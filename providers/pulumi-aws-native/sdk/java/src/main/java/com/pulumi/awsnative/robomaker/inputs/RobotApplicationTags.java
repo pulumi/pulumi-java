@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.robomaker.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class RobotApplicationTags extends com.pulumi.resources.InvokeArgs 
 
     public static final RobotApplicationTags Empty = new RobotApplicationTags();
 
-    public RobotApplicationTags() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(RobotApplicationTags defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private RobotApplicationTags $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(RobotApplicationTags defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new RobotApplicationTags();
         }
         public RobotApplicationTags build() {
-            return new RobotApplicationTags();
+            return $;
         }
     }
+
 }

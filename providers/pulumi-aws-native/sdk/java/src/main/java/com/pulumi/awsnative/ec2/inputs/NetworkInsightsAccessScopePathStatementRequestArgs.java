@@ -7,8 +7,8 @@ import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopePacketHeaderSta
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeResourceStatementRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends co
     public static final NetworkInsightsAccessScopePathStatementRequestArgs Empty = new NetworkInsightsAccessScopePathStatementRequestArgs();
 
     @Import(name="packetHeaderStatement")
-      private final @Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
+    private @Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
 
-    public Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement() {
-        return this.packetHeaderStatement == null ? Codegen.empty() : this.packetHeaderStatement;
+    public Optional<Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs>> packetHeaderStatement() {
+        return Optional.ofNullable(this.packetHeaderStatement);
     }
 
     @Import(name="resourceStatement")
-      private final @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+    private @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
-    public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement() {
-        return this.resourceStatement == null ? Codegen.empty() : this.resourceStatement;
+    public Optional<Output<NetworkInsightsAccessScopeResourceStatementRequestArgs>> resourceStatement() {
+        return Optional.ofNullable(this.resourceStatement);
     }
 
-    public NetworkInsightsAccessScopePathStatementRequestArgs(
-        @Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement,
-        @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
-        this.packetHeaderStatement = packetHeaderStatement;
-        this.resourceStatement = resourceStatement;
-    }
+    private NetworkInsightsAccessScopePathStatementRequestArgs() {}
 
-    private NetworkInsightsAccessScopePathStatementRequestArgs() {
-        this.packetHeaderStatement = Codegen.empty();
-        this.resourceStatement = Codegen.empty();
+    private NetworkInsightsAccessScopePathStatementRequestArgs(NetworkInsightsAccessScopePathStatementRequestArgs $) {
+        this.packetHeaderStatement = $.packetHeaderStatement;
+        this.resourceStatement = $.resourceStatement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAccessScopePathStatementRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement;
-        private @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+        private NetworkInsightsAccessScopePathStatementRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAccessScopePathStatementRequestArgs();
         }
 
         public Builder(NetworkInsightsAccessScopePathStatementRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packetHeaderStatement = defaults.packetHeaderStatement;
-    	      this.resourceStatement = defaults.resourceStatement;
+            $ = new NetworkInsightsAccessScopePathStatementRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packetHeaderStatement(@Nullable Output<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement) {
-            this.packetHeaderStatement = packetHeaderStatement;
+            $.packetHeaderStatement = packetHeaderStatement;
             return this;
         }
-        public Builder packetHeaderStatement(@Nullable NetworkInsightsAccessScopePacketHeaderStatementRequestArgs packetHeaderStatement) {
-            this.packetHeaderStatement = Codegen.ofNullable(packetHeaderStatement);
-            return this;
+
+        public Builder packetHeaderStatement(NetworkInsightsAccessScopePacketHeaderStatementRequestArgs packetHeaderStatement) {
+            return packetHeaderStatement(Output.of(packetHeaderStatement));
         }
+
         public Builder resourceStatement(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
-            this.resourceStatement = resourceStatement;
+            $.resourceStatement = resourceStatement;
             return this;
         }
-        public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
-            this.resourceStatement = Codegen.ofNullable(resourceStatement);
-            return this;
-        }        public NetworkInsightsAccessScopePathStatementRequestArgs build() {
-            return new NetworkInsightsAccessScopePathStatementRequestArgs(packetHeaderStatement, resourceStatement);
+
+        public Builder resourceStatement(NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
+            return resourceStatement(Output.of(resourceStatement));
+        }
+
+        public NetworkInsightsAccessScopePathStatementRequestArgs build() {
+            return $;
         }
     }
+
 }

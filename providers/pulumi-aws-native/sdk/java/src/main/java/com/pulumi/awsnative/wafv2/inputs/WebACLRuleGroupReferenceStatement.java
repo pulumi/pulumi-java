@@ -17,65 +17,62 @@ public final class WebACLRuleGroupReferenceStatement extends com.pulumi.resource
     public static final WebACLRuleGroupReferenceStatement Empty = new WebACLRuleGroupReferenceStatement();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="excludedRules")
-      private final @Nullable List<WebACLExcludedRule> excludedRules;
+    private @Nullable List<WebACLExcludedRule> excludedRules;
 
-    public List<WebACLExcludedRule> excludedRules() {
-        return this.excludedRules == null ? List.of() : this.excludedRules;
+    public Optional<List<WebACLExcludedRule>> excludedRules() {
+        return Optional.ofNullable(this.excludedRules);
     }
 
-    public WebACLRuleGroupReferenceStatement(
-        String arn,
-        @Nullable List<WebACLExcludedRule> excludedRules) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.excludedRules = excludedRules;
-    }
+    private WebACLRuleGroupReferenceStatement() {}
 
-    private WebACLRuleGroupReferenceStatement() {
-        this.arn = null;
-        this.excludedRules = List.of();
+    private WebACLRuleGroupReferenceStatement(WebACLRuleGroupReferenceStatement $) {
+        this.arn = $.arn;
+        this.excludedRules = $.excludedRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLRuleGroupReferenceStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private @Nullable List<WebACLExcludedRule> excludedRules;
+        private WebACLRuleGroupReferenceStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLRuleGroupReferenceStatement();
         }
 
         public Builder(WebACLRuleGroupReferenceStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.excludedRules = defaults.excludedRules;
+            $ = new WebACLRuleGroupReferenceStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder excludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
-            this.excludedRules = excludedRules;
+            $.excludedRules = excludedRules;
             return this;
         }
+
         public Builder excludedRules(WebACLExcludedRule... excludedRules) {
             return excludedRules(List.of(excludedRules));
-        }        public WebACLRuleGroupReferenceStatement build() {
-            return new WebACLRuleGroupReferenceStatement(arn, excludedRules);
+        }
+
+        public WebACLRuleGroupReferenceStatement build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

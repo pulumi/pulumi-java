@@ -5,9 +5,9 @@ package com.pulumi.awsnative.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class WarmPoolInstanceReusePolicyArgs extends com.pulumi.resources.
     public static final WarmPoolInstanceReusePolicyArgs Empty = new WarmPoolInstanceReusePolicyArgs();
 
     @Import(name="reuseOnScaleIn")
-      private final @Nullable Output<Boolean> reuseOnScaleIn;
+    private @Nullable Output<Boolean> reuseOnScaleIn;
 
-    public Output<Boolean> reuseOnScaleIn() {
-        return this.reuseOnScaleIn == null ? Codegen.empty() : this.reuseOnScaleIn;
+    public Optional<Output<Boolean>> reuseOnScaleIn() {
+        return Optional.ofNullable(this.reuseOnScaleIn);
     }
 
-    public WarmPoolInstanceReusePolicyArgs(@Nullable Output<Boolean> reuseOnScaleIn) {
-        this.reuseOnScaleIn = reuseOnScaleIn;
-    }
+    private WarmPoolInstanceReusePolicyArgs() {}
 
-    private WarmPoolInstanceReusePolicyArgs() {
-        this.reuseOnScaleIn = Codegen.empty();
+    private WarmPoolInstanceReusePolicyArgs(WarmPoolInstanceReusePolicyArgs $) {
+        this.reuseOnScaleIn = $.reuseOnScaleIn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WarmPoolInstanceReusePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> reuseOnScaleIn;
+        private WarmPoolInstanceReusePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WarmPoolInstanceReusePolicyArgs();
         }
 
         public Builder(WarmPoolInstanceReusePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reuseOnScaleIn = defaults.reuseOnScaleIn;
+            $ = new WarmPoolInstanceReusePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reuseOnScaleIn(@Nullable Output<Boolean> reuseOnScaleIn) {
-            this.reuseOnScaleIn = reuseOnScaleIn;
+            $.reuseOnScaleIn = reuseOnScaleIn;
             return this;
         }
-        public Builder reuseOnScaleIn(@Nullable Boolean reuseOnScaleIn) {
-            this.reuseOnScaleIn = Codegen.ofNullable(reuseOnScaleIn);
-            return this;
-        }        public WarmPoolInstanceReusePolicyArgs build() {
-            return new WarmPoolInstanceReusePolicyArgs(reuseOnScaleIn);
+
+        public Builder reuseOnScaleIn(Boolean reuseOnScaleIn) {
+            return reuseOnScaleIn(Output.of(reuseOnScaleIn));
+        }
+
+        public WarmPoolInstanceReusePolicyArgs build() {
+            return $;
         }
     }
+
 }

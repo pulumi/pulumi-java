@@ -17,45 +17,45 @@ public final class GetConfigurationAggregatorArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="configurationAggregatorName", required=true)
-      private final String configurationAggregatorName;
+    private String configurationAggregatorName;
 
     public String configurationAggregatorName() {
         return this.configurationAggregatorName;
     }
 
-    public GetConfigurationAggregatorArgs(String configurationAggregatorName) {
-        this.configurationAggregatorName = Objects.requireNonNull(configurationAggregatorName, "expected parameter 'configurationAggregatorName' to be non-null");
-    }
+    private GetConfigurationAggregatorArgs() {}
 
-    private GetConfigurationAggregatorArgs() {
-        this.configurationAggregatorName = null;
+    private GetConfigurationAggregatorArgs(GetConfigurationAggregatorArgs $) {
+        this.configurationAggregatorName = $.configurationAggregatorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationAggregatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationAggregatorName;
+        private GetConfigurationAggregatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationAggregatorArgs();
         }
 
         public Builder(GetConfigurationAggregatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationAggregatorName = defaults.configurationAggregatorName;
+            $ = new GetConfigurationAggregatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationAggregatorName(String configurationAggregatorName) {
-            this.configurationAggregatorName = Objects.requireNonNull(configurationAggregatorName);
+            $.configurationAggregatorName = configurationAggregatorName;
             return this;
-        }        public GetConfigurationAggregatorArgs build() {
-            return new GetConfigurationAggregatorArgs(configurationAggregatorName);
+        }
+
+        public GetConfigurationAggregatorArgs build() {
+            $.configurationAggregatorName = Objects.requireNonNull($.configurationAggregatorName, "expected parameter 'configurationAggregatorName' to be non-null");
+            return $;
         }
     }
+
 }

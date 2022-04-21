@@ -15,45 +15,44 @@ public final class SpotFleetIamInstanceProfileSpecification extends com.pulumi.r
     public static final SpotFleetIamInstanceProfileSpecification Empty = new SpotFleetIamInstanceProfileSpecification();
 
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
-    public SpotFleetIamInstanceProfileSpecification(@Nullable String arn) {
-        this.arn = arn;
-    }
+    private SpotFleetIamInstanceProfileSpecification() {}
 
-    private SpotFleetIamInstanceProfileSpecification() {
-        this.arn = null;
+    private SpotFleetIamInstanceProfileSpecification(SpotFleetIamInstanceProfileSpecification $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetIamInstanceProfileSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
+        private SpotFleetIamInstanceProfileSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetIamInstanceProfileSpecification();
         }
 
         public Builder(SpotFleetIamInstanceProfileSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new SpotFleetIamInstanceProfileSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
-        }        public SpotFleetIamInstanceProfileSpecification build() {
-            return new SpotFleetIamInstanceProfileSpecification(arn);
+        }
+
+        public SpotFleetIamInstanceProfileSpecification build() {
+            return $;
         }
     }
+
 }

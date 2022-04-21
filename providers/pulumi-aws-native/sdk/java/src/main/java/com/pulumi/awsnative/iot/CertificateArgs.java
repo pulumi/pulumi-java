@@ -7,9 +7,9 @@ import com.pulumi.awsnative.iot.enums.CertificateMode;
 import com.pulumi.awsnative.iot.enums.CertificateStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,130 +18,117 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     public static final CertificateArgs Empty = new CertificateArgs();
 
     @Import(name="cACertificatePem")
-      private final @Nullable Output<String> cACertificatePem;
+    private @Nullable Output<String> cACertificatePem;
 
-    public Output<String> cACertificatePem() {
-        return this.cACertificatePem == null ? Codegen.empty() : this.cACertificatePem;
+    public Optional<Output<String>> cACertificatePem() {
+        return Optional.ofNullable(this.cACertificatePem);
     }
 
     @Import(name="certificateMode")
-      private final @Nullable Output<CertificateMode> certificateMode;
+    private @Nullable Output<CertificateMode> certificateMode;
 
-    public Output<CertificateMode> certificateMode() {
-        return this.certificateMode == null ? Codegen.empty() : this.certificateMode;
+    public Optional<Output<CertificateMode>> certificateMode() {
+        return Optional.ofNullable(this.certificateMode);
     }
 
     @Import(name="certificatePem")
-      private final @Nullable Output<String> certificatePem;
+    private @Nullable Output<String> certificatePem;
 
-    public Output<String> certificatePem() {
-        return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
+    public Optional<Output<String>> certificatePem() {
+        return Optional.ofNullable(this.certificatePem);
     }
 
     @Import(name="certificateSigningRequest")
-      private final @Nullable Output<String> certificateSigningRequest;
+    private @Nullable Output<String> certificateSigningRequest;
 
-    public Output<String> certificateSigningRequest() {
-        return this.certificateSigningRequest == null ? Codegen.empty() : this.certificateSigningRequest;
+    public Optional<Output<String>> certificateSigningRequest() {
+        return Optional.ofNullable(this.certificateSigningRequest);
     }
 
     @Import(name="status", required=true)
-      private final Output<CertificateStatus> status;
+    private Output<CertificateStatus> status;
 
     public Output<CertificateStatus> status() {
         return this.status;
     }
 
-    public CertificateArgs(
-        @Nullable Output<String> cACertificatePem,
-        @Nullable Output<CertificateMode> certificateMode,
-        @Nullable Output<String> certificatePem,
-        @Nullable Output<String> certificateSigningRequest,
-        Output<CertificateStatus> status) {
-        this.cACertificatePem = cACertificatePem;
-        this.certificateMode = certificateMode;
-        this.certificatePem = certificatePem;
-        this.certificateSigningRequest = certificateSigningRequest;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.cACertificatePem = Codegen.empty();
-        this.certificateMode = Codegen.empty();
-        this.certificatePem = Codegen.empty();
-        this.certificateSigningRequest = Codegen.empty();
-        this.status = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.cACertificatePem = $.cACertificatePem;
+        this.certificateMode = $.certificateMode;
+        this.certificatePem = $.certificatePem;
+        this.certificateSigningRequest = $.certificateSigningRequest;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cACertificatePem;
-        private @Nullable Output<CertificateMode> certificateMode;
-        private @Nullable Output<String> certificatePem;
-        private @Nullable Output<String> certificateSigningRequest;
-        private Output<CertificateStatus> status;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cACertificatePem = defaults.cACertificatePem;
-    	      this.certificateMode = defaults.certificateMode;
-    	      this.certificatePem = defaults.certificatePem;
-    	      this.certificateSigningRequest = defaults.certificateSigningRequest;
-    	      this.status = defaults.status;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cACertificatePem(@Nullable Output<String> cACertificatePem) {
-            this.cACertificatePem = cACertificatePem;
+            $.cACertificatePem = cACertificatePem;
             return this;
         }
-        public Builder cACertificatePem(@Nullable String cACertificatePem) {
-            this.cACertificatePem = Codegen.ofNullable(cACertificatePem);
-            return this;
+
+        public Builder cACertificatePem(String cACertificatePem) {
+            return cACertificatePem(Output.of(cACertificatePem));
         }
+
         public Builder certificateMode(@Nullable Output<CertificateMode> certificateMode) {
-            this.certificateMode = certificateMode;
+            $.certificateMode = certificateMode;
             return this;
         }
-        public Builder certificateMode(@Nullable CertificateMode certificateMode) {
-            this.certificateMode = Codegen.ofNullable(certificateMode);
-            return this;
+
+        public Builder certificateMode(CertificateMode certificateMode) {
+            return certificateMode(Output.of(certificateMode));
         }
+
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
-            this.certificatePem = certificatePem;
+            $.certificatePem = certificatePem;
             return this;
         }
-        public Builder certificatePem(@Nullable String certificatePem) {
-            this.certificatePem = Codegen.ofNullable(certificatePem);
-            return this;
+
+        public Builder certificatePem(String certificatePem) {
+            return certificatePem(Output.of(certificatePem));
         }
+
         public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
-            this.certificateSigningRequest = certificateSigningRequest;
+            $.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
-        public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
-            this.certificateSigningRequest = Codegen.ofNullable(certificateSigningRequest);
-            return this;
+
+        public Builder certificateSigningRequest(String certificateSigningRequest) {
+            return certificateSigningRequest(Output.of(certificateSigningRequest));
         }
+
         public Builder status(Output<CertificateStatus> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(CertificateStatus status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(cACertificatePem, certificateMode, certificatePem, certificateSigningRequest, status);
+            return status(Output.of(status));
+        }
+
+        public CertificateArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.awsnative.macie.inputs;
 import com.pulumi.awsnative.macie.inputs.FindingsFilterCriterionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FindingsFilterFindingCriteriaArgs extends com.pulumi.resource
     public static final FindingsFilterFindingCriteriaArgs Empty = new FindingsFilterFindingCriteriaArgs();
 
     @Import(name="criterion")
-      private final @Nullable Output<FindingsFilterCriterionArgs> criterion;
+    private @Nullable Output<FindingsFilterCriterionArgs> criterion;
 
-    public Output<FindingsFilterCriterionArgs> criterion() {
-        return this.criterion == null ? Codegen.empty() : this.criterion;
+    public Optional<Output<FindingsFilterCriterionArgs>> criterion() {
+        return Optional.ofNullable(this.criterion);
     }
 
-    public FindingsFilterFindingCriteriaArgs(@Nullable Output<FindingsFilterCriterionArgs> criterion) {
-        this.criterion = criterion;
-    }
+    private FindingsFilterFindingCriteriaArgs() {}
 
-    private FindingsFilterFindingCriteriaArgs() {
-        this.criterion = Codegen.empty();
+    private FindingsFilterFindingCriteriaArgs(FindingsFilterFindingCriteriaArgs $) {
+        this.criterion = $.criterion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FindingsFilterFindingCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FindingsFilterCriterionArgs> criterion;
+        private FindingsFilterFindingCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FindingsFilterFindingCriteriaArgs();
         }
 
         public Builder(FindingsFilterFindingCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criterion = defaults.criterion;
+            $ = new FindingsFilterFindingCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder criterion(@Nullable Output<FindingsFilterCriterionArgs> criterion) {
-            this.criterion = criterion;
+            $.criterion = criterion;
             return this;
         }
-        public Builder criterion(@Nullable FindingsFilterCriterionArgs criterion) {
-            this.criterion = Codegen.ofNullable(criterion);
-            return this;
-        }        public FindingsFilterFindingCriteriaArgs build() {
-            return new FindingsFilterFindingCriteriaArgs(criterion);
+
+        public Builder criterion(FindingsFilterCriterionArgs criterion) {
+            return criterion(Output.of(criterion));
+        }
+
+        public FindingsFilterFindingCriteriaArgs build() {
+            return $;
         }
     }
+
 }

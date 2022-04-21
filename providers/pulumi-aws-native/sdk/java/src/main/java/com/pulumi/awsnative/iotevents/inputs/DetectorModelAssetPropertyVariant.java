@@ -23,10 +23,10 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
      * 
      */
     @Import(name="booleanValue")
-      private final @Nullable String booleanValue;
+    private @Nullable String booleanValue;
 
     public Optional<String> booleanValue() {
-        return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
+        return Optional.ofNullable(this.booleanValue);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
      * 
      */
     @Import(name="doubleValue")
-      private final @Nullable String doubleValue;
+    private @Nullable String doubleValue;
 
     public Optional<String> doubleValue() {
-        return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
+        return Optional.ofNullable(this.doubleValue);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
      * 
      */
     @Import(name="integerValue")
-      private final @Nullable String integerValue;
+    private @Nullable String integerValue;
 
     public Optional<String> integerValue() {
-        return this.integerValue == null ? Optional.empty() : Optional.ofNullable(this.integerValue);
+        return Optional.ofNullable(this.integerValue);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
      * 
      */
     @Import(name="stringValue")
-      private final @Nullable String stringValue;
+    private @Nullable String stringValue;
 
     public Optional<String> stringValue() {
-        return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
+        return Optional.ofNullable(this.stringValue);
     }
 
-    public DetectorModelAssetPropertyVariant(
-        @Nullable String booleanValue,
-        @Nullable String doubleValue,
-        @Nullable String integerValue,
-        @Nullable String stringValue) {
-        this.booleanValue = booleanValue;
-        this.doubleValue = doubleValue;
-        this.integerValue = integerValue;
-        this.stringValue = stringValue;
-    }
+    private DetectorModelAssetPropertyVariant() {}
 
-    private DetectorModelAssetPropertyVariant() {
-        this.booleanValue = null;
-        this.doubleValue = null;
-        this.integerValue = null;
-        this.stringValue = null;
+    private DetectorModelAssetPropertyVariant(DetectorModelAssetPropertyVariant $) {
+        this.booleanValue = $.booleanValue;
+        this.doubleValue = $.doubleValue;
+        this.integerValue = $.integerValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelAssetPropertyVariant defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String booleanValue;
-        private @Nullable String doubleValue;
-        private @Nullable String integerValue;
-        private @Nullable String stringValue;
+        private DetectorModelAssetPropertyVariant $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelAssetPropertyVariant();
         }
 
         public Builder(DetectorModelAssetPropertyVariant defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.integerValue = defaults.integerValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new DetectorModelAssetPropertyVariant(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(@Nullable String booleanValue) {
-            this.booleanValue = booleanValue;
+            $.booleanValue = booleanValue;
             return this;
         }
+
         public Builder doubleValue(@Nullable String doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
+
         public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = integerValue;
+            $.integerValue = integerValue;
             return this;
         }
+
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
-        }        public DetectorModelAssetPropertyVariant build() {
-            return new DetectorModelAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
+        }
+
+        public DetectorModelAssetPropertyVariant build() {
+            return $;
         }
     }
+
 }

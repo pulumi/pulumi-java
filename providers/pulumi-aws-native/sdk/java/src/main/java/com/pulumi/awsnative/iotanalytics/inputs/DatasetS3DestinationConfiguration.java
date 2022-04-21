@@ -16,94 +16,86 @@ public final class DatasetS3DestinationConfiguration extends com.pulumi.resource
     public static final DatasetS3DestinationConfiguration Empty = new DatasetS3DestinationConfiguration();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="glueConfiguration")
-      private final @Nullable DatasetGlueConfiguration glueConfiguration;
+    private @Nullable DatasetGlueConfiguration glueConfiguration;
 
     public Optional<DatasetGlueConfiguration> glueConfiguration() {
-        return this.glueConfiguration == null ? Optional.empty() : Optional.ofNullable(this.glueConfiguration);
+        return Optional.ofNullable(this.glueConfiguration);
     }
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public DatasetS3DestinationConfiguration(
-        String bucket,
-        @Nullable DatasetGlueConfiguration glueConfiguration,
-        String key,
-        String roleArn) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.glueConfiguration = glueConfiguration;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private DatasetS3DestinationConfiguration() {}
 
-    private DatasetS3DestinationConfiguration() {
-        this.bucket = null;
-        this.glueConfiguration = null;
-        this.key = null;
-        this.roleArn = null;
+    private DatasetS3DestinationConfiguration(DatasetS3DestinationConfiguration $) {
+        this.bucket = $.bucket;
+        this.glueConfiguration = $.glueConfiguration;
+        this.key = $.key;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetS3DestinationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable DatasetGlueConfiguration glueConfiguration;
-        private String key;
-        private String roleArn;
+        private DatasetS3DestinationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetS3DestinationConfiguration();
         }
 
         public Builder(DatasetS3DestinationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.glueConfiguration = defaults.glueConfiguration;
-    	      this.key = defaults.key;
-    	      this.roleArn = defaults.roleArn;
+            $ = new DatasetS3DestinationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder glueConfiguration(@Nullable DatasetGlueConfiguration glueConfiguration) {
-            this.glueConfiguration = glueConfiguration;
+            $.glueConfiguration = glueConfiguration;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public DatasetS3DestinationConfiguration build() {
-            return new DatasetS3DestinationConfiguration(bucket, glueConfiguration, key, roleArn);
+        }
+
+        public DatasetS3DestinationConfiguration build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

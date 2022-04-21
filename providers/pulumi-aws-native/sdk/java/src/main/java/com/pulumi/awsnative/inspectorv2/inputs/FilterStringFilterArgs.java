@@ -6,7 +6,6 @@ package com.pulumi.awsnative.inspectorv2.inputs;
 import com.pulumi.awsnative.inspectorv2.enums.FilterStringComparison;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class FilterStringFilterArgs extends com.pulumi.resources.ResourceA
     public static final FilterStringFilterArgs Empty = new FilterStringFilterArgs();
 
     @Import(name="comparison", required=true)
-      private final Output<FilterStringComparison> comparison;
+    private Output<FilterStringComparison> comparison;
 
     public Output<FilterStringComparison> comparison() {
         return this.comparison;
     }
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public FilterStringFilterArgs(
-        Output<FilterStringComparison> comparison,
-        Output<String> value) {
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private FilterStringFilterArgs() {}
 
-    private FilterStringFilterArgs() {
-        this.comparison = Codegen.empty();
-        this.value = Codegen.empty();
+    private FilterStringFilterArgs(FilterStringFilterArgs $) {
+        this.comparison = $.comparison;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterStringFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FilterStringComparison> comparison;
-        private Output<String> value;
+        private FilterStringFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterStringFilterArgs();
         }
 
         public Builder(FilterStringFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparison = defaults.comparison;
-    	      this.value = defaults.value;
+            $ = new FilterStringFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparison(Output<FilterStringComparison> comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder comparison(FilterStringComparison comparison) {
-            this.comparison = Output.of(Objects.requireNonNull(comparison));
-            return this;
+            return comparison(Output.of(comparison));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public FilterStringFilterArgs build() {
-            return new FilterStringFilterArgs(comparison, value);
+            return value(Output.of(value));
+        }
+
+        public FilterStringFilterArgs build() {
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

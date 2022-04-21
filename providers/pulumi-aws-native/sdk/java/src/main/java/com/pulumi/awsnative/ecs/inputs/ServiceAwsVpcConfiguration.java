@@ -17,84 +17,78 @@ public final class ServiceAwsVpcConfiguration extends com.pulumi.resources.Invok
     public static final ServiceAwsVpcConfiguration Empty = new ServiceAwsVpcConfiguration();
 
     @Import(name="assignPublicIp")
-      private final @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp;
+    private @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp;
 
     public Optional<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp() {
-        return this.assignPublicIp == null ? Optional.empty() : Optional.ofNullable(this.assignPublicIp);
+        return Optional.ofNullable(this.assignPublicIp);
     }
 
     @Import(name="securityGroups")
-      private final @Nullable List<String> securityGroups;
+    private @Nullable List<String> securityGroups;
 
-    public List<String> securityGroups() {
-        return this.securityGroups == null ? List.of() : this.securityGroups;
+    public Optional<List<String>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     @Import(name="subnets")
-      private final @Nullable List<String> subnets;
+    private @Nullable List<String> subnets;
 
-    public List<String> subnets() {
-        return this.subnets == null ? List.of() : this.subnets;
+    public Optional<List<String>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
-    public ServiceAwsVpcConfiguration(
-        @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp,
-        @Nullable List<String> securityGroups,
-        @Nullable List<String> subnets) {
-        this.assignPublicIp = assignPublicIp;
-        this.securityGroups = securityGroups;
-        this.subnets = subnets;
-    }
+    private ServiceAwsVpcConfiguration() {}
 
-    private ServiceAwsVpcConfiguration() {
-        this.assignPublicIp = null;
-        this.securityGroups = List.of();
-        this.subnets = List.of();
+    private ServiceAwsVpcConfiguration(ServiceAwsVpcConfiguration $) {
+        this.assignPublicIp = $.assignPublicIp;
+        this.securityGroups = $.securityGroups;
+        this.subnets = $.subnets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAwsVpcConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp;
-        private @Nullable List<String> securityGroups;
-        private @Nullable List<String> subnets;
+        private ServiceAwsVpcConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAwsVpcConfiguration();
         }
 
         public Builder(ServiceAwsVpcConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignPublicIp = defaults.assignPublicIp;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnets = defaults.subnets;
+            $ = new ServiceAwsVpcConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder assignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
-            this.assignPublicIp = assignPublicIp;
+            $.assignPublicIp = assignPublicIp;
             return this;
         }
+
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnets(@Nullable List<String> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
-        }        public ServiceAwsVpcConfiguration build() {
-            return new ServiceAwsVpcConfiguration(assignPublicIp, securityGroups, subnets);
+        }
+
+        public ServiceAwsVpcConfiguration build() {
+            return $;
         }
     }
+
 }

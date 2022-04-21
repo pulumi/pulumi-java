@@ -16,81 +16,76 @@ public final class PipelineRemoveAttributes extends com.pulumi.resources.InvokeA
     public static final PipelineRemoveAttributes Empty = new PipelineRemoveAttributes();
 
     @Import(name="attributes", required=true)
-      private final List<String> attributes;
+    private List<String> attributes;
 
     public List<String> attributes() {
         return this.attributes;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable String next;
+    private @Nullable String next;
 
     public Optional<String> next() {
-        return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineRemoveAttributes(
-        List<String> attributes,
-        String name,
-        @Nullable String next) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineRemoveAttributes() {}
 
-    private PipelineRemoveAttributes() {
-        this.attributes = List.of();
-        this.name = null;
-        this.next = null;
+    private PipelineRemoveAttributes(PipelineRemoveAttributes $) {
+        this.attributes = $.attributes;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineRemoveAttributes defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> attributes;
-        private String name;
-        private @Nullable String next;
+        private PipelineRemoveAttributes $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineRemoveAttributes();
         }
 
         public Builder(PipelineRemoveAttributes defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineRemoveAttributes(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(List<String> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(String... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder next(@Nullable String next) {
-            this.next = next;
+            $.next = next;
             return this;
-        }        public PipelineRemoveAttributes build() {
-            return new PipelineRemoveAttributes(attributes, name, next);
+        }
+
+        public PipelineRemoveAttributes build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

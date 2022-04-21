@@ -14,62 +14,59 @@ public final class FirewallPolicyCustomAction extends com.pulumi.resources.Invok
     public static final FirewallPolicyCustomAction Empty = new FirewallPolicyCustomAction();
 
     @Import(name="actionDefinition", required=true)
-      private final FirewallPolicyActionDefinition actionDefinition;
+    private FirewallPolicyActionDefinition actionDefinition;
 
     public FirewallPolicyActionDefinition actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
-      private final String actionName;
+    private String actionName;
 
     public String actionName() {
         return this.actionName;
     }
 
-    public FirewallPolicyCustomAction(
-        FirewallPolicyActionDefinition actionDefinition,
-        String actionName) {
-        this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-    }
+    private FirewallPolicyCustomAction() {}
 
-    private FirewallPolicyCustomAction() {
-        this.actionDefinition = null;
-        this.actionName = null;
+    private FirewallPolicyCustomAction(FirewallPolicyCustomAction $) {
+        this.actionDefinition = $.actionDefinition;
+        this.actionName = $.actionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyCustomAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FirewallPolicyActionDefinition actionDefinition;
-        private String actionName;
+        private FirewallPolicyCustomAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyCustomAction();
         }
 
         public Builder(FirewallPolicyCustomAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionDefinition = defaults.actionDefinition;
-    	      this.actionName = defaults.actionName;
+            $ = new FirewallPolicyCustomAction(Objects.requireNonNull(defaults));
         }
 
         public Builder actionDefinition(FirewallPolicyActionDefinition actionDefinition) {
-            this.actionDefinition = Objects.requireNonNull(actionDefinition);
+            $.actionDefinition = actionDefinition;
             return this;
         }
+
         public Builder actionName(String actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
-        }        public FirewallPolicyCustomAction build() {
-            return new FirewallPolicyCustomAction(actionDefinition, actionName);
+        }
+
+        public FirewallPolicyCustomAction build() {
+            $.actionDefinition = Objects.requireNonNull($.actionDefinition, "expected parameter 'actionDefinition' to be non-null");
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

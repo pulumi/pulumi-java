@@ -16,48 +16,48 @@ public final class JobExecutionsRetryConfigProperties extends com.pulumi.resourc
     public static final JobExecutionsRetryConfigProperties Empty = new JobExecutionsRetryConfigProperties();
 
     @Import(name="retryCriteriaList")
-      private final @Nullable List<JobTemplateRetryCriteria> retryCriteriaList;
+    private @Nullable List<JobTemplateRetryCriteria> retryCriteriaList;
 
-    public List<JobTemplateRetryCriteria> retryCriteriaList() {
-        return this.retryCriteriaList == null ? List.of() : this.retryCriteriaList;
+    public Optional<List<JobTemplateRetryCriteria>> retryCriteriaList() {
+        return Optional.ofNullable(this.retryCriteriaList);
     }
 
-    public JobExecutionsRetryConfigProperties(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
-        this.retryCriteriaList = retryCriteriaList;
-    }
+    private JobExecutionsRetryConfigProperties() {}
 
-    private JobExecutionsRetryConfigProperties() {
-        this.retryCriteriaList = List.of();
+    private JobExecutionsRetryConfigProperties(JobExecutionsRetryConfigProperties $) {
+        this.retryCriteriaList = $.retryCriteriaList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobExecutionsRetryConfigProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<JobTemplateRetryCriteria> retryCriteriaList;
+        private JobExecutionsRetryConfigProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobExecutionsRetryConfigProperties();
         }
 
         public Builder(JobExecutionsRetryConfigProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retryCriteriaList = defaults.retryCriteriaList;
+            $ = new JobExecutionsRetryConfigProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder retryCriteriaList(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
-            this.retryCriteriaList = retryCriteriaList;
+            $.retryCriteriaList = retryCriteriaList;
             return this;
         }
+
         public Builder retryCriteriaList(JobTemplateRetryCriteria... retryCriteriaList) {
             return retryCriteriaList(List.of(retryCriteriaList));
-        }        public JobExecutionsRetryConfigProperties build() {
-            return new JobExecutionsRetryConfigProperties(retryCriteriaList);
+        }
+
+        public JobExecutionsRetryConfigProperties build() {
+            return $;
         }
     }
+
 }

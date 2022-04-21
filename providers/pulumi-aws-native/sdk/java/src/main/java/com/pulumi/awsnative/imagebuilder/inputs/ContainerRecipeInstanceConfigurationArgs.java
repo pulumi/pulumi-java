@@ -6,10 +6,10 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceBlockDeviceMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ContainerRecipeInstanceConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="blockDeviceMappings")
-      private final @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
+    private @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
+    public Optional<Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>>> blockDeviceMappings() {
+        return Optional.ofNullable(this.blockDeviceMappings);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ContainerRecipeInstanceConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
-    public ContainerRecipeInstanceConfigurationArgs(
-        @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings,
-        @Nullable Output<String> image) {
-        this.blockDeviceMappings = blockDeviceMappings;
-        this.image = image;
-    }
+    private ContainerRecipeInstanceConfigurationArgs() {}
 
-    private ContainerRecipeInstanceConfigurationArgs() {
-        this.blockDeviceMappings = Codegen.empty();
-        this.image = Codegen.empty();
+    private ContainerRecipeInstanceConfigurationArgs(ContainerRecipeInstanceConfigurationArgs $) {
+        this.blockDeviceMappings = $.blockDeviceMappings;
+        this.image = $.image;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRecipeInstanceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
-        private @Nullable Output<String> image;
+        private ContainerRecipeInstanceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRecipeInstanceConfigurationArgs();
         }
 
         public Builder(ContainerRecipeInstanceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockDeviceMappings = defaults.blockDeviceMappings;
-    	      this.image = defaults.image;
+            $ = new ContainerRecipeInstanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockDeviceMappings(@Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
-            this.blockDeviceMappings = blockDeviceMappings;
+            $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-        public Builder blockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
-            return this;
+
+        public Builder blockDeviceMappings(List<ContainerRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
+            return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
+
         public Builder blockDeviceMappings(ContainerRecipeInstanceBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
-        }        public ContainerRecipeInstanceConfigurationArgs build() {
-            return new ContainerRecipeInstanceConfigurationArgs(blockDeviceMappings, image);
+
+        public Builder image(String image) {
+            return image(Output.of(image));
+        }
+
+        public ContainerRecipeInstanceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

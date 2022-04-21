@@ -6,9 +6,9 @@ package com.pulumi.awsnative.appflow.inputs;
 import com.pulumi.awsnative.appflow.inputs.FlowS3OutputFormatConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,83 @@ public final class FlowS3DestinationPropertiesArgs extends com.pulumi.resources.
     public static final FlowS3DestinationPropertiesArgs Empty = new FlowS3DestinationPropertiesArgs();
 
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
-      private final @Nullable Output<String> bucketPrefix;
+    private @Nullable Output<String> bucketPrefix;
 
-    public Output<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
+    public Optional<Output<String>> bucketPrefix() {
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="s3OutputFormatConfig")
-      private final @Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig;
+    private @Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
-    public Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig() {
-        return this.s3OutputFormatConfig == null ? Codegen.empty() : this.s3OutputFormatConfig;
+    public Optional<Output<FlowS3OutputFormatConfigArgs>> s3OutputFormatConfig() {
+        return Optional.ofNullable(this.s3OutputFormatConfig);
     }
 
-    public FlowS3DestinationPropertiesArgs(
-        Output<String> bucketName,
-        @Nullable Output<String> bucketPrefix,
-        @Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.bucketPrefix = bucketPrefix;
-        this.s3OutputFormatConfig = s3OutputFormatConfig;
-    }
+    private FlowS3DestinationPropertiesArgs() {}
 
-    private FlowS3DestinationPropertiesArgs() {
-        this.bucketName = Codegen.empty();
-        this.bucketPrefix = Codegen.empty();
-        this.s3OutputFormatConfig = Codegen.empty();
+    private FlowS3DestinationPropertiesArgs(FlowS3DestinationPropertiesArgs $) {
+        this.bucketName = $.bucketName;
+        this.bucketPrefix = $.bucketPrefix;
+        this.s3OutputFormatConfig = $.s3OutputFormatConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowS3DestinationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<String> bucketPrefix;
-        private @Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig;
+        private FlowS3DestinationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowS3DestinationPropertiesArgs();
         }
 
         public Builder(FlowS3DestinationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.s3OutputFormatConfig = defaults.s3OutputFormatConfig;
+            $ = new FlowS3DestinationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
-        public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
-            return this;
+
+        public Builder bucketPrefix(String bucketPrefix) {
+            return bucketPrefix(Output.of(bucketPrefix));
         }
+
         public Builder s3OutputFormatConfig(@Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig) {
-            this.s3OutputFormatConfig = s3OutputFormatConfig;
+            $.s3OutputFormatConfig = s3OutputFormatConfig;
             return this;
         }
-        public Builder s3OutputFormatConfig(@Nullable FlowS3OutputFormatConfigArgs s3OutputFormatConfig) {
-            this.s3OutputFormatConfig = Codegen.ofNullable(s3OutputFormatConfig);
-            return this;
-        }        public FlowS3DestinationPropertiesArgs build() {
-            return new FlowS3DestinationPropertiesArgs(bucketName, bucketPrefix, s3OutputFormatConfig);
+
+        public Builder s3OutputFormatConfig(FlowS3OutputFormatConfigArgs s3OutputFormatConfig) {
+            return s3OutputFormatConfig(Output.of(s3OutputFormatConfig));
+        }
+
+        public FlowS3DestinationPropertiesArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

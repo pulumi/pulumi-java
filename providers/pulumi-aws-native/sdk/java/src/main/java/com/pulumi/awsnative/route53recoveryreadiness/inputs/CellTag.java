@@ -14,65 +14,63 @@ public final class CellTag extends com.pulumi.resources.InvokeArgs {
     public static final CellTag Empty = new CellTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final List<String> value;
+    private List<String> value;
 
     public List<String> value() {
         return this.value;
     }
 
-    public CellTag(
-        String key,
-        List<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private CellTag() {}
 
-    private CellTag() {
-        this.key = null;
-        this.value = List.of();
+    private CellTag(CellTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CellTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private List<String> value;
+        private CellTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new CellTag();
         }
 
         public Builder(CellTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new CellTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(List<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String... value) {
             return value(List.of(value));
-        }        public CellTag build() {
-            return new CellTag(key, value);
+        }
+
+        public CellTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

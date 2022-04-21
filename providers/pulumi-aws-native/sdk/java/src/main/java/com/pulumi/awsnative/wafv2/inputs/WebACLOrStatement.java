@@ -14,48 +14,49 @@ public final class WebACLOrStatement extends com.pulumi.resources.InvokeArgs {
     public static final WebACLOrStatement Empty = new WebACLOrStatement();
 
     @Import(name="statements", required=true)
-      private final List<WebACLStatement> statements;
+    private List<WebACLStatement> statements;
 
     public List<WebACLStatement> statements() {
         return this.statements;
     }
 
-    public WebACLOrStatement(List<WebACLStatement> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private WebACLOrStatement() {}
 
-    private WebACLOrStatement() {
-        this.statements = List.of();
+    private WebACLOrStatement(WebACLOrStatement $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLOrStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<WebACLStatement> statements;
+        private WebACLOrStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLOrStatement();
         }
 
         public Builder(WebACLOrStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new WebACLOrStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(List<WebACLStatement> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(WebACLStatement... statements) {
             return statements(List.of(statements));
-        }        public WebACLOrStatement build() {
-            return new WebACLOrStatement(statements);
+        }
+
+        public WebACLOrStatement build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

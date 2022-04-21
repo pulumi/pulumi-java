@@ -23,10 +23,10 @@ public final class StageAccessLogSetting extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="destinationArn")
-      private final @Nullable String destinationArn;
+    private @Nullable String destinationArn;
 
     public Optional<String> destinationArn() {
-        return this.destinationArn == null ? Optional.empty() : Optional.ofNullable(this.destinationArn);
+        return Optional.ofNullable(this.destinationArn);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class StageAccessLogSetting extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
-    public StageAccessLogSetting(
-        @Nullable String destinationArn,
-        @Nullable String format) {
-        this.destinationArn = destinationArn;
-        this.format = format;
-    }
+    private StageAccessLogSetting() {}
 
-    private StageAccessLogSetting() {
-        this.destinationArn = null;
-        this.format = null;
+    private StageAccessLogSetting(StageAccessLogSetting $) {
+        this.destinationArn = $.destinationArn;
+        this.format = $.format;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageAccessLogSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destinationArn;
-        private @Nullable String format;
+        private StageAccessLogSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageAccessLogSetting();
         }
 
         public Builder(StageAccessLogSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.format = defaults.format;
+            $ = new StageAccessLogSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = destinationArn;
+            $.destinationArn = destinationArn;
             return this;
         }
+
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
-        }        public StageAccessLogSetting build() {
-            return new StageAccessLogSetting(destinationArn, format);
+        }
+
+        public StageAccessLogSetting build() {
+            return $;
         }
     }
+
 }

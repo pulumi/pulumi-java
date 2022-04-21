@@ -8,11 +8,11 @@ import com.pulumi.awsnative.iot.inputs.SecurityProfileMetricToRetainArgs;
 import com.pulumi.awsnative.iot.inputs.SecurityProfileTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="additionalMetricsToRetainV2")
-      private final @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
+    private @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
-    public Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2() {
-        return this.additionalMetricsToRetainV2 == null ? Codegen.empty() : this.additionalMetricsToRetainV2;
+    public Optional<Output<List<SecurityProfileMetricToRetainArgs>>> additionalMetricsToRetainV2() {
+        return Optional.ofNullable(this.additionalMetricsToRetainV2);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="alertTargets")
-      private final @Nullable Output<Object> alertTargets;
+    private @Nullable Output<Object> alertTargets;
 
-    public Output<Object> alertTargets() {
-        return this.alertTargets == null ? Codegen.empty() : this.alertTargets;
+    public Optional<Output<Object>> alertTargets() {
+        return Optional.ofNullable(this.alertTargets);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="behaviors")
-      private final @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
+    private @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
 
-    public Output<List<SecurityProfileBehaviorArgs>> behaviors() {
-        return this.behaviors == null ? Codegen.empty() : this.behaviors;
+    public Optional<Output<List<SecurityProfileBehaviorArgs>>> behaviors() {
+        return Optional.ofNullable(this.behaviors);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="securityProfileDescription")
-      private final @Nullable Output<String> securityProfileDescription;
+    private @Nullable Output<String> securityProfileDescription;
 
-    public Output<String> securityProfileDescription() {
-        return this.securityProfileDescription == null ? Codegen.empty() : this.securityProfileDescription;
+    public Optional<Output<String>> securityProfileDescription() {
+        return Optional.ofNullable(this.securityProfileDescription);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="securityProfileName")
-      private final @Nullable Output<String> securityProfileName;
+    private @Nullable Output<String> securityProfileName;
 
-    public Output<String> securityProfileName() {
-        return this.securityProfileName == null ? Codegen.empty() : this.securityProfileName;
+    public Optional<Output<String>> securityProfileName() {
+        return Optional.ofNullable(this.securityProfileName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<SecurityProfileTagArgs>> tags;
+    private @Nullable Output<List<SecurityProfileTagArgs>> tags;
 
-    public Output<List<SecurityProfileTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<SecurityProfileTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -91,140 +91,124 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetArns")
-      private final @Nullable Output<List<String>> targetArns;
+    private @Nullable Output<List<String>> targetArns;
 
-    public Output<List<String>> targetArns() {
-        return this.targetArns == null ? Codegen.empty() : this.targetArns;
+    public Optional<Output<List<String>>> targetArns() {
+        return Optional.ofNullable(this.targetArns);
     }
 
-    public SecurityProfileArgs(
-        @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2,
-        @Nullable Output<Object> alertTargets,
-        @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors,
-        @Nullable Output<String> securityProfileDescription,
-        @Nullable Output<String> securityProfileName,
-        @Nullable Output<List<SecurityProfileTagArgs>> tags,
-        @Nullable Output<List<String>> targetArns) {
-        this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
-        this.alertTargets = alertTargets;
-        this.behaviors = behaviors;
-        this.securityProfileDescription = securityProfileDescription;
-        this.securityProfileName = securityProfileName;
-        this.tags = tags;
-        this.targetArns = targetArns;
-    }
+    private SecurityProfileArgs() {}
 
-    private SecurityProfileArgs() {
-        this.additionalMetricsToRetainV2 = Codegen.empty();
-        this.alertTargets = Codegen.empty();
-        this.behaviors = Codegen.empty();
-        this.securityProfileDescription = Codegen.empty();
-        this.securityProfileName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetArns = Codegen.empty();
+    private SecurityProfileArgs(SecurityProfileArgs $) {
+        this.additionalMetricsToRetainV2 = $.additionalMetricsToRetainV2;
+        this.alertTargets = $.alertTargets;
+        this.behaviors = $.behaviors;
+        this.securityProfileDescription = $.securityProfileDescription;
+        this.securityProfileName = $.securityProfileName;
+        this.tags = $.tags;
+        this.targetArns = $.targetArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
-        private @Nullable Output<Object> alertTargets;
-        private @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
-        private @Nullable Output<String> securityProfileDescription;
-        private @Nullable Output<String> securityProfileName;
-        private @Nullable Output<List<SecurityProfileTagArgs>> tags;
-        private @Nullable Output<List<String>> targetArns;
+        private SecurityProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileArgs();
         }
 
         public Builder(SecurityProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalMetricsToRetainV2 = defaults.additionalMetricsToRetainV2;
-    	      this.alertTargets = defaults.alertTargets;
-    	      this.behaviors = defaults.behaviors;
-    	      this.securityProfileDescription = defaults.securityProfileDescription;
-    	      this.securityProfileName = defaults.securityProfileName;
-    	      this.tags = defaults.tags;
-    	      this.targetArns = defaults.targetArns;
+            $ = new SecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalMetricsToRetainV2(@Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2) {
-            this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
+            $.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
             return this;
         }
-        public Builder additionalMetricsToRetainV2(@Nullable List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
-            this.additionalMetricsToRetainV2 = Codegen.ofNullable(additionalMetricsToRetainV2);
-            return this;
+
+        public Builder additionalMetricsToRetainV2(List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
+            return additionalMetricsToRetainV2(Output.of(additionalMetricsToRetainV2));
         }
+
         public Builder additionalMetricsToRetainV2(SecurityProfileMetricToRetainArgs... additionalMetricsToRetainV2) {
             return additionalMetricsToRetainV2(List.of(additionalMetricsToRetainV2));
         }
+
         public Builder alertTargets(@Nullable Output<Object> alertTargets) {
-            this.alertTargets = alertTargets;
+            $.alertTargets = alertTargets;
             return this;
         }
-        public Builder alertTargets(@Nullable Object alertTargets) {
-            this.alertTargets = Codegen.ofNullable(alertTargets);
-            return this;
+
+        public Builder alertTargets(Object alertTargets) {
+            return alertTargets(Output.of(alertTargets));
         }
+
         public Builder behaviors(@Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors) {
-            this.behaviors = behaviors;
+            $.behaviors = behaviors;
             return this;
         }
-        public Builder behaviors(@Nullable List<SecurityProfileBehaviorArgs> behaviors) {
-            this.behaviors = Codegen.ofNullable(behaviors);
-            return this;
+
+        public Builder behaviors(List<SecurityProfileBehaviorArgs> behaviors) {
+            return behaviors(Output.of(behaviors));
         }
+
         public Builder behaviors(SecurityProfileBehaviorArgs... behaviors) {
             return behaviors(List.of(behaviors));
         }
+
         public Builder securityProfileDescription(@Nullable Output<String> securityProfileDescription) {
-            this.securityProfileDescription = securityProfileDescription;
+            $.securityProfileDescription = securityProfileDescription;
             return this;
         }
-        public Builder securityProfileDescription(@Nullable String securityProfileDescription) {
-            this.securityProfileDescription = Codegen.ofNullable(securityProfileDescription);
-            return this;
+
+        public Builder securityProfileDescription(String securityProfileDescription) {
+            return securityProfileDescription(Output.of(securityProfileDescription));
         }
+
         public Builder securityProfileName(@Nullable Output<String> securityProfileName) {
-            this.securityProfileName = securityProfileName;
+            $.securityProfileName = securityProfileName;
             return this;
         }
-        public Builder securityProfileName(@Nullable String securityProfileName) {
-            this.securityProfileName = Codegen.ofNullable(securityProfileName);
-            return this;
+
+        public Builder securityProfileName(String securityProfileName) {
+            return securityProfileName(Output.of(securityProfileName));
         }
+
         public Builder tags(@Nullable Output<List<SecurityProfileTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<SecurityProfileTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<SecurityProfileTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(SecurityProfileTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder targetArns(@Nullable Output<List<String>> targetArns) {
-            this.targetArns = targetArns;
+            $.targetArns = targetArns;
             return this;
         }
-        public Builder targetArns(@Nullable List<String> targetArns) {
-            this.targetArns = Codegen.ofNullable(targetArns);
-            return this;
+
+        public Builder targetArns(List<String> targetArns) {
+            return targetArns(Output.of(targetArns));
         }
+
         public Builder targetArns(String... targetArns) {
             return targetArns(List.of(targetArns));
-        }        public SecurityProfileArgs build() {
-            return new SecurityProfileArgs(additionalMetricsToRetainV2, alertTargets, behaviors, securityProfileDescription, securityProfileName, tags, targetArns);
+        }
+
+        public SecurityProfileArgs build() {
+            return $;
         }
     }
+
 }

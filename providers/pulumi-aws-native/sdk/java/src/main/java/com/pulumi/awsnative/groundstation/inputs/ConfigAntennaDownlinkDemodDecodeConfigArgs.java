@@ -8,8 +8,8 @@ import com.pulumi.awsnative.groundstation.inputs.ConfigDemodulationConfigArgs;
 import com.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends com.pulumi
     public static final ConfigAntennaDownlinkDemodDecodeConfigArgs Empty = new ConfigAntennaDownlinkDemodDecodeConfigArgs();
 
     @Import(name="decodeConfig")
-      private final @Nullable Output<ConfigDecodeConfigArgs> decodeConfig;
+    private @Nullable Output<ConfigDecodeConfigArgs> decodeConfig;
 
-    public Output<ConfigDecodeConfigArgs> decodeConfig() {
-        return this.decodeConfig == null ? Codegen.empty() : this.decodeConfig;
+    public Optional<Output<ConfigDecodeConfigArgs>> decodeConfig() {
+        return Optional.ofNullable(this.decodeConfig);
     }
 
     @Import(name="demodulationConfig")
-      private final @Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig;
+    private @Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig;
 
-    public Output<ConfigDemodulationConfigArgs> demodulationConfig() {
-        return this.demodulationConfig == null ? Codegen.empty() : this.demodulationConfig;
+    public Optional<Output<ConfigDemodulationConfigArgs>> demodulationConfig() {
+        return Optional.ofNullable(this.demodulationConfig);
     }
 
     @Import(name="spectrumConfig")
-      private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
+    private @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
-    public Output<ConfigSpectrumConfigArgs> spectrumConfig() {
-        return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
+    public Optional<Output<ConfigSpectrumConfigArgs>> spectrumConfig() {
+        return Optional.ofNullable(this.spectrumConfig);
     }
 
-    public ConfigAntennaDownlinkDemodDecodeConfigArgs(
-        @Nullable Output<ConfigDecodeConfigArgs> decodeConfig,
-        @Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig,
-        @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
-        this.decodeConfig = decodeConfig;
-        this.demodulationConfig = demodulationConfig;
-        this.spectrumConfig = spectrumConfig;
-    }
+    private ConfigAntennaDownlinkDemodDecodeConfigArgs() {}
 
-    private ConfigAntennaDownlinkDemodDecodeConfigArgs() {
-        this.decodeConfig = Codegen.empty();
-        this.demodulationConfig = Codegen.empty();
-        this.spectrumConfig = Codegen.empty();
+    private ConfigAntennaDownlinkDemodDecodeConfigArgs(ConfigAntennaDownlinkDemodDecodeConfigArgs $) {
+        this.decodeConfig = $.decodeConfig;
+        this.demodulationConfig = $.demodulationConfig;
+        this.spectrumConfig = $.spectrumConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigAntennaDownlinkDemodDecodeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigDecodeConfigArgs> decodeConfig;
-        private @Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig;
-        private @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
+        private ConfigAntennaDownlinkDemodDecodeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigAntennaDownlinkDemodDecodeConfigArgs();
         }
 
         public Builder(ConfigAntennaDownlinkDemodDecodeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.decodeConfig = defaults.decodeConfig;
-    	      this.demodulationConfig = defaults.demodulationConfig;
-    	      this.spectrumConfig = defaults.spectrumConfig;
+            $ = new ConfigAntennaDownlinkDemodDecodeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder decodeConfig(@Nullable Output<ConfigDecodeConfigArgs> decodeConfig) {
-            this.decodeConfig = decodeConfig;
+            $.decodeConfig = decodeConfig;
             return this;
         }
-        public Builder decodeConfig(@Nullable ConfigDecodeConfigArgs decodeConfig) {
-            this.decodeConfig = Codegen.ofNullable(decodeConfig);
-            return this;
+
+        public Builder decodeConfig(ConfigDecodeConfigArgs decodeConfig) {
+            return decodeConfig(Output.of(decodeConfig));
         }
+
         public Builder demodulationConfig(@Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig) {
-            this.demodulationConfig = demodulationConfig;
+            $.demodulationConfig = demodulationConfig;
             return this;
         }
-        public Builder demodulationConfig(@Nullable ConfigDemodulationConfigArgs demodulationConfig) {
-            this.demodulationConfig = Codegen.ofNullable(demodulationConfig);
-            return this;
+
+        public Builder demodulationConfig(ConfigDemodulationConfigArgs demodulationConfig) {
+            return demodulationConfig(Output.of(demodulationConfig));
         }
+
         public Builder spectrumConfig(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
-            this.spectrumConfig = spectrumConfig;
+            $.spectrumConfig = spectrumConfig;
             return this;
         }
-        public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
-            this.spectrumConfig = Codegen.ofNullable(spectrumConfig);
-            return this;
-        }        public ConfigAntennaDownlinkDemodDecodeConfigArgs build() {
-            return new ConfigAntennaDownlinkDemodDecodeConfigArgs(decodeConfig, demodulationConfig, spectrumConfig);
+
+        public Builder spectrumConfig(ConfigSpectrumConfigArgs spectrumConfig) {
+            return spectrumConfig(Output.of(spectrumConfig));
+        }
+
+        public ConfigAntennaDownlinkDemodDecodeConfigArgs build() {
+            return $;
         }
     }
+
 }

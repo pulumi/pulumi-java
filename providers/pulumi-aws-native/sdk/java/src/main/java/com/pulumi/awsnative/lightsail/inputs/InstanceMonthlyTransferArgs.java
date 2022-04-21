@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class InstanceMonthlyTransferArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="gbPerMonthAllocated")
-      private final @Nullable Output<String> gbPerMonthAllocated;
+    private @Nullable Output<String> gbPerMonthAllocated;
 
-    public Output<String> gbPerMonthAllocated() {
-        return this.gbPerMonthAllocated == null ? Codegen.empty() : this.gbPerMonthAllocated;
+    public Optional<Output<String>> gbPerMonthAllocated() {
+        return Optional.ofNullable(this.gbPerMonthAllocated);
     }
 
-    public InstanceMonthlyTransferArgs(@Nullable Output<String> gbPerMonthAllocated) {
-        this.gbPerMonthAllocated = gbPerMonthAllocated;
-    }
+    private InstanceMonthlyTransferArgs() {}
 
-    private InstanceMonthlyTransferArgs() {
-        this.gbPerMonthAllocated = Codegen.empty();
+    private InstanceMonthlyTransferArgs(InstanceMonthlyTransferArgs $) {
+        this.gbPerMonthAllocated = $.gbPerMonthAllocated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceMonthlyTransferArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gbPerMonthAllocated;
+        private InstanceMonthlyTransferArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceMonthlyTransferArgs();
         }
 
         public Builder(InstanceMonthlyTransferArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gbPerMonthAllocated = defaults.gbPerMonthAllocated;
+            $ = new InstanceMonthlyTransferArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gbPerMonthAllocated(@Nullable Output<String> gbPerMonthAllocated) {
-            this.gbPerMonthAllocated = gbPerMonthAllocated;
+            $.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
         }
-        public Builder gbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
-            this.gbPerMonthAllocated = Codegen.ofNullable(gbPerMonthAllocated);
-            return this;
-        }        public InstanceMonthlyTransferArgs build() {
-            return new InstanceMonthlyTransferArgs(gbPerMonthAllocated);
+
+        public Builder gbPerMonthAllocated(String gbPerMonthAllocated) {
+            return gbPerMonthAllocated(Output.of(gbPerMonthAllocated));
+        }
+
+        public InstanceMonthlyTransferArgs build() {
+            return $;
         }
     }
+
 }

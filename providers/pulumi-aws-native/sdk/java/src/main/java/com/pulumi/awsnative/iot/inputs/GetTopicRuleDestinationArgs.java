@@ -17,45 +17,45 @@ public final class GetTopicRuleDestinationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetTopicRuleDestinationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetTopicRuleDestinationArgs() {}
 
-    private GetTopicRuleDestinationArgs() {
-        this.arn = null;
+    private GetTopicRuleDestinationArgs(GetTopicRuleDestinationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTopicRuleDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetTopicRuleDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTopicRuleDestinationArgs();
         }
 
         public Builder(GetTopicRuleDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetTopicRuleDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetTopicRuleDestinationArgs build() {
-            return new GetTopicRuleDestinationArgs(arn);
+        }
+
+        public GetTopicRuleDestinationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

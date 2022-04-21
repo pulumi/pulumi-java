@@ -8,10 +8,10 @@ import com.pulumi.awsnative.resourcegroups.inputs.GroupResourceQueryArgs;
 import com.pulumi.awsnative.resourcegroups.inputs.GroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     public static final GroupArgs Empty = new GroupArgs();
 
     @Import(name="configuration")
-      private final @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
+    private @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
 
-    public Output<List<GroupConfigurationItemArgs>> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<List<GroupConfigurationItemArgs>>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,145 +42,131 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="resourceQuery")
-      private final @Nullable Output<GroupResourceQueryArgs> resourceQuery;
+    private @Nullable Output<GroupResourceQueryArgs> resourceQuery;
 
-    public Output<GroupResourceQueryArgs> resourceQuery() {
-        return this.resourceQuery == null ? Codegen.empty() : this.resourceQuery;
+    public Optional<Output<GroupResourceQueryArgs>> resourceQuery() {
+        return Optional.ofNullable(this.resourceQuery);
     }
 
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<GroupTagArgs>> tags;
+    private @Nullable Output<List<GroupTagArgs>> tags;
 
-    public Output<List<GroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<GroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GroupArgs(
-        @Nullable Output<List<GroupConfigurationItemArgs>> configuration,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<GroupResourceQueryArgs> resourceQuery,
-        @Nullable Output<List<String>> resources,
-        @Nullable Output<List<GroupTagArgs>> tags) {
-        this.configuration = configuration;
-        this.description = description;
-        this.name = name;
-        this.resourceQuery = resourceQuery;
-        this.resources = resources;
-        this.tags = tags;
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.configuration = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceQuery = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.configuration = $.configuration;
+        this.description = $.description;
+        this.name = $.name;
+        this.resourceQuery = $.resourceQuery;
+        this.resources = $.resources;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<GroupResourceQueryArgs> resourceQuery;
-        private @Nullable Output<List<String>> resources;
-        private @Nullable Output<List<GroupTagArgs>> tags;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.resourceQuery = defaults.resourceQuery;
-    	      this.resources = defaults.resources;
-    	      this.tags = defaults.tags;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<List<GroupConfigurationItemArgs>> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable List<GroupConfigurationItemArgs> configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(List<GroupConfigurationItemArgs> configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder configuration(GroupConfigurationItemArgs... configuration) {
             return configuration(List.of(configuration));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceQuery(@Nullable Output<GroupResourceQueryArgs> resourceQuery) {
-            this.resourceQuery = resourceQuery;
+            $.resourceQuery = resourceQuery;
             return this;
         }
-        public Builder resourceQuery(@Nullable GroupResourceQueryArgs resourceQuery) {
-            this.resourceQuery = Codegen.ofNullable(resourceQuery);
-            return this;
+
+        public Builder resourceQuery(GroupResourceQueryArgs resourceQuery) {
+            return resourceQuery(Output.of(resourceQuery));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder tags(@Nullable Output<List<GroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<GroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<GroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(GroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public GroupArgs build() {
-            return new GroupArgs(configuration, description, name, resourceQuery, resources, tags);
+        }
+
+        public GroupArgs build() {
+            return $;
         }
     }
+
 }

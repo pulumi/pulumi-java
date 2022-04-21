@@ -17,45 +17,45 @@ public final class GetAppImageConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="appImageConfigName", required=true)
-      private final String appImageConfigName;
+    private String appImageConfigName;
 
     public String appImageConfigName() {
         return this.appImageConfigName;
     }
 
-    public GetAppImageConfigArgs(String appImageConfigName) {
-        this.appImageConfigName = Objects.requireNonNull(appImageConfigName, "expected parameter 'appImageConfigName' to be non-null");
-    }
+    private GetAppImageConfigArgs() {}
 
-    private GetAppImageConfigArgs() {
-        this.appImageConfigName = null;
+    private GetAppImageConfigArgs(GetAppImageConfigArgs $) {
+        this.appImageConfigName = $.appImageConfigName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppImageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appImageConfigName;
+        private GetAppImageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppImageConfigArgs();
         }
 
         public Builder(GetAppImageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appImageConfigName = defaults.appImageConfigName;
+            $ = new GetAppImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appImageConfigName(String appImageConfigName) {
-            this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
+            $.appImageConfigName = appImageConfigName;
             return this;
-        }        public GetAppImageConfigArgs build() {
-            return new GetAppImageConfigArgs(appImageConfigName);
+        }
+
+        public GetAppImageConfigArgs build() {
+            $.appImageConfigName = Objects.requireNonNull($.appImageConfigName, "expected parameter 'appImageConfigName' to be non-null");
+            return $;
         }
     }
+
 }

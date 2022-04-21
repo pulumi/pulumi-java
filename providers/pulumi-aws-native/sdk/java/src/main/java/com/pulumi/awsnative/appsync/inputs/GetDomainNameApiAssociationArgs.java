@@ -13,45 +13,45 @@ public final class GetDomainNameApiAssociationArgs extends com.pulumi.resources.
     public static final GetDomainNameApiAssociationArgs Empty = new GetDomainNameApiAssociationArgs();
 
     @Import(name="apiAssociationIdentifier", required=true)
-      private final String apiAssociationIdentifier;
+    private String apiAssociationIdentifier;
 
     public String apiAssociationIdentifier() {
         return this.apiAssociationIdentifier;
     }
 
-    public GetDomainNameApiAssociationArgs(String apiAssociationIdentifier) {
-        this.apiAssociationIdentifier = Objects.requireNonNull(apiAssociationIdentifier, "expected parameter 'apiAssociationIdentifier' to be non-null");
-    }
+    private GetDomainNameApiAssociationArgs() {}
 
-    private GetDomainNameApiAssociationArgs() {
-        this.apiAssociationIdentifier = null;
+    private GetDomainNameApiAssociationArgs(GetDomainNameApiAssociationArgs $) {
+        this.apiAssociationIdentifier = $.apiAssociationIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainNameApiAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiAssociationIdentifier;
+        private GetDomainNameApiAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainNameApiAssociationArgs();
         }
 
         public Builder(GetDomainNameApiAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiAssociationIdentifier = defaults.apiAssociationIdentifier;
+            $ = new GetDomainNameApiAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiAssociationIdentifier(String apiAssociationIdentifier) {
-            this.apiAssociationIdentifier = Objects.requireNonNull(apiAssociationIdentifier);
+            $.apiAssociationIdentifier = apiAssociationIdentifier;
             return this;
-        }        public GetDomainNameApiAssociationArgs build() {
-            return new GetDomainNameApiAssociationArgs(apiAssociationIdentifier);
+        }
+
+        public GetDomainNameApiAssociationArgs build() {
+            $.apiAssociationIdentifier = Objects.requireNonNull($.apiAssociationIdentifier, "expected parameter 'apiAssociationIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

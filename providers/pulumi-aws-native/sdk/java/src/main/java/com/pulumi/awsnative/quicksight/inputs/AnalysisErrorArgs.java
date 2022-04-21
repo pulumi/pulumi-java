@@ -6,9 +6,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.enums.AnalysisErrorType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,65 @@ public final class AnalysisErrorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="type")
-      private final @Nullable Output<AnalysisErrorType> type;
+    private @Nullable Output<AnalysisErrorType> type;
 
-    public Output<AnalysisErrorType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<AnalysisErrorType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AnalysisErrorArgs(
-        @Nullable Output<String> message,
-        @Nullable Output<AnalysisErrorType> type) {
-        this.message = message;
-        this.type = type;
-    }
+    private AnalysisErrorArgs() {}
 
-    private AnalysisErrorArgs() {
-        this.message = Codegen.empty();
-        this.type = Codegen.empty();
+    private AnalysisErrorArgs(AnalysisErrorArgs $) {
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> message;
-        private @Nullable Output<AnalysisErrorType> type;
+        private AnalysisErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisErrorArgs();
         }
 
         public Builder(AnalysisErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new AnalysisErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder type(@Nullable Output<AnalysisErrorType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable AnalysisErrorType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AnalysisErrorArgs build() {
-            return new AnalysisErrorArgs(message, type);
+
+        public Builder type(AnalysisErrorType type) {
+            return type(Output.of(type));
+        }
+
+        public AnalysisErrorArgs build() {
+            return $;
         }
     }
+
 }

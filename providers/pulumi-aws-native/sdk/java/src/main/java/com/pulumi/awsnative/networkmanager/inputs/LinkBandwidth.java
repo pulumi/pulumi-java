@@ -23,10 +23,10 @@ public final class LinkBandwidth extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="downloadSpeed")
-      private final @Nullable Integer downloadSpeed;
+    private @Nullable Integer downloadSpeed;
 
     public Optional<Integer> downloadSpeed() {
-        return this.downloadSpeed == null ? Optional.empty() : Optional.ofNullable(this.downloadSpeed);
+        return Optional.ofNullable(this.downloadSpeed);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class LinkBandwidth extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uploadSpeed")
-      private final @Nullable Integer uploadSpeed;
+    private @Nullable Integer uploadSpeed;
 
     public Optional<Integer> uploadSpeed() {
-        return this.uploadSpeed == null ? Optional.empty() : Optional.ofNullable(this.uploadSpeed);
+        return Optional.ofNullable(this.uploadSpeed);
     }
 
-    public LinkBandwidth(
-        @Nullable Integer downloadSpeed,
-        @Nullable Integer uploadSpeed) {
-        this.downloadSpeed = downloadSpeed;
-        this.uploadSpeed = uploadSpeed;
-    }
+    private LinkBandwidth() {}
 
-    private LinkBandwidth() {
-        this.downloadSpeed = null;
-        this.uploadSpeed = null;
+    private LinkBandwidth(LinkBandwidth $) {
+        this.downloadSpeed = $.downloadSpeed;
+        this.uploadSpeed = $.uploadSpeed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkBandwidth defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer downloadSpeed;
-        private @Nullable Integer uploadSpeed;
+        private LinkBandwidth $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkBandwidth();
         }
 
         public Builder(LinkBandwidth defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.downloadSpeed = defaults.downloadSpeed;
-    	      this.uploadSpeed = defaults.uploadSpeed;
+            $ = new LinkBandwidth(Objects.requireNonNull(defaults));
         }
 
         public Builder downloadSpeed(@Nullable Integer downloadSpeed) {
-            this.downloadSpeed = downloadSpeed;
+            $.downloadSpeed = downloadSpeed;
             return this;
         }
+
         public Builder uploadSpeed(@Nullable Integer uploadSpeed) {
-            this.uploadSpeed = uploadSpeed;
+            $.uploadSpeed = uploadSpeed;
             return this;
-        }        public LinkBandwidth build() {
-            return new LinkBandwidth(downloadSpeed, uploadSpeed);
+        }
+
+        public LinkBandwidth build() {
+            return $;
         }
     }
+
 }

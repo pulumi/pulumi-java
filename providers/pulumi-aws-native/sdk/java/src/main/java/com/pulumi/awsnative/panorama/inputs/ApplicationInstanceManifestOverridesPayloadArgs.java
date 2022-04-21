@@ -5,9 +5,9 @@ package com.pulumi.awsnative.panorama.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends com.p
     public static final ApplicationInstanceManifestOverridesPayloadArgs Empty = new ApplicationInstanceManifestOverridesPayloadArgs();
 
     @Import(name="payloadData")
-      private final @Nullable Output<String> payloadData;
+    private @Nullable Output<String> payloadData;
 
-    public Output<String> payloadData() {
-        return this.payloadData == null ? Codegen.empty() : this.payloadData;
+    public Optional<Output<String>> payloadData() {
+        return Optional.ofNullable(this.payloadData);
     }
 
-    public ApplicationInstanceManifestOverridesPayloadArgs(@Nullable Output<String> payloadData) {
-        this.payloadData = payloadData;
-    }
+    private ApplicationInstanceManifestOverridesPayloadArgs() {}
 
-    private ApplicationInstanceManifestOverridesPayloadArgs() {
-        this.payloadData = Codegen.empty();
+    private ApplicationInstanceManifestOverridesPayloadArgs(ApplicationInstanceManifestOverridesPayloadArgs $) {
+        this.payloadData = $.payloadData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInstanceManifestOverridesPayloadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> payloadData;
+        private ApplicationInstanceManifestOverridesPayloadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInstanceManifestOverridesPayloadArgs();
         }
 
         public Builder(ApplicationInstanceManifestOverridesPayloadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payloadData = defaults.payloadData;
+            $ = new ApplicationInstanceManifestOverridesPayloadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder payloadData(@Nullable Output<String> payloadData) {
-            this.payloadData = payloadData;
+            $.payloadData = payloadData;
             return this;
         }
-        public Builder payloadData(@Nullable String payloadData) {
-            this.payloadData = Codegen.ofNullable(payloadData);
-            return this;
-        }        public ApplicationInstanceManifestOverridesPayloadArgs build() {
-            return new ApplicationInstanceManifestOverridesPayloadArgs(payloadData);
+
+        public Builder payloadData(String payloadData) {
+            return payloadData(Output.of(payloadData));
+        }
+
+        public ApplicationInstanceManifestOverridesPayloadArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,12 +7,12 @@ import com.pulumi.awsnative.iam.inputs.RolePolicyArgs;
 import com.pulumi.awsnative.iam.inputs.RoleTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assumeRolePolicyDocument", required=true)
-      private final Output<Object> assumeRolePolicyDocument;
+    private Output<Object> assumeRolePolicyDocument;
 
     public Output<Object> assumeRolePolicyDocument() {
         return this.assumeRolePolicyDocument;
@@ -36,10 +36,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedPolicyArns")
-      private final @Nullable Output<List<String>> managedPolicyArns;
+    private @Nullable Output<List<String>> managedPolicyArns;
 
-    public Output<List<String>> managedPolicyArns() {
-        return this.managedPolicyArns == null ? Codegen.empty() : this.managedPolicyArns;
+    public Optional<Output<List<String>>> managedPolicyArns() {
+        return Optional.ofNullable(this.managedPolicyArns);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSessionDuration")
-      private final @Nullable Output<Integer> maxSessionDuration;
+    private @Nullable Output<Integer> maxSessionDuration;
 
-    public Output<Integer> maxSessionDuration() {
-        return this.maxSessionDuration == null ? Codegen.empty() : this.maxSessionDuration;
+    public Optional<Output<Integer>> maxSessionDuration() {
+        return Optional.ofNullable(this.maxSessionDuration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionsBoundary")
-      private final @Nullable Output<String> permissionsBoundary;
+    private @Nullable Output<String> permissionsBoundary;
 
-    public Output<String> permissionsBoundary() {
-        return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
+    public Optional<Output<String>> permissionsBoundary() {
+        return Optional.ofNullable(this.permissionsBoundary);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<List<RolePolicyArgs>> policies;
+    private @Nullable Output<List<RolePolicyArgs>> policies;
 
-    public Output<List<RolePolicyArgs>> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<List<RolePolicyArgs>>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleName")
-      private final @Nullable Output<String> roleName;
+    private @Nullable Output<String> roleName;
 
-    public Output<String> roleName() {
-        return this.roleName == null ? Codegen.empty() : this.roleName;
+    public Optional<Output<String>> roleName() {
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -113,163 +113,141 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RoleTagArgs>> tags;
+    private @Nullable Output<List<RoleTagArgs>> tags;
 
-    public Output<List<RoleTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RoleTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RoleArgs(
-        Output<Object> assumeRolePolicyDocument,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> managedPolicyArns,
-        @Nullable Output<Integer> maxSessionDuration,
-        @Nullable Output<String> path,
-        @Nullable Output<String> permissionsBoundary,
-        @Nullable Output<List<RolePolicyArgs>> policies,
-        @Nullable Output<String> roleName,
-        @Nullable Output<List<RoleTagArgs>> tags) {
-        this.assumeRolePolicyDocument = Objects.requireNonNull(assumeRolePolicyDocument, "expected parameter 'assumeRolePolicyDocument' to be non-null");
-        this.description = description;
-        this.managedPolicyArns = managedPolicyArns;
-        this.maxSessionDuration = maxSessionDuration;
-        this.path = path;
-        this.permissionsBoundary = permissionsBoundary;
-        this.policies = policies;
-        this.roleName = roleName;
-        this.tags = tags;
-    }
+    private RoleArgs() {}
 
-    private RoleArgs() {
-        this.assumeRolePolicyDocument = Codegen.empty();
-        this.description = Codegen.empty();
-        this.managedPolicyArns = Codegen.empty();
-        this.maxSessionDuration = Codegen.empty();
-        this.path = Codegen.empty();
-        this.permissionsBoundary = Codegen.empty();
-        this.policies = Codegen.empty();
-        this.roleName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RoleArgs(RoleArgs $) {
+        this.assumeRolePolicyDocument = $.assumeRolePolicyDocument;
+        this.description = $.description;
+        this.managedPolicyArns = $.managedPolicyArns;
+        this.maxSessionDuration = $.maxSessionDuration;
+        this.path = $.path;
+        this.permissionsBoundary = $.permissionsBoundary;
+        this.policies = $.policies;
+        this.roleName = $.roleName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> assumeRolePolicyDocument;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> managedPolicyArns;
-        private @Nullable Output<Integer> maxSessionDuration;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> permissionsBoundary;
-        private @Nullable Output<List<RolePolicyArgs>> policies;
-        private @Nullable Output<String> roleName;
-        private @Nullable Output<List<RoleTagArgs>> tags;
+        private RoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleArgs();
         }
 
         public Builder(RoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assumeRolePolicyDocument = defaults.assumeRolePolicyDocument;
-    	      this.description = defaults.description;
-    	      this.managedPolicyArns = defaults.managedPolicyArns;
-    	      this.maxSessionDuration = defaults.maxSessionDuration;
-    	      this.path = defaults.path;
-    	      this.permissionsBoundary = defaults.permissionsBoundary;
-    	      this.policies = defaults.policies;
-    	      this.roleName = defaults.roleName;
-    	      this.tags = defaults.tags;
+            $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assumeRolePolicyDocument(Output<Object> assumeRolePolicyDocument) {
-            this.assumeRolePolicyDocument = Objects.requireNonNull(assumeRolePolicyDocument);
+            $.assumeRolePolicyDocument = assumeRolePolicyDocument;
             return this;
         }
+
         public Builder assumeRolePolicyDocument(Object assumeRolePolicyDocument) {
-            this.assumeRolePolicyDocument = Output.of(Objects.requireNonNull(assumeRolePolicyDocument));
-            return this;
+            return assumeRolePolicyDocument(Output.of(assumeRolePolicyDocument));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
-            this.managedPolicyArns = managedPolicyArns;
+            $.managedPolicyArns = managedPolicyArns;
             return this;
         }
-        public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
-            this.managedPolicyArns = Codegen.ofNullable(managedPolicyArns);
-            return this;
+
+        public Builder managedPolicyArns(List<String> managedPolicyArns) {
+            return managedPolicyArns(Output.of(managedPolicyArns));
         }
+
         public Builder managedPolicyArns(String... managedPolicyArns) {
             return managedPolicyArns(List.of(managedPolicyArns));
         }
+
         public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
-            this.maxSessionDuration = maxSessionDuration;
+            $.maxSessionDuration = maxSessionDuration;
             return this;
         }
-        public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
-            this.maxSessionDuration = Codegen.ofNullable(maxSessionDuration);
-            return this;
+
+        public Builder maxSessionDuration(Integer maxSessionDuration) {
+            return maxSessionDuration(Output.of(maxSessionDuration));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
-            this.permissionsBoundary = permissionsBoundary;
+            $.permissionsBoundary = permissionsBoundary;
             return this;
         }
-        public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
-            this.permissionsBoundary = Codegen.ofNullable(permissionsBoundary);
-            return this;
+
+        public Builder permissionsBoundary(String permissionsBoundary) {
+            return permissionsBoundary(Output.of(permissionsBoundary));
         }
+
         public Builder policies(@Nullable Output<List<RolePolicyArgs>> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable List<RolePolicyArgs> policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
+
+        public Builder policies(List<RolePolicyArgs> policies) {
+            return policies(Output.of(policies));
         }
+
         public Builder policies(RolePolicyArgs... policies) {
             return policies(List.of(policies));
         }
+
         public Builder roleName(@Nullable Output<String> roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
-        public Builder roleName(@Nullable String roleName) {
-            this.roleName = Codegen.ofNullable(roleName);
-            return this;
+
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
+
         public Builder tags(@Nullable Output<List<RoleTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RoleTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RoleTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RoleTagArgs... tags) {
             return tags(List.of(tags));
-        }        public RoleArgs build() {
-            return new RoleArgs(assumeRolePolicyDocument, description, managedPolicyArns, maxSessionDuration, path, permissionsBoundary, policies, roleName, tags);
+        }
+
+        public RoleArgs build() {
+            $.assumeRolePolicyDocument = Objects.requireNonNull($.assumeRolePolicyDocument, "expected parameter 'assumeRolePolicyDocument' to be non-null");
+            return $;
         }
     }
+
 }

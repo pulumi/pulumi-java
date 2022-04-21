@@ -19,45 +19,44 @@ public final class AssessmentAWSService extends com.pulumi.resources.InvokeArgs 
     public static final AssessmentAWSService Empty = new AssessmentAWSService();
 
     @Import(name="serviceName")
-      private final @Nullable String serviceName;
+    private @Nullable String serviceName;
 
     public Optional<String> serviceName() {
-        return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
+        return Optional.ofNullable(this.serviceName);
     }
 
-    public AssessmentAWSService(@Nullable String serviceName) {
-        this.serviceName = serviceName;
-    }
+    private AssessmentAWSService() {}
 
-    private AssessmentAWSService() {
-        this.serviceName = null;
+    private AssessmentAWSService(AssessmentAWSService $) {
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentAWSService defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String serviceName;
+        private AssessmentAWSService $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentAWSService();
         }
 
         public Builder(AssessmentAWSService defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceName = defaults.serviceName;
+            $ = new AssessmentAWSService(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
-        }        public AssessmentAWSService build() {
-            return new AssessmentAWSService(serviceName);
+        }
+
+        public AssessmentAWSService build() {
+            return $;
         }
     }
+
 }

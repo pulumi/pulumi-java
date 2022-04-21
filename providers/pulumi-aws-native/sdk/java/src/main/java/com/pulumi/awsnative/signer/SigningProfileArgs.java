@@ -8,9 +8,9 @@ import com.pulumi.awsnative.signer.inputs.SigningProfileSignatureValidityPeriodA
 import com.pulumi.awsnative.signer.inputs.SigningProfileTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="platformId", required=true)
-      private final Output<SigningProfilePlatformId> platformId;
+    private Output<SigningProfilePlatformId> platformId;
 
     public Output<SigningProfilePlatformId> platformId() {
         return this.platformId;
@@ -34,10 +34,10 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="signatureValidityPeriod")
-      private final @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
+    private @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
-    public Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod() {
-        return this.signatureValidityPeriod == null ? Codegen.empty() : this.signatureValidityPeriod;
+    public Optional<Output<SigningProfileSignatureValidityPeriodArgs>> signatureValidityPeriod() {
+        return Optional.ofNullable(this.signatureValidityPeriod);
     }
 
     /**
@@ -45,79 +45,73 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<SigningProfileTagArgs>> tags;
+    private @Nullable Output<List<SigningProfileTagArgs>> tags;
 
-    public Output<List<SigningProfileTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<SigningProfileTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SigningProfileArgs(
-        Output<SigningProfilePlatformId> platformId,
-        @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod,
-        @Nullable Output<List<SigningProfileTagArgs>> tags) {
-        this.platformId = Objects.requireNonNull(platformId, "expected parameter 'platformId' to be non-null");
-        this.signatureValidityPeriod = signatureValidityPeriod;
-        this.tags = tags;
-    }
+    private SigningProfileArgs() {}
 
-    private SigningProfileArgs() {
-        this.platformId = Codegen.empty();
-        this.signatureValidityPeriod = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SigningProfileArgs(SigningProfileArgs $) {
+        this.platformId = $.platformId;
+        this.signatureValidityPeriod = $.signatureValidityPeriod;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SigningProfilePlatformId> platformId;
-        private @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
-        private @Nullable Output<List<SigningProfileTagArgs>> tags;
+        private SigningProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningProfileArgs();
         }
 
         public Builder(SigningProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.platformId = defaults.platformId;
-    	      this.signatureValidityPeriod = defaults.signatureValidityPeriod;
-    	      this.tags = defaults.tags;
+            $ = new SigningProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder platformId(Output<SigningProfilePlatformId> platformId) {
-            this.platformId = Objects.requireNonNull(platformId);
+            $.platformId = platformId;
             return this;
         }
+
         public Builder platformId(SigningProfilePlatformId platformId) {
-            this.platformId = Output.of(Objects.requireNonNull(platformId));
-            return this;
+            return platformId(Output.of(platformId));
         }
+
         public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
-            this.signatureValidityPeriod = signatureValidityPeriod;
+            $.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
-        public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
-            this.signatureValidityPeriod = Codegen.ofNullable(signatureValidityPeriod);
-            return this;
+
+        public Builder signatureValidityPeriod(SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
+            return signatureValidityPeriod(Output.of(signatureValidityPeriod));
         }
+
         public Builder tags(@Nullable Output<List<SigningProfileTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<SigningProfileTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<SigningProfileTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(SigningProfileTagArgs... tags) {
             return tags(List.of(tags));
-        }        public SigningProfileArgs build() {
-            return new SigningProfileArgs(platformId, signatureValidityPeriod, tags);
+        }
+
+        public SigningProfileArgs build() {
+            $.platformId = Objects.requireNonNull($.platformId, "expected parameter 'platformId' to be non-null");
+            return $;
         }
     }
+
 }

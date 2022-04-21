@@ -13,45 +13,45 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
     public static final GetInstanceProfileArgs Empty = new GetInstanceProfileArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetInstanceProfileArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetInstanceProfileArgs() {}
 
-    private GetInstanceProfileArgs() {
-        this.arn = null;
+    private GetInstanceProfileArgs(GetInstanceProfileArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetInstanceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceProfileArgs();
         }
 
         public Builder(GetInstanceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetInstanceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetInstanceProfileArgs build() {
-            return new GetInstanceProfileArgs(arn);
+        }
+
+        public GetInstanceProfileArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

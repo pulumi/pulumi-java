@@ -8,10 +8,10 @@ import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifes
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,17 +28,17 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
      * 
      */
     @Import(name="manifestLayout")
-      private final @Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
+    private @Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
 
-    public Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout() {
-        return this.manifestLayout == null ? Codegen.empty() : this.manifestLayout;
+    public Optional<Output<PackagingConfigurationDashManifestManifestLayout>> manifestLayout() {
+        return Optional.ofNullable(this.manifestLayout);
     }
 
     @Import(name="manifestName")
-      private final @Nullable Output<String> manifestName;
+    private @Nullable Output<String> manifestName;
 
-    public Output<String> manifestName() {
-        return this.manifestName == null ? Codegen.empty() : this.manifestName;
+    public Optional<Output<String>> manifestName() {
+        return Optional.ofNullable(this.manifestName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
      * 
      */
     @Import(name="minBufferTimeSeconds")
-      private final @Nullable Output<Integer> minBufferTimeSeconds;
+    private @Nullable Output<Integer> minBufferTimeSeconds;
 
-    public Output<Integer> minBufferTimeSeconds() {
-        return this.minBufferTimeSeconds == null ? Codegen.empty() : this.minBufferTimeSeconds;
+    public Optional<Output<Integer>> minBufferTimeSeconds() {
+        return Optional.ofNullable(this.minBufferTimeSeconds);
     }
 
     /**
@@ -57,109 +57,95 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<PackagingConfigurationDashManifestProfile> profile;
+    private @Nullable Output<PackagingConfigurationDashManifestProfile> profile;
 
-    public Output<PackagingConfigurationDashManifestProfile> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<PackagingConfigurationDashManifestProfile>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
+    private @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
-    public Output<PackagingConfigurationStreamSelectionArgs> streamSelection() {
-        return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
+    public Optional<Output<PackagingConfigurationStreamSelectionArgs>> streamSelection() {
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public PackagingConfigurationDashManifestArgs(
-        @Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout,
-        @Nullable Output<String> manifestName,
-        @Nullable Output<Integer> minBufferTimeSeconds,
-        @Nullable Output<PackagingConfigurationDashManifestProfile> profile,
-        @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
-        this.manifestLayout = manifestLayout;
-        this.manifestName = manifestName;
-        this.minBufferTimeSeconds = minBufferTimeSeconds;
-        this.profile = profile;
-        this.streamSelection = streamSelection;
-    }
+    private PackagingConfigurationDashManifestArgs() {}
 
-    private PackagingConfigurationDashManifestArgs() {
-        this.manifestLayout = Codegen.empty();
-        this.manifestName = Codegen.empty();
-        this.minBufferTimeSeconds = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.streamSelection = Codegen.empty();
+    private PackagingConfigurationDashManifestArgs(PackagingConfigurationDashManifestArgs $) {
+        this.manifestLayout = $.manifestLayout;
+        this.manifestName = $.manifestName;
+        this.minBufferTimeSeconds = $.minBufferTimeSeconds;
+        this.profile = $.profile;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationDashManifestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
-        private @Nullable Output<String> manifestName;
-        private @Nullable Output<Integer> minBufferTimeSeconds;
-        private @Nullable Output<PackagingConfigurationDashManifestProfile> profile;
-        private @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
+        private PackagingConfigurationDashManifestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationDashManifestArgs();
         }
 
         public Builder(PackagingConfigurationDashManifestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manifestLayout = defaults.manifestLayout;
-    	      this.manifestName = defaults.manifestName;
-    	      this.minBufferTimeSeconds = defaults.minBufferTimeSeconds;
-    	      this.profile = defaults.profile;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new PackagingConfigurationDashManifestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder manifestLayout(@Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout) {
-            this.manifestLayout = manifestLayout;
+            $.manifestLayout = manifestLayout;
             return this;
         }
-        public Builder manifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
-            this.manifestLayout = Codegen.ofNullable(manifestLayout);
-            return this;
+
+        public Builder manifestLayout(PackagingConfigurationDashManifestManifestLayout manifestLayout) {
+            return manifestLayout(Output.of(manifestLayout));
         }
+
         public Builder manifestName(@Nullable Output<String> manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
-        public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Codegen.ofNullable(manifestName);
-            return this;
+
+        public Builder manifestName(String manifestName) {
+            return manifestName(Output.of(manifestName));
         }
+
         public Builder minBufferTimeSeconds(@Nullable Output<Integer> minBufferTimeSeconds) {
-            this.minBufferTimeSeconds = minBufferTimeSeconds;
+            $.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
-        public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
-            this.minBufferTimeSeconds = Codegen.ofNullable(minBufferTimeSeconds);
-            return this;
+
+        public Builder minBufferTimeSeconds(Integer minBufferTimeSeconds) {
+            return minBufferTimeSeconds(Output.of(minBufferTimeSeconds));
         }
+
         public Builder profile(@Nullable Output<PackagingConfigurationDashManifestProfile> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable PackagingConfigurationDashManifestProfile profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(PackagingConfigurationDashManifestProfile profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
         }
-        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
-            this.streamSelection = Codegen.ofNullable(streamSelection);
-            return this;
-        }        public PackagingConfigurationDashManifestArgs build() {
-            return new PackagingConfigurationDashManifestArgs(manifestLayout, manifestName, minBufferTimeSeconds, profile, streamSelection);
+
+        public Builder streamSelection(PackagingConfigurationStreamSelectionArgs streamSelection) {
+            return streamSelection(Output.of(streamSelection));
+        }
+
+        public PackagingConfigurationDashManifestArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBotAliasArgs Empty = new GetBotAliasArgs();
 
     @Import(name="botAliasId", required=true)
-      private final String botAliasId;
+    private String botAliasId;
 
     public String botAliasId() {
         return this.botAliasId;
     }
 
     @Import(name="botId", required=true)
-      private final String botId;
+    private String botId;
 
     public String botId() {
         return this.botId;
     }
 
-    public GetBotAliasArgs(
-        String botAliasId,
-        String botId) {
-        this.botAliasId = Objects.requireNonNull(botAliasId, "expected parameter 'botAliasId' to be non-null");
-        this.botId = Objects.requireNonNull(botId, "expected parameter 'botId' to be non-null");
-    }
+    private GetBotAliasArgs() {}
 
-    private GetBotAliasArgs() {
-        this.botAliasId = null;
-        this.botId = null;
+    private GetBotAliasArgs(GetBotAliasArgs $) {
+        this.botAliasId = $.botAliasId;
+        this.botId = $.botId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBotAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String botAliasId;
-        private String botId;
+        private GetBotAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBotAliasArgs();
         }
 
         public Builder(GetBotAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botAliasId = defaults.botAliasId;
-    	      this.botId = defaults.botId;
+            $ = new GetBotAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder botAliasId(String botAliasId) {
-            this.botAliasId = Objects.requireNonNull(botAliasId);
+            $.botAliasId = botAliasId;
             return this;
         }
+
         public Builder botId(String botId) {
-            this.botId = Objects.requireNonNull(botId);
+            $.botId = botId;
             return this;
-        }        public GetBotAliasArgs build() {
-            return new GetBotAliasArgs(botAliasId, botId);
+        }
+
+        public GetBotAliasArgs build() {
+            $.botAliasId = Objects.requireNonNull($.botAliasId, "expected parameter 'botAliasId' to be non-null");
+            $.botId = Objects.requireNonNull($.botId, "expected parameter 'botId' to be non-null");
+            return $;
         }
     }
+
 }

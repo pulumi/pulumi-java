@@ -17,45 +17,45 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aliasName", required=true)
-      private final String aliasName;
+    private String aliasName;
 
     public String aliasName() {
         return this.aliasName;
     }
 
-    public GetAliasArgs(String aliasName) {
-        this.aliasName = Objects.requireNonNull(aliasName, "expected parameter 'aliasName' to be non-null");
-    }
+    private GetAliasArgs() {}
 
-    private GetAliasArgs() {
-        this.aliasName = null;
+    private GetAliasArgs(GetAliasArgs $) {
+        this.aliasName = $.aliasName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aliasName;
+        private GetAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAliasArgs();
         }
 
         public Builder(GetAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasName = defaults.aliasName;
+            $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasName(String aliasName) {
-            this.aliasName = Objects.requireNonNull(aliasName);
+            $.aliasName = aliasName;
             return this;
-        }        public GetAliasArgs build() {
-            return new GetAliasArgs(aliasName);
+        }
+
+        public GetAliasArgs build() {
+            $.aliasName = Objects.requireNonNull($.aliasName, "expected parameter 'aliasName' to be non-null");
+            return $;
         }
     }
+
 }

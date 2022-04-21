@@ -17,65 +17,61 @@ public final class ListenerRuleForwardConfig extends com.pulumi.resources.Invoke
     public static final ListenerRuleForwardConfig Empty = new ListenerRuleForwardConfig();
 
     @Import(name="targetGroupStickinessConfig")
-      private final @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig;
+    private @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig;
 
     public Optional<ListenerRuleTargetGroupStickinessConfig> targetGroupStickinessConfig() {
-        return this.targetGroupStickinessConfig == null ? Optional.empty() : Optional.ofNullable(this.targetGroupStickinessConfig);
+        return Optional.ofNullable(this.targetGroupStickinessConfig);
     }
 
     @Import(name="targetGroups")
-      private final @Nullable List<ListenerRuleTargetGroupTuple> targetGroups;
+    private @Nullable List<ListenerRuleTargetGroupTuple> targetGroups;
 
-    public List<ListenerRuleTargetGroupTuple> targetGroups() {
-        return this.targetGroups == null ? List.of() : this.targetGroups;
+    public Optional<List<ListenerRuleTargetGroupTuple>> targetGroups() {
+        return Optional.ofNullable(this.targetGroups);
     }
 
-    public ListenerRuleForwardConfig(
-        @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig,
-        @Nullable List<ListenerRuleTargetGroupTuple> targetGroups) {
-        this.targetGroupStickinessConfig = targetGroupStickinessConfig;
-        this.targetGroups = targetGroups;
-    }
+    private ListenerRuleForwardConfig() {}
 
-    private ListenerRuleForwardConfig() {
-        this.targetGroupStickinessConfig = null;
-        this.targetGroups = List.of();
+    private ListenerRuleForwardConfig(ListenerRuleForwardConfig $) {
+        this.targetGroupStickinessConfig = $.targetGroupStickinessConfig;
+        this.targetGroups = $.targetGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleForwardConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig;
-        private @Nullable List<ListenerRuleTargetGroupTuple> targetGroups;
+        private ListenerRuleForwardConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleForwardConfig();
         }
 
         public Builder(ListenerRuleForwardConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetGroupStickinessConfig = defaults.targetGroupStickinessConfig;
-    	      this.targetGroups = defaults.targetGroups;
+            $ = new ListenerRuleForwardConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder targetGroupStickinessConfig(@Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig) {
-            this.targetGroupStickinessConfig = targetGroupStickinessConfig;
+            $.targetGroupStickinessConfig = targetGroupStickinessConfig;
             return this;
         }
+
         public Builder targetGroups(@Nullable List<ListenerRuleTargetGroupTuple> targetGroups) {
-            this.targetGroups = targetGroups;
+            $.targetGroups = targetGroups;
             return this;
         }
+
         public Builder targetGroups(ListenerRuleTargetGroupTuple... targetGroups) {
             return targetGroups(List.of(targetGroups));
-        }        public ListenerRuleForwardConfig build() {
-            return new ListenerRuleForwardConfig(targetGroupStickinessConfig, targetGroups);
+        }
+
+        public ListenerRuleForwardConfig build() {
+            return $;
         }
     }
+
 }

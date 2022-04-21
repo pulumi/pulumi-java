@@ -24,10 +24,10 @@ public final class BucketSourceSelectionCriteria extends com.pulumi.resources.In
      * 
      */
     @Import(name="replicaModifications")
-      private final @Nullable BucketReplicaModifications replicaModifications;
+    private @Nullable BucketReplicaModifications replicaModifications;
 
     public Optional<BucketReplicaModifications> replicaModifications() {
-        return this.replicaModifications == null ? Optional.empty() : Optional.ofNullable(this.replicaModifications);
+        return Optional.ofNullable(this.replicaModifications);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class BucketSourceSelectionCriteria extends com.pulumi.resources.In
      * 
      */
     @Import(name="sseKmsEncryptedObjects")
-      private final @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
+    private @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
     public Optional<BucketSseKmsEncryptedObjects> sseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Optional.empty() : Optional.ofNullable(this.sseKmsEncryptedObjects);
+        return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
 
-    public BucketSourceSelectionCriteria(
-        @Nullable BucketReplicaModifications replicaModifications,
-        @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
-        this.replicaModifications = replicaModifications;
-        this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
-    }
+    private BucketSourceSelectionCriteria() {}
 
-    private BucketSourceSelectionCriteria() {
-        this.replicaModifications = null;
-        this.sseKmsEncryptedObjects = null;
+    private BucketSourceSelectionCriteria(BucketSourceSelectionCriteria $) {
+        this.replicaModifications = $.replicaModifications;
+        this.sseKmsEncryptedObjects = $.sseKmsEncryptedObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketSourceSelectionCriteria defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketReplicaModifications replicaModifications;
-        private @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
+        private BucketSourceSelectionCriteria $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketSourceSelectionCriteria();
         }
 
         public Builder(BucketSourceSelectionCriteria defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicaModifications = defaults.replicaModifications;
-    	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
+            $ = new BucketSourceSelectionCriteria(Objects.requireNonNull(defaults));
         }
 
         public Builder replicaModifications(@Nullable BucketReplicaModifications replicaModifications) {
-            this.replicaModifications = replicaModifications;
+            $.replicaModifications = replicaModifications;
             return this;
         }
+
         public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
+            $.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
-        }        public BucketSourceSelectionCriteria build() {
-            return new BucketSourceSelectionCriteria(replicaModifications, sseKmsEncryptedObjects);
+        }
+
+        public BucketSourceSelectionCriteria build() {
+            return $;
         }
     }
+
 }

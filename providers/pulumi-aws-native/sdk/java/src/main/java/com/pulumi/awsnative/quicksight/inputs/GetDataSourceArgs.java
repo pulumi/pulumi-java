@@ -13,62 +13,59 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final String awsAccountId;
+    private String awsAccountId;
 
     public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dataSourceId", required=true)
-      private final String dataSourceId;
+    private String dataSourceId;
 
     public String dataSourceId() {
         return this.dataSourceId;
     }
 
-    public GetDataSourceArgs(
-        String awsAccountId,
-        String dataSourceId) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.dataSourceId = Objects.requireNonNull(dataSourceId, "expected parameter 'dataSourceId' to be non-null");
-    }
+    private GetDataSourceArgs() {}
 
-    private GetDataSourceArgs() {
-        this.awsAccountId = null;
-        this.dataSourceId = null;
+    private GetDataSourceArgs(GetDataSourceArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.dataSourceId = $.dataSourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsAccountId;
-        private String dataSourceId;
+        private GetDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataSourceArgs();
         }
 
         public Builder(GetDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.dataSourceId = defaults.dataSourceId;
+            $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Objects.requireNonNull(dataSourceId);
+            $.dataSourceId = dataSourceId;
             return this;
-        }        public GetDataSourceArgs build() {
-            return new GetDataSourceArgs(awsAccountId, dataSourceId);
+        }
+
+        public GetDataSourceArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.dataSourceId = Objects.requireNonNull($.dataSourceId, "expected parameter 'dataSourceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditCheckConfig
 import com.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,24 +22,24 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
     }
 
     @Import(name="auditCheckConfigurations", required=true)
-      private final Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations;
+    private Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations;
 
     public Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations() {
         return this.auditCheckConfigurations;
     }
 
     @Import(name="auditNotificationTargetConfigurations")
-      private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
+    private @Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
 
-    public Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations() {
-        return this.auditNotificationTargetConfigurations == null ? Codegen.empty() : this.auditNotificationTargetConfigurations;
+    public Optional<Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs>> auditNotificationTargetConfigurations() {
+        return Optional.ofNullable(this.auditNotificationTargetConfigurations);
     }
 
     /**
@@ -47,89 +47,81 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public AccountAuditConfigurationArgs(
-        Output<String> accountId,
-        Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations,
-        @Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations,
-        Output<String> roleArn) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.auditCheckConfigurations = Objects.requireNonNull(auditCheckConfigurations, "expected parameter 'auditCheckConfigurations' to be non-null");
-        this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private AccountAuditConfigurationArgs() {}
 
-    private AccountAuditConfigurationArgs() {
-        this.accountId = Codegen.empty();
-        this.auditCheckConfigurations = Codegen.empty();
-        this.auditNotificationTargetConfigurations = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private AccountAuditConfigurationArgs(AccountAuditConfigurationArgs $) {
+        this.accountId = $.accountId;
+        this.auditCheckConfigurations = $.auditCheckConfigurations;
+        this.auditNotificationTargetConfigurations = $.auditNotificationTargetConfigurations;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAuditConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations;
-        private @Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
-        private Output<String> roleArn;
+        private AccountAuditConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAuditConfigurationArgs();
         }
 
         public Builder(AccountAuditConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.auditCheckConfigurations = defaults.auditCheckConfigurations;
-    	      this.auditNotificationTargetConfigurations = defaults.auditNotificationTargetConfigurations;
-    	      this.roleArn = defaults.roleArn;
+            $ = new AccountAuditConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder auditCheckConfigurations(Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations) {
-            this.auditCheckConfigurations = Objects.requireNonNull(auditCheckConfigurations);
+            $.auditCheckConfigurations = auditCheckConfigurations;
             return this;
         }
+
         public Builder auditCheckConfigurations(AccountAuditConfigurationAuditCheckConfigurationsArgs auditCheckConfigurations) {
-            this.auditCheckConfigurations = Output.of(Objects.requireNonNull(auditCheckConfigurations));
-            return this;
+            return auditCheckConfigurations(Output.of(auditCheckConfigurations));
         }
+
         public Builder auditNotificationTargetConfigurations(@Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations) {
-            this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
+            $.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
             return this;
         }
-        public Builder auditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs auditNotificationTargetConfigurations) {
-            this.auditNotificationTargetConfigurations = Codegen.ofNullable(auditNotificationTargetConfigurations);
-            return this;
+
+        public Builder auditNotificationTargetConfigurations(AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs auditNotificationTargetConfigurations) {
+            return auditNotificationTargetConfigurations(Output.of(auditNotificationTargetConfigurations));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public AccountAuditConfigurationArgs build() {
-            return new AccountAuditConfigurationArgs(accountId, auditCheckConfigurations, auditNotificationTargetConfigurations, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public AccountAuditConfigurationArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.auditCheckConfigurations = Objects.requireNonNull($.auditCheckConfigurations, "expected parameter 'auditCheckConfigurations' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

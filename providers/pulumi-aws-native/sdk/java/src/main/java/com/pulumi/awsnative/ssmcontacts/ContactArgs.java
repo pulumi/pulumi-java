@@ -7,7 +7,6 @@ import com.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import com.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +21,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias", required=true)
-      private final Output<String> alias;
+    private Output<String> alias;
 
     public Output<String> alias() {
         return this.alias;
@@ -33,7 +32,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -44,7 +43,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="plan", required=true)
-      private final Output<List<ContactStageArgs>> plan;
+    private Output<List<ContactStageArgs>> plan;
 
     public Output<List<ContactStageArgs>> plan() {
         return this.plan;
@@ -55,92 +54,86 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ContactType> type;
+    private Output<ContactType> type;
 
     public Output<ContactType> type() {
         return this.type;
     }
 
-    public ContactArgs(
-        Output<String> alias,
-        Output<String> displayName,
-        Output<List<ContactStageArgs>> plan,
-        Output<ContactType> type) {
-        this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.plan = Objects.requireNonNull(plan, "expected parameter 'plan' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ContactArgs() {}
 
-    private ContactArgs() {
-        this.alias = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.type = Codegen.empty();
+    private ContactArgs(ContactArgs $) {
+        this.alias = $.alias;
+        this.displayName = $.displayName;
+        this.plan = $.plan;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alias;
-        private Output<String> displayName;
-        private Output<List<ContactStageArgs>> plan;
-        private Output<ContactType> type;
+        private ContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactArgs();
         }
 
         public Builder(ContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.displayName = defaults.displayName;
-    	      this.plan = defaults.plan;
-    	      this.type = defaults.type;
+            $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(Output<String> alias) {
-            this.alias = Objects.requireNonNull(alias);
+            $.alias = alias;
             return this;
         }
+
         public Builder alias(String alias) {
-            this.alias = Output.of(Objects.requireNonNull(alias));
-            return this;
+            return alias(Output.of(alias));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder plan(Output<List<ContactStageArgs>> plan) {
-            this.plan = Objects.requireNonNull(plan);
+            $.plan = plan;
             return this;
         }
+
         public Builder plan(List<ContactStageArgs> plan) {
-            this.plan = Output.of(Objects.requireNonNull(plan));
-            return this;
+            return plan(Output.of(plan));
         }
+
         public Builder plan(ContactStageArgs... plan) {
             return plan(List.of(plan));
         }
+
         public Builder type(Output<ContactType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ContactType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ContactArgs build() {
-            return new ContactArgs(alias, displayName, plan, type);
+            return type(Output.of(type));
+        }
+
+        public ContactArgs build() {
+            $.alias = Objects.requireNonNull($.alias, "expected parameter 'alias' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.plan = Objects.requireNonNull($.plan, "expected parameter 'plan' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

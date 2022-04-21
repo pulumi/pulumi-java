@@ -6,8 +6,8 @@ package com.pulumi.awsnative.location.inputs;
 import com.pulumi.awsnative.location.enums.PlaceIndexIntendedUse;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class PlaceIndexDataSourceConfigurationArgs extends com.pulumi.reso
     public static final PlaceIndexDataSourceConfigurationArgs Empty = new PlaceIndexDataSourceConfigurationArgs();
 
     @Import(name="intendedUse")
-      private final @Nullable Output<PlaceIndexIntendedUse> intendedUse;
+    private @Nullable Output<PlaceIndexIntendedUse> intendedUse;
 
-    public Output<PlaceIndexIntendedUse> intendedUse() {
-        return this.intendedUse == null ? Codegen.empty() : this.intendedUse;
+    public Optional<Output<PlaceIndexIntendedUse>> intendedUse() {
+        return Optional.ofNullable(this.intendedUse);
     }
 
-    public PlaceIndexDataSourceConfigurationArgs(@Nullable Output<PlaceIndexIntendedUse> intendedUse) {
-        this.intendedUse = intendedUse;
-    }
+    private PlaceIndexDataSourceConfigurationArgs() {}
 
-    private PlaceIndexDataSourceConfigurationArgs() {
-        this.intendedUse = Codegen.empty();
+    private PlaceIndexDataSourceConfigurationArgs(PlaceIndexDataSourceConfigurationArgs $) {
+        this.intendedUse = $.intendedUse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlaceIndexDataSourceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PlaceIndexIntendedUse> intendedUse;
+        private PlaceIndexDataSourceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlaceIndexDataSourceConfigurationArgs();
         }
 
         public Builder(PlaceIndexDataSourceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intendedUse = defaults.intendedUse;
+            $ = new PlaceIndexDataSourceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder intendedUse(@Nullable Output<PlaceIndexIntendedUse> intendedUse) {
-            this.intendedUse = intendedUse;
+            $.intendedUse = intendedUse;
             return this;
         }
-        public Builder intendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
-            this.intendedUse = Codegen.ofNullable(intendedUse);
-            return this;
-        }        public PlaceIndexDataSourceConfigurationArgs build() {
-            return new PlaceIndexDataSourceConfigurationArgs(intendedUse);
+
+        public Builder intendedUse(PlaceIndexIntendedUse intendedUse) {
+            return intendedUse(Output.of(intendedUse));
+        }
+
+        public PlaceIndexDataSourceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

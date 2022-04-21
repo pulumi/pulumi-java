@@ -23,10 +23,10 @@ public final class ServiceAuthenticationConfiguration extends com.pulumi.resourc
      * 
      */
     @Import(name="accessRoleArn")
-      private final @Nullable String accessRoleArn;
+    private @Nullable String accessRoleArn;
 
     public Optional<String> accessRoleArn() {
-        return this.accessRoleArn == null ? Optional.empty() : Optional.ofNullable(this.accessRoleArn);
+        return Optional.ofNullable(this.accessRoleArn);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ServiceAuthenticationConfiguration extends com.pulumi.resourc
      * 
      */
     @Import(name="connectionArn")
-      private final @Nullable String connectionArn;
+    private @Nullable String connectionArn;
 
     public Optional<String> connectionArn() {
-        return this.connectionArn == null ? Optional.empty() : Optional.ofNullable(this.connectionArn);
+        return Optional.ofNullable(this.connectionArn);
     }
 
-    public ServiceAuthenticationConfiguration(
-        @Nullable String accessRoleArn,
-        @Nullable String connectionArn) {
-        this.accessRoleArn = accessRoleArn;
-        this.connectionArn = connectionArn;
-    }
+    private ServiceAuthenticationConfiguration() {}
 
-    private ServiceAuthenticationConfiguration() {
-        this.accessRoleArn = null;
-        this.connectionArn = null;
+    private ServiceAuthenticationConfiguration(ServiceAuthenticationConfiguration $) {
+        this.accessRoleArn = $.accessRoleArn;
+        this.connectionArn = $.connectionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAuthenticationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessRoleArn;
-        private @Nullable String connectionArn;
+        private ServiceAuthenticationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAuthenticationConfiguration();
         }
 
         public Builder(ServiceAuthenticationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessRoleArn = defaults.accessRoleArn;
-    	      this.connectionArn = defaults.connectionArn;
+            $ = new ServiceAuthenticationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder accessRoleArn(@Nullable String accessRoleArn) {
-            this.accessRoleArn = accessRoleArn;
+            $.accessRoleArn = accessRoleArn;
             return this;
         }
+
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = connectionArn;
+            $.connectionArn = connectionArn;
             return this;
-        }        public ServiceAuthenticationConfiguration build() {
-            return new ServiceAuthenticationConfiguration(accessRoleArn, connectionArn);
+        }
+
+        public ServiceAuthenticationConfiguration build() {
+            return $;
         }
     }
+
 }

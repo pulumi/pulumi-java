@@ -21,45 +21,45 @@ public final class MitigationActionPublishFindingToSnsParams extends com.pulumi.
      * 
      */
     @Import(name="topicArn", required=true)
-      private final String topicArn;
+    private String topicArn;
 
     public String topicArn() {
         return this.topicArn;
     }
 
-    public MitigationActionPublishFindingToSnsParams(String topicArn) {
-        this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
-    }
+    private MitigationActionPublishFindingToSnsParams() {}
 
-    private MitigationActionPublishFindingToSnsParams() {
-        this.topicArn = null;
+    private MitigationActionPublishFindingToSnsParams(MitigationActionPublishFindingToSnsParams $) {
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionPublishFindingToSnsParams defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String topicArn;
+        private MitigationActionPublishFindingToSnsParams $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionPublishFindingToSnsParams();
         }
 
         public Builder(MitigationActionPublishFindingToSnsParams defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topicArn = defaults.topicArn;
+            $ = new MitigationActionPublishFindingToSnsParams(Objects.requireNonNull(defaults));
         }
 
         public Builder topicArn(String topicArn) {
-            this.topicArn = Objects.requireNonNull(topicArn);
+            $.topicArn = topicArn;
             return this;
-        }        public MitigationActionPublishFindingToSnsParams build() {
-            return new MitigationActionPublishFindingToSnsParams(topicArn);
+        }
+
+        public MitigationActionPublishFindingToSnsParams build() {
+            $.topicArn = Objects.requireNonNull($.topicArn, "expected parameter 'topicArn' to be non-null");
+            return $;
         }
     }
+
 }

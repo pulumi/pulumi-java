@@ -15,62 +15,57 @@ public final class ServiceKeyValuePair extends com.pulumi.resources.InvokeArgs {
     public static final ServiceKeyValuePair Empty = new ServiceKeyValuePair();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ServiceKeyValuePair(
-        @Nullable String name,
-        @Nullable String value) {
-        this.name = name;
-        this.value = value;
-    }
+    private ServiceKeyValuePair() {}
 
-    private ServiceKeyValuePair() {
-        this.name = null;
-        this.value = null;
+    private ServiceKeyValuePair(ServiceKeyValuePair $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceKeyValuePair defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String value;
+        private ServiceKeyValuePair $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceKeyValuePair();
         }
 
         public Builder(ServiceKeyValuePair defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new ServiceKeyValuePair(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ServiceKeyValuePair build() {
-            return new ServiceKeyValuePair(name, value);
+        }
+
+        public ServiceKeyValuePair build() {
+            return $;
         }
     }
+
 }

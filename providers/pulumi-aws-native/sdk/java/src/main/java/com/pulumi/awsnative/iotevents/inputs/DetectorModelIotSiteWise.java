@@ -24,10 +24,10 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="assetId")
-      private final @Nullable String assetId;
+    private @Nullable String assetId;
 
     public Optional<String> assetId() {
-        return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
+        return Optional.ofNullable(this.assetId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="entryId")
-      private final @Nullable String entryId;
+    private @Nullable String entryId;
 
     public Optional<String> entryId() {
-        return this.entryId == null ? Optional.empty() : Optional.ofNullable(this.entryId);
+        return Optional.ofNullable(this.entryId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="propertyAlias")
-      private final @Nullable String propertyAlias;
+    private @Nullable String propertyAlias;
 
     public Optional<String> propertyAlias() {
-        return this.propertyAlias == null ? Optional.empty() : Optional.ofNullable(this.propertyAlias);
+        return Optional.ofNullable(this.propertyAlias);
     }
 
     /**
@@ -57,89 +57,76 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="propertyId")
-      private final @Nullable String propertyId;
+    private @Nullable String propertyId;
 
     public Optional<String> propertyId() {
-        return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
+        return Optional.ofNullable(this.propertyId);
     }
 
     @Import(name="propertyValue", required=true)
-      private final DetectorModelAssetPropertyValue propertyValue;
+    private DetectorModelAssetPropertyValue propertyValue;
 
     public DetectorModelAssetPropertyValue propertyValue() {
         return this.propertyValue;
     }
 
-    public DetectorModelIotSiteWise(
-        @Nullable String assetId,
-        @Nullable String entryId,
-        @Nullable String propertyAlias,
-        @Nullable String propertyId,
-        DetectorModelAssetPropertyValue propertyValue) {
-        this.assetId = assetId;
-        this.entryId = entryId;
-        this.propertyAlias = propertyAlias;
-        this.propertyId = propertyId;
-        this.propertyValue = Objects.requireNonNull(propertyValue, "expected parameter 'propertyValue' to be non-null");
-    }
+    private DetectorModelIotSiteWise() {}
 
-    private DetectorModelIotSiteWise() {
-        this.assetId = null;
-        this.entryId = null;
-        this.propertyAlias = null;
-        this.propertyId = null;
-        this.propertyValue = null;
+    private DetectorModelIotSiteWise(DetectorModelIotSiteWise $) {
+        this.assetId = $.assetId;
+        this.entryId = $.entryId;
+        this.propertyAlias = $.propertyAlias;
+        this.propertyId = $.propertyId;
+        this.propertyValue = $.propertyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelIotSiteWise defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assetId;
-        private @Nullable String entryId;
-        private @Nullable String propertyAlias;
-        private @Nullable String propertyId;
-        private DetectorModelAssetPropertyValue propertyValue;
+        private DetectorModelIotSiteWise $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelIotSiteWise();
         }
 
         public Builder(DetectorModelIotSiteWise defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetId = defaults.assetId;
-    	      this.entryId = defaults.entryId;
-    	      this.propertyAlias = defaults.propertyAlias;
-    	      this.propertyId = defaults.propertyId;
-    	      this.propertyValue = defaults.propertyValue;
+            $ = new DetectorModelIotSiteWise(Objects.requireNonNull(defaults));
         }
 
         public Builder assetId(@Nullable String assetId) {
-            this.assetId = assetId;
+            $.assetId = assetId;
             return this;
         }
+
         public Builder entryId(@Nullable String entryId) {
-            this.entryId = entryId;
+            $.entryId = entryId;
             return this;
         }
+
         public Builder propertyAlias(@Nullable String propertyAlias) {
-            this.propertyAlias = propertyAlias;
+            $.propertyAlias = propertyAlias;
             return this;
         }
+
         public Builder propertyId(@Nullable String propertyId) {
-            this.propertyId = propertyId;
+            $.propertyId = propertyId;
             return this;
         }
+
         public Builder propertyValue(DetectorModelAssetPropertyValue propertyValue) {
-            this.propertyValue = Objects.requireNonNull(propertyValue);
+            $.propertyValue = propertyValue;
             return this;
-        }        public DetectorModelIotSiteWise build() {
-            return new DetectorModelIotSiteWise(assetId, entryId, propertyAlias, propertyId, propertyValue);
+        }
+
+        public DetectorModelIotSiteWise build() {
+            $.propertyValue = Objects.requireNonNull($.propertyValue, "expected parameter 'propertyValue' to be non-null");
+            return $;
         }
     }
+
 }

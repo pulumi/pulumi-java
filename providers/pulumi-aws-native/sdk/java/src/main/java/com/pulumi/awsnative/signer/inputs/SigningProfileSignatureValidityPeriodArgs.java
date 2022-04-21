@@ -6,9 +6,9 @@ package com.pulumi.awsnative.signer.inputs;
 import com.pulumi.awsnative.signer.enums.SigningProfileSignatureValidityPeriodType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class SigningProfileSignatureValidityPeriodArgs extends com.pulumi.
     public static final SigningProfileSignatureValidityPeriodArgs Empty = new SigningProfileSignatureValidityPeriodArgs();
 
     @Import(name="type")
-      private final @Nullable Output<SigningProfileSignatureValidityPeriodType> type;
+    private @Nullable Output<SigningProfileSignatureValidityPeriodType> type;
 
-    public Output<SigningProfileSignatureValidityPeriodType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SigningProfileSignatureValidityPeriodType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="value")
-      private final @Nullable Output<Integer> value;
+    private @Nullable Output<Integer> value;
 
-    public Output<Integer> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Integer>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public SigningProfileSignatureValidityPeriodArgs(
-        @Nullable Output<SigningProfileSignatureValidityPeriodType> type,
-        @Nullable Output<Integer> value) {
-        this.type = type;
-        this.value = value;
-    }
+    private SigningProfileSignatureValidityPeriodArgs() {}
 
-    private SigningProfileSignatureValidityPeriodArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private SigningProfileSignatureValidityPeriodArgs(SigningProfileSignatureValidityPeriodArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningProfileSignatureValidityPeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SigningProfileSignatureValidityPeriodType> type;
-        private @Nullable Output<Integer> value;
+        private SigningProfileSignatureValidityPeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningProfileSignatureValidityPeriodArgs();
         }
 
         public Builder(SigningProfileSignatureValidityPeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new SigningProfileSignatureValidityPeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<SigningProfileSignatureValidityPeriodType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SigningProfileSignatureValidityPeriodType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(SigningProfileSignatureValidityPeriodType type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<Integer> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Integer value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public SigningProfileSignatureValidityPeriodArgs build() {
-            return new SigningProfileSignatureValidityPeriodArgs(type, value);
+
+        public Builder value(Integer value) {
+            return value(Output.of(value));
+        }
+
+        public SigningProfileSignatureValidityPeriodArgs build() {
+            return $;
         }
     }
+
 }

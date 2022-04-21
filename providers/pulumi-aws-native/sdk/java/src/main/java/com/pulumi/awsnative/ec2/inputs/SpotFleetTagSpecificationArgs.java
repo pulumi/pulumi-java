@@ -7,9 +7,9 @@ import com.pulumi.awsnative.ec2.enums.SpotFleetTagSpecificationResourceType;
 import com.pulumi.awsnative.ec2.inputs.SpotFleetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class SpotFleetTagSpecificationArgs extends com.pulumi.resources.Re
     public static final SpotFleetTagSpecificationArgs Empty = new SpotFleetTagSpecificationArgs();
 
     @Import(name="resourceType")
-      private final @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType;
+    private @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType;
 
-    public Output<SpotFleetTagSpecificationResourceType> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<SpotFleetTagSpecificationResourceType>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<SpotFleetTagArgs>> tags;
+    private @Nullable Output<List<SpotFleetTagArgs>> tags;
 
-    public Output<List<SpotFleetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<SpotFleetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SpotFleetTagSpecificationArgs(
-        @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType,
-        @Nullable Output<List<SpotFleetTagArgs>> tags) {
-        this.resourceType = resourceType;
-        this.tags = tags;
-    }
+    private SpotFleetTagSpecificationArgs() {}
 
-    private SpotFleetTagSpecificationArgs() {
-        this.resourceType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SpotFleetTagSpecificationArgs(SpotFleetTagSpecificationArgs $) {
+        this.resourceType = $.resourceType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetTagSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType;
-        private @Nullable Output<List<SpotFleetTagArgs>> tags;
+        private SpotFleetTagSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetTagSpecificationArgs();
         }
 
         public Builder(SpotFleetTagSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.tags = defaults.tags;
+            $ = new SpotFleetTagSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(@Nullable Output<SpotFleetTagSpecificationResourceType> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable SpotFleetTagSpecificationResourceType resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(SpotFleetTagSpecificationResourceType resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder tags(@Nullable Output<List<SpotFleetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<SpotFleetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<SpotFleetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(SpotFleetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public SpotFleetTagSpecificationArgs build() {
-            return new SpotFleetTagSpecificationArgs(resourceType, tags);
+        }
+
+        public SpotFleetTagSpecificationArgs build() {
+            return $;
         }
     }
+
 }

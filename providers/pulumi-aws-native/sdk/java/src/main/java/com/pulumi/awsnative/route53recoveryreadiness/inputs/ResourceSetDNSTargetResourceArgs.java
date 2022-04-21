@@ -6,9 +6,9 @@ package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="hostedZoneArn")
-      private final @Nullable Output<String> hostedZoneArn;
+    private @Nullable Output<String> hostedZoneArn;
 
-    public Output<String> hostedZoneArn() {
-        return this.hostedZoneArn == null ? Codegen.empty() : this.hostedZoneArn;
+    public Optional<Output<String>> hostedZoneArn() {
+        return Optional.ofNullable(this.hostedZoneArn);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="recordSetId")
-      private final @Nullable Output<String> recordSetId;
+    private @Nullable Output<String> recordSetId;
 
-    public Output<String> recordSetId() {
-        return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
+    public Optional<Output<String>> recordSetId() {
+        return Optional.ofNullable(this.recordSetId);
     }
 
     /**
@@ -58,109 +58,95 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="recordType")
-      private final @Nullable Output<String> recordType;
+    private @Nullable Output<String> recordType;
 
-    public Output<String> recordType() {
-        return this.recordType == null ? Codegen.empty() : this.recordType;
+    public Optional<Output<String>> recordType() {
+        return Optional.ofNullable(this.recordType);
     }
 
     @Import(name="targetResource")
-      private final @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
+    private @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
 
-    public Output<ResourceSetTargetResourceArgs> targetResource() {
-        return this.targetResource == null ? Codegen.empty() : this.targetResource;
+    public Optional<Output<ResourceSetTargetResourceArgs>> targetResource() {
+        return Optional.ofNullable(this.targetResource);
     }
 
-    public ResourceSetDNSTargetResourceArgs(
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> hostedZoneArn,
-        @Nullable Output<String> recordSetId,
-        @Nullable Output<String> recordType,
-        @Nullable Output<ResourceSetTargetResourceArgs> targetResource) {
-        this.domainName = domainName;
-        this.hostedZoneArn = hostedZoneArn;
-        this.recordSetId = recordSetId;
-        this.recordType = recordType;
-        this.targetResource = targetResource;
-    }
+    private ResourceSetDNSTargetResourceArgs() {}
 
-    private ResourceSetDNSTargetResourceArgs() {
-        this.domainName = Codegen.empty();
-        this.hostedZoneArn = Codegen.empty();
-        this.recordSetId = Codegen.empty();
-        this.recordType = Codegen.empty();
-        this.targetResource = Codegen.empty();
+    private ResourceSetDNSTargetResourceArgs(ResourceSetDNSTargetResourceArgs $) {
+        this.domainName = $.domainName;
+        this.hostedZoneArn = $.hostedZoneArn;
+        this.recordSetId = $.recordSetId;
+        this.recordType = $.recordType;
+        this.targetResource = $.targetResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetDNSTargetResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> hostedZoneArn;
-        private @Nullable Output<String> recordSetId;
-        private @Nullable Output<String> recordType;
-        private @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
+        private ResourceSetDNSTargetResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetDNSTargetResourceArgs();
         }
 
         public Builder(ResourceSetDNSTargetResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.hostedZoneArn = defaults.hostedZoneArn;
-    	      this.recordSetId = defaults.recordSetId;
-    	      this.recordType = defaults.recordType;
-    	      this.targetResource = defaults.targetResource;
+            $ = new ResourceSetDNSTargetResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
-            this.hostedZoneArn = hostedZoneArn;
+            $.hostedZoneArn = hostedZoneArn;
             return this;
         }
-        public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
-            this.hostedZoneArn = Codegen.ofNullable(hostedZoneArn);
-            return this;
+
+        public Builder hostedZoneArn(String hostedZoneArn) {
+            return hostedZoneArn(Output.of(hostedZoneArn));
         }
+
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
-            this.recordSetId = recordSetId;
+            $.recordSetId = recordSetId;
             return this;
         }
-        public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Codegen.ofNullable(recordSetId);
-            return this;
+
+        public Builder recordSetId(String recordSetId) {
+            return recordSetId(Output.of(recordSetId));
         }
+
         public Builder recordType(@Nullable Output<String> recordType) {
-            this.recordType = recordType;
+            $.recordType = recordType;
             return this;
         }
-        public Builder recordType(@Nullable String recordType) {
-            this.recordType = Codegen.ofNullable(recordType);
-            return this;
+
+        public Builder recordType(String recordType) {
+            return recordType(Output.of(recordType));
         }
+
         public Builder targetResource(@Nullable Output<ResourceSetTargetResourceArgs> targetResource) {
-            this.targetResource = targetResource;
+            $.targetResource = targetResource;
             return this;
         }
-        public Builder targetResource(@Nullable ResourceSetTargetResourceArgs targetResource) {
-            this.targetResource = Codegen.ofNullable(targetResource);
-            return this;
-        }        public ResourceSetDNSTargetResourceArgs build() {
-            return new ResourceSetDNSTargetResourceArgs(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
+
+        public Builder targetResource(ResourceSetTargetResourceArgs targetResource) {
+            return targetResource(Output.of(targetResource));
+        }
+
+        public ResourceSetDNSTargetResourceArgs build() {
+            return $;
         }
     }
+
 }

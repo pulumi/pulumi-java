@@ -19,62 +19,58 @@ public final class AssetModelTumblingWindow extends com.pulumi.resources.InvokeA
     public static final AssetModelTumblingWindow Empty = new AssetModelTumblingWindow();
 
     @Import(name="interval", required=true)
-      private final String interval;
+    private String interval;
 
     public String interval() {
         return this.interval;
     }
 
     @Import(name="offset")
-      private final @Nullable String offset;
+    private @Nullable String offset;
 
     public Optional<String> offset() {
-        return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
+        return Optional.ofNullable(this.offset);
     }
 
-    public AssetModelTumblingWindow(
-        String interval,
-        @Nullable String offset) {
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.offset = offset;
-    }
+    private AssetModelTumblingWindow() {}
 
-    private AssetModelTumblingWindow() {
-        this.interval = null;
-        this.offset = null;
+    private AssetModelTumblingWindow(AssetModelTumblingWindow $) {
+        this.interval = $.interval;
+        this.offset = $.offset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelTumblingWindow defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interval;
-        private @Nullable String offset;
+        private AssetModelTumblingWindow $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelTumblingWindow();
         }
 
         public Builder(AssetModelTumblingWindow defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.offset = defaults.offset;
+            $ = new AssetModelTumblingWindow(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(String interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder offset(@Nullable String offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
-        }        public AssetModelTumblingWindow build() {
-            return new AssetModelTumblingWindow(interval, offset);
+        }
+
+        public AssetModelTumblingWindow build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            return $;
         }
     }
+
 }

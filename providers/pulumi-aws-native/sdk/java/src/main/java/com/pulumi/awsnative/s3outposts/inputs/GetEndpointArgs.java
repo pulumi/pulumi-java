@@ -17,45 +17,45 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetEndpointArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetEndpointArgs() {}
 
-    private GetEndpointArgs() {
-        this.arn = null;
+    private GetEndpointArgs(GetEndpointArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointArgs();
         }
 
         public Builder(GetEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetEndpointArgs build() {
-            return new GetEndpointArgs(arn);
+        }
+
+        public GetEndpointArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

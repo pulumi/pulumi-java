@@ -13,45 +13,45 @@ public final class GetRouteCalculatorArgs extends com.pulumi.resources.InvokeArg
     public static final GetRouteCalculatorArgs Empty = new GetRouteCalculatorArgs();
 
     @Import(name="calculatorName", required=true)
-      private final String calculatorName;
+    private String calculatorName;
 
     public String calculatorName() {
         return this.calculatorName;
     }
 
-    public GetRouteCalculatorArgs(String calculatorName) {
-        this.calculatorName = Objects.requireNonNull(calculatorName, "expected parameter 'calculatorName' to be non-null");
-    }
+    private GetRouteCalculatorArgs() {}
 
-    private GetRouteCalculatorArgs() {
-        this.calculatorName = null;
+    private GetRouteCalculatorArgs(GetRouteCalculatorArgs $) {
+        this.calculatorName = $.calculatorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteCalculatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String calculatorName;
+        private GetRouteCalculatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteCalculatorArgs();
         }
 
         public Builder(GetRouteCalculatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.calculatorName = defaults.calculatorName;
+            $ = new GetRouteCalculatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder calculatorName(String calculatorName) {
-            this.calculatorName = Objects.requireNonNull(calculatorName);
+            $.calculatorName = calculatorName;
             return this;
-        }        public GetRouteCalculatorArgs build() {
-            return new GetRouteCalculatorArgs(calculatorName);
+        }
+
+        public GetRouteCalculatorArgs build() {
+            $.calculatorName = Objects.requireNonNull($.calculatorName, "expected parameter 'calculatorName' to be non-null");
+            return $;
         }
     }
+
 }

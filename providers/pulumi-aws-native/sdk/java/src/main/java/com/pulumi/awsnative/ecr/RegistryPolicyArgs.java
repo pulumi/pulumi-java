@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ecr;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class RegistryPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policyText", required=true)
-      private final Output<Object> policyText;
+    private Output<Object> policyText;
 
     public Output<Object> policyText() {
         return this.policyText;
     }
 
-    public RegistryPolicyArgs(Output<Object> policyText) {
-        this.policyText = Objects.requireNonNull(policyText, "expected parameter 'policyText' to be non-null");
-    }
+    private RegistryPolicyArgs() {}
 
-    private RegistryPolicyArgs() {
-        this.policyText = Codegen.empty();
+    private RegistryPolicyArgs(RegistryPolicyArgs $) {
+        this.policyText = $.policyText;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> policyText;
+        private RegistryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryPolicyArgs();
         }
 
         public Builder(RegistryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyText = defaults.policyText;
+            $ = new RegistryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyText(Output<Object> policyText) {
-            this.policyText = Objects.requireNonNull(policyText);
+            $.policyText = policyText;
             return this;
         }
+
         public Builder policyText(Object policyText) {
-            this.policyText = Output.of(Objects.requireNonNull(policyText));
-            return this;
-        }        public RegistryPolicyArgs build() {
-            return new RegistryPolicyArgs(policyText);
+            return policyText(Output.of(policyText));
+        }
+
+        public RegistryPolicyArgs build() {
+            $.policyText = Objects.requireNonNull($.policyText, "expected parameter 'policyText' to be non-null");
+            return $;
         }
     }
+
 }

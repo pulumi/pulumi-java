@@ -17,45 +17,45 @@ public final class GetDetectorModelArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="detectorModelName", required=true)
-      private final String detectorModelName;
+    private String detectorModelName;
 
     public String detectorModelName() {
         return this.detectorModelName;
     }
 
-    public GetDetectorModelArgs(String detectorModelName) {
-        this.detectorModelName = Objects.requireNonNull(detectorModelName, "expected parameter 'detectorModelName' to be non-null");
-    }
+    private GetDetectorModelArgs() {}
 
-    private GetDetectorModelArgs() {
-        this.detectorModelName = null;
+    private GetDetectorModelArgs(GetDetectorModelArgs $) {
+        this.detectorModelName = $.detectorModelName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDetectorModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String detectorModelName;
+        private GetDetectorModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDetectorModelArgs();
         }
 
         public Builder(GetDetectorModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detectorModelName = defaults.detectorModelName;
+            $ = new GetDetectorModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder detectorModelName(String detectorModelName) {
-            this.detectorModelName = Objects.requireNonNull(detectorModelName);
+            $.detectorModelName = detectorModelName;
             return this;
-        }        public GetDetectorModelArgs build() {
-            return new GetDetectorModelArgs(detectorModelName);
+        }
+
+        public GetDetectorModelArgs build() {
+            $.detectorModelName = Objects.requireNonNull($.detectorModelName, "expected parameter 'detectorModelName' to be non-null");
+            return $;
         }
     }
+
 }

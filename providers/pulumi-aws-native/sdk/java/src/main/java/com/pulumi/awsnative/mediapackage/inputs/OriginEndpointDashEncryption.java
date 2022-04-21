@@ -24,62 +24,58 @@ public final class OriginEndpointDashEncryption extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyRotationIntervalSeconds")
-      private final @Nullable Integer keyRotationIntervalSeconds;
+    private @Nullable Integer keyRotationIntervalSeconds;
 
     public Optional<Integer> keyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.keyRotationIntervalSeconds);
+        return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
     @Import(name="spekeKeyProvider", required=true)
-      private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+    private OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public OriginEndpointDashEncryption(
-        @Nullable Integer keyRotationIntervalSeconds,
-        OriginEndpointSpekeKeyProvider spekeKeyProvider) {
-        this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private OriginEndpointDashEncryption() {}
 
-    private OriginEndpointDashEncryption() {
-        this.keyRotationIntervalSeconds = null;
-        this.spekeKeyProvider = null;
+    private OriginEndpointDashEncryption(OriginEndpointDashEncryption $) {
+        this.keyRotationIntervalSeconds = $.keyRotationIntervalSeconds;
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointDashEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer keyRotationIntervalSeconds;
-        private OriginEndpointSpekeKeyProvider spekeKeyProvider;
+        private OriginEndpointDashEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointDashEncryption();
         }
 
         public Builder(OriginEndpointDashEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyRotationIntervalSeconds = defaults.keyRotationIntervalSeconds;
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new OriginEndpointDashEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
+            $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
+
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
-        }        public OriginEndpointDashEncryption build() {
-            return new OriginEndpointDashEncryption(keyRotationIntervalSeconds, spekeKeyProvider);
+        }
+
+        public OriginEndpointDashEncryption build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

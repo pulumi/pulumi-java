@@ -26,14 +26,14 @@ public final class WebACLCustomResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="customResponseBodyKey")
-      private final @Nullable String customResponseBodyKey;
+    private @Nullable String customResponseBodyKey;
 
     public Optional<String> customResponseBodyKey() {
-        return this.customResponseBodyKey == null ? Optional.empty() : Optional.ofNullable(this.customResponseBodyKey);
+        return Optional.ofNullable(this.customResponseBodyKey);
     }
 
     @Import(name="responseCode", required=true)
-      private final Integer responseCode;
+    private Integer responseCode;
 
     public Integer responseCode() {
         return this.responseCode;
@@ -44,67 +44,61 @@ public final class WebACLCustomResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="responseHeaders")
-      private final @Nullable List<WebACLCustomHTTPHeader> responseHeaders;
+    private @Nullable List<WebACLCustomHTTPHeader> responseHeaders;
 
-    public List<WebACLCustomHTTPHeader> responseHeaders() {
-        return this.responseHeaders == null ? List.of() : this.responseHeaders;
+    public Optional<List<WebACLCustomHTTPHeader>> responseHeaders() {
+        return Optional.ofNullable(this.responseHeaders);
     }
 
-    public WebACLCustomResponse(
-        @Nullable String customResponseBodyKey,
-        Integer responseCode,
-        @Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
-        this.customResponseBodyKey = customResponseBodyKey;
-        this.responseCode = Objects.requireNonNull(responseCode, "expected parameter 'responseCode' to be non-null");
-        this.responseHeaders = responseHeaders;
-    }
+    private WebACLCustomResponse() {}
 
-    private WebACLCustomResponse() {
-        this.customResponseBodyKey = null;
-        this.responseCode = null;
-        this.responseHeaders = List.of();
+    private WebACLCustomResponse(WebACLCustomResponse $) {
+        this.customResponseBodyKey = $.customResponseBodyKey;
+        this.responseCode = $.responseCode;
+        this.responseHeaders = $.responseHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCustomResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customResponseBodyKey;
-        private Integer responseCode;
-        private @Nullable List<WebACLCustomHTTPHeader> responseHeaders;
+        private WebACLCustomResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCustomResponse();
         }
 
         public Builder(WebACLCustomResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customResponseBodyKey = defaults.customResponseBodyKey;
-    	      this.responseCode = defaults.responseCode;
-    	      this.responseHeaders = defaults.responseHeaders;
+            $ = new WebACLCustomResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
-            this.customResponseBodyKey = customResponseBodyKey;
+            $.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
+
         public Builder responseCode(Integer responseCode) {
-            this.responseCode = Objects.requireNonNull(responseCode);
+            $.responseCode = responseCode;
             return this;
         }
+
         public Builder responseHeaders(@Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
-            this.responseHeaders = responseHeaders;
+            $.responseHeaders = responseHeaders;
             return this;
         }
+
         public Builder responseHeaders(WebACLCustomHTTPHeader... responseHeaders) {
             return responseHeaders(List.of(responseHeaders));
-        }        public WebACLCustomResponse build() {
-            return new WebACLCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
+        }
+
+        public WebACLCustomResponse build() {
+            $.responseCode = Objects.requireNonNull($.responseCode, "expected parameter 'responseCode' to be non-null");
+            return $;
         }
     }
+
 }

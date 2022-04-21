@@ -5,9 +5,9 @@ package com.pulumi.awsnative.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class BackupSelectionConditionParameterArgs extends com.pulumi.reso
     public static final BackupSelectionConditionParameterArgs Empty = new BackupSelectionConditionParameterArgs();
 
     @Import(name="conditionKey")
-      private final @Nullable Output<String> conditionKey;
+    private @Nullable Output<String> conditionKey;
 
-    public Output<String> conditionKey() {
-        return this.conditionKey == null ? Codegen.empty() : this.conditionKey;
+    public Optional<Output<String>> conditionKey() {
+        return Optional.ofNullable(this.conditionKey);
     }
 
     @Import(name="conditionValue")
-      private final @Nullable Output<String> conditionValue;
+    private @Nullable Output<String> conditionValue;
 
-    public Output<String> conditionValue() {
-        return this.conditionValue == null ? Codegen.empty() : this.conditionValue;
+    public Optional<Output<String>> conditionValue() {
+        return Optional.ofNullable(this.conditionValue);
     }
 
-    public BackupSelectionConditionParameterArgs(
-        @Nullable Output<String> conditionKey,
-        @Nullable Output<String> conditionValue) {
-        this.conditionKey = conditionKey;
-        this.conditionValue = conditionValue;
-    }
+    private BackupSelectionConditionParameterArgs() {}
 
-    private BackupSelectionConditionParameterArgs() {
-        this.conditionKey = Codegen.empty();
-        this.conditionValue = Codegen.empty();
+    private BackupSelectionConditionParameterArgs(BackupSelectionConditionParameterArgs $) {
+        this.conditionKey = $.conditionKey;
+        this.conditionValue = $.conditionValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupSelectionConditionParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> conditionKey;
-        private @Nullable Output<String> conditionValue;
+        private BackupSelectionConditionParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupSelectionConditionParameterArgs();
         }
 
         public Builder(BackupSelectionConditionParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionKey = defaults.conditionKey;
-    	      this.conditionValue = defaults.conditionValue;
+            $ = new BackupSelectionConditionParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionKey(@Nullable Output<String> conditionKey) {
-            this.conditionKey = conditionKey;
+            $.conditionKey = conditionKey;
             return this;
         }
-        public Builder conditionKey(@Nullable String conditionKey) {
-            this.conditionKey = Codegen.ofNullable(conditionKey);
-            return this;
+
+        public Builder conditionKey(String conditionKey) {
+            return conditionKey(Output.of(conditionKey));
         }
+
         public Builder conditionValue(@Nullable Output<String> conditionValue) {
-            this.conditionValue = conditionValue;
+            $.conditionValue = conditionValue;
             return this;
         }
-        public Builder conditionValue(@Nullable String conditionValue) {
-            this.conditionValue = Codegen.ofNullable(conditionValue);
-            return this;
-        }        public BackupSelectionConditionParameterArgs build() {
-            return new BackupSelectionConditionParameterArgs(conditionKey, conditionValue);
+
+        public Builder conditionValue(String conditionValue) {
+            return conditionValue(Output.of(conditionValue));
+        }
+
+        public BackupSelectionConditionParameterArgs build() {
+            return $;
         }
     }
+
 }

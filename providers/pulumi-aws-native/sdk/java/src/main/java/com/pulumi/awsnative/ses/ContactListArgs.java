@@ -7,10 +7,10 @@ import com.pulumi.awsnative.ses.inputs.ContactListTagArgs;
 import com.pulumi.awsnative.ses.inputs.ContactListTopicArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactListName")
-      private final @Nullable Output<String> contactListName;
+    private @Nullable Output<String> contactListName;
 
-    public Output<String> contactListName() {
-        return this.contactListName == null ? Codegen.empty() : this.contactListName;
+    public Optional<Output<String>> contactListName() {
+        return Optional.ofNullable(this.contactListName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ContactListTagArgs>> tags;
+    private @Nullable Output<List<ContactListTagArgs>> tags;
 
-    public Output<List<ContactListTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ContactListTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -56,95 +56,86 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topics")
-      private final @Nullable Output<List<ContactListTopicArgs>> topics;
+    private @Nullable Output<List<ContactListTopicArgs>> topics;
 
-    public Output<List<ContactListTopicArgs>> topics() {
-        return this.topics == null ? Codegen.empty() : this.topics;
+    public Optional<Output<List<ContactListTopicArgs>>> topics() {
+        return Optional.ofNullable(this.topics);
     }
 
-    public ContactListArgs(
-        @Nullable Output<String> contactListName,
-        @Nullable Output<String> description,
-        @Nullable Output<List<ContactListTagArgs>> tags,
-        @Nullable Output<List<ContactListTopicArgs>> topics) {
-        this.contactListName = contactListName;
-        this.description = description;
-        this.tags = tags;
-        this.topics = topics;
-    }
+    private ContactListArgs() {}
 
-    private ContactListArgs() {
-        this.contactListName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.topics = Codegen.empty();
+    private ContactListArgs(ContactListArgs $) {
+        this.contactListName = $.contactListName;
+        this.description = $.description;
+        this.tags = $.tags;
+        this.topics = $.topics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contactListName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ContactListTagArgs>> tags;
-        private @Nullable Output<List<ContactListTopicArgs>> topics;
+        private ContactListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactListArgs();
         }
 
         public Builder(ContactListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactListName = defaults.contactListName;
-    	      this.description = defaults.description;
-    	      this.tags = defaults.tags;
-    	      this.topics = defaults.topics;
+            $ = new ContactListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactListName(@Nullable Output<String> contactListName) {
-            this.contactListName = contactListName;
+            $.contactListName = contactListName;
             return this;
         }
-        public Builder contactListName(@Nullable String contactListName) {
-            this.contactListName = Codegen.ofNullable(contactListName);
-            return this;
+
+        public Builder contactListName(String contactListName) {
+            return contactListName(Output.of(contactListName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder tags(@Nullable Output<List<ContactListTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ContactListTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ContactListTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ContactListTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder topics(@Nullable Output<List<ContactListTopicArgs>> topics) {
-            this.topics = topics;
+            $.topics = topics;
             return this;
         }
-        public Builder topics(@Nullable List<ContactListTopicArgs> topics) {
-            this.topics = Codegen.ofNullable(topics);
-            return this;
+
+        public Builder topics(List<ContactListTopicArgs> topics) {
+            return topics(Output.of(topics));
         }
+
         public Builder topics(ContactListTopicArgs... topics) {
             return topics(List.of(topics));
-        }        public ContactListArgs build() {
-            return new ContactListArgs(contactListName, description, tags, topics);
+        }
+
+        public ContactListArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,126 +15,110 @@ public final class ListenerRuleRedirectConfig extends com.pulumi.resources.Invok
     public static final ListenerRuleRedirectConfig Empty = new ListenerRuleRedirectConfig();
 
     @Import(name="host")
-      private final @Nullable String host;
+    private @Nullable String host;
 
     public Optional<String> host() {
-        return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
+        return Optional.ofNullable(this.host);
     }
 
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     @Import(name="port")
-      private final @Nullable String port;
+    private @Nullable String port;
 
     public Optional<String> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     @Import(name="query")
-      private final @Nullable String query;
+    private @Nullable String query;
 
     public Optional<String> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     @Import(name="statusCode", required=true)
-      private final String statusCode;
+    private String statusCode;
 
     public String statusCode() {
         return this.statusCode;
     }
 
-    public ListenerRuleRedirectConfig(
-        @Nullable String host,
-        @Nullable String path,
-        @Nullable String port,
-        @Nullable String protocol,
-        @Nullable String query,
-        String statusCode) {
-        this.host = host;
-        this.path = path;
-        this.port = port;
-        this.protocol = protocol;
-        this.query = query;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private ListenerRuleRedirectConfig() {}
 
-    private ListenerRuleRedirectConfig() {
-        this.host = null;
-        this.path = null;
-        this.port = null;
-        this.protocol = null;
-        this.query = null;
-        this.statusCode = null;
+    private ListenerRuleRedirectConfig(ListenerRuleRedirectConfig $) {
+        this.host = $.host;
+        this.path = $.path;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.query = $.query;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleRedirectConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String host;
-        private @Nullable String path;
-        private @Nullable String port;
-        private @Nullable String protocol;
-        private @Nullable String query;
-        private String statusCode;
+        private ListenerRuleRedirectConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleRedirectConfig();
         }
 
         public Builder(ListenerRuleRedirectConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.query = defaults.query;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ListenerRuleRedirectConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable String host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder port(@Nullable String port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder query(@Nullable String query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
-        }        public ListenerRuleRedirectConfig build() {
-            return new ListenerRuleRedirectConfig(host, path, port, protocol, query, statusCode);
+        }
+
+        public ListenerRuleRedirectConfig build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

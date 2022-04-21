@@ -24,62 +24,58 @@ public final class StudioEncryptionConfiguration extends com.pulumi.resources.In
      * 
      */
     @Import(name="keyArn")
-      private final @Nullable String keyArn;
+    private @Nullable String keyArn;
 
     public Optional<String> keyArn() {
-        return this.keyArn == null ? Optional.empty() : Optional.ofNullable(this.keyArn);
+        return Optional.ofNullable(this.keyArn);
     }
 
     @Import(name="keyType", required=true)
-      private final StudioEncryptionConfigurationKeyType keyType;
+    private StudioEncryptionConfigurationKeyType keyType;
 
     public StudioEncryptionConfigurationKeyType keyType() {
         return this.keyType;
     }
 
-    public StudioEncryptionConfiguration(
-        @Nullable String keyArn,
-        StudioEncryptionConfigurationKeyType keyType) {
-        this.keyArn = keyArn;
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-    }
+    private StudioEncryptionConfiguration() {}
 
-    private StudioEncryptionConfiguration() {
-        this.keyArn = null;
-        this.keyType = null;
+    private StudioEncryptionConfiguration(StudioEncryptionConfiguration $) {
+        this.keyArn = $.keyArn;
+        this.keyType = $.keyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioEncryptionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyArn;
-        private StudioEncryptionConfigurationKeyType keyType;
+        private StudioEncryptionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioEncryptionConfiguration();
         }
 
         public Builder(StudioEncryptionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyArn = defaults.keyArn;
-    	      this.keyType = defaults.keyType;
+            $ = new StudioEncryptionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = keyArn;
+            $.keyArn = keyArn;
             return this;
         }
+
         public Builder keyType(StudioEncryptionConfigurationKeyType keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
-        }        public StudioEncryptionConfiguration build() {
-            return new StudioEncryptionConfiguration(keyArn, keyType);
+        }
+
+        public StudioEncryptionConfiguration build() {
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            return $;
         }
     }
+
 }

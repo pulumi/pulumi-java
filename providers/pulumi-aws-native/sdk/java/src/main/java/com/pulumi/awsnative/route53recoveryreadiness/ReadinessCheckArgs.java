@@ -6,10 +6,10 @@ package com.pulumi.awsnative.route53recoveryreadiness;
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.ReadinessCheckTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="readinessCheckName")
-      private final @Nullable Output<String> readinessCheckName;
+    private @Nullable Output<String> readinessCheckName;
 
-    public Output<String> readinessCheckName() {
-        return this.readinessCheckName == null ? Codegen.empty() : this.readinessCheckName;
+    public Optional<Output<String>> readinessCheckName() {
+        return Optional.ofNullable(this.readinessCheckName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceSetName")
-      private final @Nullable Output<String> resourceSetName;
+    private @Nullable Output<String> resourceSetName;
 
-    public Output<String> resourceSetName() {
-        return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
+    public Optional<Output<String>> resourceSetName() {
+        return Optional.ofNullable(this.resourceSetName);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ReadinessCheckTagArgs>> tags;
+    private @Nullable Output<List<ReadinessCheckTagArgs>> tags;
 
-    public Output<List<ReadinessCheckTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ReadinessCheckTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ReadinessCheckArgs(
-        @Nullable Output<String> readinessCheckName,
-        @Nullable Output<String> resourceSetName,
-        @Nullable Output<List<ReadinessCheckTagArgs>> tags) {
-        this.readinessCheckName = readinessCheckName;
-        this.resourceSetName = resourceSetName;
-        this.tags = tags;
-    }
+    private ReadinessCheckArgs() {}
 
-    private ReadinessCheckArgs() {
-        this.readinessCheckName = Codegen.empty();
-        this.resourceSetName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ReadinessCheckArgs(ReadinessCheckArgs $) {
+        this.readinessCheckName = $.readinessCheckName;
+        this.resourceSetName = $.resourceSetName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReadinessCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> readinessCheckName;
-        private @Nullable Output<String> resourceSetName;
-        private @Nullable Output<List<ReadinessCheckTagArgs>> tags;
+        private ReadinessCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReadinessCheckArgs();
         }
 
         public Builder(ReadinessCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readinessCheckName = defaults.readinessCheckName;
-    	      this.resourceSetName = defaults.resourceSetName;
-    	      this.tags = defaults.tags;
+            $ = new ReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readinessCheckName(@Nullable Output<String> readinessCheckName) {
-            this.readinessCheckName = readinessCheckName;
+            $.readinessCheckName = readinessCheckName;
             return this;
         }
-        public Builder readinessCheckName(@Nullable String readinessCheckName) {
-            this.readinessCheckName = Codegen.ofNullable(readinessCheckName);
-            return this;
+
+        public Builder readinessCheckName(String readinessCheckName) {
+            return readinessCheckName(Output.of(readinessCheckName));
         }
+
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
-            this.resourceSetName = resourceSetName;
+            $.resourceSetName = resourceSetName;
             return this;
         }
-        public Builder resourceSetName(@Nullable String resourceSetName) {
-            this.resourceSetName = Codegen.ofNullable(resourceSetName);
-            return this;
+
+        public Builder resourceSetName(String resourceSetName) {
+            return resourceSetName(Output.of(resourceSetName));
         }
+
         public Builder tags(@Nullable Output<List<ReadinessCheckTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ReadinessCheckTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ReadinessCheckTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ReadinessCheckTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ReadinessCheckArgs build() {
-            return new ReadinessCheckArgs(readinessCheckName, resourceSetName, tags);
+        }
+
+        public ReadinessCheckArgs build() {
+            return $;
         }
     }
+
 }

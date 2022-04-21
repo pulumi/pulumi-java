@@ -23,45 +23,44 @@ public final class EventSourceMappingOnFailure extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="destination")
-      private final @Nullable String destination;
+    private @Nullable String destination;
 
     public Optional<String> destination() {
-        return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
+        return Optional.ofNullable(this.destination);
     }
 
-    public EventSourceMappingOnFailure(@Nullable String destination) {
-        this.destination = destination;
-    }
+    private EventSourceMappingOnFailure() {}
 
-    private EventSourceMappingOnFailure() {
-        this.destination = null;
+    private EventSourceMappingOnFailure(EventSourceMappingOnFailure $) {
+        this.destination = $.destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingOnFailure defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destination;
+        private EventSourceMappingOnFailure $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingOnFailure();
         }
 
         public Builder(EventSourceMappingOnFailure defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
+            $ = new EventSourceMappingOnFailure(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
-        }        public EventSourceMappingOnFailure build() {
-            return new EventSourceMappingOnFailure(destination);
+        }
+
+        public EventSourceMappingOnFailure build() {
+            return $;
         }
     }
+
 }

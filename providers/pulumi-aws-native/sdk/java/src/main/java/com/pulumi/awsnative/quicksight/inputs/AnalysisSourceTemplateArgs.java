@@ -6,7 +6,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.AnalysisDataSetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
@@ -36,66 +35,64 @@ public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataSetReferences", required=true)
-      private final Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
+    private Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
 
     public Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences() {
         return this.dataSetReferences;
     }
 
-    public AnalysisSourceTemplateArgs(
-        Output<String> arn,
-        Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.dataSetReferences = Objects.requireNonNull(dataSetReferences, "expected parameter 'dataSetReferences' to be non-null");
-    }
+    private AnalysisSourceTemplateArgs() {}
 
-    private AnalysisSourceTemplateArgs() {
-        this.arn = Codegen.empty();
-        this.dataSetReferences = Codegen.empty();
+    private AnalysisSourceTemplateArgs(AnalysisSourceTemplateArgs $) {
+        this.arn = $.arn;
+        this.dataSetReferences = $.dataSetReferences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisSourceTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
+        private AnalysisSourceTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisSourceTemplateArgs();
         }
 
         public Builder(AnalysisSourceTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.dataSetReferences = defaults.dataSetReferences;
+            $ = new AnalysisSourceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder dataSetReferences(Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences) {
-            this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
+            $.dataSetReferences = dataSetReferences;
             return this;
         }
+
         public Builder dataSetReferences(List<AnalysisDataSetReferenceArgs> dataSetReferences) {
-            this.dataSetReferences = Output.of(Objects.requireNonNull(dataSetReferences));
-            return this;
+            return dataSetReferences(Output.of(dataSetReferences));
         }
+
         public Builder dataSetReferences(AnalysisDataSetReferenceArgs... dataSetReferences) {
             return dataSetReferences(List.of(dataSetReferences));
-        }        public AnalysisSourceTemplateArgs build() {
-            return new AnalysisSourceTemplateArgs(arn, dataSetReferences);
+        }
+
+        public AnalysisSourceTemplateArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.dataSetReferences = Objects.requireNonNull($.dataSetReferences, "expected parameter 'dataSetReferences' to be non-null");
+            return $;
         }
     }
+
 }

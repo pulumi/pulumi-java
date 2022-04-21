@@ -17,45 +17,45 @@ public final class GetLaunchConfigurationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="launchConfigurationName", required=true)
-      private final String launchConfigurationName;
+    private String launchConfigurationName;
 
     public String launchConfigurationName() {
         return this.launchConfigurationName;
     }
 
-    public GetLaunchConfigurationArgs(String launchConfigurationName) {
-        this.launchConfigurationName = Objects.requireNonNull(launchConfigurationName, "expected parameter 'launchConfigurationName' to be non-null");
-    }
+    private GetLaunchConfigurationArgs() {}
 
-    private GetLaunchConfigurationArgs() {
-        this.launchConfigurationName = null;
+    private GetLaunchConfigurationArgs(GetLaunchConfigurationArgs $) {
+        this.launchConfigurationName = $.launchConfigurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String launchConfigurationName;
+        private GetLaunchConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchConfigurationArgs();
         }
 
         public Builder(GetLaunchConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchConfigurationName = defaults.launchConfigurationName;
+            $ = new GetLaunchConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchConfigurationName(String launchConfigurationName) {
-            this.launchConfigurationName = Objects.requireNonNull(launchConfigurationName);
+            $.launchConfigurationName = launchConfigurationName;
             return this;
-        }        public GetLaunchConfigurationArgs build() {
-            return new GetLaunchConfigurationArgs(launchConfigurationName);
+        }
+
+        public GetLaunchConfigurationArgs build() {
+            $.launchConfigurationName = Objects.requireNonNull($.launchConfigurationName, "expected parameter 'launchConfigurationName' to be non-null");
+            return $;
         }
     }
+
 }

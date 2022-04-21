@@ -17,65 +17,61 @@ public final class WebACLGeoMatchStatement extends com.pulumi.resources.InvokeAr
     public static final WebACLGeoMatchStatement Empty = new WebACLGeoMatchStatement();
 
     @Import(name="countryCodes")
-      private final @Nullable List<String> countryCodes;
+    private @Nullable List<String> countryCodes;
 
-    public List<String> countryCodes() {
-        return this.countryCodes == null ? List.of() : this.countryCodes;
+    public Optional<List<String>> countryCodes() {
+        return Optional.ofNullable(this.countryCodes);
     }
 
     @Import(name="forwardedIPConfig")
-      private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
+    private @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<WebACLForwardedIPConfiguration> forwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
+        return Optional.ofNullable(this.forwardedIPConfig);
     }
 
-    public WebACLGeoMatchStatement(
-        @Nullable List<String> countryCodes,
-        @Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
-        this.countryCodes = countryCodes;
-        this.forwardedIPConfig = forwardedIPConfig;
-    }
+    private WebACLGeoMatchStatement() {}
 
-    private WebACLGeoMatchStatement() {
-        this.countryCodes = List.of();
-        this.forwardedIPConfig = null;
+    private WebACLGeoMatchStatement(WebACLGeoMatchStatement $) {
+        this.countryCodes = $.countryCodes;
+        this.forwardedIPConfig = $.forwardedIPConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLGeoMatchStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> countryCodes;
-        private @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
+        private WebACLGeoMatchStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLGeoMatchStatement();
         }
 
         public Builder(WebACLGeoMatchStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCodes = defaults.countryCodes;
-    	      this.forwardedIPConfig = defaults.forwardedIPConfig;
+            $ = new WebACLGeoMatchStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCodes(@Nullable List<String> countryCodes) {
-            this.countryCodes = countryCodes;
+            $.countryCodes = countryCodes;
             return this;
         }
+
         public Builder countryCodes(String... countryCodes) {
             return countryCodes(List.of(countryCodes));
         }
+
         public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
-            this.forwardedIPConfig = forwardedIPConfig;
+            $.forwardedIPConfig = forwardedIPConfig;
             return this;
-        }        public WebACLGeoMatchStatement build() {
-            return new WebACLGeoMatchStatement(countryCodes, forwardedIPConfig);
+        }
+
+        public WebACLGeoMatchStatement build() {
+            return $;
         }
     }
+
 }

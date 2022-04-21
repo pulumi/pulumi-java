@@ -7,8 +7,8 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerSeedUrlConfigurati
 import com.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerSiteMapsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DataSourceWebCrawlerUrlsArgs extends com.pulumi.resources.Res
     public static final DataSourceWebCrawlerUrlsArgs Empty = new DataSourceWebCrawlerUrlsArgs();
 
     @Import(name="seedUrlConfiguration")
-      private final @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration;
+    private @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration;
 
-    public Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration() {
-        return this.seedUrlConfiguration == null ? Codegen.empty() : this.seedUrlConfiguration;
+    public Optional<Output<DataSourceWebCrawlerSeedUrlConfigurationArgs>> seedUrlConfiguration() {
+        return Optional.ofNullable(this.seedUrlConfiguration);
     }
 
     @Import(name="siteMapsConfiguration")
-      private final @Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration;
+    private @Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration;
 
-    public Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration() {
-        return this.siteMapsConfiguration == null ? Codegen.empty() : this.siteMapsConfiguration;
+    public Optional<Output<DataSourceWebCrawlerSiteMapsConfigurationArgs>> siteMapsConfiguration() {
+        return Optional.ofNullable(this.siteMapsConfiguration);
     }
 
-    public DataSourceWebCrawlerUrlsArgs(
-        @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration,
-        @Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration) {
-        this.seedUrlConfiguration = seedUrlConfiguration;
-        this.siteMapsConfiguration = siteMapsConfiguration;
-    }
+    private DataSourceWebCrawlerUrlsArgs() {}
 
-    private DataSourceWebCrawlerUrlsArgs() {
-        this.seedUrlConfiguration = Codegen.empty();
-        this.siteMapsConfiguration = Codegen.empty();
+    private DataSourceWebCrawlerUrlsArgs(DataSourceWebCrawlerUrlsArgs $) {
+        this.seedUrlConfiguration = $.seedUrlConfiguration;
+        this.siteMapsConfiguration = $.siteMapsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceWebCrawlerUrlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration;
-        private @Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration;
+        private DataSourceWebCrawlerUrlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceWebCrawlerUrlsArgs();
         }
 
         public Builder(DataSourceWebCrawlerUrlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.seedUrlConfiguration = defaults.seedUrlConfiguration;
-    	      this.siteMapsConfiguration = defaults.siteMapsConfiguration;
+            $ = new DataSourceWebCrawlerUrlsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder seedUrlConfiguration(@Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration) {
-            this.seedUrlConfiguration = seedUrlConfiguration;
+            $.seedUrlConfiguration = seedUrlConfiguration;
             return this;
         }
-        public Builder seedUrlConfiguration(@Nullable DataSourceWebCrawlerSeedUrlConfigurationArgs seedUrlConfiguration) {
-            this.seedUrlConfiguration = Codegen.ofNullable(seedUrlConfiguration);
-            return this;
+
+        public Builder seedUrlConfiguration(DataSourceWebCrawlerSeedUrlConfigurationArgs seedUrlConfiguration) {
+            return seedUrlConfiguration(Output.of(seedUrlConfiguration));
         }
+
         public Builder siteMapsConfiguration(@Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration) {
-            this.siteMapsConfiguration = siteMapsConfiguration;
+            $.siteMapsConfiguration = siteMapsConfiguration;
             return this;
         }
-        public Builder siteMapsConfiguration(@Nullable DataSourceWebCrawlerSiteMapsConfigurationArgs siteMapsConfiguration) {
-            this.siteMapsConfiguration = Codegen.ofNullable(siteMapsConfiguration);
-            return this;
-        }        public DataSourceWebCrawlerUrlsArgs build() {
-            return new DataSourceWebCrawlerUrlsArgs(seedUrlConfiguration, siteMapsConfiguration);
+
+        public Builder siteMapsConfiguration(DataSourceWebCrawlerSiteMapsConfigurationArgs siteMapsConfiguration) {
+            return siteMapsConfiguration(Output.of(siteMapsConfiguration));
+        }
+
+        public DataSourceWebCrawlerUrlsArgs build() {
+            return $;
         }
     }
+
 }

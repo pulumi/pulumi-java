@@ -25,10 +25,10 @@ public final class OriginEndpointCmafEncryption extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="constantInitializationVector")
-      private final @Nullable String constantInitializationVector;
+    private @Nullable String constantInitializationVector;
 
     public Optional<String> constantInitializationVector() {
-        return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
+        return Optional.ofNullable(this.constantInitializationVector);
     }
 
     /**
@@ -36,71 +36,64 @@ public final class OriginEndpointCmafEncryption extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyRotationIntervalSeconds")
-      private final @Nullable Integer keyRotationIntervalSeconds;
+    private @Nullable Integer keyRotationIntervalSeconds;
 
     public Optional<Integer> keyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.keyRotationIntervalSeconds);
+        return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
     @Import(name="spekeKeyProvider", required=true)
-      private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+    private OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public OriginEndpointCmafEncryption(
-        @Nullable String constantInitializationVector,
-        @Nullable Integer keyRotationIntervalSeconds,
-        OriginEndpointSpekeKeyProvider spekeKeyProvider) {
-        this.constantInitializationVector = constantInitializationVector;
-        this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private OriginEndpointCmafEncryption() {}
 
-    private OriginEndpointCmafEncryption() {
-        this.constantInitializationVector = null;
-        this.keyRotationIntervalSeconds = null;
-        this.spekeKeyProvider = null;
+    private OriginEndpointCmafEncryption(OriginEndpointCmafEncryption $) {
+        this.constantInitializationVector = $.constantInitializationVector;
+        this.keyRotationIntervalSeconds = $.keyRotationIntervalSeconds;
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointCmafEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String constantInitializationVector;
-        private @Nullable Integer keyRotationIntervalSeconds;
-        private OriginEndpointSpekeKeyProvider spekeKeyProvider;
+        private OriginEndpointCmafEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointCmafEncryption();
         }
 
         public Builder(OriginEndpointCmafEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constantInitializationVector = defaults.constantInitializationVector;
-    	      this.keyRotationIntervalSeconds = defaults.keyRotationIntervalSeconds;
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new OriginEndpointCmafEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = constantInitializationVector;
+            $.constantInitializationVector = constantInitializationVector;
             return this;
         }
+
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
+            $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
+
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
-        }        public OriginEndpointCmafEncryption build() {
-            return new OriginEndpointCmafEncryption(constantInitializationVector, keyRotationIntervalSeconds, spekeKeyProvider);
+        }
+
+        public OriginEndpointCmafEncryption build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

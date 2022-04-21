@@ -26,330 +26,282 @@ public final class SpotFleetLaunchSpecification extends com.pulumi.resources.Inv
     public static final SpotFleetLaunchSpecification Empty = new SpotFleetLaunchSpecification();
 
     @Import(name="blockDeviceMappings")
-      private final @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings;
+    private @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings;
 
-    public List<SpotFleetBlockDeviceMapping> blockDeviceMappings() {
-        return this.blockDeviceMappings == null ? List.of() : this.blockDeviceMappings;
+    public Optional<List<SpotFleetBlockDeviceMapping>> blockDeviceMappings() {
+        return Optional.ofNullable(this.blockDeviceMappings);
     }
 
     @Import(name="ebsOptimized")
-      private final @Nullable Boolean ebsOptimized;
+    private @Nullable Boolean ebsOptimized;
 
     public Optional<Boolean> ebsOptimized() {
-        return this.ebsOptimized == null ? Optional.empty() : Optional.ofNullable(this.ebsOptimized);
+        return Optional.ofNullable(this.ebsOptimized);
     }
 
     @Import(name="iamInstanceProfile")
-      private final @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile;
+    private @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile;
 
     public Optional<SpotFleetIamInstanceProfileSpecification> iamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Optional.empty() : Optional.ofNullable(this.iamInstanceProfile);
+        return Optional.ofNullable(this.iamInstanceProfile);
     }
 
     @Import(name="imageId", required=true)
-      private final String imageId;
+    private String imageId;
 
     public String imageId() {
         return this.imageId;
     }
 
     @Import(name="instanceRequirements")
-      private final @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
+    private @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
 
     public Optional<SpotFleetInstanceRequirementsRequest> instanceRequirements() {
-        return this.instanceRequirements == null ? Optional.empty() : Optional.ofNullable(this.instanceRequirements);
+        return Optional.ofNullable(this.instanceRequirements);
     }
 
     @Import(name="instanceType")
-      private final @Nullable String instanceType;
+    private @Nullable String instanceType;
 
     public Optional<String> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     @Import(name="kernelId")
-      private final @Nullable String kernelId;
+    private @Nullable String kernelId;
 
     public Optional<String> kernelId() {
-        return this.kernelId == null ? Optional.empty() : Optional.ofNullable(this.kernelId);
+        return Optional.ofNullable(this.kernelId);
     }
 
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     @Import(name="monitoring")
-      private final @Nullable SpotFleetMonitoring monitoring;
+    private @Nullable SpotFleetMonitoring monitoring;
 
     public Optional<SpotFleetMonitoring> monitoring() {
-        return this.monitoring == null ? Optional.empty() : Optional.ofNullable(this.monitoring);
+        return Optional.ofNullable(this.monitoring);
     }
 
     @Import(name="networkInterfaces")
-      private final @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces;
+    private @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces;
 
-    public List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces() {
-        return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
+    public Optional<List<SpotFleetInstanceNetworkInterfaceSpecification>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     @Import(name="placement")
-      private final @Nullable SpotFleetSpotPlacement placement;
+    private @Nullable SpotFleetSpotPlacement placement;
 
     public Optional<SpotFleetSpotPlacement> placement() {
-        return this.placement == null ? Optional.empty() : Optional.ofNullable(this.placement);
+        return Optional.ofNullable(this.placement);
     }
 
     @Import(name="ramdiskId")
-      private final @Nullable String ramdiskId;
+    private @Nullable String ramdiskId;
 
     public Optional<String> ramdiskId() {
-        return this.ramdiskId == null ? Optional.empty() : Optional.ofNullable(this.ramdiskId);
+        return Optional.ofNullable(this.ramdiskId);
     }
 
     @Import(name="securityGroups")
-      private final @Nullable List<SpotFleetGroupIdentifier> securityGroups;
+    private @Nullable List<SpotFleetGroupIdentifier> securityGroups;
 
-    public List<SpotFleetGroupIdentifier> securityGroups() {
-        return this.securityGroups == null ? List.of() : this.securityGroups;
+    public Optional<List<SpotFleetGroupIdentifier>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     @Import(name="spotPrice")
-      private final @Nullable String spotPrice;
+    private @Nullable String spotPrice;
 
     public Optional<String> spotPrice() {
-        return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
+        return Optional.ofNullable(this.spotPrice);
     }
 
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     @Import(name="tagSpecifications")
-      private final @Nullable List<SpotFleetTagSpecification> tagSpecifications;
+    private @Nullable List<SpotFleetTagSpecification> tagSpecifications;
 
-    public List<SpotFleetTagSpecification> tagSpecifications() {
-        return this.tagSpecifications == null ? List.of() : this.tagSpecifications;
+    public Optional<List<SpotFleetTagSpecification>> tagSpecifications() {
+        return Optional.ofNullable(this.tagSpecifications);
     }
 
     @Import(name="userData")
-      private final @Nullable String userData;
+    private @Nullable String userData;
 
     public Optional<String> userData() {
-        return this.userData == null ? Optional.empty() : Optional.ofNullable(this.userData);
+        return Optional.ofNullable(this.userData);
     }
 
     @Import(name="weightedCapacity")
-      private final @Nullable Double weightedCapacity;
+    private @Nullable Double weightedCapacity;
 
     public Optional<Double> weightedCapacity() {
-        return this.weightedCapacity == null ? Optional.empty() : Optional.ofNullable(this.weightedCapacity);
+        return Optional.ofNullable(this.weightedCapacity);
     }
 
-    public SpotFleetLaunchSpecification(
-        @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings,
-        @Nullable Boolean ebsOptimized,
-        @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile,
-        String imageId,
-        @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
-        @Nullable String instanceType,
-        @Nullable String kernelId,
-        @Nullable String keyName,
-        @Nullable SpotFleetMonitoring monitoring,
-        @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces,
-        @Nullable SpotFleetSpotPlacement placement,
-        @Nullable String ramdiskId,
-        @Nullable List<SpotFleetGroupIdentifier> securityGroups,
-        @Nullable String spotPrice,
-        @Nullable String subnetId,
-        @Nullable List<SpotFleetTagSpecification> tagSpecifications,
-        @Nullable String userData,
-        @Nullable Double weightedCapacity) {
-        this.blockDeviceMappings = blockDeviceMappings;
-        this.ebsOptimized = ebsOptimized;
-        this.iamInstanceProfile = iamInstanceProfile;
-        this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
-        this.instanceRequirements = instanceRequirements;
-        this.instanceType = instanceType;
-        this.kernelId = kernelId;
-        this.keyName = keyName;
-        this.monitoring = monitoring;
-        this.networkInterfaces = networkInterfaces;
-        this.placement = placement;
-        this.ramdiskId = ramdiskId;
-        this.securityGroups = securityGroups;
-        this.spotPrice = spotPrice;
-        this.subnetId = subnetId;
-        this.tagSpecifications = tagSpecifications;
-        this.userData = userData;
-        this.weightedCapacity = weightedCapacity;
-    }
+    private SpotFleetLaunchSpecification() {}
 
-    private SpotFleetLaunchSpecification() {
-        this.blockDeviceMappings = List.of();
-        this.ebsOptimized = null;
-        this.iamInstanceProfile = null;
-        this.imageId = null;
-        this.instanceRequirements = null;
-        this.instanceType = null;
-        this.kernelId = null;
-        this.keyName = null;
-        this.monitoring = null;
-        this.networkInterfaces = List.of();
-        this.placement = null;
-        this.ramdiskId = null;
-        this.securityGroups = List.of();
-        this.spotPrice = null;
-        this.subnetId = null;
-        this.tagSpecifications = List.of();
-        this.userData = null;
-        this.weightedCapacity = null;
+    private SpotFleetLaunchSpecification(SpotFleetLaunchSpecification $) {
+        this.blockDeviceMappings = $.blockDeviceMappings;
+        this.ebsOptimized = $.ebsOptimized;
+        this.iamInstanceProfile = $.iamInstanceProfile;
+        this.imageId = $.imageId;
+        this.instanceRequirements = $.instanceRequirements;
+        this.instanceType = $.instanceType;
+        this.kernelId = $.kernelId;
+        this.keyName = $.keyName;
+        this.monitoring = $.monitoring;
+        this.networkInterfaces = $.networkInterfaces;
+        this.placement = $.placement;
+        this.ramdiskId = $.ramdiskId;
+        this.securityGroups = $.securityGroups;
+        this.spotPrice = $.spotPrice;
+        this.subnetId = $.subnetId;
+        this.tagSpecifications = $.tagSpecifications;
+        this.userData = $.userData;
+        this.weightedCapacity = $.weightedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetLaunchSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings;
-        private @Nullable Boolean ebsOptimized;
-        private @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile;
-        private String imageId;
-        private @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
-        private @Nullable String instanceType;
-        private @Nullable String kernelId;
-        private @Nullable String keyName;
-        private @Nullable SpotFleetMonitoring monitoring;
-        private @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces;
-        private @Nullable SpotFleetSpotPlacement placement;
-        private @Nullable String ramdiskId;
-        private @Nullable List<SpotFleetGroupIdentifier> securityGroups;
-        private @Nullable String spotPrice;
-        private @Nullable String subnetId;
-        private @Nullable List<SpotFleetTagSpecification> tagSpecifications;
-        private @Nullable String userData;
-        private @Nullable Double weightedCapacity;
+        private SpotFleetLaunchSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetLaunchSpecification();
         }
 
         public Builder(SpotFleetLaunchSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockDeviceMappings = defaults.blockDeviceMappings;
-    	      this.ebsOptimized = defaults.ebsOptimized;
-    	      this.iamInstanceProfile = defaults.iamInstanceProfile;
-    	      this.imageId = defaults.imageId;
-    	      this.instanceRequirements = defaults.instanceRequirements;
-    	      this.instanceType = defaults.instanceType;
-    	      this.kernelId = defaults.kernelId;
-    	      this.keyName = defaults.keyName;
-    	      this.monitoring = defaults.monitoring;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.placement = defaults.placement;
-    	      this.ramdiskId = defaults.ramdiskId;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.spotPrice = defaults.spotPrice;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tagSpecifications = defaults.tagSpecifications;
-    	      this.userData = defaults.userData;
-    	      this.weightedCapacity = defaults.weightedCapacity;
+            $ = new SpotFleetLaunchSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder blockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings) {
-            this.blockDeviceMappings = blockDeviceMappings;
+            $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
+
         public Builder blockDeviceMappings(SpotFleetBlockDeviceMapping... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
+
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = ebsOptimized;
+            $.ebsOptimized = ebsOptimized;
             return this;
         }
+
         public Builder iamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile) {
-            this.iamInstanceProfile = iamInstanceProfile;
+            $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
+
         public Builder imageId(String imageId) {
-            this.imageId = Objects.requireNonNull(imageId);
+            $.imageId = imageId;
             return this;
         }
+
         public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
-            this.instanceRequirements = instanceRequirements;
+            $.instanceRequirements = instanceRequirements;
             return this;
         }
+
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = kernelId;
+            $.kernelId = kernelId;
             return this;
         }
+
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder monitoring(@Nullable SpotFleetMonitoring monitoring) {
-            this.monitoring = monitoring;
+            $.monitoring = monitoring;
             return this;
         }
+
         public Builder networkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(SpotFleetInstanceNetworkInterfaceSpecification... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder placement(@Nullable SpotFleetSpotPlacement placement) {
-            this.placement = placement;
+            $.placement = placement;
             return this;
         }
+
         public Builder ramdiskId(@Nullable String ramdiskId) {
-            this.ramdiskId = ramdiskId;
+            $.ramdiskId = ramdiskId;
             return this;
         }
+
         public Builder securityGroups(@Nullable List<SpotFleetGroupIdentifier> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
+
         public Builder securityGroups(SpotFleetGroupIdentifier... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = spotPrice;
+            $.spotPrice = spotPrice;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder tagSpecifications(@Nullable List<SpotFleetTagSpecification> tagSpecifications) {
-            this.tagSpecifications = tagSpecifications;
+            $.tagSpecifications = tagSpecifications;
             return this;
         }
+
         public Builder tagSpecifications(SpotFleetTagSpecification... tagSpecifications) {
             return tagSpecifications(List.of(tagSpecifications));
         }
+
         public Builder userData(@Nullable String userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
+
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+            $.weightedCapacity = weightedCapacity;
             return this;
-        }        public SpotFleetLaunchSpecification build() {
-            return new SpotFleetLaunchSpecification(blockDeviceMappings, ebsOptimized, iamInstanceProfile, imageId, instanceRequirements, instanceType, kernelId, keyName, monitoring, networkInterfaces, placement, ramdiskId, securityGroups, spotPrice, subnetId, tagSpecifications, userData, weightedCapacity);
+        }
+
+        public SpotFleetLaunchSpecification build() {
+            $.imageId = Objects.requireNonNull($.imageId, "expected parameter 'imageId' to be non-null");
+            return $;
         }
     }
+
 }

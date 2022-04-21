@@ -17,45 +17,45 @@ public final class GetConformancePackArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="conformancePackName", required=true)
-      private final String conformancePackName;
+    private String conformancePackName;
 
     public String conformancePackName() {
         return this.conformancePackName;
     }
 
-    public GetConformancePackArgs(String conformancePackName) {
-        this.conformancePackName = Objects.requireNonNull(conformancePackName, "expected parameter 'conformancePackName' to be non-null");
-    }
+    private GetConformancePackArgs() {}
 
-    private GetConformancePackArgs() {
-        this.conformancePackName = null;
+    private GetConformancePackArgs(GetConformancePackArgs $) {
+        this.conformancePackName = $.conformancePackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConformancePackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String conformancePackName;
+        private GetConformancePackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConformancePackArgs();
         }
 
         public Builder(GetConformancePackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conformancePackName = defaults.conformancePackName;
+            $ = new GetConformancePackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conformancePackName(String conformancePackName) {
-            this.conformancePackName = Objects.requireNonNull(conformancePackName);
+            $.conformancePackName = conformancePackName;
             return this;
-        }        public GetConformancePackArgs build() {
-            return new GetConformancePackArgs(conformancePackName);
+        }
+
+        public GetConformancePackArgs build() {
+            $.conformancePackName = Objects.requireNonNull($.conformancePackName, "expected parameter 'conformancePackName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,63 +33,60 @@ public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
-    public HealthCheckAlarmIdentifierArgs(
-        Output<String> name,
-        Output<String> region) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private HealthCheckAlarmIdentifierArgs() {}
 
-    private HealthCheckAlarmIdentifierArgs() {
-        this.name = Codegen.empty();
-        this.region = Codegen.empty();
+    private HealthCheckAlarmIdentifierArgs(HealthCheckAlarmIdentifierArgs $) {
+        this.name = $.name;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckAlarmIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> region;
+        private HealthCheckAlarmIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckAlarmIdentifierArgs();
         }
 
         public Builder(HealthCheckAlarmIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.region = defaults.region;
+            $ = new HealthCheckAlarmIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
-        }        public HealthCheckAlarmIdentifierArgs build() {
-            return new HealthCheckAlarmIdentifierArgs(name, region);
+            return region(Output.of(region));
+        }
+
+        public HealthCheckAlarmIdentifierArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

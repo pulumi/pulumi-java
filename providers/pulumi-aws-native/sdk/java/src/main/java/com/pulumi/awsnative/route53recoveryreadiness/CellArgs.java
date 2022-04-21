@@ -6,10 +6,10 @@ package com.pulumi.awsnative.route53recoveryreadiness;
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.CellTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CellArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cellName")
-      private final @Nullable Output<String> cellName;
+    private @Nullable Output<String> cellName;
 
-    public Output<String> cellName() {
-        return this.cellName == null ? Codegen.empty() : this.cellName;
+    public Optional<Output<String>> cellName() {
+        return Optional.ofNullable(this.cellName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CellArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cells")
-      private final @Nullable Output<List<String>> cells;
+    private @Nullable Output<List<String>> cells;
 
-    public Output<List<String>> cells() {
-        return this.cells == null ? Codegen.empty() : this.cells;
+    public Optional<Output<List<String>>> cells() {
+        return Optional.ofNullable(this.cells);
     }
 
     /**
@@ -44,82 +44,76 @@ public final class CellArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<CellTagArgs>> tags;
+    private @Nullable Output<List<CellTagArgs>> tags;
 
-    public Output<List<CellTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<CellTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CellArgs(
-        @Nullable Output<String> cellName,
-        @Nullable Output<List<String>> cells,
-        @Nullable Output<List<CellTagArgs>> tags) {
-        this.cellName = cellName;
-        this.cells = cells;
-        this.tags = tags;
-    }
+    private CellArgs() {}
 
-    private CellArgs() {
-        this.cellName = Codegen.empty();
-        this.cells = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CellArgs(CellArgs $) {
+        this.cellName = $.cellName;
+        this.cells = $.cells;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CellArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cellName;
-        private @Nullable Output<List<String>> cells;
-        private @Nullable Output<List<CellTagArgs>> tags;
+        private CellArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CellArgs();
         }
 
         public Builder(CellArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cellName = defaults.cellName;
-    	      this.cells = defaults.cells;
-    	      this.tags = defaults.tags;
+            $ = new CellArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cellName(@Nullable Output<String> cellName) {
-            this.cellName = cellName;
+            $.cellName = cellName;
             return this;
         }
-        public Builder cellName(@Nullable String cellName) {
-            this.cellName = Codegen.ofNullable(cellName);
-            return this;
+
+        public Builder cellName(String cellName) {
+            return cellName(Output.of(cellName));
         }
+
         public Builder cells(@Nullable Output<List<String>> cells) {
-            this.cells = cells;
+            $.cells = cells;
             return this;
         }
-        public Builder cells(@Nullable List<String> cells) {
-            this.cells = Codegen.ofNullable(cells);
-            return this;
+
+        public Builder cells(List<String> cells) {
+            return cells(Output.of(cells));
         }
+
         public Builder cells(String... cells) {
             return cells(List.of(cells));
         }
+
         public Builder tags(@Nullable Output<List<CellTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<CellTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<CellTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(CellTagArgs... tags) {
             return tags(List.of(tags));
-        }        public CellArgs build() {
-            return new CellArgs(cellName, cells, tags);
+        }
+
+        public CellArgs build() {
+            return $;
         }
     }
+
 }

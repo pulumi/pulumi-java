@@ -9,8 +9,8 @@ import com.pulumi.awsnative.lex.inputs.BotPlainTextMessageArgs;
 import com.pulumi.awsnative.lex.inputs.BotSSMLMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,110 +23,99 @@ public final class BotMessageArgs extends com.pulumi.resources.ResourceArgs {
     public static final BotMessageArgs Empty = new BotMessageArgs();
 
     @Import(name="customPayload")
-      private final @Nullable Output<BotCustomPayloadArgs> customPayload;
+    private @Nullable Output<BotCustomPayloadArgs> customPayload;
 
-    public Output<BotCustomPayloadArgs> customPayload() {
-        return this.customPayload == null ? Codegen.empty() : this.customPayload;
+    public Optional<Output<BotCustomPayloadArgs>> customPayload() {
+        return Optional.ofNullable(this.customPayload);
     }
 
     @Import(name="imageResponseCard")
-      private final @Nullable Output<BotImageResponseCardArgs> imageResponseCard;
+    private @Nullable Output<BotImageResponseCardArgs> imageResponseCard;
 
-    public Output<BotImageResponseCardArgs> imageResponseCard() {
-        return this.imageResponseCard == null ? Codegen.empty() : this.imageResponseCard;
+    public Optional<Output<BotImageResponseCardArgs>> imageResponseCard() {
+        return Optional.ofNullable(this.imageResponseCard);
     }
 
     @Import(name="plainTextMessage")
-      private final @Nullable Output<BotPlainTextMessageArgs> plainTextMessage;
+    private @Nullable Output<BotPlainTextMessageArgs> plainTextMessage;
 
-    public Output<BotPlainTextMessageArgs> plainTextMessage() {
-        return this.plainTextMessage == null ? Codegen.empty() : this.plainTextMessage;
+    public Optional<Output<BotPlainTextMessageArgs>> plainTextMessage() {
+        return Optional.ofNullable(this.plainTextMessage);
     }
 
     @Import(name="sSMLMessage")
-      private final @Nullable Output<BotSSMLMessageArgs> sSMLMessage;
+    private @Nullable Output<BotSSMLMessageArgs> sSMLMessage;
 
-    public Output<BotSSMLMessageArgs> sSMLMessage() {
-        return this.sSMLMessage == null ? Codegen.empty() : this.sSMLMessage;
+    public Optional<Output<BotSSMLMessageArgs>> sSMLMessage() {
+        return Optional.ofNullable(this.sSMLMessage);
     }
 
-    public BotMessageArgs(
-        @Nullable Output<BotCustomPayloadArgs> customPayload,
-        @Nullable Output<BotImageResponseCardArgs> imageResponseCard,
-        @Nullable Output<BotPlainTextMessageArgs> plainTextMessage,
-        @Nullable Output<BotSSMLMessageArgs> sSMLMessage) {
-        this.customPayload = customPayload;
-        this.imageResponseCard = imageResponseCard;
-        this.plainTextMessage = plainTextMessage;
-        this.sSMLMessage = sSMLMessage;
-    }
+    private BotMessageArgs() {}
 
-    private BotMessageArgs() {
-        this.customPayload = Codegen.empty();
-        this.imageResponseCard = Codegen.empty();
-        this.plainTextMessage = Codegen.empty();
-        this.sSMLMessage = Codegen.empty();
+    private BotMessageArgs(BotMessageArgs $) {
+        this.customPayload = $.customPayload;
+        this.imageResponseCard = $.imageResponseCard;
+        this.plainTextMessage = $.plainTextMessage;
+        this.sSMLMessage = $.sSMLMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotCustomPayloadArgs> customPayload;
-        private @Nullable Output<BotImageResponseCardArgs> imageResponseCard;
-        private @Nullable Output<BotPlainTextMessageArgs> plainTextMessage;
-        private @Nullable Output<BotSSMLMessageArgs> sSMLMessage;
+        private BotMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotMessageArgs();
         }
 
         public Builder(BotMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customPayload = defaults.customPayload;
-    	      this.imageResponseCard = defaults.imageResponseCard;
-    	      this.plainTextMessage = defaults.plainTextMessage;
-    	      this.sSMLMessage = defaults.sSMLMessage;
+            $ = new BotMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customPayload(@Nullable Output<BotCustomPayloadArgs> customPayload) {
-            this.customPayload = customPayload;
+            $.customPayload = customPayload;
             return this;
         }
-        public Builder customPayload(@Nullable BotCustomPayloadArgs customPayload) {
-            this.customPayload = Codegen.ofNullable(customPayload);
-            return this;
+
+        public Builder customPayload(BotCustomPayloadArgs customPayload) {
+            return customPayload(Output.of(customPayload));
         }
+
         public Builder imageResponseCard(@Nullable Output<BotImageResponseCardArgs> imageResponseCard) {
-            this.imageResponseCard = imageResponseCard;
+            $.imageResponseCard = imageResponseCard;
             return this;
         }
-        public Builder imageResponseCard(@Nullable BotImageResponseCardArgs imageResponseCard) {
-            this.imageResponseCard = Codegen.ofNullable(imageResponseCard);
-            return this;
+
+        public Builder imageResponseCard(BotImageResponseCardArgs imageResponseCard) {
+            return imageResponseCard(Output.of(imageResponseCard));
         }
+
         public Builder plainTextMessage(@Nullable Output<BotPlainTextMessageArgs> plainTextMessage) {
-            this.plainTextMessage = plainTextMessage;
+            $.plainTextMessage = plainTextMessage;
             return this;
         }
-        public Builder plainTextMessage(@Nullable BotPlainTextMessageArgs plainTextMessage) {
-            this.plainTextMessage = Codegen.ofNullable(plainTextMessage);
-            return this;
+
+        public Builder plainTextMessage(BotPlainTextMessageArgs plainTextMessage) {
+            return plainTextMessage(Output.of(plainTextMessage));
         }
+
         public Builder sSMLMessage(@Nullable Output<BotSSMLMessageArgs> sSMLMessage) {
-            this.sSMLMessage = sSMLMessage;
+            $.sSMLMessage = sSMLMessage;
             return this;
         }
-        public Builder sSMLMessage(@Nullable BotSSMLMessageArgs sSMLMessage) {
-            this.sSMLMessage = Codegen.ofNullable(sSMLMessage);
-            return this;
-        }        public BotMessageArgs build() {
-            return new BotMessageArgs(customPayload, imageResponseCard, plainTextMessage, sSMLMessage);
+
+        public Builder sSMLMessage(BotSSMLMessageArgs sSMLMessage) {
+            return sSMLMessage(Output.of(sSMLMessage));
+        }
+
+        public BotMessageArgs build() {
+            return $;
         }
     }
+
 }

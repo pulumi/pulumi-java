@@ -13,45 +13,45 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
-    public GetAccountArgs(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-    }
+    private GetAccountArgs() {}
 
-    private GetAccountArgs() {
-        this.accountId = null;
+    private GetAccountArgs(GetAccountArgs $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
+        private GetAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccountArgs();
         }
 
         public Builder(GetAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new GetAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
-        }        public GetAccountArgs build() {
-            return new GetAccountArgs(accountId);
+        }
+
+        public GetAccountArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            return $;
         }
     }
+
 }

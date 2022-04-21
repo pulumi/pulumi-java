@@ -21,45 +21,45 @@ public final class ApplicationAlarmMetric extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="alarmMetricName", required=true)
-      private final String alarmMetricName;
+    private String alarmMetricName;
 
     public String alarmMetricName() {
         return this.alarmMetricName;
     }
 
-    public ApplicationAlarmMetric(String alarmMetricName) {
-        this.alarmMetricName = Objects.requireNonNull(alarmMetricName, "expected parameter 'alarmMetricName' to be non-null");
-    }
+    private ApplicationAlarmMetric() {}
 
-    private ApplicationAlarmMetric() {
-        this.alarmMetricName = null;
+    private ApplicationAlarmMetric(ApplicationAlarmMetric $) {
+        this.alarmMetricName = $.alarmMetricName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationAlarmMetric defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alarmMetricName;
+        private ApplicationAlarmMetric $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationAlarmMetric();
         }
 
         public Builder(ApplicationAlarmMetric defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmMetricName = defaults.alarmMetricName;
+            $ = new ApplicationAlarmMetric(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmMetricName(String alarmMetricName) {
-            this.alarmMetricName = Objects.requireNonNull(alarmMetricName);
+            $.alarmMetricName = alarmMetricName;
             return this;
-        }        public ApplicationAlarmMetric build() {
-            return new ApplicationAlarmMetric(alarmMetricName);
+        }
+
+        public ApplicationAlarmMetric build() {
+            $.alarmMetricName = Objects.requireNonNull($.alarmMetricName, "expected parameter 'alarmMetricName' to be non-null");
+            return $;
         }
     }
+
 }

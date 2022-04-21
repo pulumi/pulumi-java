@@ -10,12 +10,12 @@ import com.pulumi.awsnative.cassandra.inputs.TableEncryptionSpecificationArgs;
 import com.pulumi.awsnative.cassandra.inputs.TableTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     public static final TableArgs Empty = new TableArgs();
 
     @Import(name="billingMode")
-      private final @Nullable Output<TableBillingModeArgs> billingMode;
+    private @Nullable Output<TableBillingModeArgs> billingMode;
 
-    public Output<TableBillingModeArgs> billingMode() {
-        return this.billingMode == null ? Codegen.empty() : this.billingMode;
+    public Optional<Output<TableBillingModeArgs>> billingMode() {
+        return Optional.ofNullable(this.billingMode);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusteringKeyColumns")
-      private final @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
+    private @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
-    public Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns() {
-        return this.clusteringKeyColumns == null ? Codegen.empty() : this.clusteringKeyColumns;
+    public Optional<Output<List<TableClusteringKeyColumnArgs>>> clusteringKeyColumns() {
+        return Optional.ofNullable(this.clusteringKeyColumns);
     }
 
     /**
@@ -46,17 +46,17 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultTimeToLive")
-      private final @Nullable Output<Integer> defaultTimeToLive;
+    private @Nullable Output<Integer> defaultTimeToLive;
 
-    public Output<Integer> defaultTimeToLive() {
-        return this.defaultTimeToLive == null ? Codegen.empty() : this.defaultTimeToLive;
+    public Optional<Output<Integer>> defaultTimeToLive() {
+        return Optional.ofNullable(this.defaultTimeToLive);
     }
 
     @Import(name="encryptionSpecification")
-      private final @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
+    private @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
 
-    public Output<TableEncryptionSpecificationArgs> encryptionSpecification() {
-        return this.encryptionSpecification == null ? Codegen.empty() : this.encryptionSpecification;
+    public Optional<Output<TableEncryptionSpecificationArgs>> encryptionSpecification() {
+        return Optional.ofNullable(this.encryptionSpecification);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyspaceName", required=true)
-      private final Output<String> keyspaceName;
+    private Output<String> keyspaceName;
 
     public Output<String> keyspaceName() {
         return this.keyspaceName;
@@ -75,7 +75,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionKeyColumns", required=true)
-      private final Output<List<TableColumnArgs>> partitionKeyColumns;
+    private Output<List<TableColumnArgs>> partitionKeyColumns;
 
     public Output<List<TableColumnArgs>> partitionKeyColumns() {
         return this.partitionKeyColumns;
@@ -86,10 +86,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pointInTimeRecoveryEnabled")
-      private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
+    private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> pointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
+    public Optional<Output<Boolean>> pointInTimeRecoveryEnabled() {
+        return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regularColumns")
-      private final @Nullable Output<List<TableColumnArgs>> regularColumns;
+    private @Nullable Output<List<TableColumnArgs>> regularColumns;
 
-    public Output<List<TableColumnArgs>> regularColumns() {
-        return this.regularColumns == null ? Codegen.empty() : this.regularColumns;
+    public Optional<Output<List<TableColumnArgs>>> regularColumns() {
+        return Optional.ofNullable(this.regularColumns);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
     /**
@@ -119,179 +119,156 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<TableTagArgs>> tags;
+    private @Nullable Output<List<TableTagArgs>> tags;
 
-    public Output<List<TableTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TableTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public TableArgs(
-        @Nullable Output<TableBillingModeArgs> billingMode,
-        @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns,
-        @Nullable Output<Integer> defaultTimeToLive,
-        @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification,
-        Output<String> keyspaceName,
-        Output<List<TableColumnArgs>> partitionKeyColumns,
-        @Nullable Output<Boolean> pointInTimeRecoveryEnabled,
-        @Nullable Output<List<TableColumnArgs>> regularColumns,
-        @Nullable Output<String> tableName,
-        @Nullable Output<List<TableTagArgs>> tags) {
-        this.billingMode = billingMode;
-        this.clusteringKeyColumns = clusteringKeyColumns;
-        this.defaultTimeToLive = defaultTimeToLive;
-        this.encryptionSpecification = encryptionSpecification;
-        this.keyspaceName = Objects.requireNonNull(keyspaceName, "expected parameter 'keyspaceName' to be non-null");
-        this.partitionKeyColumns = Objects.requireNonNull(partitionKeyColumns, "expected parameter 'partitionKeyColumns' to be non-null");
-        this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
-        this.regularColumns = regularColumns;
-        this.tableName = tableName;
-        this.tags = tags;
-    }
+    private TableArgs() {}
 
-    private TableArgs() {
-        this.billingMode = Codegen.empty();
-        this.clusteringKeyColumns = Codegen.empty();
-        this.defaultTimeToLive = Codegen.empty();
-        this.encryptionSpecification = Codegen.empty();
-        this.keyspaceName = Codegen.empty();
-        this.partitionKeyColumns = Codegen.empty();
-        this.pointInTimeRecoveryEnabled = Codegen.empty();
-        this.regularColumns = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private TableArgs(TableArgs $) {
+        this.billingMode = $.billingMode;
+        this.clusteringKeyColumns = $.clusteringKeyColumns;
+        this.defaultTimeToLive = $.defaultTimeToLive;
+        this.encryptionSpecification = $.encryptionSpecification;
+        this.keyspaceName = $.keyspaceName;
+        this.partitionKeyColumns = $.partitionKeyColumns;
+        this.pointInTimeRecoveryEnabled = $.pointInTimeRecoveryEnabled;
+        this.regularColumns = $.regularColumns;
+        this.tableName = $.tableName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TableBillingModeArgs> billingMode;
-        private @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
-        private @Nullable Output<Integer> defaultTimeToLive;
-        private @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
-        private Output<String> keyspaceName;
-        private Output<List<TableColumnArgs>> partitionKeyColumns;
-        private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
-        private @Nullable Output<List<TableColumnArgs>> regularColumns;
-        private @Nullable Output<String> tableName;
-        private @Nullable Output<List<TableTagArgs>> tags;
+        private TableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableArgs();
         }
 
         public Builder(TableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingMode = defaults.billingMode;
-    	      this.clusteringKeyColumns = defaults.clusteringKeyColumns;
-    	      this.defaultTimeToLive = defaults.defaultTimeToLive;
-    	      this.encryptionSpecification = defaults.encryptionSpecification;
-    	      this.keyspaceName = defaults.keyspaceName;
-    	      this.partitionKeyColumns = defaults.partitionKeyColumns;
-    	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
-    	      this.regularColumns = defaults.regularColumns;
-    	      this.tableName = defaults.tableName;
-    	      this.tags = defaults.tags;
+            $ = new TableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingMode(@Nullable Output<TableBillingModeArgs> billingMode) {
-            this.billingMode = billingMode;
+            $.billingMode = billingMode;
             return this;
         }
-        public Builder billingMode(@Nullable TableBillingModeArgs billingMode) {
-            this.billingMode = Codegen.ofNullable(billingMode);
-            return this;
+
+        public Builder billingMode(TableBillingModeArgs billingMode) {
+            return billingMode(Output.of(billingMode));
         }
+
         public Builder clusteringKeyColumns(@Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
-            this.clusteringKeyColumns = clusteringKeyColumns;
+            $.clusteringKeyColumns = clusteringKeyColumns;
             return this;
         }
-        public Builder clusteringKeyColumns(@Nullable List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
-            this.clusteringKeyColumns = Codegen.ofNullable(clusteringKeyColumns);
-            return this;
+
+        public Builder clusteringKeyColumns(List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
+            return clusteringKeyColumns(Output.of(clusteringKeyColumns));
         }
+
         public Builder clusteringKeyColumns(TableClusteringKeyColumnArgs... clusteringKeyColumns) {
             return clusteringKeyColumns(List.of(clusteringKeyColumns));
         }
+
         public Builder defaultTimeToLive(@Nullable Output<Integer> defaultTimeToLive) {
-            this.defaultTimeToLive = defaultTimeToLive;
+            $.defaultTimeToLive = defaultTimeToLive;
             return this;
         }
-        public Builder defaultTimeToLive(@Nullable Integer defaultTimeToLive) {
-            this.defaultTimeToLive = Codegen.ofNullable(defaultTimeToLive);
-            return this;
+
+        public Builder defaultTimeToLive(Integer defaultTimeToLive) {
+            return defaultTimeToLive(Output.of(defaultTimeToLive));
         }
+
         public Builder encryptionSpecification(@Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification) {
-            this.encryptionSpecification = encryptionSpecification;
+            $.encryptionSpecification = encryptionSpecification;
             return this;
         }
-        public Builder encryptionSpecification(@Nullable TableEncryptionSpecificationArgs encryptionSpecification) {
-            this.encryptionSpecification = Codegen.ofNullable(encryptionSpecification);
-            return this;
+
+        public Builder encryptionSpecification(TableEncryptionSpecificationArgs encryptionSpecification) {
+            return encryptionSpecification(Output.of(encryptionSpecification));
         }
+
         public Builder keyspaceName(Output<String> keyspaceName) {
-            this.keyspaceName = Objects.requireNonNull(keyspaceName);
+            $.keyspaceName = keyspaceName;
             return this;
         }
+
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Output.of(Objects.requireNonNull(keyspaceName));
-            return this;
+            return keyspaceName(Output.of(keyspaceName));
         }
+
         public Builder partitionKeyColumns(Output<List<TableColumnArgs>> partitionKeyColumns) {
-            this.partitionKeyColumns = Objects.requireNonNull(partitionKeyColumns);
+            $.partitionKeyColumns = partitionKeyColumns;
             return this;
         }
+
         public Builder partitionKeyColumns(List<TableColumnArgs> partitionKeyColumns) {
-            this.partitionKeyColumns = Output.of(Objects.requireNonNull(partitionKeyColumns));
-            return this;
+            return partitionKeyColumns(Output.of(partitionKeyColumns));
         }
+
         public Builder partitionKeyColumns(TableColumnArgs... partitionKeyColumns) {
             return partitionKeyColumns(List.of(partitionKeyColumns));
         }
+
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
+            $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Codegen.ofNullable(pointInTimeRecoveryEnabled);
-            return this;
+
+        public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
+            return pointInTimeRecoveryEnabled(Output.of(pointInTimeRecoveryEnabled));
         }
+
         public Builder regularColumns(@Nullable Output<List<TableColumnArgs>> regularColumns) {
-            this.regularColumns = regularColumns;
+            $.regularColumns = regularColumns;
             return this;
         }
-        public Builder regularColumns(@Nullable List<TableColumnArgs> regularColumns) {
-            this.regularColumns = Codegen.ofNullable(regularColumns);
-            return this;
+
+        public Builder regularColumns(List<TableColumnArgs> regularColumns) {
+            return regularColumns(Output.of(regularColumns));
         }
+
         public Builder regularColumns(TableColumnArgs... regularColumns) {
             return regularColumns(List.of(regularColumns));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
         }
+
         public Builder tags(@Nullable Output<List<TableTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TableTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TableTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TableTagArgs... tags) {
             return tags(List.of(tags));
-        }        public TableArgs build() {
-            return new TableArgs(billingMode, clusteringKeyColumns, defaultTimeToLive, encryptionSpecification, keyspaceName, partitionKeyColumns, pointInTimeRecoveryEnabled, regularColumns, tableName, tags);
+        }
+
+        public TableArgs build() {
+            $.keyspaceName = Objects.requireNonNull($.keyspaceName, "expected parameter 'keyspaceName' to be non-null");
+            $.partitionKeyColumns = Objects.requireNonNull($.partitionKeyColumns, "expected parameter 'partitionKeyColumns' to be non-null");
+            return $;
         }
     }
+
 }

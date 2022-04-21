@@ -17,45 +17,45 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactFlowArn", required=true)
-      private final String contactFlowArn;
+    private String contactFlowArn;
 
     public String contactFlowArn() {
         return this.contactFlowArn;
     }
 
-    public GetContactFlowArgs(String contactFlowArn) {
-        this.contactFlowArn = Objects.requireNonNull(contactFlowArn, "expected parameter 'contactFlowArn' to be non-null");
-    }
+    private GetContactFlowArgs() {}
 
-    private GetContactFlowArgs() {
-        this.contactFlowArn = null;
+    private GetContactFlowArgs(GetContactFlowArgs $) {
+        this.contactFlowArn = $.contactFlowArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactFlowArn;
+        private GetContactFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactFlowArgs();
         }
 
         public Builder(GetContactFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactFlowArn = defaults.contactFlowArn;
+            $ = new GetContactFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactFlowArn(String contactFlowArn) {
-            this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
+            $.contactFlowArn = contactFlowArn;
             return this;
-        }        public GetContactFlowArgs build() {
-            return new GetContactFlowArgs(contactFlowArn);
+        }
+
+        public GetContactFlowArgs build() {
+            $.contactFlowArn = Objects.requireNonNull($.contactFlowArn, "expected parameter 'contactFlowArn' to be non-null");
+            return $;
         }
     }
+
 }

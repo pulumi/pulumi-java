@@ -5,7 +5,6 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class LocationS3S3ConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bucketAccessRoleArn", required=true)
-      private final Output<String> bucketAccessRoleArn;
+    private Output<String> bucketAccessRoleArn;
 
     public Output<String> bucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
     }
 
-    public LocationS3S3ConfigArgs(Output<String> bucketAccessRoleArn) {
-        this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn, "expected parameter 'bucketAccessRoleArn' to be non-null");
-    }
+    private LocationS3S3ConfigArgs() {}
 
-    private LocationS3S3ConfigArgs() {
-        this.bucketAccessRoleArn = Codegen.empty();
+    private LocationS3S3ConfigArgs(LocationS3S3ConfigArgs $) {
+        this.bucketAccessRoleArn = $.bucketAccessRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationS3S3ConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketAccessRoleArn;
+        private LocationS3S3ConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationS3S3ConfigArgs();
         }
 
         public Builder(LocationS3S3ConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketAccessRoleArn = defaults.bucketAccessRoleArn;
+            $ = new LocationS3S3ConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketAccessRoleArn(Output<String> bucketAccessRoleArn) {
-            this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn);
+            $.bucketAccessRoleArn = bucketAccessRoleArn;
             return this;
         }
+
         public Builder bucketAccessRoleArn(String bucketAccessRoleArn) {
-            this.bucketAccessRoleArn = Output.of(Objects.requireNonNull(bucketAccessRoleArn));
-            return this;
-        }        public LocationS3S3ConfigArgs build() {
-            return new LocationS3S3ConfigArgs(bucketAccessRoleArn);
+            return bucketAccessRoleArn(Output.of(bucketAccessRoleArn));
+        }
+
+        public LocationS3S3ConfigArgs build() {
+            $.bucketAccessRoleArn = Objects.requireNonNull($.bucketAccessRoleArn, "expected parameter 'bucketAccessRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

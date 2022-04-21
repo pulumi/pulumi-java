@@ -13,45 +13,45 @@ public final class ResponseHeadersPolicyContentTypeOptions extends com.pulumi.re
     public static final ResponseHeadersPolicyContentTypeOptions Empty = new ResponseHeadersPolicyContentTypeOptions();
 
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
     }
 
-    public ResponseHeadersPolicyContentTypeOptions(Boolean override) {
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private ResponseHeadersPolicyContentTypeOptions() {}
 
-    private ResponseHeadersPolicyContentTypeOptions() {
-        this.override = null;
+    private ResponseHeadersPolicyContentTypeOptions(ResponseHeadersPolicyContentTypeOptions $) {
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyContentTypeOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean override;
+        private ResponseHeadersPolicyContentTypeOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyContentTypeOptions();
         }
 
         public Builder(ResponseHeadersPolicyContentTypeOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.override = defaults.override;
+            $ = new ResponseHeadersPolicyContentTypeOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
-        }        public ResponseHeadersPolicyContentTypeOptions build() {
-            return new ResponseHeadersPolicyContentTypeOptions(override);
+        }
+
+        public ResponseHeadersPolicyContentTypeOptions build() {
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

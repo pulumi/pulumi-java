@@ -16,94 +16,85 @@ public final class ResponseHeadersPolicyStrictTransportSecurity extends com.pulu
     public static final ResponseHeadersPolicyStrictTransportSecurity Empty = new ResponseHeadersPolicyStrictTransportSecurity();
 
     @Import(name="accessControlMaxAgeSec", required=true)
-      private final Integer accessControlMaxAgeSec;
+    private Integer accessControlMaxAgeSec;
 
     public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
     @Import(name="includeSubdomains")
-      private final @Nullable Boolean includeSubdomains;
+    private @Nullable Boolean includeSubdomains;
 
     public Optional<Boolean> includeSubdomains() {
-        return this.includeSubdomains == null ? Optional.empty() : Optional.ofNullable(this.includeSubdomains);
+        return Optional.ofNullable(this.includeSubdomains);
     }
 
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
     }
 
     @Import(name="preload")
-      private final @Nullable Boolean preload;
+    private @Nullable Boolean preload;
 
     public Optional<Boolean> preload() {
-        return this.preload == null ? Optional.empty() : Optional.ofNullable(this.preload);
+        return Optional.ofNullable(this.preload);
     }
 
-    public ResponseHeadersPolicyStrictTransportSecurity(
-        Integer accessControlMaxAgeSec,
-        @Nullable Boolean includeSubdomains,
-        Boolean override,
-        @Nullable Boolean preload) {
-        this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec, "expected parameter 'accessControlMaxAgeSec' to be non-null");
-        this.includeSubdomains = includeSubdomains;
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-        this.preload = preload;
-    }
+    private ResponseHeadersPolicyStrictTransportSecurity() {}
 
-    private ResponseHeadersPolicyStrictTransportSecurity() {
-        this.accessControlMaxAgeSec = null;
-        this.includeSubdomains = null;
-        this.override = null;
-        this.preload = null;
+    private ResponseHeadersPolicyStrictTransportSecurity(ResponseHeadersPolicyStrictTransportSecurity $) {
+        this.accessControlMaxAgeSec = $.accessControlMaxAgeSec;
+        this.includeSubdomains = $.includeSubdomains;
+        this.override = $.override;
+        this.preload = $.preload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyStrictTransportSecurity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer accessControlMaxAgeSec;
-        private @Nullable Boolean includeSubdomains;
-        private Boolean override;
-        private @Nullable Boolean preload;
+        private ResponseHeadersPolicyStrictTransportSecurity $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyStrictTransportSecurity();
         }
 
         public Builder(ResponseHeadersPolicyStrictTransportSecurity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlMaxAgeSec = defaults.accessControlMaxAgeSec;
-    	      this.includeSubdomains = defaults.includeSubdomains;
-    	      this.override = defaults.override;
-    	      this.preload = defaults.preload;
+            $ = new ResponseHeadersPolicyStrictTransportSecurity(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
+            $.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
+
         public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
-            this.includeSubdomains = includeSubdomains;
+            $.includeSubdomains = includeSubdomains;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder preload(@Nullable Boolean preload) {
-            this.preload = preload;
+            $.preload = preload;
             return this;
-        }        public ResponseHeadersPolicyStrictTransportSecurity build() {
-            return new ResponseHeadersPolicyStrictTransportSecurity(accessControlMaxAgeSec, includeSubdomains, override, preload);
+        }
+
+        public ResponseHeadersPolicyStrictTransportSecurity build() {
+            $.accessControlMaxAgeSec = Objects.requireNonNull($.accessControlMaxAgeSec, "expected parameter 'accessControlMaxAgeSec' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

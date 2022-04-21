@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ssmincidents;
 import com.pulumi.awsnative.ssmincidents.inputs.ReplicationSetReplicationRegionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ReplicationSetArgs extends com.pulumi.resources.ResourceArgs 
     public static final ReplicationSetArgs Empty = new ReplicationSetArgs();
 
     @Import(name="deletionProtected")
-      private final @Nullable Output<Boolean> deletionProtected;
+    private @Nullable Output<Boolean> deletionProtected;
 
-    public Output<Boolean> deletionProtected() {
-        return this.deletionProtected == null ? Codegen.empty() : this.deletionProtected;
+    public Optional<Output<Boolean>> deletionProtected() {
+        return Optional.ofNullable(this.deletionProtected);
     }
 
     /**
@@ -29,66 +29,63 @@ public final class ReplicationSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="regions", required=true)
-      private final Output<List<ReplicationSetReplicationRegionArgs>> regions;
+    private Output<List<ReplicationSetReplicationRegionArgs>> regions;
 
     public Output<List<ReplicationSetReplicationRegionArgs>> regions() {
         return this.regions;
     }
 
-    public ReplicationSetArgs(
-        @Nullable Output<Boolean> deletionProtected,
-        Output<List<ReplicationSetReplicationRegionArgs>> regions) {
-        this.deletionProtected = deletionProtected;
-        this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
-    }
+    private ReplicationSetArgs() {}
 
-    private ReplicationSetArgs() {
-        this.deletionProtected = Codegen.empty();
-        this.regions = Codegen.empty();
+    private ReplicationSetArgs(ReplicationSetArgs $) {
+        this.deletionProtected = $.deletionProtected;
+        this.regions = $.regions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deletionProtected;
-        private Output<List<ReplicationSetReplicationRegionArgs>> regions;
+        private ReplicationSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationSetArgs();
         }
 
         public Builder(ReplicationSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletionProtected = defaults.deletionProtected;
-    	      this.regions = defaults.regions;
+            $ = new ReplicationSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deletionProtected(@Nullable Output<Boolean> deletionProtected) {
-            this.deletionProtected = deletionProtected;
+            $.deletionProtected = deletionProtected;
             return this;
         }
-        public Builder deletionProtected(@Nullable Boolean deletionProtected) {
-            this.deletionProtected = Codegen.ofNullable(deletionProtected);
-            return this;
+
+        public Builder deletionProtected(Boolean deletionProtected) {
+            return deletionProtected(Output.of(deletionProtected));
         }
+
         public Builder regions(Output<List<ReplicationSetReplicationRegionArgs>> regions) {
-            this.regions = Objects.requireNonNull(regions);
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(List<ReplicationSetReplicationRegionArgs> regions) {
-            this.regions = Output.of(Objects.requireNonNull(regions));
-            return this;
+            return regions(Output.of(regions));
         }
+
         public Builder regions(ReplicationSetReplicationRegionArgs... regions) {
             return regions(List.of(regions));
-        }        public ReplicationSetArgs build() {
-            return new ReplicationSetArgs(deletionProtected, regions);
+        }
+
+        public ReplicationSetArgs build() {
+            $.regions = Objects.requireNonNull($.regions, "expected parameter 'regions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.awsnative.appflow.enums.FlowTriggerType;
 import com.pulumi.awsnative.appflow.inputs.FlowScheduledTriggerPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FlowTriggerConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="triggerProperties")
-      private final @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
+    private @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
 
-    public Output<FlowScheduledTriggerPropertiesArgs> triggerProperties() {
-        return this.triggerProperties == null ? Codegen.empty() : this.triggerProperties;
+    public Optional<Output<FlowScheduledTriggerPropertiesArgs>> triggerProperties() {
+        return Optional.ofNullable(this.triggerProperties);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class FlowTriggerConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="triggerType", required=true)
-      private final Output<FlowTriggerType> triggerType;
+    private Output<FlowTriggerType> triggerType;
 
     public Output<FlowTriggerType> triggerType() {
         return this.triggerType;
     }
 
-    public FlowTriggerConfigArgs(
-        @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties,
-        Output<FlowTriggerType> triggerType) {
-        this.triggerProperties = triggerProperties;
-        this.triggerType = Objects.requireNonNull(triggerType, "expected parameter 'triggerType' to be non-null");
-    }
+    private FlowTriggerConfigArgs() {}
 
-    private FlowTriggerConfigArgs() {
-        this.triggerProperties = Codegen.empty();
-        this.triggerType = Codegen.empty();
+    private FlowTriggerConfigArgs(FlowTriggerConfigArgs $) {
+        this.triggerProperties = $.triggerProperties;
+        this.triggerType = $.triggerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowTriggerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
-        private Output<FlowTriggerType> triggerType;
+        private FlowTriggerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowTriggerConfigArgs();
         }
 
         public Builder(FlowTriggerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.triggerProperties = defaults.triggerProperties;
-    	      this.triggerType = defaults.triggerType;
+            $ = new FlowTriggerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder triggerProperties(@Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties) {
-            this.triggerProperties = triggerProperties;
+            $.triggerProperties = triggerProperties;
             return this;
         }
-        public Builder triggerProperties(@Nullable FlowScheduledTriggerPropertiesArgs triggerProperties) {
-            this.triggerProperties = Codegen.ofNullable(triggerProperties);
-            return this;
+
+        public Builder triggerProperties(FlowScheduledTriggerPropertiesArgs triggerProperties) {
+            return triggerProperties(Output.of(triggerProperties));
         }
+
         public Builder triggerType(Output<FlowTriggerType> triggerType) {
-            this.triggerType = Objects.requireNonNull(triggerType);
+            $.triggerType = triggerType;
             return this;
         }
+
         public Builder triggerType(FlowTriggerType triggerType) {
-            this.triggerType = Output.of(Objects.requireNonNull(triggerType));
-            return this;
-        }        public FlowTriggerConfigArgs build() {
-            return new FlowTriggerConfigArgs(triggerProperties, triggerType);
+            return triggerType(Output.of(triggerType));
+        }
+
+        public FlowTriggerConfigArgs build() {
+            $.triggerType = Objects.requireNonNull($.triggerType, "expected parameter 'triggerType' to be non-null");
+            return $;
         }
     }
+
 }

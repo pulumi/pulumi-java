@@ -5,10 +5,10 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FunctionImageConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FunctionImageConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entryPoint")
-      private final @Nullable Output<List<String>> entryPoint;
+    private @Nullable Output<List<String>> entryPoint;
 
-    public Output<List<String>> entryPoint() {
-        return this.entryPoint == null ? Codegen.empty() : this.entryPoint;
+    public Optional<Output<List<String>>> entryPoint() {
+        return Optional.ofNullable(this.entryPoint);
     }
 
     /**
@@ -43,82 +43,76 @@ public final class FunctionImageConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="workingDirectory")
-      private final @Nullable Output<String> workingDirectory;
+    private @Nullable Output<String> workingDirectory;
 
-    public Output<String> workingDirectory() {
-        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
+    public Optional<Output<String>> workingDirectory() {
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public FunctionImageConfigArgs(
-        @Nullable Output<List<String>> command,
-        @Nullable Output<List<String>> entryPoint,
-        @Nullable Output<String> workingDirectory) {
-        this.command = command;
-        this.entryPoint = entryPoint;
-        this.workingDirectory = workingDirectory;
-    }
+    private FunctionImageConfigArgs() {}
 
-    private FunctionImageConfigArgs() {
-        this.command = Codegen.empty();
-        this.entryPoint = Codegen.empty();
-        this.workingDirectory = Codegen.empty();
+    private FunctionImageConfigArgs(FunctionImageConfigArgs $) {
+        this.command = $.command;
+        this.entryPoint = $.entryPoint;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionImageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<List<String>> entryPoint;
-        private @Nullable Output<String> workingDirectory;
+        private FunctionImageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionImageConfigArgs();
         }
 
         public Builder(FunctionImageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.entryPoint = defaults.entryPoint;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new FunctionImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder entryPoint(@Nullable Output<List<String>> entryPoint) {
-            this.entryPoint = entryPoint;
+            $.entryPoint = entryPoint;
             return this;
         }
-        public Builder entryPoint(@Nullable List<String> entryPoint) {
-            this.entryPoint = Codegen.ofNullable(entryPoint);
-            return this;
+
+        public Builder entryPoint(List<String> entryPoint) {
+            return entryPoint(Output.of(entryPoint));
         }
+
         public Builder entryPoint(String... entryPoint) {
             return entryPoint(List.of(entryPoint));
         }
+
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
         }
-        public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Codegen.ofNullable(workingDirectory);
-            return this;
-        }        public FunctionImageConfigArgs build() {
-            return new FunctionImageConfigArgs(command, entryPoint, workingDirectory);
+
+        public Builder workingDirectory(String workingDirectory) {
+            return workingDirectory(Output.of(workingDirectory));
+        }
+
+        public FunctionImageConfigArgs build() {
+            return $;
         }
     }
+
 }

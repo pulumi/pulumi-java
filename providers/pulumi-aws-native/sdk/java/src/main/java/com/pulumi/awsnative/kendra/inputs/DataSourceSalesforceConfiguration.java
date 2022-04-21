@@ -21,183 +21,162 @@ public final class DataSourceSalesforceConfiguration extends com.pulumi.resource
     public static final DataSourceSalesforceConfiguration Empty = new DataSourceSalesforceConfiguration();
 
     @Import(name="chatterFeedConfiguration")
-      private final @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration;
+    private @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration;
 
     public Optional<DataSourceSalesforceChatterFeedConfiguration> chatterFeedConfiguration() {
-        return this.chatterFeedConfiguration == null ? Optional.empty() : Optional.ofNullable(this.chatterFeedConfiguration);
+        return Optional.ofNullable(this.chatterFeedConfiguration);
     }
 
     @Import(name="crawlAttachments")
-      private final @Nullable Boolean crawlAttachments;
+    private @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> crawlAttachments() {
-        return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
+        return Optional.ofNullable(this.crawlAttachments);
     }
 
     @Import(name="excludeAttachmentFilePatterns")
-      private final @Nullable List<String> excludeAttachmentFilePatterns;
+    private @Nullable List<String> excludeAttachmentFilePatterns;
 
-    public List<String> excludeAttachmentFilePatterns() {
-        return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
+    public Optional<List<String>> excludeAttachmentFilePatterns() {
+        return Optional.ofNullable(this.excludeAttachmentFilePatterns);
     }
 
     @Import(name="includeAttachmentFilePatterns")
-      private final @Nullable List<String> includeAttachmentFilePatterns;
+    private @Nullable List<String> includeAttachmentFilePatterns;
 
-    public List<String> includeAttachmentFilePatterns() {
-        return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
+    public Optional<List<String>> includeAttachmentFilePatterns() {
+        return Optional.ofNullable(this.includeAttachmentFilePatterns);
     }
 
     @Import(name="knowledgeArticleConfiguration")
-      private final @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration;
+    private @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration;
 
     public Optional<DataSourceSalesforceKnowledgeArticleConfiguration> knowledgeArticleConfiguration() {
-        return this.knowledgeArticleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.knowledgeArticleConfiguration);
+        return Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
 
     @Import(name="secretArn", required=true)
-      private final String secretArn;
+    private String secretArn;
 
     public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serverUrl", required=true)
-      private final String serverUrl;
+    private String serverUrl;
 
     public String serverUrl() {
         return this.serverUrl;
     }
 
     @Import(name="standardObjectAttachmentConfiguration")
-      private final @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
+    private @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
 
     public Optional<DataSourceSalesforceStandardObjectAttachmentConfiguration> standardObjectAttachmentConfiguration() {
-        return this.standardObjectAttachmentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.standardObjectAttachmentConfiguration);
+        return Optional.ofNullable(this.standardObjectAttachmentConfiguration);
     }
 
     @Import(name="standardObjectConfigurations")
-      private final @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
+    private @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
 
-    public List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations() {
-        return this.standardObjectConfigurations == null ? List.of() : this.standardObjectConfigurations;
+    public Optional<List<DataSourceSalesforceStandardObjectConfiguration>> standardObjectConfigurations() {
+        return Optional.ofNullable(this.standardObjectConfigurations);
     }
 
-    public DataSourceSalesforceConfiguration(
-        @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration,
-        @Nullable Boolean crawlAttachments,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<String> includeAttachmentFilePatterns,
-        @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        String secretArn,
-        String serverUrl,
-        @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration,
-        @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
-        this.chatterFeedConfiguration = chatterFeedConfiguration;
-        this.crawlAttachments = crawlAttachments;
-        this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
-        this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
-        this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.serverUrl = Objects.requireNonNull(serverUrl, "expected parameter 'serverUrl' to be non-null");
-        this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
-        this.standardObjectConfigurations = standardObjectConfigurations;
-    }
+    private DataSourceSalesforceConfiguration() {}
 
-    private DataSourceSalesforceConfiguration() {
-        this.chatterFeedConfiguration = null;
-        this.crawlAttachments = null;
-        this.excludeAttachmentFilePatterns = List.of();
-        this.includeAttachmentFilePatterns = List.of();
-        this.knowledgeArticleConfiguration = null;
-        this.secretArn = null;
-        this.serverUrl = null;
-        this.standardObjectAttachmentConfiguration = null;
-        this.standardObjectConfigurations = List.of();
+    private DataSourceSalesforceConfiguration(DataSourceSalesforceConfiguration $) {
+        this.chatterFeedConfiguration = $.chatterFeedConfiguration;
+        this.crawlAttachments = $.crawlAttachments;
+        this.excludeAttachmentFilePatterns = $.excludeAttachmentFilePatterns;
+        this.includeAttachmentFilePatterns = $.includeAttachmentFilePatterns;
+        this.knowledgeArticleConfiguration = $.knowledgeArticleConfiguration;
+        this.secretArn = $.secretArn;
+        this.serverUrl = $.serverUrl;
+        this.standardObjectAttachmentConfiguration = $.standardObjectAttachmentConfiguration;
+        this.standardObjectConfigurations = $.standardObjectConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSalesforceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration;
-        private @Nullable Boolean crawlAttachments;
-        private @Nullable List<String> excludeAttachmentFilePatterns;
-        private @Nullable List<String> includeAttachmentFilePatterns;
-        private @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration;
-        private String secretArn;
-        private String serverUrl;
-        private @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
-        private @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
+        private DataSourceSalesforceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSalesforceConfiguration();
         }
 
         public Builder(DataSourceSalesforceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chatterFeedConfiguration = defaults.chatterFeedConfiguration;
-    	      this.crawlAttachments = defaults.crawlAttachments;
-    	      this.excludeAttachmentFilePatterns = defaults.excludeAttachmentFilePatterns;
-    	      this.includeAttachmentFilePatterns = defaults.includeAttachmentFilePatterns;
-    	      this.knowledgeArticleConfiguration = defaults.knowledgeArticleConfiguration;
-    	      this.secretArn = defaults.secretArn;
-    	      this.serverUrl = defaults.serverUrl;
-    	      this.standardObjectAttachmentConfiguration = defaults.standardObjectAttachmentConfiguration;
-    	      this.standardObjectConfigurations = defaults.standardObjectConfigurations;
+            $ = new DataSourceSalesforceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder chatterFeedConfiguration(@Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration) {
-            this.chatterFeedConfiguration = chatterFeedConfiguration;
+            $.chatterFeedConfiguration = chatterFeedConfiguration;
             return this;
         }
+
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = crawlAttachments;
+            $.crawlAttachments = crawlAttachments;
             return this;
         }
+
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
-            this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
+            $.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
+
         public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
             return excludeAttachmentFilePatterns(List.of(excludeAttachmentFilePatterns));
         }
+
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
-            this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
+            $.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
+
         public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {
             return includeAttachmentFilePatterns(List.of(includeAttachmentFilePatterns));
         }
+
         public Builder knowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
-            this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
+            $.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder serverUrl(String serverUrl) {
-            this.serverUrl = Objects.requireNonNull(serverUrl);
+            $.serverUrl = serverUrl;
             return this;
         }
+
         public Builder standardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
-            this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
+            $.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
             return this;
         }
+
         public Builder standardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
-            this.standardObjectConfigurations = standardObjectConfigurations;
+            $.standardObjectConfigurations = standardObjectConfigurations;
             return this;
         }
+
         public Builder standardObjectConfigurations(DataSourceSalesforceStandardObjectConfiguration... standardObjectConfigurations) {
             return standardObjectConfigurations(List.of(standardObjectConfigurations));
-        }        public DataSourceSalesforceConfiguration build() {
-            return new DataSourceSalesforceConfiguration(chatterFeedConfiguration, crawlAttachments, excludeAttachmentFilePatterns, includeAttachmentFilePatterns, knowledgeArticleConfiguration, secretArn, serverUrl, standardObjectAttachmentConfiguration, standardObjectConfigurations);
+        }
+
+        public DataSourceSalesforceConfiguration build() {
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.serverUrl = Objects.requireNonNull($.serverUrl, "expected parameter 'serverUrl' to be non-null");
+            return $;
         }
     }
+
 }

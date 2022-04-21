@@ -5,11 +5,11 @@ package com.pulumi.awsnative.accessanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,139 +18,129 @@ public final class AnalyzerFilterArgs extends com.pulumi.resources.ResourceArgs 
     public static final AnalyzerFilterArgs Empty = new AnalyzerFilterArgs();
 
     @Import(name="contains")
-      private final @Nullable Output<List<String>> contains;
+    private @Nullable Output<List<String>> contains;
 
-    public Output<List<String>> contains() {
-        return this.contains == null ? Codegen.empty() : this.contains;
+    public Optional<Output<List<String>>> contains() {
+        return Optional.ofNullable(this.contains);
     }
 
     @Import(name="eq")
-      private final @Nullable Output<List<String>> eq;
+    private @Nullable Output<List<String>> eq;
 
-    public Output<List<String>> eq() {
-        return this.eq == null ? Codegen.empty() : this.eq;
+    public Optional<Output<List<String>>> eq() {
+        return Optional.ofNullable(this.eq);
     }
 
     @Import(name="exists")
-      private final @Nullable Output<Boolean> exists;
+    private @Nullable Output<Boolean> exists;
 
-    public Output<Boolean> exists() {
-        return this.exists == null ? Codegen.empty() : this.exists;
+    public Optional<Output<Boolean>> exists() {
+        return Optional.ofNullable(this.exists);
     }
 
     @Import(name="neq")
-      private final @Nullable Output<List<String>> neq;
+    private @Nullable Output<List<String>> neq;
 
-    public Output<List<String>> neq() {
-        return this.neq == null ? Codegen.empty() : this.neq;
+    public Optional<Output<List<String>>> neq() {
+        return Optional.ofNullable(this.neq);
     }
 
     @Import(name="property", required=true)
-      private final Output<String> property;
+    private Output<String> property;
 
     public Output<String> property() {
         return this.property;
     }
 
-    public AnalyzerFilterArgs(
-        @Nullable Output<List<String>> contains,
-        @Nullable Output<List<String>> eq,
-        @Nullable Output<Boolean> exists,
-        @Nullable Output<List<String>> neq,
-        Output<String> property) {
-        this.contains = contains;
-        this.eq = eq;
-        this.exists = exists;
-        this.neq = neq;
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-    }
+    private AnalyzerFilterArgs() {}
 
-    private AnalyzerFilterArgs() {
-        this.contains = Codegen.empty();
-        this.eq = Codegen.empty();
-        this.exists = Codegen.empty();
-        this.neq = Codegen.empty();
-        this.property = Codegen.empty();
+    private AnalyzerFilterArgs(AnalyzerFilterArgs $) {
+        this.contains = $.contains;
+        this.eq = $.eq;
+        this.exists = $.exists;
+        this.neq = $.neq;
+        this.property = $.property;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyzerFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> contains;
-        private @Nullable Output<List<String>> eq;
-        private @Nullable Output<Boolean> exists;
-        private @Nullable Output<List<String>> neq;
-        private Output<String> property;
+        private AnalyzerFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyzerFilterArgs();
         }
 
         public Builder(AnalyzerFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contains = defaults.contains;
-    	      this.eq = defaults.eq;
-    	      this.exists = defaults.exists;
-    	      this.neq = defaults.neq;
-    	      this.property = defaults.property;
+            $ = new AnalyzerFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contains(@Nullable Output<List<String>> contains) {
-            this.contains = contains;
+            $.contains = contains;
             return this;
         }
-        public Builder contains(@Nullable List<String> contains) {
-            this.contains = Codegen.ofNullable(contains);
-            return this;
+
+        public Builder contains(List<String> contains) {
+            return contains(Output.of(contains));
         }
+
         public Builder contains(String... contains) {
             return contains(List.of(contains));
         }
+
         public Builder eq(@Nullable Output<List<String>> eq) {
-            this.eq = eq;
+            $.eq = eq;
             return this;
         }
-        public Builder eq(@Nullable List<String> eq) {
-            this.eq = Codegen.ofNullable(eq);
-            return this;
+
+        public Builder eq(List<String> eq) {
+            return eq(Output.of(eq));
         }
+
         public Builder eq(String... eq) {
             return eq(List.of(eq));
         }
+
         public Builder exists(@Nullable Output<Boolean> exists) {
-            this.exists = exists;
+            $.exists = exists;
             return this;
         }
-        public Builder exists(@Nullable Boolean exists) {
-            this.exists = Codegen.ofNullable(exists);
-            return this;
+
+        public Builder exists(Boolean exists) {
+            return exists(Output.of(exists));
         }
+
         public Builder neq(@Nullable Output<List<String>> neq) {
-            this.neq = neq;
+            $.neq = neq;
             return this;
         }
-        public Builder neq(@Nullable List<String> neq) {
-            this.neq = Codegen.ofNullable(neq);
-            return this;
+
+        public Builder neq(List<String> neq) {
+            return neq(Output.of(neq));
         }
+
         public Builder neq(String... neq) {
             return neq(List.of(neq));
         }
+
         public Builder property(Output<String> property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
         }
+
         public Builder property(String property) {
-            this.property = Output.of(Objects.requireNonNull(property));
-            return this;
-        }        public AnalyzerFilterArgs build() {
-            return new AnalyzerFilterArgs(contains, eq, exists, neq, property);
+            return property(Output.of(property));
+        }
+
+        public AnalyzerFilterArgs build() {
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            return $;
         }
     }
+
 }

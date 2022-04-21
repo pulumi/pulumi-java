@@ -17,7 +17,7 @@ public final class StackSetParameter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameterKey", required=true)
-      private final String parameterKey;
+    private String parameterKey;
 
     public String parameterKey() {
         return this.parameterKey;
@@ -28,55 +28,52 @@ public final class StackSetParameter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameterValue", required=true)
-      private final String parameterValue;
+    private String parameterValue;
 
     public String parameterValue() {
         return this.parameterValue;
     }
 
-    public StackSetParameter(
-        String parameterKey,
-        String parameterValue) {
-        this.parameterKey = Objects.requireNonNull(parameterKey, "expected parameter 'parameterKey' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private StackSetParameter() {}
 
-    private StackSetParameter() {
-        this.parameterKey = null;
-        this.parameterValue = null;
+    private StackSetParameter(StackSetParameter $) {
+        this.parameterKey = $.parameterKey;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameterKey;
-        private String parameterValue;
+        private StackSetParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetParameter();
         }
 
         public Builder(StackSetParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterKey = defaults.parameterKey;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new StackSetParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterKey(String parameterKey) {
-            this.parameterKey = Objects.requireNonNull(parameterKey);
+            $.parameterKey = parameterKey;
             return this;
         }
+
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
-        }        public StackSetParameter build() {
-            return new StackSetParameter(parameterKey, parameterValue);
+        }
+
+        public StackSetParameter build() {
+            $.parameterKey = Objects.requireNonNull($.parameterKey, "expected parameter 'parameterKey' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.greengrassv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ComponentVersionComponentPlatformArgs extends com.pulumi.reso
     public static final ComponentVersionComponentPlatformArgs Empty = new ComponentVersionComponentPlatformArgs();
 
     @Import(name="attributes")
-      private final @Nullable Output<Object> attributes;
+    private @Nullable Output<Object> attributes;
 
-    public Output<Object> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Object>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ComponentVersionComponentPlatformArgs(
-        @Nullable Output<Object> attributes,
-        @Nullable Output<String> name) {
-        this.attributes = attributes;
-        this.name = name;
-    }
+    private ComponentVersionComponentPlatformArgs() {}
 
-    private ComponentVersionComponentPlatformArgs() {
-        this.attributes = Codegen.empty();
-        this.name = Codegen.empty();
+    private ComponentVersionComponentPlatformArgs(ComponentVersionComponentPlatformArgs $) {
+        this.attributes = $.attributes;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentVersionComponentPlatformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> attributes;
-        private @Nullable Output<String> name;
+        private ComponentVersionComponentPlatformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentVersionComponentPlatformArgs();
         }
 
         public Builder(ComponentVersionComponentPlatformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.name = defaults.name;
+            $ = new ComponentVersionComponentPlatformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Object> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Object attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Object attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ComponentVersionComponentPlatformArgs build() {
-            return new ComponentVersionComponentPlatformArgs(attributes, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ComponentVersionComponentPlatformArgs build() {
+            return $;
         }
     }
+
 }

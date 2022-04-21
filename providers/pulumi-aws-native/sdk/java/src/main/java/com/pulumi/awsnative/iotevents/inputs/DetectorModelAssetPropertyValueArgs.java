@@ -7,9 +7,9 @@ import com.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyTimestamp
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyVariantArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,90 +26,83 @@ public final class DetectorModelAssetPropertyValueArgs extends com.pulumi.resour
      * 
      */
     @Import(name="quality")
-      private final @Nullable Output<String> quality;
+    private @Nullable Output<String> quality;
 
-    public Output<String> quality() {
-        return this.quality == null ? Codegen.empty() : this.quality;
+    public Optional<Output<String>> quality() {
+        return Optional.ofNullable(this.quality);
     }
 
     @Import(name="timestamp")
-      private final @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
+    private @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
 
-    public Output<DetectorModelAssetPropertyTimestampArgs> timestamp() {
-        return this.timestamp == null ? Codegen.empty() : this.timestamp;
+    public Optional<Output<DetectorModelAssetPropertyTimestampArgs>> timestamp() {
+        return Optional.ofNullable(this.timestamp);
     }
 
     @Import(name="value", required=true)
-      private final Output<DetectorModelAssetPropertyVariantArgs> value;
+    private Output<DetectorModelAssetPropertyVariantArgs> value;
 
     public Output<DetectorModelAssetPropertyVariantArgs> value() {
         return this.value;
     }
 
-    public DetectorModelAssetPropertyValueArgs(
-        @Nullable Output<String> quality,
-        @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp,
-        Output<DetectorModelAssetPropertyVariantArgs> value) {
-        this.quality = quality;
-        this.timestamp = timestamp;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private DetectorModelAssetPropertyValueArgs() {}
 
-    private DetectorModelAssetPropertyValueArgs() {
-        this.quality = Codegen.empty();
-        this.timestamp = Codegen.empty();
-        this.value = Codegen.empty();
+    private DetectorModelAssetPropertyValueArgs(DetectorModelAssetPropertyValueArgs $) {
+        this.quality = $.quality;
+        this.timestamp = $.timestamp;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelAssetPropertyValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> quality;
-        private @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
-        private Output<DetectorModelAssetPropertyVariantArgs> value;
+        private DetectorModelAssetPropertyValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelAssetPropertyValueArgs();
         }
 
         public Builder(DetectorModelAssetPropertyValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quality = defaults.quality;
-    	      this.timestamp = defaults.timestamp;
-    	      this.value = defaults.value;
+            $ = new DetectorModelAssetPropertyValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quality(@Nullable Output<String> quality) {
-            this.quality = quality;
+            $.quality = quality;
             return this;
         }
-        public Builder quality(@Nullable String quality) {
-            this.quality = Codegen.ofNullable(quality);
-            return this;
+
+        public Builder quality(String quality) {
+            return quality(Output.of(quality));
         }
+
         public Builder timestamp(@Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp) {
-            this.timestamp = timestamp;
+            $.timestamp = timestamp;
             return this;
         }
-        public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestampArgs timestamp) {
-            this.timestamp = Codegen.ofNullable(timestamp);
-            return this;
+
+        public Builder timestamp(DetectorModelAssetPropertyTimestampArgs timestamp) {
+            return timestamp(Output.of(timestamp));
         }
+
         public Builder value(Output<DetectorModelAssetPropertyVariantArgs> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(DetectorModelAssetPropertyVariantArgs value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public DetectorModelAssetPropertyValueArgs build() {
-            return new DetectorModelAssetPropertyValueArgs(quality, timestamp, value);
+            return value(Output.of(value));
+        }
+
+        public DetectorModelAssetPropertyValueArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ResourceSetR53ResourceRecord extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="domainName")
-      private final @Nullable String domainName;
+    private @Nullable String domainName;
 
     public Optional<String> domainName() {
-        return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ResourceSetR53ResourceRecord extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="recordSetId")
-      private final @Nullable String recordSetId;
+    private @Nullable String recordSetId;
 
     public Optional<String> recordSetId() {
-        return this.recordSetId == null ? Optional.empty() : Optional.ofNullable(this.recordSetId);
+        return Optional.ofNullable(this.recordSetId);
     }
 
-    public ResourceSetR53ResourceRecord(
-        @Nullable String domainName,
-        @Nullable String recordSetId) {
-        this.domainName = domainName;
-        this.recordSetId = recordSetId;
-    }
+    private ResourceSetR53ResourceRecord() {}
 
-    private ResourceSetR53ResourceRecord() {
-        this.domainName = null;
-        this.recordSetId = null;
+    private ResourceSetR53ResourceRecord(ResourceSetR53ResourceRecord $) {
+        this.domainName = $.domainName;
+        this.recordSetId = $.recordSetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetR53ResourceRecord defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String domainName;
-        private @Nullable String recordSetId;
+        private ResourceSetR53ResourceRecord $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetR53ResourceRecord();
         }
 
         public Builder(ResourceSetR53ResourceRecord defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.recordSetId = defaults.recordSetId;
+            $ = new ResourceSetR53ResourceRecord(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
+
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = recordSetId;
+            $.recordSetId = recordSetId;
             return this;
-        }        public ResourceSetR53ResourceRecord build() {
-            return new ResourceSetR53ResourceRecord(domainName, recordSetId);
+        }
+
+        public ResourceSetR53ResourceRecord build() {
+            return $;
         }
     }
+
 }

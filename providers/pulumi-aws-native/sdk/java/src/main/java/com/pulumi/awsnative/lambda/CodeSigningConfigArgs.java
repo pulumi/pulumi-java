@@ -7,9 +7,9 @@ import com.pulumi.awsnative.lambda.inputs.CodeSigningConfigAllowedPublishersArgs
 import com.pulumi.awsnative.lambda.inputs.CodeSigningConfigCodeSigningPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="allowedPublishers", required=true)
-      private final Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
+    private Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
     public Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers() {
         return this.allowedPublishers;
@@ -33,10 +33,10 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="codeSigningPolicies")
-      private final @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
+    private @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
-    public Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies() {
-        return this.codeSigningPolicies == null ? Codegen.empty() : this.codeSigningPolicies;
+    public Optional<Output<CodeSigningConfigCodeSigningPoliciesArgs>> codeSigningPolicies() {
+        return Optional.ofNullable(this.codeSigningPolicies);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public CodeSigningConfigArgs(
-        Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers,
-        @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies,
-        @Nullable Output<String> description) {
-        this.allowedPublishers = Objects.requireNonNull(allowedPublishers, "expected parameter 'allowedPublishers' to be non-null");
-        this.codeSigningPolicies = codeSigningPolicies;
-        this.description = description;
-    }
+    private CodeSigningConfigArgs() {}
 
-    private CodeSigningConfigArgs() {
-        this.allowedPublishers = Codegen.empty();
-        this.codeSigningPolicies = Codegen.empty();
-        this.description = Codegen.empty();
+    private CodeSigningConfigArgs(CodeSigningConfigArgs $) {
+        this.allowedPublishers = $.allowedPublishers;
+        this.codeSigningPolicies = $.codeSigningPolicies;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeSigningConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
-        private @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
-        private @Nullable Output<String> description;
+        private CodeSigningConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeSigningConfigArgs();
         }
 
         public Builder(CodeSigningConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPublishers = defaults.allowedPublishers;
-    	      this.codeSigningPolicies = defaults.codeSigningPolicies;
-    	      this.description = defaults.description;
+            $ = new CodeSigningConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPublishers(Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
-            this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
+            $.allowedPublishers = allowedPublishers;
             return this;
         }
+
         public Builder allowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
-            this.allowedPublishers = Output.of(Objects.requireNonNull(allowedPublishers));
-            return this;
+            return allowedPublishers(Output.of(allowedPublishers));
         }
+
         public Builder codeSigningPolicies(@Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies) {
-            this.codeSigningPolicies = codeSigningPolicies;
+            $.codeSigningPolicies = codeSigningPolicies;
             return this;
         }
-        public Builder codeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPoliciesArgs codeSigningPolicies) {
-            this.codeSigningPolicies = Codegen.ofNullable(codeSigningPolicies);
-            return this;
+
+        public Builder codeSigningPolicies(CodeSigningConfigCodeSigningPoliciesArgs codeSigningPolicies) {
+            return codeSigningPolicies(Output.of(codeSigningPolicies));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public CodeSigningConfigArgs build() {
-            return new CodeSigningConfigArgs(allowedPublishers, codeSigningPolicies, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public CodeSigningConfigArgs build() {
+            $.allowedPublishers = Objects.requireNonNull($.allowedPublishers, "expected parameter 'allowedPublishers' to be non-null");
+            return $;
         }
     }
+
 }

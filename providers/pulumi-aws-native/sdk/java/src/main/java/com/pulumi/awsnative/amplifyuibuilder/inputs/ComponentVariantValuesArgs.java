@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ComponentVariantValuesArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ComponentVariantValuesArgs Empty = new ComponentVariantValuesArgs();
 
-    public ComponentVariantValuesArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ComponentVariantValuesArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ComponentVariantValuesArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ComponentVariantValuesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ComponentVariantValuesArgs();
         }
         public ComponentVariantValuesArgs build() {
-            return new ComponentVariantValuesArgs();
+            return $;
         }
     }
+
 }

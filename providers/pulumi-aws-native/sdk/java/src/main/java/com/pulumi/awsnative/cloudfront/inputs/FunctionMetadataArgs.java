@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FunctionMetadataArgs extends com.pulumi.resources.ResourceArg
     public static final FunctionMetadataArgs Empty = new FunctionMetadataArgs();
 
     @Import(name="functionARN")
-      private final @Nullable Output<String> functionARN;
+    private @Nullable Output<String> functionARN;
 
-    public Output<String> functionARN() {
-        return this.functionARN == null ? Codegen.empty() : this.functionARN;
+    public Optional<Output<String>> functionARN() {
+        return Optional.ofNullable(this.functionARN);
     }
 
-    public FunctionMetadataArgs(@Nullable Output<String> functionARN) {
-        this.functionARN = functionARN;
-    }
+    private FunctionMetadataArgs() {}
 
-    private FunctionMetadataArgs() {
-        this.functionARN = Codegen.empty();
+    private FunctionMetadataArgs(FunctionMetadataArgs $) {
+        this.functionARN = $.functionARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> functionARN;
+        private FunctionMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionMetadataArgs();
         }
 
         public Builder(FunctionMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionARN = defaults.functionARN;
+            $ = new FunctionMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionARN(@Nullable Output<String> functionARN) {
-            this.functionARN = functionARN;
+            $.functionARN = functionARN;
             return this;
         }
-        public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = Codegen.ofNullable(functionARN);
-            return this;
-        }        public FunctionMetadataArgs build() {
-            return new FunctionMetadataArgs(functionARN);
+
+        public Builder functionARN(String functionARN) {
+            return functionARN(Output.of(functionARN));
+        }
+
+        public FunctionMetadataArgs build() {
+            return $;
         }
     }
+
 }

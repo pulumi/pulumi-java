@@ -23,7 +23,7 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fromPort", required=true)
-      private final Integer fromPort;
+    private Integer fromPort;
 
     public Integer fromPort() {
         return this.fromPort;
@@ -34,7 +34,7 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipRange", required=true)
-      private final String ipRange;
+    private String ipRange;
 
     public String ipRange() {
         return this.ipRange;
@@ -45,7 +45,7 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final FleetIpPermissionProtocol protocol;
+    private FleetIpPermissionProtocol protocol;
 
     public FleetIpPermissionProtocol protocol() {
         return this.protocol;
@@ -56,73 +56,66 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="toPort", required=true)
-      private final Integer toPort;
+    private Integer toPort;
 
     public Integer toPort() {
         return this.toPort;
     }
 
-    public FleetIpPermission(
-        Integer fromPort,
-        String ipRange,
-        FleetIpPermissionProtocol protocol,
-        Integer toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
-        this.ipRange = Objects.requireNonNull(ipRange, "expected parameter 'ipRange' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.toPort = Objects.requireNonNull(toPort, "expected parameter 'toPort' to be non-null");
-    }
+    private FleetIpPermission() {}
 
-    private FleetIpPermission() {
-        this.fromPort = null;
-        this.ipRange = null;
-        this.protocol = null;
-        this.toPort = null;
+    private FleetIpPermission(FleetIpPermission $) {
+        this.fromPort = $.fromPort;
+        this.ipRange = $.ipRange;
+        this.protocol = $.protocol;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetIpPermission defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer fromPort;
-        private String ipRange;
-        private FleetIpPermissionProtocol protocol;
-        private Integer toPort;
+        private FleetIpPermission $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetIpPermission();
         }
 
         public Builder(FleetIpPermission defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fromPort = defaults.fromPort;
-    	      this.ipRange = defaults.ipRange;
-    	      this.protocol = defaults.protocol;
-    	      this.toPort = defaults.toPort;
+            $ = new FleetIpPermission(Objects.requireNonNull(defaults));
         }
 
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Objects.requireNonNull(fromPort);
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder ipRange(String ipRange) {
-            this.ipRange = Objects.requireNonNull(ipRange);
+            $.ipRange = ipRange;
             return this;
         }
+
         public Builder protocol(FleetIpPermissionProtocol protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder toPort(Integer toPort) {
-            this.toPort = Objects.requireNonNull(toPort);
+            $.toPort = toPort;
             return this;
-        }        public FleetIpPermission build() {
-            return new FleetIpPermission(fromPort, ipRange, protocol, toPort);
+        }
+
+        public FleetIpPermission build() {
+            $.fromPort = Objects.requireNonNull($.fromPort, "expected parameter 'fromPort' to be non-null");
+            $.ipRange = Objects.requireNonNull($.ipRange, "expected parameter 'ipRange' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.toPort = Objects.requireNonNull($.toPort, "expected parameter 'toPort' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetOutcomeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetOutcomeArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetOutcomeArgs() {}
 
-    private GetOutcomeArgs() {
-        this.arn = null;
+    private GetOutcomeArgs(GetOutcomeArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOutcomeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetOutcomeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOutcomeArgs();
         }
 
         public Builder(GetOutcomeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetOutcomeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetOutcomeArgs build() {
-            return new GetOutcomeArgs(arn);
+        }
+
+        public GetOutcomeArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class FleetServerProcess extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="concurrentExecutions", required=true)
-      private final Integer concurrentExecutions;
+    private Integer concurrentExecutions;
 
     public Integer concurrentExecutions() {
         return this.concurrentExecutions;
@@ -39,7 +39,7 @@ public final class FleetServerProcess extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="launchPath", required=true)
-      private final String launchPath;
+    private String launchPath;
 
     public String launchPath() {
         return this.launchPath;
@@ -50,64 +50,58 @@ public final class FleetServerProcess extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable String parameters;
+    private @Nullable String parameters;
 
     public Optional<String> parameters() {
-        return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
+        return Optional.ofNullable(this.parameters);
     }
 
-    public FleetServerProcess(
-        Integer concurrentExecutions,
-        String launchPath,
-        @Nullable String parameters) {
-        this.concurrentExecutions = Objects.requireNonNull(concurrentExecutions, "expected parameter 'concurrentExecutions' to be non-null");
-        this.launchPath = Objects.requireNonNull(launchPath, "expected parameter 'launchPath' to be non-null");
-        this.parameters = parameters;
-    }
+    private FleetServerProcess() {}
 
-    private FleetServerProcess() {
-        this.concurrentExecutions = null;
-        this.launchPath = null;
-        this.parameters = null;
+    private FleetServerProcess(FleetServerProcess $) {
+        this.concurrentExecutions = $.concurrentExecutions;
+        this.launchPath = $.launchPath;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetServerProcess defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer concurrentExecutions;
-        private String launchPath;
-        private @Nullable String parameters;
+        private FleetServerProcess $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetServerProcess();
         }
 
         public Builder(FleetServerProcess defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.concurrentExecutions = defaults.concurrentExecutions;
-    	      this.launchPath = defaults.launchPath;
-    	      this.parameters = defaults.parameters;
+            $ = new FleetServerProcess(Objects.requireNonNull(defaults));
         }
 
         public Builder concurrentExecutions(Integer concurrentExecutions) {
-            this.concurrentExecutions = Objects.requireNonNull(concurrentExecutions);
+            $.concurrentExecutions = concurrentExecutions;
             return this;
         }
+
         public Builder launchPath(String launchPath) {
-            this.launchPath = Objects.requireNonNull(launchPath);
+            $.launchPath = launchPath;
             return this;
         }
+
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
-        }        public FleetServerProcess build() {
-            return new FleetServerProcess(concurrentExecutions, launchPath, parameters);
+        }
+
+        public FleetServerProcess build() {
+            $.concurrentExecutions = Objects.requireNonNull($.concurrentExecutions, "expected parameter 'concurrentExecutions' to be non-null");
+            $.launchPath = Objects.requireNonNull($.launchPath, "expected parameter 'launchPath' to be non-null");
+            return $;
         }
     }
+
 }

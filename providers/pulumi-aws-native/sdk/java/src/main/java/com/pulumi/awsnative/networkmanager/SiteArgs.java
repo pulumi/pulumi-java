@@ -7,10 +7,10 @@ import com.pulumi.awsnative.networkmanager.inputs.SiteLocationArgs;
 import com.pulumi.awsnative.networkmanager.inputs.SiteTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final Output<String> globalNetworkId;
+    private Output<String> globalNetworkId;
 
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
@@ -45,10 +45,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<SiteLocationArgs> location;
+    private @Nullable Output<SiteLocationArgs> location;
 
-    public Output<SiteLocationArgs> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<SiteLocationArgs>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -56,92 +56,83 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<SiteTagArgs>> tags;
+    private @Nullable Output<List<SiteTagArgs>> tags;
 
-    public Output<List<SiteTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<SiteTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SiteArgs(
-        @Nullable Output<String> description,
-        Output<String> globalNetworkId,
-        @Nullable Output<SiteLocationArgs> location,
-        @Nullable Output<List<SiteTagArgs>> tags) {
-        this.description = description;
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.location = location;
-        this.tags = tags;
-    }
+    private SiteArgs() {}
 
-    private SiteArgs() {
-        this.description = Codegen.empty();
-        this.globalNetworkId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SiteArgs(SiteArgs $) {
+        this.description = $.description;
+        this.globalNetworkId = $.globalNetworkId;
+        this.location = $.location;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> globalNetworkId;
-        private @Nullable Output<SiteLocationArgs> location;
-        private @Nullable Output<List<SiteTagArgs>> tags;
+        private SiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteArgs();
         }
 
         public Builder(SiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.location = defaults.location;
-    	      this.tags = defaults.tags;
+            $ = new SiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder globalNetworkId(Output<String> globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
+
         public Builder location(@Nullable Output<SiteLocationArgs> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable SiteLocationArgs location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(SiteLocationArgs location) {
+            return location(Output.of(location));
         }
+
         public Builder tags(@Nullable Output<List<SiteTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<SiteTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<SiteTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(SiteTagArgs... tags) {
             return tags(List.of(tags));
-        }        public SiteArgs build() {
-            return new SiteArgs(description, globalNetworkId, location, tags);
+        }
+
+        public SiteArgs build() {
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            return $;
         }
     }
+
 }

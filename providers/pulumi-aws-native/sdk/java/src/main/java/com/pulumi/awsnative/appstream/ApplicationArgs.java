@@ -7,10 +7,10 @@ import com.pulumi.awsnative.appstream.inputs.ApplicationS3LocationArgs;
 import com.pulumi.awsnative.appstream.inputs.ApplicationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,282 +19,256 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     @Import(name="appBlockArn", required=true)
-      private final Output<String> appBlockArn;
+    private Output<String> appBlockArn;
 
     public Output<String> appBlockArn() {
         return this.appBlockArn;
     }
 
     @Import(name="attributesToDelete")
-      private final @Nullable Output<List<String>> attributesToDelete;
+    private @Nullable Output<List<String>> attributesToDelete;
 
-    public Output<List<String>> attributesToDelete() {
-        return this.attributesToDelete == null ? Codegen.empty() : this.attributesToDelete;
+    public Optional<Output<List<String>>> attributesToDelete() {
+        return Optional.ofNullable(this.attributesToDelete);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="iconS3Location", required=true)
-      private final Output<ApplicationS3LocationArgs> iconS3Location;
+    private Output<ApplicationS3LocationArgs> iconS3Location;
 
     public Output<ApplicationS3LocationArgs> iconS3Location() {
         return this.iconS3Location;
     }
 
     @Import(name="instanceFamilies", required=true)
-      private final Output<List<String>> instanceFamilies;
+    private Output<List<String>> instanceFamilies;
 
     public Output<List<String>> instanceFamilies() {
         return this.instanceFamilies;
     }
 
     @Import(name="launchParameters")
-      private final @Nullable Output<String> launchParameters;
+    private @Nullable Output<String> launchParameters;
 
-    public Output<String> launchParameters() {
-        return this.launchParameters == null ? Codegen.empty() : this.launchParameters;
+    public Optional<Output<String>> launchParameters() {
+        return Optional.ofNullable(this.launchParameters);
     }
 
     @Import(name="launchPath", required=true)
-      private final Output<String> launchPath;
+    private Output<String> launchPath;
 
     public Output<String> launchPath() {
         return this.launchPath;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="platforms", required=true)
-      private final Output<List<String>> platforms;
+    private Output<List<String>> platforms;
 
     public Output<List<String>> platforms() {
         return this.platforms;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ApplicationTagArgs>> tags;
+    private @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ApplicationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="workingDirectory")
-      private final @Nullable Output<String> workingDirectory;
+    private @Nullable Output<String> workingDirectory;
 
-    public Output<String> workingDirectory() {
-        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
+    public Optional<Output<String>> workingDirectory() {
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public ApplicationArgs(
-        Output<String> appBlockArn,
-        @Nullable Output<List<String>> attributesToDelete,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<ApplicationS3LocationArgs> iconS3Location,
-        Output<List<String>> instanceFamilies,
-        @Nullable Output<String> launchParameters,
-        Output<String> launchPath,
-        @Nullable Output<String> name,
-        Output<List<String>> platforms,
-        @Nullable Output<List<ApplicationTagArgs>> tags,
-        @Nullable Output<String> workingDirectory) {
-        this.appBlockArn = Objects.requireNonNull(appBlockArn, "expected parameter 'appBlockArn' to be non-null");
-        this.attributesToDelete = attributesToDelete;
-        this.description = description;
-        this.displayName = displayName;
-        this.iconS3Location = Objects.requireNonNull(iconS3Location, "expected parameter 'iconS3Location' to be non-null");
-        this.instanceFamilies = Objects.requireNonNull(instanceFamilies, "expected parameter 'instanceFamilies' to be non-null");
-        this.launchParameters = launchParameters;
-        this.launchPath = Objects.requireNonNull(launchPath, "expected parameter 'launchPath' to be non-null");
-        this.name = name;
-        this.platforms = Objects.requireNonNull(platforms, "expected parameter 'platforms' to be non-null");
-        this.tags = tags;
-        this.workingDirectory = workingDirectory;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.appBlockArn = Codegen.empty();
-        this.attributesToDelete = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.iconS3Location = Codegen.empty();
-        this.instanceFamilies = Codegen.empty();
-        this.launchParameters = Codegen.empty();
-        this.launchPath = Codegen.empty();
-        this.name = Codegen.empty();
-        this.platforms = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workingDirectory = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.appBlockArn = $.appBlockArn;
+        this.attributesToDelete = $.attributesToDelete;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.iconS3Location = $.iconS3Location;
+        this.instanceFamilies = $.instanceFamilies;
+        this.launchParameters = $.launchParameters;
+        this.launchPath = $.launchPath;
+        this.name = $.name;
+        this.platforms = $.platforms;
+        this.tags = $.tags;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appBlockArn;
-        private @Nullable Output<List<String>> attributesToDelete;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<ApplicationS3LocationArgs> iconS3Location;
-        private Output<List<String>> instanceFamilies;
-        private @Nullable Output<String> launchParameters;
-        private Output<String> launchPath;
-        private @Nullable Output<String> name;
-        private Output<List<String>> platforms;
-        private @Nullable Output<List<ApplicationTagArgs>> tags;
-        private @Nullable Output<String> workingDirectory;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appBlockArn = defaults.appBlockArn;
-    	      this.attributesToDelete = defaults.attributesToDelete;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.iconS3Location = defaults.iconS3Location;
-    	      this.instanceFamilies = defaults.instanceFamilies;
-    	      this.launchParameters = defaults.launchParameters;
-    	      this.launchPath = defaults.launchPath;
-    	      this.name = defaults.name;
-    	      this.platforms = defaults.platforms;
-    	      this.tags = defaults.tags;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appBlockArn(Output<String> appBlockArn) {
-            this.appBlockArn = Objects.requireNonNull(appBlockArn);
+            $.appBlockArn = appBlockArn;
             return this;
         }
+
         public Builder appBlockArn(String appBlockArn) {
-            this.appBlockArn = Output.of(Objects.requireNonNull(appBlockArn));
-            return this;
+            return appBlockArn(Output.of(appBlockArn));
         }
+
         public Builder attributesToDelete(@Nullable Output<List<String>> attributesToDelete) {
-            this.attributesToDelete = attributesToDelete;
+            $.attributesToDelete = attributesToDelete;
             return this;
         }
-        public Builder attributesToDelete(@Nullable List<String> attributesToDelete) {
-            this.attributesToDelete = Codegen.ofNullable(attributesToDelete);
-            return this;
+
+        public Builder attributesToDelete(List<String> attributesToDelete) {
+            return attributesToDelete(Output.of(attributesToDelete));
         }
+
         public Builder attributesToDelete(String... attributesToDelete) {
             return attributesToDelete(List.of(attributesToDelete));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder iconS3Location(Output<ApplicationS3LocationArgs> iconS3Location) {
-            this.iconS3Location = Objects.requireNonNull(iconS3Location);
+            $.iconS3Location = iconS3Location;
             return this;
         }
+
         public Builder iconS3Location(ApplicationS3LocationArgs iconS3Location) {
-            this.iconS3Location = Output.of(Objects.requireNonNull(iconS3Location));
-            return this;
+            return iconS3Location(Output.of(iconS3Location));
         }
+
         public Builder instanceFamilies(Output<List<String>> instanceFamilies) {
-            this.instanceFamilies = Objects.requireNonNull(instanceFamilies);
+            $.instanceFamilies = instanceFamilies;
             return this;
         }
+
         public Builder instanceFamilies(List<String> instanceFamilies) {
-            this.instanceFamilies = Output.of(Objects.requireNonNull(instanceFamilies));
-            return this;
+            return instanceFamilies(Output.of(instanceFamilies));
         }
+
         public Builder instanceFamilies(String... instanceFamilies) {
             return instanceFamilies(List.of(instanceFamilies));
         }
+
         public Builder launchParameters(@Nullable Output<String> launchParameters) {
-            this.launchParameters = launchParameters;
+            $.launchParameters = launchParameters;
             return this;
         }
-        public Builder launchParameters(@Nullable String launchParameters) {
-            this.launchParameters = Codegen.ofNullable(launchParameters);
-            return this;
+
+        public Builder launchParameters(String launchParameters) {
+            return launchParameters(Output.of(launchParameters));
         }
+
         public Builder launchPath(Output<String> launchPath) {
-            this.launchPath = Objects.requireNonNull(launchPath);
+            $.launchPath = launchPath;
             return this;
         }
+
         public Builder launchPath(String launchPath) {
-            this.launchPath = Output.of(Objects.requireNonNull(launchPath));
-            return this;
+            return launchPath(Output.of(launchPath));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder platforms(Output<List<String>> platforms) {
-            this.platforms = Objects.requireNonNull(platforms);
+            $.platforms = platforms;
             return this;
         }
+
         public Builder platforms(List<String> platforms) {
-            this.platforms = Output.of(Objects.requireNonNull(platforms));
-            return this;
+            return platforms(Output.of(platforms));
         }
+
         public Builder platforms(String... platforms) {
             return platforms(List.of(platforms));
         }
+
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ApplicationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ApplicationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
         }
-        public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Codegen.ofNullable(workingDirectory);
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(appBlockArn, attributesToDelete, description, displayName, iconS3Location, instanceFamilies, launchParameters, launchPath, name, platforms, tags, workingDirectory);
+
+        public Builder workingDirectory(String workingDirectory) {
+            return workingDirectory(Output.of(workingDirectory));
+        }
+
+        public ApplicationArgs build() {
+            $.appBlockArn = Objects.requireNonNull($.appBlockArn, "expected parameter 'appBlockArn' to be non-null");
+            $.iconS3Location = Objects.requireNonNull($.iconS3Location, "expected parameter 'iconS3Location' to be non-null");
+            $.instanceFamilies = Objects.requireNonNull($.instanceFamilies, "expected parameter 'instanceFamilies' to be non-null");
+            $.launchPath = Objects.requireNonNull($.launchPath, "expected parameter 'launchPath' to be non-null");
+            $.platforms = Objects.requireNonNull($.platforms, "expected parameter 'platforms' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class QuickConnectPhoneNumberQuickConnectConfig extends com.pulumi.
     public static final QuickConnectPhoneNumberQuickConnectConfig Empty = new QuickConnectPhoneNumberQuickConnectConfig();
 
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
     }
 
-    public QuickConnectPhoneNumberQuickConnectConfig(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-    }
+    private QuickConnectPhoneNumberQuickConnectConfig() {}
 
-    private QuickConnectPhoneNumberQuickConnectConfig() {
-        this.phoneNumber = null;
+    private QuickConnectPhoneNumberQuickConnectConfig(QuickConnectPhoneNumberQuickConnectConfig $) {
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickConnectPhoneNumberQuickConnectConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String phoneNumber;
+        private QuickConnectPhoneNumberQuickConnectConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickConnectPhoneNumberQuickConnectConfig();
         }
 
         public Builder(QuickConnectPhoneNumberQuickConnectConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new QuickConnectPhoneNumberQuickConnectConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
-        }        public QuickConnectPhoneNumberQuickConnectConfig build() {
-            return new QuickConnectPhoneNumberQuickConnectConfig(phoneNumber);
+        }
+
+        public QuickConnectPhoneNumberQuickConnectConfig build() {
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
-    public GetDatabaseArgs(String databaseName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-    }
+    private GetDatabaseArgs() {}
 
-    private GetDatabaseArgs() {
-        this.databaseName = null;
+    private GetDatabaseArgs(GetDatabaseArgs $) {
+        this.databaseName = $.databaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
+        private GetDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseArgs();
         }
 
         public Builder(GetDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
+            $ = new GetDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
-        }        public GetDatabaseArgs build() {
-            return new GetDatabaseArgs(databaseName);
+        }
+
+        public GetDatabaseArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            return $;
         }
     }
+
 }

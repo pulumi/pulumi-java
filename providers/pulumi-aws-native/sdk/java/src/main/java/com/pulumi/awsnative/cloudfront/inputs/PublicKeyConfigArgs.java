@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,102 @@ public final class PublicKeyConfigArgs extends com.pulumi.resources.ResourceArgs
     public static final PublicKeyConfigArgs Empty = new PublicKeyConfigArgs();
 
     @Import(name="callerReference", required=true)
-      private final Output<String> callerReference;
+    private Output<String> callerReference;
 
     public Output<String> callerReference() {
         return this.callerReference;
     }
 
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="encodedKey", required=true)
-      private final Output<String> encodedKey;
+    private Output<String> encodedKey;
 
     public Output<String> encodedKey() {
         return this.encodedKey;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PublicKeyConfigArgs(
-        Output<String> callerReference,
-        @Nullable Output<String> comment,
-        Output<String> encodedKey,
-        Output<String> name) {
-        this.callerReference = Objects.requireNonNull(callerReference, "expected parameter 'callerReference' to be non-null");
-        this.comment = comment;
-        this.encodedKey = Objects.requireNonNull(encodedKey, "expected parameter 'encodedKey' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PublicKeyConfigArgs() {}
 
-    private PublicKeyConfigArgs() {
-        this.callerReference = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.encodedKey = Codegen.empty();
-        this.name = Codegen.empty();
+    private PublicKeyConfigArgs(PublicKeyConfigArgs $) {
+        this.callerReference = $.callerReference;
+        this.comment = $.comment;
+        this.encodedKey = $.encodedKey;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> callerReference;
-        private @Nullable Output<String> comment;
-        private Output<String> encodedKey;
-        private Output<String> name;
+        private PublicKeyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyConfigArgs();
         }
 
         public Builder(PublicKeyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callerReference = defaults.callerReference;
-    	      this.comment = defaults.comment;
-    	      this.encodedKey = defaults.encodedKey;
-    	      this.name = defaults.name;
+            $ = new PublicKeyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder callerReference(Output<String> callerReference) {
-            this.callerReference = Objects.requireNonNull(callerReference);
+            $.callerReference = callerReference;
             return this;
         }
+
         public Builder callerReference(String callerReference) {
-            this.callerReference = Output.of(Objects.requireNonNull(callerReference));
-            return this;
+            return callerReference(Output.of(callerReference));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder encodedKey(Output<String> encodedKey) {
-            this.encodedKey = Objects.requireNonNull(encodedKey);
+            $.encodedKey = encodedKey;
             return this;
         }
+
         public Builder encodedKey(String encodedKey) {
-            this.encodedKey = Output.of(Objects.requireNonNull(encodedKey));
-            return this;
+            return encodedKey(Output.of(encodedKey));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PublicKeyConfigArgs build() {
-            return new PublicKeyConfigArgs(callerReference, comment, encodedKey, name);
+            return name(Output.of(name));
+        }
+
+        public PublicKeyConfigArgs build() {
+            $.callerReference = Objects.requireNonNull($.callerReference, "expected parameter 'callerReference' to be non-null");
+            $.encodedKey = Objects.requireNonNull($.encodedKey, "expected parameter 'encodedKey' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.awsnative.iotsitewise.inputs.GatewayPlatformArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.GatewayTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayCapabilitySummaries")
-      private final @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
+    private @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
-    public Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries() {
-        return this.gatewayCapabilitySummaries == null ? Codegen.empty() : this.gatewayCapabilitySummaries;
+    public Optional<Output<List<GatewayCapabilitySummaryArgs>>> gatewayCapabilitySummaries() {
+        return Optional.ofNullable(this.gatewayCapabilitySummaries);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayName")
-      private final @Nullable Output<String> gatewayName;
+    private @Nullable Output<String> gatewayName;
 
-    public Output<String> gatewayName() {
-        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
+    public Optional<Output<String>> gatewayName() {
+        return Optional.ofNullable(this.gatewayName);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayPlatform", required=true)
-      private final Output<GatewayPlatformArgs> gatewayPlatform;
+    private Output<GatewayPlatformArgs> gatewayPlatform;
 
     public Output<GatewayPlatformArgs> gatewayPlatform() {
         return this.gatewayPlatform;
@@ -57,95 +57,87 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<GatewayTagArgs>> tags;
+    private @Nullable Output<List<GatewayTagArgs>> tags;
 
-    public Output<List<GatewayTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<GatewayTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GatewayArgs(
-        @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries,
-        @Nullable Output<String> gatewayName,
-        Output<GatewayPlatformArgs> gatewayPlatform,
-        @Nullable Output<List<GatewayTagArgs>> tags) {
-        this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
-        this.gatewayName = gatewayName;
-        this.gatewayPlatform = Objects.requireNonNull(gatewayPlatform, "expected parameter 'gatewayPlatform' to be non-null");
-        this.tags = tags;
-    }
+    private GatewayArgs() {}
 
-    private GatewayArgs() {
-        this.gatewayCapabilitySummaries = Codegen.empty();
-        this.gatewayName = Codegen.empty();
-        this.gatewayPlatform = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GatewayArgs(GatewayArgs $) {
+        this.gatewayCapabilitySummaries = $.gatewayCapabilitySummaries;
+        this.gatewayName = $.gatewayName;
+        this.gatewayPlatform = $.gatewayPlatform;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
-        private @Nullable Output<String> gatewayName;
-        private Output<GatewayPlatformArgs> gatewayPlatform;
-        private @Nullable Output<List<GatewayTagArgs>> tags;
+        private GatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayArgs();
         }
 
         public Builder(GatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayCapabilitySummaries = defaults.gatewayCapabilitySummaries;
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.gatewayPlatform = defaults.gatewayPlatform;
-    	      this.tags = defaults.tags;
+            $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayCapabilitySummaries(@Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries) {
-            this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
+            $.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
-        public Builder gatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
-            this.gatewayCapabilitySummaries = Codegen.ofNullable(gatewayCapabilitySummaries);
-            return this;
+
+        public Builder gatewayCapabilitySummaries(List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
+            return gatewayCapabilitySummaries(Output.of(gatewayCapabilitySummaries));
         }
+
         public Builder gatewayCapabilitySummaries(GatewayCapabilitySummaryArgs... gatewayCapabilitySummaries) {
             return gatewayCapabilitySummaries(List.of(gatewayCapabilitySummaries));
         }
+
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
-            this.gatewayName = gatewayName;
+            $.gatewayName = gatewayName;
             return this;
         }
-        public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Codegen.ofNullable(gatewayName);
-            return this;
+
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
         }
+
         public Builder gatewayPlatform(Output<GatewayPlatformArgs> gatewayPlatform) {
-            this.gatewayPlatform = Objects.requireNonNull(gatewayPlatform);
+            $.gatewayPlatform = gatewayPlatform;
             return this;
         }
+
         public Builder gatewayPlatform(GatewayPlatformArgs gatewayPlatform) {
-            this.gatewayPlatform = Output.of(Objects.requireNonNull(gatewayPlatform));
-            return this;
+            return gatewayPlatform(Output.of(gatewayPlatform));
         }
+
         public Builder tags(@Nullable Output<List<GatewayTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<GatewayTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<GatewayTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(GatewayTagArgs... tags) {
             return tags(List.of(tags));
-        }        public GatewayArgs build() {
-            return new GatewayArgs(gatewayCapabilitySummaries, gatewayName, gatewayPlatform, tags);
+        }
+
+        public GatewayArgs build() {
+            $.gatewayPlatform = Objects.requireNonNull($.gatewayPlatform, "expected parameter 'gatewayPlatform' to be non-null");
+            return $;
         }
     }
+
 }

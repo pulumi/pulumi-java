@@ -14,62 +14,59 @@ public final class WirelessDeviceAbpV10x extends com.pulumi.resources.InvokeArgs
     public static final WirelessDeviceAbpV10x Empty = new WirelessDeviceAbpV10x();
 
     @Import(name="devAddr", required=true)
-      private final String devAddr;
+    private String devAddr;
 
     public String devAddr() {
         return this.devAddr;
     }
 
     @Import(name="sessionKeys", required=true)
-      private final WirelessDeviceSessionKeysAbpV10x sessionKeys;
+    private WirelessDeviceSessionKeysAbpV10x sessionKeys;
 
     public WirelessDeviceSessionKeysAbpV10x sessionKeys() {
         return this.sessionKeys;
     }
 
-    public WirelessDeviceAbpV10x(
-        String devAddr,
-        WirelessDeviceSessionKeysAbpV10x sessionKeys) {
-        this.devAddr = Objects.requireNonNull(devAddr, "expected parameter 'devAddr' to be non-null");
-        this.sessionKeys = Objects.requireNonNull(sessionKeys, "expected parameter 'sessionKeys' to be non-null");
-    }
+    private WirelessDeviceAbpV10x() {}
 
-    private WirelessDeviceAbpV10x() {
-        this.devAddr = null;
-        this.sessionKeys = null;
+    private WirelessDeviceAbpV10x(WirelessDeviceAbpV10x $) {
+        this.devAddr = $.devAddr;
+        this.sessionKeys = $.sessionKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceAbpV10x defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String devAddr;
-        private WirelessDeviceSessionKeysAbpV10x sessionKeys;
+        private WirelessDeviceAbpV10x $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceAbpV10x();
         }
 
         public Builder(WirelessDeviceAbpV10x defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.devAddr = defaults.devAddr;
-    	      this.sessionKeys = defaults.sessionKeys;
+            $ = new WirelessDeviceAbpV10x(Objects.requireNonNull(defaults));
         }
 
         public Builder devAddr(String devAddr) {
-            this.devAddr = Objects.requireNonNull(devAddr);
+            $.devAddr = devAddr;
             return this;
         }
+
         public Builder sessionKeys(WirelessDeviceSessionKeysAbpV10x sessionKeys) {
-            this.sessionKeys = Objects.requireNonNull(sessionKeys);
+            $.sessionKeys = sessionKeys;
             return this;
-        }        public WirelessDeviceAbpV10x build() {
-            return new WirelessDeviceAbpV10x(devAddr, sessionKeys);
+        }
+
+        public WirelessDeviceAbpV10x build() {
+            $.devAddr = Objects.requireNonNull($.devAddr, "expected parameter 'devAddr' to be non-null");
+            $.sessionKeys = Objects.requireNonNull($.sessionKeys, "expected parameter 'sessionKeys' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,62 +19,57 @@ public final class BucketLoggingConfiguration extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="destinationBucketName")
-      private final @Nullable String destinationBucketName;
+    private @Nullable String destinationBucketName;
 
     public Optional<String> destinationBucketName() {
-        return this.destinationBucketName == null ? Optional.empty() : Optional.ofNullable(this.destinationBucketName);
+        return Optional.ofNullable(this.destinationBucketName);
     }
 
     @Import(name="logFilePrefix")
-      private final @Nullable String logFilePrefix;
+    private @Nullable String logFilePrefix;
 
     public Optional<String> logFilePrefix() {
-        return this.logFilePrefix == null ? Optional.empty() : Optional.ofNullable(this.logFilePrefix);
+        return Optional.ofNullable(this.logFilePrefix);
     }
 
-    public BucketLoggingConfiguration(
-        @Nullable String destinationBucketName,
-        @Nullable String logFilePrefix) {
-        this.destinationBucketName = destinationBucketName;
-        this.logFilePrefix = logFilePrefix;
-    }
+    private BucketLoggingConfiguration() {}
 
-    private BucketLoggingConfiguration() {
-        this.destinationBucketName = null;
-        this.logFilePrefix = null;
+    private BucketLoggingConfiguration(BucketLoggingConfiguration $) {
+        this.destinationBucketName = $.destinationBucketName;
+        this.logFilePrefix = $.logFilePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLoggingConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destinationBucketName;
-        private @Nullable String logFilePrefix;
+        private BucketLoggingConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLoggingConfiguration();
         }
 
         public Builder(BucketLoggingConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationBucketName = defaults.destinationBucketName;
-    	      this.logFilePrefix = defaults.logFilePrefix;
+            $ = new BucketLoggingConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationBucketName(@Nullable String destinationBucketName) {
-            this.destinationBucketName = destinationBucketName;
+            $.destinationBucketName = destinationBucketName;
             return this;
         }
+
         public Builder logFilePrefix(@Nullable String logFilePrefix) {
-            this.logFilePrefix = logFilePrefix;
+            $.logFilePrefix = logFilePrefix;
             return this;
-        }        public BucketLoggingConfiguration build() {
-            return new BucketLoggingConfiguration(destinationBucketName, logFilePrefix);
+        }
+
+        public BucketLoggingConfiguration build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetBackupVaultArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupVaultArgs Empty = new GetBackupVaultArgs();
 
     @Import(name="backupVaultName", required=true)
-      private final String backupVaultName;
+    private String backupVaultName;
 
     public String backupVaultName() {
         return this.backupVaultName;
     }
 
-    public GetBackupVaultArgs(String backupVaultName) {
-        this.backupVaultName = Objects.requireNonNull(backupVaultName, "expected parameter 'backupVaultName' to be non-null");
-    }
+    private GetBackupVaultArgs() {}
 
-    private GetBackupVaultArgs() {
-        this.backupVaultName = null;
+    private GetBackupVaultArgs(GetBackupVaultArgs $) {
+        this.backupVaultName = $.backupVaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupVaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupVaultName;
+        private GetBackupVaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupVaultArgs();
         }
 
         public Builder(GetBackupVaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupVaultName = defaults.backupVaultName;
+            $ = new GetBackupVaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupVaultName(String backupVaultName) {
-            this.backupVaultName = Objects.requireNonNull(backupVaultName);
+            $.backupVaultName = backupVaultName;
             return this;
-        }        public GetBackupVaultArgs build() {
-            return new GetBackupVaultArgs(backupVaultName);
+        }
+
+        public GetBackupVaultArgs build() {
+            $.backupVaultName = Objects.requireNonNull($.backupVaultName, "expected parameter 'backupVaultName' to be non-null");
+            return $;
         }
     }
+
 }

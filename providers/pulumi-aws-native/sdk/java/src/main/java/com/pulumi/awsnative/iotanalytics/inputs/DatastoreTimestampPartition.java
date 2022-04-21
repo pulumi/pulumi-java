@@ -15,62 +15,58 @@ public final class DatastoreTimestampPartition extends com.pulumi.resources.Invo
     public static final DatastoreTimestampPartition Empty = new DatastoreTimestampPartition();
 
     @Import(name="attributeName", required=true)
-      private final String attributeName;
+    private String attributeName;
 
     public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="timestampFormat")
-      private final @Nullable String timestampFormat;
+    private @Nullable String timestampFormat;
 
     public Optional<String> timestampFormat() {
-        return this.timestampFormat == null ? Optional.empty() : Optional.ofNullable(this.timestampFormat);
+        return Optional.ofNullable(this.timestampFormat);
     }
 
-    public DatastoreTimestampPartition(
-        String attributeName,
-        @Nullable String timestampFormat) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.timestampFormat = timestampFormat;
-    }
+    private DatastoreTimestampPartition() {}
 
-    private DatastoreTimestampPartition() {
-        this.attributeName = null;
-        this.timestampFormat = null;
+    private DatastoreTimestampPartition(DatastoreTimestampPartition $) {
+        this.attributeName = $.attributeName;
+        this.timestampFormat = $.timestampFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreTimestampPartition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributeName;
-        private @Nullable String timestampFormat;
+        private DatastoreTimestampPartition $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreTimestampPartition();
         }
 
         public Builder(DatastoreTimestampPartition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.timestampFormat = defaults.timestampFormat;
+            $ = new DatastoreTimestampPartition(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder timestampFormat(@Nullable String timestampFormat) {
-            this.timestampFormat = timestampFormat;
+            $.timestampFormat = timestampFormat;
             return this;
-        }        public DatastoreTimestampPartition build() {
-            return new DatastoreTimestampPartition(attributeName, timestampFormat);
+        }
+
+        public DatastoreTimestampPartition build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            return $;
         }
     }
+
 }

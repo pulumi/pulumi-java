@@ -5,10 +5,10 @@ package com.pulumi.awsnative.opensearchservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,116 @@ public final class DomainEndpointOptionsArgs extends com.pulumi.resources.Resour
     public static final DomainEndpointOptionsArgs Empty = new DomainEndpointOptionsArgs();
 
     @Import(name="customEndpoint")
-      private final @Nullable Output<String> customEndpoint;
+    private @Nullable Output<String> customEndpoint;
 
-    public Output<String> customEndpoint() {
-        return this.customEndpoint == null ? Codegen.empty() : this.customEndpoint;
+    public Optional<Output<String>> customEndpoint() {
+        return Optional.ofNullable(this.customEndpoint);
     }
 
     @Import(name="customEndpointCertificateArn")
-      private final @Nullable Output<String> customEndpointCertificateArn;
+    private @Nullable Output<String> customEndpointCertificateArn;
 
-    public Output<String> customEndpointCertificateArn() {
-        return this.customEndpointCertificateArn == null ? Codegen.empty() : this.customEndpointCertificateArn;
+    public Optional<Output<String>> customEndpointCertificateArn() {
+        return Optional.ofNullable(this.customEndpointCertificateArn);
     }
 
     @Import(name="customEndpointEnabled")
-      private final @Nullable Output<Boolean> customEndpointEnabled;
+    private @Nullable Output<Boolean> customEndpointEnabled;
 
-    public Output<Boolean> customEndpointEnabled() {
-        return this.customEndpointEnabled == null ? Codegen.empty() : this.customEndpointEnabled;
+    public Optional<Output<Boolean>> customEndpointEnabled() {
+        return Optional.ofNullable(this.customEndpointEnabled);
     }
 
     @Import(name="enforceHTTPS")
-      private final @Nullable Output<Boolean> enforceHTTPS;
+    private @Nullable Output<Boolean> enforceHTTPS;
 
-    public Output<Boolean> enforceHTTPS() {
-        return this.enforceHTTPS == null ? Codegen.empty() : this.enforceHTTPS;
+    public Optional<Output<Boolean>> enforceHTTPS() {
+        return Optional.ofNullable(this.enforceHTTPS);
     }
 
     @Import(name="tLSSecurityPolicy")
-      private final @Nullable Output<String> tLSSecurityPolicy;
+    private @Nullable Output<String> tLSSecurityPolicy;
 
-    public Output<String> tLSSecurityPolicy() {
-        return this.tLSSecurityPolicy == null ? Codegen.empty() : this.tLSSecurityPolicy;
+    public Optional<Output<String>> tLSSecurityPolicy() {
+        return Optional.ofNullable(this.tLSSecurityPolicy);
     }
 
-    public DomainEndpointOptionsArgs(
-        @Nullable Output<String> customEndpoint,
-        @Nullable Output<String> customEndpointCertificateArn,
-        @Nullable Output<Boolean> customEndpointEnabled,
-        @Nullable Output<Boolean> enforceHTTPS,
-        @Nullable Output<String> tLSSecurityPolicy) {
-        this.customEndpoint = customEndpoint;
-        this.customEndpointCertificateArn = customEndpointCertificateArn;
-        this.customEndpointEnabled = customEndpointEnabled;
-        this.enforceHTTPS = enforceHTTPS;
-        this.tLSSecurityPolicy = tLSSecurityPolicy;
-    }
+    private DomainEndpointOptionsArgs() {}
 
-    private DomainEndpointOptionsArgs() {
-        this.customEndpoint = Codegen.empty();
-        this.customEndpointCertificateArn = Codegen.empty();
-        this.customEndpointEnabled = Codegen.empty();
-        this.enforceHTTPS = Codegen.empty();
-        this.tLSSecurityPolicy = Codegen.empty();
+    private DomainEndpointOptionsArgs(DomainEndpointOptionsArgs $) {
+        this.customEndpoint = $.customEndpoint;
+        this.customEndpointCertificateArn = $.customEndpointCertificateArn;
+        this.customEndpointEnabled = $.customEndpointEnabled;
+        this.enforceHTTPS = $.enforceHTTPS;
+        this.tLSSecurityPolicy = $.tLSSecurityPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainEndpointOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customEndpoint;
-        private @Nullable Output<String> customEndpointCertificateArn;
-        private @Nullable Output<Boolean> customEndpointEnabled;
-        private @Nullable Output<Boolean> enforceHTTPS;
-        private @Nullable Output<String> tLSSecurityPolicy;
+        private DomainEndpointOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainEndpointOptionsArgs();
         }
 
         public Builder(DomainEndpointOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEndpoint = defaults.customEndpoint;
-    	      this.customEndpointCertificateArn = defaults.customEndpointCertificateArn;
-    	      this.customEndpointEnabled = defaults.customEndpointEnabled;
-    	      this.enforceHTTPS = defaults.enforceHTTPS;
-    	      this.tLSSecurityPolicy = defaults.tLSSecurityPolicy;
+            $ = new DomainEndpointOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customEndpoint(@Nullable Output<String> customEndpoint) {
-            this.customEndpoint = customEndpoint;
+            $.customEndpoint = customEndpoint;
             return this;
         }
-        public Builder customEndpoint(@Nullable String customEndpoint) {
-            this.customEndpoint = Codegen.ofNullable(customEndpoint);
-            return this;
+
+        public Builder customEndpoint(String customEndpoint) {
+            return customEndpoint(Output.of(customEndpoint));
         }
+
         public Builder customEndpointCertificateArn(@Nullable Output<String> customEndpointCertificateArn) {
-            this.customEndpointCertificateArn = customEndpointCertificateArn;
+            $.customEndpointCertificateArn = customEndpointCertificateArn;
             return this;
         }
-        public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
-            this.customEndpointCertificateArn = Codegen.ofNullable(customEndpointCertificateArn);
-            return this;
+
+        public Builder customEndpointCertificateArn(String customEndpointCertificateArn) {
+            return customEndpointCertificateArn(Output.of(customEndpointCertificateArn));
         }
+
         public Builder customEndpointEnabled(@Nullable Output<Boolean> customEndpointEnabled) {
-            this.customEndpointEnabled = customEndpointEnabled;
+            $.customEndpointEnabled = customEndpointEnabled;
             return this;
         }
-        public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
-            this.customEndpointEnabled = Codegen.ofNullable(customEndpointEnabled);
-            return this;
+
+        public Builder customEndpointEnabled(Boolean customEndpointEnabled) {
+            return customEndpointEnabled(Output.of(customEndpointEnabled));
         }
+
         public Builder enforceHTTPS(@Nullable Output<Boolean> enforceHTTPS) {
-            this.enforceHTTPS = enforceHTTPS;
+            $.enforceHTTPS = enforceHTTPS;
             return this;
         }
-        public Builder enforceHTTPS(@Nullable Boolean enforceHTTPS) {
-            this.enforceHTTPS = Codegen.ofNullable(enforceHTTPS);
-            return this;
+
+        public Builder enforceHTTPS(Boolean enforceHTTPS) {
+            return enforceHTTPS(Output.of(enforceHTTPS));
         }
+
         public Builder tLSSecurityPolicy(@Nullable Output<String> tLSSecurityPolicy) {
-            this.tLSSecurityPolicy = tLSSecurityPolicy;
+            $.tLSSecurityPolicy = tLSSecurityPolicy;
             return this;
         }
-        public Builder tLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
-            this.tLSSecurityPolicy = Codegen.ofNullable(tLSSecurityPolicy);
-            return this;
-        }        public DomainEndpointOptionsArgs build() {
-            return new DomainEndpointOptionsArgs(customEndpoint, customEndpointCertificateArn, customEndpointEnabled, enforceHTTPS, tLSSecurityPolicy);
+
+        public Builder tLSSecurityPolicy(String tLSSecurityPolicy) {
+            return tLSSecurityPolicy(Output.of(tLSSecurityPolicy));
+        }
+
+        public DomainEndpointOptionsArgs build() {
+            return $;
         }
     }
+
 }

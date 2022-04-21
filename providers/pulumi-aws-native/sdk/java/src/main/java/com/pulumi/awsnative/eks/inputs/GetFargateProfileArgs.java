@@ -17,7 +17,7 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,55 +28,52 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fargateProfileName", required=true)
-      private final String fargateProfileName;
+    private String fargateProfileName;
 
     public String fargateProfileName() {
         return this.fargateProfileName;
     }
 
-    public GetFargateProfileArgs(
-        String clusterName,
-        String fargateProfileName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.fargateProfileName = Objects.requireNonNull(fargateProfileName, "expected parameter 'fargateProfileName' to be non-null");
-    }
+    private GetFargateProfileArgs() {}
 
-    private GetFargateProfileArgs() {
-        this.clusterName = null;
-        this.fargateProfileName = null;
+    private GetFargateProfileArgs(GetFargateProfileArgs $) {
+        this.clusterName = $.clusterName;
+        this.fargateProfileName = $.fargateProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFargateProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String fargateProfileName;
+        private GetFargateProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFargateProfileArgs();
         }
 
         public Builder(GetFargateProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.fargateProfileName = defaults.fargateProfileName;
+            $ = new GetFargateProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder fargateProfileName(String fargateProfileName) {
-            this.fargateProfileName = Objects.requireNonNull(fargateProfileName);
+            $.fargateProfileName = fargateProfileName;
             return this;
-        }        public GetFargateProfileArgs build() {
-            return new GetFargateProfileArgs(clusterName, fargateProfileName);
+        }
+
+        public GetFargateProfileArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.fargateProfileName = Objects.requireNonNull($.fargateProfileName, "expected parameter 'fargateProfileName' to be non-null");
+            return $;
         }
     }
+
 }

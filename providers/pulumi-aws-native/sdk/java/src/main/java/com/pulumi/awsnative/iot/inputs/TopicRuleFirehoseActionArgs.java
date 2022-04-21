@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,101 @@ public final class TopicRuleFirehoseActionArgs extends com.pulumi.resources.Reso
     public static final TopicRuleFirehoseActionArgs Empty = new TopicRuleFirehoseActionArgs();
 
     @Import(name="batchMode")
-      private final @Nullable Output<Boolean> batchMode;
+    private @Nullable Output<Boolean> batchMode;
 
-    public Output<Boolean> batchMode() {
-        return this.batchMode == null ? Codegen.empty() : this.batchMode;
+    public Optional<Output<Boolean>> batchMode() {
+        return Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="deliveryStreamName", required=true)
-      private final Output<String> deliveryStreamName;
+    private Output<String> deliveryStreamName;
 
     public Output<String> deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="separator")
-      private final @Nullable Output<String> separator;
+    private @Nullable Output<String> separator;
 
-    public Output<String> separator() {
-        return this.separator == null ? Codegen.empty() : this.separator;
+    public Optional<Output<String>> separator() {
+        return Optional.ofNullable(this.separator);
     }
 
-    public TopicRuleFirehoseActionArgs(
-        @Nullable Output<Boolean> batchMode,
-        Output<String> deliveryStreamName,
-        Output<String> roleArn,
-        @Nullable Output<String> separator) {
-        this.batchMode = batchMode;
-        this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.separator = separator;
-    }
+    private TopicRuleFirehoseActionArgs() {}
 
-    private TopicRuleFirehoseActionArgs() {
-        this.batchMode = Codegen.empty();
-        this.deliveryStreamName = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.separator = Codegen.empty();
+    private TopicRuleFirehoseActionArgs(TopicRuleFirehoseActionArgs $) {
+        this.batchMode = $.batchMode;
+        this.deliveryStreamName = $.deliveryStreamName;
+        this.roleArn = $.roleArn;
+        this.separator = $.separator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleFirehoseActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> batchMode;
-        private Output<String> deliveryStreamName;
-        private Output<String> roleArn;
-        private @Nullable Output<String> separator;
+        private TopicRuleFirehoseActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleFirehoseActionArgs();
         }
 
         public Builder(TopicRuleFirehoseActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchMode = defaults.batchMode;
-    	      this.deliveryStreamName = defaults.deliveryStreamName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.separator = defaults.separator;
+            $ = new TopicRuleFirehoseActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchMode(@Nullable Output<Boolean> batchMode) {
-            this.batchMode = batchMode;
+            $.batchMode = batchMode;
             return this;
         }
-        public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = Codegen.ofNullable(batchMode);
-            return this;
+
+        public Builder batchMode(Boolean batchMode) {
+            return batchMode(Output.of(batchMode));
         }
+
         public Builder deliveryStreamName(Output<String> deliveryStreamName) {
-            this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
+            $.deliveryStreamName = deliveryStreamName;
             return this;
         }
+
         public Builder deliveryStreamName(String deliveryStreamName) {
-            this.deliveryStreamName = Output.of(Objects.requireNonNull(deliveryStreamName));
-            return this;
+            return deliveryStreamName(Output.of(deliveryStreamName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder separator(@Nullable Output<String> separator) {
-            this.separator = separator;
+            $.separator = separator;
             return this;
         }
-        public Builder separator(@Nullable String separator) {
-            this.separator = Codegen.ofNullable(separator);
-            return this;
-        }        public TopicRuleFirehoseActionArgs build() {
-            return new TopicRuleFirehoseActionArgs(batchMode, deliveryStreamName, roleArn, separator);
+
+        public Builder separator(String separator) {
+            return separator(Output.of(separator));
+        }
+
+        public TopicRuleFirehoseActionArgs build() {
+            $.deliveryStreamName = Objects.requireNonNull($.deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

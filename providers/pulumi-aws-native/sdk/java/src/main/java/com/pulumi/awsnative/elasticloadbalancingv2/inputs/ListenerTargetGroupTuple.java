@@ -16,62 +16,57 @@ public final class ListenerTargetGroupTuple extends com.pulumi.resources.InvokeA
     public static final ListenerTargetGroupTuple Empty = new ListenerTargetGroupTuple();
 
     @Import(name="targetGroupArn")
-      private final @Nullable String targetGroupArn;
+    private @Nullable String targetGroupArn;
 
     public Optional<String> targetGroupArn() {
-        return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
+        return Optional.ofNullable(this.targetGroupArn);
     }
 
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public ListenerTargetGroupTuple(
-        @Nullable String targetGroupArn,
-        @Nullable Integer weight) {
-        this.targetGroupArn = targetGroupArn;
-        this.weight = weight;
-    }
+    private ListenerTargetGroupTuple() {}
 
-    private ListenerTargetGroupTuple() {
-        this.targetGroupArn = null;
-        this.weight = null;
+    private ListenerTargetGroupTuple(ListenerTargetGroupTuple $) {
+        this.targetGroupArn = $.targetGroupArn;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerTargetGroupTuple defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String targetGroupArn;
-        private @Nullable Integer weight;
+        private ListenerTargetGroupTuple $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerTargetGroupTuple();
         }
 
         public Builder(ListenerTargetGroupTuple defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetGroupArn = defaults.targetGroupArn;
-    	      this.weight = defaults.weight;
+            $ = new ListenerTargetGroupTuple(Objects.requireNonNull(defaults));
         }
 
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = targetGroupArn;
+            $.targetGroupArn = targetGroupArn;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public ListenerTargetGroupTuple build() {
-            return new ListenerTargetGroupTuple(targetGroupArn, weight);
+        }
+
+        public ListenerTargetGroupTuple build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.MitigationActionUpdateCACertificateParamsAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends com.pul
     public static final MitigationActionUpdateCACertificateParamsArgs Empty = new MitigationActionUpdateCACertificateParamsArgs();
 
     @Import(name="action", required=true)
-      private final Output<MitigationActionUpdateCACertificateParamsAction> action;
+    private Output<MitigationActionUpdateCACertificateParamsAction> action;
 
     public Output<MitigationActionUpdateCACertificateParamsAction> action() {
         return this.action;
     }
 
-    public MitigationActionUpdateCACertificateParamsArgs(Output<MitigationActionUpdateCACertificateParamsAction> action) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-    }
+    private MitigationActionUpdateCACertificateParamsArgs() {}
 
-    private MitigationActionUpdateCACertificateParamsArgs() {
-        this.action = Codegen.empty();
+    private MitigationActionUpdateCACertificateParamsArgs(MitigationActionUpdateCACertificateParamsArgs $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionUpdateCACertificateParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MitigationActionUpdateCACertificateParamsAction> action;
+        private MitigationActionUpdateCACertificateParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionUpdateCACertificateParamsArgs();
         }
 
         public Builder(MitigationActionUpdateCACertificateParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new MitigationActionUpdateCACertificateParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<MitigationActionUpdateCACertificateParamsAction> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(MitigationActionUpdateCACertificateParamsAction action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
-        }        public MitigationActionUpdateCACertificateParamsArgs build() {
-            return new MitigationActionUpdateCACertificateParamsArgs(action);
+            return action(Output.of(action));
+        }
+
+        public MitigationActionUpdateCACertificateParamsArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

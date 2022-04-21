@@ -16,78 +16,72 @@ public final class TopicRuleIotAnalyticsAction extends com.pulumi.resources.Invo
     public static final TopicRuleIotAnalyticsAction Empty = new TopicRuleIotAnalyticsAction();
 
     @Import(name="batchMode")
-      private final @Nullable Boolean batchMode;
+    private @Nullable Boolean batchMode;
 
     public Optional<Boolean> batchMode() {
-        return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
+        return Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="channelName", required=true)
-      private final String channelName;
+    private String channelName;
 
     public String channelName() {
         return this.channelName;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleIotAnalyticsAction(
-        @Nullable Boolean batchMode,
-        String channelName,
-        String roleArn) {
-        this.batchMode = batchMode;
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleIotAnalyticsAction() {}
 
-    private TopicRuleIotAnalyticsAction() {
-        this.batchMode = null;
-        this.channelName = null;
-        this.roleArn = null;
+    private TopicRuleIotAnalyticsAction(TopicRuleIotAnalyticsAction $) {
+        this.batchMode = $.batchMode;
+        this.channelName = $.channelName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleIotAnalyticsAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean batchMode;
-        private String channelName;
-        private String roleArn;
+        private TopicRuleIotAnalyticsAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleIotAnalyticsAction();
         }
 
         public Builder(TopicRuleIotAnalyticsAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchMode = defaults.batchMode;
-    	      this.channelName = defaults.channelName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleIotAnalyticsAction(Objects.requireNonNull(defaults));
         }
 
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = batchMode;
+            $.batchMode = batchMode;
             return this;
         }
+
         public Builder channelName(String channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public TopicRuleIotAnalyticsAction build() {
-            return new TopicRuleIotAnalyticsAction(batchMode, channelName, roleArn);
+        }
+
+        public TopicRuleIotAnalyticsAction build() {
+            $.channelName = Objects.requireNonNull($.channelName, "expected parameter 'channelName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

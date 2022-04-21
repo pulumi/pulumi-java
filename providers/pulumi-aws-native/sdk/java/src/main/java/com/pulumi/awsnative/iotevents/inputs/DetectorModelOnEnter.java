@@ -24,48 +24,48 @@ public final class DetectorModelOnEnter extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="events")
-      private final @Nullable List<DetectorModelEvent> events;
+    private @Nullable List<DetectorModelEvent> events;
 
-    public List<DetectorModelEvent> events() {
-        return this.events == null ? List.of() : this.events;
+    public Optional<List<DetectorModelEvent>> events() {
+        return Optional.ofNullable(this.events);
     }
 
-    public DetectorModelOnEnter(@Nullable List<DetectorModelEvent> events) {
-        this.events = events;
-    }
+    private DetectorModelOnEnter() {}
 
-    private DetectorModelOnEnter() {
-        this.events = List.of();
+    private DetectorModelOnEnter(DetectorModelOnEnter $) {
+        this.events = $.events;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelOnEnter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DetectorModelEvent> events;
+        private DetectorModelOnEnter $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelOnEnter();
         }
 
         public Builder(DetectorModelOnEnter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
+            $ = new DetectorModelOnEnter(Objects.requireNonNull(defaults));
         }
 
         public Builder events(@Nullable List<DetectorModelEvent> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
+
         public Builder events(DetectorModelEvent... events) {
             return events(List.of(events));
-        }        public DetectorModelOnEnter build() {
-            return new DetectorModelOnEnter(events);
+        }
+
+        public DetectorModelOnEnter build() {
+            return $;
         }
     }
+
 }

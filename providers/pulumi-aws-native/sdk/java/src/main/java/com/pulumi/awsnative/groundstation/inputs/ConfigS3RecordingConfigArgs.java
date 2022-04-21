@@ -5,9 +5,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class ConfigS3RecordingConfigArgs extends com.pulumi.resources.Reso
     public static final ConfigS3RecordingConfigArgs Empty = new ConfigS3RecordingConfigArgs();
 
     @Import(name="bucketArn")
-      private final @Nullable Output<String> bucketArn;
+    private @Nullable Output<String> bucketArn;
 
-    public Output<String> bucketArn() {
-        return this.bucketArn == null ? Codegen.empty() : this.bucketArn;
+    public Optional<Output<String>> bucketArn() {
+        return Optional.ofNullable(this.bucketArn);
     }
 
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public ConfigS3RecordingConfigArgs(
-        @Nullable Output<String> bucketArn,
-        @Nullable Output<String> prefix,
-        @Nullable Output<String> roleArn) {
-        this.bucketArn = bucketArn;
-        this.prefix = prefix;
-        this.roleArn = roleArn;
-    }
+    private ConfigS3RecordingConfigArgs() {}
 
-    private ConfigS3RecordingConfigArgs() {
-        this.bucketArn = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private ConfigS3RecordingConfigArgs(ConfigS3RecordingConfigArgs $) {
+        this.bucketArn = $.bucketArn;
+        this.prefix = $.prefix;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigS3RecordingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketArn;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<String> roleArn;
+        private ConfigS3RecordingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigS3RecordingConfigArgs();
         }
 
         public Builder(ConfigS3RecordingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketArn = defaults.bucketArn;
-    	      this.prefix = defaults.prefix;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ConfigS3RecordingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketArn(@Nullable Output<String> bucketArn) {
-            this.bucketArn = bucketArn;
+            $.bucketArn = bucketArn;
             return this;
         }
-        public Builder bucketArn(@Nullable String bucketArn) {
-            this.bucketArn = Codegen.ofNullable(bucketArn);
-            return this;
+
+        public Builder bucketArn(String bucketArn) {
+            return bucketArn(Output.of(bucketArn));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public ConfigS3RecordingConfigArgs build() {
-            return new ConfigS3RecordingConfigArgs(bucketArn, prefix, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public ConfigS3RecordingConfigArgs build() {
+            return $;
         }
     }
+
 }

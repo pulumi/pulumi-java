@@ -13,45 +13,45 @@ public final class GetMapArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMapArgs Empty = new GetMapArgs();
 
     @Import(name="mapName", required=true)
-      private final String mapName;
+    private String mapName;
 
     public String mapName() {
         return this.mapName;
     }
 
-    public GetMapArgs(String mapName) {
-        this.mapName = Objects.requireNonNull(mapName, "expected parameter 'mapName' to be non-null");
-    }
+    private GetMapArgs() {}
 
-    private GetMapArgs() {
-        this.mapName = null;
+    private GetMapArgs(GetMapArgs $) {
+        this.mapName = $.mapName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mapName;
+        private GetMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMapArgs();
         }
 
         public Builder(GetMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mapName = defaults.mapName;
+            $ = new GetMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mapName(String mapName) {
-            this.mapName = Objects.requireNonNull(mapName);
+            $.mapName = mapName;
             return this;
-        }        public GetMapArgs build() {
-            return new GetMapArgs(mapName);
+        }
+
+        public GetMapArgs build() {
+            $.mapName = Objects.requireNonNull($.mapName, "expected parameter 'mapName' to be non-null");
+            return $;
         }
     }
+
 }

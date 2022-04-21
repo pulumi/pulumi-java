@@ -5,7 +5,6 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class RuleGroupPortRangeArgs extends com.pulumi.resources.ResourceA
     public static final RuleGroupPortRangeArgs Empty = new RuleGroupPortRangeArgs();
 
     @Import(name="fromPort", required=true)
-      private final Output<Integer> fromPort;
+    private Output<Integer> fromPort;
 
     public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
     @Import(name="toPort", required=true)
-      private final Output<Integer> toPort;
+    private Output<Integer> toPort;
 
     public Output<Integer> toPort() {
         return this.toPort;
     }
 
-    public RuleGroupPortRangeArgs(
-        Output<Integer> fromPort,
-        Output<Integer> toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
-        this.toPort = Objects.requireNonNull(toPort, "expected parameter 'toPort' to be non-null");
-    }
+    private RuleGroupPortRangeArgs() {}
 
-    private RuleGroupPortRangeArgs() {
-        this.fromPort = Codegen.empty();
-        this.toPort = Codegen.empty();
+    private RuleGroupPortRangeArgs(RuleGroupPortRangeArgs $) {
+        this.fromPort = $.fromPort;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupPortRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> fromPort;
-        private Output<Integer> toPort;
+        private RuleGroupPortRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupPortRangeArgs();
         }
 
         public Builder(RuleGroupPortRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fromPort = defaults.fromPort;
-    	      this.toPort = defaults.toPort;
+            $ = new RuleGroupPortRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fromPort(Output<Integer> fromPort) {
-            this.fromPort = Objects.requireNonNull(fromPort);
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
-            return this;
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder toPort(Output<Integer> toPort) {
-            this.toPort = Objects.requireNonNull(toPort);
+            $.toPort = toPort;
             return this;
         }
+
         public Builder toPort(Integer toPort) {
-            this.toPort = Output.of(Objects.requireNonNull(toPort));
-            return this;
-        }        public RuleGroupPortRangeArgs build() {
-            return new RuleGroupPortRangeArgs(fromPort, toPort);
+            return toPort(Output.of(toPort));
+        }
+
+        public RuleGroupPortRangeArgs build() {
+            $.fromPort = Objects.requireNonNull($.fromPort, "expected parameter 'fromPort' to be non-null");
+            $.toPort = Objects.requireNonNull($.toPort, "expected parameter 'toPort' to be non-null");
+            return $;
         }
     }
+
 }

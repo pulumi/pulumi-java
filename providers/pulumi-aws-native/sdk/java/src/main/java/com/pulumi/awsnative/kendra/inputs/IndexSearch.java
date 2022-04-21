@@ -15,94 +15,83 @@ public final class IndexSearch extends com.pulumi.resources.InvokeArgs {
     public static final IndexSearch Empty = new IndexSearch();
 
     @Import(name="displayable")
-      private final @Nullable Boolean displayable;
+    private @Nullable Boolean displayable;
 
     public Optional<Boolean> displayable() {
-        return this.displayable == null ? Optional.empty() : Optional.ofNullable(this.displayable);
+        return Optional.ofNullable(this.displayable);
     }
 
     @Import(name="facetable")
-      private final @Nullable Boolean facetable;
+    private @Nullable Boolean facetable;
 
     public Optional<Boolean> facetable() {
-        return this.facetable == null ? Optional.empty() : Optional.ofNullable(this.facetable);
+        return Optional.ofNullable(this.facetable);
     }
 
     @Import(name="searchable")
-      private final @Nullable Boolean searchable;
+    private @Nullable Boolean searchable;
 
     public Optional<Boolean> searchable() {
-        return this.searchable == null ? Optional.empty() : Optional.ofNullable(this.searchable);
+        return Optional.ofNullable(this.searchable);
     }
 
     @Import(name="sortable")
-      private final @Nullable Boolean sortable;
+    private @Nullable Boolean sortable;
 
     public Optional<Boolean> sortable() {
-        return this.sortable == null ? Optional.empty() : Optional.ofNullable(this.sortable);
+        return Optional.ofNullable(this.sortable);
     }
 
-    public IndexSearch(
-        @Nullable Boolean displayable,
-        @Nullable Boolean facetable,
-        @Nullable Boolean searchable,
-        @Nullable Boolean sortable) {
-        this.displayable = displayable;
-        this.facetable = facetable;
-        this.searchable = searchable;
-        this.sortable = sortable;
-    }
+    private IndexSearch() {}
 
-    private IndexSearch() {
-        this.displayable = null;
-        this.facetable = null;
-        this.searchable = null;
-        this.sortable = null;
+    private IndexSearch(IndexSearch $) {
+        this.displayable = $.displayable;
+        this.facetable = $.facetable;
+        this.searchable = $.searchable;
+        this.sortable = $.sortable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexSearch defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean displayable;
-        private @Nullable Boolean facetable;
-        private @Nullable Boolean searchable;
-        private @Nullable Boolean sortable;
+        private IndexSearch $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexSearch();
         }
 
         public Builder(IndexSearch defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayable = defaults.displayable;
-    	      this.facetable = defaults.facetable;
-    	      this.searchable = defaults.searchable;
-    	      this.sortable = defaults.sortable;
+            $ = new IndexSearch(Objects.requireNonNull(defaults));
         }
 
         public Builder displayable(@Nullable Boolean displayable) {
-            this.displayable = displayable;
+            $.displayable = displayable;
             return this;
         }
+
         public Builder facetable(@Nullable Boolean facetable) {
-            this.facetable = facetable;
+            $.facetable = facetable;
             return this;
         }
+
         public Builder searchable(@Nullable Boolean searchable) {
-            this.searchable = searchable;
+            $.searchable = searchable;
             return this;
         }
+
         public Builder sortable(@Nullable Boolean sortable) {
-            this.sortable = sortable;
+            $.sortable = sortable;
             return this;
-        }        public IndexSearch build() {
-            return new IndexSearch(displayable, facetable, searchable, sortable);
+        }
+
+        public IndexSearch build() {
+            return $;
         }
     }
+
 }

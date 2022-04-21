@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iot.inputs.TopicRulePayloadArgs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,87 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final TopicRuleArgs Empty = new TopicRuleArgs();
 
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<TopicRuleTagArgs>> tags;
+    private @Nullable Output<List<TopicRuleTagArgs>> tags;
 
-    public Output<List<TopicRuleTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TopicRuleTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="topicRulePayload", required=true)
-      private final Output<TopicRulePayloadArgs> topicRulePayload;
+    private Output<TopicRulePayloadArgs> topicRulePayload;
 
     public Output<TopicRulePayloadArgs> topicRulePayload() {
         return this.topicRulePayload;
     }
 
-    public TopicRuleArgs(
-        @Nullable Output<String> ruleName,
-        @Nullable Output<List<TopicRuleTagArgs>> tags,
-        Output<TopicRulePayloadArgs> topicRulePayload) {
-        this.ruleName = ruleName;
-        this.tags = tags;
-        this.topicRulePayload = Objects.requireNonNull(topicRulePayload, "expected parameter 'topicRulePayload' to be non-null");
-    }
+    private TopicRuleArgs() {}
 
-    private TopicRuleArgs() {
-        this.ruleName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.topicRulePayload = Codegen.empty();
+    private TopicRuleArgs(TopicRuleArgs $) {
+        this.ruleName = $.ruleName;
+        this.tags = $.tags;
+        this.topicRulePayload = $.topicRulePayload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ruleName;
-        private @Nullable Output<List<TopicRuleTagArgs>> tags;
-        private Output<TopicRulePayloadArgs> topicRulePayload;
+        private TopicRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleArgs();
         }
 
         public Builder(TopicRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleName = defaults.ruleName;
-    	      this.tags = defaults.tags;
-    	      this.topicRulePayload = defaults.topicRulePayload;
+            $ = new TopicRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder tags(@Nullable Output<List<TopicRuleTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TopicRuleTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TopicRuleTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TopicRuleTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder topicRulePayload(Output<TopicRulePayloadArgs> topicRulePayload) {
-            this.topicRulePayload = Objects.requireNonNull(topicRulePayload);
+            $.topicRulePayload = topicRulePayload;
             return this;
         }
+
         public Builder topicRulePayload(TopicRulePayloadArgs topicRulePayload) {
-            this.topicRulePayload = Output.of(Objects.requireNonNull(topicRulePayload));
-            return this;
-        }        public TopicRuleArgs build() {
-            return new TopicRuleArgs(ruleName, tags, topicRulePayload);
+            return topicRulePayload(Output.of(topicRulePayload));
+        }
+
+        public TopicRuleArgs build() {
+            $.topicRulePayload = Objects.requireNonNull($.topicRulePayload, "expected parameter 'topicRulePayload' to be non-null");
+            return $;
         }
     }
+
 }

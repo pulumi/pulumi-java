@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.enums.DatasetResourceConfigurationComputeType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class DatasetResourceConfigurationArgs extends com.pulumi.resources
     public static final DatasetResourceConfigurationArgs Empty = new DatasetResourceConfigurationArgs();
 
     @Import(name="computeType", required=true)
-      private final Output<DatasetResourceConfigurationComputeType> computeType;
+    private Output<DatasetResourceConfigurationComputeType> computeType;
 
     public Output<DatasetResourceConfigurationComputeType> computeType() {
         return this.computeType;
     }
 
     @Import(name="volumeSizeInGB", required=true)
-      private final Output<Integer> volumeSizeInGB;
+    private Output<Integer> volumeSizeInGB;
 
     public Output<Integer> volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 
-    public DatasetResourceConfigurationArgs(
-        Output<DatasetResourceConfigurationComputeType> computeType,
-        Output<Integer> volumeSizeInGB) {
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
-        this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
-    }
+    private DatasetResourceConfigurationArgs() {}
 
-    private DatasetResourceConfigurationArgs() {
-        this.computeType = Codegen.empty();
-        this.volumeSizeInGB = Codegen.empty();
+    private DatasetResourceConfigurationArgs(DatasetResourceConfigurationArgs $) {
+        this.computeType = $.computeType;
+        this.volumeSizeInGB = $.volumeSizeInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetResourceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DatasetResourceConfigurationComputeType> computeType;
-        private Output<Integer> volumeSizeInGB;
+        private DatasetResourceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetResourceConfigurationArgs();
         }
 
         public Builder(DatasetResourceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeType = defaults.computeType;
-    	      this.volumeSizeInGB = defaults.volumeSizeInGB;
+            $ = new DatasetResourceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeType(Output<DatasetResourceConfigurationComputeType> computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder computeType(DatasetResourceConfigurationComputeType computeType) {
-            this.computeType = Output.of(Objects.requireNonNull(computeType));
-            return this;
+            return computeType(Output.of(computeType));
         }
+
         public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {
-            this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
+            $.volumeSizeInGB = volumeSizeInGB;
             return this;
         }
+
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
-            this.volumeSizeInGB = Output.of(Objects.requireNonNull(volumeSizeInGB));
-            return this;
-        }        public DatasetResourceConfigurationArgs build() {
-            return new DatasetResourceConfigurationArgs(computeType, volumeSizeInGB);
+            return volumeSizeInGB(Output.of(volumeSizeInGB));
+        }
+
+        public DatasetResourceConfigurationArgs build() {
+            $.computeType = Objects.requireNonNull($.computeType, "expected parameter 'computeType' to be non-null");
+            $.volumeSizeInGB = Objects.requireNonNull($.volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
+            return $;
         }
     }
+
 }

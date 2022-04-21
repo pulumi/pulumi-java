@@ -15,65 +15,63 @@ public final class DistributionOriginGroupMembers extends com.pulumi.resources.I
     public static final DistributionOriginGroupMembers Empty = new DistributionOriginGroupMembers();
 
     @Import(name="items", required=true)
-      private final List<DistributionOriginGroupMember> items;
+    private List<DistributionOriginGroupMember> items;
 
     public List<DistributionOriginGroupMember> items() {
         return this.items;
     }
 
     @Import(name="quantity", required=true)
-      private final Integer quantity;
+    private Integer quantity;
 
     public Integer quantity() {
         return this.quantity;
     }
 
-    public DistributionOriginGroupMembers(
-        List<DistributionOriginGroupMember> items,
-        Integer quantity) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.quantity = Objects.requireNonNull(quantity, "expected parameter 'quantity' to be non-null");
-    }
+    private DistributionOriginGroupMembers() {}
 
-    private DistributionOriginGroupMembers() {
-        this.items = List.of();
-        this.quantity = null;
+    private DistributionOriginGroupMembers(DistributionOriginGroupMembers $) {
+        this.items = $.items;
+        this.quantity = $.quantity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginGroupMembers defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DistributionOriginGroupMember> items;
-        private Integer quantity;
+        private DistributionOriginGroupMembers $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginGroupMembers();
         }
 
         public Builder(DistributionOriginGroupMembers defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.quantity = defaults.quantity;
+            $ = new DistributionOriginGroupMembers(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<DistributionOriginGroupMember> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(DistributionOriginGroupMember... items) {
             return items(List.of(items));
         }
+
         public Builder quantity(Integer quantity) {
-            this.quantity = Objects.requireNonNull(quantity);
+            $.quantity = quantity;
             return this;
-        }        public DistributionOriginGroupMembers build() {
-            return new DistributionOriginGroupMembers(items, quantity);
+        }
+
+        public DistributionOriginGroupMembers build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.quantity = Objects.requireNonNull($.quantity, "expected parameter 'quantity' to be non-null");
+            return $;
         }
     }
+
 }

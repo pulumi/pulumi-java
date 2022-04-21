@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appintegrations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class EventIntegrationEventFilterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
-    public EventIntegrationEventFilterArgs(Output<String> source) {
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private EventIntegrationEventFilterArgs() {}
 
-    private EventIntegrationEventFilterArgs() {
-        this.source = Codegen.empty();
+    private EventIntegrationEventFilterArgs(EventIntegrationEventFilterArgs $) {
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventIntegrationEventFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> source;
+        private EventIntegrationEventFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventIntegrationEventFilterArgs();
         }
 
         public Builder(EventIntegrationEventFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
+            $ = new EventIntegrationEventFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public EventIntegrationEventFilterArgs build() {
-            return new EventIntegrationEventFilterArgs(source);
+            return source(Output.of(source));
+        }
+
+        public EventIntegrationEventFilterArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class TrailDataResource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -35,58 +35,55 @@ public final class TrailDataResource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public TrailDataResource(
-        String type,
-        @Nullable List<String> values) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.values = values;
-    }
+    private TrailDataResource() {}
 
-    private TrailDataResource() {
-        this.type = null;
-        this.values = List.of();
+    private TrailDataResource(TrailDataResource $) {
+        this.type = $.type;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailDataResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private @Nullable List<String> values;
+        private TrailDataResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailDataResource();
         }
 
         public Builder(TrailDataResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
+            $ = new TrailDataResource(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public TrailDataResource build() {
-            return new TrailDataResource(type, values);
+        }
+
+        public TrailDataResource build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

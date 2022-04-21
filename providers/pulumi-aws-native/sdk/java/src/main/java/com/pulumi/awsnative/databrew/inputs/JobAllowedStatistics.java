@@ -14,48 +14,49 @@ public final class JobAllowedStatistics extends com.pulumi.resources.InvokeArgs 
     public static final JobAllowedStatistics Empty = new JobAllowedStatistics();
 
     @Import(name="statistics", required=true)
-      private final List<String> statistics;
+    private List<String> statistics;
 
     public List<String> statistics() {
         return this.statistics;
     }
 
-    public JobAllowedStatistics(List<String> statistics) {
-        this.statistics = Objects.requireNonNull(statistics, "expected parameter 'statistics' to be non-null");
-    }
+    private JobAllowedStatistics() {}
 
-    private JobAllowedStatistics() {
-        this.statistics = List.of();
+    private JobAllowedStatistics(JobAllowedStatistics $) {
+        this.statistics = $.statistics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobAllowedStatistics defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> statistics;
+        private JobAllowedStatistics $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobAllowedStatistics();
         }
 
         public Builder(JobAllowedStatistics defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statistics = defaults.statistics;
+            $ = new JobAllowedStatistics(Objects.requireNonNull(defaults));
         }
 
         public Builder statistics(List<String> statistics) {
-            this.statistics = Objects.requireNonNull(statistics);
+            $.statistics = statistics;
             return this;
         }
+
         public Builder statistics(String... statistics) {
             return statistics(List.of(statistics));
-        }        public JobAllowedStatistics build() {
-            return new JobAllowedStatistics(statistics);
+        }
+
+        public JobAllowedStatistics build() {
+            $.statistics = Objects.requireNonNull($.statistics, "expected parameter 'statistics' to be non-null");
+            return $;
         }
     }
+
 }

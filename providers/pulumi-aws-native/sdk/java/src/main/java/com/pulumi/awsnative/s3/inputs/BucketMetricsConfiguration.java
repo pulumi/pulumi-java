@@ -17,97 +17,88 @@ public final class BucketMetricsConfiguration extends com.pulumi.resources.Invok
     public static final BucketMetricsConfiguration Empty = new BucketMetricsConfiguration();
 
     @Import(name="accessPointArn")
-      private final @Nullable String accessPointArn;
+    private @Nullable String accessPointArn;
 
     public Optional<String> accessPointArn() {
-        return this.accessPointArn == null ? Optional.empty() : Optional.ofNullable(this.accessPointArn);
+        return Optional.ofNullable(this.accessPointArn);
     }
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="tagFilters")
-      private final @Nullable List<BucketTagFilter> tagFilters;
+    private @Nullable List<BucketTagFilter> tagFilters;
 
-    public List<BucketTagFilter> tagFilters() {
-        return this.tagFilters == null ? List.of() : this.tagFilters;
+    public Optional<List<BucketTagFilter>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
-    public BucketMetricsConfiguration(
-        @Nullable String accessPointArn,
-        String id,
-        @Nullable String prefix,
-        @Nullable List<BucketTagFilter> tagFilters) {
-        this.accessPointArn = accessPointArn;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.prefix = prefix;
-        this.tagFilters = tagFilters;
-    }
+    private BucketMetricsConfiguration() {}
 
-    private BucketMetricsConfiguration() {
-        this.accessPointArn = null;
-        this.id = null;
-        this.prefix = null;
-        this.tagFilters = List.of();
+    private BucketMetricsConfiguration(BucketMetricsConfiguration $) {
+        this.accessPointArn = $.accessPointArn;
+        this.id = $.id;
+        this.prefix = $.prefix;
+        this.tagFilters = $.tagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketMetricsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessPointArn;
-        private String id;
-        private @Nullable String prefix;
-        private @Nullable List<BucketTagFilter> tagFilters;
+        private BucketMetricsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketMetricsConfiguration();
         }
 
         public Builder(BucketMetricsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointArn = defaults.accessPointArn;
-    	      this.id = defaults.id;
-    	      this.prefix = defaults.prefix;
-    	      this.tagFilters = defaults.tagFilters;
+            $ = new BucketMetricsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointArn(@Nullable String accessPointArn) {
-            this.accessPointArn = accessPointArn;
+            $.accessPointArn = accessPointArn;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
+
         public Builder tagFilters(BucketTagFilter... tagFilters) {
             return tagFilters(List.of(tagFilters));
-        }        public BucketMetricsConfiguration build() {
-            return new BucketMetricsConfiguration(accessPointArn, id, prefix, tagFilters);
+        }
+
+        public BucketMetricsConfiguration build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LaunchConfigurationMetadataOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="httpEndpoint")
-      private final @Nullable Output<String> httpEndpoint;
+    private @Nullable Output<String> httpEndpoint;
 
-    public Output<String> httpEndpoint() {
-        return this.httpEndpoint == null ? Codegen.empty() : this.httpEndpoint;
+    public Optional<Output<String>> httpEndpoint() {
+        return Optional.ofNullable(this.httpEndpoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LaunchConfigurationMetadataOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="httpPutResponseHopLimit")
-      private final @Nullable Output<Integer> httpPutResponseHopLimit;
+    private @Nullable Output<Integer> httpPutResponseHopLimit;
 
-    public Output<Integer> httpPutResponseHopLimit() {
-        return this.httpPutResponseHopLimit == null ? Codegen.empty() : this.httpPutResponseHopLimit;
+    public Optional<Output<Integer>> httpPutResponseHopLimit() {
+        return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class LaunchConfigurationMetadataOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="httpTokens")
-      private final @Nullable Output<String> httpTokens;
+    private @Nullable Output<String> httpTokens;
 
-    public Output<String> httpTokens() {
-        return this.httpTokens == null ? Codegen.empty() : this.httpTokens;
+    public Optional<Output<String>> httpTokens() {
+        return Optional.ofNullable(this.httpTokens);
     }
 
-    public LaunchConfigurationMetadataOptionsArgs(
-        @Nullable Output<String> httpEndpoint,
-        @Nullable Output<Integer> httpPutResponseHopLimit,
-        @Nullable Output<String> httpTokens) {
-        this.httpEndpoint = httpEndpoint;
-        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
-        this.httpTokens = httpTokens;
-    }
+    private LaunchConfigurationMetadataOptionsArgs() {}
 
-    private LaunchConfigurationMetadataOptionsArgs() {
-        this.httpEndpoint = Codegen.empty();
-        this.httpPutResponseHopLimit = Codegen.empty();
-        this.httpTokens = Codegen.empty();
+    private LaunchConfigurationMetadataOptionsArgs(LaunchConfigurationMetadataOptionsArgs $) {
+        this.httpEndpoint = $.httpEndpoint;
+        this.httpPutResponseHopLimit = $.httpPutResponseHopLimit;
+        this.httpTokens = $.httpTokens;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchConfigurationMetadataOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> httpEndpoint;
-        private @Nullable Output<Integer> httpPutResponseHopLimit;
-        private @Nullable Output<String> httpTokens;
+        private LaunchConfigurationMetadataOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchConfigurationMetadataOptionsArgs();
         }
 
         public Builder(LaunchConfigurationMetadataOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEndpoint = defaults.httpEndpoint;
-    	      this.httpPutResponseHopLimit = defaults.httpPutResponseHopLimit;
-    	      this.httpTokens = defaults.httpTokens;
+            $ = new LaunchConfigurationMetadataOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEndpoint(@Nullable Output<String> httpEndpoint) {
-            this.httpEndpoint = httpEndpoint;
+            $.httpEndpoint = httpEndpoint;
             return this;
         }
-        public Builder httpEndpoint(@Nullable String httpEndpoint) {
-            this.httpEndpoint = Codegen.ofNullable(httpEndpoint);
-            return this;
+
+        public Builder httpEndpoint(String httpEndpoint) {
+            return httpEndpoint(Output.of(httpEndpoint));
         }
+
         public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+            $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Codegen.ofNullable(httpPutResponseHopLimit);
-            return this;
+
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+            return httpPutResponseHopLimit(Output.of(httpPutResponseHopLimit));
         }
+
         public Builder httpTokens(@Nullable Output<String> httpTokens) {
-            this.httpTokens = httpTokens;
+            $.httpTokens = httpTokens;
             return this;
         }
-        public Builder httpTokens(@Nullable String httpTokens) {
-            this.httpTokens = Codegen.ofNullable(httpTokens);
-            return this;
-        }        public LaunchConfigurationMetadataOptionsArgs build() {
-            return new LaunchConfigurationMetadataOptionsArgs(httpEndpoint, httpPutResponseHopLimit, httpTokens);
+
+        public Builder httpTokens(String httpTokens) {
+            return httpTokens(Output.of(httpTokens));
+        }
+
+        public LaunchConfigurationMetadataOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,7 +13,7 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
     public static final GetIPAMAllocationArgs Empty = new GetIPAMAllocationArgs();
 
     @Import(name="cidr", required=true)
-      private final String cidr;
+    private String cidr;
 
     public String cidr() {
         return this.cidr;
@@ -24,7 +24,7 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipamPoolAllocationId", required=true)
-      private final String ipamPoolAllocationId;
+    private String ipamPoolAllocationId;
 
     public String ipamPoolAllocationId() {
         return this.ipamPoolAllocationId;
@@ -35,64 +35,59 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipamPoolId", required=true)
-      private final String ipamPoolId;
+    private String ipamPoolId;
 
     public String ipamPoolId() {
         return this.ipamPoolId;
     }
 
-    public GetIPAMAllocationArgs(
-        String cidr,
-        String ipamPoolAllocationId,
-        String ipamPoolId) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-        this.ipamPoolAllocationId = Objects.requireNonNull(ipamPoolAllocationId, "expected parameter 'ipamPoolAllocationId' to be non-null");
-        this.ipamPoolId = Objects.requireNonNull(ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
-    }
+    private GetIPAMAllocationArgs() {}
 
-    private GetIPAMAllocationArgs() {
-        this.cidr = null;
-        this.ipamPoolAllocationId = null;
-        this.ipamPoolId = null;
+    private GetIPAMAllocationArgs(GetIPAMAllocationArgs $) {
+        this.cidr = $.cidr;
+        this.ipamPoolAllocationId = $.ipamPoolAllocationId;
+        this.ipamPoolId = $.ipamPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIPAMAllocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidr;
-        private String ipamPoolAllocationId;
-        private String ipamPoolId;
+        private GetIPAMAllocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIPAMAllocationArgs();
         }
 
         public Builder(GetIPAMAllocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.ipamPoolAllocationId = defaults.ipamPoolAllocationId;
-    	      this.ipamPoolId = defaults.ipamPoolId;
+            $ = new GetIPAMAllocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
-            this.ipamPoolAllocationId = Objects.requireNonNull(ipamPoolAllocationId);
+            $.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
+
         public Builder ipamPoolId(String ipamPoolId) {
-            this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
+            $.ipamPoolId = ipamPoolId;
             return this;
-        }        public GetIPAMAllocationArgs build() {
-            return new GetIPAMAllocationArgs(cidr, ipamPoolAllocationId, ipamPoolId);
+        }
+
+        public GetIPAMAllocationArgs build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            $.ipamPoolAllocationId = Objects.requireNonNull($.ipamPoolAllocationId, "expected parameter 'ipamPoolAllocationId' to be non-null");
+            $.ipamPoolId = Objects.requireNonNull($.ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,12 +8,12 @@ import com.pulumi.awsnative.globalaccelerator.inputs.EndpointGroupEndpointConfig
 import com.pulumi.awsnative.globalaccelerator.inputs.EndpointGroupPortOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointConfigurations")
-      private final @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
+    private @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
 
-    public Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations() {
-        return this.endpointConfigurations == null ? Codegen.empty() : this.endpointConfigurations;
+    public Optional<Output<List<EndpointGroupEndpointConfigurationArgs>>> endpointConfigurations() {
+        return Optional.ofNullable(this.endpointConfigurations);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointGroupRegion", required=true)
-      private final Output<String> endpointGroupRegion;
+    private Output<String> endpointGroupRegion;
 
     public Output<String> endpointGroupRegion() {
         return this.endpointGroupRegion;
@@ -48,17 +48,17 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckIntervalSeconds")
-      private final @Nullable Output<Integer> healthCheckIntervalSeconds;
+    private @Nullable Output<Integer> healthCheckIntervalSeconds;
 
-    public Output<Integer> healthCheckIntervalSeconds() {
-        return this.healthCheckIntervalSeconds == null ? Codegen.empty() : this.healthCheckIntervalSeconds;
+    public Optional<Output<Integer>> healthCheckIntervalSeconds() {
+        return Optional.ofNullable(this.healthCheckIntervalSeconds);
     }
 
     @Import(name="healthCheckPath")
-      private final @Nullable Output<String> healthCheckPath;
+    private @Nullable Output<String> healthCheckPath;
 
-    public Output<String> healthCheckPath() {
-        return this.healthCheckPath == null ? Codegen.empty() : this.healthCheckPath;
+    public Optional<Output<String>> healthCheckPath() {
+        return Optional.ofNullable(this.healthCheckPath);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckPort")
-      private final @Nullable Output<Integer> healthCheckPort;
+    private @Nullable Output<Integer> healthCheckPort;
 
-    public Output<Integer> healthCheckPort() {
-        return this.healthCheckPort == null ? Codegen.empty() : this.healthCheckPort;
+    public Optional<Output<Integer>> healthCheckPort() {
+        return Optional.ofNullable(this.healthCheckPort);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckProtocol")
-      private final @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
+    private @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
 
-    public Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol() {
-        return this.healthCheckProtocol == null ? Codegen.empty() : this.healthCheckProtocol;
+    public Optional<Output<EndpointGroupHealthCheckProtocol>> healthCheckProtocol() {
+        return Optional.ofNullable(this.healthCheckProtocol);
     }
 
     /**
@@ -88,17 +88,17 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="listenerArn", required=true)
-      private final Output<String> listenerArn;
+    private Output<String> listenerArn;
 
     public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
     @Import(name="portOverrides")
-      private final @Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides;
+    private @Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides;
 
-    public Output<List<EndpointGroupPortOverrideArgs>> portOverrides() {
-        return this.portOverrides == null ? Codegen.empty() : this.portOverrides;
+    public Optional<Output<List<EndpointGroupPortOverrideArgs>>> portOverrides() {
+        return Optional.ofNullable(this.portOverrides);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thresholdCount")
-      private final @Nullable Output<Integer> thresholdCount;
+    private @Nullable Output<Integer> thresholdCount;
 
-    public Output<Integer> thresholdCount() {
-        return this.thresholdCount == null ? Codegen.empty() : this.thresholdCount;
+    public Optional<Output<Integer>> thresholdCount() {
+        return Optional.ofNullable(this.thresholdCount);
     }
 
     /**
@@ -117,173 +117,148 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficDialPercentage")
-      private final @Nullable Output<Double> trafficDialPercentage;
+    private @Nullable Output<Double> trafficDialPercentage;
 
-    public Output<Double> trafficDialPercentage() {
-        return this.trafficDialPercentage == null ? Codegen.empty() : this.trafficDialPercentage;
+    public Optional<Output<Double>> trafficDialPercentage() {
+        return Optional.ofNullable(this.trafficDialPercentage);
     }
 
-    public EndpointGroupArgs(
-        @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations,
-        Output<String> endpointGroupRegion,
-        @Nullable Output<Integer> healthCheckIntervalSeconds,
-        @Nullable Output<String> healthCheckPath,
-        @Nullable Output<Integer> healthCheckPort,
-        @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol,
-        Output<String> listenerArn,
-        @Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides,
-        @Nullable Output<Integer> thresholdCount,
-        @Nullable Output<Double> trafficDialPercentage) {
-        this.endpointConfigurations = endpointConfigurations;
-        this.endpointGroupRegion = Objects.requireNonNull(endpointGroupRegion, "expected parameter 'endpointGroupRegion' to be non-null");
-        this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
-        this.healthCheckPath = healthCheckPath;
-        this.healthCheckPort = healthCheckPort;
-        this.healthCheckProtocol = healthCheckProtocol;
-        this.listenerArn = Objects.requireNonNull(listenerArn, "expected parameter 'listenerArn' to be non-null");
-        this.portOverrides = portOverrides;
-        this.thresholdCount = thresholdCount;
-        this.trafficDialPercentage = trafficDialPercentage;
-    }
+    private EndpointGroupArgs() {}
 
-    private EndpointGroupArgs() {
-        this.endpointConfigurations = Codegen.empty();
-        this.endpointGroupRegion = Codegen.empty();
-        this.healthCheckIntervalSeconds = Codegen.empty();
-        this.healthCheckPath = Codegen.empty();
-        this.healthCheckPort = Codegen.empty();
-        this.healthCheckProtocol = Codegen.empty();
-        this.listenerArn = Codegen.empty();
-        this.portOverrides = Codegen.empty();
-        this.thresholdCount = Codegen.empty();
-        this.trafficDialPercentage = Codegen.empty();
+    private EndpointGroupArgs(EndpointGroupArgs $) {
+        this.endpointConfigurations = $.endpointConfigurations;
+        this.endpointGroupRegion = $.endpointGroupRegion;
+        this.healthCheckIntervalSeconds = $.healthCheckIntervalSeconds;
+        this.healthCheckPath = $.healthCheckPath;
+        this.healthCheckPort = $.healthCheckPort;
+        this.healthCheckProtocol = $.healthCheckProtocol;
+        this.listenerArn = $.listenerArn;
+        this.portOverrides = $.portOverrides;
+        this.thresholdCount = $.thresholdCount;
+        this.trafficDialPercentage = $.trafficDialPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
-        private Output<String> endpointGroupRegion;
-        private @Nullable Output<Integer> healthCheckIntervalSeconds;
-        private @Nullable Output<String> healthCheckPath;
-        private @Nullable Output<Integer> healthCheckPort;
-        private @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
-        private Output<String> listenerArn;
-        private @Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides;
-        private @Nullable Output<Integer> thresholdCount;
-        private @Nullable Output<Double> trafficDialPercentage;
+        private EndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointGroupArgs();
         }
 
         public Builder(EndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointConfigurations = defaults.endpointConfigurations;
-    	      this.endpointGroupRegion = defaults.endpointGroupRegion;
-    	      this.healthCheckIntervalSeconds = defaults.healthCheckIntervalSeconds;
-    	      this.healthCheckPath = defaults.healthCheckPath;
-    	      this.healthCheckPort = defaults.healthCheckPort;
-    	      this.healthCheckProtocol = defaults.healthCheckProtocol;
-    	      this.listenerArn = defaults.listenerArn;
-    	      this.portOverrides = defaults.portOverrides;
-    	      this.thresholdCount = defaults.thresholdCount;
-    	      this.trafficDialPercentage = defaults.trafficDialPercentage;
+            $ = new EndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointConfigurations(@Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations) {
-            this.endpointConfigurations = endpointConfigurations;
+            $.endpointConfigurations = endpointConfigurations;
             return this;
         }
-        public Builder endpointConfigurations(@Nullable List<EndpointGroupEndpointConfigurationArgs> endpointConfigurations) {
-            this.endpointConfigurations = Codegen.ofNullable(endpointConfigurations);
-            return this;
+
+        public Builder endpointConfigurations(List<EndpointGroupEndpointConfigurationArgs> endpointConfigurations) {
+            return endpointConfigurations(Output.of(endpointConfigurations));
         }
+
         public Builder endpointConfigurations(EndpointGroupEndpointConfigurationArgs... endpointConfigurations) {
             return endpointConfigurations(List.of(endpointConfigurations));
         }
+
         public Builder endpointGroupRegion(Output<String> endpointGroupRegion) {
-            this.endpointGroupRegion = Objects.requireNonNull(endpointGroupRegion);
+            $.endpointGroupRegion = endpointGroupRegion;
             return this;
         }
+
         public Builder endpointGroupRegion(String endpointGroupRegion) {
-            this.endpointGroupRegion = Output.of(Objects.requireNonNull(endpointGroupRegion));
-            return this;
+            return endpointGroupRegion(Output.of(endpointGroupRegion));
         }
+
         public Builder healthCheckIntervalSeconds(@Nullable Output<Integer> healthCheckIntervalSeconds) {
-            this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
+            $.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
             return this;
         }
-        public Builder healthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
-            this.healthCheckIntervalSeconds = Codegen.ofNullable(healthCheckIntervalSeconds);
-            return this;
+
+        public Builder healthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
+            return healthCheckIntervalSeconds(Output.of(healthCheckIntervalSeconds));
         }
+
         public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
-            this.healthCheckPath = healthCheckPath;
+            $.healthCheckPath = healthCheckPath;
             return this;
         }
-        public Builder healthCheckPath(@Nullable String healthCheckPath) {
-            this.healthCheckPath = Codegen.ofNullable(healthCheckPath);
-            return this;
+
+        public Builder healthCheckPath(String healthCheckPath) {
+            return healthCheckPath(Output.of(healthCheckPath));
         }
+
         public Builder healthCheckPort(@Nullable Output<Integer> healthCheckPort) {
-            this.healthCheckPort = healthCheckPort;
+            $.healthCheckPort = healthCheckPort;
             return this;
         }
-        public Builder healthCheckPort(@Nullable Integer healthCheckPort) {
-            this.healthCheckPort = Codegen.ofNullable(healthCheckPort);
-            return this;
+
+        public Builder healthCheckPort(Integer healthCheckPort) {
+            return healthCheckPort(Output.of(healthCheckPort));
         }
+
         public Builder healthCheckProtocol(@Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol) {
-            this.healthCheckProtocol = healthCheckProtocol;
+            $.healthCheckProtocol = healthCheckProtocol;
             return this;
         }
-        public Builder healthCheckProtocol(@Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol) {
-            this.healthCheckProtocol = Codegen.ofNullable(healthCheckProtocol);
-            return this;
+
+        public Builder healthCheckProtocol(EndpointGroupHealthCheckProtocol healthCheckProtocol) {
+            return healthCheckProtocol(Output.of(healthCheckProtocol));
         }
+
         public Builder listenerArn(Output<String> listenerArn) {
-            this.listenerArn = Objects.requireNonNull(listenerArn);
+            $.listenerArn = listenerArn;
             return this;
         }
+
         public Builder listenerArn(String listenerArn) {
-            this.listenerArn = Output.of(Objects.requireNonNull(listenerArn));
-            return this;
+            return listenerArn(Output.of(listenerArn));
         }
+
         public Builder portOverrides(@Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides) {
-            this.portOverrides = portOverrides;
+            $.portOverrides = portOverrides;
             return this;
         }
-        public Builder portOverrides(@Nullable List<EndpointGroupPortOverrideArgs> portOverrides) {
-            this.portOverrides = Codegen.ofNullable(portOverrides);
-            return this;
+
+        public Builder portOverrides(List<EndpointGroupPortOverrideArgs> portOverrides) {
+            return portOverrides(Output.of(portOverrides));
         }
+
         public Builder portOverrides(EndpointGroupPortOverrideArgs... portOverrides) {
             return portOverrides(List.of(portOverrides));
         }
+
         public Builder thresholdCount(@Nullable Output<Integer> thresholdCount) {
-            this.thresholdCount = thresholdCount;
+            $.thresholdCount = thresholdCount;
             return this;
         }
-        public Builder thresholdCount(@Nullable Integer thresholdCount) {
-            this.thresholdCount = Codegen.ofNullable(thresholdCount);
-            return this;
+
+        public Builder thresholdCount(Integer thresholdCount) {
+            return thresholdCount(Output.of(thresholdCount));
         }
+
         public Builder trafficDialPercentage(@Nullable Output<Double> trafficDialPercentage) {
-            this.trafficDialPercentage = trafficDialPercentage;
+            $.trafficDialPercentage = trafficDialPercentage;
             return this;
         }
-        public Builder trafficDialPercentage(@Nullable Double trafficDialPercentage) {
-            this.trafficDialPercentage = Codegen.ofNullable(trafficDialPercentage);
-            return this;
-        }        public EndpointGroupArgs build() {
-            return new EndpointGroupArgs(endpointConfigurations, endpointGroupRegion, healthCheckIntervalSeconds, healthCheckPath, healthCheckPort, healthCheckProtocol, listenerArn, portOverrides, thresholdCount, trafficDialPercentage);
+
+        public Builder trafficDialPercentage(Double trafficDialPercentage) {
+            return trafficDialPercentage(Output.of(trafficDialPercentage));
+        }
+
+        public EndpointGroupArgs build() {
+            $.endpointGroupRegion = Objects.requireNonNull($.endpointGroupRegion, "expected parameter 'endpointGroupRegion' to be non-null");
+            $.listenerArn = Objects.requireNonNull($.listenerArn, "expected parameter 'listenerArn' to be non-null");
+            return $;
         }
     }
+
 }

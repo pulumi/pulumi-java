@@ -9,13 +9,13 @@ import com.pulumi.awsnative.ssm.inputs.AssociationInstanceAssociationOutputLocat
 import com.pulumi.awsnative.ssm.inputs.AssociationTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     public static final AssociationArgs Empty = new AssociationArgs();
 
     @Import(name="applyOnlyAtCronInterval")
-      private final @Nullable Output<Boolean> applyOnlyAtCronInterval;
+    private @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
-    public Output<Boolean> applyOnlyAtCronInterval() {
-        return this.applyOnlyAtCronInterval == null ? Codegen.empty() : this.applyOnlyAtCronInterval;
+    public Optional<Output<Boolean>> applyOnlyAtCronInterval() {
+        return Optional.ofNullable(this.applyOnlyAtCronInterval);
     }
 
     /**
@@ -35,31 +35,31 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associationName")
-      private final @Nullable Output<String> associationName;
+    private @Nullable Output<String> associationName;
 
-    public Output<String> associationName() {
-        return this.associationName == null ? Codegen.empty() : this.associationName;
+    public Optional<Output<String>> associationName() {
+        return Optional.ofNullable(this.associationName);
     }
 
     @Import(name="automationTargetParameterName")
-      private final @Nullable Output<String> automationTargetParameterName;
+    private @Nullable Output<String> automationTargetParameterName;
 
-    public Output<String> automationTargetParameterName() {
-        return this.automationTargetParameterName == null ? Codegen.empty() : this.automationTargetParameterName;
+    public Optional<Output<String>> automationTargetParameterName() {
+        return Optional.ofNullable(this.automationTargetParameterName);
     }
 
     @Import(name="calendarNames")
-      private final @Nullable Output<List<String>> calendarNames;
+    private @Nullable Output<List<String>> calendarNames;
 
-    public Output<List<String>> calendarNames() {
-        return this.calendarNames == null ? Codegen.empty() : this.calendarNames;
+    public Optional<Output<List<String>>> calendarNames() {
+        return Optional.ofNullable(this.calendarNames);
     }
 
     @Import(name="complianceSeverity")
-      private final @Nullable Output<AssociationComplianceSeverity> complianceSeverity;
+    private @Nullable Output<AssociationComplianceSeverity> complianceSeverity;
 
-    public Output<AssociationComplianceSeverity> complianceSeverity() {
-        return this.complianceSeverity == null ? Codegen.empty() : this.complianceSeverity;
+    public Optional<Output<AssociationComplianceSeverity>> complianceSeverity() {
+        return Optional.ofNullable(this.complianceSeverity);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentVersion")
-      private final @Nullable Output<String> documentVersion;
+    private @Nullable Output<String> documentVersion;
 
-    public Output<String> documentVersion() {
-        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
+    public Optional<Output<String>> documentVersion() {
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -78,24 +78,24 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     @Import(name="maxConcurrency")
-      private final @Nullable Output<String> maxConcurrency;
+    private @Nullable Output<String> maxConcurrency;
 
-    public Output<String> maxConcurrency() {
-        return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
+    public Optional<Output<String>> maxConcurrency() {
+        return Optional.ofNullable(this.maxConcurrency);
     }
 
     @Import(name="maxErrors")
-      private final @Nullable Output<String> maxErrors;
+    private @Nullable Output<String> maxErrors;
 
-    public Output<String> maxErrors() {
-        return this.maxErrors == null ? Codegen.empty() : this.maxErrors;
+    public Optional<Output<String>> maxErrors() {
+        return Optional.ofNullable(this.maxErrors);
     }
 
     /**
@@ -103,17 +103,17 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="outputLocation")
-      private final @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
+    private @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
 
-    public Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation() {
-        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
+    public Optional<Output<AssociationInstanceAssociationOutputLocationArgs>> outputLocation() {
+        return Optional.ofNullable(this.outputLocation);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Object> parameters;
+    private @Nullable Output<Object> parameters;
 
-    public Output<Object> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -132,17 +132,17 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleExpression")
-      private final @Nullable Output<String> scheduleExpression;
+    private @Nullable Output<String> scheduleExpression;
 
-    public Output<String> scheduleExpression() {
-        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
+    public Optional<Output<String>> scheduleExpression() {
+        return Optional.ofNullable(this.scheduleExpression);
     }
 
     @Import(name="syncCompliance")
-      private final @Nullable Output<AssociationSyncCompliance> syncCompliance;
+    private @Nullable Output<AssociationSyncCompliance> syncCompliance;
 
-    public Output<AssociationSyncCompliance> syncCompliance() {
-        return this.syncCompliance == null ? Codegen.empty() : this.syncCompliance;
+    public Optional<Output<AssociationSyncCompliance>> syncCompliance() {
+        return Optional.ofNullable(this.syncCompliance);
     }
 
     /**
@@ -150,258 +150,213 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targets")
-      private final @Nullable Output<List<AssociationTargetArgs>> targets;
+    private @Nullable Output<List<AssociationTargetArgs>> targets;
 
-    public Output<List<AssociationTargetArgs>> targets() {
-        return this.targets == null ? Codegen.empty() : this.targets;
+    public Optional<Output<List<AssociationTargetArgs>>> targets() {
+        return Optional.ofNullable(this.targets);
     }
 
     @Import(name="waitForSuccessTimeoutSeconds")
-      private final @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
+    private @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
 
-    public Output<Integer> waitForSuccessTimeoutSeconds() {
-        return this.waitForSuccessTimeoutSeconds == null ? Codegen.empty() : this.waitForSuccessTimeoutSeconds;
+    public Optional<Output<Integer>> waitForSuccessTimeoutSeconds() {
+        return Optional.ofNullable(this.waitForSuccessTimeoutSeconds);
     }
 
-    public AssociationArgs(
-        @Nullable Output<Boolean> applyOnlyAtCronInterval,
-        @Nullable Output<String> associationName,
-        @Nullable Output<String> automationTargetParameterName,
-        @Nullable Output<List<String>> calendarNames,
-        @Nullable Output<AssociationComplianceSeverity> complianceSeverity,
-        @Nullable Output<String> documentVersion,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> maxConcurrency,
-        @Nullable Output<String> maxErrors,
-        @Nullable Output<String> name,
-        @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation,
-        @Nullable Output<Object> parameters,
-        @Nullable Output<String> scheduleExpression,
-        @Nullable Output<AssociationSyncCompliance> syncCompliance,
-        @Nullable Output<List<AssociationTargetArgs>> targets,
-        @Nullable Output<Integer> waitForSuccessTimeoutSeconds) {
-        this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
-        this.associationName = associationName;
-        this.automationTargetParameterName = automationTargetParameterName;
-        this.calendarNames = calendarNames;
-        this.complianceSeverity = complianceSeverity;
-        this.documentVersion = documentVersion;
-        this.instanceId = instanceId;
-        this.maxConcurrency = maxConcurrency;
-        this.maxErrors = maxErrors;
-        this.name = name;
-        this.outputLocation = outputLocation;
-        this.parameters = parameters;
-        this.scheduleExpression = scheduleExpression;
-        this.syncCompliance = syncCompliance;
-        this.targets = targets;
-        this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
-    }
+    private AssociationArgs() {}
 
-    private AssociationArgs() {
-        this.applyOnlyAtCronInterval = Codegen.empty();
-        this.associationName = Codegen.empty();
-        this.automationTargetParameterName = Codegen.empty();
-        this.calendarNames = Codegen.empty();
-        this.complianceSeverity = Codegen.empty();
-        this.documentVersion = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.maxConcurrency = Codegen.empty();
-        this.maxErrors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputLocation = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.scheduleExpression = Codegen.empty();
-        this.syncCompliance = Codegen.empty();
-        this.targets = Codegen.empty();
-        this.waitForSuccessTimeoutSeconds = Codegen.empty();
+    private AssociationArgs(AssociationArgs $) {
+        this.applyOnlyAtCronInterval = $.applyOnlyAtCronInterval;
+        this.associationName = $.associationName;
+        this.automationTargetParameterName = $.automationTargetParameterName;
+        this.calendarNames = $.calendarNames;
+        this.complianceSeverity = $.complianceSeverity;
+        this.documentVersion = $.documentVersion;
+        this.instanceId = $.instanceId;
+        this.maxConcurrency = $.maxConcurrency;
+        this.maxErrors = $.maxErrors;
+        this.name = $.name;
+        this.outputLocation = $.outputLocation;
+        this.parameters = $.parameters;
+        this.scheduleExpression = $.scheduleExpression;
+        this.syncCompliance = $.syncCompliance;
+        this.targets = $.targets;
+        this.waitForSuccessTimeoutSeconds = $.waitForSuccessTimeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> applyOnlyAtCronInterval;
-        private @Nullable Output<String> associationName;
-        private @Nullable Output<String> automationTargetParameterName;
-        private @Nullable Output<List<String>> calendarNames;
-        private @Nullable Output<AssociationComplianceSeverity> complianceSeverity;
-        private @Nullable Output<String> documentVersion;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> maxConcurrency;
-        private @Nullable Output<String> maxErrors;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
-        private @Nullable Output<Object> parameters;
-        private @Nullable Output<String> scheduleExpression;
-        private @Nullable Output<AssociationSyncCompliance> syncCompliance;
-        private @Nullable Output<List<AssociationTargetArgs>> targets;
-        private @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
+        private AssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociationArgs();
         }
 
         public Builder(AssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyOnlyAtCronInterval = defaults.applyOnlyAtCronInterval;
-    	      this.associationName = defaults.associationName;
-    	      this.automationTargetParameterName = defaults.automationTargetParameterName;
-    	      this.calendarNames = defaults.calendarNames;
-    	      this.complianceSeverity = defaults.complianceSeverity;
-    	      this.documentVersion = defaults.documentVersion;
-    	      this.instanceId = defaults.instanceId;
-    	      this.maxConcurrency = defaults.maxConcurrency;
-    	      this.maxErrors = defaults.maxErrors;
-    	      this.name = defaults.name;
-    	      this.outputLocation = defaults.outputLocation;
-    	      this.parameters = defaults.parameters;
-    	      this.scheduleExpression = defaults.scheduleExpression;
-    	      this.syncCompliance = defaults.syncCompliance;
-    	      this.targets = defaults.targets;
-    	      this.waitForSuccessTimeoutSeconds = defaults.waitForSuccessTimeoutSeconds;
+            $ = new AssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applyOnlyAtCronInterval(@Nullable Output<Boolean> applyOnlyAtCronInterval) {
-            this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
+            $.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
-        public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
-            this.applyOnlyAtCronInterval = Codegen.ofNullable(applyOnlyAtCronInterval);
-            return this;
+
+        public Builder applyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
+            return applyOnlyAtCronInterval(Output.of(applyOnlyAtCronInterval));
         }
+
         public Builder associationName(@Nullable Output<String> associationName) {
-            this.associationName = associationName;
+            $.associationName = associationName;
             return this;
         }
-        public Builder associationName(@Nullable String associationName) {
-            this.associationName = Codegen.ofNullable(associationName);
-            return this;
+
+        public Builder associationName(String associationName) {
+            return associationName(Output.of(associationName));
         }
+
         public Builder automationTargetParameterName(@Nullable Output<String> automationTargetParameterName) {
-            this.automationTargetParameterName = automationTargetParameterName;
+            $.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
-        public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
-            this.automationTargetParameterName = Codegen.ofNullable(automationTargetParameterName);
-            return this;
+
+        public Builder automationTargetParameterName(String automationTargetParameterName) {
+            return automationTargetParameterName(Output.of(automationTargetParameterName));
         }
+
         public Builder calendarNames(@Nullable Output<List<String>> calendarNames) {
-            this.calendarNames = calendarNames;
+            $.calendarNames = calendarNames;
             return this;
         }
-        public Builder calendarNames(@Nullable List<String> calendarNames) {
-            this.calendarNames = Codegen.ofNullable(calendarNames);
-            return this;
+
+        public Builder calendarNames(List<String> calendarNames) {
+            return calendarNames(Output.of(calendarNames));
         }
+
         public Builder calendarNames(String... calendarNames) {
             return calendarNames(List.of(calendarNames));
         }
+
         public Builder complianceSeverity(@Nullable Output<AssociationComplianceSeverity> complianceSeverity) {
-            this.complianceSeverity = complianceSeverity;
+            $.complianceSeverity = complianceSeverity;
             return this;
         }
-        public Builder complianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
-            this.complianceSeverity = Codegen.ofNullable(complianceSeverity);
-            return this;
+
+        public Builder complianceSeverity(AssociationComplianceSeverity complianceSeverity) {
+            return complianceSeverity(Output.of(complianceSeverity));
         }
+
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
-            this.documentVersion = documentVersion;
+            $.documentVersion = documentVersion;
             return this;
         }
-        public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Codegen.ofNullable(documentVersion);
-            return this;
+
+        public Builder documentVersion(String documentVersion) {
+            return documentVersion(Output.of(documentVersion));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
-            this.maxConcurrency = maxConcurrency;
+            $.maxConcurrency = maxConcurrency;
             return this;
         }
-        public Builder maxConcurrency(@Nullable String maxConcurrency) {
-            this.maxConcurrency = Codegen.ofNullable(maxConcurrency);
-            return this;
+
+        public Builder maxConcurrency(String maxConcurrency) {
+            return maxConcurrency(Output.of(maxConcurrency));
         }
+
         public Builder maxErrors(@Nullable Output<String> maxErrors) {
-            this.maxErrors = maxErrors;
+            $.maxErrors = maxErrors;
             return this;
         }
-        public Builder maxErrors(@Nullable String maxErrors) {
-            this.maxErrors = Codegen.ofNullable(maxErrors);
-            return this;
+
+        public Builder maxErrors(String maxErrors) {
+            return maxErrors(Output.of(maxErrors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outputLocation(@Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
         }
-        public Builder outputLocation(@Nullable AssociationInstanceAssociationOutputLocationArgs outputLocation) {
-            this.outputLocation = Codegen.ofNullable(outputLocation);
-            return this;
+
+        public Builder outputLocation(AssociationInstanceAssociationOutputLocationArgs outputLocation) {
+            return outputLocation(Output.of(outputLocation));
         }
+
         public Builder parameters(@Nullable Output<Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Object parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
-        public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
-            return this;
+
+        public Builder scheduleExpression(String scheduleExpression) {
+            return scheduleExpression(Output.of(scheduleExpression));
         }
+
         public Builder syncCompliance(@Nullable Output<AssociationSyncCompliance> syncCompliance) {
-            this.syncCompliance = syncCompliance;
+            $.syncCompliance = syncCompliance;
             return this;
         }
-        public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
-            this.syncCompliance = Codegen.ofNullable(syncCompliance);
-            return this;
+
+        public Builder syncCompliance(AssociationSyncCompliance syncCompliance) {
+            return syncCompliance(Output.of(syncCompliance));
         }
+
         public Builder targets(@Nullable Output<List<AssociationTargetArgs>> targets) {
-            this.targets = targets;
+            $.targets = targets;
             return this;
         }
-        public Builder targets(@Nullable List<AssociationTargetArgs> targets) {
-            this.targets = Codegen.ofNullable(targets);
-            return this;
+
+        public Builder targets(List<AssociationTargetArgs> targets) {
+            return targets(Output.of(targets));
         }
+
         public Builder targets(AssociationTargetArgs... targets) {
             return targets(List.of(targets));
         }
+
         public Builder waitForSuccessTimeoutSeconds(@Nullable Output<Integer> waitForSuccessTimeoutSeconds) {
-            this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
+            $.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }
-        public Builder waitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
-            this.waitForSuccessTimeoutSeconds = Codegen.ofNullable(waitForSuccessTimeoutSeconds);
-            return this;
-        }        public AssociationArgs build() {
-            return new AssociationArgs(applyOnlyAtCronInterval, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);
+
+        public Builder waitForSuccessTimeoutSeconds(Integer waitForSuccessTimeoutSeconds) {
+            return waitForSuccessTimeoutSeconds(Output.of(waitForSuccessTimeoutSeconds));
+        }
+
+        public AssociationArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.awsnative.s3.inputs.BucketReplicaModificationsArgs;
 import com.pulumi.awsnative.s3.inputs.BucketSseKmsEncryptedObjectsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BucketSourceSelectionCriteriaArgs extends com.pulumi.resource
      * 
      */
     @Import(name="replicaModifications")
-      private final @Nullable Output<BucketReplicaModificationsArgs> replicaModifications;
+    private @Nullable Output<BucketReplicaModificationsArgs> replicaModifications;
 
-    public Output<BucketReplicaModificationsArgs> replicaModifications() {
-        return this.replicaModifications == null ? Codegen.empty() : this.replicaModifications;
+    public Optional<Output<BucketReplicaModificationsArgs>> replicaModifications() {
+        return Optional.ofNullable(this.replicaModifications);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BucketSourceSelectionCriteriaArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sseKmsEncryptedObjects")
-      private final @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+    private @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
-    public Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
+    public Optional<Output<BucketSseKmsEncryptedObjectsArgs>> sseKmsEncryptedObjects() {
+        return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
 
-    public BucketSourceSelectionCriteriaArgs(
-        @Nullable Output<BucketReplicaModificationsArgs> replicaModifications,
-        @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
-        this.replicaModifications = replicaModifications;
-        this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
-    }
+    private BucketSourceSelectionCriteriaArgs() {}
 
-    private BucketSourceSelectionCriteriaArgs() {
-        this.replicaModifications = Codegen.empty();
-        this.sseKmsEncryptedObjects = Codegen.empty();
+    private BucketSourceSelectionCriteriaArgs(BucketSourceSelectionCriteriaArgs $) {
+        this.replicaModifications = $.replicaModifications;
+        this.sseKmsEncryptedObjects = $.sseKmsEncryptedObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketSourceSelectionCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketReplicaModificationsArgs> replicaModifications;
-        private @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+        private BucketSourceSelectionCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketSourceSelectionCriteriaArgs();
         }
 
         public Builder(BucketSourceSelectionCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicaModifications = defaults.replicaModifications;
-    	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
+            $ = new BucketSourceSelectionCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicaModifications(@Nullable Output<BucketReplicaModificationsArgs> replicaModifications) {
-            this.replicaModifications = replicaModifications;
+            $.replicaModifications = replicaModifications;
             return this;
         }
-        public Builder replicaModifications(@Nullable BucketReplicaModificationsArgs replicaModifications) {
-            this.replicaModifications = Codegen.ofNullable(replicaModifications);
-            return this;
+
+        public Builder replicaModifications(BucketReplicaModificationsArgs replicaModifications) {
+            return replicaModifications(Output.of(replicaModifications));
         }
+
         public Builder sseKmsEncryptedObjects(@Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
+            $.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
-        public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = Codegen.ofNullable(sseKmsEncryptedObjects);
-            return this;
-        }        public BucketSourceSelectionCriteriaArgs build() {
-            return new BucketSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);
+
+        public Builder sseKmsEncryptedObjects(BucketSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
+            return sseKmsEncryptedObjects(Output.of(sseKmsEncryptedObjects));
+        }
+
+        public BucketSourceSelectionCriteriaArgs build() {
+            return $;
         }
     }
+
 }

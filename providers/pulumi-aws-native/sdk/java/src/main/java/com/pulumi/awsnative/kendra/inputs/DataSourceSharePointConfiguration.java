@@ -25,234 +25,206 @@ public final class DataSourceSharePointConfiguration extends com.pulumi.resource
     public static final DataSourceSharePointConfiguration Empty = new DataSourceSharePointConfiguration();
 
     @Import(name="crawlAttachments")
-      private final @Nullable Boolean crawlAttachments;
+    private @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> crawlAttachments() {
-        return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
+        return Optional.ofNullable(this.crawlAttachments);
     }
 
     @Import(name="disableLocalGroups")
-      private final @Nullable Boolean disableLocalGroups;
+    private @Nullable Boolean disableLocalGroups;
 
     public Optional<Boolean> disableLocalGroups() {
-        return this.disableLocalGroups == null ? Optional.empty() : Optional.ofNullable(this.disableLocalGroups);
+        return Optional.ofNullable(this.disableLocalGroups);
     }
 
     @Import(name="documentTitleFieldName")
-      private final @Nullable String documentTitleFieldName;
+    private @Nullable String documentTitleFieldName;
 
     public Optional<String> documentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
+        return Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="exclusionPatterns")
-      private final @Nullable List<String> exclusionPatterns;
+    private @Nullable List<String> exclusionPatterns;
 
-    public List<String> exclusionPatterns() {
-        return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
+    public Optional<List<String>> exclusionPatterns() {
+        return Optional.ofNullable(this.exclusionPatterns);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="inclusionPatterns")
-      private final @Nullable List<String> inclusionPatterns;
+    private @Nullable List<String> inclusionPatterns;
 
-    public List<String> inclusionPatterns() {
-        return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
+    public Optional<List<String>> inclusionPatterns() {
+        return Optional.ofNullable(this.inclusionPatterns);
     }
 
     @Import(name="secretArn", required=true)
-      private final String secretArn;
+    private String secretArn;
 
     public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="sharePointVersion", required=true)
-      private final DataSourceSharePointConfigurationSharePointVersion sharePointVersion;
+    private DataSourceSharePointConfigurationSharePointVersion sharePointVersion;
 
     public DataSourceSharePointConfigurationSharePointVersion sharePointVersion() {
         return this.sharePointVersion;
     }
 
     @Import(name="sslCertificateS3Path")
-      private final @Nullable DataSourceS3Path sslCertificateS3Path;
+    private @Nullable DataSourceS3Path sslCertificateS3Path;
 
     public Optional<DataSourceS3Path> sslCertificateS3Path() {
-        return this.sslCertificateS3Path == null ? Optional.empty() : Optional.ofNullable(this.sslCertificateS3Path);
+        return Optional.ofNullable(this.sslCertificateS3Path);
     }
 
     @Import(name="urls", required=true)
-      private final List<String> urls;
+    private List<String> urls;
 
     public List<String> urls() {
         return this.urls;
     }
 
     @Import(name="useChangeLog")
-      private final @Nullable Boolean useChangeLog;
+    private @Nullable Boolean useChangeLog;
 
     public Optional<Boolean> useChangeLog() {
-        return this.useChangeLog == null ? Optional.empty() : Optional.ofNullable(this.useChangeLog);
+        return Optional.ofNullable(this.useChangeLog);
     }
 
     @Import(name="vpcConfiguration")
-      private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
+    private @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
     public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public DataSourceSharePointConfiguration(
-        @Nullable Boolean crawlAttachments,
-        @Nullable Boolean disableLocalGroups,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        String secretArn,
-        DataSourceSharePointConfigurationSharePointVersion sharePointVersion,
-        @Nullable DataSourceS3Path sslCertificateS3Path,
-        List<String> urls,
-        @Nullable Boolean useChangeLog,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
-        this.crawlAttachments = crawlAttachments;
-        this.disableLocalGroups = disableLocalGroups;
-        this.documentTitleFieldName = documentTitleFieldName;
-        this.exclusionPatterns = exclusionPatterns;
-        this.fieldMappings = fieldMappings;
-        this.inclusionPatterns = inclusionPatterns;
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.sharePointVersion = Objects.requireNonNull(sharePointVersion, "expected parameter 'sharePointVersion' to be non-null");
-        this.sslCertificateS3Path = sslCertificateS3Path;
-        this.urls = Objects.requireNonNull(urls, "expected parameter 'urls' to be non-null");
-        this.useChangeLog = useChangeLog;
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private DataSourceSharePointConfiguration() {}
 
-    private DataSourceSharePointConfiguration() {
-        this.crawlAttachments = null;
-        this.disableLocalGroups = null;
-        this.documentTitleFieldName = null;
-        this.exclusionPatterns = List.of();
-        this.fieldMappings = List.of();
-        this.inclusionPatterns = List.of();
-        this.secretArn = null;
-        this.sharePointVersion = null;
-        this.sslCertificateS3Path = null;
-        this.urls = List.of();
-        this.useChangeLog = null;
-        this.vpcConfiguration = null;
+    private DataSourceSharePointConfiguration(DataSourceSharePointConfiguration $) {
+        this.crawlAttachments = $.crawlAttachments;
+        this.disableLocalGroups = $.disableLocalGroups;
+        this.documentTitleFieldName = $.documentTitleFieldName;
+        this.exclusionPatterns = $.exclusionPatterns;
+        this.fieldMappings = $.fieldMappings;
+        this.inclusionPatterns = $.inclusionPatterns;
+        this.secretArn = $.secretArn;
+        this.sharePointVersion = $.sharePointVersion;
+        this.sslCertificateS3Path = $.sslCertificateS3Path;
+        this.urls = $.urls;
+        this.useChangeLog = $.useChangeLog;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSharePointConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean crawlAttachments;
-        private @Nullable Boolean disableLocalGroups;
-        private @Nullable String documentTitleFieldName;
-        private @Nullable List<String> exclusionPatterns;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
-        private @Nullable List<String> inclusionPatterns;
-        private String secretArn;
-        private DataSourceSharePointConfigurationSharePointVersion sharePointVersion;
-        private @Nullable DataSourceS3Path sslCertificateS3Path;
-        private List<String> urls;
-        private @Nullable Boolean useChangeLog;
-        private @Nullable DataSourceVpcConfiguration vpcConfiguration;
+        private DataSourceSharePointConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSharePointConfiguration();
         }
 
         public Builder(DataSourceSharePointConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crawlAttachments = defaults.crawlAttachments;
-    	      this.disableLocalGroups = defaults.disableLocalGroups;
-    	      this.documentTitleFieldName = defaults.documentTitleFieldName;
-    	      this.exclusionPatterns = defaults.exclusionPatterns;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.inclusionPatterns = defaults.inclusionPatterns;
-    	      this.secretArn = defaults.secretArn;
-    	      this.sharePointVersion = defaults.sharePointVersion;
-    	      this.sslCertificateS3Path = defaults.sslCertificateS3Path;
-    	      this.urls = defaults.urls;
-    	      this.useChangeLog = defaults.useChangeLog;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new DataSourceSharePointConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = crawlAttachments;
+            $.crawlAttachments = crawlAttachments;
             return this;
         }
+
         public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
-            this.disableLocalGroups = disableLocalGroups;
+            $.disableLocalGroups = disableLocalGroups;
             return this;
         }
+
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = documentTitleFieldName;
+            $.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
+
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = exclusionPatterns;
+            $.exclusionPatterns = exclusionPatterns;
             return this;
         }
+
         public Builder exclusionPatterns(String... exclusionPatterns) {
             return exclusionPatterns(List.of(exclusionPatterns));
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = inclusionPatterns;
+            $.inclusionPatterns = inclusionPatterns;
             return this;
         }
+
         public Builder inclusionPatterns(String... inclusionPatterns) {
             return inclusionPatterns(List.of(inclusionPatterns));
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder sharePointVersion(DataSourceSharePointConfigurationSharePointVersion sharePointVersion) {
-            this.sharePointVersion = Objects.requireNonNull(sharePointVersion);
+            $.sharePointVersion = sharePointVersion;
             return this;
         }
+
         public Builder sslCertificateS3Path(@Nullable DataSourceS3Path sslCertificateS3Path) {
-            this.sslCertificateS3Path = sslCertificateS3Path;
+            $.sslCertificateS3Path = sslCertificateS3Path;
             return this;
         }
+
         public Builder urls(List<String> urls) {
-            this.urls = Objects.requireNonNull(urls);
+            $.urls = urls;
             return this;
         }
+
         public Builder urls(String... urls) {
             return urls(List.of(urls));
         }
+
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
-            this.useChangeLog = useChangeLog;
+            $.useChangeLog = useChangeLog;
             return this;
         }
+
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
-        }        public DataSourceSharePointConfiguration build() {
-            return new DataSourceSharePointConfiguration(crawlAttachments, disableLocalGroups, documentTitleFieldName, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn, sharePointVersion, sslCertificateS3Path, urls, useChangeLog, vpcConfiguration);
+        }
+
+        public DataSourceSharePointConfiguration build() {
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.sharePointVersion = Objects.requireNonNull($.sharePointVersion, "expected parameter 'sharePointVersion' to be non-null");
+            $.urls = Objects.requireNonNull($.urls, "expected parameter 'urls' to be non-null");
+            return $;
         }
     }
+
 }

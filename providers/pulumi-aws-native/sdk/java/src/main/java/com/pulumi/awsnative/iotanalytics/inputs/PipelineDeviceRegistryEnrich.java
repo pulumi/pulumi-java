@@ -15,110 +15,100 @@ public final class PipelineDeviceRegistryEnrich extends com.pulumi.resources.Inv
     public static final PipelineDeviceRegistryEnrich Empty = new PipelineDeviceRegistryEnrich();
 
     @Import(name="attribute", required=true)
-      private final String attribute;
+    private String attribute;
 
     public String attribute() {
         return this.attribute;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable String next;
+    private @Nullable String next;
 
     public Optional<String> next() {
-        return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
+        return Optional.ofNullable(this.next);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="thingName", required=true)
-      private final String thingName;
+    private String thingName;
 
     public String thingName() {
         return this.thingName;
     }
 
-    public PipelineDeviceRegistryEnrich(
-        String attribute,
-        String name,
-        @Nullable String next,
-        String roleArn,
-        String thingName) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.thingName = Objects.requireNonNull(thingName, "expected parameter 'thingName' to be non-null");
-    }
+    private PipelineDeviceRegistryEnrich() {}
 
-    private PipelineDeviceRegistryEnrich() {
-        this.attribute = null;
-        this.name = null;
-        this.next = null;
-        this.roleArn = null;
-        this.thingName = null;
+    private PipelineDeviceRegistryEnrich(PipelineDeviceRegistryEnrich $) {
+        this.attribute = $.attribute;
+        this.name = $.name;
+        this.next = $.next;
+        this.roleArn = $.roleArn;
+        this.thingName = $.thingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDeviceRegistryEnrich defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attribute;
-        private String name;
-        private @Nullable String next;
-        private String roleArn;
-        private String thingName;
+        private PipelineDeviceRegistryEnrich $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDeviceRegistryEnrich();
         }
 
         public Builder(PipelineDeviceRegistryEnrich defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
-    	      this.roleArn = defaults.roleArn;
-    	      this.thingName = defaults.thingName;
+            $ = new PipelineDeviceRegistryEnrich(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder next(@Nullable String next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder thingName(String thingName) {
-            this.thingName = Objects.requireNonNull(thingName);
+            $.thingName = thingName;
             return this;
-        }        public PipelineDeviceRegistryEnrich build() {
-            return new PipelineDeviceRegistryEnrich(attribute, name, next, roleArn, thingName);
+        }
+
+        public PipelineDeviceRegistryEnrich build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.thingName = Objects.requireNonNull($.thingName, "expected parameter 'thingName' to be non-null");
+            return $;
         }
     }
+
 }

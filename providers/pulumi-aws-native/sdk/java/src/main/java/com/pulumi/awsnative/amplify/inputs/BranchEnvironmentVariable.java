@@ -13,62 +13,59 @@ public final class BranchEnvironmentVariable extends com.pulumi.resources.Invoke
     public static final BranchEnvironmentVariable Empty = new BranchEnvironmentVariable();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public BranchEnvironmentVariable(
-        String name,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private BranchEnvironmentVariable() {}
 
-    private BranchEnvironmentVariable() {
-        this.name = null;
-        this.value = null;
+    private BranchEnvironmentVariable(BranchEnvironmentVariable $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BranchEnvironmentVariable defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
+        private BranchEnvironmentVariable $;
 
         public Builder() {
-    	      // Empty
+            $ = new BranchEnvironmentVariable();
         }
 
         public Builder(BranchEnvironmentVariable defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new BranchEnvironmentVariable(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public BranchEnvironmentVariable build() {
-            return new BranchEnvironmentVariable(name, value);
+        }
+
+        public BranchEnvironmentVariable build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

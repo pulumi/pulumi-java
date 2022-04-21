@@ -9,10 +9,10 @@ import com.pulumi.awsnative.route53.inputs.HostedZoneTagArgs;
 import com.pulumi.awsnative.route53.inputs.HostedZoneVPCArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
     public static final HostedZoneArgs Empty = new HostedZoneArgs();
 
     @Import(name="hostedZoneConfig")
-      private final @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
+    private @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
 
-    public Output<HostedZoneConfigArgs> hostedZoneConfig() {
-        return this.hostedZoneConfig == null ? Codegen.empty() : this.hostedZoneConfig;
+    public Optional<Output<HostedZoneConfigArgs>> hostedZoneConfig() {
+        return Optional.ofNullable(this.hostedZoneConfig);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostedZoneTags")
-      private final @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
+    private @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
 
-    public Output<List<HostedZoneTagArgs>> hostedZoneTags() {
-        return this.hostedZoneTags == null ? Codegen.empty() : this.hostedZoneTags;
+    public Optional<Output<List<HostedZoneTagArgs>>> hostedZoneTags() {
+        return Optional.ofNullable(this.hostedZoneTags);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="queryLoggingConfig")
-      private final @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
+    private @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
 
-    public Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig() {
-        return this.queryLoggingConfig == null ? Codegen.empty() : this.queryLoggingConfig;
+    public Optional<Output<HostedZoneQueryLoggingConfigArgs>> queryLoggingConfig() {
+        return Optional.ofNullable(this.queryLoggingConfig);
     }
 
     /**
@@ -65,108 +65,96 @@ public final class HostedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vPCs")
-      private final @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
+    private @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
 
-    public Output<List<HostedZoneVPCArgs>> vPCs() {
-        return this.vPCs == null ? Codegen.empty() : this.vPCs;
+    public Optional<Output<List<HostedZoneVPCArgs>>> vPCs() {
+        return Optional.ofNullable(this.vPCs);
     }
 
-    public HostedZoneArgs(
-        @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig,
-        @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags,
-        @Nullable Output<String> name,
-        @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig,
-        @Nullable Output<List<HostedZoneVPCArgs>> vPCs) {
-        this.hostedZoneConfig = hostedZoneConfig;
-        this.hostedZoneTags = hostedZoneTags;
-        this.name = name;
-        this.queryLoggingConfig = queryLoggingConfig;
-        this.vPCs = vPCs;
-    }
+    private HostedZoneArgs() {}
 
-    private HostedZoneArgs() {
-        this.hostedZoneConfig = Codegen.empty();
-        this.hostedZoneTags = Codegen.empty();
-        this.name = Codegen.empty();
-        this.queryLoggingConfig = Codegen.empty();
-        this.vPCs = Codegen.empty();
+    private HostedZoneArgs(HostedZoneArgs $) {
+        this.hostedZoneConfig = $.hostedZoneConfig;
+        this.hostedZoneTags = $.hostedZoneTags;
+        this.name = $.name;
+        this.queryLoggingConfig = $.queryLoggingConfig;
+        this.vPCs = $.vPCs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
-        private @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
-        private @Nullable Output<String> name;
-        private @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
-        private @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
+        private HostedZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedZoneArgs();
         }
 
         public Builder(HostedZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostedZoneConfig = defaults.hostedZoneConfig;
-    	      this.hostedZoneTags = defaults.hostedZoneTags;
-    	      this.name = defaults.name;
-    	      this.queryLoggingConfig = defaults.queryLoggingConfig;
-    	      this.vPCs = defaults.vPCs;
+            $ = new HostedZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostedZoneConfig(@Nullable Output<HostedZoneConfigArgs> hostedZoneConfig) {
-            this.hostedZoneConfig = hostedZoneConfig;
+            $.hostedZoneConfig = hostedZoneConfig;
             return this;
         }
-        public Builder hostedZoneConfig(@Nullable HostedZoneConfigArgs hostedZoneConfig) {
-            this.hostedZoneConfig = Codegen.ofNullable(hostedZoneConfig);
-            return this;
+
+        public Builder hostedZoneConfig(HostedZoneConfigArgs hostedZoneConfig) {
+            return hostedZoneConfig(Output.of(hostedZoneConfig));
         }
+
         public Builder hostedZoneTags(@Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags) {
-            this.hostedZoneTags = hostedZoneTags;
+            $.hostedZoneTags = hostedZoneTags;
             return this;
         }
-        public Builder hostedZoneTags(@Nullable List<HostedZoneTagArgs> hostedZoneTags) {
-            this.hostedZoneTags = Codegen.ofNullable(hostedZoneTags);
-            return this;
+
+        public Builder hostedZoneTags(List<HostedZoneTagArgs> hostedZoneTags) {
+            return hostedZoneTags(Output.of(hostedZoneTags));
         }
+
         public Builder hostedZoneTags(HostedZoneTagArgs... hostedZoneTags) {
             return hostedZoneTags(List.of(hostedZoneTags));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder queryLoggingConfig(@Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig) {
-            this.queryLoggingConfig = queryLoggingConfig;
+            $.queryLoggingConfig = queryLoggingConfig;
             return this;
         }
-        public Builder queryLoggingConfig(@Nullable HostedZoneQueryLoggingConfigArgs queryLoggingConfig) {
-            this.queryLoggingConfig = Codegen.ofNullable(queryLoggingConfig);
-            return this;
+
+        public Builder queryLoggingConfig(HostedZoneQueryLoggingConfigArgs queryLoggingConfig) {
+            return queryLoggingConfig(Output.of(queryLoggingConfig));
         }
+
         public Builder vPCs(@Nullable Output<List<HostedZoneVPCArgs>> vPCs) {
-            this.vPCs = vPCs;
+            $.vPCs = vPCs;
             return this;
         }
-        public Builder vPCs(@Nullable List<HostedZoneVPCArgs> vPCs) {
-            this.vPCs = Codegen.ofNullable(vPCs);
-            return this;
+
+        public Builder vPCs(List<HostedZoneVPCArgs> vPCs) {
+            return vPCs(Output.of(vPCs));
         }
+
         public Builder vPCs(HostedZoneVPCArgs... vPCs) {
             return vPCs(List.of(vPCs));
-        }        public HostedZoneArgs build() {
-            return new HostedZoneArgs(hostedZoneConfig, hostedZoneTags, name, queryLoggingConfig, vPCs);
+        }
+
+        public HostedZoneArgs build() {
+            return $;
         }
     }
+
 }

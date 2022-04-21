@@ -17,45 +17,45 @@ public final class GetIPAMPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipamPoolId", required=true)
-      private final String ipamPoolId;
+    private String ipamPoolId;
 
     public String ipamPoolId() {
         return this.ipamPoolId;
     }
 
-    public GetIPAMPoolArgs(String ipamPoolId) {
-        this.ipamPoolId = Objects.requireNonNull(ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
-    }
+    private GetIPAMPoolArgs() {}
 
-    private GetIPAMPoolArgs() {
-        this.ipamPoolId = null;
+    private GetIPAMPoolArgs(GetIPAMPoolArgs $) {
+        this.ipamPoolId = $.ipamPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIPAMPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipamPoolId;
+        private GetIPAMPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIPAMPoolArgs();
         }
 
         public Builder(GetIPAMPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipamPoolId = defaults.ipamPoolId;
+            $ = new GetIPAMPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipamPoolId(String ipamPoolId) {
-            this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
+            $.ipamPoolId = ipamPoolId;
             return this;
-        }        public GetIPAMPoolArgs build() {
-            return new GetIPAMPoolArgs(ipamPoolId);
+        }
+
+        public GetIPAMPoolArgs build() {
+            $.ipamPoolId = Objects.requireNonNull($.ipamPoolId, "expected parameter 'ipamPoolId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetExperimentArgs Empty = new GetExperimentArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetExperimentArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetExperimentArgs() {}
 
-    private GetExperimentArgs() {
-        this.arn = null;
+    private GetExperimentArgs(GetExperimentArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExperimentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetExperimentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExperimentArgs();
         }
 
         public Builder(GetExperimentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetExperimentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetExperimentArgs build() {
-            return new GetExperimentArgs(arn);
+        }
+
+        public GetExperimentArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

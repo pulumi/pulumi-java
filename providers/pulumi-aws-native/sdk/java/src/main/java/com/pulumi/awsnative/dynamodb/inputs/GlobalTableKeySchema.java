@@ -13,62 +13,59 @@ public final class GlobalTableKeySchema extends com.pulumi.resources.InvokeArgs 
     public static final GlobalTableKeySchema Empty = new GlobalTableKeySchema();
 
     @Import(name="attributeName", required=true)
-      private final String attributeName;
+    private String attributeName;
 
     public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="keyType", required=true)
-      private final String keyType;
+    private String keyType;
 
     public String keyType() {
         return this.keyType;
     }
 
-    public GlobalTableKeySchema(
-        String attributeName,
-        String keyType) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-    }
+    private GlobalTableKeySchema() {}
 
-    private GlobalTableKeySchema() {
-        this.attributeName = null;
-        this.keyType = null;
+    private GlobalTableKeySchema(GlobalTableKeySchema $) {
+        this.attributeName = $.attributeName;
+        this.keyType = $.keyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableKeySchema defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributeName;
-        private String keyType;
+        private GlobalTableKeySchema $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableKeySchema();
         }
 
         public Builder(GlobalTableKeySchema defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.keyType = defaults.keyType;
+            $ = new GlobalTableKeySchema(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder keyType(String keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
-        }        public GlobalTableKeySchema build() {
-            return new GlobalTableKeySchema(attributeName, keyType);
+        }
+
+        public GlobalTableKeySchema build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            return $;
         }
     }
+
 }

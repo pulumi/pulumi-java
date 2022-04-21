@@ -24,48 +24,48 @@ public final class DetectorModelOnExit extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="events")
-      private final @Nullable List<DetectorModelEvent> events;
+    private @Nullable List<DetectorModelEvent> events;
 
-    public List<DetectorModelEvent> events() {
-        return this.events == null ? List.of() : this.events;
+    public Optional<List<DetectorModelEvent>> events() {
+        return Optional.ofNullable(this.events);
     }
 
-    public DetectorModelOnExit(@Nullable List<DetectorModelEvent> events) {
-        this.events = events;
-    }
+    private DetectorModelOnExit() {}
 
-    private DetectorModelOnExit() {
-        this.events = List.of();
+    private DetectorModelOnExit(DetectorModelOnExit $) {
+        this.events = $.events;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelOnExit defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DetectorModelEvent> events;
+        private DetectorModelOnExit $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelOnExit();
         }
 
         public Builder(DetectorModelOnExit defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
+            $ = new DetectorModelOnExit(Objects.requireNonNull(defaults));
         }
 
         public Builder events(@Nullable List<DetectorModelEvent> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
+
         public Builder events(DetectorModelEvent... events) {
             return events(List.of(events));
-        }        public DetectorModelOnExit build() {
-            return new DetectorModelOnExit(events);
+        }
+
+        public DetectorModelOnExit build() {
+            return $;
         }
     }
+
 }

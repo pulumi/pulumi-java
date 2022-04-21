@@ -18,110 +18,97 @@ public final class DatasetVariable extends com.pulumi.resources.InvokeArgs {
     public static final DatasetVariable Empty = new DatasetVariable();
 
     @Import(name="datasetContentVersionValue")
-      private final @Nullable DatasetContentVersionValue datasetContentVersionValue;
+    private @Nullable DatasetContentVersionValue datasetContentVersionValue;
 
     public Optional<DatasetContentVersionValue> datasetContentVersionValue() {
-        return this.datasetContentVersionValue == null ? Optional.empty() : Optional.ofNullable(this.datasetContentVersionValue);
+        return Optional.ofNullable(this.datasetContentVersionValue);
     }
 
     @Import(name="doubleValue")
-      private final @Nullable Double doubleValue;
+    private @Nullable Double doubleValue;
 
     public Optional<Double> doubleValue() {
-        return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
+        return Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="outputFileUriValue")
-      private final @Nullable DatasetOutputFileUriValue outputFileUriValue;
+    private @Nullable DatasetOutputFileUriValue outputFileUriValue;
 
     public Optional<DatasetOutputFileUriValue> outputFileUriValue() {
-        return this.outputFileUriValue == null ? Optional.empty() : Optional.ofNullable(this.outputFileUriValue);
+        return Optional.ofNullable(this.outputFileUriValue);
     }
 
     @Import(name="stringValue")
-      private final @Nullable String stringValue;
+    private @Nullable String stringValue;
 
     public Optional<String> stringValue() {
-        return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
+        return Optional.ofNullable(this.stringValue);
     }
 
     @Import(name="variableName", required=true)
-      private final String variableName;
+    private String variableName;
 
     public String variableName() {
         return this.variableName;
     }
 
-    public DatasetVariable(
-        @Nullable DatasetContentVersionValue datasetContentVersionValue,
-        @Nullable Double doubleValue,
-        @Nullable DatasetOutputFileUriValue outputFileUriValue,
-        @Nullable String stringValue,
-        String variableName) {
-        this.datasetContentVersionValue = datasetContentVersionValue;
-        this.doubleValue = doubleValue;
-        this.outputFileUriValue = outputFileUriValue;
-        this.stringValue = stringValue;
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-    }
+    private DatasetVariable() {}
 
-    private DatasetVariable() {
-        this.datasetContentVersionValue = null;
-        this.doubleValue = null;
-        this.outputFileUriValue = null;
-        this.stringValue = null;
-        this.variableName = null;
+    private DatasetVariable(DatasetVariable $) {
+        this.datasetContentVersionValue = $.datasetContentVersionValue;
+        this.doubleValue = $.doubleValue;
+        this.outputFileUriValue = $.outputFileUriValue;
+        this.stringValue = $.stringValue;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetVariable defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetContentVersionValue datasetContentVersionValue;
-        private @Nullable Double doubleValue;
-        private @Nullable DatasetOutputFileUriValue outputFileUriValue;
-        private @Nullable String stringValue;
-        private String variableName;
+        private DatasetVariable $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetVariable();
         }
 
         public Builder(DatasetVariable defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetContentVersionValue = defaults.datasetContentVersionValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.outputFileUriValue = defaults.outputFileUriValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.variableName = defaults.variableName;
+            $ = new DatasetVariable(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetContentVersionValue(@Nullable DatasetContentVersionValue datasetContentVersionValue) {
-            this.datasetContentVersionValue = datasetContentVersionValue;
+            $.datasetContentVersionValue = datasetContentVersionValue;
             return this;
         }
+
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
+
         public Builder outputFileUriValue(@Nullable DatasetOutputFileUriValue outputFileUriValue) {
-            this.outputFileUriValue = outputFileUriValue;
+            $.outputFileUriValue = outputFileUriValue;
             return this;
         }
+
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
+
         public Builder variableName(String variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
-        }        public DatasetVariable build() {
-            return new DatasetVariable(datasetContentVersionValue, doubleValue, outputFileUriValue, stringValue, variableName);
+        }
+
+        public DatasetVariable build() {
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            return $;
         }
     }
+
 }

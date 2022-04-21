@@ -6,9 +6,9 @@ package com.pulumi.awsnative.robomaker;
 import com.pulumi.awsnative.robomaker.inputs.FleetTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<FleetTagsArgs> tags;
+    private @Nullable Output<FleetTagsArgs> tags;
 
-    public Output<FleetTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<FleetTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FleetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<FleetTagsArgs> tags) {
-        this.name = name;
-        this.tags = tags;
-    }
+    private FleetArgs() {}
 
-    private FleetArgs() {
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FleetArgs(FleetArgs $) {
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<FleetTagsArgs> tags;
+        private FleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetArgs();
         }
 
         public Builder(FleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new FleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<FleetTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable FleetTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public FleetArgs build() {
-            return new FleetArgs(name, tags);
+
+        public Builder tags(FleetTagsArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public FleetArgs build() {
+            return $;
         }
     }
+
 }

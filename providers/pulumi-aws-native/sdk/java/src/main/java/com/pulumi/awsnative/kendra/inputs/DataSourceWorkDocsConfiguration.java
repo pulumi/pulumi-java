@@ -18,135 +18,122 @@ public final class DataSourceWorkDocsConfiguration extends com.pulumi.resources.
     public static final DataSourceWorkDocsConfiguration Empty = new DataSourceWorkDocsConfiguration();
 
     @Import(name="crawlComments")
-      private final @Nullable Boolean crawlComments;
+    private @Nullable Boolean crawlComments;
 
     public Optional<Boolean> crawlComments() {
-        return this.crawlComments == null ? Optional.empty() : Optional.ofNullable(this.crawlComments);
+        return Optional.ofNullable(this.crawlComments);
     }
 
     @Import(name="exclusionPatterns")
-      private final @Nullable List<String> exclusionPatterns;
+    private @Nullable List<String> exclusionPatterns;
 
-    public List<String> exclusionPatterns() {
-        return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
+    public Optional<List<String>> exclusionPatterns() {
+        return Optional.ofNullable(this.exclusionPatterns);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="inclusionPatterns")
-      private final @Nullable List<String> inclusionPatterns;
+    private @Nullable List<String> inclusionPatterns;
 
-    public List<String> inclusionPatterns() {
-        return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
+    public Optional<List<String>> inclusionPatterns() {
+        return Optional.ofNullable(this.inclusionPatterns);
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="useChangeLog")
-      private final @Nullable Boolean useChangeLog;
+    private @Nullable Boolean useChangeLog;
 
     public Optional<Boolean> useChangeLog() {
-        return this.useChangeLog == null ? Optional.empty() : Optional.ofNullable(this.useChangeLog);
+        return Optional.ofNullable(this.useChangeLog);
     }
 
-    public DataSourceWorkDocsConfiguration(
-        @Nullable Boolean crawlComments,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        String organizationId,
-        @Nullable Boolean useChangeLog) {
-        this.crawlComments = crawlComments;
-        this.exclusionPatterns = exclusionPatterns;
-        this.fieldMappings = fieldMappings;
-        this.inclusionPatterns = inclusionPatterns;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.useChangeLog = useChangeLog;
-    }
+    private DataSourceWorkDocsConfiguration() {}
 
-    private DataSourceWorkDocsConfiguration() {
-        this.crawlComments = null;
-        this.exclusionPatterns = List.of();
-        this.fieldMappings = List.of();
-        this.inclusionPatterns = List.of();
-        this.organizationId = null;
-        this.useChangeLog = null;
+    private DataSourceWorkDocsConfiguration(DataSourceWorkDocsConfiguration $) {
+        this.crawlComments = $.crawlComments;
+        this.exclusionPatterns = $.exclusionPatterns;
+        this.fieldMappings = $.fieldMappings;
+        this.inclusionPatterns = $.inclusionPatterns;
+        this.organizationId = $.organizationId;
+        this.useChangeLog = $.useChangeLog;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceWorkDocsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean crawlComments;
-        private @Nullable List<String> exclusionPatterns;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
-        private @Nullable List<String> inclusionPatterns;
-        private String organizationId;
-        private @Nullable Boolean useChangeLog;
+        private DataSourceWorkDocsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceWorkDocsConfiguration();
         }
 
         public Builder(DataSourceWorkDocsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crawlComments = defaults.crawlComments;
-    	      this.exclusionPatterns = defaults.exclusionPatterns;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.inclusionPatterns = defaults.inclusionPatterns;
-    	      this.organizationId = defaults.organizationId;
-    	      this.useChangeLog = defaults.useChangeLog;
+            $ = new DataSourceWorkDocsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder crawlComments(@Nullable Boolean crawlComments) {
-            this.crawlComments = crawlComments;
+            $.crawlComments = crawlComments;
             return this;
         }
+
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = exclusionPatterns;
+            $.exclusionPatterns = exclusionPatterns;
             return this;
         }
+
         public Builder exclusionPatterns(String... exclusionPatterns) {
             return exclusionPatterns(List.of(exclusionPatterns));
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = inclusionPatterns;
+            $.inclusionPatterns = inclusionPatterns;
             return this;
         }
+
         public Builder inclusionPatterns(String... inclusionPatterns) {
             return inclusionPatterns(List.of(inclusionPatterns));
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
-            this.useChangeLog = useChangeLog;
+            $.useChangeLog = useChangeLog;
             return this;
-        }        public DataSourceWorkDocsConfiguration build() {
-            return new DataSourceWorkDocsConfiguration(crawlComments, exclusionPatterns, fieldMappings, inclusionPatterns, organizationId, useChangeLog);
+        }
+
+        public DataSourceWorkDocsConfiguration build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

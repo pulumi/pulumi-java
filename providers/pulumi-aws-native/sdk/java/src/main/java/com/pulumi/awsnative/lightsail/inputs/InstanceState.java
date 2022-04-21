@@ -24,10 +24,10 @@ public final class InstanceState extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable Integer code;
+    private @Nullable Integer code;
 
     public Optional<Integer> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class InstanceState extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public InstanceState(
-        @Nullable Integer code,
-        @Nullable String name) {
-        this.code = code;
-        this.name = name;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.code = null;
-        this.name = null;
+    private InstanceState(InstanceState $) {
+        this.code = $.code;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer code;
-        private @Nullable String name;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.name = defaults.name;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Integer code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public InstanceState build() {
-            return new InstanceState(code, name);
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

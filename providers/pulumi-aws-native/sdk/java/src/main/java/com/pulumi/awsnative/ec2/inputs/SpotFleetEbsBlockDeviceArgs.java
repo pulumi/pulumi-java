@@ -6,11 +6,11 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.SpotFleetEbsBlockDeviceVolumeType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,150 +19,133 @@ public final class SpotFleetEbsBlockDeviceArgs extends com.pulumi.resources.Reso
     public static final SpotFleetEbsBlockDeviceArgs Empty = new SpotFleetEbsBlockDeviceArgs();
 
     @Import(name="deleteOnTermination")
-      private final @Nullable Output<Boolean> deleteOnTermination;
+    private @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
+    public Optional<Output<Boolean>> deleteOnTermination() {
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     @Import(name="volumeSize")
-      private final @Nullable Output<Integer> volumeSize;
+    private @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> volumeSize() {
-        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
+    public Optional<Output<Integer>> volumeSize() {
+        return Optional.ofNullable(this.volumeSize);
     }
 
     @Import(name="volumeType")
-      private final @Nullable Output<SpotFleetEbsBlockDeviceVolumeType> volumeType;
+    private @Nullable Output<SpotFleetEbsBlockDeviceVolumeType> volumeType;
 
-    public Output<SpotFleetEbsBlockDeviceVolumeType> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<SpotFleetEbsBlockDeviceVolumeType>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public SpotFleetEbsBlockDeviceArgs(
-        @Nullable Output<Boolean> deleteOnTermination,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> snapshotId,
-        @Nullable Output<Integer> volumeSize,
-        @Nullable Output<SpotFleetEbsBlockDeviceVolumeType> volumeType) {
-        this.deleteOnTermination = deleteOnTermination;
-        this.encrypted = encrypted;
-        this.iops = iops;
-        this.snapshotId = snapshotId;
-        this.volumeSize = volumeSize;
-        this.volumeType = volumeType;
-    }
+    private SpotFleetEbsBlockDeviceArgs() {}
 
-    private SpotFleetEbsBlockDeviceArgs() {
-        this.deleteOnTermination = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.volumeSize = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private SpotFleetEbsBlockDeviceArgs(SpotFleetEbsBlockDeviceArgs $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.snapshotId = $.snapshotId;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetEbsBlockDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteOnTermination;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> snapshotId;
-        private @Nullable Output<Integer> volumeSize;
-        private @Nullable Output<SpotFleetEbsBlockDeviceVolumeType> volumeType;
+        private SpotFleetEbsBlockDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetEbsBlockDeviceArgs();
         }
 
         public Builder(SpotFleetEbsBlockDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new SpotFleetEbsBlockDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
-        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
-            return this;
+
+        public Builder deleteOnTermination(Boolean deleteOnTermination) {
+            return deleteOnTermination(Output.of(deleteOnTermination));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
-        public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Codegen.ofNullable(volumeSize);
-            return this;
+
+        public Builder volumeSize(Integer volumeSize) {
+            return volumeSize(Output.of(volumeSize));
         }
+
         public Builder volumeType(@Nullable Output<SpotFleetEbsBlockDeviceVolumeType> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public SpotFleetEbsBlockDeviceArgs build() {
-            return new SpotFleetEbsBlockDeviceArgs(deleteOnTermination, encrypted, iops, snapshotId, volumeSize, volumeType);
+
+        public Builder volumeType(SpotFleetEbsBlockDeviceVolumeType volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public SpotFleetEbsBlockDeviceArgs build() {
+            return $;
         }
     }
+
 }

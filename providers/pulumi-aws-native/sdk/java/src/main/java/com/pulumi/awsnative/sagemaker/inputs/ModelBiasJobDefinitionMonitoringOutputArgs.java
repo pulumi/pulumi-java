@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionS3OutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends com.pulumi
     public static final ModelBiasJobDefinitionMonitoringOutputArgs Empty = new ModelBiasJobDefinitionMonitoringOutputArgs();
 
     @Import(name="s3Output", required=true)
-      private final Output<ModelBiasJobDefinitionS3OutputArgs> s3Output;
+    private Output<ModelBiasJobDefinitionS3OutputArgs> s3Output;
 
     public Output<ModelBiasJobDefinitionS3OutputArgs> s3Output() {
         return this.s3Output;
     }
 
-    public ModelBiasJobDefinitionMonitoringOutputArgs(Output<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
-        this.s3Output = Objects.requireNonNull(s3Output, "expected parameter 's3Output' to be non-null");
-    }
+    private ModelBiasJobDefinitionMonitoringOutputArgs() {}
 
-    private ModelBiasJobDefinitionMonitoringOutputArgs() {
-        this.s3Output = Codegen.empty();
+    private ModelBiasJobDefinitionMonitoringOutputArgs(ModelBiasJobDefinitionMonitoringOutputArgs $) {
+        this.s3Output = $.s3Output;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelBiasJobDefinitionMonitoringOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ModelBiasJobDefinitionS3OutputArgs> s3Output;
+        private ModelBiasJobDefinitionMonitoringOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelBiasJobDefinitionMonitoringOutputArgs();
         }
 
         public Builder(ModelBiasJobDefinitionMonitoringOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Output = defaults.s3Output;
+            $ = new ModelBiasJobDefinitionMonitoringOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Output(Output<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
-            this.s3Output = Objects.requireNonNull(s3Output);
+            $.s3Output = s3Output;
             return this;
         }
+
         public Builder s3Output(ModelBiasJobDefinitionS3OutputArgs s3Output) {
-            this.s3Output = Output.of(Objects.requireNonNull(s3Output));
-            return this;
-        }        public ModelBiasJobDefinitionMonitoringOutputArgs build() {
-            return new ModelBiasJobDefinitionMonitoringOutputArgs(s3Output);
+            return s3Output(Output.of(s3Output));
+        }
+
+        public ModelBiasJobDefinitionMonitoringOutputArgs build() {
+            $.s3Output = Objects.requireNonNull($.s3Output, "expected parameter 's3Output' to be non-null");
+            return $;
         }
     }
+
 }

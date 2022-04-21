@@ -5,9 +5,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class DataSourceSslPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="disableSsl")
-      private final @Nullable Output<Boolean> disableSsl;
+    private @Nullable Output<Boolean> disableSsl;
 
-    public Output<Boolean> disableSsl() {
-        return this.disableSsl == null ? Codegen.empty() : this.disableSsl;
+    public Optional<Output<Boolean>> disableSsl() {
+        return Optional.ofNullable(this.disableSsl);
     }
 
-    public DataSourceSslPropertiesArgs(@Nullable Output<Boolean> disableSsl) {
-        this.disableSsl = disableSsl;
-    }
+    private DataSourceSslPropertiesArgs() {}
 
-    private DataSourceSslPropertiesArgs() {
-        this.disableSsl = Codegen.empty();
+    private DataSourceSslPropertiesArgs(DataSourceSslPropertiesArgs $) {
+        this.disableSsl = $.disableSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSslPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableSsl;
+        private DataSourceSslPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSslPropertiesArgs();
         }
 
         public Builder(DataSourceSslPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableSsl = defaults.disableSsl;
+            $ = new DataSourceSslPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableSsl(@Nullable Output<Boolean> disableSsl) {
-            this.disableSsl = disableSsl;
+            $.disableSsl = disableSsl;
             return this;
         }
-        public Builder disableSsl(@Nullable Boolean disableSsl) {
-            this.disableSsl = Codegen.ofNullable(disableSsl);
-            return this;
-        }        public DataSourceSslPropertiesArgs build() {
-            return new DataSourceSslPropertiesArgs(disableSsl);
+
+        public Builder disableSsl(Boolean disableSsl) {
+            return disableSsl(Output.of(disableSsl));
+        }
+
+        public DataSourceSslPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class RecipeDataCatalogInputDefinition extends com.pulumi.resources
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable String catalogId;
+    private @Nullable String catalogId;
 
     public Optional<String> catalogId() {
-        return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RecipeDataCatalogInputDefinition extends com.pulumi.resources
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -42,80 +42,69 @@ public final class RecipeDataCatalogInputDefinition extends com.pulumi.resources
      * 
      */
     @Import(name="tableName")
-      private final @Nullable String tableName;
+    private @Nullable String tableName;
 
     public Optional<String> tableName() {
-        return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
+        return Optional.ofNullable(this.tableName);
     }
 
     @Import(name="tempDirectory")
-      private final @Nullable RecipeS3Location tempDirectory;
+    private @Nullable RecipeS3Location tempDirectory;
 
     public Optional<RecipeS3Location> tempDirectory() {
-        return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
+        return Optional.ofNullable(this.tempDirectory);
     }
 
-    public RecipeDataCatalogInputDefinition(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String tableName,
-        @Nullable RecipeS3Location tempDirectory) {
-        this.catalogId = catalogId;
-        this.databaseName = databaseName;
-        this.tableName = tableName;
-        this.tempDirectory = tempDirectory;
-    }
+    private RecipeDataCatalogInputDefinition() {}
 
-    private RecipeDataCatalogInputDefinition() {
-        this.catalogId = null;
-        this.databaseName = null;
-        this.tableName = null;
-        this.tempDirectory = null;
+    private RecipeDataCatalogInputDefinition(RecipeDataCatalogInputDefinition $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.tableName = $.tableName;
+        this.tempDirectory = $.tempDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeDataCatalogInputDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String catalogId;
-        private @Nullable String databaseName;
-        private @Nullable String tableName;
-        private @Nullable RecipeS3Location tempDirectory;
+        private RecipeDataCatalogInputDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeDataCatalogInputDefinition();
         }
 
         public Builder(RecipeDataCatalogInputDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.tableName = defaults.tableName;
-    	      this.tempDirectory = defaults.tempDirectory;
+            $ = new RecipeDataCatalogInputDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tempDirectory(@Nullable RecipeS3Location tempDirectory) {
-            this.tempDirectory = tempDirectory;
+            $.tempDirectory = tempDirectory;
             return this;
-        }        public RecipeDataCatalogInputDefinition build() {
-            return new RecipeDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
+        }
+
+        public RecipeDataCatalogInputDefinition build() {
+            return $;
         }
     }
+
 }

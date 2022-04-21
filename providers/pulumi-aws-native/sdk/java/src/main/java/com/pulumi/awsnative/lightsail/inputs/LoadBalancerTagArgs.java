@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class LoadBalancerTagArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -35,63 +35,59 @@ public final class LoadBalancerTagArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public LoadBalancerTagArgs(
-        Output<String> key,
-        @Nullable Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = value;
-    }
+    private LoadBalancerTagArgs() {}
 
-    private LoadBalancerTagArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private LoadBalancerTagArgs(LoadBalancerTagArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<String> value;
+        private LoadBalancerTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerTagArgs();
         }
 
         public Builder(LoadBalancerTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new LoadBalancerTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public LoadBalancerTagArgs build() {
-            return new LoadBalancerTagArgs(key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public LoadBalancerTagArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

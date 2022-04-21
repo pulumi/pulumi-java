@@ -20,10 +20,10 @@ public final class CanaryBaseScreenshot extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ignoreCoordinates")
-      private final @Nullable List<String> ignoreCoordinates;
+    private @Nullable List<String> ignoreCoordinates;
 
-    public List<String> ignoreCoordinates() {
-        return this.ignoreCoordinates == null ? List.of() : this.ignoreCoordinates;
+    public Optional<List<String>> ignoreCoordinates() {
+        return Optional.ofNullable(this.ignoreCoordinates);
     }
 
     /**
@@ -31,58 +31,55 @@ public final class CanaryBaseScreenshot extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="screenshotName", required=true)
-      private final String screenshotName;
+    private String screenshotName;
 
     public String screenshotName() {
         return this.screenshotName;
     }
 
-    public CanaryBaseScreenshot(
-        @Nullable List<String> ignoreCoordinates,
-        String screenshotName) {
-        this.ignoreCoordinates = ignoreCoordinates;
-        this.screenshotName = Objects.requireNonNull(screenshotName, "expected parameter 'screenshotName' to be non-null");
-    }
+    private CanaryBaseScreenshot() {}
 
-    private CanaryBaseScreenshot() {
-        this.ignoreCoordinates = List.of();
-        this.screenshotName = null;
+    private CanaryBaseScreenshot(CanaryBaseScreenshot $) {
+        this.ignoreCoordinates = $.ignoreCoordinates;
+        this.screenshotName = $.screenshotName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryBaseScreenshot defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> ignoreCoordinates;
-        private String screenshotName;
+        private CanaryBaseScreenshot $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryBaseScreenshot();
         }
 
         public Builder(CanaryBaseScreenshot defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreCoordinates = defaults.ignoreCoordinates;
-    	      this.screenshotName = defaults.screenshotName;
+            $ = new CanaryBaseScreenshot(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreCoordinates(@Nullable List<String> ignoreCoordinates) {
-            this.ignoreCoordinates = ignoreCoordinates;
+            $.ignoreCoordinates = ignoreCoordinates;
             return this;
         }
+
         public Builder ignoreCoordinates(String... ignoreCoordinates) {
             return ignoreCoordinates(List.of(ignoreCoordinates));
         }
+
         public Builder screenshotName(String screenshotName) {
-            this.screenshotName = Objects.requireNonNull(screenshotName);
+            $.screenshotName = screenshotName;
             return this;
-        }        public CanaryBaseScreenshot build() {
-            return new CanaryBaseScreenshot(ignoreCoordinates, screenshotName);
+        }
+
+        public CanaryBaseScreenshot build() {
+            $.screenshotName = Objects.requireNonNull($.screenshotName, "expected parameter 'screenshotName' to be non-null");
+            return $;
         }
     }
+
 }

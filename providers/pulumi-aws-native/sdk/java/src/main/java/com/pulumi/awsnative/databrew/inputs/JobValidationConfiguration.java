@@ -24,62 +24,58 @@ public final class JobValidationConfiguration extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="rulesetArn", required=true)
-      private final String rulesetArn;
+    private String rulesetArn;
 
     public String rulesetArn() {
         return this.rulesetArn;
     }
 
     @Import(name="validationMode")
-      private final @Nullable JobValidationMode validationMode;
+    private @Nullable JobValidationMode validationMode;
 
     public Optional<JobValidationMode> validationMode() {
-        return this.validationMode == null ? Optional.empty() : Optional.ofNullable(this.validationMode);
+        return Optional.ofNullable(this.validationMode);
     }
 
-    public JobValidationConfiguration(
-        String rulesetArn,
-        @Nullable JobValidationMode validationMode) {
-        this.rulesetArn = Objects.requireNonNull(rulesetArn, "expected parameter 'rulesetArn' to be non-null");
-        this.validationMode = validationMode;
-    }
+    private JobValidationConfiguration() {}
 
-    private JobValidationConfiguration() {
-        this.rulesetArn = null;
-        this.validationMode = null;
+    private JobValidationConfiguration(JobValidationConfiguration $) {
+        this.rulesetArn = $.rulesetArn;
+        this.validationMode = $.validationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobValidationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String rulesetArn;
-        private @Nullable JobValidationMode validationMode;
+        private JobValidationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobValidationConfiguration();
         }
 
         public Builder(JobValidationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rulesetArn = defaults.rulesetArn;
-    	      this.validationMode = defaults.validationMode;
+            $ = new JobValidationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder rulesetArn(String rulesetArn) {
-            this.rulesetArn = Objects.requireNonNull(rulesetArn);
+            $.rulesetArn = rulesetArn;
             return this;
         }
+
         public Builder validationMode(@Nullable JobValidationMode validationMode) {
-            this.validationMode = validationMode;
+            $.validationMode = validationMode;
             return this;
-        }        public JobValidationConfiguration build() {
-            return new JobValidationConfiguration(rulesetArn, validationMode);
+        }
+
+        public JobValidationConfiguration build() {
+            $.rulesetArn = Objects.requireNonNull($.rulesetArn, "expected parameter 'rulesetArn' to be non-null");
+            return $;
         }
     }
+
 }

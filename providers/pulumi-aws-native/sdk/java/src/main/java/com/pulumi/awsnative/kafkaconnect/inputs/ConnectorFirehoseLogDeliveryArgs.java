@@ -5,10 +5,10 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorFirehoseLogDeliveryArgs extends com.pulumi.resources
      * 
      */
     @Import(name="deliveryStream")
-      private final @Nullable Output<String> deliveryStream;
+    private @Nullable Output<String> deliveryStream;
 
-    public Output<String> deliveryStream() {
-        return this.deliveryStream == null ? Codegen.empty() : this.deliveryStream;
+    public Optional<Output<String>> deliveryStream() {
+        return Optional.ofNullable(this.deliveryStream);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class ConnectorFirehoseLogDeliveryArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ConnectorFirehoseLogDeliveryArgs(
-        @Nullable Output<String> deliveryStream,
-        Output<Boolean> enabled) {
-        this.deliveryStream = deliveryStream;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ConnectorFirehoseLogDeliveryArgs() {}
 
-    private ConnectorFirehoseLogDeliveryArgs() {
-        this.deliveryStream = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private ConnectorFirehoseLogDeliveryArgs(ConnectorFirehoseLogDeliveryArgs $) {
+        this.deliveryStream = $.deliveryStream;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorFirehoseLogDeliveryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deliveryStream;
-        private Output<Boolean> enabled;
+        private ConnectorFirehoseLogDeliveryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorFirehoseLogDeliveryArgs();
         }
 
         public Builder(ConnectorFirehoseLogDeliveryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryStream = defaults.deliveryStream;
-    	      this.enabled = defaults.enabled;
+            $ = new ConnectorFirehoseLogDeliveryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryStream(@Nullable Output<String> deliveryStream) {
-            this.deliveryStream = deliveryStream;
+            $.deliveryStream = deliveryStream;
             return this;
         }
-        public Builder deliveryStream(@Nullable String deliveryStream) {
-            this.deliveryStream = Codegen.ofNullable(deliveryStream);
-            return this;
+
+        public Builder deliveryStream(String deliveryStream) {
+            return deliveryStream(Output.of(deliveryStream));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ConnectorFirehoseLogDeliveryArgs build() {
-            return new ConnectorFirehoseLogDeliveryArgs(deliveryStream, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ConnectorFirehoseLogDeliveryArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

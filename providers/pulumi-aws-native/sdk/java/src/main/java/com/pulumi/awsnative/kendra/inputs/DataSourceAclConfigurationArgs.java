@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class DataSourceAclConfigurationArgs extends com.pulumi.resources.R
     public static final DataSourceAclConfigurationArgs Empty = new DataSourceAclConfigurationArgs();
 
     @Import(name="allowedGroupsColumnName", required=true)
-      private final Output<String> allowedGroupsColumnName;
+    private Output<String> allowedGroupsColumnName;
 
     public Output<String> allowedGroupsColumnName() {
         return this.allowedGroupsColumnName;
     }
 
-    public DataSourceAclConfigurationArgs(Output<String> allowedGroupsColumnName) {
-        this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName, "expected parameter 'allowedGroupsColumnName' to be non-null");
-    }
+    private DataSourceAclConfigurationArgs() {}
 
-    private DataSourceAclConfigurationArgs() {
-        this.allowedGroupsColumnName = Codegen.empty();
+    private DataSourceAclConfigurationArgs(DataSourceAclConfigurationArgs $) {
+        this.allowedGroupsColumnName = $.allowedGroupsColumnName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceAclConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> allowedGroupsColumnName;
+        private DataSourceAclConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceAclConfigurationArgs();
         }
 
         public Builder(DataSourceAclConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedGroupsColumnName = defaults.allowedGroupsColumnName;
+            $ = new DataSourceAclConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedGroupsColumnName(Output<String> allowedGroupsColumnName) {
-            this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
+            $.allowedGroupsColumnName = allowedGroupsColumnName;
             return this;
         }
+
         public Builder allowedGroupsColumnName(String allowedGroupsColumnName) {
-            this.allowedGroupsColumnName = Output.of(Objects.requireNonNull(allowedGroupsColumnName));
-            return this;
-        }        public DataSourceAclConfigurationArgs build() {
-            return new DataSourceAclConfigurationArgs(allowedGroupsColumnName);
+            return allowedGroupsColumnName(Output.of(allowedGroupsColumnName));
+        }
+
+        public DataSourceAclConfigurationArgs build() {
+            $.allowedGroupsColumnName = Objects.requireNonNull($.allowedGroupsColumnName, "expected parameter 'allowedGroupsColumnName' to be non-null");
+            return $;
         }
     }
+
 }

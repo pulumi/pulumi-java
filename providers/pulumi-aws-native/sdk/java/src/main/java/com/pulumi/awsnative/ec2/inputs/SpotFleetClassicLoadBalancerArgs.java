@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class SpotFleetClassicLoadBalancerArgs extends com.pulumi.resources
     public static final SpotFleetClassicLoadBalancerArgs Empty = new SpotFleetClassicLoadBalancerArgs();
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public SpotFleetClassicLoadBalancerArgs(Output<String> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private SpotFleetClassicLoadBalancerArgs() {}
 
-    private SpotFleetClassicLoadBalancerArgs() {
-        this.name = Codegen.empty();
+    private SpotFleetClassicLoadBalancerArgs(SpotFleetClassicLoadBalancerArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetClassicLoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
+        private SpotFleetClassicLoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetClassicLoadBalancerArgs();
         }
 
         public Builder(SpotFleetClassicLoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new SpotFleetClassicLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public SpotFleetClassicLoadBalancerArgs build() {
-            return new SpotFleetClassicLoadBalancerArgs(name);
+            return name(Output.of(name));
+        }
+
+        public SpotFleetClassicLoadBalancerArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

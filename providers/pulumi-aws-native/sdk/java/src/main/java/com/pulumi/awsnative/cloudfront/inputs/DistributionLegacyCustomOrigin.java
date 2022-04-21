@@ -17,113 +17,103 @@ public final class DistributionLegacyCustomOrigin extends com.pulumi.resources.I
     public static final DistributionLegacyCustomOrigin Empty = new DistributionLegacyCustomOrigin();
 
     @Import(name="dNSName", required=true)
-      private final String dNSName;
+    private String dNSName;
 
     public String dNSName() {
         return this.dNSName;
     }
 
     @Import(name="hTTPPort")
-      private final @Nullable Integer hTTPPort;
+    private @Nullable Integer hTTPPort;
 
     public Optional<Integer> hTTPPort() {
-        return this.hTTPPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPPort);
+        return Optional.ofNullable(this.hTTPPort);
     }
 
     @Import(name="hTTPSPort")
-      private final @Nullable Integer hTTPSPort;
+    private @Nullable Integer hTTPSPort;
 
     public Optional<Integer> hTTPSPort() {
-        return this.hTTPSPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPSPort);
+        return Optional.ofNullable(this.hTTPSPort);
     }
 
     @Import(name="originProtocolPolicy", required=true)
-      private final String originProtocolPolicy;
+    private String originProtocolPolicy;
 
     public String originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @Import(name="originSSLProtocols", required=true)
-      private final List<String> originSSLProtocols;
+    private List<String> originSSLProtocols;
 
     public List<String> originSSLProtocols() {
         return this.originSSLProtocols;
     }
 
-    public DistributionLegacyCustomOrigin(
-        String dNSName,
-        @Nullable Integer hTTPPort,
-        @Nullable Integer hTTPSPort,
-        String originProtocolPolicy,
-        List<String> originSSLProtocols) {
-        this.dNSName = Objects.requireNonNull(dNSName, "expected parameter 'dNSName' to be non-null");
-        this.hTTPPort = hTTPPort;
-        this.hTTPSPort = hTTPSPort;
-        this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy, "expected parameter 'originProtocolPolicy' to be non-null");
-        this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols, "expected parameter 'originSSLProtocols' to be non-null");
-    }
+    private DistributionLegacyCustomOrigin() {}
 
-    private DistributionLegacyCustomOrigin() {
-        this.dNSName = null;
-        this.hTTPPort = null;
-        this.hTTPSPort = null;
-        this.originProtocolPolicy = null;
-        this.originSSLProtocols = List.of();
+    private DistributionLegacyCustomOrigin(DistributionLegacyCustomOrigin $) {
+        this.dNSName = $.dNSName;
+        this.hTTPPort = $.hTTPPort;
+        this.hTTPSPort = $.hTTPSPort;
+        this.originProtocolPolicy = $.originProtocolPolicy;
+        this.originSSLProtocols = $.originSSLProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionLegacyCustomOrigin defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dNSName;
-        private @Nullable Integer hTTPPort;
-        private @Nullable Integer hTTPSPort;
-        private String originProtocolPolicy;
-        private List<String> originSSLProtocols;
+        private DistributionLegacyCustomOrigin $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionLegacyCustomOrigin();
         }
 
         public Builder(DistributionLegacyCustomOrigin defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dNSName = defaults.dNSName;
-    	      this.hTTPPort = defaults.hTTPPort;
-    	      this.hTTPSPort = defaults.hTTPSPort;
-    	      this.originProtocolPolicy = defaults.originProtocolPolicy;
-    	      this.originSSLProtocols = defaults.originSSLProtocols;
+            $ = new DistributionLegacyCustomOrigin(Objects.requireNonNull(defaults));
         }
 
         public Builder dNSName(String dNSName) {
-            this.dNSName = Objects.requireNonNull(dNSName);
+            $.dNSName = dNSName;
             return this;
         }
+
         public Builder hTTPPort(@Nullable Integer hTTPPort) {
-            this.hTTPPort = hTTPPort;
+            $.hTTPPort = hTTPPort;
             return this;
         }
+
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
-            this.hTTPSPort = hTTPSPort;
+            $.hTTPSPort = hTTPSPort;
             return this;
         }
+
         public Builder originProtocolPolicy(String originProtocolPolicy) {
-            this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
+            $.originProtocolPolicy = originProtocolPolicy;
             return this;
         }
+
         public Builder originSSLProtocols(List<String> originSSLProtocols) {
-            this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols);
+            $.originSSLProtocols = originSSLProtocols;
             return this;
         }
+
         public Builder originSSLProtocols(String... originSSLProtocols) {
             return originSSLProtocols(List.of(originSSLProtocols));
-        }        public DistributionLegacyCustomOrigin build() {
-            return new DistributionLegacyCustomOrigin(dNSName, hTTPPort, hTTPSPort, originProtocolPolicy, originSSLProtocols);
+        }
+
+        public DistributionLegacyCustomOrigin build() {
+            $.dNSName = Objects.requireNonNull($.dNSName, "expected parameter 'dNSName' to be non-null");
+            $.originProtocolPolicy = Objects.requireNonNull($.originProtocolPolicy, "expected parameter 'originProtocolPolicy' to be non-null");
+            $.originSSLProtocols = Objects.requireNonNull($.originSSLProtocols, "expected parameter 'originSSLProtocols' to be non-null");
+            return $;
         }
     }
+
 }

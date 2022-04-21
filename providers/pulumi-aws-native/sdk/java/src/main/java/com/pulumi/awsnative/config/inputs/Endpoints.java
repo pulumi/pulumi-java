@@ -23,10 +23,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessanalyzer")
-      private final @Nullable String accessanalyzer;
+    private @Nullable String accessanalyzer;
 
     public Optional<String> accessanalyzer() {
-        return this.accessanalyzer == null ? Optional.empty() : Optional.ofNullable(this.accessanalyzer);
+        return Optional.ofNullable(this.accessanalyzer);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acm")
-      private final @Nullable String acm;
+    private @Nullable String acm;
 
     public Optional<String> acm() {
-        return this.acm == null ? Optional.empty() : Optional.ofNullable(this.acm);
+        return Optional.ofNullable(this.acm);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acmpca")
-      private final @Nullable String acmpca;
+    private @Nullable String acmpca;
 
     public Optional<String> acmpca() {
-        return this.acmpca == null ? Optional.empty() : Optional.ofNullable(this.acmpca);
+        return Optional.ofNullable(this.acmpca);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="amplify")
-      private final @Nullable String amplify;
+    private @Nullable String amplify;
 
     public Optional<String> amplify() {
-        return this.amplify == null ? Optional.empty() : Optional.ofNullable(this.amplify);
+        return Optional.ofNullable(this.amplify);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appconfig")
-      private final @Nullable String appconfig;
+    private @Nullable String appconfig;
 
     public Optional<String> appconfig() {
-        return this.appconfig == null ? Optional.empty() : Optional.ofNullable(this.appconfig);
+        return Optional.ofNullable(this.appconfig);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationautoscaling")
-      private final @Nullable String applicationautoscaling;
+    private @Nullable String applicationautoscaling;
 
     public Optional<String> applicationautoscaling() {
-        return this.applicationautoscaling == null ? Optional.empty() : Optional.ofNullable(this.applicationautoscaling);
+        return Optional.ofNullable(this.applicationautoscaling);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationinsights")
-      private final @Nullable String applicationinsights;
+    private @Nullable String applicationinsights;
 
     public Optional<String> applicationinsights() {
-        return this.applicationinsights == null ? Optional.empty() : Optional.ofNullable(this.applicationinsights);
+        return Optional.ofNullable(this.applicationinsights);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appmesh")
-      private final @Nullable String appmesh;
+    private @Nullable String appmesh;
 
     public Optional<String> appmesh() {
-        return this.appmesh == null ? Optional.empty() : Optional.ofNullable(this.appmesh);
+        return Optional.ofNullable(this.appmesh);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apprunner")
-      private final @Nullable String apprunner;
+    private @Nullable String apprunner;
 
     public Optional<String> apprunner() {
-        return this.apprunner == null ? Optional.empty() : Optional.ofNullable(this.apprunner);
+        return Optional.ofNullable(this.apprunner);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appstream")
-      private final @Nullable String appstream;
+    private @Nullable String appstream;
 
     public Optional<String> appstream() {
-        return this.appstream == null ? Optional.empty() : Optional.ofNullable(this.appstream);
+        return Optional.ofNullable(this.appstream);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appsync")
-      private final @Nullable String appsync;
+    private @Nullable String appsync;
 
     public Optional<String> appsync() {
-        return this.appsync == null ? Optional.empty() : Optional.ofNullable(this.appsync);
+        return Optional.ofNullable(this.appsync);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="athena")
-      private final @Nullable String athena;
+    private @Nullable String athena;
 
     public Optional<String> athena() {
-        return this.athena == null ? Optional.empty() : Optional.ofNullable(this.athena);
+        return Optional.ofNullable(this.athena);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditmanager")
-      private final @Nullable String auditmanager;
+    private @Nullable String auditmanager;
 
     public Optional<String> auditmanager() {
-        return this.auditmanager == null ? Optional.empty() : Optional.ofNullable(this.auditmanager);
+        return Optional.ofNullable(this.auditmanager);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="autoscaling")
-      private final @Nullable String autoscaling;
+    private @Nullable String autoscaling;
 
     public Optional<String> autoscaling() {
-        return this.autoscaling == null ? Optional.empty() : Optional.ofNullable(this.autoscaling);
+        return Optional.ofNullable(this.autoscaling);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backup")
-      private final @Nullable String backup;
+    private @Nullable String backup;
 
     public Optional<String> backup() {
-        return this.backup == null ? Optional.empty() : Optional.ofNullable(this.backup);
+        return Optional.ofNullable(this.backup);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="batch")
-      private final @Nullable String batch;
+    private @Nullable String batch;
 
     public Optional<String> batch() {
-        return this.batch == null ? Optional.empty() : Optional.ofNullable(this.batch);
+        return Optional.ofNullable(this.batch);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="budgets")
-      private final @Nullable String budgets;
+    private @Nullable String budgets;
 
     public Optional<String> budgets() {
-        return this.budgets == null ? Optional.empty() : Optional.ofNullable(this.budgets);
+        return Optional.ofNullable(this.budgets);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="chime")
-      private final @Nullable String chime;
+    private @Nullable String chime;
 
     public Optional<String> chime() {
-        return this.chime == null ? Optional.empty() : Optional.ofNullable(this.chime);
+        return Optional.ofNullable(this.chime);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloud9")
-      private final @Nullable String cloud9;
+    private @Nullable String cloud9;
 
     public Optional<String> cloud9() {
-        return this.cloud9 == null ? Optional.empty() : Optional.ofNullable(this.cloud9);
+        return Optional.ofNullable(this.cloud9);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudformation")
-      private final @Nullable String cloudformation;
+    private @Nullable String cloudformation;
 
     public Optional<String> cloudformation() {
-        return this.cloudformation == null ? Optional.empty() : Optional.ofNullable(this.cloudformation);
+        return Optional.ofNullable(this.cloudformation);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudfront")
-      private final @Nullable String cloudfront;
+    private @Nullable String cloudfront;
 
     public Optional<String> cloudfront() {
-        return this.cloudfront == null ? Optional.empty() : Optional.ofNullable(this.cloudfront);
+        return Optional.ofNullable(this.cloudfront);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudhsm")
-      private final @Nullable String cloudhsm;
+    private @Nullable String cloudhsm;
 
     public Optional<String> cloudhsm() {
-        return this.cloudhsm == null ? Optional.empty() : Optional.ofNullable(this.cloudhsm);
+        return Optional.ofNullable(this.cloudhsm);
     }
 
     /**
@@ -265,10 +265,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudsearch")
-      private final @Nullable String cloudsearch;
+    private @Nullable String cloudsearch;
 
     public Optional<String> cloudsearch() {
-        return this.cloudsearch == null ? Optional.empty() : Optional.ofNullable(this.cloudsearch);
+        return Optional.ofNullable(this.cloudsearch);
     }
 
     /**
@@ -276,10 +276,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudtrail")
-      private final @Nullable String cloudtrail;
+    private @Nullable String cloudtrail;
 
     public Optional<String> cloudtrail() {
-        return this.cloudtrail == null ? Optional.empty() : Optional.ofNullable(this.cloudtrail);
+        return Optional.ofNullable(this.cloudtrail);
     }
 
     /**
@@ -287,10 +287,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudwatch")
-      private final @Nullable String cloudwatch;
+    private @Nullable String cloudwatch;
 
     public Optional<String> cloudwatch() {
-        return this.cloudwatch == null ? Optional.empty() : Optional.ofNullable(this.cloudwatch);
+        return Optional.ofNullable(this.cloudwatch);
     }
 
     /**
@@ -298,10 +298,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudwatchevents")
-      private final @Nullable String cloudwatchevents;
+    private @Nullable String cloudwatchevents;
 
     public Optional<String> cloudwatchevents() {
-        return this.cloudwatchevents == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchevents);
+        return Optional.ofNullable(this.cloudwatchevents);
     }
 
     /**
@@ -309,10 +309,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudwatchlogs")
-      private final @Nullable String cloudwatchlogs;
+    private @Nullable String cloudwatchlogs;
 
     public Optional<String> cloudwatchlogs() {
-        return this.cloudwatchlogs == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchlogs);
+        return Optional.ofNullable(this.cloudwatchlogs);
     }
 
     /**
@@ -320,10 +320,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codeartifact")
-      private final @Nullable String codeartifact;
+    private @Nullable String codeartifact;
 
     public Optional<String> codeartifact() {
-        return this.codeartifact == null ? Optional.empty() : Optional.ofNullable(this.codeartifact);
+        return Optional.ofNullable(this.codeartifact);
     }
 
     /**
@@ -331,10 +331,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codebuild")
-      private final @Nullable String codebuild;
+    private @Nullable String codebuild;
 
     public Optional<String> codebuild() {
-        return this.codebuild == null ? Optional.empty() : Optional.ofNullable(this.codebuild);
+        return Optional.ofNullable(this.codebuild);
     }
 
     /**
@@ -342,10 +342,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codecommit")
-      private final @Nullable String codecommit;
+    private @Nullable String codecommit;
 
     public Optional<String> codecommit() {
-        return this.codecommit == null ? Optional.empty() : Optional.ofNullable(this.codecommit);
+        return Optional.ofNullable(this.codecommit);
     }
 
     /**
@@ -353,10 +353,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codedeploy")
-      private final @Nullable String codedeploy;
+    private @Nullable String codedeploy;
 
     public Optional<String> codedeploy() {
-        return this.codedeploy == null ? Optional.empty() : Optional.ofNullable(this.codedeploy);
+        return Optional.ofNullable(this.codedeploy);
     }
 
     /**
@@ -364,10 +364,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codepipeline")
-      private final @Nullable String codepipeline;
+    private @Nullable String codepipeline;
 
     public Optional<String> codepipeline() {
-        return this.codepipeline == null ? Optional.empty() : Optional.ofNullable(this.codepipeline);
+        return Optional.ofNullable(this.codepipeline);
     }
 
     /**
@@ -375,10 +375,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codestarconnections")
-      private final @Nullable String codestarconnections;
+    private @Nullable String codestarconnections;
 
     public Optional<String> codestarconnections() {
-        return this.codestarconnections == null ? Optional.empty() : Optional.ofNullable(this.codestarconnections);
+        return Optional.ofNullable(this.codestarconnections);
     }
 
     /**
@@ -386,10 +386,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cognitoidentity")
-      private final @Nullable String cognitoidentity;
+    private @Nullable String cognitoidentity;
 
     public Optional<String> cognitoidentity() {
-        return this.cognitoidentity == null ? Optional.empty() : Optional.ofNullable(this.cognitoidentity);
+        return Optional.ofNullable(this.cognitoidentity);
     }
 
     /**
@@ -397,10 +397,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="configservice")
-      private final @Nullable String configservice;
+    private @Nullable String configservice;
 
     public Optional<String> configservice() {
-        return this.configservice == null ? Optional.empty() : Optional.ofNullable(this.configservice);
+        return Optional.ofNullable(this.configservice);
     }
 
     /**
@@ -408,10 +408,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connect")
-      private final @Nullable String connect;
+    private @Nullable String connect;
 
     public Optional<String> connect() {
-        return this.connect == null ? Optional.empty() : Optional.ofNullable(this.connect);
+        return Optional.ofNullable(this.connect);
     }
 
     /**
@@ -419,10 +419,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cur")
-      private final @Nullable String cur;
+    private @Nullable String cur;
 
     public Optional<String> cur() {
-        return this.cur == null ? Optional.empty() : Optional.ofNullable(this.cur);
+        return Optional.ofNullable(this.cur);
     }
 
     /**
@@ -430,10 +430,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataexchange")
-      private final @Nullable String dataexchange;
+    private @Nullable String dataexchange;
 
     public Optional<String> dataexchange() {
-        return this.dataexchange == null ? Optional.empty() : Optional.ofNullable(this.dataexchange);
+        return Optional.ofNullable(this.dataexchange);
     }
 
     /**
@@ -441,10 +441,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datapipeline")
-      private final @Nullable String datapipeline;
+    private @Nullable String datapipeline;
 
     public Optional<String> datapipeline() {
-        return this.datapipeline == null ? Optional.empty() : Optional.ofNullable(this.datapipeline);
+        return Optional.ofNullable(this.datapipeline);
     }
 
     /**
@@ -452,10 +452,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasync")
-      private final @Nullable String datasync;
+    private @Nullable String datasync;
 
     public Optional<String> datasync() {
-        return this.datasync == null ? Optional.empty() : Optional.ofNullable(this.datasync);
+        return Optional.ofNullable(this.datasync);
     }
 
     /**
@@ -463,10 +463,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dax")
-      private final @Nullable String dax;
+    private @Nullable String dax;
 
     public Optional<String> dax() {
-        return this.dax == null ? Optional.empty() : Optional.ofNullable(this.dax);
+        return Optional.ofNullable(this.dax);
     }
 
     /**
@@ -474,10 +474,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="detective")
-      private final @Nullable String detective;
+    private @Nullable String detective;
 
     public Optional<String> detective() {
-        return this.detective == null ? Optional.empty() : Optional.ofNullable(this.detective);
+        return Optional.ofNullable(this.detective);
     }
 
     /**
@@ -485,10 +485,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="devicefarm")
-      private final @Nullable String devicefarm;
+    private @Nullable String devicefarm;
 
     public Optional<String> devicefarm() {
-        return this.devicefarm == null ? Optional.empty() : Optional.ofNullable(this.devicefarm);
+        return Optional.ofNullable(this.devicefarm);
     }
 
     /**
@@ -496,10 +496,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directconnect")
-      private final @Nullable String directconnect;
+    private @Nullable String directconnect;
 
     public Optional<String> directconnect() {
-        return this.directconnect == null ? Optional.empty() : Optional.ofNullable(this.directconnect);
+        return Optional.ofNullable(this.directconnect);
     }
 
     /**
@@ -507,10 +507,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dlm")
-      private final @Nullable String dlm;
+    private @Nullable String dlm;
 
     public Optional<String> dlm() {
-        return this.dlm == null ? Optional.empty() : Optional.ofNullable(this.dlm);
+        return Optional.ofNullable(this.dlm);
     }
 
     /**
@@ -518,10 +518,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dms")
-      private final @Nullable String dms;
+    private @Nullable String dms;
 
     public Optional<String> dms() {
-        return this.dms == null ? Optional.empty() : Optional.ofNullable(this.dms);
+        return Optional.ofNullable(this.dms);
     }
 
     /**
@@ -529,10 +529,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="docdb")
-      private final @Nullable String docdb;
+    private @Nullable String docdb;
 
     public Optional<String> docdb() {
-        return this.docdb == null ? Optional.empty() : Optional.ofNullable(this.docdb);
+        return Optional.ofNullable(this.docdb);
     }
 
     /**
@@ -540,10 +540,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ds")
-      private final @Nullable String ds;
+    private @Nullable String ds;
 
     public Optional<String> ds() {
-        return this.ds == null ? Optional.empty() : Optional.ofNullable(this.ds);
+        return Optional.ofNullable(this.ds);
     }
 
     /**
@@ -551,10 +551,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dynamodb")
-      private final @Nullable String dynamodb;
+    private @Nullable String dynamodb;
 
     public Optional<String> dynamodb() {
-        return this.dynamodb == null ? Optional.empty() : Optional.ofNullable(this.dynamodb);
+        return Optional.ofNullable(this.dynamodb);
     }
 
     /**
@@ -562,10 +562,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ec2")
-      private final @Nullable String ec2;
+    private @Nullable String ec2;
 
     public Optional<String> ec2() {
-        return this.ec2 == null ? Optional.empty() : Optional.ofNullable(this.ec2);
+        return Optional.ofNullable(this.ec2);
     }
 
     /**
@@ -573,10 +573,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ecr")
-      private final @Nullable String ecr;
+    private @Nullable String ecr;
 
     public Optional<String> ecr() {
-        return this.ecr == null ? Optional.empty() : Optional.ofNullable(this.ecr);
+        return Optional.ofNullable(this.ecr);
     }
 
     /**
@@ -584,10 +584,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ecrpublic")
-      private final @Nullable String ecrpublic;
+    private @Nullable String ecrpublic;
 
     public Optional<String> ecrpublic() {
-        return this.ecrpublic == null ? Optional.empty() : Optional.ofNullable(this.ecrpublic);
+        return Optional.ofNullable(this.ecrpublic);
     }
 
     /**
@@ -595,10 +595,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ecs")
-      private final @Nullable String ecs;
+    private @Nullable String ecs;
 
     public Optional<String> ecs() {
-        return this.ecs == null ? Optional.empty() : Optional.ofNullable(this.ecs);
+        return Optional.ofNullable(this.ecs);
     }
 
     /**
@@ -606,10 +606,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="efs")
-      private final @Nullable String efs;
+    private @Nullable String efs;
 
     public Optional<String> efs() {
-        return this.efs == null ? Optional.empty() : Optional.ofNullable(this.efs);
+        return Optional.ofNullable(this.efs);
     }
 
     /**
@@ -617,10 +617,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eks")
-      private final @Nullable String eks;
+    private @Nullable String eks;
 
     public Optional<String> eks() {
-        return this.eks == null ? Optional.empty() : Optional.ofNullable(this.eks);
+        return Optional.ofNullable(this.eks);
     }
 
     /**
@@ -628,10 +628,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elasticache")
-      private final @Nullable String elasticache;
+    private @Nullable String elasticache;
 
     public Optional<String> elasticache() {
-        return this.elasticache == null ? Optional.empty() : Optional.ofNullable(this.elasticache);
+        return Optional.ofNullable(this.elasticache);
     }
 
     /**
@@ -639,10 +639,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elasticbeanstalk")
-      private final @Nullable String elasticbeanstalk;
+    private @Nullable String elasticbeanstalk;
 
     public Optional<String> elasticbeanstalk() {
-        return this.elasticbeanstalk == null ? Optional.empty() : Optional.ofNullable(this.elasticbeanstalk);
+        return Optional.ofNullable(this.elasticbeanstalk);
     }
 
     /**
@@ -650,10 +650,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elastictranscoder")
-      private final @Nullable String elastictranscoder;
+    private @Nullable String elastictranscoder;
 
     public Optional<String> elastictranscoder() {
-        return this.elastictranscoder == null ? Optional.empty() : Optional.ofNullable(this.elastictranscoder);
+        return Optional.ofNullable(this.elastictranscoder);
     }
 
     /**
@@ -661,10 +661,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elb")
-      private final @Nullable String elb;
+    private @Nullable String elb;
 
     public Optional<String> elb() {
-        return this.elb == null ? Optional.empty() : Optional.ofNullable(this.elb);
+        return Optional.ofNullable(this.elb);
     }
 
     /**
@@ -672,10 +672,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elbv2")
-      private final @Nullable String elbv2;
+    private @Nullable String elbv2;
 
     public Optional<String> elbv2() {
-        return this.elbv2 == null ? Optional.empty() : Optional.ofNullable(this.elbv2);
+        return Optional.ofNullable(this.elbv2);
     }
 
     /**
@@ -683,10 +683,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emr")
-      private final @Nullable String emr;
+    private @Nullable String emr;
 
     public Optional<String> emr() {
-        return this.emr == null ? Optional.empty() : Optional.ofNullable(this.emr);
+        return Optional.ofNullable(this.emr);
     }
 
     /**
@@ -694,10 +694,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emrcontainers")
-      private final @Nullable String emrcontainers;
+    private @Nullable String emrcontainers;
 
     public Optional<String> emrcontainers() {
-        return this.emrcontainers == null ? Optional.empty() : Optional.ofNullable(this.emrcontainers);
+        return Optional.ofNullable(this.emrcontainers);
     }
 
     /**
@@ -705,10 +705,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="es")
-      private final @Nullable String es;
+    private @Nullable String es;
 
     public Optional<String> es() {
-        return this.es == null ? Optional.empty() : Optional.ofNullable(this.es);
+        return Optional.ofNullable(this.es);
     }
 
     /**
@@ -716,10 +716,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firehose")
-      private final @Nullable String firehose;
+    private @Nullable String firehose;
 
     public Optional<String> firehose() {
-        return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
+        return Optional.ofNullable(this.firehose);
     }
 
     /**
@@ -727,10 +727,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fms")
-      private final @Nullable String fms;
+    private @Nullable String fms;
 
     public Optional<String> fms() {
-        return this.fms == null ? Optional.empty() : Optional.ofNullable(this.fms);
+        return Optional.ofNullable(this.fms);
     }
 
     /**
@@ -738,10 +738,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="forecast")
-      private final @Nullable String forecast;
+    private @Nullable String forecast;
 
     public Optional<String> forecast() {
-        return this.forecast == null ? Optional.empty() : Optional.ofNullable(this.forecast);
+        return Optional.ofNullable(this.forecast);
     }
 
     /**
@@ -749,10 +749,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fsx")
-      private final @Nullable String fsx;
+    private @Nullable String fsx;
 
     public Optional<String> fsx() {
-        return this.fsx == null ? Optional.empty() : Optional.ofNullable(this.fsx);
+        return Optional.ofNullable(this.fsx);
     }
 
     /**
@@ -760,10 +760,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gamelift")
-      private final @Nullable String gamelift;
+    private @Nullable String gamelift;
 
     public Optional<String> gamelift() {
-        return this.gamelift == null ? Optional.empty() : Optional.ofNullable(this.gamelift);
+        return Optional.ofNullable(this.gamelift);
     }
 
     /**
@@ -771,10 +771,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glacier")
-      private final @Nullable String glacier;
+    private @Nullable String glacier;
 
     public Optional<String> glacier() {
-        return this.glacier == null ? Optional.empty() : Optional.ofNullable(this.glacier);
+        return Optional.ofNullable(this.glacier);
     }
 
     /**
@@ -782,10 +782,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalaccelerator")
-      private final @Nullable String globalaccelerator;
+    private @Nullable String globalaccelerator;
 
     public Optional<String> globalaccelerator() {
-        return this.globalaccelerator == null ? Optional.empty() : Optional.ofNullable(this.globalaccelerator);
+        return Optional.ofNullable(this.globalaccelerator);
     }
 
     /**
@@ -793,10 +793,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glue")
-      private final @Nullable String glue;
+    private @Nullable String glue;
 
     public Optional<String> glue() {
-        return this.glue == null ? Optional.empty() : Optional.ofNullable(this.glue);
+        return Optional.ofNullable(this.glue);
     }
 
     /**
@@ -804,10 +804,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="greengrass")
-      private final @Nullable String greengrass;
+    private @Nullable String greengrass;
 
     public Optional<String> greengrass() {
-        return this.greengrass == null ? Optional.empty() : Optional.ofNullable(this.greengrass);
+        return Optional.ofNullable(this.greengrass);
     }
 
     /**
@@ -815,10 +815,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="guardduty")
-      private final @Nullable String guardduty;
+    private @Nullable String guardduty;
 
     public Optional<String> guardduty() {
-        return this.guardduty == null ? Optional.empty() : Optional.ofNullable(this.guardduty);
+        return Optional.ofNullable(this.guardduty);
     }
 
     /**
@@ -826,10 +826,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iam")
-      private final @Nullable String iam;
+    private @Nullable String iam;
 
     public Optional<String> iam() {
-        return this.iam == null ? Optional.empty() : Optional.ofNullable(this.iam);
+        return Optional.ofNullable(this.iam);
     }
 
     /**
@@ -837,10 +837,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identitystore")
-      private final @Nullable String identitystore;
+    private @Nullable String identitystore;
 
     public Optional<String> identitystore() {
-        return this.identitystore == null ? Optional.empty() : Optional.ofNullable(this.identitystore);
+        return Optional.ofNullable(this.identitystore);
     }
 
     /**
@@ -848,10 +848,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imagebuilder")
-      private final @Nullable String imagebuilder;
+    private @Nullable String imagebuilder;
 
     public Optional<String> imagebuilder() {
-        return this.imagebuilder == null ? Optional.empty() : Optional.ofNullable(this.imagebuilder);
+        return Optional.ofNullable(this.imagebuilder);
     }
 
     /**
@@ -859,10 +859,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inspector")
-      private final @Nullable String inspector;
+    private @Nullable String inspector;
 
     public Optional<String> inspector() {
-        return this.inspector == null ? Optional.empty() : Optional.ofNullable(this.inspector);
+        return Optional.ofNullable(this.inspector);
     }
 
     /**
@@ -870,10 +870,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iot")
-      private final @Nullable String iot;
+    private @Nullable String iot;
 
     public Optional<String> iot() {
-        return this.iot == null ? Optional.empty() : Optional.ofNullable(this.iot);
+        return Optional.ofNullable(this.iot);
     }
 
     /**
@@ -881,10 +881,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iotanalytics")
-      private final @Nullable String iotanalytics;
+    private @Nullable String iotanalytics;
 
     public Optional<String> iotanalytics() {
-        return this.iotanalytics == null ? Optional.empty() : Optional.ofNullable(this.iotanalytics);
+        return Optional.ofNullable(this.iotanalytics);
     }
 
     /**
@@ -892,10 +892,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iotevents")
-      private final @Nullable String iotevents;
+    private @Nullable String iotevents;
 
     public Optional<String> iotevents() {
-        return this.iotevents == null ? Optional.empty() : Optional.ofNullable(this.iotevents);
+        return Optional.ofNullable(this.iotevents);
     }
 
     /**
@@ -903,10 +903,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kafka")
-      private final @Nullable String kafka;
+    private @Nullable String kafka;
 
     public Optional<String> kafka() {
-        return this.kafka == null ? Optional.empty() : Optional.ofNullable(this.kafka);
+        return Optional.ofNullable(this.kafka);
     }
 
     /**
@@ -914,10 +914,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kinesis")
-      private final @Nullable String kinesis;
+    private @Nullable String kinesis;
 
     public Optional<String> kinesis() {
-        return this.kinesis == null ? Optional.empty() : Optional.ofNullable(this.kinesis);
+        return Optional.ofNullable(this.kinesis);
     }
 
     /**
@@ -925,10 +925,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kinesisanalytics")
-      private final @Nullable String kinesisanalytics;
+    private @Nullable String kinesisanalytics;
 
     public Optional<String> kinesisanalytics() {
-        return this.kinesisanalytics == null ? Optional.empty() : Optional.ofNullable(this.kinesisanalytics);
+        return Optional.ofNullable(this.kinesisanalytics);
     }
 
     /**
@@ -936,10 +936,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kinesisanalyticsv2")
-      private final @Nullable String kinesisanalyticsv2;
+    private @Nullable String kinesisanalyticsv2;
 
     public Optional<String> kinesisanalyticsv2() {
-        return this.kinesisanalyticsv2 == null ? Optional.empty() : Optional.ofNullable(this.kinesisanalyticsv2);
+        return Optional.ofNullable(this.kinesisanalyticsv2);
     }
 
     /**
@@ -947,10 +947,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kinesisvideo")
-      private final @Nullable String kinesisvideo;
+    private @Nullable String kinesisvideo;
 
     public Optional<String> kinesisvideo() {
-        return this.kinesisvideo == null ? Optional.empty() : Optional.ofNullable(this.kinesisvideo);
+        return Optional.ofNullable(this.kinesisvideo);
     }
 
     /**
@@ -958,10 +958,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kms")
-      private final @Nullable String kms;
+    private @Nullable String kms;
 
     public Optional<String> kms() {
-        return this.kms == null ? Optional.empty() : Optional.ofNullable(this.kms);
+        return Optional.ofNullable(this.kms);
     }
 
     /**
@@ -969,10 +969,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lakeformation")
-      private final @Nullable String lakeformation;
+    private @Nullable String lakeformation;
 
     public Optional<String> lakeformation() {
-        return this.lakeformation == null ? Optional.empty() : Optional.ofNullable(this.lakeformation);
+        return Optional.ofNullable(this.lakeformation);
     }
 
     /**
@@ -980,10 +980,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lambda")
-      private final @Nullable String lambda;
+    private @Nullable String lambda;
 
     public Optional<String> lambda() {
-        return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
+        return Optional.ofNullable(this.lambda);
     }
 
     /**
@@ -991,10 +991,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lexmodels")
-      private final @Nullable String lexmodels;
+    private @Nullable String lexmodels;
 
     public Optional<String> lexmodels() {
-        return this.lexmodels == null ? Optional.empty() : Optional.ofNullable(this.lexmodels);
+        return Optional.ofNullable(this.lexmodels);
     }
 
     /**
@@ -1002,10 +1002,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="licensemanager")
-      private final @Nullable String licensemanager;
+    private @Nullable String licensemanager;
 
     public Optional<String> licensemanager() {
-        return this.licensemanager == null ? Optional.empty() : Optional.ofNullable(this.licensemanager);
+        return Optional.ofNullable(this.licensemanager);
     }
 
     /**
@@ -1013,10 +1013,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lightsail")
-      private final @Nullable String lightsail;
+    private @Nullable String lightsail;
 
     public Optional<String> lightsail() {
-        return this.lightsail == null ? Optional.empty() : Optional.ofNullable(this.lightsail);
+        return Optional.ofNullable(this.lightsail);
     }
 
     /**
@@ -1024,10 +1024,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -1035,10 +1035,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="macie")
-      private final @Nullable String macie;
+    private @Nullable String macie;
 
     public Optional<String> macie() {
-        return this.macie == null ? Optional.empty() : Optional.ofNullable(this.macie);
+        return Optional.ofNullable(this.macie);
     }
 
     /**
@@ -1046,10 +1046,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="macie2")
-      private final @Nullable String macie2;
+    private @Nullable String macie2;
 
     public Optional<String> macie2() {
-        return this.macie2 == null ? Optional.empty() : Optional.ofNullable(this.macie2);
+        return Optional.ofNullable(this.macie2);
     }
 
     /**
@@ -1057,10 +1057,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managedblockchain")
-      private final @Nullable String managedblockchain;
+    private @Nullable String managedblockchain;
 
     public Optional<String> managedblockchain() {
-        return this.managedblockchain == null ? Optional.empty() : Optional.ofNullable(this.managedblockchain);
+        return Optional.ofNullable(this.managedblockchain);
     }
 
     /**
@@ -1068,10 +1068,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="marketplacecatalog")
-      private final @Nullable String marketplacecatalog;
+    private @Nullable String marketplacecatalog;
 
     public Optional<String> marketplacecatalog() {
-        return this.marketplacecatalog == null ? Optional.empty() : Optional.ofNullable(this.marketplacecatalog);
+        return Optional.ofNullable(this.marketplacecatalog);
     }
 
     /**
@@ -1079,10 +1079,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mediaconnect")
-      private final @Nullable String mediaconnect;
+    private @Nullable String mediaconnect;
 
     public Optional<String> mediaconnect() {
-        return this.mediaconnect == null ? Optional.empty() : Optional.ofNullable(this.mediaconnect);
+        return Optional.ofNullable(this.mediaconnect);
     }
 
     /**
@@ -1090,10 +1090,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mediaconvert")
-      private final @Nullable String mediaconvert;
+    private @Nullable String mediaconvert;
 
     public Optional<String> mediaconvert() {
-        return this.mediaconvert == null ? Optional.empty() : Optional.ofNullable(this.mediaconvert);
+        return Optional.ofNullable(this.mediaconvert);
     }
 
     /**
@@ -1101,10 +1101,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="medialive")
-      private final @Nullable String medialive;
+    private @Nullable String medialive;
 
     public Optional<String> medialive() {
-        return this.medialive == null ? Optional.empty() : Optional.ofNullable(this.medialive);
+        return Optional.ofNullable(this.medialive);
     }
 
     /**
@@ -1112,10 +1112,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mediapackage")
-      private final @Nullable String mediapackage;
+    private @Nullable String mediapackage;
 
     public Optional<String> mediapackage() {
-        return this.mediapackage == null ? Optional.empty() : Optional.ofNullable(this.mediapackage);
+        return Optional.ofNullable(this.mediapackage);
     }
 
     /**
@@ -1123,10 +1123,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mediastore")
-      private final @Nullable String mediastore;
+    private @Nullable String mediastore;
 
     public Optional<String> mediastore() {
-        return this.mediastore == null ? Optional.empty() : Optional.ofNullable(this.mediastore);
+        return Optional.ofNullable(this.mediastore);
     }
 
     /**
@@ -1134,10 +1134,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mediastoredata")
-      private final @Nullable String mediastoredata;
+    private @Nullable String mediastoredata;
 
     public Optional<String> mediastoredata() {
-        return this.mediastoredata == null ? Optional.empty() : Optional.ofNullable(this.mediastoredata);
+        return Optional.ofNullable(this.mediastoredata);
     }
 
     /**
@@ -1145,10 +1145,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="memorydb")
-      private final @Nullable String memorydb;
+    private @Nullable String memorydb;
 
     public Optional<String> memorydb() {
-        return this.memorydb == null ? Optional.empty() : Optional.ofNullable(this.memorydb);
+        return Optional.ofNullable(this.memorydb);
     }
 
     /**
@@ -1156,10 +1156,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mq")
-      private final @Nullable String mq;
+    private @Nullable String mq;
 
     public Optional<String> mq() {
-        return this.mq == null ? Optional.empty() : Optional.ofNullable(this.mq);
+        return Optional.ofNullable(this.mq);
     }
 
     /**
@@ -1167,10 +1167,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mwaa")
-      private final @Nullable String mwaa;
+    private @Nullable String mwaa;
 
     public Optional<String> mwaa() {
-        return this.mwaa == null ? Optional.empty() : Optional.ofNullable(this.mwaa);
+        return Optional.ofNullable(this.mwaa);
     }
 
     /**
@@ -1178,10 +1178,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="neptune")
-      private final @Nullable String neptune;
+    private @Nullable String neptune;
 
     public Optional<String> neptune() {
-        return this.neptune == null ? Optional.empty() : Optional.ofNullable(this.neptune);
+        return Optional.ofNullable(this.neptune);
     }
 
     /**
@@ -1189,10 +1189,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkfirewall")
-      private final @Nullable String networkfirewall;
+    private @Nullable String networkfirewall;
 
     public Optional<String> networkfirewall() {
-        return this.networkfirewall == null ? Optional.empty() : Optional.ofNullable(this.networkfirewall);
+        return Optional.ofNullable(this.networkfirewall);
     }
 
     /**
@@ -1200,10 +1200,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkmanager")
-      private final @Nullable String networkmanager;
+    private @Nullable String networkmanager;
 
     public Optional<String> networkmanager() {
-        return this.networkmanager == null ? Optional.empty() : Optional.ofNullable(this.networkmanager);
+        return Optional.ofNullable(this.networkmanager);
     }
 
     /**
@@ -1211,10 +1211,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="opsworks")
-      private final @Nullable String opsworks;
+    private @Nullable String opsworks;
 
     public Optional<String> opsworks() {
-        return this.opsworks == null ? Optional.empty() : Optional.ofNullable(this.opsworks);
+        return Optional.ofNullable(this.opsworks);
     }
 
     /**
@@ -1222,10 +1222,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organizations")
-      private final @Nullable String organizations;
+    private @Nullable String organizations;
 
     public Optional<String> organizations() {
-        return this.organizations == null ? Optional.empty() : Optional.ofNullable(this.organizations);
+        return Optional.ofNullable(this.organizations);
     }
 
     /**
@@ -1233,10 +1233,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outposts")
-      private final @Nullable String outposts;
+    private @Nullable String outposts;
 
     public Optional<String> outposts() {
-        return this.outposts == null ? Optional.empty() : Optional.ofNullable(this.outposts);
+        return Optional.ofNullable(this.outposts);
     }
 
     /**
@@ -1244,10 +1244,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="personalize")
-      private final @Nullable String personalize;
+    private @Nullable String personalize;
 
     public Optional<String> personalize() {
-        return this.personalize == null ? Optional.empty() : Optional.ofNullable(this.personalize);
+        return Optional.ofNullable(this.personalize);
     }
 
     /**
@@ -1255,10 +1255,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pinpoint")
-      private final @Nullable String pinpoint;
+    private @Nullable String pinpoint;
 
     public Optional<String> pinpoint() {
-        return this.pinpoint == null ? Optional.empty() : Optional.ofNullable(this.pinpoint);
+        return Optional.ofNullable(this.pinpoint);
     }
 
     /**
@@ -1266,10 +1266,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pricing")
-      private final @Nullable String pricing;
+    private @Nullable String pricing;
 
     public Optional<String> pricing() {
-        return this.pricing == null ? Optional.empty() : Optional.ofNullable(this.pricing);
+        return Optional.ofNullable(this.pricing);
     }
 
     /**
@@ -1277,10 +1277,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qldb")
-      private final @Nullable String qldb;
+    private @Nullable String qldb;
 
     public Optional<String> qldb() {
-        return this.qldb == null ? Optional.empty() : Optional.ofNullable(this.qldb);
+        return Optional.ofNullable(this.qldb);
     }
 
     /**
@@ -1288,10 +1288,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quicksight")
-      private final @Nullable String quicksight;
+    private @Nullable String quicksight;
 
     public Optional<String> quicksight() {
-        return this.quicksight == null ? Optional.empty() : Optional.ofNullable(this.quicksight);
+        return Optional.ofNullable(this.quicksight);
     }
 
     /**
@@ -1299,10 +1299,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ram")
-      private final @Nullable String ram;
+    private @Nullable String ram;
 
     public Optional<String> ram() {
-        return this.ram == null ? Optional.empty() : Optional.ofNullable(this.ram);
+        return Optional.ofNullable(this.ram);
     }
 
     /**
@@ -1310,10 +1310,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rds")
-      private final @Nullable String rds;
+    private @Nullable String rds;
 
     public Optional<String> rds() {
-        return this.rds == null ? Optional.empty() : Optional.ofNullable(this.rds);
+        return Optional.ofNullable(this.rds);
     }
 
     /**
@@ -1321,10 +1321,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="redshift")
-      private final @Nullable String redshift;
+    private @Nullable String redshift;
 
     public Optional<String> redshift() {
-        return this.redshift == null ? Optional.empty() : Optional.ofNullable(this.redshift);
+        return Optional.ofNullable(this.redshift);
     }
 
     /**
@@ -1332,10 +1332,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourcegroups")
-      private final @Nullable String resourcegroups;
+    private @Nullable String resourcegroups;
 
     public Optional<String> resourcegroups() {
-        return this.resourcegroups == null ? Optional.empty() : Optional.ofNullable(this.resourcegroups);
+        return Optional.ofNullable(this.resourcegroups);
     }
 
     /**
@@ -1343,10 +1343,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourcegroupstaggingapi")
-      private final @Nullable String resourcegroupstaggingapi;
+    private @Nullable String resourcegroupstaggingapi;
 
     public Optional<String> resourcegroupstaggingapi() {
-        return this.resourcegroupstaggingapi == null ? Optional.empty() : Optional.ofNullable(this.resourcegroupstaggingapi);
+        return Optional.ofNullable(this.resourcegroupstaggingapi);
     }
 
     /**
@@ -1354,10 +1354,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="route53")
-      private final @Nullable String route53;
+    private @Nullable String route53;
 
     public Optional<String> route53() {
-        return this.route53 == null ? Optional.empty() : Optional.ofNullable(this.route53);
+        return Optional.ofNullable(this.route53);
     }
 
     /**
@@ -1365,10 +1365,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="route53domains")
-      private final @Nullable String route53domains;
+    private @Nullable String route53domains;
 
     public Optional<String> route53domains() {
-        return this.route53domains == null ? Optional.empty() : Optional.ofNullable(this.route53domains);
+        return Optional.ofNullable(this.route53domains);
     }
 
     /**
@@ -1376,10 +1376,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="route53recoverycontrolconfig")
-      private final @Nullable String route53recoverycontrolconfig;
+    private @Nullable String route53recoverycontrolconfig;
 
     public Optional<String> route53recoverycontrolconfig() {
-        return this.route53recoverycontrolconfig == null ? Optional.empty() : Optional.ofNullable(this.route53recoverycontrolconfig);
+        return Optional.ofNullable(this.route53recoverycontrolconfig);
     }
 
     /**
@@ -1387,10 +1387,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="route53recoveryreadiness")
-      private final @Nullable String route53recoveryreadiness;
+    private @Nullable String route53recoveryreadiness;
 
     public Optional<String> route53recoveryreadiness() {
-        return this.route53recoveryreadiness == null ? Optional.empty() : Optional.ofNullable(this.route53recoveryreadiness);
+        return Optional.ofNullable(this.route53recoveryreadiness);
     }
 
     /**
@@ -1398,10 +1398,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="route53resolver")
-      private final @Nullable String route53resolver;
+    private @Nullable String route53resolver;
 
     public Optional<String> route53resolver() {
-        return this.route53resolver == null ? Optional.empty() : Optional.ofNullable(this.route53resolver);
+        return Optional.ofNullable(this.route53resolver);
     }
 
     /**
@@ -1409,10 +1409,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="s3")
-      private final @Nullable String s3;
+    private @Nullable String s3;
 
     public Optional<String> s3() {
-        return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
+        return Optional.ofNullable(this.s3);
     }
 
     /**
@@ -1420,10 +1420,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="s3control")
-      private final @Nullable String s3control;
+    private @Nullable String s3control;
 
     public Optional<String> s3control() {
-        return this.s3control == null ? Optional.empty() : Optional.ofNullable(this.s3control);
+        return Optional.ofNullable(this.s3control);
     }
 
     /**
@@ -1431,10 +1431,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="s3outposts")
-      private final @Nullable String s3outposts;
+    private @Nullable String s3outposts;
 
     public Optional<String> s3outposts() {
-        return this.s3outposts == null ? Optional.empty() : Optional.ofNullable(this.s3outposts);
+        return Optional.ofNullable(this.s3outposts);
     }
 
     /**
@@ -1442,10 +1442,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sagemaker")
-      private final @Nullable String sagemaker;
+    private @Nullable String sagemaker;
 
     public Optional<String> sagemaker() {
-        return this.sagemaker == null ? Optional.empty() : Optional.ofNullable(this.sagemaker);
+        return Optional.ofNullable(this.sagemaker);
     }
 
     /**
@@ -1453,10 +1453,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="schemas")
-      private final @Nullable String schemas;
+    private @Nullable String schemas;
 
     public Optional<String> schemas() {
-        return this.schemas == null ? Optional.empty() : Optional.ofNullable(this.schemas);
+        return Optional.ofNullable(this.schemas);
     }
 
     /**
@@ -1464,10 +1464,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sdb")
-      private final @Nullable String sdb;
+    private @Nullable String sdb;
 
     public Optional<String> sdb() {
-        return this.sdb == null ? Optional.empty() : Optional.ofNullable(this.sdb);
+        return Optional.ofNullable(this.sdb);
     }
 
     /**
@@ -1475,10 +1475,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretsmanager")
-      private final @Nullable String secretsmanager;
+    private @Nullable String secretsmanager;
 
     public Optional<String> secretsmanager() {
-        return this.secretsmanager == null ? Optional.empty() : Optional.ofNullable(this.secretsmanager);
+        return Optional.ofNullable(this.secretsmanager);
     }
 
     /**
@@ -1486,10 +1486,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityhub")
-      private final @Nullable String securityhub;
+    private @Nullable String securityhub;
 
     public Optional<String> securityhub() {
-        return this.securityhub == null ? Optional.empty() : Optional.ofNullable(this.securityhub);
+        return Optional.ofNullable(this.securityhub);
     }
 
     /**
@@ -1497,10 +1497,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverlessrepo")
-      private final @Nullable String serverlessrepo;
+    private @Nullable String serverlessrepo;
 
     public Optional<String> serverlessrepo() {
-        return this.serverlessrepo == null ? Optional.empty() : Optional.ofNullable(this.serverlessrepo);
+        return Optional.ofNullable(this.serverlessrepo);
     }
 
     /**
@@ -1508,10 +1508,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="servicecatalog")
-      private final @Nullable String servicecatalog;
+    private @Nullable String servicecatalog;
 
     public Optional<String> servicecatalog() {
-        return this.servicecatalog == null ? Optional.empty() : Optional.ofNullable(this.servicecatalog);
+        return Optional.ofNullable(this.servicecatalog);
     }
 
     /**
@@ -1519,10 +1519,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="servicediscovery")
-      private final @Nullable String servicediscovery;
+    private @Nullable String servicediscovery;
 
     public Optional<String> servicediscovery() {
-        return this.servicediscovery == null ? Optional.empty() : Optional.ofNullable(this.servicediscovery);
+        return Optional.ofNullable(this.servicediscovery);
     }
 
     /**
@@ -1530,10 +1530,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="servicequotas")
-      private final @Nullable String servicequotas;
+    private @Nullable String servicequotas;
 
     public Optional<String> servicequotas() {
-        return this.servicequotas == null ? Optional.empty() : Optional.ofNullable(this.servicequotas);
+        return Optional.ofNullable(this.servicequotas);
     }
 
     /**
@@ -1541,10 +1541,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ses")
-      private final @Nullable String ses;
+    private @Nullable String ses;
 
     public Optional<String> ses() {
-        return this.ses == null ? Optional.empty() : Optional.ofNullable(this.ses);
+        return Optional.ofNullable(this.ses);
     }
 
     /**
@@ -1552,10 +1552,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shield")
-      private final @Nullable String shield;
+    private @Nullable String shield;
 
     public Optional<String> shield() {
-        return this.shield == null ? Optional.empty() : Optional.ofNullable(this.shield);
+        return Optional.ofNullable(this.shield);
     }
 
     /**
@@ -1563,10 +1563,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signer")
-      private final @Nullable String signer;
+    private @Nullable String signer;
 
     public Optional<String> signer() {
-        return this.signer == null ? Optional.empty() : Optional.ofNullable(this.signer);
+        return Optional.ofNullable(this.signer);
     }
 
     /**
@@ -1574,10 +1574,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sns")
-      private final @Nullable String sns;
+    private @Nullable String sns;
 
     public Optional<String> sns() {
-        return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
+        return Optional.ofNullable(this.sns);
     }
 
     /**
@@ -1585,10 +1585,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqs")
-      private final @Nullable String sqs;
+    private @Nullable String sqs;
 
     public Optional<String> sqs() {
-        return this.sqs == null ? Optional.empty() : Optional.ofNullable(this.sqs);
+        return Optional.ofNullable(this.sqs);
     }
 
     /**
@@ -1596,10 +1596,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ssm")
-      private final @Nullable String ssm;
+    private @Nullable String ssm;
 
     public Optional<String> ssm() {
-        return this.ssm == null ? Optional.empty() : Optional.ofNullable(this.ssm);
+        return Optional.ofNullable(this.ssm);
     }
 
     /**
@@ -1607,10 +1607,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ssoadmin")
-      private final @Nullable String ssoadmin;
+    private @Nullable String ssoadmin;
 
     public Optional<String> ssoadmin() {
-        return this.ssoadmin == null ? Optional.empty() : Optional.ofNullable(this.ssoadmin);
+        return Optional.ofNullable(this.ssoadmin);
     }
 
     /**
@@ -1618,10 +1618,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepfunctions")
-      private final @Nullable String stepfunctions;
+    private @Nullable String stepfunctions;
 
     public Optional<String> stepfunctions() {
-        return this.stepfunctions == null ? Optional.empty() : Optional.ofNullable(this.stepfunctions);
+        return Optional.ofNullable(this.stepfunctions);
     }
 
     /**
@@ -1629,10 +1629,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storagegateway")
-      private final @Nullable String storagegateway;
+    private @Nullable String storagegateway;
 
     public Optional<String> storagegateway() {
-        return this.storagegateway == null ? Optional.empty() : Optional.ofNullable(this.storagegateway);
+        return Optional.ofNullable(this.storagegateway);
     }
 
     /**
@@ -1640,10 +1640,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sts")
-      private final @Nullable String sts;
+    private @Nullable String sts;
 
     public Optional<String> sts() {
-        return this.sts == null ? Optional.empty() : Optional.ofNullable(this.sts);
+        return Optional.ofNullable(this.sts);
     }
 
     /**
@@ -1651,10 +1651,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="swf")
-      private final @Nullable String swf;
+    private @Nullable String swf;
 
     public Optional<String> swf() {
-        return this.swf == null ? Optional.empty() : Optional.ofNullable(this.swf);
+        return Optional.ofNullable(this.swf);
     }
 
     /**
@@ -1662,10 +1662,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="synthetics")
-      private final @Nullable String synthetics;
+    private @Nullable String synthetics;
 
     public Optional<String> synthetics() {
-        return this.synthetics == null ? Optional.empty() : Optional.ofNullable(this.synthetics);
+        return Optional.ofNullable(this.synthetics);
     }
 
     /**
@@ -1673,10 +1673,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timestreamwrite")
-      private final @Nullable String timestreamwrite;
+    private @Nullable String timestreamwrite;
 
     public Optional<String> timestreamwrite() {
-        return this.timestreamwrite == null ? Optional.empty() : Optional.ofNullable(this.timestreamwrite);
+        return Optional.ofNullable(this.timestreamwrite);
     }
 
     /**
@@ -1684,10 +1684,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transfer")
-      private final @Nullable String transfer;
+    private @Nullable String transfer;
 
     public Optional<String> transfer() {
-        return this.transfer == null ? Optional.empty() : Optional.ofNullable(this.transfer);
+        return Optional.ofNullable(this.transfer);
     }
 
     /**
@@ -1695,10 +1695,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="waf")
-      private final @Nullable String waf;
+    private @Nullable String waf;
 
     public Optional<String> waf() {
-        return this.waf == null ? Optional.empty() : Optional.ofNullable(this.waf);
+        return Optional.ofNullable(this.waf);
     }
 
     /**
@@ -1706,10 +1706,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="wafregional")
-      private final @Nullable String wafregional;
+    private @Nullable String wafregional;
 
     public Optional<String> wafregional() {
-        return this.wafregional == null ? Optional.empty() : Optional.ofNullable(this.wafregional);
+        return Optional.ofNullable(this.wafregional);
     }
 
     /**
@@ -1717,10 +1717,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="wafv2")
-      private final @Nullable String wafv2;
+    private @Nullable String wafv2;
 
     public Optional<String> wafv2() {
-        return this.wafv2 == null ? Optional.empty() : Optional.ofNullable(this.wafv2);
+        return Optional.ofNullable(this.wafv2);
     }
 
     /**
@@ -1728,10 +1728,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="worklink")
-      private final @Nullable String worklink;
+    private @Nullable String worklink;
 
     public Optional<String> worklink() {
-        return this.worklink == null ? Optional.empty() : Optional.ofNullable(this.worklink);
+        return Optional.ofNullable(this.worklink);
     }
 
     /**
@@ -1739,10 +1739,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workmail")
-      private final @Nullable String workmail;
+    private @Nullable String workmail;
 
     public Optional<String> workmail() {
-        return this.workmail == null ? Optional.empty() : Optional.ofNullable(this.workmail);
+        return Optional.ofNullable(this.workmail);
     }
 
     /**
@@ -1750,10 +1750,10 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaces")
-      private final @Nullable String workspaces;
+    private @Nullable String workspaces;
 
     public Optional<String> workspaces() {
-        return this.workspaces == null ? Optional.empty() : Optional.ofNullable(this.workspaces);
+        return Optional.ofNullable(this.workspaces);
     }
 
     /**
@@ -1761,1468 +1761,992 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xray")
-      private final @Nullable String xray;
+    private @Nullable String xray;
 
     public Optional<String> xray() {
-        return this.xray == null ? Optional.empty() : Optional.ofNullable(this.xray);
+        return Optional.ofNullable(this.xray);
     }
 
-    public Endpoints(
-        @Nullable String accessanalyzer,
-        @Nullable String acm,
-        @Nullable String acmpca,
-        @Nullable String amplify,
-        @Nullable String appconfig,
-        @Nullable String applicationautoscaling,
-        @Nullable String applicationinsights,
-        @Nullable String appmesh,
-        @Nullable String apprunner,
-        @Nullable String appstream,
-        @Nullable String appsync,
-        @Nullable String athena,
-        @Nullable String auditmanager,
-        @Nullable String autoscaling,
-        @Nullable String backup,
-        @Nullable String batch,
-        @Nullable String budgets,
-        @Nullable String chime,
-        @Nullable String cloud9,
-        @Nullable String cloudformation,
-        @Nullable String cloudfront,
-        @Nullable String cloudhsm,
-        @Nullable String cloudsearch,
-        @Nullable String cloudtrail,
-        @Nullable String cloudwatch,
-        @Nullable String cloudwatchevents,
-        @Nullable String cloudwatchlogs,
-        @Nullable String codeartifact,
-        @Nullable String codebuild,
-        @Nullable String codecommit,
-        @Nullable String codedeploy,
-        @Nullable String codepipeline,
-        @Nullable String codestarconnections,
-        @Nullable String cognitoidentity,
-        @Nullable String configservice,
-        @Nullable String connect,
-        @Nullable String cur,
-        @Nullable String dataexchange,
-        @Nullable String datapipeline,
-        @Nullable String datasync,
-        @Nullable String dax,
-        @Nullable String detective,
-        @Nullable String devicefarm,
-        @Nullable String directconnect,
-        @Nullable String dlm,
-        @Nullable String dms,
-        @Nullable String docdb,
-        @Nullable String ds,
-        @Nullable String dynamodb,
-        @Nullable String ec2,
-        @Nullable String ecr,
-        @Nullable String ecrpublic,
-        @Nullable String ecs,
-        @Nullable String efs,
-        @Nullable String eks,
-        @Nullable String elasticache,
-        @Nullable String elasticbeanstalk,
-        @Nullable String elastictranscoder,
-        @Nullable String elb,
-        @Nullable String elbv2,
-        @Nullable String emr,
-        @Nullable String emrcontainers,
-        @Nullable String es,
-        @Nullable String firehose,
-        @Nullable String fms,
-        @Nullable String forecast,
-        @Nullable String fsx,
-        @Nullable String gamelift,
-        @Nullable String glacier,
-        @Nullable String globalaccelerator,
-        @Nullable String glue,
-        @Nullable String greengrass,
-        @Nullable String guardduty,
-        @Nullable String iam,
-        @Nullable String identitystore,
-        @Nullable String imagebuilder,
-        @Nullable String inspector,
-        @Nullable String iot,
-        @Nullable String iotanalytics,
-        @Nullable String iotevents,
-        @Nullable String kafka,
-        @Nullable String kinesis,
-        @Nullable String kinesisanalytics,
-        @Nullable String kinesisanalyticsv2,
-        @Nullable String kinesisvideo,
-        @Nullable String kms,
-        @Nullable String lakeformation,
-        @Nullable String lambda,
-        @Nullable String lexmodels,
-        @Nullable String licensemanager,
-        @Nullable String lightsail,
-        @Nullable String location,
-        @Nullable String macie,
-        @Nullable String macie2,
-        @Nullable String managedblockchain,
-        @Nullable String marketplacecatalog,
-        @Nullable String mediaconnect,
-        @Nullable String mediaconvert,
-        @Nullable String medialive,
-        @Nullable String mediapackage,
-        @Nullable String mediastore,
-        @Nullable String mediastoredata,
-        @Nullable String memorydb,
-        @Nullable String mq,
-        @Nullable String mwaa,
-        @Nullable String neptune,
-        @Nullable String networkfirewall,
-        @Nullable String networkmanager,
-        @Nullable String opsworks,
-        @Nullable String organizations,
-        @Nullable String outposts,
-        @Nullable String personalize,
-        @Nullable String pinpoint,
-        @Nullable String pricing,
-        @Nullable String qldb,
-        @Nullable String quicksight,
-        @Nullable String ram,
-        @Nullable String rds,
-        @Nullable String redshift,
-        @Nullable String resourcegroups,
-        @Nullable String resourcegroupstaggingapi,
-        @Nullable String route53,
-        @Nullable String route53domains,
-        @Nullable String route53recoverycontrolconfig,
-        @Nullable String route53recoveryreadiness,
-        @Nullable String route53resolver,
-        @Nullable String s3,
-        @Nullable String s3control,
-        @Nullable String s3outposts,
-        @Nullable String sagemaker,
-        @Nullable String schemas,
-        @Nullable String sdb,
-        @Nullable String secretsmanager,
-        @Nullable String securityhub,
-        @Nullable String serverlessrepo,
-        @Nullable String servicecatalog,
-        @Nullable String servicediscovery,
-        @Nullable String servicequotas,
-        @Nullable String ses,
-        @Nullable String shield,
-        @Nullable String signer,
-        @Nullable String sns,
-        @Nullable String sqs,
-        @Nullable String ssm,
-        @Nullable String ssoadmin,
-        @Nullable String stepfunctions,
-        @Nullable String storagegateway,
-        @Nullable String sts,
-        @Nullable String swf,
-        @Nullable String synthetics,
-        @Nullable String timestreamwrite,
-        @Nullable String transfer,
-        @Nullable String waf,
-        @Nullable String wafregional,
-        @Nullable String wafv2,
-        @Nullable String worklink,
-        @Nullable String workmail,
-        @Nullable String workspaces,
-        @Nullable String xray) {
-        this.accessanalyzer = accessanalyzer;
-        this.acm = acm;
-        this.acmpca = acmpca;
-        this.amplify = amplify;
-        this.appconfig = appconfig;
-        this.applicationautoscaling = applicationautoscaling;
-        this.applicationinsights = applicationinsights;
-        this.appmesh = appmesh;
-        this.apprunner = apprunner;
-        this.appstream = appstream;
-        this.appsync = appsync;
-        this.athena = athena;
-        this.auditmanager = auditmanager;
-        this.autoscaling = autoscaling;
-        this.backup = backup;
-        this.batch = batch;
-        this.budgets = budgets;
-        this.chime = chime;
-        this.cloud9 = cloud9;
-        this.cloudformation = cloudformation;
-        this.cloudfront = cloudfront;
-        this.cloudhsm = cloudhsm;
-        this.cloudsearch = cloudsearch;
-        this.cloudtrail = cloudtrail;
-        this.cloudwatch = cloudwatch;
-        this.cloudwatchevents = cloudwatchevents;
-        this.cloudwatchlogs = cloudwatchlogs;
-        this.codeartifact = codeartifact;
-        this.codebuild = codebuild;
-        this.codecommit = codecommit;
-        this.codedeploy = codedeploy;
-        this.codepipeline = codepipeline;
-        this.codestarconnections = codestarconnections;
-        this.cognitoidentity = cognitoidentity;
-        this.configservice = configservice;
-        this.connect = connect;
-        this.cur = cur;
-        this.dataexchange = dataexchange;
-        this.datapipeline = datapipeline;
-        this.datasync = datasync;
-        this.dax = dax;
-        this.detective = detective;
-        this.devicefarm = devicefarm;
-        this.directconnect = directconnect;
-        this.dlm = dlm;
-        this.dms = dms;
-        this.docdb = docdb;
-        this.ds = ds;
-        this.dynamodb = dynamodb;
-        this.ec2 = ec2;
-        this.ecr = ecr;
-        this.ecrpublic = ecrpublic;
-        this.ecs = ecs;
-        this.efs = efs;
-        this.eks = eks;
-        this.elasticache = elasticache;
-        this.elasticbeanstalk = elasticbeanstalk;
-        this.elastictranscoder = elastictranscoder;
-        this.elb = elb;
-        this.elbv2 = elbv2;
-        this.emr = emr;
-        this.emrcontainers = emrcontainers;
-        this.es = es;
-        this.firehose = firehose;
-        this.fms = fms;
-        this.forecast = forecast;
-        this.fsx = fsx;
-        this.gamelift = gamelift;
-        this.glacier = glacier;
-        this.globalaccelerator = globalaccelerator;
-        this.glue = glue;
-        this.greengrass = greengrass;
-        this.guardduty = guardduty;
-        this.iam = iam;
-        this.identitystore = identitystore;
-        this.imagebuilder = imagebuilder;
-        this.inspector = inspector;
-        this.iot = iot;
-        this.iotanalytics = iotanalytics;
-        this.iotevents = iotevents;
-        this.kafka = kafka;
-        this.kinesis = kinesis;
-        this.kinesisanalytics = kinesisanalytics;
-        this.kinesisanalyticsv2 = kinesisanalyticsv2;
-        this.kinesisvideo = kinesisvideo;
-        this.kms = kms;
-        this.lakeformation = lakeformation;
-        this.lambda = lambda;
-        this.lexmodels = lexmodels;
-        this.licensemanager = licensemanager;
-        this.lightsail = lightsail;
-        this.location = location;
-        this.macie = macie;
-        this.macie2 = macie2;
-        this.managedblockchain = managedblockchain;
-        this.marketplacecatalog = marketplacecatalog;
-        this.mediaconnect = mediaconnect;
-        this.mediaconvert = mediaconvert;
-        this.medialive = medialive;
-        this.mediapackage = mediapackage;
-        this.mediastore = mediastore;
-        this.mediastoredata = mediastoredata;
-        this.memorydb = memorydb;
-        this.mq = mq;
-        this.mwaa = mwaa;
-        this.neptune = neptune;
-        this.networkfirewall = networkfirewall;
-        this.networkmanager = networkmanager;
-        this.opsworks = opsworks;
-        this.organizations = organizations;
-        this.outposts = outposts;
-        this.personalize = personalize;
-        this.pinpoint = pinpoint;
-        this.pricing = pricing;
-        this.qldb = qldb;
-        this.quicksight = quicksight;
-        this.ram = ram;
-        this.rds = rds;
-        this.redshift = redshift;
-        this.resourcegroups = resourcegroups;
-        this.resourcegroupstaggingapi = resourcegroupstaggingapi;
-        this.route53 = route53;
-        this.route53domains = route53domains;
-        this.route53recoverycontrolconfig = route53recoverycontrolconfig;
-        this.route53recoveryreadiness = route53recoveryreadiness;
-        this.route53resolver = route53resolver;
-        this.s3 = s3;
-        this.s3control = s3control;
-        this.s3outposts = s3outposts;
-        this.sagemaker = sagemaker;
-        this.schemas = schemas;
-        this.sdb = sdb;
-        this.secretsmanager = secretsmanager;
-        this.securityhub = securityhub;
-        this.serverlessrepo = serverlessrepo;
-        this.servicecatalog = servicecatalog;
-        this.servicediscovery = servicediscovery;
-        this.servicequotas = servicequotas;
-        this.ses = ses;
-        this.shield = shield;
-        this.signer = signer;
-        this.sns = sns;
-        this.sqs = sqs;
-        this.ssm = ssm;
-        this.ssoadmin = ssoadmin;
-        this.stepfunctions = stepfunctions;
-        this.storagegateway = storagegateway;
-        this.sts = sts;
-        this.swf = swf;
-        this.synthetics = synthetics;
-        this.timestreamwrite = timestreamwrite;
-        this.transfer = transfer;
-        this.waf = waf;
-        this.wafregional = wafregional;
-        this.wafv2 = wafv2;
-        this.worklink = worklink;
-        this.workmail = workmail;
-        this.workspaces = workspaces;
-        this.xray = xray;
-    }
+    private Endpoints() {}
 
-    private Endpoints() {
-        this.accessanalyzer = null;
-        this.acm = null;
-        this.acmpca = null;
-        this.amplify = null;
-        this.appconfig = null;
-        this.applicationautoscaling = null;
-        this.applicationinsights = null;
-        this.appmesh = null;
-        this.apprunner = null;
-        this.appstream = null;
-        this.appsync = null;
-        this.athena = null;
-        this.auditmanager = null;
-        this.autoscaling = null;
-        this.backup = null;
-        this.batch = null;
-        this.budgets = null;
-        this.chime = null;
-        this.cloud9 = null;
-        this.cloudformation = null;
-        this.cloudfront = null;
-        this.cloudhsm = null;
-        this.cloudsearch = null;
-        this.cloudtrail = null;
-        this.cloudwatch = null;
-        this.cloudwatchevents = null;
-        this.cloudwatchlogs = null;
-        this.codeartifact = null;
-        this.codebuild = null;
-        this.codecommit = null;
-        this.codedeploy = null;
-        this.codepipeline = null;
-        this.codestarconnections = null;
-        this.cognitoidentity = null;
-        this.configservice = null;
-        this.connect = null;
-        this.cur = null;
-        this.dataexchange = null;
-        this.datapipeline = null;
-        this.datasync = null;
-        this.dax = null;
-        this.detective = null;
-        this.devicefarm = null;
-        this.directconnect = null;
-        this.dlm = null;
-        this.dms = null;
-        this.docdb = null;
-        this.ds = null;
-        this.dynamodb = null;
-        this.ec2 = null;
-        this.ecr = null;
-        this.ecrpublic = null;
-        this.ecs = null;
-        this.efs = null;
-        this.eks = null;
-        this.elasticache = null;
-        this.elasticbeanstalk = null;
-        this.elastictranscoder = null;
-        this.elb = null;
-        this.elbv2 = null;
-        this.emr = null;
-        this.emrcontainers = null;
-        this.es = null;
-        this.firehose = null;
-        this.fms = null;
-        this.forecast = null;
-        this.fsx = null;
-        this.gamelift = null;
-        this.glacier = null;
-        this.globalaccelerator = null;
-        this.glue = null;
-        this.greengrass = null;
-        this.guardduty = null;
-        this.iam = null;
-        this.identitystore = null;
-        this.imagebuilder = null;
-        this.inspector = null;
-        this.iot = null;
-        this.iotanalytics = null;
-        this.iotevents = null;
-        this.kafka = null;
-        this.kinesis = null;
-        this.kinesisanalytics = null;
-        this.kinesisanalyticsv2 = null;
-        this.kinesisvideo = null;
-        this.kms = null;
-        this.lakeformation = null;
-        this.lambda = null;
-        this.lexmodels = null;
-        this.licensemanager = null;
-        this.lightsail = null;
-        this.location = null;
-        this.macie = null;
-        this.macie2 = null;
-        this.managedblockchain = null;
-        this.marketplacecatalog = null;
-        this.mediaconnect = null;
-        this.mediaconvert = null;
-        this.medialive = null;
-        this.mediapackage = null;
-        this.mediastore = null;
-        this.mediastoredata = null;
-        this.memorydb = null;
-        this.mq = null;
-        this.mwaa = null;
-        this.neptune = null;
-        this.networkfirewall = null;
-        this.networkmanager = null;
-        this.opsworks = null;
-        this.organizations = null;
-        this.outposts = null;
-        this.personalize = null;
-        this.pinpoint = null;
-        this.pricing = null;
-        this.qldb = null;
-        this.quicksight = null;
-        this.ram = null;
-        this.rds = null;
-        this.redshift = null;
-        this.resourcegroups = null;
-        this.resourcegroupstaggingapi = null;
-        this.route53 = null;
-        this.route53domains = null;
-        this.route53recoverycontrolconfig = null;
-        this.route53recoveryreadiness = null;
-        this.route53resolver = null;
-        this.s3 = null;
-        this.s3control = null;
-        this.s3outposts = null;
-        this.sagemaker = null;
-        this.schemas = null;
-        this.sdb = null;
-        this.secretsmanager = null;
-        this.securityhub = null;
-        this.serverlessrepo = null;
-        this.servicecatalog = null;
-        this.servicediscovery = null;
-        this.servicequotas = null;
-        this.ses = null;
-        this.shield = null;
-        this.signer = null;
-        this.sns = null;
-        this.sqs = null;
-        this.ssm = null;
-        this.ssoadmin = null;
-        this.stepfunctions = null;
-        this.storagegateway = null;
-        this.sts = null;
-        this.swf = null;
-        this.synthetics = null;
-        this.timestreamwrite = null;
-        this.transfer = null;
-        this.waf = null;
-        this.wafregional = null;
-        this.wafv2 = null;
-        this.worklink = null;
-        this.workmail = null;
-        this.workspaces = null;
-        this.xray = null;
+    private Endpoints(Endpoints $) {
+        this.accessanalyzer = $.accessanalyzer;
+        this.acm = $.acm;
+        this.acmpca = $.acmpca;
+        this.amplify = $.amplify;
+        this.appconfig = $.appconfig;
+        this.applicationautoscaling = $.applicationautoscaling;
+        this.applicationinsights = $.applicationinsights;
+        this.appmesh = $.appmesh;
+        this.apprunner = $.apprunner;
+        this.appstream = $.appstream;
+        this.appsync = $.appsync;
+        this.athena = $.athena;
+        this.auditmanager = $.auditmanager;
+        this.autoscaling = $.autoscaling;
+        this.backup = $.backup;
+        this.batch = $.batch;
+        this.budgets = $.budgets;
+        this.chime = $.chime;
+        this.cloud9 = $.cloud9;
+        this.cloudformation = $.cloudformation;
+        this.cloudfront = $.cloudfront;
+        this.cloudhsm = $.cloudhsm;
+        this.cloudsearch = $.cloudsearch;
+        this.cloudtrail = $.cloudtrail;
+        this.cloudwatch = $.cloudwatch;
+        this.cloudwatchevents = $.cloudwatchevents;
+        this.cloudwatchlogs = $.cloudwatchlogs;
+        this.codeartifact = $.codeartifact;
+        this.codebuild = $.codebuild;
+        this.codecommit = $.codecommit;
+        this.codedeploy = $.codedeploy;
+        this.codepipeline = $.codepipeline;
+        this.codestarconnections = $.codestarconnections;
+        this.cognitoidentity = $.cognitoidentity;
+        this.configservice = $.configservice;
+        this.connect = $.connect;
+        this.cur = $.cur;
+        this.dataexchange = $.dataexchange;
+        this.datapipeline = $.datapipeline;
+        this.datasync = $.datasync;
+        this.dax = $.dax;
+        this.detective = $.detective;
+        this.devicefarm = $.devicefarm;
+        this.directconnect = $.directconnect;
+        this.dlm = $.dlm;
+        this.dms = $.dms;
+        this.docdb = $.docdb;
+        this.ds = $.ds;
+        this.dynamodb = $.dynamodb;
+        this.ec2 = $.ec2;
+        this.ecr = $.ecr;
+        this.ecrpublic = $.ecrpublic;
+        this.ecs = $.ecs;
+        this.efs = $.efs;
+        this.eks = $.eks;
+        this.elasticache = $.elasticache;
+        this.elasticbeanstalk = $.elasticbeanstalk;
+        this.elastictranscoder = $.elastictranscoder;
+        this.elb = $.elb;
+        this.elbv2 = $.elbv2;
+        this.emr = $.emr;
+        this.emrcontainers = $.emrcontainers;
+        this.es = $.es;
+        this.firehose = $.firehose;
+        this.fms = $.fms;
+        this.forecast = $.forecast;
+        this.fsx = $.fsx;
+        this.gamelift = $.gamelift;
+        this.glacier = $.glacier;
+        this.globalaccelerator = $.globalaccelerator;
+        this.glue = $.glue;
+        this.greengrass = $.greengrass;
+        this.guardduty = $.guardduty;
+        this.iam = $.iam;
+        this.identitystore = $.identitystore;
+        this.imagebuilder = $.imagebuilder;
+        this.inspector = $.inspector;
+        this.iot = $.iot;
+        this.iotanalytics = $.iotanalytics;
+        this.iotevents = $.iotevents;
+        this.kafka = $.kafka;
+        this.kinesis = $.kinesis;
+        this.kinesisanalytics = $.kinesisanalytics;
+        this.kinesisanalyticsv2 = $.kinesisanalyticsv2;
+        this.kinesisvideo = $.kinesisvideo;
+        this.kms = $.kms;
+        this.lakeformation = $.lakeformation;
+        this.lambda = $.lambda;
+        this.lexmodels = $.lexmodels;
+        this.licensemanager = $.licensemanager;
+        this.lightsail = $.lightsail;
+        this.location = $.location;
+        this.macie = $.macie;
+        this.macie2 = $.macie2;
+        this.managedblockchain = $.managedblockchain;
+        this.marketplacecatalog = $.marketplacecatalog;
+        this.mediaconnect = $.mediaconnect;
+        this.mediaconvert = $.mediaconvert;
+        this.medialive = $.medialive;
+        this.mediapackage = $.mediapackage;
+        this.mediastore = $.mediastore;
+        this.mediastoredata = $.mediastoredata;
+        this.memorydb = $.memorydb;
+        this.mq = $.mq;
+        this.mwaa = $.mwaa;
+        this.neptune = $.neptune;
+        this.networkfirewall = $.networkfirewall;
+        this.networkmanager = $.networkmanager;
+        this.opsworks = $.opsworks;
+        this.organizations = $.organizations;
+        this.outposts = $.outposts;
+        this.personalize = $.personalize;
+        this.pinpoint = $.pinpoint;
+        this.pricing = $.pricing;
+        this.qldb = $.qldb;
+        this.quicksight = $.quicksight;
+        this.ram = $.ram;
+        this.rds = $.rds;
+        this.redshift = $.redshift;
+        this.resourcegroups = $.resourcegroups;
+        this.resourcegroupstaggingapi = $.resourcegroupstaggingapi;
+        this.route53 = $.route53;
+        this.route53domains = $.route53domains;
+        this.route53recoverycontrolconfig = $.route53recoverycontrolconfig;
+        this.route53recoveryreadiness = $.route53recoveryreadiness;
+        this.route53resolver = $.route53resolver;
+        this.s3 = $.s3;
+        this.s3control = $.s3control;
+        this.s3outposts = $.s3outposts;
+        this.sagemaker = $.sagemaker;
+        this.schemas = $.schemas;
+        this.sdb = $.sdb;
+        this.secretsmanager = $.secretsmanager;
+        this.securityhub = $.securityhub;
+        this.serverlessrepo = $.serverlessrepo;
+        this.servicecatalog = $.servicecatalog;
+        this.servicediscovery = $.servicediscovery;
+        this.servicequotas = $.servicequotas;
+        this.ses = $.ses;
+        this.shield = $.shield;
+        this.signer = $.signer;
+        this.sns = $.sns;
+        this.sqs = $.sqs;
+        this.ssm = $.ssm;
+        this.ssoadmin = $.ssoadmin;
+        this.stepfunctions = $.stepfunctions;
+        this.storagegateway = $.storagegateway;
+        this.sts = $.sts;
+        this.swf = $.swf;
+        this.synthetics = $.synthetics;
+        this.timestreamwrite = $.timestreamwrite;
+        this.transfer = $.transfer;
+        this.waf = $.waf;
+        this.wafregional = $.wafregional;
+        this.wafv2 = $.wafv2;
+        this.worklink = $.worklink;
+        this.workmail = $.workmail;
+        this.workspaces = $.workspaces;
+        this.xray = $.xray;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Endpoints defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessanalyzer;
-        private @Nullable String acm;
-        private @Nullable String acmpca;
-        private @Nullable String amplify;
-        private @Nullable String appconfig;
-        private @Nullable String applicationautoscaling;
-        private @Nullable String applicationinsights;
-        private @Nullable String appmesh;
-        private @Nullable String apprunner;
-        private @Nullable String appstream;
-        private @Nullable String appsync;
-        private @Nullable String athena;
-        private @Nullable String auditmanager;
-        private @Nullable String autoscaling;
-        private @Nullable String backup;
-        private @Nullable String batch;
-        private @Nullable String budgets;
-        private @Nullable String chime;
-        private @Nullable String cloud9;
-        private @Nullable String cloudformation;
-        private @Nullable String cloudfront;
-        private @Nullable String cloudhsm;
-        private @Nullable String cloudsearch;
-        private @Nullable String cloudtrail;
-        private @Nullable String cloudwatch;
-        private @Nullable String cloudwatchevents;
-        private @Nullable String cloudwatchlogs;
-        private @Nullable String codeartifact;
-        private @Nullable String codebuild;
-        private @Nullable String codecommit;
-        private @Nullable String codedeploy;
-        private @Nullable String codepipeline;
-        private @Nullable String codestarconnections;
-        private @Nullable String cognitoidentity;
-        private @Nullable String configservice;
-        private @Nullable String connect;
-        private @Nullable String cur;
-        private @Nullable String dataexchange;
-        private @Nullable String datapipeline;
-        private @Nullable String datasync;
-        private @Nullable String dax;
-        private @Nullable String detective;
-        private @Nullable String devicefarm;
-        private @Nullable String directconnect;
-        private @Nullable String dlm;
-        private @Nullable String dms;
-        private @Nullable String docdb;
-        private @Nullable String ds;
-        private @Nullable String dynamodb;
-        private @Nullable String ec2;
-        private @Nullable String ecr;
-        private @Nullable String ecrpublic;
-        private @Nullable String ecs;
-        private @Nullable String efs;
-        private @Nullable String eks;
-        private @Nullable String elasticache;
-        private @Nullable String elasticbeanstalk;
-        private @Nullable String elastictranscoder;
-        private @Nullable String elb;
-        private @Nullable String elbv2;
-        private @Nullable String emr;
-        private @Nullable String emrcontainers;
-        private @Nullable String es;
-        private @Nullable String firehose;
-        private @Nullable String fms;
-        private @Nullable String forecast;
-        private @Nullable String fsx;
-        private @Nullable String gamelift;
-        private @Nullable String glacier;
-        private @Nullable String globalaccelerator;
-        private @Nullable String glue;
-        private @Nullable String greengrass;
-        private @Nullable String guardduty;
-        private @Nullable String iam;
-        private @Nullable String identitystore;
-        private @Nullable String imagebuilder;
-        private @Nullable String inspector;
-        private @Nullable String iot;
-        private @Nullable String iotanalytics;
-        private @Nullable String iotevents;
-        private @Nullable String kafka;
-        private @Nullable String kinesis;
-        private @Nullable String kinesisanalytics;
-        private @Nullable String kinesisanalyticsv2;
-        private @Nullable String kinesisvideo;
-        private @Nullable String kms;
-        private @Nullable String lakeformation;
-        private @Nullable String lambda;
-        private @Nullable String lexmodels;
-        private @Nullable String licensemanager;
-        private @Nullable String lightsail;
-        private @Nullable String location;
-        private @Nullable String macie;
-        private @Nullable String macie2;
-        private @Nullable String managedblockchain;
-        private @Nullable String marketplacecatalog;
-        private @Nullable String mediaconnect;
-        private @Nullable String mediaconvert;
-        private @Nullable String medialive;
-        private @Nullable String mediapackage;
-        private @Nullable String mediastore;
-        private @Nullable String mediastoredata;
-        private @Nullable String memorydb;
-        private @Nullable String mq;
-        private @Nullable String mwaa;
-        private @Nullable String neptune;
-        private @Nullable String networkfirewall;
-        private @Nullable String networkmanager;
-        private @Nullable String opsworks;
-        private @Nullable String organizations;
-        private @Nullable String outposts;
-        private @Nullable String personalize;
-        private @Nullable String pinpoint;
-        private @Nullable String pricing;
-        private @Nullable String qldb;
-        private @Nullable String quicksight;
-        private @Nullable String ram;
-        private @Nullable String rds;
-        private @Nullable String redshift;
-        private @Nullable String resourcegroups;
-        private @Nullable String resourcegroupstaggingapi;
-        private @Nullable String route53;
-        private @Nullable String route53domains;
-        private @Nullable String route53recoverycontrolconfig;
-        private @Nullable String route53recoveryreadiness;
-        private @Nullable String route53resolver;
-        private @Nullable String s3;
-        private @Nullable String s3control;
-        private @Nullable String s3outposts;
-        private @Nullable String sagemaker;
-        private @Nullable String schemas;
-        private @Nullable String sdb;
-        private @Nullable String secretsmanager;
-        private @Nullable String securityhub;
-        private @Nullable String serverlessrepo;
-        private @Nullable String servicecatalog;
-        private @Nullable String servicediscovery;
-        private @Nullable String servicequotas;
-        private @Nullable String ses;
-        private @Nullable String shield;
-        private @Nullable String signer;
-        private @Nullable String sns;
-        private @Nullable String sqs;
-        private @Nullable String ssm;
-        private @Nullable String ssoadmin;
-        private @Nullable String stepfunctions;
-        private @Nullable String storagegateway;
-        private @Nullable String sts;
-        private @Nullable String swf;
-        private @Nullable String synthetics;
-        private @Nullable String timestreamwrite;
-        private @Nullable String transfer;
-        private @Nullable String waf;
-        private @Nullable String wafregional;
-        private @Nullable String wafv2;
-        private @Nullable String worklink;
-        private @Nullable String workmail;
-        private @Nullable String workspaces;
-        private @Nullable String xray;
+        private Endpoints $;
 
         public Builder() {
-    	      // Empty
+            $ = new Endpoints();
         }
 
         public Builder(Endpoints defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessanalyzer = defaults.accessanalyzer;
-    	      this.acm = defaults.acm;
-    	      this.acmpca = defaults.acmpca;
-    	      this.amplify = defaults.amplify;
-    	      this.appconfig = defaults.appconfig;
-    	      this.applicationautoscaling = defaults.applicationautoscaling;
-    	      this.applicationinsights = defaults.applicationinsights;
-    	      this.appmesh = defaults.appmesh;
-    	      this.apprunner = defaults.apprunner;
-    	      this.appstream = defaults.appstream;
-    	      this.appsync = defaults.appsync;
-    	      this.athena = defaults.athena;
-    	      this.auditmanager = defaults.auditmanager;
-    	      this.autoscaling = defaults.autoscaling;
-    	      this.backup = defaults.backup;
-    	      this.batch = defaults.batch;
-    	      this.budgets = defaults.budgets;
-    	      this.chime = defaults.chime;
-    	      this.cloud9 = defaults.cloud9;
-    	      this.cloudformation = defaults.cloudformation;
-    	      this.cloudfront = defaults.cloudfront;
-    	      this.cloudhsm = defaults.cloudhsm;
-    	      this.cloudsearch = defaults.cloudsearch;
-    	      this.cloudtrail = defaults.cloudtrail;
-    	      this.cloudwatch = defaults.cloudwatch;
-    	      this.cloudwatchevents = defaults.cloudwatchevents;
-    	      this.cloudwatchlogs = defaults.cloudwatchlogs;
-    	      this.codeartifact = defaults.codeartifact;
-    	      this.codebuild = defaults.codebuild;
-    	      this.codecommit = defaults.codecommit;
-    	      this.codedeploy = defaults.codedeploy;
-    	      this.codepipeline = defaults.codepipeline;
-    	      this.codestarconnections = defaults.codestarconnections;
-    	      this.cognitoidentity = defaults.cognitoidentity;
-    	      this.configservice = defaults.configservice;
-    	      this.connect = defaults.connect;
-    	      this.cur = defaults.cur;
-    	      this.dataexchange = defaults.dataexchange;
-    	      this.datapipeline = defaults.datapipeline;
-    	      this.datasync = defaults.datasync;
-    	      this.dax = defaults.dax;
-    	      this.detective = defaults.detective;
-    	      this.devicefarm = defaults.devicefarm;
-    	      this.directconnect = defaults.directconnect;
-    	      this.dlm = defaults.dlm;
-    	      this.dms = defaults.dms;
-    	      this.docdb = defaults.docdb;
-    	      this.ds = defaults.ds;
-    	      this.dynamodb = defaults.dynamodb;
-    	      this.ec2 = defaults.ec2;
-    	      this.ecr = defaults.ecr;
-    	      this.ecrpublic = defaults.ecrpublic;
-    	      this.ecs = defaults.ecs;
-    	      this.efs = defaults.efs;
-    	      this.eks = defaults.eks;
-    	      this.elasticache = defaults.elasticache;
-    	      this.elasticbeanstalk = defaults.elasticbeanstalk;
-    	      this.elastictranscoder = defaults.elastictranscoder;
-    	      this.elb = defaults.elb;
-    	      this.elbv2 = defaults.elbv2;
-    	      this.emr = defaults.emr;
-    	      this.emrcontainers = defaults.emrcontainers;
-    	      this.es = defaults.es;
-    	      this.firehose = defaults.firehose;
-    	      this.fms = defaults.fms;
-    	      this.forecast = defaults.forecast;
-    	      this.fsx = defaults.fsx;
-    	      this.gamelift = defaults.gamelift;
-    	      this.glacier = defaults.glacier;
-    	      this.globalaccelerator = defaults.globalaccelerator;
-    	      this.glue = defaults.glue;
-    	      this.greengrass = defaults.greengrass;
-    	      this.guardduty = defaults.guardduty;
-    	      this.iam = defaults.iam;
-    	      this.identitystore = defaults.identitystore;
-    	      this.imagebuilder = defaults.imagebuilder;
-    	      this.inspector = defaults.inspector;
-    	      this.iot = defaults.iot;
-    	      this.iotanalytics = defaults.iotanalytics;
-    	      this.iotevents = defaults.iotevents;
-    	      this.kafka = defaults.kafka;
-    	      this.kinesis = defaults.kinesis;
-    	      this.kinesisanalytics = defaults.kinesisanalytics;
-    	      this.kinesisanalyticsv2 = defaults.kinesisanalyticsv2;
-    	      this.kinesisvideo = defaults.kinesisvideo;
-    	      this.kms = defaults.kms;
-    	      this.lakeformation = defaults.lakeformation;
-    	      this.lambda = defaults.lambda;
-    	      this.lexmodels = defaults.lexmodels;
-    	      this.licensemanager = defaults.licensemanager;
-    	      this.lightsail = defaults.lightsail;
-    	      this.location = defaults.location;
-    	      this.macie = defaults.macie;
-    	      this.macie2 = defaults.macie2;
-    	      this.managedblockchain = defaults.managedblockchain;
-    	      this.marketplacecatalog = defaults.marketplacecatalog;
-    	      this.mediaconnect = defaults.mediaconnect;
-    	      this.mediaconvert = defaults.mediaconvert;
-    	      this.medialive = defaults.medialive;
-    	      this.mediapackage = defaults.mediapackage;
-    	      this.mediastore = defaults.mediastore;
-    	      this.mediastoredata = defaults.mediastoredata;
-    	      this.memorydb = defaults.memorydb;
-    	      this.mq = defaults.mq;
-    	      this.mwaa = defaults.mwaa;
-    	      this.neptune = defaults.neptune;
-    	      this.networkfirewall = defaults.networkfirewall;
-    	      this.networkmanager = defaults.networkmanager;
-    	      this.opsworks = defaults.opsworks;
-    	      this.organizations = defaults.organizations;
-    	      this.outposts = defaults.outposts;
-    	      this.personalize = defaults.personalize;
-    	      this.pinpoint = defaults.pinpoint;
-    	      this.pricing = defaults.pricing;
-    	      this.qldb = defaults.qldb;
-    	      this.quicksight = defaults.quicksight;
-    	      this.ram = defaults.ram;
-    	      this.rds = defaults.rds;
-    	      this.redshift = defaults.redshift;
-    	      this.resourcegroups = defaults.resourcegroups;
-    	      this.resourcegroupstaggingapi = defaults.resourcegroupstaggingapi;
-    	      this.route53 = defaults.route53;
-    	      this.route53domains = defaults.route53domains;
-    	      this.route53recoverycontrolconfig = defaults.route53recoverycontrolconfig;
-    	      this.route53recoveryreadiness = defaults.route53recoveryreadiness;
-    	      this.route53resolver = defaults.route53resolver;
-    	      this.s3 = defaults.s3;
-    	      this.s3control = defaults.s3control;
-    	      this.s3outposts = defaults.s3outposts;
-    	      this.sagemaker = defaults.sagemaker;
-    	      this.schemas = defaults.schemas;
-    	      this.sdb = defaults.sdb;
-    	      this.secretsmanager = defaults.secretsmanager;
-    	      this.securityhub = defaults.securityhub;
-    	      this.serverlessrepo = defaults.serverlessrepo;
-    	      this.servicecatalog = defaults.servicecatalog;
-    	      this.servicediscovery = defaults.servicediscovery;
-    	      this.servicequotas = defaults.servicequotas;
-    	      this.ses = defaults.ses;
-    	      this.shield = defaults.shield;
-    	      this.signer = defaults.signer;
-    	      this.sns = defaults.sns;
-    	      this.sqs = defaults.sqs;
-    	      this.ssm = defaults.ssm;
-    	      this.ssoadmin = defaults.ssoadmin;
-    	      this.stepfunctions = defaults.stepfunctions;
-    	      this.storagegateway = defaults.storagegateway;
-    	      this.sts = defaults.sts;
-    	      this.swf = defaults.swf;
-    	      this.synthetics = defaults.synthetics;
-    	      this.timestreamwrite = defaults.timestreamwrite;
-    	      this.transfer = defaults.transfer;
-    	      this.waf = defaults.waf;
-    	      this.wafregional = defaults.wafregional;
-    	      this.wafv2 = defaults.wafv2;
-    	      this.worklink = defaults.worklink;
-    	      this.workmail = defaults.workmail;
-    	      this.workspaces = defaults.workspaces;
-    	      this.xray = defaults.xray;
+            $ = new Endpoints(Objects.requireNonNull(defaults));
         }
 
         public Builder accessanalyzer(@Nullable String accessanalyzer) {
-            this.accessanalyzer = accessanalyzer;
+            $.accessanalyzer = accessanalyzer;
             return this;
         }
+
         public Builder acm(@Nullable String acm) {
-            this.acm = acm;
+            $.acm = acm;
             return this;
         }
+
         public Builder acmpca(@Nullable String acmpca) {
-            this.acmpca = acmpca;
+            $.acmpca = acmpca;
             return this;
         }
+
         public Builder amplify(@Nullable String amplify) {
-            this.amplify = amplify;
+            $.amplify = amplify;
             return this;
         }
+
         public Builder appconfig(@Nullable String appconfig) {
-            this.appconfig = appconfig;
+            $.appconfig = appconfig;
             return this;
         }
+
         public Builder applicationautoscaling(@Nullable String applicationautoscaling) {
-            this.applicationautoscaling = applicationautoscaling;
+            $.applicationautoscaling = applicationautoscaling;
             return this;
         }
+
         public Builder applicationinsights(@Nullable String applicationinsights) {
-            this.applicationinsights = applicationinsights;
+            $.applicationinsights = applicationinsights;
             return this;
         }
+
         public Builder appmesh(@Nullable String appmesh) {
-            this.appmesh = appmesh;
+            $.appmesh = appmesh;
             return this;
         }
+
         public Builder apprunner(@Nullable String apprunner) {
-            this.apprunner = apprunner;
+            $.apprunner = apprunner;
             return this;
         }
+
         public Builder appstream(@Nullable String appstream) {
-            this.appstream = appstream;
+            $.appstream = appstream;
             return this;
         }
+
         public Builder appsync(@Nullable String appsync) {
-            this.appsync = appsync;
+            $.appsync = appsync;
             return this;
         }
+
         public Builder athena(@Nullable String athena) {
-            this.athena = athena;
+            $.athena = athena;
             return this;
         }
+
         public Builder auditmanager(@Nullable String auditmanager) {
-            this.auditmanager = auditmanager;
+            $.auditmanager = auditmanager;
             return this;
         }
+
         public Builder autoscaling(@Nullable String autoscaling) {
-            this.autoscaling = autoscaling;
+            $.autoscaling = autoscaling;
             return this;
         }
+
         public Builder backup(@Nullable String backup) {
-            this.backup = backup;
+            $.backup = backup;
             return this;
         }
+
         public Builder batch(@Nullable String batch) {
-            this.batch = batch;
+            $.batch = batch;
             return this;
         }
+
         public Builder budgets(@Nullable String budgets) {
-            this.budgets = budgets;
+            $.budgets = budgets;
             return this;
         }
+
         public Builder chime(@Nullable String chime) {
-            this.chime = chime;
+            $.chime = chime;
             return this;
         }
+
         public Builder cloud9(@Nullable String cloud9) {
-            this.cloud9 = cloud9;
+            $.cloud9 = cloud9;
             return this;
         }
+
         public Builder cloudformation(@Nullable String cloudformation) {
-            this.cloudformation = cloudformation;
+            $.cloudformation = cloudformation;
             return this;
         }
+
         public Builder cloudfront(@Nullable String cloudfront) {
-            this.cloudfront = cloudfront;
+            $.cloudfront = cloudfront;
             return this;
         }
+
         public Builder cloudhsm(@Nullable String cloudhsm) {
-            this.cloudhsm = cloudhsm;
+            $.cloudhsm = cloudhsm;
             return this;
         }
+
         public Builder cloudsearch(@Nullable String cloudsearch) {
-            this.cloudsearch = cloudsearch;
+            $.cloudsearch = cloudsearch;
             return this;
         }
+
         public Builder cloudtrail(@Nullable String cloudtrail) {
-            this.cloudtrail = cloudtrail;
+            $.cloudtrail = cloudtrail;
             return this;
         }
+
         public Builder cloudwatch(@Nullable String cloudwatch) {
-            this.cloudwatch = cloudwatch;
+            $.cloudwatch = cloudwatch;
             return this;
         }
+
         public Builder cloudwatchevents(@Nullable String cloudwatchevents) {
-            this.cloudwatchevents = cloudwatchevents;
+            $.cloudwatchevents = cloudwatchevents;
             return this;
         }
+
         public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
-            this.cloudwatchlogs = cloudwatchlogs;
+            $.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
+
         public Builder codeartifact(@Nullable String codeartifact) {
-            this.codeartifact = codeartifact;
+            $.codeartifact = codeartifact;
             return this;
         }
+
         public Builder codebuild(@Nullable String codebuild) {
-            this.codebuild = codebuild;
+            $.codebuild = codebuild;
             return this;
         }
+
         public Builder codecommit(@Nullable String codecommit) {
-            this.codecommit = codecommit;
+            $.codecommit = codecommit;
             return this;
         }
+
         public Builder codedeploy(@Nullable String codedeploy) {
-            this.codedeploy = codedeploy;
+            $.codedeploy = codedeploy;
             return this;
         }
+
         public Builder codepipeline(@Nullable String codepipeline) {
-            this.codepipeline = codepipeline;
+            $.codepipeline = codepipeline;
             return this;
         }
+
         public Builder codestarconnections(@Nullable String codestarconnections) {
-            this.codestarconnections = codestarconnections;
+            $.codestarconnections = codestarconnections;
             return this;
         }
+
         public Builder cognitoidentity(@Nullable String cognitoidentity) {
-            this.cognitoidentity = cognitoidentity;
+            $.cognitoidentity = cognitoidentity;
             return this;
         }
+
         public Builder configservice(@Nullable String configservice) {
-            this.configservice = configservice;
+            $.configservice = configservice;
             return this;
         }
+
         public Builder connect(@Nullable String connect) {
-            this.connect = connect;
+            $.connect = connect;
             return this;
         }
+
         public Builder cur(@Nullable String cur) {
-            this.cur = cur;
+            $.cur = cur;
             return this;
         }
+
         public Builder dataexchange(@Nullable String dataexchange) {
-            this.dataexchange = dataexchange;
+            $.dataexchange = dataexchange;
             return this;
         }
+
         public Builder datapipeline(@Nullable String datapipeline) {
-            this.datapipeline = datapipeline;
+            $.datapipeline = datapipeline;
             return this;
         }
+
         public Builder datasync(@Nullable String datasync) {
-            this.datasync = datasync;
+            $.datasync = datasync;
             return this;
         }
+
         public Builder dax(@Nullable String dax) {
-            this.dax = dax;
+            $.dax = dax;
             return this;
         }
+
         public Builder detective(@Nullable String detective) {
-            this.detective = detective;
+            $.detective = detective;
             return this;
         }
+
         public Builder devicefarm(@Nullable String devicefarm) {
-            this.devicefarm = devicefarm;
+            $.devicefarm = devicefarm;
             return this;
         }
+
         public Builder directconnect(@Nullable String directconnect) {
-            this.directconnect = directconnect;
+            $.directconnect = directconnect;
             return this;
         }
+
         public Builder dlm(@Nullable String dlm) {
-            this.dlm = dlm;
+            $.dlm = dlm;
             return this;
         }
+
         public Builder dms(@Nullable String dms) {
-            this.dms = dms;
+            $.dms = dms;
             return this;
         }
+
         public Builder docdb(@Nullable String docdb) {
-            this.docdb = docdb;
+            $.docdb = docdb;
             return this;
         }
+
         public Builder ds(@Nullable String ds) {
-            this.ds = ds;
+            $.ds = ds;
             return this;
         }
+
         public Builder dynamodb(@Nullable String dynamodb) {
-            this.dynamodb = dynamodb;
+            $.dynamodb = dynamodb;
             return this;
         }
+
         public Builder ec2(@Nullable String ec2) {
-            this.ec2 = ec2;
+            $.ec2 = ec2;
             return this;
         }
+
         public Builder ecr(@Nullable String ecr) {
-            this.ecr = ecr;
+            $.ecr = ecr;
             return this;
         }
+
         public Builder ecrpublic(@Nullable String ecrpublic) {
-            this.ecrpublic = ecrpublic;
+            $.ecrpublic = ecrpublic;
             return this;
         }
+
         public Builder ecs(@Nullable String ecs) {
-            this.ecs = ecs;
+            $.ecs = ecs;
             return this;
         }
+
         public Builder efs(@Nullable String efs) {
-            this.efs = efs;
+            $.efs = efs;
             return this;
         }
+
         public Builder eks(@Nullable String eks) {
-            this.eks = eks;
+            $.eks = eks;
             return this;
         }
+
         public Builder elasticache(@Nullable String elasticache) {
-            this.elasticache = elasticache;
+            $.elasticache = elasticache;
             return this;
         }
+
         public Builder elasticbeanstalk(@Nullable String elasticbeanstalk) {
-            this.elasticbeanstalk = elasticbeanstalk;
+            $.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
+
         public Builder elastictranscoder(@Nullable String elastictranscoder) {
-            this.elastictranscoder = elastictranscoder;
+            $.elastictranscoder = elastictranscoder;
             return this;
         }
+
         public Builder elb(@Nullable String elb) {
-            this.elb = elb;
+            $.elb = elb;
             return this;
         }
+
         public Builder elbv2(@Nullable String elbv2) {
-            this.elbv2 = elbv2;
+            $.elbv2 = elbv2;
             return this;
         }
+
         public Builder emr(@Nullable String emr) {
-            this.emr = emr;
+            $.emr = emr;
             return this;
         }
+
         public Builder emrcontainers(@Nullable String emrcontainers) {
-            this.emrcontainers = emrcontainers;
+            $.emrcontainers = emrcontainers;
             return this;
         }
+
         public Builder es(@Nullable String es) {
-            this.es = es;
+            $.es = es;
             return this;
         }
+
         public Builder firehose(@Nullable String firehose) {
-            this.firehose = firehose;
+            $.firehose = firehose;
             return this;
         }
+
         public Builder fms(@Nullable String fms) {
-            this.fms = fms;
+            $.fms = fms;
             return this;
         }
+
         public Builder forecast(@Nullable String forecast) {
-            this.forecast = forecast;
+            $.forecast = forecast;
             return this;
         }
+
         public Builder fsx(@Nullable String fsx) {
-            this.fsx = fsx;
+            $.fsx = fsx;
             return this;
         }
+
         public Builder gamelift(@Nullable String gamelift) {
-            this.gamelift = gamelift;
+            $.gamelift = gamelift;
             return this;
         }
+
         public Builder glacier(@Nullable String glacier) {
-            this.glacier = glacier;
+            $.glacier = glacier;
             return this;
         }
+
         public Builder globalaccelerator(@Nullable String globalaccelerator) {
-            this.globalaccelerator = globalaccelerator;
+            $.globalaccelerator = globalaccelerator;
             return this;
         }
+
         public Builder glue(@Nullable String glue) {
-            this.glue = glue;
+            $.glue = glue;
             return this;
         }
+
         public Builder greengrass(@Nullable String greengrass) {
-            this.greengrass = greengrass;
+            $.greengrass = greengrass;
             return this;
         }
+
         public Builder guardduty(@Nullable String guardduty) {
-            this.guardduty = guardduty;
+            $.guardduty = guardduty;
             return this;
         }
+
         public Builder iam(@Nullable String iam) {
-            this.iam = iam;
+            $.iam = iam;
             return this;
         }
+
         public Builder identitystore(@Nullable String identitystore) {
-            this.identitystore = identitystore;
+            $.identitystore = identitystore;
             return this;
         }
+
         public Builder imagebuilder(@Nullable String imagebuilder) {
-            this.imagebuilder = imagebuilder;
+            $.imagebuilder = imagebuilder;
             return this;
         }
+
         public Builder inspector(@Nullable String inspector) {
-            this.inspector = inspector;
+            $.inspector = inspector;
             return this;
         }
+
         public Builder iot(@Nullable String iot) {
-            this.iot = iot;
+            $.iot = iot;
             return this;
         }
+
         public Builder iotanalytics(@Nullable String iotanalytics) {
-            this.iotanalytics = iotanalytics;
+            $.iotanalytics = iotanalytics;
             return this;
         }
+
         public Builder iotevents(@Nullable String iotevents) {
-            this.iotevents = iotevents;
+            $.iotevents = iotevents;
             return this;
         }
+
         public Builder kafka(@Nullable String kafka) {
-            this.kafka = kafka;
+            $.kafka = kafka;
             return this;
         }
+
         public Builder kinesis(@Nullable String kinesis) {
-            this.kinesis = kinesis;
+            $.kinesis = kinesis;
             return this;
         }
+
         public Builder kinesisanalytics(@Nullable String kinesisanalytics) {
-            this.kinesisanalytics = kinesisanalytics;
+            $.kinesisanalytics = kinesisanalytics;
             return this;
         }
+
         public Builder kinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
-            this.kinesisanalyticsv2 = kinesisanalyticsv2;
+            $.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
+
         public Builder kinesisvideo(@Nullable String kinesisvideo) {
-            this.kinesisvideo = kinesisvideo;
+            $.kinesisvideo = kinesisvideo;
             return this;
         }
+
         public Builder kms(@Nullable String kms) {
-            this.kms = kms;
+            $.kms = kms;
             return this;
         }
+
         public Builder lakeformation(@Nullable String lakeformation) {
-            this.lakeformation = lakeformation;
+            $.lakeformation = lakeformation;
             return this;
         }
+
         public Builder lambda(@Nullable String lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
+
         public Builder lexmodels(@Nullable String lexmodels) {
-            this.lexmodels = lexmodels;
+            $.lexmodels = lexmodels;
             return this;
         }
+
         public Builder licensemanager(@Nullable String licensemanager) {
-            this.licensemanager = licensemanager;
+            $.licensemanager = licensemanager;
             return this;
         }
+
         public Builder lightsail(@Nullable String lightsail) {
-            this.lightsail = lightsail;
+            $.lightsail = lightsail;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder macie(@Nullable String macie) {
-            this.macie = macie;
+            $.macie = macie;
             return this;
         }
+
         public Builder macie2(@Nullable String macie2) {
-            this.macie2 = macie2;
+            $.macie2 = macie2;
             return this;
         }
+
         public Builder managedblockchain(@Nullable String managedblockchain) {
-            this.managedblockchain = managedblockchain;
+            $.managedblockchain = managedblockchain;
             return this;
         }
+
         public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
-            this.marketplacecatalog = marketplacecatalog;
+            $.marketplacecatalog = marketplacecatalog;
             return this;
         }
+
         public Builder mediaconnect(@Nullable String mediaconnect) {
-            this.mediaconnect = mediaconnect;
+            $.mediaconnect = mediaconnect;
             return this;
         }
+
         public Builder mediaconvert(@Nullable String mediaconvert) {
-            this.mediaconvert = mediaconvert;
+            $.mediaconvert = mediaconvert;
             return this;
         }
+
         public Builder medialive(@Nullable String medialive) {
-            this.medialive = medialive;
+            $.medialive = medialive;
             return this;
         }
+
         public Builder mediapackage(@Nullable String mediapackage) {
-            this.mediapackage = mediapackage;
+            $.mediapackage = mediapackage;
             return this;
         }
+
         public Builder mediastore(@Nullable String mediastore) {
-            this.mediastore = mediastore;
+            $.mediastore = mediastore;
             return this;
         }
+
         public Builder mediastoredata(@Nullable String mediastoredata) {
-            this.mediastoredata = mediastoredata;
+            $.mediastoredata = mediastoredata;
             return this;
         }
+
         public Builder memorydb(@Nullable String memorydb) {
-            this.memorydb = memorydb;
+            $.memorydb = memorydb;
             return this;
         }
+
         public Builder mq(@Nullable String mq) {
-            this.mq = mq;
+            $.mq = mq;
             return this;
         }
+
         public Builder mwaa(@Nullable String mwaa) {
-            this.mwaa = mwaa;
+            $.mwaa = mwaa;
             return this;
         }
+
         public Builder neptune(@Nullable String neptune) {
-            this.neptune = neptune;
+            $.neptune = neptune;
             return this;
         }
+
         public Builder networkfirewall(@Nullable String networkfirewall) {
-            this.networkfirewall = networkfirewall;
+            $.networkfirewall = networkfirewall;
             return this;
         }
+
         public Builder networkmanager(@Nullable String networkmanager) {
-            this.networkmanager = networkmanager;
+            $.networkmanager = networkmanager;
             return this;
         }
+
         public Builder opsworks(@Nullable String opsworks) {
-            this.opsworks = opsworks;
+            $.opsworks = opsworks;
             return this;
         }
+
         public Builder organizations(@Nullable String organizations) {
-            this.organizations = organizations;
+            $.organizations = organizations;
             return this;
         }
+
         public Builder outposts(@Nullable String outposts) {
-            this.outposts = outposts;
+            $.outposts = outposts;
             return this;
         }
+
         public Builder personalize(@Nullable String personalize) {
-            this.personalize = personalize;
+            $.personalize = personalize;
             return this;
         }
+
         public Builder pinpoint(@Nullable String pinpoint) {
-            this.pinpoint = pinpoint;
+            $.pinpoint = pinpoint;
             return this;
         }
+
         public Builder pricing(@Nullable String pricing) {
-            this.pricing = pricing;
+            $.pricing = pricing;
             return this;
         }
+
         public Builder qldb(@Nullable String qldb) {
-            this.qldb = qldb;
+            $.qldb = qldb;
             return this;
         }
+
         public Builder quicksight(@Nullable String quicksight) {
-            this.quicksight = quicksight;
+            $.quicksight = quicksight;
             return this;
         }
+
         public Builder ram(@Nullable String ram) {
-            this.ram = ram;
+            $.ram = ram;
             return this;
         }
+
         public Builder rds(@Nullable String rds) {
-            this.rds = rds;
+            $.rds = rds;
             return this;
         }
+
         public Builder redshift(@Nullable String redshift) {
-            this.redshift = redshift;
+            $.redshift = redshift;
             return this;
         }
+
         public Builder resourcegroups(@Nullable String resourcegroups) {
-            this.resourcegroups = resourcegroups;
+            $.resourcegroups = resourcegroups;
             return this;
         }
+
         public Builder resourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
-            this.resourcegroupstaggingapi = resourcegroupstaggingapi;
+            $.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
+
         public Builder route53(@Nullable String route53) {
-            this.route53 = route53;
+            $.route53 = route53;
             return this;
         }
+
         public Builder route53domains(@Nullable String route53domains) {
-            this.route53domains = route53domains;
+            $.route53domains = route53domains;
             return this;
         }
+
         public Builder route53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
-            this.route53recoverycontrolconfig = route53recoverycontrolconfig;
+            $.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
+
         public Builder route53recoveryreadiness(@Nullable String route53recoveryreadiness) {
-            this.route53recoveryreadiness = route53recoveryreadiness;
+            $.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
+
         public Builder route53resolver(@Nullable String route53resolver) {
-            this.route53resolver = route53resolver;
+            $.route53resolver = route53resolver;
             return this;
         }
+
         public Builder s3(@Nullable String s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
+
         public Builder s3control(@Nullable String s3control) {
-            this.s3control = s3control;
+            $.s3control = s3control;
             return this;
         }
+
         public Builder s3outposts(@Nullable String s3outposts) {
-            this.s3outposts = s3outposts;
+            $.s3outposts = s3outposts;
             return this;
         }
+
         public Builder sagemaker(@Nullable String sagemaker) {
-            this.sagemaker = sagemaker;
+            $.sagemaker = sagemaker;
             return this;
         }
+
         public Builder schemas(@Nullable String schemas) {
-            this.schemas = schemas;
+            $.schemas = schemas;
             return this;
         }
+
         public Builder sdb(@Nullable String sdb) {
-            this.sdb = sdb;
+            $.sdb = sdb;
             return this;
         }
+
         public Builder secretsmanager(@Nullable String secretsmanager) {
-            this.secretsmanager = secretsmanager;
+            $.secretsmanager = secretsmanager;
             return this;
         }
+
         public Builder securityhub(@Nullable String securityhub) {
-            this.securityhub = securityhub;
+            $.securityhub = securityhub;
             return this;
         }
+
         public Builder serverlessrepo(@Nullable String serverlessrepo) {
-            this.serverlessrepo = serverlessrepo;
+            $.serverlessrepo = serverlessrepo;
             return this;
         }
+
         public Builder servicecatalog(@Nullable String servicecatalog) {
-            this.servicecatalog = servicecatalog;
+            $.servicecatalog = servicecatalog;
             return this;
         }
+
         public Builder servicediscovery(@Nullable String servicediscovery) {
-            this.servicediscovery = servicediscovery;
+            $.servicediscovery = servicediscovery;
             return this;
         }
+
         public Builder servicequotas(@Nullable String servicequotas) {
-            this.servicequotas = servicequotas;
+            $.servicequotas = servicequotas;
             return this;
         }
+
         public Builder ses(@Nullable String ses) {
-            this.ses = ses;
+            $.ses = ses;
             return this;
         }
+
         public Builder shield(@Nullable String shield) {
-            this.shield = shield;
+            $.shield = shield;
             return this;
         }
+
         public Builder signer(@Nullable String signer) {
-            this.signer = signer;
+            $.signer = signer;
             return this;
         }
+
         public Builder sns(@Nullable String sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
+
         public Builder sqs(@Nullable String sqs) {
-            this.sqs = sqs;
+            $.sqs = sqs;
             return this;
         }
+
         public Builder ssm(@Nullable String ssm) {
-            this.ssm = ssm;
+            $.ssm = ssm;
             return this;
         }
+
         public Builder ssoadmin(@Nullable String ssoadmin) {
-            this.ssoadmin = ssoadmin;
+            $.ssoadmin = ssoadmin;
             return this;
         }
+
         public Builder stepfunctions(@Nullable String stepfunctions) {
-            this.stepfunctions = stepfunctions;
+            $.stepfunctions = stepfunctions;
             return this;
         }
+
         public Builder storagegateway(@Nullable String storagegateway) {
-            this.storagegateway = storagegateway;
+            $.storagegateway = storagegateway;
             return this;
         }
+
         public Builder sts(@Nullable String sts) {
-            this.sts = sts;
+            $.sts = sts;
             return this;
         }
+
         public Builder swf(@Nullable String swf) {
-            this.swf = swf;
+            $.swf = swf;
             return this;
         }
+
         public Builder synthetics(@Nullable String synthetics) {
-            this.synthetics = synthetics;
+            $.synthetics = synthetics;
             return this;
         }
+
         public Builder timestreamwrite(@Nullable String timestreamwrite) {
-            this.timestreamwrite = timestreamwrite;
+            $.timestreamwrite = timestreamwrite;
             return this;
         }
+
         public Builder transfer(@Nullable String transfer) {
-            this.transfer = transfer;
+            $.transfer = transfer;
             return this;
         }
+
         public Builder waf(@Nullable String waf) {
-            this.waf = waf;
+            $.waf = waf;
             return this;
         }
+
         public Builder wafregional(@Nullable String wafregional) {
-            this.wafregional = wafregional;
+            $.wafregional = wafregional;
             return this;
         }
+
         public Builder wafv2(@Nullable String wafv2) {
-            this.wafv2 = wafv2;
+            $.wafv2 = wafv2;
             return this;
         }
+
         public Builder worklink(@Nullable String worklink) {
-            this.worklink = worklink;
+            $.worklink = worklink;
             return this;
         }
+
         public Builder workmail(@Nullable String workmail) {
-            this.workmail = workmail;
+            $.workmail = workmail;
             return this;
         }
+
         public Builder workspaces(@Nullable String workspaces) {
-            this.workspaces = workspaces;
+            $.workspaces = workspaces;
             return this;
         }
+
         public Builder xray(@Nullable String xray) {
-            this.xray = xray;
+            $.xray = xray;
             return this;
-        }        public Endpoints build() {
-            return new Endpoints(accessanalyzer, acm, acmpca, amplify, appconfig, applicationautoscaling, applicationinsights, appmesh, apprunner, appstream, appsync, athena, auditmanager, autoscaling, backup, batch, budgets, chime, cloud9, cloudformation, cloudfront, cloudhsm, cloudsearch, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codepipeline, codestarconnections, cognitoidentity, configservice, connect, cur, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, dlm, dms, docdb, ds, dynamodb, ec2, ecr, ecrpublic, ecs, efs, eks, elasticache, elasticbeanstalk, elastictranscoder, elb, elbv2, emr, emrcontainers, es, firehose, fms, forecast, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, guardduty, iam, identitystore, imagebuilder, inspector, iot, iotanalytics, iotevents, kafka, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kms, lakeformation, lambda, lexmodels, licensemanager, lightsail, location, macie, macie2, managedblockchain, marketplacecatalog, mediaconnect, mediaconvert, medialive, mediapackage, mediastore, mediastoredata, memorydb, mq, mwaa, neptune, networkfirewall, networkmanager, opsworks, organizations, outposts, personalize, pinpoint, pricing, qldb, quicksight, ram, rds, redshift, resourcegroups, resourcegroupstaggingapi, route53, route53domains, route53recoverycontrolconfig, route53recoveryreadiness, route53resolver, s3, s3control, s3outposts, sagemaker, schemas, sdb, secretsmanager, securityhub, serverlessrepo, servicecatalog, servicediscovery, servicequotas, ses, shield, signer, sns, sqs, ssm, ssoadmin, stepfunctions, storagegateway, sts, swf, synthetics, timestreamwrite, transfer, waf, wafregional, wafv2, worklink, workmail, workspaces, xray);
+        }
+
+        public Endpoints build() {
+            return $;
         }
     }
+
 }

@@ -13,94 +13,87 @@ public final class TopicRuleCloudwatchAlarmAction extends com.pulumi.resources.I
     public static final TopicRuleCloudwatchAlarmAction Empty = new TopicRuleCloudwatchAlarmAction();
 
     @Import(name="alarmName", required=true)
-      private final String alarmName;
+    private String alarmName;
 
     public String alarmName() {
         return this.alarmName;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stateReason", required=true)
-      private final String stateReason;
+    private String stateReason;
 
     public String stateReason() {
         return this.stateReason;
     }
 
     @Import(name="stateValue", required=true)
-      private final String stateValue;
+    private String stateValue;
 
     public String stateValue() {
         return this.stateValue;
     }
 
-    public TopicRuleCloudwatchAlarmAction(
-        String alarmName,
-        String roleArn,
-        String stateReason,
-        String stateValue) {
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stateReason = Objects.requireNonNull(stateReason, "expected parameter 'stateReason' to be non-null");
-        this.stateValue = Objects.requireNonNull(stateValue, "expected parameter 'stateValue' to be non-null");
-    }
+    private TopicRuleCloudwatchAlarmAction() {}
 
-    private TopicRuleCloudwatchAlarmAction() {
-        this.alarmName = null;
-        this.roleArn = null;
-        this.stateReason = null;
-        this.stateValue = null;
+    private TopicRuleCloudwatchAlarmAction(TopicRuleCloudwatchAlarmAction $) {
+        this.alarmName = $.alarmName;
+        this.roleArn = $.roleArn;
+        this.stateReason = $.stateReason;
+        this.stateValue = $.stateValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleCloudwatchAlarmAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alarmName;
-        private String roleArn;
-        private String stateReason;
-        private String stateValue;
+        private TopicRuleCloudwatchAlarmAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleCloudwatchAlarmAction();
         }
 
         public Builder(TopicRuleCloudwatchAlarmAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stateReason = defaults.stateReason;
-    	      this.stateValue = defaults.stateValue;
+            $ = new TopicRuleCloudwatchAlarmAction(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder stateReason(String stateReason) {
-            this.stateReason = Objects.requireNonNull(stateReason);
+            $.stateReason = stateReason;
             return this;
         }
+
         public Builder stateValue(String stateValue) {
-            this.stateValue = Objects.requireNonNull(stateValue);
+            $.stateValue = stateValue;
             return this;
-        }        public TopicRuleCloudwatchAlarmAction build() {
-            return new TopicRuleCloudwatchAlarmAction(alarmName, roleArn, stateReason, stateValue);
+        }
+
+        public TopicRuleCloudwatchAlarmAction build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.stateReason = Objects.requireNonNull($.stateReason, "expected parameter 'stateReason' to be non-null");
+            $.stateValue = Objects.requireNonNull($.stateValue, "expected parameter 'stateValue' to be non-null");
+            return $;
         }
     }
+
 }

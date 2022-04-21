@@ -5,7 +5,6 @@ package com.pulumi.awsnative.refactorspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class ServiceLambdaEndpointInputArgs extends com.pulumi.resources.R
     public static final ServiceLambdaEndpointInputArgs Empty = new ServiceLambdaEndpointInputArgs();
 
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
     }
 
-    public ServiceLambdaEndpointInputArgs(Output<String> arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private ServiceLambdaEndpointInputArgs() {}
 
-    private ServiceLambdaEndpointInputArgs() {
-        this.arn = Codegen.empty();
+    private ServiceLambdaEndpointInputArgs(ServiceLambdaEndpointInputArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceLambdaEndpointInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
+        private ServiceLambdaEndpointInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceLambdaEndpointInputArgs();
         }
 
         public Builder(ServiceLambdaEndpointInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new ServiceLambdaEndpointInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
-        }        public ServiceLambdaEndpointInputArgs build() {
-            return new ServiceLambdaEndpointInputArgs(arn);
+            return arn(Output.of(arn));
+        }
+
+        public ServiceLambdaEndpointInputArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

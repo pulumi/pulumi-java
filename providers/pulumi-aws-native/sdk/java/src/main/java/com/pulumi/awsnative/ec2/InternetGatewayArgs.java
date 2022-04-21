@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.InternetGatewayTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class InternetGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<InternetGatewayTagArgs>> tags;
+    private @Nullable Output<List<InternetGatewayTagArgs>> tags;
 
-    public Output<List<InternetGatewayTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<InternetGatewayTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public InternetGatewayArgs(@Nullable Output<List<InternetGatewayTagArgs>> tags) {
-        this.tags = tags;
-    }
+    private InternetGatewayArgs() {}
 
-    private InternetGatewayArgs() {
-        this.tags = Codegen.empty();
+    private InternetGatewayArgs(InternetGatewayArgs $) {
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InternetGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InternetGatewayTagArgs>> tags;
+        private InternetGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InternetGatewayArgs();
         }
 
         public Builder(InternetGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
+            $ = new InternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(@Nullable Output<List<InternetGatewayTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<InternetGatewayTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<InternetGatewayTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(InternetGatewayTagArgs... tags) {
             return tags(List.of(tags));
-        }        public InternetGatewayArgs build() {
-            return new InternetGatewayArgs(tags);
+        }
+
+        public InternetGatewayArgs build() {
+            return $;
         }
     }
+
 }

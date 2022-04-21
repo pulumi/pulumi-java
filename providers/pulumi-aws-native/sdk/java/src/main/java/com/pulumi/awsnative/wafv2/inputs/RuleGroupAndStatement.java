@@ -14,48 +14,49 @@ public final class RuleGroupAndStatement extends com.pulumi.resources.InvokeArgs
     public static final RuleGroupAndStatement Empty = new RuleGroupAndStatement();
 
     @Import(name="statements", required=true)
-      private final List<RuleGroupStatement> statements;
+    private List<RuleGroupStatement> statements;
 
     public List<RuleGroupStatement> statements() {
         return this.statements;
     }
 
-    public RuleGroupAndStatement(List<RuleGroupStatement> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private RuleGroupAndStatement() {}
 
-    private RuleGroupAndStatement() {
-        this.statements = List.of();
+    private RuleGroupAndStatement(RuleGroupAndStatement $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupAndStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RuleGroupStatement> statements;
+        private RuleGroupAndStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupAndStatement();
         }
 
         public Builder(RuleGroupAndStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new RuleGroupAndStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(List<RuleGroupStatement> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(RuleGroupStatement... statements) {
             return statements(List.of(statements));
-        }        public RuleGroupAndStatement build() {
-            return new RuleGroupAndStatement(statements);
+        }
+
+        public RuleGroupAndStatement build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

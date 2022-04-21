@@ -13,45 +13,45 @@ public final class GetStateMachineArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStateMachineArgs Empty = new GetStateMachineArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetStateMachineArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetStateMachineArgs() {}
 
-    private GetStateMachineArgs() {
-        this.arn = null;
+    private GetStateMachineArgs(GetStateMachineArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStateMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetStateMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStateMachineArgs();
         }
 
         public Builder(GetStateMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetStateMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetStateMachineArgs build() {
-            return new GetStateMachineArgs(arn);
+        }
+
+        public GetStateMachineArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

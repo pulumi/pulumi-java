@@ -18,129 +18,115 @@ public final class TopicRulePayload extends com.pulumi.resources.InvokeArgs {
     public static final TopicRulePayload Empty = new TopicRulePayload();
 
     @Import(name="actions", required=true)
-      private final List<TopicRuleAction> actions;
+    private List<TopicRuleAction> actions;
 
     public List<TopicRuleAction> actions() {
         return this.actions;
     }
 
     @Import(name="awsIotSqlVersion")
-      private final @Nullable String awsIotSqlVersion;
+    private @Nullable String awsIotSqlVersion;
 
     public Optional<String> awsIotSqlVersion() {
-        return this.awsIotSqlVersion == null ? Optional.empty() : Optional.ofNullable(this.awsIotSqlVersion);
+        return Optional.ofNullable(this.awsIotSqlVersion);
     }
 
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="errorAction")
-      private final @Nullable TopicRuleAction errorAction;
+    private @Nullable TopicRuleAction errorAction;
 
     public Optional<TopicRuleAction> errorAction() {
-        return this.errorAction == null ? Optional.empty() : Optional.ofNullable(this.errorAction);
+        return Optional.ofNullable(this.errorAction);
     }
 
     @Import(name="ruleDisabled")
-      private final @Nullable Boolean ruleDisabled;
+    private @Nullable Boolean ruleDisabled;
 
     public Optional<Boolean> ruleDisabled() {
-        return this.ruleDisabled == null ? Optional.empty() : Optional.ofNullable(this.ruleDisabled);
+        return Optional.ofNullable(this.ruleDisabled);
     }
 
     @Import(name="sql", required=true)
-      private final String sql;
+    private String sql;
 
     public String sql() {
         return this.sql;
     }
 
-    public TopicRulePayload(
-        List<TopicRuleAction> actions,
-        @Nullable String awsIotSqlVersion,
-        @Nullable String description,
-        @Nullable TopicRuleAction errorAction,
-        @Nullable Boolean ruleDisabled,
-        String sql) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.awsIotSqlVersion = awsIotSqlVersion;
-        this.description = description;
-        this.errorAction = errorAction;
-        this.ruleDisabled = ruleDisabled;
-        this.sql = Objects.requireNonNull(sql, "expected parameter 'sql' to be non-null");
-    }
+    private TopicRulePayload() {}
 
-    private TopicRulePayload() {
-        this.actions = List.of();
-        this.awsIotSqlVersion = null;
-        this.description = null;
-        this.errorAction = null;
-        this.ruleDisabled = null;
-        this.sql = null;
+    private TopicRulePayload(TopicRulePayload $) {
+        this.actions = $.actions;
+        this.awsIotSqlVersion = $.awsIotSqlVersion;
+        this.description = $.description;
+        this.errorAction = $.errorAction;
+        this.ruleDisabled = $.ruleDisabled;
+        this.sql = $.sql;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRulePayload defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TopicRuleAction> actions;
-        private @Nullable String awsIotSqlVersion;
-        private @Nullable String description;
-        private @Nullable TopicRuleAction errorAction;
-        private @Nullable Boolean ruleDisabled;
-        private String sql;
+        private TopicRulePayload $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRulePayload();
         }
 
         public Builder(TopicRulePayload defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.awsIotSqlVersion = defaults.awsIotSqlVersion;
-    	      this.description = defaults.description;
-    	      this.errorAction = defaults.errorAction;
-    	      this.ruleDisabled = defaults.ruleDisabled;
-    	      this.sql = defaults.sql;
+            $ = new TopicRulePayload(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<TopicRuleAction> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(TopicRuleAction... actions) {
             return actions(List.of(actions));
         }
+
         public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
-            this.awsIotSqlVersion = awsIotSqlVersion;
+            $.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder errorAction(@Nullable TopicRuleAction errorAction) {
-            this.errorAction = errorAction;
+            $.errorAction = errorAction;
             return this;
         }
+
         public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
-            this.ruleDisabled = ruleDisabled;
+            $.ruleDisabled = ruleDisabled;
             return this;
         }
+
         public Builder sql(String sql) {
-            this.sql = Objects.requireNonNull(sql);
+            $.sql = sql;
             return this;
-        }        public TopicRulePayload build() {
-            return new TopicRulePayload(actions, awsIotSqlVersion, description, errorAction, ruleDisabled, sql);
+        }
+
+        public TopicRulePayload build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.sql = Objects.requireNonNull($.sql, "expected parameter 'sql' to be non-null");
+            return $;
         }
     }
+
 }

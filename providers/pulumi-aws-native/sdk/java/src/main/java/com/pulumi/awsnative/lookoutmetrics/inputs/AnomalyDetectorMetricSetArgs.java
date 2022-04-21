@@ -9,11 +9,11 @@ import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSourceArg
 import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorTimestampColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dimensionList")
-      private final @Nullable Output<List<String>> dimensionList;
+    private @Nullable Output<List<String>> dimensionList;
 
-    public Output<List<String>> dimensionList() {
-        return this.dimensionList == null ? Codegen.empty() : this.dimensionList;
+    public Optional<Output<List<String>>> dimensionList() {
+        return Optional.ofNullable(this.dimensionList);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="metricList", required=true)
-      private final Output<List<AnomalyDetectorMetricArgs>> metricList;
+    private Output<List<AnomalyDetectorMetricArgs>> metricList;
 
     public Output<List<AnomalyDetectorMetricArgs>> metricList() {
         return this.metricList;
@@ -48,10 +48,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="metricSetDescription")
-      private final @Nullable Output<String> metricSetDescription;
+    private @Nullable Output<String> metricSetDescription;
 
-    public Output<String> metricSetDescription() {
-        return this.metricSetDescription == null ? Codegen.empty() : this.metricSetDescription;
+    public Optional<Output<String>> metricSetDescription() {
+        return Optional.ofNullable(this.metricSetDescription);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="metricSetFrequency")
-      private final @Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency;
+    private @Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency;
 
-    public Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency() {
-        return this.metricSetFrequency == null ? Codegen.empty() : this.metricSetFrequency;
+    public Optional<Output<AnomalyDetectorMetricSetMetricSetFrequency>> metricSetFrequency() {
+        return Optional.ofNullable(this.metricSetFrequency);
     }
 
     /**
@@ -70,14 +70,14 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="metricSetName", required=true)
-      private final Output<String> metricSetName;
+    private Output<String> metricSetName;
 
     public Output<String> metricSetName() {
         return this.metricSetName;
     }
 
     @Import(name="metricSource", required=true)
-      private final Output<AnomalyDetectorMetricSourceArgs> metricSource;
+    private Output<AnomalyDetectorMetricSourceArgs> metricSource;
 
     public Output<AnomalyDetectorMetricSourceArgs> metricSource() {
         return this.metricSource;
@@ -88,174 +88,153 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="offset")
-      private final @Nullable Output<Integer> offset;
+    private @Nullable Output<Integer> offset;
 
-    public Output<Integer> offset() {
-        return this.offset == null ? Codegen.empty() : this.offset;
+    public Optional<Output<Integer>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
     @Import(name="timestampColumn")
-      private final @Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn;
+    private @Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn;
 
-    public Output<AnomalyDetectorTimestampColumnArgs> timestampColumn() {
-        return this.timestampColumn == null ? Codegen.empty() : this.timestampColumn;
+    public Optional<Output<AnomalyDetectorTimestampColumnArgs>> timestampColumn() {
+        return Optional.ofNullable(this.timestampColumn);
     }
 
     @Import(name="timezone")
-      private final @Nullable Output<String> timezone;
+    private @Nullable Output<String> timezone;
 
-    public Output<String> timezone() {
-        return this.timezone == null ? Codegen.empty() : this.timezone;
+    public Optional<Output<String>> timezone() {
+        return Optional.ofNullable(this.timezone);
     }
 
-    public AnomalyDetectorMetricSetArgs(
-        @Nullable Output<List<String>> dimensionList,
-        Output<List<AnomalyDetectorMetricArgs>> metricList,
-        @Nullable Output<String> metricSetDescription,
-        @Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency,
-        Output<String> metricSetName,
-        Output<AnomalyDetectorMetricSourceArgs> metricSource,
-        @Nullable Output<Integer> offset,
-        @Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn,
-        @Nullable Output<String> timezone) {
-        this.dimensionList = dimensionList;
-        this.metricList = Objects.requireNonNull(metricList, "expected parameter 'metricList' to be non-null");
-        this.metricSetDescription = metricSetDescription;
-        this.metricSetFrequency = metricSetFrequency;
-        this.metricSetName = Objects.requireNonNull(metricSetName, "expected parameter 'metricSetName' to be non-null");
-        this.metricSource = Objects.requireNonNull(metricSource, "expected parameter 'metricSource' to be non-null");
-        this.offset = offset;
-        this.timestampColumn = timestampColumn;
-        this.timezone = timezone;
-    }
+    private AnomalyDetectorMetricSetArgs() {}
 
-    private AnomalyDetectorMetricSetArgs() {
-        this.dimensionList = Codegen.empty();
-        this.metricList = Codegen.empty();
-        this.metricSetDescription = Codegen.empty();
-        this.metricSetFrequency = Codegen.empty();
-        this.metricSetName = Codegen.empty();
-        this.metricSource = Codegen.empty();
-        this.offset = Codegen.empty();
-        this.timestampColumn = Codegen.empty();
-        this.timezone = Codegen.empty();
+    private AnomalyDetectorMetricSetArgs(AnomalyDetectorMetricSetArgs $) {
+        this.dimensionList = $.dimensionList;
+        this.metricList = $.metricList;
+        this.metricSetDescription = $.metricSetDescription;
+        this.metricSetFrequency = $.metricSetFrequency;
+        this.metricSetName = $.metricSetName;
+        this.metricSource = $.metricSource;
+        this.offset = $.offset;
+        this.timestampColumn = $.timestampColumn;
+        this.timezone = $.timezone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorMetricSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dimensionList;
-        private Output<List<AnomalyDetectorMetricArgs>> metricList;
-        private @Nullable Output<String> metricSetDescription;
-        private @Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency;
-        private Output<String> metricSetName;
-        private Output<AnomalyDetectorMetricSourceArgs> metricSource;
-        private @Nullable Output<Integer> offset;
-        private @Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn;
-        private @Nullable Output<String> timezone;
+        private AnomalyDetectorMetricSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorMetricSetArgs();
         }
 
         public Builder(AnomalyDetectorMetricSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensionList = defaults.dimensionList;
-    	      this.metricList = defaults.metricList;
-    	      this.metricSetDescription = defaults.metricSetDescription;
-    	      this.metricSetFrequency = defaults.metricSetFrequency;
-    	      this.metricSetName = defaults.metricSetName;
-    	      this.metricSource = defaults.metricSource;
-    	      this.offset = defaults.offset;
-    	      this.timestampColumn = defaults.timestampColumn;
-    	      this.timezone = defaults.timezone;
+            $ = new AnomalyDetectorMetricSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensionList(@Nullable Output<List<String>> dimensionList) {
-            this.dimensionList = dimensionList;
+            $.dimensionList = dimensionList;
             return this;
         }
-        public Builder dimensionList(@Nullable List<String> dimensionList) {
-            this.dimensionList = Codegen.ofNullable(dimensionList);
-            return this;
+
+        public Builder dimensionList(List<String> dimensionList) {
+            return dimensionList(Output.of(dimensionList));
         }
+
         public Builder dimensionList(String... dimensionList) {
             return dimensionList(List.of(dimensionList));
         }
+
         public Builder metricList(Output<List<AnomalyDetectorMetricArgs>> metricList) {
-            this.metricList = Objects.requireNonNull(metricList);
+            $.metricList = metricList;
             return this;
         }
+
         public Builder metricList(List<AnomalyDetectorMetricArgs> metricList) {
-            this.metricList = Output.of(Objects.requireNonNull(metricList));
-            return this;
+            return metricList(Output.of(metricList));
         }
+
         public Builder metricList(AnomalyDetectorMetricArgs... metricList) {
             return metricList(List.of(metricList));
         }
+
         public Builder metricSetDescription(@Nullable Output<String> metricSetDescription) {
-            this.metricSetDescription = metricSetDescription;
+            $.metricSetDescription = metricSetDescription;
             return this;
         }
-        public Builder metricSetDescription(@Nullable String metricSetDescription) {
-            this.metricSetDescription = Codegen.ofNullable(metricSetDescription);
-            return this;
+
+        public Builder metricSetDescription(String metricSetDescription) {
+            return metricSetDescription(Output.of(metricSetDescription));
         }
+
         public Builder metricSetFrequency(@Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency) {
-            this.metricSetFrequency = metricSetFrequency;
+            $.metricSetFrequency = metricSetFrequency;
             return this;
         }
-        public Builder metricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
-            this.metricSetFrequency = Codegen.ofNullable(metricSetFrequency);
-            return this;
+
+        public Builder metricSetFrequency(AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
+            return metricSetFrequency(Output.of(metricSetFrequency));
         }
+
         public Builder metricSetName(Output<String> metricSetName) {
-            this.metricSetName = Objects.requireNonNull(metricSetName);
+            $.metricSetName = metricSetName;
             return this;
         }
+
         public Builder metricSetName(String metricSetName) {
-            this.metricSetName = Output.of(Objects.requireNonNull(metricSetName));
-            return this;
+            return metricSetName(Output.of(metricSetName));
         }
+
         public Builder metricSource(Output<AnomalyDetectorMetricSourceArgs> metricSource) {
-            this.metricSource = Objects.requireNonNull(metricSource);
+            $.metricSource = metricSource;
             return this;
         }
+
         public Builder metricSource(AnomalyDetectorMetricSourceArgs metricSource) {
-            this.metricSource = Output.of(Objects.requireNonNull(metricSource));
-            return this;
+            return metricSource(Output.of(metricSource));
         }
+
         public Builder offset(@Nullable Output<Integer> offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
-        public Builder offset(@Nullable Integer offset) {
-            this.offset = Codegen.ofNullable(offset);
-            return this;
+
+        public Builder offset(Integer offset) {
+            return offset(Output.of(offset));
         }
+
         public Builder timestampColumn(@Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn) {
-            this.timestampColumn = timestampColumn;
+            $.timestampColumn = timestampColumn;
             return this;
         }
-        public Builder timestampColumn(@Nullable AnomalyDetectorTimestampColumnArgs timestampColumn) {
-            this.timestampColumn = Codegen.ofNullable(timestampColumn);
-            return this;
+
+        public Builder timestampColumn(AnomalyDetectorTimestampColumnArgs timestampColumn) {
+            return timestampColumn(Output.of(timestampColumn));
         }
+
         public Builder timezone(@Nullable Output<String> timezone) {
-            this.timezone = timezone;
+            $.timezone = timezone;
             return this;
         }
-        public Builder timezone(@Nullable String timezone) {
-            this.timezone = Codegen.ofNullable(timezone);
-            return this;
-        }        public AnomalyDetectorMetricSetArgs build() {
-            return new AnomalyDetectorMetricSetArgs(dimensionList, metricList, metricSetDescription, metricSetFrequency, metricSetName, metricSource, offset, timestampColumn, timezone);
+
+        public Builder timezone(String timezone) {
+            return timezone(Output.of(timezone));
+        }
+
+        public AnomalyDetectorMetricSetArgs build() {
+            $.metricList = Objects.requireNonNull($.metricList, "expected parameter 'metricList' to be non-null");
+            $.metricSetName = Objects.requireNonNull($.metricSetName, "expected parameter 'metricSetName' to be non-null");
+            $.metricSource = Objects.requireNonNull($.metricSource, "expected parameter 'metricSource' to be non-null");
+            return $;
         }
     }
+
 }

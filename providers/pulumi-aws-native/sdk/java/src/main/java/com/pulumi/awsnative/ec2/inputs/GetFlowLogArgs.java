@@ -17,45 +17,45 @@ public final class GetFlowLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetFlowLogArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetFlowLogArgs() {}
 
-    private GetFlowLogArgs() {
-        this.id = null;
+    private GetFlowLogArgs(GetFlowLogArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFlowLogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetFlowLogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFlowLogArgs();
         }
 
         public Builder(GetFlowLogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetFlowLogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetFlowLogArgs build() {
-            return new GetFlowLogArgs(id);
+        }
+
+        public GetFlowLogArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

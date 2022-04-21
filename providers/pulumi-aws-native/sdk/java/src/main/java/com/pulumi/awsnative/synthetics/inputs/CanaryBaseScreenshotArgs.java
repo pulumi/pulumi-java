@@ -5,10 +5,10 @@ package com.pulumi.awsnative.synthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CanaryBaseScreenshotArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ignoreCoordinates")
-      private final @Nullable Output<List<String>> ignoreCoordinates;
+    private @Nullable Output<List<String>> ignoreCoordinates;
 
-    public Output<List<String>> ignoreCoordinates() {
-        return this.ignoreCoordinates == null ? Codegen.empty() : this.ignoreCoordinates;
+    public Optional<Output<List<String>>> ignoreCoordinates() {
+        return Optional.ofNullable(this.ignoreCoordinates);
     }
 
     /**
@@ -32,66 +32,63 @@ public final class CanaryBaseScreenshotArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="screenshotName", required=true)
-      private final Output<String> screenshotName;
+    private Output<String> screenshotName;
 
     public Output<String> screenshotName() {
         return this.screenshotName;
     }
 
-    public CanaryBaseScreenshotArgs(
-        @Nullable Output<List<String>> ignoreCoordinates,
-        Output<String> screenshotName) {
-        this.ignoreCoordinates = ignoreCoordinates;
-        this.screenshotName = Objects.requireNonNull(screenshotName, "expected parameter 'screenshotName' to be non-null");
-    }
+    private CanaryBaseScreenshotArgs() {}
 
-    private CanaryBaseScreenshotArgs() {
-        this.ignoreCoordinates = Codegen.empty();
-        this.screenshotName = Codegen.empty();
+    private CanaryBaseScreenshotArgs(CanaryBaseScreenshotArgs $) {
+        this.ignoreCoordinates = $.ignoreCoordinates;
+        this.screenshotName = $.screenshotName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryBaseScreenshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ignoreCoordinates;
-        private Output<String> screenshotName;
+        private CanaryBaseScreenshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryBaseScreenshotArgs();
         }
 
         public Builder(CanaryBaseScreenshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreCoordinates = defaults.ignoreCoordinates;
-    	      this.screenshotName = defaults.screenshotName;
+            $ = new CanaryBaseScreenshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreCoordinates(@Nullable Output<List<String>> ignoreCoordinates) {
-            this.ignoreCoordinates = ignoreCoordinates;
+            $.ignoreCoordinates = ignoreCoordinates;
             return this;
         }
-        public Builder ignoreCoordinates(@Nullable List<String> ignoreCoordinates) {
-            this.ignoreCoordinates = Codegen.ofNullable(ignoreCoordinates);
-            return this;
+
+        public Builder ignoreCoordinates(List<String> ignoreCoordinates) {
+            return ignoreCoordinates(Output.of(ignoreCoordinates));
         }
+
         public Builder ignoreCoordinates(String... ignoreCoordinates) {
             return ignoreCoordinates(List.of(ignoreCoordinates));
         }
+
         public Builder screenshotName(Output<String> screenshotName) {
-            this.screenshotName = Objects.requireNonNull(screenshotName);
+            $.screenshotName = screenshotName;
             return this;
         }
+
         public Builder screenshotName(String screenshotName) {
-            this.screenshotName = Output.of(Objects.requireNonNull(screenshotName));
-            return this;
-        }        public CanaryBaseScreenshotArgs build() {
-            return new CanaryBaseScreenshotArgs(ignoreCoordinates, screenshotName);
+            return screenshotName(Output.of(screenshotName));
+        }
+
+        public CanaryBaseScreenshotArgs build() {
+            $.screenshotName = Objects.requireNonNull($.screenshotName, "expected parameter 'screenshotName' to be non-null");
+            return $;
         }
     }
+
 }

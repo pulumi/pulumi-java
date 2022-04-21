@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class AnomalyDetectorAppFlowConfigArgs extends com.pulumi.resources
     public static final AnomalyDetectorAppFlowConfigArgs Empty = new AnomalyDetectorAppFlowConfigArgs();
 
     @Import(name="flowName", required=true)
-      private final Output<String> flowName;
+    private Output<String> flowName;
 
     public Output<String> flowName() {
         return this.flowName;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public AnomalyDetectorAppFlowConfigArgs(
-        Output<String> flowName,
-        Output<String> roleArn) {
-        this.flowName = Objects.requireNonNull(flowName, "expected parameter 'flowName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private AnomalyDetectorAppFlowConfigArgs() {}
 
-    private AnomalyDetectorAppFlowConfigArgs() {
-        this.flowName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private AnomalyDetectorAppFlowConfigArgs(AnomalyDetectorAppFlowConfigArgs $) {
+        this.flowName = $.flowName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorAppFlowConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> flowName;
-        private Output<String> roleArn;
+        private AnomalyDetectorAppFlowConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorAppFlowConfigArgs();
         }
 
         public Builder(AnomalyDetectorAppFlowConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flowName = defaults.flowName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new AnomalyDetectorAppFlowConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flowName(Output<String> flowName) {
-            this.flowName = Objects.requireNonNull(flowName);
+            $.flowName = flowName;
             return this;
         }
+
         public Builder flowName(String flowName) {
-            this.flowName = Output.of(Objects.requireNonNull(flowName));
-            return this;
+            return flowName(Output.of(flowName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public AnomalyDetectorAppFlowConfigArgs build() {
-            return new AnomalyDetectorAppFlowConfigArgs(flowName, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public AnomalyDetectorAppFlowConfigArgs build() {
+            $.flowName = Objects.requireNonNull($.flowName, "expected parameter 'flowName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

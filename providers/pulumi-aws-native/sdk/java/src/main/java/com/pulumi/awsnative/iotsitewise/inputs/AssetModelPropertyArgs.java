@@ -8,9 +8,9 @@ import com.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataType", required=true)
-      private final Output<AssetModelDataType> dataType;
+    private Output<AssetModelDataType> dataType;
 
     public Output<AssetModelDataType> dataType() {
         return this.dataType;
@@ -38,10 +38,10 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataTypeSpec")
-      private final @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
+    private @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
 
-    public Output<AssetModelDataTypeSpec> dataTypeSpec() {
-        return this.dataTypeSpec == null ? Codegen.empty() : this.dataTypeSpec;
+    public Optional<Output<AssetModelDataTypeSpec>> dataTypeSpec() {
+        return Optional.ofNullable(this.dataTypeSpec);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logicalId", required=true)
-      private final Output<String> logicalId;
+    private Output<String> logicalId;
 
     public Output<String> logicalId() {
         return this.logicalId;
@@ -60,7 +60,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -71,7 +71,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<AssetModelPropertyTypeArgs> type;
+    private Output<AssetModelPropertyTypeArgs> type;
 
     public Output<AssetModelPropertyTypeArgs> type() {
         return this.type;
@@ -82,115 +82,102 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
-    public AssetModelPropertyArgs(
-        Output<AssetModelDataType> dataType,
-        @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec,
-        Output<String> logicalId,
-        Output<String> name,
-        Output<AssetModelPropertyTypeArgs> type,
-        @Nullable Output<String> unit) {
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.dataTypeSpec = dataTypeSpec;
-        this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.unit = unit;
-    }
+    private AssetModelPropertyArgs() {}
 
-    private AssetModelPropertyArgs() {
-        this.dataType = Codegen.empty();
-        this.dataTypeSpec = Codegen.empty();
-        this.logicalId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
-        this.unit = Codegen.empty();
+    private AssetModelPropertyArgs(AssetModelPropertyArgs $) {
+        this.dataType = $.dataType;
+        this.dataTypeSpec = $.dataTypeSpec;
+        this.logicalId = $.logicalId;
+        this.name = $.name;
+        this.type = $.type;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AssetModelDataType> dataType;
-        private @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
-        private Output<String> logicalId;
-        private Output<String> name;
-        private Output<AssetModelPropertyTypeArgs> type;
-        private @Nullable Output<String> unit;
+        private AssetModelPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelPropertyArgs();
         }
 
         public Builder(AssetModelPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.dataTypeSpec = defaults.dataTypeSpec;
-    	      this.logicalId = defaults.logicalId;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.unit = defaults.unit;
+            $ = new AssetModelPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(Output<AssetModelDataType> dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder dataType(AssetModelDataType dataType) {
-            this.dataType = Output.of(Objects.requireNonNull(dataType));
-            return this;
+            return dataType(Output.of(dataType));
         }
+
         public Builder dataTypeSpec(@Nullable Output<AssetModelDataTypeSpec> dataTypeSpec) {
-            this.dataTypeSpec = dataTypeSpec;
+            $.dataTypeSpec = dataTypeSpec;
             return this;
         }
-        public Builder dataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
-            this.dataTypeSpec = Codegen.ofNullable(dataTypeSpec);
-            return this;
+
+        public Builder dataTypeSpec(AssetModelDataTypeSpec dataTypeSpec) {
+            return dataTypeSpec(Output.of(dataTypeSpec));
         }
+
         public Builder logicalId(Output<String> logicalId) {
-            this.logicalId = Objects.requireNonNull(logicalId);
+            $.logicalId = logicalId;
             return this;
         }
+
         public Builder logicalId(String logicalId) {
-            this.logicalId = Output.of(Objects.requireNonNull(logicalId));
-            return this;
+            return logicalId(Output.of(logicalId));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<AssetModelPropertyTypeArgs> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(AssetModelPropertyTypeArgs type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
-        }        public AssetModelPropertyArgs build() {
-            return new AssetModelPropertyArgs(dataType, dataTypeSpec, logicalId, name, type, unit);
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
+        }
+
+        public AssetModelPropertyArgs build() {
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.logicalId = Objects.requireNonNull($.logicalId, "expected parameter 'logicalId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

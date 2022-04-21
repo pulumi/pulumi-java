@@ -5,7 +5,6 @@ package com.pulumi.awsnative.logs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policyDocument", required=true)
-      private final Output<String> policyDocument;
+    private Output<String> policyDocument;
 
     public Output<String> policyDocument() {
         return this.policyDocument;
@@ -30,63 +29,60 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policyName", required=true)
-      private final Output<String> policyName;
+    private Output<String> policyName;
 
     public Output<String> policyName() {
         return this.policyName;
     }
 
-    public ResourcePolicyArgs(
-        Output<String> policyDocument,
-        Output<String> policyName) {
-        this.policyDocument = Objects.requireNonNull(policyDocument, "expected parameter 'policyDocument' to be non-null");
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-    }
+    private ResourcePolicyArgs() {}
 
-    private ResourcePolicyArgs() {
-        this.policyDocument = Codegen.empty();
-        this.policyName = Codegen.empty();
+    private ResourcePolicyArgs(ResourcePolicyArgs $) {
+        this.policyDocument = $.policyDocument;
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyDocument;
-        private Output<String> policyName;
+        private ResourcePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyArgs();
         }
 
         public Builder(ResourcePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyDocument = defaults.policyDocument;
-    	      this.policyName = defaults.policyName;
+            $ = new ResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyDocument(Output<String> policyDocument) {
-            this.policyDocument = Objects.requireNonNull(policyDocument);
+            $.policyDocument = policyDocument;
             return this;
         }
+
         public Builder policyDocument(String policyDocument) {
-            this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
-            return this;
+            return policyDocument(Output.of(policyDocument));
         }
+
         public Builder policyName(Output<String> policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder policyName(String policyName) {
-            this.policyName = Output.of(Objects.requireNonNull(policyName));
-            return this;
-        }        public ResourcePolicyArgs build() {
-            return new ResourcePolicyArgs(policyDocument, policyName);
+            return policyName(Output.of(policyName));
+        }
+
+        public ResourcePolicyArgs build() {
+            $.policyDocument = Objects.requireNonNull($.policyDocument, "expected parameter 'policyDocument' to be non-null");
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            return $;
         }
     }
+
 }

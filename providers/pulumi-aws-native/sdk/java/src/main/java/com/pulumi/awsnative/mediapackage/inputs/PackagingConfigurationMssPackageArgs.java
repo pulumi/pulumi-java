@@ -7,10 +7,10 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssEncrypt
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssManifestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PackagingConfigurationMssPackageArgs extends com.pulumi.resou
     public static final PackagingConfigurationMssPackageArgs Empty = new PackagingConfigurationMssPackageArgs();
 
     @Import(name="encryption")
-      private final @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption;
+    private @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption;
 
-    public Output<PackagingConfigurationMssEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<PackagingConfigurationMssEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -34,86 +34,80 @@ public final class PackagingConfigurationMssPackageArgs extends com.pulumi.resou
      * 
      */
     @Import(name="mssManifests", required=true)
-      private final Output<List<PackagingConfigurationMssManifestArgs>> mssManifests;
+    private Output<List<PackagingConfigurationMssManifestArgs>> mssManifests;
 
     public Output<List<PackagingConfigurationMssManifestArgs>> mssManifests() {
         return this.mssManifests;
     }
 
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Output<Integer> segmentDurationSeconds;
+    private @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
+    public Optional<Output<Integer>> segmentDurationSeconds() {
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
-    public PackagingConfigurationMssPackageArgs(
-        @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption,
-        Output<List<PackagingConfigurationMssManifestArgs>> mssManifests,
-        @Nullable Output<Integer> segmentDurationSeconds) {
-        this.encryption = encryption;
-        this.mssManifests = Objects.requireNonNull(mssManifests, "expected parameter 'mssManifests' to be non-null");
-        this.segmentDurationSeconds = segmentDurationSeconds;
-    }
+    private PackagingConfigurationMssPackageArgs() {}
 
-    private PackagingConfigurationMssPackageArgs() {
-        this.encryption = Codegen.empty();
-        this.mssManifests = Codegen.empty();
-        this.segmentDurationSeconds = Codegen.empty();
+    private PackagingConfigurationMssPackageArgs(PackagingConfigurationMssPackageArgs $) {
+        this.encryption = $.encryption;
+        this.mssManifests = $.mssManifests;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationMssPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption;
-        private Output<List<PackagingConfigurationMssManifestArgs>> mssManifests;
-        private @Nullable Output<Integer> segmentDurationSeconds;
+        private PackagingConfigurationMssPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationMssPackageArgs();
         }
 
         public Builder(PackagingConfigurationMssPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.mssManifests = defaults.mssManifests;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
+            $ = new PackagingConfigurationMssPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable PackagingConfigurationMssEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(PackagingConfigurationMssEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder mssManifests(Output<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
-            this.mssManifests = Objects.requireNonNull(mssManifests);
+            $.mssManifests = mssManifests;
             return this;
         }
+
         public Builder mssManifests(List<PackagingConfigurationMssManifestArgs> mssManifests) {
-            this.mssManifests = Output.of(Objects.requireNonNull(mssManifests));
-            return this;
+            return mssManifests(Output.of(mssManifests));
         }
+
         public Builder mssManifests(PackagingConfigurationMssManifestArgs... mssManifests) {
             return mssManifests(List.of(mssManifests));
         }
+
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
-            return this;
-        }        public PackagingConfigurationMssPackageArgs build() {
-            return new PackagingConfigurationMssPackageArgs(encryption, mssManifests, segmentDurationSeconds);
+
+        public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
+            return segmentDurationSeconds(Output.of(segmentDurationSeconds));
+        }
+
+        public PackagingConfigurationMssPackageArgs build() {
+            $.mssManifests = Objects.requireNonNull($.mssManifests, "expected parameter 'mssManifests' to be non-null");
+            return $;
         }
     }
+
 }

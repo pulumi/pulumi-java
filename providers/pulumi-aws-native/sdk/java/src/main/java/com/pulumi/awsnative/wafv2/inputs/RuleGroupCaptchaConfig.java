@@ -15,45 +15,44 @@ public final class RuleGroupCaptchaConfig extends com.pulumi.resources.InvokeArg
     public static final RuleGroupCaptchaConfig Empty = new RuleGroupCaptchaConfig();
 
     @Import(name="immunityTimeProperty")
-      private final @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty;
+    private @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty;
 
     public Optional<RuleGroupImmunityTimeProperty> immunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Optional.empty() : Optional.ofNullable(this.immunityTimeProperty);
+        return Optional.ofNullable(this.immunityTimeProperty);
     }
 
-    public RuleGroupCaptchaConfig(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
-        this.immunityTimeProperty = immunityTimeProperty;
-    }
+    private RuleGroupCaptchaConfig() {}
 
-    private RuleGroupCaptchaConfig() {
-        this.immunityTimeProperty = null;
+    private RuleGroupCaptchaConfig(RuleGroupCaptchaConfig $) {
+        this.immunityTimeProperty = $.immunityTimeProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupCaptchaConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty;
+        private RuleGroupCaptchaConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupCaptchaConfig();
         }
 
         public Builder(RuleGroupCaptchaConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immunityTimeProperty = defaults.immunityTimeProperty;
+            $ = new RuleGroupCaptchaConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
-            this.immunityTimeProperty = immunityTimeProperty;
+            $.immunityTimeProperty = immunityTimeProperty;
             return this;
-        }        public RuleGroupCaptchaConfig build() {
-            return new RuleGroupCaptchaConfig(immunityTimeProperty);
+        }
+
+        public RuleGroupCaptchaConfig build() {
+            return $;
         }
     }
+
 }

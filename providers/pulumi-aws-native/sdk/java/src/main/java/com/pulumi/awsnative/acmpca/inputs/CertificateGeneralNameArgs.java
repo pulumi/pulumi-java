@@ -8,9 +8,9 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateOtherNameArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,190 +23,167 @@ public final class CertificateGeneralNameArgs extends com.pulumi.resources.Resou
     public static final CertificateGeneralNameArgs Empty = new CertificateGeneralNameArgs();
 
     @Import(name="directoryName")
-      private final @Nullable Output<CertificateSubjectArgs> directoryName;
+    private @Nullable Output<CertificateSubjectArgs> directoryName;
 
-    public Output<CertificateSubjectArgs> directoryName() {
-        return this.directoryName == null ? Codegen.empty() : this.directoryName;
+    public Optional<Output<CertificateSubjectArgs>> directoryName() {
+        return Optional.ofNullable(this.directoryName);
     }
 
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     @Import(name="ediPartyName")
-      private final @Nullable Output<CertificateEdiPartyNameArgs> ediPartyName;
+    private @Nullable Output<CertificateEdiPartyNameArgs> ediPartyName;
 
-    public Output<CertificateEdiPartyNameArgs> ediPartyName() {
-        return this.ediPartyName == null ? Codegen.empty() : this.ediPartyName;
+    public Optional<Output<CertificateEdiPartyNameArgs>> ediPartyName() {
+        return Optional.ofNullable(this.ediPartyName);
     }
 
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     @Import(name="otherName")
-      private final @Nullable Output<CertificateOtherNameArgs> otherName;
+    private @Nullable Output<CertificateOtherNameArgs> otherName;
 
-    public Output<CertificateOtherNameArgs> otherName() {
-        return this.otherName == null ? Codegen.empty() : this.otherName;
+    public Optional<Output<CertificateOtherNameArgs>> otherName() {
+        return Optional.ofNullable(this.otherName);
     }
 
     @Import(name="registeredId")
-      private final @Nullable Output<String> registeredId;
+    private @Nullable Output<String> registeredId;
 
-    public Output<String> registeredId() {
-        return this.registeredId == null ? Codegen.empty() : this.registeredId;
+    public Optional<Output<String>> registeredId() {
+        return Optional.ofNullable(this.registeredId);
     }
 
     @Import(name="rfc822Name")
-      private final @Nullable Output<String> rfc822Name;
+    private @Nullable Output<String> rfc822Name;
 
-    public Output<String> rfc822Name() {
-        return this.rfc822Name == null ? Codegen.empty() : this.rfc822Name;
+    public Optional<Output<String>> rfc822Name() {
+        return Optional.ofNullable(this.rfc822Name);
     }
 
     @Import(name="uniformResourceIdentifier")
-      private final @Nullable Output<String> uniformResourceIdentifier;
+    private @Nullable Output<String> uniformResourceIdentifier;
 
-    public Output<String> uniformResourceIdentifier() {
-        return this.uniformResourceIdentifier == null ? Codegen.empty() : this.uniformResourceIdentifier;
+    public Optional<Output<String>> uniformResourceIdentifier() {
+        return Optional.ofNullable(this.uniformResourceIdentifier);
     }
 
-    public CertificateGeneralNameArgs(
-        @Nullable Output<CertificateSubjectArgs> directoryName,
-        @Nullable Output<String> dnsName,
-        @Nullable Output<CertificateEdiPartyNameArgs> ediPartyName,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<CertificateOtherNameArgs> otherName,
-        @Nullable Output<String> registeredId,
-        @Nullable Output<String> rfc822Name,
-        @Nullable Output<String> uniformResourceIdentifier) {
-        this.directoryName = directoryName;
-        this.dnsName = dnsName;
-        this.ediPartyName = ediPartyName;
-        this.ipAddress = ipAddress;
-        this.otherName = otherName;
-        this.registeredId = registeredId;
-        this.rfc822Name = rfc822Name;
-        this.uniformResourceIdentifier = uniformResourceIdentifier;
-    }
+    private CertificateGeneralNameArgs() {}
 
-    private CertificateGeneralNameArgs() {
-        this.directoryName = Codegen.empty();
-        this.dnsName = Codegen.empty();
-        this.ediPartyName = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.otherName = Codegen.empty();
-        this.registeredId = Codegen.empty();
-        this.rfc822Name = Codegen.empty();
-        this.uniformResourceIdentifier = Codegen.empty();
+    private CertificateGeneralNameArgs(CertificateGeneralNameArgs $) {
+        this.directoryName = $.directoryName;
+        this.dnsName = $.dnsName;
+        this.ediPartyName = $.ediPartyName;
+        this.ipAddress = $.ipAddress;
+        this.otherName = $.otherName;
+        this.registeredId = $.registeredId;
+        this.rfc822Name = $.rfc822Name;
+        this.uniformResourceIdentifier = $.uniformResourceIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateGeneralNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateSubjectArgs> directoryName;
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<CertificateEdiPartyNameArgs> ediPartyName;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<CertificateOtherNameArgs> otherName;
-        private @Nullable Output<String> registeredId;
-        private @Nullable Output<String> rfc822Name;
-        private @Nullable Output<String> uniformResourceIdentifier;
+        private CertificateGeneralNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateGeneralNameArgs();
         }
 
         public Builder(CertificateGeneralNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryName = defaults.directoryName;
-    	      this.dnsName = defaults.dnsName;
-    	      this.ediPartyName = defaults.ediPartyName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.otherName = defaults.otherName;
-    	      this.registeredId = defaults.registeredId;
-    	      this.rfc822Name = defaults.rfc822Name;
-    	      this.uniformResourceIdentifier = defaults.uniformResourceIdentifier;
+            $ = new CertificateGeneralNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryName(@Nullable Output<CertificateSubjectArgs> directoryName) {
-            this.directoryName = directoryName;
+            $.directoryName = directoryName;
             return this;
         }
-        public Builder directoryName(@Nullable CertificateSubjectArgs directoryName) {
-            this.directoryName = Codegen.ofNullable(directoryName);
-            return this;
+
+        public Builder directoryName(CertificateSubjectArgs directoryName) {
+            return directoryName(Output.of(directoryName));
         }
+
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder ediPartyName(@Nullable Output<CertificateEdiPartyNameArgs> ediPartyName) {
-            this.ediPartyName = ediPartyName;
+            $.ediPartyName = ediPartyName;
             return this;
         }
-        public Builder ediPartyName(@Nullable CertificateEdiPartyNameArgs ediPartyName) {
-            this.ediPartyName = Codegen.ofNullable(ediPartyName);
-            return this;
+
+        public Builder ediPartyName(CertificateEdiPartyNameArgs ediPartyName) {
+            return ediPartyName(Output.of(ediPartyName));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder otherName(@Nullable Output<CertificateOtherNameArgs> otherName) {
-            this.otherName = otherName;
+            $.otherName = otherName;
             return this;
         }
-        public Builder otherName(@Nullable CertificateOtherNameArgs otherName) {
-            this.otherName = Codegen.ofNullable(otherName);
-            return this;
+
+        public Builder otherName(CertificateOtherNameArgs otherName) {
+            return otherName(Output.of(otherName));
         }
+
         public Builder registeredId(@Nullable Output<String> registeredId) {
-            this.registeredId = registeredId;
+            $.registeredId = registeredId;
             return this;
         }
-        public Builder registeredId(@Nullable String registeredId) {
-            this.registeredId = Codegen.ofNullable(registeredId);
-            return this;
+
+        public Builder registeredId(String registeredId) {
+            return registeredId(Output.of(registeredId));
         }
+
         public Builder rfc822Name(@Nullable Output<String> rfc822Name) {
-            this.rfc822Name = rfc822Name;
+            $.rfc822Name = rfc822Name;
             return this;
         }
-        public Builder rfc822Name(@Nullable String rfc822Name) {
-            this.rfc822Name = Codegen.ofNullable(rfc822Name);
-            return this;
+
+        public Builder rfc822Name(String rfc822Name) {
+            return rfc822Name(Output.of(rfc822Name));
         }
+
         public Builder uniformResourceIdentifier(@Nullable Output<String> uniformResourceIdentifier) {
-            this.uniformResourceIdentifier = uniformResourceIdentifier;
+            $.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
         }
-        public Builder uniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
-            this.uniformResourceIdentifier = Codegen.ofNullable(uniformResourceIdentifier);
-            return this;
-        }        public CertificateGeneralNameArgs build() {
-            return new CertificateGeneralNameArgs(directoryName, dnsName, ediPartyName, ipAddress, otherName, registeredId, rfc822Name, uniformResourceIdentifier);
+
+        public Builder uniformResourceIdentifier(String uniformResourceIdentifier) {
+            return uniformResourceIdentifier(Output.of(uniformResourceIdentifier));
+        }
+
+        public CertificateGeneralNameArgs build() {
+            return $;
         }
     }
+
 }

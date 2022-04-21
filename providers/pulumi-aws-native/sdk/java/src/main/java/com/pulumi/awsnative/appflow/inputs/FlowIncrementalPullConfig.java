@@ -19,45 +19,44 @@ public final class FlowIncrementalPullConfig extends com.pulumi.resources.Invoke
     public static final FlowIncrementalPullConfig Empty = new FlowIncrementalPullConfig();
 
     @Import(name="datetimeTypeFieldName")
-      private final @Nullable String datetimeTypeFieldName;
+    private @Nullable String datetimeTypeFieldName;
 
     public Optional<String> datetimeTypeFieldName() {
-        return this.datetimeTypeFieldName == null ? Optional.empty() : Optional.ofNullable(this.datetimeTypeFieldName);
+        return Optional.ofNullable(this.datetimeTypeFieldName);
     }
 
-    public FlowIncrementalPullConfig(@Nullable String datetimeTypeFieldName) {
-        this.datetimeTypeFieldName = datetimeTypeFieldName;
-    }
+    private FlowIncrementalPullConfig() {}
 
-    private FlowIncrementalPullConfig() {
-        this.datetimeTypeFieldName = null;
+    private FlowIncrementalPullConfig(FlowIncrementalPullConfig $) {
+        this.datetimeTypeFieldName = $.datetimeTypeFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowIncrementalPullConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String datetimeTypeFieldName;
+        private FlowIncrementalPullConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowIncrementalPullConfig();
         }
 
         public Builder(FlowIncrementalPullConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datetimeTypeFieldName = defaults.datetimeTypeFieldName;
+            $ = new FlowIncrementalPullConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
-            this.datetimeTypeFieldName = datetimeTypeFieldName;
+            $.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
-        }        public FlowIncrementalPullConfig build() {
-            return new FlowIncrementalPullConfig(datetimeTypeFieldName);
+        }
+
+        public FlowIncrementalPullConfig build() {
+            return $;
         }
     }
+
 }

@@ -10,10 +10,10 @@ import com.pulumi.awsnative.appflow.inputs.FlowTaskArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowTriggerConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationFlowConfigList", required=true)
-      private final Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
+    private Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
     public Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList() {
         return this.destinationFlowConfigList;
@@ -48,10 +48,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flowName")
-      private final @Nullable Output<String> flowName;
+    private @Nullable Output<String> flowName;
 
-    public Output<String> flowName() {
-        return this.flowName == null ? Codegen.empty() : this.flowName;
+    public Optional<Output<String>> flowName() {
+        return Optional.ofNullable(this.flowName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kMSArn")
-      private final @Nullable Output<String> kMSArn;
+    private @Nullable Output<String> kMSArn;
 
-    public Output<String> kMSArn() {
-        return this.kMSArn == null ? Codegen.empty() : this.kMSArn;
+    public Optional<Output<String>> kMSArn() {
+        return Optional.ofNullable(this.kMSArn);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceFlowConfig", required=true)
-      private final Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
+    private Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
     public Output<FlowSourceFlowConfigArgs> sourceFlowConfig() {
         return this.sourceFlowConfig;
@@ -81,10 +81,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FlowTagArgs>> tags;
+    private @Nullable Output<List<FlowTagArgs>> tags;
 
-    public Output<List<FlowTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FlowTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tasks", required=true)
-      private final Output<List<FlowTaskArgs>> tasks;
+    private Output<List<FlowTaskArgs>> tasks;
 
     public Output<List<FlowTaskArgs>> tasks() {
         return this.tasks;
@@ -103,150 +103,134 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggerConfig", required=true)
-      private final Output<FlowTriggerConfigArgs> triggerConfig;
+    private Output<FlowTriggerConfigArgs> triggerConfig;
 
     public Output<FlowTriggerConfigArgs> triggerConfig() {
         return this.triggerConfig;
     }
 
-    public FlowArgs(
-        @Nullable Output<String> description,
-        Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList,
-        @Nullable Output<String> flowName,
-        @Nullable Output<String> kMSArn,
-        Output<FlowSourceFlowConfigArgs> sourceFlowConfig,
-        @Nullable Output<List<FlowTagArgs>> tags,
-        Output<List<FlowTaskArgs>> tasks,
-        Output<FlowTriggerConfigArgs> triggerConfig) {
-        this.description = description;
-        this.destinationFlowConfigList = Objects.requireNonNull(destinationFlowConfigList, "expected parameter 'destinationFlowConfigList' to be non-null");
-        this.flowName = flowName;
-        this.kMSArn = kMSArn;
-        this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig, "expected parameter 'sourceFlowConfig' to be non-null");
-        this.tags = tags;
-        this.tasks = Objects.requireNonNull(tasks, "expected parameter 'tasks' to be non-null");
-        this.triggerConfig = Objects.requireNonNull(triggerConfig, "expected parameter 'triggerConfig' to be non-null");
-    }
+    private FlowArgs() {}
 
-    private FlowArgs() {
-        this.description = Codegen.empty();
-        this.destinationFlowConfigList = Codegen.empty();
-        this.flowName = Codegen.empty();
-        this.kMSArn = Codegen.empty();
-        this.sourceFlowConfig = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tasks = Codegen.empty();
-        this.triggerConfig = Codegen.empty();
+    private FlowArgs(FlowArgs $) {
+        this.description = $.description;
+        this.destinationFlowConfigList = $.destinationFlowConfigList;
+        this.flowName = $.flowName;
+        this.kMSArn = $.kMSArn;
+        this.sourceFlowConfig = $.sourceFlowConfig;
+        this.tags = $.tags;
+        this.tasks = $.tasks;
+        this.triggerConfig = $.triggerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
-        private @Nullable Output<String> flowName;
-        private @Nullable Output<String> kMSArn;
-        private Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
-        private @Nullable Output<List<FlowTagArgs>> tags;
-        private Output<List<FlowTaskArgs>> tasks;
-        private Output<FlowTriggerConfigArgs> triggerConfig;
+        private FlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowArgs();
         }
 
         public Builder(FlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destinationFlowConfigList = defaults.destinationFlowConfigList;
-    	      this.flowName = defaults.flowName;
-    	      this.kMSArn = defaults.kMSArn;
-    	      this.sourceFlowConfig = defaults.sourceFlowConfig;
-    	      this.tags = defaults.tags;
-    	      this.tasks = defaults.tasks;
-    	      this.triggerConfig = defaults.triggerConfig;
+            $ = new FlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationFlowConfigList(Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
-            this.destinationFlowConfigList = Objects.requireNonNull(destinationFlowConfigList);
+            $.destinationFlowConfigList = destinationFlowConfigList;
             return this;
         }
+
         public Builder destinationFlowConfigList(List<FlowDestinationFlowConfigArgs> destinationFlowConfigList) {
-            this.destinationFlowConfigList = Output.of(Objects.requireNonNull(destinationFlowConfigList));
-            return this;
+            return destinationFlowConfigList(Output.of(destinationFlowConfigList));
         }
+
         public Builder destinationFlowConfigList(FlowDestinationFlowConfigArgs... destinationFlowConfigList) {
             return destinationFlowConfigList(List.of(destinationFlowConfigList));
         }
+
         public Builder flowName(@Nullable Output<String> flowName) {
-            this.flowName = flowName;
+            $.flowName = flowName;
             return this;
         }
-        public Builder flowName(@Nullable String flowName) {
-            this.flowName = Codegen.ofNullable(flowName);
-            return this;
+
+        public Builder flowName(String flowName) {
+            return flowName(Output.of(flowName));
         }
+
         public Builder kMSArn(@Nullable Output<String> kMSArn) {
-            this.kMSArn = kMSArn;
+            $.kMSArn = kMSArn;
             return this;
         }
-        public Builder kMSArn(@Nullable String kMSArn) {
-            this.kMSArn = Codegen.ofNullable(kMSArn);
-            return this;
+
+        public Builder kMSArn(String kMSArn) {
+            return kMSArn(Output.of(kMSArn));
         }
+
         public Builder sourceFlowConfig(Output<FlowSourceFlowConfigArgs> sourceFlowConfig) {
-            this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
+            $.sourceFlowConfig = sourceFlowConfig;
             return this;
         }
+
         public Builder sourceFlowConfig(FlowSourceFlowConfigArgs sourceFlowConfig) {
-            this.sourceFlowConfig = Output.of(Objects.requireNonNull(sourceFlowConfig));
-            return this;
+            return sourceFlowConfig(Output.of(sourceFlowConfig));
         }
+
         public Builder tags(@Nullable Output<List<FlowTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FlowTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FlowTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FlowTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder tasks(Output<List<FlowTaskArgs>> tasks) {
-            this.tasks = Objects.requireNonNull(tasks);
+            $.tasks = tasks;
             return this;
         }
+
         public Builder tasks(List<FlowTaskArgs> tasks) {
-            this.tasks = Output.of(Objects.requireNonNull(tasks));
-            return this;
+            return tasks(Output.of(tasks));
         }
+
         public Builder tasks(FlowTaskArgs... tasks) {
             return tasks(List.of(tasks));
         }
+
         public Builder triggerConfig(Output<FlowTriggerConfigArgs> triggerConfig) {
-            this.triggerConfig = Objects.requireNonNull(triggerConfig);
+            $.triggerConfig = triggerConfig;
             return this;
         }
+
         public Builder triggerConfig(FlowTriggerConfigArgs triggerConfig) {
-            this.triggerConfig = Output.of(Objects.requireNonNull(triggerConfig));
-            return this;
-        }        public FlowArgs build() {
-            return new FlowArgs(description, destinationFlowConfigList, flowName, kMSArn, sourceFlowConfig, tags, tasks, triggerConfig);
+            return triggerConfig(Output.of(triggerConfig));
+        }
+
+        public FlowArgs build() {
+            $.destinationFlowConfigList = Objects.requireNonNull($.destinationFlowConfigList, "expected parameter 'destinationFlowConfigList' to be non-null");
+            $.sourceFlowConfig = Objects.requireNonNull($.sourceFlowConfig, "expected parameter 'sourceFlowConfig' to be non-null");
+            $.tasks = Objects.requireNonNull($.tasks, "expected parameter 'tasks' to be non-null");
+            $.triggerConfig = Objects.requireNonNull($.triggerConfig, "expected parameter 'triggerConfig' to be non-null");
+            return $;
         }
     }
+
 }

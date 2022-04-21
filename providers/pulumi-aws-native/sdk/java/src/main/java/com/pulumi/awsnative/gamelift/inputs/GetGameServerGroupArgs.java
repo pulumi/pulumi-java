@@ -17,45 +17,45 @@ public final class GetGameServerGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="gameServerGroupArn", required=true)
-      private final String gameServerGroupArn;
+    private String gameServerGroupArn;
 
     public String gameServerGroupArn() {
         return this.gameServerGroupArn;
     }
 
-    public GetGameServerGroupArgs(String gameServerGroupArn) {
-        this.gameServerGroupArn = Objects.requireNonNull(gameServerGroupArn, "expected parameter 'gameServerGroupArn' to be non-null");
-    }
+    private GetGameServerGroupArgs() {}
 
-    private GetGameServerGroupArgs() {
-        this.gameServerGroupArn = null;
+    private GetGameServerGroupArgs(GetGameServerGroupArgs $) {
+        this.gameServerGroupArn = $.gameServerGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGameServerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gameServerGroupArn;
+        private GetGameServerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGameServerGroupArgs();
         }
 
         public Builder(GetGameServerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gameServerGroupArn = defaults.gameServerGroupArn;
+            $ = new GetGameServerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gameServerGroupArn(String gameServerGroupArn) {
-            this.gameServerGroupArn = Objects.requireNonNull(gameServerGroupArn);
+            $.gameServerGroupArn = gameServerGroupArn;
             return this;
-        }        public GetGameServerGroupArgs build() {
-            return new GetGameServerGroupArgs(gameServerGroupArn);
+        }
+
+        public GetGameServerGroupArgs build() {
+            $.gameServerGroupArn = Objects.requireNonNull($.gameServerGroupArn, "expected parameter 'gameServerGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

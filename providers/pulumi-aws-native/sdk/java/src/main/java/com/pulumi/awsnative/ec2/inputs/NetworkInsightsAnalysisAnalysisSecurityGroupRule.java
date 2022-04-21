@@ -16,126 +16,109 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule extends com.
     public static final NetworkInsightsAnalysisAnalysisSecurityGroupRule Empty = new NetworkInsightsAnalysisAnalysisSecurityGroupRule();
 
     @Import(name="cidr")
-      private final @Nullable String cidr;
+    private @Nullable String cidr;
 
     public Optional<String> cidr() {
-        return this.cidr == null ? Optional.empty() : Optional.ofNullable(this.cidr);
+        return Optional.ofNullable(this.cidr);
     }
 
     @Import(name="direction")
-      private final @Nullable String direction;
+    private @Nullable String direction;
 
     public Optional<String> direction() {
-        return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
+        return Optional.ofNullable(this.direction);
     }
 
     @Import(name="portRange")
-      private final @Nullable NetworkInsightsAnalysisPortRange portRange;
+    private @Nullable NetworkInsightsAnalysisPortRange portRange;
 
     public Optional<NetworkInsightsAnalysisPortRange> portRange() {
-        return this.portRange == null ? Optional.empty() : Optional.ofNullable(this.portRange);
+        return Optional.ofNullable(this.portRange);
     }
 
     @Import(name="prefixListId")
-      private final @Nullable String prefixListId;
+    private @Nullable String prefixListId;
 
     public Optional<String> prefixListId() {
-        return this.prefixListId == null ? Optional.empty() : Optional.ofNullable(this.prefixListId);
+        return Optional.ofNullable(this.prefixListId);
     }
 
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     @Import(name="securityGroupId")
-      private final @Nullable String securityGroupId;
+    private @Nullable String securityGroupId;
 
     public Optional<String> securityGroupId() {
-        return this.securityGroupId == null ? Optional.empty() : Optional.ofNullable(this.securityGroupId);
+        return Optional.ofNullable(this.securityGroupId);
     }
 
-    public NetworkInsightsAnalysisAnalysisSecurityGroupRule(
-        @Nullable String cidr,
-        @Nullable String direction,
-        @Nullable NetworkInsightsAnalysisPortRange portRange,
-        @Nullable String prefixListId,
-        @Nullable String protocol,
-        @Nullable String securityGroupId) {
-        this.cidr = cidr;
-        this.direction = direction;
-        this.portRange = portRange;
-        this.prefixListId = prefixListId;
-        this.protocol = protocol;
-        this.securityGroupId = securityGroupId;
-    }
+    private NetworkInsightsAnalysisAnalysisSecurityGroupRule() {}
 
-    private NetworkInsightsAnalysisAnalysisSecurityGroupRule() {
-        this.cidr = null;
-        this.direction = null;
-        this.portRange = null;
-        this.prefixListId = null;
-        this.protocol = null;
-        this.securityGroupId = null;
+    private NetworkInsightsAnalysisAnalysisSecurityGroupRule(NetworkInsightsAnalysisAnalysisSecurityGroupRule $) {
+        this.cidr = $.cidr;
+        this.direction = $.direction;
+        this.portRange = $.portRange;
+        this.prefixListId = $.prefixListId;
+        this.protocol = $.protocol;
+        this.securityGroupId = $.securityGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisAnalysisSecurityGroupRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cidr;
-        private @Nullable String direction;
-        private @Nullable NetworkInsightsAnalysisPortRange portRange;
-        private @Nullable String prefixListId;
-        private @Nullable String protocol;
-        private @Nullable String securityGroupId;
+        private NetworkInsightsAnalysisAnalysisSecurityGroupRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisAnalysisSecurityGroupRule();
         }
 
         public Builder(NetworkInsightsAnalysisAnalysisSecurityGroupRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.direction = defaults.direction;
-    	      this.portRange = defaults.portRange;
-    	      this.prefixListId = defaults.prefixListId;
-    	      this.protocol = defaults.protocol;
-    	      this.securityGroupId = defaults.securityGroupId;
+            $ = new NetworkInsightsAnalysisAnalysisSecurityGroupRule(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = cidr;
+            $.cidr = cidr;
             return this;
         }
+
         public Builder direction(@Nullable String direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
+
         public Builder portRange(@Nullable NetworkInsightsAnalysisPortRange portRange) {
-            this.portRange = portRange;
+            $.portRange = portRange;
             return this;
         }
+
         public Builder prefixListId(@Nullable String prefixListId) {
-            this.prefixListId = prefixListId;
+            $.prefixListId = prefixListId;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = securityGroupId;
+            $.securityGroupId = securityGroupId;
             return this;
-        }        public NetworkInsightsAnalysisAnalysisSecurityGroupRule build() {
-            return new NetworkInsightsAnalysisAnalysisSecurityGroupRule(cidr, direction, portRange, prefixListId, protocol, securityGroupId);
+        }
+
+        public NetworkInsightsAnalysisAnalysisSecurityGroupRule build() {
+            return $;
         }
     }
+
 }

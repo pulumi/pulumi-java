@@ -15,62 +15,57 @@ public final class DeliveryStreamBufferingHints extends com.pulumi.resources.Inv
     public static final DeliveryStreamBufferingHints Empty = new DeliveryStreamBufferingHints();
 
     @Import(name="intervalInSeconds")
-      private final @Nullable Integer intervalInSeconds;
+    private @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     @Import(name="sizeInMBs")
-      private final @Nullable Integer sizeInMBs;
+    private @Nullable Integer sizeInMBs;
 
     public Optional<Integer> sizeInMBs() {
-        return this.sizeInMBs == null ? Optional.empty() : Optional.ofNullable(this.sizeInMBs);
+        return Optional.ofNullable(this.sizeInMBs);
     }
 
-    public DeliveryStreamBufferingHints(
-        @Nullable Integer intervalInSeconds,
-        @Nullable Integer sizeInMBs) {
-        this.intervalInSeconds = intervalInSeconds;
-        this.sizeInMBs = sizeInMBs;
-    }
+    private DeliveryStreamBufferingHints() {}
 
-    private DeliveryStreamBufferingHints() {
-        this.intervalInSeconds = null;
-        this.sizeInMBs = null;
+    private DeliveryStreamBufferingHints(DeliveryStreamBufferingHints $) {
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.sizeInMBs = $.sizeInMBs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamBufferingHints defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer intervalInSeconds;
-        private @Nullable Integer sizeInMBs;
+        private DeliveryStreamBufferingHints $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamBufferingHints();
         }
 
         public Builder(DeliveryStreamBufferingHints defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.sizeInMBs = defaults.sizeInMBs;
+            $ = new DeliveryStreamBufferingHints(Objects.requireNonNull(defaults));
         }
 
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
+
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
-            this.sizeInMBs = sizeInMBs;
+            $.sizeInMBs = sizeInMBs;
             return this;
-        }        public DeliveryStreamBufferingHints build() {
-            return new DeliveryStreamBufferingHints(intervalInSeconds, sizeInMBs);
+        }
+
+        public DeliveryStreamBufferingHints build() {
+            return $;
         }
     }
+
 }

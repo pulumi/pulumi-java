@@ -5,9 +5,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class ThemeGutterStyleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="show")
-      private final @Nullable Output<Boolean> show;
+    private @Nullable Output<Boolean> show;
 
-    public Output<Boolean> show() {
-        return this.show == null ? Codegen.empty() : this.show;
+    public Optional<Output<Boolean>> show() {
+        return Optional.ofNullable(this.show);
     }
 
-    public ThemeGutterStyleArgs(@Nullable Output<Boolean> show) {
-        this.show = show;
-    }
+    private ThemeGutterStyleArgs() {}
 
-    private ThemeGutterStyleArgs() {
-        this.show = Codegen.empty();
+    private ThemeGutterStyleArgs(ThemeGutterStyleArgs $) {
+        this.show = $.show;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeGutterStyleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> show;
+        private ThemeGutterStyleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeGutterStyleArgs();
         }
 
         public Builder(ThemeGutterStyleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.show = defaults.show;
+            $ = new ThemeGutterStyleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder show(@Nullable Output<Boolean> show) {
-            this.show = show;
+            $.show = show;
             return this;
         }
-        public Builder show(@Nullable Boolean show) {
-            this.show = Codegen.ofNullable(show);
-            return this;
-        }        public ThemeGutterStyleArgs build() {
-            return new ThemeGutterStyleArgs(show);
+
+        public Builder show(Boolean show) {
+            return show(Output.of(show));
+        }
+
+        public ThemeGutterStyleArgs build() {
+            return $;
         }
     }
+
 }

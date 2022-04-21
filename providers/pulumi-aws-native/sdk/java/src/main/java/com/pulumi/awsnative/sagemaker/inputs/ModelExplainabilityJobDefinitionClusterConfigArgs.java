@@ -5,10 +5,10 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
      * 
      */
     @Import(name="instanceCount", required=true)
-      private final Output<Integer> instanceCount;
+    private Output<Integer> instanceCount;
 
     public Output<Integer> instanceCount() {
         return this.instanceCount;
@@ -36,7 +36,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -47,10 +47,10 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
      * 
      */
     @Import(name="volumeKmsKeyId")
-      private final @Nullable Output<String> volumeKmsKeyId;
+    private @Nullable Output<String> volumeKmsKeyId;
 
-    public Output<String> volumeKmsKeyId() {
-        return this.volumeKmsKeyId == null ? Codegen.empty() : this.volumeKmsKeyId;
+    public Optional<Output<String>> volumeKmsKeyId() {
+        return Optional.ofNullable(this.volumeKmsKeyId);
     }
 
     /**
@@ -58,89 +58,81 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
      * 
      */
     @Import(name="volumeSizeInGB", required=true)
-      private final Output<Integer> volumeSizeInGB;
+    private Output<Integer> volumeSizeInGB;
 
     public Output<Integer> volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 
-    public ModelExplainabilityJobDefinitionClusterConfigArgs(
-        Output<Integer> instanceCount,
-        Output<String> instanceType,
-        @Nullable Output<String> volumeKmsKeyId,
-        Output<Integer> volumeSizeInGB) {
-        this.instanceCount = Objects.requireNonNull(instanceCount, "expected parameter 'instanceCount' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.volumeKmsKeyId = volumeKmsKeyId;
-        this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
-    }
+    private ModelExplainabilityJobDefinitionClusterConfigArgs() {}
 
-    private ModelExplainabilityJobDefinitionClusterConfigArgs() {
-        this.instanceCount = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.volumeKmsKeyId = Codegen.empty();
-        this.volumeSizeInGB = Codegen.empty();
+    private ModelExplainabilityJobDefinitionClusterConfigArgs(ModelExplainabilityJobDefinitionClusterConfigArgs $) {
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.volumeKmsKeyId = $.volumeKmsKeyId;
+        this.volumeSizeInGB = $.volumeSizeInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelExplainabilityJobDefinitionClusterConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> instanceCount;
-        private Output<String> instanceType;
-        private @Nullable Output<String> volumeKmsKeyId;
-        private Output<Integer> volumeSizeInGB;
+        private ModelExplainabilityJobDefinitionClusterConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelExplainabilityJobDefinitionClusterConfigArgs();
         }
 
         public Builder(ModelExplainabilityJobDefinitionClusterConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.volumeKmsKeyId = defaults.volumeKmsKeyId;
-    	      this.volumeSizeInGB = defaults.volumeSizeInGB;
+            $ = new ModelExplainabilityJobDefinitionClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceCount(Output<Integer> instanceCount) {
-            this.instanceCount = Objects.requireNonNull(instanceCount);
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder instanceCount(Integer instanceCount) {
-            this.instanceCount = Output.of(Objects.requireNonNull(instanceCount));
-            return this;
+            return instanceCount(Output.of(instanceCount));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder volumeKmsKeyId(@Nullable Output<String> volumeKmsKeyId) {
-            this.volumeKmsKeyId = volumeKmsKeyId;
+            $.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
-        public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
-            this.volumeKmsKeyId = Codegen.ofNullable(volumeKmsKeyId);
-            return this;
+
+        public Builder volumeKmsKeyId(String volumeKmsKeyId) {
+            return volumeKmsKeyId(Output.of(volumeKmsKeyId));
         }
+
         public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {
-            this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
+            $.volumeSizeInGB = volumeSizeInGB;
             return this;
         }
+
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
-            this.volumeSizeInGB = Output.of(Objects.requireNonNull(volumeSizeInGB));
-            return this;
-        }        public ModelExplainabilityJobDefinitionClusterConfigArgs build() {
-            return new ModelExplainabilityJobDefinitionClusterConfigArgs(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
+            return volumeSizeInGB(Output.of(volumeSizeInGB));
+        }
+
+        public ModelExplainabilityJobDefinitionClusterConfigArgs build() {
+            $.instanceCount = Objects.requireNonNull($.instanceCount, "expected parameter 'instanceCount' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            $.volumeSizeInGB = Objects.requireNonNull($.volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
+            return $;
         }
     }
+
 }

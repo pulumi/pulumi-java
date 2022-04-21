@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudformation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class HookDefaultVersionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="typeName")
-      private final @Nullable Output<String> typeName;
+    private @Nullable Output<String> typeName;
 
-    public Output<String> typeName() {
-        return this.typeName == null ? Codegen.empty() : this.typeName;
+    public Optional<Output<String>> typeName() {
+        return Optional.ofNullable(this.typeName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HookDefaultVersionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="typeVersionArn")
-      private final @Nullable Output<String> typeVersionArn;
+    private @Nullable Output<String> typeVersionArn;
 
-    public Output<String> typeVersionArn() {
-        return this.typeVersionArn == null ? Codegen.empty() : this.typeVersionArn;
+    public Optional<Output<String>> typeVersionArn() {
+        return Optional.ofNullable(this.typeVersionArn);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class HookDefaultVersionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
-    public HookDefaultVersionArgs(
-        @Nullable Output<String> typeName,
-        @Nullable Output<String> typeVersionArn,
-        @Nullable Output<String> versionId) {
-        this.typeName = typeName;
-        this.typeVersionArn = typeVersionArn;
-        this.versionId = versionId;
-    }
+    private HookDefaultVersionArgs() {}
 
-    private HookDefaultVersionArgs() {
-        this.typeName = Codegen.empty();
-        this.typeVersionArn = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private HookDefaultVersionArgs(HookDefaultVersionArgs $) {
+        this.typeName = $.typeName;
+        this.typeVersionArn = $.typeVersionArn;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HookDefaultVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> typeName;
-        private @Nullable Output<String> typeVersionArn;
-        private @Nullable Output<String> versionId;
+        private HookDefaultVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HookDefaultVersionArgs();
         }
 
         public Builder(HookDefaultVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.typeName = defaults.typeName;
-    	      this.typeVersionArn = defaults.typeVersionArn;
-    	      this.versionId = defaults.versionId;
+            $ = new HookDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder typeName(@Nullable Output<String> typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
-        public Builder typeName(@Nullable String typeName) {
-            this.typeName = Codegen.ofNullable(typeName);
-            return this;
+
+        public Builder typeName(String typeName) {
+            return typeName(Output.of(typeName));
         }
+
         public Builder typeVersionArn(@Nullable Output<String> typeVersionArn) {
-            this.typeVersionArn = typeVersionArn;
+            $.typeVersionArn = typeVersionArn;
             return this;
         }
-        public Builder typeVersionArn(@Nullable String typeVersionArn) {
-            this.typeVersionArn = Codegen.ofNullable(typeVersionArn);
-            return this;
+
+        public Builder typeVersionArn(String typeVersionArn) {
+            return typeVersionArn(Output.of(typeVersionArn));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
-        }        public HookDefaultVersionArgs build() {
-            return new HookDefaultVersionArgs(typeName, typeVersionArn, versionId);
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public HookDefaultVersionArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.awsnative.cloudfront.inputs.CachePolicyHeadersConfigArgs;
 import com.pulumi.awsnative.cloudfront.inputs.CachePolicyQueryStringsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,130 +19,120 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
     public static final CachePolicyParametersInCacheKeyAndForwardedToOriginArgs Empty = new CachePolicyParametersInCacheKeyAndForwardedToOriginArgs();
 
     @Import(name="cookiesConfig", required=true)
-      private final Output<CachePolicyCookiesConfigArgs> cookiesConfig;
+    private Output<CachePolicyCookiesConfigArgs> cookiesConfig;
 
     public Output<CachePolicyCookiesConfigArgs> cookiesConfig() {
         return this.cookiesConfig;
     }
 
     @Import(name="enableAcceptEncodingBrotli")
-      private final @Nullable Output<Boolean> enableAcceptEncodingBrotli;
+    private @Nullable Output<Boolean> enableAcceptEncodingBrotli;
 
-    public Output<Boolean> enableAcceptEncodingBrotli() {
-        return this.enableAcceptEncodingBrotli == null ? Codegen.empty() : this.enableAcceptEncodingBrotli;
+    public Optional<Output<Boolean>> enableAcceptEncodingBrotli() {
+        return Optional.ofNullable(this.enableAcceptEncodingBrotli);
     }
 
     @Import(name="enableAcceptEncodingGzip", required=true)
-      private final Output<Boolean> enableAcceptEncodingGzip;
+    private Output<Boolean> enableAcceptEncodingGzip;
 
     public Output<Boolean> enableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip;
     }
 
     @Import(name="headersConfig", required=true)
-      private final Output<CachePolicyHeadersConfigArgs> headersConfig;
+    private Output<CachePolicyHeadersConfigArgs> headersConfig;
 
     public Output<CachePolicyHeadersConfigArgs> headersConfig() {
         return this.headersConfig;
     }
 
     @Import(name="queryStringsConfig", required=true)
-      private final Output<CachePolicyQueryStringsConfigArgs> queryStringsConfig;
+    private Output<CachePolicyQueryStringsConfigArgs> queryStringsConfig;
 
     public Output<CachePolicyQueryStringsConfigArgs> queryStringsConfig() {
         return this.queryStringsConfig;
     }
 
-    public CachePolicyParametersInCacheKeyAndForwardedToOriginArgs(
-        Output<CachePolicyCookiesConfigArgs> cookiesConfig,
-        @Nullable Output<Boolean> enableAcceptEncodingBrotli,
-        Output<Boolean> enableAcceptEncodingGzip,
-        Output<CachePolicyHeadersConfigArgs> headersConfig,
-        Output<CachePolicyQueryStringsConfigArgs> queryStringsConfig) {
-        this.cookiesConfig = Objects.requireNonNull(cookiesConfig, "expected parameter 'cookiesConfig' to be non-null");
-        this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
-        this.enableAcceptEncodingGzip = Objects.requireNonNull(enableAcceptEncodingGzip, "expected parameter 'enableAcceptEncodingGzip' to be non-null");
-        this.headersConfig = Objects.requireNonNull(headersConfig, "expected parameter 'headersConfig' to be non-null");
-        this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig, "expected parameter 'queryStringsConfig' to be non-null");
-    }
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginArgs() {}
 
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginArgs() {
-        this.cookiesConfig = Codegen.empty();
-        this.enableAcceptEncodingBrotli = Codegen.empty();
-        this.enableAcceptEncodingGzip = Codegen.empty();
-        this.headersConfig = Codegen.empty();
-        this.queryStringsConfig = Codegen.empty();
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginArgs(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs $) {
+        this.cookiesConfig = $.cookiesConfig;
+        this.enableAcceptEncodingBrotli = $.enableAcceptEncodingBrotli;
+        this.enableAcceptEncodingGzip = $.enableAcceptEncodingGzip;
+        this.headersConfig = $.headersConfig;
+        this.queryStringsConfig = $.queryStringsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CachePolicyCookiesConfigArgs> cookiesConfig;
-        private @Nullable Output<Boolean> enableAcceptEncodingBrotli;
-        private Output<Boolean> enableAcceptEncodingGzip;
-        private Output<CachePolicyHeadersConfigArgs> headersConfig;
-        private Output<CachePolicyQueryStringsConfigArgs> queryStringsConfig;
+        private CachePolicyParametersInCacheKeyAndForwardedToOriginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginArgs();
         }
 
         public Builder(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookiesConfig = defaults.cookiesConfig;
-    	      this.enableAcceptEncodingBrotli = defaults.enableAcceptEncodingBrotli;
-    	      this.enableAcceptEncodingGzip = defaults.enableAcceptEncodingGzip;
-    	      this.headersConfig = defaults.headersConfig;
-    	      this.queryStringsConfig = defaults.queryStringsConfig;
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cookiesConfig(Output<CachePolicyCookiesConfigArgs> cookiesConfig) {
-            this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
+            $.cookiesConfig = cookiesConfig;
             return this;
         }
+
         public Builder cookiesConfig(CachePolicyCookiesConfigArgs cookiesConfig) {
-            this.cookiesConfig = Output.of(Objects.requireNonNull(cookiesConfig));
-            return this;
+            return cookiesConfig(Output.of(cookiesConfig));
         }
+
         public Builder enableAcceptEncodingBrotli(@Nullable Output<Boolean> enableAcceptEncodingBrotli) {
-            this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
+            $.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
             return this;
         }
-        public Builder enableAcceptEncodingBrotli(@Nullable Boolean enableAcceptEncodingBrotli) {
-            this.enableAcceptEncodingBrotli = Codegen.ofNullable(enableAcceptEncodingBrotli);
-            return this;
+
+        public Builder enableAcceptEncodingBrotli(Boolean enableAcceptEncodingBrotli) {
+            return enableAcceptEncodingBrotli(Output.of(enableAcceptEncodingBrotli));
         }
+
         public Builder enableAcceptEncodingGzip(Output<Boolean> enableAcceptEncodingGzip) {
-            this.enableAcceptEncodingGzip = Objects.requireNonNull(enableAcceptEncodingGzip);
+            $.enableAcceptEncodingGzip = enableAcceptEncodingGzip;
             return this;
         }
+
         public Builder enableAcceptEncodingGzip(Boolean enableAcceptEncodingGzip) {
-            this.enableAcceptEncodingGzip = Output.of(Objects.requireNonNull(enableAcceptEncodingGzip));
-            return this;
+            return enableAcceptEncodingGzip(Output.of(enableAcceptEncodingGzip));
         }
+
         public Builder headersConfig(Output<CachePolicyHeadersConfigArgs> headersConfig) {
-            this.headersConfig = Objects.requireNonNull(headersConfig);
+            $.headersConfig = headersConfig;
             return this;
         }
+
         public Builder headersConfig(CachePolicyHeadersConfigArgs headersConfig) {
-            this.headersConfig = Output.of(Objects.requireNonNull(headersConfig));
-            return this;
+            return headersConfig(Output.of(headersConfig));
         }
+
         public Builder queryStringsConfig(Output<CachePolicyQueryStringsConfigArgs> queryStringsConfig) {
-            this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
+            $.queryStringsConfig = queryStringsConfig;
             return this;
         }
+
         public Builder queryStringsConfig(CachePolicyQueryStringsConfigArgs queryStringsConfig) {
-            this.queryStringsConfig = Output.of(Objects.requireNonNull(queryStringsConfig));
-            return this;
-        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginArgs build() {
-            return new CachePolicyParametersInCacheKeyAndForwardedToOriginArgs(cookiesConfig, enableAcceptEncodingBrotli, enableAcceptEncodingGzip, headersConfig, queryStringsConfig);
+            return queryStringsConfig(Output.of(queryStringsConfig));
+        }
+
+        public CachePolicyParametersInCacheKeyAndForwardedToOriginArgs build() {
+            $.cookiesConfig = Objects.requireNonNull($.cookiesConfig, "expected parameter 'cookiesConfig' to be non-null");
+            $.enableAcceptEncodingGzip = Objects.requireNonNull($.enableAcceptEncodingGzip, "expected parameter 'enableAcceptEncodingGzip' to be non-null");
+            $.headersConfig = Objects.requireNonNull($.headersConfig, "expected parameter 'headersConfig' to be non-null");
+            $.queryStringsConfig = Objects.requireNonNull($.queryStringsConfig, "expected parameter 'queryStringsConfig' to be non-null");
+            return $;
         }
     }
+
 }

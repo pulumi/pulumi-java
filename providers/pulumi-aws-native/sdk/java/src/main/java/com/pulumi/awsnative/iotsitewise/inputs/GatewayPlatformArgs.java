@@ -7,8 +7,8 @@ import com.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassV2Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GatewayPlatformArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="greengrass")
-      private final @Nullable Output<GatewayGreengrassArgs> greengrass;
+    private @Nullable Output<GatewayGreengrassArgs> greengrass;
 
-    public Output<GatewayGreengrassArgs> greengrass() {
-        return this.greengrass == null ? Codegen.empty() : this.greengrass;
+    public Optional<Output<GatewayGreengrassArgs>> greengrass() {
+        return Optional.ofNullable(this.greengrass);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GatewayPlatformArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="greengrassV2")
-      private final @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
+    private @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
 
-    public Output<GatewayGreengrassV2Args> greengrassV2() {
-        return this.greengrassV2 == null ? Codegen.empty() : this.greengrassV2;
+    public Optional<Output<GatewayGreengrassV2Args>> greengrassV2() {
+        return Optional.ofNullable(this.greengrassV2);
     }
 
-    public GatewayPlatformArgs(
-        @Nullable Output<GatewayGreengrassArgs> greengrass,
-        @Nullable Output<GatewayGreengrassV2Args> greengrassV2) {
-        this.greengrass = greengrass;
-        this.greengrassV2 = greengrassV2;
-    }
+    private GatewayPlatformArgs() {}
 
-    private GatewayPlatformArgs() {
-        this.greengrass = Codegen.empty();
-        this.greengrassV2 = Codegen.empty();
+    private GatewayPlatformArgs(GatewayPlatformArgs $) {
+        this.greengrass = $.greengrass;
+        this.greengrassV2 = $.greengrassV2;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayPlatformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GatewayGreengrassArgs> greengrass;
-        private @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
+        private GatewayPlatformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayPlatformArgs();
         }
 
         public Builder(GatewayPlatformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.greengrass = defaults.greengrass;
-    	      this.greengrassV2 = defaults.greengrassV2;
+            $ = new GatewayPlatformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder greengrass(@Nullable Output<GatewayGreengrassArgs> greengrass) {
-            this.greengrass = greengrass;
+            $.greengrass = greengrass;
             return this;
         }
-        public Builder greengrass(@Nullable GatewayGreengrassArgs greengrass) {
-            this.greengrass = Codegen.ofNullable(greengrass);
-            return this;
+
+        public Builder greengrass(GatewayGreengrassArgs greengrass) {
+            return greengrass(Output.of(greengrass));
         }
+
         public Builder greengrassV2(@Nullable Output<GatewayGreengrassV2Args> greengrassV2) {
-            this.greengrassV2 = greengrassV2;
+            $.greengrassV2 = greengrassV2;
             return this;
         }
-        public Builder greengrassV2(@Nullable GatewayGreengrassV2Args greengrassV2) {
-            this.greengrassV2 = Codegen.ofNullable(greengrassV2);
-            return this;
-        }        public GatewayPlatformArgs build() {
-            return new GatewayPlatformArgs(greengrass, greengrassV2);
+
+        public Builder greengrassV2(GatewayGreengrassV2Args greengrassV2) {
+            return greengrassV2(Output.of(greengrassV2));
+        }
+
+        public GatewayPlatformArgs build() {
+            return $;
         }
     }
+
 }

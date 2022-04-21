@@ -6,8 +6,8 @@ package com.pulumi.awsnative.devopsguru.inputs;
 import com.pulumi.awsnative.devopsguru.inputs.ResourceCollectionCloudFormationCollectionFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ResourceCollectionFilterArgs extends com.pulumi.resources.Res
     public static final ResourceCollectionFilterArgs Empty = new ResourceCollectionFilterArgs();
 
     @Import(name="cloudFormation")
-      private final @Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
+    private @Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
 
-    public Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation() {
-        return this.cloudFormation == null ? Codegen.empty() : this.cloudFormation;
+    public Optional<Output<ResourceCollectionCloudFormationCollectionFilterArgs>> cloudFormation() {
+        return Optional.ofNullable(this.cloudFormation);
     }
 
-    public ResourceCollectionFilterArgs(@Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
-        this.cloudFormation = cloudFormation;
-    }
+    private ResourceCollectionFilterArgs() {}
 
-    private ResourceCollectionFilterArgs() {
-        this.cloudFormation = Codegen.empty();
+    private ResourceCollectionFilterArgs(ResourceCollectionFilterArgs $) {
+        this.cloudFormation = $.cloudFormation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceCollectionFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
+        private ResourceCollectionFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceCollectionFilterArgs();
         }
 
         public Builder(ResourceCollectionFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFormation = defaults.cloudFormation;
+            $ = new ResourceCollectionFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFormation(@Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
-            this.cloudFormation = cloudFormation;
+            $.cloudFormation = cloudFormation;
             return this;
         }
-        public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilterArgs cloudFormation) {
-            this.cloudFormation = Codegen.ofNullable(cloudFormation);
-            return this;
-        }        public ResourceCollectionFilterArgs build() {
-            return new ResourceCollectionFilterArgs(cloudFormation);
+
+        public Builder cloudFormation(ResourceCollectionCloudFormationCollectionFilterArgs cloudFormation) {
+            return cloudFormation(Output.of(cloudFormation));
+        }
+
+        public ResourceCollectionFilterArgs build() {
+            return $;
         }
     }
+
 }

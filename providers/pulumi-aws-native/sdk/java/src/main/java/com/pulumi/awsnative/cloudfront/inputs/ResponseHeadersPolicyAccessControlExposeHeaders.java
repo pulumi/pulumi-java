@@ -14,48 +14,49 @@ public final class ResponseHeadersPolicyAccessControlExposeHeaders extends com.p
     public static final ResponseHeadersPolicyAccessControlExposeHeaders Empty = new ResponseHeadersPolicyAccessControlExposeHeaders();
 
     @Import(name="items", required=true)
-      private final List<String> items;
+    private List<String> items;
 
     public List<String> items() {
         return this.items;
     }
 
-    public ResponseHeadersPolicyAccessControlExposeHeaders(List<String> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private ResponseHeadersPolicyAccessControlExposeHeaders() {}
 
-    private ResponseHeadersPolicyAccessControlExposeHeaders() {
-        this.items = List.of();
+    private ResponseHeadersPolicyAccessControlExposeHeaders(ResponseHeadersPolicyAccessControlExposeHeaders $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyAccessControlExposeHeaders defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> items;
+        private ResponseHeadersPolicyAccessControlExposeHeaders $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyAccessControlExposeHeaders();
         }
 
         public Builder(ResponseHeadersPolicyAccessControlExposeHeaders defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new ResponseHeadersPolicyAccessControlExposeHeaders(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<String> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public ResponseHeadersPolicyAccessControlExposeHeaders build() {
-            return new ResponseHeadersPolicyAccessControlExposeHeaders(items);
+        }
+
+        public ResponseHeadersPolicyAccessControlExposeHeaders build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

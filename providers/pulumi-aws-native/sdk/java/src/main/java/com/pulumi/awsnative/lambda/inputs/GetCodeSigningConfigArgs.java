@@ -17,45 +17,45 @@ public final class GetCodeSigningConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="codeSigningConfigArn", required=true)
-      private final String codeSigningConfigArn;
+    private String codeSigningConfigArn;
 
     public String codeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
 
-    public GetCodeSigningConfigArgs(String codeSigningConfigArn) {
-        this.codeSigningConfigArn = Objects.requireNonNull(codeSigningConfigArn, "expected parameter 'codeSigningConfigArn' to be non-null");
-    }
+    private GetCodeSigningConfigArgs() {}
 
-    private GetCodeSigningConfigArgs() {
-        this.codeSigningConfigArn = null;
+    private GetCodeSigningConfigArgs(GetCodeSigningConfigArgs $) {
+        this.codeSigningConfigArn = $.codeSigningConfigArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCodeSigningConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String codeSigningConfigArn;
+        private GetCodeSigningConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCodeSigningConfigArgs();
         }
 
         public Builder(GetCodeSigningConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeSigningConfigArn = defaults.codeSigningConfigArn;
+            $ = new GetCodeSigningConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeSigningConfigArn(String codeSigningConfigArn) {
-            this.codeSigningConfigArn = Objects.requireNonNull(codeSigningConfigArn);
+            $.codeSigningConfigArn = codeSigningConfigArn;
             return this;
-        }        public GetCodeSigningConfigArgs build() {
-            return new GetCodeSigningConfigArgs(codeSigningConfigArn);
+        }
+
+        public GetCodeSigningConfigArgs build() {
+            $.codeSigningConfigArn = Objects.requireNonNull($.codeSigningConfigArn, "expected parameter 'codeSigningConfigArn' to be non-null");
+            return $;
         }
     }
+
 }

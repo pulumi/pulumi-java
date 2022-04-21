@@ -17,45 +17,45 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="internetGatewayId", required=true)
-      private final String internetGatewayId;
+    private String internetGatewayId;
 
     public String internetGatewayId() {
         return this.internetGatewayId;
     }
 
-    public GetInternetGatewayArgs(String internetGatewayId) {
-        this.internetGatewayId = Objects.requireNonNull(internetGatewayId, "expected parameter 'internetGatewayId' to be non-null");
-    }
+    private GetInternetGatewayArgs() {}
 
-    private GetInternetGatewayArgs() {
-        this.internetGatewayId = null;
+    private GetInternetGatewayArgs(GetInternetGatewayArgs $) {
+        this.internetGatewayId = $.internetGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInternetGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String internetGatewayId;
+        private GetInternetGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInternetGatewayArgs();
         }
 
         public Builder(GetInternetGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.internetGatewayId = defaults.internetGatewayId;
+            $ = new GetInternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder internetGatewayId(String internetGatewayId) {
-            this.internetGatewayId = Objects.requireNonNull(internetGatewayId);
+            $.internetGatewayId = internetGatewayId;
             return this;
-        }        public GetInternetGatewayArgs build() {
-            return new GetInternetGatewayArgs(internetGatewayId);
+        }
+
+        public GetInternetGatewayArgs build() {
+            $.internetGatewayId = Objects.requireNonNull($.internetGatewayId, "expected parameter 'internetGatewayId' to be non-null");
+            return $;
         }
     }
+
 }

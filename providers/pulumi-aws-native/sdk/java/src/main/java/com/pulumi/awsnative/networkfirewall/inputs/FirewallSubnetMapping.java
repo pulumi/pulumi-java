@@ -17,45 +17,45 @@ public final class FirewallSubnetMapping extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
     }
 
-    public FirewallSubnetMapping(String subnetId) {
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private FirewallSubnetMapping() {}
 
-    private FirewallSubnetMapping() {
-        this.subnetId = null;
+    private FirewallSubnetMapping(FirewallSubnetMapping $) {
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallSubnetMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String subnetId;
+        private FirewallSubnetMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallSubnetMapping();
         }
 
         public Builder(FirewallSubnetMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
+            $ = new FirewallSubnetMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
-        }        public FirewallSubnetMapping build() {
-            return new FirewallSubnetMapping(subnetId);
+        }
+
+        public FirewallSubnetMapping build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

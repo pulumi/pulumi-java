@@ -9,9 +9,9 @@ import com.pulumi.awsnative.s3.inputs.BucketQueueConfigurationArgs;
 import com.pulumi.awsnative.s3.inputs.BucketTopicConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,119 +24,111 @@ public final class BucketNotificationConfigurationArgs extends com.pulumi.resour
     public static final BucketNotificationConfigurationArgs Empty = new BucketNotificationConfigurationArgs();
 
     @Import(name="eventBridgeConfiguration")
-      private final @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
+    private @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
 
-    public Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration() {
-        return this.eventBridgeConfiguration == null ? Codegen.empty() : this.eventBridgeConfiguration;
+    public Optional<Output<BucketEventBridgeConfigurationArgs>> eventBridgeConfiguration() {
+        return Optional.ofNullable(this.eventBridgeConfiguration);
     }
 
     @Import(name="lambdaConfigurations")
-      private final @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
+    private @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
 
-    public Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations() {
-        return this.lambdaConfigurations == null ? Codegen.empty() : this.lambdaConfigurations;
+    public Optional<Output<List<BucketLambdaConfigurationArgs>>> lambdaConfigurations() {
+        return Optional.ofNullable(this.lambdaConfigurations);
     }
 
     @Import(name="queueConfigurations")
-      private final @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
+    private @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
 
-    public Output<List<BucketQueueConfigurationArgs>> queueConfigurations() {
-        return this.queueConfigurations == null ? Codegen.empty() : this.queueConfigurations;
+    public Optional<Output<List<BucketQueueConfigurationArgs>>> queueConfigurations() {
+        return Optional.ofNullable(this.queueConfigurations);
     }
 
     @Import(name="topicConfigurations")
-      private final @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
+    private @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
 
-    public Output<List<BucketTopicConfigurationArgs>> topicConfigurations() {
-        return this.topicConfigurations == null ? Codegen.empty() : this.topicConfigurations;
+    public Optional<Output<List<BucketTopicConfigurationArgs>>> topicConfigurations() {
+        return Optional.ofNullable(this.topicConfigurations);
     }
 
-    public BucketNotificationConfigurationArgs(
-        @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration,
-        @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations,
-        @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations,
-        @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations) {
-        this.eventBridgeConfiguration = eventBridgeConfiguration;
-        this.lambdaConfigurations = lambdaConfigurations;
-        this.queueConfigurations = queueConfigurations;
-        this.topicConfigurations = topicConfigurations;
-    }
+    private BucketNotificationConfigurationArgs() {}
 
-    private BucketNotificationConfigurationArgs() {
-        this.eventBridgeConfiguration = Codegen.empty();
-        this.lambdaConfigurations = Codegen.empty();
-        this.queueConfigurations = Codegen.empty();
-        this.topicConfigurations = Codegen.empty();
+    private BucketNotificationConfigurationArgs(BucketNotificationConfigurationArgs $) {
+        this.eventBridgeConfiguration = $.eventBridgeConfiguration;
+        this.lambdaConfigurations = $.lambdaConfigurations;
+        this.queueConfigurations = $.queueConfigurations;
+        this.topicConfigurations = $.topicConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNotificationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
-        private @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
-        private @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
-        private @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
+        private BucketNotificationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNotificationConfigurationArgs();
         }
 
         public Builder(BucketNotificationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventBridgeConfiguration = defaults.eventBridgeConfiguration;
-    	      this.lambdaConfigurations = defaults.lambdaConfigurations;
-    	      this.queueConfigurations = defaults.queueConfigurations;
-    	      this.topicConfigurations = defaults.topicConfigurations;
+            $ = new BucketNotificationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventBridgeConfiguration(@Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration) {
-            this.eventBridgeConfiguration = eventBridgeConfiguration;
+            $.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
-        public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfigurationArgs eventBridgeConfiguration) {
-            this.eventBridgeConfiguration = Codegen.ofNullable(eventBridgeConfiguration);
-            return this;
+
+        public Builder eventBridgeConfiguration(BucketEventBridgeConfigurationArgs eventBridgeConfiguration) {
+            return eventBridgeConfiguration(Output.of(eventBridgeConfiguration));
         }
+
         public Builder lambdaConfigurations(@Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations) {
-            this.lambdaConfigurations = lambdaConfigurations;
+            $.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
-        public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfigurationArgs> lambdaConfigurations) {
-            this.lambdaConfigurations = Codegen.ofNullable(lambdaConfigurations);
-            return this;
+
+        public Builder lambdaConfigurations(List<BucketLambdaConfigurationArgs> lambdaConfigurations) {
+            return lambdaConfigurations(Output.of(lambdaConfigurations));
         }
+
         public Builder lambdaConfigurations(BucketLambdaConfigurationArgs... lambdaConfigurations) {
             return lambdaConfigurations(List.of(lambdaConfigurations));
         }
+
         public Builder queueConfigurations(@Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations) {
-            this.queueConfigurations = queueConfigurations;
+            $.queueConfigurations = queueConfigurations;
             return this;
         }
-        public Builder queueConfigurations(@Nullable List<BucketQueueConfigurationArgs> queueConfigurations) {
-            this.queueConfigurations = Codegen.ofNullable(queueConfigurations);
-            return this;
+
+        public Builder queueConfigurations(List<BucketQueueConfigurationArgs> queueConfigurations) {
+            return queueConfigurations(Output.of(queueConfigurations));
         }
+
         public Builder queueConfigurations(BucketQueueConfigurationArgs... queueConfigurations) {
             return queueConfigurations(List.of(queueConfigurations));
         }
+
         public Builder topicConfigurations(@Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations) {
-            this.topicConfigurations = topicConfigurations;
+            $.topicConfigurations = topicConfigurations;
             return this;
         }
-        public Builder topicConfigurations(@Nullable List<BucketTopicConfigurationArgs> topicConfigurations) {
-            this.topicConfigurations = Codegen.ofNullable(topicConfigurations);
-            return this;
+
+        public Builder topicConfigurations(List<BucketTopicConfigurationArgs> topicConfigurations) {
+            return topicConfigurations(Output.of(topicConfigurations));
         }
+
         public Builder topicConfigurations(BucketTopicConfigurationArgs... topicConfigurations) {
             return topicConfigurations(List.of(topicConfigurations));
-        }        public BucketNotificationConfigurationArgs build() {
-            return new BucketNotificationConfigurationArgs(eventBridgeConfiguration, lambdaConfigurations, queueConfigurations, topicConfigurations);
+        }
+
+        public BucketNotificationConfigurationArgs build() {
+            return $;
         }
     }
+
 }

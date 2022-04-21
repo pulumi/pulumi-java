@@ -15,62 +15,58 @@ public final class DatastoreCustomerManagedS3Storage extends com.pulumi.resource
     public static final DatastoreCustomerManagedS3Storage Empty = new DatastoreCustomerManagedS3Storage();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
-      private final @Nullable String keyPrefix;
+    private @Nullable String keyPrefix;
 
     public Optional<String> keyPrefix() {
-        return this.keyPrefix == null ? Optional.empty() : Optional.ofNullable(this.keyPrefix);
+        return Optional.ofNullable(this.keyPrefix);
     }
 
-    public DatastoreCustomerManagedS3Storage(
-        String bucket,
-        @Nullable String keyPrefix) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.keyPrefix = keyPrefix;
-    }
+    private DatastoreCustomerManagedS3Storage() {}
 
-    private DatastoreCustomerManagedS3Storage() {
-        this.bucket = null;
-        this.keyPrefix = null;
+    private DatastoreCustomerManagedS3Storage(DatastoreCustomerManagedS3Storage $) {
+        this.bucket = $.bucket;
+        this.keyPrefix = $.keyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreCustomerManagedS3Storage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String keyPrefix;
+        private DatastoreCustomerManagedS3Storage $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreCustomerManagedS3Storage();
         }
 
         public Builder(DatastoreCustomerManagedS3Storage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.keyPrefix = defaults.keyPrefix;
+            $ = new DatastoreCustomerManagedS3Storage(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder keyPrefix(@Nullable String keyPrefix) {
-            this.keyPrefix = keyPrefix;
+            $.keyPrefix = keyPrefix;
             return this;
-        }        public DatastoreCustomerManagedS3Storage build() {
-            return new DatastoreCustomerManagedS3Storage(bucket, keyPrefix);
+        }
+
+        public DatastoreCustomerManagedS3Storage build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasLambdaCodeHookArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class BotAliasCodeHookSpecificationArgs extends com.pulumi.resource
     public static final BotAliasCodeHookSpecificationArgs Empty = new BotAliasCodeHookSpecificationArgs();
 
     @Import(name="lambdaCodeHook", required=true)
-      private final Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
+    private Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
 
     public Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook() {
         return this.lambdaCodeHook;
     }
 
-    public BotAliasCodeHookSpecificationArgs(Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
-        this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook, "expected parameter 'lambdaCodeHook' to be non-null");
-    }
+    private BotAliasCodeHookSpecificationArgs() {}
 
-    private BotAliasCodeHookSpecificationArgs() {
-        this.lambdaCodeHook = Codegen.empty();
+    private BotAliasCodeHookSpecificationArgs(BotAliasCodeHookSpecificationArgs $) {
+        this.lambdaCodeHook = $.lambdaCodeHook;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasCodeHookSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
+        private BotAliasCodeHookSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasCodeHookSpecificationArgs();
         }
 
         public Builder(BotAliasCodeHookSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lambdaCodeHook = defaults.lambdaCodeHook;
+            $ = new BotAliasCodeHookSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lambdaCodeHook(Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
-            this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
+            $.lambdaCodeHook = lambdaCodeHook;
             return this;
         }
+
         public Builder lambdaCodeHook(BotAliasLambdaCodeHookArgs lambdaCodeHook) {
-            this.lambdaCodeHook = Output.of(Objects.requireNonNull(lambdaCodeHook));
-            return this;
-        }        public BotAliasCodeHookSpecificationArgs build() {
-            return new BotAliasCodeHookSpecificationArgs(lambdaCodeHook);
+            return lambdaCodeHook(Output.of(lambdaCodeHook));
+        }
+
+        public BotAliasCodeHookSpecificationArgs build() {
+            $.lambdaCodeHook = Objects.requireNonNull($.lambdaCodeHook, "expected parameter 'lambdaCodeHook' to be non-null");
+            return $;
         }
     }
+
 }

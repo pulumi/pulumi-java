@@ -16,62 +16,57 @@ public final class ThemeValues extends com.pulumi.resources.InvokeArgs {
     public static final ThemeValues Empty = new ThemeValues();
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable ThemeValue value;
+    private @Nullable ThemeValue value;
 
     public Optional<ThemeValue> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ThemeValues(
-        @Nullable String key,
-        @Nullable ThemeValue value) {
-        this.key = key;
-        this.value = value;
-    }
+    private ThemeValues() {}
 
-    private ThemeValues() {
-        this.key = null;
-        this.value = null;
+    private ThemeValues(ThemeValues $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeValues defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private @Nullable ThemeValue value;
+        private ThemeValues $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeValues();
         }
 
         public Builder(ThemeValues defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ThemeValues(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable ThemeValue value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ThemeValues build() {
-            return new ThemeValues(key, value);
+        }
+
+        public ThemeValues build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.location;
 import com.pulumi.awsnative.location.enums.RouteCalculatorPricingPlan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,101 @@ public final class RouteCalculatorArgs extends com.pulumi.resources.ResourceArgs
     public static final RouteCalculatorArgs Empty = new RouteCalculatorArgs();
 
     @Import(name="calculatorName", required=true)
-      private final Output<String> calculatorName;
+    private Output<String> calculatorName;
 
     public Output<String> calculatorName() {
         return this.calculatorName;
     }
 
     @Import(name="dataSource", required=true)
-      private final Output<String> dataSource;
+    private Output<String> dataSource;
 
     public Output<String> dataSource() {
         return this.dataSource;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="pricingPlan")
-      private final @Nullable Output<RouteCalculatorPricingPlan> pricingPlan;
+    private @Nullable Output<RouteCalculatorPricingPlan> pricingPlan;
 
-    public Output<RouteCalculatorPricingPlan> pricingPlan() {
-        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
+    public Optional<Output<RouteCalculatorPricingPlan>> pricingPlan() {
+        return Optional.ofNullable(this.pricingPlan);
     }
 
-    public RouteCalculatorArgs(
-        Output<String> calculatorName,
-        Output<String> dataSource,
-        @Nullable Output<String> description,
-        @Nullable Output<RouteCalculatorPricingPlan> pricingPlan) {
-        this.calculatorName = Objects.requireNonNull(calculatorName, "expected parameter 'calculatorName' to be non-null");
-        this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.description = description;
-        this.pricingPlan = pricingPlan;
-    }
+    private RouteCalculatorArgs() {}
 
-    private RouteCalculatorArgs() {
-        this.calculatorName = Codegen.empty();
-        this.dataSource = Codegen.empty();
-        this.description = Codegen.empty();
-        this.pricingPlan = Codegen.empty();
+    private RouteCalculatorArgs(RouteCalculatorArgs $) {
+        this.calculatorName = $.calculatorName;
+        this.dataSource = $.dataSource;
+        this.description = $.description;
+        this.pricingPlan = $.pricingPlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteCalculatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> calculatorName;
-        private Output<String> dataSource;
-        private @Nullable Output<String> description;
-        private @Nullable Output<RouteCalculatorPricingPlan> pricingPlan;
+        private RouteCalculatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteCalculatorArgs();
         }
 
         public Builder(RouteCalculatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.calculatorName = defaults.calculatorName;
-    	      this.dataSource = defaults.dataSource;
-    	      this.description = defaults.description;
-    	      this.pricingPlan = defaults.pricingPlan;
+            $ = new RouteCalculatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder calculatorName(Output<String> calculatorName) {
-            this.calculatorName = Objects.requireNonNull(calculatorName);
+            $.calculatorName = calculatorName;
             return this;
         }
+
         public Builder calculatorName(String calculatorName) {
-            this.calculatorName = Output.of(Objects.requireNonNull(calculatorName));
-            return this;
+            return calculatorName(Output.of(calculatorName));
         }
+
         public Builder dataSource(Output<String> dataSource) {
-            this.dataSource = Objects.requireNonNull(dataSource);
+            $.dataSource = dataSource;
             return this;
         }
+
         public Builder dataSource(String dataSource) {
-            this.dataSource = Output.of(Objects.requireNonNull(dataSource));
-            return this;
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder pricingPlan(@Nullable Output<RouteCalculatorPricingPlan> pricingPlan) {
-            this.pricingPlan = pricingPlan;
+            $.pricingPlan = pricingPlan;
             return this;
         }
-        public Builder pricingPlan(@Nullable RouteCalculatorPricingPlan pricingPlan) {
-            this.pricingPlan = Codegen.ofNullable(pricingPlan);
-            return this;
-        }        public RouteCalculatorArgs build() {
-            return new RouteCalculatorArgs(calculatorName, dataSource, description, pricingPlan);
+
+        public Builder pricingPlan(RouteCalculatorPricingPlan pricingPlan) {
+            return pricingPlan(Output.of(pricingPlan));
+        }
+
+        public RouteCalculatorArgs build() {
+            $.calculatorName = Objects.requireNonNull($.calculatorName, "expected parameter 'calculatorName' to be non-null");
+            $.dataSource = Objects.requireNonNull($.dataSource, "expected parameter 'dataSource' to be non-null");
+            return $;
         }
     }
+
 }

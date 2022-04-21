@@ -14,62 +14,59 @@ public final class DatasetResourceConfiguration extends com.pulumi.resources.Inv
     public static final DatasetResourceConfiguration Empty = new DatasetResourceConfiguration();
 
     @Import(name="computeType", required=true)
-      private final DatasetResourceConfigurationComputeType computeType;
+    private DatasetResourceConfigurationComputeType computeType;
 
     public DatasetResourceConfigurationComputeType computeType() {
         return this.computeType;
     }
 
     @Import(name="volumeSizeInGB", required=true)
-      private final Integer volumeSizeInGB;
+    private Integer volumeSizeInGB;
 
     public Integer volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 
-    public DatasetResourceConfiguration(
-        DatasetResourceConfigurationComputeType computeType,
-        Integer volumeSizeInGB) {
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
-        this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
-    }
+    private DatasetResourceConfiguration() {}
 
-    private DatasetResourceConfiguration() {
-        this.computeType = null;
-        this.volumeSizeInGB = null;
+    private DatasetResourceConfiguration(DatasetResourceConfiguration $) {
+        this.computeType = $.computeType;
+        this.volumeSizeInGB = $.volumeSizeInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetResourceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DatasetResourceConfigurationComputeType computeType;
-        private Integer volumeSizeInGB;
+        private DatasetResourceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetResourceConfiguration();
         }
 
         public Builder(DatasetResourceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeType = defaults.computeType;
-    	      this.volumeSizeInGB = defaults.volumeSizeInGB;
+            $ = new DatasetResourceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder computeType(DatasetResourceConfigurationComputeType computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
-            this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
+            $.volumeSizeInGB = volumeSizeInGB;
             return this;
-        }        public DatasetResourceConfiguration build() {
-            return new DatasetResourceConfiguration(computeType, volumeSizeInGB);
+        }
+
+        public DatasetResourceConfiguration build() {
+            $.computeType = Objects.requireNonNull($.computeType, "expected parameter 'computeType' to be non-null");
+            $.volumeSizeInGB = Objects.requireNonNull($.volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
+            return $;
         }
     }
+
 }

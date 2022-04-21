@@ -22,7 +22,7 @@ public final class ServiceSourceCodeVersion extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final ServiceSourceCodeVersionType type;
+    private ServiceSourceCodeVersionType type;
 
     public ServiceSourceCodeVersionType type() {
         return this.type;
@@ -33,55 +33,52 @@ public final class ServiceSourceCodeVersion extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ServiceSourceCodeVersion(
-        ServiceSourceCodeVersionType type,
-        String value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ServiceSourceCodeVersion() {}
 
-    private ServiceSourceCodeVersion() {
-        this.type = null;
-        this.value = null;
+    private ServiceSourceCodeVersion(ServiceSourceCodeVersion $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSourceCodeVersion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ServiceSourceCodeVersionType type;
-        private String value;
+        private ServiceSourceCodeVersion $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSourceCodeVersion();
         }
 
         public Builder(ServiceSourceCodeVersion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ServiceSourceCodeVersion(Objects.requireNonNull(defaults));
         }
 
         public Builder type(ServiceSourceCodeVersionType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ServiceSourceCodeVersion build() {
-            return new ServiceSourceCodeVersion(type, value);
+        }
+
+        public ServiceSourceCodeVersion build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

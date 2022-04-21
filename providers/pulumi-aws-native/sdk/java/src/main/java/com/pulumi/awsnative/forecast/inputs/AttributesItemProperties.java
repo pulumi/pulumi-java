@@ -20,10 +20,10 @@ public final class AttributesItemProperties extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="attributeName")
-      private final @Nullable String attributeName;
+    private @Nullable String attributeName;
 
     public Optional<String> attributeName() {
-        return this.attributeName == null ? Optional.empty() : Optional.ofNullable(this.attributeName);
+        return Optional.ofNullable(this.attributeName);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class AttributesItemProperties extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="attributeType")
-      private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
+    private @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
     public Optional<DatasetAttributesItemPropertiesAttributeType> attributeType() {
-        return this.attributeType == null ? Optional.empty() : Optional.ofNullable(this.attributeType);
+        return Optional.ofNullable(this.attributeType);
     }
 
-    public AttributesItemProperties(
-        @Nullable String attributeName,
-        @Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
-        this.attributeName = attributeName;
-        this.attributeType = attributeType;
-    }
+    private AttributesItemProperties() {}
 
-    private AttributesItemProperties() {
-        this.attributeName = null;
-        this.attributeType = null;
+    private AttributesItemProperties(AttributesItemProperties $) {
+        this.attributeName = $.attributeName;
+        this.attributeType = $.attributeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttributesItemProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String attributeName;
-        private @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
+        private AttributesItemProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttributesItemProperties();
         }
 
         public Builder(AttributesItemProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.attributeType = defaults.attributeType;
+            $ = new AttributesItemProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = attributeName;
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
-            this.attributeType = attributeType;
+            $.attributeType = attributeType;
             return this;
-        }        public AttributesItemProperties build() {
-            return new AttributesItemProperties(attributeName, attributeType);
+        }
+
+        public AttributesItemProperties build() {
+            return $;
         }
     }
+
 }

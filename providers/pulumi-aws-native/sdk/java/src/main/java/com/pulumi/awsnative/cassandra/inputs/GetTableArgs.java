@@ -17,7 +17,7 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyspaceName", required=true)
-      private final String keyspaceName;
+    private String keyspaceName;
 
     public String keyspaceName() {
         return this.keyspaceName;
@@ -28,55 +28,52 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public GetTableArgs(
-        String keyspaceName,
-        String tableName) {
-        this.keyspaceName = Objects.requireNonNull(keyspaceName, "expected parameter 'keyspaceName' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private GetTableArgs() {}
 
-    private GetTableArgs() {
-        this.keyspaceName = null;
-        this.tableName = null;
+    private GetTableArgs(GetTableArgs $) {
+        this.keyspaceName = $.keyspaceName;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyspaceName;
-        private String tableName;
+        private GetTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableArgs();
         }
 
         public Builder(GetTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyspaceName = defaults.keyspaceName;
-    	      this.tableName = defaults.tableName;
+            $ = new GetTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Objects.requireNonNull(keyspaceName);
+            $.keyspaceName = keyspaceName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public GetTableArgs build() {
-            return new GetTableArgs(keyspaceName, tableName);
+        }
+
+        public GetTableArgs build() {
+            $.keyspaceName = Objects.requireNonNull($.keyspaceName, "expected parameter 'keyspaceName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

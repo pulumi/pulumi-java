@@ -17,45 +17,45 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="associationId", required=true)
-      private final String associationId;
+    private String associationId;
 
     public String associationId() {
         return this.associationId;
     }
 
-    public GetAssociationArgs(String associationId) {
-        this.associationId = Objects.requireNonNull(associationId, "expected parameter 'associationId' to be non-null");
-    }
+    private GetAssociationArgs() {}
 
-    private GetAssociationArgs() {
-        this.associationId = null;
+    private GetAssociationArgs(GetAssociationArgs $) {
+        this.associationId = $.associationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associationId;
+        private GetAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssociationArgs();
         }
 
         public Builder(GetAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationId = defaults.associationId;
+            $ = new GetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associationId(String associationId) {
-            this.associationId = Objects.requireNonNull(associationId);
+            $.associationId = associationId;
             return this;
-        }        public GetAssociationArgs build() {
-            return new GetAssociationArgs(associationId);
+        }
+
+        public GetAssociationArgs build() {
+            $.associationId = Objects.requireNonNull($.associationId, "expected parameter 'associationId' to be non-null");
+            return $;
         }
     }
+
 }

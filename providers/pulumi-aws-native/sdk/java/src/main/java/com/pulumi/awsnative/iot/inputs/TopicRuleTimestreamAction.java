@@ -19,129 +19,117 @@ public final class TopicRuleTimestreamAction extends com.pulumi.resources.Invoke
     public static final TopicRuleTimestreamAction Empty = new TopicRuleTimestreamAction();
 
     @Import(name="batchMode")
-      private final @Nullable Boolean batchMode;
+    private @Nullable Boolean batchMode;
 
     public Optional<Boolean> batchMode() {
-        return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
+        return Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="dimensions", required=true)
-      private final List<TopicRuleTimestreamDimension> dimensions;
+    private List<TopicRuleTimestreamDimension> dimensions;
 
     public List<TopicRuleTimestreamDimension> dimensions() {
         return this.dimensions;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
     @Import(name="timestamp")
-      private final @Nullable TopicRuleTimestreamTimestamp timestamp;
+    private @Nullable TopicRuleTimestreamTimestamp timestamp;
 
     public Optional<TopicRuleTimestreamTimestamp> timestamp() {
-        return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
+        return Optional.ofNullable(this.timestamp);
     }
 
-    public TopicRuleTimestreamAction(
-        @Nullable Boolean batchMode,
-        String databaseName,
-        List<TopicRuleTimestreamDimension> dimensions,
-        String roleArn,
-        String tableName,
-        @Nullable TopicRuleTimestreamTimestamp timestamp) {
-        this.batchMode = batchMode;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.timestamp = timestamp;
-    }
+    private TopicRuleTimestreamAction() {}
 
-    private TopicRuleTimestreamAction() {
-        this.batchMode = null;
-        this.databaseName = null;
-        this.dimensions = List.of();
-        this.roleArn = null;
-        this.tableName = null;
-        this.timestamp = null;
+    private TopicRuleTimestreamAction(TopicRuleTimestreamAction $) {
+        this.batchMode = $.batchMode;
+        this.databaseName = $.databaseName;
+        this.dimensions = $.dimensions;
+        this.roleArn = $.roleArn;
+        this.tableName = $.tableName;
+        this.timestamp = $.timestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleTimestreamAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean batchMode;
-        private String databaseName;
-        private List<TopicRuleTimestreamDimension> dimensions;
-        private String roleArn;
-        private String tableName;
-        private @Nullable TopicRuleTimestreamTimestamp timestamp;
+        private TopicRuleTimestreamAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleTimestreamAction();
         }
 
         public Builder(TopicRuleTimestreamAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchMode = defaults.batchMode;
-    	      this.databaseName = defaults.databaseName;
-    	      this.dimensions = defaults.dimensions;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tableName = defaults.tableName;
-    	      this.timestamp = defaults.timestamp;
+            $ = new TopicRuleTimestreamAction(Objects.requireNonNull(defaults));
         }
 
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = batchMode;
+            $.batchMode = batchMode;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder dimensions(List<TopicRuleTimestreamDimension> dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(TopicRuleTimestreamDimension... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder timestamp(@Nullable TopicRuleTimestreamTimestamp timestamp) {
-            this.timestamp = timestamp;
+            $.timestamp = timestamp;
             return this;
-        }        public TopicRuleTimestreamAction build() {
-            return new TopicRuleTimestreamAction(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
+        }
+
+        public TopicRuleTimestreamAction build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

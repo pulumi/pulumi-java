@@ -24,10 +24,10 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="domainName")
-      private final @Nullable String domainName;
+    private @Nullable String domainName;
 
     public Optional<String> domainName() {
-        return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="hostedZoneArn")
-      private final @Nullable String hostedZoneArn;
+    private @Nullable String hostedZoneArn;
 
     public Optional<String> hostedZoneArn() {
-        return this.hostedZoneArn == null ? Optional.empty() : Optional.ofNullable(this.hostedZoneArn);
+        return Optional.ofNullable(this.hostedZoneArn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="recordSetId")
-      private final @Nullable String recordSetId;
+    private @Nullable String recordSetId;
 
     public Optional<String> recordSetId() {
-        return this.recordSetId == null ? Optional.empty() : Optional.ofNullable(this.recordSetId);
+        return Optional.ofNullable(this.recordSetId);
     }
 
     /**
@@ -57,89 +57,75 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="recordType")
-      private final @Nullable String recordType;
+    private @Nullable String recordType;
 
     public Optional<String> recordType() {
-        return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
+        return Optional.ofNullable(this.recordType);
     }
 
     @Import(name="targetResource")
-      private final @Nullable ResourceSetTargetResource targetResource;
+    private @Nullable ResourceSetTargetResource targetResource;
 
     public Optional<ResourceSetTargetResource> targetResource() {
-        return this.targetResource == null ? Optional.empty() : Optional.ofNullable(this.targetResource);
+        return Optional.ofNullable(this.targetResource);
     }
 
-    public ResourceSetDNSTargetResource(
-        @Nullable String domainName,
-        @Nullable String hostedZoneArn,
-        @Nullable String recordSetId,
-        @Nullable String recordType,
-        @Nullable ResourceSetTargetResource targetResource) {
-        this.domainName = domainName;
-        this.hostedZoneArn = hostedZoneArn;
-        this.recordSetId = recordSetId;
-        this.recordType = recordType;
-        this.targetResource = targetResource;
-    }
+    private ResourceSetDNSTargetResource() {}
 
-    private ResourceSetDNSTargetResource() {
-        this.domainName = null;
-        this.hostedZoneArn = null;
-        this.recordSetId = null;
-        this.recordType = null;
-        this.targetResource = null;
+    private ResourceSetDNSTargetResource(ResourceSetDNSTargetResource $) {
+        this.domainName = $.domainName;
+        this.hostedZoneArn = $.hostedZoneArn;
+        this.recordSetId = $.recordSetId;
+        this.recordType = $.recordType;
+        this.targetResource = $.targetResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetDNSTargetResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String domainName;
-        private @Nullable String hostedZoneArn;
-        private @Nullable String recordSetId;
-        private @Nullable String recordType;
-        private @Nullable ResourceSetTargetResource targetResource;
+        private ResourceSetDNSTargetResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetDNSTargetResource();
         }
 
         public Builder(ResourceSetDNSTargetResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.hostedZoneArn = defaults.hostedZoneArn;
-    	      this.recordSetId = defaults.recordSetId;
-    	      this.recordType = defaults.recordType;
-    	      this.targetResource = defaults.targetResource;
+            $ = new ResourceSetDNSTargetResource(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
+
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
-            this.hostedZoneArn = hostedZoneArn;
+            $.hostedZoneArn = hostedZoneArn;
             return this;
         }
+
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = recordSetId;
+            $.recordSetId = recordSetId;
             return this;
         }
+
         public Builder recordType(@Nullable String recordType) {
-            this.recordType = recordType;
+            $.recordType = recordType;
             return this;
         }
+
         public Builder targetResource(@Nullable ResourceSetTargetResource targetResource) {
-            this.targetResource = targetResource;
+            $.targetResource = targetResource;
             return this;
-        }        public ResourceSetDNSTargetResource build() {
-            return new ResourceSetDNSTargetResource(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
+        }
+
+        public ResourceSetDNSTargetResource build() {
+            return $;
         }
     }
+
 }

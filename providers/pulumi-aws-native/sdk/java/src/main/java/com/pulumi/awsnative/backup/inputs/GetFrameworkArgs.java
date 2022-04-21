@@ -17,45 +17,45 @@ public final class GetFrameworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frameworkArn", required=true)
-      private final String frameworkArn;
+    private String frameworkArn;
 
     public String frameworkArn() {
         return this.frameworkArn;
     }
 
-    public GetFrameworkArgs(String frameworkArn) {
-        this.frameworkArn = Objects.requireNonNull(frameworkArn, "expected parameter 'frameworkArn' to be non-null");
-    }
+    private GetFrameworkArgs() {}
 
-    private GetFrameworkArgs() {
-        this.frameworkArn = null;
+    private GetFrameworkArgs(GetFrameworkArgs $) {
+        this.frameworkArn = $.frameworkArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFrameworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String frameworkArn;
+        private GetFrameworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFrameworkArgs();
         }
 
         public Builder(GetFrameworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frameworkArn = defaults.frameworkArn;
+            $ = new GetFrameworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frameworkArn(String frameworkArn) {
-            this.frameworkArn = Objects.requireNonNull(frameworkArn);
+            $.frameworkArn = frameworkArn;
             return this;
-        }        public GetFrameworkArgs build() {
-            return new GetFrameworkArgs(frameworkArn);
+        }
+
+        public GetFrameworkArgs build() {
+            $.frameworkArn = Objects.requireNonNull($.frameworkArn, "expected parameter 'frameworkArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import com.pulumi.awsnative.codestarnotifications.inputs.NotificationRuleTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,236 +21,213 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     public static final NotificationRuleArgs Empty = new NotificationRuleArgs();
 
     @Import(name="createdBy")
-      private final @Nullable Output<String> createdBy;
+    private @Nullable Output<String> createdBy;
 
-    public Output<String> createdBy() {
-        return this.createdBy == null ? Codegen.empty() : this.createdBy;
+    public Optional<Output<String>> createdBy() {
+        return Optional.ofNullable(this.createdBy);
     }
 
     @Import(name="detailType", required=true)
-      private final Output<NotificationRuleDetailType> detailType;
+    private Output<NotificationRuleDetailType> detailType;
 
     public Output<NotificationRuleDetailType> detailType() {
         return this.detailType;
     }
 
     @Import(name="eventTypeId")
-      private final @Nullable Output<String> eventTypeId;
+    private @Nullable Output<String> eventTypeId;
 
-    public Output<String> eventTypeId() {
-        return this.eventTypeId == null ? Codegen.empty() : this.eventTypeId;
+    public Optional<Output<String>> eventTypeId() {
+        return Optional.ofNullable(this.eventTypeId);
     }
 
     @Import(name="eventTypeIds", required=true)
-      private final Output<List<String>> eventTypeIds;
+    private Output<List<String>> eventTypeIds;
 
     public Output<List<String>> eventTypeIds() {
         return this.eventTypeIds;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
     }
 
     @Import(name="status")
-      private final @Nullable Output<NotificationRuleStatus> status;
+    private @Nullable Output<NotificationRuleStatus> status;
 
-    public Output<NotificationRuleStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<NotificationRuleStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Object> tags;
+    private @Nullable Output<Object> tags;
 
-    public Output<Object> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Object>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="targetAddress")
-      private final @Nullable Output<String> targetAddress;
+    private @Nullable Output<String> targetAddress;
 
-    public Output<String> targetAddress() {
-        return this.targetAddress == null ? Codegen.empty() : this.targetAddress;
+    public Optional<Output<String>> targetAddress() {
+        return Optional.ofNullable(this.targetAddress);
     }
 
     @Import(name="targets", required=true)
-      private final Output<List<NotificationRuleTargetArgs>> targets;
+    private Output<List<NotificationRuleTargetArgs>> targets;
 
     public Output<List<NotificationRuleTargetArgs>> targets() {
         return this.targets;
     }
 
-    public NotificationRuleArgs(
-        @Nullable Output<String> createdBy,
-        Output<NotificationRuleDetailType> detailType,
-        @Nullable Output<String> eventTypeId,
-        Output<List<String>> eventTypeIds,
-        @Nullable Output<String> name,
-        Output<String> resource,
-        @Nullable Output<NotificationRuleStatus> status,
-        @Nullable Output<Object> tags,
-        @Nullable Output<String> targetAddress,
-        Output<List<NotificationRuleTargetArgs>> targets) {
-        this.createdBy = createdBy;
-        this.detailType = Objects.requireNonNull(detailType, "expected parameter 'detailType' to be non-null");
-        this.eventTypeId = eventTypeId;
-        this.eventTypeIds = Objects.requireNonNull(eventTypeIds, "expected parameter 'eventTypeIds' to be non-null");
-        this.name = name;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.status = status;
-        this.tags = tags;
-        this.targetAddress = targetAddress;
-        this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
-    }
+    private NotificationRuleArgs() {}
 
-    private NotificationRuleArgs() {
-        this.createdBy = Codegen.empty();
-        this.detailType = Codegen.empty();
-        this.eventTypeId = Codegen.empty();
-        this.eventTypeIds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resource = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetAddress = Codegen.empty();
-        this.targets = Codegen.empty();
+    private NotificationRuleArgs(NotificationRuleArgs $) {
+        this.createdBy = $.createdBy;
+        this.detailType = $.detailType;
+        this.eventTypeId = $.eventTypeId;
+        this.eventTypeIds = $.eventTypeIds;
+        this.name = $.name;
+        this.resource = $.resource;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.targetAddress = $.targetAddress;
+        this.targets = $.targets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdBy;
-        private Output<NotificationRuleDetailType> detailType;
-        private @Nullable Output<String> eventTypeId;
-        private Output<List<String>> eventTypeIds;
-        private @Nullable Output<String> name;
-        private Output<String> resource;
-        private @Nullable Output<NotificationRuleStatus> status;
-        private @Nullable Output<Object> tags;
-        private @Nullable Output<String> targetAddress;
-        private Output<List<NotificationRuleTargetArgs>> targets;
+        private NotificationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRuleArgs();
         }
 
         public Builder(NotificationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdBy = defaults.createdBy;
-    	      this.detailType = defaults.detailType;
-    	      this.eventTypeId = defaults.eventTypeId;
-    	      this.eventTypeIds = defaults.eventTypeIds;
-    	      this.name = defaults.name;
-    	      this.resource = defaults.resource;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.targetAddress = defaults.targetAddress;
-    	      this.targets = defaults.targets;
+            $ = new NotificationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdBy(@Nullable Output<String> createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
-        public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Codegen.ofNullable(createdBy);
-            return this;
+
+        public Builder createdBy(String createdBy) {
+            return createdBy(Output.of(createdBy));
         }
+
         public Builder detailType(Output<NotificationRuleDetailType> detailType) {
-            this.detailType = Objects.requireNonNull(detailType);
+            $.detailType = detailType;
             return this;
         }
+
         public Builder detailType(NotificationRuleDetailType detailType) {
-            this.detailType = Output.of(Objects.requireNonNull(detailType));
-            return this;
+            return detailType(Output.of(detailType));
         }
+
         public Builder eventTypeId(@Nullable Output<String> eventTypeId) {
-            this.eventTypeId = eventTypeId;
+            $.eventTypeId = eventTypeId;
             return this;
         }
-        public Builder eventTypeId(@Nullable String eventTypeId) {
-            this.eventTypeId = Codegen.ofNullable(eventTypeId);
-            return this;
+
+        public Builder eventTypeId(String eventTypeId) {
+            return eventTypeId(Output.of(eventTypeId));
         }
+
         public Builder eventTypeIds(Output<List<String>> eventTypeIds) {
-            this.eventTypeIds = Objects.requireNonNull(eventTypeIds);
+            $.eventTypeIds = eventTypeIds;
             return this;
         }
+
         public Builder eventTypeIds(List<String> eventTypeIds) {
-            this.eventTypeIds = Output.of(Objects.requireNonNull(eventTypeIds));
-            return this;
+            return eventTypeIds(Output.of(eventTypeIds));
         }
+
         public Builder eventTypeIds(String... eventTypeIds) {
             return eventTypeIds(List.of(eventTypeIds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
+            return resource(Output.of(resource));
         }
+
         public Builder status(@Nullable Output<NotificationRuleStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable NotificationRuleStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(NotificationRuleStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Object> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Object tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Object tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetAddress(@Nullable Output<String> targetAddress) {
-            this.targetAddress = targetAddress;
+            $.targetAddress = targetAddress;
             return this;
         }
-        public Builder targetAddress(@Nullable String targetAddress) {
-            this.targetAddress = Codegen.ofNullable(targetAddress);
-            return this;
+
+        public Builder targetAddress(String targetAddress) {
+            return targetAddress(Output.of(targetAddress));
         }
+
         public Builder targets(Output<List<NotificationRuleTargetArgs>> targets) {
-            this.targets = Objects.requireNonNull(targets);
+            $.targets = targets;
             return this;
         }
+
         public Builder targets(List<NotificationRuleTargetArgs> targets) {
-            this.targets = Output.of(Objects.requireNonNull(targets));
-            return this;
+            return targets(Output.of(targets));
         }
+
         public Builder targets(NotificationRuleTargetArgs... targets) {
             return targets(List.of(targets));
-        }        public NotificationRuleArgs build() {
-            return new NotificationRuleArgs(createdBy, detailType, eventTypeId, eventTypeIds, name, resource, status, tags, targetAddress, targets);
+        }
+
+        public NotificationRuleArgs build() {
+            $.detailType = Objects.requireNonNull($.detailType, "expected parameter 'detailType' to be non-null");
+            $.eventTypeIds = Objects.requireNonNull($.eventTypeIds, "expected parameter 'eventTypeIds' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            $.targets = Objects.requireNonNull($.targets, "expected parameter 'targets' to be non-null");
+            return $;
         }
     }
+
 }

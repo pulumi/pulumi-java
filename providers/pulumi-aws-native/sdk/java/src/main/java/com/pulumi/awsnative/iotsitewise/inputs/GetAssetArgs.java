@@ -17,45 +17,45 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assetId", required=true)
-      private final String assetId;
+    private String assetId;
 
     public String assetId() {
         return this.assetId;
     }
 
-    public GetAssetArgs(String assetId) {
-        this.assetId = Objects.requireNonNull(assetId, "expected parameter 'assetId' to be non-null");
-    }
+    private GetAssetArgs() {}
 
-    private GetAssetArgs() {
-        this.assetId = null;
+    private GetAssetArgs(GetAssetArgs $) {
+        this.assetId = $.assetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assetId;
+        private GetAssetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssetArgs();
         }
 
         public Builder(GetAssetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetId = defaults.assetId;
+            $ = new GetAssetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetId(String assetId) {
-            this.assetId = Objects.requireNonNull(assetId);
+            $.assetId = assetId;
             return this;
-        }        public GetAssetArgs build() {
-            return new GetAssetArgs(assetId);
+        }
+
+        public GetAssetArgs build() {
+            $.assetId = Objects.requireNonNull($.assetId, "expected parameter 'assetId' to be non-null");
+            return $;
         }
     }
+
 }

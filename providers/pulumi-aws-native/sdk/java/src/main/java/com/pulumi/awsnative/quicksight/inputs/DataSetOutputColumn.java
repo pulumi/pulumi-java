@@ -24,10 +24,10 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,71 +35,63 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="type")
-      private final @Nullable DataSetColumnDataType type;
+    private @Nullable DataSetColumnDataType type;
 
     public Optional<DataSetColumnDataType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public DataSetOutputColumn(
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable DataSetColumnDataType type) {
-        this.description = description;
-        this.name = name;
-        this.type = type;
-    }
+    private DataSetOutputColumn() {}
 
-    private DataSetOutputColumn() {
-        this.description = null;
-        this.name = null;
-        this.type = null;
+    private DataSetOutputColumn(DataSetOutputColumn $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetOutputColumn defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String name;
-        private @Nullable DataSetColumnDataType type;
+        private DataSetOutputColumn $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetOutputColumn();
         }
 
         public Builder(DataSetOutputColumn defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new DataSetOutputColumn(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable DataSetColumnDataType type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public DataSetOutputColumn build() {
-            return new DataSetOutputColumn(description, name, type);
+        }
+
+        public DataSetOutputColumn build() {
+            return $;
         }
     }
+
 }

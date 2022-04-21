@@ -8,9 +8,9 @@ import com.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyHeadersConfigAr
 import com.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,130 +19,120 @@ public final class OriginRequestPolicyConfigArgs extends com.pulumi.resources.Re
     public static final OriginRequestPolicyConfigArgs Empty = new OriginRequestPolicyConfigArgs();
 
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="cookiesConfig", required=true)
-      private final Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
+    private Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
     public Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig() {
         return this.cookiesConfig;
     }
 
     @Import(name="headersConfig", required=true)
-      private final Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
+    private Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
     public Output<OriginRequestPolicyHeadersConfigArgs> headersConfig() {
         return this.headersConfig;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="queryStringsConfig", required=true)
-      private final Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
+    private Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
     public Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig() {
         return this.queryStringsConfig;
     }
 
-    public OriginRequestPolicyConfigArgs(
-        @Nullable Output<String> comment,
-        Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig,
-        Output<OriginRequestPolicyHeadersConfigArgs> headersConfig,
-        Output<String> name,
-        Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
-        this.comment = comment;
-        this.cookiesConfig = Objects.requireNonNull(cookiesConfig, "expected parameter 'cookiesConfig' to be non-null");
-        this.headersConfig = Objects.requireNonNull(headersConfig, "expected parameter 'headersConfig' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig, "expected parameter 'queryStringsConfig' to be non-null");
-    }
+    private OriginRequestPolicyConfigArgs() {}
 
-    private OriginRequestPolicyConfigArgs() {
-        this.comment = Codegen.empty();
-        this.cookiesConfig = Codegen.empty();
-        this.headersConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.queryStringsConfig = Codegen.empty();
+    private OriginRequestPolicyConfigArgs(OriginRequestPolicyConfigArgs $) {
+        this.comment = $.comment;
+        this.cookiesConfig = $.cookiesConfig;
+        this.headersConfig = $.headersConfig;
+        this.name = $.name;
+        this.queryStringsConfig = $.queryStringsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginRequestPolicyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
-        private Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
-        private Output<String> name;
-        private Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
+        private OriginRequestPolicyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginRequestPolicyConfigArgs();
         }
 
         public Builder(OriginRequestPolicyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.cookiesConfig = defaults.cookiesConfig;
-    	      this.headersConfig = defaults.headersConfig;
-    	      this.name = defaults.name;
-    	      this.queryStringsConfig = defaults.queryStringsConfig;
+            $ = new OriginRequestPolicyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder cookiesConfig(Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
-            this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
+            $.cookiesConfig = cookiesConfig;
             return this;
         }
+
         public Builder cookiesConfig(OriginRequestPolicyCookiesConfigArgs cookiesConfig) {
-            this.cookiesConfig = Output.of(Objects.requireNonNull(cookiesConfig));
-            return this;
+            return cookiesConfig(Output.of(cookiesConfig));
         }
+
         public Builder headersConfig(Output<OriginRequestPolicyHeadersConfigArgs> headersConfig) {
-            this.headersConfig = Objects.requireNonNull(headersConfig);
+            $.headersConfig = headersConfig;
             return this;
         }
+
         public Builder headersConfig(OriginRequestPolicyHeadersConfigArgs headersConfig) {
-            this.headersConfig = Output.of(Objects.requireNonNull(headersConfig));
-            return this;
+            return headersConfig(Output.of(headersConfig));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder queryStringsConfig(Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
-            this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
+            $.queryStringsConfig = queryStringsConfig;
             return this;
         }
+
         public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfigArgs queryStringsConfig) {
-            this.queryStringsConfig = Output.of(Objects.requireNonNull(queryStringsConfig));
-            return this;
-        }        public OriginRequestPolicyConfigArgs build() {
-            return new OriginRequestPolicyConfigArgs(comment, cookiesConfig, headersConfig, name, queryStringsConfig);
+            return queryStringsConfig(Output.of(queryStringsConfig));
+        }
+
+        public OriginRequestPolicyConfigArgs build() {
+            $.cookiesConfig = Objects.requireNonNull($.cookiesConfig, "expected parameter 'cookiesConfig' to be non-null");
+            $.headersConfig = Objects.requireNonNull($.headersConfig, "expected parameter 'headersConfig' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.queryStringsConfig = Objects.requireNonNull($.queryStringsConfig, "expected parameter 'queryStringsConfig' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public ChannelIngestEndpoint(
-        @Nullable String id,
-        @Nullable String password,
-        @Nullable String url,
-        @Nullable String username) {
-        this.id = id;
-        this.password = password;
-        this.url = url;
-        this.username = username;
-    }
+    private ChannelIngestEndpoint() {}
 
-    private ChannelIngestEndpoint() {
-        this.id = null;
-        this.password = null;
-        this.url = null;
-        this.username = null;
+    private ChannelIngestEndpoint(ChannelIngestEndpoint $) {
+        this.id = $.id;
+        this.password = $.password;
+        this.url = $.url;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelIngestEndpoint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String password;
-        private @Nullable String url;
-        private @Nullable String username;
+        private ChannelIngestEndpoint $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelIngestEndpoint();
         }
 
         public Builder(ChannelIngestEndpoint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.password = defaults.password;
-    	      this.url = defaults.url;
-    	      this.username = defaults.username;
+            $ = new ChannelIngestEndpoint(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public ChannelIngestEndpoint build() {
-            return new ChannelIngestEndpoint(id, password, url, username);
+        }
+
+        public ChannelIngestEndpoint build() {
+            return $;
         }
     }
+
 }

@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.macie.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class FindingsFilterCriterionArgs extends com.pulumi.resources.Reso
 
     public static final FindingsFilterCriterionArgs Empty = new FindingsFilterCriterionArgs();
 
-    public FindingsFilterCriterionArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(FindingsFilterCriterionArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private FindingsFilterCriterionArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(FindingsFilterCriterionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new FindingsFilterCriterionArgs();
         }
         public FindingsFilterCriterionArgs build() {
-            return new FindingsFilterCriterionArgs();
+            return $;
         }
     }
+
 }

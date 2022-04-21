@@ -16,78 +16,71 @@ public final class DistributionLogging extends com.pulumi.resources.InvokeArgs {
     public static final DistributionLogging Empty = new DistributionLogging();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="includeCookies")
-      private final @Nullable Boolean includeCookies;
+    private @Nullable Boolean includeCookies;
 
     public Optional<Boolean> includeCookies() {
-        return this.includeCookies == null ? Optional.empty() : Optional.ofNullable(this.includeCookies);
+        return Optional.ofNullable(this.includeCookies);
     }
 
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
-    public DistributionLogging(
-        String bucket,
-        @Nullable Boolean includeCookies,
-        @Nullable String prefix) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.includeCookies = includeCookies;
-        this.prefix = prefix;
-    }
+    private DistributionLogging() {}
 
-    private DistributionLogging() {
-        this.bucket = null;
-        this.includeCookies = null;
-        this.prefix = null;
+    private DistributionLogging(DistributionLogging $) {
+        this.bucket = $.bucket;
+        this.includeCookies = $.includeCookies;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionLogging defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable Boolean includeCookies;
-        private @Nullable String prefix;
+        private DistributionLogging $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionLogging();
         }
 
         public Builder(DistributionLogging defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.includeCookies = defaults.includeCookies;
-    	      this.prefix = defaults.prefix;
+            $ = new DistributionLogging(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder includeCookies(@Nullable Boolean includeCookies) {
-            this.includeCookies = includeCookies;
+            $.includeCookies = includeCookies;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
-        }        public DistributionLogging build() {
-            return new DistributionLogging(bucket, includeCookies, prefix);
+        }
+
+        public DistributionLogging build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

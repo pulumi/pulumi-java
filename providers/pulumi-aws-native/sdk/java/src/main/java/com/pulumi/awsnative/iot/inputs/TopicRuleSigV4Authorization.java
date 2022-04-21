@@ -13,78 +13,73 @@ public final class TopicRuleSigV4Authorization extends com.pulumi.resources.Invo
     public static final TopicRuleSigV4Authorization Empty = new TopicRuleSigV4Authorization();
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
     @Import(name="signingRegion", required=true)
-      private final String signingRegion;
+    private String signingRegion;
 
     public String signingRegion() {
         return this.signingRegion;
     }
 
-    public TopicRuleSigV4Authorization(
-        String roleArn,
-        String serviceName,
-        String signingRegion) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.signingRegion = Objects.requireNonNull(signingRegion, "expected parameter 'signingRegion' to be non-null");
-    }
+    private TopicRuleSigV4Authorization() {}
 
-    private TopicRuleSigV4Authorization() {
-        this.roleArn = null;
-        this.serviceName = null;
-        this.signingRegion = null;
+    private TopicRuleSigV4Authorization(TopicRuleSigV4Authorization $) {
+        this.roleArn = $.roleArn;
+        this.serviceName = $.serviceName;
+        this.signingRegion = $.signingRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleSigV4Authorization defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleArn;
-        private String serviceName;
-        private String signingRegion;
+        private TopicRuleSigV4Authorization $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleSigV4Authorization();
         }
 
         public Builder(TopicRuleSigV4Authorization defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.serviceName = defaults.serviceName;
-    	      this.signingRegion = defaults.signingRegion;
+            $ = new TopicRuleSigV4Authorization(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder signingRegion(String signingRegion) {
-            this.signingRegion = Objects.requireNonNull(signingRegion);
+            $.signingRegion = signingRegion;
             return this;
-        }        public TopicRuleSigV4Authorization build() {
-            return new TopicRuleSigV4Authorization(roleArn, serviceName, signingRegion);
+        }
+
+        public TopicRuleSigV4Authorization build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.signingRegion = Objects.requireNonNull($.signingRegion, "expected parameter 'signingRegion' to be non-null");
+            return $;
         }
     }
+
 }

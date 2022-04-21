@@ -6,9 +6,9 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.enums.IndexKeyLocation;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,170 +17,151 @@ public final class IndexJwtTokenTypeConfigurationArgs extends com.pulumi.resourc
     public static final IndexJwtTokenTypeConfigurationArgs Empty = new IndexJwtTokenTypeConfigurationArgs();
 
     @Import(name="claimRegex")
-      private final @Nullable Output<String> claimRegex;
+    private @Nullable Output<String> claimRegex;
 
-    public Output<String> claimRegex() {
-        return this.claimRegex == null ? Codegen.empty() : this.claimRegex;
+    public Optional<Output<String>> claimRegex() {
+        return Optional.ofNullable(this.claimRegex);
     }
 
     @Import(name="groupAttributeField")
-      private final @Nullable Output<String> groupAttributeField;
+    private @Nullable Output<String> groupAttributeField;
 
-    public Output<String> groupAttributeField() {
-        return this.groupAttributeField == null ? Codegen.empty() : this.groupAttributeField;
+    public Optional<Output<String>> groupAttributeField() {
+        return Optional.ofNullable(this.groupAttributeField);
     }
 
     @Import(name="issuer")
-      private final @Nullable Output<String> issuer;
+    private @Nullable Output<String> issuer;
 
-    public Output<String> issuer() {
-        return this.issuer == null ? Codegen.empty() : this.issuer;
+    public Optional<Output<String>> issuer() {
+        return Optional.ofNullable(this.issuer);
     }
 
     @Import(name="keyLocation", required=true)
-      private final Output<IndexKeyLocation> keyLocation;
+    private Output<IndexKeyLocation> keyLocation;
 
     public Output<IndexKeyLocation> keyLocation() {
         return this.keyLocation;
     }
 
     @Import(name="secretManagerArn")
-      private final @Nullable Output<String> secretManagerArn;
+    private @Nullable Output<String> secretManagerArn;
 
-    public Output<String> secretManagerArn() {
-        return this.secretManagerArn == null ? Codegen.empty() : this.secretManagerArn;
+    public Optional<Output<String>> secretManagerArn() {
+        return Optional.ofNullable(this.secretManagerArn);
     }
 
     @Import(name="uRL")
-      private final @Nullable Output<String> uRL;
+    private @Nullable Output<String> uRL;
 
-    public Output<String> uRL() {
-        return this.uRL == null ? Codegen.empty() : this.uRL;
+    public Optional<Output<String>> uRL() {
+        return Optional.ofNullable(this.uRL);
     }
 
     @Import(name="userNameAttributeField")
-      private final @Nullable Output<String> userNameAttributeField;
+    private @Nullable Output<String> userNameAttributeField;
 
-    public Output<String> userNameAttributeField() {
-        return this.userNameAttributeField == null ? Codegen.empty() : this.userNameAttributeField;
+    public Optional<Output<String>> userNameAttributeField() {
+        return Optional.ofNullable(this.userNameAttributeField);
     }
 
-    public IndexJwtTokenTypeConfigurationArgs(
-        @Nullable Output<String> claimRegex,
-        @Nullable Output<String> groupAttributeField,
-        @Nullable Output<String> issuer,
-        Output<IndexKeyLocation> keyLocation,
-        @Nullable Output<String> secretManagerArn,
-        @Nullable Output<String> uRL,
-        @Nullable Output<String> userNameAttributeField) {
-        this.claimRegex = claimRegex;
-        this.groupAttributeField = groupAttributeField;
-        this.issuer = issuer;
-        this.keyLocation = Objects.requireNonNull(keyLocation, "expected parameter 'keyLocation' to be non-null");
-        this.secretManagerArn = secretManagerArn;
-        this.uRL = uRL;
-        this.userNameAttributeField = userNameAttributeField;
-    }
+    private IndexJwtTokenTypeConfigurationArgs() {}
 
-    private IndexJwtTokenTypeConfigurationArgs() {
-        this.claimRegex = Codegen.empty();
-        this.groupAttributeField = Codegen.empty();
-        this.issuer = Codegen.empty();
-        this.keyLocation = Codegen.empty();
-        this.secretManagerArn = Codegen.empty();
-        this.uRL = Codegen.empty();
-        this.userNameAttributeField = Codegen.empty();
+    private IndexJwtTokenTypeConfigurationArgs(IndexJwtTokenTypeConfigurationArgs $) {
+        this.claimRegex = $.claimRegex;
+        this.groupAttributeField = $.groupAttributeField;
+        this.issuer = $.issuer;
+        this.keyLocation = $.keyLocation;
+        this.secretManagerArn = $.secretManagerArn;
+        this.uRL = $.uRL;
+        this.userNameAttributeField = $.userNameAttributeField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexJwtTokenTypeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> claimRegex;
-        private @Nullable Output<String> groupAttributeField;
-        private @Nullable Output<String> issuer;
-        private Output<IndexKeyLocation> keyLocation;
-        private @Nullable Output<String> secretManagerArn;
-        private @Nullable Output<String> uRL;
-        private @Nullable Output<String> userNameAttributeField;
+        private IndexJwtTokenTypeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexJwtTokenTypeConfigurationArgs();
         }
 
         public Builder(IndexJwtTokenTypeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimRegex = defaults.claimRegex;
-    	      this.groupAttributeField = defaults.groupAttributeField;
-    	      this.issuer = defaults.issuer;
-    	      this.keyLocation = defaults.keyLocation;
-    	      this.secretManagerArn = defaults.secretManagerArn;
-    	      this.uRL = defaults.uRL;
-    	      this.userNameAttributeField = defaults.userNameAttributeField;
+            $ = new IndexJwtTokenTypeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder claimRegex(@Nullable Output<String> claimRegex) {
-            this.claimRegex = claimRegex;
+            $.claimRegex = claimRegex;
             return this;
         }
-        public Builder claimRegex(@Nullable String claimRegex) {
-            this.claimRegex = Codegen.ofNullable(claimRegex);
-            return this;
+
+        public Builder claimRegex(String claimRegex) {
+            return claimRegex(Output.of(claimRegex));
         }
+
         public Builder groupAttributeField(@Nullable Output<String> groupAttributeField) {
-            this.groupAttributeField = groupAttributeField;
+            $.groupAttributeField = groupAttributeField;
             return this;
         }
-        public Builder groupAttributeField(@Nullable String groupAttributeField) {
-            this.groupAttributeField = Codegen.ofNullable(groupAttributeField);
-            return this;
+
+        public Builder groupAttributeField(String groupAttributeField) {
+            return groupAttributeField(Output.of(groupAttributeField));
         }
+
         public Builder issuer(@Nullable Output<String> issuer) {
-            this.issuer = issuer;
+            $.issuer = issuer;
             return this;
         }
-        public Builder issuer(@Nullable String issuer) {
-            this.issuer = Codegen.ofNullable(issuer);
-            return this;
+
+        public Builder issuer(String issuer) {
+            return issuer(Output.of(issuer));
         }
+
         public Builder keyLocation(Output<IndexKeyLocation> keyLocation) {
-            this.keyLocation = Objects.requireNonNull(keyLocation);
+            $.keyLocation = keyLocation;
             return this;
         }
+
         public Builder keyLocation(IndexKeyLocation keyLocation) {
-            this.keyLocation = Output.of(Objects.requireNonNull(keyLocation));
-            return this;
+            return keyLocation(Output.of(keyLocation));
         }
+
         public Builder secretManagerArn(@Nullable Output<String> secretManagerArn) {
-            this.secretManagerArn = secretManagerArn;
+            $.secretManagerArn = secretManagerArn;
             return this;
         }
-        public Builder secretManagerArn(@Nullable String secretManagerArn) {
-            this.secretManagerArn = Codegen.ofNullable(secretManagerArn);
-            return this;
+
+        public Builder secretManagerArn(String secretManagerArn) {
+            return secretManagerArn(Output.of(secretManagerArn));
         }
+
         public Builder uRL(@Nullable Output<String> uRL) {
-            this.uRL = uRL;
+            $.uRL = uRL;
             return this;
         }
-        public Builder uRL(@Nullable String uRL) {
-            this.uRL = Codegen.ofNullable(uRL);
-            return this;
+
+        public Builder uRL(String uRL) {
+            return uRL(Output.of(uRL));
         }
+
         public Builder userNameAttributeField(@Nullable Output<String> userNameAttributeField) {
-            this.userNameAttributeField = userNameAttributeField;
+            $.userNameAttributeField = userNameAttributeField;
             return this;
         }
-        public Builder userNameAttributeField(@Nullable String userNameAttributeField) {
-            this.userNameAttributeField = Codegen.ofNullable(userNameAttributeField);
-            return this;
-        }        public IndexJwtTokenTypeConfigurationArgs build() {
-            return new IndexJwtTokenTypeConfigurationArgs(claimRegex, groupAttributeField, issuer, keyLocation, secretManagerArn, uRL, userNameAttributeField);
+
+        public Builder userNameAttributeField(String userNameAttributeField) {
+            return userNameAttributeField(Output.of(userNameAttributeField));
+        }
+
+        public IndexJwtTokenTypeConfigurationArgs build() {
+            $.keyLocation = Objects.requireNonNull($.keyLocation, "expected parameter 'keyLocation' to be non-null");
+            return $;
         }
     }
+
 }

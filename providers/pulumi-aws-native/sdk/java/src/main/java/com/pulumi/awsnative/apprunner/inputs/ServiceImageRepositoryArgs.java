@@ -7,9 +7,9 @@ import com.pulumi.awsnative.apprunner.enums.ServiceImageRepositoryImageRepositor
 import com.pulumi.awsnative.apprunner.inputs.ServiceImageConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
     public static final ServiceImageRepositoryArgs Empty = new ServiceImageRepositoryArgs();
 
     @Import(name="imageConfiguration")
-      private final @Nullable Output<ServiceImageConfigurationArgs> imageConfiguration;
+    private @Nullable Output<ServiceImageConfigurationArgs> imageConfiguration;
 
-    public Output<ServiceImageConfigurationArgs> imageConfiguration() {
-        return this.imageConfiguration == null ? Codegen.empty() : this.imageConfiguration;
+    public Optional<Output<ServiceImageConfigurationArgs>> imageConfiguration() {
+        return Optional.ofNullable(this.imageConfiguration);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="imageIdentifier", required=true)
-      private final Output<String> imageIdentifier;
+    private Output<String> imageIdentifier;
 
     public Output<String> imageIdentifier() {
         return this.imageIdentifier;
@@ -44,76 +44,70 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="imageRepositoryType", required=true)
-      private final Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
+    private Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
 
     public Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType() {
         return this.imageRepositoryType;
     }
 
-    public ServiceImageRepositoryArgs(
-        @Nullable Output<ServiceImageConfigurationArgs> imageConfiguration,
-        Output<String> imageIdentifier,
-        Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType) {
-        this.imageConfiguration = imageConfiguration;
-        this.imageIdentifier = Objects.requireNonNull(imageIdentifier, "expected parameter 'imageIdentifier' to be non-null");
-        this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType, "expected parameter 'imageRepositoryType' to be non-null");
-    }
+    private ServiceImageRepositoryArgs() {}
 
-    private ServiceImageRepositoryArgs() {
-        this.imageConfiguration = Codegen.empty();
-        this.imageIdentifier = Codegen.empty();
-        this.imageRepositoryType = Codegen.empty();
+    private ServiceImageRepositoryArgs(ServiceImageRepositoryArgs $) {
+        this.imageConfiguration = $.imageConfiguration;
+        this.imageIdentifier = $.imageIdentifier;
+        this.imageRepositoryType = $.imageRepositoryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceImageRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceImageConfigurationArgs> imageConfiguration;
-        private Output<String> imageIdentifier;
-        private Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
+        private ServiceImageRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceImageRepositoryArgs();
         }
 
         public Builder(ServiceImageRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageConfiguration = defaults.imageConfiguration;
-    	      this.imageIdentifier = defaults.imageIdentifier;
-    	      this.imageRepositoryType = defaults.imageRepositoryType;
+            $ = new ServiceImageRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageConfiguration(@Nullable Output<ServiceImageConfigurationArgs> imageConfiguration) {
-            this.imageConfiguration = imageConfiguration;
+            $.imageConfiguration = imageConfiguration;
             return this;
         }
-        public Builder imageConfiguration(@Nullable ServiceImageConfigurationArgs imageConfiguration) {
-            this.imageConfiguration = Codegen.ofNullable(imageConfiguration);
-            return this;
+
+        public Builder imageConfiguration(ServiceImageConfigurationArgs imageConfiguration) {
+            return imageConfiguration(Output.of(imageConfiguration));
         }
+
         public Builder imageIdentifier(Output<String> imageIdentifier) {
-            this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
+            $.imageIdentifier = imageIdentifier;
             return this;
         }
+
         public Builder imageIdentifier(String imageIdentifier) {
-            this.imageIdentifier = Output.of(Objects.requireNonNull(imageIdentifier));
-            return this;
+            return imageIdentifier(Output.of(imageIdentifier));
         }
+
         public Builder imageRepositoryType(Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType) {
-            this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
+            $.imageRepositoryType = imageRepositoryType;
             return this;
         }
+
         public Builder imageRepositoryType(ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
-            this.imageRepositoryType = Output.of(Objects.requireNonNull(imageRepositoryType));
-            return this;
-        }        public ServiceImageRepositoryArgs build() {
-            return new ServiceImageRepositoryArgs(imageConfiguration, imageIdentifier, imageRepositoryType);
+            return imageRepositoryType(Output.of(imageRepositoryType));
+        }
+
+        public ServiceImageRepositoryArgs build() {
+            $.imageIdentifier = Objects.requireNonNull($.imageIdentifier, "expected parameter 'imageIdentifier' to be non-null");
+            $.imageRepositoryType = Objects.requireNonNull($.imageRepositoryType, "expected parameter 'imageRepositoryType' to be non-null");
+            return $;
         }
     }
+
 }

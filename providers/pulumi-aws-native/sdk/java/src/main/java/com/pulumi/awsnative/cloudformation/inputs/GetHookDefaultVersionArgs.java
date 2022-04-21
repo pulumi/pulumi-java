@@ -17,45 +17,45 @@ public final class GetHookDefaultVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetHookDefaultVersionArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetHookDefaultVersionArgs() {}
 
-    private GetHookDefaultVersionArgs() {
-        this.arn = null;
+    private GetHookDefaultVersionArgs(GetHookDefaultVersionArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHookDefaultVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetHookDefaultVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHookDefaultVersionArgs();
         }
 
         public Builder(GetHookDefaultVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetHookDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetHookDefaultVersionArgs build() {
-            return new GetHookDefaultVersionArgs(arn);
+        }
+
+        public GetHookDefaultVersionArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

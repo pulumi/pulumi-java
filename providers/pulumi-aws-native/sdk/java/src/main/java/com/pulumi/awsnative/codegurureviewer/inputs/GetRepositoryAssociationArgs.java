@@ -17,45 +17,45 @@ public final class GetRepositoryAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="associationArn", required=true)
-      private final String associationArn;
+    private String associationArn;
 
     public String associationArn() {
         return this.associationArn;
     }
 
-    public GetRepositoryAssociationArgs(String associationArn) {
-        this.associationArn = Objects.requireNonNull(associationArn, "expected parameter 'associationArn' to be non-null");
-    }
+    private GetRepositoryAssociationArgs() {}
 
-    private GetRepositoryAssociationArgs() {
-        this.associationArn = null;
+    private GetRepositoryAssociationArgs(GetRepositoryAssociationArgs $) {
+        this.associationArn = $.associationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associationArn;
+        private GetRepositoryAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryAssociationArgs();
         }
 
         public Builder(GetRepositoryAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationArn = defaults.associationArn;
+            $ = new GetRepositoryAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associationArn(String associationArn) {
-            this.associationArn = Objects.requireNonNull(associationArn);
+            $.associationArn = associationArn;
             return this;
-        }        public GetRepositoryAssociationArgs build() {
-            return new GetRepositoryAssociationArgs(associationArn);
+        }
+
+        public GetRepositoryAssociationArgs build() {
+            $.associationArn = Objects.requireNonNull($.associationArn, "expected parameter 'associationArn' to be non-null");
+            return $;
         }
     }
+
 }

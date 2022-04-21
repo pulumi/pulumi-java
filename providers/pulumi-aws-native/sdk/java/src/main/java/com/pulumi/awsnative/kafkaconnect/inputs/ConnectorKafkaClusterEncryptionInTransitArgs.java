@@ -6,7 +6,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterEncryptionInTransitType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends com.pulu
     public static final ConnectorKafkaClusterEncryptionInTransitArgs Empty = new ConnectorKafkaClusterEncryptionInTransitArgs();
 
     @Import(name="encryptionType", required=true)
-      private final Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
+    private Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
 
     public Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType() {
         return this.encryptionType;
     }
 
-    public ConnectorKafkaClusterEncryptionInTransitArgs(Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
-        this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
-    }
+    private ConnectorKafkaClusterEncryptionInTransitArgs() {}
 
-    private ConnectorKafkaClusterEncryptionInTransitArgs() {
-        this.encryptionType = Codegen.empty();
+    private ConnectorKafkaClusterEncryptionInTransitArgs(ConnectorKafkaClusterEncryptionInTransitArgs $) {
+        this.encryptionType = $.encryptionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorKafkaClusterEncryptionInTransitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
+        private ConnectorKafkaClusterEncryptionInTransitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorKafkaClusterEncryptionInTransitArgs();
         }
 
         public Builder(ConnectorKafkaClusterEncryptionInTransitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionType = defaults.encryptionType;
+            $ = new ConnectorKafkaClusterEncryptionInTransitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionType(Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
-            this.encryptionType = Objects.requireNonNull(encryptionType);
+            $.encryptionType = encryptionType;
             return this;
         }
+
         public Builder encryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
-            this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
-            return this;
-        }        public ConnectorKafkaClusterEncryptionInTransitArgs build() {
-            return new ConnectorKafkaClusterEncryptionInTransitArgs(encryptionType);
+            return encryptionType(Output.of(encryptionType));
+        }
+
+        public ConnectorKafkaClusterEncryptionInTransitArgs build() {
+            $.encryptionType = Objects.requireNonNull($.encryptionType, "expected parameter 'encryptionType' to be non-null");
+            return $;
         }
     }
+
 }

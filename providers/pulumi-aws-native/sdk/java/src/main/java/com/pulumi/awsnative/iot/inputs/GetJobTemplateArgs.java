@@ -13,45 +13,45 @@ public final class GetJobTemplateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobTemplateArgs Empty = new GetJobTemplateArgs();
 
     @Import(name="jobTemplateId", required=true)
-      private final String jobTemplateId;
+    private String jobTemplateId;
 
     public String jobTemplateId() {
         return this.jobTemplateId;
     }
 
-    public GetJobTemplateArgs(String jobTemplateId) {
-        this.jobTemplateId = Objects.requireNonNull(jobTemplateId, "expected parameter 'jobTemplateId' to be non-null");
-    }
+    private GetJobTemplateArgs() {}
 
-    private GetJobTemplateArgs() {
-        this.jobTemplateId = null;
+    private GetJobTemplateArgs(GetJobTemplateArgs $) {
+        this.jobTemplateId = $.jobTemplateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobTemplateId;
+        private GetJobTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobTemplateArgs();
         }
 
         public Builder(GetJobTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobTemplateId = defaults.jobTemplateId;
+            $ = new GetJobTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobTemplateId(String jobTemplateId) {
-            this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
+            $.jobTemplateId = jobTemplateId;
             return this;
-        }        public GetJobTemplateArgs build() {
-            return new GetJobTemplateArgs(jobTemplateId);
+        }
+
+        public GetJobTemplateArgs build() {
+            $.jobTemplateId = Objects.requireNonNull($.jobTemplateId, "expected parameter 'jobTemplateId' to be non-null");
+            return $;
         }
     }
+
 }

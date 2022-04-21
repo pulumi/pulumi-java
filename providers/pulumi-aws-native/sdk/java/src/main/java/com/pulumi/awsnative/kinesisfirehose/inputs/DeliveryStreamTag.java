@@ -15,62 +15,58 @@ public final class DeliveryStreamTag extends com.pulumi.resources.InvokeArgs {
     public static final DeliveryStreamTag Empty = new DeliveryStreamTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public DeliveryStreamTag(
-        String key,
-        @Nullable String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = value;
-    }
+    private DeliveryStreamTag() {}
 
-    private DeliveryStreamTag() {
-        this.key = null;
-        this.value = null;
+    private DeliveryStreamTag(DeliveryStreamTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private @Nullable String value;
+        private DeliveryStreamTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamTag();
         }
 
         public Builder(DeliveryStreamTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new DeliveryStreamTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public DeliveryStreamTag build() {
-            return new DeliveryStreamTag(key, value);
+        }
+
+        public DeliveryStreamTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

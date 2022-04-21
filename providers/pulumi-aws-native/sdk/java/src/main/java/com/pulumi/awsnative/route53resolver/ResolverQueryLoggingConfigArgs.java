@@ -5,9 +5,9 @@ package com.pulumi.awsnative.route53resolver;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResolverQueryLoggingConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="destinationArn")
-      private final @Nullable Output<String> destinationArn;
+    private @Nullable Output<String> destinationArn;
 
-    public Output<String> destinationArn() {
-        return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
+    public Optional<Output<String>> destinationArn() {
+        return Optional.ofNullable(this.destinationArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ResolverQueryLoggingConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ResolverQueryLoggingConfigArgs(
-        @Nullable Output<String> destinationArn,
-        @Nullable Output<String> name) {
-        this.destinationArn = destinationArn;
-        this.name = name;
-    }
+    private ResolverQueryLoggingConfigArgs() {}
 
-    private ResolverQueryLoggingConfigArgs() {
-        this.destinationArn = Codegen.empty();
-        this.name = Codegen.empty();
+    private ResolverQueryLoggingConfigArgs(ResolverQueryLoggingConfigArgs $) {
+        this.destinationArn = $.destinationArn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverQueryLoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationArn;
-        private @Nullable Output<String> name;
+        private ResolverQueryLoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverQueryLoggingConfigArgs();
         }
 
         public Builder(ResolverQueryLoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.name = defaults.name;
+            $ = new ResolverQueryLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(@Nullable Output<String> destinationArn) {
-            this.destinationArn = destinationArn;
+            $.destinationArn = destinationArn;
             return this;
         }
-        public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Codegen.ofNullable(destinationArn);
-            return this;
+
+        public Builder destinationArn(String destinationArn) {
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ResolverQueryLoggingConfigArgs build() {
-            return new ResolverQueryLoggingConfigArgs(destinationArn, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ResolverQueryLoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

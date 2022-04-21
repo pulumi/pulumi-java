@@ -23,113 +23,103 @@ public final class WebACLByteMatchStatement extends com.pulumi.resources.InvokeA
     public static final WebACLByteMatchStatement Empty = new WebACLByteMatchStatement();
 
     @Import(name="fieldToMatch", required=true)
-      private final WebACLFieldToMatch fieldToMatch;
+    private WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="positionalConstraint", required=true)
-      private final WebACLPositionalConstraint positionalConstraint;
+    private WebACLPositionalConstraint positionalConstraint;
 
     public WebACLPositionalConstraint positionalConstraint() {
         return this.positionalConstraint;
     }
 
     @Import(name="searchString")
-      private final @Nullable String searchString;
+    private @Nullable String searchString;
 
     public Optional<String> searchString() {
-        return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
+        return Optional.ofNullable(this.searchString);
     }
 
     @Import(name="searchStringBase64")
-      private final @Nullable String searchStringBase64;
+    private @Nullable String searchStringBase64;
 
     public Optional<String> searchStringBase64() {
-        return this.searchStringBase64 == null ? Optional.empty() : Optional.ofNullable(this.searchStringBase64);
+        return Optional.ofNullable(this.searchStringBase64);
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<WebACLTextTransformation> textTransformations;
+    private List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebACLByteMatchStatement(
-        WebACLFieldToMatch fieldToMatch,
-        WebACLPositionalConstraint positionalConstraint,
-        @Nullable String searchString,
-        @Nullable String searchStringBase64,
-        List<WebACLTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
-        this.searchString = searchString;
-        this.searchStringBase64 = searchStringBase64;
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebACLByteMatchStatement() {}
 
-    private WebACLByteMatchStatement() {
-        this.fieldToMatch = null;
-        this.positionalConstraint = null;
-        this.searchString = null;
-        this.searchStringBase64 = null;
-        this.textTransformations = List.of();
+    private WebACLByteMatchStatement(WebACLByteMatchStatement $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.positionalConstraint = $.positionalConstraint;
+        this.searchString = $.searchString;
+        this.searchStringBase64 = $.searchStringBase64;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLByteMatchStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private WebACLFieldToMatch fieldToMatch;
-        private WebACLPositionalConstraint positionalConstraint;
-        private @Nullable String searchString;
-        private @Nullable String searchStringBase64;
-        private List<WebACLTextTransformation> textTransformations;
+        private WebACLByteMatchStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLByteMatchStatement();
         }
 
         public Builder(WebACLByteMatchStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.positionalConstraint = defaults.positionalConstraint;
-    	      this.searchString = defaults.searchString;
-    	      this.searchStringBase64 = defaults.searchStringBase64;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebACLByteMatchStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder positionalConstraint(WebACLPositionalConstraint positionalConstraint) {
-            this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
+            $.positionalConstraint = positionalConstraint;
             return this;
         }
+
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = searchString;
+            $.searchString = searchString;
             return this;
         }
+
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
-            this.searchStringBase64 = searchStringBase64;
+            $.searchStringBase64 = searchStringBase64;
             return this;
         }
+
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(WebACLTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebACLByteMatchStatement build() {
-            return new WebACLByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
+        }
+
+        public WebACLByteMatchStatement build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.positionalConstraint = Objects.requireNonNull($.positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

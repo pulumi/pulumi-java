@@ -25,78 +25,71 @@ public final class DetectorModelAssetPropertyValue extends com.pulumi.resources.
      * 
      */
     @Import(name="quality")
-      private final @Nullable String quality;
+    private @Nullable String quality;
 
     public Optional<String> quality() {
-        return this.quality == null ? Optional.empty() : Optional.ofNullable(this.quality);
+        return Optional.ofNullable(this.quality);
     }
 
     @Import(name="timestamp")
-      private final @Nullable DetectorModelAssetPropertyTimestamp timestamp;
+    private @Nullable DetectorModelAssetPropertyTimestamp timestamp;
 
     public Optional<DetectorModelAssetPropertyTimestamp> timestamp() {
-        return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
+        return Optional.ofNullable(this.timestamp);
     }
 
     @Import(name="value", required=true)
-      private final DetectorModelAssetPropertyVariant value;
+    private DetectorModelAssetPropertyVariant value;
 
     public DetectorModelAssetPropertyVariant value() {
         return this.value;
     }
 
-    public DetectorModelAssetPropertyValue(
-        @Nullable String quality,
-        @Nullable DetectorModelAssetPropertyTimestamp timestamp,
-        DetectorModelAssetPropertyVariant value) {
-        this.quality = quality;
-        this.timestamp = timestamp;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private DetectorModelAssetPropertyValue() {}
 
-    private DetectorModelAssetPropertyValue() {
-        this.quality = null;
-        this.timestamp = null;
-        this.value = null;
+    private DetectorModelAssetPropertyValue(DetectorModelAssetPropertyValue $) {
+        this.quality = $.quality;
+        this.timestamp = $.timestamp;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelAssetPropertyValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String quality;
-        private @Nullable DetectorModelAssetPropertyTimestamp timestamp;
-        private DetectorModelAssetPropertyVariant value;
+        private DetectorModelAssetPropertyValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelAssetPropertyValue();
         }
 
         public Builder(DetectorModelAssetPropertyValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quality = defaults.quality;
-    	      this.timestamp = defaults.timestamp;
-    	      this.value = defaults.value;
+            $ = new DetectorModelAssetPropertyValue(Objects.requireNonNull(defaults));
         }
 
         public Builder quality(@Nullable String quality) {
-            this.quality = quality;
+            $.quality = quality;
             return this;
         }
+
         public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestamp timestamp) {
-            this.timestamp = timestamp;
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder value(DetectorModelAssetPropertyVariant value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public DetectorModelAssetPropertyValue build() {
-            return new DetectorModelAssetPropertyValue(quality, timestamp, value);
+        }
+
+        public DetectorModelAssetPropertyValue build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

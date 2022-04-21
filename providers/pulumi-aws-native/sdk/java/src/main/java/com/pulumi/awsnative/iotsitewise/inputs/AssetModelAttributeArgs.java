@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class AssetModelAttributeArgs extends com.pulumi.resources.Resource
     public static final AssetModelAttributeArgs Empty = new AssetModelAttributeArgs();
 
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
-    public AssetModelAttributeArgs(@Nullable Output<String> defaultValue) {
-        this.defaultValue = defaultValue;
-    }
+    private AssetModelAttributeArgs() {}
 
-    private AssetModelAttributeArgs() {
-        this.defaultValue = Codegen.empty();
+    private AssetModelAttributeArgs(AssetModelAttributeArgs $) {
+        this.defaultValue = $.defaultValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelAttributeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultValue;
+        private AssetModelAttributeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelAttributeArgs();
         }
 
         public Builder(AssetModelAttributeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
+            $ = new AssetModelAttributeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
-        }        public AssetModelAttributeArgs build() {
-            return new AssetModelAttributeArgs(defaultValue);
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
+        }
+
+        public AssetModelAttributeArgs build() {
+            return $;
         }
     }
+
 }

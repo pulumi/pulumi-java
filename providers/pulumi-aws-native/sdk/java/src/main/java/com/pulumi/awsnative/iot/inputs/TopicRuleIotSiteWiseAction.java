@@ -15,65 +15,63 @@ public final class TopicRuleIotSiteWiseAction extends com.pulumi.resources.Invok
     public static final TopicRuleIotSiteWiseAction Empty = new TopicRuleIotSiteWiseAction();
 
     @Import(name="putAssetPropertyValueEntries", required=true)
-      private final List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries;
+    private List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries;
 
     public List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries() {
         return this.putAssetPropertyValueEntries;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleIotSiteWiseAction(
-        List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
-        String roleArn) {
-        this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries, "expected parameter 'putAssetPropertyValueEntries' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleIotSiteWiseAction() {}
 
-    private TopicRuleIotSiteWiseAction() {
-        this.putAssetPropertyValueEntries = List.of();
-        this.roleArn = null;
+    private TopicRuleIotSiteWiseAction(TopicRuleIotSiteWiseAction $) {
+        this.putAssetPropertyValueEntries = $.putAssetPropertyValueEntries;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleIotSiteWiseAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries;
-        private String roleArn;
+        private TopicRuleIotSiteWiseAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleIotSiteWiseAction();
         }
 
         public Builder(TopicRuleIotSiteWiseAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.putAssetPropertyValueEntries = defaults.putAssetPropertyValueEntries;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleIotSiteWiseAction(Objects.requireNonNull(defaults));
         }
 
         public Builder putAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries) {
-            this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries);
+            $.putAssetPropertyValueEntries = putAssetPropertyValueEntries;
             return this;
         }
+
         public Builder putAssetPropertyValueEntries(TopicRulePutAssetPropertyValueEntry... putAssetPropertyValueEntries) {
             return putAssetPropertyValueEntries(List.of(putAssetPropertyValueEntries));
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public TopicRuleIotSiteWiseAction build() {
-            return new TopicRuleIotSiteWiseAction(putAssetPropertyValueEntries, roleArn);
+        }
+
+        public TopicRuleIotSiteWiseAction build() {
+            $.putAssetPropertyValueEntries = Objects.requireNonNull($.putAssetPropertyValueEntries, "expected parameter 'putAssetPropertyValueEntries' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

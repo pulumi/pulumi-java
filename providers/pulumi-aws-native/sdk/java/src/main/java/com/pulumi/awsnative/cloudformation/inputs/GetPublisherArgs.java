@@ -17,45 +17,45 @@ public final class GetPublisherArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisherId", required=true)
-      private final String publisherId;
+    private String publisherId;
 
     public String publisherId() {
         return this.publisherId;
     }
 
-    public GetPublisherArgs(String publisherId) {
-        this.publisherId = Objects.requireNonNull(publisherId, "expected parameter 'publisherId' to be non-null");
-    }
+    private GetPublisherArgs() {}
 
-    private GetPublisherArgs() {
-        this.publisherId = null;
+    private GetPublisherArgs(GetPublisherArgs $) {
+        this.publisherId = $.publisherId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublisherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String publisherId;
+        private GetPublisherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublisherArgs();
         }
 
         public Builder(GetPublisherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publisherId = defaults.publisherId;
+            $ = new GetPublisherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publisherId(String publisherId) {
-            this.publisherId = Objects.requireNonNull(publisherId);
+            $.publisherId = publisherId;
             return this;
-        }        public GetPublisherArgs build() {
-            return new GetPublisherArgs(publisherId);
+        }
+
+        public GetPublisherArgs build() {
+            $.publisherId = Objects.requireNonNull($.publisherId, "expected parameter 'publisherId' to be non-null");
+            return $;
         }
     }
+
 }

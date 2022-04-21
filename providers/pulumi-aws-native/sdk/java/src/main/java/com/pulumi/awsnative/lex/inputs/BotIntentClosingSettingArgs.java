@@ -6,9 +6,9 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class BotIntentClosingSettingArgs extends com.pulumi.resources.Reso
     public static final BotIntentClosingSettingArgs Empty = new BotIntentClosingSettingArgs();
 
     @Import(name="closingResponse", required=true)
-      private final Output<BotResponseSpecificationArgs> closingResponse;
+    private Output<BotResponseSpecificationArgs> closingResponse;
 
     public Output<BotResponseSpecificationArgs> closingResponse() {
         return this.closingResponse;
     }
 
     @Import(name="isActive")
-      private final @Nullable Output<Boolean> isActive;
+    private @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> isActive() {
-        return this.isActive == null ? Codegen.empty() : this.isActive;
+    public Optional<Output<Boolean>> isActive() {
+        return Optional.ofNullable(this.isActive);
     }
 
-    public BotIntentClosingSettingArgs(
-        Output<BotResponseSpecificationArgs> closingResponse,
-        @Nullable Output<Boolean> isActive) {
-        this.closingResponse = Objects.requireNonNull(closingResponse, "expected parameter 'closingResponse' to be non-null");
-        this.isActive = isActive;
-    }
+    private BotIntentClosingSettingArgs() {}
 
-    private BotIntentClosingSettingArgs() {
-        this.closingResponse = Codegen.empty();
-        this.isActive = Codegen.empty();
+    private BotIntentClosingSettingArgs(BotIntentClosingSettingArgs $) {
+        this.closingResponse = $.closingResponse;
+        this.isActive = $.isActive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotIntentClosingSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BotResponseSpecificationArgs> closingResponse;
-        private @Nullable Output<Boolean> isActive;
+        private BotIntentClosingSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotIntentClosingSettingArgs();
         }
 
         public Builder(BotIntentClosingSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.closingResponse = defaults.closingResponse;
-    	      this.isActive = defaults.isActive;
+            $ = new BotIntentClosingSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder closingResponse(Output<BotResponseSpecificationArgs> closingResponse) {
-            this.closingResponse = Objects.requireNonNull(closingResponse);
+            $.closingResponse = closingResponse;
             return this;
         }
+
         public Builder closingResponse(BotResponseSpecificationArgs closingResponse) {
-            this.closingResponse = Output.of(Objects.requireNonNull(closingResponse));
-            return this;
+            return closingResponse(Output.of(closingResponse));
         }
+
         public Builder isActive(@Nullable Output<Boolean> isActive) {
-            this.isActive = isActive;
+            $.isActive = isActive;
             return this;
         }
-        public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Codegen.ofNullable(isActive);
-            return this;
-        }        public BotIntentClosingSettingArgs build() {
-            return new BotIntentClosingSettingArgs(closingResponse, isActive);
+
+        public Builder isActive(Boolean isActive) {
+            return isActive(Output.of(isActive));
+        }
+
+        public BotIntentClosingSettingArgs build() {
+            $.closingResponse = Objects.requireNonNull($.closingResponse, "expected parameter 'closingResponse' to be non-null");
+            return $;
         }
     }
+
 }

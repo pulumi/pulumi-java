@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<DetectorModelActionArgs>> actions;
+    private @Nullable Output<List<DetectorModelActionArgs>> actions;
 
-    public Output<List<DetectorModelActionArgs>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<DetectorModelActionArgs>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
      * 
      */
     @Import(name="condition", required=true)
-      private final Output<String> condition;
+    private Output<String> condition;
 
     public Output<String> condition() {
         return this.condition;
@@ -48,7 +48,7 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
      * 
      */
     @Import(name="eventName", required=true)
-      private final Output<String> eventName;
+    private Output<String> eventName;
 
     public Output<String> eventName() {
         return this.eventName;
@@ -59,92 +59,85 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
      * 
      */
     @Import(name="nextState", required=true)
-      private final Output<String> nextState;
+    private Output<String> nextState;
 
     public Output<String> nextState() {
         return this.nextState;
     }
 
-    public DetectorModelTransitionEventArgs(
-        @Nullable Output<List<DetectorModelActionArgs>> actions,
-        Output<String> condition,
-        Output<String> eventName,
-        Output<String> nextState) {
-        this.actions = actions;
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
-        this.nextState = Objects.requireNonNull(nextState, "expected parameter 'nextState' to be non-null");
-    }
+    private DetectorModelTransitionEventArgs() {}
 
-    private DetectorModelTransitionEventArgs() {
-        this.actions = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.eventName = Codegen.empty();
-        this.nextState = Codegen.empty();
+    private DetectorModelTransitionEventArgs(DetectorModelTransitionEventArgs $) {
+        this.actions = $.actions;
+        this.condition = $.condition;
+        this.eventName = $.eventName;
+        this.nextState = $.nextState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelTransitionEventArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DetectorModelActionArgs>> actions;
-        private Output<String> condition;
-        private Output<String> eventName;
-        private Output<String> nextState;
+        private DetectorModelTransitionEventArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelTransitionEventArgs();
         }
 
         public Builder(DetectorModelTransitionEventArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.condition = defaults.condition;
-    	      this.eventName = defaults.eventName;
-    	      this.nextState = defaults.nextState;
+            $ = new DetectorModelTransitionEventArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<DetectorModelActionArgs>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<DetectorModelActionArgs> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<DetectorModelActionArgs> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(DetectorModelActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder condition(Output<String> condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder condition(String condition) {
-            this.condition = Output.of(Objects.requireNonNull(condition));
-            return this;
+            return condition(Output.of(condition));
         }
+
         public Builder eventName(Output<String> eventName) {
-            this.eventName = Objects.requireNonNull(eventName);
+            $.eventName = eventName;
             return this;
         }
+
         public Builder eventName(String eventName) {
-            this.eventName = Output.of(Objects.requireNonNull(eventName));
-            return this;
+            return eventName(Output.of(eventName));
         }
+
         public Builder nextState(Output<String> nextState) {
-            this.nextState = Objects.requireNonNull(nextState);
+            $.nextState = nextState;
             return this;
         }
+
         public Builder nextState(String nextState) {
-            this.nextState = Output.of(Objects.requireNonNull(nextState));
-            return this;
-        }        public DetectorModelTransitionEventArgs build() {
-            return new DetectorModelTransitionEventArgs(actions, condition, eventName, nextState);
+            return nextState(Output.of(nextState));
+        }
+
+        public DetectorModelTransitionEventArgs build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.eventName = Objects.requireNonNull($.eventName, "expected parameter 'eventName' to be non-null");
+            $.nextState = Objects.requireNonNull($.nextState, "expected parameter 'nextState' to be non-null");
+            return $;
         }
     }
+
 }

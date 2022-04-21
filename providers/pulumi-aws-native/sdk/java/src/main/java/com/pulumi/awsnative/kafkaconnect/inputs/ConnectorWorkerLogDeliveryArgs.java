@@ -8,8 +8,8 @@ import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorFirehoseLogDeliveryArgs
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorS3LogDeliveryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,90 +22,82 @@ public final class ConnectorWorkerLogDeliveryArgs extends com.pulumi.resources.R
     public static final ConnectorWorkerLogDeliveryArgs Empty = new ConnectorWorkerLogDeliveryArgs();
 
     @Import(name="cloudWatchLogs")
-      private final @Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
+    private @Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
 
-    public Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs() {
-        return this.cloudWatchLogs == null ? Codegen.empty() : this.cloudWatchLogs;
+    public Optional<Output<ConnectorCloudWatchLogsLogDeliveryArgs>> cloudWatchLogs() {
+        return Optional.ofNullable(this.cloudWatchLogs);
     }
 
     @Import(name="firehose")
-      private final @Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose;
+    private @Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose;
 
-    public Output<ConnectorFirehoseLogDeliveryArgs> firehose() {
-        return this.firehose == null ? Codegen.empty() : this.firehose;
+    public Optional<Output<ConnectorFirehoseLogDeliveryArgs>> firehose() {
+        return Optional.ofNullable(this.firehose);
     }
 
     @Import(name="s3")
-      private final @Nullable Output<ConnectorS3LogDeliveryArgs> s3;
+    private @Nullable Output<ConnectorS3LogDeliveryArgs> s3;
 
-    public Output<ConnectorS3LogDeliveryArgs> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<ConnectorS3LogDeliveryArgs>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
-    public ConnectorWorkerLogDeliveryArgs(
-        @Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs,
-        @Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose,
-        @Nullable Output<ConnectorS3LogDeliveryArgs> s3) {
-        this.cloudWatchLogs = cloudWatchLogs;
-        this.firehose = firehose;
-        this.s3 = s3;
-    }
+    private ConnectorWorkerLogDeliveryArgs() {}
 
-    private ConnectorWorkerLogDeliveryArgs() {
-        this.cloudWatchLogs = Codegen.empty();
-        this.firehose = Codegen.empty();
-        this.s3 = Codegen.empty();
+    private ConnectorWorkerLogDeliveryArgs(ConnectorWorkerLogDeliveryArgs $) {
+        this.cloudWatchLogs = $.cloudWatchLogs;
+        this.firehose = $.firehose;
+        this.s3 = $.s3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorWorkerLogDeliveryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
-        private @Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose;
-        private @Nullable Output<ConnectorS3LogDeliveryArgs> s3;
+        private ConnectorWorkerLogDeliveryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorWorkerLogDeliveryArgs();
         }
 
         public Builder(ConnectorWorkerLogDeliveryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchLogs = defaults.cloudWatchLogs;
-    	      this.firehose = defaults.firehose;
-    	      this.s3 = defaults.s3;
+            $ = new ConnectorWorkerLogDeliveryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchLogs(@Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs) {
-            this.cloudWatchLogs = cloudWatchLogs;
+            $.cloudWatchLogs = cloudWatchLogs;
             return this;
         }
-        public Builder cloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDeliveryArgs cloudWatchLogs) {
-            this.cloudWatchLogs = Codegen.ofNullable(cloudWatchLogs);
-            return this;
+
+        public Builder cloudWatchLogs(ConnectorCloudWatchLogsLogDeliveryArgs cloudWatchLogs) {
+            return cloudWatchLogs(Output.of(cloudWatchLogs));
         }
+
         public Builder firehose(@Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose) {
-            this.firehose = firehose;
+            $.firehose = firehose;
             return this;
         }
-        public Builder firehose(@Nullable ConnectorFirehoseLogDeliveryArgs firehose) {
-            this.firehose = Codegen.ofNullable(firehose);
-            return this;
+
+        public Builder firehose(ConnectorFirehoseLogDeliveryArgs firehose) {
+            return firehose(Output.of(firehose));
         }
+
         public Builder s3(@Nullable Output<ConnectorS3LogDeliveryArgs> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable ConnectorS3LogDeliveryArgs s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
-        }        public ConnectorWorkerLogDeliveryArgs build() {
-            return new ConnectorWorkerLogDeliveryArgs(cloudWatchLogs, firehose, s3);
+
+        public Builder s3(ConnectorS3LogDeliveryArgs s3) {
+            return s3(Output.of(s3));
+        }
+
+        public ConnectorWorkerLogDeliveryArgs build() {
+            return $;
         }
     }
+
 }

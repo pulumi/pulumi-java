@@ -9,10 +9,10 @@ import com.pulumi.awsnative.panorama.inputs.ApplicationInstanceManifestPayloadAr
 import com.pulumi.awsnative.panorama.inputs.ApplicationInstanceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,233 +21,207 @@ public final class ApplicationInstanceArgs extends com.pulumi.resources.Resource
     public static final ApplicationInstanceArgs Empty = new ApplicationInstanceArgs();
 
     @Import(name="applicationInstanceIdToReplace")
-      private final @Nullable Output<String> applicationInstanceIdToReplace;
+    private @Nullable Output<String> applicationInstanceIdToReplace;
 
-    public Output<String> applicationInstanceIdToReplace() {
-        return this.applicationInstanceIdToReplace == null ? Codegen.empty() : this.applicationInstanceIdToReplace;
+    public Optional<Output<String>> applicationInstanceIdToReplace() {
+        return Optional.ofNullable(this.applicationInstanceIdToReplace);
     }
 
     @Import(name="defaultRuntimeContextDevice", required=true)
-      private final Output<String> defaultRuntimeContextDevice;
+    private Output<String> defaultRuntimeContextDevice;
 
     public Output<String> defaultRuntimeContextDevice() {
         return this.defaultRuntimeContextDevice;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="deviceId")
-      private final @Nullable Output<String> deviceId;
+    private @Nullable Output<String> deviceId;
 
-    public Output<String> deviceId() {
-        return this.deviceId == null ? Codegen.empty() : this.deviceId;
+    public Optional<Output<String>> deviceId() {
+        return Optional.ofNullable(this.deviceId);
     }
 
     @Import(name="manifestOverridesPayload")
-      private final @Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload;
+    private @Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload;
 
-    public Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload() {
-        return this.manifestOverridesPayload == null ? Codegen.empty() : this.manifestOverridesPayload;
+    public Optional<Output<ApplicationInstanceManifestOverridesPayloadArgs>> manifestOverridesPayload() {
+        return Optional.ofNullable(this.manifestOverridesPayload);
     }
 
     @Import(name="manifestPayload", required=true)
-      private final Output<ApplicationInstanceManifestPayloadArgs> manifestPayload;
+    private Output<ApplicationInstanceManifestPayloadArgs> manifestPayload;
 
     public Output<ApplicationInstanceManifestPayloadArgs> manifestPayload() {
         return this.manifestPayload;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="runtimeRoleArn")
-      private final @Nullable Output<String> runtimeRoleArn;
+    private @Nullable Output<String> runtimeRoleArn;
 
-    public Output<String> runtimeRoleArn() {
-        return this.runtimeRoleArn == null ? Codegen.empty() : this.runtimeRoleArn;
+    public Optional<Output<String>> runtimeRoleArn() {
+        return Optional.ofNullable(this.runtimeRoleArn);
     }
 
     @Import(name="statusFilter")
-      private final @Nullable Output<ApplicationInstanceStatusFilter> statusFilter;
+    private @Nullable Output<ApplicationInstanceStatusFilter> statusFilter;
 
-    public Output<ApplicationInstanceStatusFilter> statusFilter() {
-        return this.statusFilter == null ? Codegen.empty() : this.statusFilter;
+    public Optional<Output<ApplicationInstanceStatusFilter>> statusFilter() {
+        return Optional.ofNullable(this.statusFilter);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ApplicationInstanceTagArgs>> tags;
+    private @Nullable Output<List<ApplicationInstanceTagArgs>> tags;
 
-    public Output<List<ApplicationInstanceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ApplicationInstanceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ApplicationInstanceArgs(
-        @Nullable Output<String> applicationInstanceIdToReplace,
-        Output<String> defaultRuntimeContextDevice,
-        @Nullable Output<String> description,
-        @Nullable Output<String> deviceId,
-        @Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload,
-        Output<ApplicationInstanceManifestPayloadArgs> manifestPayload,
-        @Nullable Output<String> name,
-        @Nullable Output<String> runtimeRoleArn,
-        @Nullable Output<ApplicationInstanceStatusFilter> statusFilter,
-        @Nullable Output<List<ApplicationInstanceTagArgs>> tags) {
-        this.applicationInstanceIdToReplace = applicationInstanceIdToReplace;
-        this.defaultRuntimeContextDevice = Objects.requireNonNull(defaultRuntimeContextDevice, "expected parameter 'defaultRuntimeContextDevice' to be non-null");
-        this.description = description;
-        this.deviceId = deviceId;
-        this.manifestOverridesPayload = manifestOverridesPayload;
-        this.manifestPayload = Objects.requireNonNull(manifestPayload, "expected parameter 'manifestPayload' to be non-null");
-        this.name = name;
-        this.runtimeRoleArn = runtimeRoleArn;
-        this.statusFilter = statusFilter;
-        this.tags = tags;
-    }
+    private ApplicationInstanceArgs() {}
 
-    private ApplicationInstanceArgs() {
-        this.applicationInstanceIdToReplace = Codegen.empty();
-        this.defaultRuntimeContextDevice = Codegen.empty();
-        this.description = Codegen.empty();
-        this.deviceId = Codegen.empty();
-        this.manifestOverridesPayload = Codegen.empty();
-        this.manifestPayload = Codegen.empty();
-        this.name = Codegen.empty();
-        this.runtimeRoleArn = Codegen.empty();
-        this.statusFilter = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ApplicationInstanceArgs(ApplicationInstanceArgs $) {
+        this.applicationInstanceIdToReplace = $.applicationInstanceIdToReplace;
+        this.defaultRuntimeContextDevice = $.defaultRuntimeContextDevice;
+        this.description = $.description;
+        this.deviceId = $.deviceId;
+        this.manifestOverridesPayload = $.manifestOverridesPayload;
+        this.manifestPayload = $.manifestPayload;
+        this.name = $.name;
+        this.runtimeRoleArn = $.runtimeRoleArn;
+        this.statusFilter = $.statusFilter;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationInstanceIdToReplace;
-        private Output<String> defaultRuntimeContextDevice;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> deviceId;
-        private @Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload;
-        private Output<ApplicationInstanceManifestPayloadArgs> manifestPayload;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> runtimeRoleArn;
-        private @Nullable Output<ApplicationInstanceStatusFilter> statusFilter;
-        private @Nullable Output<List<ApplicationInstanceTagArgs>> tags;
+        private ApplicationInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInstanceArgs();
         }
 
         public Builder(ApplicationInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationInstanceIdToReplace = defaults.applicationInstanceIdToReplace;
-    	      this.defaultRuntimeContextDevice = defaults.defaultRuntimeContextDevice;
-    	      this.description = defaults.description;
-    	      this.deviceId = defaults.deviceId;
-    	      this.manifestOverridesPayload = defaults.manifestOverridesPayload;
-    	      this.manifestPayload = defaults.manifestPayload;
-    	      this.name = defaults.name;
-    	      this.runtimeRoleArn = defaults.runtimeRoleArn;
-    	      this.statusFilter = defaults.statusFilter;
-    	      this.tags = defaults.tags;
+            $ = new ApplicationInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationInstanceIdToReplace(@Nullable Output<String> applicationInstanceIdToReplace) {
-            this.applicationInstanceIdToReplace = applicationInstanceIdToReplace;
+            $.applicationInstanceIdToReplace = applicationInstanceIdToReplace;
             return this;
         }
-        public Builder applicationInstanceIdToReplace(@Nullable String applicationInstanceIdToReplace) {
-            this.applicationInstanceIdToReplace = Codegen.ofNullable(applicationInstanceIdToReplace);
-            return this;
+
+        public Builder applicationInstanceIdToReplace(String applicationInstanceIdToReplace) {
+            return applicationInstanceIdToReplace(Output.of(applicationInstanceIdToReplace));
         }
+
         public Builder defaultRuntimeContextDevice(Output<String> defaultRuntimeContextDevice) {
-            this.defaultRuntimeContextDevice = Objects.requireNonNull(defaultRuntimeContextDevice);
+            $.defaultRuntimeContextDevice = defaultRuntimeContextDevice;
             return this;
         }
+
         public Builder defaultRuntimeContextDevice(String defaultRuntimeContextDevice) {
-            this.defaultRuntimeContextDevice = Output.of(Objects.requireNonNull(defaultRuntimeContextDevice));
-            return this;
+            return defaultRuntimeContextDevice(Output.of(defaultRuntimeContextDevice));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder deviceId(@Nullable Output<String> deviceId) {
-            this.deviceId = deviceId;
+            $.deviceId = deviceId;
             return this;
         }
-        public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = Codegen.ofNullable(deviceId);
-            return this;
+
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
         }
+
         public Builder manifestOverridesPayload(@Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload) {
-            this.manifestOverridesPayload = manifestOverridesPayload;
+            $.manifestOverridesPayload = manifestOverridesPayload;
             return this;
         }
-        public Builder manifestOverridesPayload(@Nullable ApplicationInstanceManifestOverridesPayloadArgs manifestOverridesPayload) {
-            this.manifestOverridesPayload = Codegen.ofNullable(manifestOverridesPayload);
-            return this;
+
+        public Builder manifestOverridesPayload(ApplicationInstanceManifestOverridesPayloadArgs manifestOverridesPayload) {
+            return manifestOverridesPayload(Output.of(manifestOverridesPayload));
         }
+
         public Builder manifestPayload(Output<ApplicationInstanceManifestPayloadArgs> manifestPayload) {
-            this.manifestPayload = Objects.requireNonNull(manifestPayload);
+            $.manifestPayload = manifestPayload;
             return this;
         }
+
         public Builder manifestPayload(ApplicationInstanceManifestPayloadArgs manifestPayload) {
-            this.manifestPayload = Output.of(Objects.requireNonNull(manifestPayload));
-            return this;
+            return manifestPayload(Output.of(manifestPayload));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder runtimeRoleArn(@Nullable Output<String> runtimeRoleArn) {
-            this.runtimeRoleArn = runtimeRoleArn;
+            $.runtimeRoleArn = runtimeRoleArn;
             return this;
         }
-        public Builder runtimeRoleArn(@Nullable String runtimeRoleArn) {
-            this.runtimeRoleArn = Codegen.ofNullable(runtimeRoleArn);
-            return this;
+
+        public Builder runtimeRoleArn(String runtimeRoleArn) {
+            return runtimeRoleArn(Output.of(runtimeRoleArn));
         }
+
         public Builder statusFilter(@Nullable Output<ApplicationInstanceStatusFilter> statusFilter) {
-            this.statusFilter = statusFilter;
+            $.statusFilter = statusFilter;
             return this;
         }
-        public Builder statusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
-            this.statusFilter = Codegen.ofNullable(statusFilter);
-            return this;
+
+        public Builder statusFilter(ApplicationInstanceStatusFilter statusFilter) {
+            return statusFilter(Output.of(statusFilter));
         }
+
         public Builder tags(@Nullable Output<List<ApplicationInstanceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ApplicationInstanceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ApplicationInstanceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ApplicationInstanceTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ApplicationInstanceArgs build() {
-            return new ApplicationInstanceArgs(applicationInstanceIdToReplace, defaultRuntimeContextDevice, description, deviceId, manifestOverridesPayload, manifestPayload, name, runtimeRoleArn, statusFilter, tags);
+        }
+
+        public ApplicationInstanceArgs build() {
+            $.defaultRuntimeContextDevice = Objects.requireNonNull($.defaultRuntimeContextDevice, "expected parameter 'defaultRuntimeContextDevice' to be non-null");
+            $.manifestPayload = Objects.requireNonNull($.manifestPayload, "expected parameter 'manifestPayload' to be non-null");
+            return $;
         }
     }
+
 }

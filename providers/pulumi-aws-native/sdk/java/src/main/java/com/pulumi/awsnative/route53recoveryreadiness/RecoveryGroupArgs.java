@@ -6,10 +6,10 @@ package com.pulumi.awsnative.route53recoveryreadiness;
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.RecoveryGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RecoveryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cells")
-      private final @Nullable Output<List<String>> cells;
+    private @Nullable Output<List<String>> cells;
 
-    public Output<List<String>> cells() {
-        return this.cells == null ? Codegen.empty() : this.cells;
+    public Optional<Output<List<String>>> cells() {
+        return Optional.ofNullable(this.cells);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RecoveryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recoveryGroupName")
-      private final @Nullable Output<String> recoveryGroupName;
+    private @Nullable Output<String> recoveryGroupName;
 
-    public Output<String> recoveryGroupName() {
-        return this.recoveryGroupName == null ? Codegen.empty() : this.recoveryGroupName;
+    public Optional<Output<String>> recoveryGroupName() {
+        return Optional.ofNullable(this.recoveryGroupName);
     }
 
     /**
@@ -44,82 +44,76 @@ public final class RecoveryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RecoveryGroupTagArgs>> tags;
+    private @Nullable Output<List<RecoveryGroupTagArgs>> tags;
 
-    public Output<List<RecoveryGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RecoveryGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RecoveryGroupArgs(
-        @Nullable Output<List<String>> cells,
-        @Nullable Output<String> recoveryGroupName,
-        @Nullable Output<List<RecoveryGroupTagArgs>> tags) {
-        this.cells = cells;
-        this.recoveryGroupName = recoveryGroupName;
-        this.tags = tags;
-    }
+    private RecoveryGroupArgs() {}
 
-    private RecoveryGroupArgs() {
-        this.cells = Codegen.empty();
-        this.recoveryGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RecoveryGroupArgs(RecoveryGroupArgs $) {
+        this.cells = $.cells;
+        this.recoveryGroupName = $.recoveryGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cells;
-        private @Nullable Output<String> recoveryGroupName;
-        private @Nullable Output<List<RecoveryGroupTagArgs>> tags;
+        private RecoveryGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryGroupArgs();
         }
 
         public Builder(RecoveryGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cells = defaults.cells;
-    	      this.recoveryGroupName = defaults.recoveryGroupName;
-    	      this.tags = defaults.tags;
+            $ = new RecoveryGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cells(@Nullable Output<List<String>> cells) {
-            this.cells = cells;
+            $.cells = cells;
             return this;
         }
-        public Builder cells(@Nullable List<String> cells) {
-            this.cells = Codegen.ofNullable(cells);
-            return this;
+
+        public Builder cells(List<String> cells) {
+            return cells(Output.of(cells));
         }
+
         public Builder cells(String... cells) {
             return cells(List.of(cells));
         }
+
         public Builder recoveryGroupName(@Nullable Output<String> recoveryGroupName) {
-            this.recoveryGroupName = recoveryGroupName;
+            $.recoveryGroupName = recoveryGroupName;
             return this;
         }
-        public Builder recoveryGroupName(@Nullable String recoveryGroupName) {
-            this.recoveryGroupName = Codegen.ofNullable(recoveryGroupName);
-            return this;
+
+        public Builder recoveryGroupName(String recoveryGroupName) {
+            return recoveryGroupName(Output.of(recoveryGroupName));
         }
+
         public Builder tags(@Nullable Output<List<RecoveryGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RecoveryGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RecoveryGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RecoveryGroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public RecoveryGroupArgs build() {
-            return new RecoveryGroupArgs(cells, recoveryGroupName, tags);
+        }
+
+        public RecoveryGroupArgs build() {
+            return $;
         }
     }
+
 }

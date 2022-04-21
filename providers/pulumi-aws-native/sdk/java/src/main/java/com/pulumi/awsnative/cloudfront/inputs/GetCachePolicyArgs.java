@@ -13,45 +13,45 @@ public final class GetCachePolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCachePolicyArgs Empty = new GetCachePolicyArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetCachePolicyArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetCachePolicyArgs() {}
 
-    private GetCachePolicyArgs() {
-        this.id = null;
+    private GetCachePolicyArgs(GetCachePolicyArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCachePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetCachePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCachePolicyArgs();
         }
 
         public Builder(GetCachePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetCachePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetCachePolicyArgs build() {
-            return new GetCachePolicyArgs(id);
+        }
+
+        public GetCachePolicyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

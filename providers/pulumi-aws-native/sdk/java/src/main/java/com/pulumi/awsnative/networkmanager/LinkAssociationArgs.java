@@ -5,7 +5,6 @@ package com.pulumi.awsnative.networkmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class LinkAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deviceId", required=true)
-      private final Output<String> deviceId;
+    private Output<String> deviceId;
 
     public Output<String> deviceId() {
         return this.deviceId;
@@ -30,7 +29,7 @@ public final class LinkAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final Output<String> globalNetworkId;
+    private Output<String> globalNetworkId;
 
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
@@ -41,76 +40,71 @@ public final class LinkAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="linkId", required=true)
-      private final Output<String> linkId;
+    private Output<String> linkId;
 
     public Output<String> linkId() {
         return this.linkId;
     }
 
-    public LinkAssociationArgs(
-        Output<String> deviceId,
-        Output<String> globalNetworkId,
-        Output<String> linkId) {
-        this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.linkId = Objects.requireNonNull(linkId, "expected parameter 'linkId' to be non-null");
-    }
+    private LinkAssociationArgs() {}
 
-    private LinkAssociationArgs() {
-        this.deviceId = Codegen.empty();
-        this.globalNetworkId = Codegen.empty();
-        this.linkId = Codegen.empty();
+    private LinkAssociationArgs(LinkAssociationArgs $) {
+        this.deviceId = $.deviceId;
+        this.globalNetworkId = $.globalNetworkId;
+        this.linkId = $.linkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceId;
-        private Output<String> globalNetworkId;
-        private Output<String> linkId;
+        private LinkAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkAssociationArgs();
         }
 
         public Builder(LinkAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceId = defaults.deviceId;
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.linkId = defaults.linkId;
+            $ = new LinkAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceId(Output<String> deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId);
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder deviceId(String deviceId) {
-            this.deviceId = Output.of(Objects.requireNonNull(deviceId));
-            return this;
+            return deviceId(Output.of(deviceId));
         }
+
         public Builder globalNetworkId(Output<String> globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
+
         public Builder linkId(Output<String> linkId) {
-            this.linkId = Objects.requireNonNull(linkId);
+            $.linkId = linkId;
             return this;
         }
+
         public Builder linkId(String linkId) {
-            this.linkId = Output.of(Objects.requireNonNull(linkId));
-            return this;
-        }        public LinkAssociationArgs build() {
-            return new LinkAssociationArgs(deviceId, globalNetworkId, linkId);
+            return linkId(Output.of(linkId));
+        }
+
+        public LinkAssociationArgs build() {
+            $.deviceId = Objects.requireNonNull($.deviceId, "expected parameter 'deviceId' to be non-null");
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            $.linkId = Objects.requireNonNull($.linkId, "expected parameter 'linkId' to be non-null");
+            return $;
         }
     }
+
 }

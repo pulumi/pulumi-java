@@ -13,45 +13,45 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetConfigArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetConfigArgs() {}
 
-    private GetConfigArgs() {
-        this.arn = null;
+    private GetConfigArgs(GetConfigArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigArgs();
         }
 
         public Builder(GetConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetConfigArgs build() {
-            return new GetConfigArgs(arn);
+        }
+
+        public GetConfigArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

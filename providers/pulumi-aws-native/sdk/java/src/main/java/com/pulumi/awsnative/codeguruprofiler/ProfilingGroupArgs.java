@@ -9,10 +9,10 @@ import com.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupChannelArgs;
 import com.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="agentPermissions")
-      private final @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
+    private @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
 
-    public Output<AgentPermissionsPropertiesArgs> agentPermissions() {
-        return this.agentPermissions == null ? Codegen.empty() : this.agentPermissions;
+    public Optional<Output<AgentPermissionsPropertiesArgs>> agentPermissions() {
+        return Optional.ofNullable(this.agentPermissions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="anomalyDetectionNotificationConfiguration")
-      private final @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
+    private @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
-    public Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration() {
-        return this.anomalyDetectionNotificationConfiguration == null ? Codegen.empty() : this.anomalyDetectionNotificationConfiguration;
+    public Optional<Output<List<ProfilingGroupChannelArgs>>> anomalyDetectionNotificationConfiguration() {
+        return Optional.ofNullable(this.anomalyDetectionNotificationConfiguration);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="computePlatform")
-      private final @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
+    private @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
 
-    public Output<ProfilingGroupComputePlatform> computePlatform() {
-        return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
+    public Optional<Output<ProfilingGroupComputePlatform>> computePlatform() {
+        return Optional.ofNullable(this.computePlatform);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="profilingGroupName")
-      private final @Nullable Output<String> profilingGroupName;
+    private @Nullable Output<String> profilingGroupName;
 
-    public Output<String> profilingGroupName() {
-        return this.profilingGroupName == null ? Codegen.empty() : this.profilingGroupName;
+    public Optional<Output<String>> profilingGroupName() {
+        return Optional.ofNullable(this.profilingGroupName);
     }
 
     /**
@@ -69,108 +69,96 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ProfilingGroupTagArgs>> tags;
+    private @Nullable Output<List<ProfilingGroupTagArgs>> tags;
 
-    public Output<List<ProfilingGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ProfilingGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ProfilingGroupArgs(
-        @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions,
-        @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration,
-        @Nullable Output<ProfilingGroupComputePlatform> computePlatform,
-        @Nullable Output<String> profilingGroupName,
-        @Nullable Output<List<ProfilingGroupTagArgs>> tags) {
-        this.agentPermissions = agentPermissions;
-        this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
-        this.computePlatform = computePlatform;
-        this.profilingGroupName = profilingGroupName;
-        this.tags = tags;
-    }
+    private ProfilingGroupArgs() {}
 
-    private ProfilingGroupArgs() {
-        this.agentPermissions = Codegen.empty();
-        this.anomalyDetectionNotificationConfiguration = Codegen.empty();
-        this.computePlatform = Codegen.empty();
-        this.profilingGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ProfilingGroupArgs(ProfilingGroupArgs $) {
+        this.agentPermissions = $.agentPermissions;
+        this.anomalyDetectionNotificationConfiguration = $.anomalyDetectionNotificationConfiguration;
+        this.computePlatform = $.computePlatform;
+        this.profilingGroupName = $.profilingGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfilingGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
-        private @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
-        private @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
-        private @Nullable Output<String> profilingGroupName;
-        private @Nullable Output<List<ProfilingGroupTagArgs>> tags;
+        private ProfilingGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfilingGroupArgs();
         }
 
         public Builder(ProfilingGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentPermissions = defaults.agentPermissions;
-    	      this.anomalyDetectionNotificationConfiguration = defaults.anomalyDetectionNotificationConfiguration;
-    	      this.computePlatform = defaults.computePlatform;
-    	      this.profilingGroupName = defaults.profilingGroupName;
-    	      this.tags = defaults.tags;
+            $ = new ProfilingGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentPermissions(@Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions) {
-            this.agentPermissions = agentPermissions;
+            $.agentPermissions = agentPermissions;
             return this;
         }
-        public Builder agentPermissions(@Nullable AgentPermissionsPropertiesArgs agentPermissions) {
-            this.agentPermissions = Codegen.ofNullable(agentPermissions);
-            return this;
+
+        public Builder agentPermissions(AgentPermissionsPropertiesArgs agentPermissions) {
+            return agentPermissions(Output.of(agentPermissions));
         }
+
         public Builder anomalyDetectionNotificationConfiguration(@Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
-            this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
+            $.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
-        public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
-            this.anomalyDetectionNotificationConfiguration = Codegen.ofNullable(anomalyDetectionNotificationConfiguration);
-            return this;
+
+        public Builder anomalyDetectionNotificationConfiguration(List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
+            return anomalyDetectionNotificationConfiguration(Output.of(anomalyDetectionNotificationConfiguration));
         }
+
         public Builder anomalyDetectionNotificationConfiguration(ProfilingGroupChannelArgs... anomalyDetectionNotificationConfiguration) {
             return anomalyDetectionNotificationConfiguration(List.of(anomalyDetectionNotificationConfiguration));
         }
+
         public Builder computePlatform(@Nullable Output<ProfilingGroupComputePlatform> computePlatform) {
-            this.computePlatform = computePlatform;
+            $.computePlatform = computePlatform;
             return this;
         }
-        public Builder computePlatform(@Nullable ProfilingGroupComputePlatform computePlatform) {
-            this.computePlatform = Codegen.ofNullable(computePlatform);
-            return this;
+
+        public Builder computePlatform(ProfilingGroupComputePlatform computePlatform) {
+            return computePlatform(Output.of(computePlatform));
         }
+
         public Builder profilingGroupName(@Nullable Output<String> profilingGroupName) {
-            this.profilingGroupName = profilingGroupName;
+            $.profilingGroupName = profilingGroupName;
             return this;
         }
-        public Builder profilingGroupName(@Nullable String profilingGroupName) {
-            this.profilingGroupName = Codegen.ofNullable(profilingGroupName);
-            return this;
+
+        public Builder profilingGroupName(String profilingGroupName) {
+            return profilingGroupName(Output.of(profilingGroupName));
         }
+
         public Builder tags(@Nullable Output<List<ProfilingGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ProfilingGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ProfilingGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ProfilingGroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ProfilingGroupArgs build() {
-            return new ProfilingGroupArgs(agentPermissions, anomalyDetectionNotificationConfiguration, computePlatform, profilingGroupName, tags);
+        }
+
+        public ProfilingGroupArgs build() {
+            return $;
         }
     }
+
 }

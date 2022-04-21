@@ -13,62 +13,59 @@ public final class FrameworkControlInputParameter extends com.pulumi.resources.I
     public static final FrameworkControlInputParameter Empty = new FrameworkControlInputParameter();
 
     @Import(name="parameterName", required=true)
-      private final String parameterName;
+    private String parameterName;
 
     public String parameterName() {
         return this.parameterName;
     }
 
     @Import(name="parameterValue", required=true)
-      private final String parameterValue;
+    private String parameterValue;
 
     public String parameterValue() {
         return this.parameterValue;
     }
 
-    public FrameworkControlInputParameter(
-        String parameterName,
-        String parameterValue) {
-        this.parameterName = Objects.requireNonNull(parameterName, "expected parameter 'parameterName' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private FrameworkControlInputParameter() {}
 
-    private FrameworkControlInputParameter() {
-        this.parameterName = null;
-        this.parameterValue = null;
+    private FrameworkControlInputParameter(FrameworkControlInputParameter $) {
+        this.parameterName = $.parameterName;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrameworkControlInputParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameterName;
-        private String parameterValue;
+        private FrameworkControlInputParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrameworkControlInputParameter();
         }
 
         public Builder(FrameworkControlInputParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterName = defaults.parameterName;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new FrameworkControlInputParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterName(String parameterName) {
-            this.parameterName = Objects.requireNonNull(parameterName);
+            $.parameterName = parameterName;
             return this;
         }
+
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
-        }        public FrameworkControlInputParameter build() {
-            return new FrameworkControlInputParameter(parameterName, parameterValue);
+        }
+
+        public FrameworkControlInputParameter build() {
+            $.parameterName = Objects.requireNonNull($.parameterName, "expected parameter 'parameterName' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

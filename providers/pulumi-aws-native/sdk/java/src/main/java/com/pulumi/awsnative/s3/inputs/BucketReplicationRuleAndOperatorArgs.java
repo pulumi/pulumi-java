@@ -6,10 +6,10 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class BucketReplicationRuleAndOperatorArgs extends com.pulumi.resou
     public static final BucketReplicationRuleAndOperatorArgs Empty = new BucketReplicationRuleAndOperatorArgs();
 
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="tagFilters")
-      private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
+    private @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Output<List<BucketTagFilterArgs>> tagFilters() {
-        return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
+    public Optional<Output<List<BucketTagFilterArgs>>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
-    public BucketReplicationRuleAndOperatorArgs(
-        @Nullable Output<String> prefix,
-        @Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
-        this.prefix = prefix;
-        this.tagFilters = tagFilters;
-    }
+    private BucketReplicationRuleAndOperatorArgs() {}
 
-    private BucketReplicationRuleAndOperatorArgs() {
-        this.prefix = Codegen.empty();
-        this.tagFilters = Codegen.empty();
+    private BucketReplicationRuleAndOperatorArgs(BucketReplicationRuleAndOperatorArgs $) {
+        this.prefix = $.prefix;
+        this.tagFilters = $.tagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationRuleAndOperatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
+        private BucketReplicationRuleAndOperatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationRuleAndOperatorArgs();
         }
 
         public Builder(BucketReplicationRuleAndOperatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prefix = defaults.prefix;
-    	      this.tagFilters = defaults.tagFilters;
+            $ = new BucketReplicationRuleAndOperatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
-        public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
-            this.tagFilters = Codegen.ofNullable(tagFilters);
-            return this;
+
+        public Builder tagFilters(List<BucketTagFilterArgs> tagFilters) {
+            return tagFilters(Output.of(tagFilters));
         }
+
         public Builder tagFilters(BucketTagFilterArgs... tagFilters) {
             return tagFilters(List.of(tagFilters));
-        }        public BucketReplicationRuleAndOperatorArgs build() {
-            return new BucketReplicationRuleAndOperatorArgs(prefix, tagFilters);
+        }
+
+        public BucketReplicationRuleAndOperatorArgs build() {
+            return $;
         }
     }
+
 }

@@ -20,78 +20,70 @@ public final class ClusterExecuteCommandConfiguration extends com.pulumi.resourc
     public static final ClusterExecuteCommandConfiguration Empty = new ClusterExecuteCommandConfiguration();
 
     @Import(name="kmsKeyId")
-      private final @Nullable String kmsKeyId;
+    private @Nullable String kmsKeyId;
 
     public Optional<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="logConfiguration")
-      private final @Nullable ClusterExecuteCommandLogConfiguration logConfiguration;
+    private @Nullable ClusterExecuteCommandLogConfiguration logConfiguration;
 
     public Optional<ClusterExecuteCommandLogConfiguration> logConfiguration() {
-        return this.logConfiguration == null ? Optional.empty() : Optional.ofNullable(this.logConfiguration);
+        return Optional.ofNullable(this.logConfiguration);
     }
 
     @Import(name="logging")
-      private final @Nullable String logging;
+    private @Nullable String logging;
 
     public Optional<String> logging() {
-        return this.logging == null ? Optional.empty() : Optional.ofNullable(this.logging);
+        return Optional.ofNullable(this.logging);
     }
 
-    public ClusterExecuteCommandConfiguration(
-        @Nullable String kmsKeyId,
-        @Nullable ClusterExecuteCommandLogConfiguration logConfiguration,
-        @Nullable String logging) {
-        this.kmsKeyId = kmsKeyId;
-        this.logConfiguration = logConfiguration;
-        this.logging = logging;
-    }
+    private ClusterExecuteCommandConfiguration() {}
 
-    private ClusterExecuteCommandConfiguration() {
-        this.kmsKeyId = null;
-        this.logConfiguration = null;
-        this.logging = null;
+    private ClusterExecuteCommandConfiguration(ClusterExecuteCommandConfiguration $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.logConfiguration = $.logConfiguration;
+        this.logging = $.logging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterExecuteCommandConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kmsKeyId;
-        private @Nullable ClusterExecuteCommandLogConfiguration logConfiguration;
-        private @Nullable String logging;
+        private ClusterExecuteCommandConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterExecuteCommandConfiguration();
         }
 
         public Builder(ClusterExecuteCommandConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.logConfiguration = defaults.logConfiguration;
-    	      this.logging = defaults.logging;
+            $ = new ClusterExecuteCommandConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder logConfiguration(@Nullable ClusterExecuteCommandLogConfiguration logConfiguration) {
-            this.logConfiguration = logConfiguration;
+            $.logConfiguration = logConfiguration;
             return this;
         }
+
         public Builder logging(@Nullable String logging) {
-            this.logging = logging;
+            $.logging = logging;
             return this;
-        }        public ClusterExecuteCommandConfiguration build() {
-            return new ClusterExecuteCommandConfiguration(kmsKeyId, logConfiguration, logging);
+        }
+
+        public ClusterExecuteCommandConfiguration build() {
+            return $;
         }
     }
+
 }

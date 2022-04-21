@@ -13,62 +13,59 @@ public final class CloudFormationProvisionedProductTag extends com.pulumi.resour
     public static final CloudFormationProvisionedProductTag Empty = new CloudFormationProvisionedProductTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public CloudFormationProvisionedProductTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private CloudFormationProvisionedProductTag() {}
 
-    private CloudFormationProvisionedProductTag() {
-        this.key = null;
-        this.value = null;
+    private CloudFormationProvisionedProductTag(CloudFormationProvisionedProductTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFormationProvisionedProductTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private CloudFormationProvisionedProductTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFormationProvisionedProductTag();
         }
 
         public Builder(CloudFormationProvisionedProductTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new CloudFormationProvisionedProductTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public CloudFormationProvisionedProductTag build() {
-            return new CloudFormationProvisionedProductTag(key, value);
+        }
+
+        public CloudFormationProvisionedProductTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

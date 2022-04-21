@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
-import java.util.Objects;
+
 
 
 public final class StreamingImageTagsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final StreamingImageTagsArgs Empty = new StreamingImageTagsArgs();
 
-    public StreamingImageTagsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(StreamingImageTagsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private StreamingImageTagsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(StreamingImageTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new StreamingImageTagsArgs();
         }
         public StreamingImageTagsArgs build() {
-            return new StreamingImageTagsArgs();
+            return $;
         }
     }
+
 }

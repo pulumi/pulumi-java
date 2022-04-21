@@ -13,45 +13,45 @@ public final class GetPackageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPackageArgs Empty = new GetPackageArgs();
 
     @Import(name="packageId", required=true)
-      private final String packageId;
+    private String packageId;
 
     public String packageId() {
         return this.packageId;
     }
 
-    public GetPackageArgs(String packageId) {
-        this.packageId = Objects.requireNonNull(packageId, "expected parameter 'packageId' to be non-null");
-    }
+    private GetPackageArgs() {}
 
-    private GetPackageArgs() {
-        this.packageId = null;
+    private GetPackageArgs(GetPackageArgs $) {
+        this.packageId = $.packageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String packageId;
+        private GetPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPackageArgs();
         }
 
         public Builder(GetPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageId = defaults.packageId;
+            $ = new GetPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packageId(String packageId) {
-            this.packageId = Objects.requireNonNull(packageId);
+            $.packageId = packageId;
             return this;
-        }        public GetPackageArgs build() {
-            return new GetPackageArgs(packageId);
+        }
+
+        public GetPackageArgs build() {
+            $.packageId = Objects.requireNonNull($.packageId, "expected parameter 'packageId' to be non-null");
+            return $;
         }
     }
+
 }

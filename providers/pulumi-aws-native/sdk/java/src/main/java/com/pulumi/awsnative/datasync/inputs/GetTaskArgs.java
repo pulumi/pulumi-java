@@ -17,45 +17,45 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="taskArn", required=true)
-      private final String taskArn;
+    private String taskArn;
 
     public String taskArn() {
         return this.taskArn;
     }
 
-    public GetTaskArgs(String taskArn) {
-        this.taskArn = Objects.requireNonNull(taskArn, "expected parameter 'taskArn' to be non-null");
-    }
+    private GetTaskArgs() {}
 
-    private GetTaskArgs() {
-        this.taskArn = null;
+    private GetTaskArgs(GetTaskArgs $) {
+        this.taskArn = $.taskArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String taskArn;
+        private GetTaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaskArgs();
         }
 
         public Builder(GetTaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.taskArn = defaults.taskArn;
+            $ = new GetTaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder taskArn(String taskArn) {
-            this.taskArn = Objects.requireNonNull(taskArn);
+            $.taskArn = taskArn;
             return this;
-        }        public GetTaskArgs build() {
-            return new GetTaskArgs(taskArn);
+        }
+
+        public GetTaskArgs build() {
+            $.taskArn = Objects.requireNonNull($.taskArn, "expected parameter 'taskArn' to be non-null");
+            return $;
         }
     }
+
 }

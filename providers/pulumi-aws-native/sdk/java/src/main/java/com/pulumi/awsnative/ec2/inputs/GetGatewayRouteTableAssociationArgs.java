@@ -17,45 +17,45 @@ public final class GetGatewayRouteTableAssociationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final String gatewayId;
+    private String gatewayId;
 
     public String gatewayId() {
         return this.gatewayId;
     }
 
-    public GetGatewayRouteTableAssociationArgs(String gatewayId) {
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-    }
+    private GetGatewayRouteTableAssociationArgs() {}
 
-    private GetGatewayRouteTableAssociationArgs() {
-        this.gatewayId = null;
+    private GetGatewayRouteTableAssociationArgs(GetGatewayRouteTableAssociationArgs $) {
+        this.gatewayId = $.gatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGatewayRouteTableAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayId;
+        private GetGatewayRouteTableAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGatewayRouteTableAssociationArgs();
         }
 
         public Builder(GetGatewayRouteTableAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayId = defaults.gatewayId;
+            $ = new GetGatewayRouteTableAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
-        }        public GetGatewayRouteTableAssociationArgs build() {
-            return new GetGatewayRouteTableAssociationArgs(gatewayId);
+        }
+
+        public GetGatewayRouteTableAssociationArgs build() {
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            return $;
         }
     }
+
 }

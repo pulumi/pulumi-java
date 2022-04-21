@@ -22,135 +22,122 @@ public final class DataSourceS3DataSourceConfiguration extends com.pulumi.resour
     public static final DataSourceS3DataSourceConfiguration Empty = new DataSourceS3DataSourceConfiguration();
 
     @Import(name="accessControlListConfiguration")
-      private final @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration;
+    private @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration;
 
     public Optional<DataSourceAccessControlListConfiguration> accessControlListConfiguration() {
-        return this.accessControlListConfiguration == null ? Optional.empty() : Optional.ofNullable(this.accessControlListConfiguration);
+        return Optional.ofNullable(this.accessControlListConfiguration);
     }
 
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="documentsMetadataConfiguration")
-      private final @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration;
+    private @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration;
 
     public Optional<DataSourceDocumentsMetadataConfiguration> documentsMetadataConfiguration() {
-        return this.documentsMetadataConfiguration == null ? Optional.empty() : Optional.ofNullable(this.documentsMetadataConfiguration);
+        return Optional.ofNullable(this.documentsMetadataConfiguration);
     }
 
     @Import(name="exclusionPatterns")
-      private final @Nullable List<String> exclusionPatterns;
+    private @Nullable List<String> exclusionPatterns;
 
-    public List<String> exclusionPatterns() {
-        return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
+    public Optional<List<String>> exclusionPatterns() {
+        return Optional.ofNullable(this.exclusionPatterns);
     }
 
     @Import(name="inclusionPatterns")
-      private final @Nullable List<String> inclusionPatterns;
+    private @Nullable List<String> inclusionPatterns;
 
-    public List<String> inclusionPatterns() {
-        return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
+    public Optional<List<String>> inclusionPatterns() {
+        return Optional.ofNullable(this.inclusionPatterns);
     }
 
     @Import(name="inclusionPrefixes")
-      private final @Nullable List<String> inclusionPrefixes;
+    private @Nullable List<String> inclusionPrefixes;
 
-    public List<String> inclusionPrefixes() {
-        return this.inclusionPrefixes == null ? List.of() : this.inclusionPrefixes;
+    public Optional<List<String>> inclusionPrefixes() {
+        return Optional.ofNullable(this.inclusionPrefixes);
     }
 
-    public DataSourceS3DataSourceConfiguration(
-        @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration,
-        String bucketName,
-        @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<String> inclusionPatterns,
-        @Nullable List<String> inclusionPrefixes) {
-        this.accessControlListConfiguration = accessControlListConfiguration;
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.documentsMetadataConfiguration = documentsMetadataConfiguration;
-        this.exclusionPatterns = exclusionPatterns;
-        this.inclusionPatterns = inclusionPatterns;
-        this.inclusionPrefixes = inclusionPrefixes;
-    }
+    private DataSourceS3DataSourceConfiguration() {}
 
-    private DataSourceS3DataSourceConfiguration() {
-        this.accessControlListConfiguration = null;
-        this.bucketName = null;
-        this.documentsMetadataConfiguration = null;
-        this.exclusionPatterns = List.of();
-        this.inclusionPatterns = List.of();
-        this.inclusionPrefixes = List.of();
+    private DataSourceS3DataSourceConfiguration(DataSourceS3DataSourceConfiguration $) {
+        this.accessControlListConfiguration = $.accessControlListConfiguration;
+        this.bucketName = $.bucketName;
+        this.documentsMetadataConfiguration = $.documentsMetadataConfiguration;
+        this.exclusionPatterns = $.exclusionPatterns;
+        this.inclusionPatterns = $.inclusionPatterns;
+        this.inclusionPrefixes = $.inclusionPrefixes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceS3DataSourceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration;
-        private String bucketName;
-        private @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration;
-        private @Nullable List<String> exclusionPatterns;
-        private @Nullable List<String> inclusionPatterns;
-        private @Nullable List<String> inclusionPrefixes;
+        private DataSourceS3DataSourceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceS3DataSourceConfiguration();
         }
 
         public Builder(DataSourceS3DataSourceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlListConfiguration = defaults.accessControlListConfiguration;
-    	      this.bucketName = defaults.bucketName;
-    	      this.documentsMetadataConfiguration = defaults.documentsMetadataConfiguration;
-    	      this.exclusionPatterns = defaults.exclusionPatterns;
-    	      this.inclusionPatterns = defaults.inclusionPatterns;
-    	      this.inclusionPrefixes = defaults.inclusionPrefixes;
+            $ = new DataSourceS3DataSourceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlListConfiguration(@Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration) {
-            this.accessControlListConfiguration = accessControlListConfiguration;
+            $.accessControlListConfiguration = accessControlListConfiguration;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder documentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration) {
-            this.documentsMetadataConfiguration = documentsMetadataConfiguration;
+            $.documentsMetadataConfiguration = documentsMetadataConfiguration;
             return this;
         }
+
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = exclusionPatterns;
+            $.exclusionPatterns = exclusionPatterns;
             return this;
         }
+
         public Builder exclusionPatterns(String... exclusionPatterns) {
             return exclusionPatterns(List.of(exclusionPatterns));
         }
+
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = inclusionPatterns;
+            $.inclusionPatterns = inclusionPatterns;
             return this;
         }
+
         public Builder inclusionPatterns(String... inclusionPatterns) {
             return inclusionPatterns(List.of(inclusionPatterns));
         }
+
         public Builder inclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
-            this.inclusionPrefixes = inclusionPrefixes;
+            $.inclusionPrefixes = inclusionPrefixes;
             return this;
         }
+
         public Builder inclusionPrefixes(String... inclusionPrefixes) {
             return inclusionPrefixes(List.of(inclusionPrefixes));
-        }        public DataSourceS3DataSourceConfiguration build() {
-            return new DataSourceS3DataSourceConfiguration(accessControlListConfiguration, bucketName, documentsMetadataConfiguration, exclusionPatterns, inclusionPatterns, inclusionPrefixes);
+        }
+
+        public DataSourceS3DataSourceConfiguration build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 import com.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<ApplicationLogEncoding> encoding;
+    private @Nullable Output<ApplicationLogEncoding> encoding;
 
-    public Output<ApplicationLogEncoding> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<ApplicationLogEncoding>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="logPath")
-      private final @Nullable Output<String> logPath;
+    private @Nullable Output<String> logPath;
 
-    public Output<String> logPath() {
-        return this.logPath == null ? Codegen.empty() : this.logPath;
+    public Optional<Output<String>> logPath() {
+        return Optional.ofNullable(this.logPath);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="logType", required=true)
-      private final Output<String> logType;
+    private Output<String> logType;
 
     public Output<String> logType() {
         return this.logType;
@@ -69,102 +69,89 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="patternSet")
-      private final @Nullable Output<String> patternSet;
+    private @Nullable Output<String> patternSet;
 
-    public Output<String> patternSet() {
-        return this.patternSet == null ? Codegen.empty() : this.patternSet;
+    public Optional<Output<String>> patternSet() {
+        return Optional.ofNullable(this.patternSet);
     }
 
-    public ApplicationLogArgs(
-        @Nullable Output<ApplicationLogEncoding> encoding,
-        @Nullable Output<String> logGroupName,
-        @Nullable Output<String> logPath,
-        Output<String> logType,
-        @Nullable Output<String> patternSet) {
-        this.encoding = encoding;
-        this.logGroupName = logGroupName;
-        this.logPath = logPath;
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-        this.patternSet = patternSet;
-    }
+    private ApplicationLogArgs() {}
 
-    private ApplicationLogArgs() {
-        this.encoding = Codegen.empty();
-        this.logGroupName = Codegen.empty();
-        this.logPath = Codegen.empty();
-        this.logType = Codegen.empty();
-        this.patternSet = Codegen.empty();
+    private ApplicationLogArgs(ApplicationLogArgs $) {
+        this.encoding = $.encoding;
+        this.logGroupName = $.logGroupName;
+        this.logPath = $.logPath;
+        this.logType = $.logType;
+        this.patternSet = $.patternSet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationLogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationLogEncoding> encoding;
-        private @Nullable Output<String> logGroupName;
-        private @Nullable Output<String> logPath;
-        private Output<String> logType;
-        private @Nullable Output<String> patternSet;
+        private ApplicationLogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationLogArgs();
         }
 
         public Builder(ApplicationLogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.logPath = defaults.logPath;
-    	      this.logType = defaults.logType;
-    	      this.patternSet = defaults.patternSet;
+            $ = new ApplicationLogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<ApplicationLogEncoding> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable ApplicationLogEncoding encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(ApplicationLogEncoding encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder logPath(@Nullable Output<String> logPath) {
-            this.logPath = logPath;
+            $.logPath = logPath;
             return this;
         }
-        public Builder logPath(@Nullable String logPath) {
-            this.logPath = Codegen.ofNullable(logPath);
-            return this;
+
+        public Builder logPath(String logPath) {
+            return logPath(Output.of(logPath));
         }
+
         public Builder logType(Output<String> logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
         }
+
         public Builder logType(String logType) {
-            this.logType = Output.of(Objects.requireNonNull(logType));
-            return this;
+            return logType(Output.of(logType));
         }
+
         public Builder patternSet(@Nullable Output<String> patternSet) {
-            this.patternSet = patternSet;
+            $.patternSet = patternSet;
             return this;
         }
-        public Builder patternSet(@Nullable String patternSet) {
-            this.patternSet = Codegen.ofNullable(patternSet);
-            return this;
-        }        public ApplicationLogArgs build() {
-            return new ApplicationLogArgs(encoding, logGroupName, logPath, logType, patternSet);
+
+        public Builder patternSet(String patternSet) {
+            return patternSet(Output.of(patternSet));
+        }
+
+        public ApplicationLogArgs build() {
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

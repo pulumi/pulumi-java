@@ -16,158 +16,135 @@ public final class DomainServiceSoftwareOptions extends com.pulumi.resources.Inv
     public static final DomainServiceSoftwareOptions Empty = new DomainServiceSoftwareOptions();
 
     @Import(name="automatedUpdateDate")
-      private final @Nullable String automatedUpdateDate;
+    private @Nullable String automatedUpdateDate;
 
     public Optional<String> automatedUpdateDate() {
-        return this.automatedUpdateDate == null ? Optional.empty() : Optional.ofNullable(this.automatedUpdateDate);
+        return Optional.ofNullable(this.automatedUpdateDate);
     }
 
     @Import(name="cancellable")
-      private final @Nullable Boolean cancellable;
+    private @Nullable Boolean cancellable;
 
     public Optional<Boolean> cancellable() {
-        return this.cancellable == null ? Optional.empty() : Optional.ofNullable(this.cancellable);
+        return Optional.ofNullable(this.cancellable);
     }
 
     @Import(name="currentVersion")
-      private final @Nullable String currentVersion;
+    private @Nullable String currentVersion;
 
     public Optional<String> currentVersion() {
-        return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
+        return Optional.ofNullable(this.currentVersion);
     }
 
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="newVersion")
-      private final @Nullable String newVersion;
+    private @Nullable String newVersion;
 
     public Optional<String> newVersion() {
-        return this.newVersion == null ? Optional.empty() : Optional.ofNullable(this.newVersion);
+        return Optional.ofNullable(this.newVersion);
     }
 
     @Import(name="optionalDeployment")
-      private final @Nullable Boolean optionalDeployment;
+    private @Nullable Boolean optionalDeployment;
 
     public Optional<Boolean> optionalDeployment() {
-        return this.optionalDeployment == null ? Optional.empty() : Optional.ofNullable(this.optionalDeployment);
+        return Optional.ofNullable(this.optionalDeployment);
     }
 
     @Import(name="updateAvailable")
-      private final @Nullable Boolean updateAvailable;
+    private @Nullable Boolean updateAvailable;
 
     public Optional<Boolean> updateAvailable() {
-        return this.updateAvailable == null ? Optional.empty() : Optional.ofNullable(this.updateAvailable);
+        return Optional.ofNullable(this.updateAvailable);
     }
 
     @Import(name="updateStatus")
-      private final @Nullable String updateStatus;
+    private @Nullable String updateStatus;
 
     public Optional<String> updateStatus() {
-        return this.updateStatus == null ? Optional.empty() : Optional.ofNullable(this.updateStatus);
+        return Optional.ofNullable(this.updateStatus);
     }
 
-    public DomainServiceSoftwareOptions(
-        @Nullable String automatedUpdateDate,
-        @Nullable Boolean cancellable,
-        @Nullable String currentVersion,
-        @Nullable String description,
-        @Nullable String newVersion,
-        @Nullable Boolean optionalDeployment,
-        @Nullable Boolean updateAvailable,
-        @Nullable String updateStatus) {
-        this.automatedUpdateDate = automatedUpdateDate;
-        this.cancellable = cancellable;
-        this.currentVersion = currentVersion;
-        this.description = description;
-        this.newVersion = newVersion;
-        this.optionalDeployment = optionalDeployment;
-        this.updateAvailable = updateAvailable;
-        this.updateStatus = updateStatus;
-    }
+    private DomainServiceSoftwareOptions() {}
 
-    private DomainServiceSoftwareOptions() {
-        this.automatedUpdateDate = null;
-        this.cancellable = null;
-        this.currentVersion = null;
-        this.description = null;
-        this.newVersion = null;
-        this.optionalDeployment = null;
-        this.updateAvailable = null;
-        this.updateStatus = null;
+    private DomainServiceSoftwareOptions(DomainServiceSoftwareOptions $) {
+        this.automatedUpdateDate = $.automatedUpdateDate;
+        this.cancellable = $.cancellable;
+        this.currentVersion = $.currentVersion;
+        this.description = $.description;
+        this.newVersion = $.newVersion;
+        this.optionalDeployment = $.optionalDeployment;
+        this.updateAvailable = $.updateAvailable;
+        this.updateStatus = $.updateStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainServiceSoftwareOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String automatedUpdateDate;
-        private @Nullable Boolean cancellable;
-        private @Nullable String currentVersion;
-        private @Nullable String description;
-        private @Nullable String newVersion;
-        private @Nullable Boolean optionalDeployment;
-        private @Nullable Boolean updateAvailable;
-        private @Nullable String updateStatus;
+        private DomainServiceSoftwareOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainServiceSoftwareOptions();
         }
 
         public Builder(DomainServiceSoftwareOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatedUpdateDate = defaults.automatedUpdateDate;
-    	      this.cancellable = defaults.cancellable;
-    	      this.currentVersion = defaults.currentVersion;
-    	      this.description = defaults.description;
-    	      this.newVersion = defaults.newVersion;
-    	      this.optionalDeployment = defaults.optionalDeployment;
-    	      this.updateAvailable = defaults.updateAvailable;
-    	      this.updateStatus = defaults.updateStatus;
+            $ = new DomainServiceSoftwareOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder automatedUpdateDate(@Nullable String automatedUpdateDate) {
-            this.automatedUpdateDate = automatedUpdateDate;
+            $.automatedUpdateDate = automatedUpdateDate;
             return this;
         }
+
         public Builder cancellable(@Nullable Boolean cancellable) {
-            this.cancellable = cancellable;
+            $.cancellable = cancellable;
             return this;
         }
+
         public Builder currentVersion(@Nullable String currentVersion) {
-            this.currentVersion = currentVersion;
+            $.currentVersion = currentVersion;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder newVersion(@Nullable String newVersion) {
-            this.newVersion = newVersion;
+            $.newVersion = newVersion;
             return this;
         }
+
         public Builder optionalDeployment(@Nullable Boolean optionalDeployment) {
-            this.optionalDeployment = optionalDeployment;
+            $.optionalDeployment = optionalDeployment;
             return this;
         }
+
         public Builder updateAvailable(@Nullable Boolean updateAvailable) {
-            this.updateAvailable = updateAvailable;
+            $.updateAvailable = updateAvailable;
             return this;
         }
+
         public Builder updateStatus(@Nullable String updateStatus) {
-            this.updateStatus = updateStatus;
+            $.updateStatus = updateStatus;
             return this;
-        }        public DomainServiceSoftwareOptions build() {
-            return new DomainServiceSoftwareOptions(automatedUpdateDate, cancellable, currentVersion, description, newVersion, optionalDeployment, updateAvailable, updateStatus);
+        }
+
+        public DomainServiceSoftwareOptions build() {
+            return $;
         }
     }
+
 }

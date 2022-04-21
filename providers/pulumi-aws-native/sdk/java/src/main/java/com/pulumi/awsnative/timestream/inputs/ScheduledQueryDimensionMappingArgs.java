@@ -6,7 +6,6 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.enums.ScheduledQueryDimensionValueType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,70 +19,67 @@ public final class ScheduledQueryDimensionMappingArgs extends com.pulumi.resourc
     public static final ScheduledQueryDimensionMappingArgs Empty = new ScheduledQueryDimensionMappingArgs();
 
     @Import(name="dimensionValueType", required=true)
-      private final Output<ScheduledQueryDimensionValueType> dimensionValueType;
+    private Output<ScheduledQueryDimensionValueType> dimensionValueType;
 
     public Output<ScheduledQueryDimensionValueType> dimensionValueType() {
         return this.dimensionValueType;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ScheduledQueryDimensionMappingArgs(
-        Output<ScheduledQueryDimensionValueType> dimensionValueType,
-        Output<String> name) {
-        this.dimensionValueType = Objects.requireNonNull(dimensionValueType, "expected parameter 'dimensionValueType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ScheduledQueryDimensionMappingArgs() {}
 
-    private ScheduledQueryDimensionMappingArgs() {
-        this.dimensionValueType = Codegen.empty();
-        this.name = Codegen.empty();
+    private ScheduledQueryDimensionMappingArgs(ScheduledQueryDimensionMappingArgs $) {
+        this.dimensionValueType = $.dimensionValueType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledQueryDimensionMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ScheduledQueryDimensionValueType> dimensionValueType;
-        private Output<String> name;
+        private ScheduledQueryDimensionMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledQueryDimensionMappingArgs();
         }
 
         public Builder(ScheduledQueryDimensionMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensionValueType = defaults.dimensionValueType;
-    	      this.name = defaults.name;
+            $ = new ScheduledQueryDimensionMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensionValueType(Output<ScheduledQueryDimensionValueType> dimensionValueType) {
-            this.dimensionValueType = Objects.requireNonNull(dimensionValueType);
+            $.dimensionValueType = dimensionValueType;
             return this;
         }
+
         public Builder dimensionValueType(ScheduledQueryDimensionValueType dimensionValueType) {
-            this.dimensionValueType = Output.of(Objects.requireNonNull(dimensionValueType));
-            return this;
+            return dimensionValueType(Output.of(dimensionValueType));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ScheduledQueryDimensionMappingArgs build() {
-            return new ScheduledQueryDimensionMappingArgs(dimensionValueType, name);
+            return name(Output.of(name));
+        }
+
+        public ScheduledQueryDimensionMappingArgs build() {
+            $.dimensionValueType = Objects.requireNonNull($.dimensionValueType, "expected parameter 'dimensionValueType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

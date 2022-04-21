@@ -10,8 +10,8 @@ import com.pulumi.awsnative.customerprofiles.enums.IntegrationServiceNowConnecto
 import com.pulumi.awsnative.customerprofiles.enums.IntegrationZendeskConnectorOperator;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,130 +20,116 @@ public final class IntegrationConnectorOperatorArgs extends com.pulumi.resources
     public static final IntegrationConnectorOperatorArgs Empty = new IntegrationConnectorOperatorArgs();
 
     @Import(name="marketo")
-      private final @Nullable Output<IntegrationMarketoConnectorOperator> marketo;
+    private @Nullable Output<IntegrationMarketoConnectorOperator> marketo;
 
-    public Output<IntegrationMarketoConnectorOperator> marketo() {
-        return this.marketo == null ? Codegen.empty() : this.marketo;
+    public Optional<Output<IntegrationMarketoConnectorOperator>> marketo() {
+        return Optional.ofNullable(this.marketo);
     }
 
     @Import(name="s3")
-      private final @Nullable Output<IntegrationS3ConnectorOperator> s3;
+    private @Nullable Output<IntegrationS3ConnectorOperator> s3;
 
-    public Output<IntegrationS3ConnectorOperator> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<IntegrationS3ConnectorOperator>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
     @Import(name="salesforce")
-      private final @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce;
+    private @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce;
 
-    public Output<IntegrationSalesforceConnectorOperator> salesforce() {
-        return this.salesforce == null ? Codegen.empty() : this.salesforce;
+    public Optional<Output<IntegrationSalesforceConnectorOperator>> salesforce() {
+        return Optional.ofNullable(this.salesforce);
     }
 
     @Import(name="serviceNow")
-      private final @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow;
+    private @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow;
 
-    public Output<IntegrationServiceNowConnectorOperator> serviceNow() {
-        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
+    public Optional<Output<IntegrationServiceNowConnectorOperator>> serviceNow() {
+        return Optional.ofNullable(this.serviceNow);
     }
 
     @Import(name="zendesk")
-      private final @Nullable Output<IntegrationZendeskConnectorOperator> zendesk;
+    private @Nullable Output<IntegrationZendeskConnectorOperator> zendesk;
 
-    public Output<IntegrationZendeskConnectorOperator> zendesk() {
-        return this.zendesk == null ? Codegen.empty() : this.zendesk;
+    public Optional<Output<IntegrationZendeskConnectorOperator>> zendesk() {
+        return Optional.ofNullable(this.zendesk);
     }
 
-    public IntegrationConnectorOperatorArgs(
-        @Nullable Output<IntegrationMarketoConnectorOperator> marketo,
-        @Nullable Output<IntegrationS3ConnectorOperator> s3,
-        @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce,
-        @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow,
-        @Nullable Output<IntegrationZendeskConnectorOperator> zendesk) {
-        this.marketo = marketo;
-        this.s3 = s3;
-        this.salesforce = salesforce;
-        this.serviceNow = serviceNow;
-        this.zendesk = zendesk;
-    }
+    private IntegrationConnectorOperatorArgs() {}
 
-    private IntegrationConnectorOperatorArgs() {
-        this.marketo = Codegen.empty();
-        this.s3 = Codegen.empty();
-        this.salesforce = Codegen.empty();
-        this.serviceNow = Codegen.empty();
-        this.zendesk = Codegen.empty();
+    private IntegrationConnectorOperatorArgs(IntegrationConnectorOperatorArgs $) {
+        this.marketo = $.marketo;
+        this.s3 = $.s3;
+        this.salesforce = $.salesforce;
+        this.serviceNow = $.serviceNow;
+        this.zendesk = $.zendesk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationConnectorOperatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationMarketoConnectorOperator> marketo;
-        private @Nullable Output<IntegrationS3ConnectorOperator> s3;
-        private @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce;
-        private @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow;
-        private @Nullable Output<IntegrationZendeskConnectorOperator> zendesk;
+        private IntegrationConnectorOperatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationConnectorOperatorArgs();
         }
 
         public Builder(IntegrationConnectorOperatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.marketo = defaults.marketo;
-    	      this.s3 = defaults.s3;
-    	      this.salesforce = defaults.salesforce;
-    	      this.serviceNow = defaults.serviceNow;
-    	      this.zendesk = defaults.zendesk;
+            $ = new IntegrationConnectorOperatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder marketo(@Nullable Output<IntegrationMarketoConnectorOperator> marketo) {
-            this.marketo = marketo;
+            $.marketo = marketo;
             return this;
         }
-        public Builder marketo(@Nullable IntegrationMarketoConnectorOperator marketo) {
-            this.marketo = Codegen.ofNullable(marketo);
-            return this;
+
+        public Builder marketo(IntegrationMarketoConnectorOperator marketo) {
+            return marketo(Output.of(marketo));
         }
+
         public Builder s3(@Nullable Output<IntegrationS3ConnectorOperator> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable IntegrationS3ConnectorOperator s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
+
+        public Builder s3(IntegrationS3ConnectorOperator s3) {
+            return s3(Output.of(s3));
         }
+
         public Builder salesforce(@Nullable Output<IntegrationSalesforceConnectorOperator> salesforce) {
-            this.salesforce = salesforce;
+            $.salesforce = salesforce;
             return this;
         }
-        public Builder salesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
-            this.salesforce = Codegen.ofNullable(salesforce);
-            return this;
+
+        public Builder salesforce(IntegrationSalesforceConnectorOperator salesforce) {
+            return salesforce(Output.of(salesforce));
         }
+
         public Builder serviceNow(@Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow) {
-            this.serviceNow = serviceNow;
+            $.serviceNow = serviceNow;
             return this;
         }
-        public Builder serviceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
-            this.serviceNow = Codegen.ofNullable(serviceNow);
-            return this;
+
+        public Builder serviceNow(IntegrationServiceNowConnectorOperator serviceNow) {
+            return serviceNow(Output.of(serviceNow));
         }
+
         public Builder zendesk(@Nullable Output<IntegrationZendeskConnectorOperator> zendesk) {
-            this.zendesk = zendesk;
+            $.zendesk = zendesk;
             return this;
         }
-        public Builder zendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
-            this.zendesk = Codegen.ofNullable(zendesk);
-            return this;
-        }        public IntegrationConnectorOperatorArgs build() {
-            return new IntegrationConnectorOperatorArgs(marketo, s3, salesforce, serviceNow, zendesk);
+
+        public Builder zendesk(IntegrationZendeskConnectorOperator zendesk) {
+            return zendesk(Output.of(zendesk));
+        }
+
+        public IntegrationConnectorOperatorArgs build() {
+            return $;
         }
     }
+
 }

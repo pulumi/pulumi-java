@@ -13,62 +13,59 @@ public final class TransitGatewayTag extends com.pulumi.resources.InvokeArgs {
     public static final TransitGatewayTag Empty = new TransitGatewayTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public TransitGatewayTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TransitGatewayTag() {}
 
-    private TransitGatewayTag() {
-        this.key = null;
-        this.value = null;
+    private TransitGatewayTag(TransitGatewayTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private TransitGatewayTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayTag();
         }
 
         public Builder(TransitGatewayTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new TransitGatewayTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public TransitGatewayTag build() {
-            return new TransitGatewayTag(key, value);
+        }
+
+        public TransitGatewayTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,62 +15,57 @@ public final class ProvisioningTemplateProvisioningHook extends com.pulumi.resou
     public static final ProvisioningTemplateProvisioningHook Empty = new ProvisioningTemplateProvisioningHook();
 
     @Import(name="payloadVersion")
-      private final @Nullable String payloadVersion;
+    private @Nullable String payloadVersion;
 
     public Optional<String> payloadVersion() {
-        return this.payloadVersion == null ? Optional.empty() : Optional.ofNullable(this.payloadVersion);
+        return Optional.ofNullable(this.payloadVersion);
     }
 
     @Import(name="targetArn")
-      private final @Nullable String targetArn;
+    private @Nullable String targetArn;
 
     public Optional<String> targetArn() {
-        return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);
+        return Optional.ofNullable(this.targetArn);
     }
 
-    public ProvisioningTemplateProvisioningHook(
-        @Nullable String payloadVersion,
-        @Nullable String targetArn) {
-        this.payloadVersion = payloadVersion;
-        this.targetArn = targetArn;
-    }
+    private ProvisioningTemplateProvisioningHook() {}
 
-    private ProvisioningTemplateProvisioningHook() {
-        this.payloadVersion = null;
-        this.targetArn = null;
+    private ProvisioningTemplateProvisioningHook(ProvisioningTemplateProvisioningHook $) {
+        this.payloadVersion = $.payloadVersion;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisioningTemplateProvisioningHook defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String payloadVersion;
-        private @Nullable String targetArn;
+        private ProvisioningTemplateProvisioningHook $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisioningTemplateProvisioningHook();
         }
 
         public Builder(ProvisioningTemplateProvisioningHook defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payloadVersion = defaults.payloadVersion;
-    	      this.targetArn = defaults.targetArn;
+            $ = new ProvisioningTemplateProvisioningHook(Objects.requireNonNull(defaults));
         }
 
         public Builder payloadVersion(@Nullable String payloadVersion) {
-            this.payloadVersion = payloadVersion;
+            $.payloadVersion = payloadVersion;
             return this;
         }
+
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
-        }        public ProvisioningTemplateProvisioningHook build() {
-            return new ProvisioningTemplateProvisioningHook(payloadVersion, targetArn);
+        }
+
+        public ProvisioningTemplateProvisioningHook build() {
+            return $;
         }
     }
+
 }

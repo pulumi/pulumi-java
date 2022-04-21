@@ -16,78 +16,70 @@ public final class DistributionLambdaFunctionAssociation extends com.pulumi.reso
     public static final DistributionLambdaFunctionAssociation Empty = new DistributionLambdaFunctionAssociation();
 
     @Import(name="eventType")
-      private final @Nullable String eventType;
+    private @Nullable String eventType;
 
     public Optional<String> eventType() {
-        return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
+        return Optional.ofNullable(this.eventType);
     }
 
     @Import(name="includeBody")
-      private final @Nullable Boolean includeBody;
+    private @Nullable Boolean includeBody;
 
     public Optional<Boolean> includeBody() {
-        return this.includeBody == null ? Optional.empty() : Optional.ofNullable(this.includeBody);
+        return Optional.ofNullable(this.includeBody);
     }
 
     @Import(name="lambdaFunctionARN")
-      private final @Nullable String lambdaFunctionARN;
+    private @Nullable String lambdaFunctionARN;
 
     public Optional<String> lambdaFunctionARN() {
-        return this.lambdaFunctionARN == null ? Optional.empty() : Optional.ofNullable(this.lambdaFunctionARN);
+        return Optional.ofNullable(this.lambdaFunctionARN);
     }
 
-    public DistributionLambdaFunctionAssociation(
-        @Nullable String eventType,
-        @Nullable Boolean includeBody,
-        @Nullable String lambdaFunctionARN) {
-        this.eventType = eventType;
-        this.includeBody = includeBody;
-        this.lambdaFunctionARN = lambdaFunctionARN;
-    }
+    private DistributionLambdaFunctionAssociation() {}
 
-    private DistributionLambdaFunctionAssociation() {
-        this.eventType = null;
-        this.includeBody = null;
-        this.lambdaFunctionARN = null;
+    private DistributionLambdaFunctionAssociation(DistributionLambdaFunctionAssociation $) {
+        this.eventType = $.eventType;
+        this.includeBody = $.includeBody;
+        this.lambdaFunctionARN = $.lambdaFunctionARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionLambdaFunctionAssociation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eventType;
-        private @Nullable Boolean includeBody;
-        private @Nullable String lambdaFunctionARN;
+        private DistributionLambdaFunctionAssociation $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionLambdaFunctionAssociation();
         }
 
         public Builder(DistributionLambdaFunctionAssociation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.includeBody = defaults.includeBody;
-    	      this.lambdaFunctionARN = defaults.lambdaFunctionARN;
+            $ = new DistributionLambdaFunctionAssociation(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(@Nullable String eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
+
         public Builder includeBody(@Nullable Boolean includeBody) {
-            this.includeBody = includeBody;
+            $.includeBody = includeBody;
             return this;
         }
+
         public Builder lambdaFunctionARN(@Nullable String lambdaFunctionARN) {
-            this.lambdaFunctionARN = lambdaFunctionARN;
+            $.lambdaFunctionARN = lambdaFunctionARN;
             return this;
-        }        public DistributionLambdaFunctionAssociation build() {
-            return new DistributionLambdaFunctionAssociation(eventType, includeBody, lambdaFunctionARN);
+        }
+
+        public DistributionLambdaFunctionAssociation build() {
+            return $;
         }
     }
+
 }

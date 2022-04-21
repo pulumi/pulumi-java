@@ -17,65 +17,61 @@ public final class GroupConfigurationItem extends com.pulumi.resources.InvokeArg
     public static final GroupConfigurationItem Empty = new GroupConfigurationItem();
 
     @Import(name="parameters")
-      private final @Nullable List<GroupConfigurationParameter> parameters;
+    private @Nullable List<GroupConfigurationParameter> parameters;
 
-    public List<GroupConfigurationParameter> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<GroupConfigurationParameter>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public GroupConfigurationItem(
-        @Nullable List<GroupConfigurationParameter> parameters,
-        @Nullable String type) {
-        this.parameters = parameters;
-        this.type = type;
-    }
+    private GroupConfigurationItem() {}
 
-    private GroupConfigurationItem() {
-        this.parameters = List.of();
-        this.type = null;
+    private GroupConfigurationItem(GroupConfigurationItem $) {
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupConfigurationItem defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GroupConfigurationParameter> parameters;
-        private @Nullable String type;
+        private GroupConfigurationItem $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupConfigurationItem();
         }
 
         public Builder(GroupConfigurationItem defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new GroupConfigurationItem(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable List<GroupConfigurationParameter> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(GroupConfigurationParameter... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public GroupConfigurationItem build() {
-            return new GroupConfigurationItem(parameters, type);
+        }
+
+        public GroupConfigurationItem build() {
+            return $;
         }
     }
+
 }

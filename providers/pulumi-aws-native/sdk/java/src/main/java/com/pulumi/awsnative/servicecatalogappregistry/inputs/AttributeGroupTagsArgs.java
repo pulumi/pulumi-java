@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.servicecatalogappregistry.inputs;
 
-import java.util.Objects;
+
 
 
 public final class AttributeGroupTagsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AttributeGroupTagsArgs Empty = new AttributeGroupTagsArgs();
 
-    public AttributeGroupTagsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AttributeGroupTagsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AttributeGroupTagsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AttributeGroupTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AttributeGroupTagsArgs();
         }
         public AttributeGroupTagsArgs build() {
-            return new AttributeGroupTagsArgs();
+            return $;
         }
     }
+
 }

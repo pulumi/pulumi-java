@@ -5,7 +5,6 @@ package com.pulumi.awsnative.wisdom.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,73 +15,71 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends com.pul
     public static final KnowledgeBaseAppIntegrationsConfigurationArgs Empty = new KnowledgeBaseAppIntegrationsConfigurationArgs();
 
     @Import(name="appIntegrationArn", required=true)
-      private final Output<String> appIntegrationArn;
+    private Output<String> appIntegrationArn;
 
     public Output<String> appIntegrationArn() {
         return this.appIntegrationArn;
     }
 
     @Import(name="objectFields", required=true)
-      private final Output<List<String>> objectFields;
+    private Output<List<String>> objectFields;
 
     public Output<List<String>> objectFields() {
         return this.objectFields;
     }
 
-    public KnowledgeBaseAppIntegrationsConfigurationArgs(
-        Output<String> appIntegrationArn,
-        Output<List<String>> objectFields) {
-        this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn, "expected parameter 'appIntegrationArn' to be non-null");
-        this.objectFields = Objects.requireNonNull(objectFields, "expected parameter 'objectFields' to be non-null");
-    }
+    private KnowledgeBaseAppIntegrationsConfigurationArgs() {}
 
-    private KnowledgeBaseAppIntegrationsConfigurationArgs() {
-        this.appIntegrationArn = Codegen.empty();
-        this.objectFields = Codegen.empty();
+    private KnowledgeBaseAppIntegrationsConfigurationArgs(KnowledgeBaseAppIntegrationsConfigurationArgs $) {
+        this.appIntegrationArn = $.appIntegrationArn;
+        this.objectFields = $.objectFields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KnowledgeBaseAppIntegrationsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appIntegrationArn;
-        private Output<List<String>> objectFields;
+        private KnowledgeBaseAppIntegrationsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KnowledgeBaseAppIntegrationsConfigurationArgs();
         }
 
         public Builder(KnowledgeBaseAppIntegrationsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appIntegrationArn = defaults.appIntegrationArn;
-    	      this.objectFields = defaults.objectFields;
+            $ = new KnowledgeBaseAppIntegrationsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appIntegrationArn(Output<String> appIntegrationArn) {
-            this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn);
+            $.appIntegrationArn = appIntegrationArn;
             return this;
         }
+
         public Builder appIntegrationArn(String appIntegrationArn) {
-            this.appIntegrationArn = Output.of(Objects.requireNonNull(appIntegrationArn));
-            return this;
+            return appIntegrationArn(Output.of(appIntegrationArn));
         }
+
         public Builder objectFields(Output<List<String>> objectFields) {
-            this.objectFields = Objects.requireNonNull(objectFields);
+            $.objectFields = objectFields;
             return this;
         }
+
         public Builder objectFields(List<String> objectFields) {
-            this.objectFields = Output.of(Objects.requireNonNull(objectFields));
-            return this;
+            return objectFields(Output.of(objectFields));
         }
+
         public Builder objectFields(String... objectFields) {
             return objectFields(List.of(objectFields));
-        }        public KnowledgeBaseAppIntegrationsConfigurationArgs build() {
-            return new KnowledgeBaseAppIntegrationsConfigurationArgs(appIntegrationArn, objectFields);
+        }
+
+        public KnowledgeBaseAppIntegrationsConfigurationArgs build() {
+            $.appIntegrationArn = Objects.requireNonNull($.appIntegrationArn, "expected parameter 'appIntegrationArn' to be non-null");
+            $.objectFields = Objects.requireNonNull($.objectFields, "expected parameter 'objectFields' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,78 +16,72 @@ public final class TopicRuleRepublishAction extends com.pulumi.resources.InvokeA
     public static final TopicRuleRepublishAction Empty = new TopicRuleRepublishAction();
 
     @Import(name="qos")
-      private final @Nullable Integer qos;
+    private @Nullable Integer qos;
 
     public Optional<Integer> qos() {
-        return this.qos == null ? Optional.empty() : Optional.ofNullable(this.qos);
+        return Optional.ofNullable(this.qos);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public TopicRuleRepublishAction(
-        @Nullable Integer qos,
-        String roleArn,
-        String topic) {
-        this.qos = qos;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private TopicRuleRepublishAction() {}
 
-    private TopicRuleRepublishAction() {
-        this.qos = null;
-        this.roleArn = null;
-        this.topic = null;
+    private TopicRuleRepublishAction(TopicRuleRepublishAction $) {
+        this.qos = $.qos;
+        this.roleArn = $.roleArn;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleRepublishAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer qos;
-        private String roleArn;
-        private String topic;
+        private TopicRuleRepublishAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleRepublishAction();
         }
 
         public Builder(TopicRuleRepublishAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.qos = defaults.qos;
-    	      this.roleArn = defaults.roleArn;
-    	      this.topic = defaults.topic;
+            $ = new TopicRuleRepublishAction(Objects.requireNonNull(defaults));
         }
 
         public Builder qos(@Nullable Integer qos) {
-            this.qos = qos;
+            $.qos = qos;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public TopicRuleRepublishAction build() {
-            return new TopicRuleRepublishAction(qos, roleArn, topic);
+        }
+
+        public TopicRuleRepublishAction build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

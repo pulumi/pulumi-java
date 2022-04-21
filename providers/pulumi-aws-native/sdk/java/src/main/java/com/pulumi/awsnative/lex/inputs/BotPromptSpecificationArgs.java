@@ -6,11 +6,11 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,93 +27,88 @@ public final class BotPromptSpecificationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowInterrupt")
-      private final @Nullable Output<Boolean> allowInterrupt;
+    private @Nullable Output<Boolean> allowInterrupt;
 
-    public Output<Boolean> allowInterrupt() {
-        return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
+    public Optional<Output<Boolean>> allowInterrupt() {
+        return Optional.ofNullable(this.allowInterrupt);
     }
 
     @Import(name="maxRetries", required=true)
-      private final Output<Integer> maxRetries;
+    private Output<Integer> maxRetries;
 
     public Output<Integer> maxRetries() {
         return this.maxRetries;
     }
 
     @Import(name="messageGroupsList", required=true)
-      private final Output<List<BotMessageGroupArgs>> messageGroupsList;
+    private Output<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Output<List<BotMessageGroupArgs>> messageGroupsList() {
         return this.messageGroupsList;
     }
 
-    public BotPromptSpecificationArgs(
-        @Nullable Output<Boolean> allowInterrupt,
-        Output<Integer> maxRetries,
-        Output<List<BotMessageGroupArgs>> messageGroupsList) {
-        this.allowInterrupt = allowInterrupt;
-        this.maxRetries = Objects.requireNonNull(maxRetries, "expected parameter 'maxRetries' to be non-null");
-        this.messageGroupsList = Objects.requireNonNull(messageGroupsList, "expected parameter 'messageGroupsList' to be non-null");
-    }
+    private BotPromptSpecificationArgs() {}
 
-    private BotPromptSpecificationArgs() {
-        this.allowInterrupt = Codegen.empty();
-        this.maxRetries = Codegen.empty();
-        this.messageGroupsList = Codegen.empty();
+    private BotPromptSpecificationArgs(BotPromptSpecificationArgs $) {
+        this.allowInterrupt = $.allowInterrupt;
+        this.maxRetries = $.maxRetries;
+        this.messageGroupsList = $.messageGroupsList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotPromptSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowInterrupt;
-        private Output<Integer> maxRetries;
-        private Output<List<BotMessageGroupArgs>> messageGroupsList;
+        private BotPromptSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotPromptSpecificationArgs();
         }
 
         public Builder(BotPromptSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInterrupt = defaults.allowInterrupt;
-    	      this.maxRetries = defaults.maxRetries;
-    	      this.messageGroupsList = defaults.messageGroupsList;
+            $ = new BotPromptSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
-            this.allowInterrupt = allowInterrupt;
+            $.allowInterrupt = allowInterrupt;
             return this;
         }
-        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Codegen.ofNullable(allowInterrupt);
-            return this;
+
+        public Builder allowInterrupt(Boolean allowInterrupt) {
+            return allowInterrupt(Output.of(allowInterrupt));
         }
+
         public Builder maxRetries(Output<Integer> maxRetries) {
-            this.maxRetries = Objects.requireNonNull(maxRetries);
+            $.maxRetries = maxRetries;
             return this;
         }
+
         public Builder maxRetries(Integer maxRetries) {
-            this.maxRetries = Output.of(Objects.requireNonNull(maxRetries));
-            return this;
+            return maxRetries(Output.of(maxRetries));
         }
+
         public Builder messageGroupsList(Output<List<BotMessageGroupArgs>> messageGroupsList) {
-            this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
+            $.messageGroupsList = messageGroupsList;
             return this;
         }
+
         public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
-            this.messageGroupsList = Output.of(Objects.requireNonNull(messageGroupsList));
-            return this;
+            return messageGroupsList(Output.of(messageGroupsList));
         }
+
         public Builder messageGroupsList(BotMessageGroupArgs... messageGroupsList) {
             return messageGroupsList(List.of(messageGroupsList));
-        }        public BotPromptSpecificationArgs build() {
-            return new BotPromptSpecificationArgs(allowInterrupt, maxRetries, messageGroupsList);
+        }
+
+        public BotPromptSpecificationArgs build() {
+            $.maxRetries = Objects.requireNonNull($.maxRetries, "expected parameter 'maxRetries' to be non-null");
+            $.messageGroupsList = Objects.requireNonNull($.messageGroupsList, "expected parameter 'messageGroupsList' to be non-null");
+            return $;
         }
     }
+
 }

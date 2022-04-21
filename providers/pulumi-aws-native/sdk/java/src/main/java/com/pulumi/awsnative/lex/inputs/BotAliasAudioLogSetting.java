@@ -18,62 +18,59 @@ public final class BotAliasAudioLogSetting extends com.pulumi.resources.InvokeAr
     public static final BotAliasAudioLogSetting Empty = new BotAliasAudioLogSetting();
 
     @Import(name="destination", required=true)
-      private final BotAliasAudioLogDestination destination;
+    private BotAliasAudioLogDestination destination;
 
     public BotAliasAudioLogDestination destination() {
         return this.destination;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public BotAliasAudioLogSetting(
-        BotAliasAudioLogDestination destination,
-        Boolean enabled) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private BotAliasAudioLogSetting() {}
 
-    private BotAliasAudioLogSetting() {
-        this.destination = null;
-        this.enabled = null;
+    private BotAliasAudioLogSetting(BotAliasAudioLogSetting $) {
+        this.destination = $.destination;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasAudioLogSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BotAliasAudioLogDestination destination;
-        private Boolean enabled;
+        private BotAliasAudioLogSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasAudioLogSetting();
         }
 
         public Builder(BotAliasAudioLogSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.enabled = defaults.enabled;
+            $ = new BotAliasAudioLogSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(BotAliasAudioLogDestination destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public BotAliasAudioLogSetting build() {
-            return new BotAliasAudioLogSetting(destination, enabled);
+        }
+
+        public BotAliasAudioLogSetting build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

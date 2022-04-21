@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class DetectorModelDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="initialStateName", required=true)
-      private final Output<String> initialStateName;
+    private Output<String> initialStateName;
 
     public Output<String> initialStateName() {
         return this.initialStateName;
@@ -36,66 +35,64 @@ public final class DetectorModelDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="states", required=true)
-      private final Output<List<DetectorModelStateArgs>> states;
+    private Output<List<DetectorModelStateArgs>> states;
 
     public Output<List<DetectorModelStateArgs>> states() {
         return this.states;
     }
 
-    public DetectorModelDefinitionArgs(
-        Output<String> initialStateName,
-        Output<List<DetectorModelStateArgs>> states) {
-        this.initialStateName = Objects.requireNonNull(initialStateName, "expected parameter 'initialStateName' to be non-null");
-        this.states = Objects.requireNonNull(states, "expected parameter 'states' to be non-null");
-    }
+    private DetectorModelDefinitionArgs() {}
 
-    private DetectorModelDefinitionArgs() {
-        this.initialStateName = Codegen.empty();
-        this.states = Codegen.empty();
+    private DetectorModelDefinitionArgs(DetectorModelDefinitionArgs $) {
+        this.initialStateName = $.initialStateName;
+        this.states = $.states;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> initialStateName;
-        private Output<List<DetectorModelStateArgs>> states;
+        private DetectorModelDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelDefinitionArgs();
         }
 
         public Builder(DetectorModelDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialStateName = defaults.initialStateName;
-    	      this.states = defaults.states;
+            $ = new DetectorModelDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder initialStateName(Output<String> initialStateName) {
-            this.initialStateName = Objects.requireNonNull(initialStateName);
+            $.initialStateName = initialStateName;
             return this;
         }
+
         public Builder initialStateName(String initialStateName) {
-            this.initialStateName = Output.of(Objects.requireNonNull(initialStateName));
-            return this;
+            return initialStateName(Output.of(initialStateName));
         }
+
         public Builder states(Output<List<DetectorModelStateArgs>> states) {
-            this.states = Objects.requireNonNull(states);
+            $.states = states;
             return this;
         }
+
         public Builder states(List<DetectorModelStateArgs> states) {
-            this.states = Output.of(Objects.requireNonNull(states));
-            return this;
+            return states(Output.of(states));
         }
+
         public Builder states(DetectorModelStateArgs... states) {
             return states(List.of(states));
-        }        public DetectorModelDefinitionArgs build() {
-            return new DetectorModelDefinitionArgs(initialStateName, states);
+        }
+
+        public DetectorModelDefinitionArgs build() {
+            $.initialStateName = Objects.requireNonNull($.initialStateName, "expected parameter 'initialStateName' to be non-null");
+            $.states = Objects.requireNonNull($.states, "expected parameter 'states' to be non-null");
+            return $;
         }
     }
+
 }

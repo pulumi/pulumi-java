@@ -7,8 +7,8 @@ import com.pulumi.awsnative.robomaker.enums.RobotApplicationRobotSoftwareSuiteNa
 import com.pulumi.awsnative.robomaker.enums.RobotApplicationRobotSoftwareSuiteVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<RobotApplicationRobotSoftwareSuiteName> name;
+    private Output<RobotApplicationRobotSoftwareSuiteName> name;
 
     public Output<RobotApplicationRobotSoftwareSuiteName> name() {
         return this.name;
@@ -36,63 +36,59 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends com.pulumi.res
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version;
+    private @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version;
 
-    public Output<RobotApplicationRobotSoftwareSuiteVersion> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<RobotApplicationRobotSoftwareSuiteVersion>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public RobotApplicationRobotSoftwareSuiteArgs(
-        Output<RobotApplicationRobotSoftwareSuiteName> name,
-        @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = version;
-    }
+    private RobotApplicationRobotSoftwareSuiteArgs() {}
 
-    private RobotApplicationRobotSoftwareSuiteArgs() {
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private RobotApplicationRobotSoftwareSuiteArgs(RobotApplicationRobotSoftwareSuiteArgs $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RobotApplicationRobotSoftwareSuiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RobotApplicationRobotSoftwareSuiteName> name;
-        private @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version;
+        private RobotApplicationRobotSoftwareSuiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RobotApplicationRobotSoftwareSuiteArgs();
         }
 
         public Builder(RobotApplicationRobotSoftwareSuiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new RobotApplicationRobotSoftwareSuiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<RobotApplicationRobotSoftwareSuiteName> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder version(@Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public RobotApplicationRobotSoftwareSuiteArgs build() {
-            return new RobotApplicationRobotSoftwareSuiteArgs(name, version);
+
+        public Builder version(RobotApplicationRobotSoftwareSuiteVersion version) {
+            return version(Output.of(version));
+        }
+
+        public RobotApplicationRobotSoftwareSuiteArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

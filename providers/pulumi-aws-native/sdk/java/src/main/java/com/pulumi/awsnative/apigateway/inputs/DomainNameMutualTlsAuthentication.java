@@ -15,62 +15,57 @@ public final class DomainNameMutualTlsAuthentication extends com.pulumi.resource
     public static final DomainNameMutualTlsAuthentication Empty = new DomainNameMutualTlsAuthentication();
 
     @Import(name="truststoreUri")
-      private final @Nullable String truststoreUri;
+    private @Nullable String truststoreUri;
 
     public Optional<String> truststoreUri() {
-        return this.truststoreUri == null ? Optional.empty() : Optional.ofNullable(this.truststoreUri);
+        return Optional.ofNullable(this.truststoreUri);
     }
 
     @Import(name="truststoreVersion")
-      private final @Nullable String truststoreVersion;
+    private @Nullable String truststoreVersion;
 
     public Optional<String> truststoreVersion() {
-        return this.truststoreVersion == null ? Optional.empty() : Optional.ofNullable(this.truststoreVersion);
+        return Optional.ofNullable(this.truststoreVersion);
     }
 
-    public DomainNameMutualTlsAuthentication(
-        @Nullable String truststoreUri,
-        @Nullable String truststoreVersion) {
-        this.truststoreUri = truststoreUri;
-        this.truststoreVersion = truststoreVersion;
-    }
+    private DomainNameMutualTlsAuthentication() {}
 
-    private DomainNameMutualTlsAuthentication() {
-        this.truststoreUri = null;
-        this.truststoreVersion = null;
+    private DomainNameMutualTlsAuthentication(DomainNameMutualTlsAuthentication $) {
+        this.truststoreUri = $.truststoreUri;
+        this.truststoreVersion = $.truststoreVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameMutualTlsAuthentication defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String truststoreUri;
-        private @Nullable String truststoreVersion;
+        private DomainNameMutualTlsAuthentication $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameMutualTlsAuthentication();
         }
 
         public Builder(DomainNameMutualTlsAuthentication defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.truststoreUri = defaults.truststoreUri;
-    	      this.truststoreVersion = defaults.truststoreVersion;
+            $ = new DomainNameMutualTlsAuthentication(Objects.requireNonNull(defaults));
         }
 
         public Builder truststoreUri(@Nullable String truststoreUri) {
-            this.truststoreUri = truststoreUri;
+            $.truststoreUri = truststoreUri;
             return this;
         }
+
         public Builder truststoreVersion(@Nullable String truststoreVersion) {
-            this.truststoreVersion = truststoreVersion;
+            $.truststoreVersion = truststoreVersion;
             return this;
-        }        public DomainNameMutualTlsAuthentication build() {
-            return new DomainNameMutualTlsAuthentication(truststoreUri, truststoreVersion);
+        }
+
+        public DomainNameMutualTlsAuthentication build() {
+            return $;
         }
     }
+
 }

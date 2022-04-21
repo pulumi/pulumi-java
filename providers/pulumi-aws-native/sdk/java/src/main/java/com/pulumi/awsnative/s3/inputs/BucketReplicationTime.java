@@ -14,62 +14,59 @@ public final class BucketReplicationTime extends com.pulumi.resources.InvokeArgs
     public static final BucketReplicationTime Empty = new BucketReplicationTime();
 
     @Import(name="status", required=true)
-      private final BucketReplicationTimeStatus status;
+    private BucketReplicationTimeStatus status;
 
     public BucketReplicationTimeStatus status() {
         return this.status;
     }
 
     @Import(name="time", required=true)
-      private final BucketReplicationTimeValue time;
+    private BucketReplicationTimeValue time;
 
     public BucketReplicationTimeValue time() {
         return this.time;
     }
 
-    public BucketReplicationTime(
-        BucketReplicationTimeStatus status,
-        BucketReplicationTimeValue time) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private BucketReplicationTime() {}
 
-    private BucketReplicationTime() {
-        this.status = null;
-        this.time = null;
+    private BucketReplicationTime(BucketReplicationTime $) {
+        this.status = $.status;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationTime defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketReplicationTimeStatus status;
-        private BucketReplicationTimeValue time;
+        private BucketReplicationTime $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationTime();
         }
 
         public Builder(BucketReplicationTime defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.time = defaults.time;
+            $ = new BucketReplicationTime(Objects.requireNonNull(defaults));
         }
 
         public Builder status(BucketReplicationTimeStatus status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder time(BucketReplicationTimeValue time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
-        }        public BucketReplicationTime build() {
-            return new BucketReplicationTime(status, time);
+        }
+
+        public BucketReplicationTime build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

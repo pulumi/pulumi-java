@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetContentDeliveryRuleDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class DatasetContentDeliveryRuleArgs extends com.pulumi.resources.R
     public static final DatasetContentDeliveryRuleArgs Empty = new DatasetContentDeliveryRuleArgs();
 
     @Import(name="destination", required=true)
-      private final Output<DatasetContentDeliveryRuleDestinationArgs> destination;
+    private Output<DatasetContentDeliveryRuleDestinationArgs> destination;
 
     public Output<DatasetContentDeliveryRuleDestinationArgs> destination() {
         return this.destination;
     }
 
     @Import(name="entryName")
-      private final @Nullable Output<String> entryName;
+    private @Nullable Output<String> entryName;
 
-    public Output<String> entryName() {
-        return this.entryName == null ? Codegen.empty() : this.entryName;
+    public Optional<Output<String>> entryName() {
+        return Optional.ofNullable(this.entryName);
     }
 
-    public DatasetContentDeliveryRuleArgs(
-        Output<DatasetContentDeliveryRuleDestinationArgs> destination,
-        @Nullable Output<String> entryName) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.entryName = entryName;
-    }
+    private DatasetContentDeliveryRuleArgs() {}
 
-    private DatasetContentDeliveryRuleArgs() {
-        this.destination = Codegen.empty();
-        this.entryName = Codegen.empty();
+    private DatasetContentDeliveryRuleArgs(DatasetContentDeliveryRuleArgs $) {
+        this.destination = $.destination;
+        this.entryName = $.entryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetContentDeliveryRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DatasetContentDeliveryRuleDestinationArgs> destination;
-        private @Nullable Output<String> entryName;
+        private DatasetContentDeliveryRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetContentDeliveryRuleArgs();
         }
 
         public Builder(DatasetContentDeliveryRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.entryName = defaults.entryName;
+            $ = new DatasetContentDeliveryRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<DatasetContentDeliveryRuleDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(DatasetContentDeliveryRuleDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder entryName(@Nullable Output<String> entryName) {
-            this.entryName = entryName;
+            $.entryName = entryName;
             return this;
         }
-        public Builder entryName(@Nullable String entryName) {
-            this.entryName = Codegen.ofNullable(entryName);
-            return this;
-        }        public DatasetContentDeliveryRuleArgs build() {
-            return new DatasetContentDeliveryRuleArgs(destination, entryName);
+
+        public Builder entryName(String entryName) {
+            return entryName(Output.of(entryName));
+        }
+
+        public DatasetContentDeliveryRuleArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

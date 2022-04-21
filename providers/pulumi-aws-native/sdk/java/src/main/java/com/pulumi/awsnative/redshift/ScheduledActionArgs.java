@@ -6,10 +6,10 @@ package com.pulumi.awsnative.redshift;
 import com.pulumi.awsnative.redshift.inputs.ScheduledActionTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="iamRole")
-      private final @Nullable Output<String> iamRole;
+    private @Nullable Output<String> iamRole;
 
-    public Output<String> iamRole() {
-        return this.iamRole == null ? Codegen.empty() : this.iamRole;
+    public Optional<Output<String>> iamRole() {
+        return Optional.ofNullable(this.iamRole);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scheduledActionDescription")
-      private final @Nullable Output<String> scheduledActionDescription;
+    private @Nullable Output<String> scheduledActionDescription;
 
-    public Output<String> scheduledActionDescription() {
-        return this.scheduledActionDescription == null ? Codegen.empty() : this.scheduledActionDescription;
+    public Optional<Output<String>> scheduledActionDescription() {
+        return Optional.ofNullable(this.scheduledActionDescription);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scheduledActionName")
-      private final @Nullable Output<String> scheduledActionName;
+    private @Nullable Output<String> scheduledActionName;
 
-    public Output<String> scheduledActionName() {
-        return this.scheduledActionName == null ? Codegen.empty() : this.scheduledActionName;
+    public Optional<Output<String>> scheduledActionName() {
+        return Optional.ofNullable(this.scheduledActionName);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -99,141 +99,118 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetAction")
-      private final @Nullable Output<ScheduledActionTypeArgs> targetAction;
+    private @Nullable Output<ScheduledActionTypeArgs> targetAction;
 
-    public Output<ScheduledActionTypeArgs> targetAction() {
-        return this.targetAction == null ? Codegen.empty() : this.targetAction;
+    public Optional<Output<ScheduledActionTypeArgs>> targetAction() {
+        return Optional.ofNullable(this.targetAction);
     }
 
-    public ScheduledActionArgs(
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> iamRole,
-        @Nullable Output<String> schedule,
-        @Nullable Output<String> scheduledActionDescription,
-        @Nullable Output<String> scheduledActionName,
-        @Nullable Output<String> startTime,
-        @Nullable Output<ScheduledActionTypeArgs> targetAction) {
-        this.enable = enable;
-        this.endTime = endTime;
-        this.iamRole = iamRole;
-        this.schedule = schedule;
-        this.scheduledActionDescription = scheduledActionDescription;
-        this.scheduledActionName = scheduledActionName;
-        this.startTime = startTime;
-        this.targetAction = targetAction;
-    }
+    private ScheduledActionArgs() {}
 
-    private ScheduledActionArgs() {
-        this.enable = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.iamRole = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.scheduledActionDescription = Codegen.empty();
-        this.scheduledActionName = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.targetAction = Codegen.empty();
+    private ScheduledActionArgs(ScheduledActionArgs $) {
+        this.enable = $.enable;
+        this.endTime = $.endTime;
+        this.iamRole = $.iamRole;
+        this.schedule = $.schedule;
+        this.scheduledActionDescription = $.scheduledActionDescription;
+        this.scheduledActionName = $.scheduledActionName;
+        this.startTime = $.startTime;
+        this.targetAction = $.targetAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> iamRole;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<String> scheduledActionDescription;
-        private @Nullable Output<String> scheduledActionName;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<ScheduledActionTypeArgs> targetAction;
+        private ScheduledActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionArgs();
         }
 
         public Builder(ScheduledActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.endTime = defaults.endTime;
-    	      this.iamRole = defaults.iamRole;
-    	      this.schedule = defaults.schedule;
-    	      this.scheduledActionDescription = defaults.scheduledActionDescription;
-    	      this.scheduledActionName = defaults.scheduledActionName;
-    	      this.startTime = defaults.startTime;
-    	      this.targetAction = defaults.targetAction;
+            $ = new ScheduledActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder iamRole(@Nullable Output<String> iamRole) {
-            this.iamRole = iamRole;
+            $.iamRole = iamRole;
             return this;
         }
-        public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Codegen.ofNullable(iamRole);
-            return this;
+
+        public Builder iamRole(String iamRole) {
+            return iamRole(Output.of(iamRole));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder scheduledActionDescription(@Nullable Output<String> scheduledActionDescription) {
-            this.scheduledActionDescription = scheduledActionDescription;
+            $.scheduledActionDescription = scheduledActionDescription;
             return this;
         }
-        public Builder scheduledActionDescription(@Nullable String scheduledActionDescription) {
-            this.scheduledActionDescription = Codegen.ofNullable(scheduledActionDescription);
-            return this;
+
+        public Builder scheduledActionDescription(String scheduledActionDescription) {
+            return scheduledActionDescription(Output.of(scheduledActionDescription));
         }
+
         public Builder scheduledActionName(@Nullable Output<String> scheduledActionName) {
-            this.scheduledActionName = scheduledActionName;
+            $.scheduledActionName = scheduledActionName;
             return this;
         }
-        public Builder scheduledActionName(@Nullable String scheduledActionName) {
-            this.scheduledActionName = Codegen.ofNullable(scheduledActionName);
-            return this;
+
+        public Builder scheduledActionName(String scheduledActionName) {
+            return scheduledActionName(Output.of(scheduledActionName));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder targetAction(@Nullable Output<ScheduledActionTypeArgs> targetAction) {
-            this.targetAction = targetAction;
+            $.targetAction = targetAction;
             return this;
         }
-        public Builder targetAction(@Nullable ScheduledActionTypeArgs targetAction) {
-            this.targetAction = Codegen.ofNullable(targetAction);
-            return this;
-        }        public ScheduledActionArgs build() {
-            return new ScheduledActionArgs(enable, endTime, iamRole, schedule, scheduledActionDescription, scheduledActionName, startTime, targetAction);
+
+        public Builder targetAction(ScheduledActionTypeArgs targetAction) {
+            return targetAction(Output.of(targetAction));
+        }
+
+        public ScheduledActionArgs build() {
+            return $;
         }
     }
+
 }

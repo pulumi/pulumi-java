@@ -13,62 +13,59 @@ public final class FirewallTag extends com.pulumi.resources.InvokeArgs {
     public static final FirewallTag Empty = new FirewallTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public FirewallTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private FirewallTag() {}
 
-    private FirewallTag() {
-        this.key = null;
-        this.value = null;
+    private FirewallTag(FirewallTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private FirewallTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallTag();
         }
 
         public Builder(FirewallTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new FirewallTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public FirewallTag build() {
-            return new FirewallTag(key, value);
+        }
+
+        public FirewallTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

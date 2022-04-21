@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class FlowInforNexusSourcePropertiesArgs extends com.pulumi.resourc
     public static final FlowInforNexusSourcePropertiesArgs Empty = new FlowInforNexusSourcePropertiesArgs();
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
-    public FlowInforNexusSourcePropertiesArgs(Output<String> object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowInforNexusSourcePropertiesArgs() {}
 
-    private FlowInforNexusSourcePropertiesArgs() {
-        this.object = Codegen.empty();
+    private FlowInforNexusSourcePropertiesArgs(FlowInforNexusSourcePropertiesArgs $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowInforNexusSourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> object;
+        private FlowInforNexusSourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowInforNexusSourcePropertiesArgs();
         }
 
         public Builder(FlowInforNexusSourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowInforNexusSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
-        }        public FlowInforNexusSourcePropertiesArgs build() {
-            return new FlowInforNexusSourcePropertiesArgs(object);
+            return object(Output.of(object));
+        }
+
+        public FlowInforNexusSourcePropertiesArgs build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

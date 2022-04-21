@@ -15,62 +15,57 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry extends com.pulum
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskEntry Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskEntry();
 
     @Import(name="currentVersion")
-      private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
+    private @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> currentVersion() {
-        return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
+        return Optional.ofNullable(this.currentVersion);
     }
 
     @Import(name="updateVersion")
-      private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
+    private @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> updateVersion() {
-        return this.updateVersion == null ? Optional.empty() : Optional.ofNullable(this.updateVersion);
+        return Optional.ofNullable(this.updateVersion);
     }
 
-    public TaskDefinitionLoRaWANUpdateGatewayTaskEntry(
-        @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion,
-        @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
-        this.currentVersion = currentVersion;
-        this.updateVersion = updateVersion;
-    }
+    private TaskDefinitionLoRaWANUpdateGatewayTaskEntry() {}
 
-    private TaskDefinitionLoRaWANUpdateGatewayTaskEntry() {
-        this.currentVersion = null;
-        this.updateVersion = null;
+    private TaskDefinitionLoRaWANUpdateGatewayTaskEntry(TaskDefinitionLoRaWANUpdateGatewayTaskEntry $) {
+        this.currentVersion = $.currentVersion;
+        this.updateVersion = $.updateVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionLoRaWANUpdateGatewayTaskEntry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
-        private @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
+        private TaskDefinitionLoRaWANUpdateGatewayTaskEntry $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionLoRaWANUpdateGatewayTaskEntry();
         }
 
         public Builder(TaskDefinitionLoRaWANUpdateGatewayTaskEntry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentVersion = defaults.currentVersion;
-    	      this.updateVersion = defaults.updateVersion;
+            $ = new TaskDefinitionLoRaWANUpdateGatewayTaskEntry(Objects.requireNonNull(defaults));
         }
 
         public Builder currentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion) {
-            this.currentVersion = currentVersion;
+            $.currentVersion = currentVersion;
             return this;
         }
+
         public Builder updateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
-            this.updateVersion = updateVersion;
+            $.updateVersion = updateVersion;
             return this;
-        }        public TaskDefinitionLoRaWANUpdateGatewayTaskEntry build() {
-            return new TaskDefinitionLoRaWANUpdateGatewayTaskEntry(currentVersion, updateVersion);
+        }
+
+        public TaskDefinitionLoRaWANUpdateGatewayTaskEntry build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class AccessPolicyUser extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public AccessPolicyUser(@Nullable String id) {
-        this.id = id;
-    }
+    private AccessPolicyUser() {}
 
-    private AccessPolicyUser() {
-        this.id = null;
+    private AccessPolicyUser(AccessPolicyUser $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyUser defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private AccessPolicyUser $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyUser();
         }
 
         public Builder(AccessPolicyUser defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new AccessPolicyUser(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public AccessPolicyUser build() {
-            return new AccessPolicyUser(id);
+        }
+
+        public AccessPolicyUser build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appstream;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ApplicationFleetAssociationArgs extends com.pulumi.resources.
     public static final ApplicationFleetAssociationArgs Empty = new ApplicationFleetAssociationArgs();
 
     @Import(name="applicationArn", required=true)
-      private final Output<String> applicationArn;
+    private Output<String> applicationArn;
 
     public Output<String> applicationArn() {
         return this.applicationArn;
     }
 
     @Import(name="fleetName", required=true)
-      private final Output<String> fleetName;
+    private Output<String> fleetName;
 
     public Output<String> fleetName() {
         return this.fleetName;
     }
 
-    public ApplicationFleetAssociationArgs(
-        Output<String> applicationArn,
-        Output<String> fleetName) {
-        this.applicationArn = Objects.requireNonNull(applicationArn, "expected parameter 'applicationArn' to be non-null");
-        this.fleetName = Objects.requireNonNull(fleetName, "expected parameter 'fleetName' to be non-null");
-    }
+    private ApplicationFleetAssociationArgs() {}
 
-    private ApplicationFleetAssociationArgs() {
-        this.applicationArn = Codegen.empty();
-        this.fleetName = Codegen.empty();
+    private ApplicationFleetAssociationArgs(ApplicationFleetAssociationArgs $) {
+        this.applicationArn = $.applicationArn;
+        this.fleetName = $.fleetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationFleetAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationArn;
-        private Output<String> fleetName;
+        private ApplicationFleetAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationFleetAssociationArgs();
         }
 
         public Builder(ApplicationFleetAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationArn = defaults.applicationArn;
-    	      this.fleetName = defaults.fleetName;
+            $ = new ApplicationFleetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationArn(Output<String> applicationArn) {
-            this.applicationArn = Objects.requireNonNull(applicationArn);
+            $.applicationArn = applicationArn;
             return this;
         }
+
         public Builder applicationArn(String applicationArn) {
-            this.applicationArn = Output.of(Objects.requireNonNull(applicationArn));
-            return this;
+            return applicationArn(Output.of(applicationArn));
         }
+
         public Builder fleetName(Output<String> fleetName) {
-            this.fleetName = Objects.requireNonNull(fleetName);
+            $.fleetName = fleetName;
             return this;
         }
+
         public Builder fleetName(String fleetName) {
-            this.fleetName = Output.of(Objects.requireNonNull(fleetName));
-            return this;
-        }        public ApplicationFleetAssociationArgs build() {
-            return new ApplicationFleetAssociationArgs(applicationArn, fleetName);
+            return fleetName(Output.of(fleetName));
+        }
+
+        public ApplicationFleetAssociationArgs build() {
+            $.applicationArn = Objects.requireNonNull($.applicationArn, "expected parameter 'applicationArn' to be non-null");
+            $.fleetName = Objects.requireNonNull($.fleetName, "expected parameter 'fleetName' to be non-null");
+            return $;
         }
     }
+
 }

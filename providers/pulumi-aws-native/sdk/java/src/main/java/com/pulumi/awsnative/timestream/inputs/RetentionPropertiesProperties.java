@@ -23,10 +23,10 @@ public final class RetentionPropertiesProperties extends com.pulumi.resources.In
      * 
      */
     @Import(name="magneticStoreRetentionPeriodInDays")
-      private final @Nullable String magneticStoreRetentionPeriodInDays;
+    private @Nullable String magneticStoreRetentionPeriodInDays;
 
     public Optional<String> magneticStoreRetentionPeriodInDays() {
-        return this.magneticStoreRetentionPeriodInDays == null ? Optional.empty() : Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
+        return Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RetentionPropertiesProperties extends com.pulumi.resources.In
      * 
      */
     @Import(name="memoryStoreRetentionPeriodInHours")
-      private final @Nullable String memoryStoreRetentionPeriodInHours;
+    private @Nullable String memoryStoreRetentionPeriodInHours;
 
     public Optional<String> memoryStoreRetentionPeriodInHours() {
-        return this.memoryStoreRetentionPeriodInHours == null ? Optional.empty() : Optional.ofNullable(this.memoryStoreRetentionPeriodInHours);
+        return Optional.ofNullable(this.memoryStoreRetentionPeriodInHours);
     }
 
-    public RetentionPropertiesProperties(
-        @Nullable String magneticStoreRetentionPeriodInDays,
-        @Nullable String memoryStoreRetentionPeriodInHours) {
-        this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
-        this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
-    }
+    private RetentionPropertiesProperties() {}
 
-    private RetentionPropertiesProperties() {
-        this.magneticStoreRetentionPeriodInDays = null;
-        this.memoryStoreRetentionPeriodInHours = null;
+    private RetentionPropertiesProperties(RetentionPropertiesProperties $) {
+        this.magneticStoreRetentionPeriodInDays = $.magneticStoreRetentionPeriodInDays;
+        this.memoryStoreRetentionPeriodInHours = $.memoryStoreRetentionPeriodInHours;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionPropertiesProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String magneticStoreRetentionPeriodInDays;
-        private @Nullable String memoryStoreRetentionPeriodInHours;
+        private RetentionPropertiesProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionPropertiesProperties();
         }
 
         public Builder(RetentionPropertiesProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.magneticStoreRetentionPeriodInDays = defaults.magneticStoreRetentionPeriodInDays;
-    	      this.memoryStoreRetentionPeriodInHours = defaults.memoryStoreRetentionPeriodInHours;
+            $ = new RetentionPropertiesProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder magneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
-            this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
+            $.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
             return this;
         }
+
         public Builder memoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
-            this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
+            $.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
-        }        public RetentionPropertiesProperties build() {
-            return new RetentionPropertiesProperties(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);
+        }
+
+        public RetentionPropertiesProperties build() {
+            return $;
         }
     }
+
 }

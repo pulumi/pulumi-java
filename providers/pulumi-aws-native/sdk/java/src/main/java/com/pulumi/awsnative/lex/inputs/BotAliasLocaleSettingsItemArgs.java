@@ -6,7 +6,6 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasLocaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class BotAliasLocaleSettingsItemArgs extends com.pulumi.resources.R
     public static final BotAliasLocaleSettingsItemArgs Empty = new BotAliasLocaleSettingsItemArgs();
 
     @Import(name="botAliasLocaleSetting", required=true)
-      private final Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
+    private Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
 
     public Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting() {
         return this.botAliasLocaleSetting;
@@ -31,63 +30,60 @@ public final class BotAliasLocaleSettingsItemArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="localeId", required=true)
-      private final Output<String> localeId;
+    private Output<String> localeId;
 
     public Output<String> localeId() {
         return this.localeId;
     }
 
-    public BotAliasLocaleSettingsItemArgs(
-        Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting,
-        Output<String> localeId) {
-        this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting, "expected parameter 'botAliasLocaleSetting' to be non-null");
-        this.localeId = Objects.requireNonNull(localeId, "expected parameter 'localeId' to be non-null");
-    }
+    private BotAliasLocaleSettingsItemArgs() {}
 
-    private BotAliasLocaleSettingsItemArgs() {
-        this.botAliasLocaleSetting = Codegen.empty();
-        this.localeId = Codegen.empty();
+    private BotAliasLocaleSettingsItemArgs(BotAliasLocaleSettingsItemArgs $) {
+        this.botAliasLocaleSetting = $.botAliasLocaleSetting;
+        this.localeId = $.localeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasLocaleSettingsItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
-        private Output<String> localeId;
+        private BotAliasLocaleSettingsItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasLocaleSettingsItemArgs();
         }
 
         public Builder(BotAliasLocaleSettingsItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botAliasLocaleSetting = defaults.botAliasLocaleSetting;
-    	      this.localeId = defaults.localeId;
+            $ = new BotAliasLocaleSettingsItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder botAliasLocaleSetting(Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting) {
-            this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting);
+            $.botAliasLocaleSetting = botAliasLocaleSetting;
             return this;
         }
+
         public Builder botAliasLocaleSetting(BotAliasLocaleSettingsArgs botAliasLocaleSetting) {
-            this.botAliasLocaleSetting = Output.of(Objects.requireNonNull(botAliasLocaleSetting));
-            return this;
+            return botAliasLocaleSetting(Output.of(botAliasLocaleSetting));
         }
+
         public Builder localeId(Output<String> localeId) {
-            this.localeId = Objects.requireNonNull(localeId);
+            $.localeId = localeId;
             return this;
         }
+
         public Builder localeId(String localeId) {
-            this.localeId = Output.of(Objects.requireNonNull(localeId));
-            return this;
-        }        public BotAliasLocaleSettingsItemArgs build() {
-            return new BotAliasLocaleSettingsItemArgs(botAliasLocaleSetting, localeId);
+            return localeId(Output.of(localeId));
+        }
+
+        public BotAliasLocaleSettingsItemArgs build() {
+            $.botAliasLocaleSetting = Objects.requireNonNull($.botAliasLocaleSetting, "expected parameter 'botAliasLocaleSetting' to be non-null");
+            $.localeId = Objects.requireNonNull($.localeId, "expected parameter 'localeId' to be non-null");
+            return $;
         }
     }
+
 }

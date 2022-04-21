@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends com.pulu
     public static final DataSourceDocumentsMetadataConfigurationArgs Empty = new DataSourceDocumentsMetadataConfigurationArgs();
 
     @Import(name="s3Prefix")
-      private final @Nullable Output<String> s3Prefix;
+    private @Nullable Output<String> s3Prefix;
 
-    public Output<String> s3Prefix() {
-        return this.s3Prefix == null ? Codegen.empty() : this.s3Prefix;
+    public Optional<Output<String>> s3Prefix() {
+        return Optional.ofNullable(this.s3Prefix);
     }
 
-    public DataSourceDocumentsMetadataConfigurationArgs(@Nullable Output<String> s3Prefix) {
-        this.s3Prefix = s3Prefix;
-    }
+    private DataSourceDocumentsMetadataConfigurationArgs() {}
 
-    private DataSourceDocumentsMetadataConfigurationArgs() {
-        this.s3Prefix = Codegen.empty();
+    private DataSourceDocumentsMetadataConfigurationArgs(DataSourceDocumentsMetadataConfigurationArgs $) {
+        this.s3Prefix = $.s3Prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceDocumentsMetadataConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> s3Prefix;
+        private DataSourceDocumentsMetadataConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceDocumentsMetadataConfigurationArgs();
         }
 
         public Builder(DataSourceDocumentsMetadataConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Prefix = defaults.s3Prefix;
+            $ = new DataSourceDocumentsMetadataConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Prefix(@Nullable Output<String> s3Prefix) {
-            this.s3Prefix = s3Prefix;
+            $.s3Prefix = s3Prefix;
             return this;
         }
-        public Builder s3Prefix(@Nullable String s3Prefix) {
-            this.s3Prefix = Codegen.ofNullable(s3Prefix);
-            return this;
-        }        public DataSourceDocumentsMetadataConfigurationArgs build() {
-            return new DataSourceDocumentsMetadataConfigurationArgs(s3Prefix);
+
+        public Builder s3Prefix(String s3Prefix) {
+            return s3Prefix(Output.of(s3Prefix));
+        }
+
+        public DataSourceDocumentsMetadataConfigurationArgs build() {
+            return $;
         }
     }
+
 }

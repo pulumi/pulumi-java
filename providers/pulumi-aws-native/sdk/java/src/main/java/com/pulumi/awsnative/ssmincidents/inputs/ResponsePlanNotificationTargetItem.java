@@ -19,45 +19,44 @@ public final class ResponsePlanNotificationTargetItem extends com.pulumi.resourc
     public static final ResponsePlanNotificationTargetItem Empty = new ResponsePlanNotificationTargetItem();
 
     @Import(name="snsTopicArn")
-      private final @Nullable String snsTopicArn;
+    private @Nullable String snsTopicArn;
 
     public Optional<String> snsTopicArn() {
-        return this.snsTopicArn == null ? Optional.empty() : Optional.ofNullable(this.snsTopicArn);
+        return Optional.ofNullable(this.snsTopicArn);
     }
 
-    public ResponsePlanNotificationTargetItem(@Nullable String snsTopicArn) {
-        this.snsTopicArn = snsTopicArn;
-    }
+    private ResponsePlanNotificationTargetItem() {}
 
-    private ResponsePlanNotificationTargetItem() {
-        this.snsTopicArn = null;
+    private ResponsePlanNotificationTargetItem(ResponsePlanNotificationTargetItem $) {
+        this.snsTopicArn = $.snsTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanNotificationTargetItem defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String snsTopicArn;
+        private ResponsePlanNotificationTargetItem $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanNotificationTargetItem();
         }
 
         public Builder(ResponsePlanNotificationTargetItem defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snsTopicArn = defaults.snsTopicArn;
+            $ = new ResponsePlanNotificationTargetItem(Objects.requireNonNull(defaults));
         }
 
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = snsTopicArn;
+            $.snsTopicArn = snsTopicArn;
             return this;
-        }        public ResponsePlanNotificationTargetItem build() {
-            return new ResponsePlanNotificationTargetItem(snsTopicArn);
+        }
+
+        public ResponsePlanNotificationTargetItem build() {
+            return $;
         }
     }
+
 }

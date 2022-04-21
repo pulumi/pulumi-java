@@ -5,10 +5,10 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends com.pulumi.res
     public static final GlobalTableTimeToLiveSpecificationArgs Empty = new GlobalTableTimeToLiveSpecificationArgs();
 
     @Import(name="attributeName")
-      private final @Nullable Output<String> attributeName;
+    private @Nullable Output<String> attributeName;
 
-    public Output<String> attributeName() {
-        return this.attributeName == null ? Codegen.empty() : this.attributeName;
+    public Optional<Output<String>> attributeName() {
+        return Optional.ofNullable(this.attributeName);
     }
 
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public GlobalTableTimeToLiveSpecificationArgs(
-        @Nullable Output<String> attributeName,
-        Output<Boolean> enabled) {
-        this.attributeName = attributeName;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GlobalTableTimeToLiveSpecificationArgs() {}
 
-    private GlobalTableTimeToLiveSpecificationArgs() {
-        this.attributeName = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private GlobalTableTimeToLiveSpecificationArgs(GlobalTableTimeToLiveSpecificationArgs $) {
+        this.attributeName = $.attributeName;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableTimeToLiveSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attributeName;
-        private Output<Boolean> enabled;
+        private GlobalTableTimeToLiveSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableTimeToLiveSpecificationArgs();
         }
 
         public Builder(GlobalTableTimeToLiveSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.enabled = defaults.enabled;
+            $ = new GlobalTableTimeToLiveSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(@Nullable Output<String> attributeName) {
-            this.attributeName = attributeName;
+            $.attributeName = attributeName;
             return this;
         }
-        public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = Codegen.ofNullable(attributeName);
-            return this;
+
+        public Builder attributeName(String attributeName) {
+            return attributeName(Output.of(attributeName));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public GlobalTableTimeToLiveSpecificationArgs build() {
-            return new GlobalTableTimeToLiveSpecificationArgs(attributeName, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public GlobalTableTimeToLiveSpecificationArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

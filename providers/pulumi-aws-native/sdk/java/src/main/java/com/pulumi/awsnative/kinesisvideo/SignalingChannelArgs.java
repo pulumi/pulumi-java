@@ -7,11 +7,11 @@ import com.pulumi.awsnative.kinesisvideo.enums.SignalingChannelType;
 import com.pulumi.awsnative.kinesisvideo.inputs.SignalingChannelTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="messageTtlSeconds")
-      private final @Nullable Output<Integer> messageTtlSeconds;
+    private @Nullable Output<Integer> messageTtlSeconds;
 
-    public Output<Integer> messageTtlSeconds() {
-        return this.messageTtlSeconds == null ? Codegen.empty() : this.messageTtlSeconds;
+    public Optional<Output<Integer>> messageTtlSeconds() {
+        return Optional.ofNullable(this.messageTtlSeconds);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<SignalingChannelTagArgs>> tags;
+    private @Nullable Output<List<SignalingChannelTagArgs>> tags;
 
-    public Output<List<SignalingChannelTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<SignalingChannelTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -57,92 +57,82 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<SignalingChannelType> type;
+    private @Nullable Output<SignalingChannelType> type;
 
-    public Output<SignalingChannelType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SignalingChannelType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SignalingChannelArgs(
-        @Nullable Output<Integer> messageTtlSeconds,
-        @Nullable Output<String> name,
-        @Nullable Output<List<SignalingChannelTagArgs>> tags,
-        @Nullable Output<SignalingChannelType> type) {
-        this.messageTtlSeconds = messageTtlSeconds;
-        this.name = name;
-        this.tags = tags;
-        this.type = type;
-    }
+    private SignalingChannelArgs() {}
 
-    private SignalingChannelArgs() {
-        this.messageTtlSeconds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private SignalingChannelArgs(SignalingChannelArgs $) {
+        this.messageTtlSeconds = $.messageTtlSeconds;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignalingChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> messageTtlSeconds;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<SignalingChannelTagArgs>> tags;
-        private @Nullable Output<SignalingChannelType> type;
+        private SignalingChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignalingChannelArgs();
         }
 
         public Builder(SignalingChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageTtlSeconds = defaults.messageTtlSeconds;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new SignalingChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageTtlSeconds(@Nullable Output<Integer> messageTtlSeconds) {
-            this.messageTtlSeconds = messageTtlSeconds;
+            $.messageTtlSeconds = messageTtlSeconds;
             return this;
         }
-        public Builder messageTtlSeconds(@Nullable Integer messageTtlSeconds) {
-            this.messageTtlSeconds = Codegen.ofNullable(messageTtlSeconds);
-            return this;
+
+        public Builder messageTtlSeconds(Integer messageTtlSeconds) {
+            return messageTtlSeconds(Output.of(messageTtlSeconds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<SignalingChannelTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<SignalingChannelTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<SignalingChannelTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(SignalingChannelTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(@Nullable Output<SignalingChannelType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SignalingChannelType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SignalingChannelArgs build() {
-            return new SignalingChannelArgs(messageTtlSeconds, name, tags, type);
+
+        public Builder type(SignalingChannelType type) {
+            return type(Output.of(type));
+        }
+
+        public SignalingChannelArgs build() {
+            return $;
         }
     }
+
 }

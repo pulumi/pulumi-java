@@ -5,10 +5,10 @@ package com.pulumi.awsnative.acmpca;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<String>> actions;
+    private Output<List<String>> actions;
 
     public Output<List<String>> actions() {
         return this.actions;
@@ -32,7 +32,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateAuthorityArn", required=true)
-      private final Output<String> certificateAuthorityArn;
+    private Output<String> certificateAuthorityArn;
 
     public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
@@ -43,7 +43,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
@@ -54,92 +54,85 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAccount")
-      private final @Nullable Output<String> sourceAccount;
+    private @Nullable Output<String> sourceAccount;
 
-    public Output<String> sourceAccount() {
-        return this.sourceAccount == null ? Codegen.empty() : this.sourceAccount;
+    public Optional<Output<String>> sourceAccount() {
+        return Optional.ofNullable(this.sourceAccount);
     }
 
-    public PermissionArgs(
-        Output<List<String>> actions,
-        Output<String> certificateAuthorityArn,
-        Output<String> principal,
-        @Nullable Output<String> sourceAccount) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.sourceAccount = sourceAccount;
-    }
+    private PermissionArgs() {}
 
-    private PermissionArgs() {
-        this.actions = Codegen.empty();
-        this.certificateAuthorityArn = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.sourceAccount = Codegen.empty();
+    private PermissionArgs(PermissionArgs $) {
+        this.actions = $.actions;
+        this.certificateAuthorityArn = $.certificateAuthorityArn;
+        this.principal = $.principal;
+        this.sourceAccount = $.sourceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> actions;
-        private Output<String> certificateAuthorityArn;
-        private Output<String> principal;
-        private @Nullable Output<String> sourceAccount;
+        private PermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionArgs();
         }
 
         public Builder(PermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.certificateAuthorityArn = defaults.certificateAuthorityArn;
-    	      this.principal = defaults.principal;
-    	      this.sourceAccount = defaults.sourceAccount;
+            $ = new PermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<String>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<String> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
-            this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
+            $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
+
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Output.of(Objects.requireNonNull(certificateAuthorityArn));
-            return this;
+            return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
+
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder sourceAccount(@Nullable Output<String> sourceAccount) {
-            this.sourceAccount = sourceAccount;
+            $.sourceAccount = sourceAccount;
             return this;
         }
-        public Builder sourceAccount(@Nullable String sourceAccount) {
-            this.sourceAccount = Codegen.ofNullable(sourceAccount);
-            return this;
-        }        public PermissionArgs build() {
-            return new PermissionArgs(actions, certificateAuthorityArn, principal, sourceAccount);
+
+        public Builder sourceAccount(String sourceAccount) {
+            return sourceAccount(Output.of(sourceAccount));
+        }
+
+        public PermissionArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.certificateAuthorityArn = Objects.requireNonNull($.certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

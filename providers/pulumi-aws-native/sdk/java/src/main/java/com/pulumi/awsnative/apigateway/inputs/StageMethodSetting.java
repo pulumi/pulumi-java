@@ -26,10 +26,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cacheDataEncrypted")
-      private final @Nullable Boolean cacheDataEncrypted;
+    private @Nullable Boolean cacheDataEncrypted;
 
     public Optional<Boolean> cacheDataEncrypted() {
-        return this.cacheDataEncrypted == null ? Optional.empty() : Optional.ofNullable(this.cacheDataEncrypted);
+        return Optional.ofNullable(this.cacheDataEncrypted);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cacheTtlInSeconds")
-      private final @Nullable Integer cacheTtlInSeconds;
+    private @Nullable Integer cacheTtlInSeconds;
 
     public Optional<Integer> cacheTtlInSeconds() {
-        return this.cacheTtlInSeconds == null ? Optional.empty() : Optional.ofNullable(this.cacheTtlInSeconds);
+        return Optional.ofNullable(this.cacheTtlInSeconds);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cachingEnabled")
-      private final @Nullable Boolean cachingEnabled;
+    private @Nullable Boolean cachingEnabled;
 
     public Optional<Boolean> cachingEnabled() {
-        return this.cachingEnabled == null ? Optional.empty() : Optional.ofNullable(this.cachingEnabled);
+        return Optional.ofNullable(this.cachingEnabled);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataTraceEnabled")
-      private final @Nullable Boolean dataTraceEnabled;
+    private @Nullable Boolean dataTraceEnabled;
 
     public Optional<Boolean> dataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Optional.empty() : Optional.ofNullable(this.dataTraceEnabled);
+        return Optional.ofNullable(this.dataTraceEnabled);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable String httpMethod;
+    private @Nullable String httpMethod;
 
     public Optional<String> httpMethod() {
-        return this.httpMethod == null ? Optional.empty() : Optional.ofNullable(this.httpMethod);
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loggingLevel")
-      private final @Nullable String loggingLevel;
+    private @Nullable String loggingLevel;
 
     public Optional<String> loggingLevel() {
-        return this.loggingLevel == null ? Optional.empty() : Optional.ofNullable(this.loggingLevel);
+        return Optional.ofNullable(this.loggingLevel);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metricsEnabled")
-      private final @Nullable Boolean metricsEnabled;
+    private @Nullable Boolean metricsEnabled;
 
     public Optional<Boolean> metricsEnabled() {
-        return this.metricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.metricsEnabled);
+        return Optional.ofNullable(this.metricsEnabled);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourcePath")
-      private final @Nullable String resourcePath;
+    private @Nullable String resourcePath;
 
     public Optional<String> resourcePath() {
-        return this.resourcePath == null ? Optional.empty() : Optional.ofNullable(this.resourcePath);
+        return Optional.ofNullable(this.resourcePath);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="throttlingBurstLimit")
-      private final @Nullable Integer throttlingBurstLimit;
+    private @Nullable Integer throttlingBurstLimit;
 
     public Optional<Integer> throttlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Optional.empty() : Optional.ofNullable(this.throttlingBurstLimit);
+        return Optional.ofNullable(this.throttlingBurstLimit);
     }
 
     /**
@@ -125,127 +125,98 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="throttlingRateLimit")
-      private final @Nullable Double throttlingRateLimit;
+    private @Nullable Double throttlingRateLimit;
 
     public Optional<Double> throttlingRateLimit() {
-        return this.throttlingRateLimit == null ? Optional.empty() : Optional.ofNullable(this.throttlingRateLimit);
+        return Optional.ofNullable(this.throttlingRateLimit);
     }
 
-    public StageMethodSetting(
-        @Nullable Boolean cacheDataEncrypted,
-        @Nullable Integer cacheTtlInSeconds,
-        @Nullable Boolean cachingEnabled,
-        @Nullable Boolean dataTraceEnabled,
-        @Nullable String httpMethod,
-        @Nullable String loggingLevel,
-        @Nullable Boolean metricsEnabled,
-        @Nullable String resourcePath,
-        @Nullable Integer throttlingBurstLimit,
-        @Nullable Double throttlingRateLimit) {
-        this.cacheDataEncrypted = cacheDataEncrypted;
-        this.cacheTtlInSeconds = cacheTtlInSeconds;
-        this.cachingEnabled = cachingEnabled;
-        this.dataTraceEnabled = dataTraceEnabled;
-        this.httpMethod = httpMethod;
-        this.loggingLevel = loggingLevel;
-        this.metricsEnabled = metricsEnabled;
-        this.resourcePath = resourcePath;
-        this.throttlingBurstLimit = throttlingBurstLimit;
-        this.throttlingRateLimit = throttlingRateLimit;
-    }
+    private StageMethodSetting() {}
 
-    private StageMethodSetting() {
-        this.cacheDataEncrypted = null;
-        this.cacheTtlInSeconds = null;
-        this.cachingEnabled = null;
-        this.dataTraceEnabled = null;
-        this.httpMethod = null;
-        this.loggingLevel = null;
-        this.metricsEnabled = null;
-        this.resourcePath = null;
-        this.throttlingBurstLimit = null;
-        this.throttlingRateLimit = null;
+    private StageMethodSetting(StageMethodSetting $) {
+        this.cacheDataEncrypted = $.cacheDataEncrypted;
+        this.cacheTtlInSeconds = $.cacheTtlInSeconds;
+        this.cachingEnabled = $.cachingEnabled;
+        this.dataTraceEnabled = $.dataTraceEnabled;
+        this.httpMethod = $.httpMethod;
+        this.loggingLevel = $.loggingLevel;
+        this.metricsEnabled = $.metricsEnabled;
+        this.resourcePath = $.resourcePath;
+        this.throttlingBurstLimit = $.throttlingBurstLimit;
+        this.throttlingRateLimit = $.throttlingRateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageMethodSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean cacheDataEncrypted;
-        private @Nullable Integer cacheTtlInSeconds;
-        private @Nullable Boolean cachingEnabled;
-        private @Nullable Boolean dataTraceEnabled;
-        private @Nullable String httpMethod;
-        private @Nullable String loggingLevel;
-        private @Nullable Boolean metricsEnabled;
-        private @Nullable String resourcePath;
-        private @Nullable Integer throttlingBurstLimit;
-        private @Nullable Double throttlingRateLimit;
+        private StageMethodSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageMethodSetting();
         }
 
         public Builder(StageMethodSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheDataEncrypted = defaults.cacheDataEncrypted;
-    	      this.cacheTtlInSeconds = defaults.cacheTtlInSeconds;
-    	      this.cachingEnabled = defaults.cachingEnabled;
-    	      this.dataTraceEnabled = defaults.dataTraceEnabled;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.loggingLevel = defaults.loggingLevel;
-    	      this.metricsEnabled = defaults.metricsEnabled;
-    	      this.resourcePath = defaults.resourcePath;
-    	      this.throttlingBurstLimit = defaults.throttlingBurstLimit;
-    	      this.throttlingRateLimit = defaults.throttlingRateLimit;
+            $ = new StageMethodSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
-            this.cacheDataEncrypted = cacheDataEncrypted;
+            $.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
+
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
-            this.cacheTtlInSeconds = cacheTtlInSeconds;
+            $.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
+
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
-            this.cachingEnabled = cachingEnabled;
+            $.cachingEnabled = cachingEnabled;
             return this;
         }
+
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = dataTraceEnabled;
+            $.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
+
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = loggingLevel;
+            $.loggingLevel = loggingLevel;
             return this;
         }
+
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
-            this.metricsEnabled = metricsEnabled;
+            $.metricsEnabled = metricsEnabled;
             return this;
         }
+
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = resourcePath;
+            $.resourcePath = resourcePath;
             return this;
         }
+
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = throttlingBurstLimit;
+            $.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
+
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = throttlingRateLimit;
+            $.throttlingRateLimit = throttlingRateLimit;
             return this;
-        }        public StageMethodSetting build() {
-            return new StageMethodSetting(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, httpMethod, loggingLevel, metricsEnabled, resourcePath, throttlingBurstLimit, throttlingRateLimit);
+        }
+
+        public StageMethodSetting build() {
+            return $;
         }
     }
+
 }

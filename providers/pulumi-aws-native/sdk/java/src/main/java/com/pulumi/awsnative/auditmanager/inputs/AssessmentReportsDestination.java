@@ -20,62 +20,57 @@ public final class AssessmentReportsDestination extends com.pulumi.resources.Inv
     public static final AssessmentReportsDestination Empty = new AssessmentReportsDestination();
 
     @Import(name="destination")
-      private final @Nullable String destination;
+    private @Nullable String destination;
 
     public Optional<String> destination() {
-        return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="destinationType")
-      private final @Nullable AssessmentReportDestinationType destinationType;
+    private @Nullable AssessmentReportDestinationType destinationType;
 
     public Optional<AssessmentReportDestinationType> destinationType() {
-        return this.destinationType == null ? Optional.empty() : Optional.ofNullable(this.destinationType);
+        return Optional.ofNullable(this.destinationType);
     }
 
-    public AssessmentReportsDestination(
-        @Nullable String destination,
-        @Nullable AssessmentReportDestinationType destinationType) {
-        this.destination = destination;
-        this.destinationType = destinationType;
-    }
+    private AssessmentReportsDestination() {}
 
-    private AssessmentReportsDestination() {
-        this.destination = null;
-        this.destinationType = null;
+    private AssessmentReportsDestination(AssessmentReportsDestination $) {
+        this.destination = $.destination;
+        this.destinationType = $.destinationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentReportsDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destination;
-        private @Nullable AssessmentReportDestinationType destinationType;
+        private AssessmentReportsDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentReportsDestination();
         }
 
         public Builder(AssessmentReportsDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.destinationType = defaults.destinationType;
+            $ = new AssessmentReportsDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
+
         public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
-            this.destinationType = destinationType;
+            $.destinationType = destinationType;
             return this;
-        }        public AssessmentReportsDestination build() {
-            return new AssessmentReportsDestination(destination, destinationType);
+        }
+
+        public AssessmentReportsDestination build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.PublicKeyConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     public static final PublicKeyArgs Empty = new PublicKeyArgs();
 
     @Import(name="publicKeyConfig", required=true)
-      private final Output<PublicKeyConfigArgs> publicKeyConfig;
+    private Output<PublicKeyConfigArgs> publicKeyConfig;
 
     public Output<PublicKeyConfigArgs> publicKeyConfig() {
         return this.publicKeyConfig;
     }
 
-    public PublicKeyArgs(Output<PublicKeyConfigArgs> publicKeyConfig) {
-        this.publicKeyConfig = Objects.requireNonNull(publicKeyConfig, "expected parameter 'publicKeyConfig' to be non-null");
-    }
+    private PublicKeyArgs() {}
 
-    private PublicKeyArgs() {
-        this.publicKeyConfig = Codegen.empty();
+    private PublicKeyArgs(PublicKeyArgs $) {
+        this.publicKeyConfig = $.publicKeyConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PublicKeyConfigArgs> publicKeyConfig;
+        private PublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyArgs();
         }
 
         public Builder(PublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyConfig = defaults.publicKeyConfig;
+            $ = new PublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyConfig(Output<PublicKeyConfigArgs> publicKeyConfig) {
-            this.publicKeyConfig = Objects.requireNonNull(publicKeyConfig);
+            $.publicKeyConfig = publicKeyConfig;
             return this;
         }
+
         public Builder publicKeyConfig(PublicKeyConfigArgs publicKeyConfig) {
-            this.publicKeyConfig = Output.of(Objects.requireNonNull(publicKeyConfig));
-            return this;
-        }        public PublicKeyArgs build() {
-            return new PublicKeyArgs(publicKeyConfig);
+            return publicKeyConfig(Output.of(publicKeyConfig));
+        }
+
+        public PublicKeyArgs build() {
+            $.publicKeyConfig = Objects.requireNonNull($.publicKeyConfig, "expected parameter 'publicKeyConfig' to be non-null");
+            return $;
         }
     }
+
 }

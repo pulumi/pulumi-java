@@ -17,65 +17,61 @@ public final class ListenerForwardConfig extends com.pulumi.resources.InvokeArgs
     public static final ListenerForwardConfig Empty = new ListenerForwardConfig();
 
     @Import(name="targetGroupStickinessConfig")
-      private final @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig;
+    private @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig;
 
     public Optional<ListenerTargetGroupStickinessConfig> targetGroupStickinessConfig() {
-        return this.targetGroupStickinessConfig == null ? Optional.empty() : Optional.ofNullable(this.targetGroupStickinessConfig);
+        return Optional.ofNullable(this.targetGroupStickinessConfig);
     }
 
     @Import(name="targetGroups")
-      private final @Nullable List<ListenerTargetGroupTuple> targetGroups;
+    private @Nullable List<ListenerTargetGroupTuple> targetGroups;
 
-    public List<ListenerTargetGroupTuple> targetGroups() {
-        return this.targetGroups == null ? List.of() : this.targetGroups;
+    public Optional<List<ListenerTargetGroupTuple>> targetGroups() {
+        return Optional.ofNullable(this.targetGroups);
     }
 
-    public ListenerForwardConfig(
-        @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig,
-        @Nullable List<ListenerTargetGroupTuple> targetGroups) {
-        this.targetGroupStickinessConfig = targetGroupStickinessConfig;
-        this.targetGroups = targetGroups;
-    }
+    private ListenerForwardConfig() {}
 
-    private ListenerForwardConfig() {
-        this.targetGroupStickinessConfig = null;
-        this.targetGroups = List.of();
+    private ListenerForwardConfig(ListenerForwardConfig $) {
+        this.targetGroupStickinessConfig = $.targetGroupStickinessConfig;
+        this.targetGroups = $.targetGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerForwardConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig;
-        private @Nullable List<ListenerTargetGroupTuple> targetGroups;
+        private ListenerForwardConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerForwardConfig();
         }
 
         public Builder(ListenerForwardConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetGroupStickinessConfig = defaults.targetGroupStickinessConfig;
-    	      this.targetGroups = defaults.targetGroups;
+            $ = new ListenerForwardConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder targetGroupStickinessConfig(@Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig) {
-            this.targetGroupStickinessConfig = targetGroupStickinessConfig;
+            $.targetGroupStickinessConfig = targetGroupStickinessConfig;
             return this;
         }
+
         public Builder targetGroups(@Nullable List<ListenerTargetGroupTuple> targetGroups) {
-            this.targetGroups = targetGroups;
+            $.targetGroups = targetGroups;
             return this;
         }
+
         public Builder targetGroups(ListenerTargetGroupTuple... targetGroups) {
             return targetGroups(List.of(targetGroups));
-        }        public ListenerForwardConfig build() {
-            return new ListenerForwardConfig(targetGroupStickinessConfig, targetGroups);
+        }
+
+        public ListenerForwardConfig build() {
+            return $;
         }
     }
+
 }

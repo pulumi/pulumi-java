@@ -5,10 +5,10 @@ package com.pulumi.awsnative.opensearchservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,99 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
     public static final DomainCognitoOptionsArgs Empty = new DomainCognitoOptionsArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="identityPoolId")
-      private final @Nullable Output<String> identityPoolId;
+    private @Nullable Output<String> identityPoolId;
 
-    public Output<String> identityPoolId() {
-        return this.identityPoolId == null ? Codegen.empty() : this.identityPoolId;
+    public Optional<Output<String>> identityPoolId() {
+        return Optional.ofNullable(this.identityPoolId);
     }
 
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="userPoolId")
-      private final @Nullable Output<String> userPoolId;
+    private @Nullable Output<String> userPoolId;
 
-    public Output<String> userPoolId() {
-        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
+    public Optional<Output<String>> userPoolId() {
+        return Optional.ofNullable(this.userPoolId);
     }
 
-    public DomainCognitoOptionsArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> identityPoolId,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> userPoolId) {
-        this.enabled = enabled;
-        this.identityPoolId = identityPoolId;
-        this.roleArn = roleArn;
-        this.userPoolId = userPoolId;
-    }
+    private DomainCognitoOptionsArgs() {}
 
-    private DomainCognitoOptionsArgs() {
-        this.enabled = Codegen.empty();
-        this.identityPoolId = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private DomainCognitoOptionsArgs(DomainCognitoOptionsArgs $) {
+        this.enabled = $.enabled;
+        this.identityPoolId = $.identityPoolId;
+        this.roleArn = $.roleArn;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainCognitoOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> identityPoolId;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> userPoolId;
+        private DomainCognitoOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainCognitoOptionsArgs();
         }
 
         public Builder(DomainCognitoOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.identityPoolId = defaults.identityPoolId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new DomainCognitoOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder identityPoolId(@Nullable Output<String> identityPoolId) {
-            this.identityPoolId = identityPoolId;
+            $.identityPoolId = identityPoolId;
             return this;
         }
-        public Builder identityPoolId(@Nullable String identityPoolId) {
-            this.identityPoolId = Codegen.ofNullable(identityPoolId);
-            return this;
+
+        public Builder identityPoolId(String identityPoolId) {
+            return identityPoolId(Output.of(identityPoolId));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
-            this.userPoolId = userPoolId;
+            $.userPoolId = userPoolId;
             return this;
         }
-        public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Codegen.ofNullable(userPoolId);
-            return this;
-        }        public DomainCognitoOptionsArgs build() {
-            return new DomainCognitoOptionsArgs(enabled, identityPoolId, roleArn, userPoolId);
+
+        public Builder userPoolId(String userPoolId) {
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public DomainCognitoOptionsArgs build() {
+            return $;
         }
     }
+
 }

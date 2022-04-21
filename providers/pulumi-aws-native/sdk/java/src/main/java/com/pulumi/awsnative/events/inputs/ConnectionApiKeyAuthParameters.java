@@ -13,62 +13,59 @@ public final class ConnectionApiKeyAuthParameters extends com.pulumi.resources.I
     public static final ConnectionApiKeyAuthParameters Empty = new ConnectionApiKeyAuthParameters();
 
     @Import(name="apiKeyName", required=true)
-      private final String apiKeyName;
+    private String apiKeyName;
 
     public String apiKeyName() {
         return this.apiKeyName;
     }
 
     @Import(name="apiKeyValue", required=true)
-      private final String apiKeyValue;
+    private String apiKeyValue;
 
     public String apiKeyValue() {
         return this.apiKeyValue;
     }
 
-    public ConnectionApiKeyAuthParameters(
-        String apiKeyName,
-        String apiKeyValue) {
-        this.apiKeyName = Objects.requireNonNull(apiKeyName, "expected parameter 'apiKeyName' to be non-null");
-        this.apiKeyValue = Objects.requireNonNull(apiKeyValue, "expected parameter 'apiKeyValue' to be non-null");
-    }
+    private ConnectionApiKeyAuthParameters() {}
 
-    private ConnectionApiKeyAuthParameters() {
-        this.apiKeyName = null;
-        this.apiKeyValue = null;
+    private ConnectionApiKeyAuthParameters(ConnectionApiKeyAuthParameters $) {
+        this.apiKeyName = $.apiKeyName;
+        this.apiKeyValue = $.apiKeyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionApiKeyAuthParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiKeyName;
-        private String apiKeyValue;
+        private ConnectionApiKeyAuthParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionApiKeyAuthParameters();
         }
 
         public Builder(ConnectionApiKeyAuthParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKeyName = defaults.apiKeyName;
-    	      this.apiKeyValue = defaults.apiKeyValue;
+            $ = new ConnectionApiKeyAuthParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKeyName(String apiKeyName) {
-            this.apiKeyName = Objects.requireNonNull(apiKeyName);
+            $.apiKeyName = apiKeyName;
             return this;
         }
+
         public Builder apiKeyValue(String apiKeyValue) {
-            this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
+            $.apiKeyValue = apiKeyValue;
             return this;
-        }        public ConnectionApiKeyAuthParameters build() {
-            return new ConnectionApiKeyAuthParameters(apiKeyName, apiKeyValue);
+        }
+
+        public ConnectionApiKeyAuthParameters build() {
+            $.apiKeyName = Objects.requireNonNull($.apiKeyName, "expected parameter 'apiKeyName' to be non-null");
+            $.apiKeyValue = Objects.requireNonNull($.apiKeyValue, "expected parameter 'apiKeyValue' to be non-null");
+            return $;
         }
     }
+
 }

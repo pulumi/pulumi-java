@@ -6,9 +6,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRetryOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends co
     public static final DeliveryStreamDynamicPartitioningConfigurationArgs Empty = new DeliveryStreamDynamicPartitioningConfigurationArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="retryOptions")
-      private final @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
+    private @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamRetryOptionsArgs> retryOptions() {
-        return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
+    public Optional<Output<DeliveryStreamRetryOptionsArgs>> retryOptions() {
+        return Optional.ofNullable(this.retryOptions);
     }
 
-    public DeliveryStreamDynamicPartitioningConfigurationArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions) {
-        this.enabled = enabled;
-        this.retryOptions = retryOptions;
-    }
+    private DeliveryStreamDynamicPartitioningConfigurationArgs() {}
 
-    private DeliveryStreamDynamicPartitioningConfigurationArgs() {
-        this.enabled = Codegen.empty();
-        this.retryOptions = Codegen.empty();
+    private DeliveryStreamDynamicPartitioningConfigurationArgs(DeliveryStreamDynamicPartitioningConfigurationArgs $) {
+        this.enabled = $.enabled;
+        this.retryOptions = $.retryOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamDynamicPartitioningConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
+        private DeliveryStreamDynamicPartitioningConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamDynamicPartitioningConfigurationArgs();
         }
 
         public Builder(DeliveryStreamDynamicPartitioningConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retryOptions = defaults.retryOptions;
+            $ = new DeliveryStreamDynamicPartitioningConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder retryOptions(@Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions) {
-            this.retryOptions = retryOptions;
+            $.retryOptions = retryOptions;
             return this;
         }
-        public Builder retryOptions(@Nullable DeliveryStreamRetryOptionsArgs retryOptions) {
-            this.retryOptions = Codegen.ofNullable(retryOptions);
-            return this;
-        }        public DeliveryStreamDynamicPartitioningConfigurationArgs build() {
-            return new DeliveryStreamDynamicPartitioningConfigurationArgs(enabled, retryOptions);
+
+        public Builder retryOptions(DeliveryStreamRetryOptionsArgs retryOptions) {
+            return retryOptions(Output.of(retryOptions));
+        }
+
+        public DeliveryStreamDynamicPartitioningConfigurationArgs build() {
+            return $;
         }
     }
+
 }

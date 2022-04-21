@@ -6,8 +6,8 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeBorderStyleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ThemeTileStyleArgs extends com.pulumi.resources.ResourceArgs 
     public static final ThemeTileStyleArgs Empty = new ThemeTileStyleArgs();
 
     @Import(name="border")
-      private final @Nullable Output<ThemeBorderStyleArgs> border;
+    private @Nullable Output<ThemeBorderStyleArgs> border;
 
-    public Output<ThemeBorderStyleArgs> border() {
-        return this.border == null ? Codegen.empty() : this.border;
+    public Optional<Output<ThemeBorderStyleArgs>> border() {
+        return Optional.ofNullable(this.border);
     }
 
-    public ThemeTileStyleArgs(@Nullable Output<ThemeBorderStyleArgs> border) {
-        this.border = border;
-    }
+    private ThemeTileStyleArgs() {}
 
-    private ThemeTileStyleArgs() {
-        this.border = Codegen.empty();
+    private ThemeTileStyleArgs(ThemeTileStyleArgs $) {
+        this.border = $.border;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeTileStyleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ThemeBorderStyleArgs> border;
+        private ThemeTileStyleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeTileStyleArgs();
         }
 
         public Builder(ThemeTileStyleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.border = defaults.border;
+            $ = new ThemeTileStyleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder border(@Nullable Output<ThemeBorderStyleArgs> border) {
-            this.border = border;
+            $.border = border;
             return this;
         }
-        public Builder border(@Nullable ThemeBorderStyleArgs border) {
-            this.border = Codegen.ofNullable(border);
-            return this;
-        }        public ThemeTileStyleArgs build() {
-            return new ThemeTileStyleArgs(border);
+
+        public Builder border(ThemeBorderStyleArgs border) {
+            return border(Output.of(border));
+        }
+
+        public ThemeTileStyleArgs build() {
+            return $;
         }
     }
+
 }

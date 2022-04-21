@@ -13,45 +13,45 @@ public final class DistributionRestrictions extends com.pulumi.resources.InvokeA
     public static final DistributionRestrictions Empty = new DistributionRestrictions();
 
     @Import(name="geoRestriction", required=true)
-      private final DistributionGeoRestriction geoRestriction;
+    private DistributionGeoRestriction geoRestriction;
 
     public DistributionGeoRestriction geoRestriction() {
         return this.geoRestriction;
     }
 
-    public DistributionRestrictions(DistributionGeoRestriction geoRestriction) {
-        this.geoRestriction = Objects.requireNonNull(geoRestriction, "expected parameter 'geoRestriction' to be non-null");
-    }
+    private DistributionRestrictions() {}
 
-    private DistributionRestrictions() {
-        this.geoRestriction = null;
+    private DistributionRestrictions(DistributionRestrictions $) {
+        this.geoRestriction = $.geoRestriction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionRestrictions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DistributionGeoRestriction geoRestriction;
+        private DistributionRestrictions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionRestrictions();
         }
 
         public Builder(DistributionRestrictions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.geoRestriction = defaults.geoRestriction;
+            $ = new DistributionRestrictions(Objects.requireNonNull(defaults));
         }
 
         public Builder geoRestriction(DistributionGeoRestriction geoRestriction) {
-            this.geoRestriction = Objects.requireNonNull(geoRestriction);
+            $.geoRestriction = geoRestriction;
             return this;
-        }        public DistributionRestrictions build() {
-            return new DistributionRestrictions(geoRestriction);
+        }
+
+        public DistributionRestrictions build() {
+            $.geoRestriction = Objects.requireNonNull($.geoRestriction, "expected parameter 'geoRestriction' to be non-null");
+            return $;
         }
     }
+
 }

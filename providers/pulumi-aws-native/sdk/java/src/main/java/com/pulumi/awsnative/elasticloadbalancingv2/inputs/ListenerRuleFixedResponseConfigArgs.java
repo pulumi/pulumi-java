@@ -5,9 +5,9 @@ package com.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,83 @@ public final class ListenerRuleFixedResponseConfigArgs extends com.pulumi.resour
     public static final ListenerRuleFixedResponseConfigArgs Empty = new ListenerRuleFixedResponseConfigArgs();
 
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     @Import(name="messageBody")
-      private final @Nullable Output<String> messageBody;
+    private @Nullable Output<String> messageBody;
 
-    public Output<String> messageBody() {
-        return this.messageBody == null ? Codegen.empty() : this.messageBody;
+    public Optional<Output<String>> messageBody() {
+        return Optional.ofNullable(this.messageBody);
     }
 
     @Import(name="statusCode", required=true)
-      private final Output<String> statusCode;
+    private Output<String> statusCode;
 
     public Output<String> statusCode() {
         return this.statusCode;
     }
 
-    public ListenerRuleFixedResponseConfigArgs(
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> messageBody,
-        Output<String> statusCode) {
-        this.contentType = contentType;
-        this.messageBody = messageBody;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private ListenerRuleFixedResponseConfigArgs() {}
 
-    private ListenerRuleFixedResponseConfigArgs() {
-        this.contentType = Codegen.empty();
-        this.messageBody = Codegen.empty();
-        this.statusCode = Codegen.empty();
+    private ListenerRuleFixedResponseConfigArgs(ListenerRuleFixedResponseConfigArgs $) {
+        this.contentType = $.contentType;
+        this.messageBody = $.messageBody;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleFixedResponseConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> messageBody;
-        private Output<String> statusCode;
+        private ListenerRuleFixedResponseConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleFixedResponseConfigArgs();
         }
 
         public Builder(ListenerRuleFixedResponseConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.messageBody = defaults.messageBody;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ListenerRuleFixedResponseConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder messageBody(@Nullable Output<String> messageBody) {
-            this.messageBody = messageBody;
+            $.messageBody = messageBody;
             return this;
         }
-        public Builder messageBody(@Nullable String messageBody) {
-            this.messageBody = Codegen.ofNullable(messageBody);
-            return this;
+
+        public Builder messageBody(String messageBody) {
+            return messageBody(Output.of(messageBody));
         }
+
         public Builder statusCode(Output<String> statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
-            return this;
-        }        public ListenerRuleFixedResponseConfigArgs build() {
-            return new ListenerRuleFixedResponseConfigArgs(contentType, messageBody, statusCode);
+            return statusCode(Output.of(statusCode));
+        }
+
+        public ListenerRuleFixedResponseConfigArgs build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketDataExportArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BucketStorageClassAnalysisArgs extends com.pulumi.resources.R
     public static final BucketStorageClassAnalysisArgs Empty = new BucketStorageClassAnalysisArgs();
 
     @Import(name="dataExport")
-      private final @Nullable Output<BucketDataExportArgs> dataExport;
+    private @Nullable Output<BucketDataExportArgs> dataExport;
 
-    public Output<BucketDataExportArgs> dataExport() {
-        return this.dataExport == null ? Codegen.empty() : this.dataExport;
+    public Optional<Output<BucketDataExportArgs>> dataExport() {
+        return Optional.ofNullable(this.dataExport);
     }
 
-    public BucketStorageClassAnalysisArgs(@Nullable Output<BucketDataExportArgs> dataExport) {
-        this.dataExport = dataExport;
-    }
+    private BucketStorageClassAnalysisArgs() {}
 
-    private BucketStorageClassAnalysisArgs() {
-        this.dataExport = Codegen.empty();
+    private BucketStorageClassAnalysisArgs(BucketStorageClassAnalysisArgs $) {
+        this.dataExport = $.dataExport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketStorageClassAnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketDataExportArgs> dataExport;
+        private BucketStorageClassAnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketStorageClassAnalysisArgs();
         }
 
         public Builder(BucketStorageClassAnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataExport = defaults.dataExport;
+            $ = new BucketStorageClassAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataExport(@Nullable Output<BucketDataExportArgs> dataExport) {
-            this.dataExport = dataExport;
+            $.dataExport = dataExport;
             return this;
         }
-        public Builder dataExport(@Nullable BucketDataExportArgs dataExport) {
-            this.dataExport = Codegen.ofNullable(dataExport);
-            return this;
-        }        public BucketStorageClassAnalysisArgs build() {
-            return new BucketStorageClassAnalysisArgs(dataExport);
+
+        public Builder dataExport(BucketDataExportArgs dataExport) {
+            return dataExport(Output.of(dataExport));
+        }
+
+        public BucketStorageClassAnalysisArgs build() {
+            return $;
         }
     }
+
 }

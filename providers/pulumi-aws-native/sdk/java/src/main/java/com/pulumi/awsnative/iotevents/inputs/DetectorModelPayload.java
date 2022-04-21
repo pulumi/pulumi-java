@@ -23,7 +23,7 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="contentExpression", required=true)
-      private final String contentExpression;
+    private String contentExpression;
 
     public String contentExpression() {
         return this.contentExpression;
@@ -34,55 +34,52 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DetectorModelPayload(
-        String contentExpression,
-        String type) {
-        this.contentExpression = Objects.requireNonNull(contentExpression, "expected parameter 'contentExpression' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DetectorModelPayload() {}
 
-    private DetectorModelPayload() {
-        this.contentExpression = null;
-        this.type = null;
+    private DetectorModelPayload(DetectorModelPayload $) {
+        this.contentExpression = $.contentExpression;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelPayload defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contentExpression;
-        private String type;
+        private DetectorModelPayload $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelPayload();
         }
 
         public Builder(DetectorModelPayload defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentExpression = defaults.contentExpression;
-    	      this.type = defaults.type;
+            $ = new DetectorModelPayload(Objects.requireNonNull(defaults));
         }
 
         public Builder contentExpression(String contentExpression) {
-            this.contentExpression = Objects.requireNonNull(contentExpression);
+            $.contentExpression = contentExpression;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DetectorModelPayload build() {
-            return new DetectorModelPayload(contentExpression, type);
+        }
+
+        public DetectorModelPayload build() {
+            $.contentExpression = Objects.requireNonNull($.contentExpression, "expected parameter 'contentExpression' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

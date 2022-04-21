@@ -17,45 +17,45 @@ public final class GetModelBiasJobDefinitionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="jobDefinitionArn", required=true)
-      private final String jobDefinitionArn;
+    private String jobDefinitionArn;
 
     public String jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
 
-    public GetModelBiasJobDefinitionArgs(String jobDefinitionArn) {
-        this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn, "expected parameter 'jobDefinitionArn' to be non-null");
-    }
+    private GetModelBiasJobDefinitionArgs() {}
 
-    private GetModelBiasJobDefinitionArgs() {
-        this.jobDefinitionArn = null;
+    private GetModelBiasJobDefinitionArgs(GetModelBiasJobDefinitionArgs $) {
+        this.jobDefinitionArn = $.jobDefinitionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModelBiasJobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobDefinitionArn;
+        private GetModelBiasJobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModelBiasJobDefinitionArgs();
         }
 
         public Builder(GetModelBiasJobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobDefinitionArn = defaults.jobDefinitionArn;
+            $ = new GetModelBiasJobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobDefinitionArn(String jobDefinitionArn) {
-            this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
+            $.jobDefinitionArn = jobDefinitionArn;
             return this;
-        }        public GetModelBiasJobDefinitionArgs build() {
-            return new GetModelBiasJobDefinitionArgs(jobDefinitionArn);
+        }
+
+        public GetModelBiasJobDefinitionArgs build() {
+            $.jobDefinitionArn = Objects.requireNonNull($.jobDefinitionArn, "expected parameter 'jobDefinitionArn' to be non-null");
+            return $;
         }
     }
+
 }

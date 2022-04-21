@@ -23,7 +23,7 @@ public final class BucketTag extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -34,55 +34,51 @@ public final class BucketTag extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public BucketTag(
-        String key,
-        @Nullable String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = value;
-    }
+    private BucketTag() {}
 
-    private BucketTag() {
-        this.key = null;
-        this.value = null;
+    private BucketTag(BucketTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private @Nullable String value;
+        private BucketTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketTag();
         }
 
         public Builder(BucketTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new BucketTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public BucketTag build() {
-            return new BucketTag(key, value);
+        }
+
+        public BucketTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

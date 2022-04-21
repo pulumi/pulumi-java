@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class ResponseHeadersPolicyAccessControlAllowHeadersArgs extends co
     public static final ResponseHeadersPolicyAccessControlAllowHeadersArgs Empty = new ResponseHeadersPolicyAccessControlAllowHeadersArgs();
 
     @Import(name="items", required=true)
-      private final Output<List<String>> items;
+    private Output<List<String>> items;
 
     public Output<List<String>> items() {
         return this.items;
     }
 
-    public ResponseHeadersPolicyAccessControlAllowHeadersArgs(Output<List<String>> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private ResponseHeadersPolicyAccessControlAllowHeadersArgs() {}
 
-    private ResponseHeadersPolicyAccessControlAllowHeadersArgs() {
-        this.items = Codegen.empty();
+    private ResponseHeadersPolicyAccessControlAllowHeadersArgs(ResponseHeadersPolicyAccessControlAllowHeadersArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyAccessControlAllowHeadersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> items;
+        private ResponseHeadersPolicyAccessControlAllowHeadersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyAccessControlAllowHeadersArgs();
         }
 
         public Builder(ResponseHeadersPolicyAccessControlAllowHeadersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new ResponseHeadersPolicyAccessControlAllowHeadersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(Output<List<String>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<String> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public ResponseHeadersPolicyAccessControlAllowHeadersArgs build() {
-            return new ResponseHeadersPolicyAccessControlAllowHeadersArgs(items);
+        }
+
+        public ResponseHeadersPolicyAccessControlAllowHeadersArgs build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

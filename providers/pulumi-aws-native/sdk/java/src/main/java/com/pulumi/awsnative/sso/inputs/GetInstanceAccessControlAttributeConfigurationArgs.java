@@ -17,45 +17,45 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends co
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final String instanceArn;
+    private String instanceArn;
 
     public String instanceArn() {
         return this.instanceArn;
     }
 
-    public GetInstanceAccessControlAttributeConfigurationArgs(String instanceArn) {
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-    }
+    private GetInstanceAccessControlAttributeConfigurationArgs() {}
 
-    private GetInstanceAccessControlAttributeConfigurationArgs() {
-        this.instanceArn = null;
+    private GetInstanceAccessControlAttributeConfigurationArgs(GetInstanceAccessControlAttributeConfigurationArgs $) {
+        this.instanceArn = $.instanceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceAccessControlAttributeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceArn;
+        private GetInstanceAccessControlAttributeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceAccessControlAttributeConfigurationArgs();
         }
 
         public Builder(GetInstanceAccessControlAttributeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceArn = defaults.instanceArn;
+            $ = new GetInstanceAccessControlAttributeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
-        }        public GetInstanceAccessControlAttributeConfigurationArgs build() {
-            return new GetInstanceAccessControlAttributeConfigurationArgs(instanceArn);
+        }
+
+        public GetInstanceAccessControlAttributeConfigurationArgs build() {
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            return $;
         }
     }
+
 }

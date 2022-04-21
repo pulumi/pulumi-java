@@ -7,9 +7,9 @@ import com.pulumi.awsnative.rds.enums.DBProxyAuthFormatAuthScheme;
 import com.pulumi.awsnative.rds.enums.DBProxyAuthFormatIAMAuth;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="authScheme")
-      private final @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
+    private @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
 
-    public Output<DBProxyAuthFormatAuthScheme> authScheme() {
-        return this.authScheme == null ? Codegen.empty() : this.authScheme;
+    public Optional<Output<DBProxyAuthFormatAuthScheme>> authScheme() {
+        return Optional.ofNullable(this.authScheme);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="iAMAuth")
-      private final @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
+    private @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
 
-    public Output<DBProxyAuthFormatIAMAuth> iAMAuth() {
-        return this.iAMAuth == null ? Codegen.empty() : this.iAMAuth;
+    public Optional<Output<DBProxyAuthFormatIAMAuth>> iAMAuth() {
+        return Optional.ofNullable(this.iAMAuth);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="secretArn")
-      private final @Nullable Output<String> secretArn;
+    private @Nullable Output<String> secretArn;
 
-    public Output<String> secretArn() {
-        return this.secretArn == null ? Codegen.empty() : this.secretArn;
+    public Optional<Output<String>> secretArn() {
+        return Optional.ofNullable(this.secretArn);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public DBProxyAuthFormatArgs(
-        @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme,
-        @Nullable Output<String> description,
-        @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth,
-        @Nullable Output<String> secretArn,
-        @Nullable Output<String> userName) {
-        this.authScheme = authScheme;
-        this.description = description;
-        this.iAMAuth = iAMAuth;
-        this.secretArn = secretArn;
-        this.userName = userName;
-    }
+    private DBProxyAuthFormatArgs() {}
 
-    private DBProxyAuthFormatArgs() {
-        this.authScheme = Codegen.empty();
-        this.description = Codegen.empty();
-        this.iAMAuth = Codegen.empty();
-        this.secretArn = Codegen.empty();
-        this.userName = Codegen.empty();
+    private DBProxyAuthFormatArgs(DBProxyAuthFormatArgs $) {
+        this.authScheme = $.authScheme;
+        this.description = $.description;
+        this.iAMAuth = $.iAMAuth;
+        this.secretArn = $.secretArn;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DBProxyAuthFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
-        private @Nullable Output<String> secretArn;
-        private @Nullable Output<String> userName;
+        private DBProxyAuthFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DBProxyAuthFormatArgs();
         }
 
         public Builder(DBProxyAuthFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authScheme = defaults.authScheme;
-    	      this.description = defaults.description;
-    	      this.iAMAuth = defaults.iAMAuth;
-    	      this.secretArn = defaults.secretArn;
-    	      this.userName = defaults.userName;
+            $ = new DBProxyAuthFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authScheme(@Nullable Output<DBProxyAuthFormatAuthScheme> authScheme) {
-            this.authScheme = authScheme;
+            $.authScheme = authScheme;
             return this;
         }
-        public Builder authScheme(@Nullable DBProxyAuthFormatAuthScheme authScheme) {
-            this.authScheme = Codegen.ofNullable(authScheme);
-            return this;
+
+        public Builder authScheme(DBProxyAuthFormatAuthScheme authScheme) {
+            return authScheme(Output.of(authScheme));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder iAMAuth(@Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth) {
-            this.iAMAuth = iAMAuth;
+            $.iAMAuth = iAMAuth;
             return this;
         }
-        public Builder iAMAuth(@Nullable DBProxyAuthFormatIAMAuth iAMAuth) {
-            this.iAMAuth = Codegen.ofNullable(iAMAuth);
-            return this;
+
+        public Builder iAMAuth(DBProxyAuthFormatIAMAuth iAMAuth) {
+            return iAMAuth(Output.of(iAMAuth));
         }
+
         public Builder secretArn(@Nullable Output<String> secretArn) {
-            this.secretArn = secretArn;
+            $.secretArn = secretArn;
             return this;
         }
-        public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Codegen.ofNullable(secretArn);
-            return this;
+
+        public Builder secretArn(String secretArn) {
+            return secretArn(Output.of(secretArn));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public DBProxyAuthFormatArgs build() {
-            return new DBProxyAuthFormatArgs(authScheme, description, iAMAuth, secretArn, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public DBProxyAuthFormatArgs build() {
+            return $;
         }
     }
+
 }

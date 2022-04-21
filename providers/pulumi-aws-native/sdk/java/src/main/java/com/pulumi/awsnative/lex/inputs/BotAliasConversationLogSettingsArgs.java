@@ -7,9 +7,9 @@ import com.pulumi.awsnative.lex.inputs.BotAliasAudioLogSettingArgs;
 import com.pulumi.awsnative.lex.inputs.BotAliasTextLogSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,76 +22,73 @@ public final class BotAliasConversationLogSettingsArgs extends com.pulumi.resour
     public static final BotAliasConversationLogSettingsArgs Empty = new BotAliasConversationLogSettingsArgs();
 
     @Import(name="audioLogSettings")
-      private final @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
+    private @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
 
-    public Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings() {
-        return this.audioLogSettings == null ? Codegen.empty() : this.audioLogSettings;
+    public Optional<Output<List<BotAliasAudioLogSettingArgs>>> audioLogSettings() {
+        return Optional.ofNullable(this.audioLogSettings);
     }
 
     @Import(name="textLogSettings")
-      private final @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings;
+    private @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings;
 
-    public Output<List<BotAliasTextLogSettingArgs>> textLogSettings() {
-        return this.textLogSettings == null ? Codegen.empty() : this.textLogSettings;
+    public Optional<Output<List<BotAliasTextLogSettingArgs>>> textLogSettings() {
+        return Optional.ofNullable(this.textLogSettings);
     }
 
-    public BotAliasConversationLogSettingsArgs(
-        @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings,
-        @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings) {
-        this.audioLogSettings = audioLogSettings;
-        this.textLogSettings = textLogSettings;
-    }
+    private BotAliasConversationLogSettingsArgs() {}
 
-    private BotAliasConversationLogSettingsArgs() {
-        this.audioLogSettings = Codegen.empty();
-        this.textLogSettings = Codegen.empty();
+    private BotAliasConversationLogSettingsArgs(BotAliasConversationLogSettingsArgs $) {
+        this.audioLogSettings = $.audioLogSettings;
+        this.textLogSettings = $.textLogSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasConversationLogSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
-        private @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings;
+        private BotAliasConversationLogSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasConversationLogSettingsArgs();
         }
 
         public Builder(BotAliasConversationLogSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioLogSettings = defaults.audioLogSettings;
-    	      this.textLogSettings = defaults.textLogSettings;
+            $ = new BotAliasConversationLogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioLogSettings(@Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings) {
-            this.audioLogSettings = audioLogSettings;
+            $.audioLogSettings = audioLogSettings;
             return this;
         }
-        public Builder audioLogSettings(@Nullable List<BotAliasAudioLogSettingArgs> audioLogSettings) {
-            this.audioLogSettings = Codegen.ofNullable(audioLogSettings);
-            return this;
+
+        public Builder audioLogSettings(List<BotAliasAudioLogSettingArgs> audioLogSettings) {
+            return audioLogSettings(Output.of(audioLogSettings));
         }
+
         public Builder audioLogSettings(BotAliasAudioLogSettingArgs... audioLogSettings) {
             return audioLogSettings(List.of(audioLogSettings));
         }
+
         public Builder textLogSettings(@Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings) {
-            this.textLogSettings = textLogSettings;
+            $.textLogSettings = textLogSettings;
             return this;
         }
-        public Builder textLogSettings(@Nullable List<BotAliasTextLogSettingArgs> textLogSettings) {
-            this.textLogSettings = Codegen.ofNullable(textLogSettings);
-            return this;
+
+        public Builder textLogSettings(List<BotAliasTextLogSettingArgs> textLogSettings) {
+            return textLogSettings(Output.of(textLogSettings));
         }
+
         public Builder textLogSettings(BotAliasTextLogSettingArgs... textLogSettings) {
             return textLogSettings(List.of(textLogSettings));
-        }        public BotAliasConversationLogSettingsArgs build() {
-            return new BotAliasConversationLogSettingsArgs(audioLogSettings, textLogSettings);
+        }
+
+        public BotAliasConversationLogSettingsArgs build() {
+            return $;
         }
     }
+
 }

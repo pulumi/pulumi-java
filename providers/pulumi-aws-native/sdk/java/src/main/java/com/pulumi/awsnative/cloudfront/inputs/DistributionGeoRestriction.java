@@ -16,65 +16,62 @@ public final class DistributionGeoRestriction extends com.pulumi.resources.Invok
     public static final DistributionGeoRestriction Empty = new DistributionGeoRestriction();
 
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     @Import(name="restrictionType", required=true)
-      private final String restrictionType;
+    private String restrictionType;
 
     public String restrictionType() {
         return this.restrictionType;
     }
 
-    public DistributionGeoRestriction(
-        @Nullable List<String> locations,
-        String restrictionType) {
-        this.locations = locations;
-        this.restrictionType = Objects.requireNonNull(restrictionType, "expected parameter 'restrictionType' to be non-null");
-    }
+    private DistributionGeoRestriction() {}
 
-    private DistributionGeoRestriction() {
-        this.locations = List.of();
-        this.restrictionType = null;
+    private DistributionGeoRestriction(DistributionGeoRestriction $) {
+        this.locations = $.locations;
+        this.restrictionType = $.restrictionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionGeoRestriction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> locations;
-        private String restrictionType;
+        private DistributionGeoRestriction $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionGeoRestriction();
         }
 
         public Builder(DistributionGeoRestriction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.restrictionType = defaults.restrictionType;
+            $ = new DistributionGeoRestriction(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder restrictionType(String restrictionType) {
-            this.restrictionType = Objects.requireNonNull(restrictionType);
+            $.restrictionType = restrictionType;
             return this;
-        }        public DistributionGeoRestriction build() {
-            return new DistributionGeoRestriction(locations, restrictionType);
+        }
+
+        public DistributionGeoRestriction build() {
+            $.restrictionType = Objects.requireNonNull($.restrictionType, "expected parameter 'restrictionType' to be non-null");
+            return $;
         }
     }
+
 }

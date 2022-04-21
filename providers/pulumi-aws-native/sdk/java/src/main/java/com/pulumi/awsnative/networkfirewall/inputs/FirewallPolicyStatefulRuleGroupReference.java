@@ -16,62 +16,58 @@ public final class FirewallPolicyStatefulRuleGroupReference extends com.pulumi.r
     public static final FirewallPolicyStatefulRuleGroupReference Empty = new FirewallPolicyStatefulRuleGroupReference();
 
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     @Import(name="resourceArn", required=true)
-      private final String resourceArn;
+    private String resourceArn;
 
     public String resourceArn() {
         return this.resourceArn;
     }
 
-    public FirewallPolicyStatefulRuleGroupReference(
-        @Nullable Integer priority,
-        String resourceArn) {
-        this.priority = priority;
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-    }
+    private FirewallPolicyStatefulRuleGroupReference() {}
 
-    private FirewallPolicyStatefulRuleGroupReference() {
-        this.priority = null;
-        this.resourceArn = null;
+    private FirewallPolicyStatefulRuleGroupReference(FirewallPolicyStatefulRuleGroupReference $) {
+        this.priority = $.priority;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyStatefulRuleGroupReference defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer priority;
-        private String resourceArn;
+        private FirewallPolicyStatefulRuleGroupReference $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyStatefulRuleGroupReference();
         }
 
         public Builder(FirewallPolicyStatefulRuleGroupReference defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new FirewallPolicyStatefulRuleGroupReference(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
-        }        public FirewallPolicyStatefulRuleGroupReference build() {
-            return new FirewallPolicyStatefulRuleGroupReference(priority, resourceArn);
+        }
+
+        public FirewallPolicyStatefulRuleGroupReference build() {
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

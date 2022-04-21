@@ -9,9 +9,9 @@ import com.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyPolicyMapArgs;
 import com.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyTagMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,14 +24,14 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataLocationConstraint")
-      private final @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
+    private @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
-    public Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint() {
-        return this.dataLocationConstraint == null ? Codegen.empty() : this.dataLocationConstraint;
+    public Optional<Output<ResiliencyPolicyDataLocationConstraint>> dataLocationConstraint() {
+        return Optional.ofNullable(this.dataLocationConstraint);
     }
 
     @Import(name="policy", required=true)
-      private final Output<ResiliencyPolicyPolicyMapArgs> policy;
+    private Output<ResiliencyPolicyPolicyMapArgs> policy;
 
     public Output<ResiliencyPolicyPolicyMapArgs> policy() {
         return this.policy;
@@ -42,10 +42,10 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyDescription")
-      private final @Nullable Output<String> policyDescription;
+    private @Nullable Output<String> policyDescription;
 
-    public Output<String> policyDescription() {
-        return this.policyDescription == null ? Codegen.empty() : this.policyDescription;
+    public Optional<Output<String>> policyDescription() {
+        return Optional.ofNullable(this.policyDescription);
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyName", required=true)
-      private final Output<String> policyName;
+    private Output<String> policyName;
 
     public Output<String> policyName() {
         return this.policyName;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
+    private @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
 
-    public Output<ResiliencyPolicyTagMapArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<ResiliencyPolicyTagMapArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -71,115 +71,101 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<ResiliencyPolicyTier> tier;
+    private Output<ResiliencyPolicyTier> tier;
 
     public Output<ResiliencyPolicyTier> tier() {
         return this.tier;
     }
 
-    public ResiliencyPolicyArgs(
-        @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint,
-        Output<ResiliencyPolicyPolicyMapArgs> policy,
-        @Nullable Output<String> policyDescription,
-        Output<String> policyName,
-        @Nullable Output<ResiliencyPolicyTagMapArgs> tags,
-        Output<ResiliencyPolicyTier> tier) {
-        this.dataLocationConstraint = dataLocationConstraint;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.policyDescription = policyDescription;
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.tags = tags;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private ResiliencyPolicyArgs() {}
 
-    private ResiliencyPolicyArgs() {
-        this.dataLocationConstraint = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.policyDescription = Codegen.empty();
-        this.policyName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ResiliencyPolicyArgs(ResiliencyPolicyArgs $) {
+        this.dataLocationConstraint = $.dataLocationConstraint;
+        this.policy = $.policy;
+        this.policyDescription = $.policyDescription;
+        this.policyName = $.policyName;
+        this.tags = $.tags;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResiliencyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
-        private Output<ResiliencyPolicyPolicyMapArgs> policy;
-        private @Nullable Output<String> policyDescription;
-        private Output<String> policyName;
-        private @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
-        private Output<ResiliencyPolicyTier> tier;
+        private ResiliencyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResiliencyPolicyArgs();
         }
 
         public Builder(ResiliencyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataLocationConstraint = defaults.dataLocationConstraint;
-    	      this.policy = defaults.policy;
-    	      this.policyDescription = defaults.policyDescription;
-    	      this.policyName = defaults.policyName;
-    	      this.tags = defaults.tags;
-    	      this.tier = defaults.tier;
+            $ = new ResiliencyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataLocationConstraint(@Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint) {
-            this.dataLocationConstraint = dataLocationConstraint;
+            $.dataLocationConstraint = dataLocationConstraint;
             return this;
         }
-        public Builder dataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
-            this.dataLocationConstraint = Codegen.ofNullable(dataLocationConstraint);
-            return this;
+
+        public Builder dataLocationConstraint(ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
+            return dataLocationConstraint(Output.of(dataLocationConstraint));
         }
+
         public Builder policy(Output<ResiliencyPolicyPolicyMapArgs> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(ResiliencyPolicyPolicyMapArgs policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder policyDescription(@Nullable Output<String> policyDescription) {
-            this.policyDescription = policyDescription;
+            $.policyDescription = policyDescription;
             return this;
         }
-        public Builder policyDescription(@Nullable String policyDescription) {
-            this.policyDescription = Codegen.ofNullable(policyDescription);
-            return this;
+
+        public Builder policyDescription(String policyDescription) {
+            return policyDescription(Output.of(policyDescription));
         }
+
         public Builder policyName(Output<String> policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder policyName(String policyName) {
-            this.policyName = Output.of(Objects.requireNonNull(policyName));
-            return this;
+            return policyName(Output.of(policyName));
         }
+
         public Builder tags(@Nullable Output<ResiliencyPolicyTagMapArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable ResiliencyPolicyTagMapArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(ResiliencyPolicyTagMapArgs tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tier(Output<ResiliencyPolicyTier> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(ResiliencyPolicyTier tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
-        }        public ResiliencyPolicyArgs build() {
-            return new ResiliencyPolicyArgs(dataLocationConstraint, policy, policyDescription, policyName, tags, tier);
+            return tier(Output.of(tier));
+        }
+
+        public ResiliencyPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

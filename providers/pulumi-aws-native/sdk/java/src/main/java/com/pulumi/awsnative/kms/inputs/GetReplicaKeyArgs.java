@@ -13,45 +13,45 @@ public final class GetReplicaKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReplicaKeyArgs Empty = new GetReplicaKeyArgs();
 
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
-    public GetReplicaKeyArgs(String keyId) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-    }
+    private GetReplicaKeyArgs() {}
 
-    private GetReplicaKeyArgs() {
-        this.keyId = null;
+    private GetReplicaKeyArgs(GetReplicaKeyArgs $) {
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicaKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
+        private GetReplicaKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicaKeyArgs();
         }
 
         public Builder(GetReplicaKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
+            $ = new GetReplicaKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
-        }        public GetReplicaKeyArgs build() {
-            return new GetReplicaKeyArgs(keyId);
+        }
+
+        public GetReplicaKeyArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

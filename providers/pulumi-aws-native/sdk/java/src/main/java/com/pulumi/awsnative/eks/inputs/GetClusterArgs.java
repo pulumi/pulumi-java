@@ -17,45 +17,45 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetClusterArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetClusterArgs() {}
 
-    private GetClusterArgs() {
-        this.name = null;
+    private GetClusterArgs(GetClusterArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterArgs();
         }
 
         public Builder(GetClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetClusterArgs build() {
-            return new GetClusterArgs(name);
+        }
+
+        public GetClusterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

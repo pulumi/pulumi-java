@@ -24,10 +24,10 @@ public final class TaskFilterRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filterType")
-      private final @Nullable TaskFilterRuleFilterType filterType;
+    private @Nullable TaskFilterRuleFilterType filterType;
 
     public Optional<TaskFilterRuleFilterType> filterType() {
-        return this.filterType == null ? Optional.empty() : Optional.ofNullable(this.filterType);
+        return Optional.ofNullable(this.filterType);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class TaskFilterRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public TaskFilterRule(
-        @Nullable TaskFilterRuleFilterType filterType,
-        @Nullable String value) {
-        this.filterType = filterType;
-        this.value = value;
-    }
+    private TaskFilterRule() {}
 
-    private TaskFilterRule() {
-        this.filterType = null;
-        this.value = null;
+    private TaskFilterRule(TaskFilterRule $) {
+        this.filterType = $.filterType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskFilterRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TaskFilterRuleFilterType filterType;
-        private @Nullable String value;
+        private TaskFilterRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskFilterRule();
         }
 
         public Builder(TaskFilterRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterType = defaults.filterType;
-    	      this.value = defaults.value;
+            $ = new TaskFilterRule(Objects.requireNonNull(defaults));
         }
 
         public Builder filterType(@Nullable TaskFilterRuleFilterType filterType) {
-            this.filterType = filterType;
+            $.filterType = filterType;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public TaskFilterRule build() {
-            return new TaskFilterRule(filterType, value);
+        }
+
+        public TaskFilterRule build() {
+            return $;
         }
     }
+
 }

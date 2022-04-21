@@ -16,62 +16,58 @@ public final class DatasetLateDataRule extends com.pulumi.resources.InvokeArgs {
     public static final DatasetLateDataRule Empty = new DatasetLateDataRule();
 
     @Import(name="ruleConfiguration", required=true)
-      private final DatasetLateDataRuleConfiguration ruleConfiguration;
+    private DatasetLateDataRuleConfiguration ruleConfiguration;
 
     public DatasetLateDataRuleConfiguration ruleConfiguration() {
         return this.ruleConfiguration;
     }
 
     @Import(name="ruleName")
-      private final @Nullable String ruleName;
+    private @Nullable String ruleName;
 
     public Optional<String> ruleName() {
-        return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
+        return Optional.ofNullable(this.ruleName);
     }
 
-    public DatasetLateDataRule(
-        DatasetLateDataRuleConfiguration ruleConfiguration,
-        @Nullable String ruleName) {
-        this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration, "expected parameter 'ruleConfiguration' to be non-null");
-        this.ruleName = ruleName;
-    }
+    private DatasetLateDataRule() {}
 
-    private DatasetLateDataRule() {
-        this.ruleConfiguration = null;
-        this.ruleName = null;
+    private DatasetLateDataRule(DatasetLateDataRule $) {
+        this.ruleConfiguration = $.ruleConfiguration;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetLateDataRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DatasetLateDataRuleConfiguration ruleConfiguration;
-        private @Nullable String ruleName;
+        private DatasetLateDataRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetLateDataRule();
         }
 
         public Builder(DatasetLateDataRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleConfiguration = defaults.ruleConfiguration;
-    	      this.ruleName = defaults.ruleName;
+            $ = new DatasetLateDataRule(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleConfiguration(DatasetLateDataRuleConfiguration ruleConfiguration) {
-            this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration);
+            $.ruleConfiguration = ruleConfiguration;
             return this;
         }
+
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
-        }        public DatasetLateDataRule build() {
-            return new DatasetLateDataRule(ruleConfiguration, ruleName);
+        }
+
+        public DatasetLateDataRule build() {
+            $.ruleConfiguration = Objects.requireNonNull($.ruleConfiguration, "expected parameter 'ruleConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

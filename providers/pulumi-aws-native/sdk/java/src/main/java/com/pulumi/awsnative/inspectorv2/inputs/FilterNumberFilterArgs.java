@@ -5,9 +5,9 @@ package com.pulumi.awsnative.inspectorv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class FilterNumberFilterArgs extends com.pulumi.resources.ResourceA
     public static final FilterNumberFilterArgs Empty = new FilterNumberFilterArgs();
 
     @Import(name="lowerInclusive")
-      private final @Nullable Output<Double> lowerInclusive;
+    private @Nullable Output<Double> lowerInclusive;
 
-    public Output<Double> lowerInclusive() {
-        return this.lowerInclusive == null ? Codegen.empty() : this.lowerInclusive;
+    public Optional<Output<Double>> lowerInclusive() {
+        return Optional.ofNullable(this.lowerInclusive);
     }
 
     @Import(name="upperInclusive")
-      private final @Nullable Output<Double> upperInclusive;
+    private @Nullable Output<Double> upperInclusive;
 
-    public Output<Double> upperInclusive() {
-        return this.upperInclusive == null ? Codegen.empty() : this.upperInclusive;
+    public Optional<Output<Double>> upperInclusive() {
+        return Optional.ofNullable(this.upperInclusive);
     }
 
-    public FilterNumberFilterArgs(
-        @Nullable Output<Double> lowerInclusive,
-        @Nullable Output<Double> upperInclusive) {
-        this.lowerInclusive = lowerInclusive;
-        this.upperInclusive = upperInclusive;
-    }
+    private FilterNumberFilterArgs() {}
 
-    private FilterNumberFilterArgs() {
-        this.lowerInclusive = Codegen.empty();
-        this.upperInclusive = Codegen.empty();
+    private FilterNumberFilterArgs(FilterNumberFilterArgs $) {
+        this.lowerInclusive = $.lowerInclusive;
+        this.upperInclusive = $.upperInclusive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterNumberFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> lowerInclusive;
-        private @Nullable Output<Double> upperInclusive;
+        private FilterNumberFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterNumberFilterArgs();
         }
 
         public Builder(FilterNumberFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lowerInclusive = defaults.lowerInclusive;
-    	      this.upperInclusive = defaults.upperInclusive;
+            $ = new FilterNumberFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lowerInclusive(@Nullable Output<Double> lowerInclusive) {
-            this.lowerInclusive = lowerInclusive;
+            $.lowerInclusive = lowerInclusive;
             return this;
         }
-        public Builder lowerInclusive(@Nullable Double lowerInclusive) {
-            this.lowerInclusive = Codegen.ofNullable(lowerInclusive);
-            return this;
+
+        public Builder lowerInclusive(Double lowerInclusive) {
+            return lowerInclusive(Output.of(lowerInclusive));
         }
+
         public Builder upperInclusive(@Nullable Output<Double> upperInclusive) {
-            this.upperInclusive = upperInclusive;
+            $.upperInclusive = upperInclusive;
             return this;
         }
-        public Builder upperInclusive(@Nullable Double upperInclusive) {
-            this.upperInclusive = Codegen.ofNullable(upperInclusive);
-            return this;
-        }        public FilterNumberFilterArgs build() {
-            return new FilterNumberFilterArgs(lowerInclusive, upperInclusive);
+
+        public Builder upperInclusive(Double upperInclusive) {
+            return upperInclusive(Output.of(upperInclusive));
+        }
+
+        public FilterNumberFilterArgs build() {
+            return $;
         }
     }
+
 }

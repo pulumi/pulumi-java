@@ -13,45 +13,45 @@ public final class FlowSingularSourceProperties extends com.pulumi.resources.Inv
     public static final FlowSingularSourceProperties Empty = new FlowSingularSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowSingularSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowSingularSourceProperties() {}
 
-    private FlowSingularSourceProperties() {
-        this.object = null;
+    private FlowSingularSourceProperties(FlowSingularSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSingularSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowSingularSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSingularSourceProperties();
         }
 
         public Builder(FlowSingularSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowSingularSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowSingularSourceProperties build() {
-            return new FlowSingularSourceProperties(object);
+        }
+
+        public FlowSingularSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

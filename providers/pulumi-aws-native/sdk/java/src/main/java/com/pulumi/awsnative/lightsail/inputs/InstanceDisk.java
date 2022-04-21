@@ -25,10 +25,10 @@ public final class InstanceDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attachedTo")
-      private final @Nullable String attachedTo;
+    private @Nullable String attachedTo;
 
     public Optional<String> attachedTo() {
-        return this.attachedTo == null ? Optional.empty() : Optional.ofNullable(this.attachedTo);
+        return Optional.ofNullable(this.attachedTo);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attachmentState")
-      private final @Nullable String attachmentState;
+    private @Nullable String attachmentState;
 
     public Optional<String> attachmentState() {
-        return this.attachmentState == null ? Optional.empty() : Optional.ofNullable(this.attachmentState);
+        return Optional.ofNullable(this.attachmentState);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class InstanceDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -58,10 +58,10 @@ public final class InstanceDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iOPS")
-      private final @Nullable Integer iOPS;
+    private @Nullable Integer iOPS;
 
     public Optional<Integer> iOPS() {
-        return this.iOPS == null ? Optional.empty() : Optional.ofNullable(this.iOPS);
+        return Optional.ofNullable(this.iOPS);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isSystemDisk")
-      private final @Nullable Boolean isSystemDisk;
+    private @Nullable Boolean isSystemDisk;
 
     public Optional<Boolean> isSystemDisk() {
-        return this.isSystemDisk == null ? Optional.empty() : Optional.ofNullable(this.isSystemDisk);
+        return Optional.ofNullable(this.isSystemDisk);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class InstanceDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -91,100 +91,82 @@ public final class InstanceDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sizeInGb")
-      private final @Nullable String sizeInGb;
+    private @Nullable String sizeInGb;
 
     public Optional<String> sizeInGb() {
-        return this.sizeInGb == null ? Optional.empty() : Optional.ofNullable(this.sizeInGb);
+        return Optional.ofNullable(this.sizeInGb);
     }
 
-    public InstanceDisk(
-        @Nullable String attachedTo,
-        @Nullable String attachmentState,
-        String diskName,
-        @Nullable Integer iOPS,
-        @Nullable Boolean isSystemDisk,
-        String path,
-        @Nullable String sizeInGb) {
-        this.attachedTo = attachedTo;
-        this.attachmentState = attachmentState;
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.iOPS = iOPS;
-        this.isSystemDisk = isSystemDisk;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.sizeInGb = sizeInGb;
-    }
+    private InstanceDisk() {}
 
-    private InstanceDisk() {
-        this.attachedTo = null;
-        this.attachmentState = null;
-        this.diskName = null;
-        this.iOPS = null;
-        this.isSystemDisk = null;
-        this.path = null;
-        this.sizeInGb = null;
+    private InstanceDisk(InstanceDisk $) {
+        this.attachedTo = $.attachedTo;
+        this.attachmentState = $.attachmentState;
+        this.diskName = $.diskName;
+        this.iOPS = $.iOPS;
+        this.isSystemDisk = $.isSystemDisk;
+        this.path = $.path;
+        this.sizeInGb = $.sizeInGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceDisk defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String attachedTo;
-        private @Nullable String attachmentState;
-        private String diskName;
-        private @Nullable Integer iOPS;
-        private @Nullable Boolean isSystemDisk;
-        private String path;
-        private @Nullable String sizeInGb;
+        private InstanceDisk $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceDisk();
         }
 
         public Builder(InstanceDisk defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedTo = defaults.attachedTo;
-    	      this.attachmentState = defaults.attachmentState;
-    	      this.diskName = defaults.diskName;
-    	      this.iOPS = defaults.iOPS;
-    	      this.isSystemDisk = defaults.isSystemDisk;
-    	      this.path = defaults.path;
-    	      this.sizeInGb = defaults.sizeInGb;
+            $ = new InstanceDisk(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedTo(@Nullable String attachedTo) {
-            this.attachedTo = attachedTo;
+            $.attachedTo = attachedTo;
             return this;
         }
+
         public Builder attachmentState(@Nullable String attachmentState) {
-            this.attachmentState = attachmentState;
+            $.attachmentState = attachmentState;
             return this;
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder iOPS(@Nullable Integer iOPS) {
-            this.iOPS = iOPS;
+            $.iOPS = iOPS;
             return this;
         }
+
         public Builder isSystemDisk(@Nullable Boolean isSystemDisk) {
-            this.isSystemDisk = isSystemDisk;
+            $.isSystemDisk = isSystemDisk;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder sizeInGb(@Nullable String sizeInGb) {
-            this.sizeInGb = sizeInGb;
+            $.sizeInGb = sizeInGb;
             return this;
-        }        public InstanceDisk build() {
-            return new InstanceDisk(attachedTo, attachmentState, diskName, iOPS, isSystemDisk, path, sizeInGb);
+        }
+
+        public InstanceDisk build() {
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

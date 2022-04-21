@@ -18,78 +18,71 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy e
     public static final ClusterCapacityProviderAssociationsCapacityProviderStrategy Empty = new ClusterCapacityProviderAssociationsCapacityProviderStrategy();
 
     @Import(name="base")
-      private final @Nullable Integer base;
+    private @Nullable Integer base;
 
     public Optional<Integer> base() {
-        return this.base == null ? Optional.empty() : Optional.ofNullable(this.base);
+        return Optional.ofNullable(this.base);
     }
 
     @Import(name="capacityProvider", required=true)
-      private final Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider;
+    private Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider;
 
     public Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider() {
         return this.capacityProvider;
     }
 
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public ClusterCapacityProviderAssociationsCapacityProviderStrategy(
-        @Nullable Integer base,
-        Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider,
-        @Nullable Integer weight) {
-        this.base = base;
-        this.capacityProvider = Objects.requireNonNull(capacityProvider, "expected parameter 'capacityProvider' to be non-null");
-        this.weight = weight;
-    }
+    private ClusterCapacityProviderAssociationsCapacityProviderStrategy() {}
 
-    private ClusterCapacityProviderAssociationsCapacityProviderStrategy() {
-        this.base = null;
-        this.capacityProvider = null;
-        this.weight = null;
+    private ClusterCapacityProviderAssociationsCapacityProviderStrategy(ClusterCapacityProviderAssociationsCapacityProviderStrategy $) {
+        this.base = $.base;
+        this.capacityProvider = $.capacityProvider;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCapacityProviderAssociationsCapacityProviderStrategy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer base;
-        private Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider;
-        private @Nullable Integer weight;
+        private ClusterCapacityProviderAssociationsCapacityProviderStrategy $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCapacityProviderAssociationsCapacityProviderStrategy();
         }
 
         public Builder(ClusterCapacityProviderAssociationsCapacityProviderStrategy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base = defaults.base;
-    	      this.capacityProvider = defaults.capacityProvider;
-    	      this.weight = defaults.weight;
+            $ = new ClusterCapacityProviderAssociationsCapacityProviderStrategy(Objects.requireNonNull(defaults));
         }
 
         public Builder base(@Nullable Integer base) {
-            this.base = base;
+            $.base = base;
             return this;
         }
+
         public Builder capacityProvider(Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider) {
-            this.capacityProvider = Objects.requireNonNull(capacityProvider);
+            $.capacityProvider = capacityProvider;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public ClusterCapacityProviderAssociationsCapacityProviderStrategy build() {
-            return new ClusterCapacityProviderAssociationsCapacityProviderStrategy(base, capacityProvider, weight);
+        }
+
+        public ClusterCapacityProviderAssociationsCapacityProviderStrategy build() {
+            $.capacityProvider = Objects.requireNonNull($.capacityProvider, "expected parameter 'capacityProvider' to be non-null");
+            return $;
         }
     }
+
 }

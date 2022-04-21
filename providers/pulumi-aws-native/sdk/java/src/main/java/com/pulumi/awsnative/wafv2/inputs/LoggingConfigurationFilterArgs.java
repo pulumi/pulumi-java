@@ -8,7 +8,6 @@ import com.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="behavior", required=true)
-      private final Output<LoggingConfigurationFilterBehavior> behavior;
+    private Output<LoggingConfigurationFilterBehavior> behavior;
 
     public Output<LoggingConfigurationFilterBehavior> behavior() {
         return this.behavior;
@@ -33,7 +32,7 @@ public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<LoggingConfigurationConditionArgs>> conditions;
+    private Output<List<LoggingConfigurationConditionArgs>> conditions;
 
     public Output<List<LoggingConfigurationConditionArgs>> conditions() {
         return this.conditions;
@@ -44,79 +43,75 @@ public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="requirement", required=true)
-      private final Output<LoggingConfigurationFilterRequirement> requirement;
+    private Output<LoggingConfigurationFilterRequirement> requirement;
 
     public Output<LoggingConfigurationFilterRequirement> requirement() {
         return this.requirement;
     }
 
-    public LoggingConfigurationFilterArgs(
-        Output<LoggingConfigurationFilterBehavior> behavior,
-        Output<List<LoggingConfigurationConditionArgs>> conditions,
-        Output<LoggingConfigurationFilterRequirement> requirement) {
-        this.behavior = Objects.requireNonNull(behavior, "expected parameter 'behavior' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.requirement = Objects.requireNonNull(requirement, "expected parameter 'requirement' to be non-null");
-    }
+    private LoggingConfigurationFilterArgs() {}
 
-    private LoggingConfigurationFilterArgs() {
-        this.behavior = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.requirement = Codegen.empty();
+    private LoggingConfigurationFilterArgs(LoggingConfigurationFilterArgs $) {
+        this.behavior = $.behavior;
+        this.conditions = $.conditions;
+        this.requirement = $.requirement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<LoggingConfigurationFilterBehavior> behavior;
-        private Output<List<LoggingConfigurationConditionArgs>> conditions;
-        private Output<LoggingConfigurationFilterRequirement> requirement;
+        private LoggingConfigurationFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationFilterArgs();
         }
 
         public Builder(LoggingConfigurationFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.behavior = defaults.behavior;
-    	      this.conditions = defaults.conditions;
-    	      this.requirement = defaults.requirement;
+            $ = new LoggingConfigurationFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder behavior(Output<LoggingConfigurationFilterBehavior> behavior) {
-            this.behavior = Objects.requireNonNull(behavior);
+            $.behavior = behavior;
             return this;
         }
+
         public Builder behavior(LoggingConfigurationFilterBehavior behavior) {
-            this.behavior = Output.of(Objects.requireNonNull(behavior));
-            return this;
+            return behavior(Output.of(behavior));
         }
+
         public Builder conditions(Output<List<LoggingConfigurationConditionArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<LoggingConfigurationConditionArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(LoggingConfigurationConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder requirement(Output<LoggingConfigurationFilterRequirement> requirement) {
-            this.requirement = Objects.requireNonNull(requirement);
+            $.requirement = requirement;
             return this;
         }
+
         public Builder requirement(LoggingConfigurationFilterRequirement requirement) {
-            this.requirement = Output.of(Objects.requireNonNull(requirement));
-            return this;
-        }        public LoggingConfigurationFilterArgs build() {
-            return new LoggingConfigurationFilterArgs(behavior, conditions, requirement);
+            return requirement(Output.of(requirement));
+        }
+
+        public LoggingConfigurationFilterArgs build() {
+            $.behavior = Objects.requireNonNull($.behavior, "expected parameter 'behavior' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.requirement = Objects.requireNonNull($.requirement, "expected parameter 'requirement' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
     @Import(name="channelName", required=true)
-      private final String channelName;
+    private String channelName;
 
     public String channelName() {
         return this.channelName;
     }
 
-    public GetChannelArgs(String channelName) {
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
-    }
+    private GetChannelArgs() {}
 
-    private GetChannelArgs() {
-        this.channelName = null;
+    private GetChannelArgs(GetChannelArgs $) {
+        this.channelName = $.channelName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channelName;
+        private GetChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetChannelArgs();
         }
 
         public Builder(GetChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelName = defaults.channelName;
+            $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
-        }        public GetChannelArgs build() {
-            return new GetChannelArgs(channelName);
+        }
+
+        public GetChannelArgs build() {
+            $.channelName = Objects.requireNonNull($.channelName, "expected parameter 'channelName' to be non-null");
+            return $;
         }
     }
+
 }

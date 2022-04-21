@@ -16,94 +16,84 @@ public final class SpotFleetBlockDeviceMapping extends com.pulumi.resources.Invo
     public static final SpotFleetBlockDeviceMapping Empty = new SpotFleetBlockDeviceMapping();
 
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
     }
 
     @Import(name="ebs")
-      private final @Nullable SpotFleetEbsBlockDevice ebs;
+    private @Nullable SpotFleetEbsBlockDevice ebs;
 
     public Optional<SpotFleetEbsBlockDevice> ebs() {
-        return this.ebs == null ? Optional.empty() : Optional.ofNullable(this.ebs);
+        return Optional.ofNullable(this.ebs);
     }
 
     @Import(name="noDevice")
-      private final @Nullable String noDevice;
+    private @Nullable String noDevice;
 
     public Optional<String> noDevice() {
-        return this.noDevice == null ? Optional.empty() : Optional.ofNullable(this.noDevice);
+        return Optional.ofNullable(this.noDevice);
     }
 
     @Import(name="virtualName")
-      private final @Nullable String virtualName;
+    private @Nullable String virtualName;
 
     public Optional<String> virtualName() {
-        return this.virtualName == null ? Optional.empty() : Optional.ofNullable(this.virtualName);
+        return Optional.ofNullable(this.virtualName);
     }
 
-    public SpotFleetBlockDeviceMapping(
-        String deviceName,
-        @Nullable SpotFleetEbsBlockDevice ebs,
-        @Nullable String noDevice,
-        @Nullable String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.ebs = ebs;
-        this.noDevice = noDevice;
-        this.virtualName = virtualName;
-    }
+    private SpotFleetBlockDeviceMapping() {}
 
-    private SpotFleetBlockDeviceMapping() {
-        this.deviceName = null;
-        this.ebs = null;
-        this.noDevice = null;
-        this.virtualName = null;
+    private SpotFleetBlockDeviceMapping(SpotFleetBlockDeviceMapping $) {
+        this.deviceName = $.deviceName;
+        this.ebs = $.ebs;
+        this.noDevice = $.noDevice;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetBlockDeviceMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private @Nullable SpotFleetEbsBlockDevice ebs;
-        private @Nullable String noDevice;
-        private @Nullable String virtualName;
+        private SpotFleetBlockDeviceMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetBlockDeviceMapping();
         }
 
         public Builder(SpotFleetBlockDeviceMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.ebs = defaults.ebs;
-    	      this.noDevice = defaults.noDevice;
-    	      this.virtualName = defaults.virtualName;
+            $ = new SpotFleetBlockDeviceMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder ebs(@Nullable SpotFleetEbsBlockDevice ebs) {
-            this.ebs = ebs;
+            $.ebs = ebs;
             return this;
         }
+
         public Builder noDevice(@Nullable String noDevice) {
-            this.noDevice = noDevice;
+            $.noDevice = noDevice;
             return this;
         }
+
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = virtualName;
+            $.virtualName = virtualName;
             return this;
-        }        public SpotFleetBlockDeviceMapping build() {
-            return new SpotFleetBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
+        }
+
+        public SpotFleetBlockDeviceMapping build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ReportDeliveryChannelProperties extends com.pulumi.resources.
      * 
      */
     @Import(name="formats")
-      private final @Nullable List<String> formats;
+    private @Nullable List<String> formats;
 
-    public List<String> formats() {
-        return this.formats == null ? List.of() : this.formats;
+    public Optional<List<String>> formats() {
+        return Optional.ofNullable(this.formats);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ReportDeliveryChannelProperties extends com.pulumi.resources.
      * 
      */
     @Import(name="s3BucketName", required=true)
-      private final String s3BucketName;
+    private String s3BucketName;
 
     public String s3BucketName() {
         return this.s3BucketName;
@@ -46,67 +46,61 @@ public final class ReportDeliveryChannelProperties extends com.pulumi.resources.
      * 
      */
     @Import(name="s3KeyPrefix")
-      private final @Nullable String s3KeyPrefix;
+    private @Nullable String s3KeyPrefix;
 
     public Optional<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public ReportDeliveryChannelProperties(
-        @Nullable List<String> formats,
-        String s3BucketName,
-        @Nullable String s3KeyPrefix) {
-        this.formats = formats;
-        this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private ReportDeliveryChannelProperties() {}
 
-    private ReportDeliveryChannelProperties() {
-        this.formats = List.of();
-        this.s3BucketName = null;
-        this.s3KeyPrefix = null;
+    private ReportDeliveryChannelProperties(ReportDeliveryChannelProperties $) {
+        this.formats = $.formats;
+        this.s3BucketName = $.s3BucketName;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportDeliveryChannelProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> formats;
-        private String s3BucketName;
-        private @Nullable String s3KeyPrefix;
+        private ReportDeliveryChannelProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportDeliveryChannelProperties();
         }
 
         public Builder(ReportDeliveryChannelProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.formats = defaults.formats;
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new ReportDeliveryChannelProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder formats(@Nullable List<String> formats) {
-            this.formats = formats;
+            $.formats = formats;
             return this;
         }
+
         public Builder formats(String... formats) {
             return formats(List.of(formats));
         }
+
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Objects.requireNonNull(s3BucketName);
+            $.s3BucketName = s3BucketName;
             return this;
         }
+
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }        public ReportDeliveryChannelProperties build() {
-            return new ReportDeliveryChannelProperties(formats, s3BucketName, s3KeyPrefix);
+        }
+
+        public ReportDeliveryChannelProperties build() {
+            $.s3BucketName = Objects.requireNonNull($.s3BucketName, "expected parameter 's3BucketName' to be non-null");
+            return $;
         }
     }
+
 }

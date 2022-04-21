@@ -7,7 +7,6 @@ import com.pulumi.awsnative.s3.enums.BucketReplicationTimeStatus;
 import com.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -16,70 +15,67 @@ public final class BucketReplicationTimeArgs extends com.pulumi.resources.Resour
     public static final BucketReplicationTimeArgs Empty = new BucketReplicationTimeArgs();
 
     @Import(name="status", required=true)
-      private final Output<BucketReplicationTimeStatus> status;
+    private Output<BucketReplicationTimeStatus> status;
 
     public Output<BucketReplicationTimeStatus> status() {
         return this.status;
     }
 
     @Import(name="time", required=true)
-      private final Output<BucketReplicationTimeValueArgs> time;
+    private Output<BucketReplicationTimeValueArgs> time;
 
     public Output<BucketReplicationTimeValueArgs> time() {
         return this.time;
     }
 
-    public BucketReplicationTimeArgs(
-        Output<BucketReplicationTimeStatus> status,
-        Output<BucketReplicationTimeValueArgs> time) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private BucketReplicationTimeArgs() {}
 
-    private BucketReplicationTimeArgs() {
-        this.status = Codegen.empty();
-        this.time = Codegen.empty();
+    private BucketReplicationTimeArgs(BucketReplicationTimeArgs $) {
+        this.status = $.status;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationTimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketReplicationTimeStatus> status;
-        private Output<BucketReplicationTimeValueArgs> time;
+        private BucketReplicationTimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationTimeArgs();
         }
 
         public Builder(BucketReplicationTimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.time = defaults.time;
+            $ = new BucketReplicationTimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<BucketReplicationTimeStatus> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(BucketReplicationTimeStatus status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
+            return status(Output.of(status));
         }
+
         public Builder time(Output<BucketReplicationTimeValueArgs> time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
         }
+
         public Builder time(BucketReplicationTimeValueArgs time) {
-            this.time = Output.of(Objects.requireNonNull(time));
-            return this;
-        }        public BucketReplicationTimeArgs build() {
-            return new BucketReplicationTimeArgs(status, time);
+            return time(Output.of(time));
+        }
+
+        public BucketReplicationTimeArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

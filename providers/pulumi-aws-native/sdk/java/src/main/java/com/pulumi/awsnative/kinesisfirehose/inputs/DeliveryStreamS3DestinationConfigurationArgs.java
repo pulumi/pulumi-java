@@ -9,9 +9,9 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamCloudWatchLoggi
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,190 +20,169 @@ public final class DeliveryStreamS3DestinationConfigurationArgs extends com.pulu
     public static final DeliveryStreamS3DestinationConfigurationArgs Empty = new DeliveryStreamS3DestinationConfigurationArgs();
 
     @Import(name="bucketARN", required=true)
-      private final Output<String> bucketARN;
+    private Output<String> bucketARN;
 
     public Output<String> bucketARN() {
         return this.bucketARN;
     }
 
     @Import(name="bufferingHints")
-      private final @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
+    private @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
-    public Output<DeliveryStreamBufferingHintsArgs> bufferingHints() {
-        return this.bufferingHints == null ? Codegen.empty() : this.bufferingHints;
+    public Optional<Output<DeliveryStreamBufferingHintsArgs>> bufferingHints() {
+        return Optional.ofNullable(this.bufferingHints);
     }
 
     @Import(name="cloudWatchLoggingOptions")
-      private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+    private @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
+    public Optional<Output<DeliveryStreamCloudWatchLoggingOptionsArgs>> cloudWatchLoggingOptions() {
+        return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @Import(name="compressionFormat")
-      private final @Nullable Output<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat;
+    private @Nullable Output<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat;
 
-    public Output<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat() {
-        return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
+    public Optional<Output<DeliveryStreamS3DestinationConfigurationCompressionFormat>> compressionFormat() {
+        return Optional.ofNullable(this.compressionFormat);
     }
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
+    private @Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<DeliveryStreamEncryptionConfigurationArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="errorOutputPrefix")
-      private final @Nullable Output<String> errorOutputPrefix;
+    private @Nullable Output<String> errorOutputPrefix;
 
-    public Output<String> errorOutputPrefix() {
-        return this.errorOutputPrefix == null ? Codegen.empty() : this.errorOutputPrefix;
+    public Optional<Output<String>> errorOutputPrefix() {
+        return Optional.ofNullable(this.errorOutputPrefix);
     }
 
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="roleARN", required=true)
-      private final Output<String> roleARN;
+    private Output<String> roleARN;
 
     public Output<String> roleARN() {
         return this.roleARN;
     }
 
-    public DeliveryStreamS3DestinationConfigurationArgs(
-        Output<String> bucketARN,
-        @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints,
-        @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions,
-        @Nullable Output<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat,
-        @Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Output<String> errorOutputPrefix,
-        @Nullable Output<String> prefix,
-        Output<String> roleARN) {
-        this.bucketARN = Objects.requireNonNull(bucketARN, "expected parameter 'bucketARN' to be non-null");
-        this.bufferingHints = bufferingHints;
-        this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
-        this.compressionFormat = compressionFormat;
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.errorOutputPrefix = errorOutputPrefix;
-        this.prefix = prefix;
-        this.roleARN = Objects.requireNonNull(roleARN, "expected parameter 'roleARN' to be non-null");
-    }
+    private DeliveryStreamS3DestinationConfigurationArgs() {}
 
-    private DeliveryStreamS3DestinationConfigurationArgs() {
-        this.bucketARN = Codegen.empty();
-        this.bufferingHints = Codegen.empty();
-        this.cloudWatchLoggingOptions = Codegen.empty();
-        this.compressionFormat = Codegen.empty();
-        this.encryptionConfiguration = Codegen.empty();
-        this.errorOutputPrefix = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.roleARN = Codegen.empty();
+    private DeliveryStreamS3DestinationConfigurationArgs(DeliveryStreamS3DestinationConfigurationArgs $) {
+        this.bucketARN = $.bucketARN;
+        this.bufferingHints = $.bufferingHints;
+        this.cloudWatchLoggingOptions = $.cloudWatchLoggingOptions;
+        this.compressionFormat = $.compressionFormat;
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.errorOutputPrefix = $.errorOutputPrefix;
+        this.prefix = $.prefix;
+        this.roleARN = $.roleARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamS3DestinationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketARN;
-        private @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
-        private @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
-        private @Nullable Output<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat;
-        private @Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Output<String> errorOutputPrefix;
-        private @Nullable Output<String> prefix;
-        private Output<String> roleARN;
+        private DeliveryStreamS3DestinationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamS3DestinationConfigurationArgs();
         }
 
         public Builder(DeliveryStreamS3DestinationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketARN = defaults.bucketARN;
-    	      this.bufferingHints = defaults.bufferingHints;
-    	      this.cloudWatchLoggingOptions = defaults.cloudWatchLoggingOptions;
-    	      this.compressionFormat = defaults.compressionFormat;
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.errorOutputPrefix = defaults.errorOutputPrefix;
-    	      this.prefix = defaults.prefix;
-    	      this.roleARN = defaults.roleARN;
+            $ = new DeliveryStreamS3DestinationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketARN(Output<String> bucketARN) {
-            this.bucketARN = Objects.requireNonNull(bucketARN);
+            $.bucketARN = bucketARN;
             return this;
         }
+
         public Builder bucketARN(String bucketARN) {
-            this.bucketARN = Output.of(Objects.requireNonNull(bucketARN));
-            return this;
+            return bucketARN(Output.of(bucketARN));
         }
+
         public Builder bufferingHints(@Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints) {
-            this.bufferingHints = bufferingHints;
+            $.bufferingHints = bufferingHints;
             return this;
         }
-        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
-            this.bufferingHints = Codegen.ofNullable(bufferingHints);
-            return this;
+
+        public Builder bufferingHints(DeliveryStreamBufferingHintsArgs bufferingHints) {
+            return bufferingHints(Output.of(bufferingHints));
         }
+
         public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
+            $.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = Codegen.ofNullable(cloudWatchLoggingOptions);
-            return this;
+
+        public Builder cloudWatchLoggingOptions(DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
+            return cloudWatchLoggingOptions(Output.of(cloudWatchLoggingOptions));
         }
+
         public Builder compressionFormat(@Nullable Output<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat) {
-            this.compressionFormat = compressionFormat;
+            $.compressionFormat = compressionFormat;
             return this;
         }
-        public Builder compressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
-            this.compressionFormat = Codegen.ofNullable(compressionFormat);
-            return this;
+
+        public Builder compressionFormat(DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
+            return compressionFormat(Output.of(compressionFormat));
         }
+
         public Builder encryptionConfiguration(@Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
-            this.errorOutputPrefix = errorOutputPrefix;
+            $.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
-        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
-            this.errorOutputPrefix = Codegen.ofNullable(errorOutputPrefix);
-            return this;
+
+        public Builder errorOutputPrefix(String errorOutputPrefix) {
+            return errorOutputPrefix(Output.of(errorOutputPrefix));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder roleARN(Output<String> roleARN) {
-            this.roleARN = Objects.requireNonNull(roleARN);
+            $.roleARN = roleARN;
             return this;
         }
+
         public Builder roleARN(String roleARN) {
-            this.roleARN = Output.of(Objects.requireNonNull(roleARN));
-            return this;
-        }        public DeliveryStreamS3DestinationConfigurationArgs build() {
-            return new DeliveryStreamS3DestinationConfigurationArgs(bucketARN, bufferingHints, cloudWatchLoggingOptions, compressionFormat, encryptionConfiguration, errorOutputPrefix, prefix, roleARN);
+            return roleARN(Output.of(roleARN));
+        }
+
+        public DeliveryStreamS3DestinationConfigurationArgs build() {
+            $.bucketARN = Objects.requireNonNull($.bucketARN, "expected parameter 'bucketARN' to be non-null");
+            $.roleARN = Objects.requireNonNull($.roleARN, "expected parameter 'roleARN' to be non-null");
+            return $;
         }
     }
+
 }

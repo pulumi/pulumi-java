@@ -24,62 +24,57 @@ public final class FlowFailoverConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recoveryWindow")
-      private final @Nullable Integer recoveryWindow;
+    private @Nullable Integer recoveryWindow;
 
     public Optional<Integer> recoveryWindow() {
-        return this.recoveryWindow == null ? Optional.empty() : Optional.ofNullable(this.recoveryWindow);
+        return Optional.ofNullable(this.recoveryWindow);
     }
 
     @Import(name="state")
-      private final @Nullable FlowFailoverConfigState state;
+    private @Nullable FlowFailoverConfigState state;
 
     public Optional<FlowFailoverConfigState> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public FlowFailoverConfig(
-        @Nullable Integer recoveryWindow,
-        @Nullable FlowFailoverConfigState state) {
-        this.recoveryWindow = recoveryWindow;
-        this.state = state;
-    }
+    private FlowFailoverConfig() {}
 
-    private FlowFailoverConfig() {
-        this.recoveryWindow = null;
-        this.state = null;
+    private FlowFailoverConfig(FlowFailoverConfig $) {
+        this.recoveryWindow = $.recoveryWindow;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowFailoverConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer recoveryWindow;
-        private @Nullable FlowFailoverConfigState state;
+        private FlowFailoverConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowFailoverConfig();
         }
 
         public Builder(FlowFailoverConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recoveryWindow = defaults.recoveryWindow;
-    	      this.state = defaults.state;
+            $ = new FlowFailoverConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder recoveryWindow(@Nullable Integer recoveryWindow) {
-            this.recoveryWindow = recoveryWindow;
+            $.recoveryWindow = recoveryWindow;
             return this;
         }
+
         public Builder state(@Nullable FlowFailoverConfigState state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public FlowFailoverConfig build() {
-            return new FlowFailoverConfig(recoveryWindow, state);
+        }
+
+        public FlowFailoverConfig build() {
+            return $;
         }
     }
+
 }

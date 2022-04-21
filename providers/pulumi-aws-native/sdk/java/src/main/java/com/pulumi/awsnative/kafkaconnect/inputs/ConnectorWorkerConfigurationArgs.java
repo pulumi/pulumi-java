@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ConnectorWorkerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="revision", required=true)
-      private final Output<Integer> revision;
+    private Output<Integer> revision;
 
     public Output<Integer> revision() {
         return this.revision;
@@ -35,63 +34,60 @@ public final class ConnectorWorkerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workerConfigurationArn", required=true)
-      private final Output<String> workerConfigurationArn;
+    private Output<String> workerConfigurationArn;
 
     public Output<String> workerConfigurationArn() {
         return this.workerConfigurationArn;
     }
 
-    public ConnectorWorkerConfigurationArgs(
-        Output<Integer> revision,
-        Output<String> workerConfigurationArn) {
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn, "expected parameter 'workerConfigurationArn' to be non-null");
-    }
+    private ConnectorWorkerConfigurationArgs() {}
 
-    private ConnectorWorkerConfigurationArgs() {
-        this.revision = Codegen.empty();
-        this.workerConfigurationArn = Codegen.empty();
+    private ConnectorWorkerConfigurationArgs(ConnectorWorkerConfigurationArgs $) {
+        this.revision = $.revision;
+        this.workerConfigurationArn = $.workerConfigurationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorWorkerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> revision;
-        private Output<String> workerConfigurationArn;
+        private ConnectorWorkerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorWorkerConfigurationArgs();
         }
 
         public Builder(ConnectorWorkerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revision = defaults.revision;
-    	      this.workerConfigurationArn = defaults.workerConfigurationArn;
+            $ = new ConnectorWorkerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder revision(Output<Integer> revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder revision(Integer revision) {
-            this.revision = Output.of(Objects.requireNonNull(revision));
-            return this;
+            return revision(Output.of(revision));
         }
+
         public Builder workerConfigurationArn(Output<String> workerConfigurationArn) {
-            this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
+            $.workerConfigurationArn = workerConfigurationArn;
             return this;
         }
+
         public Builder workerConfigurationArn(String workerConfigurationArn) {
-            this.workerConfigurationArn = Output.of(Objects.requireNonNull(workerConfigurationArn));
-            return this;
-        }        public ConnectorWorkerConfigurationArgs build() {
-            return new ConnectorWorkerConfigurationArgs(revision, workerConfigurationArn);
+            return workerConfigurationArn(Output.of(workerConfigurationArn));
+        }
+
+        public ConnectorWorkerConfigurationArgs build() {
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.workerConfigurationArn = Objects.requireNonNull($.workerConfigurationArn, "expected parameter 'workerConfigurationArn' to be non-null");
+            return $;
         }
     }
+
 }

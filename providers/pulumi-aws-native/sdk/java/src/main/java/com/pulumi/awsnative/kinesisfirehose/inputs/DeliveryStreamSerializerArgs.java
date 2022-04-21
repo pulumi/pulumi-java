@@ -7,8 +7,8 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOrcSerDeArgs;
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamParquetSerDeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DeliveryStreamSerializerArgs extends com.pulumi.resources.Res
     public static final DeliveryStreamSerializerArgs Empty = new DeliveryStreamSerializerArgs();
 
     @Import(name="orcSerDe")
-      private final @Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe;
+    private @Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe;
 
-    public Output<DeliveryStreamOrcSerDeArgs> orcSerDe() {
-        return this.orcSerDe == null ? Codegen.empty() : this.orcSerDe;
+    public Optional<Output<DeliveryStreamOrcSerDeArgs>> orcSerDe() {
+        return Optional.ofNullable(this.orcSerDe);
     }
 
     @Import(name="parquetSerDe")
-      private final @Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe;
+    private @Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe;
 
-    public Output<DeliveryStreamParquetSerDeArgs> parquetSerDe() {
-        return this.parquetSerDe == null ? Codegen.empty() : this.parquetSerDe;
+    public Optional<Output<DeliveryStreamParquetSerDeArgs>> parquetSerDe() {
+        return Optional.ofNullable(this.parquetSerDe);
     }
 
-    public DeliveryStreamSerializerArgs(
-        @Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe,
-        @Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe) {
-        this.orcSerDe = orcSerDe;
-        this.parquetSerDe = parquetSerDe;
-    }
+    private DeliveryStreamSerializerArgs() {}
 
-    private DeliveryStreamSerializerArgs() {
-        this.orcSerDe = Codegen.empty();
-        this.parquetSerDe = Codegen.empty();
+    private DeliveryStreamSerializerArgs(DeliveryStreamSerializerArgs $) {
+        this.orcSerDe = $.orcSerDe;
+        this.parquetSerDe = $.parquetSerDe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamSerializerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe;
-        private @Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe;
+        private DeliveryStreamSerializerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamSerializerArgs();
         }
 
         public Builder(DeliveryStreamSerializerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.orcSerDe = defaults.orcSerDe;
-    	      this.parquetSerDe = defaults.parquetSerDe;
+            $ = new DeliveryStreamSerializerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder orcSerDe(@Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe) {
-            this.orcSerDe = orcSerDe;
+            $.orcSerDe = orcSerDe;
             return this;
         }
-        public Builder orcSerDe(@Nullable DeliveryStreamOrcSerDeArgs orcSerDe) {
-            this.orcSerDe = Codegen.ofNullable(orcSerDe);
-            return this;
+
+        public Builder orcSerDe(DeliveryStreamOrcSerDeArgs orcSerDe) {
+            return orcSerDe(Output.of(orcSerDe));
         }
+
         public Builder parquetSerDe(@Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe) {
-            this.parquetSerDe = parquetSerDe;
+            $.parquetSerDe = parquetSerDe;
             return this;
         }
-        public Builder parquetSerDe(@Nullable DeliveryStreamParquetSerDeArgs parquetSerDe) {
-            this.parquetSerDe = Codegen.ofNullable(parquetSerDe);
-            return this;
-        }        public DeliveryStreamSerializerArgs build() {
-            return new DeliveryStreamSerializerArgs(orcSerDe, parquetSerDe);
+
+        public Builder parquetSerDe(DeliveryStreamParquetSerDeArgs parquetSerDe) {
+            return parquetSerDe(Output.of(parquetSerDe));
+        }
+
+        public DeliveryStreamSerializerArgs build() {
+            return $;
         }
     }
+
 }

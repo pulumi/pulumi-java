@@ -18,94 +18,85 @@ public final class RuleGroupRateBasedStatement extends com.pulumi.resources.Invo
     public static final RuleGroupRateBasedStatement Empty = new RuleGroupRateBasedStatement();
 
     @Import(name="aggregateKeyType", required=true)
-      private final RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType;
+    private RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType;
 
     public RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @Import(name="forwardedIPConfig")
-      private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
+    private @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<RuleGroupForwardedIPConfiguration> forwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
+        return Optional.ofNullable(this.forwardedIPConfig);
     }
 
     @Import(name="limit", required=true)
-      private final Integer limit;
+    private Integer limit;
 
     public Integer limit() {
         return this.limit;
     }
 
     @Import(name="scopeDownStatement")
-      private final @Nullable RuleGroupStatement scopeDownStatement;
+    private @Nullable RuleGroupStatement scopeDownStatement;
 
     public Optional<RuleGroupStatement> scopeDownStatement() {
-        return this.scopeDownStatement == null ? Optional.empty() : Optional.ofNullable(this.scopeDownStatement);
+        return Optional.ofNullable(this.scopeDownStatement);
     }
 
-    public RuleGroupRateBasedStatement(
-        RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType,
-        @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
-        Integer limit,
-        @Nullable RuleGroupStatement scopeDownStatement) {
-        this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType, "expected parameter 'aggregateKeyType' to be non-null");
-        this.forwardedIPConfig = forwardedIPConfig;
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.scopeDownStatement = scopeDownStatement;
-    }
+    private RuleGroupRateBasedStatement() {}
 
-    private RuleGroupRateBasedStatement() {
-        this.aggregateKeyType = null;
-        this.forwardedIPConfig = null;
-        this.limit = null;
-        this.scopeDownStatement = null;
+    private RuleGroupRateBasedStatement(RuleGroupRateBasedStatement $) {
+        this.aggregateKeyType = $.aggregateKeyType;
+        this.forwardedIPConfig = $.forwardedIPConfig;
+        this.limit = $.limit;
+        this.scopeDownStatement = $.scopeDownStatement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRateBasedStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType;
-        private @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
-        private Integer limit;
-        private @Nullable RuleGroupStatement scopeDownStatement;
+        private RuleGroupRateBasedStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRateBasedStatement();
         }
 
         public Builder(RuleGroupRateBasedStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregateKeyType = defaults.aggregateKeyType;
-    	      this.forwardedIPConfig = defaults.forwardedIPConfig;
-    	      this.limit = defaults.limit;
-    	      this.scopeDownStatement = defaults.scopeDownStatement;
+            $ = new RuleGroupRateBasedStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
-            this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
+            $.aggregateKeyType = aggregateKeyType;
             return this;
         }
+
         public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
-            this.forwardedIPConfig = forwardedIPConfig;
+            $.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
+
         public Builder limit(Integer limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder scopeDownStatement(@Nullable RuleGroupStatement scopeDownStatement) {
-            this.scopeDownStatement = scopeDownStatement;
+            $.scopeDownStatement = scopeDownStatement;
             return this;
-        }        public RuleGroupRateBasedStatement build() {
-            return new RuleGroupRateBasedStatement(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
+        }
+
+        public RuleGroupRateBasedStatement build() {
+            $.aggregateKeyType = Objects.requireNonNull($.aggregateKeyType, "expected parameter 'aggregateKeyType' to be non-null");
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetDatasetArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetDatasetArgs() {}
 
-    private GetDatasetArgs() {
-        this.name = null;
+    private GetDatasetArgs(GetDatasetArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatasetArgs();
         }
 
         public Builder(GetDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetDatasetArgs build() {
-            return new GetDatasetArgs(name);
+        }
+
+        public GetDatasetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleQueryArgumentPr
 import com.pulumi.awsnative.wafv2.inputs.WebACLJsonBodyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allQueryArguments")
-      private final @Nullable Output<Object> allQueryArguments;
+    private @Nullable Output<Object> allQueryArguments;
 
-    public Output<Object> allQueryArguments() {
-        return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
+    public Optional<Output<Object>> allQueryArguments() {
+        return Optional.ofNullable(this.allQueryArguments);
     }
 
     /**
@@ -38,17 +38,17 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<Object> body;
+    private @Nullable Output<Object> body;
 
-    public Output<Object> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<Object>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     @Import(name="jsonBody")
-      private final @Nullable Output<WebACLJsonBodyArgs> jsonBody;
+    private @Nullable Output<WebACLJsonBodyArgs> jsonBody;
 
-    public Output<WebACLJsonBodyArgs> jsonBody() {
-        return this.jsonBody == null ? Codegen.empty() : this.jsonBody;
+    public Optional<Output<WebACLJsonBodyArgs>> jsonBody() {
+        return Optional.ofNullable(this.jsonBody);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<Object> method;
+    private @Nullable Output<Object> method;
 
-    public Output<Object> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<Object>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -67,17 +67,17 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queryString")
-      private final @Nullable Output<Object> queryString;
+    private @Nullable Output<Object> queryString;
 
-    public Output<Object> queryString() {
-        return this.queryString == null ? Codegen.empty() : this.queryString;
+    public Optional<Output<Object>> queryString() {
+        return Optional.ofNullable(this.queryString);
     }
 
     @Import(name="singleHeader")
-      private final @Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
+    private @Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
-    public Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader() {
-        return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
+    public Optional<Output<WebACLFieldToMatchSingleHeaderPropertiesArgs>> singleHeader() {
+        return Optional.ofNullable(this.singleHeader);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="singleQueryArgument")
-      private final @Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
+    private @Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
-    public Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument() {
-        return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
+    public Optional<Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs>> singleQueryArgument() {
+        return Optional.ofNullable(this.singleQueryArgument);
     }
 
     /**
@@ -96,141 +96,118 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="uriPath")
-      private final @Nullable Output<Object> uriPath;
+    private @Nullable Output<Object> uriPath;
 
-    public Output<Object> uriPath() {
-        return this.uriPath == null ? Codegen.empty() : this.uriPath;
+    public Optional<Output<Object>> uriPath() {
+        return Optional.ofNullable(this.uriPath);
     }
 
-    public WebACLFieldToMatchArgs(
-        @Nullable Output<Object> allQueryArguments,
-        @Nullable Output<Object> body,
-        @Nullable Output<WebACLJsonBodyArgs> jsonBody,
-        @Nullable Output<Object> method,
-        @Nullable Output<Object> queryString,
-        @Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader,
-        @Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument,
-        @Nullable Output<Object> uriPath) {
-        this.allQueryArguments = allQueryArguments;
-        this.body = body;
-        this.jsonBody = jsonBody;
-        this.method = method;
-        this.queryString = queryString;
-        this.singleHeader = singleHeader;
-        this.singleQueryArgument = singleQueryArgument;
-        this.uriPath = uriPath;
-    }
+    private WebACLFieldToMatchArgs() {}
 
-    private WebACLFieldToMatchArgs() {
-        this.allQueryArguments = Codegen.empty();
-        this.body = Codegen.empty();
-        this.jsonBody = Codegen.empty();
-        this.method = Codegen.empty();
-        this.queryString = Codegen.empty();
-        this.singleHeader = Codegen.empty();
-        this.singleQueryArgument = Codegen.empty();
-        this.uriPath = Codegen.empty();
+    private WebACLFieldToMatchArgs(WebACLFieldToMatchArgs $) {
+        this.allQueryArguments = $.allQueryArguments;
+        this.body = $.body;
+        this.jsonBody = $.jsonBody;
+        this.method = $.method;
+        this.queryString = $.queryString;
+        this.singleHeader = $.singleHeader;
+        this.singleQueryArgument = $.singleQueryArgument;
+        this.uriPath = $.uriPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLFieldToMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> allQueryArguments;
-        private @Nullable Output<Object> body;
-        private @Nullable Output<WebACLJsonBodyArgs> jsonBody;
-        private @Nullable Output<Object> method;
-        private @Nullable Output<Object> queryString;
-        private @Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
-        private @Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
-        private @Nullable Output<Object> uriPath;
+        private WebACLFieldToMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLFieldToMatchArgs();
         }
 
         public Builder(WebACLFieldToMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allQueryArguments = defaults.allQueryArguments;
-    	      this.body = defaults.body;
-    	      this.jsonBody = defaults.jsonBody;
-    	      this.method = defaults.method;
-    	      this.queryString = defaults.queryString;
-    	      this.singleHeader = defaults.singleHeader;
-    	      this.singleQueryArgument = defaults.singleQueryArgument;
-    	      this.uriPath = defaults.uriPath;
+            $ = new WebACLFieldToMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allQueryArguments(@Nullable Output<Object> allQueryArguments) {
-            this.allQueryArguments = allQueryArguments;
+            $.allQueryArguments = allQueryArguments;
             return this;
         }
-        public Builder allQueryArguments(@Nullable Object allQueryArguments) {
-            this.allQueryArguments = Codegen.ofNullable(allQueryArguments);
-            return this;
+
+        public Builder allQueryArguments(Object allQueryArguments) {
+            return allQueryArguments(Output.of(allQueryArguments));
         }
+
         public Builder body(@Nullable Output<Object> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable Object body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(Object body) {
+            return body(Output.of(body));
         }
+
         public Builder jsonBody(@Nullable Output<WebACLJsonBodyArgs> jsonBody) {
-            this.jsonBody = jsonBody;
+            $.jsonBody = jsonBody;
             return this;
         }
-        public Builder jsonBody(@Nullable WebACLJsonBodyArgs jsonBody) {
-            this.jsonBody = Codegen.ofNullable(jsonBody);
-            return this;
+
+        public Builder jsonBody(WebACLJsonBodyArgs jsonBody) {
+            return jsonBody(Output.of(jsonBody));
         }
+
         public Builder method(@Nullable Output<Object> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable Object method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(Object method) {
+            return method(Output.of(method));
         }
+
         public Builder queryString(@Nullable Output<Object> queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
-        public Builder queryString(@Nullable Object queryString) {
-            this.queryString = Codegen.ofNullable(queryString);
-            return this;
+
+        public Builder queryString(Object queryString) {
+            return queryString(Output.of(queryString));
         }
+
         public Builder singleHeader(@Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
-            this.singleHeader = singleHeader;
+            $.singleHeader = singleHeader;
             return this;
         }
-        public Builder singleHeader(@Nullable WebACLFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
-            this.singleHeader = Codegen.ofNullable(singleHeader);
-            return this;
+
+        public Builder singleHeader(WebACLFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
+            return singleHeader(Output.of(singleHeader));
         }
+
         public Builder singleQueryArgument(@Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument) {
-            this.singleQueryArgument = singleQueryArgument;
+            $.singleQueryArgument = singleQueryArgument;
             return this;
         }
-        public Builder singleQueryArgument(@Nullable WebACLFieldToMatchSingleQueryArgumentPropertiesArgs singleQueryArgument) {
-            this.singleQueryArgument = Codegen.ofNullable(singleQueryArgument);
-            return this;
+
+        public Builder singleQueryArgument(WebACLFieldToMatchSingleQueryArgumentPropertiesArgs singleQueryArgument) {
+            return singleQueryArgument(Output.of(singleQueryArgument));
         }
+
         public Builder uriPath(@Nullable Output<Object> uriPath) {
-            this.uriPath = uriPath;
+            $.uriPath = uriPath;
             return this;
         }
-        public Builder uriPath(@Nullable Object uriPath) {
-            this.uriPath = Codegen.ofNullable(uriPath);
-            return this;
-        }        public WebACLFieldToMatchArgs build() {
-            return new WebACLFieldToMatchArgs(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
+
+        public Builder uriPath(Object uriPath) {
+            return uriPath(Output.of(uriPath));
+        }
+
+        public WebACLFieldToMatchArgs build() {
+            return $;
         }
     }
+
 }

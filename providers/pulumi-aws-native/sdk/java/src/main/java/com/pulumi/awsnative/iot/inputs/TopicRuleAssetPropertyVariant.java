@@ -15,94 +15,83 @@ public final class TopicRuleAssetPropertyVariant extends com.pulumi.resources.In
     public static final TopicRuleAssetPropertyVariant Empty = new TopicRuleAssetPropertyVariant();
 
     @Import(name="booleanValue")
-      private final @Nullable String booleanValue;
+    private @Nullable String booleanValue;
 
     public Optional<String> booleanValue() {
-        return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
+        return Optional.ofNullable(this.booleanValue);
     }
 
     @Import(name="doubleValue")
-      private final @Nullable String doubleValue;
+    private @Nullable String doubleValue;
 
     public Optional<String> doubleValue() {
-        return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
+        return Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="integerValue")
-      private final @Nullable String integerValue;
+    private @Nullable String integerValue;
 
     public Optional<String> integerValue() {
-        return this.integerValue == null ? Optional.empty() : Optional.ofNullable(this.integerValue);
+        return Optional.ofNullable(this.integerValue);
     }
 
     @Import(name="stringValue")
-      private final @Nullable String stringValue;
+    private @Nullable String stringValue;
 
     public Optional<String> stringValue() {
-        return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
+        return Optional.ofNullable(this.stringValue);
     }
 
-    public TopicRuleAssetPropertyVariant(
-        @Nullable String booleanValue,
-        @Nullable String doubleValue,
-        @Nullable String integerValue,
-        @Nullable String stringValue) {
-        this.booleanValue = booleanValue;
-        this.doubleValue = doubleValue;
-        this.integerValue = integerValue;
-        this.stringValue = stringValue;
-    }
+    private TopicRuleAssetPropertyVariant() {}
 
-    private TopicRuleAssetPropertyVariant() {
-        this.booleanValue = null;
-        this.doubleValue = null;
-        this.integerValue = null;
-        this.stringValue = null;
+    private TopicRuleAssetPropertyVariant(TopicRuleAssetPropertyVariant $) {
+        this.booleanValue = $.booleanValue;
+        this.doubleValue = $.doubleValue;
+        this.integerValue = $.integerValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleAssetPropertyVariant defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String booleanValue;
-        private @Nullable String doubleValue;
-        private @Nullable String integerValue;
-        private @Nullable String stringValue;
+        private TopicRuleAssetPropertyVariant $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleAssetPropertyVariant();
         }
 
         public Builder(TopicRuleAssetPropertyVariant defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.integerValue = defaults.integerValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new TopicRuleAssetPropertyVariant(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(@Nullable String booleanValue) {
-            this.booleanValue = booleanValue;
+            $.booleanValue = booleanValue;
             return this;
         }
+
         public Builder doubleValue(@Nullable String doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
+
         public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = integerValue;
+            $.integerValue = integerValue;
             return this;
         }
+
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
-        }        public TopicRuleAssetPropertyVariant build() {
-            return new TopicRuleAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
+        }
+
+        public TopicRuleAssetPropertyVariant build() {
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class ApiKeyStageKey extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId")
-      private final @Nullable String restApiId;
+    private @Nullable String restApiId;
 
     public Optional<String> restApiId() {
-        return this.restApiId == null ? Optional.empty() : Optional.ofNullable(this.restApiId);
+        return Optional.ofNullable(this.restApiId);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class ApiKeyStageKey extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName")
-      private final @Nullable String stageName;
+    private @Nullable String stageName;
 
     public Optional<String> stageName() {
-        return this.stageName == null ? Optional.empty() : Optional.ofNullable(this.stageName);
+        return Optional.ofNullable(this.stageName);
     }
 
-    public ApiKeyStageKey(
-        @Nullable String restApiId,
-        @Nullable String stageName) {
-        this.restApiId = restApiId;
-        this.stageName = stageName;
-    }
+    private ApiKeyStageKey() {}
 
-    private ApiKeyStageKey() {
-        this.restApiId = null;
-        this.stageName = null;
+    private ApiKeyStageKey(ApiKeyStageKey $) {
+        this.restApiId = $.restApiId;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyStageKey defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String restApiId;
-        private @Nullable String stageName;
+        private ApiKeyStageKey $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyStageKey();
         }
 
         public Builder(ApiKeyStageKey defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.restApiId = defaults.restApiId;
-    	      this.stageName = defaults.stageName;
+            $ = new ApiKeyStageKey(Objects.requireNonNull(defaults));
         }
 
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = restApiId;
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
-        }        public ApiKeyStageKey build() {
-            return new ApiKeyStageKey(restApiId, stageName);
+        }
+
+        public ApiKeyStageKey build() {
+            return $;
         }
     }
+
 }

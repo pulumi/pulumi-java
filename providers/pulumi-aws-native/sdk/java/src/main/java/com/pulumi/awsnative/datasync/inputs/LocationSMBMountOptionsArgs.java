@@ -6,8 +6,8 @@ package com.pulumi.awsnative.datasync.inputs;
 import com.pulumi.awsnative.datasync.enums.LocationSMBMountOptionsVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LocationSMBMountOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<LocationSMBMountOptionsVersion> version;
+    private @Nullable Output<LocationSMBMountOptionsVersion> version;
 
-    public Output<LocationSMBMountOptionsVersion> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<LocationSMBMountOptionsVersion>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public LocationSMBMountOptionsArgs(@Nullable Output<LocationSMBMountOptionsVersion> version) {
-        this.version = version;
-    }
+    private LocationSMBMountOptionsArgs() {}
 
-    private LocationSMBMountOptionsArgs() {
-        this.version = Codegen.empty();
+    private LocationSMBMountOptionsArgs(LocationSMBMountOptionsArgs $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationSMBMountOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LocationSMBMountOptionsVersion> version;
+        private LocationSMBMountOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationSMBMountOptionsArgs();
         }
 
         public Builder(LocationSMBMountOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new LocationSMBMountOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder version(@Nullable Output<LocationSMBMountOptionsVersion> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public LocationSMBMountOptionsArgs build() {
-            return new LocationSMBMountOptionsArgs(version);
+
+        public Builder version(LocationSMBMountOptionsVersion version) {
+            return version(Output.of(version));
+        }
+
+        public LocationSMBMountOptionsArgs build() {
+            return $;
         }
     }
+
 }

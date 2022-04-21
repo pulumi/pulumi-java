@@ -7,10 +7,10 @@ import com.pulumi.awsnative.datasync.inputs.LocationSMBMountOptionsArgs;
 import com.pulumi.awsnative.datasync.inputs.LocationSMBTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentArns", required=true)
-      private final Output<List<String>> agentArns;
+    private Output<List<String>> agentArns;
 
     public Output<List<String>> agentArns() {
         return this.agentArns;
@@ -34,17 +34,17 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     @Import(name="mountOptions")
-      private final @Nullable Output<LocationSMBMountOptionsArgs> mountOptions;
+    private @Nullable Output<LocationSMBMountOptionsArgs> mountOptions;
 
-    public Output<LocationSMBMountOptionsArgs> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<LocationSMBMountOptionsArgs>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -63,7 +63,7 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverHostname", required=true)
-      private final Output<String> serverHostname;
+    private Output<String> serverHostname;
 
     public Output<String> serverHostname() {
         return this.serverHostname;
@@ -74,7 +74,7 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdirectory", required=true)
-      private final Output<String> subdirectory;
+    private Output<String> subdirectory;
 
     public Output<String> subdirectory() {
         return this.subdirectory;
@@ -85,10 +85,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LocationSMBTagArgs>> tags;
+    private @Nullable Output<List<LocationSMBTagArgs>> tags;
 
-    public Output<List<LocationSMBTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LocationSMBTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -96,147 +96,131 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public LocationSMBArgs(
-        Output<List<String>> agentArns,
-        @Nullable Output<String> domain,
-        @Nullable Output<LocationSMBMountOptionsArgs> mountOptions,
-        Output<String> password,
-        Output<String> serverHostname,
-        Output<String> subdirectory,
-        @Nullable Output<List<LocationSMBTagArgs>> tags,
-        Output<String> user) {
-        this.agentArns = Objects.requireNonNull(agentArns, "expected parameter 'agentArns' to be non-null");
-        this.domain = domain;
-        this.mountOptions = mountOptions;
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.serverHostname = Objects.requireNonNull(serverHostname, "expected parameter 'serverHostname' to be non-null");
-        this.subdirectory = Objects.requireNonNull(subdirectory, "expected parameter 'subdirectory' to be non-null");
-        this.tags = tags;
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private LocationSMBArgs() {}
 
-    private LocationSMBArgs() {
-        this.agentArns = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.mountOptions = Codegen.empty();
-        this.password = Codegen.empty();
-        this.serverHostname = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.user = Codegen.empty();
+    private LocationSMBArgs(LocationSMBArgs $) {
+        this.agentArns = $.agentArns;
+        this.domain = $.domain;
+        this.mountOptions = $.mountOptions;
+        this.password = $.password;
+        this.serverHostname = $.serverHostname;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationSMBArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> agentArns;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<LocationSMBMountOptionsArgs> mountOptions;
-        private Output<String> password;
-        private Output<String> serverHostname;
-        private Output<String> subdirectory;
-        private @Nullable Output<List<LocationSMBTagArgs>> tags;
-        private Output<String> user;
+        private LocationSMBArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationSMBArgs();
         }
 
         public Builder(LocationSMBArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentArns = defaults.agentArns;
-    	      this.domain = defaults.domain;
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.password = defaults.password;
-    	      this.serverHostname = defaults.serverHostname;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
-    	      this.user = defaults.user;
+            $ = new LocationSMBArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentArns(Output<List<String>> agentArns) {
-            this.agentArns = Objects.requireNonNull(agentArns);
+            $.agentArns = agentArns;
             return this;
         }
+
         public Builder agentArns(List<String> agentArns) {
-            this.agentArns = Output.of(Objects.requireNonNull(agentArns));
-            return this;
+            return agentArns(Output.of(agentArns));
         }
+
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder mountOptions(@Nullable Output<LocationSMBMountOptionsArgs> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable LocationSMBMountOptionsArgs mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(LocationSMBMountOptionsArgs mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder serverHostname(Output<String> serverHostname) {
-            this.serverHostname = Objects.requireNonNull(serverHostname);
+            $.serverHostname = serverHostname;
             return this;
         }
+
         public Builder serverHostname(String serverHostname) {
-            this.serverHostname = Output.of(Objects.requireNonNull(serverHostname));
-            return this;
+            return serverHostname(Output.of(serverHostname));
         }
+
         public Builder subdirectory(Output<String> subdirectory) {
-            this.subdirectory = Objects.requireNonNull(subdirectory);
+            $.subdirectory = subdirectory;
             return this;
         }
+
         public Builder subdirectory(String subdirectory) {
-            this.subdirectory = Output.of(Objects.requireNonNull(subdirectory));
-            return this;
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<List<LocationSMBTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LocationSMBTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LocationSMBTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LocationSMBTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Output.of(Objects.requireNonNull(user));
-            return this;
-        }        public LocationSMBArgs build() {
-            return new LocationSMBArgs(agentArns, domain, mountOptions, password, serverHostname, subdirectory, tags, user);
+            return user(Output.of(user));
+        }
+
+        public LocationSMBArgs build() {
+            $.agentArns = Objects.requireNonNull($.agentArns, "expected parameter 'agentArns' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.serverHostname = Objects.requireNonNull($.serverHostname, "expected parameter 'serverHostname' to be non-null");
+            $.subdirectory = Objects.requireNonNull($.subdirectory, "expected parameter 'subdirectory' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

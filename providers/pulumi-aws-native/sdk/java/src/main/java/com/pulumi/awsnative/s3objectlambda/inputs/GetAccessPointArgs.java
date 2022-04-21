@@ -17,45 +17,45 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetAccessPointArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetAccessPointArgs() {}
 
-    private GetAccessPointArgs() {
-        this.name = null;
+    private GetAccessPointArgs(GetAccessPointArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetAccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPointArgs();
         }
 
         public Builder(GetAccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetAccessPointArgs build() {
-            return new GetAccessPointArgs(name);
+        }
+
+        public GetAccessPointArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

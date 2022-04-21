@@ -5,10 +5,10 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,76 +21,73 @@ public final class StorageLensBucketsAndRegionsArgs extends com.pulumi.resources
     public static final StorageLensBucketsAndRegionsArgs Empty = new StorageLensBucketsAndRegionsArgs();
 
     @Import(name="buckets")
-      private final @Nullable Output<List<String>> buckets;
+    private @Nullable Output<List<String>> buckets;
 
-    public Output<List<String>> buckets() {
-        return this.buckets == null ? Codegen.empty() : this.buckets;
+    public Optional<Output<List<String>>> buckets() {
+        return Optional.ofNullable(this.buckets);
     }
 
     @Import(name="regions")
-      private final @Nullable Output<List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
-    public StorageLensBucketsAndRegionsArgs(
-        @Nullable Output<List<String>> buckets,
-        @Nullable Output<List<String>> regions) {
-        this.buckets = buckets;
-        this.regions = regions;
-    }
+    private StorageLensBucketsAndRegionsArgs() {}
 
-    private StorageLensBucketsAndRegionsArgs() {
-        this.buckets = Codegen.empty();
-        this.regions = Codegen.empty();
+    private StorageLensBucketsAndRegionsArgs(StorageLensBucketsAndRegionsArgs $) {
+        this.buckets = $.buckets;
+        this.regions = $.regions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensBucketsAndRegionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> buckets;
-        private @Nullable Output<List<String>> regions;
+        private StorageLensBucketsAndRegionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensBucketsAndRegionsArgs();
         }
 
         public Builder(StorageLensBucketsAndRegionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buckets = defaults.buckets;
-    	      this.regions = defaults.regions;
+            $ = new StorageLensBucketsAndRegionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buckets(@Nullable Output<List<String>> buckets) {
-            this.buckets = buckets;
+            $.buckets = buckets;
             return this;
         }
-        public Builder buckets(@Nullable List<String> buckets) {
-            this.buckets = Codegen.ofNullable(buckets);
-            return this;
+
+        public Builder buckets(List<String> buckets) {
+            return buckets(Output.of(buckets));
         }
+
         public Builder buckets(String... buckets) {
             return buckets(List.of(buckets));
         }
+
         public Builder regions(@Nullable Output<List<String>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<String> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
-        }        public StorageLensBucketsAndRegionsArgs build() {
-            return new StorageLensBucketsAndRegionsArgs(buckets, regions);
+        }
+
+        public StorageLensBucketsAndRegionsArgs build() {
+            return $;
         }
     }
+
 }

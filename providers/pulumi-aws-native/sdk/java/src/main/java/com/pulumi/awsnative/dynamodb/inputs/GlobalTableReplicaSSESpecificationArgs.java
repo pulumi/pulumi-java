@@ -5,7 +5,6 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class GlobalTableReplicaSSESpecificationArgs extends com.pulumi.res
     public static final GlobalTableReplicaSSESpecificationArgs Empty = new GlobalTableReplicaSSESpecificationArgs();
 
     @Import(name="kMSMasterKeyId", required=true)
-      private final Output<String> kMSMasterKeyId;
+    private Output<String> kMSMasterKeyId;
 
     public Output<String> kMSMasterKeyId() {
         return this.kMSMasterKeyId;
     }
 
-    public GlobalTableReplicaSSESpecificationArgs(Output<String> kMSMasterKeyId) {
-        this.kMSMasterKeyId = Objects.requireNonNull(kMSMasterKeyId, "expected parameter 'kMSMasterKeyId' to be non-null");
-    }
+    private GlobalTableReplicaSSESpecificationArgs() {}
 
-    private GlobalTableReplicaSSESpecificationArgs() {
-        this.kMSMasterKeyId = Codegen.empty();
+    private GlobalTableReplicaSSESpecificationArgs(GlobalTableReplicaSSESpecificationArgs $) {
+        this.kMSMasterKeyId = $.kMSMasterKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableReplicaSSESpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kMSMasterKeyId;
+        private GlobalTableReplicaSSESpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableReplicaSSESpecificationArgs();
         }
 
         public Builder(GlobalTableReplicaSSESpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kMSMasterKeyId = defaults.kMSMasterKeyId;
+            $ = new GlobalTableReplicaSSESpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kMSMasterKeyId(Output<String> kMSMasterKeyId) {
-            this.kMSMasterKeyId = Objects.requireNonNull(kMSMasterKeyId);
+            $.kMSMasterKeyId = kMSMasterKeyId;
             return this;
         }
+
         public Builder kMSMasterKeyId(String kMSMasterKeyId) {
-            this.kMSMasterKeyId = Output.of(Objects.requireNonNull(kMSMasterKeyId));
-            return this;
-        }        public GlobalTableReplicaSSESpecificationArgs build() {
-            return new GlobalTableReplicaSSESpecificationArgs(kMSMasterKeyId);
+            return kMSMasterKeyId(Output.of(kMSMasterKeyId));
+        }
+
+        public GlobalTableReplicaSSESpecificationArgs build() {
+            $.kMSMasterKeyId = Objects.requireNonNull($.kMSMasterKeyId, "expected parameter 'kMSMasterKeyId' to be non-null");
+            return $;
         }
     }
+
 }

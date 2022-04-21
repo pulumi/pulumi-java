@@ -13,45 +13,45 @@ public final class GetDistributionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDistributionArgs Empty = new GetDistributionArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetDistributionArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetDistributionArgs() {}
 
-    private GetDistributionArgs() {
-        this.id = null;
+    private GetDistributionArgs(GetDistributionArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDistributionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetDistributionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDistributionArgs();
         }
 
         public Builder(GetDistributionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetDistributionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetDistributionArgs build() {
-            return new GetDistributionArgs(id);
+        }
+
+        public GetDistributionArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

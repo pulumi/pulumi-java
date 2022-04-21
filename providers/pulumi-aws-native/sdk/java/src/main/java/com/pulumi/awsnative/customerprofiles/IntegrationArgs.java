@@ -8,10 +8,10 @@ import com.pulumi.awsnative.customerprofiles.inputs.IntegrationObjectTypeMapping
 import com.pulumi.awsnative.customerprofiles.inputs.IntegrationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
     }
 
     @Import(name="flowDefinition")
-      private final @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
+    private @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
 
-    public Output<IntegrationFlowDefinitionArgs> flowDefinition() {
-        return this.flowDefinition == null ? Codegen.empty() : this.flowDefinition;
+    public Optional<Output<IntegrationFlowDefinitionArgs>> flowDefinition() {
+        return Optional.ofNullable(this.flowDefinition);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectTypeName")
-      private final @Nullable Output<String> objectTypeName;
+    private @Nullable Output<String> objectTypeName;
 
-    public Output<String> objectTypeName() {
-        return this.objectTypeName == null ? Codegen.empty() : this.objectTypeName;
+    public Optional<Output<String>> objectTypeName() {
+        return Optional.ofNullable(this.objectTypeName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectTypeNames")
-      private final @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
+    private @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
-    public Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames() {
-        return this.objectTypeNames == null ? Codegen.empty() : this.objectTypeNames;
+    public Optional<Output<List<IntegrationObjectTypeMappingArgs>>> objectTypeNames() {
+        return Optional.ofNullable(this.objectTypeNames);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<IntegrationTagArgs>> tags;
+    private @Nullable Output<List<IntegrationTagArgs>> tags;
 
-    public Output<List<IntegrationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<IntegrationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -75,121 +75,107 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public IntegrationArgs(
-        Output<String> domainName,
-        @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition,
-        @Nullable Output<String> objectTypeName,
-        @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames,
-        @Nullable Output<List<IntegrationTagArgs>> tags,
-        @Nullable Output<String> uri) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.flowDefinition = flowDefinition;
-        this.objectTypeName = objectTypeName;
-        this.objectTypeNames = objectTypeNames;
-        this.tags = tags;
-        this.uri = uri;
-    }
+    private IntegrationArgs() {}
 
-    private IntegrationArgs() {
-        this.domainName = Codegen.empty();
-        this.flowDefinition = Codegen.empty();
-        this.objectTypeName = Codegen.empty();
-        this.objectTypeNames = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.uri = Codegen.empty();
+    private IntegrationArgs(IntegrationArgs $) {
+        this.domainName = $.domainName;
+        this.flowDefinition = $.flowDefinition;
+        this.objectTypeName = $.objectTypeName;
+        this.objectTypeNames = $.objectTypeNames;
+        this.tags = $.tags;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainName;
-        private @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
-        private @Nullable Output<String> objectTypeName;
-        private @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
-        private @Nullable Output<List<IntegrationTagArgs>> tags;
-        private @Nullable Output<String> uri;
+        private IntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationArgs();
         }
 
         public Builder(IntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.flowDefinition = defaults.flowDefinition;
-    	      this.objectTypeName = defaults.objectTypeName;
-    	      this.objectTypeNames = defaults.objectTypeNames;
-    	      this.tags = defaults.tags;
-    	      this.uri = defaults.uri;
+            $ = new IntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder flowDefinition(@Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition) {
-            this.flowDefinition = flowDefinition;
+            $.flowDefinition = flowDefinition;
             return this;
         }
-        public Builder flowDefinition(@Nullable IntegrationFlowDefinitionArgs flowDefinition) {
-            this.flowDefinition = Codegen.ofNullable(flowDefinition);
-            return this;
+
+        public Builder flowDefinition(IntegrationFlowDefinitionArgs flowDefinition) {
+            return flowDefinition(Output.of(flowDefinition));
         }
+
         public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
-            this.objectTypeName = objectTypeName;
+            $.objectTypeName = objectTypeName;
             return this;
         }
-        public Builder objectTypeName(@Nullable String objectTypeName) {
-            this.objectTypeName = Codegen.ofNullable(objectTypeName);
-            return this;
+
+        public Builder objectTypeName(String objectTypeName) {
+            return objectTypeName(Output.of(objectTypeName));
         }
+
         public Builder objectTypeNames(@Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
-            this.objectTypeNames = objectTypeNames;
+            $.objectTypeNames = objectTypeNames;
             return this;
         }
-        public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
-            this.objectTypeNames = Codegen.ofNullable(objectTypeNames);
-            return this;
+
+        public Builder objectTypeNames(List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
+            return objectTypeNames(Output.of(objectTypeNames));
         }
+
         public Builder objectTypeNames(IntegrationObjectTypeMappingArgs... objectTypeNames) {
             return objectTypeNames(List.of(objectTypeNames));
         }
+
         public Builder tags(@Nullable Output<List<IntegrationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<IntegrationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<IntegrationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(IntegrationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public IntegrationArgs build() {
-            return new IntegrationArgs(domainName, flowDefinition, objectTypeName, objectTypeNames, tags, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public IntegrationArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

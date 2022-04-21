@@ -18,9 +18,9 @@ import com.pulumi.awsnative.datasync.enums.TaskOptionsUid;
 import com.pulumi.awsnative.datasync.enums.TaskOptionsVerifyMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,10 +37,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="atime")
-      private final @Nullable Output<TaskOptionsAtime> atime;
+    private @Nullable Output<TaskOptionsAtime> atime;
 
-    public Output<TaskOptionsAtime> atime() {
-        return this.atime == null ? Codegen.empty() : this.atime;
+    public Optional<Output<TaskOptionsAtime>> atime() {
+        return Optional.ofNullable(this.atime);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bytesPerSecond")
-      private final @Nullable Output<Integer> bytesPerSecond;
+    private @Nullable Output<Integer> bytesPerSecond;
 
-    public Output<Integer> bytesPerSecond() {
-        return this.bytesPerSecond == null ? Codegen.empty() : this.bytesPerSecond;
+    public Optional<Output<Integer>> bytesPerSecond() {
+        return Optional.ofNullable(this.bytesPerSecond);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gid")
-      private final @Nullable Output<TaskOptionsGid> gid;
+    private @Nullable Output<TaskOptionsGid> gid;
 
-    public Output<TaskOptionsGid> gid() {
-        return this.gid == null ? Codegen.empty() : this.gid;
+    public Optional<Output<TaskOptionsGid>> gid() {
+        return Optional.ofNullable(this.gid);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<TaskOptionsLogLevel> logLevel;
+    private @Nullable Output<TaskOptionsLogLevel> logLevel;
 
-    public Output<TaskOptionsLogLevel> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<TaskOptionsLogLevel>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mtime")
-      private final @Nullable Output<TaskOptionsMtime> mtime;
+    private @Nullable Output<TaskOptionsMtime> mtime;
 
-    public Output<TaskOptionsMtime> mtime() {
-        return this.mtime == null ? Codegen.empty() : this.mtime;
+    public Optional<Output<TaskOptionsMtime>> mtime() {
+        return Optional.ofNullable(this.mtime);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overwriteMode")
-      private final @Nullable Output<TaskOptionsOverwriteMode> overwriteMode;
+    private @Nullable Output<TaskOptionsOverwriteMode> overwriteMode;
 
-    public Output<TaskOptionsOverwriteMode> overwriteMode() {
-        return this.overwriteMode == null ? Codegen.empty() : this.overwriteMode;
+    public Optional<Output<TaskOptionsOverwriteMode>> overwriteMode() {
+        return Optional.ofNullable(this.overwriteMode);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixPermissions")
-      private final @Nullable Output<TaskOptionsPosixPermissions> posixPermissions;
+    private @Nullable Output<TaskOptionsPosixPermissions> posixPermissions;
 
-    public Output<TaskOptionsPosixPermissions> posixPermissions() {
-        return this.posixPermissions == null ? Codegen.empty() : this.posixPermissions;
+    public Optional<Output<TaskOptionsPosixPermissions>> posixPermissions() {
+        return Optional.ofNullable(this.posixPermissions);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preserveDeletedFiles")
-      private final @Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles;
+    private @Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles;
 
-    public Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles() {
-        return this.preserveDeletedFiles == null ? Codegen.empty() : this.preserveDeletedFiles;
+    public Optional<Output<TaskOptionsPreserveDeletedFiles>> preserveDeletedFiles() {
+        return Optional.ofNullable(this.preserveDeletedFiles);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preserveDevices")
-      private final @Nullable Output<TaskOptionsPreserveDevices> preserveDevices;
+    private @Nullable Output<TaskOptionsPreserveDevices> preserveDevices;
 
-    public Output<TaskOptionsPreserveDevices> preserveDevices() {
-        return this.preserveDevices == null ? Codegen.empty() : this.preserveDevices;
+    public Optional<Output<TaskOptionsPreserveDevices>> preserveDevices() {
+        return Optional.ofNullable(this.preserveDevices);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityDescriptorCopyFlags")
-      private final @Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags;
+    private @Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags;
 
-    public Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags() {
-        return this.securityDescriptorCopyFlags == null ? Codegen.empty() : this.securityDescriptorCopyFlags;
+    public Optional<Output<TaskOptionsSecurityDescriptorCopyFlags>> securityDescriptorCopyFlags() {
+        return Optional.ofNullable(this.securityDescriptorCopyFlags);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskQueueing")
-      private final @Nullable Output<TaskOptionsTaskQueueing> taskQueueing;
+    private @Nullable Output<TaskOptionsTaskQueueing> taskQueueing;
 
-    public Output<TaskOptionsTaskQueueing> taskQueueing() {
-        return this.taskQueueing == null ? Codegen.empty() : this.taskQueueing;
+    public Optional<Output<TaskOptionsTaskQueueing>> taskQueueing() {
+        return Optional.ofNullable(this.taskQueueing);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferMode")
-      private final @Nullable Output<TaskOptionsTransferMode> transferMode;
+    private @Nullable Output<TaskOptionsTransferMode> transferMode;
 
-    public Output<TaskOptionsTransferMode> transferMode() {
-        return this.transferMode == null ? Codegen.empty() : this.transferMode;
+    public Optional<Output<TaskOptionsTransferMode>> transferMode() {
+        return Optional.ofNullable(this.transferMode);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<TaskOptionsUid> uid;
+    private @Nullable Output<TaskOptionsUid> uid;
 
-    public Output<TaskOptionsUid> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<TaskOptionsUid>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -180,219 +180,178 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verifyMode")
-      private final @Nullable Output<TaskOptionsVerifyMode> verifyMode;
+    private @Nullable Output<TaskOptionsVerifyMode> verifyMode;
 
-    public Output<TaskOptionsVerifyMode> verifyMode() {
-        return this.verifyMode == null ? Codegen.empty() : this.verifyMode;
+    public Optional<Output<TaskOptionsVerifyMode>> verifyMode() {
+        return Optional.ofNullable(this.verifyMode);
     }
 
-    public TaskOptionsArgs(
-        @Nullable Output<TaskOptionsAtime> atime,
-        @Nullable Output<Integer> bytesPerSecond,
-        @Nullable Output<TaskOptionsGid> gid,
-        @Nullable Output<TaskOptionsLogLevel> logLevel,
-        @Nullable Output<TaskOptionsMtime> mtime,
-        @Nullable Output<TaskOptionsOverwriteMode> overwriteMode,
-        @Nullable Output<TaskOptionsPosixPermissions> posixPermissions,
-        @Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles,
-        @Nullable Output<TaskOptionsPreserveDevices> preserveDevices,
-        @Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags,
-        @Nullable Output<TaskOptionsTaskQueueing> taskQueueing,
-        @Nullable Output<TaskOptionsTransferMode> transferMode,
-        @Nullable Output<TaskOptionsUid> uid,
-        @Nullable Output<TaskOptionsVerifyMode> verifyMode) {
-        this.atime = atime;
-        this.bytesPerSecond = bytesPerSecond;
-        this.gid = gid;
-        this.logLevel = logLevel;
-        this.mtime = mtime;
-        this.overwriteMode = overwriteMode;
-        this.posixPermissions = posixPermissions;
-        this.preserveDeletedFiles = preserveDeletedFiles;
-        this.preserveDevices = preserveDevices;
-        this.securityDescriptorCopyFlags = securityDescriptorCopyFlags;
-        this.taskQueueing = taskQueueing;
-        this.transferMode = transferMode;
-        this.uid = uid;
-        this.verifyMode = verifyMode;
-    }
+    private TaskOptionsArgs() {}
 
-    private TaskOptionsArgs() {
-        this.atime = Codegen.empty();
-        this.bytesPerSecond = Codegen.empty();
-        this.gid = Codegen.empty();
-        this.logLevel = Codegen.empty();
-        this.mtime = Codegen.empty();
-        this.overwriteMode = Codegen.empty();
-        this.posixPermissions = Codegen.empty();
-        this.preserveDeletedFiles = Codegen.empty();
-        this.preserveDevices = Codegen.empty();
-        this.securityDescriptorCopyFlags = Codegen.empty();
-        this.taskQueueing = Codegen.empty();
-        this.transferMode = Codegen.empty();
-        this.uid = Codegen.empty();
-        this.verifyMode = Codegen.empty();
+    private TaskOptionsArgs(TaskOptionsArgs $) {
+        this.atime = $.atime;
+        this.bytesPerSecond = $.bytesPerSecond;
+        this.gid = $.gid;
+        this.logLevel = $.logLevel;
+        this.mtime = $.mtime;
+        this.overwriteMode = $.overwriteMode;
+        this.posixPermissions = $.posixPermissions;
+        this.preserveDeletedFiles = $.preserveDeletedFiles;
+        this.preserveDevices = $.preserveDevices;
+        this.securityDescriptorCopyFlags = $.securityDescriptorCopyFlags;
+        this.taskQueueing = $.taskQueueing;
+        this.transferMode = $.transferMode;
+        this.uid = $.uid;
+        this.verifyMode = $.verifyMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TaskOptionsAtime> atime;
-        private @Nullable Output<Integer> bytesPerSecond;
-        private @Nullable Output<TaskOptionsGid> gid;
-        private @Nullable Output<TaskOptionsLogLevel> logLevel;
-        private @Nullable Output<TaskOptionsMtime> mtime;
-        private @Nullable Output<TaskOptionsOverwriteMode> overwriteMode;
-        private @Nullable Output<TaskOptionsPosixPermissions> posixPermissions;
-        private @Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles;
-        private @Nullable Output<TaskOptionsPreserveDevices> preserveDevices;
-        private @Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags;
-        private @Nullable Output<TaskOptionsTaskQueueing> taskQueueing;
-        private @Nullable Output<TaskOptionsTransferMode> transferMode;
-        private @Nullable Output<TaskOptionsUid> uid;
-        private @Nullable Output<TaskOptionsVerifyMode> verifyMode;
+        private TaskOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskOptionsArgs();
         }
 
         public Builder(TaskOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.atime = defaults.atime;
-    	      this.bytesPerSecond = defaults.bytesPerSecond;
-    	      this.gid = defaults.gid;
-    	      this.logLevel = defaults.logLevel;
-    	      this.mtime = defaults.mtime;
-    	      this.overwriteMode = defaults.overwriteMode;
-    	      this.posixPermissions = defaults.posixPermissions;
-    	      this.preserveDeletedFiles = defaults.preserveDeletedFiles;
-    	      this.preserveDevices = defaults.preserveDevices;
-    	      this.securityDescriptorCopyFlags = defaults.securityDescriptorCopyFlags;
-    	      this.taskQueueing = defaults.taskQueueing;
-    	      this.transferMode = defaults.transferMode;
-    	      this.uid = defaults.uid;
-    	      this.verifyMode = defaults.verifyMode;
+            $ = new TaskOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder atime(@Nullable Output<TaskOptionsAtime> atime) {
-            this.atime = atime;
+            $.atime = atime;
             return this;
         }
-        public Builder atime(@Nullable TaskOptionsAtime atime) {
-            this.atime = Codegen.ofNullable(atime);
-            return this;
+
+        public Builder atime(TaskOptionsAtime atime) {
+            return atime(Output.of(atime));
         }
+
         public Builder bytesPerSecond(@Nullable Output<Integer> bytesPerSecond) {
-            this.bytesPerSecond = bytesPerSecond;
+            $.bytesPerSecond = bytesPerSecond;
             return this;
         }
-        public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
-            this.bytesPerSecond = Codegen.ofNullable(bytesPerSecond);
-            return this;
+
+        public Builder bytesPerSecond(Integer bytesPerSecond) {
+            return bytesPerSecond(Output.of(bytesPerSecond));
         }
+
         public Builder gid(@Nullable Output<TaskOptionsGid> gid) {
-            this.gid = gid;
+            $.gid = gid;
             return this;
         }
-        public Builder gid(@Nullable TaskOptionsGid gid) {
-            this.gid = Codegen.ofNullable(gid);
-            return this;
+
+        public Builder gid(TaskOptionsGid gid) {
+            return gid(Output.of(gid));
         }
+
         public Builder logLevel(@Nullable Output<TaskOptionsLogLevel> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable TaskOptionsLogLevel logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
+
+        public Builder logLevel(TaskOptionsLogLevel logLevel) {
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder mtime(@Nullable Output<TaskOptionsMtime> mtime) {
-            this.mtime = mtime;
+            $.mtime = mtime;
             return this;
         }
-        public Builder mtime(@Nullable TaskOptionsMtime mtime) {
-            this.mtime = Codegen.ofNullable(mtime);
-            return this;
+
+        public Builder mtime(TaskOptionsMtime mtime) {
+            return mtime(Output.of(mtime));
         }
+
         public Builder overwriteMode(@Nullable Output<TaskOptionsOverwriteMode> overwriteMode) {
-            this.overwriteMode = overwriteMode;
+            $.overwriteMode = overwriteMode;
             return this;
         }
-        public Builder overwriteMode(@Nullable TaskOptionsOverwriteMode overwriteMode) {
-            this.overwriteMode = Codegen.ofNullable(overwriteMode);
-            return this;
+
+        public Builder overwriteMode(TaskOptionsOverwriteMode overwriteMode) {
+            return overwriteMode(Output.of(overwriteMode));
         }
+
         public Builder posixPermissions(@Nullable Output<TaskOptionsPosixPermissions> posixPermissions) {
-            this.posixPermissions = posixPermissions;
+            $.posixPermissions = posixPermissions;
             return this;
         }
-        public Builder posixPermissions(@Nullable TaskOptionsPosixPermissions posixPermissions) {
-            this.posixPermissions = Codegen.ofNullable(posixPermissions);
-            return this;
+
+        public Builder posixPermissions(TaskOptionsPosixPermissions posixPermissions) {
+            return posixPermissions(Output.of(posixPermissions));
         }
+
         public Builder preserveDeletedFiles(@Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles) {
-            this.preserveDeletedFiles = preserveDeletedFiles;
+            $.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
-        public Builder preserveDeletedFiles(@Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles) {
-            this.preserveDeletedFiles = Codegen.ofNullable(preserveDeletedFiles);
-            return this;
+
+        public Builder preserveDeletedFiles(TaskOptionsPreserveDeletedFiles preserveDeletedFiles) {
+            return preserveDeletedFiles(Output.of(preserveDeletedFiles));
         }
+
         public Builder preserveDevices(@Nullable Output<TaskOptionsPreserveDevices> preserveDevices) {
-            this.preserveDevices = preserveDevices;
+            $.preserveDevices = preserveDevices;
             return this;
         }
-        public Builder preserveDevices(@Nullable TaskOptionsPreserveDevices preserveDevices) {
-            this.preserveDevices = Codegen.ofNullable(preserveDevices);
-            return this;
+
+        public Builder preserveDevices(TaskOptionsPreserveDevices preserveDevices) {
+            return preserveDevices(Output.of(preserveDevices));
         }
+
         public Builder securityDescriptorCopyFlags(@Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags) {
-            this.securityDescriptorCopyFlags = securityDescriptorCopyFlags;
+            $.securityDescriptorCopyFlags = securityDescriptorCopyFlags;
             return this;
         }
-        public Builder securityDescriptorCopyFlags(@Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags) {
-            this.securityDescriptorCopyFlags = Codegen.ofNullable(securityDescriptorCopyFlags);
-            return this;
+
+        public Builder securityDescriptorCopyFlags(TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags) {
+            return securityDescriptorCopyFlags(Output.of(securityDescriptorCopyFlags));
         }
+
         public Builder taskQueueing(@Nullable Output<TaskOptionsTaskQueueing> taskQueueing) {
-            this.taskQueueing = taskQueueing;
+            $.taskQueueing = taskQueueing;
             return this;
         }
-        public Builder taskQueueing(@Nullable TaskOptionsTaskQueueing taskQueueing) {
-            this.taskQueueing = Codegen.ofNullable(taskQueueing);
-            return this;
+
+        public Builder taskQueueing(TaskOptionsTaskQueueing taskQueueing) {
+            return taskQueueing(Output.of(taskQueueing));
         }
+
         public Builder transferMode(@Nullable Output<TaskOptionsTransferMode> transferMode) {
-            this.transferMode = transferMode;
+            $.transferMode = transferMode;
             return this;
         }
-        public Builder transferMode(@Nullable TaskOptionsTransferMode transferMode) {
-            this.transferMode = Codegen.ofNullable(transferMode);
-            return this;
+
+        public Builder transferMode(TaskOptionsTransferMode transferMode) {
+            return transferMode(Output.of(transferMode));
         }
+
         public Builder uid(@Nullable Output<TaskOptionsUid> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable TaskOptionsUid uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
+
+        public Builder uid(TaskOptionsUid uid) {
+            return uid(Output.of(uid));
         }
+
         public Builder verifyMode(@Nullable Output<TaskOptionsVerifyMode> verifyMode) {
-            this.verifyMode = verifyMode;
+            $.verifyMode = verifyMode;
             return this;
         }
-        public Builder verifyMode(@Nullable TaskOptionsVerifyMode verifyMode) {
-            this.verifyMode = Codegen.ofNullable(verifyMode);
-            return this;
-        }        public TaskOptionsArgs build() {
-            return new TaskOptionsArgs(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, securityDescriptorCopyFlags, taskQueueing, transferMode, uid, verifyMode);
+
+        public Builder verifyMode(TaskOptionsVerifyMode verifyMode) {
+            return verifyMode(Output.of(verifyMode));
+        }
+
+        public TaskOptionsArgs build() {
+            return $;
         }
     }
+
 }

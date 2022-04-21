@@ -16,48 +16,48 @@ public final class DataSourceWebCrawlerAuthenticationConfiguration extends com.p
     public static final DataSourceWebCrawlerAuthenticationConfiguration Empty = new DataSourceWebCrawlerAuthenticationConfiguration();
 
     @Import(name="basicAuthentication")
-      private final @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication;
+    private @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication;
 
-    public List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication() {
-        return this.basicAuthentication == null ? List.of() : this.basicAuthentication;
+    public Optional<List<DataSourceWebCrawlerBasicAuthentication>> basicAuthentication() {
+        return Optional.ofNullable(this.basicAuthentication);
     }
 
-    public DataSourceWebCrawlerAuthenticationConfiguration(@Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
-        this.basicAuthentication = basicAuthentication;
-    }
+    private DataSourceWebCrawlerAuthenticationConfiguration() {}
 
-    private DataSourceWebCrawlerAuthenticationConfiguration() {
-        this.basicAuthentication = List.of();
+    private DataSourceWebCrawlerAuthenticationConfiguration(DataSourceWebCrawlerAuthenticationConfiguration $) {
+        this.basicAuthentication = $.basicAuthentication;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceWebCrawlerAuthenticationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication;
+        private DataSourceWebCrawlerAuthenticationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceWebCrawlerAuthenticationConfiguration();
         }
 
         public Builder(DataSourceWebCrawlerAuthenticationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicAuthentication = defaults.basicAuthentication;
+            $ = new DataSourceWebCrawlerAuthenticationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder basicAuthentication(@Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
-            this.basicAuthentication = basicAuthentication;
+            $.basicAuthentication = basicAuthentication;
             return this;
         }
+
         public Builder basicAuthentication(DataSourceWebCrawlerBasicAuthentication... basicAuthentication) {
             return basicAuthentication(List.of(basicAuthentication));
-        }        public DataSourceWebCrawlerAuthenticationConfiguration build() {
-            return new DataSourceWebCrawlerAuthenticationConfiguration(basicAuthentication);
+        }
+
+        public DataSourceWebCrawlerAuthenticationConfiguration build() {
+            return $;
         }
     }
+
 }

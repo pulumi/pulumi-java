@@ -17,119 +17,109 @@ public final class AnalyzerFilter extends com.pulumi.resources.InvokeArgs {
     public static final AnalyzerFilter Empty = new AnalyzerFilter();
 
     @Import(name="contains")
-      private final @Nullable List<String> contains;
+    private @Nullable List<String> contains;
 
-    public List<String> contains() {
-        return this.contains == null ? List.of() : this.contains;
+    public Optional<List<String>> contains() {
+        return Optional.ofNullable(this.contains);
     }
 
     @Import(name="eq")
-      private final @Nullable List<String> eq;
+    private @Nullable List<String> eq;
 
-    public List<String> eq() {
-        return this.eq == null ? List.of() : this.eq;
+    public Optional<List<String>> eq() {
+        return Optional.ofNullable(this.eq);
     }
 
     @Import(name="exists")
-      private final @Nullable Boolean exists;
+    private @Nullable Boolean exists;
 
     public Optional<Boolean> exists() {
-        return this.exists == null ? Optional.empty() : Optional.ofNullable(this.exists);
+        return Optional.ofNullable(this.exists);
     }
 
     @Import(name="neq")
-      private final @Nullable List<String> neq;
+    private @Nullable List<String> neq;
 
-    public List<String> neq() {
-        return this.neq == null ? List.of() : this.neq;
+    public Optional<List<String>> neq() {
+        return Optional.ofNullable(this.neq);
     }
 
     @Import(name="property", required=true)
-      private final String property;
+    private String property;
 
     public String property() {
         return this.property;
     }
 
-    public AnalyzerFilter(
-        @Nullable List<String> contains,
-        @Nullable List<String> eq,
-        @Nullable Boolean exists,
-        @Nullable List<String> neq,
-        String property) {
-        this.contains = contains;
-        this.eq = eq;
-        this.exists = exists;
-        this.neq = neq;
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-    }
+    private AnalyzerFilter() {}
 
-    private AnalyzerFilter() {
-        this.contains = List.of();
-        this.eq = List.of();
-        this.exists = null;
-        this.neq = List.of();
-        this.property = null;
+    private AnalyzerFilter(AnalyzerFilter $) {
+        this.contains = $.contains;
+        this.eq = $.eq;
+        this.exists = $.exists;
+        this.neq = $.neq;
+        this.property = $.property;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyzerFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> contains;
-        private @Nullable List<String> eq;
-        private @Nullable Boolean exists;
-        private @Nullable List<String> neq;
-        private String property;
+        private AnalyzerFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyzerFilter();
         }
 
         public Builder(AnalyzerFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contains = defaults.contains;
-    	      this.eq = defaults.eq;
-    	      this.exists = defaults.exists;
-    	      this.neq = defaults.neq;
-    	      this.property = defaults.property;
+            $ = new AnalyzerFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder contains(@Nullable List<String> contains) {
-            this.contains = contains;
+            $.contains = contains;
             return this;
         }
+
         public Builder contains(String... contains) {
             return contains(List.of(contains));
         }
+
         public Builder eq(@Nullable List<String> eq) {
-            this.eq = eq;
+            $.eq = eq;
             return this;
         }
+
         public Builder eq(String... eq) {
             return eq(List.of(eq));
         }
+
         public Builder exists(@Nullable Boolean exists) {
-            this.exists = exists;
+            $.exists = exists;
             return this;
         }
+
         public Builder neq(@Nullable List<String> neq) {
-            this.neq = neq;
+            $.neq = neq;
             return this;
         }
+
         public Builder neq(String... neq) {
             return neq(List.of(neq));
         }
+
         public Builder property(String property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
-        }        public AnalyzerFilter build() {
-            return new AnalyzerFilter(contains, eq, exists, neq, property);
+        }
+
+        public AnalyzerFilter build() {
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            return $;
         }
     }
+
 }

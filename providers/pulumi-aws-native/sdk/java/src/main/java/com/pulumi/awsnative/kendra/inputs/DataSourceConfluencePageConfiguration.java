@@ -16,48 +16,48 @@ public final class DataSourceConfluencePageConfiguration extends com.pulumi.reso
     public static final DataSourceConfluencePageConfiguration Empty = new DataSourceConfluencePageConfiguration();
 
     @Import(name="pageFieldMappings")
-      private final @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings;
+    private @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings;
 
-    public List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings() {
-        return this.pageFieldMappings == null ? List.of() : this.pageFieldMappings;
+    public Optional<List<DataSourceConfluencePageToIndexFieldMapping>> pageFieldMappings() {
+        return Optional.ofNullable(this.pageFieldMappings);
     }
 
-    public DataSourceConfluencePageConfiguration(@Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
-        this.pageFieldMappings = pageFieldMappings;
-    }
+    private DataSourceConfluencePageConfiguration() {}
 
-    private DataSourceConfluencePageConfiguration() {
-        this.pageFieldMappings = List.of();
+    private DataSourceConfluencePageConfiguration(DataSourceConfluencePageConfiguration $) {
+        this.pageFieldMappings = $.pageFieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluencePageConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings;
+        private DataSourceConfluencePageConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluencePageConfiguration();
         }
 
         public Builder(DataSourceConfluencePageConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pageFieldMappings = defaults.pageFieldMappings;
+            $ = new DataSourceConfluencePageConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder pageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
-            this.pageFieldMappings = pageFieldMappings;
+            $.pageFieldMappings = pageFieldMappings;
             return this;
         }
+
         public Builder pageFieldMappings(DataSourceConfluencePageToIndexFieldMapping... pageFieldMappings) {
             return pageFieldMappings(List.of(pageFieldMappings));
-        }        public DataSourceConfluencePageConfiguration build() {
-            return new DataSourceConfluencePageConfiguration(pageFieldMappings);
+        }
+
+        public DataSourceConfluencePageConfiguration build() {
+            return $;
         }
     }
+
 }

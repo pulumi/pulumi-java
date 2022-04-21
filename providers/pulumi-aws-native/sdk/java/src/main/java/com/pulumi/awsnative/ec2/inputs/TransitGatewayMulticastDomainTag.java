@@ -19,10 +19,10 @@ public final class TransitGatewayMulticastDomainTag extends com.pulumi.resources
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class TransitGatewayMulticastDomainTag extends com.pulumi.resources
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public TransitGatewayMulticastDomainTag(
-        @Nullable String key,
-        @Nullable String value) {
-        this.key = key;
-        this.value = value;
-    }
+    private TransitGatewayMulticastDomainTag() {}
 
-    private TransitGatewayMulticastDomainTag() {
-        this.key = null;
-        this.value = null;
+    private TransitGatewayMulticastDomainTag(TransitGatewayMulticastDomainTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayMulticastDomainTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private @Nullable String value;
+        private TransitGatewayMulticastDomainTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayMulticastDomainTag();
         }
 
         public Builder(TransitGatewayMulticastDomainTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new TransitGatewayMulticastDomainTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public TransitGatewayMulticastDomainTag build() {
-            return new TransitGatewayMulticastDomainTag(key, value);
+        }
+
+        public TransitGatewayMulticastDomainTag build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class EventSourceMappingSourceAccessConfiguration extends com.pulum
      * 
      */
     @Import(name="type")
-      private final @Nullable EventSourceMappingSourceAccessConfigurationType type;
+    private @Nullable EventSourceMappingSourceAccessConfigurationType type;
 
     public Optional<EventSourceMappingSourceAccessConfigurationType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class EventSourceMappingSourceAccessConfiguration extends com.pulum
      * 
      */
     @Import(name="uRI")
-      private final @Nullable String uRI;
+    private @Nullable String uRI;
 
     public Optional<String> uRI() {
-        return this.uRI == null ? Optional.empty() : Optional.ofNullable(this.uRI);
+        return Optional.ofNullable(this.uRI);
     }
 
-    public EventSourceMappingSourceAccessConfiguration(
-        @Nullable EventSourceMappingSourceAccessConfigurationType type,
-        @Nullable String uRI) {
-        this.type = type;
-        this.uRI = uRI;
-    }
+    private EventSourceMappingSourceAccessConfiguration() {}
 
-    private EventSourceMappingSourceAccessConfiguration() {
-        this.type = null;
-        this.uRI = null;
+    private EventSourceMappingSourceAccessConfiguration(EventSourceMappingSourceAccessConfiguration $) {
+        this.type = $.type;
+        this.uRI = $.uRI;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingSourceAccessConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EventSourceMappingSourceAccessConfigurationType type;
-        private @Nullable String uRI;
+        private EventSourceMappingSourceAccessConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingSourceAccessConfiguration();
         }
 
         public Builder(EventSourceMappingSourceAccessConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.uRI = defaults.uRI;
+            $ = new EventSourceMappingSourceAccessConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder uRI(@Nullable String uRI) {
-            this.uRI = uRI;
+            $.uRI = uRI;
             return this;
-        }        public EventSourceMappingSourceAccessConfiguration build() {
-            return new EventSourceMappingSourceAccessConfiguration(type, uRI);
+        }
+
+        public EventSourceMappingSourceAccessConfiguration build() {
+            return $;
         }
     }
+
 }

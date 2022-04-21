@@ -16,62 +16,57 @@ public final class InAppTemplateOverrideButtonConfiguration extends com.pulumi.r
     public static final InAppTemplateOverrideButtonConfiguration Empty = new InAppTemplateOverrideButtonConfiguration();
 
     @Import(name="buttonAction")
-      private final @Nullable InAppTemplateButtonAction buttonAction;
+    private @Nullable InAppTemplateButtonAction buttonAction;
 
     public Optional<InAppTemplateButtonAction> buttonAction() {
-        return this.buttonAction == null ? Optional.empty() : Optional.ofNullable(this.buttonAction);
+        return Optional.ofNullable(this.buttonAction);
     }
 
     @Import(name="link")
-      private final @Nullable String link;
+    private @Nullable String link;
 
     public Optional<String> link() {
-        return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
+        return Optional.ofNullable(this.link);
     }
 
-    public InAppTemplateOverrideButtonConfiguration(
-        @Nullable InAppTemplateButtonAction buttonAction,
-        @Nullable String link) {
-        this.buttonAction = buttonAction;
-        this.link = link;
-    }
+    private InAppTemplateOverrideButtonConfiguration() {}
 
-    private InAppTemplateOverrideButtonConfiguration() {
-        this.buttonAction = null;
-        this.link = null;
+    private InAppTemplateOverrideButtonConfiguration(InAppTemplateOverrideButtonConfiguration $) {
+        this.buttonAction = $.buttonAction;
+        this.link = $.link;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateOverrideButtonConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InAppTemplateButtonAction buttonAction;
-        private @Nullable String link;
+        private InAppTemplateOverrideButtonConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateOverrideButtonConfiguration();
         }
 
         public Builder(InAppTemplateOverrideButtonConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttonAction = defaults.buttonAction;
-    	      this.link = defaults.link;
+            $ = new InAppTemplateOverrideButtonConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
-            this.buttonAction = buttonAction;
+            $.buttonAction = buttonAction;
             return this;
         }
+
         public Builder link(@Nullable String link) {
-            this.link = link;
+            $.link = link;
             return this;
-        }        public InAppTemplateOverrideButtonConfiguration build() {
-            return new InAppTemplateOverrideButtonConfiguration(buttonAction, link);
+        }
+
+        public InAppTemplateOverrideButtonConfiguration build() {
+            return $;
         }
     }
+
 }

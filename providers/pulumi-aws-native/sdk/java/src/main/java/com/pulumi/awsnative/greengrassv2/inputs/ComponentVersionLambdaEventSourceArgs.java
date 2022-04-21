@@ -6,9 +6,9 @@ package com.pulumi.awsnative.greengrassv2.inputs;
 import com.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaEventSourceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ComponentVersionLambdaEventSourceArgs extends com.pulumi.reso
     public static final ComponentVersionLambdaEventSourceArgs Empty = new ComponentVersionLambdaEventSourceArgs();
 
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
     @Import(name="type")
-      private final @Nullable Output<ComponentVersionLambdaEventSourceType> type;
+    private @Nullable Output<ComponentVersionLambdaEventSourceType> type;
 
-    public Output<ComponentVersionLambdaEventSourceType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ComponentVersionLambdaEventSourceType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ComponentVersionLambdaEventSourceArgs(
-        @Nullable Output<String> topic,
-        @Nullable Output<ComponentVersionLambdaEventSourceType> type) {
-        this.topic = topic;
-        this.type = type;
-    }
+    private ComponentVersionLambdaEventSourceArgs() {}
 
-    private ComponentVersionLambdaEventSourceArgs() {
-        this.topic = Codegen.empty();
-        this.type = Codegen.empty();
+    private ComponentVersionLambdaEventSourceArgs(ComponentVersionLambdaEventSourceArgs $) {
+        this.topic = $.topic;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentVersionLambdaEventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> topic;
-        private @Nullable Output<ComponentVersionLambdaEventSourceType> type;
+        private ComponentVersionLambdaEventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentVersionLambdaEventSourceArgs();
         }
 
         public Builder(ComponentVersionLambdaEventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topic = defaults.topic;
-    	      this.type = defaults.type;
+            $ = new ComponentVersionLambdaEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
         }
+
         public Builder type(@Nullable Output<ComponentVersionLambdaEventSourceType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ComponentVersionLambdaEventSourceType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ComponentVersionLambdaEventSourceArgs build() {
-            return new ComponentVersionLambdaEventSourceArgs(topic, type);
+
+        public Builder type(ComponentVersionLambdaEventSourceType type) {
+            return type(Output.of(type));
+        }
+
+        public ComponentVersionLambdaEventSourceArgs build() {
+            return $;
         }
     }
+
 }

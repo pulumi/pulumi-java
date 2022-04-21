@@ -20,10 +20,10 @@ public final class UsagePlanQuotaSettings extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="limit")
-      private final @Nullable Integer limit;
+    private @Nullable Integer limit;
 
     public Optional<Integer> limit() {
-        return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
+        return Optional.ofNullable(this.limit);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UsagePlanQuotaSettings extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="offset")
-      private final @Nullable Integer offset;
+    private @Nullable Integer offset;
 
     public Optional<Integer> offset() {
-        return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
+        return Optional.ofNullable(this.offset);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class UsagePlanQuotaSettings extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="period")
-      private final @Nullable String period;
+    private @Nullable String period;
 
     public Optional<String> period() {
-        return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);
+        return Optional.ofNullable(this.period);
     }
 
-    public UsagePlanQuotaSettings(
-        @Nullable Integer limit,
-        @Nullable Integer offset,
-        @Nullable String period) {
-        this.limit = limit;
-        this.offset = offset;
-        this.period = period;
-    }
+    private UsagePlanQuotaSettings() {}
 
-    private UsagePlanQuotaSettings() {
-        this.limit = null;
-        this.offset = null;
-        this.period = null;
+    private UsagePlanQuotaSettings(UsagePlanQuotaSettings $) {
+        this.limit = $.limit;
+        this.offset = $.offset;
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanQuotaSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer limit;
-        private @Nullable Integer offset;
-        private @Nullable String period;
+        private UsagePlanQuotaSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanQuotaSettings();
         }
 
         public Builder(UsagePlanQuotaSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limit = defaults.limit;
-    	      this.offset = defaults.offset;
-    	      this.period = defaults.period;
+            $ = new UsagePlanQuotaSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder limit(@Nullable Integer limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
+
         public Builder offset(@Nullable Integer offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
+
         public Builder period(@Nullable String period) {
-            this.period = period;
+            $.period = period;
             return this;
-        }        public UsagePlanQuotaSettings build() {
-            return new UsagePlanQuotaSettings(limit, offset, period);
+        }
+
+        public UsagePlanQuotaSettings build() {
+            return $;
         }
     }
+
 }

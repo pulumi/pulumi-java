@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class TaskDefinitionSystemControlArgs extends com.pulumi.resources.
     public static final TaskDefinitionSystemControlArgs Empty = new TaskDefinitionSystemControlArgs();
 
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TaskDefinitionSystemControlArgs(
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> value) {
-        this.namespace = namespace;
-        this.value = value;
-    }
+    private TaskDefinitionSystemControlArgs() {}
 
-    private TaskDefinitionSystemControlArgs() {
-        this.namespace = Codegen.empty();
-        this.value = Codegen.empty();
+    private TaskDefinitionSystemControlArgs(TaskDefinitionSystemControlArgs $) {
+        this.namespace = $.namespace;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionSystemControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> value;
+        private TaskDefinitionSystemControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionSystemControlArgs();
         }
 
         public Builder(TaskDefinitionSystemControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
-    	      this.value = defaults.value;
+            $ = new TaskDefinitionSystemControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TaskDefinitionSystemControlArgs build() {
-            return new TaskDefinitionSystemControlArgs(namespace, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public TaskDefinitionSystemControlArgs build() {
+            return $;
         }
     }
+
 }

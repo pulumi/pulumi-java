@@ -8,10 +8,10 @@ import com.pulumi.awsnative.ivs.inputs.RecordingConfigurationTagArgs;
 import com.pulumi.awsnative.ivs.inputs.RecordingConfigurationThumbnailConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
     public static final RecordingConfigurationArgs Empty = new RecordingConfigurationArgs();
 
     @Import(name="destinationConfiguration", required=true)
-      private final Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
+    private Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
 
     public Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration() {
         return this.destinationConfiguration;
@@ -31,10 +31,10 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,99 +42,90 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
+    private @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
 
-    public Output<List<RecordingConfigurationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RecordingConfigurationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="thumbnailConfiguration")
-      private final @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
+    private @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
 
-    public Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration() {
-        return this.thumbnailConfiguration == null ? Codegen.empty() : this.thumbnailConfiguration;
+    public Optional<Output<RecordingConfigurationThumbnailConfigurationArgs>> thumbnailConfiguration() {
+        return Optional.ofNullable(this.thumbnailConfiguration);
     }
 
-    public RecordingConfigurationArgs(
-        Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration,
-        @Nullable Output<String> name,
-        @Nullable Output<List<RecordingConfigurationTagArgs>> tags,
-        @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
-        this.destinationConfiguration = Objects.requireNonNull(destinationConfiguration, "expected parameter 'destinationConfiguration' to be non-null");
-        this.name = name;
-        this.tags = tags;
-        this.thumbnailConfiguration = thumbnailConfiguration;
-    }
+    private RecordingConfigurationArgs() {}
 
-    private RecordingConfigurationArgs() {
-        this.destinationConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.thumbnailConfiguration = Codegen.empty();
+    private RecordingConfigurationArgs(RecordingConfigurationArgs $) {
+        this.destinationConfiguration = $.destinationConfiguration;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.thumbnailConfiguration = $.thumbnailConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
-        private @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
+        private RecordingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordingConfigurationArgs();
         }
 
         public Builder(RecordingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationConfiguration = defaults.destinationConfiguration;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.thumbnailConfiguration = defaults.thumbnailConfiguration;
+            $ = new RecordingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationConfiguration(Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration) {
-            this.destinationConfiguration = Objects.requireNonNull(destinationConfiguration);
+            $.destinationConfiguration = destinationConfiguration;
             return this;
         }
+
         public Builder destinationConfiguration(RecordingConfigurationDestinationConfigurationArgs destinationConfiguration) {
-            this.destinationConfiguration = Output.of(Objects.requireNonNull(destinationConfiguration));
-            return this;
+            return destinationConfiguration(Output.of(destinationConfiguration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<RecordingConfigurationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RecordingConfigurationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RecordingConfigurationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RecordingConfigurationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder thumbnailConfiguration(@Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
-            this.thumbnailConfiguration = thumbnailConfiguration;
+            $.thumbnailConfiguration = thumbnailConfiguration;
             return this;
         }
-        public Builder thumbnailConfiguration(@Nullable RecordingConfigurationThumbnailConfigurationArgs thumbnailConfiguration) {
-            this.thumbnailConfiguration = Codegen.ofNullable(thumbnailConfiguration);
-            return this;
-        }        public RecordingConfigurationArgs build() {
-            return new RecordingConfigurationArgs(destinationConfiguration, name, tags, thumbnailConfiguration);
+
+        public Builder thumbnailConfiguration(RecordingConfigurationThumbnailConfigurationArgs thumbnailConfiguration) {
+            return thumbnailConfiguration(Output.of(thumbnailConfiguration));
+        }
+
+        public RecordingConfigurationArgs build() {
+            $.destinationConfiguration = Objects.requireNonNull($.destinationConfiguration, "expected parameter 'destinationConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

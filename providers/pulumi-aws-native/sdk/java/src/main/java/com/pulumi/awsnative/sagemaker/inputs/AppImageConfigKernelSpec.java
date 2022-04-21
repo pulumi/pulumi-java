@@ -19,10 +19,10 @@ public final class AppImageConfigKernelSpec extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -30,55 +30,51 @@ public final class AppImageConfigKernelSpec extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public AppImageConfigKernelSpec(
-        @Nullable String displayName,
-        String name) {
-        this.displayName = displayName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AppImageConfigKernelSpec() {}
 
-    private AppImageConfigKernelSpec() {
-        this.displayName = null;
-        this.name = null;
+    private AppImageConfigKernelSpec(AppImageConfigKernelSpec $) {
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppImageConfigKernelSpec defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private String name;
+        private AppImageConfigKernelSpec $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppImageConfigKernelSpec();
         }
 
         public Builder(AppImageConfigKernelSpec defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new AppImageConfigKernelSpec(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public AppImageConfigKernelSpec build() {
-            return new AppImageConfigKernelSpec(displayName, name);
+        }
+
+        public AppImageConfigKernelSpec build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

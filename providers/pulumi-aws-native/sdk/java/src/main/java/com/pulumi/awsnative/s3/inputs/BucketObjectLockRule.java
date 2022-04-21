@@ -19,45 +19,44 @@ public final class BucketObjectLockRule extends com.pulumi.resources.InvokeArgs 
     public static final BucketObjectLockRule Empty = new BucketObjectLockRule();
 
     @Import(name="defaultRetention")
-      private final @Nullable BucketDefaultRetention defaultRetention;
+    private @Nullable BucketDefaultRetention defaultRetention;
 
     public Optional<BucketDefaultRetention> defaultRetention() {
-        return this.defaultRetention == null ? Optional.empty() : Optional.ofNullable(this.defaultRetention);
+        return Optional.ofNullable(this.defaultRetention);
     }
 
-    public BucketObjectLockRule(@Nullable BucketDefaultRetention defaultRetention) {
-        this.defaultRetention = defaultRetention;
-    }
+    private BucketObjectLockRule() {}
 
-    private BucketObjectLockRule() {
-        this.defaultRetention = null;
+    private BucketObjectLockRule(BucketObjectLockRule $) {
+        this.defaultRetention = $.defaultRetention;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectLockRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketDefaultRetention defaultRetention;
+        private BucketObjectLockRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectLockRule();
         }
 
         public Builder(BucketObjectLockRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultRetention = defaults.defaultRetention;
+            $ = new BucketObjectLockRule(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultRetention(@Nullable BucketDefaultRetention defaultRetention) {
-            this.defaultRetention = defaultRetention;
+            $.defaultRetention = defaultRetention;
             return this;
-        }        public BucketObjectLockRule build() {
-            return new BucketObjectLockRule(defaultRetention);
+        }
+
+        public BucketObjectLockRule build() {
+            return $;
         }
     }
+
 }

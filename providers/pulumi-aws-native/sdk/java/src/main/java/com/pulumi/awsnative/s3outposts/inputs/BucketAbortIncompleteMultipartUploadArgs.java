@@ -5,7 +5,6 @@ package com.pulumi.awsnative.s3outposts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class BucketAbortIncompleteMultipartUploadArgs extends com.pulumi.r
      * 
      */
     @Import(name="daysAfterInitiation", required=true)
-      private final Output<Integer> daysAfterInitiation;
+    private Output<Integer> daysAfterInitiation;
 
     public Output<Integer> daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 
-    public BucketAbortIncompleteMultipartUploadArgs(Output<Integer> daysAfterInitiation) {
-        this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation, "expected parameter 'daysAfterInitiation' to be non-null");
-    }
+    private BucketAbortIncompleteMultipartUploadArgs() {}
 
-    private BucketAbortIncompleteMultipartUploadArgs() {
-        this.daysAfterInitiation = Codegen.empty();
+    private BucketAbortIncompleteMultipartUploadArgs(BucketAbortIncompleteMultipartUploadArgs $) {
+        this.daysAfterInitiation = $.daysAfterInitiation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAbortIncompleteMultipartUploadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> daysAfterInitiation;
+        private BucketAbortIncompleteMultipartUploadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAbortIncompleteMultipartUploadArgs();
         }
 
         public Builder(BucketAbortIncompleteMultipartUploadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysAfterInitiation = defaults.daysAfterInitiation;
+            $ = new BucketAbortIncompleteMultipartUploadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysAfterInitiation(Output<Integer> daysAfterInitiation) {
-            this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
+            $.daysAfterInitiation = daysAfterInitiation;
             return this;
         }
+
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
-            this.daysAfterInitiation = Output.of(Objects.requireNonNull(daysAfterInitiation));
-            return this;
-        }        public BucketAbortIncompleteMultipartUploadArgs build() {
-            return new BucketAbortIncompleteMultipartUploadArgs(daysAfterInitiation);
+            return daysAfterInitiation(Output.of(daysAfterInitiation));
+        }
+
+        public BucketAbortIncompleteMultipartUploadArgs build() {
+            $.daysAfterInitiation = Objects.requireNonNull($.daysAfterInitiation, "expected parameter 'daysAfterInitiation' to be non-null");
+            return $;
         }
     }
+
 }

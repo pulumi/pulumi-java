@@ -5,10 +5,10 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,93 +17,86 @@ public final class ConnectorProfileOAuthPropertiesArgs extends com.pulumi.resour
     public static final ConnectorProfileOAuthPropertiesArgs Empty = new ConnectorProfileOAuthPropertiesArgs();
 
     @Import(name="authCodeUrl")
-      private final @Nullable Output<String> authCodeUrl;
+    private @Nullable Output<String> authCodeUrl;
 
-    public Output<String> authCodeUrl() {
-        return this.authCodeUrl == null ? Codegen.empty() : this.authCodeUrl;
+    public Optional<Output<String>> authCodeUrl() {
+        return Optional.ofNullable(this.authCodeUrl);
     }
 
     @Import(name="oAuthScopes")
-      private final @Nullable Output<List<String>> oAuthScopes;
+    private @Nullable Output<List<String>> oAuthScopes;
 
-    public Output<List<String>> oAuthScopes() {
-        return this.oAuthScopes == null ? Codegen.empty() : this.oAuthScopes;
+    public Optional<Output<List<String>>> oAuthScopes() {
+        return Optional.ofNullable(this.oAuthScopes);
     }
 
     @Import(name="tokenUrl")
-      private final @Nullable Output<String> tokenUrl;
+    private @Nullable Output<String> tokenUrl;
 
-    public Output<String> tokenUrl() {
-        return this.tokenUrl == null ? Codegen.empty() : this.tokenUrl;
+    public Optional<Output<String>> tokenUrl() {
+        return Optional.ofNullable(this.tokenUrl);
     }
 
-    public ConnectorProfileOAuthPropertiesArgs(
-        @Nullable Output<String> authCodeUrl,
-        @Nullable Output<List<String>> oAuthScopes,
-        @Nullable Output<String> tokenUrl) {
-        this.authCodeUrl = authCodeUrl;
-        this.oAuthScopes = oAuthScopes;
-        this.tokenUrl = tokenUrl;
-    }
+    private ConnectorProfileOAuthPropertiesArgs() {}
 
-    private ConnectorProfileOAuthPropertiesArgs() {
-        this.authCodeUrl = Codegen.empty();
-        this.oAuthScopes = Codegen.empty();
-        this.tokenUrl = Codegen.empty();
+    private ConnectorProfileOAuthPropertiesArgs(ConnectorProfileOAuthPropertiesArgs $) {
+        this.authCodeUrl = $.authCodeUrl;
+        this.oAuthScopes = $.oAuthScopes;
+        this.tokenUrl = $.tokenUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileOAuthPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authCodeUrl;
-        private @Nullable Output<List<String>> oAuthScopes;
-        private @Nullable Output<String> tokenUrl;
+        private ConnectorProfileOAuthPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileOAuthPropertiesArgs();
         }
 
         public Builder(ConnectorProfileOAuthPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authCodeUrl = defaults.authCodeUrl;
-    	      this.oAuthScopes = defaults.oAuthScopes;
-    	      this.tokenUrl = defaults.tokenUrl;
+            $ = new ConnectorProfileOAuthPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authCodeUrl(@Nullable Output<String> authCodeUrl) {
-            this.authCodeUrl = authCodeUrl;
+            $.authCodeUrl = authCodeUrl;
             return this;
         }
-        public Builder authCodeUrl(@Nullable String authCodeUrl) {
-            this.authCodeUrl = Codegen.ofNullable(authCodeUrl);
-            return this;
+
+        public Builder authCodeUrl(String authCodeUrl) {
+            return authCodeUrl(Output.of(authCodeUrl));
         }
+
         public Builder oAuthScopes(@Nullable Output<List<String>> oAuthScopes) {
-            this.oAuthScopes = oAuthScopes;
+            $.oAuthScopes = oAuthScopes;
             return this;
         }
-        public Builder oAuthScopes(@Nullable List<String> oAuthScopes) {
-            this.oAuthScopes = Codegen.ofNullable(oAuthScopes);
-            return this;
+
+        public Builder oAuthScopes(List<String> oAuthScopes) {
+            return oAuthScopes(Output.of(oAuthScopes));
         }
+
         public Builder oAuthScopes(String... oAuthScopes) {
             return oAuthScopes(List.of(oAuthScopes));
         }
+
         public Builder tokenUrl(@Nullable Output<String> tokenUrl) {
-            this.tokenUrl = tokenUrl;
+            $.tokenUrl = tokenUrl;
             return this;
         }
-        public Builder tokenUrl(@Nullable String tokenUrl) {
-            this.tokenUrl = Codegen.ofNullable(tokenUrl);
-            return this;
-        }        public ConnectorProfileOAuthPropertiesArgs build() {
-            return new ConnectorProfileOAuthPropertiesArgs(authCodeUrl, oAuthScopes, tokenUrl);
+
+        public Builder tokenUrl(String tokenUrl) {
+            return tokenUrl(Output.of(tokenUrl));
+        }
+
+        public ConnectorProfileOAuthPropertiesArgs build() {
+            return $;
         }
     }
+
 }

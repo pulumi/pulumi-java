@@ -17,45 +17,45 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefixListId", required=true)
-      private final String prefixListId;
+    private String prefixListId;
 
     public String prefixListId() {
         return this.prefixListId;
     }
 
-    public GetPrefixListArgs(String prefixListId) {
-        this.prefixListId = Objects.requireNonNull(prefixListId, "expected parameter 'prefixListId' to be non-null");
-    }
+    private GetPrefixListArgs() {}
 
-    private GetPrefixListArgs() {
-        this.prefixListId = null;
+    private GetPrefixListArgs(GetPrefixListArgs $) {
+        this.prefixListId = $.prefixListId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrefixListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String prefixListId;
+        private GetPrefixListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrefixListArgs();
         }
 
         public Builder(GetPrefixListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prefixListId = defaults.prefixListId;
+            $ = new GetPrefixListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder prefixListId(String prefixListId) {
-            this.prefixListId = Objects.requireNonNull(prefixListId);
+            $.prefixListId = prefixListId;
             return this;
-        }        public GetPrefixListArgs build() {
-            return new GetPrefixListArgs(prefixListId);
+        }
+
+        public GetPrefixListArgs build() {
+            $.prefixListId = Objects.requireNonNull($.prefixListId, "expected parameter 'prefixListId' to be non-null");
+            return $;
         }
     }
+
 }

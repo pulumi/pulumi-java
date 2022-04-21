@@ -24,10 +24,10 @@ public final class LocationHDFSQopConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dataTransferProtection")
-      private final @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
+    private @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
 
     public Optional<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection() {
-        return this.dataTransferProtection == null ? Optional.empty() : Optional.ofNullable(this.dataTransferProtection);
+        return Optional.ofNullable(this.dataTransferProtection);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class LocationHDFSQopConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="rpcProtection")
-      private final @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
+    private @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
 
     public Optional<LocationHDFSQopConfigurationRpcProtection> rpcProtection() {
-        return this.rpcProtection == null ? Optional.empty() : Optional.ofNullable(this.rpcProtection);
+        return Optional.ofNullable(this.rpcProtection);
     }
 
-    public LocationHDFSQopConfiguration(
-        @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection,
-        @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection) {
-        this.dataTransferProtection = dataTransferProtection;
-        this.rpcProtection = rpcProtection;
-    }
+    private LocationHDFSQopConfiguration() {}
 
-    private LocationHDFSQopConfiguration() {
-        this.dataTransferProtection = null;
-        this.rpcProtection = null;
+    private LocationHDFSQopConfiguration(LocationHDFSQopConfiguration $) {
+        this.dataTransferProtection = $.dataTransferProtection;
+        this.rpcProtection = $.rpcProtection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationHDFSQopConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
-        private @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
+        private LocationHDFSQopConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationHDFSQopConfiguration();
         }
 
         public Builder(LocationHDFSQopConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataTransferProtection = defaults.dataTransferProtection;
-    	      this.rpcProtection = defaults.rpcProtection;
+            $ = new LocationHDFSQopConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder dataTransferProtection(@Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection) {
-            this.dataTransferProtection = dataTransferProtection;
+            $.dataTransferProtection = dataTransferProtection;
             return this;
         }
+
         public Builder rpcProtection(@Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection) {
-            this.rpcProtection = rpcProtection;
+            $.rpcProtection = rpcProtection;
             return this;
-        }        public LocationHDFSQopConfiguration build() {
-            return new LocationHDFSQopConfiguration(dataTransferProtection, rpcProtection);
+        }
+
+        public LocationHDFSQopConfiguration build() {
+            return $;
         }
     }
+
 }

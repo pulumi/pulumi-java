@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
-import java.util.Objects;
+
 
 
 public final class DatastoreServiceManagedS3 extends com.pulumi.resources.InvokeArgs {
 
     public static final DatastoreServiceManagedS3 Empty = new DatastoreServiceManagedS3();
 
-    public DatastoreServiceManagedS3() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DatastoreServiceManagedS3 defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DatastoreServiceManagedS3 $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DatastoreServiceManagedS3 defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DatastoreServiceManagedS3();
         }
         public DatastoreServiceManagedS3 build() {
-            return new DatastoreServiceManagedS3();
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public GetUserArgs(String userId) {
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private GetUserArgs() {}
 
-    private GetUserArgs() {
-        this.userId = null;
+    private GetUserArgs(GetUserArgs $) {
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userId;
+        private GetUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserArgs();
         }
 
         public Builder(GetUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userId = defaults.userId;
+            $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public GetUserArgs build() {
-            return new GetUserArgs(userId);
+        }
+
+        public GetUserArgs build() {
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

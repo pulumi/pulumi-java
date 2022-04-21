@@ -5,10 +5,10 @@ package com.pulumi.awsnative.groundstation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,96 +17,90 @@ public final class DataflowEndpointGroupSecurityDetailsArgs extends com.pulumi.r
     public static final DataflowEndpointGroupSecurityDetailsArgs Empty = new DataflowEndpointGroupSecurityDetailsArgs();
 
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
-    public DataflowEndpointGroupSecurityDetailsArgs(
-        @Nullable Output<String> roleArn,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<List<String>> subnetIds) {
-        this.roleArn = roleArn;
-        this.securityGroupIds = securityGroupIds;
-        this.subnetIds = subnetIds;
-    }
+    private DataflowEndpointGroupSecurityDetailsArgs() {}
 
-    private DataflowEndpointGroupSecurityDetailsArgs() {
-        this.roleArn = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
+    private DataflowEndpointGroupSecurityDetailsArgs(DataflowEndpointGroupSecurityDetailsArgs $) {
+        this.roleArn = $.roleArn;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataflowEndpointGroupSecurityDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<List<String>> subnetIds;
+        private DataflowEndpointGroupSecurityDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataflowEndpointGroupSecurityDetailsArgs();
         }
 
         public Builder(DataflowEndpointGroupSecurityDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new DataflowEndpointGroupSecurityDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public DataflowEndpointGroupSecurityDetailsArgs build() {
-            return new DataflowEndpointGroupSecurityDetailsArgs(roleArn, securityGroupIds, subnetIds);
+        }
+
+        public DataflowEndpointGroupSecurityDetailsArgs build() {
+            return $;
         }
     }
+
 }

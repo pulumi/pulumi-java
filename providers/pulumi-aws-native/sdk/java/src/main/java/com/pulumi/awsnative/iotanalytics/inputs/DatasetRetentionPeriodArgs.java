@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,70 +15,67 @@ public final class DatasetRetentionPeriodArgs extends com.pulumi.resources.Resou
     public static final DatasetRetentionPeriodArgs Empty = new DatasetRetentionPeriodArgs();
 
     @Import(name="numberOfDays", required=true)
-      private final Output<Integer> numberOfDays;
+    private Output<Integer> numberOfDays;
 
     public Output<Integer> numberOfDays() {
         return this.numberOfDays;
     }
 
     @Import(name="unlimited", required=true)
-      private final Output<Boolean> unlimited;
+    private Output<Boolean> unlimited;
 
     public Output<Boolean> unlimited() {
         return this.unlimited;
     }
 
-    public DatasetRetentionPeriodArgs(
-        Output<Integer> numberOfDays,
-        Output<Boolean> unlimited) {
-        this.numberOfDays = Objects.requireNonNull(numberOfDays, "expected parameter 'numberOfDays' to be non-null");
-        this.unlimited = Objects.requireNonNull(unlimited, "expected parameter 'unlimited' to be non-null");
-    }
+    private DatasetRetentionPeriodArgs() {}
 
-    private DatasetRetentionPeriodArgs() {
-        this.numberOfDays = Codegen.empty();
-        this.unlimited = Codegen.empty();
+    private DatasetRetentionPeriodArgs(DatasetRetentionPeriodArgs $) {
+        this.numberOfDays = $.numberOfDays;
+        this.unlimited = $.unlimited;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetRetentionPeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> numberOfDays;
-        private Output<Boolean> unlimited;
+        private DatasetRetentionPeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetRetentionPeriodArgs();
         }
 
         public Builder(DatasetRetentionPeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numberOfDays = defaults.numberOfDays;
-    	      this.unlimited = defaults.unlimited;
+            $ = new DatasetRetentionPeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numberOfDays(Output<Integer> numberOfDays) {
-            this.numberOfDays = Objects.requireNonNull(numberOfDays);
+            $.numberOfDays = numberOfDays;
             return this;
         }
+
         public Builder numberOfDays(Integer numberOfDays) {
-            this.numberOfDays = Output.of(Objects.requireNonNull(numberOfDays));
-            return this;
+            return numberOfDays(Output.of(numberOfDays));
         }
+
         public Builder unlimited(Output<Boolean> unlimited) {
-            this.unlimited = Objects.requireNonNull(unlimited);
+            $.unlimited = unlimited;
             return this;
         }
+
         public Builder unlimited(Boolean unlimited) {
-            this.unlimited = Output.of(Objects.requireNonNull(unlimited));
-            return this;
-        }        public DatasetRetentionPeriodArgs build() {
-            return new DatasetRetentionPeriodArgs(numberOfDays, unlimited);
+            return unlimited(Output.of(unlimited));
+        }
+
+        public DatasetRetentionPeriodArgs build() {
+            $.numberOfDays = Objects.requireNonNull($.numberOfDays, "expected parameter 'numberOfDays' to be non-null");
+            $.unlimited = Objects.requireNonNull($.unlimited, "expected parameter 'unlimited' to be non-null");
+            return $;
         }
     }
+
 }

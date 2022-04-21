@@ -7,8 +7,8 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHiveJsonSerDeAr
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOpenXJsonSerDeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DeliveryStreamDeserializerArgs extends com.pulumi.resources.R
     public static final DeliveryStreamDeserializerArgs Empty = new DeliveryStreamDeserializerArgs();
 
     @Import(name="hiveJsonSerDe")
-      private final @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
+    private @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
 
-    public Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe() {
-        return this.hiveJsonSerDe == null ? Codegen.empty() : this.hiveJsonSerDe;
+    public Optional<Output<DeliveryStreamHiveJsonSerDeArgs>> hiveJsonSerDe() {
+        return Optional.ofNullable(this.hiveJsonSerDe);
     }
 
     @Import(name="openXJsonSerDe")
-      private final @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
+    private @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
 
-    public Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe() {
-        return this.openXJsonSerDe == null ? Codegen.empty() : this.openXJsonSerDe;
+    public Optional<Output<DeliveryStreamOpenXJsonSerDeArgs>> openXJsonSerDe() {
+        return Optional.ofNullable(this.openXJsonSerDe);
     }
 
-    public DeliveryStreamDeserializerArgs(
-        @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe,
-        @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
-        this.hiveJsonSerDe = hiveJsonSerDe;
-        this.openXJsonSerDe = openXJsonSerDe;
-    }
+    private DeliveryStreamDeserializerArgs() {}
 
-    private DeliveryStreamDeserializerArgs() {
-        this.hiveJsonSerDe = Codegen.empty();
-        this.openXJsonSerDe = Codegen.empty();
+    private DeliveryStreamDeserializerArgs(DeliveryStreamDeserializerArgs $) {
+        this.hiveJsonSerDe = $.hiveJsonSerDe;
+        this.openXJsonSerDe = $.openXJsonSerDe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamDeserializerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
-        private @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
+        private DeliveryStreamDeserializerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamDeserializerArgs();
         }
 
         public Builder(DeliveryStreamDeserializerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hiveJsonSerDe = defaults.hiveJsonSerDe;
-    	      this.openXJsonSerDe = defaults.openXJsonSerDe;
+            $ = new DeliveryStreamDeserializerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hiveJsonSerDe(@Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe) {
-            this.hiveJsonSerDe = hiveJsonSerDe;
+            $.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
-        public Builder hiveJsonSerDe(@Nullable DeliveryStreamHiveJsonSerDeArgs hiveJsonSerDe) {
-            this.hiveJsonSerDe = Codegen.ofNullable(hiveJsonSerDe);
-            return this;
+
+        public Builder hiveJsonSerDe(DeliveryStreamHiveJsonSerDeArgs hiveJsonSerDe) {
+            return hiveJsonSerDe(Output.of(hiveJsonSerDe));
         }
+
         public Builder openXJsonSerDe(@Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
-            this.openXJsonSerDe = openXJsonSerDe;
+            $.openXJsonSerDe = openXJsonSerDe;
             return this;
         }
-        public Builder openXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDeArgs openXJsonSerDe) {
-            this.openXJsonSerDe = Codegen.ofNullable(openXJsonSerDe);
-            return this;
-        }        public DeliveryStreamDeserializerArgs build() {
-            return new DeliveryStreamDeserializerArgs(hiveJsonSerDe, openXJsonSerDe);
+
+        public Builder openXJsonSerDe(DeliveryStreamOpenXJsonSerDeArgs openXJsonSerDe) {
+            return openXJsonSerDe(Output.of(openXJsonSerDe));
+        }
+
+        public DeliveryStreamDeserializerArgs build() {
+            return $;
         }
     }
+
 }

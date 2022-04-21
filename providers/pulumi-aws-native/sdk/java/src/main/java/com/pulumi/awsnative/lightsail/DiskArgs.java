@@ -7,11 +7,11 @@ import com.pulumi.awsnative.lightsail.inputs.DiskAddOnArgs;
 import com.pulumi.awsnative.lightsail.inputs.DiskTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addOns")
-      private final @Nullable Output<List<DiskAddOnArgs>> addOns;
+    private @Nullable Output<List<DiskAddOnArgs>> addOns;
 
-    public Output<List<DiskAddOnArgs>> addOns() {
-        return this.addOns == null ? Codegen.empty() : this.addOns;
+    public Optional<Output<List<DiskAddOnArgs>>> addOns() {
+        return Optional.ofNullable(this.addOns);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskName")
-      private final @Nullable Output<String> diskName;
+    private @Nullable Output<String> diskName;
 
-    public Output<String> diskName() {
-        return this.diskName == null ? Codegen.empty() : this.diskName;
+    public Optional<Output<String>> diskName() {
+        return Optional.ofNullable(this.diskName);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeInGb", required=true)
-      private final Output<Integer> sizeInGb;
+    private Output<Integer> sizeInGb;
 
     public Output<Integer> sizeInGb() {
         return this.sizeInGb;
@@ -68,108 +68,97 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DiskTagArgs>> tags;
+    private @Nullable Output<List<DiskTagArgs>> tags;
 
-    public Output<List<DiskTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DiskTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DiskArgs(
-        @Nullable Output<List<DiskAddOnArgs>> addOns,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> diskName,
-        Output<Integer> sizeInGb,
-        @Nullable Output<List<DiskTagArgs>> tags) {
-        this.addOns = addOns;
-        this.availabilityZone = availabilityZone;
-        this.diskName = diskName;
-        this.sizeInGb = Objects.requireNonNull(sizeInGb, "expected parameter 'sizeInGb' to be non-null");
-        this.tags = tags;
-    }
+    private DiskArgs() {}
 
-    private DiskArgs() {
-        this.addOns = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.diskName = Codegen.empty();
-        this.sizeInGb = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DiskArgs(DiskArgs $) {
+        this.addOns = $.addOns;
+        this.availabilityZone = $.availabilityZone;
+        this.diskName = $.diskName;
+        this.sizeInGb = $.sizeInGb;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DiskAddOnArgs>> addOns;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> diskName;
-        private Output<Integer> sizeInGb;
-        private @Nullable Output<List<DiskTagArgs>> tags;
+        private DiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskArgs();
         }
 
         public Builder(DiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addOns = defaults.addOns;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.diskName = defaults.diskName;
-    	      this.sizeInGb = defaults.sizeInGb;
-    	      this.tags = defaults.tags;
+            $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addOns(@Nullable Output<List<DiskAddOnArgs>> addOns) {
-            this.addOns = addOns;
+            $.addOns = addOns;
             return this;
         }
-        public Builder addOns(@Nullable List<DiskAddOnArgs> addOns) {
-            this.addOns = Codegen.ofNullable(addOns);
-            return this;
+
+        public Builder addOns(List<DiskAddOnArgs> addOns) {
+            return addOns(Output.of(addOns));
         }
+
         public Builder addOns(DiskAddOnArgs... addOns) {
             return addOns(List.of(addOns));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder diskName(@Nullable Output<String> diskName) {
-            this.diskName = diskName;
+            $.diskName = diskName;
             return this;
         }
-        public Builder diskName(@Nullable String diskName) {
-            this.diskName = Codegen.ofNullable(diskName);
-            return this;
+
+        public Builder diskName(String diskName) {
+            return diskName(Output.of(diskName));
         }
+
         public Builder sizeInGb(Output<Integer> sizeInGb) {
-            this.sizeInGb = Objects.requireNonNull(sizeInGb);
+            $.sizeInGb = sizeInGb;
             return this;
         }
+
         public Builder sizeInGb(Integer sizeInGb) {
-            this.sizeInGb = Output.of(Objects.requireNonNull(sizeInGb));
-            return this;
+            return sizeInGb(Output.of(sizeInGb));
         }
+
         public Builder tags(@Nullable Output<List<DiskTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DiskTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DiskTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DiskTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DiskArgs build() {
-            return new DiskArgs(addOns, availabilityZone, diskName, sizeInGb, tags);
+        }
+
+        public DiskArgs build() {
+            $.sizeInGb = Objects.requireNonNull($.sizeInGb, "expected parameter 'sizeInGb' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,62 +16,57 @@ public final class DomainConfigurationAuthorizerConfig extends com.pulumi.resour
     public static final DomainConfigurationAuthorizerConfig Empty = new DomainConfigurationAuthorizerConfig();
 
     @Import(name="allowAuthorizerOverride")
-      private final @Nullable Boolean allowAuthorizerOverride;
+    private @Nullable Boolean allowAuthorizerOverride;
 
     public Optional<Boolean> allowAuthorizerOverride() {
-        return this.allowAuthorizerOverride == null ? Optional.empty() : Optional.ofNullable(this.allowAuthorizerOverride);
+        return Optional.ofNullable(this.allowAuthorizerOverride);
     }
 
     @Import(name="defaultAuthorizerName")
-      private final @Nullable String defaultAuthorizerName;
+    private @Nullable String defaultAuthorizerName;
 
     public Optional<String> defaultAuthorizerName() {
-        return this.defaultAuthorizerName == null ? Optional.empty() : Optional.ofNullable(this.defaultAuthorizerName);
+        return Optional.ofNullable(this.defaultAuthorizerName);
     }
 
-    public DomainConfigurationAuthorizerConfig(
-        @Nullable Boolean allowAuthorizerOverride,
-        @Nullable String defaultAuthorizerName) {
-        this.allowAuthorizerOverride = allowAuthorizerOverride;
-        this.defaultAuthorizerName = defaultAuthorizerName;
-    }
+    private DomainConfigurationAuthorizerConfig() {}
 
-    private DomainConfigurationAuthorizerConfig() {
-        this.allowAuthorizerOverride = null;
-        this.defaultAuthorizerName = null;
+    private DomainConfigurationAuthorizerConfig(DomainConfigurationAuthorizerConfig $) {
+        this.allowAuthorizerOverride = $.allowAuthorizerOverride;
+        this.defaultAuthorizerName = $.defaultAuthorizerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainConfigurationAuthorizerConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowAuthorizerOverride;
-        private @Nullable String defaultAuthorizerName;
+        private DomainConfigurationAuthorizerConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainConfigurationAuthorizerConfig();
         }
 
         public Builder(DomainConfigurationAuthorizerConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAuthorizerOverride = defaults.allowAuthorizerOverride;
-    	      this.defaultAuthorizerName = defaults.defaultAuthorizerName;
+            $ = new DomainConfigurationAuthorizerConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
-            this.allowAuthorizerOverride = allowAuthorizerOverride;
+            $.allowAuthorizerOverride = allowAuthorizerOverride;
             return this;
         }
+
         public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
-            this.defaultAuthorizerName = defaultAuthorizerName;
+            $.defaultAuthorizerName = defaultAuthorizerName;
             return this;
-        }        public DomainConfigurationAuthorizerConfig build() {
-            return new DomainConfigurationAuthorizerConfig(allowAuthorizerOverride, defaultAuthorizerName);
+        }
+
+        public DomainConfigurationAuthorizerConfig build() {
+            return $;
         }
     }
+
 }

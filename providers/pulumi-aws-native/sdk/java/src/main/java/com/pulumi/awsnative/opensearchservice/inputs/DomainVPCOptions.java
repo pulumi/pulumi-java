@@ -16,68 +16,65 @@ public final class DomainVPCOptions extends com.pulumi.resources.InvokeArgs {
     public static final DomainVPCOptions Empty = new DomainVPCOptions();
 
     @Import(name="securityGroupIds")
-      private final @Nullable List<String> securityGroupIds;
+    private @Nullable List<String> securityGroupIds;
 
-    public List<String> securityGroupIds() {
-        return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
+    public Optional<List<String>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     @Import(name="subnetIds")
-      private final @Nullable List<String> subnetIds;
+    private @Nullable List<String> subnetIds;
 
-    public List<String> subnetIds() {
-        return this.subnetIds == null ? List.of() : this.subnetIds;
+    public Optional<List<String>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
-    public DomainVPCOptions(
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds) {
-        this.securityGroupIds = securityGroupIds;
-        this.subnetIds = subnetIds;
-    }
+    private DomainVPCOptions() {}
 
-    private DomainVPCOptions() {
-        this.securityGroupIds = List.of();
-        this.subnetIds = List.of();
+    private DomainVPCOptions(DomainVPCOptions $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainVPCOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> securityGroupIds;
-        private @Nullable List<String> subnetIds;
+        private DomainVPCOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainVPCOptions();
         }
 
         public Builder(DomainVPCOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new DomainVPCOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public DomainVPCOptions build() {
-            return new DomainVPCOptions(securityGroupIds, subnetIds);
+        }
+
+        public DomainVPCOptions build() {
+            return $;
         }
     }
+
 }

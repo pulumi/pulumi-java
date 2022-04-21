@@ -21,619 +21,558 @@ public final class FilterCriteria extends com.pulumi.resources.InvokeArgs {
     public static final FilterCriteria Empty = new FilterCriteria();
 
     @Import(name="awsAccountId")
-      private final @Nullable List<FilterStringFilter> awsAccountId;
+    private @Nullable List<FilterStringFilter> awsAccountId;
 
-    public List<FilterStringFilter> awsAccountId() {
-        return this.awsAccountId == null ? List.of() : this.awsAccountId;
+    public Optional<List<FilterStringFilter>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     @Import(name="componentId")
-      private final @Nullable List<FilterStringFilter> componentId;
+    private @Nullable List<FilterStringFilter> componentId;
 
-    public List<FilterStringFilter> componentId() {
-        return this.componentId == null ? List.of() : this.componentId;
+    public Optional<List<FilterStringFilter>> componentId() {
+        return Optional.ofNullable(this.componentId);
     }
 
     @Import(name="componentType")
-      private final @Nullable List<FilterStringFilter> componentType;
+    private @Nullable List<FilterStringFilter> componentType;
 
-    public List<FilterStringFilter> componentType() {
-        return this.componentType == null ? List.of() : this.componentType;
+    public Optional<List<FilterStringFilter>> componentType() {
+        return Optional.ofNullable(this.componentType);
     }
 
     @Import(name="ec2InstanceImageId")
-      private final @Nullable List<FilterStringFilter> ec2InstanceImageId;
+    private @Nullable List<FilterStringFilter> ec2InstanceImageId;
 
-    public List<FilterStringFilter> ec2InstanceImageId() {
-        return this.ec2InstanceImageId == null ? List.of() : this.ec2InstanceImageId;
+    public Optional<List<FilterStringFilter>> ec2InstanceImageId() {
+        return Optional.ofNullable(this.ec2InstanceImageId);
     }
 
     @Import(name="ec2InstanceSubnetId")
-      private final @Nullable List<FilterStringFilter> ec2InstanceSubnetId;
+    private @Nullable List<FilterStringFilter> ec2InstanceSubnetId;
 
-    public List<FilterStringFilter> ec2InstanceSubnetId() {
-        return this.ec2InstanceSubnetId == null ? List.of() : this.ec2InstanceSubnetId;
+    public Optional<List<FilterStringFilter>> ec2InstanceSubnetId() {
+        return Optional.ofNullable(this.ec2InstanceSubnetId);
     }
 
     @Import(name="ec2InstanceVpcId")
-      private final @Nullable List<FilterStringFilter> ec2InstanceVpcId;
+    private @Nullable List<FilterStringFilter> ec2InstanceVpcId;
 
-    public List<FilterStringFilter> ec2InstanceVpcId() {
-        return this.ec2InstanceVpcId == null ? List.of() : this.ec2InstanceVpcId;
+    public Optional<List<FilterStringFilter>> ec2InstanceVpcId() {
+        return Optional.ofNullable(this.ec2InstanceVpcId);
     }
 
     @Import(name="ecrImageArchitecture")
-      private final @Nullable List<FilterStringFilter> ecrImageArchitecture;
+    private @Nullable List<FilterStringFilter> ecrImageArchitecture;
 
-    public List<FilterStringFilter> ecrImageArchitecture() {
-        return this.ecrImageArchitecture == null ? List.of() : this.ecrImageArchitecture;
+    public Optional<List<FilterStringFilter>> ecrImageArchitecture() {
+        return Optional.ofNullable(this.ecrImageArchitecture);
     }
 
     @Import(name="ecrImageHash")
-      private final @Nullable List<FilterStringFilter> ecrImageHash;
+    private @Nullable List<FilterStringFilter> ecrImageHash;
 
-    public List<FilterStringFilter> ecrImageHash() {
-        return this.ecrImageHash == null ? List.of() : this.ecrImageHash;
+    public Optional<List<FilterStringFilter>> ecrImageHash() {
+        return Optional.ofNullable(this.ecrImageHash);
     }
 
     @Import(name="ecrImagePushedAt")
-      private final @Nullable List<FilterDateFilter> ecrImagePushedAt;
+    private @Nullable List<FilterDateFilter> ecrImagePushedAt;
 
-    public List<FilterDateFilter> ecrImagePushedAt() {
-        return this.ecrImagePushedAt == null ? List.of() : this.ecrImagePushedAt;
+    public Optional<List<FilterDateFilter>> ecrImagePushedAt() {
+        return Optional.ofNullable(this.ecrImagePushedAt);
     }
 
     @Import(name="ecrImageRegistry")
-      private final @Nullable List<FilterStringFilter> ecrImageRegistry;
+    private @Nullable List<FilterStringFilter> ecrImageRegistry;
 
-    public List<FilterStringFilter> ecrImageRegistry() {
-        return this.ecrImageRegistry == null ? List.of() : this.ecrImageRegistry;
+    public Optional<List<FilterStringFilter>> ecrImageRegistry() {
+        return Optional.ofNullable(this.ecrImageRegistry);
     }
 
     @Import(name="ecrImageRepositoryName")
-      private final @Nullable List<FilterStringFilter> ecrImageRepositoryName;
+    private @Nullable List<FilterStringFilter> ecrImageRepositoryName;
 
-    public List<FilterStringFilter> ecrImageRepositoryName() {
-        return this.ecrImageRepositoryName == null ? List.of() : this.ecrImageRepositoryName;
+    public Optional<List<FilterStringFilter>> ecrImageRepositoryName() {
+        return Optional.ofNullable(this.ecrImageRepositoryName);
     }
 
     @Import(name="ecrImageTags")
-      private final @Nullable List<FilterStringFilter> ecrImageTags;
+    private @Nullable List<FilterStringFilter> ecrImageTags;
 
-    public List<FilterStringFilter> ecrImageTags() {
-        return this.ecrImageTags == null ? List.of() : this.ecrImageTags;
+    public Optional<List<FilterStringFilter>> ecrImageTags() {
+        return Optional.ofNullable(this.ecrImageTags);
     }
 
     @Import(name="findingArn")
-      private final @Nullable List<FilterStringFilter> findingArn;
+    private @Nullable List<FilterStringFilter> findingArn;
 
-    public List<FilterStringFilter> findingArn() {
-        return this.findingArn == null ? List.of() : this.findingArn;
+    public Optional<List<FilterStringFilter>> findingArn() {
+        return Optional.ofNullable(this.findingArn);
     }
 
     @Import(name="findingStatus")
-      private final @Nullable List<FilterStringFilter> findingStatus;
+    private @Nullable List<FilterStringFilter> findingStatus;
 
-    public List<FilterStringFilter> findingStatus() {
-        return this.findingStatus == null ? List.of() : this.findingStatus;
+    public Optional<List<FilterStringFilter>> findingStatus() {
+        return Optional.ofNullable(this.findingStatus);
     }
 
     @Import(name="findingType")
-      private final @Nullable List<FilterStringFilter> findingType;
+    private @Nullable List<FilterStringFilter> findingType;
 
-    public List<FilterStringFilter> findingType() {
-        return this.findingType == null ? List.of() : this.findingType;
+    public Optional<List<FilterStringFilter>> findingType() {
+        return Optional.ofNullable(this.findingType);
     }
 
     @Import(name="firstObservedAt")
-      private final @Nullable List<FilterDateFilter> firstObservedAt;
+    private @Nullable List<FilterDateFilter> firstObservedAt;
 
-    public List<FilterDateFilter> firstObservedAt() {
-        return this.firstObservedAt == null ? List.of() : this.firstObservedAt;
+    public Optional<List<FilterDateFilter>> firstObservedAt() {
+        return Optional.ofNullable(this.firstObservedAt);
     }
 
     @Import(name="inspectorScore")
-      private final @Nullable List<FilterNumberFilter> inspectorScore;
+    private @Nullable List<FilterNumberFilter> inspectorScore;
 
-    public List<FilterNumberFilter> inspectorScore() {
-        return this.inspectorScore == null ? List.of() : this.inspectorScore;
+    public Optional<List<FilterNumberFilter>> inspectorScore() {
+        return Optional.ofNullable(this.inspectorScore);
     }
 
     @Import(name="lastObservedAt")
-      private final @Nullable List<FilterDateFilter> lastObservedAt;
+    private @Nullable List<FilterDateFilter> lastObservedAt;
 
-    public List<FilterDateFilter> lastObservedAt() {
-        return this.lastObservedAt == null ? List.of() : this.lastObservedAt;
+    public Optional<List<FilterDateFilter>> lastObservedAt() {
+        return Optional.ofNullable(this.lastObservedAt);
     }
 
     @Import(name="networkProtocol")
-      private final @Nullable List<FilterStringFilter> networkProtocol;
+    private @Nullable List<FilterStringFilter> networkProtocol;
 
-    public List<FilterStringFilter> networkProtocol() {
-        return this.networkProtocol == null ? List.of() : this.networkProtocol;
+    public Optional<List<FilterStringFilter>> networkProtocol() {
+        return Optional.ofNullable(this.networkProtocol);
     }
 
     @Import(name="portRange")
-      private final @Nullable List<FilterPortRangeFilter> portRange;
+    private @Nullable List<FilterPortRangeFilter> portRange;
 
-    public List<FilterPortRangeFilter> portRange() {
-        return this.portRange == null ? List.of() : this.portRange;
+    public Optional<List<FilterPortRangeFilter>> portRange() {
+        return Optional.ofNullable(this.portRange);
     }
 
     @Import(name="relatedVulnerabilities")
-      private final @Nullable List<FilterStringFilter> relatedVulnerabilities;
+    private @Nullable List<FilterStringFilter> relatedVulnerabilities;
 
-    public List<FilterStringFilter> relatedVulnerabilities() {
-        return this.relatedVulnerabilities == null ? List.of() : this.relatedVulnerabilities;
+    public Optional<List<FilterStringFilter>> relatedVulnerabilities() {
+        return Optional.ofNullable(this.relatedVulnerabilities);
     }
 
     @Import(name="resourceId")
-      private final @Nullable List<FilterStringFilter> resourceId;
+    private @Nullable List<FilterStringFilter> resourceId;
 
-    public List<FilterStringFilter> resourceId() {
-        return this.resourceId == null ? List.of() : this.resourceId;
+    public Optional<List<FilterStringFilter>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     @Import(name="resourceTags")
-      private final @Nullable List<FilterMapFilter> resourceTags;
+    private @Nullable List<FilterMapFilter> resourceTags;
 
-    public List<FilterMapFilter> resourceTags() {
-        return this.resourceTags == null ? List.of() : this.resourceTags;
+    public Optional<List<FilterMapFilter>> resourceTags() {
+        return Optional.ofNullable(this.resourceTags);
     }
 
     @Import(name="resourceType")
-      private final @Nullable List<FilterStringFilter> resourceType;
+    private @Nullable List<FilterStringFilter> resourceType;
 
-    public List<FilterStringFilter> resourceType() {
-        return this.resourceType == null ? List.of() : this.resourceType;
+    public Optional<List<FilterStringFilter>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     @Import(name="severity")
-      private final @Nullable List<FilterStringFilter> severity;
+    private @Nullable List<FilterStringFilter> severity;
 
-    public List<FilterStringFilter> severity() {
-        return this.severity == null ? List.of() : this.severity;
+    public Optional<List<FilterStringFilter>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     @Import(name="title")
-      private final @Nullable List<FilterStringFilter> title;
+    private @Nullable List<FilterStringFilter> title;
 
-    public List<FilterStringFilter> title() {
-        return this.title == null ? List.of() : this.title;
+    public Optional<List<FilterStringFilter>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     @Import(name="updatedAt")
-      private final @Nullable List<FilterDateFilter> updatedAt;
+    private @Nullable List<FilterDateFilter> updatedAt;
 
-    public List<FilterDateFilter> updatedAt() {
-        return this.updatedAt == null ? List.of() : this.updatedAt;
+    public Optional<List<FilterDateFilter>> updatedAt() {
+        return Optional.ofNullable(this.updatedAt);
     }
 
     @Import(name="vendorSeverity")
-      private final @Nullable List<FilterStringFilter> vendorSeverity;
+    private @Nullable List<FilterStringFilter> vendorSeverity;
 
-    public List<FilterStringFilter> vendorSeverity() {
-        return this.vendorSeverity == null ? List.of() : this.vendorSeverity;
+    public Optional<List<FilterStringFilter>> vendorSeverity() {
+        return Optional.ofNullable(this.vendorSeverity);
     }
 
     @Import(name="vulnerabilityId")
-      private final @Nullable List<FilterStringFilter> vulnerabilityId;
+    private @Nullable List<FilterStringFilter> vulnerabilityId;
 
-    public List<FilterStringFilter> vulnerabilityId() {
-        return this.vulnerabilityId == null ? List.of() : this.vulnerabilityId;
+    public Optional<List<FilterStringFilter>> vulnerabilityId() {
+        return Optional.ofNullable(this.vulnerabilityId);
     }
 
     @Import(name="vulnerabilitySource")
-      private final @Nullable List<FilterStringFilter> vulnerabilitySource;
+    private @Nullable List<FilterStringFilter> vulnerabilitySource;
 
-    public List<FilterStringFilter> vulnerabilitySource() {
-        return this.vulnerabilitySource == null ? List.of() : this.vulnerabilitySource;
+    public Optional<List<FilterStringFilter>> vulnerabilitySource() {
+        return Optional.ofNullable(this.vulnerabilitySource);
     }
 
     @Import(name="vulnerablePackages")
-      private final @Nullable List<FilterPackageFilter> vulnerablePackages;
+    private @Nullable List<FilterPackageFilter> vulnerablePackages;
 
-    public List<FilterPackageFilter> vulnerablePackages() {
-        return this.vulnerablePackages == null ? List.of() : this.vulnerablePackages;
+    public Optional<List<FilterPackageFilter>> vulnerablePackages() {
+        return Optional.ofNullable(this.vulnerablePackages);
     }
 
-    public FilterCriteria(
-        @Nullable List<FilterStringFilter> awsAccountId,
-        @Nullable List<FilterStringFilter> componentId,
-        @Nullable List<FilterStringFilter> componentType,
-        @Nullable List<FilterStringFilter> ec2InstanceImageId,
-        @Nullable List<FilterStringFilter> ec2InstanceSubnetId,
-        @Nullable List<FilterStringFilter> ec2InstanceVpcId,
-        @Nullable List<FilterStringFilter> ecrImageArchitecture,
-        @Nullable List<FilterStringFilter> ecrImageHash,
-        @Nullable List<FilterDateFilter> ecrImagePushedAt,
-        @Nullable List<FilterStringFilter> ecrImageRegistry,
-        @Nullable List<FilterStringFilter> ecrImageRepositoryName,
-        @Nullable List<FilterStringFilter> ecrImageTags,
-        @Nullable List<FilterStringFilter> findingArn,
-        @Nullable List<FilterStringFilter> findingStatus,
-        @Nullable List<FilterStringFilter> findingType,
-        @Nullable List<FilterDateFilter> firstObservedAt,
-        @Nullable List<FilterNumberFilter> inspectorScore,
-        @Nullable List<FilterDateFilter> lastObservedAt,
-        @Nullable List<FilterStringFilter> networkProtocol,
-        @Nullable List<FilterPortRangeFilter> portRange,
-        @Nullable List<FilterStringFilter> relatedVulnerabilities,
-        @Nullable List<FilterStringFilter> resourceId,
-        @Nullable List<FilterMapFilter> resourceTags,
-        @Nullable List<FilterStringFilter> resourceType,
-        @Nullable List<FilterStringFilter> severity,
-        @Nullable List<FilterStringFilter> title,
-        @Nullable List<FilterDateFilter> updatedAt,
-        @Nullable List<FilterStringFilter> vendorSeverity,
-        @Nullable List<FilterStringFilter> vulnerabilityId,
-        @Nullable List<FilterStringFilter> vulnerabilitySource,
-        @Nullable List<FilterPackageFilter> vulnerablePackages) {
-        this.awsAccountId = awsAccountId;
-        this.componentId = componentId;
-        this.componentType = componentType;
-        this.ec2InstanceImageId = ec2InstanceImageId;
-        this.ec2InstanceSubnetId = ec2InstanceSubnetId;
-        this.ec2InstanceVpcId = ec2InstanceVpcId;
-        this.ecrImageArchitecture = ecrImageArchitecture;
-        this.ecrImageHash = ecrImageHash;
-        this.ecrImagePushedAt = ecrImagePushedAt;
-        this.ecrImageRegistry = ecrImageRegistry;
-        this.ecrImageRepositoryName = ecrImageRepositoryName;
-        this.ecrImageTags = ecrImageTags;
-        this.findingArn = findingArn;
-        this.findingStatus = findingStatus;
-        this.findingType = findingType;
-        this.firstObservedAt = firstObservedAt;
-        this.inspectorScore = inspectorScore;
-        this.lastObservedAt = lastObservedAt;
-        this.networkProtocol = networkProtocol;
-        this.portRange = portRange;
-        this.relatedVulnerabilities = relatedVulnerabilities;
-        this.resourceId = resourceId;
-        this.resourceTags = resourceTags;
-        this.resourceType = resourceType;
-        this.severity = severity;
-        this.title = title;
-        this.updatedAt = updatedAt;
-        this.vendorSeverity = vendorSeverity;
-        this.vulnerabilityId = vulnerabilityId;
-        this.vulnerabilitySource = vulnerabilitySource;
-        this.vulnerablePackages = vulnerablePackages;
-    }
+    private FilterCriteria() {}
 
-    private FilterCriteria() {
-        this.awsAccountId = List.of();
-        this.componentId = List.of();
-        this.componentType = List.of();
-        this.ec2InstanceImageId = List.of();
-        this.ec2InstanceSubnetId = List.of();
-        this.ec2InstanceVpcId = List.of();
-        this.ecrImageArchitecture = List.of();
-        this.ecrImageHash = List.of();
-        this.ecrImagePushedAt = List.of();
-        this.ecrImageRegistry = List.of();
-        this.ecrImageRepositoryName = List.of();
-        this.ecrImageTags = List.of();
-        this.findingArn = List.of();
-        this.findingStatus = List.of();
-        this.findingType = List.of();
-        this.firstObservedAt = List.of();
-        this.inspectorScore = List.of();
-        this.lastObservedAt = List.of();
-        this.networkProtocol = List.of();
-        this.portRange = List.of();
-        this.relatedVulnerabilities = List.of();
-        this.resourceId = List.of();
-        this.resourceTags = List.of();
-        this.resourceType = List.of();
-        this.severity = List.of();
-        this.title = List.of();
-        this.updatedAt = List.of();
-        this.vendorSeverity = List.of();
-        this.vulnerabilityId = List.of();
-        this.vulnerabilitySource = List.of();
-        this.vulnerablePackages = List.of();
+    private FilterCriteria(FilterCriteria $) {
+        this.awsAccountId = $.awsAccountId;
+        this.componentId = $.componentId;
+        this.componentType = $.componentType;
+        this.ec2InstanceImageId = $.ec2InstanceImageId;
+        this.ec2InstanceSubnetId = $.ec2InstanceSubnetId;
+        this.ec2InstanceVpcId = $.ec2InstanceVpcId;
+        this.ecrImageArchitecture = $.ecrImageArchitecture;
+        this.ecrImageHash = $.ecrImageHash;
+        this.ecrImagePushedAt = $.ecrImagePushedAt;
+        this.ecrImageRegistry = $.ecrImageRegistry;
+        this.ecrImageRepositoryName = $.ecrImageRepositoryName;
+        this.ecrImageTags = $.ecrImageTags;
+        this.findingArn = $.findingArn;
+        this.findingStatus = $.findingStatus;
+        this.findingType = $.findingType;
+        this.firstObservedAt = $.firstObservedAt;
+        this.inspectorScore = $.inspectorScore;
+        this.lastObservedAt = $.lastObservedAt;
+        this.networkProtocol = $.networkProtocol;
+        this.portRange = $.portRange;
+        this.relatedVulnerabilities = $.relatedVulnerabilities;
+        this.resourceId = $.resourceId;
+        this.resourceTags = $.resourceTags;
+        this.resourceType = $.resourceType;
+        this.severity = $.severity;
+        this.title = $.title;
+        this.updatedAt = $.updatedAt;
+        this.vendorSeverity = $.vendorSeverity;
+        this.vulnerabilityId = $.vulnerabilityId;
+        this.vulnerabilitySource = $.vulnerabilitySource;
+        this.vulnerablePackages = $.vulnerablePackages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterCriteria defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FilterStringFilter> awsAccountId;
-        private @Nullable List<FilterStringFilter> componentId;
-        private @Nullable List<FilterStringFilter> componentType;
-        private @Nullable List<FilterStringFilter> ec2InstanceImageId;
-        private @Nullable List<FilterStringFilter> ec2InstanceSubnetId;
-        private @Nullable List<FilterStringFilter> ec2InstanceVpcId;
-        private @Nullable List<FilterStringFilter> ecrImageArchitecture;
-        private @Nullable List<FilterStringFilter> ecrImageHash;
-        private @Nullable List<FilterDateFilter> ecrImagePushedAt;
-        private @Nullable List<FilterStringFilter> ecrImageRegistry;
-        private @Nullable List<FilterStringFilter> ecrImageRepositoryName;
-        private @Nullable List<FilterStringFilter> ecrImageTags;
-        private @Nullable List<FilterStringFilter> findingArn;
-        private @Nullable List<FilterStringFilter> findingStatus;
-        private @Nullable List<FilterStringFilter> findingType;
-        private @Nullable List<FilterDateFilter> firstObservedAt;
-        private @Nullable List<FilterNumberFilter> inspectorScore;
-        private @Nullable List<FilterDateFilter> lastObservedAt;
-        private @Nullable List<FilterStringFilter> networkProtocol;
-        private @Nullable List<FilterPortRangeFilter> portRange;
-        private @Nullable List<FilterStringFilter> relatedVulnerabilities;
-        private @Nullable List<FilterStringFilter> resourceId;
-        private @Nullable List<FilterMapFilter> resourceTags;
-        private @Nullable List<FilterStringFilter> resourceType;
-        private @Nullable List<FilterStringFilter> severity;
-        private @Nullable List<FilterStringFilter> title;
-        private @Nullable List<FilterDateFilter> updatedAt;
-        private @Nullable List<FilterStringFilter> vendorSeverity;
-        private @Nullable List<FilterStringFilter> vulnerabilityId;
-        private @Nullable List<FilterStringFilter> vulnerabilitySource;
-        private @Nullable List<FilterPackageFilter> vulnerablePackages;
+        private FilterCriteria $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterCriteria();
         }
 
         public Builder(FilterCriteria defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.componentId = defaults.componentId;
-    	      this.componentType = defaults.componentType;
-    	      this.ec2InstanceImageId = defaults.ec2InstanceImageId;
-    	      this.ec2InstanceSubnetId = defaults.ec2InstanceSubnetId;
-    	      this.ec2InstanceVpcId = defaults.ec2InstanceVpcId;
-    	      this.ecrImageArchitecture = defaults.ecrImageArchitecture;
-    	      this.ecrImageHash = defaults.ecrImageHash;
-    	      this.ecrImagePushedAt = defaults.ecrImagePushedAt;
-    	      this.ecrImageRegistry = defaults.ecrImageRegistry;
-    	      this.ecrImageRepositoryName = defaults.ecrImageRepositoryName;
-    	      this.ecrImageTags = defaults.ecrImageTags;
-    	      this.findingArn = defaults.findingArn;
-    	      this.findingStatus = defaults.findingStatus;
-    	      this.findingType = defaults.findingType;
-    	      this.firstObservedAt = defaults.firstObservedAt;
-    	      this.inspectorScore = defaults.inspectorScore;
-    	      this.lastObservedAt = defaults.lastObservedAt;
-    	      this.networkProtocol = defaults.networkProtocol;
-    	      this.portRange = defaults.portRange;
-    	      this.relatedVulnerabilities = defaults.relatedVulnerabilities;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceTags = defaults.resourceTags;
-    	      this.resourceType = defaults.resourceType;
-    	      this.severity = defaults.severity;
-    	      this.title = defaults.title;
-    	      this.updatedAt = defaults.updatedAt;
-    	      this.vendorSeverity = defaults.vendorSeverity;
-    	      this.vulnerabilityId = defaults.vulnerabilityId;
-    	      this.vulnerabilitySource = defaults.vulnerabilitySource;
-    	      this.vulnerablePackages = defaults.vulnerablePackages;
+            $ = new FilterCriteria(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable List<FilterStringFilter> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder awsAccountId(FilterStringFilter... awsAccountId) {
             return awsAccountId(List.of(awsAccountId));
         }
+
         public Builder componentId(@Nullable List<FilterStringFilter> componentId) {
-            this.componentId = componentId;
+            $.componentId = componentId;
             return this;
         }
+
         public Builder componentId(FilterStringFilter... componentId) {
             return componentId(List.of(componentId));
         }
+
         public Builder componentType(@Nullable List<FilterStringFilter> componentType) {
-            this.componentType = componentType;
+            $.componentType = componentType;
             return this;
         }
+
         public Builder componentType(FilterStringFilter... componentType) {
             return componentType(List.of(componentType));
         }
+
         public Builder ec2InstanceImageId(@Nullable List<FilterStringFilter> ec2InstanceImageId) {
-            this.ec2InstanceImageId = ec2InstanceImageId;
+            $.ec2InstanceImageId = ec2InstanceImageId;
             return this;
         }
+
         public Builder ec2InstanceImageId(FilterStringFilter... ec2InstanceImageId) {
             return ec2InstanceImageId(List.of(ec2InstanceImageId));
         }
+
         public Builder ec2InstanceSubnetId(@Nullable List<FilterStringFilter> ec2InstanceSubnetId) {
-            this.ec2InstanceSubnetId = ec2InstanceSubnetId;
+            $.ec2InstanceSubnetId = ec2InstanceSubnetId;
             return this;
         }
+
         public Builder ec2InstanceSubnetId(FilterStringFilter... ec2InstanceSubnetId) {
             return ec2InstanceSubnetId(List.of(ec2InstanceSubnetId));
         }
+
         public Builder ec2InstanceVpcId(@Nullable List<FilterStringFilter> ec2InstanceVpcId) {
-            this.ec2InstanceVpcId = ec2InstanceVpcId;
+            $.ec2InstanceVpcId = ec2InstanceVpcId;
             return this;
         }
+
         public Builder ec2InstanceVpcId(FilterStringFilter... ec2InstanceVpcId) {
             return ec2InstanceVpcId(List.of(ec2InstanceVpcId));
         }
+
         public Builder ecrImageArchitecture(@Nullable List<FilterStringFilter> ecrImageArchitecture) {
-            this.ecrImageArchitecture = ecrImageArchitecture;
+            $.ecrImageArchitecture = ecrImageArchitecture;
             return this;
         }
+
         public Builder ecrImageArchitecture(FilterStringFilter... ecrImageArchitecture) {
             return ecrImageArchitecture(List.of(ecrImageArchitecture));
         }
+
         public Builder ecrImageHash(@Nullable List<FilterStringFilter> ecrImageHash) {
-            this.ecrImageHash = ecrImageHash;
+            $.ecrImageHash = ecrImageHash;
             return this;
         }
+
         public Builder ecrImageHash(FilterStringFilter... ecrImageHash) {
             return ecrImageHash(List.of(ecrImageHash));
         }
+
         public Builder ecrImagePushedAt(@Nullable List<FilterDateFilter> ecrImagePushedAt) {
-            this.ecrImagePushedAt = ecrImagePushedAt;
+            $.ecrImagePushedAt = ecrImagePushedAt;
             return this;
         }
+
         public Builder ecrImagePushedAt(FilterDateFilter... ecrImagePushedAt) {
             return ecrImagePushedAt(List.of(ecrImagePushedAt));
         }
+
         public Builder ecrImageRegistry(@Nullable List<FilterStringFilter> ecrImageRegistry) {
-            this.ecrImageRegistry = ecrImageRegistry;
+            $.ecrImageRegistry = ecrImageRegistry;
             return this;
         }
+
         public Builder ecrImageRegistry(FilterStringFilter... ecrImageRegistry) {
             return ecrImageRegistry(List.of(ecrImageRegistry));
         }
+
         public Builder ecrImageRepositoryName(@Nullable List<FilterStringFilter> ecrImageRepositoryName) {
-            this.ecrImageRepositoryName = ecrImageRepositoryName;
+            $.ecrImageRepositoryName = ecrImageRepositoryName;
             return this;
         }
+
         public Builder ecrImageRepositoryName(FilterStringFilter... ecrImageRepositoryName) {
             return ecrImageRepositoryName(List.of(ecrImageRepositoryName));
         }
+
         public Builder ecrImageTags(@Nullable List<FilterStringFilter> ecrImageTags) {
-            this.ecrImageTags = ecrImageTags;
+            $.ecrImageTags = ecrImageTags;
             return this;
         }
+
         public Builder ecrImageTags(FilterStringFilter... ecrImageTags) {
             return ecrImageTags(List.of(ecrImageTags));
         }
+
         public Builder findingArn(@Nullable List<FilterStringFilter> findingArn) {
-            this.findingArn = findingArn;
+            $.findingArn = findingArn;
             return this;
         }
+
         public Builder findingArn(FilterStringFilter... findingArn) {
             return findingArn(List.of(findingArn));
         }
+
         public Builder findingStatus(@Nullable List<FilterStringFilter> findingStatus) {
-            this.findingStatus = findingStatus;
+            $.findingStatus = findingStatus;
             return this;
         }
+
         public Builder findingStatus(FilterStringFilter... findingStatus) {
             return findingStatus(List.of(findingStatus));
         }
+
         public Builder findingType(@Nullable List<FilterStringFilter> findingType) {
-            this.findingType = findingType;
+            $.findingType = findingType;
             return this;
         }
+
         public Builder findingType(FilterStringFilter... findingType) {
             return findingType(List.of(findingType));
         }
+
         public Builder firstObservedAt(@Nullable List<FilterDateFilter> firstObservedAt) {
-            this.firstObservedAt = firstObservedAt;
+            $.firstObservedAt = firstObservedAt;
             return this;
         }
+
         public Builder firstObservedAt(FilterDateFilter... firstObservedAt) {
             return firstObservedAt(List.of(firstObservedAt));
         }
+
         public Builder inspectorScore(@Nullable List<FilterNumberFilter> inspectorScore) {
-            this.inspectorScore = inspectorScore;
+            $.inspectorScore = inspectorScore;
             return this;
         }
+
         public Builder inspectorScore(FilterNumberFilter... inspectorScore) {
             return inspectorScore(List.of(inspectorScore));
         }
+
         public Builder lastObservedAt(@Nullable List<FilterDateFilter> lastObservedAt) {
-            this.lastObservedAt = lastObservedAt;
+            $.lastObservedAt = lastObservedAt;
             return this;
         }
+
         public Builder lastObservedAt(FilterDateFilter... lastObservedAt) {
             return lastObservedAt(List.of(lastObservedAt));
         }
+
         public Builder networkProtocol(@Nullable List<FilterStringFilter> networkProtocol) {
-            this.networkProtocol = networkProtocol;
+            $.networkProtocol = networkProtocol;
             return this;
         }
+
         public Builder networkProtocol(FilterStringFilter... networkProtocol) {
             return networkProtocol(List.of(networkProtocol));
         }
+
         public Builder portRange(@Nullable List<FilterPortRangeFilter> portRange) {
-            this.portRange = portRange;
+            $.portRange = portRange;
             return this;
         }
+
         public Builder portRange(FilterPortRangeFilter... portRange) {
             return portRange(List.of(portRange));
         }
+
         public Builder relatedVulnerabilities(@Nullable List<FilterStringFilter> relatedVulnerabilities) {
-            this.relatedVulnerabilities = relatedVulnerabilities;
+            $.relatedVulnerabilities = relatedVulnerabilities;
             return this;
         }
+
         public Builder relatedVulnerabilities(FilterStringFilter... relatedVulnerabilities) {
             return relatedVulnerabilities(List.of(relatedVulnerabilities));
         }
+
         public Builder resourceId(@Nullable List<FilterStringFilter> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(FilterStringFilter... resourceId) {
             return resourceId(List.of(resourceId));
         }
+
         public Builder resourceTags(@Nullable List<FilterMapFilter> resourceTags) {
-            this.resourceTags = resourceTags;
+            $.resourceTags = resourceTags;
             return this;
         }
+
         public Builder resourceTags(FilterMapFilter... resourceTags) {
             return resourceTags(List.of(resourceTags));
         }
+
         public Builder resourceType(@Nullable List<FilterStringFilter> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(FilterStringFilter... resourceType) {
             return resourceType(List.of(resourceType));
         }
+
         public Builder severity(@Nullable List<FilterStringFilter> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(FilterStringFilter... severity) {
             return severity(List.of(severity));
         }
+
         public Builder title(@Nullable List<FilterStringFilter> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
+
         public Builder title(FilterStringFilter... title) {
             return title(List.of(title));
         }
+
         public Builder updatedAt(@Nullable List<FilterDateFilter> updatedAt) {
-            this.updatedAt = updatedAt;
+            $.updatedAt = updatedAt;
             return this;
         }
+
         public Builder updatedAt(FilterDateFilter... updatedAt) {
             return updatedAt(List.of(updatedAt));
         }
+
         public Builder vendorSeverity(@Nullable List<FilterStringFilter> vendorSeverity) {
-            this.vendorSeverity = vendorSeverity;
+            $.vendorSeverity = vendorSeverity;
             return this;
         }
+
         public Builder vendorSeverity(FilterStringFilter... vendorSeverity) {
             return vendorSeverity(List.of(vendorSeverity));
         }
+
         public Builder vulnerabilityId(@Nullable List<FilterStringFilter> vulnerabilityId) {
-            this.vulnerabilityId = vulnerabilityId;
+            $.vulnerabilityId = vulnerabilityId;
             return this;
         }
+
         public Builder vulnerabilityId(FilterStringFilter... vulnerabilityId) {
             return vulnerabilityId(List.of(vulnerabilityId));
         }
+
         public Builder vulnerabilitySource(@Nullable List<FilterStringFilter> vulnerabilitySource) {
-            this.vulnerabilitySource = vulnerabilitySource;
+            $.vulnerabilitySource = vulnerabilitySource;
             return this;
         }
+
         public Builder vulnerabilitySource(FilterStringFilter... vulnerabilitySource) {
             return vulnerabilitySource(List.of(vulnerabilitySource));
         }
+
         public Builder vulnerablePackages(@Nullable List<FilterPackageFilter> vulnerablePackages) {
-            this.vulnerablePackages = vulnerablePackages;
+            $.vulnerablePackages = vulnerablePackages;
             return this;
         }
+
         public Builder vulnerablePackages(FilterPackageFilter... vulnerablePackages) {
             return vulnerablePackages(List.of(vulnerablePackages));
-        }        public FilterCriteria build() {
-            return new FilterCriteria(awsAccountId, componentId, componentType, ec2InstanceImageId, ec2InstanceSubnetId, ec2InstanceVpcId, ecrImageArchitecture, ecrImageHash, ecrImagePushedAt, ecrImageRegistry, ecrImageRepositoryName, ecrImageTags, findingArn, findingStatus, findingType, firstObservedAt, inspectorScore, lastObservedAt, networkProtocol, portRange, relatedVulnerabilities, resourceId, resourceTags, resourceType, severity, title, updatedAt, vendorSeverity, vulnerabilityId, vulnerabilitySource, vulnerablePackages);
+        }
+
+        public FilterCriteria build() {
+            return $;
         }
     }
+
 }

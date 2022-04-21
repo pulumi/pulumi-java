@@ -24,62 +24,58 @@ public final class BucketRoutingRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="redirectRule", required=true)
-      private final BucketRedirectRule redirectRule;
+    private BucketRedirectRule redirectRule;
 
     public BucketRedirectRule redirectRule() {
         return this.redirectRule;
     }
 
     @Import(name="routingRuleCondition")
-      private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
+    private @Nullable BucketRoutingRuleCondition routingRuleCondition;
 
     public Optional<BucketRoutingRuleCondition> routingRuleCondition() {
-        return this.routingRuleCondition == null ? Optional.empty() : Optional.ofNullable(this.routingRuleCondition);
+        return Optional.ofNullable(this.routingRuleCondition);
     }
 
-    public BucketRoutingRule(
-        BucketRedirectRule redirectRule,
-        @Nullable BucketRoutingRuleCondition routingRuleCondition) {
-        this.redirectRule = Objects.requireNonNull(redirectRule, "expected parameter 'redirectRule' to be non-null");
-        this.routingRuleCondition = routingRuleCondition;
-    }
+    private BucketRoutingRule() {}
 
-    private BucketRoutingRule() {
-        this.redirectRule = null;
-        this.routingRuleCondition = null;
+    private BucketRoutingRule(BucketRoutingRule $) {
+        this.redirectRule = $.redirectRule;
+        this.routingRuleCondition = $.routingRuleCondition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRoutingRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketRedirectRule redirectRule;
-        private @Nullable BucketRoutingRuleCondition routingRuleCondition;
+        private BucketRoutingRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRoutingRule();
         }
 
         public Builder(BucketRoutingRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.redirectRule = defaults.redirectRule;
-    	      this.routingRuleCondition = defaults.routingRuleCondition;
+            $ = new BucketRoutingRule(Objects.requireNonNull(defaults));
         }
 
         public Builder redirectRule(BucketRedirectRule redirectRule) {
-            this.redirectRule = Objects.requireNonNull(redirectRule);
+            $.redirectRule = redirectRule;
             return this;
         }
+
         public Builder routingRuleCondition(@Nullable BucketRoutingRuleCondition routingRuleCondition) {
-            this.routingRuleCondition = routingRuleCondition;
+            $.routingRuleCondition = routingRuleCondition;
             return this;
-        }        public BucketRoutingRule build() {
-            return new BucketRoutingRule(redirectRule, routingRuleCondition);
+        }
+
+        public BucketRoutingRule build() {
+            $.redirectRule = Objects.requireNonNull($.redirectRule, "expected parameter 'redirectRule' to be non-null");
+            return $;
         }
     }
+
 }

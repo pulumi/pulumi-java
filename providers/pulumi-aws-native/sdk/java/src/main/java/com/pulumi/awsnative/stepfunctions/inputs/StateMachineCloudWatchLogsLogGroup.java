@@ -15,45 +15,44 @@ public final class StateMachineCloudWatchLogsLogGroup extends com.pulumi.resourc
     public static final StateMachineCloudWatchLogsLogGroup Empty = new StateMachineCloudWatchLogsLogGroup();
 
     @Import(name="logGroupArn")
-      private final @Nullable String logGroupArn;
+    private @Nullable String logGroupArn;
 
     public Optional<String> logGroupArn() {
-        return this.logGroupArn == null ? Optional.empty() : Optional.ofNullable(this.logGroupArn);
+        return Optional.ofNullable(this.logGroupArn);
     }
 
-    public StateMachineCloudWatchLogsLogGroup(@Nullable String logGroupArn) {
-        this.logGroupArn = logGroupArn;
-    }
+    private StateMachineCloudWatchLogsLogGroup() {}
 
-    private StateMachineCloudWatchLogsLogGroup() {
-        this.logGroupArn = null;
+    private StateMachineCloudWatchLogsLogGroup(StateMachineCloudWatchLogsLogGroup $) {
+        this.logGroupArn = $.logGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineCloudWatchLogsLogGroup defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String logGroupArn;
+        private StateMachineCloudWatchLogsLogGroup $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineCloudWatchLogsLogGroup();
         }
 
         public Builder(StateMachineCloudWatchLogsLogGroup defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupArn = defaults.logGroupArn;
+            $ = new StateMachineCloudWatchLogsLogGroup(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupArn(@Nullable String logGroupArn) {
-            this.logGroupArn = logGroupArn;
+            $.logGroupArn = logGroupArn;
             return this;
-        }        public StateMachineCloudWatchLogsLogGroup build() {
-            return new StateMachineCloudWatchLogsLogGroup(logGroupArn);
+        }
+
+        public StateMachineCloudWatchLogsLogGroup build() {
+            return $;
         }
     }
+
 }

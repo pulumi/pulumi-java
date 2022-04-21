@@ -27,10 +27,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="executionRole")
-      private final @Nullable String executionRole;
+    private @Nullable String executionRole;
 
     public Optional<String> executionRole() {
-        return this.executionRole == null ? Optional.empty() : Optional.ofNullable(this.executionRole);
+        return Optional.ofNullable(this.executionRole);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="jupyterServerAppSettings")
-      private final @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
+    private @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
 
     public Optional<UserProfileJupyterServerAppSettings> jupyterServerAppSettings() {
-        return this.jupyterServerAppSettings == null ? Optional.empty() : Optional.ofNullable(this.jupyterServerAppSettings);
+        return Optional.ofNullable(this.jupyterServerAppSettings);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="kernelGatewayAppSettings")
-      private final @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
+    private @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
 
     public Optional<UserProfileKernelGatewayAppSettings> kernelGatewayAppSettings() {
-        return this.kernelGatewayAppSettings == null ? Optional.empty() : Optional.ofNullable(this.kernelGatewayAppSettings);
+        return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable List<String> securityGroups;
+    private @Nullable List<String> securityGroups;
 
-    public List<String> securityGroups() {
-        return this.securityGroups == null ? List.of() : this.securityGroups;
+    public Optional<List<String>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -71,85 +71,72 @@ public final class UserProfileUserSettings extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sharingSettings")
-      private final @Nullable UserProfileSharingSettings sharingSettings;
+    private @Nullable UserProfileSharingSettings sharingSettings;
 
     public Optional<UserProfileSharingSettings> sharingSettings() {
-        return this.sharingSettings == null ? Optional.empty() : Optional.ofNullable(this.sharingSettings);
+        return Optional.ofNullable(this.sharingSettings);
     }
 
-    public UserProfileUserSettings(
-        @Nullable String executionRole,
-        @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings,
-        @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings,
-        @Nullable List<String> securityGroups,
-        @Nullable UserProfileSharingSettings sharingSettings) {
-        this.executionRole = executionRole;
-        this.jupyterServerAppSettings = jupyterServerAppSettings;
-        this.kernelGatewayAppSettings = kernelGatewayAppSettings;
-        this.securityGroups = securityGroups;
-        this.sharingSettings = sharingSettings;
-    }
+    private UserProfileUserSettings() {}
 
-    private UserProfileUserSettings() {
-        this.executionRole = null;
-        this.jupyterServerAppSettings = null;
-        this.kernelGatewayAppSettings = null;
-        this.securityGroups = List.of();
-        this.sharingSettings = null;
+    private UserProfileUserSettings(UserProfileUserSettings $) {
+        this.executionRole = $.executionRole;
+        this.jupyterServerAppSettings = $.jupyterServerAppSettings;
+        this.kernelGatewayAppSettings = $.kernelGatewayAppSettings;
+        this.securityGroups = $.securityGroups;
+        this.sharingSettings = $.sharingSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileUserSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String executionRole;
-        private @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
-        private @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
-        private @Nullable List<String> securityGroups;
-        private @Nullable UserProfileSharingSettings sharingSettings;
+        private UserProfileUserSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileUserSettings();
         }
 
         public Builder(UserProfileUserSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionRole = defaults.executionRole;
-    	      this.jupyterServerAppSettings = defaults.jupyterServerAppSettings;
-    	      this.kernelGatewayAppSettings = defaults.kernelGatewayAppSettings;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.sharingSettings = defaults.sharingSettings;
+            $ = new UserProfileUserSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder executionRole(@Nullable String executionRole) {
-            this.executionRole = executionRole;
+            $.executionRole = executionRole;
             return this;
         }
+
         public Builder jupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = jupyterServerAppSettings;
+            $.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
+
         public Builder kernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = kernelGatewayAppSettings;
+            $.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
+
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder sharingSettings(@Nullable UserProfileSharingSettings sharingSettings) {
-            this.sharingSettings = sharingSettings;
+            $.sharingSettings = sharingSettings;
             return this;
-        }        public UserProfileUserSettings build() {
-            return new UserProfileUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
+        }
+
+        public UserProfileUserSettings build() {
+            return $;
         }
     }
+
 }

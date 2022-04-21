@@ -5,9 +5,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ImageRecipeSystemsManagerAgentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="uninstallAfterBuild")
-      private final @Nullable Output<Boolean> uninstallAfterBuild;
+    private @Nullable Output<Boolean> uninstallAfterBuild;
 
-    public Output<Boolean> uninstallAfterBuild() {
-        return this.uninstallAfterBuild == null ? Codegen.empty() : this.uninstallAfterBuild;
+    public Optional<Output<Boolean>> uninstallAfterBuild() {
+        return Optional.ofNullable(this.uninstallAfterBuild);
     }
 
-    public ImageRecipeSystemsManagerAgentArgs(@Nullable Output<Boolean> uninstallAfterBuild) {
-        this.uninstallAfterBuild = uninstallAfterBuild;
-    }
+    private ImageRecipeSystemsManagerAgentArgs() {}
 
-    private ImageRecipeSystemsManagerAgentArgs() {
-        this.uninstallAfterBuild = Codegen.empty();
+    private ImageRecipeSystemsManagerAgentArgs(ImageRecipeSystemsManagerAgentArgs $) {
+        this.uninstallAfterBuild = $.uninstallAfterBuild;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeSystemsManagerAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> uninstallAfterBuild;
+        private ImageRecipeSystemsManagerAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeSystemsManagerAgentArgs();
         }
 
         public Builder(ImageRecipeSystemsManagerAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uninstallAfterBuild = defaults.uninstallAfterBuild;
+            $ = new ImageRecipeSystemsManagerAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uninstallAfterBuild(@Nullable Output<Boolean> uninstallAfterBuild) {
-            this.uninstallAfterBuild = uninstallAfterBuild;
+            $.uninstallAfterBuild = uninstallAfterBuild;
             return this;
         }
-        public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
-            this.uninstallAfterBuild = Codegen.ofNullable(uninstallAfterBuild);
-            return this;
-        }        public ImageRecipeSystemsManagerAgentArgs build() {
-            return new ImageRecipeSystemsManagerAgentArgs(uninstallAfterBuild);
+
+        public Builder uninstallAfterBuild(Boolean uninstallAfterBuild) {
+            return uninstallAfterBuild(Output.of(uninstallAfterBuild));
+        }
+
+        public ImageRecipeSystemsManagerAgentArgs build() {
+            return $;
         }
     }
+
 }

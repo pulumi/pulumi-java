@@ -5,7 +5,6 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class LoggingConfigurationConditionLabelNameConditionPropertiesArgs
      * 
      */
     @Import(name="labelName", required=true)
-      private final Output<String> labelName;
+    private Output<String> labelName;
 
     public Output<String> labelName() {
         return this.labelName;
     }
 
-    public LoggingConfigurationConditionLabelNameConditionPropertiesArgs(Output<String> labelName) {
-        this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
-    }
+    private LoggingConfigurationConditionLabelNameConditionPropertiesArgs() {}
 
-    private LoggingConfigurationConditionLabelNameConditionPropertiesArgs() {
-        this.labelName = Codegen.empty();
+    private LoggingConfigurationConditionLabelNameConditionPropertiesArgs(LoggingConfigurationConditionLabelNameConditionPropertiesArgs $) {
+        this.labelName = $.labelName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationConditionLabelNameConditionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> labelName;
+        private LoggingConfigurationConditionLabelNameConditionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationConditionLabelNameConditionPropertiesArgs();
         }
 
         public Builder(LoggingConfigurationConditionLabelNameConditionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelName = defaults.labelName;
+            $ = new LoggingConfigurationConditionLabelNameConditionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labelName(Output<String> labelName) {
-            this.labelName = Objects.requireNonNull(labelName);
+            $.labelName = labelName;
             return this;
         }
+
         public Builder labelName(String labelName) {
-            this.labelName = Output.of(Objects.requireNonNull(labelName));
-            return this;
-        }        public LoggingConfigurationConditionLabelNameConditionPropertiesArgs build() {
-            return new LoggingConfigurationConditionLabelNameConditionPropertiesArgs(labelName);
+            return labelName(Output.of(labelName));
+        }
+
+        public LoggingConfigurationConditionLabelNameConditionPropertiesArgs build() {
+            $.labelName = Objects.requireNonNull($.labelName, "expected parameter 'labelName' to be non-null");
+            return $;
         }
     }
+
 }

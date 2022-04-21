@@ -6,10 +6,10 @@ package com.pulumi.awsnative.amplifyuibuilder.inputs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,113 +18,106 @@ public final class ComponentChildArgs extends com.pulumi.resources.ResourceArgs 
     public static final ComponentChildArgs Empty = new ComponentChildArgs();
 
     @Import(name="children")
-      private final @Nullable Output<List<ComponentChildArgs>> children;
+    private @Nullable Output<List<ComponentChildArgs>> children;
 
-    public Output<List<ComponentChildArgs>> children() {
-        return this.children == null ? Codegen.empty() : this.children;
+    public Optional<Output<List<ComponentChildArgs>>> children() {
+        return Optional.ofNullable(this.children);
     }
 
     @Import(name="componentType", required=true)
-      private final Output<String> componentType;
+    private Output<String> componentType;
 
     public Output<String> componentType() {
         return this.componentType;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="properties", required=true)
-      private final Output<ComponentPropertiesArgs> properties;
+    private Output<ComponentPropertiesArgs> properties;
 
     public Output<ComponentPropertiesArgs> properties() {
         return this.properties;
     }
 
-    public ComponentChildArgs(
-        @Nullable Output<List<ComponentChildArgs>> children,
-        Output<String> componentType,
-        Output<String> name,
-        Output<ComponentPropertiesArgs> properties) {
-        this.children = children;
-        this.componentType = Objects.requireNonNull(componentType, "expected parameter 'componentType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private ComponentChildArgs() {}
 
-    private ComponentChildArgs() {
-        this.children = Codegen.empty();
-        this.componentType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
+    private ComponentChildArgs(ComponentChildArgs $) {
+        this.children = $.children;
+        this.componentType = $.componentType;
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentChildArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ComponentChildArgs>> children;
-        private Output<String> componentType;
-        private Output<String> name;
-        private Output<ComponentPropertiesArgs> properties;
+        private ComponentChildArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentChildArgs();
         }
 
         public Builder(ComponentChildArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.children = defaults.children;
-    	      this.componentType = defaults.componentType;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new ComponentChildArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder children(@Nullable Output<List<ComponentChildArgs>> children) {
-            this.children = children;
+            $.children = children;
             return this;
         }
-        public Builder children(@Nullable List<ComponentChildArgs> children) {
-            this.children = Codegen.ofNullable(children);
-            return this;
+
+        public Builder children(List<ComponentChildArgs> children) {
+            return children(Output.of(children));
         }
+
         public Builder children(ComponentChildArgs... children) {
             return children(List.of(children));
         }
+
         public Builder componentType(Output<String> componentType) {
-            this.componentType = Objects.requireNonNull(componentType);
+            $.componentType = componentType;
             return this;
         }
+
         public Builder componentType(String componentType) {
-            this.componentType = Output.of(Objects.requireNonNull(componentType));
-            return this;
+            return componentType(Output.of(componentType));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder properties(Output<ComponentPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(ComponentPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
-        }        public ComponentChildArgs build() {
-            return new ComponentChildArgs(children, componentType, name, properties);
+            return properties(Output.of(properties));
+        }
+
+        public ComponentChildArgs build() {
+            $.componentType = Objects.requireNonNull($.componentType, "expected parameter 'componentType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

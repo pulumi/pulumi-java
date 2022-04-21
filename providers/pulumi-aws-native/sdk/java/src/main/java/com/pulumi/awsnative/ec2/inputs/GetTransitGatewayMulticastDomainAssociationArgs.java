@@ -17,7 +17,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
      * 
      */
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
@@ -28,7 +28,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
      * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
-      private final String transitGatewayAttachmentId;
+    private String transitGatewayAttachmentId;
 
     public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -39,64 +39,59 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
      * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
-      private final String transitGatewayMulticastDomainId;
+    private String transitGatewayMulticastDomainId;
 
     public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
-    public GetTransitGatewayMulticastDomainAssociationArgs(
-        String subnetId,
-        String transitGatewayAttachmentId,
-        String transitGatewayMulticastDomainId) {
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
-        this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
-    }
+    private GetTransitGatewayMulticastDomainAssociationArgs() {}
 
-    private GetTransitGatewayMulticastDomainAssociationArgs() {
-        this.subnetId = null;
-        this.transitGatewayAttachmentId = null;
-        this.transitGatewayMulticastDomainId = null;
+    private GetTransitGatewayMulticastDomainAssociationArgs(GetTransitGatewayMulticastDomainAssociationArgs $) {
+        this.subnetId = $.subnetId;
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
+        this.transitGatewayMulticastDomainId = $.transitGatewayMulticastDomainId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayMulticastDomainAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String subnetId;
-        private String transitGatewayAttachmentId;
-        private String transitGatewayMulticastDomainId;
+        private GetTransitGatewayMulticastDomainAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayMulticastDomainAssociationArgs();
         }
 
         public Builder(GetTransitGatewayMulticastDomainAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
-    	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
+            $ = new GetTransitGatewayMulticastDomainAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
+
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
-            this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
+            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
-        }        public GetTransitGatewayMulticastDomainAssociationArgs build() {
-            return new GetTransitGatewayMulticastDomainAssociationArgs(subnetId, transitGatewayAttachmentId, transitGatewayMulticastDomainId);
+        }
+
+        public GetTransitGatewayMulticastDomainAssociationArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.transitGatewayAttachmentId = Objects.requireNonNull($.transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
+            $.transitGatewayMulticastDomainId = Objects.requireNonNull($.transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
+            return $;
         }
     }
+
 }

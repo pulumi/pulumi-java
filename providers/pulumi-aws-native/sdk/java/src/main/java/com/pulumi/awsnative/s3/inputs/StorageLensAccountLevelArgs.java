@@ -7,8 +7,8 @@ import com.pulumi.awsnative.s3.inputs.StorageLensActivityMetricsArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensBucketLevelArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class StorageLensAccountLevelArgs extends com.pulumi.resources.Reso
     public static final StorageLensAccountLevelArgs Empty = new StorageLensAccountLevelArgs();
 
     @Import(name="activityMetrics")
-      private final @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
+    private @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
 
-    public Output<StorageLensActivityMetricsArgs> activityMetrics() {
-        return this.activityMetrics == null ? Codegen.empty() : this.activityMetrics;
+    public Optional<Output<StorageLensActivityMetricsArgs>> activityMetrics() {
+        return Optional.ofNullable(this.activityMetrics);
     }
 
     @Import(name="bucketLevel", required=true)
-      private final Output<StorageLensBucketLevelArgs> bucketLevel;
+    private Output<StorageLensBucketLevelArgs> bucketLevel;
 
     public Output<StorageLensBucketLevelArgs> bucketLevel() {
         return this.bucketLevel;
     }
 
-    public StorageLensAccountLevelArgs(
-        @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics,
-        Output<StorageLensBucketLevelArgs> bucketLevel) {
-        this.activityMetrics = activityMetrics;
-        this.bucketLevel = Objects.requireNonNull(bucketLevel, "expected parameter 'bucketLevel' to be non-null");
-    }
+    private StorageLensAccountLevelArgs() {}
 
-    private StorageLensAccountLevelArgs() {
-        this.activityMetrics = Codegen.empty();
-        this.bucketLevel = Codegen.empty();
+    private StorageLensAccountLevelArgs(StorageLensAccountLevelArgs $) {
+        this.activityMetrics = $.activityMetrics;
+        this.bucketLevel = $.bucketLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensAccountLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
-        private Output<StorageLensBucketLevelArgs> bucketLevel;
+        private StorageLensAccountLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensAccountLevelArgs();
         }
 
         public Builder(StorageLensAccountLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activityMetrics = defaults.activityMetrics;
-    	      this.bucketLevel = defaults.bucketLevel;
+            $ = new StorageLensAccountLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activityMetrics(@Nullable Output<StorageLensActivityMetricsArgs> activityMetrics) {
-            this.activityMetrics = activityMetrics;
+            $.activityMetrics = activityMetrics;
             return this;
         }
-        public Builder activityMetrics(@Nullable StorageLensActivityMetricsArgs activityMetrics) {
-            this.activityMetrics = Codegen.ofNullable(activityMetrics);
-            return this;
+
+        public Builder activityMetrics(StorageLensActivityMetricsArgs activityMetrics) {
+            return activityMetrics(Output.of(activityMetrics));
         }
+
         public Builder bucketLevel(Output<StorageLensBucketLevelArgs> bucketLevel) {
-            this.bucketLevel = Objects.requireNonNull(bucketLevel);
+            $.bucketLevel = bucketLevel;
             return this;
         }
+
         public Builder bucketLevel(StorageLensBucketLevelArgs bucketLevel) {
-            this.bucketLevel = Output.of(Objects.requireNonNull(bucketLevel));
-            return this;
-        }        public StorageLensAccountLevelArgs build() {
-            return new StorageLensAccountLevelArgs(activityMetrics, bucketLevel);
+            return bucketLevel(Output.of(bucketLevel));
+        }
+
+        public StorageLensAccountLevelArgs build() {
+            $.bucketLevel = Objects.requireNonNull($.bucketLevel, "expected parameter 'bucketLevel' to be non-null");
+            return $;
         }
     }
+
 }

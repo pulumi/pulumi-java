@@ -7,12 +7,12 @@ import com.pulumi.awsnative.kendra.enums.IndexOrder;
 import com.pulumi.awsnative.kendra.inputs.IndexValueImportanceItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,133 +21,120 @@ public final class IndexRelevanceArgs extends com.pulumi.resources.ResourceArgs 
     public static final IndexRelevanceArgs Empty = new IndexRelevanceArgs();
 
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     @Import(name="freshness")
-      private final @Nullable Output<Boolean> freshness;
+    private @Nullable Output<Boolean> freshness;
 
-    public Output<Boolean> freshness() {
-        return this.freshness == null ? Codegen.empty() : this.freshness;
+    public Optional<Output<Boolean>> freshness() {
+        return Optional.ofNullable(this.freshness);
     }
 
     @Import(name="importance")
-      private final @Nullable Output<Integer> importance;
+    private @Nullable Output<Integer> importance;
 
-    public Output<Integer> importance() {
-        return this.importance == null ? Codegen.empty() : this.importance;
+    public Optional<Output<Integer>> importance() {
+        return Optional.ofNullable(this.importance);
     }
 
     @Import(name="rankOrder")
-      private final @Nullable Output<IndexOrder> rankOrder;
+    private @Nullable Output<IndexOrder> rankOrder;
 
-    public Output<IndexOrder> rankOrder() {
-        return this.rankOrder == null ? Codegen.empty() : this.rankOrder;
+    public Optional<Output<IndexOrder>> rankOrder() {
+        return Optional.ofNullable(this.rankOrder);
     }
 
     @Import(name="valueImportanceItems")
-      private final @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
+    private @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
 
-    public Output<List<IndexValueImportanceItemArgs>> valueImportanceItems() {
-        return this.valueImportanceItems == null ? Codegen.empty() : this.valueImportanceItems;
+    public Optional<Output<List<IndexValueImportanceItemArgs>>> valueImportanceItems() {
+        return Optional.ofNullable(this.valueImportanceItems);
     }
 
-    public IndexRelevanceArgs(
-        @Nullable Output<String> duration,
-        @Nullable Output<Boolean> freshness,
-        @Nullable Output<Integer> importance,
-        @Nullable Output<IndexOrder> rankOrder,
-        @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
-        this.duration = duration;
-        this.freshness = freshness;
-        this.importance = importance;
-        this.rankOrder = rankOrder;
-        this.valueImportanceItems = valueImportanceItems;
-    }
+    private IndexRelevanceArgs() {}
 
-    private IndexRelevanceArgs() {
-        this.duration = Codegen.empty();
-        this.freshness = Codegen.empty();
-        this.importance = Codegen.empty();
-        this.rankOrder = Codegen.empty();
-        this.valueImportanceItems = Codegen.empty();
+    private IndexRelevanceArgs(IndexRelevanceArgs $) {
+        this.duration = $.duration;
+        this.freshness = $.freshness;
+        this.importance = $.importance;
+        this.rankOrder = $.rankOrder;
+        this.valueImportanceItems = $.valueImportanceItems;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexRelevanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> duration;
-        private @Nullable Output<Boolean> freshness;
-        private @Nullable Output<Integer> importance;
-        private @Nullable Output<IndexOrder> rankOrder;
-        private @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
+        private IndexRelevanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexRelevanceArgs();
         }
 
         public Builder(IndexRelevanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.freshness = defaults.freshness;
-    	      this.importance = defaults.importance;
-    	      this.rankOrder = defaults.rankOrder;
-    	      this.valueImportanceItems = defaults.valueImportanceItems;
+            $ = new IndexRelevanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder freshness(@Nullable Output<Boolean> freshness) {
-            this.freshness = freshness;
+            $.freshness = freshness;
             return this;
         }
-        public Builder freshness(@Nullable Boolean freshness) {
-            this.freshness = Codegen.ofNullable(freshness);
-            return this;
+
+        public Builder freshness(Boolean freshness) {
+            return freshness(Output.of(freshness));
         }
+
         public Builder importance(@Nullable Output<Integer> importance) {
-            this.importance = importance;
+            $.importance = importance;
             return this;
         }
-        public Builder importance(@Nullable Integer importance) {
-            this.importance = Codegen.ofNullable(importance);
-            return this;
+
+        public Builder importance(Integer importance) {
+            return importance(Output.of(importance));
         }
+
         public Builder rankOrder(@Nullable Output<IndexOrder> rankOrder) {
-            this.rankOrder = rankOrder;
+            $.rankOrder = rankOrder;
             return this;
         }
-        public Builder rankOrder(@Nullable IndexOrder rankOrder) {
-            this.rankOrder = Codegen.ofNullable(rankOrder);
-            return this;
+
+        public Builder rankOrder(IndexOrder rankOrder) {
+            return rankOrder(Output.of(rankOrder));
         }
+
         public Builder valueImportanceItems(@Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
-            this.valueImportanceItems = valueImportanceItems;
+            $.valueImportanceItems = valueImportanceItems;
             return this;
         }
-        public Builder valueImportanceItems(@Nullable List<IndexValueImportanceItemArgs> valueImportanceItems) {
-            this.valueImportanceItems = Codegen.ofNullable(valueImportanceItems);
-            return this;
+
+        public Builder valueImportanceItems(List<IndexValueImportanceItemArgs> valueImportanceItems) {
+            return valueImportanceItems(Output.of(valueImportanceItems));
         }
+
         public Builder valueImportanceItems(IndexValueImportanceItemArgs... valueImportanceItems) {
             return valueImportanceItems(List.of(valueImportanceItems));
-        }        public IndexRelevanceArgs build() {
-            return new IndexRelevanceArgs(duration, freshness, importance, rankOrder, valueImportanceItems);
+        }
+
+        public IndexRelevanceArgs build() {
+            return $;
         }
     }
+
 }

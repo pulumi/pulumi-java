@@ -5,9 +5,9 @@ package com.pulumi.awsnative.mediaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="vpcInterfaceName")
-      private final @Nullable Output<String> vpcInterfaceName;
+    private @Nullable Output<String> vpcInterfaceName;
 
-    public Output<String> vpcInterfaceName() {
-        return this.vpcInterfaceName == null ? Codegen.empty() : this.vpcInterfaceName;
+    public Optional<Output<String>> vpcInterfaceName() {
+        return Optional.ofNullable(this.vpcInterfaceName);
     }
 
-    public FlowOutputVpcInterfaceAttachmentArgs(@Nullable Output<String> vpcInterfaceName) {
-        this.vpcInterfaceName = vpcInterfaceName;
-    }
+    private FlowOutputVpcInterfaceAttachmentArgs() {}
 
-    private FlowOutputVpcInterfaceAttachmentArgs() {
-        this.vpcInterfaceName = Codegen.empty();
+    private FlowOutputVpcInterfaceAttachmentArgs(FlowOutputVpcInterfaceAttachmentArgs $) {
+        this.vpcInterfaceName = $.vpcInterfaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowOutputVpcInterfaceAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> vpcInterfaceName;
+        private FlowOutputVpcInterfaceAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowOutputVpcInterfaceAttachmentArgs();
         }
 
         public Builder(FlowOutputVpcInterfaceAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcInterfaceName = defaults.vpcInterfaceName;
+            $ = new FlowOutputVpcInterfaceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcInterfaceName(@Nullable Output<String> vpcInterfaceName) {
-            this.vpcInterfaceName = vpcInterfaceName;
+            $.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
-        public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
-            this.vpcInterfaceName = Codegen.ofNullable(vpcInterfaceName);
-            return this;
-        }        public FlowOutputVpcInterfaceAttachmentArgs build() {
-            return new FlowOutputVpcInterfaceAttachmentArgs(vpcInterfaceName);
+
+        public Builder vpcInterfaceName(String vpcInterfaceName) {
+            return vpcInterfaceName(Output.of(vpcInterfaceName));
+        }
+
+        public FlowOutputVpcInterfaceAttachmentArgs build() {
+            return $;
         }
     }
+
 }

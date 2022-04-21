@@ -7,10 +7,10 @@ import com.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import com.pulumi.awsnative.forecast.inputs.DatasetGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetArns")
-      private final @Nullable Output<List<String>> datasetArns;
+    private @Nullable Output<List<String>> datasetArns;
 
-    public Output<List<String>> datasetArns() {
-        return this.datasetArns == null ? Codegen.empty() : this.datasetArns;
+    public Optional<Output<List<String>>> datasetArns() {
+        return Optional.ofNullable(this.datasetArns);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetGroupName")
-      private final @Nullable Output<String> datasetGroupName;
+    private @Nullable Output<String> datasetGroupName;
 
-    public Output<String> datasetGroupName() {
-        return this.datasetGroupName == null ? Codegen.empty() : this.datasetGroupName;
+    public Optional<Output<String>> datasetGroupName() {
+        return Optional.ofNullable(this.datasetGroupName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<DatasetGroupDomain> domain;
+    private Output<DatasetGroupDomain> domain;
 
     public Output<DatasetGroupDomain> domain() {
         return this.domain;
@@ -56,95 +56,87 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DatasetGroupTagArgs>> tags;
+    private @Nullable Output<List<DatasetGroupTagArgs>> tags;
 
-    public Output<List<DatasetGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DatasetGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DatasetGroupArgs(
-        @Nullable Output<List<String>> datasetArns,
-        @Nullable Output<String> datasetGroupName,
-        Output<DatasetGroupDomain> domain,
-        @Nullable Output<List<DatasetGroupTagArgs>> tags) {
-        this.datasetArns = datasetArns;
-        this.datasetGroupName = datasetGroupName;
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.tags = tags;
-    }
+    private DatasetGroupArgs() {}
 
-    private DatasetGroupArgs() {
-        this.datasetArns = Codegen.empty();
-        this.datasetGroupName = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DatasetGroupArgs(DatasetGroupArgs $) {
+        this.datasetArns = $.datasetArns;
+        this.datasetGroupName = $.datasetGroupName;
+        this.domain = $.domain;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> datasetArns;
-        private @Nullable Output<String> datasetGroupName;
-        private Output<DatasetGroupDomain> domain;
-        private @Nullable Output<List<DatasetGroupTagArgs>> tags;
+        private DatasetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetGroupArgs();
         }
 
         public Builder(DatasetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetArns = defaults.datasetArns;
-    	      this.datasetGroupName = defaults.datasetGroupName;
-    	      this.domain = defaults.domain;
-    	      this.tags = defaults.tags;
+            $ = new DatasetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetArns(@Nullable Output<List<String>> datasetArns) {
-            this.datasetArns = datasetArns;
+            $.datasetArns = datasetArns;
             return this;
         }
-        public Builder datasetArns(@Nullable List<String> datasetArns) {
-            this.datasetArns = Codegen.ofNullable(datasetArns);
-            return this;
+
+        public Builder datasetArns(List<String> datasetArns) {
+            return datasetArns(Output.of(datasetArns));
         }
+
         public Builder datasetArns(String... datasetArns) {
             return datasetArns(List.of(datasetArns));
         }
+
         public Builder datasetGroupName(@Nullable Output<String> datasetGroupName) {
-            this.datasetGroupName = datasetGroupName;
+            $.datasetGroupName = datasetGroupName;
             return this;
         }
-        public Builder datasetGroupName(@Nullable String datasetGroupName) {
-            this.datasetGroupName = Codegen.ofNullable(datasetGroupName);
-            return this;
+
+        public Builder datasetGroupName(String datasetGroupName) {
+            return datasetGroupName(Output.of(datasetGroupName));
         }
+
         public Builder domain(Output<DatasetGroupDomain> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(DatasetGroupDomain domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
+            return domain(Output.of(domain));
         }
+
         public Builder tags(@Nullable Output<List<DatasetGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DatasetGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DatasetGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DatasetGroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DatasetGroupArgs build() {
-            return new DatasetGroupArgs(datasetArns, datasetGroupName, domain, tags);
+        }
+
+        public DatasetGroupArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

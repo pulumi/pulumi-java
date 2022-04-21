@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,66 @@ public final class GatewayCapabilitySummaryArgs extends com.pulumi.resources.Res
     public static final GatewayCapabilitySummaryArgs Empty = new GatewayCapabilitySummaryArgs();
 
     @Import(name="capabilityConfiguration")
-      private final @Nullable Output<String> capabilityConfiguration;
+    private @Nullable Output<String> capabilityConfiguration;
 
-    public Output<String> capabilityConfiguration() {
-        return this.capabilityConfiguration == null ? Codegen.empty() : this.capabilityConfiguration;
+    public Optional<Output<String>> capabilityConfiguration() {
+        return Optional.ofNullable(this.capabilityConfiguration);
     }
 
     @Import(name="capabilityNamespace", required=true)
-      private final Output<String> capabilityNamespace;
+    private Output<String> capabilityNamespace;
 
     public Output<String> capabilityNamespace() {
         return this.capabilityNamespace;
     }
 
-    public GatewayCapabilitySummaryArgs(
-        @Nullable Output<String> capabilityConfiguration,
-        Output<String> capabilityNamespace) {
-        this.capabilityConfiguration = capabilityConfiguration;
-        this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace, "expected parameter 'capabilityNamespace' to be non-null");
-    }
+    private GatewayCapabilitySummaryArgs() {}
 
-    private GatewayCapabilitySummaryArgs() {
-        this.capabilityConfiguration = Codegen.empty();
-        this.capabilityNamespace = Codegen.empty();
+    private GatewayCapabilitySummaryArgs(GatewayCapabilitySummaryArgs $) {
+        this.capabilityConfiguration = $.capabilityConfiguration;
+        this.capabilityNamespace = $.capabilityNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayCapabilitySummaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> capabilityConfiguration;
-        private Output<String> capabilityNamespace;
+        private GatewayCapabilitySummaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayCapabilitySummaryArgs();
         }
 
         public Builder(GatewayCapabilitySummaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilityConfiguration = defaults.capabilityConfiguration;
-    	      this.capabilityNamespace = defaults.capabilityNamespace;
+            $ = new GatewayCapabilitySummaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilityConfiguration(@Nullable Output<String> capabilityConfiguration) {
-            this.capabilityConfiguration = capabilityConfiguration;
+            $.capabilityConfiguration = capabilityConfiguration;
             return this;
         }
-        public Builder capabilityConfiguration(@Nullable String capabilityConfiguration) {
-            this.capabilityConfiguration = Codegen.ofNullable(capabilityConfiguration);
-            return this;
+
+        public Builder capabilityConfiguration(String capabilityConfiguration) {
+            return capabilityConfiguration(Output.of(capabilityConfiguration));
         }
+
         public Builder capabilityNamespace(Output<String> capabilityNamespace) {
-            this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
+            $.capabilityNamespace = capabilityNamespace;
             return this;
         }
+
         public Builder capabilityNamespace(String capabilityNamespace) {
-            this.capabilityNamespace = Output.of(Objects.requireNonNull(capabilityNamespace));
-            return this;
-        }        public GatewayCapabilitySummaryArgs build() {
-            return new GatewayCapabilitySummaryArgs(capabilityConfiguration, capabilityNamespace);
+            return capabilityNamespace(Output.of(capabilityNamespace));
+        }
+
+        public GatewayCapabilitySummaryArgs build() {
+            $.capabilityNamespace = Objects.requireNonNull($.capabilityNamespace, "expected parameter 'capabilityNamespace' to be non-null");
+            return $;
         }
     }
+
 }

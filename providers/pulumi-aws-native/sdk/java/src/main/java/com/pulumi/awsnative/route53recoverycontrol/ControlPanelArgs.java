@@ -6,10 +6,10 @@ package com.pulumi.awsnative.route53recoverycontrol;
 import com.pulumi.awsnative.route53recoverycontrol.inputs.ControlPanelTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterArn")
-      private final @Nullable Output<String> clusterArn;
+    private @Nullable Output<String> clusterArn;
 
-    public Output<String> clusterArn() {
-        return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
+    public Optional<Output<String>> clusterArn() {
+        return Optional.ofNullable(this.clusterArn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ControlPanelTagArgs>> tags;
+    private @Nullable Output<List<ControlPanelTagArgs>> tags;
 
-    public Output<List<ControlPanelTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ControlPanelTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ControlPanelArgs(
-        @Nullable Output<String> clusterArn,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ControlPanelTagArgs>> tags) {
-        this.clusterArn = clusterArn;
-        this.name = name;
-        this.tags = tags;
-    }
+    private ControlPanelArgs() {}
 
-    private ControlPanelArgs() {
-        this.clusterArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ControlPanelArgs(ControlPanelArgs $) {
+        this.clusterArn = $.clusterArn;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControlPanelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ControlPanelTagArgs>> tags;
+        private ControlPanelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControlPanelArgs();
         }
 
         public Builder(ControlPanelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterArn = defaults.clusterArn;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ControlPanelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
-            this.clusterArn = clusterArn;
+            $.clusterArn = clusterArn;
             return this;
         }
-        public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Codegen.ofNullable(clusterArn);
-            return this;
+
+        public Builder clusterArn(String clusterArn) {
+            return clusterArn(Output.of(clusterArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ControlPanelTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ControlPanelTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ControlPanelTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ControlPanelTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ControlPanelArgs build() {
-            return new ControlPanelArgs(clusterArn, name, tags);
+        }
+
+        public ControlPanelArgs build() {
+            return $;
         }
     }
+
 }

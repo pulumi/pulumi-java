@@ -8,11 +8,11 @@ import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsManifestArgs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     public static final OriginEndpointCmafPackageArgs Empty = new OriginEndpointCmafPackageArgs();
 
     @Import(name="encryption")
-      private final @Nullable Output<OriginEndpointCmafEncryptionArgs> encryption;
+    private @Nullable Output<OriginEndpointCmafEncryptionArgs> encryption;
 
-    public Output<OriginEndpointCmafEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<OriginEndpointCmafEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="hlsManifests")
-      private final @Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests;
+    private @Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests;
 
-    public Output<List<OriginEndpointHlsManifestArgs>> hlsManifests() {
-        return this.hlsManifests == null ? Codegen.empty() : this.hlsManifests;
+    public Optional<Output<List<OriginEndpointHlsManifestArgs>>> hlsManifests() {
+        return Optional.ofNullable(this.hlsManifests);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Output<Integer> segmentDurationSeconds;
+    private @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
+    public Optional<Output<Integer>> segmentDurationSeconds() {
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     /**
@@ -58,112 +58,99 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="segmentPrefix")
-      private final @Nullable Output<String> segmentPrefix;
+    private @Nullable Output<String> segmentPrefix;
 
-    public Output<String> segmentPrefix() {
-        return this.segmentPrefix == null ? Codegen.empty() : this.segmentPrefix;
+    public Optional<Output<String>> segmentPrefix() {
+        return Optional.ofNullable(this.segmentPrefix);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
+    private @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
 
-    public Output<OriginEndpointStreamSelectionArgs> streamSelection() {
-        return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
+    public Optional<Output<OriginEndpointStreamSelectionArgs>> streamSelection() {
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public OriginEndpointCmafPackageArgs(
-        @Nullable Output<OriginEndpointCmafEncryptionArgs> encryption,
-        @Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests,
-        @Nullable Output<Integer> segmentDurationSeconds,
-        @Nullable Output<String> segmentPrefix,
-        @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
-        this.encryption = encryption;
-        this.hlsManifests = hlsManifests;
-        this.segmentDurationSeconds = segmentDurationSeconds;
-        this.segmentPrefix = segmentPrefix;
-        this.streamSelection = streamSelection;
-    }
+    private OriginEndpointCmafPackageArgs() {}
 
-    private OriginEndpointCmafPackageArgs() {
-        this.encryption = Codegen.empty();
-        this.hlsManifests = Codegen.empty();
-        this.segmentDurationSeconds = Codegen.empty();
-        this.segmentPrefix = Codegen.empty();
-        this.streamSelection = Codegen.empty();
+    private OriginEndpointCmafPackageArgs(OriginEndpointCmafPackageArgs $) {
+        this.encryption = $.encryption;
+        this.hlsManifests = $.hlsManifests;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
+        this.segmentPrefix = $.segmentPrefix;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointCmafPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OriginEndpointCmafEncryptionArgs> encryption;
-        private @Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests;
-        private @Nullable Output<Integer> segmentDurationSeconds;
-        private @Nullable Output<String> segmentPrefix;
-        private @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
+        private OriginEndpointCmafPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointCmafPackageArgs();
         }
 
         public Builder(OriginEndpointCmafPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.hlsManifests = defaults.hlsManifests;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
-    	      this.segmentPrefix = defaults.segmentPrefix;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new OriginEndpointCmafPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable Output<OriginEndpointCmafEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable OriginEndpointCmafEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(OriginEndpointCmafEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder hlsManifests(@Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests) {
-            this.hlsManifests = hlsManifests;
+            $.hlsManifests = hlsManifests;
             return this;
         }
-        public Builder hlsManifests(@Nullable List<OriginEndpointHlsManifestArgs> hlsManifests) {
-            this.hlsManifests = Codegen.ofNullable(hlsManifests);
-            return this;
+
+        public Builder hlsManifests(List<OriginEndpointHlsManifestArgs> hlsManifests) {
+            return hlsManifests(Output.of(hlsManifests));
         }
+
         public Builder hlsManifests(OriginEndpointHlsManifestArgs... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
+
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
-            return this;
+
+        public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
+            return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
+
         public Builder segmentPrefix(@Nullable Output<String> segmentPrefix) {
-            this.segmentPrefix = segmentPrefix;
+            $.segmentPrefix = segmentPrefix;
             return this;
         }
-        public Builder segmentPrefix(@Nullable String segmentPrefix) {
-            this.segmentPrefix = Codegen.ofNullable(segmentPrefix);
-            return this;
+
+        public Builder segmentPrefix(String segmentPrefix) {
+            return segmentPrefix(Output.of(segmentPrefix));
         }
+
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
         }
-        public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
-            this.streamSelection = Codegen.ofNullable(streamSelection);
-            return this;
-        }        public OriginEndpointCmafPackageArgs build() {
-            return new OriginEndpointCmafPackageArgs(encryption, hlsManifests, segmentDurationSeconds, segmentPrefix, streamSelection);
+
+        public Builder streamSelection(OriginEndpointStreamSelectionArgs streamSelection) {
+            return streamSelection(Output.of(streamSelection));
+        }
+
+        public OriginEndpointCmafPackageArgs build() {
+            return $;
         }
     }
+
 }

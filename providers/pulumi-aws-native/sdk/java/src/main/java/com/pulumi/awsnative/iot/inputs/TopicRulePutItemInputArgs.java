@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class TopicRulePutItemInputArgs extends com.pulumi.resources.Resour
     public static final TopicRulePutItemInputArgs Empty = new TopicRulePutItemInputArgs();
 
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public TopicRulePutItemInputArgs(Output<String> tableName) {
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private TopicRulePutItemInputArgs() {}
 
-    private TopicRulePutItemInputArgs() {
-        this.tableName = Codegen.empty();
+    private TopicRulePutItemInputArgs(TopicRulePutItemInputArgs $) {
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRulePutItemInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> tableName;
+        private TopicRulePutItemInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRulePutItemInputArgs();
         }
 
         public Builder(TopicRulePutItemInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableName = defaults.tableName;
+            $ = new TopicRulePutItemInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public TopicRulePutItemInputArgs build() {
-            return new TopicRulePutItemInputArgs(tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public TopicRulePutItemInputArgs build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

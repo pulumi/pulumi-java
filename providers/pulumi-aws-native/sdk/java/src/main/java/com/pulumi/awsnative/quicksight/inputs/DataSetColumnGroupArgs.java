@@ -6,8 +6,8 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.DataSetGeoSpatialColumnGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class DataSetColumnGroupArgs extends com.pulumi.resources.ResourceA
     public static final DataSetColumnGroupArgs Empty = new DataSetColumnGroupArgs();
 
     @Import(name="geoSpatialColumnGroup")
-      private final @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
+    private @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
-    public Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup() {
-        return this.geoSpatialColumnGroup == null ? Codegen.empty() : this.geoSpatialColumnGroup;
+    public Optional<Output<DataSetGeoSpatialColumnGroupArgs>> geoSpatialColumnGroup() {
+        return Optional.ofNullable(this.geoSpatialColumnGroup);
     }
 
-    public DataSetColumnGroupArgs(@Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
-        this.geoSpatialColumnGroup = geoSpatialColumnGroup;
-    }
+    private DataSetColumnGroupArgs() {}
 
-    private DataSetColumnGroupArgs() {
-        this.geoSpatialColumnGroup = Codegen.empty();
+    private DataSetColumnGroupArgs(DataSetColumnGroupArgs $) {
+        this.geoSpatialColumnGroup = $.geoSpatialColumnGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetColumnGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
+        private DataSetColumnGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetColumnGroupArgs();
         }
 
         public Builder(DataSetColumnGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.geoSpatialColumnGroup = defaults.geoSpatialColumnGroup;
+            $ = new DataSetColumnGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder geoSpatialColumnGroup(@Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
-            this.geoSpatialColumnGroup = geoSpatialColumnGroup;
+            $.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }
-        public Builder geoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroupArgs geoSpatialColumnGroup) {
-            this.geoSpatialColumnGroup = Codegen.ofNullable(geoSpatialColumnGroup);
-            return this;
-        }        public DataSetColumnGroupArgs build() {
-            return new DataSetColumnGroupArgs(geoSpatialColumnGroup);
+
+        public Builder geoSpatialColumnGroup(DataSetGeoSpatialColumnGroupArgs geoSpatialColumnGroup) {
+            return geoSpatialColumnGroup(Output.of(geoSpatialColumnGroup));
+        }
+
+        public DataSetColumnGroupArgs build() {
+            return $;
         }
     }
+
 }

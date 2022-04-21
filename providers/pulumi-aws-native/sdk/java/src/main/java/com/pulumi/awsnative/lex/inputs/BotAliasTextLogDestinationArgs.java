@@ -6,8 +6,8 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasCloudWatchLogGroupLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BotAliasTextLogDestinationArgs extends com.pulumi.resources.R
     public static final BotAliasTextLogDestinationArgs Empty = new BotAliasTextLogDestinationArgs();
 
     @Import(name="cloudWatch")
-      private final @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
+    private @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
-    public Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch() {
-        return this.cloudWatch == null ? Codegen.empty() : this.cloudWatch;
+    public Optional<Output<BotAliasCloudWatchLogGroupLogDestinationArgs>> cloudWatch() {
+        return Optional.ofNullable(this.cloudWatch);
     }
 
-    public BotAliasTextLogDestinationArgs(@Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
-        this.cloudWatch = cloudWatch;
-    }
+    private BotAliasTextLogDestinationArgs() {}
 
-    private BotAliasTextLogDestinationArgs() {
-        this.cloudWatch = Codegen.empty();
+    private BotAliasTextLogDestinationArgs(BotAliasTextLogDestinationArgs $) {
+        this.cloudWatch = $.cloudWatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasTextLogDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
+        private BotAliasTextLogDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasTextLogDestinationArgs();
         }
 
         public Builder(BotAliasTextLogDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatch = defaults.cloudWatch;
+            $ = new BotAliasTextLogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatch(@Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
-            this.cloudWatch = cloudWatch;
+            $.cloudWatch = cloudWatch;
             return this;
         }
-        public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestinationArgs cloudWatch) {
-            this.cloudWatch = Codegen.ofNullable(cloudWatch);
-            return this;
-        }        public BotAliasTextLogDestinationArgs build() {
-            return new BotAliasTextLogDestinationArgs(cloudWatch);
+
+        public Builder cloudWatch(BotAliasCloudWatchLogGroupLogDestinationArgs cloudWatch) {
+            return cloudWatch(Output.of(cloudWatch));
+        }
+
+        public BotAliasTextLogDestinationArgs build() {
+            return $;
         }
     }
+
 }

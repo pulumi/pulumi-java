@@ -6,10 +6,10 @@ package com.pulumi.awsnative.greengrassv2;
 import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaFunctionRecipeSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class ComponentVersionArgs extends com.pulumi.resources.ResourceArg
     public static final ComponentVersionArgs Empty = new ComponentVersionArgs();
 
     @Import(name="inlineRecipe")
-      private final @Nullable Output<String> inlineRecipe;
+    private @Nullable Output<String> inlineRecipe;
 
-    public Output<String> inlineRecipe() {
-        return this.inlineRecipe == null ? Codegen.empty() : this.inlineRecipe;
+    public Optional<Output<String>> inlineRecipe() {
+        return Optional.ofNullable(this.inlineRecipe);
     }
 
     @Import(name="lambdaFunction")
-      private final @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
+    private @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
 
-    public Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction() {
-        return this.lambdaFunction == null ? Codegen.empty() : this.lambdaFunction;
+    public Optional<Output<ComponentVersionLambdaFunctionRecipeSourceArgs>> lambdaFunction() {
+        return Optional.ofNullable(this.lambdaFunction);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Object> tags;
+    private @Nullable Output<Object> tags;
 
-    public Output<Object> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Object>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ComponentVersionArgs(
-        @Nullable Output<String> inlineRecipe,
-        @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction,
-        @Nullable Output<Object> tags) {
-        this.inlineRecipe = inlineRecipe;
-        this.lambdaFunction = lambdaFunction;
-        this.tags = tags;
-    }
+    private ComponentVersionArgs() {}
 
-    private ComponentVersionArgs() {
-        this.inlineRecipe = Codegen.empty();
-        this.lambdaFunction = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ComponentVersionArgs(ComponentVersionArgs $) {
+        this.inlineRecipe = $.inlineRecipe;
+        this.lambdaFunction = $.lambdaFunction;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> inlineRecipe;
-        private @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
-        private @Nullable Output<Object> tags;
+        private ComponentVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentVersionArgs();
         }
 
         public Builder(ComponentVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inlineRecipe = defaults.inlineRecipe;
-    	      this.lambdaFunction = defaults.lambdaFunction;
-    	      this.tags = defaults.tags;
+            $ = new ComponentVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inlineRecipe(@Nullable Output<String> inlineRecipe) {
-            this.inlineRecipe = inlineRecipe;
+            $.inlineRecipe = inlineRecipe;
             return this;
         }
-        public Builder inlineRecipe(@Nullable String inlineRecipe) {
-            this.inlineRecipe = Codegen.ofNullable(inlineRecipe);
-            return this;
+
+        public Builder inlineRecipe(String inlineRecipe) {
+            return inlineRecipe(Output.of(inlineRecipe));
         }
+
         public Builder lambdaFunction(@Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction) {
-            this.lambdaFunction = lambdaFunction;
+            $.lambdaFunction = lambdaFunction;
             return this;
         }
-        public Builder lambdaFunction(@Nullable ComponentVersionLambdaFunctionRecipeSourceArgs lambdaFunction) {
-            this.lambdaFunction = Codegen.ofNullable(lambdaFunction);
-            return this;
+
+        public Builder lambdaFunction(ComponentVersionLambdaFunctionRecipeSourceArgs lambdaFunction) {
+            return lambdaFunction(Output.of(lambdaFunction));
         }
+
         public Builder tags(@Nullable Output<Object> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Object tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ComponentVersionArgs build() {
-            return new ComponentVersionArgs(inlineRecipe, lambdaFunction, tags);
+
+        public Builder tags(Object tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ComponentVersionArgs build() {
+            return $;
         }
     }
+
 }

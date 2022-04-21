@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iotfleethub;
 import com.pulumi.awsnative.iotfleethub.inputs.ApplicationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationDescription")
-      private final @Nullable Output<String> applicationDescription;
+    private @Nullable Output<String> applicationDescription;
 
-    public Output<String> applicationDescription() {
-        return this.applicationDescription == null ? Codegen.empty() : this.applicationDescription;
+    public Optional<Output<String>> applicationDescription() {
+        return Optional.ofNullable(this.applicationDescription);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable Output<String> applicationName;
+    private @Nullable Output<String> applicationName;
 
-    public Output<String> applicationName() {
-        return this.applicationName == null ? Codegen.empty() : this.applicationName;
+    public Optional<Output<String>> applicationName() {
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -55,92 +55,83 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ApplicationTagArgs>> tags;
+    private @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ApplicationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ApplicationArgs(
-        @Nullable Output<String> applicationDescription,
-        @Nullable Output<String> applicationName,
-        Output<String> roleArn,
-        @Nullable Output<List<ApplicationTagArgs>> tags) {
-        this.applicationDescription = applicationDescription;
-        this.applicationName = applicationName;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.applicationDescription = Codegen.empty();
-        this.applicationName = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.applicationDescription = $.applicationDescription;
+        this.applicationName = $.applicationName;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationDescription;
-        private @Nullable Output<String> applicationName;
-        private Output<String> roleArn;
-        private @Nullable Output<List<ApplicationTagArgs>> tags;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationDescription = defaults.applicationDescription;
-    	      this.applicationName = defaults.applicationName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationDescription(@Nullable Output<String> applicationDescription) {
-            this.applicationDescription = applicationDescription;
+            $.applicationDescription = applicationDescription;
             return this;
         }
-        public Builder applicationDescription(@Nullable String applicationDescription) {
-            this.applicationDescription = Codegen.ofNullable(applicationDescription);
-            return this;
+
+        public Builder applicationDescription(String applicationDescription) {
+            return applicationDescription(Output.of(applicationDescription));
         }
+
         public Builder applicationName(@Nullable Output<String> applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
-        public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Codegen.ofNullable(applicationName);
-            return this;
+
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ApplicationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ApplicationTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(applicationDescription, applicationName, roleArn, tags);
+        }
+
+        public ApplicationArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

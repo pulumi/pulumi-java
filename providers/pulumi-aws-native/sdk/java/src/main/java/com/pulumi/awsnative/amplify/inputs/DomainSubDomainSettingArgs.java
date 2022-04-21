@@ -5,7 +5,6 @@ package com.pulumi.awsnative.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class DomainSubDomainSettingArgs extends com.pulumi.resources.Resou
     public static final DomainSubDomainSettingArgs Empty = new DomainSubDomainSettingArgs();
 
     @Import(name="branchName", required=true)
-      private final Output<String> branchName;
+    private Output<String> branchName;
 
     public Output<String> branchName() {
         return this.branchName;
     }
 
     @Import(name="prefix", required=true)
-      private final Output<String> prefix;
+    private Output<String> prefix;
 
     public Output<String> prefix() {
         return this.prefix;
     }
 
-    public DomainSubDomainSettingArgs(
-        Output<String> branchName,
-        Output<String> prefix) {
-        this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-    }
+    private DomainSubDomainSettingArgs() {}
 
-    private DomainSubDomainSettingArgs() {
-        this.branchName = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private DomainSubDomainSettingArgs(DomainSubDomainSettingArgs $) {
+        this.branchName = $.branchName;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSubDomainSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> branchName;
-        private Output<String> prefix;
+        private DomainSubDomainSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSubDomainSettingArgs();
         }
 
         public Builder(DomainSubDomainSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.prefix = defaults.prefix;
+            $ = new DomainSubDomainSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(Output<String> branchName) {
-            this.branchName = Objects.requireNonNull(branchName);
+            $.branchName = branchName;
             return this;
         }
+
         public Builder branchName(String branchName) {
-            this.branchName = Output.of(Objects.requireNonNull(branchName));
-            return this;
+            return branchName(Output.of(branchName));
         }
+
         public Builder prefix(Output<String> prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Output.of(Objects.requireNonNull(prefix));
-            return this;
-        }        public DomainSubDomainSettingArgs build() {
-            return new DomainSubDomainSettingArgs(branchName, prefix);
+            return prefix(Output.of(prefix));
+        }
+
+        public DomainSubDomainSettingArgs build() {
+            $.branchName = Objects.requireNonNull($.branchName, "expected parameter 'branchName' to be non-null");
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            return $;
         }
     }
+
 }

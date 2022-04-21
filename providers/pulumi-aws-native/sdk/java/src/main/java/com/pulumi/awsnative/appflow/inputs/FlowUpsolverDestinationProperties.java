@@ -16,78 +16,72 @@ public final class FlowUpsolverDestinationProperties extends com.pulumi.resource
     public static final FlowUpsolverDestinationProperties Empty = new FlowUpsolverDestinationProperties();
 
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
-      private final @Nullable String bucketPrefix;
+    private @Nullable String bucketPrefix;
 
     public Optional<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="s3OutputFormatConfig", required=true)
-      private final FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig;
+    private FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig;
 
     public FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig() {
         return this.s3OutputFormatConfig;
     }
 
-    public FlowUpsolverDestinationProperties(
-        String bucketName,
-        @Nullable String bucketPrefix,
-        FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.bucketPrefix = bucketPrefix;
-        this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig, "expected parameter 's3OutputFormatConfig' to be non-null");
-    }
+    private FlowUpsolverDestinationProperties() {}
 
-    private FlowUpsolverDestinationProperties() {
-        this.bucketName = null;
-        this.bucketPrefix = null;
-        this.s3OutputFormatConfig = null;
+    private FlowUpsolverDestinationProperties(FlowUpsolverDestinationProperties $) {
+        this.bucketName = $.bucketName;
+        this.bucketPrefix = $.bucketPrefix;
+        this.s3OutputFormatConfig = $.s3OutputFormatConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowUpsolverDestinationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketName;
-        private @Nullable String bucketPrefix;
-        private FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig;
+        private FlowUpsolverDestinationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowUpsolverDestinationProperties();
         }
 
         public Builder(FlowUpsolverDestinationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.s3OutputFormatConfig = defaults.s3OutputFormatConfig;
+            $ = new FlowUpsolverDestinationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
+
         public Builder s3OutputFormatConfig(FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
-            this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig);
+            $.s3OutputFormatConfig = s3OutputFormatConfig;
             return this;
-        }        public FlowUpsolverDestinationProperties build() {
-            return new FlowUpsolverDestinationProperties(bucketName, bucketPrefix, s3OutputFormatConfig);
+        }
+
+        public FlowUpsolverDestinationProperties build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.s3OutputFormatConfig = Objects.requireNonNull($.s3OutputFormatConfig, "expected parameter 's3OutputFormatConfig' to be non-null");
+            return $;
         }
     }
+
 }

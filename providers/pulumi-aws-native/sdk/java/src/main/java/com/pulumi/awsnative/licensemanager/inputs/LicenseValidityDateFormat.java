@@ -17,7 +17,7 @@ public final class LicenseValidityDateFormat extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="begin", required=true)
-      private final String begin;
+    private String begin;
 
     public String begin() {
         return this.begin;
@@ -28,55 +28,52 @@ public final class LicenseValidityDateFormat extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="end", required=true)
-      private final String end;
+    private String end;
 
     public String end() {
         return this.end;
     }
 
-    public LicenseValidityDateFormat(
-        String begin,
-        String end) {
-        this.begin = Objects.requireNonNull(begin, "expected parameter 'begin' to be non-null");
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-    }
+    private LicenseValidityDateFormat() {}
 
-    private LicenseValidityDateFormat() {
-        this.begin = null;
-        this.end = null;
+    private LicenseValidityDateFormat(LicenseValidityDateFormat $) {
+        this.begin = $.begin;
+        this.end = $.end;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseValidityDateFormat defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String begin;
-        private String end;
+        private LicenseValidityDateFormat $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseValidityDateFormat();
         }
 
         public Builder(LicenseValidityDateFormat defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.begin = defaults.begin;
-    	      this.end = defaults.end;
+            $ = new LicenseValidityDateFormat(Objects.requireNonNull(defaults));
         }
 
         public Builder begin(String begin) {
-            this.begin = Objects.requireNonNull(begin);
+            $.begin = begin;
             return this;
         }
+
         public Builder end(String end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
-        }        public LicenseValidityDateFormat build() {
-            return new LicenseValidityDateFormat(begin, end);
+        }
+
+        public LicenseValidityDateFormat build() {
+            $.begin = Objects.requireNonNull($.begin, "expected parameter 'begin' to be non-null");
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            return $;
         }
     }
+
 }

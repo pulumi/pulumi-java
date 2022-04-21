@@ -17,45 +17,45 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceFleetName", required=true)
-      private final String deviceFleetName;
+    private String deviceFleetName;
 
     public String deviceFleetName() {
         return this.deviceFleetName;
     }
 
-    public GetDeviceArgs(String deviceFleetName) {
-        this.deviceFleetName = Objects.requireNonNull(deviceFleetName, "expected parameter 'deviceFleetName' to be non-null");
-    }
+    private GetDeviceArgs() {}
 
-    private GetDeviceArgs() {
-        this.deviceFleetName = null;
+    private GetDeviceArgs(GetDeviceArgs $) {
+        this.deviceFleetName = $.deviceFleetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceFleetName;
+        private GetDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeviceArgs();
         }
 
         public Builder(GetDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceFleetName = defaults.deviceFleetName;
+            $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceFleetName(String deviceFleetName) {
-            this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
+            $.deviceFleetName = deviceFleetName;
             return this;
-        }        public GetDeviceArgs build() {
-            return new GetDeviceArgs(deviceFleetName);
+        }
+
+        public GetDeviceArgs build() {
+            $.deviceFleetName = Objects.requireNonNull($.deviceFleetName, "expected parameter 'deviceFleetName' to be non-null");
+            return $;
         }
     }
+
 }

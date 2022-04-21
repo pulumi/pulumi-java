@@ -19,65 +19,63 @@ public final class DatasetFilterExpression extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
     }
 
     @Import(name="valuesMap", required=true)
-      private final List<DatasetFilterValue> valuesMap;
+    private List<DatasetFilterValue> valuesMap;
 
     public List<DatasetFilterValue> valuesMap() {
         return this.valuesMap;
     }
 
-    public DatasetFilterExpression(
-        String expression,
-        List<DatasetFilterValue> valuesMap) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.valuesMap = Objects.requireNonNull(valuesMap, "expected parameter 'valuesMap' to be non-null");
-    }
+    private DatasetFilterExpression() {}
 
-    private DatasetFilterExpression() {
-        this.expression = null;
-        this.valuesMap = List.of();
+    private DatasetFilterExpression(DatasetFilterExpression $) {
+        this.expression = $.expression;
+        this.valuesMap = $.valuesMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFilterExpression defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expression;
-        private List<DatasetFilterValue> valuesMap;
+        private DatasetFilterExpression $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFilterExpression();
         }
 
         public Builder(DatasetFilterExpression defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.valuesMap = defaults.valuesMap;
+            $ = new DatasetFilterExpression(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder valuesMap(List<DatasetFilterValue> valuesMap) {
-            this.valuesMap = Objects.requireNonNull(valuesMap);
+            $.valuesMap = valuesMap;
             return this;
         }
+
         public Builder valuesMap(DatasetFilterValue... valuesMap) {
             return valuesMap(List.of(valuesMap));
-        }        public DatasetFilterExpression build() {
-            return new DatasetFilterExpression(expression, valuesMap);
+        }
+
+        public DatasetFilterExpression build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.valuesMap = Objects.requireNonNull($.valuesMap, "expected parameter 'valuesMap' to be non-null");
+            return $;
         }
     }
+
 }

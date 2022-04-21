@@ -14,65 +14,63 @@ public final class BudgetsActionScpActionDefinition extends com.pulumi.resources
     public static final BudgetsActionScpActionDefinition Empty = new BudgetsActionScpActionDefinition();
 
     @Import(name="policyId", required=true)
-      private final String policyId;
+    private String policyId;
 
     public String policyId() {
         return this.policyId;
     }
 
     @Import(name="targetIds", required=true)
-      private final List<String> targetIds;
+    private List<String> targetIds;
 
     public List<String> targetIds() {
         return this.targetIds;
     }
 
-    public BudgetsActionScpActionDefinition(
-        String policyId,
-        List<String> targetIds) {
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.targetIds = Objects.requireNonNull(targetIds, "expected parameter 'targetIds' to be non-null");
-    }
+    private BudgetsActionScpActionDefinition() {}
 
-    private BudgetsActionScpActionDefinition() {
-        this.policyId = null;
-        this.targetIds = List.of();
+    private BudgetsActionScpActionDefinition(BudgetsActionScpActionDefinition $) {
+        this.policyId = $.policyId;
+        this.targetIds = $.targetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetsActionScpActionDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyId;
-        private List<String> targetIds;
+        private BudgetsActionScpActionDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetsActionScpActionDefinition();
         }
 
         public Builder(BudgetsActionScpActionDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.targetIds = defaults.targetIds;
+            $ = new BudgetsActionScpActionDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder targetIds(List<String> targetIds) {
-            this.targetIds = Objects.requireNonNull(targetIds);
+            $.targetIds = targetIds;
             return this;
         }
+
         public Builder targetIds(String... targetIds) {
             return targetIds(List.of(targetIds));
-        }        public BudgetsActionScpActionDefinition build() {
-            return new BudgetsActionScpActionDefinition(policyId, targetIds);
+        }
+
+        public BudgetsActionScpActionDefinition build() {
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.targetIds = Objects.requireNonNull($.targetIds, "expected parameter 'targetIds' to be non-null");
+            return $;
         }
     }
+
 }

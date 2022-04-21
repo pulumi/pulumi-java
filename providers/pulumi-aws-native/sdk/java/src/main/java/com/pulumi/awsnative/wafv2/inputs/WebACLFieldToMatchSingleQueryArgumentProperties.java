@@ -17,45 +17,45 @@ public final class WebACLFieldToMatchSingleQueryArgumentProperties extends com.p
     public static final WebACLFieldToMatchSingleQueryArgumentProperties Empty = new WebACLFieldToMatchSingleQueryArgumentProperties();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public WebACLFieldToMatchSingleQueryArgumentProperties(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private WebACLFieldToMatchSingleQueryArgumentProperties() {}
 
-    private WebACLFieldToMatchSingleQueryArgumentProperties() {
-        this.name = null;
+    private WebACLFieldToMatchSingleQueryArgumentProperties(WebACLFieldToMatchSingleQueryArgumentProperties $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLFieldToMatchSingleQueryArgumentProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private WebACLFieldToMatchSingleQueryArgumentProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLFieldToMatchSingleQueryArgumentProperties();
         }
 
         public Builder(WebACLFieldToMatchSingleQueryArgumentProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new WebACLFieldToMatchSingleQueryArgumentProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public WebACLFieldToMatchSingleQueryArgumentProperties build() {
-            return new WebACLFieldToMatchSingleQueryArgumentProperties(name);
+        }
+
+        public WebACLFieldToMatchSingleQueryArgumentProperties build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

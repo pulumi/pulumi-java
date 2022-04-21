@@ -16,62 +16,57 @@ public final class DeliveryStreamEncryptionConfiguration extends com.pulumi.reso
     public static final DeliveryStreamEncryptionConfiguration Empty = new DeliveryStreamEncryptionConfiguration();
 
     @Import(name="kMSEncryptionConfig")
-      private final @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig;
+    private @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig;
 
     public Optional<DeliveryStreamKMSEncryptionConfig> kMSEncryptionConfig() {
-        return this.kMSEncryptionConfig == null ? Optional.empty() : Optional.ofNullable(this.kMSEncryptionConfig);
+        return Optional.ofNullable(this.kMSEncryptionConfig);
     }
 
     @Import(name="noEncryptionConfig")
-      private final @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig;
+    private @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig;
 
     public Optional<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig() {
-        return this.noEncryptionConfig == null ? Optional.empty() : Optional.ofNullable(this.noEncryptionConfig);
+        return Optional.ofNullable(this.noEncryptionConfig);
     }
 
-    public DeliveryStreamEncryptionConfiguration(
-        @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig,
-        @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
-        this.kMSEncryptionConfig = kMSEncryptionConfig;
-        this.noEncryptionConfig = noEncryptionConfig;
-    }
+    private DeliveryStreamEncryptionConfiguration() {}
 
-    private DeliveryStreamEncryptionConfiguration() {
-        this.kMSEncryptionConfig = null;
-        this.noEncryptionConfig = null;
+    private DeliveryStreamEncryptionConfiguration(DeliveryStreamEncryptionConfiguration $) {
+        this.kMSEncryptionConfig = $.kMSEncryptionConfig;
+        this.noEncryptionConfig = $.noEncryptionConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamEncryptionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig;
-        private @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig;
+        private DeliveryStreamEncryptionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamEncryptionConfiguration();
         }
 
         public Builder(DeliveryStreamEncryptionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kMSEncryptionConfig = defaults.kMSEncryptionConfig;
-    	      this.noEncryptionConfig = defaults.noEncryptionConfig;
+            $ = new DeliveryStreamEncryptionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder kMSEncryptionConfig(@Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig) {
-            this.kMSEncryptionConfig = kMSEncryptionConfig;
+            $.kMSEncryptionConfig = kMSEncryptionConfig;
             return this;
         }
+
         public Builder noEncryptionConfig(@Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
-            this.noEncryptionConfig = noEncryptionConfig;
+            $.noEncryptionConfig = noEncryptionConfig;
             return this;
-        }        public DeliveryStreamEncryptionConfiguration build() {
-            return new DeliveryStreamEncryptionConfiguration(kMSEncryptionConfig, noEncryptionConfig);
+        }
+
+        public DeliveryStreamEncryptionConfiguration build() {
+            return $;
         }
     }
+
 }

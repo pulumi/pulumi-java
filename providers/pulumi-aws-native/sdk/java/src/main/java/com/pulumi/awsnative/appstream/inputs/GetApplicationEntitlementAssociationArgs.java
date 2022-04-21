@@ -13,78 +13,73 @@ public final class GetApplicationEntitlementAssociationArgs extends com.pulumi.r
     public static final GetApplicationEntitlementAssociationArgs Empty = new GetApplicationEntitlementAssociationArgs();
 
     @Import(name="applicationIdentifier", required=true)
-      private final String applicationIdentifier;
+    private String applicationIdentifier;
 
     public String applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="entitlementName", required=true)
-      private final String entitlementName;
+    private String entitlementName;
 
     public String entitlementName() {
         return this.entitlementName;
     }
 
     @Import(name="stackName", required=true)
-      private final String stackName;
+    private String stackName;
 
     public String stackName() {
         return this.stackName;
     }
 
-    public GetApplicationEntitlementAssociationArgs(
-        String applicationIdentifier,
-        String entitlementName,
-        String stackName) {
-        this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
-        this.entitlementName = Objects.requireNonNull(entitlementName, "expected parameter 'entitlementName' to be non-null");
-        this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
-    }
+    private GetApplicationEntitlementAssociationArgs() {}
 
-    private GetApplicationEntitlementAssociationArgs() {
-        this.applicationIdentifier = null;
-        this.entitlementName = null;
-        this.stackName = null;
+    private GetApplicationEntitlementAssociationArgs(GetApplicationEntitlementAssociationArgs $) {
+        this.applicationIdentifier = $.applicationIdentifier;
+        this.entitlementName = $.entitlementName;
+        this.stackName = $.stackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationEntitlementAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationIdentifier;
-        private String entitlementName;
-        private String stackName;
+        private GetApplicationEntitlementAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationEntitlementAssociationArgs();
         }
 
         public Builder(GetApplicationEntitlementAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIdentifier = defaults.applicationIdentifier;
-    	      this.entitlementName = defaults.entitlementName;
-    	      this.stackName = defaults.stackName;
+            $ = new GetApplicationEntitlementAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
+            $.applicationIdentifier = applicationIdentifier;
             return this;
         }
+
         public Builder entitlementName(String entitlementName) {
-            this.entitlementName = Objects.requireNonNull(entitlementName);
+            $.entitlementName = entitlementName;
             return this;
         }
+
         public Builder stackName(String stackName) {
-            this.stackName = Objects.requireNonNull(stackName);
+            $.stackName = stackName;
             return this;
-        }        public GetApplicationEntitlementAssociationArgs build() {
-            return new GetApplicationEntitlementAssociationArgs(applicationIdentifier, entitlementName, stackName);
+        }
+
+        public GetApplicationEntitlementAssociationArgs build() {
+            $.applicationIdentifier = Objects.requireNonNull($.applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
+            $.entitlementName = Objects.requireNonNull($.entitlementName, "expected parameter 'entitlementName' to be non-null");
+            $.stackName = Objects.requireNonNull($.stackName, "expected parameter 'stackName' to be non-null");
+            return $;
         }
     }
+
 }

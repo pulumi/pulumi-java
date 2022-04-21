@@ -21,10 +21,10 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="contentHandling")
-      private final @Nullable MethodIntegrationResponseContentHandling contentHandling;
+    private @Nullable MethodIntegrationResponseContentHandling contentHandling;
 
     public Optional<MethodIntegrationResponseContentHandling> contentHandling() {
-        return this.contentHandling == null ? Optional.empty() : Optional.ofNullable(this.contentHandling);
+        return Optional.ofNullable(this.contentHandling);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="responseParameters")
-      private final @Nullable Object responseParameters;
+    private @Nullable Object responseParameters;
 
     public Optional<Object> responseParameters() {
-        return this.responseParameters == null ? Optional.empty() : Optional.ofNullable(this.responseParameters);
+        return Optional.ofNullable(this.responseParameters);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="responseTemplates")
-      private final @Nullable Object responseTemplates;
+    private @Nullable Object responseTemplates;
 
     public Optional<Object> responseTemplates() {
-        return this.responseTemplates == null ? Optional.empty() : Optional.ofNullable(this.responseTemplates);
+        return Optional.ofNullable(this.responseTemplates);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="selectionPattern")
-      private final @Nullable String selectionPattern;
+    private @Nullable String selectionPattern;
 
     public Optional<String> selectionPattern() {
-        return this.selectionPattern == null ? Optional.empty() : Optional.ofNullable(this.selectionPattern);
+        return Optional.ofNullable(this.selectionPattern);
     }
 
     /**
@@ -65,82 +65,69 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="statusCode", required=true)
-      private final String statusCode;
+    private String statusCode;
 
     public String statusCode() {
         return this.statusCode;
     }
 
-    public MethodIntegrationResponse(
-        @Nullable MethodIntegrationResponseContentHandling contentHandling,
-        @Nullable Object responseParameters,
-        @Nullable Object responseTemplates,
-        @Nullable String selectionPattern,
-        String statusCode) {
-        this.contentHandling = contentHandling;
-        this.responseParameters = responseParameters;
-        this.responseTemplates = responseTemplates;
-        this.selectionPattern = selectionPattern;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private MethodIntegrationResponse() {}
 
-    private MethodIntegrationResponse() {
-        this.contentHandling = null;
-        this.responseParameters = null;
-        this.responseTemplates = null;
-        this.selectionPattern = null;
-        this.statusCode = null;
+    private MethodIntegrationResponse(MethodIntegrationResponse $) {
+        this.contentHandling = $.contentHandling;
+        this.responseParameters = $.responseParameters;
+        this.responseTemplates = $.responseTemplates;
+        this.selectionPattern = $.selectionPattern;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodIntegrationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MethodIntegrationResponseContentHandling contentHandling;
-        private @Nullable Object responseParameters;
-        private @Nullable Object responseTemplates;
-        private @Nullable String selectionPattern;
-        private String statusCode;
+        private MethodIntegrationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodIntegrationResponse();
         }
 
         public Builder(MethodIntegrationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentHandling = defaults.contentHandling;
-    	      this.responseParameters = defaults.responseParameters;
-    	      this.responseTemplates = defaults.responseTemplates;
-    	      this.selectionPattern = defaults.selectionPattern;
-    	      this.statusCode = defaults.statusCode;
+            $ = new MethodIntegrationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
-            this.contentHandling = contentHandling;
+            $.contentHandling = contentHandling;
             return this;
         }
+
         public Builder responseParameters(@Nullable Object responseParameters) {
-            this.responseParameters = responseParameters;
+            $.responseParameters = responseParameters;
             return this;
         }
+
         public Builder responseTemplates(@Nullable Object responseTemplates) {
-            this.responseTemplates = responseTemplates;
+            $.responseTemplates = responseTemplates;
             return this;
         }
+
         public Builder selectionPattern(@Nullable String selectionPattern) {
-            this.selectionPattern = selectionPattern;
+            $.selectionPattern = selectionPattern;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
-        }        public MethodIntegrationResponse build() {
-            return new MethodIntegrationResponse(contentHandling, responseParameters, responseTemplates, selectionPattern, statusCode);
+        }
+
+        public MethodIntegrationResponse build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

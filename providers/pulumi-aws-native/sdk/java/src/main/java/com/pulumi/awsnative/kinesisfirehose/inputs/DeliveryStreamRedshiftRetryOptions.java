@@ -15,45 +15,44 @@ public final class DeliveryStreamRedshiftRetryOptions extends com.pulumi.resourc
     public static final DeliveryStreamRedshiftRetryOptions Empty = new DeliveryStreamRedshiftRetryOptions();
 
     @Import(name="durationInSeconds")
-      private final @Nullable Integer durationInSeconds;
+    private @Nullable Integer durationInSeconds;
 
     public Optional<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
-    public DeliveryStreamRedshiftRetryOptions(@Nullable Integer durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
-    }
+    private DeliveryStreamRedshiftRetryOptions() {}
 
-    private DeliveryStreamRedshiftRetryOptions() {
-        this.durationInSeconds = null;
+    private DeliveryStreamRedshiftRetryOptions(DeliveryStreamRedshiftRetryOptions $) {
+        this.durationInSeconds = $.durationInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamRedshiftRetryOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer durationInSeconds;
+        private DeliveryStreamRedshiftRetryOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamRedshiftRetryOptions();
         }
 
         public Builder(DeliveryStreamRedshiftRetryOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
+            $ = new DeliveryStreamRedshiftRetryOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
-        }        public DeliveryStreamRedshiftRetryOptions build() {
-            return new DeliveryStreamRedshiftRetryOptions(durationInSeconds);
+        }
+
+        public DeliveryStreamRedshiftRetryOptions build() {
+            return $;
         }
     }
+
 }

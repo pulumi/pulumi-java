@@ -17,65 +17,61 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfiguration ext
     public static final DataSourceSalesforceStandardObjectAttachmentConfiguration Empty = new DataSourceSalesforceStandardObjectAttachmentConfiguration();
 
     @Import(name="documentTitleFieldName")
-      private final @Nullable String documentTitleFieldName;
+    private @Nullable String documentTitleFieldName;
 
     public Optional<String> documentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
+        return Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
-    public DataSourceSalesforceStandardObjectAttachmentConfiguration(
-        @Nullable String documentTitleFieldName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-        this.documentTitleFieldName = documentTitleFieldName;
-        this.fieldMappings = fieldMappings;
-    }
+    private DataSourceSalesforceStandardObjectAttachmentConfiguration() {}
 
-    private DataSourceSalesforceStandardObjectAttachmentConfiguration() {
-        this.documentTitleFieldName = null;
-        this.fieldMappings = List.of();
+    private DataSourceSalesforceStandardObjectAttachmentConfiguration(DataSourceSalesforceStandardObjectAttachmentConfiguration $) {
+        this.documentTitleFieldName = $.documentTitleFieldName;
+        this.fieldMappings = $.fieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSalesforceStandardObjectAttachmentConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String documentTitleFieldName;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private DataSourceSalesforceStandardObjectAttachmentConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSalesforceStandardObjectAttachmentConfiguration();
         }
 
         public Builder(DataSourceSalesforceStandardObjectAttachmentConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentTitleFieldName = defaults.documentTitleFieldName;
-    	      this.fieldMappings = defaults.fieldMappings;
+            $ = new DataSourceSalesforceStandardObjectAttachmentConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = documentTitleFieldName;
+            $.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
-        }        public DataSourceSalesforceStandardObjectAttachmentConfiguration build() {
-            return new DataSourceSalesforceStandardObjectAttachmentConfiguration(documentTitleFieldName, fieldMappings);
+        }
+
+        public DataSourceSalesforceStandardObjectAttachmentConfiguration build() {
+            return $;
         }
     }
+
 }

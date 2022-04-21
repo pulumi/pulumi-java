@@ -7,8 +7,8 @@ import com.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftw
 import com.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftwareSuiteVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends com.
      * 
      */
     @Import(name="name", required=true)
-      private final Output<SimulationApplicationSimulationSoftwareSuiteName> name;
+    private Output<SimulationApplicationSimulationSoftwareSuiteName> name;
 
     public Output<SimulationApplicationSimulationSoftwareSuiteName> name() {
         return this.name;
@@ -36,63 +36,59 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends com.
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
+    private @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 
-    public Output<SimulationApplicationSimulationSoftwareSuiteVersion> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<SimulationApplicationSimulationSoftwareSuiteVersion>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SimulationApplicationSimulationSoftwareSuiteArgs(
-        Output<SimulationApplicationSimulationSoftwareSuiteName> name,
-        @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = version;
-    }
+    private SimulationApplicationSimulationSoftwareSuiteArgs() {}
 
-    private SimulationApplicationSimulationSoftwareSuiteArgs() {
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private SimulationApplicationSimulationSoftwareSuiteArgs(SimulationApplicationSimulationSoftwareSuiteArgs $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimulationApplicationSimulationSoftwareSuiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SimulationApplicationSimulationSoftwareSuiteName> name;
-        private @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
+        private SimulationApplicationSimulationSoftwareSuiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimulationApplicationSimulationSoftwareSuiteArgs();
         }
 
         public Builder(SimulationApplicationSimulationSoftwareSuiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new SimulationApplicationSimulationSoftwareSuiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<SimulationApplicationSimulationSoftwareSuiteName> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder version(@Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SimulationApplicationSimulationSoftwareSuiteArgs build() {
-            return new SimulationApplicationSimulationSoftwareSuiteArgs(name, version);
+
+        public Builder version(SimulationApplicationSimulationSoftwareSuiteVersion version) {
+            return version(Output.of(version));
+        }
+
+        public SimulationApplicationSimulationSoftwareSuiteArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

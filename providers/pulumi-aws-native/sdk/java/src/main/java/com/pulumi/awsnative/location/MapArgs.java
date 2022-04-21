@@ -7,9 +7,9 @@ import com.pulumi.awsnative.location.enums.MapPricingPlan;
 import com.pulumi.awsnative.location.inputs.MapConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,110 +18,100 @@ public final class MapArgs extends com.pulumi.resources.ResourceArgs {
     public static final MapArgs Empty = new MapArgs();
 
     @Import(name="configuration", required=true)
-      private final Output<MapConfigurationArgs> configuration;
+    private Output<MapConfigurationArgs> configuration;
 
     public Output<MapConfigurationArgs> configuration() {
         return this.configuration;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="mapName")
-      private final @Nullable Output<String> mapName;
+    private @Nullable Output<String> mapName;
 
-    public Output<String> mapName() {
-        return this.mapName == null ? Codegen.empty() : this.mapName;
+    public Optional<Output<String>> mapName() {
+        return Optional.ofNullable(this.mapName);
     }
 
     @Import(name="pricingPlan")
-      private final @Nullable Output<MapPricingPlan> pricingPlan;
+    private @Nullable Output<MapPricingPlan> pricingPlan;
 
-    public Output<MapPricingPlan> pricingPlan() {
-        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
+    public Optional<Output<MapPricingPlan>> pricingPlan() {
+        return Optional.ofNullable(this.pricingPlan);
     }
 
-    public MapArgs(
-        Output<MapConfigurationArgs> configuration,
-        @Nullable Output<String> description,
-        @Nullable Output<String> mapName,
-        @Nullable Output<MapPricingPlan> pricingPlan) {
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.description = description;
-        this.mapName = mapName;
-        this.pricingPlan = pricingPlan;
-    }
+    private MapArgs() {}
 
-    private MapArgs() {
-        this.configuration = Codegen.empty();
-        this.description = Codegen.empty();
-        this.mapName = Codegen.empty();
-        this.pricingPlan = Codegen.empty();
+    private MapArgs(MapArgs $) {
+        this.configuration = $.configuration;
+        this.description = $.description;
+        this.mapName = $.mapName;
+        this.pricingPlan = $.pricingPlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MapConfigurationArgs> configuration;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> mapName;
-        private @Nullable Output<MapPricingPlan> pricingPlan;
+        private MapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MapArgs();
         }
 
         public Builder(MapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.description = defaults.description;
-    	      this.mapName = defaults.mapName;
-    	      this.pricingPlan = defaults.pricingPlan;
+            $ = new MapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(Output<MapConfigurationArgs> configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder configuration(MapConfigurationArgs configuration) {
-            this.configuration = Output.of(Objects.requireNonNull(configuration));
-            return this;
+            return configuration(Output.of(configuration));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder mapName(@Nullable Output<String> mapName) {
-            this.mapName = mapName;
+            $.mapName = mapName;
             return this;
         }
-        public Builder mapName(@Nullable String mapName) {
-            this.mapName = Codegen.ofNullable(mapName);
-            return this;
+
+        public Builder mapName(String mapName) {
+            return mapName(Output.of(mapName));
         }
+
         public Builder pricingPlan(@Nullable Output<MapPricingPlan> pricingPlan) {
-            this.pricingPlan = pricingPlan;
+            $.pricingPlan = pricingPlan;
             return this;
         }
-        public Builder pricingPlan(@Nullable MapPricingPlan pricingPlan) {
-            this.pricingPlan = Codegen.ofNullable(pricingPlan);
-            return this;
-        }        public MapArgs build() {
-            return new MapArgs(configuration, description, mapName, pricingPlan);
+
+        public Builder pricingPlan(MapPricingPlan pricingPlan) {
+            return pricingPlan(Output.of(pricingPlan));
+        }
+
+        public MapArgs build() {
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            return $;
         }
     }
+
 }

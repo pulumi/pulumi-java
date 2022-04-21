@@ -19,45 +19,44 @@ public final class PolicyStatusProperties extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isPublic")
-      private final @Nullable Boolean isPublic;
+    private @Nullable Boolean isPublic;
 
     public Optional<Boolean> isPublic() {
-        return this.isPublic == null ? Optional.empty() : Optional.ofNullable(this.isPublic);
+        return Optional.ofNullable(this.isPublic);
     }
 
-    public PolicyStatusProperties(@Nullable Boolean isPublic) {
-        this.isPublic = isPublic;
-    }
+    private PolicyStatusProperties() {}
 
-    private PolicyStatusProperties() {
-        this.isPublic = null;
+    private PolicyStatusProperties(PolicyStatusProperties $) {
+        this.isPublic = $.isPublic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyStatusProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isPublic;
+        private PolicyStatusProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyStatusProperties();
         }
 
         public Builder(PolicyStatusProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isPublic = defaults.isPublic;
+            $ = new PolicyStatusProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder isPublic(@Nullable Boolean isPublic) {
-            this.isPublic = isPublic;
+            $.isPublic = isPublic;
             return this;
-        }        public PolicyStatusProperties build() {
-            return new PolicyStatusProperties(isPublic);
+        }
+
+        public PolicyStatusProperties build() {
+            return $;
         }
     }
+
 }

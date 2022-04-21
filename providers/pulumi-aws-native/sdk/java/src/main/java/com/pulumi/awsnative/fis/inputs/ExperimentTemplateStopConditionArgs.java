@@ -5,9 +5,9 @@ package com.pulumi.awsnative.fis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class ExperimentTemplateStopConditionArgs extends com.pulumi.resour
     public static final ExperimentTemplateStopConditionArgs Empty = new ExperimentTemplateStopConditionArgs();
 
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ExperimentTemplateStopConditionArgs(
-        Output<String> source,
-        @Nullable Output<String> value) {
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.value = value;
-    }
+    private ExperimentTemplateStopConditionArgs() {}
 
-    private ExperimentTemplateStopConditionArgs() {
-        this.source = Codegen.empty();
-        this.value = Codegen.empty();
+    private ExperimentTemplateStopConditionArgs(ExperimentTemplateStopConditionArgs $) {
+        this.source = $.source;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentTemplateStopConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> source;
-        private @Nullable Output<String> value;
+        private ExperimentTemplateStopConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentTemplateStopConditionArgs();
         }
 
         public Builder(ExperimentTemplateStopConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
-    	      this.value = defaults.value;
+            $ = new ExperimentTemplateStopConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ExperimentTemplateStopConditionArgs build() {
-            return new ExperimentTemplateStopConditionArgs(source, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ExperimentTemplateStopConditionArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

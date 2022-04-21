@@ -17,45 +17,45 @@ public final class ScheduledActionPauseClusterMessage extends com.pulumi.resourc
     public static final ScheduledActionPauseClusterMessage Empty = new ScheduledActionPauseClusterMessage();
 
     @Import(name="clusterIdentifier", required=true)
-      private final String clusterIdentifier;
+    private String clusterIdentifier;
 
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    public ScheduledActionPauseClusterMessage(String clusterIdentifier) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-    }
+    private ScheduledActionPauseClusterMessage() {}
 
-    private ScheduledActionPauseClusterMessage() {
-        this.clusterIdentifier = null;
+    private ScheduledActionPauseClusterMessage(ScheduledActionPauseClusterMessage $) {
+        this.clusterIdentifier = $.clusterIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionPauseClusterMessage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterIdentifier;
+        private ScheduledActionPauseClusterMessage $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionPauseClusterMessage();
         }
 
         public Builder(ScheduledActionPauseClusterMessage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
+            $ = new ScheduledActionPauseClusterMessage(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
-        }        public ScheduledActionPauseClusterMessage build() {
-            return new ScheduledActionPauseClusterMessage(clusterIdentifier);
+        }
+
+        public ScheduledActionPauseClusterMessage build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

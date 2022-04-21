@@ -6,11 +6,11 @@ package com.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 import com.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionDeviceUnderTestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,133 +19,122 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends com.pulumi
     public static final SuiteDefinitionConfigurationPropertiesArgs Empty = new SuiteDefinitionConfigurationPropertiesArgs();
 
     @Import(name="devicePermissionRoleArn", required=true)
-      private final Output<String> devicePermissionRoleArn;
+    private Output<String> devicePermissionRoleArn;
 
     public Output<String> devicePermissionRoleArn() {
         return this.devicePermissionRoleArn;
     }
 
     @Import(name="devices")
-      private final @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
+    private @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
 
-    public Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices() {
-        return this.devices == null ? Codegen.empty() : this.devices;
+    public Optional<Output<List<SuiteDefinitionDeviceUnderTestArgs>>> devices() {
+        return Optional.ofNullable(this.devices);
     }
 
     @Import(name="intendedForQualification")
-      private final @Nullable Output<Boolean> intendedForQualification;
+    private @Nullable Output<Boolean> intendedForQualification;
 
-    public Output<Boolean> intendedForQualification() {
-        return this.intendedForQualification == null ? Codegen.empty() : this.intendedForQualification;
+    public Optional<Output<Boolean>> intendedForQualification() {
+        return Optional.ofNullable(this.intendedForQualification);
     }
 
     @Import(name="rootGroup", required=true)
-      private final Output<String> rootGroup;
+    private Output<String> rootGroup;
 
     public Output<String> rootGroup() {
         return this.rootGroup;
     }
 
     @Import(name="suiteDefinitionName")
-      private final @Nullable Output<String> suiteDefinitionName;
+    private @Nullable Output<String> suiteDefinitionName;
 
-    public Output<String> suiteDefinitionName() {
-        return this.suiteDefinitionName == null ? Codegen.empty() : this.suiteDefinitionName;
+    public Optional<Output<String>> suiteDefinitionName() {
+        return Optional.ofNullable(this.suiteDefinitionName);
     }
 
-    public SuiteDefinitionConfigurationPropertiesArgs(
-        Output<String> devicePermissionRoleArn,
-        @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices,
-        @Nullable Output<Boolean> intendedForQualification,
-        Output<String> rootGroup,
-        @Nullable Output<String> suiteDefinitionName) {
-        this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn, "expected parameter 'devicePermissionRoleArn' to be non-null");
-        this.devices = devices;
-        this.intendedForQualification = intendedForQualification;
-        this.rootGroup = Objects.requireNonNull(rootGroup, "expected parameter 'rootGroup' to be non-null");
-        this.suiteDefinitionName = suiteDefinitionName;
-    }
+    private SuiteDefinitionConfigurationPropertiesArgs() {}
 
-    private SuiteDefinitionConfigurationPropertiesArgs() {
-        this.devicePermissionRoleArn = Codegen.empty();
-        this.devices = Codegen.empty();
-        this.intendedForQualification = Codegen.empty();
-        this.rootGroup = Codegen.empty();
-        this.suiteDefinitionName = Codegen.empty();
+    private SuiteDefinitionConfigurationPropertiesArgs(SuiteDefinitionConfigurationPropertiesArgs $) {
+        this.devicePermissionRoleArn = $.devicePermissionRoleArn;
+        this.devices = $.devices;
+        this.intendedForQualification = $.intendedForQualification;
+        this.rootGroup = $.rootGroup;
+        this.suiteDefinitionName = $.suiteDefinitionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuiteDefinitionConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> devicePermissionRoleArn;
-        private @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
-        private @Nullable Output<Boolean> intendedForQualification;
-        private Output<String> rootGroup;
-        private @Nullable Output<String> suiteDefinitionName;
+        private SuiteDefinitionConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuiteDefinitionConfigurationPropertiesArgs();
         }
 
         public Builder(SuiteDefinitionConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.devicePermissionRoleArn = defaults.devicePermissionRoleArn;
-    	      this.devices = defaults.devices;
-    	      this.intendedForQualification = defaults.intendedForQualification;
-    	      this.rootGroup = defaults.rootGroup;
-    	      this.suiteDefinitionName = defaults.suiteDefinitionName;
+            $ = new SuiteDefinitionConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder devicePermissionRoleArn(Output<String> devicePermissionRoleArn) {
-            this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
+            $.devicePermissionRoleArn = devicePermissionRoleArn;
             return this;
         }
+
         public Builder devicePermissionRoleArn(String devicePermissionRoleArn) {
-            this.devicePermissionRoleArn = Output.of(Objects.requireNonNull(devicePermissionRoleArn));
-            return this;
+            return devicePermissionRoleArn(Output.of(devicePermissionRoleArn));
         }
+
         public Builder devices(@Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices) {
-            this.devices = devices;
+            $.devices = devices;
             return this;
         }
-        public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTestArgs> devices) {
-            this.devices = Codegen.ofNullable(devices);
-            return this;
+
+        public Builder devices(List<SuiteDefinitionDeviceUnderTestArgs> devices) {
+            return devices(Output.of(devices));
         }
+
         public Builder devices(SuiteDefinitionDeviceUnderTestArgs... devices) {
             return devices(List.of(devices));
         }
+
         public Builder intendedForQualification(@Nullable Output<Boolean> intendedForQualification) {
-            this.intendedForQualification = intendedForQualification;
+            $.intendedForQualification = intendedForQualification;
             return this;
         }
-        public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
-            this.intendedForQualification = Codegen.ofNullable(intendedForQualification);
-            return this;
+
+        public Builder intendedForQualification(Boolean intendedForQualification) {
+            return intendedForQualification(Output.of(intendedForQualification));
         }
+
         public Builder rootGroup(Output<String> rootGroup) {
-            this.rootGroup = Objects.requireNonNull(rootGroup);
+            $.rootGroup = rootGroup;
             return this;
         }
+
         public Builder rootGroup(String rootGroup) {
-            this.rootGroup = Output.of(Objects.requireNonNull(rootGroup));
-            return this;
+            return rootGroup(Output.of(rootGroup));
         }
+
         public Builder suiteDefinitionName(@Nullable Output<String> suiteDefinitionName) {
-            this.suiteDefinitionName = suiteDefinitionName;
+            $.suiteDefinitionName = suiteDefinitionName;
             return this;
         }
-        public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
-            this.suiteDefinitionName = Codegen.ofNullable(suiteDefinitionName);
-            return this;
-        }        public SuiteDefinitionConfigurationPropertiesArgs build() {
-            return new SuiteDefinitionConfigurationPropertiesArgs(devicePermissionRoleArn, devices, intendedForQualification, rootGroup, suiteDefinitionName);
+
+        public Builder suiteDefinitionName(String suiteDefinitionName) {
+            return suiteDefinitionName(Output.of(suiteDefinitionName));
+        }
+
+        public SuiteDefinitionConfigurationPropertiesArgs build() {
+            $.devicePermissionRoleArn = Objects.requireNonNull($.devicePermissionRoleArn, "expected parameter 'devicePermissionRoleArn' to be non-null");
+            $.rootGroup = Objects.requireNonNull($.rootGroup, "expected parameter 'rootGroup' to be non-null");
+            return $;
         }
     }
+
 }

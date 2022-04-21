@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class EC2FleetMemoryMiBRequestArgs extends com.pulumi.resources.Res
     public static final EC2FleetMemoryMiBRequestArgs Empty = new EC2FleetMemoryMiBRequestArgs();
 
     @Import(name="max")
-      private final @Nullable Output<Integer> max;
+    private @Nullable Output<Integer> max;
 
-    public Output<Integer> max() {
-        return this.max == null ? Codegen.empty() : this.max;
+    public Optional<Output<Integer>> max() {
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Output<Integer> min;
+    private @Nullable Output<Integer> min;
 
-    public Output<Integer> min() {
-        return this.min == null ? Codegen.empty() : this.min;
+    public Optional<Output<Integer>> min() {
+        return Optional.ofNullable(this.min);
     }
 
-    public EC2FleetMemoryMiBRequestArgs(
-        @Nullable Output<Integer> max,
-        @Nullable Output<Integer> min) {
-        this.max = max;
-        this.min = min;
-    }
+    private EC2FleetMemoryMiBRequestArgs() {}
 
-    private EC2FleetMemoryMiBRequestArgs() {
-        this.max = Codegen.empty();
-        this.min = Codegen.empty();
+    private EC2FleetMemoryMiBRequestArgs(EC2FleetMemoryMiBRequestArgs $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetMemoryMiBRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> max;
-        private @Nullable Output<Integer> min;
+        private EC2FleetMemoryMiBRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetMemoryMiBRequestArgs();
         }
 
         public Builder(EC2FleetMemoryMiBRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new EC2FleetMemoryMiBRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Output<Integer> max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
-        public Builder max(@Nullable Integer max) {
-            this.max = Codegen.ofNullable(max);
-            return this;
+
+        public Builder max(Integer max) {
+            return max(Output.of(max));
         }
+
         public Builder min(@Nullable Output<Integer> min) {
-            this.min = min;
+            $.min = min;
             return this;
         }
-        public Builder min(@Nullable Integer min) {
-            this.min = Codegen.ofNullable(min);
-            return this;
-        }        public EC2FleetMemoryMiBRequestArgs build() {
-            return new EC2FleetMemoryMiBRequestArgs(max, min);
+
+        public Builder min(Integer min) {
+            return min(Output.of(min));
+        }
+
+        public EC2FleetMemoryMiBRequestArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class DatastoreCustomerManagedS3StorageArgs extends com.pulumi.reso
     public static final DatastoreCustomerManagedS3StorageArgs Empty = new DatastoreCustomerManagedS3StorageArgs();
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
-      private final @Nullable Output<String> keyPrefix;
+    private @Nullable Output<String> keyPrefix;
 
-    public Output<String> keyPrefix() {
-        return this.keyPrefix == null ? Codegen.empty() : this.keyPrefix;
+    public Optional<Output<String>> keyPrefix() {
+        return Optional.ofNullable(this.keyPrefix);
     }
 
-    public DatastoreCustomerManagedS3StorageArgs(
-        Output<String> bucket,
-        @Nullable Output<String> keyPrefix) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.keyPrefix = keyPrefix;
-    }
+    private DatastoreCustomerManagedS3StorageArgs() {}
 
-    private DatastoreCustomerManagedS3StorageArgs() {
-        this.bucket = Codegen.empty();
-        this.keyPrefix = Codegen.empty();
+    private DatastoreCustomerManagedS3StorageArgs(DatastoreCustomerManagedS3StorageArgs $) {
+        this.bucket = $.bucket;
+        this.keyPrefix = $.keyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreCustomerManagedS3StorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> keyPrefix;
+        private DatastoreCustomerManagedS3StorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreCustomerManagedS3StorageArgs();
         }
 
         public Builder(DatastoreCustomerManagedS3StorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.keyPrefix = defaults.keyPrefix;
+            $ = new DatastoreCustomerManagedS3StorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder keyPrefix(@Nullable Output<String> keyPrefix) {
-            this.keyPrefix = keyPrefix;
+            $.keyPrefix = keyPrefix;
             return this;
         }
-        public Builder keyPrefix(@Nullable String keyPrefix) {
-            this.keyPrefix = Codegen.ofNullable(keyPrefix);
-            return this;
-        }        public DatastoreCustomerManagedS3StorageArgs build() {
-            return new DatastoreCustomerManagedS3StorageArgs(bucket, keyPrefix);
+
+        public Builder keyPrefix(String keyPrefix) {
+            return keyPrefix(Output.of(keyPrefix));
+        }
+
+        public DatastoreCustomerManagedS3StorageArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
     public static final MonitoringScheduleEndpointInput Empty = new MonitoringScheduleEndpointInput();
 
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -32,7 +32,7 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
      * 
      */
     @Import(name="localPath", required=true)
-      private final String localPath;
+    private String localPath;
 
     public String localPath() {
         return this.localPath;
@@ -43,10 +43,10 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
      * 
      */
     @Import(name="s3DataDistributionType")
-      private final @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
+    private @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
 
     public Optional<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType() {
-        return this.s3DataDistributionType == null ? Optional.empty() : Optional.ofNullable(this.s3DataDistributionType);
+        return Optional.ofNullable(this.s3DataDistributionType);
     }
 
     /**
@@ -54,73 +54,64 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
      * 
      */
     @Import(name="s3InputMode")
-      private final @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
+    private @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
 
     public Optional<MonitoringScheduleEndpointInputS3InputMode> s3InputMode() {
-        return this.s3InputMode == null ? Optional.empty() : Optional.ofNullable(this.s3InputMode);
+        return Optional.ofNullable(this.s3InputMode);
     }
 
-    public MonitoringScheduleEndpointInput(
-        String endpointName,
-        String localPath,
-        @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.localPath = Objects.requireNonNull(localPath, "expected parameter 'localPath' to be non-null");
-        this.s3DataDistributionType = s3DataDistributionType;
-        this.s3InputMode = s3InputMode;
-    }
+    private MonitoringScheduleEndpointInput() {}
 
-    private MonitoringScheduleEndpointInput() {
-        this.endpointName = null;
-        this.localPath = null;
-        this.s3DataDistributionType = null;
-        this.s3InputMode = null;
+    private MonitoringScheduleEndpointInput(MonitoringScheduleEndpointInput $) {
+        this.endpointName = $.endpointName;
+        this.localPath = $.localPath;
+        this.s3DataDistributionType = $.s3DataDistributionType;
+        this.s3InputMode = $.s3InputMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleEndpointInput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointName;
-        private String localPath;
-        private @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
-        private @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
+        private MonitoringScheduleEndpointInput $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleEndpointInput();
         }
 
         public Builder(MonitoringScheduleEndpointInput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.localPath = defaults.localPath;
-    	      this.s3DataDistributionType = defaults.s3DataDistributionType;
-    	      this.s3InputMode = defaults.s3InputMode;
+            $ = new MonitoringScheduleEndpointInput(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder localPath(String localPath) {
-            this.localPath = Objects.requireNonNull(localPath);
+            $.localPath = localPath;
             return this;
         }
+
         public Builder s3DataDistributionType(@Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType) {
-            this.s3DataDistributionType = s3DataDistributionType;
+            $.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
+
         public Builder s3InputMode(@Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
-            this.s3InputMode = s3InputMode;
+            $.s3InputMode = s3InputMode;
             return this;
-        }        public MonitoringScheduleEndpointInput build() {
-            return new MonitoringScheduleEndpointInput(endpointName, localPath, s3DataDistributionType, s3InputMode);
+        }
+
+        public MonitoringScheduleEndpointInput build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.localPath = Objects.requireNonNull($.localPath, "expected parameter 'localPath' to be non-null");
+            return $;
         }
     }
+
 }

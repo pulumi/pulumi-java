@@ -5,9 +5,9 @@ package com.pulumi.awsnative.networkmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LinkBandwidthArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="downloadSpeed")
-      private final @Nullable Output<Integer> downloadSpeed;
+    private @Nullable Output<Integer> downloadSpeed;
 
-    public Output<Integer> downloadSpeed() {
-        return this.downloadSpeed == null ? Codegen.empty() : this.downloadSpeed;
+    public Optional<Output<Integer>> downloadSpeed() {
+        return Optional.ofNullable(this.downloadSpeed);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LinkBandwidthArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uploadSpeed")
-      private final @Nullable Output<Integer> uploadSpeed;
+    private @Nullable Output<Integer> uploadSpeed;
 
-    public Output<Integer> uploadSpeed() {
-        return this.uploadSpeed == null ? Codegen.empty() : this.uploadSpeed;
+    public Optional<Output<Integer>> uploadSpeed() {
+        return Optional.ofNullable(this.uploadSpeed);
     }
 
-    public LinkBandwidthArgs(
-        @Nullable Output<Integer> downloadSpeed,
-        @Nullable Output<Integer> uploadSpeed) {
-        this.downloadSpeed = downloadSpeed;
-        this.uploadSpeed = uploadSpeed;
-    }
+    private LinkBandwidthArgs() {}
 
-    private LinkBandwidthArgs() {
-        this.downloadSpeed = Codegen.empty();
-        this.uploadSpeed = Codegen.empty();
+    private LinkBandwidthArgs(LinkBandwidthArgs $) {
+        this.downloadSpeed = $.downloadSpeed;
+        this.uploadSpeed = $.uploadSpeed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkBandwidthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> downloadSpeed;
-        private @Nullable Output<Integer> uploadSpeed;
+        private LinkBandwidthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkBandwidthArgs();
         }
 
         public Builder(LinkBandwidthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.downloadSpeed = defaults.downloadSpeed;
-    	      this.uploadSpeed = defaults.uploadSpeed;
+            $ = new LinkBandwidthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder downloadSpeed(@Nullable Output<Integer> downloadSpeed) {
-            this.downloadSpeed = downloadSpeed;
+            $.downloadSpeed = downloadSpeed;
             return this;
         }
-        public Builder downloadSpeed(@Nullable Integer downloadSpeed) {
-            this.downloadSpeed = Codegen.ofNullable(downloadSpeed);
-            return this;
+
+        public Builder downloadSpeed(Integer downloadSpeed) {
+            return downloadSpeed(Output.of(downloadSpeed));
         }
+
         public Builder uploadSpeed(@Nullable Output<Integer> uploadSpeed) {
-            this.uploadSpeed = uploadSpeed;
+            $.uploadSpeed = uploadSpeed;
             return this;
         }
-        public Builder uploadSpeed(@Nullable Integer uploadSpeed) {
-            this.uploadSpeed = Codegen.ofNullable(uploadSpeed);
-            return this;
-        }        public LinkBandwidthArgs build() {
-            return new LinkBandwidthArgs(downloadSpeed, uploadSpeed);
+
+        public Builder uploadSpeed(Integer uploadSpeed) {
+            return uploadSpeed(Output.of(uploadSpeed));
+        }
+
+        public LinkBandwidthArgs build() {
+            return $;
         }
     }
+
 }

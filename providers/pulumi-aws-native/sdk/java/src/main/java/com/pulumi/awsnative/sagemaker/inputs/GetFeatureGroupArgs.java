@@ -17,45 +17,45 @@ public final class GetFeatureGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="featureGroupName", required=true)
-      private final String featureGroupName;
+    private String featureGroupName;
 
     public String featureGroupName() {
         return this.featureGroupName;
     }
 
-    public GetFeatureGroupArgs(String featureGroupName) {
-        this.featureGroupName = Objects.requireNonNull(featureGroupName, "expected parameter 'featureGroupName' to be non-null");
-    }
+    private GetFeatureGroupArgs() {}
 
-    private GetFeatureGroupArgs() {
-        this.featureGroupName = null;
+    private GetFeatureGroupArgs(GetFeatureGroupArgs $) {
+        this.featureGroupName = $.featureGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFeatureGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String featureGroupName;
+        private GetFeatureGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFeatureGroupArgs();
         }
 
         public Builder(GetFeatureGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureGroupName = defaults.featureGroupName;
+            $ = new GetFeatureGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featureGroupName(String featureGroupName) {
-            this.featureGroupName = Objects.requireNonNull(featureGroupName);
+            $.featureGroupName = featureGroupName;
             return this;
-        }        public GetFeatureGroupArgs build() {
-            return new GetFeatureGroupArgs(featureGroupName);
+        }
+
+        public GetFeatureGroupArgs build() {
+            $.featureGroupName = Objects.requireNonNull($.featureGroupName, "expected parameter 'featureGroupName' to be non-null");
+            return $;
         }
     }
+
 }

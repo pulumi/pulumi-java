@@ -13,45 +13,45 @@ public final class GetDHCPOptionsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDHCPOptionsArgs Empty = new GetDHCPOptionsArgs();
 
     @Import(name="dhcpOptionsId", required=true)
-      private final String dhcpOptionsId;
+    private String dhcpOptionsId;
 
     public String dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
 
-    public GetDHCPOptionsArgs(String dhcpOptionsId) {
-        this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId, "expected parameter 'dhcpOptionsId' to be non-null");
-    }
+    private GetDHCPOptionsArgs() {}
 
-    private GetDHCPOptionsArgs() {
-        this.dhcpOptionsId = null;
+    private GetDHCPOptionsArgs(GetDHCPOptionsArgs $) {
+        this.dhcpOptionsId = $.dhcpOptionsId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDHCPOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dhcpOptionsId;
+        private GetDHCPOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDHCPOptionsArgs();
         }
 
         public Builder(GetDHCPOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhcpOptionsId = defaults.dhcpOptionsId;
+            $ = new GetDHCPOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dhcpOptionsId(String dhcpOptionsId) {
-            this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
+            $.dhcpOptionsId = dhcpOptionsId;
             return this;
-        }        public GetDHCPOptionsArgs build() {
-            return new GetDHCPOptionsArgs(dhcpOptionsId);
+        }
+
+        public GetDHCPOptionsArgs build() {
+            $.dhcpOptionsId = Objects.requireNonNull($.dhcpOptionsId, "expected parameter 'dhcpOptionsId' to be non-null");
+            return $;
         }
     }
+
 }

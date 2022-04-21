@@ -6,11 +6,11 @@ package com.pulumi.awsnative.imagebuilder;
 import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="distributions", required=true)
-      private final Output<List<DistributionConfigurationDistributionArgs>> distributions;
+    private Output<List<DistributionConfigurationDistributionArgs>> distributions;
 
     public Output<List<DistributionConfigurationDistributionArgs>> distributions() {
         return this.distributions;
@@ -45,10 +45,10 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,92 +56,83 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Object> tags;
+    private @Nullable Output<Object> tags;
 
-    public Output<Object> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Object>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DistributionConfigurationArgs(
-        @Nullable Output<String> description,
-        Output<List<DistributionConfigurationDistributionArgs>> distributions,
-        @Nullable Output<String> name,
-        @Nullable Output<Object> tags) {
-        this.description = description;
-        this.distributions = Objects.requireNonNull(distributions, "expected parameter 'distributions' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private DistributionConfigurationArgs() {}
 
-    private DistributionConfigurationArgs() {
-        this.description = Codegen.empty();
-        this.distributions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DistributionConfigurationArgs(DistributionConfigurationArgs $) {
+        this.description = $.description;
+        this.distributions = $.distributions;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<DistributionConfigurationDistributionArgs>> distributions;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Object> tags;
+        private DistributionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationArgs();
         }
 
         public Builder(DistributionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.distributions = defaults.distributions;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new DistributionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder distributions(Output<List<DistributionConfigurationDistributionArgs>> distributions) {
-            this.distributions = Objects.requireNonNull(distributions);
+            $.distributions = distributions;
             return this;
         }
+
         public Builder distributions(List<DistributionConfigurationDistributionArgs> distributions) {
-            this.distributions = Output.of(Objects.requireNonNull(distributions));
-            return this;
+            return distributions(Output.of(distributions));
         }
+
         public Builder distributions(DistributionConfigurationDistributionArgs... distributions) {
             return distributions(List.of(distributions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Object> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Object tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DistributionConfigurationArgs build() {
-            return new DistributionConfigurationArgs(description, distributions, name, tags);
+
+        public Builder tags(Object tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DistributionConfigurationArgs build() {
+            $.distributions = Objects.requireNonNull($.distributions, "expected parameter 'distributions' to be non-null");
+            return $;
         }
     }
+
 }

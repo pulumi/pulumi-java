@@ -13,45 +13,45 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
     @Import(name="projectArn", required=true)
-      private final String projectArn;
+    private String projectArn;
 
     public String projectArn() {
         return this.projectArn;
     }
 
-    public GetProjectArgs(String projectArn) {
-        this.projectArn = Objects.requireNonNull(projectArn, "expected parameter 'projectArn' to be non-null");
-    }
+    private GetProjectArgs() {}
 
-    private GetProjectArgs() {
-        this.projectArn = null;
+    private GetProjectArgs(GetProjectArgs $) {
+        this.projectArn = $.projectArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String projectArn;
+        private GetProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectArgs();
         }
 
         public Builder(GetProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectArn = defaults.projectArn;
+            $ = new GetProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectArn(String projectArn) {
-            this.projectArn = Objects.requireNonNull(projectArn);
+            $.projectArn = projectArn;
             return this;
-        }        public GetProjectArgs build() {
-            return new GetProjectArgs(projectArn);
+        }
+
+        public GetProjectArgs build() {
+            $.projectArn = Objects.requireNonNull($.projectArn, "expected parameter 'projectArn' to be non-null");
+            return $;
         }
     }
+
 }

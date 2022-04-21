@@ -27,388 +27,327 @@ public final class SpotFleetRequestConfigData extends com.pulumi.resources.Invok
     public static final SpotFleetRequestConfigData Empty = new SpotFleetRequestConfigData();
 
     @Import(name="allocationStrategy")
-      private final @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy;
+    private @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy;
 
     public Optional<SpotFleetRequestConfigDataAllocationStrategy> allocationStrategy() {
-        return this.allocationStrategy == null ? Optional.empty() : Optional.ofNullable(this.allocationStrategy);
+        return Optional.ofNullable(this.allocationStrategy);
     }
 
     @Import(name="context")
-      private final @Nullable String context;
+    private @Nullable String context;
 
     public Optional<String> context() {
-        return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
+        return Optional.ofNullable(this.context);
     }
 
     @Import(name="excessCapacityTerminationPolicy")
-      private final @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy;
+    private @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy;
 
     public Optional<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
-        return this.excessCapacityTerminationPolicy == null ? Optional.empty() : Optional.ofNullable(this.excessCapacityTerminationPolicy);
+        return Optional.ofNullable(this.excessCapacityTerminationPolicy);
     }
 
     @Import(name="iamFleetRole", required=true)
-      private final String iamFleetRole;
+    private String iamFleetRole;
 
     public String iamFleetRole() {
         return this.iamFleetRole;
     }
 
     @Import(name="instanceInterruptionBehavior")
-      private final @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior;
+    private @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior;
 
     public Optional<SpotFleetRequestConfigDataInstanceInterruptionBehavior> instanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Optional.empty() : Optional.ofNullable(this.instanceInterruptionBehavior);
+        return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
 
     @Import(name="instancePoolsToUseCount")
-      private final @Nullable Integer instancePoolsToUseCount;
+    private @Nullable Integer instancePoolsToUseCount;
 
     public Optional<Integer> instancePoolsToUseCount() {
-        return this.instancePoolsToUseCount == null ? Optional.empty() : Optional.ofNullable(this.instancePoolsToUseCount);
+        return Optional.ofNullable(this.instancePoolsToUseCount);
     }
 
     @Import(name="launchSpecifications")
-      private final @Nullable List<SpotFleetLaunchSpecification> launchSpecifications;
+    private @Nullable List<SpotFleetLaunchSpecification> launchSpecifications;
 
-    public List<SpotFleetLaunchSpecification> launchSpecifications() {
-        return this.launchSpecifications == null ? List.of() : this.launchSpecifications;
+    public Optional<List<SpotFleetLaunchSpecification>> launchSpecifications() {
+        return Optional.ofNullable(this.launchSpecifications);
     }
 
     @Import(name="launchTemplateConfigs")
-      private final @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs;
+    private @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs;
 
-    public List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs() {
-        return this.launchTemplateConfigs == null ? List.of() : this.launchTemplateConfigs;
+    public Optional<List<SpotFleetLaunchTemplateConfig>> launchTemplateConfigs() {
+        return Optional.ofNullable(this.launchTemplateConfigs);
     }
 
     @Import(name="loadBalancersConfig")
-      private final @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig;
+    private @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig;
 
     public Optional<SpotFleetLoadBalancersConfig> loadBalancersConfig() {
-        return this.loadBalancersConfig == null ? Optional.empty() : Optional.ofNullable(this.loadBalancersConfig);
+        return Optional.ofNullable(this.loadBalancersConfig);
     }
 
     @Import(name="onDemandAllocationStrategy")
-      private final @Nullable String onDemandAllocationStrategy;
+    private @Nullable String onDemandAllocationStrategy;
 
     public Optional<String> onDemandAllocationStrategy() {
-        return this.onDemandAllocationStrategy == null ? Optional.empty() : Optional.ofNullable(this.onDemandAllocationStrategy);
+        return Optional.ofNullable(this.onDemandAllocationStrategy);
     }
 
     @Import(name="onDemandMaxTotalPrice")
-      private final @Nullable String onDemandMaxTotalPrice;
+    private @Nullable String onDemandMaxTotalPrice;
 
     public Optional<String> onDemandMaxTotalPrice() {
-        return this.onDemandMaxTotalPrice == null ? Optional.empty() : Optional.ofNullable(this.onDemandMaxTotalPrice);
+        return Optional.ofNullable(this.onDemandMaxTotalPrice);
     }
 
     @Import(name="onDemandTargetCapacity")
-      private final @Nullable Integer onDemandTargetCapacity;
+    private @Nullable Integer onDemandTargetCapacity;
 
     public Optional<Integer> onDemandTargetCapacity() {
-        return this.onDemandTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.onDemandTargetCapacity);
+        return Optional.ofNullable(this.onDemandTargetCapacity);
     }
 
     @Import(name="replaceUnhealthyInstances")
-      private final @Nullable Boolean replaceUnhealthyInstances;
+    private @Nullable Boolean replaceUnhealthyInstances;
 
     public Optional<Boolean> replaceUnhealthyInstances() {
-        return this.replaceUnhealthyInstances == null ? Optional.empty() : Optional.ofNullable(this.replaceUnhealthyInstances);
+        return Optional.ofNullable(this.replaceUnhealthyInstances);
     }
 
     @Import(name="spotMaintenanceStrategies")
-      private final @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies;
+    private @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies;
 
     public Optional<SpotFleetSpotMaintenanceStrategies> spotMaintenanceStrategies() {
-        return this.spotMaintenanceStrategies == null ? Optional.empty() : Optional.ofNullable(this.spotMaintenanceStrategies);
+        return Optional.ofNullable(this.spotMaintenanceStrategies);
     }
 
     @Import(name="spotMaxTotalPrice")
-      private final @Nullable String spotMaxTotalPrice;
+    private @Nullable String spotMaxTotalPrice;
 
     public Optional<String> spotMaxTotalPrice() {
-        return this.spotMaxTotalPrice == null ? Optional.empty() : Optional.ofNullable(this.spotMaxTotalPrice);
+        return Optional.ofNullable(this.spotMaxTotalPrice);
     }
 
     @Import(name="spotPrice")
-      private final @Nullable String spotPrice;
+    private @Nullable String spotPrice;
 
     public Optional<String> spotPrice() {
-        return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
+        return Optional.ofNullable(this.spotPrice);
     }
 
     @Import(name="targetCapacity", required=true)
-      private final Integer targetCapacity;
+    private Integer targetCapacity;
 
     public Integer targetCapacity() {
         return this.targetCapacity;
     }
 
     @Import(name="targetCapacityUnitType")
-      private final @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType;
+    private @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType;
 
     public Optional<SpotFleetRequestConfigDataTargetCapacityUnitType> targetCapacityUnitType() {
-        return this.targetCapacityUnitType == null ? Optional.empty() : Optional.ofNullable(this.targetCapacityUnitType);
+        return Optional.ofNullable(this.targetCapacityUnitType);
     }
 
     @Import(name="terminateInstancesWithExpiration")
-      private final @Nullable Boolean terminateInstancesWithExpiration;
+    private @Nullable Boolean terminateInstancesWithExpiration;
 
     public Optional<Boolean> terminateInstancesWithExpiration() {
-        return this.terminateInstancesWithExpiration == null ? Optional.empty() : Optional.ofNullable(this.terminateInstancesWithExpiration);
+        return Optional.ofNullable(this.terminateInstancesWithExpiration);
     }
 
     @Import(name="type")
-      private final @Nullable SpotFleetRequestConfigDataType type;
+    private @Nullable SpotFleetRequestConfigDataType type;
 
     public Optional<SpotFleetRequestConfigDataType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="validFrom")
-      private final @Nullable String validFrom;
+    private @Nullable String validFrom;
 
     public Optional<String> validFrom() {
-        return this.validFrom == null ? Optional.empty() : Optional.ofNullable(this.validFrom);
+        return Optional.ofNullable(this.validFrom);
     }
 
     @Import(name="validUntil")
-      private final @Nullable String validUntil;
+    private @Nullable String validUntil;
 
     public Optional<String> validUntil() {
-        return this.validUntil == null ? Optional.empty() : Optional.ofNullable(this.validUntil);
+        return Optional.ofNullable(this.validUntil);
     }
 
-    public SpotFleetRequestConfigData(
-        @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy,
-        @Nullable String context,
-        @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
-        String iamFleetRole,
-        @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior,
-        @Nullable Integer instancePoolsToUseCount,
-        @Nullable List<SpotFleetLaunchSpecification> launchSpecifications,
-        @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs,
-        @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig,
-        @Nullable String onDemandAllocationStrategy,
-        @Nullable String onDemandMaxTotalPrice,
-        @Nullable Integer onDemandTargetCapacity,
-        @Nullable Boolean replaceUnhealthyInstances,
-        @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies,
-        @Nullable String spotMaxTotalPrice,
-        @Nullable String spotPrice,
-        Integer targetCapacity,
-        @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType,
-        @Nullable Boolean terminateInstancesWithExpiration,
-        @Nullable SpotFleetRequestConfigDataType type,
-        @Nullable String validFrom,
-        @Nullable String validUntil) {
-        this.allocationStrategy = allocationStrategy;
-        this.context = context;
-        this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
-        this.iamFleetRole = Objects.requireNonNull(iamFleetRole, "expected parameter 'iamFleetRole' to be non-null");
-        this.instanceInterruptionBehavior = instanceInterruptionBehavior;
-        this.instancePoolsToUseCount = instancePoolsToUseCount;
-        this.launchSpecifications = launchSpecifications;
-        this.launchTemplateConfigs = launchTemplateConfigs;
-        this.loadBalancersConfig = loadBalancersConfig;
-        this.onDemandAllocationStrategy = onDemandAllocationStrategy;
-        this.onDemandMaxTotalPrice = onDemandMaxTotalPrice;
-        this.onDemandTargetCapacity = onDemandTargetCapacity;
-        this.replaceUnhealthyInstances = replaceUnhealthyInstances;
-        this.spotMaintenanceStrategies = spotMaintenanceStrategies;
-        this.spotMaxTotalPrice = spotMaxTotalPrice;
-        this.spotPrice = spotPrice;
-        this.targetCapacity = Objects.requireNonNull(targetCapacity, "expected parameter 'targetCapacity' to be non-null");
-        this.targetCapacityUnitType = targetCapacityUnitType;
-        this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
-        this.type = type;
-        this.validFrom = validFrom;
-        this.validUntil = validUntil;
-    }
+    private SpotFleetRequestConfigData() {}
 
-    private SpotFleetRequestConfigData() {
-        this.allocationStrategy = null;
-        this.context = null;
-        this.excessCapacityTerminationPolicy = null;
-        this.iamFleetRole = null;
-        this.instanceInterruptionBehavior = null;
-        this.instancePoolsToUseCount = null;
-        this.launchSpecifications = List.of();
-        this.launchTemplateConfigs = List.of();
-        this.loadBalancersConfig = null;
-        this.onDemandAllocationStrategy = null;
-        this.onDemandMaxTotalPrice = null;
-        this.onDemandTargetCapacity = null;
-        this.replaceUnhealthyInstances = null;
-        this.spotMaintenanceStrategies = null;
-        this.spotMaxTotalPrice = null;
-        this.spotPrice = null;
-        this.targetCapacity = null;
-        this.targetCapacityUnitType = null;
-        this.terminateInstancesWithExpiration = null;
-        this.type = null;
-        this.validFrom = null;
-        this.validUntil = null;
+    private SpotFleetRequestConfigData(SpotFleetRequestConfigData $) {
+        this.allocationStrategy = $.allocationStrategy;
+        this.context = $.context;
+        this.excessCapacityTerminationPolicy = $.excessCapacityTerminationPolicy;
+        this.iamFleetRole = $.iamFleetRole;
+        this.instanceInterruptionBehavior = $.instanceInterruptionBehavior;
+        this.instancePoolsToUseCount = $.instancePoolsToUseCount;
+        this.launchSpecifications = $.launchSpecifications;
+        this.launchTemplateConfigs = $.launchTemplateConfigs;
+        this.loadBalancersConfig = $.loadBalancersConfig;
+        this.onDemandAllocationStrategy = $.onDemandAllocationStrategy;
+        this.onDemandMaxTotalPrice = $.onDemandMaxTotalPrice;
+        this.onDemandTargetCapacity = $.onDemandTargetCapacity;
+        this.replaceUnhealthyInstances = $.replaceUnhealthyInstances;
+        this.spotMaintenanceStrategies = $.spotMaintenanceStrategies;
+        this.spotMaxTotalPrice = $.spotMaxTotalPrice;
+        this.spotPrice = $.spotPrice;
+        this.targetCapacity = $.targetCapacity;
+        this.targetCapacityUnitType = $.targetCapacityUnitType;
+        this.terminateInstancesWithExpiration = $.terminateInstancesWithExpiration;
+        this.type = $.type;
+        this.validFrom = $.validFrom;
+        this.validUntil = $.validUntil;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetRequestConfigData defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy;
-        private @Nullable String context;
-        private @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy;
-        private String iamFleetRole;
-        private @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior;
-        private @Nullable Integer instancePoolsToUseCount;
-        private @Nullable List<SpotFleetLaunchSpecification> launchSpecifications;
-        private @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs;
-        private @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig;
-        private @Nullable String onDemandAllocationStrategy;
-        private @Nullable String onDemandMaxTotalPrice;
-        private @Nullable Integer onDemandTargetCapacity;
-        private @Nullable Boolean replaceUnhealthyInstances;
-        private @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies;
-        private @Nullable String spotMaxTotalPrice;
-        private @Nullable String spotPrice;
-        private Integer targetCapacity;
-        private @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType;
-        private @Nullable Boolean terminateInstancesWithExpiration;
-        private @Nullable SpotFleetRequestConfigDataType type;
-        private @Nullable String validFrom;
-        private @Nullable String validUntil;
+        private SpotFleetRequestConfigData $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetRequestConfigData();
         }
 
         public Builder(SpotFleetRequestConfigData defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationStrategy = defaults.allocationStrategy;
-    	      this.context = defaults.context;
-    	      this.excessCapacityTerminationPolicy = defaults.excessCapacityTerminationPolicy;
-    	      this.iamFleetRole = defaults.iamFleetRole;
-    	      this.instanceInterruptionBehavior = defaults.instanceInterruptionBehavior;
-    	      this.instancePoolsToUseCount = defaults.instancePoolsToUseCount;
-    	      this.launchSpecifications = defaults.launchSpecifications;
-    	      this.launchTemplateConfigs = defaults.launchTemplateConfigs;
-    	      this.loadBalancersConfig = defaults.loadBalancersConfig;
-    	      this.onDemandAllocationStrategy = defaults.onDemandAllocationStrategy;
-    	      this.onDemandMaxTotalPrice = defaults.onDemandMaxTotalPrice;
-    	      this.onDemandTargetCapacity = defaults.onDemandTargetCapacity;
-    	      this.replaceUnhealthyInstances = defaults.replaceUnhealthyInstances;
-    	      this.spotMaintenanceStrategies = defaults.spotMaintenanceStrategies;
-    	      this.spotMaxTotalPrice = defaults.spotMaxTotalPrice;
-    	      this.spotPrice = defaults.spotPrice;
-    	      this.targetCapacity = defaults.targetCapacity;
-    	      this.targetCapacityUnitType = defaults.targetCapacityUnitType;
-    	      this.terminateInstancesWithExpiration = defaults.terminateInstancesWithExpiration;
-    	      this.type = defaults.type;
-    	      this.validFrom = defaults.validFrom;
-    	      this.validUntil = defaults.validUntil;
+            $ = new SpotFleetRequestConfigData(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationStrategy(@Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy) {
-            this.allocationStrategy = allocationStrategy;
+            $.allocationStrategy = allocationStrategy;
             return this;
         }
+
         public Builder context(@Nullable String context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
+
         public Builder excessCapacityTerminationPolicy(@Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy) {
-            this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
+            $.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
+
         public Builder iamFleetRole(String iamFleetRole) {
-            this.iamFleetRole = Objects.requireNonNull(iamFleetRole);
+            $.iamFleetRole = iamFleetRole;
             return this;
         }
+
         public Builder instanceInterruptionBehavior(@Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = instanceInterruptionBehavior;
+            $.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
+
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = instancePoolsToUseCount;
+            $.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
+
         public Builder launchSpecifications(@Nullable List<SpotFleetLaunchSpecification> launchSpecifications) {
-            this.launchSpecifications = launchSpecifications;
+            $.launchSpecifications = launchSpecifications;
             return this;
         }
+
         public Builder launchSpecifications(SpotFleetLaunchSpecification... launchSpecifications) {
             return launchSpecifications(List.of(launchSpecifications));
         }
+
         public Builder launchTemplateConfigs(@Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs) {
-            this.launchTemplateConfigs = launchTemplateConfigs;
+            $.launchTemplateConfigs = launchTemplateConfigs;
             return this;
         }
+
         public Builder launchTemplateConfigs(SpotFleetLaunchTemplateConfig... launchTemplateConfigs) {
             return launchTemplateConfigs(List.of(launchTemplateConfigs));
         }
+
         public Builder loadBalancersConfig(@Nullable SpotFleetLoadBalancersConfig loadBalancersConfig) {
-            this.loadBalancersConfig = loadBalancersConfig;
+            $.loadBalancersConfig = loadBalancersConfig;
             return this;
         }
+
         public Builder onDemandAllocationStrategy(@Nullable String onDemandAllocationStrategy) {
-            this.onDemandAllocationStrategy = onDemandAllocationStrategy;
+            $.onDemandAllocationStrategy = onDemandAllocationStrategy;
             return this;
         }
+
         public Builder onDemandMaxTotalPrice(@Nullable String onDemandMaxTotalPrice) {
-            this.onDemandMaxTotalPrice = onDemandMaxTotalPrice;
+            $.onDemandMaxTotalPrice = onDemandMaxTotalPrice;
             return this;
         }
+
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
-            this.onDemandTargetCapacity = onDemandTargetCapacity;
+            $.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
+
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
-            this.replaceUnhealthyInstances = replaceUnhealthyInstances;
+            $.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
+
         public Builder spotMaintenanceStrategies(@Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies) {
-            this.spotMaintenanceStrategies = spotMaintenanceStrategies;
+            $.spotMaintenanceStrategies = spotMaintenanceStrategies;
             return this;
         }
+
         public Builder spotMaxTotalPrice(@Nullable String spotMaxTotalPrice) {
-            this.spotMaxTotalPrice = spotMaxTotalPrice;
+            $.spotMaxTotalPrice = spotMaxTotalPrice;
             return this;
         }
+
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = spotPrice;
+            $.spotPrice = spotPrice;
             return this;
         }
+
         public Builder targetCapacity(Integer targetCapacity) {
-            this.targetCapacity = Objects.requireNonNull(targetCapacity);
+            $.targetCapacity = targetCapacity;
             return this;
         }
+
         public Builder targetCapacityUnitType(@Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType) {
-            this.targetCapacityUnitType = targetCapacityUnitType;
+            $.targetCapacityUnitType = targetCapacityUnitType;
             return this;
         }
+
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
-            this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
+            $.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
+
         public Builder type(@Nullable SpotFleetRequestConfigDataType type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder validFrom(@Nullable String validFrom) {
-            this.validFrom = validFrom;
+            $.validFrom = validFrom;
             return this;
         }
+
         public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = validUntil;
+            $.validUntil = validUntil;
             return this;
-        }        public SpotFleetRequestConfigData build() {
-            return new SpotFleetRequestConfigData(allocationStrategy, context, excessCapacityTerminationPolicy, iamFleetRole, instanceInterruptionBehavior, instancePoolsToUseCount, launchSpecifications, launchTemplateConfigs, loadBalancersConfig, onDemandAllocationStrategy, onDemandMaxTotalPrice, onDemandTargetCapacity, replaceUnhealthyInstances, spotMaintenanceStrategies, spotMaxTotalPrice, spotPrice, targetCapacity, targetCapacityUnitType, terminateInstancesWithExpiration, type, validFrom, validUntil);
+        }
+
+        public SpotFleetRequestConfigData build() {
+            $.iamFleetRole = Objects.requireNonNull($.iamFleetRole, "expected parameter 'iamFleetRole' to be non-null");
+            $.targetCapacity = Objects.requireNonNull($.targetCapacity, "expected parameter 'targetCapacity' to be non-null");
+            return $;
         }
     }
+
 }

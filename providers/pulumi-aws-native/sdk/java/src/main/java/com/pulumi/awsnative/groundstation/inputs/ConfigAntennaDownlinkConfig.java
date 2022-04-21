@@ -15,45 +15,44 @@ public final class ConfigAntennaDownlinkConfig extends com.pulumi.resources.Invo
     public static final ConfigAntennaDownlinkConfig Empty = new ConfigAntennaDownlinkConfig();
 
     @Import(name="spectrumConfig")
-      private final @Nullable ConfigSpectrumConfig spectrumConfig;
+    private @Nullable ConfigSpectrumConfig spectrumConfig;
 
     public Optional<ConfigSpectrumConfig> spectrumConfig() {
-        return this.spectrumConfig == null ? Optional.empty() : Optional.ofNullable(this.spectrumConfig);
+        return Optional.ofNullable(this.spectrumConfig);
     }
 
-    public ConfigAntennaDownlinkConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
-        this.spectrumConfig = spectrumConfig;
-    }
+    private ConfigAntennaDownlinkConfig() {}
 
-    private ConfigAntennaDownlinkConfig() {
-        this.spectrumConfig = null;
+    private ConfigAntennaDownlinkConfig(ConfigAntennaDownlinkConfig $) {
+        this.spectrumConfig = $.spectrumConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigAntennaDownlinkConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigSpectrumConfig spectrumConfig;
+        private ConfigAntennaDownlinkConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigAntennaDownlinkConfig();
         }
 
         public Builder(ConfigAntennaDownlinkConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spectrumConfig = defaults.spectrumConfig;
+            $ = new ConfigAntennaDownlinkConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
-            this.spectrumConfig = spectrumConfig;
+            $.spectrumConfig = spectrumConfig;
             return this;
-        }        public ConfigAntennaDownlinkConfig build() {
-            return new ConfigAntennaDownlinkConfig(spectrumConfig);
+        }
+
+        public ConfigAntennaDownlinkConfig build() {
+            return $;
         }
     }
+
 }

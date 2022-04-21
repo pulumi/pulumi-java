@@ -11,10 +11,10 @@ import com.pulumi.awsnative.frauddetector.inputs.DetectorRuleArgs;
 import com.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associatedModels")
-      private final @Nullable Output<List<DetectorModelArgs>> associatedModels;
+    private @Nullable Output<List<DetectorModelArgs>> associatedModels;
 
-    public Output<List<DetectorModelArgs>> associatedModels() {
-        return this.associatedModels == null ? Codegen.empty() : this.associatedModels;
+    public Optional<Output<List<DetectorModelArgs>>> associatedModels() {
+        return Optional.ofNullable(this.associatedModels);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detectorId", required=true)
-      private final Output<String> detectorId;
+    private Output<String> detectorId;
 
     public Output<String> detectorId() {
         return this.detectorId;
@@ -60,10 +60,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detectorVersionStatus")
-      private final @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
+    private @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
 
-    public Output<DetectorVersionStatus> detectorVersionStatus() {
-        return this.detectorVersionStatus == null ? Codegen.empty() : this.detectorVersionStatus;
+    public Optional<Output<DetectorVersionStatus>> detectorVersionStatus() {
+        return Optional.ofNullable(this.detectorVersionStatus);
     }
 
     /**
@@ -71,21 +71,21 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventType", required=true)
-      private final Output<DetectorEventTypeArgs> eventType;
+    private Output<DetectorEventTypeArgs> eventType;
 
     public Output<DetectorEventTypeArgs> eventType() {
         return this.eventType;
     }
 
     @Import(name="ruleExecutionMode")
-      private final @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
+    private @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
 
-    public Output<DetectorRuleExecutionMode> ruleExecutionMode() {
-        return this.ruleExecutionMode == null ? Codegen.empty() : this.ruleExecutionMode;
+    public Optional<Output<DetectorRuleExecutionMode>> ruleExecutionMode() {
+        return Optional.ofNullable(this.ruleExecutionMode);
     }
 
     @Import(name="rules", required=true)
-      private final Output<List<DetectorRuleArgs>> rules;
+    private Output<List<DetectorRuleArgs>> rules;
 
     public Output<List<DetectorRuleArgs>> rules() {
         return this.rules;
@@ -96,150 +96,133 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DetectorTagArgs>> tags;
+    private @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DetectorTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DetectorArgs(
-        @Nullable Output<List<DetectorModelArgs>> associatedModels,
-        @Nullable Output<String> description,
-        Output<String> detectorId,
-        @Nullable Output<DetectorVersionStatus> detectorVersionStatus,
-        Output<DetectorEventTypeArgs> eventType,
-        @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode,
-        Output<List<DetectorRuleArgs>> rules,
-        @Nullable Output<List<DetectorTagArgs>> tags) {
-        this.associatedModels = associatedModels;
-        this.description = description;
-        this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
-        this.detectorVersionStatus = detectorVersionStatus;
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-        this.ruleExecutionMode = ruleExecutionMode;
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.tags = tags;
-    }
+    private DetectorArgs() {}
 
-    private DetectorArgs() {
-        this.associatedModels = Codegen.empty();
-        this.description = Codegen.empty();
-        this.detectorId = Codegen.empty();
-        this.detectorVersionStatus = Codegen.empty();
-        this.eventType = Codegen.empty();
-        this.ruleExecutionMode = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DetectorArgs(DetectorArgs $) {
+        this.associatedModels = $.associatedModels;
+        this.description = $.description;
+        this.detectorId = $.detectorId;
+        this.detectorVersionStatus = $.detectorVersionStatus;
+        this.eventType = $.eventType;
+        this.ruleExecutionMode = $.ruleExecutionMode;
+        this.rules = $.rules;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DetectorModelArgs>> associatedModels;
-        private @Nullable Output<String> description;
-        private Output<String> detectorId;
-        private @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
-        private Output<DetectorEventTypeArgs> eventType;
-        private @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
-        private Output<List<DetectorRuleArgs>> rules;
-        private @Nullable Output<List<DetectorTagArgs>> tags;
+        private DetectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorArgs();
         }
 
         public Builder(DetectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associatedModels = defaults.associatedModels;
-    	      this.description = defaults.description;
-    	      this.detectorId = defaults.detectorId;
-    	      this.detectorVersionStatus = defaults.detectorVersionStatus;
-    	      this.eventType = defaults.eventType;
-    	      this.ruleExecutionMode = defaults.ruleExecutionMode;
-    	      this.rules = defaults.rules;
-    	      this.tags = defaults.tags;
+            $ = new DetectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associatedModels(@Nullable Output<List<DetectorModelArgs>> associatedModels) {
-            this.associatedModels = associatedModels;
+            $.associatedModels = associatedModels;
             return this;
         }
-        public Builder associatedModels(@Nullable List<DetectorModelArgs> associatedModels) {
-            this.associatedModels = Codegen.ofNullable(associatedModels);
-            return this;
+
+        public Builder associatedModels(List<DetectorModelArgs> associatedModels) {
+            return associatedModels(Output.of(associatedModels));
         }
+
         public Builder associatedModels(DetectorModelArgs... associatedModels) {
             return associatedModels(List.of(associatedModels));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder detectorId(Output<String> detectorId) {
-            this.detectorId = Objects.requireNonNull(detectorId);
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder detectorId(String detectorId) {
-            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
-            return this;
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder detectorVersionStatus(@Nullable Output<DetectorVersionStatus> detectorVersionStatus) {
-            this.detectorVersionStatus = detectorVersionStatus;
+            $.detectorVersionStatus = detectorVersionStatus;
             return this;
         }
-        public Builder detectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
-            this.detectorVersionStatus = Codegen.ofNullable(detectorVersionStatus);
-            return this;
+
+        public Builder detectorVersionStatus(DetectorVersionStatus detectorVersionStatus) {
+            return detectorVersionStatus(Output.of(detectorVersionStatus));
         }
+
         public Builder eventType(Output<DetectorEventTypeArgs> eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
         }
+
         public Builder eventType(DetectorEventTypeArgs eventType) {
-            this.eventType = Output.of(Objects.requireNonNull(eventType));
-            return this;
+            return eventType(Output.of(eventType));
         }
+
         public Builder ruleExecutionMode(@Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode) {
-            this.ruleExecutionMode = ruleExecutionMode;
+            $.ruleExecutionMode = ruleExecutionMode;
             return this;
         }
-        public Builder ruleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
-            this.ruleExecutionMode = Codegen.ofNullable(ruleExecutionMode);
-            return this;
+
+        public Builder ruleExecutionMode(DetectorRuleExecutionMode ruleExecutionMode) {
+            return ruleExecutionMode(Output.of(ruleExecutionMode));
         }
+
         public Builder rules(Output<List<DetectorRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<DetectorRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(DetectorRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DetectorTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DetectorTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DetectorArgs build() {
-            return new DetectorArgs(associatedModels, description, detectorId, detectorVersionStatus, eventType, ruleExecutionMode, rules, tags);
+        }
+
+        public DetectorArgs build() {
+            $.detectorId = Objects.requireNonNull($.detectorId, "expected parameter 'detectorId' to be non-null");
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

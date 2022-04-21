@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
-import java.util.Objects;
+
 
 
 public final class DataSetPhysicalTableMap extends com.pulumi.resources.InvokeArgs {
 
     public static final DataSetPhysicalTableMap Empty = new DataSetPhysicalTableMap();
 
-    public DataSetPhysicalTableMap() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DataSetPhysicalTableMap defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DataSetPhysicalTableMap $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DataSetPhysicalTableMap defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DataSetPhysicalTableMap();
         }
         public DataSetPhysicalTableMap build() {
-            return new DataSetPhysicalTableMap();
+            return $;
         }
     }
+
 }

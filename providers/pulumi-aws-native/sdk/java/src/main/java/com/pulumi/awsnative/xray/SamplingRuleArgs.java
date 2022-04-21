@@ -8,10 +8,10 @@ import com.pulumi.awsnative.xray.inputs.SamplingRuleUpdateArgs;
 import com.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,133 +20,120 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final SamplingRuleArgs Empty = new SamplingRuleArgs();
 
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     @Import(name="samplingRule")
-      private final @Nullable Output<com.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule;
+    private @Nullable Output<com.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule;
 
-    public Output<com.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule() {
-        return this.samplingRule == null ? Codegen.empty() : this.samplingRule;
+    public Optional<Output<com.pulumi.awsnative.xray.inputs.SamplingRuleArgs>> samplingRule() {
+        return Optional.ofNullable(this.samplingRule);
     }
 
     @Import(name="samplingRuleRecord")
-      private final @Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord;
+    private @Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord;
 
-    public Output<SamplingRuleRecordArgs> samplingRuleRecord() {
-        return this.samplingRuleRecord == null ? Codegen.empty() : this.samplingRuleRecord;
+    public Optional<Output<SamplingRuleRecordArgs>> samplingRuleRecord() {
+        return Optional.ofNullable(this.samplingRuleRecord);
     }
 
     @Import(name="samplingRuleUpdate")
-      private final @Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate;
+    private @Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate;
 
-    public Output<SamplingRuleUpdateArgs> samplingRuleUpdate() {
-        return this.samplingRuleUpdate == null ? Codegen.empty() : this.samplingRuleUpdate;
+    public Optional<Output<SamplingRuleUpdateArgs>> samplingRuleUpdate() {
+        return Optional.ofNullable(this.samplingRuleUpdate);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
+    private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Output<List<TagsItemPropertiesArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TagsItemPropertiesArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SamplingRuleArgs(
-        @Nullable Output<String> ruleName,
-        @Nullable Output<com.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule,
-        @Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord,
-        @Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate,
-        @Nullable Output<List<TagsItemPropertiesArgs>> tags) {
-        this.ruleName = ruleName;
-        this.samplingRule = samplingRule;
-        this.samplingRuleRecord = samplingRuleRecord;
-        this.samplingRuleUpdate = samplingRuleUpdate;
-        this.tags = tags;
-    }
+    private SamplingRuleArgs() {}
 
-    private SamplingRuleArgs() {
-        this.ruleName = Codegen.empty();
-        this.samplingRule = Codegen.empty();
-        this.samplingRuleRecord = Codegen.empty();
-        this.samplingRuleUpdate = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SamplingRuleArgs(SamplingRuleArgs $) {
+        this.ruleName = $.ruleName;
+        this.samplingRule = $.samplingRule;
+        this.samplingRuleRecord = $.samplingRuleRecord;
+        this.samplingRuleUpdate = $.samplingRuleUpdate;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ruleName;
-        private @Nullable Output<com.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule;
-        private @Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord;
-        private @Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate;
-        private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
+        private SamplingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingRuleArgs();
         }
 
         public Builder(SamplingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleName = defaults.ruleName;
-    	      this.samplingRule = defaults.samplingRule;
-    	      this.samplingRuleRecord = defaults.samplingRuleRecord;
-    	      this.samplingRuleUpdate = defaults.samplingRuleUpdate;
-    	      this.tags = defaults.tags;
+            $ = new SamplingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder samplingRule(@Nullable Output<com.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule) {
-            this.samplingRule = samplingRule;
+            $.samplingRule = samplingRule;
             return this;
         }
-        public Builder samplingRule(@Nullable com.pulumi.awsnative.xray.inputs.SamplingRuleArgs samplingRule) {
-            this.samplingRule = Codegen.ofNullable(samplingRule);
-            return this;
+
+        public Builder samplingRule(com.pulumi.awsnative.xray.inputs.SamplingRuleArgs samplingRule) {
+            return samplingRule(Output.of(samplingRule));
         }
+
         public Builder samplingRuleRecord(@Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord) {
-            this.samplingRuleRecord = samplingRuleRecord;
+            $.samplingRuleRecord = samplingRuleRecord;
             return this;
         }
-        public Builder samplingRuleRecord(@Nullable SamplingRuleRecordArgs samplingRuleRecord) {
-            this.samplingRuleRecord = Codegen.ofNullable(samplingRuleRecord);
-            return this;
+
+        public Builder samplingRuleRecord(SamplingRuleRecordArgs samplingRuleRecord) {
+            return samplingRuleRecord(Output.of(samplingRuleRecord));
         }
+
         public Builder samplingRuleUpdate(@Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate) {
-            this.samplingRuleUpdate = samplingRuleUpdate;
+            $.samplingRuleUpdate = samplingRuleUpdate;
             return this;
         }
-        public Builder samplingRuleUpdate(@Nullable SamplingRuleUpdateArgs samplingRuleUpdate) {
-            this.samplingRuleUpdate = Codegen.ofNullable(samplingRuleUpdate);
-            return this;
+
+        public Builder samplingRuleUpdate(SamplingRuleUpdateArgs samplingRuleUpdate) {
+            return samplingRuleUpdate(Output.of(samplingRuleUpdate));
         }
+
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TagsItemPropertiesArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TagsItemPropertiesArgs... tags) {
             return tags(List.of(tags));
-        }        public SamplingRuleArgs build() {
-            return new SamplingRuleArgs(ruleName, samplingRule, samplingRuleRecord, samplingRuleUpdate, tags);
+        }
+
+        public SamplingRuleArgs build() {
+            return $;
         }
     }
+
 }

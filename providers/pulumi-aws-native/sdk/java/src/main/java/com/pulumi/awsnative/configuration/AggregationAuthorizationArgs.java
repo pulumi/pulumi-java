@@ -6,10 +6,10 @@ package com.pulumi.awsnative.configuration;
 import com.pulumi.awsnative.configuration.inputs.AggregationAuthorizationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="authorizedAccountId", required=true)
-      private final Output<String> authorizedAccountId;
+    private Output<String> authorizedAccountId;
 
     public Output<String> authorizedAccountId() {
         return this.authorizedAccountId;
@@ -33,7 +33,7 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="authorizedAwsRegion", required=true)
-      private final Output<String> authorizedAwsRegion;
+    private Output<String> authorizedAwsRegion;
 
     public Output<String> authorizedAwsRegion() {
         return this.authorizedAwsRegion;
@@ -44,79 +44,74 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
+    private @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
 
-    public Output<List<AggregationAuthorizationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AggregationAuthorizationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AggregationAuthorizationArgs(
-        Output<String> authorizedAccountId,
-        Output<String> authorizedAwsRegion,
-        @Nullable Output<List<AggregationAuthorizationTagArgs>> tags) {
-        this.authorizedAccountId = Objects.requireNonNull(authorizedAccountId, "expected parameter 'authorizedAccountId' to be non-null");
-        this.authorizedAwsRegion = Objects.requireNonNull(authorizedAwsRegion, "expected parameter 'authorizedAwsRegion' to be non-null");
-        this.tags = tags;
-    }
+    private AggregationAuthorizationArgs() {}
 
-    private AggregationAuthorizationArgs() {
-        this.authorizedAccountId = Codegen.empty();
-        this.authorizedAwsRegion = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AggregationAuthorizationArgs(AggregationAuthorizationArgs $) {
+        this.authorizedAccountId = $.authorizedAccountId;
+        this.authorizedAwsRegion = $.authorizedAwsRegion;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AggregationAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authorizedAccountId;
-        private Output<String> authorizedAwsRegion;
-        private @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
+        private AggregationAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AggregationAuthorizationArgs();
         }
 
         public Builder(AggregationAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedAccountId = defaults.authorizedAccountId;
-    	      this.authorizedAwsRegion = defaults.authorizedAwsRegion;
-    	      this.tags = defaults.tags;
+            $ = new AggregationAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedAccountId(Output<String> authorizedAccountId) {
-            this.authorizedAccountId = Objects.requireNonNull(authorizedAccountId);
+            $.authorizedAccountId = authorizedAccountId;
             return this;
         }
+
         public Builder authorizedAccountId(String authorizedAccountId) {
-            this.authorizedAccountId = Output.of(Objects.requireNonNull(authorizedAccountId));
-            return this;
+            return authorizedAccountId(Output.of(authorizedAccountId));
         }
+
         public Builder authorizedAwsRegion(Output<String> authorizedAwsRegion) {
-            this.authorizedAwsRegion = Objects.requireNonNull(authorizedAwsRegion);
+            $.authorizedAwsRegion = authorizedAwsRegion;
             return this;
         }
+
         public Builder authorizedAwsRegion(String authorizedAwsRegion) {
-            this.authorizedAwsRegion = Output.of(Objects.requireNonNull(authorizedAwsRegion));
-            return this;
+            return authorizedAwsRegion(Output.of(authorizedAwsRegion));
         }
+
         public Builder tags(@Nullable Output<List<AggregationAuthorizationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AggregationAuthorizationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AggregationAuthorizationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AggregationAuthorizationTagArgs... tags) {
             return tags(List.of(tags));
-        }        public AggregationAuthorizationArgs build() {
-            return new AggregationAuthorizationArgs(authorizedAccountId, authorizedAwsRegion, tags);
+        }
+
+        public AggregationAuthorizationArgs build() {
+            $.authorizedAccountId = Objects.requireNonNull($.authorizedAccountId, "expected parameter 'authorizedAccountId' to be non-null");
+            $.authorizedAwsRegion = Objects.requireNonNull($.authorizedAwsRegion, "expected parameter 'authorizedAwsRegion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.licensemanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
     public static final GrantArgs Empty = new GrantArgs();
 
     @Import(name="allowedOperations")
-      private final @Nullable Output<List<String>> allowedOperations;
+    private @Nullable Output<List<String>> allowedOperations;
 
-    public Output<List<String>> allowedOperations() {
-        return this.allowedOperations == null ? Codegen.empty() : this.allowedOperations;
+    public Optional<Output<List<String>>> allowedOperations() {
+        return Optional.ofNullable(this.allowedOperations);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grantName")
-      private final @Nullable Output<String> grantName;
+    private @Nullable Output<String> grantName;
 
-    public Output<String> grantName() {
-        return this.grantName == null ? Codegen.empty() : this.grantName;
+    public Optional<Output<String>> grantName() {
+        return Optional.ofNullable(this.grantName);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeRegion")
-      private final @Nullable Output<String> homeRegion;
+    private @Nullable Output<String> homeRegion;
 
-    public Output<String> homeRegion() {
-        return this.homeRegion == null ? Codegen.empty() : this.homeRegion;
+    public Optional<Output<String>> homeRegion() {
+        return Optional.ofNullable(this.homeRegion);
     }
 
     /**
@@ -50,135 +50,120 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseArn")
-      private final @Nullable Output<String> licenseArn;
+    private @Nullable Output<String> licenseArn;
 
-    public Output<String> licenseArn() {
-        return this.licenseArn == null ? Codegen.empty() : this.licenseArn;
+    public Optional<Output<String>> licenseArn() {
+        return Optional.ofNullable(this.licenseArn);
     }
 
     @Import(name="principals")
-      private final @Nullable Output<List<String>> principals;
+    private @Nullable Output<List<String>> principals;
 
-    public Output<List<String>> principals() {
-        return this.principals == null ? Codegen.empty() : this.principals;
+    public Optional<Output<List<String>>> principals() {
+        return Optional.ofNullable(this.principals);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public GrantArgs(
-        @Nullable Output<List<String>> allowedOperations,
-        @Nullable Output<String> grantName,
-        @Nullable Output<String> homeRegion,
-        @Nullable Output<String> licenseArn,
-        @Nullable Output<List<String>> principals,
-        @Nullable Output<String> status) {
-        this.allowedOperations = allowedOperations;
-        this.grantName = grantName;
-        this.homeRegion = homeRegion;
-        this.licenseArn = licenseArn;
-        this.principals = principals;
-        this.status = status;
-    }
+    private GrantArgs() {}
 
-    private GrantArgs() {
-        this.allowedOperations = Codegen.empty();
-        this.grantName = Codegen.empty();
-        this.homeRegion = Codegen.empty();
-        this.licenseArn = Codegen.empty();
-        this.principals = Codegen.empty();
-        this.status = Codegen.empty();
+    private GrantArgs(GrantArgs $) {
+        this.allowedOperations = $.allowedOperations;
+        this.grantName = $.grantName;
+        this.homeRegion = $.homeRegion;
+        this.licenseArn = $.licenseArn;
+        this.principals = $.principals;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedOperations;
-        private @Nullable Output<String> grantName;
-        private @Nullable Output<String> homeRegion;
-        private @Nullable Output<String> licenseArn;
-        private @Nullable Output<List<String>> principals;
-        private @Nullable Output<String> status;
+        private GrantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrantArgs();
         }
 
         public Builder(GrantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedOperations = defaults.allowedOperations;
-    	      this.grantName = defaults.grantName;
-    	      this.homeRegion = defaults.homeRegion;
-    	      this.licenseArn = defaults.licenseArn;
-    	      this.principals = defaults.principals;
-    	      this.status = defaults.status;
+            $ = new GrantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedOperations(@Nullable Output<List<String>> allowedOperations) {
-            this.allowedOperations = allowedOperations;
+            $.allowedOperations = allowedOperations;
             return this;
         }
-        public Builder allowedOperations(@Nullable List<String> allowedOperations) {
-            this.allowedOperations = Codegen.ofNullable(allowedOperations);
-            return this;
+
+        public Builder allowedOperations(List<String> allowedOperations) {
+            return allowedOperations(Output.of(allowedOperations));
         }
+
         public Builder allowedOperations(String... allowedOperations) {
             return allowedOperations(List.of(allowedOperations));
         }
+
         public Builder grantName(@Nullable Output<String> grantName) {
-            this.grantName = grantName;
+            $.grantName = grantName;
             return this;
         }
-        public Builder grantName(@Nullable String grantName) {
-            this.grantName = Codegen.ofNullable(grantName);
-            return this;
+
+        public Builder grantName(String grantName) {
+            return grantName(Output.of(grantName));
         }
+
         public Builder homeRegion(@Nullable Output<String> homeRegion) {
-            this.homeRegion = homeRegion;
+            $.homeRegion = homeRegion;
             return this;
         }
-        public Builder homeRegion(@Nullable String homeRegion) {
-            this.homeRegion = Codegen.ofNullable(homeRegion);
-            return this;
+
+        public Builder homeRegion(String homeRegion) {
+            return homeRegion(Output.of(homeRegion));
         }
+
         public Builder licenseArn(@Nullable Output<String> licenseArn) {
-            this.licenseArn = licenseArn;
+            $.licenseArn = licenseArn;
             return this;
         }
-        public Builder licenseArn(@Nullable String licenseArn) {
-            this.licenseArn = Codegen.ofNullable(licenseArn);
-            return this;
+
+        public Builder licenseArn(String licenseArn) {
+            return licenseArn(Output.of(licenseArn));
         }
+
         public Builder principals(@Nullable Output<List<String>> principals) {
-            this.principals = principals;
+            $.principals = principals;
             return this;
         }
-        public Builder principals(@Nullable List<String> principals) {
-            this.principals = Codegen.ofNullable(principals);
-            return this;
+
+        public Builder principals(List<String> principals) {
+            return principals(Output.of(principals));
         }
+
         public Builder principals(String... principals) {
             return principals(List.of(principals));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public GrantArgs build() {
-            return new GrantArgs(allowedOperations, grantName, homeRegion, licenseArn, principals, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public GrantArgs build() {
+            return $;
         }
     }
+
 }

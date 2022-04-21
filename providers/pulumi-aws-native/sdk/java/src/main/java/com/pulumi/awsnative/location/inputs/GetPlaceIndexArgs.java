@@ -13,45 +13,45 @@ public final class GetPlaceIndexArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPlaceIndexArgs Empty = new GetPlaceIndexArgs();
 
     @Import(name="indexName", required=true)
-      private final String indexName;
+    private String indexName;
 
     public String indexName() {
         return this.indexName;
     }
 
-    public GetPlaceIndexArgs(String indexName) {
-        this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
-    }
+    private GetPlaceIndexArgs() {}
 
-    private GetPlaceIndexArgs() {
-        this.indexName = null;
+    private GetPlaceIndexArgs(GetPlaceIndexArgs $) {
+        this.indexName = $.indexName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPlaceIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String indexName;
+        private GetPlaceIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPlaceIndexArgs();
         }
 
         public Builder(GetPlaceIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indexName = defaults.indexName;
+            $ = new GetPlaceIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder indexName(String indexName) {
-            this.indexName = Objects.requireNonNull(indexName);
+            $.indexName = indexName;
             return this;
-        }        public GetPlaceIndexArgs build() {
-            return new GetPlaceIndexArgs(indexName);
+        }
+
+        public GetPlaceIndexArgs build() {
+            $.indexName = Objects.requireNonNull($.indexName, "expected parameter 'indexName' to be non-null");
+            return $;
         }
     }
+
 }

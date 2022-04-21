@@ -7,8 +7,8 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLAllowActionArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLBlockActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class WebACLDefaultActionArgs extends com.pulumi.resources.Resource
     public static final WebACLDefaultActionArgs Empty = new WebACLDefaultActionArgs();
 
     @Import(name="allow")
-      private final @Nullable Output<WebACLAllowActionArgs> allow;
+    private @Nullable Output<WebACLAllowActionArgs> allow;
 
-    public Output<WebACLAllowActionArgs> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<WebACLAllowActionArgs>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     @Import(name="block")
-      private final @Nullable Output<WebACLBlockActionArgs> block;
+    private @Nullable Output<WebACLBlockActionArgs> block;
 
-    public Output<WebACLBlockActionArgs> block() {
-        return this.block == null ? Codegen.empty() : this.block;
+    public Optional<Output<WebACLBlockActionArgs>> block() {
+        return Optional.ofNullable(this.block);
     }
 
-    public WebACLDefaultActionArgs(
-        @Nullable Output<WebACLAllowActionArgs> allow,
-        @Nullable Output<WebACLBlockActionArgs> block) {
-        this.allow = allow;
-        this.block = block;
-    }
+    private WebACLDefaultActionArgs() {}
 
-    private WebACLDefaultActionArgs() {
-        this.allow = Codegen.empty();
-        this.block = Codegen.empty();
+    private WebACLDefaultActionArgs(WebACLDefaultActionArgs $) {
+        this.allow = $.allow;
+        this.block = $.block;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLDefaultActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebACLAllowActionArgs> allow;
-        private @Nullable Output<WebACLBlockActionArgs> block;
+        private WebACLDefaultActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLDefaultActionArgs();
         }
 
         public Builder(WebACLDefaultActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
+            $ = new WebACLDefaultActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<WebACLAllowActionArgs> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable WebACLAllowActionArgs allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(WebACLAllowActionArgs allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder block(@Nullable Output<WebACLBlockActionArgs> block) {
-            this.block = block;
+            $.block = block;
             return this;
         }
-        public Builder block(@Nullable WebACLBlockActionArgs block) {
-            this.block = Codegen.ofNullable(block);
-            return this;
-        }        public WebACLDefaultActionArgs build() {
-            return new WebACLDefaultActionArgs(allow, block);
+
+        public Builder block(WebACLBlockActionArgs block) {
+            return block(Output.of(block));
+        }
+
+        public WebACLDefaultActionArgs build() {
+            return $;
         }
     }
+
 }

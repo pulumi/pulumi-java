@@ -6,7 +6,6 @@ package com.pulumi.awsnative.ecr.inputs;
 import com.pulumi.awsnative.ecr.enums.ReplicationConfigurationFilterType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,70 +19,67 @@ public final class ReplicationConfigurationRepositoryFilterArgs extends com.pulu
     public static final ReplicationConfigurationRepositoryFilterArgs Empty = new ReplicationConfigurationRepositoryFilterArgs();
 
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
     }
 
     @Import(name="filterType", required=true)
-      private final Output<ReplicationConfigurationFilterType> filterType;
+    private Output<ReplicationConfigurationFilterType> filterType;
 
     public Output<ReplicationConfigurationFilterType> filterType() {
         return this.filterType;
     }
 
-    public ReplicationConfigurationRepositoryFilterArgs(
-        Output<String> filter,
-        Output<ReplicationConfigurationFilterType> filterType) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.filterType = Objects.requireNonNull(filterType, "expected parameter 'filterType' to be non-null");
-    }
+    private ReplicationConfigurationRepositoryFilterArgs() {}
 
-    private ReplicationConfigurationRepositoryFilterArgs() {
-        this.filter = Codegen.empty();
-        this.filterType = Codegen.empty();
+    private ReplicationConfigurationRepositoryFilterArgs(ReplicationConfigurationRepositoryFilterArgs $) {
+        this.filter = $.filter;
+        this.filterType = $.filterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationRepositoryFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filter;
-        private Output<ReplicationConfigurationFilterType> filterType;
+        private ReplicationConfigurationRepositoryFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationRepositoryFilterArgs();
         }
 
         public Builder(ReplicationConfigurationRepositoryFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.filterType = defaults.filterType;
+            $ = new ReplicationConfigurationRepositoryFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder filterType(Output<ReplicationConfigurationFilterType> filterType) {
-            this.filterType = Objects.requireNonNull(filterType);
+            $.filterType = filterType;
             return this;
         }
+
         public Builder filterType(ReplicationConfigurationFilterType filterType) {
-            this.filterType = Output.of(Objects.requireNonNull(filterType));
-            return this;
-        }        public ReplicationConfigurationRepositoryFilterArgs build() {
-            return new ReplicationConfigurationRepositoryFilterArgs(filter, filterType);
+            return filterType(Output.of(filterType));
+        }
+
+        public ReplicationConfigurationRepositoryFilterArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.filterType = Objects.requireNonNull($.filterType, "expected parameter 'filterType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.glue;
 import com.pulumi.awsnative.glue.inputs.SchemaVersionSchemaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +15,7 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
     public static final SchemaVersionArgs Empty = new SchemaVersionArgs();
 
     @Import(name="schema", required=true)
-      private final Output<SchemaVersionSchemaArgs> schema;
+    private Output<SchemaVersionSchemaArgs> schema;
 
     public Output<SchemaVersionSchemaArgs> schema() {
         return this.schema;
@@ -27,63 +26,60 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaDefinition", required=true)
-      private final Output<String> schemaDefinition;
+    private Output<String> schemaDefinition;
 
     public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
 
-    public SchemaVersionArgs(
-        Output<SchemaVersionSchemaArgs> schema,
-        Output<String> schemaDefinition) {
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.schemaDefinition = Objects.requireNonNull(schemaDefinition, "expected parameter 'schemaDefinition' to be non-null");
-    }
+    private SchemaVersionArgs() {}
 
-    private SchemaVersionArgs() {
-        this.schema = Codegen.empty();
-        this.schemaDefinition = Codegen.empty();
+    private SchemaVersionArgs(SchemaVersionArgs $) {
+        this.schema = $.schema;
+        this.schemaDefinition = $.schemaDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SchemaVersionSchemaArgs> schema;
-        private Output<String> schemaDefinition;
+        private SchemaVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaVersionArgs();
         }
 
         public Builder(SchemaVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schema = defaults.schema;
-    	      this.schemaDefinition = defaults.schemaDefinition;
+            $ = new SchemaVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schema(Output<SchemaVersionSchemaArgs> schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schema(SchemaVersionSchemaArgs schema) {
-            this.schema = Output.of(Objects.requireNonNull(schema));
-            return this;
+            return schema(Output.of(schema));
         }
+
         public Builder schemaDefinition(Output<String> schemaDefinition) {
-            this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
+            $.schemaDefinition = schemaDefinition;
             return this;
         }
+
         public Builder schemaDefinition(String schemaDefinition) {
-            this.schemaDefinition = Output.of(Objects.requireNonNull(schemaDefinition));
-            return this;
-        }        public SchemaVersionArgs build() {
-            return new SchemaVersionArgs(schema, schemaDefinition);
+            return schemaDefinition(Output.of(schemaDefinition));
+        }
+
+        public SchemaVersionArgs build() {
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            $.schemaDefinition = Objects.requireNonNull($.schemaDefinition, "expected parameter 'schemaDefinition' to be non-null");
+            return $;
         }
     }
+
 }

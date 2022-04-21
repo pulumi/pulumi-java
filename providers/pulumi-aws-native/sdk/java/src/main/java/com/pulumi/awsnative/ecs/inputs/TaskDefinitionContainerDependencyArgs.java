@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class TaskDefinitionContainerDependencyArgs extends com.pulumi.reso
     public static final TaskDefinitionContainerDependencyArgs Empty = new TaskDefinitionContainerDependencyArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<String> condition;
+    private @Nullable Output<String> condition;
 
-    public Output<String> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<String>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
-    public TaskDefinitionContainerDependencyArgs(
-        @Nullable Output<String> condition,
-        @Nullable Output<String> containerName) {
-        this.condition = condition;
-        this.containerName = containerName;
-    }
+    private TaskDefinitionContainerDependencyArgs() {}
 
-    private TaskDefinitionContainerDependencyArgs() {
-        this.condition = Codegen.empty();
-        this.containerName = Codegen.empty();
+    private TaskDefinitionContainerDependencyArgs(TaskDefinitionContainerDependencyArgs $) {
+        this.condition = $.condition;
+        this.containerName = $.containerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionContainerDependencyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> condition;
-        private @Nullable Output<String> containerName;
+        private TaskDefinitionContainerDependencyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionContainerDependencyArgs();
         }
 
         public Builder(TaskDefinitionContainerDependencyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.containerName = defaults.containerName;
+            $ = new TaskDefinitionContainerDependencyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<String> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable String condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(String condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
-        }        public TaskDefinitionContainerDependencyArgs build() {
-            return new TaskDefinitionContainerDependencyArgs(condition, containerName);
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
+        }
+
+        public TaskDefinitionContainerDependencyArgs build() {
+            return $;
         }
     }
+
 }

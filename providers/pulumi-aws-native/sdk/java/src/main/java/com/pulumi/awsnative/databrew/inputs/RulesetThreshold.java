@@ -17,78 +17,71 @@ public final class RulesetThreshold extends com.pulumi.resources.InvokeArgs {
     public static final RulesetThreshold Empty = new RulesetThreshold();
 
     @Import(name="type")
-      private final @Nullable RulesetThresholdType type;
+    private @Nullable RulesetThresholdType type;
 
     public Optional<RulesetThresholdType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="unit")
-      private final @Nullable RulesetThresholdUnit unit;
+    private @Nullable RulesetThresholdUnit unit;
 
     public Optional<RulesetThresholdUnit> unit() {
-        return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
+        return Optional.ofNullable(this.unit);
     }
 
     @Import(name="value", required=true)
-      private final Double value;
+    private Double value;
 
     public Double value() {
         return this.value;
     }
 
-    public RulesetThreshold(
-        @Nullable RulesetThresholdType type,
-        @Nullable RulesetThresholdUnit unit,
-        Double value) {
-        this.type = type;
-        this.unit = unit;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private RulesetThreshold() {}
 
-    private RulesetThreshold() {
-        this.type = null;
-        this.unit = null;
-        this.value = null;
+    private RulesetThreshold(RulesetThreshold $) {
+        this.type = $.type;
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetThreshold defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RulesetThresholdType type;
-        private @Nullable RulesetThresholdUnit unit;
-        private Double value;
+        private RulesetThreshold $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetThreshold();
         }
 
         public Builder(RulesetThreshold defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new RulesetThreshold(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable RulesetThresholdType type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder unit(@Nullable RulesetThresholdUnit unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public RulesetThreshold build() {
-            return new RulesetThreshold(type, unit, value);
+        }
+
+        public RulesetThreshold build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

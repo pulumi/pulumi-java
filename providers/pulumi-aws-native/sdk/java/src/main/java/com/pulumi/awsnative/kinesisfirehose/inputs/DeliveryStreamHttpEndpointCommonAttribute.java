@@ -13,62 +13,59 @@ public final class DeliveryStreamHttpEndpointCommonAttribute extends com.pulumi.
     public static final DeliveryStreamHttpEndpointCommonAttribute Empty = new DeliveryStreamHttpEndpointCommonAttribute();
 
     @Import(name="attributeName", required=true)
-      private final String attributeName;
+    private String attributeName;
 
     public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeValue", required=true)
-      private final String attributeValue;
+    private String attributeValue;
 
     public String attributeValue() {
         return this.attributeValue;
     }
 
-    public DeliveryStreamHttpEndpointCommonAttribute(
-        String attributeName,
-        String attributeValue) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.attributeValue = Objects.requireNonNull(attributeValue, "expected parameter 'attributeValue' to be non-null");
-    }
+    private DeliveryStreamHttpEndpointCommonAttribute() {}
 
-    private DeliveryStreamHttpEndpointCommonAttribute() {
-        this.attributeName = null;
-        this.attributeValue = null;
+    private DeliveryStreamHttpEndpointCommonAttribute(DeliveryStreamHttpEndpointCommonAttribute $) {
+        this.attributeName = $.attributeName;
+        this.attributeValue = $.attributeValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHttpEndpointCommonAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributeName;
-        private String attributeValue;
+        private DeliveryStreamHttpEndpointCommonAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHttpEndpointCommonAttribute();
         }
 
         public Builder(DeliveryStreamHttpEndpointCommonAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.attributeValue = defaults.attributeValue;
+            $ = new DeliveryStreamHttpEndpointCommonAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeValue(String attributeValue) {
-            this.attributeValue = Objects.requireNonNull(attributeValue);
+            $.attributeValue = attributeValue;
             return this;
-        }        public DeliveryStreamHttpEndpointCommonAttribute build() {
-            return new DeliveryStreamHttpEndpointCommonAttribute(attributeName, attributeValue);
+        }
+
+        public DeliveryStreamHttpEndpointCommonAttribute build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            $.attributeValue = Objects.requireNonNull($.attributeValue, "expected parameter 'attributeValue' to be non-null");
+            return $;
         }
     }
+
 }

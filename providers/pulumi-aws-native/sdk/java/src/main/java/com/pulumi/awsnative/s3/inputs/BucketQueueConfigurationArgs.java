@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class BucketQueueConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="event", required=true)
-      private final Output<String> event;
+    private Output<String> event;
 
     public Output<String> event() {
         return this.event;
@@ -36,10 +36,10 @@ public final class BucketQueueConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BucketNotificationFilterArgs> filter;
+    private @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Output<BucketNotificationFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BucketNotificationFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class BucketQueueConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="queue", required=true)
-      private final Output<String> queue;
+    private Output<String> queue;
 
     public Output<String> queue() {
         return this.queue;
     }
 
-    public BucketQueueConfigurationArgs(
-        Output<String> event,
-        @Nullable Output<BucketNotificationFilterArgs> filter,
-        Output<String> queue) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.filter = filter;
-        this.queue = Objects.requireNonNull(queue, "expected parameter 'queue' to be non-null");
-    }
+    private BucketQueueConfigurationArgs() {}
 
-    private BucketQueueConfigurationArgs() {
-        this.event = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.queue = Codegen.empty();
+    private BucketQueueConfigurationArgs(BucketQueueConfigurationArgs $) {
+        this.event = $.event;
+        this.filter = $.filter;
+        this.queue = $.queue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketQueueConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> event;
-        private @Nullable Output<BucketNotificationFilterArgs> filter;
-        private Output<String> queue;
+        private BucketQueueConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketQueueConfigurationArgs();
         }
 
         public Builder(BucketQueueConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.filter = defaults.filter;
-    	      this.queue = defaults.queue;
+            $ = new BucketQueueConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder event(Output<String> event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder event(String event) {
-            this.event = Output.of(Objects.requireNonNull(event));
-            return this;
+            return event(Output.of(event));
         }
+
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BucketNotificationFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder queue(Output<String> queue) {
-            this.queue = Objects.requireNonNull(queue);
+            $.queue = queue;
             return this;
         }
+
         public Builder queue(String queue) {
-            this.queue = Output.of(Objects.requireNonNull(queue));
-            return this;
-        }        public BucketQueueConfigurationArgs build() {
-            return new BucketQueueConfigurationArgs(event, filter, queue);
+            return queue(Output.of(queue));
+        }
+
+        public BucketQueueConfigurationArgs build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            $.queue = Objects.requireNonNull($.queue, "expected parameter 'queue' to be non-null");
+            return $;
         }
     }
+
 }

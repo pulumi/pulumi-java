@@ -7,11 +7,11 @@ import com.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import com.pulumi.awsnative.datasync.inputs.LocationObjectStorageTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accessKey")
-      private final @Nullable Output<String> accessKey;
+    private @Nullable Output<String> accessKey;
 
-    public Output<String> accessKey() {
-        return this.accessKey == null ? Codegen.empty() : this.accessKey;
+    public Optional<Output<String>> accessKey() {
+        return Optional.ofNullable(this.accessKey);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="agentArns", required=true)
-      private final Output<List<String>> agentArns;
+    private Output<List<String>> agentArns;
 
     public Output<List<String>> agentArns() {
         return this.agentArns;
@@ -46,7 +46,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -57,10 +57,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="secretKey")
-      private final @Nullable Output<String> secretKey;
+    private @Nullable Output<String> secretKey;
 
-    public Output<String> secretKey() {
-        return this.secretKey == null ? Codegen.empty() : this.secretKey;
+    public Optional<Output<String>> secretKey() {
+        return Optional.ofNullable(this.secretKey);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serverHostname", required=true)
-      private final Output<String> serverHostname;
+    private Output<String> serverHostname;
 
     public Output<String> serverHostname() {
         return this.serverHostname;
@@ -79,10 +79,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serverPort")
-      private final @Nullable Output<Integer> serverPort;
+    private @Nullable Output<Integer> serverPort;
 
-    public Output<Integer> serverPort() {
-        return this.serverPort == null ? Codegen.empty() : this.serverPort;
+    public Optional<Output<Integer>> serverPort() {
+        return Optional.ofNullable(this.serverPort);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serverProtocol")
-      private final @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
+    private @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
 
-    public Output<LocationObjectStorageServerProtocol> serverProtocol() {
-        return this.serverProtocol == null ? Codegen.empty() : this.serverProtocol;
+    public Optional<Output<LocationObjectStorageServerProtocol>> serverProtocol() {
+        return Optional.ofNullable(this.serverProtocol);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -112,160 +112,139 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LocationObjectStorageTagArgs>> tags;
+    private @Nullable Output<List<LocationObjectStorageTagArgs>> tags;
 
-    public Output<List<LocationObjectStorageTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LocationObjectStorageTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LocationObjectStorageArgs(
-        @Nullable Output<String> accessKey,
-        Output<List<String>> agentArns,
-        Output<String> bucketName,
-        @Nullable Output<String> secretKey,
-        Output<String> serverHostname,
-        @Nullable Output<Integer> serverPort,
-        @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<List<LocationObjectStorageTagArgs>> tags) {
-        this.accessKey = accessKey;
-        this.agentArns = Objects.requireNonNull(agentArns, "expected parameter 'agentArns' to be non-null");
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.secretKey = secretKey;
-        this.serverHostname = Objects.requireNonNull(serverHostname, "expected parameter 'serverHostname' to be non-null");
-        this.serverPort = serverPort;
-        this.serverProtocol = serverProtocol;
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-    }
+    private LocationObjectStorageArgs() {}
 
-    private LocationObjectStorageArgs() {
-        this.accessKey = Codegen.empty();
-        this.agentArns = Codegen.empty();
-        this.bucketName = Codegen.empty();
-        this.secretKey = Codegen.empty();
-        this.serverHostname = Codegen.empty();
-        this.serverPort = Codegen.empty();
-        this.serverProtocol = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LocationObjectStorageArgs(LocationObjectStorageArgs $) {
+        this.accessKey = $.accessKey;
+        this.agentArns = $.agentArns;
+        this.bucketName = $.bucketName;
+        this.secretKey = $.secretKey;
+        this.serverHostname = $.serverHostname;
+        this.serverPort = $.serverPort;
+        this.serverProtocol = $.serverProtocol;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationObjectStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessKey;
-        private Output<List<String>> agentArns;
-        private Output<String> bucketName;
-        private @Nullable Output<String> secretKey;
-        private Output<String> serverHostname;
-        private @Nullable Output<Integer> serverPort;
-        private @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<List<LocationObjectStorageTagArgs>> tags;
+        private LocationObjectStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationObjectStorageArgs();
         }
 
         public Builder(LocationObjectStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.agentArns = defaults.agentArns;
-    	      this.bucketName = defaults.bucketName;
-    	      this.secretKey = defaults.secretKey;
-    	      this.serverHostname = defaults.serverHostname;
-    	      this.serverPort = defaults.serverPort;
-    	      this.serverProtocol = defaults.serverProtocol;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
+            $ = new LocationObjectStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable Output<String> accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
-        public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Codegen.ofNullable(accessKey);
-            return this;
+
+        public Builder accessKey(String accessKey) {
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder agentArns(Output<List<String>> agentArns) {
-            this.agentArns = Objects.requireNonNull(agentArns);
+            $.agentArns = agentArns;
             return this;
         }
+
         public Builder agentArns(List<String> agentArns) {
-            this.agentArns = Output.of(Objects.requireNonNull(agentArns));
-            return this;
+            return agentArns(Output.of(agentArns));
         }
+
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }
+
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder secretKey(@Nullable Output<String> secretKey) {
-            this.secretKey = secretKey;
+            $.secretKey = secretKey;
             return this;
         }
-        public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Codegen.ofNullable(secretKey);
-            return this;
+
+        public Builder secretKey(String secretKey) {
+            return secretKey(Output.of(secretKey));
         }
+
         public Builder serverHostname(Output<String> serverHostname) {
-            this.serverHostname = Objects.requireNonNull(serverHostname);
+            $.serverHostname = serverHostname;
             return this;
         }
+
         public Builder serverHostname(String serverHostname) {
-            this.serverHostname = Output.of(Objects.requireNonNull(serverHostname));
-            return this;
+            return serverHostname(Output.of(serverHostname));
         }
+
         public Builder serverPort(@Nullable Output<Integer> serverPort) {
-            this.serverPort = serverPort;
+            $.serverPort = serverPort;
             return this;
         }
-        public Builder serverPort(@Nullable Integer serverPort) {
-            this.serverPort = Codegen.ofNullable(serverPort);
-            return this;
+
+        public Builder serverPort(Integer serverPort) {
+            return serverPort(Output.of(serverPort));
         }
+
         public Builder serverProtocol(@Nullable Output<LocationObjectStorageServerProtocol> serverProtocol) {
-            this.serverProtocol = serverProtocol;
+            $.serverProtocol = serverProtocol;
             return this;
         }
-        public Builder serverProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
-            this.serverProtocol = Codegen.ofNullable(serverProtocol);
-            return this;
+
+        public Builder serverProtocol(LocationObjectStorageServerProtocol serverProtocol) {
+            return serverProtocol(Output.of(serverProtocol));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<List<LocationObjectStorageTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LocationObjectStorageTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LocationObjectStorageTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LocationObjectStorageTagArgs... tags) {
             return tags(List.of(tags));
-        }        public LocationObjectStorageArgs build() {
-            return new LocationObjectStorageArgs(accessKey, agentArns, bucketName, secretKey, serverHostname, serverPort, serverProtocol, subdirectory, tags);
+        }
+
+        public LocationObjectStorageArgs build() {
+            $.agentArns = Objects.requireNonNull($.agentArns, "expected parameter 'agentArns' to be non-null");
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.serverHostname = Objects.requireNonNull($.serverHostname, "expected parameter 'serverHostname' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetPolicyArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetPolicyArgs() {}
 
-    private GetPolicyArgs() {
-        this.id = null;
+    private GetPolicyArgs(GetPolicyArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyArgs();
         }
 
         public Builder(GetPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetPolicyArgs build() {
-            return new GetPolicyArgs(id);
+        }
+
+        public GetPolicyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

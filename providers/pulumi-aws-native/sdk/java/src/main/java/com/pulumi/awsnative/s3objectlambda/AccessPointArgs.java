@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3objectlambda;
 import com.pulumi.awsnative.s3objectlambda.inputs.AccessPointObjectLambdaConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectLambdaConfiguration", required=true)
-      private final Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
+    private Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
 
     public Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration() {
         return this.objectLambdaConfiguration;
     }
 
-    public AccessPointArgs(
-        @Nullable Output<String> name,
-        Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
-        this.name = name;
-        this.objectLambdaConfiguration = Objects.requireNonNull(objectLambdaConfiguration, "expected parameter 'objectLambdaConfiguration' to be non-null");
-    }
+    private AccessPointArgs() {}
 
-    private AccessPointArgs() {
-        this.name = Codegen.empty();
-        this.objectLambdaConfiguration = Codegen.empty();
+    private AccessPointArgs(AccessPointArgs $) {
+        this.name = $.name;
+        this.objectLambdaConfiguration = $.objectLambdaConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
+        private AccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointArgs();
         }
 
         public Builder(AccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.objectLambdaConfiguration = defaults.objectLambdaConfiguration;
+            $ = new AccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder objectLambdaConfiguration(Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
-            this.objectLambdaConfiguration = Objects.requireNonNull(objectLambdaConfiguration);
+            $.objectLambdaConfiguration = objectLambdaConfiguration;
             return this;
         }
+
         public Builder objectLambdaConfiguration(AccessPointObjectLambdaConfigurationArgs objectLambdaConfiguration) {
-            this.objectLambdaConfiguration = Output.of(Objects.requireNonNull(objectLambdaConfiguration));
-            return this;
-        }        public AccessPointArgs build() {
-            return new AccessPointArgs(name, objectLambdaConfiguration);
+            return objectLambdaConfiguration(Output.of(objectLambdaConfiguration));
+        }
+
+        public AccessPointArgs build() {
+            $.objectLambdaConfiguration = Objects.requireNonNull($.objectLambdaConfiguration, "expected parameter 'objectLambdaConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

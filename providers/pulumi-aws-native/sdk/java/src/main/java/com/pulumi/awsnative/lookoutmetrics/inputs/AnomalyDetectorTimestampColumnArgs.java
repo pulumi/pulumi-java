@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class AnomalyDetectorTimestampColumnArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="columnFormat")
-      private final @Nullable Output<String> columnFormat;
+    private @Nullable Output<String> columnFormat;
 
-    public Output<String> columnFormat() {
-        return this.columnFormat == null ? Codegen.empty() : this.columnFormat;
+    public Optional<Output<String>> columnFormat() {
+        return Optional.ofNullable(this.columnFormat);
     }
 
     @Import(name="columnName")
-      private final @Nullable Output<String> columnName;
+    private @Nullable Output<String> columnName;
 
-    public Output<String> columnName() {
-        return this.columnName == null ? Codegen.empty() : this.columnName;
+    public Optional<Output<String>> columnName() {
+        return Optional.ofNullable(this.columnName);
     }
 
-    public AnomalyDetectorTimestampColumnArgs(
-        @Nullable Output<String> columnFormat,
-        @Nullable Output<String> columnName) {
-        this.columnFormat = columnFormat;
-        this.columnName = columnName;
-    }
+    private AnomalyDetectorTimestampColumnArgs() {}
 
-    private AnomalyDetectorTimestampColumnArgs() {
-        this.columnFormat = Codegen.empty();
-        this.columnName = Codegen.empty();
+    private AnomalyDetectorTimestampColumnArgs(AnomalyDetectorTimestampColumnArgs $) {
+        this.columnFormat = $.columnFormat;
+        this.columnName = $.columnName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorTimestampColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> columnFormat;
-        private @Nullable Output<String> columnName;
+        private AnomalyDetectorTimestampColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorTimestampColumnArgs();
         }
 
         public Builder(AnomalyDetectorTimestampColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnFormat = defaults.columnFormat;
-    	      this.columnName = defaults.columnName;
+            $ = new AnomalyDetectorTimestampColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnFormat(@Nullable Output<String> columnFormat) {
-            this.columnFormat = columnFormat;
+            $.columnFormat = columnFormat;
             return this;
         }
-        public Builder columnFormat(@Nullable String columnFormat) {
-            this.columnFormat = Codegen.ofNullable(columnFormat);
-            return this;
+
+        public Builder columnFormat(String columnFormat) {
+            return columnFormat(Output.of(columnFormat));
         }
+
         public Builder columnName(@Nullable Output<String> columnName) {
-            this.columnName = columnName;
+            $.columnName = columnName;
             return this;
         }
-        public Builder columnName(@Nullable String columnName) {
-            this.columnName = Codegen.ofNullable(columnName);
-            return this;
-        }        public AnomalyDetectorTimestampColumnArgs build() {
-            return new AnomalyDetectorTimestampColumnArgs(columnFormat, columnName);
+
+        public Builder columnName(String columnName) {
+            return columnName(Output.of(columnName));
+        }
+
+        public AnomalyDetectorTimestampColumnArgs build() {
+            return $;
         }
     }
+
 }

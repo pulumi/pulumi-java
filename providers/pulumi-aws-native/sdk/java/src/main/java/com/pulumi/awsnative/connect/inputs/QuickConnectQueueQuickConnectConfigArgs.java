@@ -5,7 +5,6 @@ package com.pulumi.awsnative.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class QuickConnectQueueQuickConnectConfigArgs extends com.pulumi.re
     public static final QuickConnectQueueQuickConnectConfigArgs Empty = new QuickConnectQueueQuickConnectConfigArgs();
 
     @Import(name="contactFlowArn", required=true)
-      private final Output<String> contactFlowArn;
+    private Output<String> contactFlowArn;
 
     public Output<String> contactFlowArn() {
         return this.contactFlowArn;
     }
 
     @Import(name="queueArn", required=true)
-      private final Output<String> queueArn;
+    private Output<String> queueArn;
 
     public Output<String> queueArn() {
         return this.queueArn;
     }
 
-    public QuickConnectQueueQuickConnectConfigArgs(
-        Output<String> contactFlowArn,
-        Output<String> queueArn) {
-        this.contactFlowArn = Objects.requireNonNull(contactFlowArn, "expected parameter 'contactFlowArn' to be non-null");
-        this.queueArn = Objects.requireNonNull(queueArn, "expected parameter 'queueArn' to be non-null");
-    }
+    private QuickConnectQueueQuickConnectConfigArgs() {}
 
-    private QuickConnectQueueQuickConnectConfigArgs() {
-        this.contactFlowArn = Codegen.empty();
-        this.queueArn = Codegen.empty();
+    private QuickConnectQueueQuickConnectConfigArgs(QuickConnectQueueQuickConnectConfigArgs $) {
+        this.contactFlowArn = $.contactFlowArn;
+        this.queueArn = $.queueArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickConnectQueueQuickConnectConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contactFlowArn;
-        private Output<String> queueArn;
+        private QuickConnectQueueQuickConnectConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickConnectQueueQuickConnectConfigArgs();
         }
 
         public Builder(QuickConnectQueueQuickConnectConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactFlowArn = defaults.contactFlowArn;
-    	      this.queueArn = defaults.queueArn;
+            $ = new QuickConnectQueueQuickConnectConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactFlowArn(Output<String> contactFlowArn) {
-            this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
+            $.contactFlowArn = contactFlowArn;
             return this;
         }
+
         public Builder contactFlowArn(String contactFlowArn) {
-            this.contactFlowArn = Output.of(Objects.requireNonNull(contactFlowArn));
-            return this;
+            return contactFlowArn(Output.of(contactFlowArn));
         }
+
         public Builder queueArn(Output<String> queueArn) {
-            this.queueArn = Objects.requireNonNull(queueArn);
+            $.queueArn = queueArn;
             return this;
         }
+
         public Builder queueArn(String queueArn) {
-            this.queueArn = Output.of(Objects.requireNonNull(queueArn));
-            return this;
-        }        public QuickConnectQueueQuickConnectConfigArgs build() {
-            return new QuickConnectQueueQuickConnectConfigArgs(contactFlowArn, queueArn);
+            return queueArn(Output.of(queueArn));
+        }
+
+        public QuickConnectQueueQuickConnectConfigArgs build() {
+            $.contactFlowArn = Objects.requireNonNull($.contactFlowArn, "expected parameter 'contactFlowArn' to be non-null");
+            $.queueArn = Objects.requireNonNull($.queueArn, "expected parameter 'queueArn' to be non-null");
+            return $;
         }
     }
+
 }

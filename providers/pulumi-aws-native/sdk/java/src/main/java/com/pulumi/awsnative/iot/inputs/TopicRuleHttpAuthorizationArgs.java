@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleSigV4AuthorizationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class TopicRuleHttpAuthorizationArgs extends com.pulumi.resources.R
     public static final TopicRuleHttpAuthorizationArgs Empty = new TopicRuleHttpAuthorizationArgs();
 
     @Import(name="sigv4")
-      private final @Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4;
+    private @Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4;
 
-    public Output<TopicRuleSigV4AuthorizationArgs> sigv4() {
-        return this.sigv4 == null ? Codegen.empty() : this.sigv4;
+    public Optional<Output<TopicRuleSigV4AuthorizationArgs>> sigv4() {
+        return Optional.ofNullable(this.sigv4);
     }
 
-    public TopicRuleHttpAuthorizationArgs(@Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4) {
-        this.sigv4 = sigv4;
-    }
+    private TopicRuleHttpAuthorizationArgs() {}
 
-    private TopicRuleHttpAuthorizationArgs() {
-        this.sigv4 = Codegen.empty();
+    private TopicRuleHttpAuthorizationArgs(TopicRuleHttpAuthorizationArgs $) {
+        this.sigv4 = $.sigv4;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleHttpAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4;
+        private TopicRuleHttpAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleHttpAuthorizationArgs();
         }
 
         public Builder(TopicRuleHttpAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sigv4 = defaults.sigv4;
+            $ = new TopicRuleHttpAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sigv4(@Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4) {
-            this.sigv4 = sigv4;
+            $.sigv4 = sigv4;
             return this;
         }
-        public Builder sigv4(@Nullable TopicRuleSigV4AuthorizationArgs sigv4) {
-            this.sigv4 = Codegen.ofNullable(sigv4);
-            return this;
-        }        public TopicRuleHttpAuthorizationArgs build() {
-            return new TopicRuleHttpAuthorizationArgs(sigv4);
+
+        public Builder sigv4(TopicRuleSigV4AuthorizationArgs sigv4) {
+            return sigv4(Output.of(sigv4));
+        }
+
+        public TopicRuleHttpAuthorizationArgs build() {
+            return $;
         }
     }
+
 }

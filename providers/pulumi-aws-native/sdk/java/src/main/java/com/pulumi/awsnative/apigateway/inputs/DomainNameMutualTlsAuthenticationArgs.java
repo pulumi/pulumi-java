@@ -5,9 +5,9 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
     public static final DomainNameMutualTlsAuthenticationArgs Empty = new DomainNameMutualTlsAuthenticationArgs();
 
     @Import(name="truststoreUri")
-      private final @Nullable Output<String> truststoreUri;
+    private @Nullable Output<String> truststoreUri;
 
-    public Output<String> truststoreUri() {
-        return this.truststoreUri == null ? Codegen.empty() : this.truststoreUri;
+    public Optional<Output<String>> truststoreUri() {
+        return Optional.ofNullable(this.truststoreUri);
     }
 
     @Import(name="truststoreVersion")
-      private final @Nullable Output<String> truststoreVersion;
+    private @Nullable Output<String> truststoreVersion;
 
-    public Output<String> truststoreVersion() {
-        return this.truststoreVersion == null ? Codegen.empty() : this.truststoreVersion;
+    public Optional<Output<String>> truststoreVersion() {
+        return Optional.ofNullable(this.truststoreVersion);
     }
 
-    public DomainNameMutualTlsAuthenticationArgs(
-        @Nullable Output<String> truststoreUri,
-        @Nullable Output<String> truststoreVersion) {
-        this.truststoreUri = truststoreUri;
-        this.truststoreVersion = truststoreVersion;
-    }
+    private DomainNameMutualTlsAuthenticationArgs() {}
 
-    private DomainNameMutualTlsAuthenticationArgs() {
-        this.truststoreUri = Codegen.empty();
-        this.truststoreVersion = Codegen.empty();
+    private DomainNameMutualTlsAuthenticationArgs(DomainNameMutualTlsAuthenticationArgs $) {
+        this.truststoreUri = $.truststoreUri;
+        this.truststoreVersion = $.truststoreVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameMutualTlsAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> truststoreUri;
-        private @Nullable Output<String> truststoreVersion;
+        private DomainNameMutualTlsAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameMutualTlsAuthenticationArgs();
         }
 
         public Builder(DomainNameMutualTlsAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.truststoreUri = defaults.truststoreUri;
-    	      this.truststoreVersion = defaults.truststoreVersion;
+            $ = new DomainNameMutualTlsAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder truststoreUri(@Nullable Output<String> truststoreUri) {
-            this.truststoreUri = truststoreUri;
+            $.truststoreUri = truststoreUri;
             return this;
         }
-        public Builder truststoreUri(@Nullable String truststoreUri) {
-            this.truststoreUri = Codegen.ofNullable(truststoreUri);
-            return this;
+
+        public Builder truststoreUri(String truststoreUri) {
+            return truststoreUri(Output.of(truststoreUri));
         }
+
         public Builder truststoreVersion(@Nullable Output<String> truststoreVersion) {
-            this.truststoreVersion = truststoreVersion;
+            $.truststoreVersion = truststoreVersion;
             return this;
         }
-        public Builder truststoreVersion(@Nullable String truststoreVersion) {
-            this.truststoreVersion = Codegen.ofNullable(truststoreVersion);
-            return this;
-        }        public DomainNameMutualTlsAuthenticationArgs build() {
-            return new DomainNameMutualTlsAuthenticationArgs(truststoreUri, truststoreVersion);
+
+        public Builder truststoreVersion(String truststoreVersion) {
+            return truststoreVersion(Output.of(truststoreVersion));
+        }
+
+        public DomainNameMutualTlsAuthenticationArgs build() {
+            return $;
         }
     }
+
 }

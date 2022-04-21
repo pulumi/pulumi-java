@@ -6,7 +6,6 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.KeyGroupConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class KeyGroupArgs extends com.pulumi.resources.ResourceArgs {
     public static final KeyGroupArgs Empty = new KeyGroupArgs();
 
     @Import(name="keyGroupConfig", required=true)
-      private final Output<KeyGroupConfigArgs> keyGroupConfig;
+    private Output<KeyGroupConfigArgs> keyGroupConfig;
 
     public Output<KeyGroupConfigArgs> keyGroupConfig() {
         return this.keyGroupConfig;
     }
 
-    public KeyGroupArgs(Output<KeyGroupConfigArgs> keyGroupConfig) {
-        this.keyGroupConfig = Objects.requireNonNull(keyGroupConfig, "expected parameter 'keyGroupConfig' to be non-null");
-    }
+    private KeyGroupArgs() {}
 
-    private KeyGroupArgs() {
-        this.keyGroupConfig = Codegen.empty();
+    private KeyGroupArgs(KeyGroupArgs $) {
+        this.keyGroupConfig = $.keyGroupConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<KeyGroupConfigArgs> keyGroupConfig;
+        private KeyGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyGroupArgs();
         }
 
         public Builder(KeyGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyGroupConfig = defaults.keyGroupConfig;
+            $ = new KeyGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyGroupConfig(Output<KeyGroupConfigArgs> keyGroupConfig) {
-            this.keyGroupConfig = Objects.requireNonNull(keyGroupConfig);
+            $.keyGroupConfig = keyGroupConfig;
             return this;
         }
+
         public Builder keyGroupConfig(KeyGroupConfigArgs keyGroupConfig) {
-            this.keyGroupConfig = Output.of(Objects.requireNonNull(keyGroupConfig));
-            return this;
-        }        public KeyGroupArgs build() {
-            return new KeyGroupArgs(keyGroupConfig);
+            return keyGroupConfig(Output.of(keyGroupConfig));
+        }
+
+        public KeyGroupArgs build() {
+            $.keyGroupConfig = Objects.requireNonNull($.keyGroupConfig, "expected parameter 'keyGroupConfig' to be non-null");
+            return $;
         }
     }
+
 }

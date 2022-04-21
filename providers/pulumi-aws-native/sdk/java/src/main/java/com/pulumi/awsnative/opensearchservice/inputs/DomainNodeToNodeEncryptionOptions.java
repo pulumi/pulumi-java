@@ -15,45 +15,44 @@ public final class DomainNodeToNodeEncryptionOptions extends com.pulumi.resource
     public static final DomainNodeToNodeEncryptionOptions Empty = new DomainNodeToNodeEncryptionOptions();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public DomainNodeToNodeEncryptionOptions(@Nullable Boolean enabled) {
-        this.enabled = enabled;
-    }
+    private DomainNodeToNodeEncryptionOptions() {}
 
-    private DomainNodeToNodeEncryptionOptions() {
-        this.enabled = null;
+    private DomainNodeToNodeEncryptionOptions(DomainNodeToNodeEncryptionOptions $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNodeToNodeEncryptionOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
+        private DomainNodeToNodeEncryptionOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNodeToNodeEncryptionOptions();
         }
 
         public Builder(DomainNodeToNodeEncryptionOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new DomainNodeToNodeEncryptionOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public DomainNodeToNodeEncryptionOptions build() {
-            return new DomainNodeToNodeEncryptionOptions(enabled);
+        }
+
+        public DomainNodeToNodeEncryptionOptions build() {
+            return $;
         }
     }
+
 }

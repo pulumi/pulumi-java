@@ -24,10 +24,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="organizationArns")
-      private final @Nullable List<String> organizationArns;
+    private @Nullable List<String> organizationArns;
 
-    public List<String> organizationArns() {
-        return this.organizationArns == null ? List.of() : this.organizationArns;
+    public Optional<List<String>> organizationArns() {
+        return Optional.ofNullable(this.organizationArns);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="organizationalUnitArns")
-      private final @Nullable List<String> organizationalUnitArns;
+    private @Nullable List<String> organizationalUnitArns;
 
-    public List<String> organizationalUnitArns() {
-        return this.organizationalUnitArns == null ? List.of() : this.organizationalUnitArns;
+    public Optional<List<String>> organizationalUnitArns() {
+        return Optional.ofNullable(this.organizationalUnitArns);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="userGroups")
-      private final @Nullable List<String> userGroups;
+    private @Nullable List<String> userGroups;
 
-    public List<String> userGroups() {
-        return this.userGroups == null ? List.of() : this.userGroups;
+    public Optional<List<String>> userGroups() {
+        return Optional.ofNullable(this.userGroups);
     }
 
     /**
@@ -57,85 +57,78 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="userIds")
-      private final @Nullable List<String> userIds;
+    private @Nullable List<String> userIds;
 
-    public List<String> userIds() {
-        return this.userIds == null ? List.of() : this.userIds;
+    public Optional<List<String>> userIds() {
+        return Optional.ofNullable(this.userIds);
     }
 
-    public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(
-        @Nullable List<String> organizationArns,
-        @Nullable List<String> organizationalUnitArns,
-        @Nullable List<String> userGroups,
-        @Nullable List<String> userIds) {
-        this.organizationArns = organizationArns;
-        this.organizationalUnitArns = organizationalUnitArns;
-        this.userGroups = userGroups;
-        this.userIds = userIds;
-    }
+    private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties() {}
 
-    private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties() {
-        this.organizationArns = List.of();
-        this.organizationalUnitArns = List.of();
-        this.userGroups = List.of();
-        this.userIds = List.of();
+    private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties $) {
+        this.organizationArns = $.organizationArns;
+        this.organizationalUnitArns = $.organizationalUnitArns;
+        this.userGroups = $.userGroups;
+        this.userIds = $.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> organizationArns;
-        private @Nullable List<String> organizationalUnitArns;
-        private @Nullable List<String> userGroups;
-        private @Nullable List<String> userIds;
+        private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties();
         }
 
         public Builder(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationArns = defaults.organizationArns;
-    	      this.organizationalUnitArns = defaults.organizationalUnitArns;
-    	      this.userGroups = defaults.userGroups;
-    	      this.userIds = defaults.userIds;
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationArns(@Nullable List<String> organizationArns) {
-            this.organizationArns = organizationArns;
+            $.organizationArns = organizationArns;
             return this;
         }
+
         public Builder organizationArns(String... organizationArns) {
             return organizationArns(List.of(organizationArns));
         }
+
         public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
-            this.organizationalUnitArns = organizationalUnitArns;
+            $.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
+
         public Builder organizationalUnitArns(String... organizationalUnitArns) {
             return organizationalUnitArns(List.of(organizationalUnitArns));
         }
+
         public Builder userGroups(@Nullable List<String> userGroups) {
-            this.userGroups = userGroups;
+            $.userGroups = userGroups;
             return this;
         }
+
         public Builder userGroups(String... userGroups) {
             return userGroups(List.of(userGroups));
         }
+
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = userIds;
+            $.userIds = userIds;
             return this;
         }
+
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
-        }        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties build() {
-            return new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(organizationArns, organizationalUnitArns, userGroups, userIds);
+        }
+
+        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties build() {
+            return $;
         }
     }
+
 }

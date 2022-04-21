@@ -17,45 +17,45 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hoursOfOperationArn", required=true)
-      private final String hoursOfOperationArn;
+    private String hoursOfOperationArn;
 
     public String hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
 
-    public GetHoursOfOperationArgs(String hoursOfOperationArn) {
-        this.hoursOfOperationArn = Objects.requireNonNull(hoursOfOperationArn, "expected parameter 'hoursOfOperationArn' to be non-null");
-    }
+    private GetHoursOfOperationArgs() {}
 
-    private GetHoursOfOperationArgs() {
-        this.hoursOfOperationArn = null;
+    private GetHoursOfOperationArgs(GetHoursOfOperationArgs $) {
+        this.hoursOfOperationArn = $.hoursOfOperationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHoursOfOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hoursOfOperationArn;
+        private GetHoursOfOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHoursOfOperationArgs();
         }
 
         public Builder(GetHoursOfOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hoursOfOperationArn = defaults.hoursOfOperationArn;
+            $ = new GetHoursOfOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hoursOfOperationArn(String hoursOfOperationArn) {
-            this.hoursOfOperationArn = Objects.requireNonNull(hoursOfOperationArn);
+            $.hoursOfOperationArn = hoursOfOperationArn;
             return this;
-        }        public GetHoursOfOperationArgs build() {
-            return new GetHoursOfOperationArgs(hoursOfOperationArn);
+        }
+
+        public GetHoursOfOperationArgs build() {
+            $.hoursOfOperationArn = Objects.requireNonNull($.hoursOfOperationArn, "expected parameter 'hoursOfOperationArn' to be non-null");
+            return $;
         }
     }
+
 }

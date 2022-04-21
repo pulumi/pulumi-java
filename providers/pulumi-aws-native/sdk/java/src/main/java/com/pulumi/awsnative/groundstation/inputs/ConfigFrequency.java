@@ -16,62 +16,57 @@ public final class ConfigFrequency extends com.pulumi.resources.InvokeArgs {
     public static final ConfigFrequency Empty = new ConfigFrequency();
 
     @Import(name="units")
-      private final @Nullable ConfigFrequencyUnits units;
+    private @Nullable ConfigFrequencyUnits units;
 
     public Optional<ConfigFrequencyUnits> units() {
-        return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
+        return Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
-      private final @Nullable Double value;
+    private @Nullable Double value;
 
     public Optional<Double> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ConfigFrequency(
-        @Nullable ConfigFrequencyUnits units,
-        @Nullable Double value) {
-        this.units = units;
-        this.value = value;
-    }
+    private ConfigFrequency() {}
 
-    private ConfigFrequency() {
-        this.units = null;
-        this.value = null;
+    private ConfigFrequency(ConfigFrequency $) {
+        this.units = $.units;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigFrequency defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigFrequencyUnits units;
-        private @Nullable Double value;
+        private ConfigFrequency $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigFrequency();
         }
 
         public Builder(ConfigFrequency defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.units = defaults.units;
-    	      this.value = defaults.value;
+            $ = new ConfigFrequency(Objects.requireNonNull(defaults));
         }
 
         public Builder units(@Nullable ConfigFrequencyUnits units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
+
         public Builder value(@Nullable Double value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ConfigFrequency build() {
-            return new ConfigFrequency(units, value);
+        }
+
+        public ConfigFrequency build() {
+            return $;
         }
     }
+
 }

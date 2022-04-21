@@ -7,11 +7,11 @@ import com.pulumi.awsnative.iot.inputs.FleetMetricAggregationTypeArgs;
 import com.pulumi.awsnative.iot.inputs.FleetMetricTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aggregationField")
-      private final @Nullable Output<String> aggregationField;
+    private @Nullable Output<String> aggregationField;
 
-    public Output<String> aggregationField() {
-        return this.aggregationField == null ? Codegen.empty() : this.aggregationField;
+    public Optional<Output<String>> aggregationField() {
+        return Optional.ofNullable(this.aggregationField);
     }
 
     @Import(name="aggregationType")
-      private final @Nullable Output<FleetMetricAggregationTypeArgs> aggregationType;
+    private @Nullable Output<FleetMetricAggregationTypeArgs> aggregationType;
 
-    public Output<FleetMetricAggregationTypeArgs> aggregationType() {
-        return this.aggregationType == null ? Codegen.empty() : this.aggregationType;
+    public Optional<Output<FleetMetricAggregationTypeArgs>> aggregationType() {
+        return Optional.ofNullable(this.aggregationType);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="indexName")
-      private final @Nullable Output<String> indexName;
+    private @Nullable Output<String> indexName;
 
-    public Output<String> indexName() {
-        return this.indexName == null ? Codegen.empty() : this.indexName;
+    public Optional<Output<String>> indexName() {
+        return Optional.ofNullable(this.indexName);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -75,10 +75,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<Integer> period;
+    private @Nullable Output<Integer> period;
 
-    public Output<Integer> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<Integer>> period() {
+        return Optional.ofNullable(this.period);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryString")
-      private final @Nullable Output<String> queryString;
+    private @Nullable Output<String> queryString;
 
-    public Output<String> queryString() {
-        return this.queryString == null ? Codegen.empty() : this.queryString;
+    public Optional<Output<String>> queryString() {
+        return Optional.ofNullable(this.queryString);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryVersion")
-      private final @Nullable Output<String> queryVersion;
+    private @Nullable Output<String> queryVersion;
 
-    public Output<String> queryVersion() {
-        return this.queryVersion == null ? Codegen.empty() : this.queryVersion;
+    public Optional<Output<String>> queryVersion() {
+        return Optional.ofNullable(this.queryVersion);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FleetMetricTagArgs>> tags;
+    private @Nullable Output<List<FleetMetricTagArgs>> tags;
 
-    public Output<List<FleetMetricTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FleetMetricTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -119,170 +119,143 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
-    public FleetMetricArgs(
-        @Nullable Output<String> aggregationField,
-        @Nullable Output<FleetMetricAggregationTypeArgs> aggregationType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> indexName,
-        Output<String> metricName,
-        @Nullable Output<Integer> period,
-        @Nullable Output<String> queryString,
-        @Nullable Output<String> queryVersion,
-        @Nullable Output<List<FleetMetricTagArgs>> tags,
-        @Nullable Output<String> unit) {
-        this.aggregationField = aggregationField;
-        this.aggregationType = aggregationType;
-        this.description = description;
-        this.indexName = indexName;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.period = period;
-        this.queryString = queryString;
-        this.queryVersion = queryVersion;
-        this.tags = tags;
-        this.unit = unit;
-    }
+    private FleetMetricArgs() {}
 
-    private FleetMetricArgs() {
-        this.aggregationField = Codegen.empty();
-        this.aggregationType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.indexName = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.period = Codegen.empty();
-        this.queryString = Codegen.empty();
-        this.queryVersion = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.unit = Codegen.empty();
+    private FleetMetricArgs(FleetMetricArgs $) {
+        this.aggregationField = $.aggregationField;
+        this.aggregationType = $.aggregationType;
+        this.description = $.description;
+        this.indexName = $.indexName;
+        this.metricName = $.metricName;
+        this.period = $.period;
+        this.queryString = $.queryString;
+        this.queryVersion = $.queryVersion;
+        this.tags = $.tags;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aggregationField;
-        private @Nullable Output<FleetMetricAggregationTypeArgs> aggregationType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> indexName;
-        private Output<String> metricName;
-        private @Nullable Output<Integer> period;
-        private @Nullable Output<String> queryString;
-        private @Nullable Output<String> queryVersion;
-        private @Nullable Output<List<FleetMetricTagArgs>> tags;
-        private @Nullable Output<String> unit;
+        private FleetMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetMetricArgs();
         }
 
         public Builder(FleetMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationField = defaults.aggregationField;
-    	      this.aggregationType = defaults.aggregationType;
-    	      this.description = defaults.description;
-    	      this.indexName = defaults.indexName;
-    	      this.metricName = defaults.metricName;
-    	      this.period = defaults.period;
-    	      this.queryString = defaults.queryString;
-    	      this.queryVersion = defaults.queryVersion;
-    	      this.tags = defaults.tags;
-    	      this.unit = defaults.unit;
+            $ = new FleetMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationField(@Nullable Output<String> aggregationField) {
-            this.aggregationField = aggregationField;
+            $.aggregationField = aggregationField;
             return this;
         }
-        public Builder aggregationField(@Nullable String aggregationField) {
-            this.aggregationField = Codegen.ofNullable(aggregationField);
-            return this;
+
+        public Builder aggregationField(String aggregationField) {
+            return aggregationField(Output.of(aggregationField));
         }
+
         public Builder aggregationType(@Nullable Output<FleetMetricAggregationTypeArgs> aggregationType) {
-            this.aggregationType = aggregationType;
+            $.aggregationType = aggregationType;
             return this;
         }
-        public Builder aggregationType(@Nullable FleetMetricAggregationTypeArgs aggregationType) {
-            this.aggregationType = Codegen.ofNullable(aggregationType);
-            return this;
+
+        public Builder aggregationType(FleetMetricAggregationTypeArgs aggregationType) {
+            return aggregationType(Output.of(aggregationType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder indexName(@Nullable Output<String> indexName) {
-            this.indexName = indexName;
+            $.indexName = indexName;
             return this;
         }
-        public Builder indexName(@Nullable String indexName) {
-            this.indexName = Codegen.ofNullable(indexName);
-            return this;
+
+        public Builder indexName(String indexName) {
+            return indexName(Output.of(indexName));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder period(@Nullable Output<Integer> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable Integer period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
+
+        public Builder period(Integer period) {
+            return period(Output.of(period));
         }
+
         public Builder queryString(@Nullable Output<String> queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
-        public Builder queryString(@Nullable String queryString) {
-            this.queryString = Codegen.ofNullable(queryString);
-            return this;
+
+        public Builder queryString(String queryString) {
+            return queryString(Output.of(queryString));
         }
+
         public Builder queryVersion(@Nullable Output<String> queryVersion) {
-            this.queryVersion = queryVersion;
+            $.queryVersion = queryVersion;
             return this;
         }
-        public Builder queryVersion(@Nullable String queryVersion) {
-            this.queryVersion = Codegen.ofNullable(queryVersion);
-            return this;
+
+        public Builder queryVersion(String queryVersion) {
+            return queryVersion(Output.of(queryVersion));
         }
+
         public Builder tags(@Nullable Output<List<FleetMetricTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FleetMetricTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FleetMetricTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FleetMetricTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
-        }        public FleetMetricArgs build() {
-            return new FleetMetricArgs(aggregationField, aggregationType, description, indexName, metricName, period, queryString, queryVersion, tags, unit);
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
+        }
+
+        public FleetMetricArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

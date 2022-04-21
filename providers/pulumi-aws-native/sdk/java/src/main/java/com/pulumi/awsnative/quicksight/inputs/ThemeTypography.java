@@ -20,48 +20,48 @@ public final class ThemeTypography extends com.pulumi.resources.InvokeArgs {
     public static final ThemeTypography Empty = new ThemeTypography();
 
     @Import(name="fontFamilies")
-      private final @Nullable List<ThemeFont> fontFamilies;
+    private @Nullable List<ThemeFont> fontFamilies;
 
-    public List<ThemeFont> fontFamilies() {
-        return this.fontFamilies == null ? List.of() : this.fontFamilies;
+    public Optional<List<ThemeFont>> fontFamilies() {
+        return Optional.ofNullable(this.fontFamilies);
     }
 
-    public ThemeTypography(@Nullable List<ThemeFont> fontFamilies) {
-        this.fontFamilies = fontFamilies;
-    }
+    private ThemeTypography() {}
 
-    private ThemeTypography() {
-        this.fontFamilies = List.of();
+    private ThemeTypography(ThemeTypography $) {
+        this.fontFamilies = $.fontFamilies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeTypography defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ThemeFont> fontFamilies;
+        private ThemeTypography $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeTypography();
         }
 
         public Builder(ThemeTypography defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fontFamilies = defaults.fontFamilies;
+            $ = new ThemeTypography(Objects.requireNonNull(defaults));
         }
 
         public Builder fontFamilies(@Nullable List<ThemeFont> fontFamilies) {
-            this.fontFamilies = fontFamilies;
+            $.fontFamilies = fontFamilies;
             return this;
         }
+
         public Builder fontFamilies(ThemeFont... fontFamilies) {
             return fontFamilies(List.of(fontFamilies));
-        }        public ThemeTypography build() {
-            return new ThemeTypography(fontFamilies);
+        }
+
+        public ThemeTypography build() {
+            return $;
         }
     }
+
 }

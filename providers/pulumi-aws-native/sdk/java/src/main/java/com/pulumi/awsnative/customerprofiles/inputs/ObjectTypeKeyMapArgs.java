@@ -6,10 +6,10 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class ObjectTypeKeyMapArgs extends com.pulumi.resources.ResourceArg
     public static final ObjectTypeKeyMapArgs Empty = new ObjectTypeKeyMapArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="objectTypeKeyList")
-      private final @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList;
+    private @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList;
 
-    public Output<List<ObjectTypeKeyArgs>> objectTypeKeyList() {
-        return this.objectTypeKeyList == null ? Codegen.empty() : this.objectTypeKeyList;
+    public Optional<Output<List<ObjectTypeKeyArgs>>> objectTypeKeyList() {
+        return Optional.ofNullable(this.objectTypeKeyList);
     }
 
-    public ObjectTypeKeyMapArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
-        this.name = name;
-        this.objectTypeKeyList = objectTypeKeyList;
-    }
+    private ObjectTypeKeyMapArgs() {}
 
-    private ObjectTypeKeyMapArgs() {
-        this.name = Codegen.empty();
-        this.objectTypeKeyList = Codegen.empty();
+    private ObjectTypeKeyMapArgs(ObjectTypeKeyMapArgs $) {
+        this.name = $.name;
+        this.objectTypeKeyList = $.objectTypeKeyList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeKeyMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList;
+        private ObjectTypeKeyMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeKeyMapArgs();
         }
 
         public Builder(ObjectTypeKeyMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.objectTypeKeyList = defaults.objectTypeKeyList;
+            $ = new ObjectTypeKeyMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder objectTypeKeyList(@Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
-            this.objectTypeKeyList = objectTypeKeyList;
+            $.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
-        public Builder objectTypeKeyList(@Nullable List<ObjectTypeKeyArgs> objectTypeKeyList) {
-            this.objectTypeKeyList = Codegen.ofNullable(objectTypeKeyList);
-            return this;
+
+        public Builder objectTypeKeyList(List<ObjectTypeKeyArgs> objectTypeKeyList) {
+            return objectTypeKeyList(Output.of(objectTypeKeyList));
         }
+
         public Builder objectTypeKeyList(ObjectTypeKeyArgs... objectTypeKeyList) {
             return objectTypeKeyList(List.of(objectTypeKeyList));
-        }        public ObjectTypeKeyMapArgs build() {
-            return new ObjectTypeKeyMapArgs(name, objectTypeKeyList);
+        }
+
+        public ObjectTypeKeyMapArgs build() {
+            return $;
         }
     }
+
 }

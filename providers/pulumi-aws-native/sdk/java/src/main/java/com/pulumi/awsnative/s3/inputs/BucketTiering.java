@@ -18,7 +18,7 @@ public final class BucketTiering extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessTier", required=true)
-      private final BucketTieringAccessTier accessTier;
+    private BucketTieringAccessTier accessTier;
 
     public BucketTieringAccessTier accessTier() {
         return this.accessTier;
@@ -29,55 +29,52 @@ public final class BucketTiering extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="days", required=true)
-      private final Integer days;
+    private Integer days;
 
     public Integer days() {
         return this.days;
     }
 
-    public BucketTiering(
-        BucketTieringAccessTier accessTier,
-        Integer days) {
-        this.accessTier = Objects.requireNonNull(accessTier, "expected parameter 'accessTier' to be non-null");
-        this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
-    }
+    private BucketTiering() {}
 
-    private BucketTiering() {
-        this.accessTier = null;
-        this.days = null;
+    private BucketTiering(BucketTiering $) {
+        this.accessTier = $.accessTier;
+        this.days = $.days;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketTiering defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketTieringAccessTier accessTier;
-        private Integer days;
+        private BucketTiering $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketTiering();
         }
 
         public Builder(BucketTiering defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTier = defaults.accessTier;
-    	      this.days = defaults.days;
+            $ = new BucketTiering(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTier(BucketTieringAccessTier accessTier) {
-            this.accessTier = Objects.requireNonNull(accessTier);
+            $.accessTier = accessTier;
             return this;
         }
+
         public Builder days(Integer days) {
-            this.days = Objects.requireNonNull(days);
+            $.days = days;
             return this;
-        }        public BucketTiering build() {
-            return new BucketTiering(accessTier, days);
+        }
+
+        public BucketTiering build() {
+            $.accessTier = Objects.requireNonNull($.accessTier, "expected parameter 'accessTier' to be non-null");
+            $.days = Objects.requireNonNull($.days, "expected parameter 'days' to be non-null");
+            return $;
         }
     }
+
 }

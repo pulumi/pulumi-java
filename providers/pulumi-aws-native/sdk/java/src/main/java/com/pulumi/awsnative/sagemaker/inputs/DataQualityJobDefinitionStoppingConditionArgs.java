@@ -5,7 +5,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class DataQualityJobDefinitionStoppingConditionArgs extends com.pul
      * 
      */
     @Import(name="maxRuntimeInSeconds", required=true)
-      private final Output<Integer> maxRuntimeInSeconds;
+    private Output<Integer> maxRuntimeInSeconds;
 
     public Output<Integer> maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
 
-    public DataQualityJobDefinitionStoppingConditionArgs(Output<Integer> maxRuntimeInSeconds) {
-        this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds, "expected parameter 'maxRuntimeInSeconds' to be non-null");
-    }
+    private DataQualityJobDefinitionStoppingConditionArgs() {}
 
-    private DataQualityJobDefinitionStoppingConditionArgs() {
-        this.maxRuntimeInSeconds = Codegen.empty();
+    private DataQualityJobDefinitionStoppingConditionArgs(DataQualityJobDefinitionStoppingConditionArgs $) {
+        this.maxRuntimeInSeconds = $.maxRuntimeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataQualityJobDefinitionStoppingConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxRuntimeInSeconds;
+        private DataQualityJobDefinitionStoppingConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataQualityJobDefinitionStoppingConditionArgs();
         }
 
         public Builder(DataQualityJobDefinitionStoppingConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRuntimeInSeconds = defaults.maxRuntimeInSeconds;
+            $ = new DataQualityJobDefinitionStoppingConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRuntimeInSeconds(Output<Integer> maxRuntimeInSeconds) {
-            this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
+            $.maxRuntimeInSeconds = maxRuntimeInSeconds;
             return this;
         }
+
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
-            this.maxRuntimeInSeconds = Output.of(Objects.requireNonNull(maxRuntimeInSeconds));
-            return this;
-        }        public DataQualityJobDefinitionStoppingConditionArgs build() {
-            return new DataQualityJobDefinitionStoppingConditionArgs(maxRuntimeInSeconds);
+            return maxRuntimeInSeconds(Output.of(maxRuntimeInSeconds));
+        }
+
+        public DataQualityJobDefinitionStoppingConditionArgs build() {
+            $.maxRuntimeInSeconds = Objects.requireNonNull($.maxRuntimeInSeconds, "expected parameter 'maxRuntimeInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.awsnative.appflow.inputs.FlowAggregationConfigArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowPrefixConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,83 @@ public final class FlowUpsolverS3OutputFormatConfigArgs extends com.pulumi.resou
     public static final FlowUpsolverS3OutputFormatConfigArgs Empty = new FlowUpsolverS3OutputFormatConfigArgs();
 
     @Import(name="aggregationConfig")
-      private final @Nullable Output<FlowAggregationConfigArgs> aggregationConfig;
+    private @Nullable Output<FlowAggregationConfigArgs> aggregationConfig;
 
-    public Output<FlowAggregationConfigArgs> aggregationConfig() {
-        return this.aggregationConfig == null ? Codegen.empty() : this.aggregationConfig;
+    public Optional<Output<FlowAggregationConfigArgs>> aggregationConfig() {
+        return Optional.ofNullable(this.aggregationConfig);
     }
 
     @Import(name="fileType")
-      private final @Nullable Output<FlowFileType> fileType;
+    private @Nullable Output<FlowFileType> fileType;
 
-    public Output<FlowFileType> fileType() {
-        return this.fileType == null ? Codegen.empty() : this.fileType;
+    public Optional<Output<FlowFileType>> fileType() {
+        return Optional.ofNullable(this.fileType);
     }
 
     @Import(name="prefixConfig", required=true)
-      private final Output<FlowPrefixConfigArgs> prefixConfig;
+    private Output<FlowPrefixConfigArgs> prefixConfig;
 
     public Output<FlowPrefixConfigArgs> prefixConfig() {
         return this.prefixConfig;
     }
 
-    public FlowUpsolverS3OutputFormatConfigArgs(
-        @Nullable Output<FlowAggregationConfigArgs> aggregationConfig,
-        @Nullable Output<FlowFileType> fileType,
-        Output<FlowPrefixConfigArgs> prefixConfig) {
-        this.aggregationConfig = aggregationConfig;
-        this.fileType = fileType;
-        this.prefixConfig = Objects.requireNonNull(prefixConfig, "expected parameter 'prefixConfig' to be non-null");
-    }
+    private FlowUpsolverS3OutputFormatConfigArgs() {}
 
-    private FlowUpsolverS3OutputFormatConfigArgs() {
-        this.aggregationConfig = Codegen.empty();
-        this.fileType = Codegen.empty();
-        this.prefixConfig = Codegen.empty();
+    private FlowUpsolverS3OutputFormatConfigArgs(FlowUpsolverS3OutputFormatConfigArgs $) {
+        this.aggregationConfig = $.aggregationConfig;
+        this.fileType = $.fileType;
+        this.prefixConfig = $.prefixConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowUpsolverS3OutputFormatConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowAggregationConfigArgs> aggregationConfig;
-        private @Nullable Output<FlowFileType> fileType;
-        private Output<FlowPrefixConfigArgs> prefixConfig;
+        private FlowUpsolverS3OutputFormatConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowUpsolverS3OutputFormatConfigArgs();
         }
 
         public Builder(FlowUpsolverS3OutputFormatConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationConfig = defaults.aggregationConfig;
-    	      this.fileType = defaults.fileType;
-    	      this.prefixConfig = defaults.prefixConfig;
+            $ = new FlowUpsolverS3OutputFormatConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationConfig(@Nullable Output<FlowAggregationConfigArgs> aggregationConfig) {
-            this.aggregationConfig = aggregationConfig;
+            $.aggregationConfig = aggregationConfig;
             return this;
         }
-        public Builder aggregationConfig(@Nullable FlowAggregationConfigArgs aggregationConfig) {
-            this.aggregationConfig = Codegen.ofNullable(aggregationConfig);
-            return this;
+
+        public Builder aggregationConfig(FlowAggregationConfigArgs aggregationConfig) {
+            return aggregationConfig(Output.of(aggregationConfig));
         }
+
         public Builder fileType(@Nullable Output<FlowFileType> fileType) {
-            this.fileType = fileType;
+            $.fileType = fileType;
             return this;
         }
-        public Builder fileType(@Nullable FlowFileType fileType) {
-            this.fileType = Codegen.ofNullable(fileType);
-            return this;
+
+        public Builder fileType(FlowFileType fileType) {
+            return fileType(Output.of(fileType));
         }
+
         public Builder prefixConfig(Output<FlowPrefixConfigArgs> prefixConfig) {
-            this.prefixConfig = Objects.requireNonNull(prefixConfig);
+            $.prefixConfig = prefixConfig;
             return this;
         }
+
         public Builder prefixConfig(FlowPrefixConfigArgs prefixConfig) {
-            this.prefixConfig = Output.of(Objects.requireNonNull(prefixConfig));
-            return this;
-        }        public FlowUpsolverS3OutputFormatConfigArgs build() {
-            return new FlowUpsolverS3OutputFormatConfigArgs(aggregationConfig, fileType, prefixConfig);
+            return prefixConfig(Output.of(prefixConfig));
+        }
+
+        public FlowUpsolverS3OutputFormatConfigArgs build() {
+            $.prefixConfig = Objects.requireNonNull($.prefixConfig, "expected parameter 'prefixConfig' to be non-null");
+            return $;
         }
     }
+
 }

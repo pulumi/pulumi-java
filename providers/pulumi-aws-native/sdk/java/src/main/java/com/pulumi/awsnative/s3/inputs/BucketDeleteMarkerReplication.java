@@ -15,45 +15,44 @@ public final class BucketDeleteMarkerReplication extends com.pulumi.resources.In
     public static final BucketDeleteMarkerReplication Empty = new BucketDeleteMarkerReplication();
 
     @Import(name="status")
-      private final @Nullable BucketDeleteMarkerReplicationStatus status;
+    private @Nullable BucketDeleteMarkerReplicationStatus status;
 
     public Optional<BucketDeleteMarkerReplicationStatus> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public BucketDeleteMarkerReplication(@Nullable BucketDeleteMarkerReplicationStatus status) {
-        this.status = status;
-    }
+    private BucketDeleteMarkerReplication() {}
 
-    private BucketDeleteMarkerReplication() {
-        this.status = null;
+    private BucketDeleteMarkerReplication(BucketDeleteMarkerReplication $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDeleteMarkerReplication defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketDeleteMarkerReplicationStatus status;
+        private BucketDeleteMarkerReplication $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDeleteMarkerReplication();
         }
 
         public Builder(BucketDeleteMarkerReplication defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketDeleteMarkerReplication(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable BucketDeleteMarkerReplicationStatus status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public BucketDeleteMarkerReplication build() {
-            return new BucketDeleteMarkerReplication(status);
+        }
+
+        public BucketDeleteMarkerReplication build() {
+            return $;
         }
     }
+
 }

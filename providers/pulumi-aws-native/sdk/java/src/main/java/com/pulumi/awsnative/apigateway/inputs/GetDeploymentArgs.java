@@ -17,7 +17,7 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentId", required=true)
-      private final String deploymentId;
+    private String deploymentId;
 
     public String deploymentId() {
         return this.deploymentId;
@@ -28,55 +28,52 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
     }
 
-    public GetDeploymentArgs(
-        String deploymentId,
-        String restApiId) {
-        this.deploymentId = Objects.requireNonNull(deploymentId, "expected parameter 'deploymentId' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private GetDeploymentArgs() {}
 
-    private GetDeploymentArgs() {
-        this.deploymentId = null;
-        this.restApiId = null;
+    private GetDeploymentArgs(GetDeploymentArgs $) {
+        this.deploymentId = $.deploymentId;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentId;
-        private String restApiId;
+        private GetDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentArgs();
         }
 
         public Builder(GetDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentId = defaults.deploymentId;
-    	      this.restApiId = defaults.restApiId;
+            $ = new GetDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentId(String deploymentId) {
-            this.deploymentId = Objects.requireNonNull(deploymentId);
+            $.deploymentId = deploymentId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
-        }        public GetDeploymentArgs build() {
-            return new GetDeploymentArgs(deploymentId, restApiId);
+        }
+
+        public GetDeploymentArgs build() {
+            $.deploymentId = Objects.requireNonNull($.deploymentId, "expected parameter 'deploymentId' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

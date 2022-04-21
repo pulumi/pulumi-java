@@ -17,78 +17,72 @@ public final class TopicRuleAssetPropertyValue extends com.pulumi.resources.Invo
     public static final TopicRuleAssetPropertyValue Empty = new TopicRuleAssetPropertyValue();
 
     @Import(name="quality")
-      private final @Nullable String quality;
+    private @Nullable String quality;
 
     public Optional<String> quality() {
-        return this.quality == null ? Optional.empty() : Optional.ofNullable(this.quality);
+        return Optional.ofNullable(this.quality);
     }
 
     @Import(name="timestamp", required=true)
-      private final TopicRuleAssetPropertyTimestamp timestamp;
+    private TopicRuleAssetPropertyTimestamp timestamp;
 
     public TopicRuleAssetPropertyTimestamp timestamp() {
         return this.timestamp;
     }
 
     @Import(name="value", required=true)
-      private final TopicRuleAssetPropertyVariant value;
+    private TopicRuleAssetPropertyVariant value;
 
     public TopicRuleAssetPropertyVariant value() {
         return this.value;
     }
 
-    public TopicRuleAssetPropertyValue(
-        @Nullable String quality,
-        TopicRuleAssetPropertyTimestamp timestamp,
-        TopicRuleAssetPropertyVariant value) {
-        this.quality = quality;
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TopicRuleAssetPropertyValue() {}
 
-    private TopicRuleAssetPropertyValue() {
-        this.quality = null;
-        this.timestamp = null;
-        this.value = null;
+    private TopicRuleAssetPropertyValue(TopicRuleAssetPropertyValue $) {
+        this.quality = $.quality;
+        this.timestamp = $.timestamp;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleAssetPropertyValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String quality;
-        private TopicRuleAssetPropertyTimestamp timestamp;
-        private TopicRuleAssetPropertyVariant value;
+        private TopicRuleAssetPropertyValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleAssetPropertyValue();
         }
 
         public Builder(TopicRuleAssetPropertyValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quality = defaults.quality;
-    	      this.timestamp = defaults.timestamp;
-    	      this.value = defaults.value;
+            $ = new TopicRuleAssetPropertyValue(Objects.requireNonNull(defaults));
         }
 
         public Builder quality(@Nullable String quality) {
-            this.quality = quality;
+            $.quality = quality;
             return this;
         }
+
         public Builder timestamp(TopicRuleAssetPropertyTimestamp timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder value(TopicRuleAssetPropertyVariant value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public TopicRuleAssetPropertyValue build() {
-            return new TopicRuleAssetPropertyValue(quality, timestamp, value);
+        }
+
+        public TopicRuleAssetPropertyValue build() {
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

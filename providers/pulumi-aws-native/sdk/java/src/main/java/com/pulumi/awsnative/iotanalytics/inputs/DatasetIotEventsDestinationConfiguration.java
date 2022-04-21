@@ -13,62 +13,59 @@ public final class DatasetIotEventsDestinationConfiguration extends com.pulumi.r
     public static final DatasetIotEventsDestinationConfiguration Empty = new DatasetIotEventsDestinationConfiguration();
 
     @Import(name="inputName", required=true)
-      private final String inputName;
+    private String inputName;
 
     public String inputName() {
         return this.inputName;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public DatasetIotEventsDestinationConfiguration(
-        String inputName,
-        String roleArn) {
-        this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private DatasetIotEventsDestinationConfiguration() {}
 
-    private DatasetIotEventsDestinationConfiguration() {
-        this.inputName = null;
-        this.roleArn = null;
+    private DatasetIotEventsDestinationConfiguration(DatasetIotEventsDestinationConfiguration $) {
+        this.inputName = $.inputName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetIotEventsDestinationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String inputName;
-        private String roleArn;
+        private DatasetIotEventsDestinationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetIotEventsDestinationConfiguration();
         }
 
         public Builder(DatasetIotEventsDestinationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputName = defaults.inputName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new DatasetIotEventsDestinationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder inputName(String inputName) {
-            this.inputName = Objects.requireNonNull(inputName);
+            $.inputName = inputName;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public DatasetIotEventsDestinationConfiguration build() {
-            return new DatasetIotEventsDestinationConfiguration(inputName, roleArn);
+        }
+
+        public DatasetIotEventsDestinationConfiguration build() {
+            $.inputName = Objects.requireNonNull($.inputName, "expected parameter 'inputName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,48 +16,48 @@ public final class ListenerRuleHttpRequestMethodConfig extends com.pulumi.resour
     public static final ListenerRuleHttpRequestMethodConfig Empty = new ListenerRuleHttpRequestMethodConfig();
 
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRuleHttpRequestMethodConfig(@Nullable List<String> values) {
-        this.values = values;
-    }
+    private ListenerRuleHttpRequestMethodConfig() {}
 
-    private ListenerRuleHttpRequestMethodConfig() {
-        this.values = List.of();
+    private ListenerRuleHttpRequestMethodConfig(ListenerRuleHttpRequestMethodConfig $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleHttpRequestMethodConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> values;
+        private ListenerRuleHttpRequestMethodConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleHttpRequestMethodConfig();
         }
 
         public Builder(ListenerRuleHttpRequestMethodConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRuleHttpRequestMethodConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRuleHttpRequestMethodConfig build() {
-            return new ListenerRuleHttpRequestMethodConfig(values);
+        }
+
+        public ListenerRuleHttpRequestMethodConfig build() {
+            return $;
         }
     }
+
 }

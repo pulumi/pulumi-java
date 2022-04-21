@@ -21,7 +21,7 @@ public final class EnvironmentTag extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -32,55 +32,52 @@ public final class EnvironmentTag extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public EnvironmentTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private EnvironmentTag() {}
 
-    private EnvironmentTag() {
-        this.key = null;
-        this.value = null;
+    private EnvironmentTag(EnvironmentTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private EnvironmentTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentTag();
         }
 
         public Builder(EnvironmentTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new EnvironmentTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public EnvironmentTag build() {
-            return new EnvironmentTag(key, value);
+        }
+
+        public EnvironmentTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

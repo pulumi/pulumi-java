@@ -18,81 +18,74 @@ public final class StateMachineLoggingConfiguration extends com.pulumi.resources
     public static final StateMachineLoggingConfiguration Empty = new StateMachineLoggingConfiguration();
 
     @Import(name="destinations")
-      private final @Nullable List<StateMachineLogDestination> destinations;
+    private @Nullable List<StateMachineLogDestination> destinations;
 
-    public List<StateMachineLogDestination> destinations() {
-        return this.destinations == null ? List.of() : this.destinations;
+    public Optional<List<StateMachineLogDestination>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     @Import(name="includeExecutionData")
-      private final @Nullable Boolean includeExecutionData;
+    private @Nullable Boolean includeExecutionData;
 
     public Optional<Boolean> includeExecutionData() {
-        return this.includeExecutionData == null ? Optional.empty() : Optional.ofNullable(this.includeExecutionData);
+        return Optional.ofNullable(this.includeExecutionData);
     }
 
     @Import(name="level")
-      private final @Nullable StateMachineLoggingConfigurationLevel level;
+    private @Nullable StateMachineLoggingConfigurationLevel level;
 
     public Optional<StateMachineLoggingConfigurationLevel> level() {
-        return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
+        return Optional.ofNullable(this.level);
     }
 
-    public StateMachineLoggingConfiguration(
-        @Nullable List<StateMachineLogDestination> destinations,
-        @Nullable Boolean includeExecutionData,
-        @Nullable StateMachineLoggingConfigurationLevel level) {
-        this.destinations = destinations;
-        this.includeExecutionData = includeExecutionData;
-        this.level = level;
-    }
+    private StateMachineLoggingConfiguration() {}
 
-    private StateMachineLoggingConfiguration() {
-        this.destinations = List.of();
-        this.includeExecutionData = null;
-        this.level = null;
+    private StateMachineLoggingConfiguration(StateMachineLoggingConfiguration $) {
+        this.destinations = $.destinations;
+        this.includeExecutionData = $.includeExecutionData;
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineLoggingConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<StateMachineLogDestination> destinations;
-        private @Nullable Boolean includeExecutionData;
-        private @Nullable StateMachineLoggingConfigurationLevel level;
+        private StateMachineLoggingConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineLoggingConfiguration();
         }
 
         public Builder(StateMachineLoggingConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.includeExecutionData = defaults.includeExecutionData;
-    	      this.level = defaults.level;
+            $ = new StateMachineLoggingConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(@Nullable List<StateMachineLogDestination> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(StateMachineLogDestination... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
-            this.includeExecutionData = includeExecutionData;
+            $.includeExecutionData = includeExecutionData;
             return this;
         }
+
         public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
-            this.level = level;
+            $.level = level;
             return this;
-        }        public StateMachineLoggingConfiguration build() {
-            return new StateMachineLoggingConfiguration(destinations, includeExecutionData, level);
+        }
+
+        public StateMachineLoggingConfiguration build() {
+            return $;
         }
     }
+
 }

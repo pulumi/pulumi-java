@@ -5,7 +5,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,90 +14,85 @@ public final class FeatureGroupDataCatalogConfigArgs extends com.pulumi.resource
     public static final FeatureGroupDataCatalogConfigArgs Empty = new FeatureGroupDataCatalogConfigArgs();
 
     @Import(name="catalog", required=true)
-      private final Output<String> catalog;
+    private Output<String> catalog;
 
     public Output<String> catalog() {
         return this.catalog;
     }
 
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
     }
 
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public FeatureGroupDataCatalogConfigArgs(
-        Output<String> catalog,
-        Output<String> database,
-        Output<String> tableName) {
-        this.catalog = Objects.requireNonNull(catalog, "expected parameter 'catalog' to be non-null");
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private FeatureGroupDataCatalogConfigArgs() {}
 
-    private FeatureGroupDataCatalogConfigArgs() {
-        this.catalog = Codegen.empty();
-        this.database = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private FeatureGroupDataCatalogConfigArgs(FeatureGroupDataCatalogConfigArgs $) {
+        this.catalog = $.catalog;
+        this.database = $.database;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureGroupDataCatalogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> catalog;
-        private Output<String> database;
-        private Output<String> tableName;
+        private FeatureGroupDataCatalogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureGroupDataCatalogConfigArgs();
         }
 
         public Builder(FeatureGroupDataCatalogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalog = defaults.catalog;
-    	      this.database = defaults.database;
-    	      this.tableName = defaults.tableName;
+            $ = new FeatureGroupDataCatalogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalog(Output<String> catalog) {
-            this.catalog = Objects.requireNonNull(catalog);
+            $.catalog = catalog;
             return this;
         }
+
         public Builder catalog(String catalog) {
-            this.catalog = Output.of(Objects.requireNonNull(catalog));
-            return this;
+            return catalog(Output.of(catalog));
         }
+
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public FeatureGroupDataCatalogConfigArgs build() {
-            return new FeatureGroupDataCatalogConfigArgs(catalog, database, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public FeatureGroupDataCatalogConfigArgs build() {
+            $.catalog = Objects.requireNonNull($.catalog, "expected parameter 'catalog' to be non-null");
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

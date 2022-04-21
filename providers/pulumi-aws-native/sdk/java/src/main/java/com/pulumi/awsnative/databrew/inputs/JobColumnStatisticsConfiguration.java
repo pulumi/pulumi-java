@@ -17,65 +17,62 @@ public final class JobColumnStatisticsConfiguration extends com.pulumi.resources
     public static final JobColumnStatisticsConfiguration Empty = new JobColumnStatisticsConfiguration();
 
     @Import(name="selectors")
-      private final @Nullable List<JobColumnSelector> selectors;
+    private @Nullable List<JobColumnSelector> selectors;
 
-    public List<JobColumnSelector> selectors() {
-        return this.selectors == null ? List.of() : this.selectors;
+    public Optional<List<JobColumnSelector>> selectors() {
+        return Optional.ofNullable(this.selectors);
     }
 
     @Import(name="statistics", required=true)
-      private final JobStatisticsConfiguration statistics;
+    private JobStatisticsConfiguration statistics;
 
     public JobStatisticsConfiguration statistics() {
         return this.statistics;
     }
 
-    public JobColumnStatisticsConfiguration(
-        @Nullable List<JobColumnSelector> selectors,
-        JobStatisticsConfiguration statistics) {
-        this.selectors = selectors;
-        this.statistics = Objects.requireNonNull(statistics, "expected parameter 'statistics' to be non-null");
-    }
+    private JobColumnStatisticsConfiguration() {}
 
-    private JobColumnStatisticsConfiguration() {
-        this.selectors = List.of();
-        this.statistics = null;
+    private JobColumnStatisticsConfiguration(JobColumnStatisticsConfiguration $) {
+        this.selectors = $.selectors;
+        this.statistics = $.statistics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobColumnStatisticsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<JobColumnSelector> selectors;
-        private JobStatisticsConfiguration statistics;
+        private JobColumnStatisticsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobColumnStatisticsConfiguration();
         }
 
         public Builder(JobColumnStatisticsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectors = defaults.selectors;
-    	      this.statistics = defaults.statistics;
+            $ = new JobColumnStatisticsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder selectors(@Nullable List<JobColumnSelector> selectors) {
-            this.selectors = selectors;
+            $.selectors = selectors;
             return this;
         }
+
         public Builder selectors(JobColumnSelector... selectors) {
             return selectors(List.of(selectors));
         }
+
         public Builder statistics(JobStatisticsConfiguration statistics) {
-            this.statistics = Objects.requireNonNull(statistics);
+            $.statistics = statistics;
             return this;
-        }        public JobColumnStatisticsConfiguration build() {
-            return new JobColumnStatisticsConfiguration(selectors, statistics);
+        }
+
+        public JobColumnStatisticsConfiguration build() {
+            $.statistics = Objects.requireNonNull($.statistics, "expected parameter 'statistics' to be non-null");
+            return $;
         }
     }
+
 }

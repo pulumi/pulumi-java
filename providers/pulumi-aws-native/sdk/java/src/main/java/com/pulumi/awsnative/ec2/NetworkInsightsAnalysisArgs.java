@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,96 +18,91 @@ public final class NetworkInsightsAnalysisArgs extends com.pulumi.resources.Reso
     public static final NetworkInsightsAnalysisArgs Empty = new NetworkInsightsAnalysisArgs();
 
     @Import(name="filterInArns")
-      private final @Nullable Output<List<String>> filterInArns;
+    private @Nullable Output<List<String>> filterInArns;
 
-    public Output<List<String>> filterInArns() {
-        return this.filterInArns == null ? Codegen.empty() : this.filterInArns;
+    public Optional<Output<List<String>>> filterInArns() {
+        return Optional.ofNullable(this.filterInArns);
     }
 
     @Import(name="networkInsightsPathId", required=true)
-      private final Output<String> networkInsightsPathId;
+    private Output<String> networkInsightsPathId;
 
     public Output<String> networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
+    private @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
 
-    public Output<List<NetworkInsightsAnalysisTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<NetworkInsightsAnalysisTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NetworkInsightsAnalysisArgs(
-        @Nullable Output<List<String>> filterInArns,
-        Output<String> networkInsightsPathId,
-        @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags) {
-        this.filterInArns = filterInArns;
-        this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId, "expected parameter 'networkInsightsPathId' to be non-null");
-        this.tags = tags;
-    }
+    private NetworkInsightsAnalysisArgs() {}
 
-    private NetworkInsightsAnalysisArgs() {
-        this.filterInArns = Codegen.empty();
-        this.networkInsightsPathId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NetworkInsightsAnalysisArgs(NetworkInsightsAnalysisArgs $) {
+        this.filterInArns = $.filterInArns;
+        this.networkInsightsPathId = $.networkInsightsPathId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> filterInArns;
-        private Output<String> networkInsightsPathId;
-        private @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
+        private NetworkInsightsAnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisArgs();
         }
 
         public Builder(NetworkInsightsAnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterInArns = defaults.filterInArns;
-    	      this.networkInsightsPathId = defaults.networkInsightsPathId;
-    	      this.tags = defaults.tags;
+            $ = new NetworkInsightsAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterInArns(@Nullable Output<List<String>> filterInArns) {
-            this.filterInArns = filterInArns;
+            $.filterInArns = filterInArns;
             return this;
         }
-        public Builder filterInArns(@Nullable List<String> filterInArns) {
-            this.filterInArns = Codegen.ofNullable(filterInArns);
-            return this;
+
+        public Builder filterInArns(List<String> filterInArns) {
+            return filterInArns(Output.of(filterInArns));
         }
+
         public Builder filterInArns(String... filterInArns) {
             return filterInArns(List.of(filterInArns));
         }
+
         public Builder networkInsightsPathId(Output<String> networkInsightsPathId) {
-            this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId);
+            $.networkInsightsPathId = networkInsightsPathId;
             return this;
         }
+
         public Builder networkInsightsPathId(String networkInsightsPathId) {
-            this.networkInsightsPathId = Output.of(Objects.requireNonNull(networkInsightsPathId));
-            return this;
+            return networkInsightsPathId(Output.of(networkInsightsPathId));
         }
+
         public Builder tags(@Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<NetworkInsightsAnalysisTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<NetworkInsightsAnalysisTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(NetworkInsightsAnalysisTagArgs... tags) {
             return tags(List.of(tags));
-        }        public NetworkInsightsAnalysisArgs build() {
-            return new NetworkInsightsAnalysisArgs(filterInArns, networkInsightsPathId, tags);
+        }
+
+        public NetworkInsightsAnalysisArgs build() {
+            $.networkInsightsPathId = Objects.requireNonNull($.networkInsightsPathId, "expected parameter 'networkInsightsPathId' to be non-null");
+            return $;
         }
     }
+
 }

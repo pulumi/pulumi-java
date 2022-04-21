@@ -7,10 +7,10 @@ import com.pulumi.awsnative.appflow.enums.FlowWriteOperationType;
 import com.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,10 +19,10 @@ public final class FlowZendeskDestinationPropertiesArgs extends com.pulumi.resou
     public static final FlowZendeskDestinationPropertiesArgs Empty = new FlowZendeskDestinationPropertiesArgs();
 
     @Import(name="errorHandlingConfig")
-      private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+    private @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
-    public Output<FlowErrorHandlingConfigArgs> errorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Codegen.empty() : this.errorHandlingConfig;
+    public Optional<Output<FlowErrorHandlingConfigArgs>> errorHandlingConfig() {
+        return Optional.ofNullable(this.errorHandlingConfig);
     }
 
     /**
@@ -30,106 +30,97 @@ public final class FlowZendeskDestinationPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="idFieldNames")
-      private final @Nullable Output<List<String>> idFieldNames;
+    private @Nullable Output<List<String>> idFieldNames;
 
-    public Output<List<String>> idFieldNames() {
-        return this.idFieldNames == null ? Codegen.empty() : this.idFieldNames;
+    public Optional<Output<List<String>>> idFieldNames() {
+        return Optional.ofNullable(this.idFieldNames);
     }
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
     @Import(name="writeOperationType")
-      private final @Nullable Output<FlowWriteOperationType> writeOperationType;
+    private @Nullable Output<FlowWriteOperationType> writeOperationType;
 
-    public Output<FlowWriteOperationType> writeOperationType() {
-        return this.writeOperationType == null ? Codegen.empty() : this.writeOperationType;
+    public Optional<Output<FlowWriteOperationType>> writeOperationType() {
+        return Optional.ofNullable(this.writeOperationType);
     }
 
-    public FlowZendeskDestinationPropertiesArgs(
-        @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig,
-        @Nullable Output<List<String>> idFieldNames,
-        Output<String> object,
-        @Nullable Output<FlowWriteOperationType> writeOperationType) {
-        this.errorHandlingConfig = errorHandlingConfig;
-        this.idFieldNames = idFieldNames;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.writeOperationType = writeOperationType;
-    }
+    private FlowZendeskDestinationPropertiesArgs() {}
 
-    private FlowZendeskDestinationPropertiesArgs() {
-        this.errorHandlingConfig = Codegen.empty();
-        this.idFieldNames = Codegen.empty();
-        this.object = Codegen.empty();
-        this.writeOperationType = Codegen.empty();
+    private FlowZendeskDestinationPropertiesArgs(FlowZendeskDestinationPropertiesArgs $) {
+        this.errorHandlingConfig = $.errorHandlingConfig;
+        this.idFieldNames = $.idFieldNames;
+        this.object = $.object;
+        this.writeOperationType = $.writeOperationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowZendeskDestinationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
-        private @Nullable Output<List<String>> idFieldNames;
-        private Output<String> object;
-        private @Nullable Output<FlowWriteOperationType> writeOperationType;
+        private FlowZendeskDestinationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowZendeskDestinationPropertiesArgs();
         }
 
         public Builder(FlowZendeskDestinationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorHandlingConfig = defaults.errorHandlingConfig;
-    	      this.idFieldNames = defaults.idFieldNames;
-    	      this.object = defaults.object;
-    	      this.writeOperationType = defaults.writeOperationType;
+            $ = new FlowZendeskDestinationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorHandlingConfig(@Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
-            this.errorHandlingConfig = errorHandlingConfig;
+            $.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
-            this.errorHandlingConfig = Codegen.ofNullable(errorHandlingConfig);
-            return this;
+
+        public Builder errorHandlingConfig(FlowErrorHandlingConfigArgs errorHandlingConfig) {
+            return errorHandlingConfig(Output.of(errorHandlingConfig));
         }
+
         public Builder idFieldNames(@Nullable Output<List<String>> idFieldNames) {
-            this.idFieldNames = idFieldNames;
+            $.idFieldNames = idFieldNames;
             return this;
         }
-        public Builder idFieldNames(@Nullable List<String> idFieldNames) {
-            this.idFieldNames = Codegen.ofNullable(idFieldNames);
-            return this;
+
+        public Builder idFieldNames(List<String> idFieldNames) {
+            return idFieldNames(Output.of(idFieldNames));
         }
+
         public Builder idFieldNames(String... idFieldNames) {
             return idFieldNames(List.of(idFieldNames));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
+            return object(Output.of(object));
         }
+
         public Builder writeOperationType(@Nullable Output<FlowWriteOperationType> writeOperationType) {
-            this.writeOperationType = writeOperationType;
+            $.writeOperationType = writeOperationType;
             return this;
         }
-        public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
-            this.writeOperationType = Codegen.ofNullable(writeOperationType);
-            return this;
-        }        public FlowZendeskDestinationPropertiesArgs build() {
-            return new FlowZendeskDestinationPropertiesArgs(errorHandlingConfig, idFieldNames, object, writeOperationType);
+
+        public Builder writeOperationType(FlowWriteOperationType writeOperationType) {
+            return writeOperationType(Output.of(writeOperationType));
+        }
+
+        public FlowZendeskDestinationPropertiesArgs build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
      * 
      */
     @Import(name="amiDistributionConfiguration")
-      private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
+    private @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
 
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> amiDistributionConfiguration() {
-        return this.amiDistributionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.amiDistributionConfiguration);
+        return Optional.ofNullable(this.amiDistributionConfiguration);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
      * 
      */
     @Import(name="containerDistributionConfiguration")
-      private final @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
+    private @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
 
     public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> containerDistributionConfiguration() {
-        return this.containerDistributionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerDistributionConfiguration);
+        return Optional.ofNullable(this.containerDistributionConfiguration);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
      * 
      */
     @Import(name="launchTemplateConfigurations")
-      private final @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
+    private @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
 
-    public List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations() {
-        return this.launchTemplateConfigurations == null ? List.of() : this.launchTemplateConfigurations;
+    public Optional<List<DistributionConfigurationLaunchTemplateConfiguration>> launchTemplateConfigurations() {
+        return Optional.ofNullable(this.launchTemplateConfigurations);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
      * 
      */
     @Import(name="licenseConfigurationArns")
-      private final @Nullable List<String> licenseConfigurationArns;
+    private @Nullable List<String> licenseConfigurationArns;
 
-    public List<String> licenseConfigurationArns() {
-        return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
+    public Optional<List<String>> licenseConfigurationArns() {
+        return Optional.ofNullable(this.licenseConfigurationArns);
     }
 
     /**
@@ -71,88 +71,77 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public DistributionConfigurationDistribution(
-        @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration,
-        @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration,
-        @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations,
-        @Nullable List<String> licenseConfigurationArns,
-        String region) {
-        this.amiDistributionConfiguration = amiDistributionConfiguration;
-        this.containerDistributionConfiguration = containerDistributionConfiguration;
-        this.launchTemplateConfigurations = launchTemplateConfigurations;
-        this.licenseConfigurationArns = licenseConfigurationArns;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private DistributionConfigurationDistribution() {}
 
-    private DistributionConfigurationDistribution() {
-        this.amiDistributionConfiguration = null;
-        this.containerDistributionConfiguration = null;
-        this.launchTemplateConfigurations = List.of();
-        this.licenseConfigurationArns = List.of();
-        this.region = null;
+    private DistributionConfigurationDistribution(DistributionConfigurationDistribution $) {
+        this.amiDistributionConfiguration = $.amiDistributionConfiguration;
+        this.containerDistributionConfiguration = $.containerDistributionConfiguration;
+        this.launchTemplateConfigurations = $.launchTemplateConfigurations;
+        this.licenseConfigurationArns = $.licenseConfigurationArns;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistribution defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
-        private @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
-        private @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
-        private @Nullable List<String> licenseConfigurationArns;
-        private String region;
+        private DistributionConfigurationDistribution $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistribution();
         }
 
         public Builder(DistributionConfigurationDistribution defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amiDistributionConfiguration = defaults.amiDistributionConfiguration;
-    	      this.containerDistributionConfiguration = defaults.containerDistributionConfiguration;
-    	      this.launchTemplateConfigurations = defaults.launchTemplateConfigurations;
-    	      this.licenseConfigurationArns = defaults.licenseConfigurationArns;
-    	      this.region = defaults.region;
+            $ = new DistributionConfigurationDistribution(Objects.requireNonNull(defaults));
         }
 
         public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration) {
-            this.amiDistributionConfiguration = amiDistributionConfiguration;
+            $.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
+
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
-            this.containerDistributionConfiguration = containerDistributionConfiguration;
+            $.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
+
         public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations) {
-            this.launchTemplateConfigurations = launchTemplateConfigurations;
+            $.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
+
         public Builder launchTemplateConfigurations(DistributionConfigurationLaunchTemplateConfiguration... launchTemplateConfigurations) {
             return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
         }
+
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
-            this.licenseConfigurationArns = licenseConfigurationArns;
+            $.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
+
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
             return licenseConfigurationArns(List.of(licenseConfigurationArns));
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public DistributionConfigurationDistribution build() {
-            return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
+        }
+
+        public DistributionConfigurationDistribution build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

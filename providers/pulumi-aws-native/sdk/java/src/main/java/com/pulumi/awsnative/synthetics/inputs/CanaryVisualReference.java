@@ -21,7 +21,7 @@ public final class CanaryVisualReference extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="baseCanaryRunId", required=true)
-      private final String baseCanaryRunId;
+    private String baseCanaryRunId;
 
     public String baseCanaryRunId() {
         return this.baseCanaryRunId;
@@ -32,58 +32,55 @@ public final class CanaryVisualReference extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="baseScreenshots")
-      private final @Nullable List<CanaryBaseScreenshot> baseScreenshots;
+    private @Nullable List<CanaryBaseScreenshot> baseScreenshots;
 
-    public List<CanaryBaseScreenshot> baseScreenshots() {
-        return this.baseScreenshots == null ? List.of() : this.baseScreenshots;
+    public Optional<List<CanaryBaseScreenshot>> baseScreenshots() {
+        return Optional.ofNullable(this.baseScreenshots);
     }
 
-    public CanaryVisualReference(
-        String baseCanaryRunId,
-        @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
-        this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId, "expected parameter 'baseCanaryRunId' to be non-null");
-        this.baseScreenshots = baseScreenshots;
-    }
+    private CanaryVisualReference() {}
 
-    private CanaryVisualReference() {
-        this.baseCanaryRunId = null;
-        this.baseScreenshots = List.of();
+    private CanaryVisualReference(CanaryVisualReference $) {
+        this.baseCanaryRunId = $.baseCanaryRunId;
+        this.baseScreenshots = $.baseScreenshots;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryVisualReference defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String baseCanaryRunId;
-        private @Nullable List<CanaryBaseScreenshot> baseScreenshots;
+        private CanaryVisualReference $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryVisualReference();
         }
 
         public Builder(CanaryVisualReference defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseCanaryRunId = defaults.baseCanaryRunId;
-    	      this.baseScreenshots = defaults.baseScreenshots;
+            $ = new CanaryVisualReference(Objects.requireNonNull(defaults));
         }
 
         public Builder baseCanaryRunId(String baseCanaryRunId) {
-            this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId);
+            $.baseCanaryRunId = baseCanaryRunId;
             return this;
         }
+
         public Builder baseScreenshots(@Nullable List<CanaryBaseScreenshot> baseScreenshots) {
-            this.baseScreenshots = baseScreenshots;
+            $.baseScreenshots = baseScreenshots;
             return this;
         }
+
         public Builder baseScreenshots(CanaryBaseScreenshot... baseScreenshots) {
             return baseScreenshots(List.of(baseScreenshots));
-        }        public CanaryVisualReference build() {
-            return new CanaryVisualReference(baseCanaryRunId, baseScreenshots);
+        }
+
+        public CanaryVisualReference build() {
+            $.baseCanaryRunId = Objects.requireNonNull($.baseCanaryRunId, "expected parameter 'baseCanaryRunId' to be non-null");
+            return $;
         }
     }
+
 }

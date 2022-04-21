@@ -5,7 +5,6 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class IntegrationServiceNowSourcePropertiesArgs extends com.pulumi.
     public static final IntegrationServiceNowSourcePropertiesArgs Empty = new IntegrationServiceNowSourcePropertiesArgs();
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
-    public IntegrationServiceNowSourcePropertiesArgs(Output<String> object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private IntegrationServiceNowSourcePropertiesArgs() {}
 
-    private IntegrationServiceNowSourcePropertiesArgs() {
-        this.object = Codegen.empty();
+    private IntegrationServiceNowSourcePropertiesArgs(IntegrationServiceNowSourcePropertiesArgs $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceNowSourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> object;
+        private IntegrationServiceNowSourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceNowSourcePropertiesArgs();
         }
 
         public Builder(IntegrationServiceNowSourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new IntegrationServiceNowSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
-        }        public IntegrationServiceNowSourcePropertiesArgs build() {
-            return new IntegrationServiceNowSourcePropertiesArgs(object);
+            return object(Output.of(object));
+        }
+
+        public IntegrationServiceNowSourcePropertiesArgs build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

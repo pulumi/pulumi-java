@@ -21,7 +21,7 @@ public final class AssetHierarchy extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="childAssetId", required=true)
-      private final String childAssetId;
+    private String childAssetId;
 
     public String childAssetId() {
         return this.childAssetId;
@@ -32,55 +32,52 @@ public final class AssetHierarchy extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logicalId", required=true)
-      private final String logicalId;
+    private String logicalId;
 
     public String logicalId() {
         return this.logicalId;
     }
 
-    public AssetHierarchy(
-        String childAssetId,
-        String logicalId) {
-        this.childAssetId = Objects.requireNonNull(childAssetId, "expected parameter 'childAssetId' to be non-null");
-        this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
-    }
+    private AssetHierarchy() {}
 
-    private AssetHierarchy() {
-        this.childAssetId = null;
-        this.logicalId = null;
+    private AssetHierarchy(AssetHierarchy $) {
+        this.childAssetId = $.childAssetId;
+        this.logicalId = $.logicalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetHierarchy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String childAssetId;
-        private String logicalId;
+        private AssetHierarchy $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetHierarchy();
         }
 
         public Builder(AssetHierarchy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.childAssetId = defaults.childAssetId;
-    	      this.logicalId = defaults.logicalId;
+            $ = new AssetHierarchy(Objects.requireNonNull(defaults));
         }
 
         public Builder childAssetId(String childAssetId) {
-            this.childAssetId = Objects.requireNonNull(childAssetId);
+            $.childAssetId = childAssetId;
             return this;
         }
+
         public Builder logicalId(String logicalId) {
-            this.logicalId = Objects.requireNonNull(logicalId);
+            $.logicalId = logicalId;
             return this;
-        }        public AssetHierarchy build() {
-            return new AssetHierarchy(childAssetId, logicalId);
+        }
+
+        public AssetHierarchy build() {
+            $.childAssetId = Objects.requireNonNull($.childAssetId, "expected parameter 'childAssetId' to be non-null");
+            $.logicalId = Objects.requireNonNull($.logicalId, "expected parameter 'logicalId' to be non-null");
+            return $;
         }
     }
+
 }

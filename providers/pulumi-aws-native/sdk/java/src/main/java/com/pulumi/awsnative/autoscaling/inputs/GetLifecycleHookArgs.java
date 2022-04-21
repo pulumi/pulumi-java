@@ -17,7 +17,7 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="autoScalingGroupName", required=true)
-      private final String autoScalingGroupName;
+    private String autoScalingGroupName;
 
     public String autoScalingGroupName() {
         return this.autoScalingGroupName;
@@ -28,55 +28,52 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="lifecycleHookName", required=true)
-      private final String lifecycleHookName;
+    private String lifecycleHookName;
 
     public String lifecycleHookName() {
         return this.lifecycleHookName;
     }
 
-    public GetLifecycleHookArgs(
-        String autoScalingGroupName,
-        String lifecycleHookName) {
-        this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName, "expected parameter 'autoScalingGroupName' to be non-null");
-        this.lifecycleHookName = Objects.requireNonNull(lifecycleHookName, "expected parameter 'lifecycleHookName' to be non-null");
-    }
+    private GetLifecycleHookArgs() {}
 
-    private GetLifecycleHookArgs() {
-        this.autoScalingGroupName = null;
-        this.lifecycleHookName = null;
+    private GetLifecycleHookArgs(GetLifecycleHookArgs $) {
+        this.autoScalingGroupName = $.autoScalingGroupName;
+        this.lifecycleHookName = $.lifecycleHookName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLifecycleHookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoScalingGroupName;
-        private String lifecycleHookName;
+        private GetLifecycleHookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLifecycleHookArgs();
         }
 
         public Builder(GetLifecycleHookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingGroupName = defaults.autoScalingGroupName;
-    	      this.lifecycleHookName = defaults.lifecycleHookName;
+            $ = new GetLifecycleHookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingGroupName(String autoScalingGroupName) {
-            this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
+            $.autoScalingGroupName = autoScalingGroupName;
             return this;
         }
+
         public Builder lifecycleHookName(String lifecycleHookName) {
-            this.lifecycleHookName = Objects.requireNonNull(lifecycleHookName);
+            $.lifecycleHookName = lifecycleHookName;
             return this;
-        }        public GetLifecycleHookArgs build() {
-            return new GetLifecycleHookArgs(autoScalingGroupName, lifecycleHookName);
+        }
+
+        public GetLifecycleHookArgs build() {
+            $.autoScalingGroupName = Objects.requireNonNull($.autoScalingGroupName, "expected parameter 'autoScalingGroupName' to be non-null");
+            $.lifecycleHookName = Objects.requireNonNull($.lifecycleHookName, "expected parameter 'lifecycleHookName' to be non-null");
+            return $;
         }
     }
+
 }

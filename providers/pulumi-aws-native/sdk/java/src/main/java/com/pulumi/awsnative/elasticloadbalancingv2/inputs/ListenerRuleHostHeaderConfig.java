@@ -16,48 +16,48 @@ public final class ListenerRuleHostHeaderConfig extends com.pulumi.resources.Inv
     public static final ListenerRuleHostHeaderConfig Empty = new ListenerRuleHostHeaderConfig();
 
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRuleHostHeaderConfig(@Nullable List<String> values) {
-        this.values = values;
-    }
+    private ListenerRuleHostHeaderConfig() {}
 
-    private ListenerRuleHostHeaderConfig() {
-        this.values = List.of();
+    private ListenerRuleHostHeaderConfig(ListenerRuleHostHeaderConfig $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleHostHeaderConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> values;
+        private ListenerRuleHostHeaderConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleHostHeaderConfig();
         }
 
         public Builder(ListenerRuleHostHeaderConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRuleHostHeaderConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRuleHostHeaderConfig build() {
-            return new ListenerRuleHostHeaderConfig(values);
+        }
+
+        public ListenerRuleHostHeaderConfig build() {
+            return $;
         }
     }
+
 }

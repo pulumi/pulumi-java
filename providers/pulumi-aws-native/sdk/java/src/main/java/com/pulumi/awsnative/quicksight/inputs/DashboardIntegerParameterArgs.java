@@ -5,7 +5,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +24,7 @@ public final class DashboardIntegerParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,66 +35,64 @@ public final class DashboardIntegerParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<Double>> values;
+    private Output<List<Double>> values;
 
     public Output<List<Double>> values() {
         return this.values;
     }
 
-    public DashboardIntegerParameterArgs(
-        Output<String> name,
-        Output<List<Double>> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private DashboardIntegerParameterArgs() {}
 
-    private DashboardIntegerParameterArgs() {
-        this.name = Codegen.empty();
-        this.values = Codegen.empty();
+    private DashboardIntegerParameterArgs(DashboardIntegerParameterArgs $) {
+        this.name = $.name;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardIntegerParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<List<Double>> values;
+        private DashboardIntegerParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardIntegerParameterArgs();
         }
 
         public Builder(DashboardIntegerParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.values = defaults.values;
+            $ = new DashboardIntegerParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder values(Output<List<Double>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<Double> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(Double... values) {
             return values(List.of(values));
-        }        public DashboardIntegerParameterArgs build() {
-            return new DashboardIntegerParameterArgs(name, values);
+        }
+
+        public DashboardIntegerParameterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

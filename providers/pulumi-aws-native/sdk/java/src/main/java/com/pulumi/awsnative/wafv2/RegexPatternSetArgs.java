@@ -7,10 +7,10 @@ import com.pulumi.awsnative.wafv2.enums.RegexPatternSetScope;
 import com.pulumi.awsnative.wafv2.inputs.RegexPatternSetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,14 +34,14 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="regularExpressionList", required=true)
-      private final Output<List<String>> regularExpressionList;
+    private Output<List<String>> regularExpressionList;
 
     public Output<List<String>> regularExpressionList() {
         return this.regularExpressionList;
@@ -52,115 +52,105 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<RegexPatternSetScope> scope;
+    private Output<RegexPatternSetScope> scope;
 
     public Output<RegexPatternSetScope> scope() {
         return this.scope;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<RegexPatternSetTagArgs>> tags;
+    private @Nullable Output<List<RegexPatternSetTagArgs>> tags;
 
-    public Output<List<RegexPatternSetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RegexPatternSetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RegexPatternSetArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<List<String>> regularExpressionList,
-        Output<RegexPatternSetScope> scope,
-        @Nullable Output<List<RegexPatternSetTagArgs>> tags) {
-        this.description = description;
-        this.name = name;
-        this.regularExpressionList = Objects.requireNonNull(regularExpressionList, "expected parameter 'regularExpressionList' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.tags = tags;
-    }
+    private RegexPatternSetArgs() {}
 
-    private RegexPatternSetArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.regularExpressionList = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RegexPatternSetArgs(RegexPatternSetArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.regularExpressionList = $.regularExpressionList;
+        this.scope = $.scope;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegexPatternSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<List<String>> regularExpressionList;
-        private Output<RegexPatternSetScope> scope;
-        private @Nullable Output<List<RegexPatternSetTagArgs>> tags;
+        private RegexPatternSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegexPatternSetArgs();
         }
 
         public Builder(RegexPatternSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.regularExpressionList = defaults.regularExpressionList;
-    	      this.scope = defaults.scope;
-    	      this.tags = defaults.tags;
+            $ = new RegexPatternSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder regularExpressionList(Output<List<String>> regularExpressionList) {
-            this.regularExpressionList = Objects.requireNonNull(regularExpressionList);
+            $.regularExpressionList = regularExpressionList;
             return this;
         }
+
         public Builder regularExpressionList(List<String> regularExpressionList) {
-            this.regularExpressionList = Output.of(Objects.requireNonNull(regularExpressionList));
-            return this;
+            return regularExpressionList(Output.of(regularExpressionList));
         }
+
         public Builder regularExpressionList(String... regularExpressionList) {
             return regularExpressionList(List.of(regularExpressionList));
         }
+
         public Builder scope(Output<RegexPatternSetScope> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(RegexPatternSetScope scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder tags(@Nullable Output<List<RegexPatternSetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RegexPatternSetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RegexPatternSetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RegexPatternSetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public RegexPatternSetArgs build() {
-            return new RegexPatternSetArgs(description, name, regularExpressionList, scope, tags);
+        }
+
+        public RegexPatternSetArgs build() {
+            $.regularExpressionList = Objects.requireNonNull($.regularExpressionList, "expected parameter 'regularExpressionList' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

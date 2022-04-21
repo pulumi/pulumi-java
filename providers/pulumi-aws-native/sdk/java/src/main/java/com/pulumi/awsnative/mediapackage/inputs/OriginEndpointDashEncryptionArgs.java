@@ -6,9 +6,9 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,66 @@ public final class OriginEndpointDashEncryptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keyRotationIntervalSeconds")
-      private final @Nullable Output<Integer> keyRotationIntervalSeconds;
+    private @Nullable Output<Integer> keyRotationIntervalSeconds;
 
-    public Output<Integer> keyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Codegen.empty() : this.keyRotationIntervalSeconds;
+    public Optional<Output<Integer>> keyRotationIntervalSeconds() {
+        return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
     @Import(name="spekeKeyProvider", required=true)
-      private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+    private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public OriginEndpointDashEncryptionArgs(
-        @Nullable Output<Integer> keyRotationIntervalSeconds,
-        Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
-        this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private OriginEndpointDashEncryptionArgs() {}
 
-    private OriginEndpointDashEncryptionArgs() {
-        this.keyRotationIntervalSeconds = Codegen.empty();
-        this.spekeKeyProvider = Codegen.empty();
+    private OriginEndpointDashEncryptionArgs(OriginEndpointDashEncryptionArgs $) {
+        this.keyRotationIntervalSeconds = $.keyRotationIntervalSeconds;
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointDashEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> keyRotationIntervalSeconds;
-        private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+        private OriginEndpointDashEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointDashEncryptionArgs();
         }
 
         public Builder(OriginEndpointDashEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyRotationIntervalSeconds = defaults.keyRotationIntervalSeconds;
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new OriginEndpointDashEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
+            $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
-        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = Codegen.ofNullable(keyRotationIntervalSeconds);
-            return this;
+
+        public Builder keyRotationIntervalSeconds(Integer keyRotationIntervalSeconds) {
+            return keyRotationIntervalSeconds(Output.of(keyRotationIntervalSeconds));
         }
+
         public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
         }
+
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
-            return this;
-        }        public OriginEndpointDashEncryptionArgs build() {
-            return new OriginEndpointDashEncryptionArgs(keyRotationIntervalSeconds, spekeKeyProvider);
+            return spekeKeyProvider(Output.of(spekeKeyProvider));
+        }
+
+        public OriginEndpointDashEncryptionArgs build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

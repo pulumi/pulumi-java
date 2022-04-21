@@ -6,9 +6,9 @@ package com.pulumi.awsnative.dynamodb.inputs;
 import com.pulumi.awsnative.dynamodb.inputs.GlobalTableTargetTrackingScalingPolicyConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,102 @@ public final class GlobalTableCapacityAutoScalingSettingsArgs extends com.pulumi
     public static final GlobalTableCapacityAutoScalingSettingsArgs Empty = new GlobalTableCapacityAutoScalingSettingsArgs();
 
     @Import(name="maxCapacity", required=true)
-      private final Output<Integer> maxCapacity;
+    private Output<Integer> maxCapacity;
 
     public Output<Integer> maxCapacity() {
         return this.maxCapacity;
     }
 
     @Import(name="minCapacity", required=true)
-      private final Output<Integer> minCapacity;
+    private Output<Integer> minCapacity;
 
     public Output<Integer> minCapacity() {
         return this.minCapacity;
     }
 
     @Import(name="seedCapacity")
-      private final @Nullable Output<Integer> seedCapacity;
+    private @Nullable Output<Integer> seedCapacity;
 
-    public Output<Integer> seedCapacity() {
-        return this.seedCapacity == null ? Codegen.empty() : this.seedCapacity;
+    public Optional<Output<Integer>> seedCapacity() {
+        return Optional.ofNullable(this.seedCapacity);
     }
 
     @Import(name="targetTrackingScalingPolicyConfiguration", required=true)
-      private final Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+    private Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
     public Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration() {
         return this.targetTrackingScalingPolicyConfiguration;
     }
 
-    public GlobalTableCapacityAutoScalingSettingsArgs(
-        Output<Integer> maxCapacity,
-        Output<Integer> minCapacity,
-        @Nullable Output<Integer> seedCapacity,
-        Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
-        this.maxCapacity = Objects.requireNonNull(maxCapacity, "expected parameter 'maxCapacity' to be non-null");
-        this.minCapacity = Objects.requireNonNull(minCapacity, "expected parameter 'minCapacity' to be non-null");
-        this.seedCapacity = seedCapacity;
-        this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration, "expected parameter 'targetTrackingScalingPolicyConfiguration' to be non-null");
-    }
+    private GlobalTableCapacityAutoScalingSettingsArgs() {}
 
-    private GlobalTableCapacityAutoScalingSettingsArgs() {
-        this.maxCapacity = Codegen.empty();
-        this.minCapacity = Codegen.empty();
-        this.seedCapacity = Codegen.empty();
-        this.targetTrackingScalingPolicyConfiguration = Codegen.empty();
+    private GlobalTableCapacityAutoScalingSettingsArgs(GlobalTableCapacityAutoScalingSettingsArgs $) {
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
+        this.seedCapacity = $.seedCapacity;
+        this.targetTrackingScalingPolicyConfiguration = $.targetTrackingScalingPolicyConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableCapacityAutoScalingSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxCapacity;
-        private Output<Integer> minCapacity;
-        private @Nullable Output<Integer> seedCapacity;
-        private Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+        private GlobalTableCapacityAutoScalingSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableCapacityAutoScalingSettingsArgs();
         }
 
         public Builder(GlobalTableCapacityAutoScalingSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
-    	      this.seedCapacity = defaults.seedCapacity;
-    	      this.targetTrackingScalingPolicyConfiguration = defaults.targetTrackingScalingPolicyConfiguration;
+            $ = new GlobalTableCapacityAutoScalingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacity(Output<Integer> maxCapacity) {
-            this.maxCapacity = Objects.requireNonNull(maxCapacity);
+            $.maxCapacity = maxCapacity;
             return this;
         }
+
         public Builder maxCapacity(Integer maxCapacity) {
-            this.maxCapacity = Output.of(Objects.requireNonNull(maxCapacity));
-            return this;
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder minCapacity(Output<Integer> minCapacity) {
-            this.minCapacity = Objects.requireNonNull(minCapacity);
+            $.minCapacity = minCapacity;
             return this;
         }
+
         public Builder minCapacity(Integer minCapacity) {
-            this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
-            return this;
+            return minCapacity(Output.of(minCapacity));
         }
+
         public Builder seedCapacity(@Nullable Output<Integer> seedCapacity) {
-            this.seedCapacity = seedCapacity;
+            $.seedCapacity = seedCapacity;
             return this;
         }
-        public Builder seedCapacity(@Nullable Integer seedCapacity) {
-            this.seedCapacity = Codegen.ofNullable(seedCapacity);
-            return this;
+
+        public Builder seedCapacity(Integer seedCapacity) {
+            return seedCapacity(Output.of(seedCapacity));
         }
+
         public Builder targetTrackingScalingPolicyConfiguration(Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
-            this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration);
+            $.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
             return this;
         }
+
         public Builder targetTrackingScalingPolicyConfiguration(GlobalTableTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
-            this.targetTrackingScalingPolicyConfiguration = Output.of(Objects.requireNonNull(targetTrackingScalingPolicyConfiguration));
-            return this;
-        }        public GlobalTableCapacityAutoScalingSettingsArgs build() {
-            return new GlobalTableCapacityAutoScalingSettingsArgs(maxCapacity, minCapacity, seedCapacity, targetTrackingScalingPolicyConfiguration);
+            return targetTrackingScalingPolicyConfiguration(Output.of(targetTrackingScalingPolicyConfiguration));
+        }
+
+        public GlobalTableCapacityAutoScalingSettingsArgs build() {
+            $.maxCapacity = Objects.requireNonNull($.maxCapacity, "expected parameter 'maxCapacity' to be non-null");
+            $.minCapacity = Objects.requireNonNull($.minCapacity, "expected parameter 'minCapacity' to be non-null");
+            $.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull($.targetTrackingScalingPolicyConfiguration, "expected parameter 'targetTrackingScalingPolicyConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

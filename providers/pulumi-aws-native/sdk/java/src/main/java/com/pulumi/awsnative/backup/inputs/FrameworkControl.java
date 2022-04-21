@@ -22,10 +22,10 @@ public final class FrameworkControl extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="controlInputParameters")
-      private final @Nullable List<FrameworkControlInputParameter> controlInputParameters;
+    private @Nullable List<FrameworkControlInputParameter> controlInputParameters;
 
-    public List<FrameworkControlInputParameter> controlInputParameters() {
-        return this.controlInputParameters == null ? List.of() : this.controlInputParameters;
+    public Optional<List<FrameworkControlInputParameter>> controlInputParameters() {
+        return Optional.ofNullable(this.controlInputParameters);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class FrameworkControl extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="controlName", required=true)
-      private final String controlName;
+    private String controlName;
 
     public String controlName() {
         return this.controlName;
@@ -44,67 +44,61 @@ public final class FrameworkControl extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="controlScope")
-      private final @Nullable FrameworkControlControlScopeProperties controlScope;
+    private @Nullable FrameworkControlControlScopeProperties controlScope;
 
     public Optional<FrameworkControlControlScopeProperties> controlScope() {
-        return this.controlScope == null ? Optional.empty() : Optional.ofNullable(this.controlScope);
+        return Optional.ofNullable(this.controlScope);
     }
 
-    public FrameworkControl(
-        @Nullable List<FrameworkControlInputParameter> controlInputParameters,
-        String controlName,
-        @Nullable FrameworkControlControlScopeProperties controlScope) {
-        this.controlInputParameters = controlInputParameters;
-        this.controlName = Objects.requireNonNull(controlName, "expected parameter 'controlName' to be non-null");
-        this.controlScope = controlScope;
-    }
+    private FrameworkControl() {}
 
-    private FrameworkControl() {
-        this.controlInputParameters = List.of();
-        this.controlName = null;
-        this.controlScope = null;
+    private FrameworkControl(FrameworkControl $) {
+        this.controlInputParameters = $.controlInputParameters;
+        this.controlName = $.controlName;
+        this.controlScope = $.controlScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrameworkControl defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FrameworkControlInputParameter> controlInputParameters;
-        private String controlName;
-        private @Nullable FrameworkControlControlScopeProperties controlScope;
+        private FrameworkControl $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrameworkControl();
         }
 
         public Builder(FrameworkControl defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controlInputParameters = defaults.controlInputParameters;
-    	      this.controlName = defaults.controlName;
-    	      this.controlScope = defaults.controlScope;
+            $ = new FrameworkControl(Objects.requireNonNull(defaults));
         }
 
         public Builder controlInputParameters(@Nullable List<FrameworkControlInputParameter> controlInputParameters) {
-            this.controlInputParameters = controlInputParameters;
+            $.controlInputParameters = controlInputParameters;
             return this;
         }
+
         public Builder controlInputParameters(FrameworkControlInputParameter... controlInputParameters) {
             return controlInputParameters(List.of(controlInputParameters));
         }
+
         public Builder controlName(String controlName) {
-            this.controlName = Objects.requireNonNull(controlName);
+            $.controlName = controlName;
             return this;
         }
+
         public Builder controlScope(@Nullable FrameworkControlControlScopeProperties controlScope) {
-            this.controlScope = controlScope;
+            $.controlScope = controlScope;
             return this;
-        }        public FrameworkControl build() {
-            return new FrameworkControl(controlInputParameters, controlName, controlScope);
+        }
+
+        public FrameworkControl build() {
+            $.controlName = Objects.requireNonNull($.controlName, "expected parameter 'controlName' to be non-null");
+            return $;
         }
     }
+
 }

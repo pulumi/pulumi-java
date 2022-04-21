@@ -9,8 +9,8 @@ import com.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceCon
 import com.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,110 +23,99 @@ public final class StudioComponentConfigurationArgs extends com.pulumi.resources
     public static final StudioComponentConfigurationArgs Empty = new StudioComponentConfigurationArgs();
 
     @Import(name="activeDirectoryConfiguration")
-      private final @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
+    private @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
-    public Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration() {
-        return this.activeDirectoryConfiguration == null ? Codegen.empty() : this.activeDirectoryConfiguration;
+    public Optional<Output<StudioComponentActiveDirectoryConfigurationArgs>> activeDirectoryConfiguration() {
+        return Optional.ofNullable(this.activeDirectoryConfiguration);
     }
 
     @Import(name="computeFarmConfiguration")
-      private final @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
+    private @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
 
-    public Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration() {
-        return this.computeFarmConfiguration == null ? Codegen.empty() : this.computeFarmConfiguration;
+    public Optional<Output<StudioComponentComputeFarmConfigurationArgs>> computeFarmConfiguration() {
+        return Optional.ofNullable(this.computeFarmConfiguration);
     }
 
     @Import(name="licenseServiceConfiguration")
-      private final @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
+    private @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
 
-    public Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration() {
-        return this.licenseServiceConfiguration == null ? Codegen.empty() : this.licenseServiceConfiguration;
+    public Optional<Output<StudioComponentLicenseServiceConfigurationArgs>> licenseServiceConfiguration() {
+        return Optional.ofNullable(this.licenseServiceConfiguration);
     }
 
     @Import(name="sharedFileSystemConfiguration")
-      private final @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
+    private @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
 
-    public Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration() {
-        return this.sharedFileSystemConfiguration == null ? Codegen.empty() : this.sharedFileSystemConfiguration;
+    public Optional<Output<StudioComponentSharedFileSystemConfigurationArgs>> sharedFileSystemConfiguration() {
+        return Optional.ofNullable(this.sharedFileSystemConfiguration);
     }
 
-    public StudioComponentConfigurationArgs(
-        @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration,
-        @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration,
-        @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration,
-        @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration) {
-        this.activeDirectoryConfiguration = activeDirectoryConfiguration;
-        this.computeFarmConfiguration = computeFarmConfiguration;
-        this.licenseServiceConfiguration = licenseServiceConfiguration;
-        this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
-    }
+    private StudioComponentConfigurationArgs() {}
 
-    private StudioComponentConfigurationArgs() {
-        this.activeDirectoryConfiguration = Codegen.empty();
-        this.computeFarmConfiguration = Codegen.empty();
-        this.licenseServiceConfiguration = Codegen.empty();
-        this.sharedFileSystemConfiguration = Codegen.empty();
+    private StudioComponentConfigurationArgs(StudioComponentConfigurationArgs $) {
+        this.activeDirectoryConfiguration = $.activeDirectoryConfiguration;
+        this.computeFarmConfiguration = $.computeFarmConfiguration;
+        this.licenseServiceConfiguration = $.licenseServiceConfiguration;
+        this.sharedFileSystemConfiguration = $.sharedFileSystemConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
-        private @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
-        private @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
-        private @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
+        private StudioComponentConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentConfigurationArgs();
         }
 
         public Builder(StudioComponentConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryConfiguration = defaults.activeDirectoryConfiguration;
-    	      this.computeFarmConfiguration = defaults.computeFarmConfiguration;
-    	      this.licenseServiceConfiguration = defaults.licenseServiceConfiguration;
-    	      this.sharedFileSystemConfiguration = defaults.sharedFileSystemConfiguration;
+            $ = new StudioComponentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryConfiguration(@Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration) {
-            this.activeDirectoryConfiguration = activeDirectoryConfiguration;
+            $.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
-        public Builder activeDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
-            this.activeDirectoryConfiguration = Codegen.ofNullable(activeDirectoryConfiguration);
-            return this;
+
+        public Builder activeDirectoryConfiguration(StudioComponentActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
+            return activeDirectoryConfiguration(Output.of(activeDirectoryConfiguration));
         }
+
         public Builder computeFarmConfiguration(@Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration) {
-            this.computeFarmConfiguration = computeFarmConfiguration;
+            $.computeFarmConfiguration = computeFarmConfiguration;
             return this;
         }
-        public Builder computeFarmConfiguration(@Nullable StudioComponentComputeFarmConfigurationArgs computeFarmConfiguration) {
-            this.computeFarmConfiguration = Codegen.ofNullable(computeFarmConfiguration);
-            return this;
+
+        public Builder computeFarmConfiguration(StudioComponentComputeFarmConfigurationArgs computeFarmConfiguration) {
+            return computeFarmConfiguration(Output.of(computeFarmConfiguration));
         }
+
         public Builder licenseServiceConfiguration(@Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration) {
-            this.licenseServiceConfiguration = licenseServiceConfiguration;
+            $.licenseServiceConfiguration = licenseServiceConfiguration;
             return this;
         }
-        public Builder licenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfigurationArgs licenseServiceConfiguration) {
-            this.licenseServiceConfiguration = Codegen.ofNullable(licenseServiceConfiguration);
-            return this;
+
+        public Builder licenseServiceConfiguration(StudioComponentLicenseServiceConfigurationArgs licenseServiceConfiguration) {
+            return licenseServiceConfiguration(Output.of(licenseServiceConfiguration));
         }
+
         public Builder sharedFileSystemConfiguration(@Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration) {
-            this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
+            $.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }
-        public Builder sharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfigurationArgs sharedFileSystemConfiguration) {
-            this.sharedFileSystemConfiguration = Codegen.ofNullable(sharedFileSystemConfiguration);
-            return this;
-        }        public StudioComponentConfigurationArgs build() {
-            return new StudioComponentConfigurationArgs(activeDirectoryConfiguration, computeFarmConfiguration, licenseServiceConfiguration, sharedFileSystemConfiguration);
+
+        public Builder sharedFileSystemConfiguration(StudioComponentSharedFileSystemConfigurationArgs sharedFileSystemConfiguration) {
+            return sharedFileSystemConfiguration(Output.of(sharedFileSystemConfiguration));
+        }
+
+        public StudioComponentConfigurationArgs build() {
+            return $;
         }
     }
+
 }

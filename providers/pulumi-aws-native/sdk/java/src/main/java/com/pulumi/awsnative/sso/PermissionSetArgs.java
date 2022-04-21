@@ -6,11 +6,11 @@ package com.pulumi.awsnative.sso;
 import com.pulumi.awsnative.sso.inputs.PermissionSetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inlinePolicy")
-      private final @Nullable Output<Object> inlinePolicy;
+    private @Nullable Output<Object> inlinePolicy;
 
-    public Output<Object> inlinePolicy() {
-        return this.inlinePolicy == null ? Codegen.empty() : this.inlinePolicy;
+    public Optional<Output<Object>> inlinePolicy() {
+        return Optional.ofNullable(this.inlinePolicy);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final Output<String> instanceArn;
+    private Output<String> instanceArn;
 
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
     @Import(name="managedPolicies")
-      private final @Nullable Output<List<String>> managedPolicies;
+    private @Nullable Output<List<String>> managedPolicies;
 
-    public Output<List<String>> managedPolicies() {
-        return this.managedPolicies == null ? Codegen.empty() : this.managedPolicies;
+    public Optional<Output<List<String>>> managedPolicies() {
+        return Optional.ofNullable(this.managedPolicies);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relayStateType")
-      private final @Nullable Output<String> relayStateType;
+    private @Nullable Output<String> relayStateType;
 
-    public Output<String> relayStateType() {
-        return this.relayStateType == null ? Codegen.empty() : this.relayStateType;
+    public Optional<Output<String>> relayStateType() {
+        return Optional.ofNullable(this.relayStateType);
     }
 
     /**
@@ -85,154 +85,134 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sessionDuration")
-      private final @Nullable Output<String> sessionDuration;
+    private @Nullable Output<String> sessionDuration;
 
-    public Output<String> sessionDuration() {
-        return this.sessionDuration == null ? Codegen.empty() : this.sessionDuration;
+    public Optional<Output<String>> sessionDuration() {
+        return Optional.ofNullable(this.sessionDuration);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<PermissionSetTagArgs>> tags;
+    private @Nullable Output<List<PermissionSetTagArgs>> tags;
 
-    public Output<List<PermissionSetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<PermissionSetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PermissionSetArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Object> inlinePolicy,
-        Output<String> instanceArn,
-        @Nullable Output<List<String>> managedPolicies,
-        @Nullable Output<String> name,
-        @Nullable Output<String> relayStateType,
-        @Nullable Output<String> sessionDuration,
-        @Nullable Output<List<PermissionSetTagArgs>> tags) {
-        this.description = description;
-        this.inlinePolicy = inlinePolicy;
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-        this.managedPolicies = managedPolicies;
-        this.name = name;
-        this.relayStateType = relayStateType;
-        this.sessionDuration = sessionDuration;
-        this.tags = tags;
-    }
+    private PermissionSetArgs() {}
 
-    private PermissionSetArgs() {
-        this.description = Codegen.empty();
-        this.inlinePolicy = Codegen.empty();
-        this.instanceArn = Codegen.empty();
-        this.managedPolicies = Codegen.empty();
-        this.name = Codegen.empty();
-        this.relayStateType = Codegen.empty();
-        this.sessionDuration = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PermissionSetArgs(PermissionSetArgs $) {
+        this.description = $.description;
+        this.inlinePolicy = $.inlinePolicy;
+        this.instanceArn = $.instanceArn;
+        this.managedPolicies = $.managedPolicies;
+        this.name = $.name;
+        this.relayStateType = $.relayStateType;
+        this.sessionDuration = $.sessionDuration;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> inlinePolicy;
-        private Output<String> instanceArn;
-        private @Nullable Output<List<String>> managedPolicies;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> relayStateType;
-        private @Nullable Output<String> sessionDuration;
-        private @Nullable Output<List<PermissionSetTagArgs>> tags;
+        private PermissionSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionSetArgs();
         }
 
         public Builder(PermissionSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.inlinePolicy = defaults.inlinePolicy;
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.managedPolicies = defaults.managedPolicies;
-    	      this.name = defaults.name;
-    	      this.relayStateType = defaults.relayStateType;
-    	      this.sessionDuration = defaults.sessionDuration;
-    	      this.tags = defaults.tags;
+            $ = new PermissionSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder inlinePolicy(@Nullable Output<Object> inlinePolicy) {
-            this.inlinePolicy = inlinePolicy;
+            $.inlinePolicy = inlinePolicy;
             return this;
         }
-        public Builder inlinePolicy(@Nullable Object inlinePolicy) {
-            this.inlinePolicy = Codegen.ofNullable(inlinePolicy);
-            return this;
+
+        public Builder inlinePolicy(Object inlinePolicy) {
+            return inlinePolicy(Output.of(inlinePolicy));
         }
+
         public Builder instanceArn(Output<String> instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
         }
+
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
-            return this;
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder managedPolicies(@Nullable Output<List<String>> managedPolicies) {
-            this.managedPolicies = managedPolicies;
+            $.managedPolicies = managedPolicies;
             return this;
         }
-        public Builder managedPolicies(@Nullable List<String> managedPolicies) {
-            this.managedPolicies = Codegen.ofNullable(managedPolicies);
-            return this;
+
+        public Builder managedPolicies(List<String> managedPolicies) {
+            return managedPolicies(Output.of(managedPolicies));
         }
+
         public Builder managedPolicies(String... managedPolicies) {
             return managedPolicies(List.of(managedPolicies));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder relayStateType(@Nullable Output<String> relayStateType) {
-            this.relayStateType = relayStateType;
+            $.relayStateType = relayStateType;
             return this;
         }
-        public Builder relayStateType(@Nullable String relayStateType) {
-            this.relayStateType = Codegen.ofNullable(relayStateType);
-            return this;
+
+        public Builder relayStateType(String relayStateType) {
+            return relayStateType(Output.of(relayStateType));
         }
+
         public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
-            this.sessionDuration = sessionDuration;
+            $.sessionDuration = sessionDuration;
             return this;
         }
-        public Builder sessionDuration(@Nullable String sessionDuration) {
-            this.sessionDuration = Codegen.ofNullable(sessionDuration);
-            return this;
+
+        public Builder sessionDuration(String sessionDuration) {
+            return sessionDuration(Output.of(sessionDuration));
         }
+
         public Builder tags(@Nullable Output<List<PermissionSetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<PermissionSetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<PermissionSetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(PermissionSetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public PermissionSetArgs build() {
-            return new PermissionSetArgs(description, inlinePolicy, instanceArn, managedPolicies, name, relayStateType, sessionDuration, tags);
+        }
+
+        public PermissionSetArgs build() {
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            return $;
         }
     }
+
 }

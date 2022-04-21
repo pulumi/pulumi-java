@@ -9,10 +9,10 @@ import com.pulumi.awsnative.healthlake.inputs.FHIRDatastoreSseConfigurationArgs;
 import com.pulumi.awsnative.healthlake.inputs.FHIRDatastoreTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,133 +21,121 @@ public final class FHIRDatastoreArgs extends com.pulumi.resources.ResourceArgs {
     public static final FHIRDatastoreArgs Empty = new FHIRDatastoreArgs();
 
     @Import(name="datastoreName")
-      private final @Nullable Output<String> datastoreName;
+    private @Nullable Output<String> datastoreName;
 
-    public Output<String> datastoreName() {
-        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
+    public Optional<Output<String>> datastoreName() {
+        return Optional.ofNullable(this.datastoreName);
     }
 
     @Import(name="datastoreTypeVersion", required=true)
-      private final Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
+    private Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
 
     public Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion() {
         return this.datastoreTypeVersion;
     }
 
     @Import(name="preloadDataConfig")
-      private final @Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
+    private @Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
 
-    public Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig() {
-        return this.preloadDataConfig == null ? Codegen.empty() : this.preloadDataConfig;
+    public Optional<Output<FHIRDatastorePreloadDataConfigArgs>> preloadDataConfig() {
+        return Optional.ofNullable(this.preloadDataConfig);
     }
 
     @Import(name="sseConfiguration")
-      private final @Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
+    private @Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
 
-    public Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration() {
-        return this.sseConfiguration == null ? Codegen.empty() : this.sseConfiguration;
+    public Optional<Output<FHIRDatastoreSseConfigurationArgs>> sseConfiguration() {
+        return Optional.ofNullable(this.sseConfiguration);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<FHIRDatastoreTagArgs>> tags;
+    private @Nullable Output<List<FHIRDatastoreTagArgs>> tags;
 
-    public Output<List<FHIRDatastoreTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FHIRDatastoreTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FHIRDatastoreArgs(
-        @Nullable Output<String> datastoreName,
-        Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion,
-        @Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig,
-        @Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration,
-        @Nullable Output<List<FHIRDatastoreTagArgs>> tags) {
-        this.datastoreName = datastoreName;
-        this.datastoreTypeVersion = Objects.requireNonNull(datastoreTypeVersion, "expected parameter 'datastoreTypeVersion' to be non-null");
-        this.preloadDataConfig = preloadDataConfig;
-        this.sseConfiguration = sseConfiguration;
-        this.tags = tags;
-    }
+    private FHIRDatastoreArgs() {}
 
-    private FHIRDatastoreArgs() {
-        this.datastoreName = Codegen.empty();
-        this.datastoreTypeVersion = Codegen.empty();
-        this.preloadDataConfig = Codegen.empty();
-        this.sseConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FHIRDatastoreArgs(FHIRDatastoreArgs $) {
+        this.datastoreName = $.datastoreName;
+        this.datastoreTypeVersion = $.datastoreTypeVersion;
+        this.preloadDataConfig = $.preloadDataConfig;
+        this.sseConfiguration = $.sseConfiguration;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FHIRDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datastoreName;
-        private Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
-        private @Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
-        private @Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
-        private @Nullable Output<List<FHIRDatastoreTagArgs>> tags;
+        private FHIRDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FHIRDatastoreArgs();
         }
 
         public Builder(FHIRDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.datastoreTypeVersion = defaults.datastoreTypeVersion;
-    	      this.preloadDataConfig = defaults.preloadDataConfig;
-    	      this.sseConfiguration = defaults.sseConfiguration;
-    	      this.tags = defaults.tags;
+            $ = new FHIRDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
-            this.datastoreName = datastoreName;
+            $.datastoreName = datastoreName;
             return this;
         }
-        public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Codegen.ofNullable(datastoreName);
-            return this;
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder datastoreTypeVersion(Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion) {
-            this.datastoreTypeVersion = Objects.requireNonNull(datastoreTypeVersion);
+            $.datastoreTypeVersion = datastoreTypeVersion;
             return this;
         }
+
         public Builder datastoreTypeVersion(FHIRDatastoreDatastoreTypeVersion datastoreTypeVersion) {
-            this.datastoreTypeVersion = Output.of(Objects.requireNonNull(datastoreTypeVersion));
-            return this;
+            return datastoreTypeVersion(Output.of(datastoreTypeVersion));
         }
+
         public Builder preloadDataConfig(@Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig) {
-            this.preloadDataConfig = preloadDataConfig;
+            $.preloadDataConfig = preloadDataConfig;
             return this;
         }
-        public Builder preloadDataConfig(@Nullable FHIRDatastorePreloadDataConfigArgs preloadDataConfig) {
-            this.preloadDataConfig = Codegen.ofNullable(preloadDataConfig);
-            return this;
+
+        public Builder preloadDataConfig(FHIRDatastorePreloadDataConfigArgs preloadDataConfig) {
+            return preloadDataConfig(Output.of(preloadDataConfig));
         }
+
         public Builder sseConfiguration(@Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration) {
-            this.sseConfiguration = sseConfiguration;
+            $.sseConfiguration = sseConfiguration;
             return this;
         }
-        public Builder sseConfiguration(@Nullable FHIRDatastoreSseConfigurationArgs sseConfiguration) {
-            this.sseConfiguration = Codegen.ofNullable(sseConfiguration);
-            return this;
+
+        public Builder sseConfiguration(FHIRDatastoreSseConfigurationArgs sseConfiguration) {
+            return sseConfiguration(Output.of(sseConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<FHIRDatastoreTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FHIRDatastoreTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FHIRDatastoreTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FHIRDatastoreTagArgs... tags) {
             return tags(List.of(tags));
-        }        public FHIRDatastoreArgs build() {
-            return new FHIRDatastoreArgs(datastoreName, datastoreTypeVersion, preloadDataConfig, sseConfiguration, tags);
+        }
+
+        public FHIRDatastoreArgs build() {
+            $.datastoreTypeVersion = Objects.requireNonNull($.datastoreTypeVersion, "expected parameter 'datastoreTypeVersion' to be non-null");
+            return $;
         }
     }
+
 }

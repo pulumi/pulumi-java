@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends com.pulumi.resour
     public static final JobTemplateRateIncreaseCriteriaArgs Empty = new JobTemplateRateIncreaseCriteriaArgs();
 
     @Import(name="numberOfNotifiedThings")
-      private final @Nullable Output<Integer> numberOfNotifiedThings;
+    private @Nullable Output<Integer> numberOfNotifiedThings;
 
-    public Output<Integer> numberOfNotifiedThings() {
-        return this.numberOfNotifiedThings == null ? Codegen.empty() : this.numberOfNotifiedThings;
+    public Optional<Output<Integer>> numberOfNotifiedThings() {
+        return Optional.ofNullable(this.numberOfNotifiedThings);
     }
 
     @Import(name="numberOfSucceededThings")
-      private final @Nullable Output<Integer> numberOfSucceededThings;
+    private @Nullable Output<Integer> numberOfSucceededThings;
 
-    public Output<Integer> numberOfSucceededThings() {
-        return this.numberOfSucceededThings == null ? Codegen.empty() : this.numberOfSucceededThings;
+    public Optional<Output<Integer>> numberOfSucceededThings() {
+        return Optional.ofNullable(this.numberOfSucceededThings);
     }
 
-    public JobTemplateRateIncreaseCriteriaArgs(
-        @Nullable Output<Integer> numberOfNotifiedThings,
-        @Nullable Output<Integer> numberOfSucceededThings) {
-        this.numberOfNotifiedThings = numberOfNotifiedThings;
-        this.numberOfSucceededThings = numberOfSucceededThings;
-    }
+    private JobTemplateRateIncreaseCriteriaArgs() {}
 
-    private JobTemplateRateIncreaseCriteriaArgs() {
-        this.numberOfNotifiedThings = Codegen.empty();
-        this.numberOfSucceededThings = Codegen.empty();
+    private JobTemplateRateIncreaseCriteriaArgs(JobTemplateRateIncreaseCriteriaArgs $) {
+        this.numberOfNotifiedThings = $.numberOfNotifiedThings;
+        this.numberOfSucceededThings = $.numberOfSucceededThings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTemplateRateIncreaseCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numberOfNotifiedThings;
-        private @Nullable Output<Integer> numberOfSucceededThings;
+        private JobTemplateRateIncreaseCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTemplateRateIncreaseCriteriaArgs();
         }
 
         public Builder(JobTemplateRateIncreaseCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numberOfNotifiedThings = defaults.numberOfNotifiedThings;
-    	      this.numberOfSucceededThings = defaults.numberOfSucceededThings;
+            $ = new JobTemplateRateIncreaseCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numberOfNotifiedThings(@Nullable Output<Integer> numberOfNotifiedThings) {
-            this.numberOfNotifiedThings = numberOfNotifiedThings;
+            $.numberOfNotifiedThings = numberOfNotifiedThings;
             return this;
         }
-        public Builder numberOfNotifiedThings(@Nullable Integer numberOfNotifiedThings) {
-            this.numberOfNotifiedThings = Codegen.ofNullable(numberOfNotifiedThings);
-            return this;
+
+        public Builder numberOfNotifiedThings(Integer numberOfNotifiedThings) {
+            return numberOfNotifiedThings(Output.of(numberOfNotifiedThings));
         }
+
         public Builder numberOfSucceededThings(@Nullable Output<Integer> numberOfSucceededThings) {
-            this.numberOfSucceededThings = numberOfSucceededThings;
+            $.numberOfSucceededThings = numberOfSucceededThings;
             return this;
         }
-        public Builder numberOfSucceededThings(@Nullable Integer numberOfSucceededThings) {
-            this.numberOfSucceededThings = Codegen.ofNullable(numberOfSucceededThings);
-            return this;
-        }        public JobTemplateRateIncreaseCriteriaArgs build() {
-            return new JobTemplateRateIncreaseCriteriaArgs(numberOfNotifiedThings, numberOfSucceededThings);
+
+        public Builder numberOfSucceededThings(Integer numberOfSucceededThings) {
+            return numberOfSucceededThings(Output.of(numberOfSucceededThings));
+        }
+
+        public JobTemplateRateIncreaseCriteriaArgs build() {
+            return $;
         }
     }
+
 }

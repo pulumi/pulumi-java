@@ -27,10 +27,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="abortIncompleteMultipartUpload")
-      private final @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
+    private @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
 
     public Optional<BucketAbortIncompleteMultipartUpload> abortIncompleteMultipartUpload() {
-        return this.abortIncompleteMultipartUpload == null ? Optional.empty() : Optional.ofNullable(this.abortIncompleteMultipartUpload);
+        return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable String expirationDate;
+    private @Nullable String expirationDate;
 
     public Optional<String> expirationDate() {
-        return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expirationInDays")
-      private final @Nullable Integer expirationInDays;
+    private @Nullable Integer expirationInDays;
 
     public Optional<Integer> expirationInDays() {
-        return this.expirationInDays == null ? Optional.empty() : Optional.ofNullable(this.expirationInDays);
+        return Optional.ofNullable(this.expirationInDays);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable BucketRuleFilterProperties filter;
+    private @Nullable BucketRuleFilterProperties filter;
 
     public Optional<BucketRuleFilterProperties> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -71,98 +71,81 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="status")
-      private final @Nullable BucketRuleStatus status;
+    private @Nullable BucketRuleStatus status;
 
     public Optional<BucketRuleStatus> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public BucketRule(
-        @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @Nullable String expirationDate,
-        @Nullable Integer expirationInDays,
-        @Nullable BucketRuleFilterProperties filter,
-        @Nullable String id,
-        @Nullable BucketRuleStatus status) {
-        this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
-        this.expirationDate = expirationDate;
-        this.expirationInDays = expirationInDays;
-        this.filter = filter;
-        this.id = id;
-        this.status = status;
-    }
+    private BucketRule() {}
 
-    private BucketRule() {
-        this.abortIncompleteMultipartUpload = null;
-        this.expirationDate = null;
-        this.expirationInDays = null;
-        this.filter = null;
-        this.id = null;
-        this.status = null;
+    private BucketRule(BucketRule $) {
+        this.abortIncompleteMultipartUpload = $.abortIncompleteMultipartUpload;
+        this.expirationDate = $.expirationDate;
+        this.expirationInDays = $.expirationInDays;
+        this.filter = $.filter;
+        this.id = $.id;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
-        private @Nullable String expirationDate;
-        private @Nullable Integer expirationInDays;
-        private @Nullable BucketRuleFilterProperties filter;
-        private @Nullable String id;
-        private @Nullable BucketRuleStatus status;
+        private BucketRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRule();
         }
 
         public Builder(BucketRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortIncompleteMultipartUpload = defaults.abortIncompleteMultipartUpload;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.expirationInDays = defaults.expirationInDays;
-    	      this.filter = defaults.filter;
-    	      this.id = defaults.id;
-    	      this.status = defaults.status;
+            $ = new BucketRule(Objects.requireNonNull(defaults));
         }
 
         public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
+            $.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
+
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
+
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
-            this.expirationInDays = expirationInDays;
+            $.expirationInDays = expirationInDays;
             return this;
         }
+
         public Builder filter(@Nullable BucketRuleFilterProperties filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder status(@Nullable BucketRuleStatus status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public BucketRule build() {
-            return new BucketRule(abortIncompleteMultipartUpload, expirationDate, expirationInDays, filter, id, status);
+        }
+
+        public BucketRule build() {
+            return $;
         }
     }
+
 }

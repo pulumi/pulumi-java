@@ -18,48 +18,49 @@ public final class InstanceAccessControlAttributeConfigurationProperties extends
     public static final InstanceAccessControlAttributeConfigurationProperties Empty = new InstanceAccessControlAttributeConfigurationProperties();
 
     @Import(name="accessControlAttributes", required=true)
-      private final List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
+    private List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
 
     public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes() {
         return this.accessControlAttributes;
     }
 
-    public InstanceAccessControlAttributeConfigurationProperties(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
-        this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes, "expected parameter 'accessControlAttributes' to be non-null");
-    }
+    private InstanceAccessControlAttributeConfigurationProperties() {}
 
-    private InstanceAccessControlAttributeConfigurationProperties() {
-        this.accessControlAttributes = List.of();
+    private InstanceAccessControlAttributeConfigurationProperties(InstanceAccessControlAttributeConfigurationProperties $) {
+        this.accessControlAttributes = $.accessControlAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAccessControlAttributeConfigurationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
+        private InstanceAccessControlAttributeConfigurationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAccessControlAttributeConfigurationProperties();
         }
 
         public Builder(InstanceAccessControlAttributeConfigurationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlAttributes = defaults.accessControlAttributes;
+            $ = new InstanceAccessControlAttributeConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
-            this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
+            $.accessControlAttributes = accessControlAttributes;
             return this;
         }
+
         public Builder accessControlAttributes(InstanceAccessControlAttributeConfigurationAccessControlAttribute... accessControlAttributes) {
             return accessControlAttributes(List.of(accessControlAttributes));
-        }        public InstanceAccessControlAttributeConfigurationProperties build() {
-            return new InstanceAccessControlAttributeConfigurationProperties(accessControlAttributes);
+        }
+
+        public InstanceAccessControlAttributeConfigurationProperties build() {
+            $.accessControlAttributes = Objects.requireNonNull($.accessControlAttributes, "expected parameter 'accessControlAttributes' to be non-null");
+            return $;
         }
     }
+
 }

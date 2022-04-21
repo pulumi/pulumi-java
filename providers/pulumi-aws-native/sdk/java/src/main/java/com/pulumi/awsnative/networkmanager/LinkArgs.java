@@ -7,10 +7,10 @@ import com.pulumi.awsnative.networkmanager.inputs.LinkBandwidthArgs;
 import com.pulumi.awsnative.networkmanager.inputs.LinkTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bandwidth", required=true)
-      private final Output<LinkBandwidthArgs> bandwidth;
+    private Output<LinkBandwidthArgs> bandwidth;
 
     public Output<LinkBandwidthArgs> bandwidth() {
         return this.bandwidth;
@@ -34,10 +34,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final Output<String> globalNetworkId;
+    private Output<String> globalNetworkId;
 
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
@@ -56,10 +56,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<String> provider;
+    private @Nullable Output<String> provider;
 
-    public Output<String> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<String>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="siteId", required=true)
-      private final Output<String> siteId;
+    private Output<String> siteId;
 
     public Output<String> siteId() {
         return this.siteId;
@@ -78,10 +78,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LinkTagArgs>> tags;
+    private @Nullable Output<List<LinkTagArgs>> tags;
 
-    public Output<List<LinkTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LinkTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -89,131 +89,115 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public LinkArgs(
-        Output<LinkBandwidthArgs> bandwidth,
-        @Nullable Output<String> description,
-        Output<String> globalNetworkId,
-        @Nullable Output<String> provider,
-        Output<String> siteId,
-        @Nullable Output<List<LinkTagArgs>> tags,
-        @Nullable Output<String> type) {
-        this.bandwidth = Objects.requireNonNull(bandwidth, "expected parameter 'bandwidth' to be non-null");
-        this.description = description;
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.provider = provider;
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-        this.tags = tags;
-        this.type = type;
-    }
+    private LinkArgs() {}
 
-    private LinkArgs() {
-        this.bandwidth = Codegen.empty();
-        this.description = Codegen.empty();
-        this.globalNetworkId = Codegen.empty();
-        this.provider = Codegen.empty();
-        this.siteId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private LinkArgs(LinkArgs $) {
+        this.bandwidth = $.bandwidth;
+        this.description = $.description;
+        this.globalNetworkId = $.globalNetworkId;
+        this.provider = $.provider;
+        this.siteId = $.siteId;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<LinkBandwidthArgs> bandwidth;
-        private @Nullable Output<String> description;
-        private Output<String> globalNetworkId;
-        private @Nullable Output<String> provider;
-        private Output<String> siteId;
-        private @Nullable Output<List<LinkTagArgs>> tags;
-        private @Nullable Output<String> type;
+        private LinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkArgs();
         }
 
         public Builder(LinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidth = defaults.bandwidth;
-    	      this.description = defaults.description;
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.provider = defaults.provider;
-    	      this.siteId = defaults.siteId;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new LinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidth(Output<LinkBandwidthArgs> bandwidth) {
-            this.bandwidth = Objects.requireNonNull(bandwidth);
+            $.bandwidth = bandwidth;
             return this;
         }
+
         public Builder bandwidth(LinkBandwidthArgs bandwidth) {
-            this.bandwidth = Output.of(Objects.requireNonNull(bandwidth));
-            return this;
+            return bandwidth(Output.of(bandwidth));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder globalNetworkId(Output<String> globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
+
         public Builder provider(@Nullable Output<String> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable String provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
+
+        public Builder provider(String provider) {
+            return provider(Output.of(provider));
         }
+
         public Builder siteId(Output<String> siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Output.of(Objects.requireNonNull(siteId));
-            return this;
+            return siteId(Output.of(siteId));
         }
+
         public Builder tags(@Nullable Output<List<LinkTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LinkTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LinkTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LinkTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public LinkArgs build() {
-            return new LinkArgs(bandwidth, description, globalNetworkId, provider, siteId, tags, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public LinkArgs build() {
+            $.bandwidth = Objects.requireNonNull($.bandwidth, "expected parameter 'bandwidth' to be non-null");
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            return $;
         }
     }
+
 }

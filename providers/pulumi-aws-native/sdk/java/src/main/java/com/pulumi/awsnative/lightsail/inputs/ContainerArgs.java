@@ -7,10 +7,10 @@ import com.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariableArgs;
 import com.pulumi.awsnative.lightsail.inputs.ContainerPortInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
+    private @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
 
-    public Output<List<ContainerEnvironmentVariableArgs>> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<List<ContainerEnvironmentVariableArgs>>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -71,111 +71,100 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<ContainerPortInfoArgs>> ports;
+    private @Nullable Output<List<ContainerPortInfoArgs>> ports;
 
-    public Output<List<ContainerPortInfoArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<ContainerPortInfoArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public ContainerArgs(
-        @Nullable Output<List<String>> command,
-        @Nullable Output<String> containerName,
-        @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment,
-        @Nullable Output<String> image,
-        @Nullable Output<List<ContainerPortInfoArgs>> ports) {
-        this.command = command;
-        this.containerName = containerName;
-        this.environment = environment;
-        this.image = image;
-        this.ports = ports;
-    }
+    private ContainerArgs() {}
 
-    private ContainerArgs() {
-        this.command = Codegen.empty();
-        this.containerName = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.image = Codegen.empty();
-        this.ports = Codegen.empty();
+    private ContainerArgs(ContainerArgs $) {
+        this.command = $.command;
+        this.containerName = $.containerName;
+        this.environment = $.environment;
+        this.image = $.image;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<String> containerName;
-        private @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
-        private @Nullable Output<String> image;
-        private @Nullable Output<List<ContainerPortInfoArgs>> ports;
+        private ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerArgs();
         }
 
         public Builder(ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.containerName = defaults.containerName;
-    	      this.environment = defaults.environment;
-    	      this.image = defaults.image;
-    	      this.ports = defaults.ports;
+            $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder environment(@Nullable Output<List<ContainerEnvironmentVariableArgs>> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable List<ContainerEnvironmentVariableArgs> environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(List<ContainerEnvironmentVariableArgs> environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder environment(ContainerEnvironmentVariableArgs... environment) {
             return environment(List.of(environment));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder ports(@Nullable Output<List<ContainerPortInfoArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<ContainerPortInfoArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<ContainerPortInfoArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(ContainerPortInfoArgs... ports) {
             return ports(List.of(ports));
-        }        public ContainerArgs build() {
-            return new ContainerArgs(command, containerName, environment, image, ports);
+        }
+
+        public ContainerArgs build() {
+            return $;
         }
     }
+
 }

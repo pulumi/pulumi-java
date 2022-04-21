@@ -15,81 +15,77 @@ public final class BudgetsActionSsmActionDefinition extends com.pulumi.resources
     public static final BudgetsActionSsmActionDefinition Empty = new BudgetsActionSsmActionDefinition();
 
     @Import(name="instanceIds", required=true)
-      private final List<String> instanceIds;
+    private List<String> instanceIds;
 
     public List<String> instanceIds() {
         return this.instanceIds;
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="subtype", required=true)
-      private final BudgetsActionSsmActionDefinitionSubtype subtype;
+    private BudgetsActionSsmActionDefinitionSubtype subtype;
 
     public BudgetsActionSsmActionDefinitionSubtype subtype() {
         return this.subtype;
     }
 
-    public BudgetsActionSsmActionDefinition(
-        List<String> instanceIds,
-        String region,
-        BudgetsActionSsmActionDefinitionSubtype subtype) {
-        this.instanceIds = Objects.requireNonNull(instanceIds, "expected parameter 'instanceIds' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.subtype = Objects.requireNonNull(subtype, "expected parameter 'subtype' to be non-null");
-    }
+    private BudgetsActionSsmActionDefinition() {}
 
-    private BudgetsActionSsmActionDefinition() {
-        this.instanceIds = List.of();
-        this.region = null;
-        this.subtype = null;
+    private BudgetsActionSsmActionDefinition(BudgetsActionSsmActionDefinition $) {
+        this.instanceIds = $.instanceIds;
+        this.region = $.region;
+        this.subtype = $.subtype;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetsActionSsmActionDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> instanceIds;
-        private String region;
-        private BudgetsActionSsmActionDefinitionSubtype subtype;
+        private BudgetsActionSsmActionDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetsActionSsmActionDefinition();
         }
 
         public Builder(BudgetsActionSsmActionDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceIds = defaults.instanceIds;
-    	      this.region = defaults.region;
-    	      this.subtype = defaults.subtype;
+            $ = new BudgetsActionSsmActionDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceIds(List<String> instanceIds) {
-            this.instanceIds = Objects.requireNonNull(instanceIds);
+            $.instanceIds = instanceIds;
             return this;
         }
+
         public Builder instanceIds(String... instanceIds) {
             return instanceIds(List.of(instanceIds));
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder subtype(BudgetsActionSsmActionDefinitionSubtype subtype) {
-            this.subtype = Objects.requireNonNull(subtype);
+            $.subtype = subtype;
             return this;
-        }        public BudgetsActionSsmActionDefinition build() {
-            return new BudgetsActionSsmActionDefinition(instanceIds, region, subtype);
+        }
+
+        public BudgetsActionSsmActionDefinition build() {
+            $.instanceIds = Objects.requireNonNull($.instanceIds, "expected parameter 'instanceIds' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.subtype = Objects.requireNonNull($.subtype, "expected parameter 'subtype' to be non-null");
+            return $;
         }
     }
+
 }

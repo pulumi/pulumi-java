@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class DatastoreSchemaDefinitionArgs extends com.pulumi.resources.Re
     public static final DatastoreSchemaDefinitionArgs Empty = new DatastoreSchemaDefinitionArgs();
 
     @Import(name="columns")
-      private final @Nullable Output<List<DatastoreColumnArgs>> columns;
+    private @Nullable Output<List<DatastoreColumnArgs>> columns;
 
-    public Output<List<DatastoreColumnArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<DatastoreColumnArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
-    public DatastoreSchemaDefinitionArgs(@Nullable Output<List<DatastoreColumnArgs>> columns) {
-        this.columns = columns;
-    }
+    private DatastoreSchemaDefinitionArgs() {}
 
-    private DatastoreSchemaDefinitionArgs() {
-        this.columns = Codegen.empty();
+    private DatastoreSchemaDefinitionArgs(DatastoreSchemaDefinitionArgs $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreSchemaDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DatastoreColumnArgs>> columns;
+        private DatastoreSchemaDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreSchemaDefinitionArgs();
         }
 
         public Builder(DatastoreSchemaDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new DatastoreSchemaDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<List<DatastoreColumnArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<DatastoreColumnArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<DatastoreColumnArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(DatastoreColumnArgs... columns) {
             return columns(List.of(columns));
-        }        public DatastoreSchemaDefinitionArgs build() {
-            return new DatastoreSchemaDefinitionArgs(columns);
+        }
+
+        public DatastoreSchemaDefinitionArgs build() {
+            return $;
         }
     }
+
 }

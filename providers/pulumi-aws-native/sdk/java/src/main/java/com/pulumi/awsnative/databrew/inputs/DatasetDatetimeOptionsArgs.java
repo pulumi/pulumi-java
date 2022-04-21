@@ -5,9 +5,9 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -31,10 +31,10 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="localeCode")
-      private final @Nullable Output<String> localeCode;
+    private @Nullable Output<String> localeCode;
 
-    public Output<String> localeCode() {
-        return this.localeCode == null ? Codegen.empty() : this.localeCode;
+    public Optional<Output<String>> localeCode() {
+        return Optional.ofNullable(this.localeCode);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="timezoneOffset")
-      private final @Nullable Output<String> timezoneOffset;
+    private @Nullable Output<String> timezoneOffset;
 
-    public Output<String> timezoneOffset() {
-        return this.timezoneOffset == null ? Codegen.empty() : this.timezoneOffset;
+    public Optional<Output<String>> timezoneOffset() {
+        return Optional.ofNullable(this.timezoneOffset);
     }
 
-    public DatasetDatetimeOptionsArgs(
-        Output<String> format,
-        @Nullable Output<String> localeCode,
-        @Nullable Output<String> timezoneOffset) {
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.localeCode = localeCode;
-        this.timezoneOffset = timezoneOffset;
-    }
+    private DatasetDatetimeOptionsArgs() {}
 
-    private DatasetDatetimeOptionsArgs() {
-        this.format = Codegen.empty();
-        this.localeCode = Codegen.empty();
-        this.timezoneOffset = Codegen.empty();
+    private DatasetDatetimeOptionsArgs(DatasetDatetimeOptionsArgs $) {
+        this.format = $.format;
+        this.localeCode = $.localeCode;
+        this.timezoneOffset = $.timezoneOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDatetimeOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> format;
-        private @Nullable Output<String> localeCode;
-        private @Nullable Output<String> timezoneOffset;
+        private DatasetDatetimeOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDatetimeOptionsArgs();
         }
 
         public Builder(DatasetDatetimeOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.localeCode = defaults.localeCode;
-    	      this.timezoneOffset = defaults.timezoneOffset;
+            $ = new DatasetDatetimeOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder localeCode(@Nullable Output<String> localeCode) {
-            this.localeCode = localeCode;
+            $.localeCode = localeCode;
             return this;
         }
-        public Builder localeCode(@Nullable String localeCode) {
-            this.localeCode = Codegen.ofNullable(localeCode);
-            return this;
+
+        public Builder localeCode(String localeCode) {
+            return localeCode(Output.of(localeCode));
         }
+
         public Builder timezoneOffset(@Nullable Output<String> timezoneOffset) {
-            this.timezoneOffset = timezoneOffset;
+            $.timezoneOffset = timezoneOffset;
             return this;
         }
-        public Builder timezoneOffset(@Nullable String timezoneOffset) {
-            this.timezoneOffset = Codegen.ofNullable(timezoneOffset);
-            return this;
-        }        public DatasetDatetimeOptionsArgs build() {
-            return new DatasetDatetimeOptionsArgs(format, localeCode, timezoneOffset);
+
+        public Builder timezoneOffset(String timezoneOffset) {
+            return timezoneOffset(Output.of(timezoneOffset));
+        }
+
+        public DatasetDatetimeOptionsArgs build() {
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

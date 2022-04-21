@@ -7,9 +7,9 @@ import com.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionConfigura
 import com.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class SuiteDefinitionArgs extends com.pulumi.resources.ResourceArgs
     public static final SuiteDefinitionArgs Empty = new SuiteDefinitionArgs();
 
     @Import(name="suiteDefinitionConfiguration", required=true)
-      private final Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
+    private Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
 
     public Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
@@ -29,66 +29,63 @@ public final class SuiteDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
+    private @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
 
-    public Output<List<SuiteDefinitionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<SuiteDefinitionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SuiteDefinitionArgs(
-        Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration,
-        @Nullable Output<List<SuiteDefinitionTagArgs>> tags) {
-        this.suiteDefinitionConfiguration = Objects.requireNonNull(suiteDefinitionConfiguration, "expected parameter 'suiteDefinitionConfiguration' to be non-null");
-        this.tags = tags;
-    }
+    private SuiteDefinitionArgs() {}
 
-    private SuiteDefinitionArgs() {
-        this.suiteDefinitionConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SuiteDefinitionArgs(SuiteDefinitionArgs $) {
+        this.suiteDefinitionConfiguration = $.suiteDefinitionConfiguration;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuiteDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
-        private @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
+        private SuiteDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuiteDefinitionArgs();
         }
 
         public Builder(SuiteDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.suiteDefinitionConfiguration = defaults.suiteDefinitionConfiguration;
-    	      this.tags = defaults.tags;
+            $ = new SuiteDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder suiteDefinitionConfiguration(Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration) {
-            this.suiteDefinitionConfiguration = Objects.requireNonNull(suiteDefinitionConfiguration);
+            $.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
             return this;
         }
+
         public Builder suiteDefinitionConfiguration(SuiteDefinitionConfigurationPropertiesArgs suiteDefinitionConfiguration) {
-            this.suiteDefinitionConfiguration = Output.of(Objects.requireNonNull(suiteDefinitionConfiguration));
-            return this;
+            return suiteDefinitionConfiguration(Output.of(suiteDefinitionConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<SuiteDefinitionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<SuiteDefinitionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<SuiteDefinitionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(SuiteDefinitionTagArgs... tags) {
             return tags(List.of(tags));
-        }        public SuiteDefinitionArgs build() {
-            return new SuiteDefinitionArgs(suiteDefinitionConfiguration, tags);
+        }
+
+        public SuiteDefinitionArgs build() {
+            $.suiteDefinitionConfiguration = Objects.requireNonNull($.suiteDefinitionConfiguration, "expected parameter 'suiteDefinitionConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

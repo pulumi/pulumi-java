@@ -7,10 +7,10 @@ import com.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupFirewallRule
 import com.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="firewallRules")
-      private final @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
+    private @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
 
-    public Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules() {
-        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
+    public Optional<Output<List<FirewallRuleGroupFirewallRuleArgs>>> firewallRules() {
+        return Optional.ofNullable(this.firewallRules);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,82 +45,76 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
+    private @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
 
-    public Output<List<FirewallRuleGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FirewallRuleGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FirewallRuleGroupArgs(
-        @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules,
-        @Nullable Output<String> name,
-        @Nullable Output<List<FirewallRuleGroupTagArgs>> tags) {
-        this.firewallRules = firewallRules;
-        this.name = name;
-        this.tags = tags;
-    }
+    private FirewallRuleGroupArgs() {}
 
-    private FirewallRuleGroupArgs() {
-        this.firewallRules = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FirewallRuleGroupArgs(FirewallRuleGroupArgs $) {
+        this.firewallRules = $.firewallRules;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallRuleGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
+        private FirewallRuleGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallRuleGroupArgs();
         }
 
         public Builder(FirewallRuleGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallRules = defaults.firewallRules;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new FirewallRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallRules(@Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules) {
-            this.firewallRules = firewallRules;
+            $.firewallRules = firewallRules;
             return this;
         }
-        public Builder firewallRules(@Nullable List<FirewallRuleGroupFirewallRuleArgs> firewallRules) {
-            this.firewallRules = Codegen.ofNullable(firewallRules);
-            return this;
+
+        public Builder firewallRules(List<FirewallRuleGroupFirewallRuleArgs> firewallRules) {
+            return firewallRules(Output.of(firewallRules));
         }
+
         public Builder firewallRules(FirewallRuleGroupFirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<FirewallRuleGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FirewallRuleGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FirewallRuleGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FirewallRuleGroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public FirewallRuleGroupArgs build() {
-            return new FirewallRuleGroupArgs(firewallRules, name, tags);
+        }
+
+        public FirewallRuleGroupArgs build() {
+            return $;
         }
     }
+
 }

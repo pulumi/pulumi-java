@@ -14,78 +14,73 @@ public final class DataSourceWebCrawlerBasicAuthentication extends com.pulumi.re
     public static final DataSourceWebCrawlerBasicAuthentication Empty = new DataSourceWebCrawlerBasicAuthentication();
 
     @Import(name="credentials", required=true)
-      private final String credentials;
+    private String credentials;
 
     public String credentials() {
         return this.credentials;
     }
 
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public DataSourceWebCrawlerBasicAuthentication(
-        String credentials,
-        String host,
-        Integer port) {
-        this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourceWebCrawlerBasicAuthentication() {}
 
-    private DataSourceWebCrawlerBasicAuthentication() {
-        this.credentials = null;
-        this.host = null;
-        this.port = null;
+    private DataSourceWebCrawlerBasicAuthentication(DataSourceWebCrawlerBasicAuthentication $) {
+        this.credentials = $.credentials;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceWebCrawlerBasicAuthentication defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String credentials;
-        private String host;
-        private Integer port;
+        private DataSourceWebCrawlerBasicAuthentication $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceWebCrawlerBasicAuthentication();
         }
 
         public Builder(DataSourceWebCrawlerBasicAuthentication defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceWebCrawlerBasicAuthentication(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(String credentials) {
-            this.credentials = Objects.requireNonNull(credentials);
+            $.credentials = credentials;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public DataSourceWebCrawlerBasicAuthentication build() {
-            return new DataSourceWebCrawlerBasicAuthentication(credentials, host, port);
+        }
+
+        public DataSourceWebCrawlerBasicAuthentication build() {
+            $.credentials = Objects.requireNonNull($.credentials, "expected parameter 'credentials' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="contactFlowModuleArn", required=true)
-      private final String contactFlowModuleArn;
+    private String contactFlowModuleArn;
 
     public String contactFlowModuleArn() {
         return this.contactFlowModuleArn;
     }
 
-    public GetContactFlowModuleArgs(String contactFlowModuleArn) {
-        this.contactFlowModuleArn = Objects.requireNonNull(contactFlowModuleArn, "expected parameter 'contactFlowModuleArn' to be non-null");
-    }
+    private GetContactFlowModuleArgs() {}
 
-    private GetContactFlowModuleArgs() {
-        this.contactFlowModuleArn = null;
+    private GetContactFlowModuleArgs(GetContactFlowModuleArgs $) {
+        this.contactFlowModuleArn = $.contactFlowModuleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactFlowModuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactFlowModuleArn;
+        private GetContactFlowModuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactFlowModuleArgs();
         }
 
         public Builder(GetContactFlowModuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactFlowModuleArn = defaults.contactFlowModuleArn;
+            $ = new GetContactFlowModuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactFlowModuleArn(String contactFlowModuleArn) {
-            this.contactFlowModuleArn = Objects.requireNonNull(contactFlowModuleArn);
+            $.contactFlowModuleArn = contactFlowModuleArn;
             return this;
-        }        public GetContactFlowModuleArgs build() {
-            return new GetContactFlowModuleArgs(contactFlowModuleArn);
+        }
+
+        public GetContactFlowModuleArgs build() {
+            $.contactFlowModuleArn = Objects.requireNonNull($.contactFlowModuleArn, "expected parameter 'contactFlowModuleArn' to be non-null");
+            return $;
         }
     }
+
 }

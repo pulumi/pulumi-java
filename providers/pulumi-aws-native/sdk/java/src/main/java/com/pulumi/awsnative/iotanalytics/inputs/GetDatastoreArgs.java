@@ -13,45 +13,45 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDatastoreArgs Empty = new GetDatastoreArgs();
 
     @Import(name="datastoreName", required=true)
-      private final String datastoreName;
+    private String datastoreName;
 
     public String datastoreName() {
         return this.datastoreName;
     }
 
-    public GetDatastoreArgs(String datastoreName) {
-        this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
-    }
+    private GetDatastoreArgs() {}
 
-    private GetDatastoreArgs() {
-        this.datastoreName = null;
+    private GetDatastoreArgs(GetDatastoreArgs $) {
+        this.datastoreName = $.datastoreName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datastoreName;
+        private GetDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatastoreArgs();
         }
 
         public Builder(GetDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
+            $ = new GetDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Objects.requireNonNull(datastoreName);
+            $.datastoreName = datastoreName;
             return this;
-        }        public GetDatastoreArgs build() {
-            return new GetDatastoreArgs(datastoreName);
+        }
+
+        public GetDatastoreArgs build() {
+            $.datastoreName = Objects.requireNonNull($.datastoreName, "expected parameter 'datastoreName' to be non-null");
+            return $;
         }
     }
+
 }

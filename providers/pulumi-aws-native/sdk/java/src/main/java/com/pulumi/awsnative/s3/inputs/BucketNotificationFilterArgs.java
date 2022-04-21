@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketS3KeyFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class BucketNotificationFilterArgs extends com.pulumi.resources.Res
     public static final BucketNotificationFilterArgs Empty = new BucketNotificationFilterArgs();
 
     @Import(name="s3Key", required=true)
-      private final Output<BucketS3KeyFilterArgs> s3Key;
+    private Output<BucketS3KeyFilterArgs> s3Key;
 
     public Output<BucketS3KeyFilterArgs> s3Key() {
         return this.s3Key;
     }
 
-    public BucketNotificationFilterArgs(Output<BucketS3KeyFilterArgs> s3Key) {
-        this.s3Key = Objects.requireNonNull(s3Key, "expected parameter 's3Key' to be non-null");
-    }
+    private BucketNotificationFilterArgs() {}
 
-    private BucketNotificationFilterArgs() {
-        this.s3Key = Codegen.empty();
+    private BucketNotificationFilterArgs(BucketNotificationFilterArgs $) {
+        this.s3Key = $.s3Key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNotificationFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketS3KeyFilterArgs> s3Key;
+        private BucketNotificationFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNotificationFilterArgs();
         }
 
         public Builder(BucketNotificationFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Key = defaults.s3Key;
+            $ = new BucketNotificationFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Key(Output<BucketS3KeyFilterArgs> s3Key) {
-            this.s3Key = Objects.requireNonNull(s3Key);
+            $.s3Key = s3Key;
             return this;
         }
+
         public Builder s3Key(BucketS3KeyFilterArgs s3Key) {
-            this.s3Key = Output.of(Objects.requireNonNull(s3Key));
-            return this;
-        }        public BucketNotificationFilterArgs build() {
-            return new BucketNotificationFilterArgs(s3Key);
+            return s3Key(Output.of(s3Key));
+        }
+
+        public BucketNotificationFilterArgs build() {
+            $.s3Key = Objects.requireNonNull($.s3Key, "expected parameter 's3Key' to be non-null");
+            return $;
         }
     }
+
 }

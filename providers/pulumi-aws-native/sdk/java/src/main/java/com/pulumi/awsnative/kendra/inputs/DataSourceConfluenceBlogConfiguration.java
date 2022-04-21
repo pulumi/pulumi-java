@@ -16,48 +16,48 @@ public final class DataSourceConfluenceBlogConfiguration extends com.pulumi.reso
     public static final DataSourceConfluenceBlogConfiguration Empty = new DataSourceConfluenceBlogConfiguration();
 
     @Import(name="blogFieldMappings")
-      private final @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
+    private @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
 
-    public List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings() {
-        return this.blogFieldMappings == null ? List.of() : this.blogFieldMappings;
+    public Optional<List<DataSourceConfluenceBlogToIndexFieldMapping>> blogFieldMappings() {
+        return Optional.ofNullable(this.blogFieldMappings);
     }
 
-    public DataSourceConfluenceBlogConfiguration(@Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
-        this.blogFieldMappings = blogFieldMappings;
-    }
+    private DataSourceConfluenceBlogConfiguration() {}
 
-    private DataSourceConfluenceBlogConfiguration() {
-        this.blogFieldMappings = List.of();
+    private DataSourceConfluenceBlogConfiguration(DataSourceConfluenceBlogConfiguration $) {
+        this.blogFieldMappings = $.blogFieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceBlogConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
+        private DataSourceConfluenceBlogConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceBlogConfiguration();
         }
 
         public Builder(DataSourceConfluenceBlogConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blogFieldMappings = defaults.blogFieldMappings;
+            $ = new DataSourceConfluenceBlogConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder blogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
-            this.blogFieldMappings = blogFieldMappings;
+            $.blogFieldMappings = blogFieldMappings;
             return this;
         }
+
         public Builder blogFieldMappings(DataSourceConfluenceBlogToIndexFieldMapping... blogFieldMappings) {
             return blogFieldMappings(List.of(blogFieldMappings));
-        }        public DataSourceConfluenceBlogConfiguration build() {
-            return new DataSourceConfluenceBlogConfiguration(blogFieldMappings);
+        }
+
+        public DataSourceConfluenceBlogConfiguration build() {
+            return $;
         }
     }
+
 }

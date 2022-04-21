@@ -17,45 +17,45 @@ public final class GetFindingsFilterArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetFindingsFilterArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetFindingsFilterArgs() {}
 
-    private GetFindingsFilterArgs() {
-        this.id = null;
+    private GetFindingsFilterArgs(GetFindingsFilterArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFindingsFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetFindingsFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFindingsFilterArgs();
         }
 
         public Builder(GetFindingsFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetFindingsFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetFindingsFilterArgs build() {
-            return new GetFindingsFilterArgs(id);
+        }
+
+        public GetFindingsFilterArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

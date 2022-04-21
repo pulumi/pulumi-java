@@ -17,45 +17,45 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appArn", required=true)
-      private final String appArn;
+    private String appArn;
 
     public String appArn() {
         return this.appArn;
     }
 
-    public GetAppArgs(String appArn) {
-        this.appArn = Objects.requireNonNull(appArn, "expected parameter 'appArn' to be non-null");
-    }
+    private GetAppArgs() {}
 
-    private GetAppArgs() {
-        this.appArn = null;
+    private GetAppArgs(GetAppArgs $) {
+        this.appArn = $.appArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appArn;
+        private GetAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppArgs();
         }
 
         public Builder(GetAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appArn = defaults.appArn;
+            $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appArn(String appArn) {
-            this.appArn = Objects.requireNonNull(appArn);
+            $.appArn = appArn;
             return this;
-        }        public GetAppArgs build() {
-            return new GetAppArgs(appArn);
+        }
+
+        public GetAppArgs build() {
+            $.appArn = Objects.requireNonNull($.appArn, "expected parameter 'appArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ssmcontacts.inputs;
 import com.pulumi.awsnative.ssmcontacts.inputs.ContactTargetsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ContactStageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="durationInMinutes", required=true)
-      private final Output<Integer> durationInMinutes;
+    private Output<Integer> durationInMinutes;
 
     public Output<Integer> durationInMinutes() {
         return this.durationInMinutes;
@@ -37,66 +37,63 @@ public final class ContactStageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targets")
-      private final @Nullable Output<List<ContactTargetsArgs>> targets;
+    private @Nullable Output<List<ContactTargetsArgs>> targets;
 
-    public Output<List<ContactTargetsArgs>> targets() {
-        return this.targets == null ? Codegen.empty() : this.targets;
+    public Optional<Output<List<ContactTargetsArgs>>> targets() {
+        return Optional.ofNullable(this.targets);
     }
 
-    public ContactStageArgs(
-        Output<Integer> durationInMinutes,
-        @Nullable Output<List<ContactTargetsArgs>> targets) {
-        this.durationInMinutes = Objects.requireNonNull(durationInMinutes, "expected parameter 'durationInMinutes' to be non-null");
-        this.targets = targets;
-    }
+    private ContactStageArgs() {}
 
-    private ContactStageArgs() {
-        this.durationInMinutes = Codegen.empty();
-        this.targets = Codegen.empty();
+    private ContactStageArgs(ContactStageArgs $) {
+        this.durationInMinutes = $.durationInMinutes;
+        this.targets = $.targets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactStageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> durationInMinutes;
-        private @Nullable Output<List<ContactTargetsArgs>> targets;
+        private ContactStageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactStageArgs();
         }
 
         public Builder(ContactStageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInMinutes = defaults.durationInMinutes;
-    	      this.targets = defaults.targets;
+            $ = new ContactStageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInMinutes(Output<Integer> durationInMinutes) {
-            this.durationInMinutes = Objects.requireNonNull(durationInMinutes);
+            $.durationInMinutes = durationInMinutes;
             return this;
         }
+
         public Builder durationInMinutes(Integer durationInMinutes) {
-            this.durationInMinutes = Output.of(Objects.requireNonNull(durationInMinutes));
-            return this;
+            return durationInMinutes(Output.of(durationInMinutes));
         }
+
         public Builder targets(@Nullable Output<List<ContactTargetsArgs>> targets) {
-            this.targets = targets;
+            $.targets = targets;
             return this;
         }
-        public Builder targets(@Nullable List<ContactTargetsArgs> targets) {
-            this.targets = Codegen.ofNullable(targets);
-            return this;
+
+        public Builder targets(List<ContactTargetsArgs> targets) {
+            return targets(Output.of(targets));
         }
+
         public Builder targets(ContactTargetsArgs... targets) {
             return targets(List.of(targets));
-        }        public ContactStageArgs build() {
-            return new ContactStageArgs(durationInMinutes, targets);
+        }
+
+        public ContactStageArgs build() {
+            $.durationInMinutes = Objects.requireNonNull($.durationInMinutes, "expected parameter 'durationInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

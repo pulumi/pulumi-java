@@ -6,7 +6,6 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.enums.IntegrationOperatorPropertiesKeys;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class IntegrationTaskPropertiesMapArgs extends com.pulumi.resources
     public static final IntegrationTaskPropertiesMapArgs Empty = new IntegrationTaskPropertiesMapArgs();
 
     @Import(name="operatorPropertyKey", required=true)
-      private final Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
+    private Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
 
     public Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey() {
         return this.operatorPropertyKey;
     }
 
     @Import(name="property", required=true)
-      private final Output<String> property;
+    private Output<String> property;
 
     public Output<String> property() {
         return this.property;
     }
 
-    public IntegrationTaskPropertiesMapArgs(
-        Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey,
-        Output<String> property) {
-        this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey, "expected parameter 'operatorPropertyKey' to be non-null");
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-    }
+    private IntegrationTaskPropertiesMapArgs() {}
 
-    private IntegrationTaskPropertiesMapArgs() {
-        this.operatorPropertyKey = Codegen.empty();
-        this.property = Codegen.empty();
+    private IntegrationTaskPropertiesMapArgs(IntegrationTaskPropertiesMapArgs $) {
+        this.operatorPropertyKey = $.operatorPropertyKey;
+        this.property = $.property;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationTaskPropertiesMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
-        private Output<String> property;
+        private IntegrationTaskPropertiesMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationTaskPropertiesMapArgs();
         }
 
         public Builder(IntegrationTaskPropertiesMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operatorPropertyKey = defaults.operatorPropertyKey;
-    	      this.property = defaults.property;
+            $ = new IntegrationTaskPropertiesMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operatorPropertyKey(Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey) {
-            this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey);
+            $.operatorPropertyKey = operatorPropertyKey;
             return this;
         }
+
         public Builder operatorPropertyKey(IntegrationOperatorPropertiesKeys operatorPropertyKey) {
-            this.operatorPropertyKey = Output.of(Objects.requireNonNull(operatorPropertyKey));
-            return this;
+            return operatorPropertyKey(Output.of(operatorPropertyKey));
         }
+
         public Builder property(Output<String> property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
         }
+
         public Builder property(String property) {
-            this.property = Output.of(Objects.requireNonNull(property));
-            return this;
-        }        public IntegrationTaskPropertiesMapArgs build() {
-            return new IntegrationTaskPropertiesMapArgs(operatorPropertyKey, property);
+            return property(Output.of(property));
+        }
+
+        public IntegrationTaskPropertiesMapArgs build() {
+            $.operatorPropertyKey = Objects.requireNonNull($.operatorPropertyKey, "expected parameter 'operatorPropertyKey' to be non-null");
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            return $;
         }
     }
+
 }

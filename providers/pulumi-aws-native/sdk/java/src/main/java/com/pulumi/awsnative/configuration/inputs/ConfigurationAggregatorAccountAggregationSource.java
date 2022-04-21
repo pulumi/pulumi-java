@@ -17,84 +17,79 @@ public final class ConfigurationAggregatorAccountAggregationSource extends com.p
     public static final ConfigurationAggregatorAccountAggregationSource Empty = new ConfigurationAggregatorAccountAggregationSource();
 
     @Import(name="accountIds", required=true)
-      private final List<String> accountIds;
+    private List<String> accountIds;
 
     public List<String> accountIds() {
         return this.accountIds;
     }
 
     @Import(name="allAwsRegions")
-      private final @Nullable Boolean allAwsRegions;
+    private @Nullable Boolean allAwsRegions;
 
     public Optional<Boolean> allAwsRegions() {
-        return this.allAwsRegions == null ? Optional.empty() : Optional.ofNullable(this.allAwsRegions);
+        return Optional.ofNullable(this.allAwsRegions);
     }
 
     @Import(name="awsRegions")
-      private final @Nullable List<String> awsRegions;
+    private @Nullable List<String> awsRegions;
 
-    public List<String> awsRegions() {
-        return this.awsRegions == null ? List.of() : this.awsRegions;
+    public Optional<List<String>> awsRegions() {
+        return Optional.ofNullable(this.awsRegions);
     }
 
-    public ConfigurationAggregatorAccountAggregationSource(
-        List<String> accountIds,
-        @Nullable Boolean allAwsRegions,
-        @Nullable List<String> awsRegions) {
-        this.accountIds = Objects.requireNonNull(accountIds, "expected parameter 'accountIds' to be non-null");
-        this.allAwsRegions = allAwsRegions;
-        this.awsRegions = awsRegions;
-    }
+    private ConfigurationAggregatorAccountAggregationSource() {}
 
-    private ConfigurationAggregatorAccountAggregationSource() {
-        this.accountIds = List.of();
-        this.allAwsRegions = null;
-        this.awsRegions = List.of();
+    private ConfigurationAggregatorAccountAggregationSource(ConfigurationAggregatorAccountAggregationSource $) {
+        this.accountIds = $.accountIds;
+        this.allAwsRegions = $.allAwsRegions;
+        this.awsRegions = $.awsRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationAggregatorAccountAggregationSource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> accountIds;
-        private @Nullable Boolean allAwsRegions;
-        private @Nullable List<String> awsRegions;
+        private ConfigurationAggregatorAccountAggregationSource $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationAggregatorAccountAggregationSource();
         }
 
         public Builder(ConfigurationAggregatorAccountAggregationSource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountIds = defaults.accountIds;
-    	      this.allAwsRegions = defaults.allAwsRegions;
-    	      this.awsRegions = defaults.awsRegions;
+            $ = new ConfigurationAggregatorAccountAggregationSource(Objects.requireNonNull(defaults));
         }
 
         public Builder accountIds(List<String> accountIds) {
-            this.accountIds = Objects.requireNonNull(accountIds);
+            $.accountIds = accountIds;
             return this;
         }
+
         public Builder accountIds(String... accountIds) {
             return accountIds(List.of(accountIds));
         }
+
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = allAwsRegions;
+            $.allAwsRegions = allAwsRegions;
             return this;
         }
+
         public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = awsRegions;
+            $.awsRegions = awsRegions;
             return this;
         }
+
         public Builder awsRegions(String... awsRegions) {
             return awsRegions(List.of(awsRegions));
-        }        public ConfigurationAggregatorAccountAggregationSource build() {
-            return new ConfigurationAggregatorAccountAggregationSource(accountIds, allAwsRegions, awsRegions);
+        }
+
+        public ConfigurationAggregatorAccountAggregationSource build() {
+            $.accountIds = Objects.requireNonNull($.accountIds, "expected parameter 'accountIds' to be non-null");
+            return $;
         }
     }
+
 }

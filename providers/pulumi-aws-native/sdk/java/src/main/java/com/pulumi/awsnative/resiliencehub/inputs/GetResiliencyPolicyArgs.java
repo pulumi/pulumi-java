@@ -17,45 +17,45 @@ public final class GetResiliencyPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="policyArn", required=true)
-      private final String policyArn;
+    private String policyArn;
 
     public String policyArn() {
         return this.policyArn;
     }
 
-    public GetResiliencyPolicyArgs(String policyArn) {
-        this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
-    }
+    private GetResiliencyPolicyArgs() {}
 
-    private GetResiliencyPolicyArgs() {
-        this.policyArn = null;
+    private GetResiliencyPolicyArgs(GetResiliencyPolicyArgs $) {
+        this.policyArn = $.policyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResiliencyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyArn;
+        private GetResiliencyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResiliencyPolicyArgs();
         }
 
         public Builder(GetResiliencyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyArn = defaults.policyArn;
+            $ = new GetResiliencyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyArn(String policyArn) {
-            this.policyArn = Objects.requireNonNull(policyArn);
+            $.policyArn = policyArn;
             return this;
-        }        public GetResiliencyPolicyArgs build() {
-            return new GetResiliencyPolicyArgs(policyArn);
+        }
+
+        public GetResiliencyPolicyArgs build() {
+            $.policyArn = Objects.requireNonNull($.policyArn, "expected parameter 'policyArn' to be non-null");
+            return $;
         }
     }
+
 }

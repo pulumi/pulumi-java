@@ -17,45 +17,45 @@ public final class GetConfigurationSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetConfigurationSetArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetConfigurationSetArgs() {}
 
-    private GetConfigurationSetArgs() {
-        this.name = null;
+    private GetConfigurationSetArgs(GetConfigurationSetArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetConfigurationSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationSetArgs();
         }
 
         public Builder(GetConfigurationSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetConfigurationSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetConfigurationSetArgs build() {
-            return new GetConfigurationSetArgs(name);
+        }
+
+        public GetConfigurationSetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

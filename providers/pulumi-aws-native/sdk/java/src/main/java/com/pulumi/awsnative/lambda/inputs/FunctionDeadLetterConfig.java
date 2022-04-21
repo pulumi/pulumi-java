@@ -23,45 +23,44 @@ public final class FunctionDeadLetterConfig extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="targetArn")
-      private final @Nullable String targetArn;
+    private @Nullable String targetArn;
 
     public Optional<String> targetArn() {
-        return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);
+        return Optional.ofNullable(this.targetArn);
     }
 
-    public FunctionDeadLetterConfig(@Nullable String targetArn) {
-        this.targetArn = targetArn;
-    }
+    private FunctionDeadLetterConfig() {}
 
-    private FunctionDeadLetterConfig() {
-        this.targetArn = null;
+    private FunctionDeadLetterConfig(FunctionDeadLetterConfig $) {
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionDeadLetterConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String targetArn;
+        private FunctionDeadLetterConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionDeadLetterConfig();
         }
 
         public Builder(FunctionDeadLetterConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetArn = defaults.targetArn;
+            $ = new FunctionDeadLetterConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
-        }        public FunctionDeadLetterConfig build() {
-            return new FunctionDeadLetterConfig(targetArn);
+        }
+
+        public FunctionDeadLetterConfig build() {
+            return $;
         }
     }
+
 }

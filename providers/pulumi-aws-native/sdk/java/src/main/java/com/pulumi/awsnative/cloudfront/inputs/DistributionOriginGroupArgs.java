@@ -7,7 +7,6 @@ import com.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupFailoverCri
 import com.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupMembersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,90 +16,85 @@ public final class DistributionOriginGroupArgs extends com.pulumi.resources.Reso
     public static final DistributionOriginGroupArgs Empty = new DistributionOriginGroupArgs();
 
     @Import(name="failoverCriteria", required=true)
-      private final Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
+    private Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
 
     public Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria() {
         return this.failoverCriteria;
     }
 
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
     @Import(name="members", required=true)
-      private final Output<DistributionOriginGroupMembersArgs> members;
+    private Output<DistributionOriginGroupMembersArgs> members;
 
     public Output<DistributionOriginGroupMembersArgs> members() {
         return this.members;
     }
 
-    public DistributionOriginGroupArgs(
-        Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria,
-        Output<String> id,
-        Output<DistributionOriginGroupMembersArgs> members) {
-        this.failoverCriteria = Objects.requireNonNull(failoverCriteria, "expected parameter 'failoverCriteria' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-    }
+    private DistributionOriginGroupArgs() {}
 
-    private DistributionOriginGroupArgs() {
-        this.failoverCriteria = Codegen.empty();
-        this.id = Codegen.empty();
-        this.members = Codegen.empty();
+    private DistributionOriginGroupArgs(DistributionOriginGroupArgs $) {
+        this.failoverCriteria = $.failoverCriteria;
+        this.id = $.id;
+        this.members = $.members;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
-        private Output<String> id;
-        private Output<DistributionOriginGroupMembersArgs> members;
+        private DistributionOriginGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginGroupArgs();
         }
 
         public Builder(DistributionOriginGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverCriteria = defaults.failoverCriteria;
-    	      this.id = defaults.id;
-    	      this.members = defaults.members;
+            $ = new DistributionOriginGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverCriteria(Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria) {
-            this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
+            $.failoverCriteria = failoverCriteria;
             return this;
         }
+
         public Builder failoverCriteria(DistributionOriginGroupFailoverCriteriaArgs failoverCriteria) {
-            this.failoverCriteria = Output.of(Objects.requireNonNull(failoverCriteria));
-            return this;
+            return failoverCriteria(Output.of(failoverCriteria));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder members(Output<DistributionOriginGroupMembersArgs> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(DistributionOriginGroupMembersArgs members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
-        }        public DistributionOriginGroupArgs build() {
-            return new DistributionOriginGroupArgs(failoverCriteria, id, members);
+            return members(Output.of(members));
+        }
+
+        public DistributionOriginGroupArgs build() {
+            $.failoverCriteria = Objects.requireNonNull($.failoverCriteria, "expected parameter 'failoverCriteria' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            return $;
         }
     }
+
 }

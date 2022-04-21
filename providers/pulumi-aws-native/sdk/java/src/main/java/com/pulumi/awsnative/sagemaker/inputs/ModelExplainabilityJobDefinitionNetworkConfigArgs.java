@@ -6,9 +6,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends com
      * 
      */
     @Import(name="enableInterContainerTrafficEncryption")
-      private final @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
+    private @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
 
-    public Output<Boolean> enableInterContainerTrafficEncryption() {
-        return this.enableInterContainerTrafficEncryption == null ? Codegen.empty() : this.enableInterContainerTrafficEncryption;
+    public Optional<Output<Boolean>> enableInterContainerTrafficEncryption() {
+        return Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
 
     /**
@@ -36,83 +36,75 @@ public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends com
      * 
      */
     @Import(name="enableNetworkIsolation")
-      private final @Nullable Output<Boolean> enableNetworkIsolation;
+    private @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Output<Boolean> enableNetworkIsolation() {
-        return this.enableNetworkIsolation == null ? Codegen.empty() : this.enableNetworkIsolation;
+    public Optional<Output<Boolean>> enableNetworkIsolation() {
+        return Optional.ofNullable(this.enableNetworkIsolation);
     }
 
     @Import(name="vpcConfig")
-      private final @Nullable Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig;
+    private @Nullable Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig;
 
-    public Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig() {
-        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
+    public Optional<Output<ModelExplainabilityJobDefinitionVpcConfigArgs>> vpcConfig() {
+        return Optional.ofNullable(this.vpcConfig);
     }
 
-    public ModelExplainabilityJobDefinitionNetworkConfigArgs(
-        @Nullable Output<Boolean> enableInterContainerTrafficEncryption,
-        @Nullable Output<Boolean> enableNetworkIsolation,
-        @Nullable Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig) {
-        this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
-        this.enableNetworkIsolation = enableNetworkIsolation;
-        this.vpcConfig = vpcConfig;
-    }
+    private ModelExplainabilityJobDefinitionNetworkConfigArgs() {}
 
-    private ModelExplainabilityJobDefinitionNetworkConfigArgs() {
-        this.enableInterContainerTrafficEncryption = Codegen.empty();
-        this.enableNetworkIsolation = Codegen.empty();
-        this.vpcConfig = Codegen.empty();
+    private ModelExplainabilityJobDefinitionNetworkConfigArgs(ModelExplainabilityJobDefinitionNetworkConfigArgs $) {
+        this.enableInterContainerTrafficEncryption = $.enableInterContainerTrafficEncryption;
+        this.enableNetworkIsolation = $.enableNetworkIsolation;
+        this.vpcConfig = $.vpcConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelExplainabilityJobDefinitionNetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
-        private @Nullable Output<Boolean> enableNetworkIsolation;
-        private @Nullable Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig;
+        private ModelExplainabilityJobDefinitionNetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelExplainabilityJobDefinitionNetworkConfigArgs();
         }
 
         public Builder(ModelExplainabilityJobDefinitionNetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableInterContainerTrafficEncryption = defaults.enableInterContainerTrafficEncryption;
-    	      this.enableNetworkIsolation = defaults.enableNetworkIsolation;
-    	      this.vpcConfig = defaults.vpcConfig;
+            $ = new ModelExplainabilityJobDefinitionNetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableInterContainerTrafficEncryption(@Nullable Output<Boolean> enableInterContainerTrafficEncryption) {
-            this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
+            $.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-        public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
-            this.enableInterContainerTrafficEncryption = Codegen.ofNullable(enableInterContainerTrafficEncryption);
-            return this;
+
+        public Builder enableInterContainerTrafficEncryption(Boolean enableInterContainerTrafficEncryption) {
+            return enableInterContainerTrafficEncryption(Output.of(enableInterContainerTrafficEncryption));
         }
+
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
-            this.enableNetworkIsolation = enableNetworkIsolation;
+            $.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-        public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
-            this.enableNetworkIsolation = Codegen.ofNullable(enableNetworkIsolation);
-            return this;
+
+        public Builder enableNetworkIsolation(Boolean enableNetworkIsolation) {
+            return enableNetworkIsolation(Output.of(enableNetworkIsolation));
         }
+
         public Builder vpcConfig(@Nullable Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig) {
-            this.vpcConfig = vpcConfig;
+            $.vpcConfig = vpcConfig;
             return this;
         }
-        public Builder vpcConfig(@Nullable ModelExplainabilityJobDefinitionVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Codegen.ofNullable(vpcConfig);
-            return this;
-        }        public ModelExplainabilityJobDefinitionNetworkConfigArgs build() {
-            return new ModelExplainabilityJobDefinitionNetworkConfigArgs(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
+
+        public Builder vpcConfig(ModelExplainabilityJobDefinitionVpcConfigArgs vpcConfig) {
+            return vpcConfig(Output.of(vpcConfig));
+        }
+
+        public ModelExplainabilityJobDefinitionNetworkConfigArgs build() {
+            return $;
         }
     }
+
 }

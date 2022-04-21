@@ -12,10 +12,10 @@ import com.pulumi.awsnative.kendra.inputs.IndexTagArgs;
 import com.pulumi.awsnative.kendra.inputs.IndexUserTokenConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityUnits")
-      private final @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
+    private @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
 
-    public Output<IndexCapacityUnitsConfigurationArgs> capacityUnits() {
-        return this.capacityUnits == null ? Codegen.empty() : this.capacityUnits;
+    public Optional<Output<IndexCapacityUnitsConfigurationArgs>> capacityUnits() {
+        return Optional.ofNullable(this.capacityUnits);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -50,28 +50,28 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentMetadataConfigurations")
-      private final @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
+    private @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
 
-    public Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations() {
-        return this.documentMetadataConfigurations == null ? Codegen.empty() : this.documentMetadataConfigurations;
+    public Optional<Output<List<IndexDocumentMetadataConfigurationArgs>>> documentMetadataConfigurations() {
+        return Optional.ofNullable(this.documentMetadataConfigurations);
     }
 
     @Import(name="edition", required=true)
-      private final Output<IndexEdition> edition;
+    private Output<IndexEdition> edition;
 
     public Output<IndexEdition> edition() {
         return this.edition;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -82,10 +82,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverSideEncryptionConfiguration")
-      private final @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+    private @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
+    public Optional<Output<IndexServerSideEncryptionConfigurationArgs>> serverSideEncryptionConfiguration() {
+        return Optional.ofNullable(this.serverSideEncryptionConfiguration);
     }
 
     /**
@@ -93,190 +93,166 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<IndexTagArgs>> tags;
+    private @Nullable Output<List<IndexTagArgs>> tags;
 
-    public Output<List<IndexTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<IndexTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="userContextPolicy")
-      private final @Nullable Output<IndexUserContextPolicy> userContextPolicy;
+    private @Nullable Output<IndexUserContextPolicy> userContextPolicy;
 
-    public Output<IndexUserContextPolicy> userContextPolicy() {
-        return this.userContextPolicy == null ? Codegen.empty() : this.userContextPolicy;
+    public Optional<Output<IndexUserContextPolicy>> userContextPolicy() {
+        return Optional.ofNullable(this.userContextPolicy);
     }
 
     @Import(name="userTokenConfigurations")
-      private final @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
+    private @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
 
-    public Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations() {
-        return this.userTokenConfigurations == null ? Codegen.empty() : this.userTokenConfigurations;
+    public Optional<Output<List<IndexUserTokenConfigurationArgs>>> userTokenConfigurations() {
+        return Optional.ofNullable(this.userTokenConfigurations);
     }
 
-    public IndexArgs(
-        @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits,
-        @Nullable Output<String> description,
-        @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations,
-        Output<IndexEdition> edition,
-        @Nullable Output<String> name,
-        Output<String> roleArn,
-        @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
-        @Nullable Output<List<IndexTagArgs>> tags,
-        @Nullable Output<IndexUserContextPolicy> userContextPolicy,
-        @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
-        this.capacityUnits = capacityUnits;
-        this.description = description;
-        this.documentMetadataConfigurations = documentMetadataConfigurations;
-        this.edition = Objects.requireNonNull(edition, "expected parameter 'edition' to be non-null");
-        this.name = name;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
-        this.tags = tags;
-        this.userContextPolicy = userContextPolicy;
-        this.userTokenConfigurations = userTokenConfigurations;
-    }
+    private IndexArgs() {}
 
-    private IndexArgs() {
-        this.capacityUnits = Codegen.empty();
-        this.description = Codegen.empty();
-        this.documentMetadataConfigurations = Codegen.empty();
-        this.edition = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.serverSideEncryptionConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userContextPolicy = Codegen.empty();
-        this.userTokenConfigurations = Codegen.empty();
+    private IndexArgs(IndexArgs $) {
+        this.capacityUnits = $.capacityUnits;
+        this.description = $.description;
+        this.documentMetadataConfigurations = $.documentMetadataConfigurations;
+        this.edition = $.edition;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.serverSideEncryptionConfiguration = $.serverSideEncryptionConfiguration;
+        this.tags = $.tags;
+        this.userContextPolicy = $.userContextPolicy;
+        this.userTokenConfigurations = $.userTokenConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
-        private Output<IndexEdition> edition;
-        private @Nullable Output<String> name;
-        private Output<String> roleArn;
-        private @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
-        private @Nullable Output<List<IndexTagArgs>> tags;
-        private @Nullable Output<IndexUserContextPolicy> userContextPolicy;
-        private @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
+        private IndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexArgs();
         }
 
         public Builder(IndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityUnits = defaults.capacityUnits;
-    	      this.description = defaults.description;
-    	      this.documentMetadataConfigurations = defaults.documentMetadataConfigurations;
-    	      this.edition = defaults.edition;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.serverSideEncryptionConfiguration = defaults.serverSideEncryptionConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.userContextPolicy = defaults.userContextPolicy;
-    	      this.userTokenConfigurations = defaults.userTokenConfigurations;
+            $ = new IndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityUnits(@Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits) {
-            this.capacityUnits = capacityUnits;
+            $.capacityUnits = capacityUnits;
             return this;
         }
-        public Builder capacityUnits(@Nullable IndexCapacityUnitsConfigurationArgs capacityUnits) {
-            this.capacityUnits = Codegen.ofNullable(capacityUnits);
-            return this;
+
+        public Builder capacityUnits(IndexCapacityUnitsConfigurationArgs capacityUnits) {
+            return capacityUnits(Output.of(capacityUnits));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder documentMetadataConfigurations(@Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
-            this.documentMetadataConfigurations = documentMetadataConfigurations;
+            $.documentMetadataConfigurations = documentMetadataConfigurations;
             return this;
         }
-        public Builder documentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
-            this.documentMetadataConfigurations = Codegen.ofNullable(documentMetadataConfigurations);
-            return this;
+
+        public Builder documentMetadataConfigurations(List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
+            return documentMetadataConfigurations(Output.of(documentMetadataConfigurations));
         }
+
         public Builder documentMetadataConfigurations(IndexDocumentMetadataConfigurationArgs... documentMetadataConfigurations) {
             return documentMetadataConfigurations(List.of(documentMetadataConfigurations));
         }
+
         public Builder edition(Output<IndexEdition> edition) {
-            this.edition = Objects.requireNonNull(edition);
+            $.edition = edition;
             return this;
         }
+
         public Builder edition(IndexEdition edition) {
-            this.edition = Output.of(Objects.requireNonNull(edition));
-            return this;
+            return edition(Output.of(edition));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder serverSideEncryptionConfiguration(@Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
+            $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
-        public Builder serverSideEncryptionConfiguration(@Nullable IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Codegen.ofNullable(serverSideEncryptionConfiguration);
-            return this;
+
+        public Builder serverSideEncryptionConfiguration(IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
+            return serverSideEncryptionConfiguration(Output.of(serverSideEncryptionConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<IndexTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<IndexTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<IndexTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(IndexTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder userContextPolicy(@Nullable Output<IndexUserContextPolicy> userContextPolicy) {
-            this.userContextPolicy = userContextPolicy;
+            $.userContextPolicy = userContextPolicy;
             return this;
         }
-        public Builder userContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
-            this.userContextPolicy = Codegen.ofNullable(userContextPolicy);
-            return this;
+
+        public Builder userContextPolicy(IndexUserContextPolicy userContextPolicy) {
+            return userContextPolicy(Output.of(userContextPolicy));
         }
+
         public Builder userTokenConfigurations(@Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
-            this.userTokenConfigurations = userTokenConfigurations;
+            $.userTokenConfigurations = userTokenConfigurations;
             return this;
         }
-        public Builder userTokenConfigurations(@Nullable List<IndexUserTokenConfigurationArgs> userTokenConfigurations) {
-            this.userTokenConfigurations = Codegen.ofNullable(userTokenConfigurations);
-            return this;
+
+        public Builder userTokenConfigurations(List<IndexUserTokenConfigurationArgs> userTokenConfigurations) {
+            return userTokenConfigurations(Output.of(userTokenConfigurations));
         }
+
         public Builder userTokenConfigurations(IndexUserTokenConfigurationArgs... userTokenConfigurations) {
             return userTokenConfigurations(List.of(userTokenConfigurations));
-        }        public IndexArgs build() {
-            return new IndexArgs(capacityUnits, description, documentMetadataConfigurations, edition, name, roleArn, serverSideEncryptionConfiguration, tags, userContextPolicy, userTokenConfigurations);
+        }
+
+        public IndexArgs build() {
+            $.edition = Objects.requireNonNull($.edition, "expected parameter 'edition' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

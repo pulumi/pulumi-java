@@ -5,7 +5,6 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class GlobalTableKeySchemaArgs extends com.pulumi.resources.Resourc
     public static final GlobalTableKeySchemaArgs Empty = new GlobalTableKeySchemaArgs();
 
     @Import(name="attributeName", required=true)
-      private final Output<String> attributeName;
+    private Output<String> attributeName;
 
     public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="keyType", required=true)
-      private final Output<String> keyType;
+    private Output<String> keyType;
 
     public Output<String> keyType() {
         return this.keyType;
     }
 
-    public GlobalTableKeySchemaArgs(
-        Output<String> attributeName,
-        Output<String> keyType) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-    }
+    private GlobalTableKeySchemaArgs() {}
 
-    private GlobalTableKeySchemaArgs() {
-        this.attributeName = Codegen.empty();
-        this.keyType = Codegen.empty();
+    private GlobalTableKeySchemaArgs(GlobalTableKeySchemaArgs $) {
+        this.attributeName = $.attributeName;
+        this.keyType = $.keyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableKeySchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attributeName;
-        private Output<String> keyType;
+        private GlobalTableKeySchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableKeySchemaArgs();
         }
 
         public Builder(GlobalTableKeySchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.keyType = defaults.keyType;
+            $ = new GlobalTableKeySchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(Output<String> attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeName(String attributeName) {
-            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
-            return this;
+            return attributeName(Output.of(attributeName));
         }
+
         public Builder keyType(Output<String> keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
         }
+
         public Builder keyType(String keyType) {
-            this.keyType = Output.of(Objects.requireNonNull(keyType));
-            return this;
-        }        public GlobalTableKeySchemaArgs build() {
-            return new GlobalTableKeySchemaArgs(attributeName, keyType);
+            return keyType(Output.of(keyType));
+        }
+
+        public GlobalTableKeySchemaArgs build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            return $;
         }
     }
+
 }

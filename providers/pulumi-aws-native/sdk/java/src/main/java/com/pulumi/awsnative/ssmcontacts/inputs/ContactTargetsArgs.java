@@ -7,8 +7,8 @@ import com.pulumi.awsnative.ssmcontacts.inputs.ContactChannelTargetInfoArgs;
 import com.pulumi.awsnative.ssmcontacts.inputs.ContactTargetInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ContactTargetsArgs extends com.pulumi.resources.ResourceArgs 
     public static final ContactTargetsArgs Empty = new ContactTargetsArgs();
 
     @Import(name="channelTargetInfo")
-      private final @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
+    private @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
 
-    public Output<ContactChannelTargetInfoArgs> channelTargetInfo() {
-        return this.channelTargetInfo == null ? Codegen.empty() : this.channelTargetInfo;
+    public Optional<Output<ContactChannelTargetInfoArgs>> channelTargetInfo() {
+        return Optional.ofNullable(this.channelTargetInfo);
     }
 
     @Import(name="contactTargetInfo")
-      private final @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
+    private @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
 
-    public Output<ContactTargetInfoArgs> contactTargetInfo() {
-        return this.contactTargetInfo == null ? Codegen.empty() : this.contactTargetInfo;
+    public Optional<Output<ContactTargetInfoArgs>> contactTargetInfo() {
+        return Optional.ofNullable(this.contactTargetInfo);
     }
 
-    public ContactTargetsArgs(
-        @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo,
-        @Nullable Output<ContactTargetInfoArgs> contactTargetInfo) {
-        this.channelTargetInfo = channelTargetInfo;
-        this.contactTargetInfo = contactTargetInfo;
-    }
+    private ContactTargetsArgs() {}
 
-    private ContactTargetsArgs() {
-        this.channelTargetInfo = Codegen.empty();
-        this.contactTargetInfo = Codegen.empty();
+    private ContactTargetsArgs(ContactTargetsArgs $) {
+        this.channelTargetInfo = $.channelTargetInfo;
+        this.contactTargetInfo = $.contactTargetInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactTargetsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
-        private @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
+        private ContactTargetsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactTargetsArgs();
         }
 
         public Builder(ContactTargetsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelTargetInfo = defaults.channelTargetInfo;
-    	      this.contactTargetInfo = defaults.contactTargetInfo;
+            $ = new ContactTargetsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelTargetInfo(@Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo) {
-            this.channelTargetInfo = channelTargetInfo;
+            $.channelTargetInfo = channelTargetInfo;
             return this;
         }
-        public Builder channelTargetInfo(@Nullable ContactChannelTargetInfoArgs channelTargetInfo) {
-            this.channelTargetInfo = Codegen.ofNullable(channelTargetInfo);
-            return this;
+
+        public Builder channelTargetInfo(ContactChannelTargetInfoArgs channelTargetInfo) {
+            return channelTargetInfo(Output.of(channelTargetInfo));
         }
+
         public Builder contactTargetInfo(@Nullable Output<ContactTargetInfoArgs> contactTargetInfo) {
-            this.contactTargetInfo = contactTargetInfo;
+            $.contactTargetInfo = contactTargetInfo;
             return this;
         }
-        public Builder contactTargetInfo(@Nullable ContactTargetInfoArgs contactTargetInfo) {
-            this.contactTargetInfo = Codegen.ofNullable(contactTargetInfo);
-            return this;
-        }        public ContactTargetsArgs build() {
-            return new ContactTargetsArgs(channelTargetInfo, contactTargetInfo);
+
+        public Builder contactTargetInfo(ContactTargetInfoArgs contactTargetInfo) {
+            return contactTargetInfo(Output.of(contactTargetInfo));
+        }
+
+        public ContactTargetsArgs build() {
+            return $;
         }
     }
+
 }

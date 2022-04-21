@@ -5,7 +5,6 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class CertificateEdiPartyNameArgs extends com.pulumi.resources.Reso
     public static final CertificateEdiPartyNameArgs Empty = new CertificateEdiPartyNameArgs();
 
     @Import(name="nameAssigner", required=true)
-      private final Output<String> nameAssigner;
+    private Output<String> nameAssigner;
 
     public Output<String> nameAssigner() {
         return this.nameAssigner;
     }
 
     @Import(name="partyName", required=true)
-      private final Output<String> partyName;
+    private Output<String> partyName;
 
     public Output<String> partyName() {
         return this.partyName;
     }
 
-    public CertificateEdiPartyNameArgs(
-        Output<String> nameAssigner,
-        Output<String> partyName) {
-        this.nameAssigner = Objects.requireNonNull(nameAssigner, "expected parameter 'nameAssigner' to be non-null");
-        this.partyName = Objects.requireNonNull(partyName, "expected parameter 'partyName' to be non-null");
-    }
+    private CertificateEdiPartyNameArgs() {}
 
-    private CertificateEdiPartyNameArgs() {
-        this.nameAssigner = Codegen.empty();
-        this.partyName = Codegen.empty();
+    private CertificateEdiPartyNameArgs(CertificateEdiPartyNameArgs $) {
+        this.nameAssigner = $.nameAssigner;
+        this.partyName = $.partyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateEdiPartyNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> nameAssigner;
-        private Output<String> partyName;
+        private CertificateEdiPartyNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateEdiPartyNameArgs();
         }
 
         public Builder(CertificateEdiPartyNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nameAssigner = defaults.nameAssigner;
-    	      this.partyName = defaults.partyName;
+            $ = new CertificateEdiPartyNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nameAssigner(Output<String> nameAssigner) {
-            this.nameAssigner = Objects.requireNonNull(nameAssigner);
+            $.nameAssigner = nameAssigner;
             return this;
         }
+
         public Builder nameAssigner(String nameAssigner) {
-            this.nameAssigner = Output.of(Objects.requireNonNull(nameAssigner));
-            return this;
+            return nameAssigner(Output.of(nameAssigner));
         }
+
         public Builder partyName(Output<String> partyName) {
-            this.partyName = Objects.requireNonNull(partyName);
+            $.partyName = partyName;
             return this;
         }
+
         public Builder partyName(String partyName) {
-            this.partyName = Output.of(Objects.requireNonNull(partyName));
-            return this;
-        }        public CertificateEdiPartyNameArgs build() {
-            return new CertificateEdiPartyNameArgs(nameAssigner, partyName);
+            return partyName(Output.of(partyName));
+        }
+
+        public CertificateEdiPartyNameArgs build() {
+            $.nameAssigner = Objects.requireNonNull($.nameAssigner, "expected parameter 'nameAssigner' to be non-null");
+            $.partyName = Objects.requireNonNull($.partyName, "expected parameter 'partyName' to be non-null");
+            return $;
         }
     }
+
 }

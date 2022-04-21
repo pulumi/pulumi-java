@@ -17,45 +17,45 @@ public final class GetDNSSECArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostedZoneId", required=true)
-      private final String hostedZoneId;
+    private String hostedZoneId;
 
     public String hostedZoneId() {
         return this.hostedZoneId;
     }
 
-    public GetDNSSECArgs(String hostedZoneId) {
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
-    }
+    private GetDNSSECArgs() {}
 
-    private GetDNSSECArgs() {
-        this.hostedZoneId = null;
+    private GetDNSSECArgs(GetDNSSECArgs $) {
+        this.hostedZoneId = $.hostedZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDNSSECArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostedZoneId;
+        private GetDNSSECArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDNSSECArgs();
         }
 
         public Builder(GetDNSSECArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostedZoneId = defaults.hostedZoneId;
+            $ = new GetDNSSECArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostedZoneId(String hostedZoneId) {
-            this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
+            $.hostedZoneId = hostedZoneId;
             return this;
-        }        public GetDNSSECArgs build() {
-            return new GetDNSSECArgs(hostedZoneId);
+        }
+
+        public GetDNSSECArgs build() {
+            $.hostedZoneId = Objects.requireNonNull($.hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
+            return $;
         }
     }
+
 }

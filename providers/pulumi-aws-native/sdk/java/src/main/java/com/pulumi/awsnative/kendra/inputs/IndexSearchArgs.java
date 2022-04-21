@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,99 @@ public final class IndexSearchArgs extends com.pulumi.resources.ResourceArgs {
     public static final IndexSearchArgs Empty = new IndexSearchArgs();
 
     @Import(name="displayable")
-      private final @Nullable Output<Boolean> displayable;
+    private @Nullable Output<Boolean> displayable;
 
-    public Output<Boolean> displayable() {
-        return this.displayable == null ? Codegen.empty() : this.displayable;
+    public Optional<Output<Boolean>> displayable() {
+        return Optional.ofNullable(this.displayable);
     }
 
     @Import(name="facetable")
-      private final @Nullable Output<Boolean> facetable;
+    private @Nullable Output<Boolean> facetable;
 
-    public Output<Boolean> facetable() {
-        return this.facetable == null ? Codegen.empty() : this.facetable;
+    public Optional<Output<Boolean>> facetable() {
+        return Optional.ofNullable(this.facetable);
     }
 
     @Import(name="searchable")
-      private final @Nullable Output<Boolean> searchable;
+    private @Nullable Output<Boolean> searchable;
 
-    public Output<Boolean> searchable() {
-        return this.searchable == null ? Codegen.empty() : this.searchable;
+    public Optional<Output<Boolean>> searchable() {
+        return Optional.ofNullable(this.searchable);
     }
 
     @Import(name="sortable")
-      private final @Nullable Output<Boolean> sortable;
+    private @Nullable Output<Boolean> sortable;
 
-    public Output<Boolean> sortable() {
-        return this.sortable == null ? Codegen.empty() : this.sortable;
+    public Optional<Output<Boolean>> sortable() {
+        return Optional.ofNullable(this.sortable);
     }
 
-    public IndexSearchArgs(
-        @Nullable Output<Boolean> displayable,
-        @Nullable Output<Boolean> facetable,
-        @Nullable Output<Boolean> searchable,
-        @Nullable Output<Boolean> sortable) {
-        this.displayable = displayable;
-        this.facetable = facetable;
-        this.searchable = searchable;
-        this.sortable = sortable;
-    }
+    private IndexSearchArgs() {}
 
-    private IndexSearchArgs() {
-        this.displayable = Codegen.empty();
-        this.facetable = Codegen.empty();
-        this.searchable = Codegen.empty();
-        this.sortable = Codegen.empty();
+    private IndexSearchArgs(IndexSearchArgs $) {
+        this.displayable = $.displayable;
+        this.facetable = $.facetable;
+        this.searchable = $.searchable;
+        this.sortable = $.sortable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexSearchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> displayable;
-        private @Nullable Output<Boolean> facetable;
-        private @Nullable Output<Boolean> searchable;
-        private @Nullable Output<Boolean> sortable;
+        private IndexSearchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexSearchArgs();
         }
 
         public Builder(IndexSearchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayable = defaults.displayable;
-    	      this.facetable = defaults.facetable;
-    	      this.searchable = defaults.searchable;
-    	      this.sortable = defaults.sortable;
+            $ = new IndexSearchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayable(@Nullable Output<Boolean> displayable) {
-            this.displayable = displayable;
+            $.displayable = displayable;
             return this;
         }
-        public Builder displayable(@Nullable Boolean displayable) {
-            this.displayable = Codegen.ofNullable(displayable);
-            return this;
+
+        public Builder displayable(Boolean displayable) {
+            return displayable(Output.of(displayable));
         }
+
         public Builder facetable(@Nullable Output<Boolean> facetable) {
-            this.facetable = facetable;
+            $.facetable = facetable;
             return this;
         }
-        public Builder facetable(@Nullable Boolean facetable) {
-            this.facetable = Codegen.ofNullable(facetable);
-            return this;
+
+        public Builder facetable(Boolean facetable) {
+            return facetable(Output.of(facetable));
         }
+
         public Builder searchable(@Nullable Output<Boolean> searchable) {
-            this.searchable = searchable;
+            $.searchable = searchable;
             return this;
         }
-        public Builder searchable(@Nullable Boolean searchable) {
-            this.searchable = Codegen.ofNullable(searchable);
-            return this;
+
+        public Builder searchable(Boolean searchable) {
+            return searchable(Output.of(searchable));
         }
+
         public Builder sortable(@Nullable Output<Boolean> sortable) {
-            this.sortable = sortable;
+            $.sortable = sortable;
             return this;
         }
-        public Builder sortable(@Nullable Boolean sortable) {
-            this.sortable = Codegen.ofNullable(sortable);
-            return this;
-        }        public IndexSearchArgs build() {
-            return new IndexSearchArgs(displayable, facetable, searchable, sortable);
+
+        public Builder sortable(Boolean sortable) {
+            return sortable(Output.of(sortable));
+        }
+
+        public IndexSearchArgs build() {
+            return $;
         }
     }
+
 }

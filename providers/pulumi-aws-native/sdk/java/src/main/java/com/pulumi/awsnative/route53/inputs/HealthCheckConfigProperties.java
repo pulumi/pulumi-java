@@ -25,308 +25,261 @@ public final class HealthCheckConfigProperties extends com.pulumi.resources.Invo
     public static final HealthCheckConfigProperties Empty = new HealthCheckConfigProperties();
 
     @Import(name="alarmIdentifier")
-      private final @Nullable HealthCheckAlarmIdentifier alarmIdentifier;
+    private @Nullable HealthCheckAlarmIdentifier alarmIdentifier;
 
     public Optional<HealthCheckAlarmIdentifier> alarmIdentifier() {
-        return this.alarmIdentifier == null ? Optional.empty() : Optional.ofNullable(this.alarmIdentifier);
+        return Optional.ofNullable(this.alarmIdentifier);
     }
 
     @Import(name="childHealthChecks")
-      private final @Nullable List<String> childHealthChecks;
+    private @Nullable List<String> childHealthChecks;
 
-    public List<String> childHealthChecks() {
-        return this.childHealthChecks == null ? List.of() : this.childHealthChecks;
+    public Optional<List<String>> childHealthChecks() {
+        return Optional.ofNullable(this.childHealthChecks);
     }
 
     @Import(name="enableSNI")
-      private final @Nullable Boolean enableSNI;
+    private @Nullable Boolean enableSNI;
 
     public Optional<Boolean> enableSNI() {
-        return this.enableSNI == null ? Optional.empty() : Optional.ofNullable(this.enableSNI);
+        return Optional.ofNullable(this.enableSNI);
     }
 
     @Import(name="failureThreshold")
-      private final @Nullable Integer failureThreshold;
+    private @Nullable Integer failureThreshold;
 
     public Optional<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     @Import(name="fullyQualifiedDomainName")
-      private final @Nullable String fullyQualifiedDomainName;
+    private @Nullable String fullyQualifiedDomainName;
 
     public Optional<String> fullyQualifiedDomainName() {
-        return this.fullyQualifiedDomainName == null ? Optional.empty() : Optional.ofNullable(this.fullyQualifiedDomainName);
+        return Optional.ofNullable(this.fullyQualifiedDomainName);
     }
 
     @Import(name="healthThreshold")
-      private final @Nullable Integer healthThreshold;
+    private @Nullable Integer healthThreshold;
 
     public Optional<Integer> healthThreshold() {
-        return this.healthThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthThreshold);
+        return Optional.ofNullable(this.healthThreshold);
     }
 
     @Import(name="iPAddress")
-      private final @Nullable String iPAddress;
+    private @Nullable String iPAddress;
 
     public Optional<String> iPAddress() {
-        return this.iPAddress == null ? Optional.empty() : Optional.ofNullable(this.iPAddress);
+        return Optional.ofNullable(this.iPAddress);
     }
 
     @Import(name="insufficientDataHealthStatus")
-      private final @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus;
+    private @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus;
 
     public Optional<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus() {
-        return this.insufficientDataHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.insufficientDataHealthStatus);
+        return Optional.ofNullable(this.insufficientDataHealthStatus);
     }
 
     @Import(name="inverted")
-      private final @Nullable Boolean inverted;
+    private @Nullable Boolean inverted;
 
     public Optional<Boolean> inverted() {
-        return this.inverted == null ? Optional.empty() : Optional.ofNullable(this.inverted);
+        return Optional.ofNullable(this.inverted);
     }
 
     @Import(name="measureLatency")
-      private final @Nullable Boolean measureLatency;
+    private @Nullable Boolean measureLatency;
 
     public Optional<Boolean> measureLatency() {
-        return this.measureLatency == null ? Optional.empty() : Optional.ofNullable(this.measureLatency);
+        return Optional.ofNullable(this.measureLatency);
     }
 
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="regions")
-      private final @Nullable List<String> regions;
+    private @Nullable List<String> regions;
 
-    public List<String> regions() {
-        return this.regions == null ? List.of() : this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     @Import(name="requestInterval")
-      private final @Nullable Integer requestInterval;
+    private @Nullable Integer requestInterval;
 
     public Optional<Integer> requestInterval() {
-        return this.requestInterval == null ? Optional.empty() : Optional.ofNullable(this.requestInterval);
+        return Optional.ofNullable(this.requestInterval);
     }
 
     @Import(name="resourcePath")
-      private final @Nullable String resourcePath;
+    private @Nullable String resourcePath;
 
     public Optional<String> resourcePath() {
-        return this.resourcePath == null ? Optional.empty() : Optional.ofNullable(this.resourcePath);
+        return Optional.ofNullable(this.resourcePath);
     }
 
     @Import(name="routingControlArn")
-      private final @Nullable String routingControlArn;
+    private @Nullable String routingControlArn;
 
     public Optional<String> routingControlArn() {
-        return this.routingControlArn == null ? Optional.empty() : Optional.ofNullable(this.routingControlArn);
+        return Optional.ofNullable(this.routingControlArn);
     }
 
     @Import(name="searchString")
-      private final @Nullable String searchString;
+    private @Nullable String searchString;
 
     public Optional<String> searchString() {
-        return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
+        return Optional.ofNullable(this.searchString);
     }
 
     @Import(name="type", required=true)
-      private final HealthCheckConfigPropertiesType type;
+    private HealthCheckConfigPropertiesType type;
 
     public HealthCheckConfigPropertiesType type() {
         return this.type;
     }
 
-    public HealthCheckConfigProperties(
-        @Nullable HealthCheckAlarmIdentifier alarmIdentifier,
-        @Nullable List<String> childHealthChecks,
-        @Nullable Boolean enableSNI,
-        @Nullable Integer failureThreshold,
-        @Nullable String fullyQualifiedDomainName,
-        @Nullable Integer healthThreshold,
-        @Nullable String iPAddress,
-        @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus,
-        @Nullable Boolean inverted,
-        @Nullable Boolean measureLatency,
-        @Nullable Integer port,
-        @Nullable List<String> regions,
-        @Nullable Integer requestInterval,
-        @Nullable String resourcePath,
-        @Nullable String routingControlArn,
-        @Nullable String searchString,
-        HealthCheckConfigPropertiesType type) {
-        this.alarmIdentifier = alarmIdentifier;
-        this.childHealthChecks = childHealthChecks;
-        this.enableSNI = enableSNI;
-        this.failureThreshold = failureThreshold;
-        this.fullyQualifiedDomainName = fullyQualifiedDomainName;
-        this.healthThreshold = healthThreshold;
-        this.iPAddress = iPAddress;
-        this.insufficientDataHealthStatus = insufficientDataHealthStatus;
-        this.inverted = inverted;
-        this.measureLatency = measureLatency;
-        this.port = port;
-        this.regions = regions;
-        this.requestInterval = requestInterval;
-        this.resourcePath = resourcePath;
-        this.routingControlArn = routingControlArn;
-        this.searchString = searchString;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private HealthCheckConfigProperties() {}
 
-    private HealthCheckConfigProperties() {
-        this.alarmIdentifier = null;
-        this.childHealthChecks = List.of();
-        this.enableSNI = null;
-        this.failureThreshold = null;
-        this.fullyQualifiedDomainName = null;
-        this.healthThreshold = null;
-        this.iPAddress = null;
-        this.insufficientDataHealthStatus = null;
-        this.inverted = null;
-        this.measureLatency = null;
-        this.port = null;
-        this.regions = List.of();
-        this.requestInterval = null;
-        this.resourcePath = null;
-        this.routingControlArn = null;
-        this.searchString = null;
-        this.type = null;
+    private HealthCheckConfigProperties(HealthCheckConfigProperties $) {
+        this.alarmIdentifier = $.alarmIdentifier;
+        this.childHealthChecks = $.childHealthChecks;
+        this.enableSNI = $.enableSNI;
+        this.failureThreshold = $.failureThreshold;
+        this.fullyQualifiedDomainName = $.fullyQualifiedDomainName;
+        this.healthThreshold = $.healthThreshold;
+        this.iPAddress = $.iPAddress;
+        this.insufficientDataHealthStatus = $.insufficientDataHealthStatus;
+        this.inverted = $.inverted;
+        this.measureLatency = $.measureLatency;
+        this.port = $.port;
+        this.regions = $.regions;
+        this.requestInterval = $.requestInterval;
+        this.resourcePath = $.resourcePath;
+        this.routingControlArn = $.routingControlArn;
+        this.searchString = $.searchString;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckConfigProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable HealthCheckAlarmIdentifier alarmIdentifier;
-        private @Nullable List<String> childHealthChecks;
-        private @Nullable Boolean enableSNI;
-        private @Nullable Integer failureThreshold;
-        private @Nullable String fullyQualifiedDomainName;
-        private @Nullable Integer healthThreshold;
-        private @Nullable String iPAddress;
-        private @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus;
-        private @Nullable Boolean inverted;
-        private @Nullable Boolean measureLatency;
-        private @Nullable Integer port;
-        private @Nullable List<String> regions;
-        private @Nullable Integer requestInterval;
-        private @Nullable String resourcePath;
-        private @Nullable String routingControlArn;
-        private @Nullable String searchString;
-        private HealthCheckConfigPropertiesType type;
+        private HealthCheckConfigProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckConfigProperties();
         }
 
         public Builder(HealthCheckConfigProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmIdentifier = defaults.alarmIdentifier;
-    	      this.childHealthChecks = defaults.childHealthChecks;
-    	      this.enableSNI = defaults.enableSNI;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.fullyQualifiedDomainName = defaults.fullyQualifiedDomainName;
-    	      this.healthThreshold = defaults.healthThreshold;
-    	      this.iPAddress = defaults.iPAddress;
-    	      this.insufficientDataHealthStatus = defaults.insufficientDataHealthStatus;
-    	      this.inverted = defaults.inverted;
-    	      this.measureLatency = defaults.measureLatency;
-    	      this.port = defaults.port;
-    	      this.regions = defaults.regions;
-    	      this.requestInterval = defaults.requestInterval;
-    	      this.resourcePath = defaults.resourcePath;
-    	      this.routingControlArn = defaults.routingControlArn;
-    	      this.searchString = defaults.searchString;
-    	      this.type = defaults.type;
+            $ = new HealthCheckConfigProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmIdentifier(@Nullable HealthCheckAlarmIdentifier alarmIdentifier) {
-            this.alarmIdentifier = alarmIdentifier;
+            $.alarmIdentifier = alarmIdentifier;
             return this;
         }
+
         public Builder childHealthChecks(@Nullable List<String> childHealthChecks) {
-            this.childHealthChecks = childHealthChecks;
+            $.childHealthChecks = childHealthChecks;
             return this;
         }
+
         public Builder childHealthChecks(String... childHealthChecks) {
             return childHealthChecks(List.of(childHealthChecks));
         }
+
         public Builder enableSNI(@Nullable Boolean enableSNI) {
-            this.enableSNI = enableSNI;
+            $.enableSNI = enableSNI;
             return this;
         }
+
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
+
         public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
-            this.fullyQualifiedDomainName = fullyQualifiedDomainName;
+            $.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
+
         public Builder healthThreshold(@Nullable Integer healthThreshold) {
-            this.healthThreshold = healthThreshold;
+            $.healthThreshold = healthThreshold;
             return this;
         }
+
         public Builder iPAddress(@Nullable String iPAddress) {
-            this.iPAddress = iPAddress;
+            $.iPAddress = iPAddress;
             return this;
         }
+
         public Builder insufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
-            this.insufficientDataHealthStatus = insufficientDataHealthStatus;
+            $.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
+
         public Builder inverted(@Nullable Boolean inverted) {
-            this.inverted = inverted;
+            $.inverted = inverted;
             return this;
         }
+
         public Builder measureLatency(@Nullable Boolean measureLatency) {
-            this.measureLatency = measureLatency;
+            $.measureLatency = measureLatency;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder requestInterval(@Nullable Integer requestInterval) {
-            this.requestInterval = requestInterval;
+            $.requestInterval = requestInterval;
             return this;
         }
+
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = resourcePath;
+            $.resourcePath = resourcePath;
             return this;
         }
+
         public Builder routingControlArn(@Nullable String routingControlArn) {
-            this.routingControlArn = routingControlArn;
+            $.routingControlArn = routingControlArn;
             return this;
         }
+
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = searchString;
+            $.searchString = searchString;
             return this;
         }
+
         public Builder type(HealthCheckConfigPropertiesType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public HealthCheckConfigProperties build() {
-            return new HealthCheckConfigProperties(alarmIdentifier, childHealthChecks, enableSNI, failureThreshold, fullyQualifiedDomainName, healthThreshold, iPAddress, insufficientDataHealthStatus, inverted, measureLatency, port, regions, requestInterval, resourcePath, routingControlArn, searchString, type);
+        }
+
+        public HealthCheckConfigProperties build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

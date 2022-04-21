@@ -21,10 +21,10 @@ public final class InstanceNetworking extends com.pulumi.resources.InvokeArgs {
     public static final InstanceNetworking Empty = new InstanceNetworking();
 
     @Import(name="monthlyTransfer")
-      private final @Nullable InstanceMonthlyTransfer monthlyTransfer;
+    private @Nullable InstanceMonthlyTransfer monthlyTransfer;
 
     public Optional<InstanceMonthlyTransfer> monthlyTransfer() {
-        return this.monthlyTransfer == null ? Optional.empty() : Optional.ofNullable(this.monthlyTransfer);
+        return Optional.ofNullable(this.monthlyTransfer);
     }
 
     /**
@@ -32,58 +32,55 @@ public final class InstanceNetworking extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ports", required=true)
-      private final List<InstancePort> ports;
+    private List<InstancePort> ports;
 
     public List<InstancePort> ports() {
         return this.ports;
     }
 
-    public InstanceNetworking(
-        @Nullable InstanceMonthlyTransfer monthlyTransfer,
-        List<InstancePort> ports) {
-        this.monthlyTransfer = monthlyTransfer;
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private InstanceNetworking() {}
 
-    private InstanceNetworking() {
-        this.monthlyTransfer = null;
-        this.ports = List.of();
+    private InstanceNetworking(InstanceNetworking $) {
+        this.monthlyTransfer = $.monthlyTransfer;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceNetworking defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InstanceMonthlyTransfer monthlyTransfer;
-        private List<InstancePort> ports;
+        private InstanceNetworking $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceNetworking();
         }
 
         public Builder(InstanceNetworking defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthlyTransfer = defaults.monthlyTransfer;
-    	      this.ports = defaults.ports;
+            $ = new InstanceNetworking(Objects.requireNonNull(defaults));
         }
 
         public Builder monthlyTransfer(@Nullable InstanceMonthlyTransfer monthlyTransfer) {
-            this.monthlyTransfer = monthlyTransfer;
+            $.monthlyTransfer = monthlyTransfer;
             return this;
         }
+
         public Builder ports(List<InstancePort> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(InstancePort... ports) {
             return ports(List.of(ports));
-        }        public InstanceNetworking build() {
-            return new InstanceNetworking(monthlyTransfer, ports);
+        }
+
+        public InstanceNetworking build() {
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

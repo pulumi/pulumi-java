@@ -6,7 +6,6 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.CachePolicyConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
     public static final CachePolicyArgs Empty = new CachePolicyArgs();
 
     @Import(name="cachePolicyConfig", required=true)
-      private final Output<CachePolicyConfigArgs> cachePolicyConfig;
+    private Output<CachePolicyConfigArgs> cachePolicyConfig;
 
     public Output<CachePolicyConfigArgs> cachePolicyConfig() {
         return this.cachePolicyConfig;
     }
 
-    public CachePolicyArgs(Output<CachePolicyConfigArgs> cachePolicyConfig) {
-        this.cachePolicyConfig = Objects.requireNonNull(cachePolicyConfig, "expected parameter 'cachePolicyConfig' to be non-null");
-    }
+    private CachePolicyArgs() {}
 
-    private CachePolicyArgs() {
-        this.cachePolicyConfig = Codegen.empty();
+    private CachePolicyArgs(CachePolicyArgs $) {
+        this.cachePolicyConfig = $.cachePolicyConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CachePolicyConfigArgs> cachePolicyConfig;
+        private CachePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyArgs();
         }
 
         public Builder(CachePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cachePolicyConfig = defaults.cachePolicyConfig;
+            $ = new CachePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cachePolicyConfig(Output<CachePolicyConfigArgs> cachePolicyConfig) {
-            this.cachePolicyConfig = Objects.requireNonNull(cachePolicyConfig);
+            $.cachePolicyConfig = cachePolicyConfig;
             return this;
         }
+
         public Builder cachePolicyConfig(CachePolicyConfigArgs cachePolicyConfig) {
-            this.cachePolicyConfig = Output.of(Objects.requireNonNull(cachePolicyConfig));
-            return this;
-        }        public CachePolicyArgs build() {
-            return new CachePolicyArgs(cachePolicyConfig);
+            return cachePolicyConfig(Output.of(cachePolicyConfig));
+        }
+
+        public CachePolicyArgs build() {
+            $.cachePolicyConfig = Objects.requireNonNull($.cachePolicyConfig, "expected parameter 'cachePolicyConfig' to be non-null");
+            return $;
         }
     }
+
 }

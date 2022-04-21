@@ -5,9 +5,9 @@ package com.pulumi.awsnative.stepfunctions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends com.pulumi.res
     public static final StateMachineCloudWatchLogsLogGroupArgs Empty = new StateMachineCloudWatchLogsLogGroupArgs();
 
     @Import(name="logGroupArn")
-      private final @Nullable Output<String> logGroupArn;
+    private @Nullable Output<String> logGroupArn;
 
-    public Output<String> logGroupArn() {
-        return this.logGroupArn == null ? Codegen.empty() : this.logGroupArn;
+    public Optional<Output<String>> logGroupArn() {
+        return Optional.ofNullable(this.logGroupArn);
     }
 
-    public StateMachineCloudWatchLogsLogGroupArgs(@Nullable Output<String> logGroupArn) {
-        this.logGroupArn = logGroupArn;
-    }
+    private StateMachineCloudWatchLogsLogGroupArgs() {}
 
-    private StateMachineCloudWatchLogsLogGroupArgs() {
-        this.logGroupArn = Codegen.empty();
+    private StateMachineCloudWatchLogsLogGroupArgs(StateMachineCloudWatchLogsLogGroupArgs $) {
+        this.logGroupArn = $.logGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineCloudWatchLogsLogGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logGroupArn;
+        private StateMachineCloudWatchLogsLogGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineCloudWatchLogsLogGroupArgs();
         }
 
         public Builder(StateMachineCloudWatchLogsLogGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupArn = defaults.logGroupArn;
+            $ = new StateMachineCloudWatchLogsLogGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupArn(@Nullable Output<String> logGroupArn) {
-            this.logGroupArn = logGroupArn;
+            $.logGroupArn = logGroupArn;
             return this;
         }
-        public Builder logGroupArn(@Nullable String logGroupArn) {
-            this.logGroupArn = Codegen.ofNullable(logGroupArn);
-            return this;
-        }        public StateMachineCloudWatchLogsLogGroupArgs build() {
-            return new StateMachineCloudWatchLogsLogGroupArgs(logGroupArn);
+
+        public Builder logGroupArn(String logGroupArn) {
+            return logGroupArn(Output.of(logGroupArn));
+        }
+
+        public StateMachineCloudWatchLogsLogGroupArgs build() {
+            return $;
         }
     }
+
 }

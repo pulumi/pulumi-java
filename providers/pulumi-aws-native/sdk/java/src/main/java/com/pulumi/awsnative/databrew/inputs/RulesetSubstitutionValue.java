@@ -21,7 +21,7 @@ public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
@@ -32,55 +32,52 @@ public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="valueReference", required=true)
-      private final String valueReference;
+    private String valueReference;
 
     public String valueReference() {
         return this.valueReference;
     }
 
-    public RulesetSubstitutionValue(
-        String value,
-        String valueReference) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.valueReference = Objects.requireNonNull(valueReference, "expected parameter 'valueReference' to be non-null");
-    }
+    private RulesetSubstitutionValue() {}
 
-    private RulesetSubstitutionValue() {
-        this.value = null;
-        this.valueReference = null;
+    private RulesetSubstitutionValue(RulesetSubstitutionValue $) {
+        this.value = $.value;
+        this.valueReference = $.valueReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetSubstitutionValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
-        private String valueReference;
+        private RulesetSubstitutionValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetSubstitutionValue();
         }
 
         public Builder(RulesetSubstitutionValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.valueReference = defaults.valueReference;
+            $ = new RulesetSubstitutionValue(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder valueReference(String valueReference) {
-            this.valueReference = Objects.requireNonNull(valueReference);
+            $.valueReference = valueReference;
             return this;
-        }        public RulesetSubstitutionValue build() {
-            return new RulesetSubstitutionValue(value, valueReference);
+        }
+
+        public RulesetSubstitutionValue build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.valueReference = Objects.requireNonNull($.valueReference, "expected parameter 'valueReference' to be non-null");
+            return $;
         }
     }
+
 }

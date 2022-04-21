@@ -17,62 +17,59 @@ public final class EndpointGroupPortOverride extends com.pulumi.resources.Invoke
     public static final EndpointGroupPortOverride Empty = new EndpointGroupPortOverride();
 
     @Import(name="endpointPort", required=true)
-      private final Integer endpointPort;
+    private Integer endpointPort;
 
     public Integer endpointPort() {
         return this.endpointPort;
     }
 
     @Import(name="listenerPort", required=true)
-      private final Integer listenerPort;
+    private Integer listenerPort;
 
     public Integer listenerPort() {
         return this.listenerPort;
     }
 
-    public EndpointGroupPortOverride(
-        Integer endpointPort,
-        Integer listenerPort) {
-        this.endpointPort = Objects.requireNonNull(endpointPort, "expected parameter 'endpointPort' to be non-null");
-        this.listenerPort = Objects.requireNonNull(listenerPort, "expected parameter 'listenerPort' to be non-null");
-    }
+    private EndpointGroupPortOverride() {}
 
-    private EndpointGroupPortOverride() {
-        this.endpointPort = null;
-        this.listenerPort = null;
+    private EndpointGroupPortOverride(EndpointGroupPortOverride $) {
+        this.endpointPort = $.endpointPort;
+        this.listenerPort = $.listenerPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointGroupPortOverride defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer endpointPort;
-        private Integer listenerPort;
+        private EndpointGroupPortOverride $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointGroupPortOverride();
         }
 
         public Builder(EndpointGroupPortOverride defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointPort = defaults.endpointPort;
-    	      this.listenerPort = defaults.listenerPort;
+            $ = new EndpointGroupPortOverride(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointPort(Integer endpointPort) {
-            this.endpointPort = Objects.requireNonNull(endpointPort);
+            $.endpointPort = endpointPort;
             return this;
         }
+
         public Builder listenerPort(Integer listenerPort) {
-            this.listenerPort = Objects.requireNonNull(listenerPort);
+            $.listenerPort = listenerPort;
             return this;
-        }        public EndpointGroupPortOverride build() {
-            return new EndpointGroupPortOverride(endpointPort, listenerPort);
+        }
+
+        public EndpointGroupPortOverride build() {
+            $.endpointPort = Objects.requireNonNull($.endpointPort, "expected parameter 'endpointPort' to be non-null");
+            $.listenerPort = Objects.requireNonNull($.listenerPort, "expected parameter 'listenerPort' to be non-null");
+            return $;
         }
     }
+
 }

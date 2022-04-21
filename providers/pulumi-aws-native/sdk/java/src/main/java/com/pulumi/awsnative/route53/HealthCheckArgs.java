@@ -7,9 +7,9 @@ import com.pulumi.awsnative.route53.inputs.HealthCheckConfigPropertiesArgs;
 import com.pulumi.awsnative.route53.inputs.HealthCheckTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckConfig", required=true)
-      private final Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
+    private Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
     public Output<HealthCheckConfigPropertiesArgs> healthCheckConfig() {
         return this.healthCheckConfig;
@@ -33,66 +33,63 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckTags")
-      private final @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
+    private @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
 
-    public Output<List<HealthCheckTagArgs>> healthCheckTags() {
-        return this.healthCheckTags == null ? Codegen.empty() : this.healthCheckTags;
+    public Optional<Output<List<HealthCheckTagArgs>>> healthCheckTags() {
+        return Optional.ofNullable(this.healthCheckTags);
     }
 
-    public HealthCheckArgs(
-        Output<HealthCheckConfigPropertiesArgs> healthCheckConfig,
-        @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags) {
-        this.healthCheckConfig = Objects.requireNonNull(healthCheckConfig, "expected parameter 'healthCheckConfig' to be non-null");
-        this.healthCheckTags = healthCheckTags;
-    }
+    private HealthCheckArgs() {}
 
-    private HealthCheckArgs() {
-        this.healthCheckConfig = Codegen.empty();
-        this.healthCheckTags = Codegen.empty();
+    private HealthCheckArgs(HealthCheckArgs $) {
+        this.healthCheckConfig = $.healthCheckConfig;
+        this.healthCheckTags = $.healthCheckTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
-        private @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
+        private HealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckArgs();
         }
 
         public Builder(HealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheckConfig = defaults.healthCheckConfig;
-    	      this.healthCheckTags = defaults.healthCheckTags;
+            $ = new HealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheckConfig(Output<HealthCheckConfigPropertiesArgs> healthCheckConfig) {
-            this.healthCheckConfig = Objects.requireNonNull(healthCheckConfig);
+            $.healthCheckConfig = healthCheckConfig;
             return this;
         }
+
         public Builder healthCheckConfig(HealthCheckConfigPropertiesArgs healthCheckConfig) {
-            this.healthCheckConfig = Output.of(Objects.requireNonNull(healthCheckConfig));
-            return this;
+            return healthCheckConfig(Output.of(healthCheckConfig));
         }
+
         public Builder healthCheckTags(@Nullable Output<List<HealthCheckTagArgs>> healthCheckTags) {
-            this.healthCheckTags = healthCheckTags;
+            $.healthCheckTags = healthCheckTags;
             return this;
         }
-        public Builder healthCheckTags(@Nullable List<HealthCheckTagArgs> healthCheckTags) {
-            this.healthCheckTags = Codegen.ofNullable(healthCheckTags);
-            return this;
+
+        public Builder healthCheckTags(List<HealthCheckTagArgs> healthCheckTags) {
+            return healthCheckTags(Output.of(healthCheckTags));
         }
+
         public Builder healthCheckTags(HealthCheckTagArgs... healthCheckTags) {
             return healthCheckTags(List.of(healthCheckTags));
-        }        public HealthCheckArgs build() {
-            return new HealthCheckArgs(healthCheckConfig, healthCheckTags);
+        }
+
+        public HealthCheckArgs build() {
+            $.healthCheckConfig = Objects.requireNonNull($.healthCheckConfig, "expected parameter 'healthCheckConfig' to be non-null");
+            return $;
         }
     }
+
 }

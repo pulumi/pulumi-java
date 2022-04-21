@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class TaskDefinitionResourceRequirementArgs extends com.pulumi.reso
     public static final TaskDefinitionResourceRequirementArgs Empty = new TaskDefinitionResourceRequirementArgs();
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public TaskDefinitionResourceRequirementArgs(
-        Output<String> type,
-        Output<String> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TaskDefinitionResourceRequirementArgs() {}
 
-    private TaskDefinitionResourceRequirementArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private TaskDefinitionResourceRequirementArgs(TaskDefinitionResourceRequirementArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionResourceRequirementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<String> value;
+        private TaskDefinitionResourceRequirementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionResourceRequirementArgs();
         }
 
         public Builder(TaskDefinitionResourceRequirementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new TaskDefinitionResourceRequirementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public TaskDefinitionResourceRequirementArgs build() {
-            return new TaskDefinitionResourceRequirementArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public TaskDefinitionResourceRequirementArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

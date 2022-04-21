@@ -25,10 +25,10 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable List<DetectorModelAction> actions;
+    private @Nullable List<DetectorModelAction> actions;
 
-    public List<DetectorModelAction> actions() {
-        return this.actions == null ? List.of() : this.actions;
+    public Optional<List<DetectorModelAction>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable String condition;
+    private @Nullable String condition;
 
     public Optional<String> condition() {
-        return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -47,67 +47,61 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventName", required=true)
-      private final String eventName;
+    private String eventName;
 
     public String eventName() {
         return this.eventName;
     }
 
-    public DetectorModelEvent(
-        @Nullable List<DetectorModelAction> actions,
-        @Nullable String condition,
-        String eventName) {
-        this.actions = actions;
-        this.condition = condition;
-        this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
-    }
+    private DetectorModelEvent() {}
 
-    private DetectorModelEvent() {
-        this.actions = List.of();
-        this.condition = null;
-        this.eventName = null;
+    private DetectorModelEvent(DetectorModelEvent $) {
+        this.actions = $.actions;
+        this.condition = $.condition;
+        this.eventName = $.eventName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelEvent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DetectorModelAction> actions;
-        private @Nullable String condition;
-        private String eventName;
+        private DetectorModelEvent $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelEvent();
         }
 
         public Builder(DetectorModelEvent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.condition = defaults.condition;
-    	      this.eventName = defaults.eventName;
+            $ = new DetectorModelEvent(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable List<DetectorModelAction> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(DetectorModelAction... actions) {
             return actions(List.of(actions));
         }
+
         public Builder condition(@Nullable String condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
+
         public Builder eventName(String eventName) {
-            this.eventName = Objects.requireNonNull(eventName);
+            $.eventName = eventName;
             return this;
-        }        public DetectorModelEvent build() {
-            return new DetectorModelEvent(actions, condition, eventName);
+        }
+
+        public DetectorModelEvent build() {
+            $.eventName = Objects.requireNonNull($.eventName, "expected parameter 'eventName' to be non-null");
+            return $;
         }
     }
+
 }

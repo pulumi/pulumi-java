@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,90 +14,85 @@ public final class WirelessDeviceOtaaV11Args extends com.pulumi.resources.Resour
     public static final WirelessDeviceOtaaV11Args Empty = new WirelessDeviceOtaaV11Args();
 
     @Import(name="appKey", required=true)
-      private final Output<String> appKey;
+    private Output<String> appKey;
 
     public Output<String> appKey() {
         return this.appKey;
     }
 
     @Import(name="joinEui", required=true)
-      private final Output<String> joinEui;
+    private Output<String> joinEui;
 
     public Output<String> joinEui() {
         return this.joinEui;
     }
 
     @Import(name="nwkKey", required=true)
-      private final Output<String> nwkKey;
+    private Output<String> nwkKey;
 
     public Output<String> nwkKey() {
         return this.nwkKey;
     }
 
-    public WirelessDeviceOtaaV11Args(
-        Output<String> appKey,
-        Output<String> joinEui,
-        Output<String> nwkKey) {
-        this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
-        this.joinEui = Objects.requireNonNull(joinEui, "expected parameter 'joinEui' to be non-null");
-        this.nwkKey = Objects.requireNonNull(nwkKey, "expected parameter 'nwkKey' to be non-null");
-    }
+    private WirelessDeviceOtaaV11Args() {}
 
-    private WirelessDeviceOtaaV11Args() {
-        this.appKey = Codegen.empty();
-        this.joinEui = Codegen.empty();
-        this.nwkKey = Codegen.empty();
+    private WirelessDeviceOtaaV11Args(WirelessDeviceOtaaV11Args $) {
+        this.appKey = $.appKey;
+        this.joinEui = $.joinEui;
+        this.nwkKey = $.nwkKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceOtaaV11Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appKey;
-        private Output<String> joinEui;
-        private Output<String> nwkKey;
+        private WirelessDeviceOtaaV11Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceOtaaV11Args();
         }
 
         public Builder(WirelessDeviceOtaaV11Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appKey = defaults.appKey;
-    	      this.joinEui = defaults.joinEui;
-    	      this.nwkKey = defaults.nwkKey;
+            $ = new WirelessDeviceOtaaV11Args(Objects.requireNonNull(defaults));
         }
 
         public Builder appKey(Output<String> appKey) {
-            this.appKey = Objects.requireNonNull(appKey);
+            $.appKey = appKey;
             return this;
         }
+
         public Builder appKey(String appKey) {
-            this.appKey = Output.of(Objects.requireNonNull(appKey));
-            return this;
+            return appKey(Output.of(appKey));
         }
+
         public Builder joinEui(Output<String> joinEui) {
-            this.joinEui = Objects.requireNonNull(joinEui);
+            $.joinEui = joinEui;
             return this;
         }
+
         public Builder joinEui(String joinEui) {
-            this.joinEui = Output.of(Objects.requireNonNull(joinEui));
-            return this;
+            return joinEui(Output.of(joinEui));
         }
+
         public Builder nwkKey(Output<String> nwkKey) {
-            this.nwkKey = Objects.requireNonNull(nwkKey);
+            $.nwkKey = nwkKey;
             return this;
         }
+
         public Builder nwkKey(String nwkKey) {
-            this.nwkKey = Output.of(Objects.requireNonNull(nwkKey));
-            return this;
-        }        public WirelessDeviceOtaaV11Args build() {
-            return new WirelessDeviceOtaaV11Args(appKey, joinEui, nwkKey);
+            return nwkKey(Output.of(nwkKey));
+        }
+
+        public WirelessDeviceOtaaV11Args build() {
+            $.appKey = Objects.requireNonNull($.appKey, "expected parameter 'appKey' to be non-null");
+            $.joinEui = Objects.requireNonNull($.joinEui, "expected parameter 'joinEui' to be non-null");
+            $.nwkKey = Objects.requireNonNull($.nwkKey, "expected parameter 'nwkKey' to be non-null");
+            return $;
         }
     }
+
 }

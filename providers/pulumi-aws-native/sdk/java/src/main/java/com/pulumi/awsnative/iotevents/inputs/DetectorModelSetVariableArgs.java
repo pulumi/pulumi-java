@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class DetectorModelSetVariableArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
@@ -34,63 +33,60 @@ public final class DetectorModelSetVariableArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="variableName", required=true)
-      private final Output<String> variableName;
+    private Output<String> variableName;
 
     public Output<String> variableName() {
         return this.variableName;
     }
 
-    public DetectorModelSetVariableArgs(
-        Output<String> value,
-        Output<String> variableName) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-    }
+    private DetectorModelSetVariableArgs() {}
 
-    private DetectorModelSetVariableArgs() {
-        this.value = Codegen.empty();
-        this.variableName = Codegen.empty();
+    private DetectorModelSetVariableArgs(DetectorModelSetVariableArgs $) {
+        this.value = $.value;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelSetVariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> value;
-        private Output<String> variableName;
+        private DetectorModelSetVariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelSetVariableArgs();
         }
 
         public Builder(DetectorModelSetVariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.variableName = defaults.variableName;
+            $ = new DetectorModelSetVariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
+            return value(Output.of(value));
         }
+
         public Builder variableName(Output<String> variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
         }
+
         public Builder variableName(String variableName) {
-            this.variableName = Output.of(Objects.requireNonNull(variableName));
-            return this;
-        }        public DetectorModelSetVariableArgs build() {
-            return new DetectorModelSetVariableArgs(value, variableName);
+            return variableName(Output.of(variableName));
+        }
+
+        public DetectorModelSetVariableArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            return $;
         }
     }
+
 }

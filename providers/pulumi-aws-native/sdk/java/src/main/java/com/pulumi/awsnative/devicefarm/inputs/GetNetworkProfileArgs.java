@@ -13,45 +13,45 @@ public final class GetNetworkProfileArgs extends com.pulumi.resources.InvokeArgs
     public static final GetNetworkProfileArgs Empty = new GetNetworkProfileArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetNetworkProfileArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetNetworkProfileArgs() {}
 
-    private GetNetworkProfileArgs() {
-        this.arn = null;
+    private GetNetworkProfileArgs(GetNetworkProfileArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetNetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkProfileArgs();
         }
 
         public Builder(GetNetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetNetworkProfileArgs build() {
-            return new GetNetworkProfileArgs(arn);
+        }
+
+        public GetNetworkProfileArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

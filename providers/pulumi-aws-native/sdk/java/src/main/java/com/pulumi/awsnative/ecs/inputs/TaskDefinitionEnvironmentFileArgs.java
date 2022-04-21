@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class TaskDefinitionEnvironmentFileArgs extends com.pulumi.resource
     public static final TaskDefinitionEnvironmentFileArgs Empty = new TaskDefinitionEnvironmentFileArgs();
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TaskDefinitionEnvironmentFileArgs(
-        @Nullable Output<String> type,
-        @Nullable Output<String> value) {
-        this.type = type;
-        this.value = value;
-    }
+    private TaskDefinitionEnvironmentFileArgs() {}
 
-    private TaskDefinitionEnvironmentFileArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private TaskDefinitionEnvironmentFileArgs(TaskDefinitionEnvironmentFileArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionEnvironmentFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> value;
+        private TaskDefinitionEnvironmentFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionEnvironmentFileArgs();
         }
 
         public Builder(TaskDefinitionEnvironmentFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new TaskDefinitionEnvironmentFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TaskDefinitionEnvironmentFileArgs build() {
-            return new TaskDefinitionEnvironmentFileArgs(type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public TaskDefinitionEnvironmentFileArgs build() {
+            return $;
         }
     }
+
 }

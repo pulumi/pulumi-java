@@ -7,11 +7,11 @@ import com.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationMu
 import com.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupAssociationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="firewallRuleGroupId", required=true)
-      private final Output<String> firewallRuleGroupId;
+    private Output<String> firewallRuleGroupId;
 
     public Output<String> firewallRuleGroupId() {
         return this.firewallRuleGroupId;
@@ -35,10 +35,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="mutationProtection")
-      private final @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
+    private @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
 
-    public Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection() {
-        return this.mutationProtection == null ? Codegen.empty() : this.mutationProtection;
+    public Optional<Output<FirewallRuleGroupAssociationMutationProtection>> mutationProtection() {
+        return Optional.ofNullable(this.mutationProtection);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -68,10 +68,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags;
+    private @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags;
 
-    public Output<List<FirewallRuleGroupAssociationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FirewallRuleGroupAssociationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -79,118 +79,105 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public FirewallRuleGroupAssociationArgs(
-        Output<String> firewallRuleGroupId,
-        @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection,
-        @Nullable Output<String> name,
-        Output<Integer> priority,
-        @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags,
-        Output<String> vpcId) {
-        this.firewallRuleGroupId = Objects.requireNonNull(firewallRuleGroupId, "expected parameter 'firewallRuleGroupId' to be non-null");
-        this.mutationProtection = mutationProtection;
-        this.name = name;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private FirewallRuleGroupAssociationArgs() {}
 
-    private FirewallRuleGroupAssociationArgs() {
-        this.firewallRuleGroupId = Codegen.empty();
-        this.mutationProtection = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private FirewallRuleGroupAssociationArgs(FirewallRuleGroupAssociationArgs $) {
+        this.firewallRuleGroupId = $.firewallRuleGroupId;
+        this.mutationProtection = $.mutationProtection;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallRuleGroupAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> firewallRuleGroupId;
-        private @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
-        private @Nullable Output<String> name;
-        private Output<Integer> priority;
-        private @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags;
-        private Output<String> vpcId;
+        private FirewallRuleGroupAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallRuleGroupAssociationArgs();
         }
 
         public Builder(FirewallRuleGroupAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallRuleGroupId = defaults.firewallRuleGroupId;
-    	      this.mutationProtection = defaults.mutationProtection;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new FirewallRuleGroupAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallRuleGroupId(Output<String> firewallRuleGroupId) {
-            this.firewallRuleGroupId = Objects.requireNonNull(firewallRuleGroupId);
+            $.firewallRuleGroupId = firewallRuleGroupId;
             return this;
         }
+
         public Builder firewallRuleGroupId(String firewallRuleGroupId) {
-            this.firewallRuleGroupId = Output.of(Objects.requireNonNull(firewallRuleGroupId));
-            return this;
+            return firewallRuleGroupId(Output.of(firewallRuleGroupId));
         }
+
         public Builder mutationProtection(@Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection) {
-            this.mutationProtection = mutationProtection;
+            $.mutationProtection = mutationProtection;
             return this;
         }
-        public Builder mutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
-            this.mutationProtection = Codegen.ofNullable(mutationProtection);
-            return this;
+
+        public Builder mutationProtection(FirewallRuleGroupAssociationMutationProtection mutationProtection) {
+            return mutationProtection(Output.of(mutationProtection));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder tags(@Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FirewallRuleGroupAssociationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FirewallRuleGroupAssociationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FirewallRuleGroupAssociationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public FirewallRuleGroupAssociationArgs build() {
-            return new FirewallRuleGroupAssociationArgs(firewallRuleGroupId, mutationProtection, name, priority, tags, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public FirewallRuleGroupAssociationArgs build() {
+            $.firewallRuleGroupId = Objects.requireNonNull($.firewallRuleGroupId, "expected parameter 'firewallRuleGroupId' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

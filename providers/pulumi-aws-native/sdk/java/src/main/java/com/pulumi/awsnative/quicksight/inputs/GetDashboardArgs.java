@@ -13,62 +13,59 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDashboardArgs Empty = new GetDashboardArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final String awsAccountId;
+    private String awsAccountId;
 
     public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dashboardId", required=true)
-      private final String dashboardId;
+    private String dashboardId;
 
     public String dashboardId() {
         return this.dashboardId;
     }
 
-    public GetDashboardArgs(
-        String awsAccountId,
-        String dashboardId) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.dashboardId = Objects.requireNonNull(dashboardId, "expected parameter 'dashboardId' to be non-null");
-    }
+    private GetDashboardArgs() {}
 
-    private GetDashboardArgs() {
-        this.awsAccountId = null;
-        this.dashboardId = null;
+    private GetDashboardArgs(GetDashboardArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.dashboardId = $.dashboardId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsAccountId;
-        private String dashboardId;
+        private GetDashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDashboardArgs();
         }
 
         public Builder(GetDashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.dashboardId = defaults.dashboardId;
+            $ = new GetDashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder dashboardId(String dashboardId) {
-            this.dashboardId = Objects.requireNonNull(dashboardId);
+            $.dashboardId = dashboardId;
             return this;
-        }        public GetDashboardArgs build() {
-            return new GetDashboardArgs(awsAccountId, dashboardId);
+        }
+
+        public GetDashboardArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.dashboardId = Objects.requireNonNull($.dashboardId, "expected parameter 'dashboardId' to be non-null");
+            return $;
         }
     }
+
 }

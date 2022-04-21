@@ -16,126 +16,109 @@ public final class FilterPackageFilter extends com.pulumi.resources.InvokeArgs {
     public static final FilterPackageFilter Empty = new FilterPackageFilter();
 
     @Import(name="architecture")
-      private final @Nullable FilterStringFilter architecture;
+    private @Nullable FilterStringFilter architecture;
 
     public Optional<FilterStringFilter> architecture() {
-        return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
+        return Optional.ofNullable(this.architecture);
     }
 
     @Import(name="epoch")
-      private final @Nullable FilterNumberFilter epoch;
+    private @Nullable FilterNumberFilter epoch;
 
     public Optional<FilterNumberFilter> epoch() {
-        return this.epoch == null ? Optional.empty() : Optional.ofNullable(this.epoch);
+        return Optional.ofNullable(this.epoch);
     }
 
     @Import(name="name")
-      private final @Nullable FilterStringFilter name;
+    private @Nullable FilterStringFilter name;
 
     public Optional<FilterStringFilter> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="release")
-      private final @Nullable FilterStringFilter release;
+    private @Nullable FilterStringFilter release;
 
     public Optional<FilterStringFilter> release() {
-        return this.release == null ? Optional.empty() : Optional.ofNullable(this.release);
+        return Optional.ofNullable(this.release);
     }
 
     @Import(name="sourceLayerHash")
-      private final @Nullable FilterStringFilter sourceLayerHash;
+    private @Nullable FilterStringFilter sourceLayerHash;
 
     public Optional<FilterStringFilter> sourceLayerHash() {
-        return this.sourceLayerHash == null ? Optional.empty() : Optional.ofNullable(this.sourceLayerHash);
+        return Optional.ofNullable(this.sourceLayerHash);
     }
 
     @Import(name="version")
-      private final @Nullable FilterStringFilter version;
+    private @Nullable FilterStringFilter version;
 
     public Optional<FilterStringFilter> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public FilterPackageFilter(
-        @Nullable FilterStringFilter architecture,
-        @Nullable FilterNumberFilter epoch,
-        @Nullable FilterStringFilter name,
-        @Nullable FilterStringFilter release,
-        @Nullable FilterStringFilter sourceLayerHash,
-        @Nullable FilterStringFilter version) {
-        this.architecture = architecture;
-        this.epoch = epoch;
-        this.name = name;
-        this.release = release;
-        this.sourceLayerHash = sourceLayerHash;
-        this.version = version;
-    }
+    private FilterPackageFilter() {}
 
-    private FilterPackageFilter() {
-        this.architecture = null;
-        this.epoch = null;
-        this.name = null;
-        this.release = null;
-        this.sourceLayerHash = null;
-        this.version = null;
+    private FilterPackageFilter(FilterPackageFilter $) {
+        this.architecture = $.architecture;
+        this.epoch = $.epoch;
+        this.name = $.name;
+        this.release = $.release;
+        this.sourceLayerHash = $.sourceLayerHash;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterPackageFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FilterStringFilter architecture;
-        private @Nullable FilterNumberFilter epoch;
-        private @Nullable FilterStringFilter name;
-        private @Nullable FilterStringFilter release;
-        private @Nullable FilterStringFilter sourceLayerHash;
-        private @Nullable FilterStringFilter version;
+        private FilterPackageFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterPackageFilter();
         }
 
         public Builder(FilterPackageFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.epoch = defaults.epoch;
-    	      this.name = defaults.name;
-    	      this.release = defaults.release;
-    	      this.sourceLayerHash = defaults.sourceLayerHash;
-    	      this.version = defaults.version;
+            $ = new FilterPackageFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(@Nullable FilterStringFilter architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
+
         public Builder epoch(@Nullable FilterNumberFilter epoch) {
-            this.epoch = epoch;
+            $.epoch = epoch;
             return this;
         }
+
         public Builder name(@Nullable FilterStringFilter name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder release(@Nullable FilterStringFilter release) {
-            this.release = release;
+            $.release = release;
             return this;
         }
+
         public Builder sourceLayerHash(@Nullable FilterStringFilter sourceLayerHash) {
-            this.sourceLayerHash = sourceLayerHash;
+            $.sourceLayerHash = sourceLayerHash;
             return this;
         }
+
         public Builder version(@Nullable FilterStringFilter version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public FilterPackageFilter build() {
-            return new FilterPackageFilter(architecture, epoch, name, release, sourceLayerHash, version);
+        }
+
+        public FilterPackageFilter build() {
+            return $;
         }
     }
+
 }

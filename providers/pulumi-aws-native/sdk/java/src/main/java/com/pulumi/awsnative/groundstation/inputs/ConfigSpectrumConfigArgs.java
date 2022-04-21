@@ -8,8 +8,8 @@ import com.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
 import com.pulumi.awsnative.groundstation.inputs.ConfigFrequencyBandwidthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class ConfigSpectrumConfigArgs extends com.pulumi.resources.Resourc
     public static final ConfigSpectrumConfigArgs Empty = new ConfigSpectrumConfigArgs();
 
     @Import(name="bandwidth")
-      private final @Nullable Output<ConfigFrequencyBandwidthArgs> bandwidth;
+    private @Nullable Output<ConfigFrequencyBandwidthArgs> bandwidth;
 
-    public Output<ConfigFrequencyBandwidthArgs> bandwidth() {
-        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
+    public Optional<Output<ConfigFrequencyBandwidthArgs>> bandwidth() {
+        return Optional.ofNullable(this.bandwidth);
     }
 
     @Import(name="centerFrequency")
-      private final @Nullable Output<ConfigFrequencyArgs> centerFrequency;
+    private @Nullable Output<ConfigFrequencyArgs> centerFrequency;
 
-    public Output<ConfigFrequencyArgs> centerFrequency() {
-        return this.centerFrequency == null ? Codegen.empty() : this.centerFrequency;
+    public Optional<Output<ConfigFrequencyArgs>> centerFrequency() {
+        return Optional.ofNullable(this.centerFrequency);
     }
 
     @Import(name="polarization")
-      private final @Nullable Output<ConfigPolarization> polarization;
+    private @Nullable Output<ConfigPolarization> polarization;
 
-    public Output<ConfigPolarization> polarization() {
-        return this.polarization == null ? Codegen.empty() : this.polarization;
+    public Optional<Output<ConfigPolarization>> polarization() {
+        return Optional.ofNullable(this.polarization);
     }
 
-    public ConfigSpectrumConfigArgs(
-        @Nullable Output<ConfigFrequencyBandwidthArgs> bandwidth,
-        @Nullable Output<ConfigFrequencyArgs> centerFrequency,
-        @Nullable Output<ConfigPolarization> polarization) {
-        this.bandwidth = bandwidth;
-        this.centerFrequency = centerFrequency;
-        this.polarization = polarization;
-    }
+    private ConfigSpectrumConfigArgs() {}
 
-    private ConfigSpectrumConfigArgs() {
-        this.bandwidth = Codegen.empty();
-        this.centerFrequency = Codegen.empty();
-        this.polarization = Codegen.empty();
+    private ConfigSpectrumConfigArgs(ConfigSpectrumConfigArgs $) {
+        this.bandwidth = $.bandwidth;
+        this.centerFrequency = $.centerFrequency;
+        this.polarization = $.polarization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigSpectrumConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigFrequencyBandwidthArgs> bandwidth;
-        private @Nullable Output<ConfigFrequencyArgs> centerFrequency;
-        private @Nullable Output<ConfigPolarization> polarization;
+        private ConfigSpectrumConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigSpectrumConfigArgs();
         }
 
         public Builder(ConfigSpectrumConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidth = defaults.bandwidth;
-    	      this.centerFrequency = defaults.centerFrequency;
-    	      this.polarization = defaults.polarization;
+            $ = new ConfigSpectrumConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidth(@Nullable Output<ConfigFrequencyBandwidthArgs> bandwidth) {
-            this.bandwidth = bandwidth;
+            $.bandwidth = bandwidth;
             return this;
         }
-        public Builder bandwidth(@Nullable ConfigFrequencyBandwidthArgs bandwidth) {
-            this.bandwidth = Codegen.ofNullable(bandwidth);
-            return this;
+
+        public Builder bandwidth(ConfigFrequencyBandwidthArgs bandwidth) {
+            return bandwidth(Output.of(bandwidth));
         }
+
         public Builder centerFrequency(@Nullable Output<ConfigFrequencyArgs> centerFrequency) {
-            this.centerFrequency = centerFrequency;
+            $.centerFrequency = centerFrequency;
             return this;
         }
-        public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
-            this.centerFrequency = Codegen.ofNullable(centerFrequency);
-            return this;
+
+        public Builder centerFrequency(ConfigFrequencyArgs centerFrequency) {
+            return centerFrequency(Output.of(centerFrequency));
         }
+
         public Builder polarization(@Nullable Output<ConfigPolarization> polarization) {
-            this.polarization = polarization;
+            $.polarization = polarization;
             return this;
         }
-        public Builder polarization(@Nullable ConfigPolarization polarization) {
-            this.polarization = Codegen.ofNullable(polarization);
-            return this;
-        }        public ConfigSpectrumConfigArgs build() {
-            return new ConfigSpectrumConfigArgs(bandwidth, centerFrequency, polarization);
+
+        public Builder polarization(ConfigPolarization polarization) {
+            return polarization(Output.of(polarization));
+        }
+
+        public ConfigSpectrumConfigArgs build() {
+            return $;
         }
     }
+
 }

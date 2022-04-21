@@ -6,8 +6,8 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,82 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends com.pulumi.
     public static final BotPostFulfillmentStatusSpecificationArgs Empty = new BotPostFulfillmentStatusSpecificationArgs();
 
     @Import(name="failureResponse")
-      private final @Nullable Output<BotResponseSpecificationArgs> failureResponse;
+    private @Nullable Output<BotResponseSpecificationArgs> failureResponse;
 
-    public Output<BotResponseSpecificationArgs> failureResponse() {
-        return this.failureResponse == null ? Codegen.empty() : this.failureResponse;
+    public Optional<Output<BotResponseSpecificationArgs>> failureResponse() {
+        return Optional.ofNullable(this.failureResponse);
     }
 
     @Import(name="successResponse")
-      private final @Nullable Output<BotResponseSpecificationArgs> successResponse;
+    private @Nullable Output<BotResponseSpecificationArgs> successResponse;
 
-    public Output<BotResponseSpecificationArgs> successResponse() {
-        return this.successResponse == null ? Codegen.empty() : this.successResponse;
+    public Optional<Output<BotResponseSpecificationArgs>> successResponse() {
+        return Optional.ofNullable(this.successResponse);
     }
 
     @Import(name="timeoutResponse")
-      private final @Nullable Output<BotResponseSpecificationArgs> timeoutResponse;
+    private @Nullable Output<BotResponseSpecificationArgs> timeoutResponse;
 
-    public Output<BotResponseSpecificationArgs> timeoutResponse() {
-        return this.timeoutResponse == null ? Codegen.empty() : this.timeoutResponse;
+    public Optional<Output<BotResponseSpecificationArgs>> timeoutResponse() {
+        return Optional.ofNullable(this.timeoutResponse);
     }
 
-    public BotPostFulfillmentStatusSpecificationArgs(
-        @Nullable Output<BotResponseSpecificationArgs> failureResponse,
-        @Nullable Output<BotResponseSpecificationArgs> successResponse,
-        @Nullable Output<BotResponseSpecificationArgs> timeoutResponse) {
-        this.failureResponse = failureResponse;
-        this.successResponse = successResponse;
-        this.timeoutResponse = timeoutResponse;
-    }
+    private BotPostFulfillmentStatusSpecificationArgs() {}
 
-    private BotPostFulfillmentStatusSpecificationArgs() {
-        this.failureResponse = Codegen.empty();
-        this.successResponse = Codegen.empty();
-        this.timeoutResponse = Codegen.empty();
+    private BotPostFulfillmentStatusSpecificationArgs(BotPostFulfillmentStatusSpecificationArgs $) {
+        this.failureResponse = $.failureResponse;
+        this.successResponse = $.successResponse;
+        this.timeoutResponse = $.timeoutResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotPostFulfillmentStatusSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotResponseSpecificationArgs> failureResponse;
-        private @Nullable Output<BotResponseSpecificationArgs> successResponse;
-        private @Nullable Output<BotResponseSpecificationArgs> timeoutResponse;
+        private BotPostFulfillmentStatusSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotPostFulfillmentStatusSpecificationArgs();
         }
 
         public Builder(BotPostFulfillmentStatusSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureResponse = defaults.failureResponse;
-    	      this.successResponse = defaults.successResponse;
-    	      this.timeoutResponse = defaults.timeoutResponse;
+            $ = new BotPostFulfillmentStatusSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureResponse(@Nullable Output<BotResponseSpecificationArgs> failureResponse) {
-            this.failureResponse = failureResponse;
+            $.failureResponse = failureResponse;
             return this;
         }
-        public Builder failureResponse(@Nullable BotResponseSpecificationArgs failureResponse) {
-            this.failureResponse = Codegen.ofNullable(failureResponse);
-            return this;
+
+        public Builder failureResponse(BotResponseSpecificationArgs failureResponse) {
+            return failureResponse(Output.of(failureResponse));
         }
+
         public Builder successResponse(@Nullable Output<BotResponseSpecificationArgs> successResponse) {
-            this.successResponse = successResponse;
+            $.successResponse = successResponse;
             return this;
         }
-        public Builder successResponse(@Nullable BotResponseSpecificationArgs successResponse) {
-            this.successResponse = Codegen.ofNullable(successResponse);
-            return this;
+
+        public Builder successResponse(BotResponseSpecificationArgs successResponse) {
+            return successResponse(Output.of(successResponse));
         }
+
         public Builder timeoutResponse(@Nullable Output<BotResponseSpecificationArgs> timeoutResponse) {
-            this.timeoutResponse = timeoutResponse;
+            $.timeoutResponse = timeoutResponse;
             return this;
         }
-        public Builder timeoutResponse(@Nullable BotResponseSpecificationArgs timeoutResponse) {
-            this.timeoutResponse = Codegen.ofNullable(timeoutResponse);
-            return this;
-        }        public BotPostFulfillmentStatusSpecificationArgs build() {
-            return new BotPostFulfillmentStatusSpecificationArgs(failureResponse, successResponse, timeoutResponse);
+
+        public Builder timeoutResponse(BotResponseSpecificationArgs timeoutResponse) {
+            return timeoutResponse(Output.of(timeoutResponse));
+        }
+
+        public BotPostFulfillmentStatusSpecificationArgs build() {
+            return $;
         }
     }
+
 }

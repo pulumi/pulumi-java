@@ -15,11 +15,11 @@ import com.pulumi.awsnative.cloudfront.inputs.DistributionRestrictionsArgs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionViewerCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,425 +28,375 @@ public final class DistributionConfigArgs extends com.pulumi.resources.ResourceA
     public static final DistributionConfigArgs Empty = new DistributionConfigArgs();
 
     @Import(name="aliases")
-      private final @Nullable Output<List<String>> aliases;
+    private @Nullable Output<List<String>> aliases;
 
-    public Output<List<String>> aliases() {
-        return this.aliases == null ? Codegen.empty() : this.aliases;
+    public Optional<Output<List<String>>> aliases() {
+        return Optional.ofNullable(this.aliases);
     }
 
     @Import(name="cNAMEs")
-      private final @Nullable Output<List<String>> cNAMEs;
+    private @Nullable Output<List<String>> cNAMEs;
 
-    public Output<List<String>> cNAMEs() {
-        return this.cNAMEs == null ? Codegen.empty() : this.cNAMEs;
+    public Optional<Output<List<String>>> cNAMEs() {
+        return Optional.ofNullable(this.cNAMEs);
     }
 
     @Import(name="cacheBehaviors")
-      private final @Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors;
+    private @Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors;
 
-    public Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors() {
-        return this.cacheBehaviors == null ? Codegen.empty() : this.cacheBehaviors;
+    public Optional<Output<List<DistributionCacheBehaviorArgs>>> cacheBehaviors() {
+        return Optional.ofNullable(this.cacheBehaviors);
     }
 
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="customErrorResponses")
-      private final @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
+    private @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
 
-    public Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses() {
-        return this.customErrorResponses == null ? Codegen.empty() : this.customErrorResponses;
+    public Optional<Output<List<DistributionCustomErrorResponseArgs>>> customErrorResponses() {
+        return Optional.ofNullable(this.customErrorResponses);
     }
 
     @Import(name="customOrigin")
-      private final @Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin;
+    private @Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin;
 
-    public Output<DistributionLegacyCustomOriginArgs> customOrigin() {
-        return this.customOrigin == null ? Codegen.empty() : this.customOrigin;
+    public Optional<Output<DistributionLegacyCustomOriginArgs>> customOrigin() {
+        return Optional.ofNullable(this.customOrigin);
     }
 
     @Import(name="defaultCacheBehavior")
-      private final @Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
+    private @Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
 
-    public Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior() {
-        return this.defaultCacheBehavior == null ? Codegen.empty() : this.defaultCacheBehavior;
+    public Optional<Output<DistributionDefaultCacheBehaviorArgs>> defaultCacheBehavior() {
+        return Optional.ofNullable(this.defaultCacheBehavior);
     }
 
     @Import(name="defaultRootObject")
-      private final @Nullable Output<String> defaultRootObject;
+    private @Nullable Output<String> defaultRootObject;
 
-    public Output<String> defaultRootObject() {
-        return this.defaultRootObject == null ? Codegen.empty() : this.defaultRootObject;
+    public Optional<Output<String>> defaultRootObject() {
+        return Optional.ofNullable(this.defaultRootObject);
     }
 
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
     @Import(name="httpVersion")
-      private final @Nullable Output<String> httpVersion;
+    private @Nullable Output<String> httpVersion;
 
-    public Output<String> httpVersion() {
-        return this.httpVersion == null ? Codegen.empty() : this.httpVersion;
+    public Optional<Output<String>> httpVersion() {
+        return Optional.ofNullable(this.httpVersion);
     }
 
     @Import(name="iPV6Enabled")
-      private final @Nullable Output<Boolean> iPV6Enabled;
+    private @Nullable Output<Boolean> iPV6Enabled;
 
-    public Output<Boolean> iPV6Enabled() {
-        return this.iPV6Enabled == null ? Codegen.empty() : this.iPV6Enabled;
+    public Optional<Output<Boolean>> iPV6Enabled() {
+        return Optional.ofNullable(this.iPV6Enabled);
     }
 
     @Import(name="logging")
-      private final @Nullable Output<DistributionLoggingArgs> logging;
+    private @Nullable Output<DistributionLoggingArgs> logging;
 
-    public Output<DistributionLoggingArgs> logging() {
-        return this.logging == null ? Codegen.empty() : this.logging;
+    public Optional<Output<DistributionLoggingArgs>> logging() {
+        return Optional.ofNullable(this.logging);
     }
 
     @Import(name="originGroups")
-      private final @Nullable Output<DistributionOriginGroupsArgs> originGroups;
+    private @Nullable Output<DistributionOriginGroupsArgs> originGroups;
 
-    public Output<DistributionOriginGroupsArgs> originGroups() {
-        return this.originGroups == null ? Codegen.empty() : this.originGroups;
+    public Optional<Output<DistributionOriginGroupsArgs>> originGroups() {
+        return Optional.ofNullable(this.originGroups);
     }
 
     @Import(name="origins")
-      private final @Nullable Output<List<DistributionOriginArgs>> origins;
+    private @Nullable Output<List<DistributionOriginArgs>> origins;
 
-    public Output<List<DistributionOriginArgs>> origins() {
-        return this.origins == null ? Codegen.empty() : this.origins;
+    public Optional<Output<List<DistributionOriginArgs>>> origins() {
+        return Optional.ofNullable(this.origins);
     }
 
     @Import(name="priceClass")
-      private final @Nullable Output<String> priceClass;
+    private @Nullable Output<String> priceClass;
 
-    public Output<String> priceClass() {
-        return this.priceClass == null ? Codegen.empty() : this.priceClass;
+    public Optional<Output<String>> priceClass() {
+        return Optional.ofNullable(this.priceClass);
     }
 
     @Import(name="restrictions")
-      private final @Nullable Output<DistributionRestrictionsArgs> restrictions;
+    private @Nullable Output<DistributionRestrictionsArgs> restrictions;
 
-    public Output<DistributionRestrictionsArgs> restrictions() {
-        return this.restrictions == null ? Codegen.empty() : this.restrictions;
+    public Optional<Output<DistributionRestrictionsArgs>> restrictions() {
+        return Optional.ofNullable(this.restrictions);
     }
 
     @Import(name="s3Origin")
-      private final @Nullable Output<DistributionLegacyS3OriginArgs> s3Origin;
+    private @Nullable Output<DistributionLegacyS3OriginArgs> s3Origin;
 
-    public Output<DistributionLegacyS3OriginArgs> s3Origin() {
-        return this.s3Origin == null ? Codegen.empty() : this.s3Origin;
+    public Optional<Output<DistributionLegacyS3OriginArgs>> s3Origin() {
+        return Optional.ofNullable(this.s3Origin);
     }
 
     @Import(name="viewerCertificate")
-      private final @Nullable Output<DistributionViewerCertificateArgs> viewerCertificate;
+    private @Nullable Output<DistributionViewerCertificateArgs> viewerCertificate;
 
-    public Output<DistributionViewerCertificateArgs> viewerCertificate() {
-        return this.viewerCertificate == null ? Codegen.empty() : this.viewerCertificate;
+    public Optional<Output<DistributionViewerCertificateArgs>> viewerCertificate() {
+        return Optional.ofNullable(this.viewerCertificate);
     }
 
     @Import(name="webACLId")
-      private final @Nullable Output<String> webACLId;
+    private @Nullable Output<String> webACLId;
 
-    public Output<String> webACLId() {
-        return this.webACLId == null ? Codegen.empty() : this.webACLId;
+    public Optional<Output<String>> webACLId() {
+        return Optional.ofNullable(this.webACLId);
     }
 
-    public DistributionConfigArgs(
-        @Nullable Output<List<String>> aliases,
-        @Nullable Output<List<String>> cNAMEs,
-        @Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors,
-        @Nullable Output<String> comment,
-        @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses,
-        @Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin,
-        @Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior,
-        @Nullable Output<String> defaultRootObject,
-        Output<Boolean> enabled,
-        @Nullable Output<String> httpVersion,
-        @Nullable Output<Boolean> iPV6Enabled,
-        @Nullable Output<DistributionLoggingArgs> logging,
-        @Nullable Output<DistributionOriginGroupsArgs> originGroups,
-        @Nullable Output<List<DistributionOriginArgs>> origins,
-        @Nullable Output<String> priceClass,
-        @Nullable Output<DistributionRestrictionsArgs> restrictions,
-        @Nullable Output<DistributionLegacyS3OriginArgs> s3Origin,
-        @Nullable Output<DistributionViewerCertificateArgs> viewerCertificate,
-        @Nullable Output<String> webACLId) {
-        this.aliases = aliases;
-        this.cNAMEs = cNAMEs;
-        this.cacheBehaviors = cacheBehaviors;
-        this.comment = comment;
-        this.customErrorResponses = customErrorResponses;
-        this.customOrigin = customOrigin;
-        this.defaultCacheBehavior = defaultCacheBehavior;
-        this.defaultRootObject = defaultRootObject;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.httpVersion = httpVersion;
-        this.iPV6Enabled = iPV6Enabled;
-        this.logging = logging;
-        this.originGroups = originGroups;
-        this.origins = origins;
-        this.priceClass = priceClass;
-        this.restrictions = restrictions;
-        this.s3Origin = s3Origin;
-        this.viewerCertificate = viewerCertificate;
-        this.webACLId = webACLId;
-    }
+    private DistributionConfigArgs() {}
 
-    private DistributionConfigArgs() {
-        this.aliases = Codegen.empty();
-        this.cNAMEs = Codegen.empty();
-        this.cacheBehaviors = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.customErrorResponses = Codegen.empty();
-        this.customOrigin = Codegen.empty();
-        this.defaultCacheBehavior = Codegen.empty();
-        this.defaultRootObject = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.httpVersion = Codegen.empty();
-        this.iPV6Enabled = Codegen.empty();
-        this.logging = Codegen.empty();
-        this.originGroups = Codegen.empty();
-        this.origins = Codegen.empty();
-        this.priceClass = Codegen.empty();
-        this.restrictions = Codegen.empty();
-        this.s3Origin = Codegen.empty();
-        this.viewerCertificate = Codegen.empty();
-        this.webACLId = Codegen.empty();
+    private DistributionConfigArgs(DistributionConfigArgs $) {
+        this.aliases = $.aliases;
+        this.cNAMEs = $.cNAMEs;
+        this.cacheBehaviors = $.cacheBehaviors;
+        this.comment = $.comment;
+        this.customErrorResponses = $.customErrorResponses;
+        this.customOrigin = $.customOrigin;
+        this.defaultCacheBehavior = $.defaultCacheBehavior;
+        this.defaultRootObject = $.defaultRootObject;
+        this.enabled = $.enabled;
+        this.httpVersion = $.httpVersion;
+        this.iPV6Enabled = $.iPV6Enabled;
+        this.logging = $.logging;
+        this.originGroups = $.originGroups;
+        this.origins = $.origins;
+        this.priceClass = $.priceClass;
+        this.restrictions = $.restrictions;
+        this.s3Origin = $.s3Origin;
+        this.viewerCertificate = $.viewerCertificate;
+        this.webACLId = $.webACLId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> aliases;
-        private @Nullable Output<List<String>> cNAMEs;
-        private @Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
-        private @Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin;
-        private @Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
-        private @Nullable Output<String> defaultRootObject;
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> httpVersion;
-        private @Nullable Output<Boolean> iPV6Enabled;
-        private @Nullable Output<DistributionLoggingArgs> logging;
-        private @Nullable Output<DistributionOriginGroupsArgs> originGroups;
-        private @Nullable Output<List<DistributionOriginArgs>> origins;
-        private @Nullable Output<String> priceClass;
-        private @Nullable Output<DistributionRestrictionsArgs> restrictions;
-        private @Nullable Output<DistributionLegacyS3OriginArgs> s3Origin;
-        private @Nullable Output<DistributionViewerCertificateArgs> viewerCertificate;
-        private @Nullable Output<String> webACLId;
+        private DistributionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigArgs();
         }
 
         public Builder(DistributionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliases = defaults.aliases;
-    	      this.cNAMEs = defaults.cNAMEs;
-    	      this.cacheBehaviors = defaults.cacheBehaviors;
-    	      this.comment = defaults.comment;
-    	      this.customErrorResponses = defaults.customErrorResponses;
-    	      this.customOrigin = defaults.customOrigin;
-    	      this.defaultCacheBehavior = defaults.defaultCacheBehavior;
-    	      this.defaultRootObject = defaults.defaultRootObject;
-    	      this.enabled = defaults.enabled;
-    	      this.httpVersion = defaults.httpVersion;
-    	      this.iPV6Enabled = defaults.iPV6Enabled;
-    	      this.logging = defaults.logging;
-    	      this.originGroups = defaults.originGroups;
-    	      this.origins = defaults.origins;
-    	      this.priceClass = defaults.priceClass;
-    	      this.restrictions = defaults.restrictions;
-    	      this.s3Origin = defaults.s3Origin;
-    	      this.viewerCertificate = defaults.viewerCertificate;
-    	      this.webACLId = defaults.webACLId;
+            $ = new DistributionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliases(@Nullable Output<List<String>> aliases) {
-            this.aliases = aliases;
+            $.aliases = aliases;
             return this;
         }
-        public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = Codegen.ofNullable(aliases);
-            return this;
+
+        public Builder aliases(List<String> aliases) {
+            return aliases(Output.of(aliases));
         }
+
         public Builder aliases(String... aliases) {
             return aliases(List.of(aliases));
         }
+
         public Builder cNAMEs(@Nullable Output<List<String>> cNAMEs) {
-            this.cNAMEs = cNAMEs;
+            $.cNAMEs = cNAMEs;
             return this;
         }
-        public Builder cNAMEs(@Nullable List<String> cNAMEs) {
-            this.cNAMEs = Codegen.ofNullable(cNAMEs);
-            return this;
+
+        public Builder cNAMEs(List<String> cNAMEs) {
+            return cNAMEs(Output.of(cNAMEs));
         }
+
         public Builder cNAMEs(String... cNAMEs) {
             return cNAMEs(List.of(cNAMEs));
         }
+
         public Builder cacheBehaviors(@Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors) {
-            this.cacheBehaviors = cacheBehaviors;
+            $.cacheBehaviors = cacheBehaviors;
             return this;
         }
-        public Builder cacheBehaviors(@Nullable List<DistributionCacheBehaviorArgs> cacheBehaviors) {
-            this.cacheBehaviors = Codegen.ofNullable(cacheBehaviors);
-            return this;
+
+        public Builder cacheBehaviors(List<DistributionCacheBehaviorArgs> cacheBehaviors) {
+            return cacheBehaviors(Output.of(cacheBehaviors));
         }
+
         public Builder cacheBehaviors(DistributionCacheBehaviorArgs... cacheBehaviors) {
             return cacheBehaviors(List.of(cacheBehaviors));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder customErrorResponses(@Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses) {
-            this.customErrorResponses = customErrorResponses;
+            $.customErrorResponses = customErrorResponses;
             return this;
         }
-        public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponseArgs> customErrorResponses) {
-            this.customErrorResponses = Codegen.ofNullable(customErrorResponses);
-            return this;
+
+        public Builder customErrorResponses(List<DistributionCustomErrorResponseArgs> customErrorResponses) {
+            return customErrorResponses(Output.of(customErrorResponses));
         }
+
         public Builder customErrorResponses(DistributionCustomErrorResponseArgs... customErrorResponses) {
             return customErrorResponses(List.of(customErrorResponses));
         }
+
         public Builder customOrigin(@Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin) {
-            this.customOrigin = customOrigin;
+            $.customOrigin = customOrigin;
             return this;
         }
-        public Builder customOrigin(@Nullable DistributionLegacyCustomOriginArgs customOrigin) {
-            this.customOrigin = Codegen.ofNullable(customOrigin);
-            return this;
+
+        public Builder customOrigin(DistributionLegacyCustomOriginArgs customOrigin) {
+            return customOrigin(Output.of(customOrigin));
         }
+
         public Builder defaultCacheBehavior(@Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior) {
-            this.defaultCacheBehavior = defaultCacheBehavior;
+            $.defaultCacheBehavior = defaultCacheBehavior;
             return this;
         }
-        public Builder defaultCacheBehavior(@Nullable DistributionDefaultCacheBehaviorArgs defaultCacheBehavior) {
-            this.defaultCacheBehavior = Codegen.ofNullable(defaultCacheBehavior);
-            return this;
+
+        public Builder defaultCacheBehavior(DistributionDefaultCacheBehaviorArgs defaultCacheBehavior) {
+            return defaultCacheBehavior(Output.of(defaultCacheBehavior));
         }
+
         public Builder defaultRootObject(@Nullable Output<String> defaultRootObject) {
-            this.defaultRootObject = defaultRootObject;
+            $.defaultRootObject = defaultRootObject;
             return this;
         }
-        public Builder defaultRootObject(@Nullable String defaultRootObject) {
-            this.defaultRootObject = Codegen.ofNullable(defaultRootObject);
-            return this;
+
+        public Builder defaultRootObject(String defaultRootObject) {
+            return defaultRootObject(Output.of(defaultRootObject));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder httpVersion(@Nullable Output<String> httpVersion) {
-            this.httpVersion = httpVersion;
+            $.httpVersion = httpVersion;
             return this;
         }
-        public Builder httpVersion(@Nullable String httpVersion) {
-            this.httpVersion = Codegen.ofNullable(httpVersion);
-            return this;
+
+        public Builder httpVersion(String httpVersion) {
+            return httpVersion(Output.of(httpVersion));
         }
+
         public Builder iPV6Enabled(@Nullable Output<Boolean> iPV6Enabled) {
-            this.iPV6Enabled = iPV6Enabled;
+            $.iPV6Enabled = iPV6Enabled;
             return this;
         }
-        public Builder iPV6Enabled(@Nullable Boolean iPV6Enabled) {
-            this.iPV6Enabled = Codegen.ofNullable(iPV6Enabled);
-            return this;
+
+        public Builder iPV6Enabled(Boolean iPV6Enabled) {
+            return iPV6Enabled(Output.of(iPV6Enabled));
         }
+
         public Builder logging(@Nullable Output<DistributionLoggingArgs> logging) {
-            this.logging = logging;
+            $.logging = logging;
             return this;
         }
-        public Builder logging(@Nullable DistributionLoggingArgs logging) {
-            this.logging = Codegen.ofNullable(logging);
-            return this;
+
+        public Builder logging(DistributionLoggingArgs logging) {
+            return logging(Output.of(logging));
         }
+
         public Builder originGroups(@Nullable Output<DistributionOriginGroupsArgs> originGroups) {
-            this.originGroups = originGroups;
+            $.originGroups = originGroups;
             return this;
         }
-        public Builder originGroups(@Nullable DistributionOriginGroupsArgs originGroups) {
-            this.originGroups = Codegen.ofNullable(originGroups);
-            return this;
+
+        public Builder originGroups(DistributionOriginGroupsArgs originGroups) {
+            return originGroups(Output.of(originGroups));
         }
+
         public Builder origins(@Nullable Output<List<DistributionOriginArgs>> origins) {
-            this.origins = origins;
+            $.origins = origins;
             return this;
         }
-        public Builder origins(@Nullable List<DistributionOriginArgs> origins) {
-            this.origins = Codegen.ofNullable(origins);
-            return this;
+
+        public Builder origins(List<DistributionOriginArgs> origins) {
+            return origins(Output.of(origins));
         }
+
         public Builder origins(DistributionOriginArgs... origins) {
             return origins(List.of(origins));
         }
+
         public Builder priceClass(@Nullable Output<String> priceClass) {
-            this.priceClass = priceClass;
+            $.priceClass = priceClass;
             return this;
         }
-        public Builder priceClass(@Nullable String priceClass) {
-            this.priceClass = Codegen.ofNullable(priceClass);
-            return this;
+
+        public Builder priceClass(String priceClass) {
+            return priceClass(Output.of(priceClass));
         }
+
         public Builder restrictions(@Nullable Output<DistributionRestrictionsArgs> restrictions) {
-            this.restrictions = restrictions;
+            $.restrictions = restrictions;
             return this;
         }
-        public Builder restrictions(@Nullable DistributionRestrictionsArgs restrictions) {
-            this.restrictions = Codegen.ofNullable(restrictions);
-            return this;
+
+        public Builder restrictions(DistributionRestrictionsArgs restrictions) {
+            return restrictions(Output.of(restrictions));
         }
+
         public Builder s3Origin(@Nullable Output<DistributionLegacyS3OriginArgs> s3Origin) {
-            this.s3Origin = s3Origin;
+            $.s3Origin = s3Origin;
             return this;
         }
-        public Builder s3Origin(@Nullable DistributionLegacyS3OriginArgs s3Origin) {
-            this.s3Origin = Codegen.ofNullable(s3Origin);
-            return this;
+
+        public Builder s3Origin(DistributionLegacyS3OriginArgs s3Origin) {
+            return s3Origin(Output.of(s3Origin));
         }
+
         public Builder viewerCertificate(@Nullable Output<DistributionViewerCertificateArgs> viewerCertificate) {
-            this.viewerCertificate = viewerCertificate;
+            $.viewerCertificate = viewerCertificate;
             return this;
         }
-        public Builder viewerCertificate(@Nullable DistributionViewerCertificateArgs viewerCertificate) {
-            this.viewerCertificate = Codegen.ofNullable(viewerCertificate);
-            return this;
+
+        public Builder viewerCertificate(DistributionViewerCertificateArgs viewerCertificate) {
+            return viewerCertificate(Output.of(viewerCertificate));
         }
+
         public Builder webACLId(@Nullable Output<String> webACLId) {
-            this.webACLId = webACLId;
+            $.webACLId = webACLId;
             return this;
         }
-        public Builder webACLId(@Nullable String webACLId) {
-            this.webACLId = Codegen.ofNullable(webACLId);
-            return this;
-        }        public DistributionConfigArgs build() {
-            return new DistributionConfigArgs(aliases, cNAMEs, cacheBehaviors, comment, customErrorResponses, customOrigin, defaultCacheBehavior, defaultRootObject, enabled, httpVersion, iPV6Enabled, logging, originGroups, origins, priceClass, restrictions, s3Origin, viewerCertificate, webACLId);
+
+        public Builder webACLId(String webACLId) {
+            return webACLId(Output.of(webACLId));
+        }
+
+        public DistributionConfigArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

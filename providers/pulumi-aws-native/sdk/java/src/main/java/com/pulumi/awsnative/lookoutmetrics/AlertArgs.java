@@ -6,10 +6,10 @@ package com.pulumi.awsnative.lookoutmetrics;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AlertActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final Output<AlertActionArgs> action;
+    private Output<AlertActionArgs> action;
 
     public Output<AlertActionArgs> action() {
         return this.action;
@@ -33,10 +33,10 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertDescription")
-      private final @Nullable Output<String> alertDescription;
+    private @Nullable Output<String> alertDescription;
 
-    public Output<String> alertDescription() {
-        return this.alertDescription == null ? Codegen.empty() : this.alertDescription;
+    public Optional<Output<String>> alertDescription() {
+        return Optional.ofNullable(this.alertDescription);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertName")
-      private final @Nullable Output<String> alertName;
+    private @Nullable Output<String> alertName;
 
-    public Output<String> alertName() {
-        return this.alertName == null ? Codegen.empty() : this.alertName;
+    public Optional<Output<String>> alertName() {
+        return Optional.ofNullable(this.alertName);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertSensitivityThreshold", required=true)
-      private final Output<Integer> alertSensitivityThreshold;
+    private Output<Integer> alertSensitivityThreshold;
 
     public Output<Integer> alertSensitivityThreshold() {
         return this.alertSensitivityThreshold;
@@ -66,102 +66,91 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="anomalyDetectorArn", required=true)
-      private final Output<String> anomalyDetectorArn;
+    private Output<String> anomalyDetectorArn;
 
     public Output<String> anomalyDetectorArn() {
         return this.anomalyDetectorArn;
     }
 
-    public AlertArgs(
-        Output<AlertActionArgs> action,
-        @Nullable Output<String> alertDescription,
-        @Nullable Output<String> alertName,
-        Output<Integer> alertSensitivityThreshold,
-        Output<String> anomalyDetectorArn) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.alertDescription = alertDescription;
-        this.alertName = alertName;
-        this.alertSensitivityThreshold = Objects.requireNonNull(alertSensitivityThreshold, "expected parameter 'alertSensitivityThreshold' to be non-null");
-        this.anomalyDetectorArn = Objects.requireNonNull(anomalyDetectorArn, "expected parameter 'anomalyDetectorArn' to be non-null");
-    }
+    private AlertArgs() {}
 
-    private AlertArgs() {
-        this.action = Codegen.empty();
-        this.alertDescription = Codegen.empty();
-        this.alertName = Codegen.empty();
-        this.alertSensitivityThreshold = Codegen.empty();
-        this.anomalyDetectorArn = Codegen.empty();
+    private AlertArgs(AlertArgs $) {
+        this.action = $.action;
+        this.alertDescription = $.alertDescription;
+        this.alertName = $.alertName;
+        this.alertSensitivityThreshold = $.alertSensitivityThreshold;
+        this.anomalyDetectorArn = $.anomalyDetectorArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AlertActionArgs> action;
-        private @Nullable Output<String> alertDescription;
-        private @Nullable Output<String> alertName;
-        private Output<Integer> alertSensitivityThreshold;
-        private Output<String> anomalyDetectorArn;
+        private AlertArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertArgs();
         }
 
         public Builder(AlertArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.alertDescription = defaults.alertDescription;
-    	      this.alertName = defaults.alertName;
-    	      this.alertSensitivityThreshold = defaults.alertSensitivityThreshold;
-    	      this.anomalyDetectorArn = defaults.anomalyDetectorArn;
+            $ = new AlertArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<AlertActionArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(AlertActionArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder alertDescription(@Nullable Output<String> alertDescription) {
-            this.alertDescription = alertDescription;
+            $.alertDescription = alertDescription;
             return this;
         }
-        public Builder alertDescription(@Nullable String alertDescription) {
-            this.alertDescription = Codegen.ofNullable(alertDescription);
-            return this;
+
+        public Builder alertDescription(String alertDescription) {
+            return alertDescription(Output.of(alertDescription));
         }
+
         public Builder alertName(@Nullable Output<String> alertName) {
-            this.alertName = alertName;
+            $.alertName = alertName;
             return this;
         }
-        public Builder alertName(@Nullable String alertName) {
-            this.alertName = Codegen.ofNullable(alertName);
-            return this;
+
+        public Builder alertName(String alertName) {
+            return alertName(Output.of(alertName));
         }
+
         public Builder alertSensitivityThreshold(Output<Integer> alertSensitivityThreshold) {
-            this.alertSensitivityThreshold = Objects.requireNonNull(alertSensitivityThreshold);
+            $.alertSensitivityThreshold = alertSensitivityThreshold;
             return this;
         }
+
         public Builder alertSensitivityThreshold(Integer alertSensitivityThreshold) {
-            this.alertSensitivityThreshold = Output.of(Objects.requireNonNull(alertSensitivityThreshold));
-            return this;
+            return alertSensitivityThreshold(Output.of(alertSensitivityThreshold));
         }
+
         public Builder anomalyDetectorArn(Output<String> anomalyDetectorArn) {
-            this.anomalyDetectorArn = Objects.requireNonNull(anomalyDetectorArn);
+            $.anomalyDetectorArn = anomalyDetectorArn;
             return this;
         }
+
         public Builder anomalyDetectorArn(String anomalyDetectorArn) {
-            this.anomalyDetectorArn = Output.of(Objects.requireNonNull(anomalyDetectorArn));
-            return this;
-        }        public AlertArgs build() {
-            return new AlertArgs(action, alertDescription, alertName, alertSensitivityThreshold, anomalyDetectorArn);
+            return anomalyDetectorArn(Output.of(anomalyDetectorArn));
+        }
+
+        public AlertArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.alertSensitivityThreshold = Objects.requireNonNull($.alertSensitivityThreshold, "expected parameter 'alertSensitivityThreshold' to be non-null");
+            $.anomalyDetectorArn = Objects.requireNonNull($.anomalyDetectorArn, "expected parameter 'anomalyDetectorArn' to be non-null");
+            return $;
         }
     }
+
 }

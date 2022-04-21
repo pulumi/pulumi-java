@@ -6,8 +6,8 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.enums.DashboardBehavior;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DashboardExportToCSVOptionArgs extends com.pulumi.resources.R
     public static final DashboardExportToCSVOptionArgs Empty = new DashboardExportToCSVOptionArgs();
 
     @Import(name="availabilityStatus")
-      private final @Nullable Output<DashboardBehavior> availabilityStatus;
+    private @Nullable Output<DashboardBehavior> availabilityStatus;
 
-    public Output<DashboardBehavior> availabilityStatus() {
-        return this.availabilityStatus == null ? Codegen.empty() : this.availabilityStatus;
+    public Optional<Output<DashboardBehavior>> availabilityStatus() {
+        return Optional.ofNullable(this.availabilityStatus);
     }
 
-    public DashboardExportToCSVOptionArgs(@Nullable Output<DashboardBehavior> availabilityStatus) {
-        this.availabilityStatus = availabilityStatus;
-    }
+    private DashboardExportToCSVOptionArgs() {}
 
-    private DashboardExportToCSVOptionArgs() {
-        this.availabilityStatus = Codegen.empty();
+    private DashboardExportToCSVOptionArgs(DashboardExportToCSVOptionArgs $) {
+        this.availabilityStatus = $.availabilityStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardExportToCSVOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DashboardBehavior> availabilityStatus;
+        private DashboardExportToCSVOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardExportToCSVOptionArgs();
         }
 
         public Builder(DashboardExportToCSVOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityStatus = defaults.availabilityStatus;
+            $ = new DashboardExportToCSVOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityStatus(@Nullable Output<DashboardBehavior> availabilityStatus) {
-            this.availabilityStatus = availabilityStatus;
+            $.availabilityStatus = availabilityStatus;
             return this;
         }
-        public Builder availabilityStatus(@Nullable DashboardBehavior availabilityStatus) {
-            this.availabilityStatus = Codegen.ofNullable(availabilityStatus);
-            return this;
-        }        public DashboardExportToCSVOptionArgs build() {
-            return new DashboardExportToCSVOptionArgs(availabilityStatus);
+
+        public Builder availabilityStatus(DashboardBehavior availabilityStatus) {
+            return availabilityStatus(Output.of(availabilityStatus));
+        }
+
+        public DashboardExportToCSVOptionArgs build() {
+            return $;
         }
     }
+
 }

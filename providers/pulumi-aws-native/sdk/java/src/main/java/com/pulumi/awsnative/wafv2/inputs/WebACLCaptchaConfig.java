@@ -15,45 +15,44 @@ public final class WebACLCaptchaConfig extends com.pulumi.resources.InvokeArgs {
     public static final WebACLCaptchaConfig Empty = new WebACLCaptchaConfig();
 
     @Import(name="immunityTimeProperty")
-      private final @Nullable WebACLImmunityTimeProperty immunityTimeProperty;
+    private @Nullable WebACLImmunityTimeProperty immunityTimeProperty;
 
     public Optional<WebACLImmunityTimeProperty> immunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Optional.empty() : Optional.ofNullable(this.immunityTimeProperty);
+        return Optional.ofNullable(this.immunityTimeProperty);
     }
 
-    public WebACLCaptchaConfig(@Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
-        this.immunityTimeProperty = immunityTimeProperty;
-    }
+    private WebACLCaptchaConfig() {}
 
-    private WebACLCaptchaConfig() {
-        this.immunityTimeProperty = null;
+    private WebACLCaptchaConfig(WebACLCaptchaConfig $) {
+        this.immunityTimeProperty = $.immunityTimeProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCaptchaConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLImmunityTimeProperty immunityTimeProperty;
+        private WebACLCaptchaConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCaptchaConfig();
         }
 
         public Builder(WebACLCaptchaConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immunityTimeProperty = defaults.immunityTimeProperty;
+            $ = new WebACLCaptchaConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder immunityTimeProperty(@Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
-            this.immunityTimeProperty = immunityTimeProperty;
+            $.immunityTimeProperty = immunityTimeProperty;
             return this;
-        }        public WebACLCaptchaConfig build() {
-            return new WebACLCaptchaConfig(immunityTimeProperty);
+        }
+
+        public WebACLCaptchaConfig build() {
+            return $;
         }
     }
+
 }

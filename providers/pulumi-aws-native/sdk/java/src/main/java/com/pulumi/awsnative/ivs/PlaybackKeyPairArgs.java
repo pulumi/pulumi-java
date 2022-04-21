@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ivs;
 import com.pulumi.awsnative.ivs.inputs.PlaybackKeyPairTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publicKeyMaterial", required=true)
-      private final Output<String> publicKeyMaterial;
+    private Output<String> publicKeyMaterial;
 
     public Output<String> publicKeyMaterial() {
         return this.publicKeyMaterial;
@@ -44,79 +44,73 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
+    private @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
 
-    public Output<List<PlaybackKeyPairTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<PlaybackKeyPairTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PlaybackKeyPairArgs(
-        @Nullable Output<String> name,
-        Output<String> publicKeyMaterial,
-        @Nullable Output<List<PlaybackKeyPairTagArgs>> tags) {
-        this.name = name;
-        this.publicKeyMaterial = Objects.requireNonNull(publicKeyMaterial, "expected parameter 'publicKeyMaterial' to be non-null");
-        this.tags = tags;
-    }
+    private PlaybackKeyPairArgs() {}
 
-    private PlaybackKeyPairArgs() {
-        this.name = Codegen.empty();
-        this.publicKeyMaterial = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PlaybackKeyPairArgs(PlaybackKeyPairArgs $) {
+        this.name = $.name;
+        this.publicKeyMaterial = $.publicKeyMaterial;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlaybackKeyPairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> publicKeyMaterial;
-        private @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
+        private PlaybackKeyPairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlaybackKeyPairArgs();
         }
 
         public Builder(PlaybackKeyPairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.publicKeyMaterial = defaults.publicKeyMaterial;
-    	      this.tags = defaults.tags;
+            $ = new PlaybackKeyPairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder publicKeyMaterial(Output<String> publicKeyMaterial) {
-            this.publicKeyMaterial = Objects.requireNonNull(publicKeyMaterial);
+            $.publicKeyMaterial = publicKeyMaterial;
             return this;
         }
+
         public Builder publicKeyMaterial(String publicKeyMaterial) {
-            this.publicKeyMaterial = Output.of(Objects.requireNonNull(publicKeyMaterial));
-            return this;
+            return publicKeyMaterial(Output.of(publicKeyMaterial));
         }
+
         public Builder tags(@Nullable Output<List<PlaybackKeyPairTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<PlaybackKeyPairTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<PlaybackKeyPairTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(PlaybackKeyPairTagArgs... tags) {
             return tags(List.of(tags));
-        }        public PlaybackKeyPairArgs build() {
-            return new PlaybackKeyPairArgs(name, publicKeyMaterial, tags);
+        }
+
+        public PlaybackKeyPairArgs build() {
+            $.publicKeyMaterial = Objects.requireNonNull($.publicKeyMaterial, "expected parameter 'publicKeyMaterial' to be non-null");
+            return $;
         }
     }
+
 }

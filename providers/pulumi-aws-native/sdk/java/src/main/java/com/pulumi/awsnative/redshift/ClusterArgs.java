@@ -8,12 +8,12 @@ import com.pulumi.awsnative.redshift.inputs.ClusterLoggingPropertiesArgs;
 import com.pulumi.awsnative.redshift.inputs.ClusterTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowVersionUpgrade")
-      private final @Nullable Output<Boolean> allowVersionUpgrade;
+    private @Nullable Output<Boolean> allowVersionUpgrade;
 
-    public Output<Boolean> allowVersionUpgrade() {
-        return this.allowVersionUpgrade == null ? Codegen.empty() : this.allowVersionUpgrade;
+    public Optional<Output<Boolean>> allowVersionUpgrade() {
+        return Optional.ofNullable(this.allowVersionUpgrade);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aquaConfigurationStatus")
-      private final @Nullable Output<String> aquaConfigurationStatus;
+    private @Nullable Output<String> aquaConfigurationStatus;
 
-    public Output<String> aquaConfigurationStatus() {
-        return this.aquaConfigurationStatus == null ? Codegen.empty() : this.aquaConfigurationStatus;
+    public Optional<Output<String>> aquaConfigurationStatus() {
+        return Optional.ofNullable(this.aquaConfigurationStatus);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automatedSnapshotRetentionPeriod")
-      private final @Nullable Output<Integer> automatedSnapshotRetentionPeriod;
+    private @Nullable Output<Integer> automatedSnapshotRetentionPeriod;
 
-    public Output<Integer> automatedSnapshotRetentionPeriod() {
-        return this.automatedSnapshotRetentionPeriod == null ? Codegen.empty() : this.automatedSnapshotRetentionPeriod;
+    public Optional<Output<Integer>> automatedSnapshotRetentionPeriod() {
+        return Optional.ofNullable(this.automatedSnapshotRetentionPeriod);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZoneRelocation")
-      private final @Nullable Output<Boolean> availabilityZoneRelocation;
+    private @Nullable Output<Boolean> availabilityZoneRelocation;
 
-    public Output<Boolean> availabilityZoneRelocation() {
-        return this.availabilityZoneRelocation == null ? Codegen.empty() : this.availabilityZoneRelocation;
+    public Optional<Output<Boolean>> availabilityZoneRelocation() {
+        return Optional.ofNullable(this.availabilityZoneRelocation);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZoneRelocationStatus")
-      private final @Nullable Output<String> availabilityZoneRelocationStatus;
+    private @Nullable Output<String> availabilityZoneRelocationStatus;
 
-    public Output<String> availabilityZoneRelocationStatus() {
-        return this.availabilityZoneRelocationStatus == null ? Codegen.empty() : this.availabilityZoneRelocationStatus;
+    public Optional<Output<String>> availabilityZoneRelocationStatus() {
+        return Optional.ofNullable(this.availabilityZoneRelocationStatus);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="classic")
-      private final @Nullable Output<Boolean> classic;
+    private @Nullable Output<Boolean> classic;
 
-    public Output<Boolean> classic() {
-        return this.classic == null ? Codegen.empty() : this.classic;
+    public Optional<Output<Boolean>> classic() {
+        return Optional.ofNullable(this.classic);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterIdentifier")
-      private final @Nullable Output<String> clusterIdentifier;
+    private @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> clusterIdentifier() {
-        return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
+    public Optional<Output<String>> clusterIdentifier() {
+        return Optional.ofNullable(this.clusterIdentifier);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterParameterGroupName")
-      private final @Nullable Output<String> clusterParameterGroupName;
+    private @Nullable Output<String> clusterParameterGroupName;
 
-    public Output<String> clusterParameterGroupName() {
-        return this.clusterParameterGroupName == null ? Codegen.empty() : this.clusterParameterGroupName;
+    public Optional<Output<String>> clusterParameterGroupName() {
+        return Optional.ofNullable(this.clusterParameterGroupName);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterSecurityGroups")
-      private final @Nullable Output<List<String>> clusterSecurityGroups;
+    private @Nullable Output<List<String>> clusterSecurityGroups;
 
-    public Output<List<String>> clusterSecurityGroups() {
-        return this.clusterSecurityGroups == null ? Codegen.empty() : this.clusterSecurityGroups;
+    public Optional<Output<List<String>>> clusterSecurityGroups() {
+        return Optional.ofNullable(this.clusterSecurityGroups);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterSubnetGroupName")
-      private final @Nullable Output<String> clusterSubnetGroupName;
+    private @Nullable Output<String> clusterSubnetGroupName;
 
-    public Output<String> clusterSubnetGroupName() {
-        return this.clusterSubnetGroupName == null ? Codegen.empty() : this.clusterSubnetGroupName;
+    public Optional<Output<String>> clusterSubnetGroupName() {
+        return Optional.ofNullable(this.clusterSubnetGroupName);
     }
 
     /**
@@ -151,7 +151,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterType", required=true)
-      private final Output<String> clusterType;
+    private Output<String> clusterType;
 
     public Output<String> clusterType() {
         return this.clusterType;
@@ -162,10 +162,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterVersion")
-      private final @Nullable Output<String> clusterVersion;
+    private @Nullable Output<String> clusterVersion;
 
-    public Output<String> clusterVersion() {
-        return this.clusterVersion == null ? Codegen.empty() : this.clusterVersion;
+    public Optional<Output<String>> clusterVersion() {
+        return Optional.ofNullable(this.clusterVersion);
     }
 
     /**
@@ -173,7 +173,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dBName", required=true)
-      private final Output<String> dBName;
+    private Output<String> dBName;
 
     public Output<String> dBName() {
         return this.dBName;
@@ -184,10 +184,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deferMaintenance")
-      private final @Nullable Output<Boolean> deferMaintenance;
+    private @Nullable Output<Boolean> deferMaintenance;
 
-    public Output<Boolean> deferMaintenance() {
-        return this.deferMaintenance == null ? Codegen.empty() : this.deferMaintenance;
+    public Optional<Output<Boolean>> deferMaintenance() {
+        return Optional.ofNullable(this.deferMaintenance);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deferMaintenanceDuration")
-      private final @Nullable Output<Integer> deferMaintenanceDuration;
+    private @Nullable Output<Integer> deferMaintenanceDuration;
 
-    public Output<Integer> deferMaintenanceDuration() {
-        return this.deferMaintenanceDuration == null ? Codegen.empty() : this.deferMaintenanceDuration;
+    public Optional<Output<Integer>> deferMaintenanceDuration() {
+        return Optional.ofNullable(this.deferMaintenanceDuration);
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deferMaintenanceEndTime")
-      private final @Nullable Output<String> deferMaintenanceEndTime;
+    private @Nullable Output<String> deferMaintenanceEndTime;
 
-    public Output<String> deferMaintenanceEndTime() {
-        return this.deferMaintenanceEndTime == null ? Codegen.empty() : this.deferMaintenanceEndTime;
+    public Optional<Output<String>> deferMaintenanceEndTime() {
+        return Optional.ofNullable(this.deferMaintenanceEndTime);
     }
 
     /**
@@ -217,10 +217,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deferMaintenanceStartTime")
-      private final @Nullable Output<String> deferMaintenanceStartTime;
+    private @Nullable Output<String> deferMaintenanceStartTime;
 
-    public Output<String> deferMaintenanceStartTime() {
-        return this.deferMaintenanceStartTime == null ? Codegen.empty() : this.deferMaintenanceStartTime;
+    public Optional<Output<String>> deferMaintenanceStartTime() {
+        return Optional.ofNullable(this.deferMaintenanceStartTime);
     }
 
     /**
@@ -228,10 +228,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationRegion")
-      private final @Nullable Output<String> destinationRegion;
+    private @Nullable Output<String> destinationRegion;
 
-    public Output<String> destinationRegion() {
-        return this.destinationRegion == null ? Codegen.empty() : this.destinationRegion;
+    public Optional<Output<String>> destinationRegion() {
+        return Optional.ofNullable(this.destinationRegion);
     }
 
     /**
@@ -239,10 +239,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticIp")
-      private final @Nullable Output<String> elasticIp;
+    private @Nullable Output<String> elasticIp;
 
-    public Output<String> elasticIp() {
-        return this.elasticIp == null ? Codegen.empty() : this.elasticIp;
+    public Optional<Output<String>> elasticIp() {
+        return Optional.ofNullable(this.elasticIp);
     }
 
     /**
@@ -250,17 +250,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     @Import(name="endpoint")
-      private final @Nullable Output<ClusterEndpointArgs> endpoint;
+    private @Nullable Output<ClusterEndpointArgs> endpoint;
 
-    public Output<ClusterEndpointArgs> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<ClusterEndpointArgs>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -272,10 +272,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enhancedVpcRouting")
-      private final @Nullable Output<Boolean> enhancedVpcRouting;
+    private @Nullable Output<Boolean> enhancedVpcRouting;
 
-    public Output<Boolean> enhancedVpcRouting() {
-        return this.enhancedVpcRouting == null ? Codegen.empty() : this.enhancedVpcRouting;
+    public Optional<Output<Boolean>> enhancedVpcRouting() {
+        return Optional.ofNullable(this.enhancedVpcRouting);
     }
 
     /**
@@ -283,10 +283,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hsmClientCertificateIdentifier")
-      private final @Nullable Output<String> hsmClientCertificateIdentifier;
+    private @Nullable Output<String> hsmClientCertificateIdentifier;
 
-    public Output<String> hsmClientCertificateIdentifier() {
-        return this.hsmClientCertificateIdentifier == null ? Codegen.empty() : this.hsmClientCertificateIdentifier;
+    public Optional<Output<String>> hsmClientCertificateIdentifier() {
+        return Optional.ofNullable(this.hsmClientCertificateIdentifier);
     }
 
     /**
@@ -294,10 +294,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hsmConfigurationIdentifier")
-      private final @Nullable Output<String> hsmConfigurationIdentifier;
+    private @Nullable Output<String> hsmConfigurationIdentifier;
 
-    public Output<String> hsmConfigurationIdentifier() {
-        return this.hsmConfigurationIdentifier == null ? Codegen.empty() : this.hsmConfigurationIdentifier;
+    public Optional<Output<String>> hsmConfigurationIdentifier() {
+        return Optional.ofNullable(this.hsmConfigurationIdentifier);
     }
 
     /**
@@ -305,10 +305,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRoles")
-      private final @Nullable Output<List<String>> iamRoles;
+    private @Nullable Output<List<String>> iamRoles;
 
-    public Output<List<String>> iamRoles() {
-        return this.iamRoles == null ? Codegen.empty() : this.iamRoles;
+    public Optional<Output<List<String>>> iamRoles() {
+        return Optional.ofNullable(this.iamRoles);
     }
 
     /**
@@ -316,17 +316,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="loggingProperties")
-      private final @Nullable Output<ClusterLoggingPropertiesArgs> loggingProperties;
+    private @Nullable Output<ClusterLoggingPropertiesArgs> loggingProperties;
 
-    public Output<ClusterLoggingPropertiesArgs> loggingProperties() {
-        return this.loggingProperties == null ? Codegen.empty() : this.loggingProperties;
+    public Optional<Output<ClusterLoggingPropertiesArgs>> loggingProperties() {
+        return Optional.ofNullable(this.loggingProperties);
     }
 
     /**
@@ -334,10 +334,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceTrackName")
-      private final @Nullable Output<String> maintenanceTrackName;
+    private @Nullable Output<String> maintenanceTrackName;
 
-    public Output<String> maintenanceTrackName() {
-        return this.maintenanceTrackName == null ? Codegen.empty() : this.maintenanceTrackName;
+    public Optional<Output<String>> maintenanceTrackName() {
+        return Optional.ofNullable(this.maintenanceTrackName);
     }
 
     /**
@@ -347,10 +347,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manualSnapshotRetentionPeriod")
-      private final @Nullable Output<Integer> manualSnapshotRetentionPeriod;
+    private @Nullable Output<Integer> manualSnapshotRetentionPeriod;
 
-    public Output<Integer> manualSnapshotRetentionPeriod() {
-        return this.manualSnapshotRetentionPeriod == null ? Codegen.empty() : this.manualSnapshotRetentionPeriod;
+    public Optional<Output<Integer>> manualSnapshotRetentionPeriod() {
+        return Optional.ofNullable(this.manualSnapshotRetentionPeriod);
     }
 
     /**
@@ -358,7 +358,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterUserPassword", required=true)
-      private final Output<String> masterUserPassword;
+    private Output<String> masterUserPassword;
 
     public Output<String> masterUserPassword() {
         return this.masterUserPassword;
@@ -369,7 +369,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterUsername", required=true)
-      private final Output<String> masterUsername;
+    private Output<String> masterUsername;
 
     public Output<String> masterUsername() {
         return this.masterUsername;
@@ -380,7 +380,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeType", required=true)
-      private final Output<String> nodeType;
+    private Output<String> nodeType;
 
     public Output<String> nodeType() {
         return this.nodeType;
@@ -391,17 +391,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfNodes")
-      private final @Nullable Output<Integer> numberOfNodes;
+    private @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> numberOfNodes() {
-        return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
+    public Optional<Output<Integer>> numberOfNodes() {
+        return Optional.ofNullable(this.numberOfNodes);
     }
 
     @Import(name="ownerAccount")
-      private final @Nullable Output<String> ownerAccount;
+    private @Nullable Output<String> ownerAccount;
 
-    public Output<String> ownerAccount() {
-        return this.ownerAccount == null ? Codegen.empty() : this.ownerAccount;
+    public Optional<Output<String>> ownerAccount() {
+        return Optional.ofNullable(this.ownerAccount);
     }
 
     /**
@@ -409,10 +409,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -420,10 +420,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preferredMaintenanceWindow")
-      private final @Nullable Output<String> preferredMaintenanceWindow;
+    private @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> preferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
+    public Optional<Output<String>> preferredMaintenanceWindow() {
+        return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
 
     /**
@@ -431,10 +431,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publiclyAccessible")
-      private final @Nullable Output<Boolean> publiclyAccessible;
+    private @Nullable Output<Boolean> publiclyAccessible;
 
-    public Output<Boolean> publiclyAccessible() {
-        return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
+    public Optional<Output<Boolean>> publiclyAccessible() {
+        return Optional.ofNullable(this.publiclyAccessible);
     }
 
     /**
@@ -442,10 +442,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceAction")
-      private final @Nullable Output<String> resourceAction;
+    private @Nullable Output<String> resourceAction;
 
-    public Output<String> resourceAction() {
-        return this.resourceAction == null ? Codegen.empty() : this.resourceAction;
+    public Optional<Output<String>> resourceAction() {
+        return Optional.ofNullable(this.resourceAction);
     }
 
     /**
@@ -453,10 +453,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revisionTarget")
-      private final @Nullable Output<String> revisionTarget;
+    private @Nullable Output<String> revisionTarget;
 
-    public Output<String> revisionTarget() {
-        return this.revisionTarget == null ? Codegen.empty() : this.revisionTarget;
+    public Optional<Output<String>> revisionTarget() {
+        return Optional.ofNullable(this.revisionTarget);
     }
 
     /**
@@ -464,10 +464,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rotateEncryptionKey")
-      private final @Nullable Output<Boolean> rotateEncryptionKey;
+    private @Nullable Output<Boolean> rotateEncryptionKey;
 
-    public Output<Boolean> rotateEncryptionKey() {
-        return this.rotateEncryptionKey == null ? Codegen.empty() : this.rotateEncryptionKey;
+    public Optional<Output<Boolean>> rotateEncryptionKey() {
+        return Optional.ofNullable(this.rotateEncryptionKey);
     }
 
     /**
@@ -475,10 +475,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotClusterIdentifier")
-      private final @Nullable Output<String> snapshotClusterIdentifier;
+    private @Nullable Output<String> snapshotClusterIdentifier;
 
-    public Output<String> snapshotClusterIdentifier() {
-        return this.snapshotClusterIdentifier == null ? Codegen.empty() : this.snapshotClusterIdentifier;
+    public Optional<Output<String>> snapshotClusterIdentifier() {
+        return Optional.ofNullable(this.snapshotClusterIdentifier);
     }
 
     /**
@@ -486,10 +486,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotCopyGrantName")
-      private final @Nullable Output<String> snapshotCopyGrantName;
+    private @Nullable Output<String> snapshotCopyGrantName;
 
-    public Output<String> snapshotCopyGrantName() {
-        return this.snapshotCopyGrantName == null ? Codegen.empty() : this.snapshotCopyGrantName;
+    public Optional<Output<String>> snapshotCopyGrantName() {
+        return Optional.ofNullable(this.snapshotCopyGrantName);
     }
 
     /**
@@ -497,10 +497,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotCopyManual")
-      private final @Nullable Output<Boolean> snapshotCopyManual;
+    private @Nullable Output<Boolean> snapshotCopyManual;
 
-    public Output<Boolean> snapshotCopyManual() {
-        return this.snapshotCopyManual == null ? Codegen.empty() : this.snapshotCopyManual;
+    public Optional<Output<Boolean>> snapshotCopyManual() {
+        return Optional.ofNullable(this.snapshotCopyManual);
     }
 
     /**
@@ -512,10 +512,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotCopyRetentionPeriod")
-      private final @Nullable Output<Integer> snapshotCopyRetentionPeriod;
+    private @Nullable Output<Integer> snapshotCopyRetentionPeriod;
 
-    public Output<Integer> snapshotCopyRetentionPeriod() {
-        return this.snapshotCopyRetentionPeriod == null ? Codegen.empty() : this.snapshotCopyRetentionPeriod;
+    public Optional<Output<Integer>> snapshotCopyRetentionPeriod() {
+        return Optional.ofNullable(this.snapshotCopyRetentionPeriod);
     }
 
     /**
@@ -523,10 +523,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotIdentifier")
-      private final @Nullable Output<String> snapshotIdentifier;
+    private @Nullable Output<String> snapshotIdentifier;
 
-    public Output<String> snapshotIdentifier() {
-        return this.snapshotIdentifier == null ? Codegen.empty() : this.snapshotIdentifier;
+    public Optional<Output<String>> snapshotIdentifier() {
+        return Optional.ofNullable(this.snapshotIdentifier);
     }
 
     /**
@@ -534,10 +534,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ClusterTagArgs>> tags;
+    private @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Output<List<ClusterTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ClusterTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -545,673 +545,539 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSecurityGroupIds")
-      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
+    private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
+    public Optional<Output<List<String>>> vpcSecurityGroupIds() {
+        return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
 
-    public ClusterArgs(
-        @Nullable Output<Boolean> allowVersionUpgrade,
-        @Nullable Output<String> aquaConfigurationStatus,
-        @Nullable Output<Integer> automatedSnapshotRetentionPeriod,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<Boolean> availabilityZoneRelocation,
-        @Nullable Output<String> availabilityZoneRelocationStatus,
-        @Nullable Output<Boolean> classic,
-        @Nullable Output<String> clusterIdentifier,
-        @Nullable Output<String> clusterParameterGroupName,
-        @Nullable Output<List<String>> clusterSecurityGroups,
-        @Nullable Output<String> clusterSubnetGroupName,
-        Output<String> clusterType,
-        @Nullable Output<String> clusterVersion,
-        Output<String> dBName,
-        @Nullable Output<Boolean> deferMaintenance,
-        @Nullable Output<Integer> deferMaintenanceDuration,
-        @Nullable Output<String> deferMaintenanceEndTime,
-        @Nullable Output<String> deferMaintenanceStartTime,
-        @Nullable Output<String> destinationRegion,
-        @Nullable Output<String> elasticIp,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<ClusterEndpointArgs> endpoint,
-        @Nullable Output<Boolean> enhancedVpcRouting,
-        @Nullable Output<String> hsmClientCertificateIdentifier,
-        @Nullable Output<String> hsmConfigurationIdentifier,
-        @Nullable Output<List<String>> iamRoles,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<ClusterLoggingPropertiesArgs> loggingProperties,
-        @Nullable Output<String> maintenanceTrackName,
-        @Nullable Output<Integer> manualSnapshotRetentionPeriod,
-        Output<String> masterUserPassword,
-        Output<String> masterUsername,
-        Output<String> nodeType,
-        @Nullable Output<Integer> numberOfNodes,
-        @Nullable Output<String> ownerAccount,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> preferredMaintenanceWindow,
-        @Nullable Output<Boolean> publiclyAccessible,
-        @Nullable Output<String> resourceAction,
-        @Nullable Output<String> revisionTarget,
-        @Nullable Output<Boolean> rotateEncryptionKey,
-        @Nullable Output<String> snapshotClusterIdentifier,
-        @Nullable Output<String> snapshotCopyGrantName,
-        @Nullable Output<Boolean> snapshotCopyManual,
-        @Nullable Output<Integer> snapshotCopyRetentionPeriod,
-        @Nullable Output<String> snapshotIdentifier,
-        @Nullable Output<List<ClusterTagArgs>> tags,
-        @Nullable Output<List<String>> vpcSecurityGroupIds) {
-        this.allowVersionUpgrade = allowVersionUpgrade;
-        this.aquaConfigurationStatus = aquaConfigurationStatus;
-        this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
-        this.availabilityZone = availabilityZone;
-        this.availabilityZoneRelocation = availabilityZoneRelocation;
-        this.availabilityZoneRelocationStatus = availabilityZoneRelocationStatus;
-        this.classic = classic;
-        this.clusterIdentifier = clusterIdentifier;
-        this.clusterParameterGroupName = clusterParameterGroupName;
-        this.clusterSecurityGroups = clusterSecurityGroups;
-        this.clusterSubnetGroupName = clusterSubnetGroupName;
-        this.clusterType = Objects.requireNonNull(clusterType, "expected parameter 'clusterType' to be non-null");
-        this.clusterVersion = clusterVersion;
-        this.dBName = Objects.requireNonNull(dBName, "expected parameter 'dBName' to be non-null");
-        this.deferMaintenance = deferMaintenance;
-        this.deferMaintenanceDuration = deferMaintenanceDuration;
-        this.deferMaintenanceEndTime = deferMaintenanceEndTime;
-        this.deferMaintenanceStartTime = deferMaintenanceStartTime;
-        this.destinationRegion = destinationRegion;
-        this.elasticIp = elasticIp;
-        this.encrypted = encrypted;
-        this.endpoint = endpoint;
-        this.enhancedVpcRouting = enhancedVpcRouting;
-        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
-        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
-        this.iamRoles = iamRoles;
-        this.kmsKeyId = kmsKeyId;
-        this.loggingProperties = loggingProperties;
-        this.maintenanceTrackName = maintenanceTrackName;
-        this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
-        this.masterUserPassword = Objects.requireNonNull(masterUserPassword, "expected parameter 'masterUserPassword' to be non-null");
-        this.masterUsername = Objects.requireNonNull(masterUsername, "expected parameter 'masterUsername' to be non-null");
-        this.nodeType = Objects.requireNonNull(nodeType, "expected parameter 'nodeType' to be non-null");
-        this.numberOfNodes = numberOfNodes;
-        this.ownerAccount = ownerAccount;
-        this.port = port;
-        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
-        this.publiclyAccessible = publiclyAccessible;
-        this.resourceAction = resourceAction;
-        this.revisionTarget = revisionTarget;
-        this.rotateEncryptionKey = rotateEncryptionKey;
-        this.snapshotClusterIdentifier = snapshotClusterIdentifier;
-        this.snapshotCopyGrantName = snapshotCopyGrantName;
-        this.snapshotCopyManual = snapshotCopyManual;
-        this.snapshotCopyRetentionPeriod = snapshotCopyRetentionPeriod;
-        this.snapshotIdentifier = snapshotIdentifier;
-        this.tags = tags;
-        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.allowVersionUpgrade = Codegen.empty();
-        this.aquaConfigurationStatus = Codegen.empty();
-        this.automatedSnapshotRetentionPeriod = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.availabilityZoneRelocation = Codegen.empty();
-        this.availabilityZoneRelocationStatus = Codegen.empty();
-        this.classic = Codegen.empty();
-        this.clusterIdentifier = Codegen.empty();
-        this.clusterParameterGroupName = Codegen.empty();
-        this.clusterSecurityGroups = Codegen.empty();
-        this.clusterSubnetGroupName = Codegen.empty();
-        this.clusterType = Codegen.empty();
-        this.clusterVersion = Codegen.empty();
-        this.dBName = Codegen.empty();
-        this.deferMaintenance = Codegen.empty();
-        this.deferMaintenanceDuration = Codegen.empty();
-        this.deferMaintenanceEndTime = Codegen.empty();
-        this.deferMaintenanceStartTime = Codegen.empty();
-        this.destinationRegion = Codegen.empty();
-        this.elasticIp = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.enhancedVpcRouting = Codegen.empty();
-        this.hsmClientCertificateIdentifier = Codegen.empty();
-        this.hsmConfigurationIdentifier = Codegen.empty();
-        this.iamRoles = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.loggingProperties = Codegen.empty();
-        this.maintenanceTrackName = Codegen.empty();
-        this.manualSnapshotRetentionPeriod = Codegen.empty();
-        this.masterUserPassword = Codegen.empty();
-        this.masterUsername = Codegen.empty();
-        this.nodeType = Codegen.empty();
-        this.numberOfNodes = Codegen.empty();
-        this.ownerAccount = Codegen.empty();
-        this.port = Codegen.empty();
-        this.preferredMaintenanceWindow = Codegen.empty();
-        this.publiclyAccessible = Codegen.empty();
-        this.resourceAction = Codegen.empty();
-        this.revisionTarget = Codegen.empty();
-        this.rotateEncryptionKey = Codegen.empty();
-        this.snapshotClusterIdentifier = Codegen.empty();
-        this.snapshotCopyGrantName = Codegen.empty();
-        this.snapshotCopyManual = Codegen.empty();
-        this.snapshotCopyRetentionPeriod = Codegen.empty();
-        this.snapshotIdentifier = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.allowVersionUpgrade = $.allowVersionUpgrade;
+        this.aquaConfigurationStatus = $.aquaConfigurationStatus;
+        this.automatedSnapshotRetentionPeriod = $.automatedSnapshotRetentionPeriod;
+        this.availabilityZone = $.availabilityZone;
+        this.availabilityZoneRelocation = $.availabilityZoneRelocation;
+        this.availabilityZoneRelocationStatus = $.availabilityZoneRelocationStatus;
+        this.classic = $.classic;
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.clusterParameterGroupName = $.clusterParameterGroupName;
+        this.clusterSecurityGroups = $.clusterSecurityGroups;
+        this.clusterSubnetGroupName = $.clusterSubnetGroupName;
+        this.clusterType = $.clusterType;
+        this.clusterVersion = $.clusterVersion;
+        this.dBName = $.dBName;
+        this.deferMaintenance = $.deferMaintenance;
+        this.deferMaintenanceDuration = $.deferMaintenanceDuration;
+        this.deferMaintenanceEndTime = $.deferMaintenanceEndTime;
+        this.deferMaintenanceStartTime = $.deferMaintenanceStartTime;
+        this.destinationRegion = $.destinationRegion;
+        this.elasticIp = $.elasticIp;
+        this.encrypted = $.encrypted;
+        this.endpoint = $.endpoint;
+        this.enhancedVpcRouting = $.enhancedVpcRouting;
+        this.hsmClientCertificateIdentifier = $.hsmClientCertificateIdentifier;
+        this.hsmConfigurationIdentifier = $.hsmConfigurationIdentifier;
+        this.iamRoles = $.iamRoles;
+        this.kmsKeyId = $.kmsKeyId;
+        this.loggingProperties = $.loggingProperties;
+        this.maintenanceTrackName = $.maintenanceTrackName;
+        this.manualSnapshotRetentionPeriod = $.manualSnapshotRetentionPeriod;
+        this.masterUserPassword = $.masterUserPassword;
+        this.masterUsername = $.masterUsername;
+        this.nodeType = $.nodeType;
+        this.numberOfNodes = $.numberOfNodes;
+        this.ownerAccount = $.ownerAccount;
+        this.port = $.port;
+        this.preferredMaintenanceWindow = $.preferredMaintenanceWindow;
+        this.publiclyAccessible = $.publiclyAccessible;
+        this.resourceAction = $.resourceAction;
+        this.revisionTarget = $.revisionTarget;
+        this.rotateEncryptionKey = $.rotateEncryptionKey;
+        this.snapshotClusterIdentifier = $.snapshotClusterIdentifier;
+        this.snapshotCopyGrantName = $.snapshotCopyGrantName;
+        this.snapshotCopyManual = $.snapshotCopyManual;
+        this.snapshotCopyRetentionPeriod = $.snapshotCopyRetentionPeriod;
+        this.snapshotIdentifier = $.snapshotIdentifier;
+        this.tags = $.tags;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowVersionUpgrade;
-        private @Nullable Output<String> aquaConfigurationStatus;
-        private @Nullable Output<Integer> automatedSnapshotRetentionPeriod;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<Boolean> availabilityZoneRelocation;
-        private @Nullable Output<String> availabilityZoneRelocationStatus;
-        private @Nullable Output<Boolean> classic;
-        private @Nullable Output<String> clusterIdentifier;
-        private @Nullable Output<String> clusterParameterGroupName;
-        private @Nullable Output<List<String>> clusterSecurityGroups;
-        private @Nullable Output<String> clusterSubnetGroupName;
-        private Output<String> clusterType;
-        private @Nullable Output<String> clusterVersion;
-        private Output<String> dBName;
-        private @Nullable Output<Boolean> deferMaintenance;
-        private @Nullable Output<Integer> deferMaintenanceDuration;
-        private @Nullable Output<String> deferMaintenanceEndTime;
-        private @Nullable Output<String> deferMaintenanceStartTime;
-        private @Nullable Output<String> destinationRegion;
-        private @Nullable Output<String> elasticIp;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<ClusterEndpointArgs> endpoint;
-        private @Nullable Output<Boolean> enhancedVpcRouting;
-        private @Nullable Output<String> hsmClientCertificateIdentifier;
-        private @Nullable Output<String> hsmConfigurationIdentifier;
-        private @Nullable Output<List<String>> iamRoles;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<ClusterLoggingPropertiesArgs> loggingProperties;
-        private @Nullable Output<String> maintenanceTrackName;
-        private @Nullable Output<Integer> manualSnapshotRetentionPeriod;
-        private Output<String> masterUserPassword;
-        private Output<String> masterUsername;
-        private Output<String> nodeType;
-        private @Nullable Output<Integer> numberOfNodes;
-        private @Nullable Output<String> ownerAccount;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> preferredMaintenanceWindow;
-        private @Nullable Output<Boolean> publiclyAccessible;
-        private @Nullable Output<String> resourceAction;
-        private @Nullable Output<String> revisionTarget;
-        private @Nullable Output<Boolean> rotateEncryptionKey;
-        private @Nullable Output<String> snapshotClusterIdentifier;
-        private @Nullable Output<String> snapshotCopyGrantName;
-        private @Nullable Output<Boolean> snapshotCopyManual;
-        private @Nullable Output<Integer> snapshotCopyRetentionPeriod;
-        private @Nullable Output<String> snapshotIdentifier;
-        private @Nullable Output<List<ClusterTagArgs>> tags;
-        private @Nullable Output<List<String>> vpcSecurityGroupIds;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowVersionUpgrade = defaults.allowVersionUpgrade;
-    	      this.aquaConfigurationStatus = defaults.aquaConfigurationStatus;
-    	      this.automatedSnapshotRetentionPeriod = defaults.automatedSnapshotRetentionPeriod;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.availabilityZoneRelocation = defaults.availabilityZoneRelocation;
-    	      this.availabilityZoneRelocationStatus = defaults.availabilityZoneRelocationStatus;
-    	      this.classic = defaults.classic;
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.clusterParameterGroupName = defaults.clusterParameterGroupName;
-    	      this.clusterSecurityGroups = defaults.clusterSecurityGroups;
-    	      this.clusterSubnetGroupName = defaults.clusterSubnetGroupName;
-    	      this.clusterType = defaults.clusterType;
-    	      this.clusterVersion = defaults.clusterVersion;
-    	      this.dBName = defaults.dBName;
-    	      this.deferMaintenance = defaults.deferMaintenance;
-    	      this.deferMaintenanceDuration = defaults.deferMaintenanceDuration;
-    	      this.deferMaintenanceEndTime = defaults.deferMaintenanceEndTime;
-    	      this.deferMaintenanceStartTime = defaults.deferMaintenanceStartTime;
-    	      this.destinationRegion = defaults.destinationRegion;
-    	      this.elasticIp = defaults.elasticIp;
-    	      this.encrypted = defaults.encrypted;
-    	      this.endpoint = defaults.endpoint;
-    	      this.enhancedVpcRouting = defaults.enhancedVpcRouting;
-    	      this.hsmClientCertificateIdentifier = defaults.hsmClientCertificateIdentifier;
-    	      this.hsmConfigurationIdentifier = defaults.hsmConfigurationIdentifier;
-    	      this.iamRoles = defaults.iamRoles;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.loggingProperties = defaults.loggingProperties;
-    	      this.maintenanceTrackName = defaults.maintenanceTrackName;
-    	      this.manualSnapshotRetentionPeriod = defaults.manualSnapshotRetentionPeriod;
-    	      this.masterUserPassword = defaults.masterUserPassword;
-    	      this.masterUsername = defaults.masterUsername;
-    	      this.nodeType = defaults.nodeType;
-    	      this.numberOfNodes = defaults.numberOfNodes;
-    	      this.ownerAccount = defaults.ownerAccount;
-    	      this.port = defaults.port;
-    	      this.preferredMaintenanceWindow = defaults.preferredMaintenanceWindow;
-    	      this.publiclyAccessible = defaults.publiclyAccessible;
-    	      this.resourceAction = defaults.resourceAction;
-    	      this.revisionTarget = defaults.revisionTarget;
-    	      this.rotateEncryptionKey = defaults.rotateEncryptionKey;
-    	      this.snapshotClusterIdentifier = defaults.snapshotClusterIdentifier;
-    	      this.snapshotCopyGrantName = defaults.snapshotCopyGrantName;
-    	      this.snapshotCopyManual = defaults.snapshotCopyManual;
-    	      this.snapshotCopyRetentionPeriod = defaults.snapshotCopyRetentionPeriod;
-    	      this.snapshotIdentifier = defaults.snapshotIdentifier;
-    	      this.tags = defaults.tags;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowVersionUpgrade(@Nullable Output<Boolean> allowVersionUpgrade) {
-            this.allowVersionUpgrade = allowVersionUpgrade;
+            $.allowVersionUpgrade = allowVersionUpgrade;
             return this;
         }
-        public Builder allowVersionUpgrade(@Nullable Boolean allowVersionUpgrade) {
-            this.allowVersionUpgrade = Codegen.ofNullable(allowVersionUpgrade);
-            return this;
+
+        public Builder allowVersionUpgrade(Boolean allowVersionUpgrade) {
+            return allowVersionUpgrade(Output.of(allowVersionUpgrade));
         }
+
         public Builder aquaConfigurationStatus(@Nullable Output<String> aquaConfigurationStatus) {
-            this.aquaConfigurationStatus = aquaConfigurationStatus;
+            $.aquaConfigurationStatus = aquaConfigurationStatus;
             return this;
         }
-        public Builder aquaConfigurationStatus(@Nullable String aquaConfigurationStatus) {
-            this.aquaConfigurationStatus = Codegen.ofNullable(aquaConfigurationStatus);
-            return this;
+
+        public Builder aquaConfigurationStatus(String aquaConfigurationStatus) {
+            return aquaConfigurationStatus(Output.of(aquaConfigurationStatus));
         }
+
         public Builder automatedSnapshotRetentionPeriod(@Nullable Output<Integer> automatedSnapshotRetentionPeriod) {
-            this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
+            $.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
             return this;
         }
-        public Builder automatedSnapshotRetentionPeriod(@Nullable Integer automatedSnapshotRetentionPeriod) {
-            this.automatedSnapshotRetentionPeriod = Codegen.ofNullable(automatedSnapshotRetentionPeriod);
-            return this;
+
+        public Builder automatedSnapshotRetentionPeriod(Integer automatedSnapshotRetentionPeriod) {
+            return automatedSnapshotRetentionPeriod(Output.of(automatedSnapshotRetentionPeriod));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder availabilityZoneRelocation(@Nullable Output<Boolean> availabilityZoneRelocation) {
-            this.availabilityZoneRelocation = availabilityZoneRelocation;
+            $.availabilityZoneRelocation = availabilityZoneRelocation;
             return this;
         }
-        public Builder availabilityZoneRelocation(@Nullable Boolean availabilityZoneRelocation) {
-            this.availabilityZoneRelocation = Codegen.ofNullable(availabilityZoneRelocation);
-            return this;
+
+        public Builder availabilityZoneRelocation(Boolean availabilityZoneRelocation) {
+            return availabilityZoneRelocation(Output.of(availabilityZoneRelocation));
         }
+
         public Builder availabilityZoneRelocationStatus(@Nullable Output<String> availabilityZoneRelocationStatus) {
-            this.availabilityZoneRelocationStatus = availabilityZoneRelocationStatus;
+            $.availabilityZoneRelocationStatus = availabilityZoneRelocationStatus;
             return this;
         }
-        public Builder availabilityZoneRelocationStatus(@Nullable String availabilityZoneRelocationStatus) {
-            this.availabilityZoneRelocationStatus = Codegen.ofNullable(availabilityZoneRelocationStatus);
-            return this;
+
+        public Builder availabilityZoneRelocationStatus(String availabilityZoneRelocationStatus) {
+            return availabilityZoneRelocationStatus(Output.of(availabilityZoneRelocationStatus));
         }
+
         public Builder classic(@Nullable Output<Boolean> classic) {
-            this.classic = classic;
+            $.classic = classic;
             return this;
         }
-        public Builder classic(@Nullable Boolean classic) {
-            this.classic = Codegen.ofNullable(classic);
-            return this;
+
+        public Builder classic(Boolean classic) {
+            return classic(Output.of(classic));
         }
+
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
-            this.clusterIdentifier = clusterIdentifier;
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
-        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Codegen.ofNullable(clusterIdentifier);
-            return this;
+
+        public Builder clusterIdentifier(String clusterIdentifier) {
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder clusterParameterGroupName(@Nullable Output<String> clusterParameterGroupName) {
-            this.clusterParameterGroupName = clusterParameterGroupName;
+            $.clusterParameterGroupName = clusterParameterGroupName;
             return this;
         }
-        public Builder clusterParameterGroupName(@Nullable String clusterParameterGroupName) {
-            this.clusterParameterGroupName = Codegen.ofNullable(clusterParameterGroupName);
-            return this;
+
+        public Builder clusterParameterGroupName(String clusterParameterGroupName) {
+            return clusterParameterGroupName(Output.of(clusterParameterGroupName));
         }
+
         public Builder clusterSecurityGroups(@Nullable Output<List<String>> clusterSecurityGroups) {
-            this.clusterSecurityGroups = clusterSecurityGroups;
+            $.clusterSecurityGroups = clusterSecurityGroups;
             return this;
         }
-        public Builder clusterSecurityGroups(@Nullable List<String> clusterSecurityGroups) {
-            this.clusterSecurityGroups = Codegen.ofNullable(clusterSecurityGroups);
-            return this;
+
+        public Builder clusterSecurityGroups(List<String> clusterSecurityGroups) {
+            return clusterSecurityGroups(Output.of(clusterSecurityGroups));
         }
+
         public Builder clusterSecurityGroups(String... clusterSecurityGroups) {
             return clusterSecurityGroups(List.of(clusterSecurityGroups));
         }
+
         public Builder clusterSubnetGroupName(@Nullable Output<String> clusterSubnetGroupName) {
-            this.clusterSubnetGroupName = clusterSubnetGroupName;
+            $.clusterSubnetGroupName = clusterSubnetGroupName;
             return this;
         }
-        public Builder clusterSubnetGroupName(@Nullable String clusterSubnetGroupName) {
-            this.clusterSubnetGroupName = Codegen.ofNullable(clusterSubnetGroupName);
-            return this;
+
+        public Builder clusterSubnetGroupName(String clusterSubnetGroupName) {
+            return clusterSubnetGroupName(Output.of(clusterSubnetGroupName));
         }
+
         public Builder clusterType(Output<String> clusterType) {
-            this.clusterType = Objects.requireNonNull(clusterType);
+            $.clusterType = clusterType;
             return this;
         }
+
         public Builder clusterType(String clusterType) {
-            this.clusterType = Output.of(Objects.requireNonNull(clusterType));
-            return this;
+            return clusterType(Output.of(clusterType));
         }
+
         public Builder clusterVersion(@Nullable Output<String> clusterVersion) {
-            this.clusterVersion = clusterVersion;
+            $.clusterVersion = clusterVersion;
             return this;
         }
-        public Builder clusterVersion(@Nullable String clusterVersion) {
-            this.clusterVersion = Codegen.ofNullable(clusterVersion);
-            return this;
+
+        public Builder clusterVersion(String clusterVersion) {
+            return clusterVersion(Output.of(clusterVersion));
         }
+
         public Builder dBName(Output<String> dBName) {
-            this.dBName = Objects.requireNonNull(dBName);
+            $.dBName = dBName;
             return this;
         }
+
         public Builder dBName(String dBName) {
-            this.dBName = Output.of(Objects.requireNonNull(dBName));
-            return this;
+            return dBName(Output.of(dBName));
         }
+
         public Builder deferMaintenance(@Nullable Output<Boolean> deferMaintenance) {
-            this.deferMaintenance = deferMaintenance;
+            $.deferMaintenance = deferMaintenance;
             return this;
         }
-        public Builder deferMaintenance(@Nullable Boolean deferMaintenance) {
-            this.deferMaintenance = Codegen.ofNullable(deferMaintenance);
-            return this;
+
+        public Builder deferMaintenance(Boolean deferMaintenance) {
+            return deferMaintenance(Output.of(deferMaintenance));
         }
+
         public Builder deferMaintenanceDuration(@Nullable Output<Integer> deferMaintenanceDuration) {
-            this.deferMaintenanceDuration = deferMaintenanceDuration;
+            $.deferMaintenanceDuration = deferMaintenanceDuration;
             return this;
         }
-        public Builder deferMaintenanceDuration(@Nullable Integer deferMaintenanceDuration) {
-            this.deferMaintenanceDuration = Codegen.ofNullable(deferMaintenanceDuration);
-            return this;
+
+        public Builder deferMaintenanceDuration(Integer deferMaintenanceDuration) {
+            return deferMaintenanceDuration(Output.of(deferMaintenanceDuration));
         }
+
         public Builder deferMaintenanceEndTime(@Nullable Output<String> deferMaintenanceEndTime) {
-            this.deferMaintenanceEndTime = deferMaintenanceEndTime;
+            $.deferMaintenanceEndTime = deferMaintenanceEndTime;
             return this;
         }
-        public Builder deferMaintenanceEndTime(@Nullable String deferMaintenanceEndTime) {
-            this.deferMaintenanceEndTime = Codegen.ofNullable(deferMaintenanceEndTime);
-            return this;
+
+        public Builder deferMaintenanceEndTime(String deferMaintenanceEndTime) {
+            return deferMaintenanceEndTime(Output.of(deferMaintenanceEndTime));
         }
+
         public Builder deferMaintenanceStartTime(@Nullable Output<String> deferMaintenanceStartTime) {
-            this.deferMaintenanceStartTime = deferMaintenanceStartTime;
+            $.deferMaintenanceStartTime = deferMaintenanceStartTime;
             return this;
         }
-        public Builder deferMaintenanceStartTime(@Nullable String deferMaintenanceStartTime) {
-            this.deferMaintenanceStartTime = Codegen.ofNullable(deferMaintenanceStartTime);
-            return this;
+
+        public Builder deferMaintenanceStartTime(String deferMaintenanceStartTime) {
+            return deferMaintenanceStartTime(Output.of(deferMaintenanceStartTime));
         }
+
         public Builder destinationRegion(@Nullable Output<String> destinationRegion) {
-            this.destinationRegion = destinationRegion;
+            $.destinationRegion = destinationRegion;
             return this;
         }
-        public Builder destinationRegion(@Nullable String destinationRegion) {
-            this.destinationRegion = Codegen.ofNullable(destinationRegion);
-            return this;
+
+        public Builder destinationRegion(String destinationRegion) {
+            return destinationRegion(Output.of(destinationRegion));
         }
+
         public Builder elasticIp(@Nullable Output<String> elasticIp) {
-            this.elasticIp = elasticIp;
+            $.elasticIp = elasticIp;
             return this;
         }
-        public Builder elasticIp(@Nullable String elasticIp) {
-            this.elasticIp = Codegen.ofNullable(elasticIp);
-            return this;
+
+        public Builder elasticIp(String elasticIp) {
+            return elasticIp(Output.of(elasticIp));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder endpoint(@Nullable Output<ClusterEndpointArgs> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable ClusterEndpointArgs endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(ClusterEndpointArgs endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder enhancedVpcRouting(@Nullable Output<Boolean> enhancedVpcRouting) {
-            this.enhancedVpcRouting = enhancedVpcRouting;
+            $.enhancedVpcRouting = enhancedVpcRouting;
             return this;
         }
-        public Builder enhancedVpcRouting(@Nullable Boolean enhancedVpcRouting) {
-            this.enhancedVpcRouting = Codegen.ofNullable(enhancedVpcRouting);
-            return this;
+
+        public Builder enhancedVpcRouting(Boolean enhancedVpcRouting) {
+            return enhancedVpcRouting(Output.of(enhancedVpcRouting));
         }
+
         public Builder hsmClientCertificateIdentifier(@Nullable Output<String> hsmClientCertificateIdentifier) {
-            this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+            $.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
             return this;
         }
-        public Builder hsmClientCertificateIdentifier(@Nullable String hsmClientCertificateIdentifier) {
-            this.hsmClientCertificateIdentifier = Codegen.ofNullable(hsmClientCertificateIdentifier);
-            return this;
+
+        public Builder hsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
+            return hsmClientCertificateIdentifier(Output.of(hsmClientCertificateIdentifier));
         }
+
         public Builder hsmConfigurationIdentifier(@Nullable Output<String> hsmConfigurationIdentifier) {
-            this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+            $.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
             return this;
         }
-        public Builder hsmConfigurationIdentifier(@Nullable String hsmConfigurationIdentifier) {
-            this.hsmConfigurationIdentifier = Codegen.ofNullable(hsmConfigurationIdentifier);
-            return this;
+
+        public Builder hsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
+            return hsmConfigurationIdentifier(Output.of(hsmConfigurationIdentifier));
         }
+
         public Builder iamRoles(@Nullable Output<List<String>> iamRoles) {
-            this.iamRoles = iamRoles;
+            $.iamRoles = iamRoles;
             return this;
         }
-        public Builder iamRoles(@Nullable List<String> iamRoles) {
-            this.iamRoles = Codegen.ofNullable(iamRoles);
-            return this;
+
+        public Builder iamRoles(List<String> iamRoles) {
+            return iamRoles(Output.of(iamRoles));
         }
+
         public Builder iamRoles(String... iamRoles) {
             return iamRoles(List.of(iamRoles));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder loggingProperties(@Nullable Output<ClusterLoggingPropertiesArgs> loggingProperties) {
-            this.loggingProperties = loggingProperties;
+            $.loggingProperties = loggingProperties;
             return this;
         }
-        public Builder loggingProperties(@Nullable ClusterLoggingPropertiesArgs loggingProperties) {
-            this.loggingProperties = Codegen.ofNullable(loggingProperties);
-            return this;
+
+        public Builder loggingProperties(ClusterLoggingPropertiesArgs loggingProperties) {
+            return loggingProperties(Output.of(loggingProperties));
         }
+
         public Builder maintenanceTrackName(@Nullable Output<String> maintenanceTrackName) {
-            this.maintenanceTrackName = maintenanceTrackName;
+            $.maintenanceTrackName = maintenanceTrackName;
             return this;
         }
-        public Builder maintenanceTrackName(@Nullable String maintenanceTrackName) {
-            this.maintenanceTrackName = Codegen.ofNullable(maintenanceTrackName);
-            return this;
+
+        public Builder maintenanceTrackName(String maintenanceTrackName) {
+            return maintenanceTrackName(Output.of(maintenanceTrackName));
         }
+
         public Builder manualSnapshotRetentionPeriod(@Nullable Output<Integer> manualSnapshotRetentionPeriod) {
-            this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
+            $.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
             return this;
         }
-        public Builder manualSnapshotRetentionPeriod(@Nullable Integer manualSnapshotRetentionPeriod) {
-            this.manualSnapshotRetentionPeriod = Codegen.ofNullable(manualSnapshotRetentionPeriod);
-            return this;
+
+        public Builder manualSnapshotRetentionPeriod(Integer manualSnapshotRetentionPeriod) {
+            return manualSnapshotRetentionPeriod(Output.of(manualSnapshotRetentionPeriod));
         }
+
         public Builder masterUserPassword(Output<String> masterUserPassword) {
-            this.masterUserPassword = Objects.requireNonNull(masterUserPassword);
+            $.masterUserPassword = masterUserPassword;
             return this;
         }
+
         public Builder masterUserPassword(String masterUserPassword) {
-            this.masterUserPassword = Output.of(Objects.requireNonNull(masterUserPassword));
-            return this;
+            return masterUserPassword(Output.of(masterUserPassword));
         }
+
         public Builder masterUsername(Output<String> masterUsername) {
-            this.masterUsername = Objects.requireNonNull(masterUsername);
+            $.masterUsername = masterUsername;
             return this;
         }
+
         public Builder masterUsername(String masterUsername) {
-            this.masterUsername = Output.of(Objects.requireNonNull(masterUsername));
-            return this;
+            return masterUsername(Output.of(masterUsername));
         }
+
         public Builder nodeType(Output<String> nodeType) {
-            this.nodeType = Objects.requireNonNull(nodeType);
+            $.nodeType = nodeType;
             return this;
         }
+
         public Builder nodeType(String nodeType) {
-            this.nodeType = Output.of(Objects.requireNonNull(nodeType));
-            return this;
+            return nodeType(Output.of(nodeType));
         }
+
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
-            this.numberOfNodes = numberOfNodes;
+            $.numberOfNodes = numberOfNodes;
             return this;
         }
-        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Codegen.ofNullable(numberOfNodes);
-            return this;
+
+        public Builder numberOfNodes(Integer numberOfNodes) {
+            return numberOfNodes(Output.of(numberOfNodes));
         }
+
         public Builder ownerAccount(@Nullable Output<String> ownerAccount) {
-            this.ownerAccount = ownerAccount;
+            $.ownerAccount = ownerAccount;
             return this;
         }
-        public Builder ownerAccount(@Nullable String ownerAccount) {
-            this.ownerAccount = Codegen.ofNullable(ownerAccount);
-            return this;
+
+        public Builder ownerAccount(String ownerAccount) {
+            return ownerAccount(Output.of(ownerAccount));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+            $.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
-            return this;
+
+        public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
+            return preferredMaintenanceWindow(Output.of(preferredMaintenanceWindow));
         }
+
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
-            this.publiclyAccessible = publiclyAccessible;
+            $.publiclyAccessible = publiclyAccessible;
             return this;
         }
-        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Codegen.ofNullable(publiclyAccessible);
-            return this;
+
+        public Builder publiclyAccessible(Boolean publiclyAccessible) {
+            return publiclyAccessible(Output.of(publiclyAccessible));
         }
+
         public Builder resourceAction(@Nullable Output<String> resourceAction) {
-            this.resourceAction = resourceAction;
+            $.resourceAction = resourceAction;
             return this;
         }
-        public Builder resourceAction(@Nullable String resourceAction) {
-            this.resourceAction = Codegen.ofNullable(resourceAction);
-            return this;
+
+        public Builder resourceAction(String resourceAction) {
+            return resourceAction(Output.of(resourceAction));
         }
+
         public Builder revisionTarget(@Nullable Output<String> revisionTarget) {
-            this.revisionTarget = revisionTarget;
+            $.revisionTarget = revisionTarget;
             return this;
         }
-        public Builder revisionTarget(@Nullable String revisionTarget) {
-            this.revisionTarget = Codegen.ofNullable(revisionTarget);
-            return this;
+
+        public Builder revisionTarget(String revisionTarget) {
+            return revisionTarget(Output.of(revisionTarget));
         }
+
         public Builder rotateEncryptionKey(@Nullable Output<Boolean> rotateEncryptionKey) {
-            this.rotateEncryptionKey = rotateEncryptionKey;
+            $.rotateEncryptionKey = rotateEncryptionKey;
             return this;
         }
-        public Builder rotateEncryptionKey(@Nullable Boolean rotateEncryptionKey) {
-            this.rotateEncryptionKey = Codegen.ofNullable(rotateEncryptionKey);
-            return this;
+
+        public Builder rotateEncryptionKey(Boolean rotateEncryptionKey) {
+            return rotateEncryptionKey(Output.of(rotateEncryptionKey));
         }
+
         public Builder snapshotClusterIdentifier(@Nullable Output<String> snapshotClusterIdentifier) {
-            this.snapshotClusterIdentifier = snapshotClusterIdentifier;
+            $.snapshotClusterIdentifier = snapshotClusterIdentifier;
             return this;
         }
-        public Builder snapshotClusterIdentifier(@Nullable String snapshotClusterIdentifier) {
-            this.snapshotClusterIdentifier = Codegen.ofNullable(snapshotClusterIdentifier);
-            return this;
+
+        public Builder snapshotClusterIdentifier(String snapshotClusterIdentifier) {
+            return snapshotClusterIdentifier(Output.of(snapshotClusterIdentifier));
         }
+
         public Builder snapshotCopyGrantName(@Nullable Output<String> snapshotCopyGrantName) {
-            this.snapshotCopyGrantName = snapshotCopyGrantName;
+            $.snapshotCopyGrantName = snapshotCopyGrantName;
             return this;
         }
-        public Builder snapshotCopyGrantName(@Nullable String snapshotCopyGrantName) {
-            this.snapshotCopyGrantName = Codegen.ofNullable(snapshotCopyGrantName);
-            return this;
+
+        public Builder snapshotCopyGrantName(String snapshotCopyGrantName) {
+            return snapshotCopyGrantName(Output.of(snapshotCopyGrantName));
         }
+
         public Builder snapshotCopyManual(@Nullable Output<Boolean> snapshotCopyManual) {
-            this.snapshotCopyManual = snapshotCopyManual;
+            $.snapshotCopyManual = snapshotCopyManual;
             return this;
         }
-        public Builder snapshotCopyManual(@Nullable Boolean snapshotCopyManual) {
-            this.snapshotCopyManual = Codegen.ofNullable(snapshotCopyManual);
-            return this;
+
+        public Builder snapshotCopyManual(Boolean snapshotCopyManual) {
+            return snapshotCopyManual(Output.of(snapshotCopyManual));
         }
+
         public Builder snapshotCopyRetentionPeriod(@Nullable Output<Integer> snapshotCopyRetentionPeriod) {
-            this.snapshotCopyRetentionPeriod = snapshotCopyRetentionPeriod;
+            $.snapshotCopyRetentionPeriod = snapshotCopyRetentionPeriod;
             return this;
         }
-        public Builder snapshotCopyRetentionPeriod(@Nullable Integer snapshotCopyRetentionPeriod) {
-            this.snapshotCopyRetentionPeriod = Codegen.ofNullable(snapshotCopyRetentionPeriod);
-            return this;
+
+        public Builder snapshotCopyRetentionPeriod(Integer snapshotCopyRetentionPeriod) {
+            return snapshotCopyRetentionPeriod(Output.of(snapshotCopyRetentionPeriod));
         }
+
         public Builder snapshotIdentifier(@Nullable Output<String> snapshotIdentifier) {
-            this.snapshotIdentifier = snapshotIdentifier;
+            $.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
-        public Builder snapshotIdentifier(@Nullable String snapshotIdentifier) {
-            this.snapshotIdentifier = Codegen.ofNullable(snapshotIdentifier);
-            return this;
+
+        public Builder snapshotIdentifier(String snapshotIdentifier) {
+            return snapshotIdentifier(Output.of(snapshotIdentifier));
         }
+
         public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ClusterTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ClusterTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ClusterTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
-            return this;
+
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
-        }        public ClusterArgs build() {
-            return new ClusterArgs(allowVersionUpgrade, aquaConfigurationStatus, automatedSnapshotRetentionPeriod, availabilityZone, availabilityZoneRelocation, availabilityZoneRelocationStatus, classic, clusterIdentifier, clusterParameterGroupName, clusterSecurityGroups, clusterSubnetGroupName, clusterType, clusterVersion, dBName, deferMaintenance, deferMaintenanceDuration, deferMaintenanceEndTime, deferMaintenanceStartTime, destinationRegion, elasticIp, encrypted, endpoint, enhancedVpcRouting, hsmClientCertificateIdentifier, hsmConfigurationIdentifier, iamRoles, kmsKeyId, loggingProperties, maintenanceTrackName, manualSnapshotRetentionPeriod, masterUserPassword, masterUsername, nodeType, numberOfNodes, ownerAccount, port, preferredMaintenanceWindow, publiclyAccessible, resourceAction, revisionTarget, rotateEncryptionKey, snapshotClusterIdentifier, snapshotCopyGrantName, snapshotCopyManual, snapshotCopyRetentionPeriod, snapshotIdentifier, tags, vpcSecurityGroupIds);
+        }
+
+        public ClusterArgs build() {
+            $.clusterType = Objects.requireNonNull($.clusterType, "expected parameter 'clusterType' to be non-null");
+            $.dBName = Objects.requireNonNull($.dBName, "expected parameter 'dBName' to be non-null");
+            $.masterUserPassword = Objects.requireNonNull($.masterUserPassword, "expected parameter 'masterUserPassword' to be non-null");
+            $.masterUsername = Objects.requireNonNull($.masterUsername, "expected parameter 'masterUsername' to be non-null");
+            $.nodeType = Objects.requireNonNull($.nodeType, "expected parameter 'nodeType' to be non-null");
+            return $;
         }
     }
+
 }

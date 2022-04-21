@@ -20,62 +20,57 @@ public final class DatasetCsvOptions extends com.pulumi.resources.InvokeArgs {
     public static final DatasetCsvOptions Empty = new DatasetCsvOptions();
 
     @Import(name="delimiter")
-      private final @Nullable String delimiter;
+    private @Nullable String delimiter;
 
     public Optional<String> delimiter() {
-        return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
+        return Optional.ofNullable(this.delimiter);
     }
 
     @Import(name="headerRow")
-      private final @Nullable Boolean headerRow;
+    private @Nullable Boolean headerRow;
 
     public Optional<Boolean> headerRow() {
-        return this.headerRow == null ? Optional.empty() : Optional.ofNullable(this.headerRow);
+        return Optional.ofNullable(this.headerRow);
     }
 
-    public DatasetCsvOptions(
-        @Nullable String delimiter,
-        @Nullable Boolean headerRow) {
-        this.delimiter = delimiter;
-        this.headerRow = headerRow;
-    }
+    private DatasetCsvOptions() {}
 
-    private DatasetCsvOptions() {
-        this.delimiter = null;
-        this.headerRow = null;
+    private DatasetCsvOptions(DatasetCsvOptions $) {
+        this.delimiter = $.delimiter;
+        this.headerRow = $.headerRow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCsvOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String delimiter;
-        private @Nullable Boolean headerRow;
+        private DatasetCsvOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCsvOptions();
         }
 
         public Builder(DatasetCsvOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delimiter = defaults.delimiter;
-    	      this.headerRow = defaults.headerRow;
+            $ = new DatasetCsvOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
+
         public Builder headerRow(@Nullable Boolean headerRow) {
-            this.headerRow = headerRow;
+            $.headerRow = headerRow;
             return this;
-        }        public DatasetCsvOptions build() {
-            return new DatasetCsvOptions(delimiter, headerRow);
+        }
+
+        public DatasetCsvOptions build() {
+            return $;
         }
     }
+
 }

@@ -16,48 +16,48 @@ public final class ListenerRulePathPatternConfig extends com.pulumi.resources.In
     public static final ListenerRulePathPatternConfig Empty = new ListenerRulePathPatternConfig();
 
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRulePathPatternConfig(@Nullable List<String> values) {
-        this.values = values;
-    }
+    private ListenerRulePathPatternConfig() {}
 
-    private ListenerRulePathPatternConfig() {
-        this.values = List.of();
+    private ListenerRulePathPatternConfig(ListenerRulePathPatternConfig $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRulePathPatternConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> values;
+        private ListenerRulePathPatternConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRulePathPatternConfig();
         }
 
         public Builder(ListenerRulePathPatternConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRulePathPatternConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRulePathPatternConfig build() {
-            return new ListenerRulePathPatternConfig(values);
+        }
+
+        public ListenerRulePathPatternConfig build() {
+            return $;
         }
     }
+
 }

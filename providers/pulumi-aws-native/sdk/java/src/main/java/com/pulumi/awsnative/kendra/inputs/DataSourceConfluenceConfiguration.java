@@ -22,196 +22,172 @@ public final class DataSourceConfluenceConfiguration extends com.pulumi.resource
     public static final DataSourceConfluenceConfiguration Empty = new DataSourceConfluenceConfiguration();
 
     @Import(name="attachmentConfiguration")
-      private final @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration;
+    private @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration;
 
     public Optional<DataSourceConfluenceAttachmentConfiguration> attachmentConfiguration() {
-        return this.attachmentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.attachmentConfiguration);
+        return Optional.ofNullable(this.attachmentConfiguration);
     }
 
     @Import(name="blogConfiguration")
-      private final @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration;
+    private @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration;
 
     public Optional<DataSourceConfluenceBlogConfiguration> blogConfiguration() {
-        return this.blogConfiguration == null ? Optional.empty() : Optional.ofNullable(this.blogConfiguration);
+        return Optional.ofNullable(this.blogConfiguration);
     }
 
     @Import(name="exclusionPatterns")
-      private final @Nullable List<String> exclusionPatterns;
+    private @Nullable List<String> exclusionPatterns;
 
-    public List<String> exclusionPatterns() {
-        return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
+    public Optional<List<String>> exclusionPatterns() {
+        return Optional.ofNullable(this.exclusionPatterns);
     }
 
     @Import(name="inclusionPatterns")
-      private final @Nullable List<String> inclusionPatterns;
+    private @Nullable List<String> inclusionPatterns;
 
-    public List<String> inclusionPatterns() {
-        return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
+    public Optional<List<String>> inclusionPatterns() {
+        return Optional.ofNullable(this.inclusionPatterns);
     }
 
     @Import(name="pageConfiguration")
-      private final @Nullable DataSourceConfluencePageConfiguration pageConfiguration;
+    private @Nullable DataSourceConfluencePageConfiguration pageConfiguration;
 
     public Optional<DataSourceConfluencePageConfiguration> pageConfiguration() {
-        return this.pageConfiguration == null ? Optional.empty() : Optional.ofNullable(this.pageConfiguration);
+        return Optional.ofNullable(this.pageConfiguration);
     }
 
     @Import(name="secretArn", required=true)
-      private final String secretArn;
+    private String secretArn;
 
     public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serverUrl", required=true)
-      private final String serverUrl;
+    private String serverUrl;
 
     public String serverUrl() {
         return this.serverUrl;
     }
 
     @Import(name="spaceConfiguration")
-      private final @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration;
+    private @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration;
 
     public Optional<DataSourceConfluenceSpaceConfiguration> spaceConfiguration() {
-        return this.spaceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.spaceConfiguration);
+        return Optional.ofNullable(this.spaceConfiguration);
     }
 
     @Import(name="version", required=true)
-      private final DataSourceConfluenceVersion version;
+    private DataSourceConfluenceVersion version;
 
     public DataSourceConfluenceVersion version() {
         return this.version;
     }
 
     @Import(name="vpcConfiguration")
-      private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
+    private @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
     public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public DataSourceConfluenceConfiguration(
-        @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration,
-        @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<String> inclusionPatterns,
-        @Nullable DataSourceConfluencePageConfiguration pageConfiguration,
-        String secretArn,
-        String serverUrl,
-        @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration,
-        DataSourceConfluenceVersion version,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
-        this.attachmentConfiguration = attachmentConfiguration;
-        this.blogConfiguration = blogConfiguration;
-        this.exclusionPatterns = exclusionPatterns;
-        this.inclusionPatterns = inclusionPatterns;
-        this.pageConfiguration = pageConfiguration;
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.serverUrl = Objects.requireNonNull(serverUrl, "expected parameter 'serverUrl' to be non-null");
-        this.spaceConfiguration = spaceConfiguration;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private DataSourceConfluenceConfiguration() {}
 
-    private DataSourceConfluenceConfiguration() {
-        this.attachmentConfiguration = null;
-        this.blogConfiguration = null;
-        this.exclusionPatterns = List.of();
-        this.inclusionPatterns = List.of();
-        this.pageConfiguration = null;
-        this.secretArn = null;
-        this.serverUrl = null;
-        this.spaceConfiguration = null;
-        this.version = null;
-        this.vpcConfiguration = null;
+    private DataSourceConfluenceConfiguration(DataSourceConfluenceConfiguration $) {
+        this.attachmentConfiguration = $.attachmentConfiguration;
+        this.blogConfiguration = $.blogConfiguration;
+        this.exclusionPatterns = $.exclusionPatterns;
+        this.inclusionPatterns = $.inclusionPatterns;
+        this.pageConfiguration = $.pageConfiguration;
+        this.secretArn = $.secretArn;
+        this.serverUrl = $.serverUrl;
+        this.spaceConfiguration = $.spaceConfiguration;
+        this.version = $.version;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration;
-        private @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration;
-        private @Nullable List<String> exclusionPatterns;
-        private @Nullable List<String> inclusionPatterns;
-        private @Nullable DataSourceConfluencePageConfiguration pageConfiguration;
-        private String secretArn;
-        private String serverUrl;
-        private @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration;
-        private DataSourceConfluenceVersion version;
-        private @Nullable DataSourceVpcConfiguration vpcConfiguration;
+        private DataSourceConfluenceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceConfiguration();
         }
 
         public Builder(DataSourceConfluenceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentConfiguration = defaults.attachmentConfiguration;
-    	      this.blogConfiguration = defaults.blogConfiguration;
-    	      this.exclusionPatterns = defaults.exclusionPatterns;
-    	      this.inclusionPatterns = defaults.inclusionPatterns;
-    	      this.pageConfiguration = defaults.pageConfiguration;
-    	      this.secretArn = defaults.secretArn;
-    	      this.serverUrl = defaults.serverUrl;
-    	      this.spaceConfiguration = defaults.spaceConfiguration;
-    	      this.version = defaults.version;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new DataSourceConfluenceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentConfiguration(@Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration) {
-            this.attachmentConfiguration = attachmentConfiguration;
+            $.attachmentConfiguration = attachmentConfiguration;
             return this;
         }
+
         public Builder blogConfiguration(@Nullable DataSourceConfluenceBlogConfiguration blogConfiguration) {
-            this.blogConfiguration = blogConfiguration;
+            $.blogConfiguration = blogConfiguration;
             return this;
         }
+
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = exclusionPatterns;
+            $.exclusionPatterns = exclusionPatterns;
             return this;
         }
+
         public Builder exclusionPatterns(String... exclusionPatterns) {
             return exclusionPatterns(List.of(exclusionPatterns));
         }
+
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = inclusionPatterns;
+            $.inclusionPatterns = inclusionPatterns;
             return this;
         }
+
         public Builder inclusionPatterns(String... inclusionPatterns) {
             return inclusionPatterns(List.of(inclusionPatterns));
         }
+
         public Builder pageConfiguration(@Nullable DataSourceConfluencePageConfiguration pageConfiguration) {
-            this.pageConfiguration = pageConfiguration;
+            $.pageConfiguration = pageConfiguration;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder serverUrl(String serverUrl) {
-            this.serverUrl = Objects.requireNonNull(serverUrl);
+            $.serverUrl = serverUrl;
             return this;
         }
+
         public Builder spaceConfiguration(@Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration) {
-            this.spaceConfiguration = spaceConfiguration;
+            $.spaceConfiguration = spaceConfiguration;
             return this;
         }
+
         public Builder version(DataSourceConfluenceVersion version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
-        }        public DataSourceConfluenceConfiguration build() {
-            return new DataSourceConfluenceConfiguration(attachmentConfiguration, blogConfiguration, exclusionPatterns, inclusionPatterns, pageConfiguration, secretArn, serverUrl, spaceConfiguration, version, vpcConfiguration);
+        }
+
+        public DataSourceConfluenceConfiguration build() {
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.serverUrl = Objects.requireNonNull($.serverUrl, "expected parameter 'serverUrl' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

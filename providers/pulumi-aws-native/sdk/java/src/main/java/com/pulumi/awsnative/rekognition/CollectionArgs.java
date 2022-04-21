@@ -6,10 +6,10 @@ package com.pulumi.awsnative.rekognition;
 import com.pulumi.awsnative.rekognition.inputs.CollectionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class CollectionArgs extends com.pulumi.resources.ResourceArgs {
     public static final CollectionArgs Empty = new CollectionArgs();
 
     @Import(name="collectionId", required=true)
-      private final Output<String> collectionId;
+    private Output<String> collectionId;
 
     public Output<String> collectionId() {
         return this.collectionId;
@@ -29,66 +29,63 @@ public final class CollectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<CollectionTagArgs>> tags;
+    private @Nullable Output<List<CollectionTagArgs>> tags;
 
-    public Output<List<CollectionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<CollectionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CollectionArgs(
-        Output<String> collectionId,
-        @Nullable Output<List<CollectionTagArgs>> tags) {
-        this.collectionId = Objects.requireNonNull(collectionId, "expected parameter 'collectionId' to be non-null");
-        this.tags = tags;
-    }
+    private CollectionArgs() {}
 
-    private CollectionArgs() {
-        this.collectionId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CollectionArgs(CollectionArgs $) {
+        this.collectionId = $.collectionId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> collectionId;
-        private @Nullable Output<List<CollectionTagArgs>> tags;
+        private CollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectionArgs();
         }
 
         public Builder(CollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionId = defaults.collectionId;
-    	      this.tags = defaults.tags;
+            $ = new CollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionId(Output<String> collectionId) {
-            this.collectionId = Objects.requireNonNull(collectionId);
+            $.collectionId = collectionId;
             return this;
         }
+
         public Builder collectionId(String collectionId) {
-            this.collectionId = Output.of(Objects.requireNonNull(collectionId));
-            return this;
+            return collectionId(Output.of(collectionId));
         }
+
         public Builder tags(@Nullable Output<List<CollectionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<CollectionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<CollectionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(CollectionTagArgs... tags) {
             return tags(List.of(tags));
-        }        public CollectionArgs build() {
-            return new CollectionArgs(collectionId, tags);
+        }
+
+        public CollectionArgs build() {
+            $.collectionId = Objects.requireNonNull($.collectionId, "expected parameter 'collectionId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class ServiceSourceConfiguration extends com.pulumi.resources.Invok
     public static final ServiceSourceConfiguration Empty = new ServiceSourceConfiguration();
 
     @Import(name="authenticationConfiguration")
-      private final @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
+    private @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
 
     public Optional<ServiceAuthenticationConfiguration> authenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
+        return Optional.ofNullable(this.authenticationConfiguration);
     }
 
     /**
@@ -33,87 +33,76 @@ public final class ServiceSourceConfiguration extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoDeploymentsEnabled")
-      private final @Nullable Boolean autoDeploymentsEnabled;
+    private @Nullable Boolean autoDeploymentsEnabled;
 
     public Optional<Boolean> autoDeploymentsEnabled() {
-        return this.autoDeploymentsEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoDeploymentsEnabled);
+        return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
 
     @Import(name="codeRepository")
-      private final @Nullable ServiceCodeRepository codeRepository;
+    private @Nullable ServiceCodeRepository codeRepository;
 
     public Optional<ServiceCodeRepository> codeRepository() {
-        return this.codeRepository == null ? Optional.empty() : Optional.ofNullable(this.codeRepository);
+        return Optional.ofNullable(this.codeRepository);
     }
 
     @Import(name="imageRepository")
-      private final @Nullable ServiceImageRepository imageRepository;
+    private @Nullable ServiceImageRepository imageRepository;
 
     public Optional<ServiceImageRepository> imageRepository() {
-        return this.imageRepository == null ? Optional.empty() : Optional.ofNullable(this.imageRepository);
+        return Optional.ofNullable(this.imageRepository);
     }
 
-    public ServiceSourceConfiguration(
-        @Nullable ServiceAuthenticationConfiguration authenticationConfiguration,
-        @Nullable Boolean autoDeploymentsEnabled,
-        @Nullable ServiceCodeRepository codeRepository,
-        @Nullable ServiceImageRepository imageRepository) {
-        this.authenticationConfiguration = authenticationConfiguration;
-        this.autoDeploymentsEnabled = autoDeploymentsEnabled;
-        this.codeRepository = codeRepository;
-        this.imageRepository = imageRepository;
-    }
+    private ServiceSourceConfiguration() {}
 
-    private ServiceSourceConfiguration() {
-        this.authenticationConfiguration = null;
-        this.autoDeploymentsEnabled = null;
-        this.codeRepository = null;
-        this.imageRepository = null;
+    private ServiceSourceConfiguration(ServiceSourceConfiguration $) {
+        this.authenticationConfiguration = $.authenticationConfiguration;
+        this.autoDeploymentsEnabled = $.autoDeploymentsEnabled;
+        this.codeRepository = $.codeRepository;
+        this.imageRepository = $.imageRepository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSourceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
-        private @Nullable Boolean autoDeploymentsEnabled;
-        private @Nullable ServiceCodeRepository codeRepository;
-        private @Nullable ServiceImageRepository imageRepository;
+        private ServiceSourceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSourceConfiguration();
         }
 
         public Builder(ServiceSourceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationConfiguration = defaults.authenticationConfiguration;
-    	      this.autoDeploymentsEnabled = defaults.autoDeploymentsEnabled;
-    	      this.codeRepository = defaults.codeRepository;
-    	      this.imageRepository = defaults.imageRepository;
+            $ = new ServiceSourceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfiguration authenticationConfiguration) {
-            this.authenticationConfiguration = authenticationConfiguration;
+            $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
+
         public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
-            this.autoDeploymentsEnabled = autoDeploymentsEnabled;
+            $.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
+
         public Builder codeRepository(@Nullable ServiceCodeRepository codeRepository) {
-            this.codeRepository = codeRepository;
+            $.codeRepository = codeRepository;
             return this;
         }
+
         public Builder imageRepository(@Nullable ServiceImageRepository imageRepository) {
-            this.imageRepository = imageRepository;
+            $.imageRepository = imageRepository;
             return this;
-        }        public ServiceSourceConfiguration build() {
-            return new ServiceSourceConfiguration(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
+        }
+
+        public ServiceSourceConfiguration build() {
+            return $;
         }
     }
+
 }

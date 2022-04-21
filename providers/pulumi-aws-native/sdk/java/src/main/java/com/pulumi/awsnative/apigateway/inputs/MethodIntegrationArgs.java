@@ -10,12 +10,12 @@ import com.pulumi.awsnative.apigateway.enums.MethodIntegrationType;
 import com.pulumi.awsnative.apigateway.inputs.MethodIntegrationResponseArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cacheKeyParameters")
-      private final @Nullable Output<List<String>> cacheKeyParameters;
+    private @Nullable Output<List<String>> cacheKeyParameters;
 
-    public Output<List<String>> cacheKeyParameters() {
-        return this.cacheKeyParameters == null ? Codegen.empty() : this.cacheKeyParameters;
+    public Optional<Output<List<String>>> cacheKeyParameters() {
+        return Optional.ofNullable(this.cacheKeyParameters);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cacheNamespace")
-      private final @Nullable Output<String> cacheNamespace;
+    private @Nullable Output<String> cacheNamespace;
 
-    public Output<String> cacheNamespace() {
-        return this.cacheNamespace == null ? Codegen.empty() : this.cacheNamespace;
+    public Optional<Output<String>> cacheNamespace() {
+        return Optional.ofNullable(this.cacheNamespace);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectionType")
-      private final @Nullable Output<MethodIntegrationConnectionType> connectionType;
+    private @Nullable Output<MethodIntegrationConnectionType> connectionType;
 
-    public Output<MethodIntegrationConnectionType> connectionType() {
-        return this.connectionType == null ? Codegen.empty() : this.connectionType;
+    public Optional<Output<MethodIntegrationConnectionType>> connectionType() {
+        return Optional.ofNullable(this.connectionType);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="contentHandling")
-      private final @Nullable Output<MethodIntegrationContentHandling> contentHandling;
+    private @Nullable Output<MethodIntegrationContentHandling> contentHandling;
 
-    public Output<MethodIntegrationContentHandling> contentHandling() {
-        return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
+    public Optional<Output<MethodIntegrationContentHandling>> contentHandling() {
+        return Optional.ofNullable(this.contentHandling);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<String> credentials;
+    private @Nullable Output<String> credentials;
 
-    public Output<String> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<String>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="integrationHttpMethod")
-      private final @Nullable Output<String> integrationHttpMethod;
+    private @Nullable Output<String> integrationHttpMethod;
 
-    public Output<String> integrationHttpMethod() {
-        return this.integrationHttpMethod == null ? Codegen.empty() : this.integrationHttpMethod;
+    public Optional<Output<String>> integrationHttpMethod() {
+        return Optional.ofNullable(this.integrationHttpMethod);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="integrationResponses")
-      private final @Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses;
+    private @Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses;
 
-    public Output<List<MethodIntegrationResponseArgs>> integrationResponses() {
-        return this.integrationResponses == null ? Codegen.empty() : this.integrationResponses;
+    public Optional<Output<List<MethodIntegrationResponseArgs>>> integrationResponses() {
+        return Optional.ofNullable(this.integrationResponses);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="passthroughBehavior")
-      private final @Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior;
+    private @Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior;
 
-    public Output<MethodIntegrationPassthroughBehavior> passthroughBehavior() {
-        return this.passthroughBehavior == null ? Codegen.empty() : this.passthroughBehavior;
+    public Optional<Output<MethodIntegrationPassthroughBehavior>> passthroughBehavior() {
+        return Optional.ofNullable(this.passthroughBehavior);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="requestParameters")
-      private final @Nullable Output<Object> requestParameters;
+    private @Nullable Output<Object> requestParameters;
 
-    public Output<Object> requestParameters() {
-        return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
+    public Optional<Output<Object>> requestParameters() {
+        return Optional.ofNullable(this.requestParameters);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="requestTemplates")
-      private final @Nullable Output<Object> requestTemplates;
+    private @Nullable Output<Object> requestTemplates;
 
-    public Output<Object> requestTemplates() {
-        return this.requestTemplates == null ? Codegen.empty() : this.requestTemplates;
+    public Optional<Output<Object>> requestTemplates() {
+        return Optional.ofNullable(this.requestTemplates);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeoutInMillis")
-      private final @Nullable Output<Integer> timeoutInMillis;
+    private @Nullable Output<Integer> timeoutInMillis;
 
-    public Output<Integer> timeoutInMillis() {
-        return this.timeoutInMillis == null ? Codegen.empty() : this.timeoutInMillis;
+    public Optional<Output<Integer>> timeoutInMillis() {
+        return Optional.ofNullable(this.timeoutInMillis);
     }
 
     /**
@@ -160,7 +160,7 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<MethodIntegrationType> type;
+    private Output<MethodIntegrationType> type;
 
     public Output<MethodIntegrationType> type() {
         return this.type;
@@ -171,225 +171,187 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public MethodIntegrationArgs(
-        @Nullable Output<List<String>> cacheKeyParameters,
-        @Nullable Output<String> cacheNamespace,
-        @Nullable Output<String> connectionId,
-        @Nullable Output<MethodIntegrationConnectionType> connectionType,
-        @Nullable Output<MethodIntegrationContentHandling> contentHandling,
-        @Nullable Output<String> credentials,
-        @Nullable Output<String> integrationHttpMethod,
-        @Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses,
-        @Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior,
-        @Nullable Output<Object> requestParameters,
-        @Nullable Output<Object> requestTemplates,
-        @Nullable Output<Integer> timeoutInMillis,
-        Output<MethodIntegrationType> type,
-        @Nullable Output<String> uri) {
-        this.cacheKeyParameters = cacheKeyParameters;
-        this.cacheNamespace = cacheNamespace;
-        this.connectionId = connectionId;
-        this.connectionType = connectionType;
-        this.contentHandling = contentHandling;
-        this.credentials = credentials;
-        this.integrationHttpMethod = integrationHttpMethod;
-        this.integrationResponses = integrationResponses;
-        this.passthroughBehavior = passthroughBehavior;
-        this.requestParameters = requestParameters;
-        this.requestTemplates = requestTemplates;
-        this.timeoutInMillis = timeoutInMillis;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.uri = uri;
-    }
+    private MethodIntegrationArgs() {}
 
-    private MethodIntegrationArgs() {
-        this.cacheKeyParameters = Codegen.empty();
-        this.cacheNamespace = Codegen.empty();
-        this.connectionId = Codegen.empty();
-        this.connectionType = Codegen.empty();
-        this.contentHandling = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.integrationHttpMethod = Codegen.empty();
-        this.integrationResponses = Codegen.empty();
-        this.passthroughBehavior = Codegen.empty();
-        this.requestParameters = Codegen.empty();
-        this.requestTemplates = Codegen.empty();
-        this.timeoutInMillis = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
+    private MethodIntegrationArgs(MethodIntegrationArgs $) {
+        this.cacheKeyParameters = $.cacheKeyParameters;
+        this.cacheNamespace = $.cacheNamespace;
+        this.connectionId = $.connectionId;
+        this.connectionType = $.connectionType;
+        this.contentHandling = $.contentHandling;
+        this.credentials = $.credentials;
+        this.integrationHttpMethod = $.integrationHttpMethod;
+        this.integrationResponses = $.integrationResponses;
+        this.passthroughBehavior = $.passthroughBehavior;
+        this.requestParameters = $.requestParameters;
+        this.requestTemplates = $.requestTemplates;
+        this.timeoutInMillis = $.timeoutInMillis;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodIntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cacheKeyParameters;
-        private @Nullable Output<String> cacheNamespace;
-        private @Nullable Output<String> connectionId;
-        private @Nullable Output<MethodIntegrationConnectionType> connectionType;
-        private @Nullable Output<MethodIntegrationContentHandling> contentHandling;
-        private @Nullable Output<String> credentials;
-        private @Nullable Output<String> integrationHttpMethod;
-        private @Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses;
-        private @Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior;
-        private @Nullable Output<Object> requestParameters;
-        private @Nullable Output<Object> requestTemplates;
-        private @Nullable Output<Integer> timeoutInMillis;
-        private Output<MethodIntegrationType> type;
-        private @Nullable Output<String> uri;
+        private MethodIntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodIntegrationArgs();
         }
 
         public Builder(MethodIntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheKeyParameters = defaults.cacheKeyParameters;
-    	      this.cacheNamespace = defaults.cacheNamespace;
-    	      this.connectionId = defaults.connectionId;
-    	      this.connectionType = defaults.connectionType;
-    	      this.contentHandling = defaults.contentHandling;
-    	      this.credentials = defaults.credentials;
-    	      this.integrationHttpMethod = defaults.integrationHttpMethod;
-    	      this.integrationResponses = defaults.integrationResponses;
-    	      this.passthroughBehavior = defaults.passthroughBehavior;
-    	      this.requestParameters = defaults.requestParameters;
-    	      this.requestTemplates = defaults.requestTemplates;
-    	      this.timeoutInMillis = defaults.timeoutInMillis;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new MethodIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheKeyParameters(@Nullable Output<List<String>> cacheKeyParameters) {
-            this.cacheKeyParameters = cacheKeyParameters;
+            $.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
-        public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
-            this.cacheKeyParameters = Codegen.ofNullable(cacheKeyParameters);
-            return this;
+
+        public Builder cacheKeyParameters(List<String> cacheKeyParameters) {
+            return cacheKeyParameters(Output.of(cacheKeyParameters));
         }
+
         public Builder cacheKeyParameters(String... cacheKeyParameters) {
             return cacheKeyParameters(List.of(cacheKeyParameters));
         }
+
         public Builder cacheNamespace(@Nullable Output<String> cacheNamespace) {
-            this.cacheNamespace = cacheNamespace;
+            $.cacheNamespace = cacheNamespace;
             return this;
         }
-        public Builder cacheNamespace(@Nullable String cacheNamespace) {
-            this.cacheNamespace = Codegen.ofNullable(cacheNamespace);
-            return this;
+
+        public Builder cacheNamespace(String cacheNamespace) {
+            return cacheNamespace(Output.of(cacheNamespace));
         }
+
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder connectionType(@Nullable Output<MethodIntegrationConnectionType> connectionType) {
-            this.connectionType = connectionType;
+            $.connectionType = connectionType;
             return this;
         }
-        public Builder connectionType(@Nullable MethodIntegrationConnectionType connectionType) {
-            this.connectionType = Codegen.ofNullable(connectionType);
-            return this;
+
+        public Builder connectionType(MethodIntegrationConnectionType connectionType) {
+            return connectionType(Output.of(connectionType));
         }
+
         public Builder contentHandling(@Nullable Output<MethodIntegrationContentHandling> contentHandling) {
-            this.contentHandling = contentHandling;
+            $.contentHandling = contentHandling;
             return this;
         }
-        public Builder contentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
-            this.contentHandling = Codegen.ofNullable(contentHandling);
-            return this;
+
+        public Builder contentHandling(MethodIntegrationContentHandling contentHandling) {
+            return contentHandling(Output.of(contentHandling));
         }
+
         public Builder credentials(@Nullable Output<String> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable String credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(String credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder integrationHttpMethod(@Nullable Output<String> integrationHttpMethod) {
-            this.integrationHttpMethod = integrationHttpMethod;
+            $.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
-        public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
-            this.integrationHttpMethod = Codegen.ofNullable(integrationHttpMethod);
-            return this;
+
+        public Builder integrationHttpMethod(String integrationHttpMethod) {
+            return integrationHttpMethod(Output.of(integrationHttpMethod));
         }
+
         public Builder integrationResponses(@Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses) {
-            this.integrationResponses = integrationResponses;
+            $.integrationResponses = integrationResponses;
             return this;
         }
-        public Builder integrationResponses(@Nullable List<MethodIntegrationResponseArgs> integrationResponses) {
-            this.integrationResponses = Codegen.ofNullable(integrationResponses);
-            return this;
+
+        public Builder integrationResponses(List<MethodIntegrationResponseArgs> integrationResponses) {
+            return integrationResponses(Output.of(integrationResponses));
         }
+
         public Builder integrationResponses(MethodIntegrationResponseArgs... integrationResponses) {
             return integrationResponses(List.of(integrationResponses));
         }
+
         public Builder passthroughBehavior(@Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior) {
-            this.passthroughBehavior = passthroughBehavior;
+            $.passthroughBehavior = passthroughBehavior;
             return this;
         }
-        public Builder passthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
-            this.passthroughBehavior = Codegen.ofNullable(passthroughBehavior);
-            return this;
+
+        public Builder passthroughBehavior(MethodIntegrationPassthroughBehavior passthroughBehavior) {
+            return passthroughBehavior(Output.of(passthroughBehavior));
         }
+
         public Builder requestParameters(@Nullable Output<Object> requestParameters) {
-            this.requestParameters = requestParameters;
+            $.requestParameters = requestParameters;
             return this;
         }
-        public Builder requestParameters(@Nullable Object requestParameters) {
-            this.requestParameters = Codegen.ofNullable(requestParameters);
-            return this;
+
+        public Builder requestParameters(Object requestParameters) {
+            return requestParameters(Output.of(requestParameters));
         }
+
         public Builder requestTemplates(@Nullable Output<Object> requestTemplates) {
-            this.requestTemplates = requestTemplates;
+            $.requestTemplates = requestTemplates;
             return this;
         }
-        public Builder requestTemplates(@Nullable Object requestTemplates) {
-            this.requestTemplates = Codegen.ofNullable(requestTemplates);
-            return this;
+
+        public Builder requestTemplates(Object requestTemplates) {
+            return requestTemplates(Output.of(requestTemplates));
         }
+
         public Builder timeoutInMillis(@Nullable Output<Integer> timeoutInMillis) {
-            this.timeoutInMillis = timeoutInMillis;
+            $.timeoutInMillis = timeoutInMillis;
             return this;
         }
-        public Builder timeoutInMillis(@Nullable Integer timeoutInMillis) {
-            this.timeoutInMillis = Codegen.ofNullable(timeoutInMillis);
-            return this;
+
+        public Builder timeoutInMillis(Integer timeoutInMillis) {
+            return timeoutInMillis(Output.of(timeoutInMillis));
         }
+
         public Builder type(Output<MethodIntegrationType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(MethodIntegrationType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public MethodIntegrationArgs build() {
-            return new MethodIntegrationArgs(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, integrationHttpMethod, integrationResponses, passthroughBehavior, requestParameters, requestTemplates, timeoutInMillis, type, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public MethodIntegrationArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

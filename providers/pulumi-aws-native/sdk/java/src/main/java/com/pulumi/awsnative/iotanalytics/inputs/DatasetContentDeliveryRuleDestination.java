@@ -16,62 +16,57 @@ public final class DatasetContentDeliveryRuleDestination extends com.pulumi.reso
     public static final DatasetContentDeliveryRuleDestination Empty = new DatasetContentDeliveryRuleDestination();
 
     @Import(name="iotEventsDestinationConfiguration")
-      private final @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
+    private @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
 
     public Optional<DatasetIotEventsDestinationConfiguration> iotEventsDestinationConfiguration() {
-        return this.iotEventsDestinationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.iotEventsDestinationConfiguration);
+        return Optional.ofNullable(this.iotEventsDestinationConfiguration);
     }
 
     @Import(name="s3DestinationConfiguration")
-      private final @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
+    private @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
 
     public Optional<DatasetS3DestinationConfiguration> s3DestinationConfiguration() {
-        return this.s3DestinationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.s3DestinationConfiguration);
+        return Optional.ofNullable(this.s3DestinationConfiguration);
     }
 
-    public DatasetContentDeliveryRuleDestination(
-        @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration,
-        @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
-        this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
-        this.s3DestinationConfiguration = s3DestinationConfiguration;
-    }
+    private DatasetContentDeliveryRuleDestination() {}
 
-    private DatasetContentDeliveryRuleDestination() {
-        this.iotEventsDestinationConfiguration = null;
-        this.s3DestinationConfiguration = null;
+    private DatasetContentDeliveryRuleDestination(DatasetContentDeliveryRuleDestination $) {
+        this.iotEventsDestinationConfiguration = $.iotEventsDestinationConfiguration;
+        this.s3DestinationConfiguration = $.s3DestinationConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetContentDeliveryRuleDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
-        private @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
+        private DatasetContentDeliveryRuleDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetContentDeliveryRuleDestination();
         }
 
         public Builder(DatasetContentDeliveryRuleDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iotEventsDestinationConfiguration = defaults.iotEventsDestinationConfiguration;
-    	      this.s3DestinationConfiguration = defaults.s3DestinationConfiguration;
+            $ = new DatasetContentDeliveryRuleDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder iotEventsDestinationConfiguration(@Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration) {
-            this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
+            $.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
             return this;
         }
+
         public Builder s3DestinationConfiguration(@Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
-            this.s3DestinationConfiguration = s3DestinationConfiguration;
+            $.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
-        }        public DatasetContentDeliveryRuleDestination build() {
-            return new DatasetContentDeliveryRuleDestination(iotEventsDestinationConfiguration, s3DestinationConfiguration);
+        }
+
+        public DatasetContentDeliveryRuleDestination build() {
+            return $;
         }
     }
+
 }

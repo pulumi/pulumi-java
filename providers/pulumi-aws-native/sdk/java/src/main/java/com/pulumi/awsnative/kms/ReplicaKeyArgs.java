@@ -6,13 +6,13 @@ package com.pulumi.awsnative.kms;
 import com.pulumi.awsnative.kms.inputs.ReplicaKeyTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyPolicy", required=true)
-      private final Output<Object> keyPolicy;
+    private Output<Object> keyPolicy;
 
     public Output<Object> keyPolicy() {
         return this.keyPolicy;
@@ -58,10 +58,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pendingWindowInDays")
-      private final @Nullable Output<Integer> pendingWindowInDays;
+    private @Nullable Output<Integer> pendingWindowInDays;
 
-    public Output<Integer> pendingWindowInDays() {
-        return this.pendingWindowInDays == null ? Codegen.empty() : this.pendingWindowInDays;
+    public Optional<Output<Integer>> pendingWindowInDays() {
+        return Optional.ofNullable(this.pendingWindowInDays);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryKeyArn", required=true)
-      private final Output<String> primaryKeyArn;
+    private Output<String> primaryKeyArn;
 
     public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
@@ -80,118 +80,104 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ReplicaKeyTagArgs>> tags;
+    private @Nullable Output<List<ReplicaKeyTagArgs>> tags;
 
-    public Output<List<ReplicaKeyTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ReplicaKeyTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ReplicaKeyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        Output<Object> keyPolicy,
-        @Nullable Output<Integer> pendingWindowInDays,
-        Output<String> primaryKeyArn,
-        @Nullable Output<List<ReplicaKeyTagArgs>> tags) {
-        this.description = description;
-        this.enabled = enabled;
-        this.keyPolicy = Objects.requireNonNull(keyPolicy, "expected parameter 'keyPolicy' to be non-null");
-        this.pendingWindowInDays = pendingWindowInDays;
-        this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn, "expected parameter 'primaryKeyArn' to be non-null");
-        this.tags = tags;
-    }
+    private ReplicaKeyArgs() {}
 
-    private ReplicaKeyArgs() {
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.keyPolicy = Codegen.empty();
-        this.pendingWindowInDays = Codegen.empty();
-        this.primaryKeyArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ReplicaKeyArgs(ReplicaKeyArgs $) {
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.keyPolicy = $.keyPolicy;
+        this.pendingWindowInDays = $.pendingWindowInDays;
+        this.primaryKeyArn = $.primaryKeyArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private Output<Object> keyPolicy;
-        private @Nullable Output<Integer> pendingWindowInDays;
-        private Output<String> primaryKeyArn;
-        private @Nullable Output<List<ReplicaKeyTagArgs>> tags;
+        private ReplicaKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaKeyArgs();
         }
 
         public Builder(ReplicaKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.keyPolicy = defaults.keyPolicy;
-    	      this.pendingWindowInDays = defaults.pendingWindowInDays;
-    	      this.primaryKeyArn = defaults.primaryKeyArn;
-    	      this.tags = defaults.tags;
+            $ = new ReplicaKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder keyPolicy(Output<Object> keyPolicy) {
-            this.keyPolicy = Objects.requireNonNull(keyPolicy);
+            $.keyPolicy = keyPolicy;
             return this;
         }
+
         public Builder keyPolicy(Object keyPolicy) {
-            this.keyPolicy = Output.of(Objects.requireNonNull(keyPolicy));
-            return this;
+            return keyPolicy(Output.of(keyPolicy));
         }
+
         public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
-            this.pendingWindowInDays = pendingWindowInDays;
+            $.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
-        public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
-            this.pendingWindowInDays = Codegen.ofNullable(pendingWindowInDays);
-            return this;
+
+        public Builder pendingWindowInDays(Integer pendingWindowInDays) {
+            return pendingWindowInDays(Output.of(pendingWindowInDays));
         }
+
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
-            this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn);
+            $.primaryKeyArn = primaryKeyArn;
             return this;
         }
+
         public Builder primaryKeyArn(String primaryKeyArn) {
-            this.primaryKeyArn = Output.of(Objects.requireNonNull(primaryKeyArn));
-            return this;
+            return primaryKeyArn(Output.of(primaryKeyArn));
         }
+
         public Builder tags(@Nullable Output<List<ReplicaKeyTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ReplicaKeyTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ReplicaKeyTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ReplicaKeyTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ReplicaKeyArgs build() {
-            return new ReplicaKeyArgs(description, enabled, keyPolicy, pendingWindowInDays, primaryKeyArn, tags);
+        }
+
+        public ReplicaKeyArgs build() {
+            $.keyPolicy = Objects.requireNonNull($.keyPolicy, "expected parameter 'keyPolicy' to be non-null");
+            $.primaryKeyArn = Objects.requireNonNull($.primaryKeyArn, "expected parameter 'primaryKeyArn' to be non-null");
+            return $;
         }
     }
+
 }

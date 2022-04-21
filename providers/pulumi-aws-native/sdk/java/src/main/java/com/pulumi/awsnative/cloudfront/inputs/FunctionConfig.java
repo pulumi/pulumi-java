@@ -13,62 +13,59 @@ public final class FunctionConfig extends com.pulumi.resources.InvokeArgs {
     public static final FunctionConfig Empty = new FunctionConfig();
 
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
     }
 
     @Import(name="runtime", required=true)
-      private final String runtime;
+    private String runtime;
 
     public String runtime() {
         return this.runtime;
     }
 
-    public FunctionConfig(
-        String comment,
-        String runtime) {
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.runtime = Objects.requireNonNull(runtime, "expected parameter 'runtime' to be non-null");
-    }
+    private FunctionConfig() {}
 
-    private FunctionConfig() {
-        this.comment = null;
-        this.runtime = null;
+    private FunctionConfig(FunctionConfig $) {
+        this.comment = $.comment;
+        this.runtime = $.runtime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String comment;
-        private String runtime;
+        private FunctionConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionConfig();
         }
 
         public Builder(FunctionConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.runtime = defaults.runtime;
+            $ = new FunctionConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder runtime(String runtime) {
-            this.runtime = Objects.requireNonNull(runtime);
+            $.runtime = runtime;
             return this;
-        }        public FunctionConfig build() {
-            return new FunctionConfig(comment, runtime);
+        }
+
+        public FunctionConfig build() {
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.runtime = Objects.requireNonNull($.runtime, "expected parameter 'runtime' to be non-null");
+            return $;
         }
     }
+
 }

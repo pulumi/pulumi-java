@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudtrail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class TrailDataResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -36,66 +36,63 @@ public final class TrailDataResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public TrailDataResourceArgs(
-        Output<String> type,
-        @Nullable Output<List<String>> values) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.values = values;
-    }
+    private TrailDataResourceArgs() {}
 
-    private TrailDataResourceArgs() {
-        this.type = Codegen.empty();
-        this.values = Codegen.empty();
+    private TrailDataResourceArgs(TrailDataResourceArgs $) {
+        this.type = $.type;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailDataResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private @Nullable Output<List<String>> values;
+        private TrailDataResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailDataResourceArgs();
         }
 
         public Builder(TrailDataResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
+            $ = new TrailDataResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public TrailDataResourceArgs build() {
-            return new TrailDataResourceArgs(type, values);
+        }
+
+        public TrailDataResourceArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotSlotDefaultValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class BotSlotDefaultValueSpecificationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="defaultValueList", required=true)
-      private final Output<List<BotSlotDefaultValueArgs>> defaultValueList;
+    private Output<List<BotSlotDefaultValueArgs>> defaultValueList;
 
     public Output<List<BotSlotDefaultValueArgs>> defaultValueList() {
         return this.defaultValueList;
     }
 
-    public BotSlotDefaultValueSpecificationArgs(Output<List<BotSlotDefaultValueArgs>> defaultValueList) {
-        this.defaultValueList = Objects.requireNonNull(defaultValueList, "expected parameter 'defaultValueList' to be non-null");
-    }
+    private BotSlotDefaultValueSpecificationArgs() {}
 
-    private BotSlotDefaultValueSpecificationArgs() {
-        this.defaultValueList = Codegen.empty();
+    private BotSlotDefaultValueSpecificationArgs(BotSlotDefaultValueSpecificationArgs $) {
+        this.defaultValueList = $.defaultValueList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotDefaultValueSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<BotSlotDefaultValueArgs>> defaultValueList;
+        private BotSlotDefaultValueSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotDefaultValueSpecificationArgs();
         }
 
         public Builder(BotSlotDefaultValueSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValueList = defaults.defaultValueList;
+            $ = new BotSlotDefaultValueSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValueList(Output<List<BotSlotDefaultValueArgs>> defaultValueList) {
-            this.defaultValueList = Objects.requireNonNull(defaultValueList);
+            $.defaultValueList = defaultValueList;
             return this;
         }
+
         public Builder defaultValueList(List<BotSlotDefaultValueArgs> defaultValueList) {
-            this.defaultValueList = Output.of(Objects.requireNonNull(defaultValueList));
-            return this;
+            return defaultValueList(Output.of(defaultValueList));
         }
+
         public Builder defaultValueList(BotSlotDefaultValueArgs... defaultValueList) {
             return defaultValueList(List.of(defaultValueList));
-        }        public BotSlotDefaultValueSpecificationArgs build() {
-            return new BotSlotDefaultValueSpecificationArgs(defaultValueList);
+        }
+
+        public BotSlotDefaultValueSpecificationArgs build() {
+            $.defaultValueList = Objects.requireNonNull($.defaultValueList, "expected parameter 'defaultValueList' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttribute Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttribute();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
 
     public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value() {
         return this.value;
     }
 
-    public InstanceAccessControlAttributeConfigurationAccessControlAttribute(
-        String key,
-        InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private InstanceAccessControlAttributeConfigurationAccessControlAttribute() {}
 
-    private InstanceAccessControlAttributeConfigurationAccessControlAttribute() {
-        this.key = null;
-        this.value = null;
+    private InstanceAccessControlAttributeConfigurationAccessControlAttribute(InstanceAccessControlAttributeConfigurationAccessControlAttribute $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAccessControlAttributeConfigurationAccessControlAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
+        private InstanceAccessControlAttributeConfigurationAccessControlAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttribute();
         }
 
         public Builder(InstanceAccessControlAttributeConfigurationAccessControlAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public InstanceAccessControlAttributeConfigurationAccessControlAttribute build() {
-            return new InstanceAccessControlAttributeConfigurationAccessControlAttribute(key, value);
+        }
+
+        public InstanceAccessControlAttributeConfigurationAccessControlAttribute build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

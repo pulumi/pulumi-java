@@ -5,10 +5,10 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class DomainNameEndpointConfigurationArgs extends com.pulumi.resour
     public static final DomainNameEndpointConfigurationArgs Empty = new DomainNameEndpointConfigurationArgs();
 
     @Import(name="types")
-      private final @Nullable Output<List<String>> types;
+    private @Nullable Output<List<String>> types;
 
-    public Output<List<String>> types() {
-        return this.types == null ? Codegen.empty() : this.types;
+    public Optional<Output<List<String>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
-    public DomainNameEndpointConfigurationArgs(@Nullable Output<List<String>> types) {
-        this.types = types;
-    }
+    private DomainNameEndpointConfigurationArgs() {}
 
-    private DomainNameEndpointConfigurationArgs() {
-        this.types = Codegen.empty();
+    private DomainNameEndpointConfigurationArgs(DomainNameEndpointConfigurationArgs $) {
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameEndpointConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> types;
+        private DomainNameEndpointConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameEndpointConfigurationArgs();
         }
 
         public Builder(DomainNameEndpointConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.types = defaults.types;
+            $ = new DomainNameEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder types(@Nullable Output<List<String>> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
-        public Builder types(@Nullable List<String> types) {
-            this.types = Codegen.ofNullable(types);
-            return this;
+
+        public Builder types(List<String> types) {
+            return types(Output.of(types));
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
-        }        public DomainNameEndpointConfigurationArgs build() {
-            return new DomainNameEndpointConfigurationArgs(types);
+        }
+
+        public DomainNameEndpointConfigurationArgs build() {
+            return $;
         }
     }
+
 }

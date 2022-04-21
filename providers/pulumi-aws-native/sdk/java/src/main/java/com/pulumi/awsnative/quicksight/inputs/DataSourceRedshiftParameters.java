@@ -27,10 +27,10 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable String clusterId;
+    private @Nullable String clusterId;
 
     public Optional<String> clusterId() {
-        return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
@@ -49,10 +49,10 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="host")
-      private final @Nullable String host;
+    private @Nullable String host;
 
     public Optional<String> host() {
-        return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -60,73 +60,63 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="port")
-      private final @Nullable Double port;
+    private @Nullable Double port;
 
     public Optional<Double> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
-    public DataSourceRedshiftParameters(
-        @Nullable String clusterId,
-        String database,
-        @Nullable String host,
-        @Nullable Double port) {
-        this.clusterId = clusterId;
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.host = host;
-        this.port = port;
-    }
+    private DataSourceRedshiftParameters() {}
 
-    private DataSourceRedshiftParameters() {
-        this.clusterId = null;
-        this.database = null;
-        this.host = null;
-        this.port = null;
+    private DataSourceRedshiftParameters(DataSourceRedshiftParameters $) {
+        this.clusterId = $.clusterId;
+        this.database = $.database;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRedshiftParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clusterId;
-        private String database;
-        private @Nullable String host;
-        private @Nullable Double port;
+        private DataSourceRedshiftParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRedshiftParameters();
         }
 
         public Builder(DataSourceRedshiftParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.database = defaults.database;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceRedshiftParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder host(@Nullable String host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
+
         public Builder port(@Nullable Double port) {
-            this.port = port;
+            $.port = port;
             return this;
-        }        public DataSourceRedshiftParameters build() {
-            return new DataSourceRedshiftParameters(clusterId, database, host, port);
+        }
+
+        public DataSourceRedshiftParameters build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            return $;
         }
     }
+
 }

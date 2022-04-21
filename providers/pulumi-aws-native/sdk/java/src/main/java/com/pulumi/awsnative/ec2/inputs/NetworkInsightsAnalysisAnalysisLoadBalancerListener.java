@@ -15,62 +15,57 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener extends c
     public static final NetworkInsightsAnalysisAnalysisLoadBalancerListener Empty = new NetworkInsightsAnalysisAnalysisLoadBalancerListener();
 
     @Import(name="instancePort")
-      private final @Nullable Integer instancePort;
+    private @Nullable Integer instancePort;
 
     public Optional<Integer> instancePort() {
-        return this.instancePort == null ? Optional.empty() : Optional.ofNullable(this.instancePort);
+        return Optional.ofNullable(this.instancePort);
     }
 
     @Import(name="loadBalancerPort")
-      private final @Nullable Integer loadBalancerPort;
+    private @Nullable Integer loadBalancerPort;
 
     public Optional<Integer> loadBalancerPort() {
-        return this.loadBalancerPort == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerPort);
+        return Optional.ofNullable(this.loadBalancerPort);
     }
 
-    public NetworkInsightsAnalysisAnalysisLoadBalancerListener(
-        @Nullable Integer instancePort,
-        @Nullable Integer loadBalancerPort) {
-        this.instancePort = instancePort;
-        this.loadBalancerPort = loadBalancerPort;
-    }
+    private NetworkInsightsAnalysisAnalysisLoadBalancerListener() {}
 
-    private NetworkInsightsAnalysisAnalysisLoadBalancerListener() {
-        this.instancePort = null;
-        this.loadBalancerPort = null;
+    private NetworkInsightsAnalysisAnalysisLoadBalancerListener(NetworkInsightsAnalysisAnalysisLoadBalancerListener $) {
+        this.instancePort = $.instancePort;
+        this.loadBalancerPort = $.loadBalancerPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisAnalysisLoadBalancerListener defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer instancePort;
-        private @Nullable Integer loadBalancerPort;
+        private NetworkInsightsAnalysisAnalysisLoadBalancerListener $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisAnalysisLoadBalancerListener();
         }
 
         public Builder(NetworkInsightsAnalysisAnalysisLoadBalancerListener defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instancePort = defaults.instancePort;
-    	      this.loadBalancerPort = defaults.loadBalancerPort;
+            $ = new NetworkInsightsAnalysisAnalysisLoadBalancerListener(Objects.requireNonNull(defaults));
         }
 
         public Builder instancePort(@Nullable Integer instancePort) {
-            this.instancePort = instancePort;
+            $.instancePort = instancePort;
             return this;
         }
+
         public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
-            this.loadBalancerPort = loadBalancerPort;
+            $.loadBalancerPort = loadBalancerPort;
             return this;
-        }        public NetworkInsightsAnalysisAnalysisLoadBalancerListener build() {
-            return new NetworkInsightsAnalysisAnalysisLoadBalancerListener(instancePort, loadBalancerPort);
+        }
+
+        public NetworkInsightsAnalysisAnalysisLoadBalancerListener build() {
+            return $;
         }
     }
+
 }

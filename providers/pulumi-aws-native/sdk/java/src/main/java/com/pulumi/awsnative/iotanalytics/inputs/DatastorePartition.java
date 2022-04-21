@@ -15,62 +15,57 @@ public final class DatastorePartition extends com.pulumi.resources.InvokeArgs {
     public static final DatastorePartition Empty = new DatastorePartition();
 
     @Import(name="partition")
-      private final @Nullable DatastorePartition partition;
+    private @Nullable DatastorePartition partition;
 
     public Optional<DatastorePartition> partition() {
-        return this.partition == null ? Optional.empty() : Optional.ofNullable(this.partition);
+        return Optional.ofNullable(this.partition);
     }
 
     @Import(name="timestampPartition")
-      private final @Nullable DatastoreTimestampPartition timestampPartition;
+    private @Nullable DatastoreTimestampPartition timestampPartition;
 
     public Optional<DatastoreTimestampPartition> timestampPartition() {
-        return this.timestampPartition == null ? Optional.empty() : Optional.ofNullable(this.timestampPartition);
+        return Optional.ofNullable(this.timestampPartition);
     }
 
-    public DatastorePartition(
-        @Nullable DatastorePartition partition,
-        @Nullable DatastoreTimestampPartition timestampPartition) {
-        this.partition = partition;
-        this.timestampPartition = timestampPartition;
-    }
+    private DatastorePartition() {}
 
-    private DatastorePartition() {
-        this.partition = null;
-        this.timestampPartition = null;
+    private DatastorePartition(DatastorePartition $) {
+        this.partition = $.partition;
+        this.timestampPartition = $.timestampPartition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastorePartition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatastorePartition partition;
-        private @Nullable DatastoreTimestampPartition timestampPartition;
+        private DatastorePartition $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastorePartition();
         }
 
         public Builder(DatastorePartition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partition = defaults.partition;
-    	      this.timestampPartition = defaults.timestampPartition;
+            $ = new DatastorePartition(Objects.requireNonNull(defaults));
         }
 
         public Builder partition(@Nullable DatastorePartition partition) {
-            this.partition = partition;
+            $.partition = partition;
             return this;
         }
+
         public Builder timestampPartition(@Nullable DatastoreTimestampPartition timestampPartition) {
-            this.timestampPartition = timestampPartition;
+            $.timestampPartition = timestampPartition;
             return this;
-        }        public DatastorePartition build() {
-            return new DatastorePartition(partition, timestampPartition);
+        }
+
+        public DatastorePartition build() {
+            return $;
         }
     }
+
 }

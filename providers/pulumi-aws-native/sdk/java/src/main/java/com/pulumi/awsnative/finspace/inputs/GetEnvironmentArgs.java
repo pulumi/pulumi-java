@@ -17,45 +17,45 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
-    public GetEnvironmentArgs(String environmentId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-    }
+    private GetEnvironmentArgs() {}
 
-    private GetEnvironmentArgs() {
-        this.environmentId = null;
+    private GetEnvironmentArgs(GetEnvironmentArgs $) {
+        this.environmentId = $.environmentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
+        private GetEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentArgs();
         }
 
         public Builder(GetEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
+            $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
-        }        public GetEnvironmentArgs build() {
-            return new GetEnvironmentArgs(environmentId);
+        }
+
+        public GetEnvironmentArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            return $;
         }
     }
+
 }

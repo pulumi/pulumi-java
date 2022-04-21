@@ -17,45 +17,45 @@ public final class GetMonitoringScheduleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="monitoringScheduleArn", required=true)
-      private final String monitoringScheduleArn;
+    private String monitoringScheduleArn;
 
     public String monitoringScheduleArn() {
         return this.monitoringScheduleArn;
     }
 
-    public GetMonitoringScheduleArgs(String monitoringScheduleArn) {
-        this.monitoringScheduleArn = Objects.requireNonNull(monitoringScheduleArn, "expected parameter 'monitoringScheduleArn' to be non-null");
-    }
+    private GetMonitoringScheduleArgs() {}
 
-    private GetMonitoringScheduleArgs() {
-        this.monitoringScheduleArn = null;
+    private GetMonitoringScheduleArgs(GetMonitoringScheduleArgs $) {
+        this.monitoringScheduleArn = $.monitoringScheduleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMonitoringScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String monitoringScheduleArn;
+        private GetMonitoringScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMonitoringScheduleArgs();
         }
 
         public Builder(GetMonitoringScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitoringScheduleArn = defaults.monitoringScheduleArn;
+            $ = new GetMonitoringScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitoringScheduleArn(String monitoringScheduleArn) {
-            this.monitoringScheduleArn = Objects.requireNonNull(monitoringScheduleArn);
+            $.monitoringScheduleArn = monitoringScheduleArn;
             return this;
-        }        public GetMonitoringScheduleArgs build() {
-            return new GetMonitoringScheduleArgs(monitoringScheduleArn);
+        }
+
+        public GetMonitoringScheduleArgs build() {
+            $.monitoringScheduleArn = Objects.requireNonNull($.monitoringScheduleArn, "expected parameter 'monitoringScheduleArn' to be non-null");
+            return $;
         }
     }
+
 }

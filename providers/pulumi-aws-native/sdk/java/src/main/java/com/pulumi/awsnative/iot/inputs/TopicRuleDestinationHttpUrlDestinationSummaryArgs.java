@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends com
     public static final TopicRuleDestinationHttpUrlDestinationSummaryArgs Empty = new TopicRuleDestinationHttpUrlDestinationSummaryArgs();
 
     @Import(name="confirmationUrl")
-      private final @Nullable Output<String> confirmationUrl;
+    private @Nullable Output<String> confirmationUrl;
 
-    public Output<String> confirmationUrl() {
-        return this.confirmationUrl == null ? Codegen.empty() : this.confirmationUrl;
+    public Optional<Output<String>> confirmationUrl() {
+        return Optional.ofNullable(this.confirmationUrl);
     }
 
-    public TopicRuleDestinationHttpUrlDestinationSummaryArgs(@Nullable Output<String> confirmationUrl) {
-        this.confirmationUrl = confirmationUrl;
-    }
+    private TopicRuleDestinationHttpUrlDestinationSummaryArgs() {}
 
-    private TopicRuleDestinationHttpUrlDestinationSummaryArgs() {
-        this.confirmationUrl = Codegen.empty();
+    private TopicRuleDestinationHttpUrlDestinationSummaryArgs(TopicRuleDestinationHttpUrlDestinationSummaryArgs $) {
+        this.confirmationUrl = $.confirmationUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleDestinationHttpUrlDestinationSummaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> confirmationUrl;
+        private TopicRuleDestinationHttpUrlDestinationSummaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleDestinationHttpUrlDestinationSummaryArgs();
         }
 
         public Builder(TopicRuleDestinationHttpUrlDestinationSummaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confirmationUrl = defaults.confirmationUrl;
+            $ = new TopicRuleDestinationHttpUrlDestinationSummaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder confirmationUrl(@Nullable Output<String> confirmationUrl) {
-            this.confirmationUrl = confirmationUrl;
+            $.confirmationUrl = confirmationUrl;
             return this;
         }
-        public Builder confirmationUrl(@Nullable String confirmationUrl) {
-            this.confirmationUrl = Codegen.ofNullable(confirmationUrl);
-            return this;
-        }        public TopicRuleDestinationHttpUrlDestinationSummaryArgs build() {
-            return new TopicRuleDestinationHttpUrlDestinationSummaryArgs(confirmationUrl);
+
+        public Builder confirmationUrl(String confirmationUrl) {
+            return confirmationUrl(Output.of(confirmationUrl));
+        }
+
+        public TopicRuleDestinationHttpUrlDestinationSummaryArgs build() {
+            return $;
         }
     }
+
 }

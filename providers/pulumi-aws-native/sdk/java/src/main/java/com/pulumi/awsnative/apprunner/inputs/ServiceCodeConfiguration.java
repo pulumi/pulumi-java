@@ -20,10 +20,10 @@ public final class ServiceCodeConfiguration extends com.pulumi.resources.InvokeA
     public static final ServiceCodeConfiguration Empty = new ServiceCodeConfiguration();
 
     @Import(name="codeConfigurationValues")
-      private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
+    private @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
 
     public Optional<ServiceCodeConfigurationValues> codeConfigurationValues() {
-        return this.codeConfigurationValues == null ? Optional.empty() : Optional.ofNullable(this.codeConfigurationValues);
+        return Optional.ofNullable(this.codeConfigurationValues);
     }
 
     /**
@@ -31,55 +31,51 @@ public final class ServiceCodeConfiguration extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="configurationSource", required=true)
-      private final ServiceCodeConfigurationConfigurationSource configurationSource;
+    private ServiceCodeConfigurationConfigurationSource configurationSource;
 
     public ServiceCodeConfigurationConfigurationSource configurationSource() {
         return this.configurationSource;
     }
 
-    public ServiceCodeConfiguration(
-        @Nullable ServiceCodeConfigurationValues codeConfigurationValues,
-        ServiceCodeConfigurationConfigurationSource configurationSource) {
-        this.codeConfigurationValues = codeConfigurationValues;
-        this.configurationSource = Objects.requireNonNull(configurationSource, "expected parameter 'configurationSource' to be non-null");
-    }
+    private ServiceCodeConfiguration() {}
 
-    private ServiceCodeConfiguration() {
-        this.codeConfigurationValues = null;
-        this.configurationSource = null;
+    private ServiceCodeConfiguration(ServiceCodeConfiguration $) {
+        this.codeConfigurationValues = $.codeConfigurationValues;
+        this.configurationSource = $.configurationSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCodeConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
-        private ServiceCodeConfigurationConfigurationSource configurationSource;
+        private ServiceCodeConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCodeConfiguration();
         }
 
         public Builder(ServiceCodeConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeConfigurationValues = defaults.codeConfigurationValues;
-    	      this.configurationSource = defaults.configurationSource;
+            $ = new ServiceCodeConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder codeConfigurationValues(@Nullable ServiceCodeConfigurationValues codeConfigurationValues) {
-            this.codeConfigurationValues = codeConfigurationValues;
+            $.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
+
         public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
-            this.configurationSource = Objects.requireNonNull(configurationSource);
+            $.configurationSource = configurationSource;
             return this;
-        }        public ServiceCodeConfiguration build() {
-            return new ServiceCodeConfiguration(codeConfigurationValues, configurationSource);
+        }
+
+        public ServiceCodeConfiguration build() {
+            $.configurationSource = Objects.requireNonNull($.configurationSource, "expected parameter 'configurationSource' to be non-null");
+            return $;
         }
     }
+
 }

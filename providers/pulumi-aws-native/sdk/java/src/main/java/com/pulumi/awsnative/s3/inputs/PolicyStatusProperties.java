@@ -21,45 +21,45 @@ public final class PolicyStatusProperties extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isPublic", required=true)
-      private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
+    private MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 
     public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic() {
         return this.isPublic;
     }
 
-    public PolicyStatusProperties(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
-        this.isPublic = Objects.requireNonNull(isPublic, "expected parameter 'isPublic' to be non-null");
-    }
+    private PolicyStatusProperties() {}
 
-    private PolicyStatusProperties() {
-        this.isPublic = null;
+    private PolicyStatusProperties(PolicyStatusProperties $) {
+        this.isPublic = $.isPublic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyStatusProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
+        private PolicyStatusProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyStatusProperties();
         }
 
         public Builder(PolicyStatusProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isPublic = defaults.isPublic;
+            $ = new PolicyStatusProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder isPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
-            this.isPublic = Objects.requireNonNull(isPublic);
+            $.isPublic = isPublic;
             return this;
-        }        public PolicyStatusProperties build() {
-            return new PolicyStatusProperties(isPublic);
+        }
+
+        public PolicyStatusProperties build() {
+            $.isPublic = Objects.requireNonNull($.isPublic, "expected parameter 'isPublic' to be non-null");
+            return $;
         }
     }
+
 }

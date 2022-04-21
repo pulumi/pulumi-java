@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,93 +17,86 @@ public final class TaskDefinitionDeviceArgs extends com.pulumi.resources.Resourc
     public static final TaskDefinitionDeviceArgs Empty = new TaskDefinitionDeviceArgs();
 
     @Import(name="containerPath")
-      private final @Nullable Output<String> containerPath;
+    private @Nullable Output<String> containerPath;
 
-    public Output<String> containerPath() {
-        return this.containerPath == null ? Codegen.empty() : this.containerPath;
+    public Optional<Output<String>> containerPath() {
+        return Optional.ofNullable(this.containerPath);
     }
 
     @Import(name="hostPath")
-      private final @Nullable Output<String> hostPath;
+    private @Nullable Output<String> hostPath;
 
-    public Output<String> hostPath() {
-        return this.hostPath == null ? Codegen.empty() : this.hostPath;
+    public Optional<Output<String>> hostPath() {
+        return Optional.ofNullable(this.hostPath);
     }
 
     @Import(name="permissions")
-      private final @Nullable Output<List<String>> permissions;
+    private @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<String>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
-    public TaskDefinitionDeviceArgs(
-        @Nullable Output<String> containerPath,
-        @Nullable Output<String> hostPath,
-        @Nullable Output<List<String>> permissions) {
-        this.containerPath = containerPath;
-        this.hostPath = hostPath;
-        this.permissions = permissions;
-    }
+    private TaskDefinitionDeviceArgs() {}
 
-    private TaskDefinitionDeviceArgs() {
-        this.containerPath = Codegen.empty();
-        this.hostPath = Codegen.empty();
-        this.permissions = Codegen.empty();
+    private TaskDefinitionDeviceArgs(TaskDefinitionDeviceArgs $) {
+        this.containerPath = $.containerPath;
+        this.hostPath = $.hostPath;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerPath;
-        private @Nullable Output<String> hostPath;
-        private @Nullable Output<List<String>> permissions;
+        private TaskDefinitionDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionDeviceArgs();
         }
 
         public Builder(TaskDefinitionDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPath = defaults.containerPath;
-    	      this.hostPath = defaults.hostPath;
-    	      this.permissions = defaults.permissions;
+            $ = new TaskDefinitionDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPath(@Nullable Output<String> containerPath) {
-            this.containerPath = containerPath;
+            $.containerPath = containerPath;
             return this;
         }
-        public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Codegen.ofNullable(containerPath);
-            return this;
+
+        public Builder containerPath(String containerPath) {
+            return containerPath(Output.of(containerPath));
         }
+
         public Builder hostPath(@Nullable Output<String> hostPath) {
-            this.hostPath = hostPath;
+            $.hostPath = hostPath;
             return this;
         }
-        public Builder hostPath(@Nullable String hostPath) {
-            this.hostPath = Codegen.ofNullable(hostPath);
-            return this;
+
+        public Builder hostPath(String hostPath) {
+            return hostPath(Output.of(hostPath));
         }
+
         public Builder permissions(@Nullable Output<List<String>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<String> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
-        }        public TaskDefinitionDeviceArgs build() {
-            return new TaskDefinitionDeviceArgs(containerPath, hostPath, permissions);
+        }
+
+        public TaskDefinitionDeviceArgs build() {
+            return $;
         }
     }
+
 }

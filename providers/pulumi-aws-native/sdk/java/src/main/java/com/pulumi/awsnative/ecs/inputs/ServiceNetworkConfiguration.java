@@ -15,45 +15,44 @@ public final class ServiceNetworkConfiguration extends com.pulumi.resources.Invo
     public static final ServiceNetworkConfiguration Empty = new ServiceNetworkConfiguration();
 
     @Import(name="awsvpcConfiguration")
-      private final @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
+    private @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
 
     public Optional<ServiceAwsVpcConfiguration> awsvpcConfiguration() {
-        return this.awsvpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.awsvpcConfiguration);
+        return Optional.ofNullable(this.awsvpcConfiguration);
     }
 
-    public ServiceNetworkConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
-        this.awsvpcConfiguration = awsvpcConfiguration;
-    }
+    private ServiceNetworkConfiguration() {}
 
-    private ServiceNetworkConfiguration() {
-        this.awsvpcConfiguration = null;
+    private ServiceNetworkConfiguration(ServiceNetworkConfiguration $) {
+        this.awsvpcConfiguration = $.awsvpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceNetworkConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
+        private ServiceNetworkConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceNetworkConfiguration();
         }
 
         public Builder(ServiceNetworkConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsvpcConfiguration = defaults.awsvpcConfiguration;
+            $ = new ServiceNetworkConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
-            this.awsvpcConfiguration = awsvpcConfiguration;
+            $.awsvpcConfiguration = awsvpcConfiguration;
             return this;
-        }        public ServiceNetworkConfiguration build() {
-            return new ServiceNetworkConfiguration(awsvpcConfiguration);
+        }
+
+        public ServiceNetworkConfiguration build() {
+            return $;
         }
     }
+
 }

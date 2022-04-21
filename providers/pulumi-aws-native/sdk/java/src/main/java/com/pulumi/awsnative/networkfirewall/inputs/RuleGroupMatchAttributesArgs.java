@@ -8,10 +8,10 @@ import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupPortRangeArgs;
 import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupTCPFlagFieldArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,168 +20,157 @@ public final class RuleGroupMatchAttributesArgs extends com.pulumi.resources.Res
     public static final RuleGroupMatchAttributesArgs Empty = new RuleGroupMatchAttributesArgs();
 
     @Import(name="destinationPorts")
-      private final @Nullable Output<List<RuleGroupPortRangeArgs>> destinationPorts;
+    private @Nullable Output<List<RuleGroupPortRangeArgs>> destinationPorts;
 
-    public Output<List<RuleGroupPortRangeArgs>> destinationPorts() {
-        return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
+    public Optional<Output<List<RuleGroupPortRangeArgs>>> destinationPorts() {
+        return Optional.ofNullable(this.destinationPorts);
     }
 
     @Import(name="destinations")
-      private final @Nullable Output<List<RuleGroupAddressArgs>> destinations;
+    private @Nullable Output<List<RuleGroupAddressArgs>> destinations;
 
-    public Output<List<RuleGroupAddressArgs>> destinations() {
-        return this.destinations == null ? Codegen.empty() : this.destinations;
+    public Optional<Output<List<RuleGroupAddressArgs>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     @Import(name="protocols")
-      private final @Nullable Output<List<Integer>> protocols;
+    private @Nullable Output<List<Integer>> protocols;
 
-    public Output<List<Integer>> protocols() {
-        return this.protocols == null ? Codegen.empty() : this.protocols;
+    public Optional<Output<List<Integer>>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     @Import(name="sourcePorts")
-      private final @Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts;
+    private @Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts;
 
-    public Output<List<RuleGroupPortRangeArgs>> sourcePorts() {
-        return this.sourcePorts == null ? Codegen.empty() : this.sourcePorts;
+    public Optional<Output<List<RuleGroupPortRangeArgs>>> sourcePorts() {
+        return Optional.ofNullable(this.sourcePorts);
     }
 
     @Import(name="sources")
-      private final @Nullable Output<List<RuleGroupAddressArgs>> sources;
+    private @Nullable Output<List<RuleGroupAddressArgs>> sources;
 
-    public Output<List<RuleGroupAddressArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<RuleGroupAddressArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     @Import(name="tCPFlags")
-      private final @Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags;
+    private @Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags;
 
-    public Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags() {
-        return this.tCPFlags == null ? Codegen.empty() : this.tCPFlags;
+    public Optional<Output<List<RuleGroupTCPFlagFieldArgs>>> tCPFlags() {
+        return Optional.ofNullable(this.tCPFlags);
     }
 
-    public RuleGroupMatchAttributesArgs(
-        @Nullable Output<List<RuleGroupPortRangeArgs>> destinationPorts,
-        @Nullable Output<List<RuleGroupAddressArgs>> destinations,
-        @Nullable Output<List<Integer>> protocols,
-        @Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts,
-        @Nullable Output<List<RuleGroupAddressArgs>> sources,
-        @Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags) {
-        this.destinationPorts = destinationPorts;
-        this.destinations = destinations;
-        this.protocols = protocols;
-        this.sourcePorts = sourcePorts;
-        this.sources = sources;
-        this.tCPFlags = tCPFlags;
-    }
+    private RuleGroupMatchAttributesArgs() {}
 
-    private RuleGroupMatchAttributesArgs() {
-        this.destinationPorts = Codegen.empty();
-        this.destinations = Codegen.empty();
-        this.protocols = Codegen.empty();
-        this.sourcePorts = Codegen.empty();
-        this.sources = Codegen.empty();
-        this.tCPFlags = Codegen.empty();
+    private RuleGroupMatchAttributesArgs(RuleGroupMatchAttributesArgs $) {
+        this.destinationPorts = $.destinationPorts;
+        this.destinations = $.destinations;
+        this.protocols = $.protocols;
+        this.sourcePorts = $.sourcePorts;
+        this.sources = $.sources;
+        this.tCPFlags = $.tCPFlags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupMatchAttributesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RuleGroupPortRangeArgs>> destinationPorts;
-        private @Nullable Output<List<RuleGroupAddressArgs>> destinations;
-        private @Nullable Output<List<Integer>> protocols;
-        private @Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts;
-        private @Nullable Output<List<RuleGroupAddressArgs>> sources;
-        private @Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags;
+        private RuleGroupMatchAttributesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupMatchAttributesArgs();
         }
 
         public Builder(RuleGroupMatchAttributesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationPorts = defaults.destinationPorts;
-    	      this.destinations = defaults.destinations;
-    	      this.protocols = defaults.protocols;
-    	      this.sourcePorts = defaults.sourcePorts;
-    	      this.sources = defaults.sources;
-    	      this.tCPFlags = defaults.tCPFlags;
+            $ = new RuleGroupMatchAttributesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationPorts(@Nullable Output<List<RuleGroupPortRangeArgs>> destinationPorts) {
-            this.destinationPorts = destinationPorts;
+            $.destinationPorts = destinationPorts;
             return this;
         }
-        public Builder destinationPorts(@Nullable List<RuleGroupPortRangeArgs> destinationPorts) {
-            this.destinationPorts = Codegen.ofNullable(destinationPorts);
-            return this;
+
+        public Builder destinationPorts(List<RuleGroupPortRangeArgs> destinationPorts) {
+            return destinationPorts(Output.of(destinationPorts));
         }
+
         public Builder destinationPorts(RuleGroupPortRangeArgs... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
+
         public Builder destinations(@Nullable Output<List<RuleGroupAddressArgs>> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
-        public Builder destinations(@Nullable List<RuleGroupAddressArgs> destinations) {
-            this.destinations = Codegen.ofNullable(destinations);
-            return this;
+
+        public Builder destinations(List<RuleGroupAddressArgs> destinations) {
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(RuleGroupAddressArgs... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder protocols(@Nullable Output<List<Integer>> protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
-        public Builder protocols(@Nullable List<Integer> protocols) {
-            this.protocols = Codegen.ofNullable(protocols);
-            return this;
+
+        public Builder protocols(List<Integer> protocols) {
+            return protocols(Output.of(protocols));
         }
+
         public Builder protocols(Integer... protocols) {
             return protocols(List.of(protocols));
         }
+
         public Builder sourcePorts(@Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts) {
-            this.sourcePorts = sourcePorts;
+            $.sourcePorts = sourcePorts;
             return this;
         }
-        public Builder sourcePorts(@Nullable List<RuleGroupPortRangeArgs> sourcePorts) {
-            this.sourcePorts = Codegen.ofNullable(sourcePorts);
-            return this;
+
+        public Builder sourcePorts(List<RuleGroupPortRangeArgs> sourcePorts) {
+            return sourcePorts(Output.of(sourcePorts));
         }
+
         public Builder sourcePorts(RuleGroupPortRangeArgs... sourcePorts) {
             return sourcePorts(List.of(sourcePorts));
         }
+
         public Builder sources(@Nullable Output<List<RuleGroupAddressArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<RuleGroupAddressArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<RuleGroupAddressArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(RuleGroupAddressArgs... sources) {
             return sources(List.of(sources));
         }
+
         public Builder tCPFlags(@Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags) {
-            this.tCPFlags = tCPFlags;
+            $.tCPFlags = tCPFlags;
             return this;
         }
-        public Builder tCPFlags(@Nullable List<RuleGroupTCPFlagFieldArgs> tCPFlags) {
-            this.tCPFlags = Codegen.ofNullable(tCPFlags);
-            return this;
+
+        public Builder tCPFlags(List<RuleGroupTCPFlagFieldArgs> tCPFlags) {
+            return tCPFlags(Output.of(tCPFlags));
         }
+
         public Builder tCPFlags(RuleGroupTCPFlagFieldArgs... tCPFlags) {
             return tCPFlags(List.of(tCPFlags));
-        }        public RuleGroupMatchAttributesArgs build() {
-            return new RuleGroupMatchAttributesArgs(destinationPorts, destinations, protocols, sourcePorts, sources, tCPFlags);
+        }
+
+        public RuleGroupMatchAttributesArgs build() {
+            return $;
         }
     }
+
 }

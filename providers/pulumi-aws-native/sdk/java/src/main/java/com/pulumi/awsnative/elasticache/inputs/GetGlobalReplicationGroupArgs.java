@@ -17,45 +17,45 @@ public final class GetGlobalReplicationGroupArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="globalReplicationGroupId", required=true)
-      private final String globalReplicationGroupId;
+    private String globalReplicationGroupId;
 
     public String globalReplicationGroupId() {
         return this.globalReplicationGroupId;
     }
 
-    public GetGlobalReplicationGroupArgs(String globalReplicationGroupId) {
-        this.globalReplicationGroupId = Objects.requireNonNull(globalReplicationGroupId, "expected parameter 'globalReplicationGroupId' to be non-null");
-    }
+    private GetGlobalReplicationGroupArgs() {}
 
-    private GetGlobalReplicationGroupArgs() {
-        this.globalReplicationGroupId = null;
+    private GetGlobalReplicationGroupArgs(GetGlobalReplicationGroupArgs $) {
+        this.globalReplicationGroupId = $.globalReplicationGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalReplicationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String globalReplicationGroupId;
+        private GetGlobalReplicationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalReplicationGroupArgs();
         }
 
         public Builder(GetGlobalReplicationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalReplicationGroupId = defaults.globalReplicationGroupId;
+            $ = new GetGlobalReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalReplicationGroupId(String globalReplicationGroupId) {
-            this.globalReplicationGroupId = Objects.requireNonNull(globalReplicationGroupId);
+            $.globalReplicationGroupId = globalReplicationGroupId;
             return this;
-        }        public GetGlobalReplicationGroupArgs build() {
-            return new GetGlobalReplicationGroupArgs(globalReplicationGroupId);
+        }
+
+        public GetGlobalReplicationGroupArgs build() {
+            $.globalReplicationGroupId = Objects.requireNonNull($.globalReplicationGroupId, "expected parameter 'globalReplicationGroupId' to be non-null");
+            return $;
         }
     }
+
 }

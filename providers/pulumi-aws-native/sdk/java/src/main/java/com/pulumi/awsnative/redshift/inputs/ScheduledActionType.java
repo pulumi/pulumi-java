@@ -17,78 +17,70 @@ public final class ScheduledActionType extends com.pulumi.resources.InvokeArgs {
     public static final ScheduledActionType Empty = new ScheduledActionType();
 
     @Import(name="pauseCluster")
-      private final @Nullable ScheduledActionPauseClusterMessage pauseCluster;
+    private @Nullable ScheduledActionPauseClusterMessage pauseCluster;
 
     public Optional<ScheduledActionPauseClusterMessage> pauseCluster() {
-        return this.pauseCluster == null ? Optional.empty() : Optional.ofNullable(this.pauseCluster);
+        return Optional.ofNullable(this.pauseCluster);
     }
 
     @Import(name="resizeCluster")
-      private final @Nullable ScheduledActionResizeClusterMessage resizeCluster;
+    private @Nullable ScheduledActionResizeClusterMessage resizeCluster;
 
     public Optional<ScheduledActionResizeClusterMessage> resizeCluster() {
-        return this.resizeCluster == null ? Optional.empty() : Optional.ofNullable(this.resizeCluster);
+        return Optional.ofNullable(this.resizeCluster);
     }
 
     @Import(name="resumeCluster")
-      private final @Nullable ScheduledActionResumeClusterMessage resumeCluster;
+    private @Nullable ScheduledActionResumeClusterMessage resumeCluster;
 
     public Optional<ScheduledActionResumeClusterMessage> resumeCluster() {
-        return this.resumeCluster == null ? Optional.empty() : Optional.ofNullable(this.resumeCluster);
+        return Optional.ofNullable(this.resumeCluster);
     }
 
-    public ScheduledActionType(
-        @Nullable ScheduledActionPauseClusterMessage pauseCluster,
-        @Nullable ScheduledActionResizeClusterMessage resizeCluster,
-        @Nullable ScheduledActionResumeClusterMessage resumeCluster) {
-        this.pauseCluster = pauseCluster;
-        this.resizeCluster = resizeCluster;
-        this.resumeCluster = resumeCluster;
-    }
+    private ScheduledActionType() {}
 
-    private ScheduledActionType() {
-        this.pauseCluster = null;
-        this.resizeCluster = null;
-        this.resumeCluster = null;
+    private ScheduledActionType(ScheduledActionType $) {
+        this.pauseCluster = $.pauseCluster;
+        this.resizeCluster = $.resizeCluster;
+        this.resumeCluster = $.resumeCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionType defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ScheduledActionPauseClusterMessage pauseCluster;
-        private @Nullable ScheduledActionResizeClusterMessage resizeCluster;
-        private @Nullable ScheduledActionResumeClusterMessage resumeCluster;
+        private ScheduledActionType $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionType();
         }
 
         public Builder(ScheduledActionType defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pauseCluster = defaults.pauseCluster;
-    	      this.resizeCluster = defaults.resizeCluster;
-    	      this.resumeCluster = defaults.resumeCluster;
+            $ = new ScheduledActionType(Objects.requireNonNull(defaults));
         }
 
         public Builder pauseCluster(@Nullable ScheduledActionPauseClusterMessage pauseCluster) {
-            this.pauseCluster = pauseCluster;
+            $.pauseCluster = pauseCluster;
             return this;
         }
+
         public Builder resizeCluster(@Nullable ScheduledActionResizeClusterMessage resizeCluster) {
-            this.resizeCluster = resizeCluster;
+            $.resizeCluster = resizeCluster;
             return this;
         }
+
         public Builder resumeCluster(@Nullable ScheduledActionResumeClusterMessage resumeCluster) {
-            this.resumeCluster = resumeCluster;
+            $.resumeCluster = resumeCluster;
             return this;
-        }        public ScheduledActionType build() {
-            return new ScheduledActionType(pauseCluster, resizeCluster, resumeCluster);
+        }
+
+        public ScheduledActionType build() {
+            return $;
         }
     }
+
 }

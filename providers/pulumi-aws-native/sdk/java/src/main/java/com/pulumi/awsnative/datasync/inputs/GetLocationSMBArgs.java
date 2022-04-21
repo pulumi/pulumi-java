@@ -17,45 +17,45 @@ public final class GetLocationSMBArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationArn", required=true)
-      private final String locationArn;
+    private String locationArn;
 
     public String locationArn() {
         return this.locationArn;
     }
 
-    public GetLocationSMBArgs(String locationArn) {
-        this.locationArn = Objects.requireNonNull(locationArn, "expected parameter 'locationArn' to be non-null");
-    }
+    private GetLocationSMBArgs() {}
 
-    private GetLocationSMBArgs() {
-        this.locationArn = null;
+    private GetLocationSMBArgs(GetLocationSMBArgs $) {
+        this.locationArn = $.locationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocationSMBArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String locationArn;
+        private GetLocationSMBArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocationSMBArgs();
         }
 
         public Builder(GetLocationSMBArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationArn = defaults.locationArn;
+            $ = new GetLocationSMBArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locationArn(String locationArn) {
-            this.locationArn = Objects.requireNonNull(locationArn);
+            $.locationArn = locationArn;
             return this;
-        }        public GetLocationSMBArgs build() {
-            return new GetLocationSMBArgs(locationArn);
+        }
+
+        public GetLocationSMBArgs build() {
+            $.locationArn = Objects.requireNonNull($.locationArn, "expected parameter 'locationArn' to be non-null");
+            return $;
         }
     }
+
 }

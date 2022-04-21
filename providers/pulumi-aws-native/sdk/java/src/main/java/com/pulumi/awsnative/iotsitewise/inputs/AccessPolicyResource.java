@@ -20,62 +20,57 @@ public final class AccessPolicyResource extends com.pulumi.resources.InvokeArgs 
     public static final AccessPolicyResource Empty = new AccessPolicyResource();
 
     @Import(name="portal")
-      private final @Nullable AccessPolicyPortal portal;
+    private @Nullable AccessPolicyPortal portal;
 
     public Optional<AccessPolicyPortal> portal() {
-        return this.portal == null ? Optional.empty() : Optional.ofNullable(this.portal);
+        return Optional.ofNullable(this.portal);
     }
 
     @Import(name="project")
-      private final @Nullable AccessPolicyProject project;
+    private @Nullable AccessPolicyProject project;
 
     public Optional<AccessPolicyProject> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public AccessPolicyResource(
-        @Nullable AccessPolicyPortal portal,
-        @Nullable AccessPolicyProject project) {
-        this.portal = portal;
-        this.project = project;
-    }
+    private AccessPolicyResource() {}
 
-    private AccessPolicyResource() {
-        this.portal = null;
-        this.project = null;
+    private AccessPolicyResource(AccessPolicyResource $) {
+        this.portal = $.portal;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AccessPolicyPortal portal;
-        private @Nullable AccessPolicyProject project;
+        private AccessPolicyResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyResource();
         }
 
         public Builder(AccessPolicyResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.portal = defaults.portal;
-    	      this.project = defaults.project;
+            $ = new AccessPolicyResource(Objects.requireNonNull(defaults));
         }
 
         public Builder portal(@Nullable AccessPolicyPortal portal) {
-            this.portal = portal;
+            $.portal = portal;
             return this;
         }
+
         public Builder project(@Nullable AccessPolicyProject project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public AccessPolicyResource build() {
-            return new AccessPolicyResource(portal, project);
+        }
+
+        public AccessPolicyResource build() {
+            return $;
         }
     }
+
 }

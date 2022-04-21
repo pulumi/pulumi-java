@@ -22,7 +22,7 @@ public final class DataSourceSparkParameters extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -33,55 +33,52 @@ public final class DataSourceSparkParameters extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port", required=true)
-      private final Double port;
+    private Double port;
 
     public Double port() {
         return this.port;
     }
 
-    public DataSourceSparkParameters(
-        String host,
-        Double port) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourceSparkParameters() {}
 
-    private DataSourceSparkParameters() {
-        this.host = null;
-        this.port = null;
+    private DataSourceSparkParameters(DataSourceSparkParameters $) {
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSparkParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String host;
-        private Double port;
+        private DataSourceSparkParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSparkParameters();
         }
 
         public Builder(DataSourceSparkParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceSparkParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder port(Double port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public DataSourceSparkParameters build() {
-            return new DataSourceSparkParameters(host, port);
+        }
+
+        public DataSourceSparkParameters build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

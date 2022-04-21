@@ -17,45 +17,45 @@ public final class GetFleetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fleetId", required=true)
-      private final String fleetId;
+    private String fleetId;
 
     public String fleetId() {
         return this.fleetId;
     }
 
-    public GetFleetArgs(String fleetId) {
-        this.fleetId = Objects.requireNonNull(fleetId, "expected parameter 'fleetId' to be non-null");
-    }
+    private GetFleetArgs() {}
 
-    private GetFleetArgs() {
-        this.fleetId = null;
+    private GetFleetArgs(GetFleetArgs $) {
+        this.fleetId = $.fleetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fleetId;
+        private GetFleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFleetArgs();
         }
 
         public Builder(GetFleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetId = defaults.fleetId;
+            $ = new GetFleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetId(String fleetId) {
-            this.fleetId = Objects.requireNonNull(fleetId);
+            $.fleetId = fleetId;
             return this;
-        }        public GetFleetArgs build() {
-            return new GetFleetArgs(fleetId);
+        }
+
+        public GetFleetArgs build() {
+            $.fleetId = Objects.requireNonNull($.fleetId, "expected parameter 'fleetId' to be non-null");
+            return $;
         }
     }
+
 }

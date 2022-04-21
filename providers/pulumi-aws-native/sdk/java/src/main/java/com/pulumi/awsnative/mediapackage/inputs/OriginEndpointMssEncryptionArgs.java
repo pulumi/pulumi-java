@@ -6,7 +6,6 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class OriginEndpointMssEncryptionArgs extends com.pulumi.resources.
     public static final OriginEndpointMssEncryptionArgs Empty = new OriginEndpointMssEncryptionArgs();
 
     @Import(name="spekeKeyProvider", required=true)
-      private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+    private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public OriginEndpointMssEncryptionArgs(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private OriginEndpointMssEncryptionArgs() {}
 
-    private OriginEndpointMssEncryptionArgs() {
-        this.spekeKeyProvider = Codegen.empty();
+    private OriginEndpointMssEncryptionArgs(OriginEndpointMssEncryptionArgs $) {
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointMssEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+        private OriginEndpointMssEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointMssEncryptionArgs();
         }
 
         public Builder(OriginEndpointMssEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new OriginEndpointMssEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
         }
+
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
-            return this;
-        }        public OriginEndpointMssEncryptionArgs build() {
-            return new OriginEndpointMssEncryptionArgs(spekeKeyProvider);
+            return spekeKeyProvider(Output.of(spekeKeyProvider));
+        }
+
+        public OriginEndpointMssEncryptionArgs build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

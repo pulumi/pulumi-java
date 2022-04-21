@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class ReplicationConfigurationReplicationDestinationArgs extends co
     public static final ReplicationConfigurationReplicationDestinationArgs Empty = new ReplicationConfigurationReplicationDestinationArgs();
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="registryId", required=true)
-      private final Output<String> registryId;
+    private Output<String> registryId;
 
     public Output<String> registryId() {
         return this.registryId;
     }
 
-    public ReplicationConfigurationReplicationDestinationArgs(
-        Output<String> region,
-        Output<String> registryId) {
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-    }
+    private ReplicationConfigurationReplicationDestinationArgs() {}
 
-    private ReplicationConfigurationReplicationDestinationArgs() {
-        this.region = Codegen.empty();
-        this.registryId = Codegen.empty();
+    private ReplicationConfigurationReplicationDestinationArgs(ReplicationConfigurationReplicationDestinationArgs $) {
+        this.region = $.region;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> region;
-        private Output<String> registryId;
+        private ReplicationConfigurationReplicationDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationDestinationArgs();
         }
 
         public Builder(ReplicationConfigurationReplicationDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.registryId = defaults.registryId;
+            $ = new ReplicationConfigurationReplicationDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder registryId(Output<String> registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
         }
+
         public Builder registryId(String registryId) {
-            this.registryId = Output.of(Objects.requireNonNull(registryId));
-            return this;
-        }        public ReplicationConfigurationReplicationDestinationArgs build() {
-            return new ReplicationConfigurationReplicationDestinationArgs(region, registryId);
+            return registryId(Output.of(registryId));
+        }
+
+        public ReplicationConfigurationReplicationDestinationArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

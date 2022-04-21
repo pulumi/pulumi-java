@@ -5,11 +5,11 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="retries")
-      private final @Nullable Output<Integer> retries;
+    private @Nullable Output<Integer> retries;
 
-    public Output<Integer> retries() {
-        return this.retries == null ? Codegen.empty() : this.retries;
+    public Optional<Output<Integer>> retries() {
+        return Optional.ofNullable(this.retries);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="startPeriod")
-      private final @Nullable Output<Integer> startPeriod;
+    private @Nullable Output<Integer> startPeriod;
 
-    public Output<Integer> startPeriod() {
-        return this.startPeriod == null ? Codegen.empty() : this.startPeriod;
+    public Optional<Output<Integer>> startPeriod() {
+        return Optional.ofNullable(this.startPeriod);
     }
 
     /**
@@ -70,105 +70,92 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public TaskDefinitionHealthCheckArgs(
-        @Nullable Output<List<String>> command,
-        @Nullable Output<Integer> interval,
-        @Nullable Output<Integer> retries,
-        @Nullable Output<Integer> startPeriod,
-        @Nullable Output<Integer> timeout) {
-        this.command = command;
-        this.interval = interval;
-        this.retries = retries;
-        this.startPeriod = startPeriod;
-        this.timeout = timeout;
-    }
+    private TaskDefinitionHealthCheckArgs() {}
 
-    private TaskDefinitionHealthCheckArgs() {
-        this.command = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.retries = Codegen.empty();
-        this.startPeriod = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private TaskDefinitionHealthCheckArgs(TaskDefinitionHealthCheckArgs $) {
+        this.command = $.command;
+        this.interval = $.interval;
+        this.retries = $.retries;
+        this.startPeriod = $.startPeriod;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<Integer> interval;
-        private @Nullable Output<Integer> retries;
-        private @Nullable Output<Integer> startPeriod;
-        private @Nullable Output<Integer> timeout;
+        private TaskDefinitionHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionHealthCheckArgs();
         }
 
         public Builder(TaskDefinitionHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.interval = defaults.interval;
-    	      this.retries = defaults.retries;
-    	      this.startPeriod = defaults.startPeriod;
-    	      this.timeout = defaults.timeout;
+            $ = new TaskDefinitionHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder retries(@Nullable Output<Integer> retries) {
-            this.retries = retries;
+            $.retries = retries;
             return this;
         }
-        public Builder retries(@Nullable Integer retries) {
-            this.retries = Codegen.ofNullable(retries);
-            return this;
+
+        public Builder retries(Integer retries) {
+            return retries(Output.of(retries));
         }
+
         public Builder startPeriod(@Nullable Output<Integer> startPeriod) {
-            this.startPeriod = startPeriod;
+            $.startPeriod = startPeriod;
             return this;
         }
-        public Builder startPeriod(@Nullable Integer startPeriod) {
-            this.startPeriod = Codegen.ofNullable(startPeriod);
-            return this;
+
+        public Builder startPeriod(Integer startPeriod) {
+            return startPeriod(Output.of(startPeriod));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public TaskDefinitionHealthCheckArgs build() {
-            return new TaskDefinitionHealthCheckArgs(command, interval, retries, startPeriod, timeout);
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public TaskDefinitionHealthCheckArgs build() {
+            return $;
         }
     }
+
 }

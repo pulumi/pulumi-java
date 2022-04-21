@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="htmlPart")
-      private final @Nullable Output<String> htmlPart;
+    private @Nullable Output<String> htmlPart;
 
-    public Output<String> htmlPart() {
-        return this.htmlPart == null ? Codegen.empty() : this.htmlPart;
+    public Optional<Output<String>> htmlPart() {
+        return Optional.ofNullable(this.htmlPart);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subjectPart", required=true)
-      private final Output<String> subjectPart;
+    private Output<String> subjectPart;
 
     public Output<String> subjectPart() {
         return this.subjectPart;
@@ -46,10 +46,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateName")
-      private final @Nullable Output<String> templateName;
+    private @Nullable Output<String> templateName;
 
-    public Output<String> templateName() {
-        return this.templateName == null ? Codegen.empty() : this.templateName;
+    public Optional<Output<String>> templateName() {
+        return Optional.ofNullable(this.templateName);
     }
 
     /**
@@ -57,89 +57,79 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="textPart")
-      private final @Nullable Output<String> textPart;
+    private @Nullable Output<String> textPart;
 
-    public Output<String> textPart() {
-        return this.textPart == null ? Codegen.empty() : this.textPart;
+    public Optional<Output<String>> textPart() {
+        return Optional.ofNullable(this.textPart);
     }
 
-    public TemplateArgs(
-        @Nullable Output<String> htmlPart,
-        Output<String> subjectPart,
-        @Nullable Output<String> templateName,
-        @Nullable Output<String> textPart) {
-        this.htmlPart = htmlPart;
-        this.subjectPart = Objects.requireNonNull(subjectPart, "expected parameter 'subjectPart' to be non-null");
-        this.templateName = templateName;
-        this.textPart = textPart;
-    }
+    private TemplateArgs() {}
 
-    private TemplateArgs() {
-        this.htmlPart = Codegen.empty();
-        this.subjectPart = Codegen.empty();
-        this.templateName = Codegen.empty();
-        this.textPart = Codegen.empty();
+    private TemplateArgs(TemplateArgs $) {
+        this.htmlPart = $.htmlPart;
+        this.subjectPart = $.subjectPart;
+        this.templateName = $.templateName;
+        this.textPart = $.textPart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> htmlPart;
-        private Output<String> subjectPart;
-        private @Nullable Output<String> templateName;
-        private @Nullable Output<String> textPart;
+        private TemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateArgs();
         }
 
         public Builder(TemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.htmlPart = defaults.htmlPart;
-    	      this.subjectPart = defaults.subjectPart;
-    	      this.templateName = defaults.templateName;
-    	      this.textPart = defaults.textPart;
+            $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder htmlPart(@Nullable Output<String> htmlPart) {
-            this.htmlPart = htmlPart;
+            $.htmlPart = htmlPart;
             return this;
         }
-        public Builder htmlPart(@Nullable String htmlPart) {
-            this.htmlPart = Codegen.ofNullable(htmlPart);
-            return this;
+
+        public Builder htmlPart(String htmlPart) {
+            return htmlPart(Output.of(htmlPart));
         }
+
         public Builder subjectPart(Output<String> subjectPart) {
-            this.subjectPart = Objects.requireNonNull(subjectPart);
+            $.subjectPart = subjectPart;
             return this;
         }
+
         public Builder subjectPart(String subjectPart) {
-            this.subjectPart = Output.of(Objects.requireNonNull(subjectPart));
-            return this;
+            return subjectPart(Output.of(subjectPart));
         }
+
         public Builder templateName(@Nullable Output<String> templateName) {
-            this.templateName = templateName;
+            $.templateName = templateName;
             return this;
         }
-        public Builder templateName(@Nullable String templateName) {
-            this.templateName = Codegen.ofNullable(templateName);
-            return this;
+
+        public Builder templateName(String templateName) {
+            return templateName(Output.of(templateName));
         }
+
         public Builder textPart(@Nullable Output<String> textPart) {
-            this.textPart = textPart;
+            $.textPart = textPart;
             return this;
         }
-        public Builder textPart(@Nullable String textPart) {
-            this.textPart = Codegen.ofNullable(textPart);
-            return this;
-        }        public TemplateArgs build() {
-            return new TemplateArgs(htmlPart, subjectPart, templateName, textPart);
+
+        public Builder textPart(String textPart) {
+            return textPart(Output.of(textPart));
+        }
+
+        public TemplateArgs build() {
+            $.subjectPart = Objects.requireNonNull($.subjectPart, "expected parameter 'subjectPart' to be non-null");
+            return $;
         }
     }
+
 }

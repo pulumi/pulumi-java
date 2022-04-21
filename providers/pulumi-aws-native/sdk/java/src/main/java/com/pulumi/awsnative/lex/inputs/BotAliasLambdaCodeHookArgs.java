@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class BotAliasLambdaCodeHookArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="codeHookInterfaceVersion", required=true)
-      private final Output<String> codeHookInterfaceVersion;
+    private Output<String> codeHookInterfaceVersion;
 
     public Output<String> codeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
@@ -34,63 +33,60 @@ public final class BotAliasLambdaCodeHookArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="lambdaArn", required=true)
-      private final Output<String> lambdaArn;
+    private Output<String> lambdaArn;
 
     public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
 
-    public BotAliasLambdaCodeHookArgs(
-        Output<String> codeHookInterfaceVersion,
-        Output<String> lambdaArn) {
-        this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion, "expected parameter 'codeHookInterfaceVersion' to be non-null");
-        this.lambdaArn = Objects.requireNonNull(lambdaArn, "expected parameter 'lambdaArn' to be non-null");
-    }
+    private BotAliasLambdaCodeHookArgs() {}
 
-    private BotAliasLambdaCodeHookArgs() {
-        this.codeHookInterfaceVersion = Codegen.empty();
-        this.lambdaArn = Codegen.empty();
+    private BotAliasLambdaCodeHookArgs(BotAliasLambdaCodeHookArgs $) {
+        this.codeHookInterfaceVersion = $.codeHookInterfaceVersion;
+        this.lambdaArn = $.lambdaArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasLambdaCodeHookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> codeHookInterfaceVersion;
-        private Output<String> lambdaArn;
+        private BotAliasLambdaCodeHookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasLambdaCodeHookArgs();
         }
 
         public Builder(BotAliasLambdaCodeHookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeHookInterfaceVersion = defaults.codeHookInterfaceVersion;
-    	      this.lambdaArn = defaults.lambdaArn;
+            $ = new BotAliasLambdaCodeHookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeHookInterfaceVersion(Output<String> codeHookInterfaceVersion) {
-            this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion);
+            $.codeHookInterfaceVersion = codeHookInterfaceVersion;
             return this;
         }
+
         public Builder codeHookInterfaceVersion(String codeHookInterfaceVersion) {
-            this.codeHookInterfaceVersion = Output.of(Objects.requireNonNull(codeHookInterfaceVersion));
-            return this;
+            return codeHookInterfaceVersion(Output.of(codeHookInterfaceVersion));
         }
+
         public Builder lambdaArn(Output<String> lambdaArn) {
-            this.lambdaArn = Objects.requireNonNull(lambdaArn);
+            $.lambdaArn = lambdaArn;
             return this;
         }
+
         public Builder lambdaArn(String lambdaArn) {
-            this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
-            return this;
-        }        public BotAliasLambdaCodeHookArgs build() {
-            return new BotAliasLambdaCodeHookArgs(codeHookInterfaceVersion, lambdaArn);
+            return lambdaArn(Output.of(lambdaArn));
+        }
+
+        public BotAliasLambdaCodeHookArgs build() {
+            $.codeHookInterfaceVersion = Objects.requireNonNull($.codeHookInterfaceVersion, "expected parameter 'codeHookInterfaceVersion' to be non-null");
+            $.lambdaArn = Objects.requireNonNull($.lambdaArn, "expected parameter 'lambdaArn' to be non-null");
+            return $;
         }
     }
+
 }

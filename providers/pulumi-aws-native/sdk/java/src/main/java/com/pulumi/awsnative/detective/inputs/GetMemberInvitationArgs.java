@@ -17,7 +17,7 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="graphArn", required=true)
-      private final String graphArn;
+    private String graphArn;
 
     public String graphArn() {
         return this.graphArn;
@@ -28,55 +28,52 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="memberId", required=true)
-      private final String memberId;
+    private String memberId;
 
     public String memberId() {
         return this.memberId;
     }
 
-    public GetMemberInvitationArgs(
-        String graphArn,
-        String memberId) {
-        this.graphArn = Objects.requireNonNull(graphArn, "expected parameter 'graphArn' to be non-null");
-        this.memberId = Objects.requireNonNull(memberId, "expected parameter 'memberId' to be non-null");
-    }
+    private GetMemberInvitationArgs() {}
 
-    private GetMemberInvitationArgs() {
-        this.graphArn = null;
-        this.memberId = null;
+    private GetMemberInvitationArgs(GetMemberInvitationArgs $) {
+        this.graphArn = $.graphArn;
+        this.memberId = $.memberId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMemberInvitationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String graphArn;
-        private String memberId;
+        private GetMemberInvitationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMemberInvitationArgs();
         }
 
         public Builder(GetMemberInvitationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.graphArn = defaults.graphArn;
-    	      this.memberId = defaults.memberId;
+            $ = new GetMemberInvitationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder graphArn(String graphArn) {
-            this.graphArn = Objects.requireNonNull(graphArn);
+            $.graphArn = graphArn;
             return this;
         }
+
         public Builder memberId(String memberId) {
-            this.memberId = Objects.requireNonNull(memberId);
+            $.memberId = memberId;
             return this;
-        }        public GetMemberInvitationArgs build() {
-            return new GetMemberInvitationArgs(graphArn, memberId);
+        }
+
+        public GetMemberInvitationArgs build() {
+            $.graphArn = Objects.requireNonNull($.graphArn, "expected parameter 'graphArn' to be non-null");
+            $.memberId = Objects.requireNonNull($.memberId, "expected parameter 'memberId' to be non-null");
+            return $;
         }
     }
+
 }

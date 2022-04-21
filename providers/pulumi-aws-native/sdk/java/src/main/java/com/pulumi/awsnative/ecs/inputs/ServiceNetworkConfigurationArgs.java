@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.inputs.ServiceAwsVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ServiceNetworkConfigurationArgs extends com.pulumi.resources.
     public static final ServiceNetworkConfigurationArgs Empty = new ServiceNetworkConfigurationArgs();
 
     @Import(name="awsvpcConfiguration")
-      private final @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
+    private @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
 
-    public Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration() {
-        return this.awsvpcConfiguration == null ? Codegen.empty() : this.awsvpcConfiguration;
+    public Optional<Output<ServiceAwsVpcConfigurationArgs>> awsvpcConfiguration() {
+        return Optional.ofNullable(this.awsvpcConfiguration);
     }
 
-    public ServiceNetworkConfigurationArgs(@Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
-        this.awsvpcConfiguration = awsvpcConfiguration;
-    }
+    private ServiceNetworkConfigurationArgs() {}
 
-    private ServiceNetworkConfigurationArgs() {
-        this.awsvpcConfiguration = Codegen.empty();
+    private ServiceNetworkConfigurationArgs(ServiceNetworkConfigurationArgs $) {
+        this.awsvpcConfiguration = $.awsvpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceNetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
+        private ServiceNetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceNetworkConfigurationArgs();
         }
 
         public Builder(ServiceNetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsvpcConfiguration = defaults.awsvpcConfiguration;
+            $ = new ServiceNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsvpcConfiguration(@Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
-            this.awsvpcConfiguration = awsvpcConfiguration;
+            $.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }
-        public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfigurationArgs awsvpcConfiguration) {
-            this.awsvpcConfiguration = Codegen.ofNullable(awsvpcConfiguration);
-            return this;
-        }        public ServiceNetworkConfigurationArgs build() {
-            return new ServiceNetworkConfigurationArgs(awsvpcConfiguration);
+
+        public Builder awsvpcConfiguration(ServiceAwsVpcConfigurationArgs awsvpcConfiguration) {
+            return awsvpcConfiguration(Output.of(awsvpcConfiguration));
+        }
+
+        public ServiceNetworkConfigurationArgs build() {
+            return $;
         }
     }
+
 }

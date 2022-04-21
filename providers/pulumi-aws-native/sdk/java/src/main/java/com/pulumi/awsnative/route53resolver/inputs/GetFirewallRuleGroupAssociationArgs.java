@@ -17,45 +17,45 @@ public final class GetFirewallRuleGroupAssociationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetFirewallRuleGroupAssociationArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetFirewallRuleGroupAssociationArgs() {}
 
-    private GetFirewallRuleGroupAssociationArgs() {
-        this.id = null;
+    private GetFirewallRuleGroupAssociationArgs(GetFirewallRuleGroupAssociationArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallRuleGroupAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetFirewallRuleGroupAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallRuleGroupAssociationArgs();
         }
 
         public Builder(GetFirewallRuleGroupAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetFirewallRuleGroupAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetFirewallRuleGroupAssociationArgs build() {
-            return new GetFirewallRuleGroupAssociationArgs(id);
+        }
+
+        public GetFirewallRuleGroupAssociationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

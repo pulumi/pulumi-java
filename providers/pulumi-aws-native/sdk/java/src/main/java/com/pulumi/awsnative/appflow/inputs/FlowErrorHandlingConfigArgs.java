@@ -5,10 +5,10 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class FlowErrorHandlingConfigArgs extends com.pulumi.resources.Reso
     public static final FlowErrorHandlingConfigArgs Empty = new FlowErrorHandlingConfigArgs();
 
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     @Import(name="bucketPrefix")
-      private final @Nullable Output<String> bucketPrefix;
+    private @Nullable Output<String> bucketPrefix;
 
-    public Output<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
+    public Optional<Output<String>> bucketPrefix() {
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="failOnFirstError")
-      private final @Nullable Output<Boolean> failOnFirstError;
+    private @Nullable Output<Boolean> failOnFirstError;
 
-    public Output<Boolean> failOnFirstError() {
-        return this.failOnFirstError == null ? Codegen.empty() : this.failOnFirstError;
+    public Optional<Output<Boolean>> failOnFirstError() {
+        return Optional.ofNullable(this.failOnFirstError);
     }
 
-    public FlowErrorHandlingConfigArgs(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<String> bucketPrefix,
-        @Nullable Output<Boolean> failOnFirstError) {
-        this.bucketName = bucketName;
-        this.bucketPrefix = bucketPrefix;
-        this.failOnFirstError = failOnFirstError;
-    }
+    private FlowErrorHandlingConfigArgs() {}
 
-    private FlowErrorHandlingConfigArgs() {
-        this.bucketName = Codegen.empty();
-        this.bucketPrefix = Codegen.empty();
-        this.failOnFirstError = Codegen.empty();
+    private FlowErrorHandlingConfigArgs(FlowErrorHandlingConfigArgs $) {
+        this.bucketName = $.bucketName;
+        this.bucketPrefix = $.bucketPrefix;
+        this.failOnFirstError = $.failOnFirstError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowErrorHandlingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<String> bucketPrefix;
-        private @Nullable Output<Boolean> failOnFirstError;
+        private FlowErrorHandlingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowErrorHandlingConfigArgs();
         }
 
         public Builder(FlowErrorHandlingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.failOnFirstError = defaults.failOnFirstError;
+            $ = new FlowErrorHandlingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
-        public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
-            return this;
+
+        public Builder bucketPrefix(String bucketPrefix) {
+            return bucketPrefix(Output.of(bucketPrefix));
         }
+
         public Builder failOnFirstError(@Nullable Output<Boolean> failOnFirstError) {
-            this.failOnFirstError = failOnFirstError;
+            $.failOnFirstError = failOnFirstError;
             return this;
         }
-        public Builder failOnFirstError(@Nullable Boolean failOnFirstError) {
-            this.failOnFirstError = Codegen.ofNullable(failOnFirstError);
-            return this;
-        }        public FlowErrorHandlingConfigArgs build() {
-            return new FlowErrorHandlingConfigArgs(bucketName, bucketPrefix, failOnFirstError);
+
+        public Builder failOnFirstError(Boolean failOnFirstError) {
+            return failOnFirstError(Output.of(failOnFirstError));
+        }
+
+        public FlowErrorHandlingConfigArgs build() {
+            return $;
         }
     }
+
 }

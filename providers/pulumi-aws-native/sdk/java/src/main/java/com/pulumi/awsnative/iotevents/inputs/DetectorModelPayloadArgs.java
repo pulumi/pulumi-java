@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class DetectorModelPayloadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="contentExpression", required=true)
-      private final Output<String> contentExpression;
+    private Output<String> contentExpression;
 
     public Output<String> contentExpression() {
         return this.contentExpression;
@@ -36,63 +35,60 @@ public final class DetectorModelPayloadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DetectorModelPayloadArgs(
-        Output<String> contentExpression,
-        Output<String> type) {
-        this.contentExpression = Objects.requireNonNull(contentExpression, "expected parameter 'contentExpression' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DetectorModelPayloadArgs() {}
 
-    private DetectorModelPayloadArgs() {
-        this.contentExpression = Codegen.empty();
-        this.type = Codegen.empty();
+    private DetectorModelPayloadArgs(DetectorModelPayloadArgs $) {
+        this.contentExpression = $.contentExpression;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelPayloadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contentExpression;
-        private Output<String> type;
+        private DetectorModelPayloadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelPayloadArgs();
         }
 
         public Builder(DetectorModelPayloadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentExpression = defaults.contentExpression;
-    	      this.type = defaults.type;
+            $ = new DetectorModelPayloadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentExpression(Output<String> contentExpression) {
-            this.contentExpression = Objects.requireNonNull(contentExpression);
+            $.contentExpression = contentExpression;
             return this;
         }
+
         public Builder contentExpression(String contentExpression) {
-            this.contentExpression = Output.of(Objects.requireNonNull(contentExpression));
-            return this;
+            return contentExpression(Output.of(contentExpression));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DetectorModelPayloadArgs build() {
-            return new DetectorModelPayloadArgs(contentExpression, type);
+            return type(Output.of(type));
+        }
+
+        public DetectorModelPayloadArgs build() {
+            $.contentExpression = Objects.requireNonNull($.contentExpression, "expected parameter 'contentExpression' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,84 @@ public final class TopicRuleSnsActionArgs extends com.pulumi.resources.ResourceA
     public static final TopicRuleSnsActionArgs Empty = new TopicRuleSnsActionArgs();
 
     @Import(name="messageFormat")
-      private final @Nullable Output<String> messageFormat;
+    private @Nullable Output<String> messageFormat;
 
-    public Output<String> messageFormat() {
-        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
+    public Optional<Output<String>> messageFormat() {
+        return Optional.ofNullable(this.messageFormat);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="targetArn", required=true)
-      private final Output<String> targetArn;
+    private Output<String> targetArn;
 
     public Output<String> targetArn() {
         return this.targetArn;
     }
 
-    public TopicRuleSnsActionArgs(
-        @Nullable Output<String> messageFormat,
-        Output<String> roleArn,
-        Output<String> targetArn) {
-        this.messageFormat = messageFormat;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
-    }
+    private TopicRuleSnsActionArgs() {}
 
-    private TopicRuleSnsActionArgs() {
-        this.messageFormat = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.targetArn = Codegen.empty();
+    private TopicRuleSnsActionArgs(TopicRuleSnsActionArgs $) {
+        this.messageFormat = $.messageFormat;
+        this.roleArn = $.roleArn;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleSnsActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> messageFormat;
-        private Output<String> roleArn;
-        private Output<String> targetArn;
+        private TopicRuleSnsActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleSnsActionArgs();
         }
 
         public Builder(TopicRuleSnsActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.roleArn = defaults.roleArn;
-    	      this.targetArn = defaults.targetArn;
+            $ = new TopicRuleSnsActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFormat(@Nullable Output<String> messageFormat) {
-            this.messageFormat = messageFormat;
+            $.messageFormat = messageFormat;
             return this;
         }
-        public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Codegen.ofNullable(messageFormat);
-            return this;
+
+        public Builder messageFormat(String messageFormat) {
+            return messageFormat(Output.of(messageFormat));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder targetArn(Output<String> targetArn) {
-            this.targetArn = Objects.requireNonNull(targetArn);
+            $.targetArn = targetArn;
             return this;
         }
+
         public Builder targetArn(String targetArn) {
-            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
-            return this;
-        }        public TopicRuleSnsActionArgs build() {
-            return new TopicRuleSnsActionArgs(messageFormat, roleArn, targetArn);
+            return targetArn(Output.of(targetArn));
+        }
+
+        public TopicRuleSnsActionArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.targetArn = Objects.requireNonNull($.targetArn, "expected parameter 'targetArn' to be non-null");
+            return $;
         }
     }
+
 }

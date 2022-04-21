@@ -25,10 +25,10 @@ public final class FleetResourceCreationLimitPolicy extends com.pulumi.resources
      * 
      */
     @Import(name="newGameSessionsPerCreator")
-      private final @Nullable Integer newGameSessionsPerCreator;
+    private @Nullable Integer newGameSessionsPerCreator;
 
     public Optional<Integer> newGameSessionsPerCreator() {
-        return this.newGameSessionsPerCreator == null ? Optional.empty() : Optional.ofNullable(this.newGameSessionsPerCreator);
+        return Optional.ofNullable(this.newGameSessionsPerCreator);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class FleetResourceCreationLimitPolicy extends com.pulumi.resources
      * 
      */
     @Import(name="policyPeriodInMinutes")
-      private final @Nullable Integer policyPeriodInMinutes;
+    private @Nullable Integer policyPeriodInMinutes;
 
     public Optional<Integer> policyPeriodInMinutes() {
-        return this.policyPeriodInMinutes == null ? Optional.empty() : Optional.ofNullable(this.policyPeriodInMinutes);
+        return Optional.ofNullable(this.policyPeriodInMinutes);
     }
 
-    public FleetResourceCreationLimitPolicy(
-        @Nullable Integer newGameSessionsPerCreator,
-        @Nullable Integer policyPeriodInMinutes) {
-        this.newGameSessionsPerCreator = newGameSessionsPerCreator;
-        this.policyPeriodInMinutes = policyPeriodInMinutes;
-    }
+    private FleetResourceCreationLimitPolicy() {}
 
-    private FleetResourceCreationLimitPolicy() {
-        this.newGameSessionsPerCreator = null;
-        this.policyPeriodInMinutes = null;
+    private FleetResourceCreationLimitPolicy(FleetResourceCreationLimitPolicy $) {
+        this.newGameSessionsPerCreator = $.newGameSessionsPerCreator;
+        this.policyPeriodInMinutes = $.policyPeriodInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetResourceCreationLimitPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer newGameSessionsPerCreator;
-        private @Nullable Integer policyPeriodInMinutes;
+        private FleetResourceCreationLimitPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetResourceCreationLimitPolicy();
         }
 
         public Builder(FleetResourceCreationLimitPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.newGameSessionsPerCreator = defaults.newGameSessionsPerCreator;
-    	      this.policyPeriodInMinutes = defaults.policyPeriodInMinutes;
+            $ = new FleetResourceCreationLimitPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder newGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
-            this.newGameSessionsPerCreator = newGameSessionsPerCreator;
+            $.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
+
         public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
-            this.policyPeriodInMinutes = policyPeriodInMinutes;
+            $.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
-        }        public FleetResourceCreationLimitPolicy build() {
-            return new FleetResourceCreationLimitPolicy(newGameSessionsPerCreator, policyPeriodInMinutes);
+        }
+
+        public FleetResourceCreationLimitPolicy build() {
+            return $;
         }
     }
+
 }

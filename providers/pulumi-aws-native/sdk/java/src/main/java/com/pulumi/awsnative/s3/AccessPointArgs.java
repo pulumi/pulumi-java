@@ -8,10 +8,10 @@ import com.pulumi.awsnative.s3.inputs.AccessPointVpcConfigurationArgs;
 import com.pulumi.awsnative.s3.inputs.PolicyStatusPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -35,17 +35,17 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<Object> policy;
+    private @Nullable Output<Object> policy;
 
-    public Output<Object> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<Object>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     @Import(name="policyStatus")
-      private final @Nullable Output<PolicyStatusPropertiesArgs> policyStatus;
+    private @Nullable Output<PolicyStatusPropertiesArgs> policyStatus;
 
-    public Output<PolicyStatusPropertiesArgs> policyStatus() {
-        return this.policyStatus == null ? Codegen.empty() : this.policyStatus;
+    public Optional<Output<PolicyStatusPropertiesArgs>> policyStatus() {
+        return Optional.ofNullable(this.policyStatus);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicAccessBlockConfiguration")
-      private final @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+    private @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
+    public Optional<Output<AccessPointPublicAccessBlockConfigurationArgs>> publicAccessBlockConfiguration() {
+        return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
 
     /**
@@ -64,102 +64,89 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfiguration")
-      private final @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
+    private @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<AccessPointVpcConfigurationArgs> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
+    public Optional<Output<AccessPointVpcConfigurationArgs>> vpcConfiguration() {
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public AccessPointArgs(
-        Output<String> bucket,
-        @Nullable Output<Object> policy,
-        @Nullable Output<PolicyStatusPropertiesArgs> policyStatus,
-        @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration,
-        @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.policy = policy;
-        this.policyStatus = policyStatus;
-        this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private AccessPointArgs() {}
 
-    private AccessPointArgs() {
-        this.bucket = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.policyStatus = Codegen.empty();
-        this.publicAccessBlockConfiguration = Codegen.empty();
-        this.vpcConfiguration = Codegen.empty();
+    private AccessPointArgs(AccessPointArgs $) {
+        this.bucket = $.bucket;
+        this.policy = $.policy;
+        this.policyStatus = $.policyStatus;
+        this.publicAccessBlockConfiguration = $.publicAccessBlockConfiguration;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<Object> policy;
-        private @Nullable Output<PolicyStatusPropertiesArgs> policyStatus;
-        private @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
-        private @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
+        private AccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointArgs();
         }
 
         public Builder(AccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.policy = defaults.policy;
-    	      this.policyStatus = defaults.policyStatus;
-    	      this.publicAccessBlockConfiguration = defaults.publicAccessBlockConfiguration;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new AccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder policy(@Nullable Output<Object> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable Object policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(Object policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder policyStatus(@Nullable Output<PolicyStatusPropertiesArgs> policyStatus) {
-            this.policyStatus = policyStatus;
+            $.policyStatus = policyStatus;
             return this;
         }
-        public Builder policyStatus(@Nullable PolicyStatusPropertiesArgs policyStatus) {
-            this.policyStatus = Codegen.ofNullable(policyStatus);
-            return this;
+
+        public Builder policyStatus(PolicyStatusPropertiesArgs policyStatus) {
+            return policyStatus(Output.of(policyStatus));
         }
+
         public Builder publicAccessBlockConfiguration(@Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
+            $.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
-        public Builder publicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = Codegen.ofNullable(publicAccessBlockConfiguration);
-            return this;
+
+        public Builder publicAccessBlockConfiguration(AccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
+            return publicAccessBlockConfiguration(Output.of(publicAccessBlockConfiguration));
         }
+
         public Builder vpcConfiguration(@Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
         }
-        public Builder vpcConfiguration(@Nullable AccessPointVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
-            return this;
-        }        public AccessPointArgs build() {
-            return new AccessPointArgs(bucket, policy, policyStatus, publicAccessBlockConfiguration, vpcConfiguration);
+
+        public Builder vpcConfiguration(AccessPointVpcConfigurationArgs vpcConfiguration) {
+            return vpcConfiguration(Output.of(vpcConfiguration));
+        }
+
+        public AccessPointArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

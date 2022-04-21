@@ -7,10 +7,10 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLExcludedRuleArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,133 +19,122 @@ public final class WebACLManagedRuleGroupStatementArgs extends com.pulumi.resour
     public static final WebACLManagedRuleGroupStatementArgs Empty = new WebACLManagedRuleGroupStatementArgs();
 
     @Import(name="excludedRules")
-      private final @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
+    private @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
 
-    public Output<List<WebACLExcludedRuleArgs>> excludedRules() {
-        return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
+    public Optional<Output<List<WebACLExcludedRuleArgs>>> excludedRules() {
+        return Optional.ofNullable(this.excludedRules);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="scopeDownStatement")
-      private final @Nullable Output<WebACLStatementArgs> scopeDownStatement;
+    private @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
-    public Output<WebACLStatementArgs> scopeDownStatement() {
-        return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
+    public Optional<Output<WebACLStatementArgs>> scopeDownStatement() {
+        return Optional.ofNullable(this.scopeDownStatement);
     }
 
     @Import(name="vendorName", required=true)
-      private final Output<String> vendorName;
+    private Output<String> vendorName;
 
     public Output<String> vendorName() {
         return this.vendorName;
     }
 
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public WebACLManagedRuleGroupStatementArgs(
-        @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules,
-        Output<String> name,
-        @Nullable Output<WebACLStatementArgs> scopeDownStatement,
-        Output<String> vendorName,
-        @Nullable Output<String> version) {
-        this.excludedRules = excludedRules;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scopeDownStatement = scopeDownStatement;
-        this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
-        this.version = version;
-    }
+    private WebACLManagedRuleGroupStatementArgs() {}
 
-    private WebACLManagedRuleGroupStatementArgs() {
-        this.excludedRules = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scopeDownStatement = Codegen.empty();
-        this.vendorName = Codegen.empty();
-        this.version = Codegen.empty();
+    private WebACLManagedRuleGroupStatementArgs(WebACLManagedRuleGroupStatementArgs $) {
+        this.excludedRules = $.excludedRules;
+        this.name = $.name;
+        this.scopeDownStatement = $.scopeDownStatement;
+        this.vendorName = $.vendorName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLManagedRuleGroupStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
-        private Output<String> name;
-        private @Nullable Output<WebACLStatementArgs> scopeDownStatement;
-        private Output<String> vendorName;
-        private @Nullable Output<String> version;
+        private WebACLManagedRuleGroupStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLManagedRuleGroupStatementArgs();
         }
 
         public Builder(WebACLManagedRuleGroupStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedRules = defaults.excludedRules;
-    	      this.name = defaults.name;
-    	      this.scopeDownStatement = defaults.scopeDownStatement;
-    	      this.vendorName = defaults.vendorName;
-    	      this.version = defaults.version;
+            $ = new WebACLManagedRuleGroupStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedRules(@Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules) {
-            this.excludedRules = excludedRules;
+            $.excludedRules = excludedRules;
             return this;
         }
-        public Builder excludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
-            this.excludedRules = Codegen.ofNullable(excludedRules);
-            return this;
+
+        public Builder excludedRules(List<WebACLExcludedRuleArgs> excludedRules) {
+            return excludedRules(Output.of(excludedRules));
         }
+
         public Builder excludedRules(WebACLExcludedRuleArgs... excludedRules) {
             return excludedRules(List.of(excludedRules));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder scopeDownStatement(@Nullable Output<WebACLStatementArgs> scopeDownStatement) {
-            this.scopeDownStatement = scopeDownStatement;
+            $.scopeDownStatement = scopeDownStatement;
             return this;
         }
-        public Builder scopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
-            this.scopeDownStatement = Codegen.ofNullable(scopeDownStatement);
-            return this;
+
+        public Builder scopeDownStatement(WebACLStatementArgs scopeDownStatement) {
+            return scopeDownStatement(Output.of(scopeDownStatement));
         }
+
         public Builder vendorName(Output<String> vendorName) {
-            this.vendorName = Objects.requireNonNull(vendorName);
+            $.vendorName = vendorName;
             return this;
         }
+
         public Builder vendorName(String vendorName) {
-            this.vendorName = Output.of(Objects.requireNonNull(vendorName));
-            return this;
+            return vendorName(Output.of(vendorName));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public WebACLManagedRuleGroupStatementArgs build() {
-            return new WebACLManagedRuleGroupStatementArgs(excludedRules, name, scopeDownStatement, vendorName, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public WebACLManagedRuleGroupStatementArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.vendorName = Objects.requireNonNull($.vendorName, "expected parameter 'vendorName' to be non-null");
+            return $;
         }
     }
+
 }

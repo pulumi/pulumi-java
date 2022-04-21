@@ -13,45 +13,45 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
     @Import(name="functionARN", required=true)
-      private final String functionARN;
+    private String functionARN;
 
     public String functionARN() {
         return this.functionARN;
     }
 
-    public GetFunctionArgs(String functionARN) {
-        this.functionARN = Objects.requireNonNull(functionARN, "expected parameter 'functionARN' to be non-null");
-    }
+    private GetFunctionArgs() {}
 
-    private GetFunctionArgs() {
-        this.functionARN = null;
+    private GetFunctionArgs(GetFunctionArgs $) {
+        this.functionARN = $.functionARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionARN;
+        private GetFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionArgs();
         }
 
         public Builder(GetFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionARN = defaults.functionARN;
+            $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionARN(String functionARN) {
-            this.functionARN = Objects.requireNonNull(functionARN);
+            $.functionARN = functionARN;
             return this;
-        }        public GetFunctionArgs build() {
-            return new GetFunctionArgs(functionARN);
+        }
+
+        public GetFunctionArgs build() {
+            $.functionARN = Objects.requireNonNull($.functionARN, "expected parameter 'functionARN' to be non-null");
+            return $;
         }
     }
+
 }

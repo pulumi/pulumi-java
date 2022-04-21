@@ -7,9 +7,9 @@ import com.pulumi.awsnative.s3.inputs.StorageLensConfigurationArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class StorageLensArgs extends com.pulumi.resources.ResourceArgs {
     public static final StorageLensArgs Empty = new StorageLensArgs();
 
     @Import(name="storageLensConfiguration", required=true)
-      private final Output<StorageLensConfigurationArgs> storageLensConfiguration;
+    private Output<StorageLensConfigurationArgs> storageLensConfiguration;
 
     public Output<StorageLensConfigurationArgs> storageLensConfiguration() {
         return this.storageLensConfiguration;
@@ -29,66 +29,63 @@ public final class StorageLensArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<StorageLensTagArgs>> tags;
+    private @Nullable Output<List<StorageLensTagArgs>> tags;
 
-    public Output<List<StorageLensTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<StorageLensTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StorageLensArgs(
-        Output<StorageLensConfigurationArgs> storageLensConfiguration,
-        @Nullable Output<List<StorageLensTagArgs>> tags) {
-        this.storageLensConfiguration = Objects.requireNonNull(storageLensConfiguration, "expected parameter 'storageLensConfiguration' to be non-null");
-        this.tags = tags;
-    }
+    private StorageLensArgs() {}
 
-    private StorageLensArgs() {
-        this.storageLensConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StorageLensArgs(StorageLensArgs $) {
+        this.storageLensConfiguration = $.storageLensConfiguration;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<StorageLensConfigurationArgs> storageLensConfiguration;
-        private @Nullable Output<List<StorageLensTagArgs>> tags;
+        private StorageLensArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensArgs();
         }
 
         public Builder(StorageLensArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageLensConfiguration = defaults.storageLensConfiguration;
-    	      this.tags = defaults.tags;
+            $ = new StorageLensArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageLensConfiguration(Output<StorageLensConfigurationArgs> storageLensConfiguration) {
-            this.storageLensConfiguration = Objects.requireNonNull(storageLensConfiguration);
+            $.storageLensConfiguration = storageLensConfiguration;
             return this;
         }
+
         public Builder storageLensConfiguration(StorageLensConfigurationArgs storageLensConfiguration) {
-            this.storageLensConfiguration = Output.of(Objects.requireNonNull(storageLensConfiguration));
-            return this;
+            return storageLensConfiguration(Output.of(storageLensConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<StorageLensTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<StorageLensTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<StorageLensTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(StorageLensTagArgs... tags) {
             return tags(List.of(tags));
-        }        public StorageLensArgs build() {
-            return new StorageLensArgs(storageLensConfiguration, tags);
+        }
+
+        public StorageLensArgs build() {
+            $.storageLensConfiguration = Objects.requireNonNull($.storageLensConfiguration, "expected parameter 'storageLensConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.stepfunctions.inputs;
 
-import java.util.Objects;
+
 
 
 public final class StateMachineDefinitionSubstitutionsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final StateMachineDefinitionSubstitutionsArgs Empty = new StateMachineDefinitionSubstitutionsArgs();
 
-    public StateMachineDefinitionSubstitutionsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(StateMachineDefinitionSubstitutionsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private StateMachineDefinitionSubstitutionsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(StateMachineDefinitionSubstitutionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new StateMachineDefinitionSubstitutionsArgs();
         }
         public StateMachineDefinitionSubstitutionsArgs build() {
-            return new StateMachineDefinitionSubstitutionsArgs();
+            return $;
         }
     }
+
 }

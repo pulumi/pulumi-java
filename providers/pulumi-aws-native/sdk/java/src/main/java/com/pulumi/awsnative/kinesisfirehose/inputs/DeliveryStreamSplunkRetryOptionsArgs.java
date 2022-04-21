@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DeliveryStreamSplunkRetryOptionsArgs extends com.pulumi.resou
     public static final DeliveryStreamSplunkRetryOptionsArgs Empty = new DeliveryStreamSplunkRetryOptionsArgs();
 
     @Import(name="durationInSeconds")
-      private final @Nullable Output<Integer> durationInSeconds;
+    private @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
+    public Optional<Output<Integer>> durationInSeconds() {
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
-    public DeliveryStreamSplunkRetryOptionsArgs(@Nullable Output<Integer> durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
-    }
+    private DeliveryStreamSplunkRetryOptionsArgs() {}
 
-    private DeliveryStreamSplunkRetryOptionsArgs() {
-        this.durationInSeconds = Codegen.empty();
+    private DeliveryStreamSplunkRetryOptionsArgs(DeliveryStreamSplunkRetryOptionsArgs $) {
+        this.durationInSeconds = $.durationInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamSplunkRetryOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> durationInSeconds;
+        private DeliveryStreamSplunkRetryOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamSplunkRetryOptionsArgs();
         }
 
         public Builder(DeliveryStreamSplunkRetryOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
+            $ = new DeliveryStreamSplunkRetryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Output<Integer> durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
         }
-        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = Codegen.ofNullable(durationInSeconds);
-            return this;
-        }        public DeliveryStreamSplunkRetryOptionsArgs build() {
-            return new DeliveryStreamSplunkRetryOptionsArgs(durationInSeconds);
+
+        public Builder durationInSeconds(Integer durationInSeconds) {
+            return durationInSeconds(Output.of(durationInSeconds));
+        }
+
+        public DeliveryStreamSplunkRetryOptionsArgs build() {
+            return $;
         }
     }
+
 }

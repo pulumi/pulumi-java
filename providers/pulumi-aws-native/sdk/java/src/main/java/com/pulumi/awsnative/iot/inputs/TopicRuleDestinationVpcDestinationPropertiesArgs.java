@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,116 +17,107 @@ public final class TopicRuleDestinationVpcDestinationPropertiesArgs extends com.
     public static final TopicRuleDestinationVpcDestinationPropertiesArgs Empty = new TopicRuleDestinationVpcDestinationPropertiesArgs();
 
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public TopicRuleDestinationVpcDestinationPropertiesArgs(
-        @Nullable Output<String> roleArn,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<String> vpcId) {
-        this.roleArn = roleArn;
-        this.securityGroups = securityGroups;
-        this.subnetIds = subnetIds;
-        this.vpcId = vpcId;
-    }
+    private TopicRuleDestinationVpcDestinationPropertiesArgs() {}
 
-    private TopicRuleDestinationVpcDestinationPropertiesArgs() {
-        this.roleArn = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private TopicRuleDestinationVpcDestinationPropertiesArgs(TopicRuleDestinationVpcDestinationPropertiesArgs $) {
+        this.roleArn = $.roleArn;
+        this.securityGroups = $.securityGroups;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleDestinationVpcDestinationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<String> vpcId;
+        private TopicRuleDestinationVpcDestinationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleDestinationVpcDestinationPropertiesArgs();
         }
 
         public Builder(TopicRuleDestinationVpcDestinationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new TopicRuleDestinationVpcDestinationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public TopicRuleDestinationVpcDestinationPropertiesArgs build() {
-            return new TopicRuleDestinationVpcDestinationPropertiesArgs(roleArn, securityGroups, subnetIds, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public TopicRuleDestinationVpcDestinationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

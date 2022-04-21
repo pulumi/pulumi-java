@@ -20,62 +20,57 @@ public final class ConnectorCapacity extends com.pulumi.resources.InvokeArgs {
     public static final ConnectorCapacity Empty = new ConnectorCapacity();
 
     @Import(name="autoScaling")
-      private final @Nullable ConnectorAutoScaling autoScaling;
+    private @Nullable ConnectorAutoScaling autoScaling;
 
     public Optional<ConnectorAutoScaling> autoScaling() {
-        return this.autoScaling == null ? Optional.empty() : Optional.ofNullable(this.autoScaling);
+        return Optional.ofNullable(this.autoScaling);
     }
 
     @Import(name="provisionedCapacity")
-      private final @Nullable ConnectorProvisionedCapacity provisionedCapacity;
+    private @Nullable ConnectorProvisionedCapacity provisionedCapacity;
 
     public Optional<ConnectorProvisionedCapacity> provisionedCapacity() {
-        return this.provisionedCapacity == null ? Optional.empty() : Optional.ofNullable(this.provisionedCapacity);
+        return Optional.ofNullable(this.provisionedCapacity);
     }
 
-    public ConnectorCapacity(
-        @Nullable ConnectorAutoScaling autoScaling,
-        @Nullable ConnectorProvisionedCapacity provisionedCapacity) {
-        this.autoScaling = autoScaling;
-        this.provisionedCapacity = provisionedCapacity;
-    }
+    private ConnectorCapacity() {}
 
-    private ConnectorCapacity() {
-        this.autoScaling = null;
-        this.provisionedCapacity = null;
+    private ConnectorCapacity(ConnectorCapacity $) {
+        this.autoScaling = $.autoScaling;
+        this.provisionedCapacity = $.provisionedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorCapacity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConnectorAutoScaling autoScaling;
-        private @Nullable ConnectorProvisionedCapacity provisionedCapacity;
+        private ConnectorCapacity $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorCapacity();
         }
 
         public Builder(ConnectorCapacity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScaling = defaults.autoScaling;
-    	      this.provisionedCapacity = defaults.provisionedCapacity;
+            $ = new ConnectorCapacity(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScaling(@Nullable ConnectorAutoScaling autoScaling) {
-            this.autoScaling = autoScaling;
+            $.autoScaling = autoScaling;
             return this;
         }
+
         public Builder provisionedCapacity(@Nullable ConnectorProvisionedCapacity provisionedCapacity) {
-            this.provisionedCapacity = provisionedCapacity;
+            $.provisionedCapacity = provisionedCapacity;
             return this;
-        }        public ConnectorCapacity build() {
-            return new ConnectorCapacity(autoScaling, provisionedCapacity);
+        }
+
+        public ConnectorCapacity build() {
+            return $;
         }
     }
+
 }

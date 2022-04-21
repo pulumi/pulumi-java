@@ -19,7 +19,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final String instanceArn;
+    private String instanceArn;
 
     public String instanceArn() {
         return this.instanceArn;
@@ -30,7 +30,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="permissionSetArn", required=true)
-      private final String permissionSetArn;
+    private String permissionSetArn;
 
     public String permissionSetArn() {
         return this.permissionSetArn;
@@ -41,7 +41,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -52,7 +52,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalType", required=true)
-      private final AssignmentPrincipalType principalType;
+    private AssignmentPrincipalType principalType;
 
     public AssignmentPrincipalType principalType() {
         return this.principalType;
@@ -63,7 +63,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetId", required=true)
-      private final String targetId;
+    private String targetId;
 
     public String targetId() {
         return this.targetId;
@@ -74,91 +74,80 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetType", required=true)
-      private final AssignmentTargetType targetType;
+    private AssignmentTargetType targetType;
 
     public AssignmentTargetType targetType() {
         return this.targetType;
     }
 
-    public GetAssignmentArgs(
-        String instanceArn,
-        String permissionSetArn,
-        String principalId,
-        AssignmentPrincipalType principalType,
-        String targetId,
-        AssignmentTargetType targetType) {
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-        this.permissionSetArn = Objects.requireNonNull(permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-        this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
-    }
+    private GetAssignmentArgs() {}
 
-    private GetAssignmentArgs() {
-        this.instanceArn = null;
-        this.permissionSetArn = null;
-        this.principalId = null;
-        this.principalType = null;
-        this.targetId = null;
-        this.targetType = null;
+    private GetAssignmentArgs(GetAssignmentArgs $) {
+        this.instanceArn = $.instanceArn;
+        this.permissionSetArn = $.permissionSetArn;
+        this.principalId = $.principalId;
+        this.principalType = $.principalType;
+        this.targetId = $.targetId;
+        this.targetType = $.targetType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceArn;
-        private String permissionSetArn;
-        private String principalId;
-        private AssignmentPrincipalType principalType;
-        private String targetId;
-        private AssignmentTargetType targetType;
+        private GetAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssignmentArgs();
         }
 
         public Builder(GetAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.permissionSetArn = defaults.permissionSetArn;
-    	      this.principalId = defaults.principalId;
-    	      this.principalType = defaults.principalType;
-    	      this.targetId = defaults.targetId;
-    	      this.targetType = defaults.targetType;
+            $ = new GetAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
         }
+
         public Builder permissionSetArn(String permissionSetArn) {
-            this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalType(AssignmentPrincipalType principalType) {
-            this.principalType = Objects.requireNonNull(principalType);
+            $.principalType = principalType;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder targetType(AssignmentTargetType targetType) {
-            this.targetType = Objects.requireNonNull(targetType);
+            $.targetType = targetType;
             return this;
-        }        public GetAssignmentArgs build() {
-            return new GetAssignmentArgs(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
+        }
+
+        public GetAssignmentArgs build() {
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            $.permissionSetArn = Objects.requireNonNull($.permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.principalType = Objects.requireNonNull($.principalType, "expected parameter 'principalType' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            $.targetType = Objects.requireNonNull($.targetType, "expected parameter 'targetType' to be non-null");
+            return $;
         }
     }
+
 }

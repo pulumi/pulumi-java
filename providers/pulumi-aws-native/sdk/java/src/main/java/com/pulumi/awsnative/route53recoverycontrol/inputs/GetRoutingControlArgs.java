@@ -17,45 +17,45 @@ public final class GetRoutingControlArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routingControlArn", required=true)
-      private final String routingControlArn;
+    private String routingControlArn;
 
     public String routingControlArn() {
         return this.routingControlArn;
     }
 
-    public GetRoutingControlArgs(String routingControlArn) {
-        this.routingControlArn = Objects.requireNonNull(routingControlArn, "expected parameter 'routingControlArn' to be non-null");
-    }
+    private GetRoutingControlArgs() {}
 
-    private GetRoutingControlArgs() {
-        this.routingControlArn = null;
+    private GetRoutingControlArgs(GetRoutingControlArgs $) {
+        this.routingControlArn = $.routingControlArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoutingControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String routingControlArn;
+        private GetRoutingControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoutingControlArgs();
         }
 
         public Builder(GetRoutingControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routingControlArn = defaults.routingControlArn;
+            $ = new GetRoutingControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder routingControlArn(String routingControlArn) {
-            this.routingControlArn = Objects.requireNonNull(routingControlArn);
+            $.routingControlArn = routingControlArn;
             return this;
-        }        public GetRoutingControlArgs build() {
-            return new GetRoutingControlArgs(routingControlArn);
+        }
+
+        public GetRoutingControlArgs build() {
+            $.routingControlArn = Objects.requireNonNull($.routingControlArn, "expected parameter 'routingControlArn' to be non-null");
+            return $;
         }
     }
+
 }

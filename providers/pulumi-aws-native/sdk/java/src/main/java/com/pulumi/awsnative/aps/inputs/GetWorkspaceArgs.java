@@ -17,45 +17,45 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetWorkspaceArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetWorkspaceArgs() {}
 
-    private GetWorkspaceArgs() {
-        this.arn = null;
+    private GetWorkspaceArgs(GetWorkspaceArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetWorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkspaceArgs();
         }
 
         public Builder(GetWorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetWorkspaceArgs build() {
-            return new GetWorkspaceArgs(arn);
+        }
+
+        public GetWorkspaceArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

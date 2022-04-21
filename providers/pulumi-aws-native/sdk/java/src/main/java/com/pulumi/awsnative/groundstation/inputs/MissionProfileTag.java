@@ -15,62 +15,57 @@ public final class MissionProfileTag extends com.pulumi.resources.InvokeArgs {
     public static final MissionProfileTag Empty = new MissionProfileTag();
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public MissionProfileTag(
-        @Nullable String key,
-        @Nullable String value) {
-        this.key = key;
-        this.value = value;
-    }
+    private MissionProfileTag() {}
 
-    private MissionProfileTag() {
-        this.key = null;
-        this.value = null;
+    private MissionProfileTag(MissionProfileTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MissionProfileTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private @Nullable String value;
+        private MissionProfileTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new MissionProfileTag();
         }
 
         public Builder(MissionProfileTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new MissionProfileTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public MissionProfileTag build() {
-            return new MissionProfileTag(key, value);
+        }
+
+        public MissionProfileTag build() {
+            return $;
         }
     }
+
 }

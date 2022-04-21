@@ -17,45 +17,45 @@ public final class GetIPAMScopeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipamScopeId", required=true)
-      private final String ipamScopeId;
+    private String ipamScopeId;
 
     public String ipamScopeId() {
         return this.ipamScopeId;
     }
 
-    public GetIPAMScopeArgs(String ipamScopeId) {
-        this.ipamScopeId = Objects.requireNonNull(ipamScopeId, "expected parameter 'ipamScopeId' to be non-null");
-    }
+    private GetIPAMScopeArgs() {}
 
-    private GetIPAMScopeArgs() {
-        this.ipamScopeId = null;
+    private GetIPAMScopeArgs(GetIPAMScopeArgs $) {
+        this.ipamScopeId = $.ipamScopeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIPAMScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipamScopeId;
+        private GetIPAMScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIPAMScopeArgs();
         }
 
         public Builder(GetIPAMScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipamScopeId = defaults.ipamScopeId;
+            $ = new GetIPAMScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipamScopeId(String ipamScopeId) {
-            this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
+            $.ipamScopeId = ipamScopeId;
             return this;
-        }        public GetIPAMScopeArgs build() {
-            return new GetIPAMScopeArgs(ipamScopeId);
+        }
+
+        public GetIPAMScopeArgs build() {
+            $.ipamScopeId = Objects.requireNonNull($.ipamScopeId, "expected parameter 'ipamScopeId' to be non-null");
+            return $;
         }
     }
+
 }

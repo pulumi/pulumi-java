@@ -23,45 +23,44 @@ public final class EventSourceMappingFilter extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pattern")
-      private final @Nullable String pattern;
+    private @Nullable String pattern;
 
     public Optional<String> pattern() {
-        return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
+        return Optional.ofNullable(this.pattern);
     }
 
-    public EventSourceMappingFilter(@Nullable String pattern) {
-        this.pattern = pattern;
-    }
+    private EventSourceMappingFilter() {}
 
-    private EventSourceMappingFilter() {
-        this.pattern = null;
+    private EventSourceMappingFilter(EventSourceMappingFilter $) {
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String pattern;
+        private EventSourceMappingFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingFilter();
         }
 
         public Builder(EventSourceMappingFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pattern = defaults.pattern;
+            $ = new EventSourceMappingFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
-        }        public EventSourceMappingFilter build() {
-            return new EventSourceMappingFilter(pattern);
+        }
+
+        public EventSourceMappingFilter build() {
+            return $;
         }
     }
+
 }

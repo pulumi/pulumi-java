@@ -5,9 +5,9 @@ package com.pulumi.awsnative.auditmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,82 @@ public final class AssessmentAWSAccountArgs extends com.pulumi.resources.Resourc
     public static final AssessmentAWSAccountArgs Empty = new AssessmentAWSAccountArgs();
 
     @Import(name="emailAddress")
-      private final @Nullable Output<String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
-    public Output<String> emailAddress() {
-        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public AssessmentAWSAccountArgs(
-        @Nullable Output<String> emailAddress,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name) {
-        this.emailAddress = emailAddress;
-        this.id = id;
-        this.name = name;
-    }
+    private AssessmentAWSAccountArgs() {}
 
-    private AssessmentAWSAccountArgs() {
-        this.emailAddress = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
+    private AssessmentAWSAccountArgs(AssessmentAWSAccountArgs $) {
+        this.emailAddress = $.emailAddress;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentAWSAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> emailAddress;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
+        private AssessmentAWSAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentAWSAccountArgs();
         }
 
         public Builder(AssessmentAWSAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new AssessmentAWSAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
-        public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Codegen.ofNullable(emailAddress);
-            return this;
+
+        public Builder emailAddress(String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public AssessmentAWSAccountArgs build() {
-            return new AssessmentAWSAccountArgs(emailAddress, id, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public AssessmentAWSAccountArgs build() {
+            return $;
         }
     }
+
 }

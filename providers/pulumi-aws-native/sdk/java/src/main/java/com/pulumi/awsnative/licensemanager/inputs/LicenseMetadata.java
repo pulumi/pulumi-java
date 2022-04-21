@@ -13,62 +13,59 @@ public final class LicenseMetadata extends com.pulumi.resources.InvokeArgs {
     public static final LicenseMetadata Empty = new LicenseMetadata();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public LicenseMetadata(
-        String name,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private LicenseMetadata() {}
 
-    private LicenseMetadata() {
-        this.name = null;
-        this.value = null;
+    private LicenseMetadata(LicenseMetadata $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
+        private LicenseMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseMetadata();
         }
 
         public Builder(LicenseMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new LicenseMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public LicenseMetadata build() {
-            return new LicenseMetadata(name, value);
+        }
+
+        public LicenseMetadata build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

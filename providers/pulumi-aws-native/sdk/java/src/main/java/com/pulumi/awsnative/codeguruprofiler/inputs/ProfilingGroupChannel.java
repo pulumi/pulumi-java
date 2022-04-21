@@ -19,62 +19,58 @@ public final class ProfilingGroupChannel extends com.pulumi.resources.InvokeArgs
     public static final ProfilingGroupChannel Empty = new ProfilingGroupChannel();
 
     @Import(name="channelId")
-      private final @Nullable String channelId;
+    private @Nullable String channelId;
 
     public Optional<String> channelId() {
-        return this.channelId == null ? Optional.empty() : Optional.ofNullable(this.channelId);
+        return Optional.ofNullable(this.channelId);
     }
 
     @Import(name="channelUri", required=true)
-      private final String channelUri;
+    private String channelUri;
 
     public String channelUri() {
         return this.channelUri;
     }
 
-    public ProfilingGroupChannel(
-        @Nullable String channelId,
-        String channelUri) {
-        this.channelId = channelId;
-        this.channelUri = Objects.requireNonNull(channelUri, "expected parameter 'channelUri' to be non-null");
-    }
+    private ProfilingGroupChannel() {}
 
-    private ProfilingGroupChannel() {
-        this.channelId = null;
-        this.channelUri = null;
+    private ProfilingGroupChannel(ProfilingGroupChannel $) {
+        this.channelId = $.channelId;
+        this.channelUri = $.channelUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfilingGroupChannel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String channelId;
-        private String channelUri;
+        private ProfilingGroupChannel $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfilingGroupChannel();
         }
 
         public Builder(ProfilingGroupChannel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelId = defaults.channelId;
-    	      this.channelUri = defaults.channelUri;
+            $ = new ProfilingGroupChannel(Objects.requireNonNull(defaults));
         }
 
         public Builder channelId(@Nullable String channelId) {
-            this.channelId = channelId;
+            $.channelId = channelId;
             return this;
         }
+
         public Builder channelUri(String channelUri) {
-            this.channelUri = Objects.requireNonNull(channelUri);
+            $.channelUri = channelUri;
             return this;
-        }        public ProfilingGroupChannel build() {
-            return new ProfilingGroupChannel(channelId, channelUri);
+        }
+
+        public ProfilingGroupChannel build() {
+            $.channelUri = Objects.requireNonNull($.channelUri, "expected parameter 'channelUri' to be non-null");
+            return $;
         }
     }
+
 }

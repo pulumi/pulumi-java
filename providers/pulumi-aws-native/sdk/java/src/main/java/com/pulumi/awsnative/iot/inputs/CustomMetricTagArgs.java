@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class CustomMetricTagArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -34,63 +33,60 @@ public final class CustomMetricTagArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public CustomMetricTagArgs(
-        Output<String> key,
-        Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private CustomMetricTagArgs() {}
 
-    private CustomMetricTagArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private CustomMetricTagArgs(CustomMetricTagArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomMetricTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<String> value;
+        private CustomMetricTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomMetricTagArgs();
         }
 
         public Builder(CustomMetricTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new CustomMetricTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public CustomMetricTagArgs build() {
-            return new CustomMetricTagArgs(key, value);
+            return value(Output.of(value));
+        }
+
+        public CustomMetricTagArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

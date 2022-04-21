@@ -5,9 +5,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InfrastructureConfigurationS3LogsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="s3BucketName")
-      private final @Nullable Output<String> s3BucketName;
+    private @Nullable Output<String> s3BucketName;
 
-    public Output<String> s3BucketName() {
-        return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
+    public Optional<Output<String>> s3BucketName() {
+        return Optional.ofNullable(this.s3BucketName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class InfrastructureConfigurationS3LogsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="s3KeyPrefix")
-      private final @Nullable Output<String> s3KeyPrefix;
+    private @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
+    public Optional<Output<String>> s3KeyPrefix() {
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public InfrastructureConfigurationS3LogsArgs(
-        @Nullable Output<String> s3BucketName,
-        @Nullable Output<String> s3KeyPrefix) {
-        this.s3BucketName = s3BucketName;
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private InfrastructureConfigurationS3LogsArgs() {}
 
-    private InfrastructureConfigurationS3LogsArgs() {
-        this.s3BucketName = Codegen.empty();
-        this.s3KeyPrefix = Codegen.empty();
+    private InfrastructureConfigurationS3LogsArgs(InfrastructureConfigurationS3LogsArgs $) {
+        this.s3BucketName = $.s3BucketName;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationS3LogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> s3BucketName;
-        private @Nullable Output<String> s3KeyPrefix;
+        private InfrastructureConfigurationS3LogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationS3LogsArgs();
         }
 
         public Builder(InfrastructureConfigurationS3LogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new InfrastructureConfigurationS3LogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
-            this.s3BucketName = s3BucketName;
+            $.s3BucketName = s3BucketName;
             return this;
         }
-        public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = Codegen.ofNullable(s3BucketName);
-            return this;
+
+        public Builder s3BucketName(String s3BucketName) {
+            return s3BucketName(Output.of(s3BucketName));
         }
+
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
-            return this;
-        }        public InfrastructureConfigurationS3LogsArgs build() {
-            return new InfrastructureConfigurationS3LogsArgs(s3BucketName, s3KeyPrefix);
+
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
+            return s3KeyPrefix(Output.of(s3KeyPrefix));
+        }
+
+        public InfrastructureConfigurationS3LogsArgs build() {
+            return $;
         }
     }
+
 }

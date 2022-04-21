@@ -25,10 +25,10 @@ public final class ContainerPublicEndpoint extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerPublicEndpoint extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="containerPort")
-      private final @Nullable Integer containerPort;
+    private @Nullable Integer containerPort;
 
     public Optional<Integer> containerPort() {
-        return this.containerPort == null ? Optional.empty() : Optional.ofNullable(this.containerPort);
+        return Optional.ofNullable(this.containerPort);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class ContainerPublicEndpoint extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="healthCheckConfig")
-      private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
+    private @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
     public Optional<ContainerHealthCheckConfig> healthCheckConfig() {
-        return this.healthCheckConfig == null ? Optional.empty() : Optional.ofNullable(this.healthCheckConfig);
+        return Optional.ofNullable(this.healthCheckConfig);
     }
 
-    public ContainerPublicEndpoint(
-        @Nullable String containerName,
-        @Nullable Integer containerPort,
-        @Nullable ContainerHealthCheckConfig healthCheckConfig) {
-        this.containerName = containerName;
-        this.containerPort = containerPort;
-        this.healthCheckConfig = healthCheckConfig;
-    }
+    private ContainerPublicEndpoint() {}
 
-    private ContainerPublicEndpoint() {
-        this.containerName = null;
-        this.containerPort = null;
-        this.healthCheckConfig = null;
+    private ContainerPublicEndpoint(ContainerPublicEndpoint $) {
+        this.containerName = $.containerName;
+        this.containerPort = $.containerPort;
+        this.healthCheckConfig = $.healthCheckConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPublicEndpoint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String containerName;
-        private @Nullable Integer containerPort;
-        private @Nullable ContainerHealthCheckConfig healthCheckConfig;
+        private ContainerPublicEndpoint $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPublicEndpoint();
         }
 
         public Builder(ContainerPublicEndpoint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.containerPort = defaults.containerPort;
-    	      this.healthCheckConfig = defaults.healthCheckConfig;
+            $ = new ContainerPublicEndpoint(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = containerPort;
+            $.containerPort = containerPort;
             return this;
         }
+
         public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfig healthCheckConfig) {
-            this.healthCheckConfig = healthCheckConfig;
+            $.healthCheckConfig = healthCheckConfig;
             return this;
-        }        public ContainerPublicEndpoint build() {
-            return new ContainerPublicEndpoint(containerName, containerPort, healthCheckConfig);
+        }
+
+        public ContainerPublicEndpoint build() {
+            return $;
         }
     }
+
 }

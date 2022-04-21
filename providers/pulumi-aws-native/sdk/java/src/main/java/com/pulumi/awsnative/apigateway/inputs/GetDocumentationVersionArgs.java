@@ -17,7 +17,7 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="documentationVersion", required=true)
-      private final String documentationVersion;
+    private String documentationVersion;
 
     public String documentationVersion() {
         return this.documentationVersion;
@@ -28,55 +28,52 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
     }
 
-    public GetDocumentationVersionArgs(
-        String documentationVersion,
-        String restApiId) {
-        this.documentationVersion = Objects.requireNonNull(documentationVersion, "expected parameter 'documentationVersion' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private GetDocumentationVersionArgs() {}
 
-    private GetDocumentationVersionArgs() {
-        this.documentationVersion = null;
-        this.restApiId = null;
+    private GetDocumentationVersionArgs(GetDocumentationVersionArgs $) {
+        this.documentationVersion = $.documentationVersion;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDocumentationVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentationVersion;
-        private String restApiId;
+        private GetDocumentationVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDocumentationVersionArgs();
         }
 
         public Builder(GetDocumentationVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentationVersion = defaults.documentationVersion;
-    	      this.restApiId = defaults.restApiId;
+            $ = new GetDocumentationVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder documentationVersion(String documentationVersion) {
-            this.documentationVersion = Objects.requireNonNull(documentationVersion);
+            $.documentationVersion = documentationVersion;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
-        }        public GetDocumentationVersionArgs build() {
-            return new GetDocumentationVersionArgs(documentationVersion, restApiId);
+        }
+
+        public GetDocumentationVersionArgs build() {
+            $.documentationVersion = Objects.requireNonNull($.documentationVersion, "expected parameter 'documentationVersion' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

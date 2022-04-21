@@ -20,62 +20,57 @@ public final class RecipeParametersInputProperties extends com.pulumi.resources.
     public static final RecipeParametersInputProperties Empty = new RecipeParametersInputProperties();
 
     @Import(name="dataCatalogInputDefinition")
-      private final @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
+    private @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
 
     public Optional<RecipeDataCatalogInputDefinition> dataCatalogInputDefinition() {
-        return this.dataCatalogInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.dataCatalogInputDefinition);
+        return Optional.ofNullable(this.dataCatalogInputDefinition);
     }
 
     @Import(name="s3InputDefinition")
-      private final @Nullable RecipeS3Location s3InputDefinition;
+    private @Nullable RecipeS3Location s3InputDefinition;
 
     public Optional<RecipeS3Location> s3InputDefinition() {
-        return this.s3InputDefinition == null ? Optional.empty() : Optional.ofNullable(this.s3InputDefinition);
+        return Optional.ofNullable(this.s3InputDefinition);
     }
 
-    public RecipeParametersInputProperties(
-        @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition,
-        @Nullable RecipeS3Location s3InputDefinition) {
-        this.dataCatalogInputDefinition = dataCatalogInputDefinition;
-        this.s3InputDefinition = s3InputDefinition;
-    }
+    private RecipeParametersInputProperties() {}
 
-    private RecipeParametersInputProperties() {
-        this.dataCatalogInputDefinition = null;
-        this.s3InputDefinition = null;
+    private RecipeParametersInputProperties(RecipeParametersInputProperties $) {
+        this.dataCatalogInputDefinition = $.dataCatalogInputDefinition;
+        this.s3InputDefinition = $.s3InputDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeParametersInputProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
-        private @Nullable RecipeS3Location s3InputDefinition;
+        private RecipeParametersInputProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeParametersInputProperties();
         }
 
         public Builder(RecipeParametersInputProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCatalogInputDefinition = defaults.dataCatalogInputDefinition;
-    	      this.s3InputDefinition = defaults.s3InputDefinition;
+            $ = new RecipeParametersInputProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCatalogInputDefinition(@Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition) {
-            this.dataCatalogInputDefinition = dataCatalogInputDefinition;
+            $.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
+
         public Builder s3InputDefinition(@Nullable RecipeS3Location s3InputDefinition) {
-            this.s3InputDefinition = s3InputDefinition;
+            $.s3InputDefinition = s3InputDefinition;
             return this;
-        }        public RecipeParametersInputProperties build() {
-            return new RecipeParametersInputProperties(dataCatalogInputDefinition, s3InputDefinition);
+        }
+
+        public RecipeParametersInputProperties build() {
+            return $;
         }
     }
+
 }

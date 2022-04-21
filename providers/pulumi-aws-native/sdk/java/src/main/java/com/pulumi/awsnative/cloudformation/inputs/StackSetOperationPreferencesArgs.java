@@ -6,11 +6,11 @@ package com.pulumi.awsnative.cloudformation.inputs;
 import com.pulumi.awsnative.cloudformation.enums.StackSetRegionConcurrencyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,153 +23,137 @@ public final class StackSetOperationPreferencesArgs extends com.pulumi.resources
     public static final StackSetOperationPreferencesArgs Empty = new StackSetOperationPreferencesArgs();
 
     @Import(name="failureToleranceCount")
-      private final @Nullable Output<Integer> failureToleranceCount;
+    private @Nullable Output<Integer> failureToleranceCount;
 
-    public Output<Integer> failureToleranceCount() {
-        return this.failureToleranceCount == null ? Codegen.empty() : this.failureToleranceCount;
+    public Optional<Output<Integer>> failureToleranceCount() {
+        return Optional.ofNullable(this.failureToleranceCount);
     }
 
     @Import(name="failureTolerancePercentage")
-      private final @Nullable Output<Integer> failureTolerancePercentage;
+    private @Nullable Output<Integer> failureTolerancePercentage;
 
-    public Output<Integer> failureTolerancePercentage() {
-        return this.failureTolerancePercentage == null ? Codegen.empty() : this.failureTolerancePercentage;
+    public Optional<Output<Integer>> failureTolerancePercentage() {
+        return Optional.ofNullable(this.failureTolerancePercentage);
     }
 
     @Import(name="maxConcurrentCount")
-      private final @Nullable Output<Integer> maxConcurrentCount;
+    private @Nullable Output<Integer> maxConcurrentCount;
 
-    public Output<Integer> maxConcurrentCount() {
-        return this.maxConcurrentCount == null ? Codegen.empty() : this.maxConcurrentCount;
+    public Optional<Output<Integer>> maxConcurrentCount() {
+        return Optional.ofNullable(this.maxConcurrentCount);
     }
 
     @Import(name="maxConcurrentPercentage")
-      private final @Nullable Output<Integer> maxConcurrentPercentage;
+    private @Nullable Output<Integer> maxConcurrentPercentage;
 
-    public Output<Integer> maxConcurrentPercentage() {
-        return this.maxConcurrentPercentage == null ? Codegen.empty() : this.maxConcurrentPercentage;
+    public Optional<Output<Integer>> maxConcurrentPercentage() {
+        return Optional.ofNullable(this.maxConcurrentPercentage);
     }
 
     @Import(name="regionConcurrencyType")
-      private final @Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType;
+    private @Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType;
 
-    public Output<StackSetRegionConcurrencyType> regionConcurrencyType() {
-        return this.regionConcurrencyType == null ? Codegen.empty() : this.regionConcurrencyType;
+    public Optional<Output<StackSetRegionConcurrencyType>> regionConcurrencyType() {
+        return Optional.ofNullable(this.regionConcurrencyType);
     }
 
     @Import(name="regionOrder")
-      private final @Nullable Output<List<String>> regionOrder;
+    private @Nullable Output<List<String>> regionOrder;
 
-    public Output<List<String>> regionOrder() {
-        return this.regionOrder == null ? Codegen.empty() : this.regionOrder;
+    public Optional<Output<List<String>>> regionOrder() {
+        return Optional.ofNullable(this.regionOrder);
     }
 
-    public StackSetOperationPreferencesArgs(
-        @Nullable Output<Integer> failureToleranceCount,
-        @Nullable Output<Integer> failureTolerancePercentage,
-        @Nullable Output<Integer> maxConcurrentCount,
-        @Nullable Output<Integer> maxConcurrentPercentage,
-        @Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType,
-        @Nullable Output<List<String>> regionOrder) {
-        this.failureToleranceCount = failureToleranceCount;
-        this.failureTolerancePercentage = failureTolerancePercentage;
-        this.maxConcurrentCount = maxConcurrentCount;
-        this.maxConcurrentPercentage = maxConcurrentPercentage;
-        this.regionConcurrencyType = regionConcurrencyType;
-        this.regionOrder = regionOrder;
-    }
+    private StackSetOperationPreferencesArgs() {}
 
-    private StackSetOperationPreferencesArgs() {
-        this.failureToleranceCount = Codegen.empty();
-        this.failureTolerancePercentage = Codegen.empty();
-        this.maxConcurrentCount = Codegen.empty();
-        this.maxConcurrentPercentage = Codegen.empty();
-        this.regionConcurrencyType = Codegen.empty();
-        this.regionOrder = Codegen.empty();
+    private StackSetOperationPreferencesArgs(StackSetOperationPreferencesArgs $) {
+        this.failureToleranceCount = $.failureToleranceCount;
+        this.failureTolerancePercentage = $.failureTolerancePercentage;
+        this.maxConcurrentCount = $.maxConcurrentCount;
+        this.maxConcurrentPercentage = $.maxConcurrentPercentage;
+        this.regionConcurrencyType = $.regionConcurrencyType;
+        this.regionOrder = $.regionOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetOperationPreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> failureToleranceCount;
-        private @Nullable Output<Integer> failureTolerancePercentage;
-        private @Nullable Output<Integer> maxConcurrentCount;
-        private @Nullable Output<Integer> maxConcurrentPercentage;
-        private @Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType;
-        private @Nullable Output<List<String>> regionOrder;
+        private StackSetOperationPreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetOperationPreferencesArgs();
         }
 
         public Builder(StackSetOperationPreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureToleranceCount = defaults.failureToleranceCount;
-    	      this.failureTolerancePercentage = defaults.failureTolerancePercentage;
-    	      this.maxConcurrentCount = defaults.maxConcurrentCount;
-    	      this.maxConcurrentPercentage = defaults.maxConcurrentPercentage;
-    	      this.regionConcurrencyType = defaults.regionConcurrencyType;
-    	      this.regionOrder = defaults.regionOrder;
+            $ = new StackSetOperationPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureToleranceCount(@Nullable Output<Integer> failureToleranceCount) {
-            this.failureToleranceCount = failureToleranceCount;
+            $.failureToleranceCount = failureToleranceCount;
             return this;
         }
-        public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
-            this.failureToleranceCount = Codegen.ofNullable(failureToleranceCount);
-            return this;
+
+        public Builder failureToleranceCount(Integer failureToleranceCount) {
+            return failureToleranceCount(Output.of(failureToleranceCount));
         }
+
         public Builder failureTolerancePercentage(@Nullable Output<Integer> failureTolerancePercentage) {
-            this.failureTolerancePercentage = failureTolerancePercentage;
+            $.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
-        public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
-            this.failureTolerancePercentage = Codegen.ofNullable(failureTolerancePercentage);
-            return this;
+
+        public Builder failureTolerancePercentage(Integer failureTolerancePercentage) {
+            return failureTolerancePercentage(Output.of(failureTolerancePercentage));
         }
+
         public Builder maxConcurrentCount(@Nullable Output<Integer> maxConcurrentCount) {
-            this.maxConcurrentCount = maxConcurrentCount;
+            $.maxConcurrentCount = maxConcurrentCount;
             return this;
         }
-        public Builder maxConcurrentCount(@Nullable Integer maxConcurrentCount) {
-            this.maxConcurrentCount = Codegen.ofNullable(maxConcurrentCount);
-            return this;
+
+        public Builder maxConcurrentCount(Integer maxConcurrentCount) {
+            return maxConcurrentCount(Output.of(maxConcurrentCount));
         }
+
         public Builder maxConcurrentPercentage(@Nullable Output<Integer> maxConcurrentPercentage) {
-            this.maxConcurrentPercentage = maxConcurrentPercentage;
+            $.maxConcurrentPercentage = maxConcurrentPercentage;
             return this;
         }
-        public Builder maxConcurrentPercentage(@Nullable Integer maxConcurrentPercentage) {
-            this.maxConcurrentPercentage = Codegen.ofNullable(maxConcurrentPercentage);
-            return this;
+
+        public Builder maxConcurrentPercentage(Integer maxConcurrentPercentage) {
+            return maxConcurrentPercentage(Output.of(maxConcurrentPercentage));
         }
+
         public Builder regionConcurrencyType(@Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType) {
-            this.regionConcurrencyType = regionConcurrencyType;
+            $.regionConcurrencyType = regionConcurrencyType;
             return this;
         }
-        public Builder regionConcurrencyType(@Nullable StackSetRegionConcurrencyType regionConcurrencyType) {
-            this.regionConcurrencyType = Codegen.ofNullable(regionConcurrencyType);
-            return this;
+
+        public Builder regionConcurrencyType(StackSetRegionConcurrencyType regionConcurrencyType) {
+            return regionConcurrencyType(Output.of(regionConcurrencyType));
         }
+
         public Builder regionOrder(@Nullable Output<List<String>> regionOrder) {
-            this.regionOrder = regionOrder;
+            $.regionOrder = regionOrder;
             return this;
         }
-        public Builder regionOrder(@Nullable List<String> regionOrder) {
-            this.regionOrder = Codegen.ofNullable(regionOrder);
-            return this;
+
+        public Builder regionOrder(List<String> regionOrder) {
+            return regionOrder(Output.of(regionOrder));
         }
+
         public Builder regionOrder(String... regionOrder) {
             return regionOrder(List.of(regionOrder));
-        }        public StackSetOperationPreferencesArgs build() {
-            return new StackSetOperationPreferencesArgs(failureToleranceCount, failureTolerancePercentage, maxConcurrentCount, maxConcurrentPercentage, regionConcurrencyType, regionOrder);
+        }
+
+        public StackSetOperationPreferencesArgs build() {
+            return $;
         }
     }
+
 }

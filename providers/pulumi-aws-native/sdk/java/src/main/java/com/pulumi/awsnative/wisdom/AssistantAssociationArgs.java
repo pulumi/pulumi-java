@@ -8,10 +8,10 @@ import com.pulumi.awsnative.wisdom.inputs.AssistantAssociationAssociationDataArg
 import com.pulumi.awsnative.wisdom.inputs.AssistantAssociationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,113 +20,106 @@ public final class AssistantAssociationArgs extends com.pulumi.resources.Resourc
     public static final AssistantAssociationArgs Empty = new AssistantAssociationArgs();
 
     @Import(name="assistantId", required=true)
-      private final Output<String> assistantId;
+    private Output<String> assistantId;
 
     public Output<String> assistantId() {
         return this.assistantId;
     }
 
     @Import(name="association", required=true)
-      private final Output<AssistantAssociationAssociationDataArgs> association;
+    private Output<AssistantAssociationAssociationDataArgs> association;
 
     public Output<AssistantAssociationAssociationDataArgs> association() {
         return this.association;
     }
 
     @Import(name="associationType", required=true)
-      private final Output<AssistantAssociationAssociationType> associationType;
+    private Output<AssistantAssociationAssociationType> associationType;
 
     public Output<AssistantAssociationAssociationType> associationType() {
         return this.associationType;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<AssistantAssociationTagArgs>> tags;
+    private @Nullable Output<List<AssistantAssociationTagArgs>> tags;
 
-    public Output<List<AssistantAssociationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AssistantAssociationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AssistantAssociationArgs(
-        Output<String> assistantId,
-        Output<AssistantAssociationAssociationDataArgs> association,
-        Output<AssistantAssociationAssociationType> associationType,
-        @Nullable Output<List<AssistantAssociationTagArgs>> tags) {
-        this.assistantId = Objects.requireNonNull(assistantId, "expected parameter 'assistantId' to be non-null");
-        this.association = Objects.requireNonNull(association, "expected parameter 'association' to be non-null");
-        this.associationType = Objects.requireNonNull(associationType, "expected parameter 'associationType' to be non-null");
-        this.tags = tags;
-    }
+    private AssistantAssociationArgs() {}
 
-    private AssistantAssociationArgs() {
-        this.assistantId = Codegen.empty();
-        this.association = Codegen.empty();
-        this.associationType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AssistantAssociationArgs(AssistantAssociationArgs $) {
+        this.assistantId = $.assistantId;
+        this.association = $.association;
+        this.associationType = $.associationType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssistantAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> assistantId;
-        private Output<AssistantAssociationAssociationDataArgs> association;
-        private Output<AssistantAssociationAssociationType> associationType;
-        private @Nullable Output<List<AssistantAssociationTagArgs>> tags;
+        private AssistantAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssistantAssociationArgs();
         }
 
         public Builder(AssistantAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assistantId = defaults.assistantId;
-    	      this.association = defaults.association;
-    	      this.associationType = defaults.associationType;
-    	      this.tags = defaults.tags;
+            $ = new AssistantAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assistantId(Output<String> assistantId) {
-            this.assistantId = Objects.requireNonNull(assistantId);
+            $.assistantId = assistantId;
             return this;
         }
+
         public Builder assistantId(String assistantId) {
-            this.assistantId = Output.of(Objects.requireNonNull(assistantId));
-            return this;
+            return assistantId(Output.of(assistantId));
         }
+
         public Builder association(Output<AssistantAssociationAssociationDataArgs> association) {
-            this.association = Objects.requireNonNull(association);
+            $.association = association;
             return this;
         }
+
         public Builder association(AssistantAssociationAssociationDataArgs association) {
-            this.association = Output.of(Objects.requireNonNull(association));
-            return this;
+            return association(Output.of(association));
         }
+
         public Builder associationType(Output<AssistantAssociationAssociationType> associationType) {
-            this.associationType = Objects.requireNonNull(associationType);
+            $.associationType = associationType;
             return this;
         }
+
         public Builder associationType(AssistantAssociationAssociationType associationType) {
-            this.associationType = Output.of(Objects.requireNonNull(associationType));
-            return this;
+            return associationType(Output.of(associationType));
         }
+
         public Builder tags(@Nullable Output<List<AssistantAssociationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AssistantAssociationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AssistantAssociationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AssistantAssociationTagArgs... tags) {
             return tags(List.of(tags));
-        }        public AssistantAssociationArgs build() {
-            return new AssistantAssociationArgs(assistantId, association, associationType, tags);
+        }
+
+        public AssistantAssociationArgs build() {
+            $.assistantId = Objects.requireNonNull($.assistantId, "expected parameter 'assistantId' to be non-null");
+            $.association = Objects.requireNonNull($.association, "expected parameter 'association' to be non-null");
+            $.associationType = Objects.requireNonNull($.associationType, "expected parameter 'associationType' to be non-null");
+            return $;
         }
     }
+
 }

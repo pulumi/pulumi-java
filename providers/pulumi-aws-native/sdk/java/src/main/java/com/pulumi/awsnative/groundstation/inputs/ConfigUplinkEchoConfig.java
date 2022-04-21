@@ -16,62 +16,57 @@ public final class ConfigUplinkEchoConfig extends com.pulumi.resources.InvokeArg
     public static final ConfigUplinkEchoConfig Empty = new ConfigUplinkEchoConfig();
 
     @Import(name="antennaUplinkConfigArn")
-      private final @Nullable String antennaUplinkConfigArn;
+    private @Nullable String antennaUplinkConfigArn;
 
     public Optional<String> antennaUplinkConfigArn() {
-        return this.antennaUplinkConfigArn == null ? Optional.empty() : Optional.ofNullable(this.antennaUplinkConfigArn);
+        return Optional.ofNullable(this.antennaUplinkConfigArn);
     }
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public ConfigUplinkEchoConfig(
-        @Nullable String antennaUplinkConfigArn,
-        @Nullable Boolean enabled) {
-        this.antennaUplinkConfigArn = antennaUplinkConfigArn;
-        this.enabled = enabled;
-    }
+    private ConfigUplinkEchoConfig() {}
 
-    private ConfigUplinkEchoConfig() {
-        this.antennaUplinkConfigArn = null;
-        this.enabled = null;
+    private ConfigUplinkEchoConfig(ConfigUplinkEchoConfig $) {
+        this.antennaUplinkConfigArn = $.antennaUplinkConfigArn;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigUplinkEchoConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String antennaUplinkConfigArn;
-        private @Nullable Boolean enabled;
+        private ConfigUplinkEchoConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigUplinkEchoConfig();
         }
 
         public Builder(ConfigUplinkEchoConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.antennaUplinkConfigArn = defaults.antennaUplinkConfigArn;
-    	      this.enabled = defaults.enabled;
+            $ = new ConfigUplinkEchoConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder antennaUplinkConfigArn(@Nullable String antennaUplinkConfigArn) {
-            this.antennaUplinkConfigArn = antennaUplinkConfigArn;
+            $.antennaUplinkConfigArn = antennaUplinkConfigArn;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public ConfigUplinkEchoConfig build() {
-            return new ConfigUplinkEchoConfig(antennaUplinkConfigArn, enabled);
+        }
+
+        public ConfigUplinkEchoConfig build() {
+            return $;
         }
     }
+
 }

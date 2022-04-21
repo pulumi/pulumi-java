@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class SubnetRouteTableAssociationArgs extends com.pulumi.resources.
     public static final SubnetRouteTableAssociationArgs Empty = new SubnetRouteTableAssociationArgs();
 
     @Import(name="routeTableId", required=true)
-      private final Output<String> routeTableId;
+    private Output<String> routeTableId;
 
     public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public SubnetRouteTableAssociationArgs(
-        Output<String> routeTableId,
-        Output<String> subnetId) {
-        this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private SubnetRouteTableAssociationArgs() {}
 
-    private SubnetRouteTableAssociationArgs() {
-        this.routeTableId = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private SubnetRouteTableAssociationArgs(SubnetRouteTableAssociationArgs $) {
+        this.routeTableId = $.routeTableId;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetRouteTableAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> routeTableId;
-        private Output<String> subnetId;
+        private SubnetRouteTableAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetRouteTableAssociationArgs();
         }
 
         public Builder(SubnetRouteTableAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.subnetId = defaults.subnetId;
+            $ = new SubnetRouteTableAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder routeTableId(Output<String> routeTableId) {
-            this.routeTableId = Objects.requireNonNull(routeTableId);
+            $.routeTableId = routeTableId;
             return this;
         }
+
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
-            return this;
+            return routeTableId(Output.of(routeTableId));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public SubnetRouteTableAssociationArgs build() {
-            return new SubnetRouteTableAssociationArgs(routeTableId, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public SubnetRouteTableAssociationArgs build() {
+            $.routeTableId = Objects.requireNonNull($.routeTableId, "expected parameter 'routeTableId' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

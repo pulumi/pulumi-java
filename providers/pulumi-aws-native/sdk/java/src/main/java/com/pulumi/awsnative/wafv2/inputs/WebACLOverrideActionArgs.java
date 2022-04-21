@@ -5,9 +5,9 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WebACLOverrideActionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Object> count;
+    private @Nullable Output<Object> count;
 
-    public Output<Object> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Object>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class WebACLOverrideActionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="none")
-      private final @Nullable Output<Object> none;
+    private @Nullable Output<Object> none;
 
-    public Output<Object> none() {
-        return this.none == null ? Codegen.empty() : this.none;
+    public Optional<Output<Object>> none() {
+        return Optional.ofNullable(this.none);
     }
 
-    public WebACLOverrideActionArgs(
-        @Nullable Output<Object> count,
-        @Nullable Output<Object> none) {
-        this.count = count;
-        this.none = none;
-    }
+    private WebACLOverrideActionArgs() {}
 
-    private WebACLOverrideActionArgs() {
-        this.count = Codegen.empty();
-        this.none = Codegen.empty();
+    private WebACLOverrideActionArgs(WebACLOverrideActionArgs $) {
+        this.count = $.count;
+        this.none = $.none;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLOverrideActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> count;
-        private @Nullable Output<Object> none;
+        private WebACLOverrideActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLOverrideActionArgs();
         }
 
         public Builder(WebACLOverrideActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.none = defaults.none;
+            $ = new WebACLOverrideActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Object> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Object count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Object count) {
+            return count(Output.of(count));
         }
+
         public Builder none(@Nullable Output<Object> none) {
-            this.none = none;
+            $.none = none;
             return this;
         }
-        public Builder none(@Nullable Object none) {
-            this.none = Codegen.ofNullable(none);
-            return this;
-        }        public WebACLOverrideActionArgs build() {
-            return new WebACLOverrideActionArgs(count, none);
+
+        public Builder none(Object none) {
+            return none(Output.of(none));
+        }
+
+        public WebACLOverrideActionArgs build() {
+            return $;
         }
     }
+
 }

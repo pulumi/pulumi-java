@@ -17,7 +17,7 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends com.pulumi.
      * 
      */
     @Import(name="groupIpAddress", required=true)
-      private final String groupIpAddress;
+    private String groupIpAddress;
 
     public String groupIpAddress() {
         return this.groupIpAddress;
@@ -28,7 +28,7 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends com.pulumi.
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-      private final String networkInterfaceId;
+    private String networkInterfaceId;
 
     public String networkInterfaceId() {
         return this.networkInterfaceId;
@@ -39,64 +39,59 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends com.pulumi.
      * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
-      private final String transitGatewayMulticastDomainId;
+    private String transitGatewayMulticastDomainId;
 
     public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
-    public GetTransitGatewayMulticastGroupSourceArgs(
-        String groupIpAddress,
-        String networkInterfaceId,
-        String transitGatewayMulticastDomainId) {
-        this.groupIpAddress = Objects.requireNonNull(groupIpAddress, "expected parameter 'groupIpAddress' to be non-null");
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-        this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
-    }
+    private GetTransitGatewayMulticastGroupSourceArgs() {}
 
-    private GetTransitGatewayMulticastGroupSourceArgs() {
-        this.groupIpAddress = null;
-        this.networkInterfaceId = null;
-        this.transitGatewayMulticastDomainId = null;
+    private GetTransitGatewayMulticastGroupSourceArgs(GetTransitGatewayMulticastGroupSourceArgs $) {
+        this.groupIpAddress = $.groupIpAddress;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.transitGatewayMulticastDomainId = $.transitGatewayMulticastDomainId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayMulticastGroupSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupIpAddress;
-        private String networkInterfaceId;
-        private String transitGatewayMulticastDomainId;
+        private GetTransitGatewayMulticastGroupSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayMulticastGroupSourceArgs();
         }
 
         public Builder(GetTransitGatewayMulticastGroupSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIpAddress = defaults.groupIpAddress;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
+            $ = new GetTransitGatewayMulticastGroupSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIpAddress(String groupIpAddress) {
-            this.groupIpAddress = Objects.requireNonNull(groupIpAddress);
+            $.groupIpAddress = groupIpAddress;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
-            this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
+            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
-        }        public GetTransitGatewayMulticastGroupSourceArgs build() {
-            return new GetTransitGatewayMulticastGroupSourceArgs(groupIpAddress, networkInterfaceId, transitGatewayMulticastDomainId);
+        }
+
+        public GetTransitGatewayMulticastGroupSourceArgs build() {
+            $.groupIpAddress = Objects.requireNonNull($.groupIpAddress, "expected parameter 'groupIpAddress' to be non-null");
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            $.transitGatewayMulticastDomainId = Objects.requireNonNull($.transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
+            return $;
         }
     }
+
 }

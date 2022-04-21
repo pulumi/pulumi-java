@@ -6,9 +6,9 @@ package com.pulumi.awsnative.datasync.inputs;
 import com.pulumi.awsnative.datasync.enums.TaskFilterRuleFilterType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="filterType")
-      private final @Nullable Output<TaskFilterRuleFilterType> filterType;
+    private @Nullable Output<TaskFilterRuleFilterType> filterType;
 
-    public Output<TaskFilterRuleFilterType> filterType() {
-        return this.filterType == null ? Codegen.empty() : this.filterType;
+    public Optional<Output<TaskFilterRuleFilterType>> filterType() {
+        return Optional.ofNullable(this.filterType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TaskFilterRuleArgs(
-        @Nullable Output<TaskFilterRuleFilterType> filterType,
-        @Nullable Output<String> value) {
-        this.filterType = filterType;
-        this.value = value;
-    }
+    private TaskFilterRuleArgs() {}
 
-    private TaskFilterRuleArgs() {
-        this.filterType = Codegen.empty();
-        this.value = Codegen.empty();
+    private TaskFilterRuleArgs(TaskFilterRuleArgs $) {
+        this.filterType = $.filterType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskFilterRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TaskFilterRuleFilterType> filterType;
-        private @Nullable Output<String> value;
+        private TaskFilterRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskFilterRuleArgs();
         }
 
         public Builder(TaskFilterRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterType = defaults.filterType;
-    	      this.value = defaults.value;
+            $ = new TaskFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterType(@Nullable Output<TaskFilterRuleFilterType> filterType) {
-            this.filterType = filterType;
+            $.filterType = filterType;
             return this;
         }
-        public Builder filterType(@Nullable TaskFilterRuleFilterType filterType) {
-            this.filterType = Codegen.ofNullable(filterType);
-            return this;
+
+        public Builder filterType(TaskFilterRuleFilterType filterType) {
+            return filterType(Output.of(filterType));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TaskFilterRuleArgs build() {
-            return new TaskFilterRuleArgs(filterType, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public TaskFilterRuleArgs build() {
+            return $;
         }
     }
+
 }

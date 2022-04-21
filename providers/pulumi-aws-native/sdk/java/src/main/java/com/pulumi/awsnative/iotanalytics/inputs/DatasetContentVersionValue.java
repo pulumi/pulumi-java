@@ -13,45 +13,45 @@ public final class DatasetContentVersionValue extends com.pulumi.resources.Invok
     public static final DatasetContentVersionValue Empty = new DatasetContentVersionValue();
 
     @Import(name="datasetName", required=true)
-      private final String datasetName;
+    private String datasetName;
 
     public String datasetName() {
         return this.datasetName;
     }
 
-    public DatasetContentVersionValue(String datasetName) {
-        this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
-    }
+    private DatasetContentVersionValue() {}
 
-    private DatasetContentVersionValue() {
-        this.datasetName = null;
+    private DatasetContentVersionValue(DatasetContentVersionValue $) {
+        this.datasetName = $.datasetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetContentVersionValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetName;
+        private DatasetContentVersionValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetContentVersionValue();
         }
 
         public Builder(DatasetContentVersionValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetName = defaults.datasetName;
+            $ = new DatasetContentVersionValue(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetName(String datasetName) {
-            this.datasetName = Objects.requireNonNull(datasetName);
+            $.datasetName = datasetName;
             return this;
-        }        public DatasetContentVersionValue build() {
-            return new DatasetContentVersionValue(datasetName);
+        }
+
+        public DatasetContentVersionValue build() {
+            $.datasetName = Objects.requireNonNull($.datasetName, "expected parameter 'datasetName' to be non-null");
+            return $;
         }
     }
+
 }

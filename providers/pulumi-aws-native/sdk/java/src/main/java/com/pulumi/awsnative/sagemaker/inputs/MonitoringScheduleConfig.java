@@ -22,10 +22,10 @@ public final class MonitoringScheduleConfig extends com.pulumi.resources.InvokeA
     public static final MonitoringScheduleConfig Empty = new MonitoringScheduleConfig();
 
     @Import(name="monitoringJobDefinition")
-      private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
+    private @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
 
     public Optional<MonitoringScheduleMonitoringJobDefinition> monitoringJobDefinition() {
-        return this.monitoringJobDefinition == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobDefinition);
+        return Optional.ofNullable(this.monitoringJobDefinition);
     }
 
     /**
@@ -33,87 +33,76 @@ public final class MonitoringScheduleConfig extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitoringJobDefinitionName")
-      private final @Nullable String monitoringJobDefinitionName;
+    private @Nullable String monitoringJobDefinitionName;
 
     public Optional<String> monitoringJobDefinitionName() {
-        return this.monitoringJobDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobDefinitionName);
+        return Optional.ofNullable(this.monitoringJobDefinitionName);
     }
 
     @Import(name="monitoringType")
-      private final @Nullable MonitoringScheduleMonitoringType monitoringType;
+    private @Nullable MonitoringScheduleMonitoringType monitoringType;
 
     public Optional<MonitoringScheduleMonitoringType> monitoringType() {
-        return this.monitoringType == null ? Optional.empty() : Optional.ofNullable(this.monitoringType);
+        return Optional.ofNullable(this.monitoringType);
     }
 
     @Import(name="scheduleConfig")
-      private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
+    private @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
 
     public Optional<MonitoringScheduleScheduleConfig> scheduleConfig() {
-        return this.scheduleConfig == null ? Optional.empty() : Optional.ofNullable(this.scheduleConfig);
+        return Optional.ofNullable(this.scheduleConfig);
     }
 
-    public MonitoringScheduleConfig(
-        @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition,
-        @Nullable String monitoringJobDefinitionName,
-        @Nullable MonitoringScheduleMonitoringType monitoringType,
-        @Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
-        this.monitoringJobDefinition = monitoringJobDefinition;
-        this.monitoringJobDefinitionName = monitoringJobDefinitionName;
-        this.monitoringType = monitoringType;
-        this.scheduleConfig = scheduleConfig;
-    }
+    private MonitoringScheduleConfig() {}
 
-    private MonitoringScheduleConfig() {
-        this.monitoringJobDefinition = null;
-        this.monitoringJobDefinitionName = null;
-        this.monitoringType = null;
-        this.scheduleConfig = null;
+    private MonitoringScheduleConfig(MonitoringScheduleConfig $) {
+        this.monitoringJobDefinition = $.monitoringJobDefinition;
+        this.monitoringJobDefinitionName = $.monitoringJobDefinitionName;
+        this.monitoringType = $.monitoringType;
+        this.scheduleConfig = $.scheduleConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
-        private @Nullable String monitoringJobDefinitionName;
-        private @Nullable MonitoringScheduleMonitoringType monitoringType;
-        private @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
+        private MonitoringScheduleConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleConfig();
         }
 
         public Builder(MonitoringScheduleConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitoringJobDefinition = defaults.monitoringJobDefinition;
-    	      this.monitoringJobDefinitionName = defaults.monitoringJobDefinitionName;
-    	      this.monitoringType = defaults.monitoringType;
-    	      this.scheduleConfig = defaults.scheduleConfig;
+            $ = new MonitoringScheduleConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder monitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition) {
-            this.monitoringJobDefinition = monitoringJobDefinition;
+            $.monitoringJobDefinition = monitoringJobDefinition;
             return this;
         }
+
         public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
-            this.monitoringJobDefinitionName = monitoringJobDefinitionName;
+            $.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
+
         public Builder monitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
-            this.monitoringType = monitoringType;
+            $.monitoringType = monitoringType;
             return this;
         }
+
         public Builder scheduleConfig(@Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
-            this.scheduleConfig = scheduleConfig;
+            $.scheduleConfig = scheduleConfig;
             return this;
-        }        public MonitoringScheduleConfig build() {
-            return new MonitoringScheduleConfig(monitoringJobDefinition, monitoringJobDefinitionName, monitoringType, scheduleConfig);
+        }
+
+        public MonitoringScheduleConfig build() {
+            return $;
         }
     }
+
 }

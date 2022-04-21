@@ -13,45 +13,45 @@ public final class GetApplicationInstanceArgs extends com.pulumi.resources.Invok
     public static final GetApplicationInstanceArgs Empty = new GetApplicationInstanceArgs();
 
     @Import(name="applicationInstanceId", required=true)
-      private final String applicationInstanceId;
+    private String applicationInstanceId;
 
     public String applicationInstanceId() {
         return this.applicationInstanceId;
     }
 
-    public GetApplicationInstanceArgs(String applicationInstanceId) {
-        this.applicationInstanceId = Objects.requireNonNull(applicationInstanceId, "expected parameter 'applicationInstanceId' to be non-null");
-    }
+    private GetApplicationInstanceArgs() {}
 
-    private GetApplicationInstanceArgs() {
-        this.applicationInstanceId = null;
+    private GetApplicationInstanceArgs(GetApplicationInstanceArgs $) {
+        this.applicationInstanceId = $.applicationInstanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationInstanceId;
+        private GetApplicationInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationInstanceArgs();
         }
 
         public Builder(GetApplicationInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationInstanceId = defaults.applicationInstanceId;
+            $ = new GetApplicationInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationInstanceId(String applicationInstanceId) {
-            this.applicationInstanceId = Objects.requireNonNull(applicationInstanceId);
+            $.applicationInstanceId = applicationInstanceId;
             return this;
-        }        public GetApplicationInstanceArgs build() {
-            return new GetApplicationInstanceArgs(applicationInstanceId);
+        }
+
+        public GetApplicationInstanceArgs build() {
+            $.applicationInstanceId = Objects.requireNonNull($.applicationInstanceId, "expected parameter 'applicationInstanceId' to be non-null");
+            return $;
         }
     }
+
 }

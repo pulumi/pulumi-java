@@ -16,94 +16,86 @@ public final class TopicRuleS3Action extends com.pulumi.resources.InvokeArgs {
     public static final TopicRuleS3Action Empty = new TopicRuleS3Action();
 
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="cannedAcl")
-      private final @Nullable TopicRuleCannedAccessControlList cannedAcl;
+    private @Nullable TopicRuleCannedAccessControlList cannedAcl;
 
     public Optional<TopicRuleCannedAccessControlList> cannedAcl() {
-        return this.cannedAcl == null ? Optional.empty() : Optional.ofNullable(this.cannedAcl);
+        return Optional.ofNullable(this.cannedAcl);
     }
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleS3Action(
-        String bucketName,
-        @Nullable TopicRuleCannedAccessControlList cannedAcl,
-        String key,
-        String roleArn) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.cannedAcl = cannedAcl;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleS3Action() {}
 
-    private TopicRuleS3Action() {
-        this.bucketName = null;
-        this.cannedAcl = null;
-        this.key = null;
-        this.roleArn = null;
+    private TopicRuleS3Action(TopicRuleS3Action $) {
+        this.bucketName = $.bucketName;
+        this.cannedAcl = $.cannedAcl;
+        this.key = $.key;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleS3Action defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketName;
-        private @Nullable TopicRuleCannedAccessControlList cannedAcl;
-        private String key;
-        private String roleArn;
+        private TopicRuleS3Action $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleS3Action();
         }
 
         public Builder(TopicRuleS3Action defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.cannedAcl = defaults.cannedAcl;
-    	      this.key = defaults.key;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleS3Action(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder cannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
-            this.cannedAcl = cannedAcl;
+            $.cannedAcl = cannedAcl;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public TopicRuleS3Action build() {
-            return new TopicRuleS3Action(bucketName, cannedAcl, key, roleArn);
+        }
+
+        public TopicRuleS3Action build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

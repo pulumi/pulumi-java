@@ -13,45 +13,45 @@ public final class GetCollectionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCollectionArgs Empty = new GetCollectionArgs();
 
     @Import(name="collectionId", required=true)
-      private final String collectionId;
+    private String collectionId;
 
     public String collectionId() {
         return this.collectionId;
     }
 
-    public GetCollectionArgs(String collectionId) {
-        this.collectionId = Objects.requireNonNull(collectionId, "expected parameter 'collectionId' to be non-null");
-    }
+    private GetCollectionArgs() {}
 
-    private GetCollectionArgs() {
-        this.collectionId = null;
+    private GetCollectionArgs(GetCollectionArgs $) {
+        this.collectionId = $.collectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String collectionId;
+        private GetCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCollectionArgs();
         }
 
         public Builder(GetCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionId = defaults.collectionId;
+            $ = new GetCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionId(String collectionId) {
-            this.collectionId = Objects.requireNonNull(collectionId);
+            $.collectionId = collectionId;
             return this;
-        }        public GetCollectionArgs build() {
-            return new GetCollectionArgs(collectionId);
+        }
+
+        public GetCollectionArgs build() {
+            $.collectionId = Objects.requireNonNull($.collectionId, "expected parameter 'collectionId' to be non-null");
+            return $;
         }
     }
+
 }

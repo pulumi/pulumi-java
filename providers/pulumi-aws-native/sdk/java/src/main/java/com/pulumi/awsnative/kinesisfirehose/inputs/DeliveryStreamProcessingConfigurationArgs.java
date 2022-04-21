@@ -6,10 +6,10 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class DeliveryStreamProcessingConfigurationArgs extends com.pulumi.
     public static final DeliveryStreamProcessingConfigurationArgs Empty = new DeliveryStreamProcessingConfigurationArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="processors")
-      private final @Nullable Output<List<DeliveryStreamProcessorArgs>> processors;
+    private @Nullable Output<List<DeliveryStreamProcessorArgs>> processors;
 
-    public Output<List<DeliveryStreamProcessorArgs>> processors() {
-        return this.processors == null ? Codegen.empty() : this.processors;
+    public Optional<Output<List<DeliveryStreamProcessorArgs>>> processors() {
+        return Optional.ofNullable(this.processors);
     }
 
-    public DeliveryStreamProcessingConfigurationArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<DeliveryStreamProcessorArgs>> processors) {
-        this.enabled = enabled;
-        this.processors = processors;
-    }
+    private DeliveryStreamProcessingConfigurationArgs() {}
 
-    private DeliveryStreamProcessingConfigurationArgs() {
-        this.enabled = Codegen.empty();
-        this.processors = Codegen.empty();
+    private DeliveryStreamProcessingConfigurationArgs(DeliveryStreamProcessingConfigurationArgs $) {
+        this.enabled = $.enabled;
+        this.processors = $.processors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamProcessingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<DeliveryStreamProcessorArgs>> processors;
+        private DeliveryStreamProcessingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamProcessingConfigurationArgs();
         }
 
         public Builder(DeliveryStreamProcessingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.processors = defaults.processors;
+            $ = new DeliveryStreamProcessingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder processors(@Nullable Output<List<DeliveryStreamProcessorArgs>> processors) {
-            this.processors = processors;
+            $.processors = processors;
             return this;
         }
-        public Builder processors(@Nullable List<DeliveryStreamProcessorArgs> processors) {
-            this.processors = Codegen.ofNullable(processors);
-            return this;
+
+        public Builder processors(List<DeliveryStreamProcessorArgs> processors) {
+            return processors(Output.of(processors));
         }
+
         public Builder processors(DeliveryStreamProcessorArgs... processors) {
             return processors(List.of(processors));
-        }        public DeliveryStreamProcessingConfigurationArgs build() {
-            return new DeliveryStreamProcessingConfigurationArgs(enabled, processors);
+        }
+
+        public DeliveryStreamProcessingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

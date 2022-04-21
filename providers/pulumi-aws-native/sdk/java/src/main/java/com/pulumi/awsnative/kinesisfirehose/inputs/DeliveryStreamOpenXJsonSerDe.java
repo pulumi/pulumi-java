@@ -16,78 +16,70 @@ public final class DeliveryStreamOpenXJsonSerDe extends com.pulumi.resources.Inv
     public static final DeliveryStreamOpenXJsonSerDe Empty = new DeliveryStreamOpenXJsonSerDe();
 
     @Import(name="caseInsensitive")
-      private final @Nullable Boolean caseInsensitive;
+    private @Nullable Boolean caseInsensitive;
 
     public Optional<Boolean> caseInsensitive() {
-        return this.caseInsensitive == null ? Optional.empty() : Optional.ofNullable(this.caseInsensitive);
+        return Optional.ofNullable(this.caseInsensitive);
     }
 
     @Import(name="columnToJsonKeyMappings")
-      private final @Nullable Object columnToJsonKeyMappings;
+    private @Nullable Object columnToJsonKeyMappings;
 
     public Optional<Object> columnToJsonKeyMappings() {
-        return this.columnToJsonKeyMappings == null ? Optional.empty() : Optional.ofNullable(this.columnToJsonKeyMappings);
+        return Optional.ofNullable(this.columnToJsonKeyMappings);
     }
 
     @Import(name="convertDotsInJsonKeysToUnderscores")
-      private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
+    private @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
     public Optional<Boolean> convertDotsInJsonKeysToUnderscores() {
-        return this.convertDotsInJsonKeysToUnderscores == null ? Optional.empty() : Optional.ofNullable(this.convertDotsInJsonKeysToUnderscores);
+        return Optional.ofNullable(this.convertDotsInJsonKeysToUnderscores);
     }
 
-    public DeliveryStreamOpenXJsonSerDe(
-        @Nullable Boolean caseInsensitive,
-        @Nullable Object columnToJsonKeyMappings,
-        @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
-        this.caseInsensitive = caseInsensitive;
-        this.columnToJsonKeyMappings = columnToJsonKeyMappings;
-        this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
-    }
+    private DeliveryStreamOpenXJsonSerDe() {}
 
-    private DeliveryStreamOpenXJsonSerDe() {
-        this.caseInsensitive = null;
-        this.columnToJsonKeyMappings = null;
-        this.convertDotsInJsonKeysToUnderscores = null;
+    private DeliveryStreamOpenXJsonSerDe(DeliveryStreamOpenXJsonSerDe $) {
+        this.caseInsensitive = $.caseInsensitive;
+        this.columnToJsonKeyMappings = $.columnToJsonKeyMappings;
+        this.convertDotsInJsonKeysToUnderscores = $.convertDotsInJsonKeysToUnderscores;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamOpenXJsonSerDe defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean caseInsensitive;
-        private @Nullable Object columnToJsonKeyMappings;
-        private @Nullable Boolean convertDotsInJsonKeysToUnderscores;
+        private DeliveryStreamOpenXJsonSerDe $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamOpenXJsonSerDe();
         }
 
         public Builder(DeliveryStreamOpenXJsonSerDe defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caseInsensitive = defaults.caseInsensitive;
-    	      this.columnToJsonKeyMappings = defaults.columnToJsonKeyMappings;
-    	      this.convertDotsInJsonKeysToUnderscores = defaults.convertDotsInJsonKeysToUnderscores;
+            $ = new DeliveryStreamOpenXJsonSerDe(Objects.requireNonNull(defaults));
         }
 
         public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
-            this.caseInsensitive = caseInsensitive;
+            $.caseInsensitive = caseInsensitive;
             return this;
         }
+
         public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
-            this.columnToJsonKeyMappings = columnToJsonKeyMappings;
+            $.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
+
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
-            this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
+            $.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
-        }        public DeliveryStreamOpenXJsonSerDe build() {
-            return new DeliveryStreamOpenXJsonSerDe(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
+        }
+
+        public DeliveryStreamOpenXJsonSerDe build() {
+            return $;
         }
     }
+
 }

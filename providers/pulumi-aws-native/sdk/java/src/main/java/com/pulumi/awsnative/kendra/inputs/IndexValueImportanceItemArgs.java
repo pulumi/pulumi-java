@@ -5,10 +5,10 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class IndexValueImportanceItemArgs extends com.pulumi.resources.Res
     public static final IndexValueImportanceItemArgs Empty = new IndexValueImportanceItemArgs();
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable Output<Integer> value;
+    private @Nullable Output<Integer> value;
 
-    public Output<Integer> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Integer>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public IndexValueImportanceItemArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<Integer> value) {
-        this.key = key;
-        this.value = value;
-    }
+    private IndexValueImportanceItemArgs() {}
 
-    private IndexValueImportanceItemArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private IndexValueImportanceItemArgs(IndexValueImportanceItemArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexValueImportanceItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<Integer> value;
+        private IndexValueImportanceItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexValueImportanceItemArgs();
         }
 
         public Builder(IndexValueImportanceItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new IndexValueImportanceItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<Integer> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Integer value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public IndexValueImportanceItemArgs build() {
-            return new IndexValueImportanceItemArgs(key, value);
+
+        public Builder value(Integer value) {
+            return value(Output.of(value));
+        }
+
+        public IndexValueImportanceItemArgs build() {
+            return $;
         }
     }
+
 }

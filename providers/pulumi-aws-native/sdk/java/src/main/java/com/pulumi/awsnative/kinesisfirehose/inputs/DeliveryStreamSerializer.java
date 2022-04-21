@@ -16,62 +16,57 @@ public final class DeliveryStreamSerializer extends com.pulumi.resources.InvokeA
     public static final DeliveryStreamSerializer Empty = new DeliveryStreamSerializer();
 
     @Import(name="orcSerDe")
-      private final @Nullable DeliveryStreamOrcSerDe orcSerDe;
+    private @Nullable DeliveryStreamOrcSerDe orcSerDe;
 
     public Optional<DeliveryStreamOrcSerDe> orcSerDe() {
-        return this.orcSerDe == null ? Optional.empty() : Optional.ofNullable(this.orcSerDe);
+        return Optional.ofNullable(this.orcSerDe);
     }
 
     @Import(name="parquetSerDe")
-      private final @Nullable DeliveryStreamParquetSerDe parquetSerDe;
+    private @Nullable DeliveryStreamParquetSerDe parquetSerDe;
 
     public Optional<DeliveryStreamParquetSerDe> parquetSerDe() {
-        return this.parquetSerDe == null ? Optional.empty() : Optional.ofNullable(this.parquetSerDe);
+        return Optional.ofNullable(this.parquetSerDe);
     }
 
-    public DeliveryStreamSerializer(
-        @Nullable DeliveryStreamOrcSerDe orcSerDe,
-        @Nullable DeliveryStreamParquetSerDe parquetSerDe) {
-        this.orcSerDe = orcSerDe;
-        this.parquetSerDe = parquetSerDe;
-    }
+    private DeliveryStreamSerializer() {}
 
-    private DeliveryStreamSerializer() {
-        this.orcSerDe = null;
-        this.parquetSerDe = null;
+    private DeliveryStreamSerializer(DeliveryStreamSerializer $) {
+        this.orcSerDe = $.orcSerDe;
+        this.parquetSerDe = $.parquetSerDe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamSerializer defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeliveryStreamOrcSerDe orcSerDe;
-        private @Nullable DeliveryStreamParquetSerDe parquetSerDe;
+        private DeliveryStreamSerializer $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamSerializer();
         }
 
         public Builder(DeliveryStreamSerializer defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.orcSerDe = defaults.orcSerDe;
-    	      this.parquetSerDe = defaults.parquetSerDe;
+            $ = new DeliveryStreamSerializer(Objects.requireNonNull(defaults));
         }
 
         public Builder orcSerDe(@Nullable DeliveryStreamOrcSerDe orcSerDe) {
-            this.orcSerDe = orcSerDe;
+            $.orcSerDe = orcSerDe;
             return this;
         }
+
         public Builder parquetSerDe(@Nullable DeliveryStreamParquetSerDe parquetSerDe) {
-            this.parquetSerDe = parquetSerDe;
+            $.parquetSerDe = parquetSerDe;
             return this;
-        }        public DeliveryStreamSerializer build() {
-            return new DeliveryStreamSerializer(orcSerDe, parquetSerDe);
+        }
+
+        public DeliveryStreamSerializer build() {
+            return $;
         }
     }
+
 }

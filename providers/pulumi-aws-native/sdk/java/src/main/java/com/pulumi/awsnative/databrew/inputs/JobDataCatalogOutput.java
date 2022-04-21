@@ -18,126 +18,111 @@ public final class JobDataCatalogOutput extends com.pulumi.resources.InvokeArgs 
     public static final JobDataCatalogOutput Empty = new JobDataCatalogOutput();
 
     @Import(name="catalogId")
-      private final @Nullable String catalogId;
+    private @Nullable String catalogId;
 
     public Optional<String> catalogId() {
-        return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
+        return Optional.ofNullable(this.catalogId);
     }
 
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databaseOptions")
-      private final @Nullable JobDatabaseTableOutputOptions databaseOptions;
+    private @Nullable JobDatabaseTableOutputOptions databaseOptions;
 
     public Optional<JobDatabaseTableOutputOptions> databaseOptions() {
-        return this.databaseOptions == null ? Optional.empty() : Optional.ofNullable(this.databaseOptions);
+        return Optional.ofNullable(this.databaseOptions);
     }
 
     @Import(name="overwrite")
-      private final @Nullable Boolean overwrite;
+    private @Nullable Boolean overwrite;
 
     public Optional<Boolean> overwrite() {
-        return this.overwrite == null ? Optional.empty() : Optional.ofNullable(this.overwrite);
+        return Optional.ofNullable(this.overwrite);
     }
 
     @Import(name="s3Options")
-      private final @Nullable JobS3TableOutputOptions s3Options;
+    private @Nullable JobS3TableOutputOptions s3Options;
 
     public Optional<JobS3TableOutputOptions> s3Options() {
-        return this.s3Options == null ? Optional.empty() : Optional.ofNullable(this.s3Options);
+        return Optional.ofNullable(this.s3Options);
     }
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public JobDataCatalogOutput(
-        @Nullable String catalogId,
-        String databaseName,
-        @Nullable JobDatabaseTableOutputOptions databaseOptions,
-        @Nullable Boolean overwrite,
-        @Nullable JobS3TableOutputOptions s3Options,
-        String tableName) {
-        this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.databaseOptions = databaseOptions;
-        this.overwrite = overwrite;
-        this.s3Options = s3Options;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private JobDataCatalogOutput() {}
 
-    private JobDataCatalogOutput() {
-        this.catalogId = null;
-        this.databaseName = null;
-        this.databaseOptions = null;
-        this.overwrite = null;
-        this.s3Options = null;
-        this.tableName = null;
+    private JobDataCatalogOutput(JobDataCatalogOutput $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.databaseOptions = $.databaseOptions;
+        this.overwrite = $.overwrite;
+        this.s3Options = $.s3Options;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDataCatalogOutput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String catalogId;
-        private String databaseName;
-        private @Nullable JobDatabaseTableOutputOptions databaseOptions;
-        private @Nullable Boolean overwrite;
-        private @Nullable JobS3TableOutputOptions s3Options;
-        private String tableName;
+        private JobDataCatalogOutput $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDataCatalogOutput();
         }
 
         public Builder(JobDataCatalogOutput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.databaseOptions = defaults.databaseOptions;
-    	      this.overwrite = defaults.overwrite;
-    	      this.s3Options = defaults.s3Options;
-    	      this.tableName = defaults.tableName;
+            $ = new JobDataCatalogOutput(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseOptions(@Nullable JobDatabaseTableOutputOptions databaseOptions) {
-            this.databaseOptions = databaseOptions;
+            $.databaseOptions = databaseOptions;
             return this;
         }
+
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = overwrite;
+            $.overwrite = overwrite;
             return this;
         }
+
         public Builder s3Options(@Nullable JobS3TableOutputOptions s3Options) {
-            this.s3Options = s3Options;
+            $.s3Options = s3Options;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public JobDataCatalogOutput build() {
-            return new JobDataCatalogOutput(catalogId, databaseName, databaseOptions, overwrite, s3Options, tableName);
+        }
+
+        public JobDataCatalogOutput build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobAllowedStatisticsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class JobEntityDetectorConfigurationArgs extends com.pulumi.resourc
     public static final JobEntityDetectorConfigurationArgs Empty = new JobEntityDetectorConfigurationArgs();
 
     @Import(name="allowedStatistics")
-      private final @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
+    private @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
 
-    public Output<JobAllowedStatisticsArgs> allowedStatistics() {
-        return this.allowedStatistics == null ? Codegen.empty() : this.allowedStatistics;
+    public Optional<Output<JobAllowedStatisticsArgs>> allowedStatistics() {
+        return Optional.ofNullable(this.allowedStatistics);
     }
 
     @Import(name="entityTypes", required=true)
-      private final Output<List<String>> entityTypes;
+    private Output<List<String>> entityTypes;
 
     public Output<List<String>> entityTypes() {
         return this.entityTypes;
     }
 
-    public JobEntityDetectorConfigurationArgs(
-        @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics,
-        Output<List<String>> entityTypes) {
-        this.allowedStatistics = allowedStatistics;
-        this.entityTypes = Objects.requireNonNull(entityTypes, "expected parameter 'entityTypes' to be non-null");
-    }
+    private JobEntityDetectorConfigurationArgs() {}
 
-    private JobEntityDetectorConfigurationArgs() {
-        this.allowedStatistics = Codegen.empty();
-        this.entityTypes = Codegen.empty();
+    private JobEntityDetectorConfigurationArgs(JobEntityDetectorConfigurationArgs $) {
+        this.allowedStatistics = $.allowedStatistics;
+        this.entityTypes = $.entityTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobEntityDetectorConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
-        private Output<List<String>> entityTypes;
+        private JobEntityDetectorConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobEntityDetectorConfigurationArgs();
         }
 
         public Builder(JobEntityDetectorConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedStatistics = defaults.allowedStatistics;
-    	      this.entityTypes = defaults.entityTypes;
+            $ = new JobEntityDetectorConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedStatistics(@Nullable Output<JobAllowedStatisticsArgs> allowedStatistics) {
-            this.allowedStatistics = allowedStatistics;
+            $.allowedStatistics = allowedStatistics;
             return this;
         }
-        public Builder allowedStatistics(@Nullable JobAllowedStatisticsArgs allowedStatistics) {
-            this.allowedStatistics = Codegen.ofNullable(allowedStatistics);
-            return this;
+
+        public Builder allowedStatistics(JobAllowedStatisticsArgs allowedStatistics) {
+            return allowedStatistics(Output.of(allowedStatistics));
         }
+
         public Builder entityTypes(Output<List<String>> entityTypes) {
-            this.entityTypes = Objects.requireNonNull(entityTypes);
+            $.entityTypes = entityTypes;
             return this;
         }
+
         public Builder entityTypes(List<String> entityTypes) {
-            this.entityTypes = Output.of(Objects.requireNonNull(entityTypes));
-            return this;
+            return entityTypes(Output.of(entityTypes));
         }
+
         public Builder entityTypes(String... entityTypes) {
             return entityTypes(List.of(entityTypes));
-        }        public JobEntityDetectorConfigurationArgs build() {
-            return new JobEntityDetectorConfigurationArgs(allowedStatistics, entityTypes);
+        }
+
+        public JobEntityDetectorConfigurationArgs build() {
+            $.entityTypes = Objects.requireNonNull($.entityTypes, "expected parameter 'entityTypes' to be non-null");
+            return $;
         }
     }
+
 }

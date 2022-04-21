@@ -5,10 +5,10 @@ package com.pulumi.awsnative.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class AppBasicAuthConfigArgs extends com.pulumi.resources.ResourceA
     public static final AppBasicAuthConfigArgs Empty = new AppBasicAuthConfigArgs();
 
     @Import(name="enableBasicAuth")
-      private final @Nullable Output<Boolean> enableBasicAuth;
+    private @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> enableBasicAuth() {
-        return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
+    public Optional<Output<Boolean>> enableBasicAuth() {
+        return Optional.ofNullable(this.enableBasicAuth);
     }
 
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public AppBasicAuthConfigArgs(
-        @Nullable Output<Boolean> enableBasicAuth,
-        @Nullable Output<String> password,
-        @Nullable Output<String> username) {
-        this.enableBasicAuth = enableBasicAuth;
-        this.password = password;
-        this.username = username;
-    }
+    private AppBasicAuthConfigArgs() {}
 
-    private AppBasicAuthConfigArgs() {
-        this.enableBasicAuth = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private AppBasicAuthConfigArgs(AppBasicAuthConfigArgs $) {
+        this.enableBasicAuth = $.enableBasicAuth;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppBasicAuthConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableBasicAuth;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> username;
+        private AppBasicAuthConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppBasicAuthConfigArgs();
         }
 
         public Builder(AppBasicAuthConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableBasicAuth = defaults.enableBasicAuth;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new AppBasicAuthConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
-            this.enableBasicAuth = enableBasicAuth;
+            $.enableBasicAuth = enableBasicAuth;
             return this;
         }
-        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Codegen.ofNullable(enableBasicAuth);
-            return this;
+
+        public Builder enableBasicAuth(Boolean enableBasicAuth) {
+            return enableBasicAuth(Output.of(enableBasicAuth));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public AppBasicAuthConfigArgs build() {
-            return new AppBasicAuthConfigArgs(enableBasicAuth, password, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public AppBasicAuthConfigArgs build() {
+            return $;
         }
     }
+
 }

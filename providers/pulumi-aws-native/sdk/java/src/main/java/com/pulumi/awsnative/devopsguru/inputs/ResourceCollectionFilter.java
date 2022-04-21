@@ -19,45 +19,44 @@ public final class ResourceCollectionFilter extends com.pulumi.resources.InvokeA
     public static final ResourceCollectionFilter Empty = new ResourceCollectionFilter();
 
     @Import(name="cloudFormation")
-      private final @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
+    private @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
 
     public Optional<ResourceCollectionCloudFormationCollectionFilter> cloudFormation() {
-        return this.cloudFormation == null ? Optional.empty() : Optional.ofNullable(this.cloudFormation);
+        return Optional.ofNullable(this.cloudFormation);
     }
 
-    public ResourceCollectionFilter(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
-        this.cloudFormation = cloudFormation;
-    }
+    private ResourceCollectionFilter() {}
 
-    private ResourceCollectionFilter() {
-        this.cloudFormation = null;
+    private ResourceCollectionFilter(ResourceCollectionFilter $) {
+        this.cloudFormation = $.cloudFormation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceCollectionFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
+        private ResourceCollectionFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceCollectionFilter();
         }
 
         public Builder(ResourceCollectionFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFormation = defaults.cloudFormation;
+            $ = new ResourceCollectionFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
-            this.cloudFormation = cloudFormation;
+            $.cloudFormation = cloudFormation;
             return this;
-        }        public ResourceCollectionFilter build() {
-            return new ResourceCollectionFilter(cloudFormation);
+        }
+
+        public ResourceCollectionFilter build() {
+            return $;
         }
     }
+
 }

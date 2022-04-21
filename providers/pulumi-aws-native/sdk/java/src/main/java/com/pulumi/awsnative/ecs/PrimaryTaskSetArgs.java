@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ecs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
@@ -30,7 +29,7 @@ public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
@@ -41,76 +40,71 @@ public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="taskSetId", required=true)
-      private final Output<String> taskSetId;
+    private Output<String> taskSetId;
 
     public Output<String> taskSetId() {
         return this.taskSetId;
     }
 
-    public PrimaryTaskSetArgs(
-        Output<String> cluster,
-        Output<String> service,
-        Output<String> taskSetId) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.taskSetId = Objects.requireNonNull(taskSetId, "expected parameter 'taskSetId' to be non-null");
-    }
+    private PrimaryTaskSetArgs() {}
 
-    private PrimaryTaskSetArgs() {
-        this.cluster = Codegen.empty();
-        this.service = Codegen.empty();
-        this.taskSetId = Codegen.empty();
+    private PrimaryTaskSetArgs(PrimaryTaskSetArgs $) {
+        this.cluster = $.cluster;
+        this.service = $.service;
+        this.taskSetId = $.taskSetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrimaryTaskSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cluster;
-        private Output<String> service;
-        private Output<String> taskSetId;
+        private PrimaryTaskSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrimaryTaskSetArgs();
         }
 
         public Builder(PrimaryTaskSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.service = defaults.service;
-    	      this.taskSetId = defaults.taskSetId;
+            $ = new PrimaryTaskSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
+            return cluster(Output.of(cluster));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder taskSetId(Output<String> taskSetId) {
-            this.taskSetId = Objects.requireNonNull(taskSetId);
+            $.taskSetId = taskSetId;
             return this;
         }
+
         public Builder taskSetId(String taskSetId) {
-            this.taskSetId = Output.of(Objects.requireNonNull(taskSetId));
-            return this;
-        }        public PrimaryTaskSetArgs build() {
-            return new PrimaryTaskSetArgs(cluster, service, taskSetId);
+            return taskSetId(Output.of(taskSetId));
+        }
+
+        public PrimaryTaskSetArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.taskSetId = Objects.requireNonNull($.taskSetId, "expected parameter 'taskSetId' to be non-null");
+            return $;
         }
     }
+
 }

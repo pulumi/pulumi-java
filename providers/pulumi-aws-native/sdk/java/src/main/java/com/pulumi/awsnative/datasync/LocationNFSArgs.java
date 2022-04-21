@@ -8,10 +8,10 @@ import com.pulumi.awsnative.datasync.inputs.LocationNFSOnPremConfigArgs;
 import com.pulumi.awsnative.datasync.inputs.LocationNFSTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     public static final LocationNFSArgs Empty = new LocationNFSArgs();
 
     @Import(name="mountOptions")
-      private final @Nullable Output<LocationNFSMountOptionsArgs> mountOptions;
+    private @Nullable Output<LocationNFSMountOptionsArgs> mountOptions;
 
-    public Output<LocationNFSMountOptionsArgs> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<LocationNFSMountOptionsArgs>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     @Import(name="onPremConfig", required=true)
-      private final Output<LocationNFSOnPremConfigArgs> onPremConfig;
+    private Output<LocationNFSOnPremConfigArgs> onPremConfig;
 
     public Output<LocationNFSOnPremConfigArgs> onPremConfig() {
         return this.onPremConfig;
@@ -38,7 +38,7 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverHostname", required=true)
-      private final Output<String> serverHostname;
+    private Output<String> serverHostname;
 
     public Output<String> serverHostname() {
         return this.serverHostname;
@@ -49,7 +49,7 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdirectory", required=true)
-      private final Output<String> subdirectory;
+    private Output<String> subdirectory;
 
     public Output<String> subdirectory() {
         return this.subdirectory;
@@ -60,105 +60,95 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LocationNFSTagArgs>> tags;
+    private @Nullable Output<List<LocationNFSTagArgs>> tags;
 
-    public Output<List<LocationNFSTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LocationNFSTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LocationNFSArgs(
-        @Nullable Output<LocationNFSMountOptionsArgs> mountOptions,
-        Output<LocationNFSOnPremConfigArgs> onPremConfig,
-        Output<String> serverHostname,
-        Output<String> subdirectory,
-        @Nullable Output<List<LocationNFSTagArgs>> tags) {
-        this.mountOptions = mountOptions;
-        this.onPremConfig = Objects.requireNonNull(onPremConfig, "expected parameter 'onPremConfig' to be non-null");
-        this.serverHostname = Objects.requireNonNull(serverHostname, "expected parameter 'serverHostname' to be non-null");
-        this.subdirectory = Objects.requireNonNull(subdirectory, "expected parameter 'subdirectory' to be non-null");
-        this.tags = tags;
-    }
+    private LocationNFSArgs() {}
 
-    private LocationNFSArgs() {
-        this.mountOptions = Codegen.empty();
-        this.onPremConfig = Codegen.empty();
-        this.serverHostname = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LocationNFSArgs(LocationNFSArgs $) {
+        this.mountOptions = $.mountOptions;
+        this.onPremConfig = $.onPremConfig;
+        this.serverHostname = $.serverHostname;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationNFSArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LocationNFSMountOptionsArgs> mountOptions;
-        private Output<LocationNFSOnPremConfigArgs> onPremConfig;
-        private Output<String> serverHostname;
-        private Output<String> subdirectory;
-        private @Nullable Output<List<LocationNFSTagArgs>> tags;
+        private LocationNFSArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationNFSArgs();
         }
 
         public Builder(LocationNFSArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.onPremConfig = defaults.onPremConfig;
-    	      this.serverHostname = defaults.serverHostname;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
+            $ = new LocationNFSArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mountOptions(@Nullable Output<LocationNFSMountOptionsArgs> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable LocationNFSMountOptionsArgs mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(LocationNFSMountOptionsArgs mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder onPremConfig(Output<LocationNFSOnPremConfigArgs> onPremConfig) {
-            this.onPremConfig = Objects.requireNonNull(onPremConfig);
+            $.onPremConfig = onPremConfig;
             return this;
         }
+
         public Builder onPremConfig(LocationNFSOnPremConfigArgs onPremConfig) {
-            this.onPremConfig = Output.of(Objects.requireNonNull(onPremConfig));
-            return this;
+            return onPremConfig(Output.of(onPremConfig));
         }
+
         public Builder serverHostname(Output<String> serverHostname) {
-            this.serverHostname = Objects.requireNonNull(serverHostname);
+            $.serverHostname = serverHostname;
             return this;
         }
+
         public Builder serverHostname(String serverHostname) {
-            this.serverHostname = Output.of(Objects.requireNonNull(serverHostname));
-            return this;
+            return serverHostname(Output.of(serverHostname));
         }
+
         public Builder subdirectory(Output<String> subdirectory) {
-            this.subdirectory = Objects.requireNonNull(subdirectory);
+            $.subdirectory = subdirectory;
             return this;
         }
+
         public Builder subdirectory(String subdirectory) {
-            this.subdirectory = Output.of(Objects.requireNonNull(subdirectory));
-            return this;
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<List<LocationNFSTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LocationNFSTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LocationNFSTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LocationNFSTagArgs... tags) {
             return tags(List.of(tags));
-        }        public LocationNFSArgs build() {
-            return new LocationNFSArgs(mountOptions, onPremConfig, serverHostname, subdirectory, tags);
+        }
+
+        public LocationNFSArgs build() {
+            $.onPremConfig = Objects.requireNonNull($.onPremConfig, "expected parameter 'onPremConfig' to be non-null");
+            $.serverHostname = Objects.requireNonNull($.serverHostname, "expected parameter 'serverHostname' to be non-null");
+            $.subdirectory = Objects.requireNonNull($.subdirectory, "expected parameter 'subdirectory' to be non-null");
+            return $;
         }
     }
+
 }

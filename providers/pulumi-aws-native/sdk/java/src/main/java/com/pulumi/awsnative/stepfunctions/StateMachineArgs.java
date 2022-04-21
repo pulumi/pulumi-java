@@ -12,10 +12,10 @@ import com.pulumi.awsnative.stepfunctions.inputs.StateMachineTagsEntryArgs;
 import com.pulumi.awsnative.stepfunctions.inputs.StateMachineTracingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,233 +24,206 @@ public final class StateMachineArgs extends com.pulumi.resources.ResourceArgs {
     public static final StateMachineArgs Empty = new StateMachineArgs();
 
     @Import(name="definition")
-      private final @Nullable Output<StateMachineDefinitionArgs> definition;
+    private @Nullable Output<StateMachineDefinitionArgs> definition;
 
-    public Output<StateMachineDefinitionArgs> definition() {
-        return this.definition == null ? Codegen.empty() : this.definition;
+    public Optional<Output<StateMachineDefinitionArgs>> definition() {
+        return Optional.ofNullable(this.definition);
     }
 
     @Import(name="definitionS3Location")
-      private final @Nullable Output<StateMachineS3LocationArgs> definitionS3Location;
+    private @Nullable Output<StateMachineS3LocationArgs> definitionS3Location;
 
-    public Output<StateMachineS3LocationArgs> definitionS3Location() {
-        return this.definitionS3Location == null ? Codegen.empty() : this.definitionS3Location;
+    public Optional<Output<StateMachineS3LocationArgs>> definitionS3Location() {
+        return Optional.ofNullable(this.definitionS3Location);
     }
 
     @Import(name="definitionString")
-      private final @Nullable Output<String> definitionString;
+    private @Nullable Output<String> definitionString;
 
-    public Output<String> definitionString() {
-        return this.definitionString == null ? Codegen.empty() : this.definitionString;
+    public Optional<Output<String>> definitionString() {
+        return Optional.ofNullable(this.definitionString);
     }
 
     @Import(name="definitionSubstitutions")
-      private final @Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions;
+    private @Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions;
 
-    public Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions() {
-        return this.definitionSubstitutions == null ? Codegen.empty() : this.definitionSubstitutions;
+    public Optional<Output<StateMachineDefinitionSubstitutionsArgs>> definitionSubstitutions() {
+        return Optional.ofNullable(this.definitionSubstitutions);
     }
 
     @Import(name="loggingConfiguration")
-      private final @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
+    private @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<StateMachineLoggingConfigurationArgs> loggingConfiguration() {
-        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
+    public Optional<Output<StateMachineLoggingConfigurationArgs>> loggingConfiguration() {
+        return Optional.ofNullable(this.loggingConfiguration);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stateMachineName")
-      private final @Nullable Output<String> stateMachineName;
+    private @Nullable Output<String> stateMachineName;
 
-    public Output<String> stateMachineName() {
-        return this.stateMachineName == null ? Codegen.empty() : this.stateMachineName;
+    public Optional<Output<String>> stateMachineName() {
+        return Optional.ofNullable(this.stateMachineName);
     }
 
     @Import(name="stateMachineType")
-      private final @Nullable Output<StateMachineType> stateMachineType;
+    private @Nullable Output<StateMachineType> stateMachineType;
 
-    public Output<StateMachineType> stateMachineType() {
-        return this.stateMachineType == null ? Codegen.empty() : this.stateMachineType;
+    public Optional<Output<StateMachineType>> stateMachineType() {
+        return Optional.ofNullable(this.stateMachineType);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<StateMachineTagsEntryArgs>> tags;
+    private @Nullable Output<List<StateMachineTagsEntryArgs>> tags;
 
-    public Output<List<StateMachineTagsEntryArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<StateMachineTagsEntryArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tracingConfiguration")
-      private final @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
+    private @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
-    public Output<StateMachineTracingConfigurationArgs> tracingConfiguration() {
-        return this.tracingConfiguration == null ? Codegen.empty() : this.tracingConfiguration;
+    public Optional<Output<StateMachineTracingConfigurationArgs>> tracingConfiguration() {
+        return Optional.ofNullable(this.tracingConfiguration);
     }
 
-    public StateMachineArgs(
-        @Nullable Output<StateMachineDefinitionArgs> definition,
-        @Nullable Output<StateMachineS3LocationArgs> definitionS3Location,
-        @Nullable Output<String> definitionString,
-        @Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions,
-        @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration,
-        Output<String> roleArn,
-        @Nullable Output<String> stateMachineName,
-        @Nullable Output<StateMachineType> stateMachineType,
-        @Nullable Output<List<StateMachineTagsEntryArgs>> tags,
-        @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration) {
-        this.definition = definition;
-        this.definitionS3Location = definitionS3Location;
-        this.definitionString = definitionString;
-        this.definitionSubstitutions = definitionSubstitutions;
-        this.loggingConfiguration = loggingConfiguration;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stateMachineName = stateMachineName;
-        this.stateMachineType = stateMachineType;
-        this.tags = tags;
-        this.tracingConfiguration = tracingConfiguration;
-    }
+    private StateMachineArgs() {}
 
-    private StateMachineArgs() {
-        this.definition = Codegen.empty();
-        this.definitionS3Location = Codegen.empty();
-        this.definitionString = Codegen.empty();
-        this.definitionSubstitutions = Codegen.empty();
-        this.loggingConfiguration = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.stateMachineName = Codegen.empty();
-        this.stateMachineType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tracingConfiguration = Codegen.empty();
+    private StateMachineArgs(StateMachineArgs $) {
+        this.definition = $.definition;
+        this.definitionS3Location = $.definitionS3Location;
+        this.definitionString = $.definitionString;
+        this.definitionSubstitutions = $.definitionSubstitutions;
+        this.loggingConfiguration = $.loggingConfiguration;
+        this.roleArn = $.roleArn;
+        this.stateMachineName = $.stateMachineName;
+        this.stateMachineType = $.stateMachineType;
+        this.tags = $.tags;
+        this.tracingConfiguration = $.tracingConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StateMachineDefinitionArgs> definition;
-        private @Nullable Output<StateMachineS3LocationArgs> definitionS3Location;
-        private @Nullable Output<String> definitionString;
-        private @Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions;
-        private @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
-        private Output<String> roleArn;
-        private @Nullable Output<String> stateMachineName;
-        private @Nullable Output<StateMachineType> stateMachineType;
-        private @Nullable Output<List<StateMachineTagsEntryArgs>> tags;
-        private @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
+        private StateMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineArgs();
         }
 
         public Builder(StateMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.definitionS3Location = defaults.definitionS3Location;
-    	      this.definitionString = defaults.definitionString;
-    	      this.definitionSubstitutions = defaults.definitionSubstitutions;
-    	      this.loggingConfiguration = defaults.loggingConfiguration;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stateMachineName = defaults.stateMachineName;
-    	      this.stateMachineType = defaults.stateMachineType;
-    	      this.tags = defaults.tags;
-    	      this.tracingConfiguration = defaults.tracingConfiguration;
+            $ = new StateMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(@Nullable Output<StateMachineDefinitionArgs> definition) {
-            this.definition = definition;
+            $.definition = definition;
             return this;
         }
-        public Builder definition(@Nullable StateMachineDefinitionArgs definition) {
-            this.definition = Codegen.ofNullable(definition);
-            return this;
+
+        public Builder definition(StateMachineDefinitionArgs definition) {
+            return definition(Output.of(definition));
         }
+
         public Builder definitionS3Location(@Nullable Output<StateMachineS3LocationArgs> definitionS3Location) {
-            this.definitionS3Location = definitionS3Location;
+            $.definitionS3Location = definitionS3Location;
             return this;
         }
-        public Builder definitionS3Location(@Nullable StateMachineS3LocationArgs definitionS3Location) {
-            this.definitionS3Location = Codegen.ofNullable(definitionS3Location);
-            return this;
+
+        public Builder definitionS3Location(StateMachineS3LocationArgs definitionS3Location) {
+            return definitionS3Location(Output.of(definitionS3Location));
         }
+
         public Builder definitionString(@Nullable Output<String> definitionString) {
-            this.definitionString = definitionString;
+            $.definitionString = definitionString;
             return this;
         }
-        public Builder definitionString(@Nullable String definitionString) {
-            this.definitionString = Codegen.ofNullable(definitionString);
-            return this;
+
+        public Builder definitionString(String definitionString) {
+            return definitionString(Output.of(definitionString));
         }
+
         public Builder definitionSubstitutions(@Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions) {
-            this.definitionSubstitutions = definitionSubstitutions;
+            $.definitionSubstitutions = definitionSubstitutions;
             return this;
         }
-        public Builder definitionSubstitutions(@Nullable StateMachineDefinitionSubstitutionsArgs definitionSubstitutions) {
-            this.definitionSubstitutions = Codegen.ofNullable(definitionSubstitutions);
-            return this;
+
+        public Builder definitionSubstitutions(StateMachineDefinitionSubstitutionsArgs definitionSubstitutions) {
+            return definitionSubstitutions(Output.of(definitionSubstitutions));
         }
+
         public Builder loggingConfiguration(@Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration) {
-            this.loggingConfiguration = loggingConfiguration;
+            $.loggingConfiguration = loggingConfiguration;
             return this;
         }
-        public Builder loggingConfiguration(@Nullable StateMachineLoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
-            return this;
+
+        public Builder loggingConfiguration(StateMachineLoggingConfigurationArgs loggingConfiguration) {
+            return loggingConfiguration(Output.of(loggingConfiguration));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder stateMachineName(@Nullable Output<String> stateMachineName) {
-            this.stateMachineName = stateMachineName;
+            $.stateMachineName = stateMachineName;
             return this;
         }
-        public Builder stateMachineName(@Nullable String stateMachineName) {
-            this.stateMachineName = Codegen.ofNullable(stateMachineName);
-            return this;
+
+        public Builder stateMachineName(String stateMachineName) {
+            return stateMachineName(Output.of(stateMachineName));
         }
+
         public Builder stateMachineType(@Nullable Output<StateMachineType> stateMachineType) {
-            this.stateMachineType = stateMachineType;
+            $.stateMachineType = stateMachineType;
             return this;
         }
-        public Builder stateMachineType(@Nullable StateMachineType stateMachineType) {
-            this.stateMachineType = Codegen.ofNullable(stateMachineType);
-            return this;
+
+        public Builder stateMachineType(StateMachineType stateMachineType) {
+            return stateMachineType(Output.of(stateMachineType));
         }
+
         public Builder tags(@Nullable Output<List<StateMachineTagsEntryArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<StateMachineTagsEntryArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<StateMachineTagsEntryArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(StateMachineTagsEntryArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder tracingConfiguration(@Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration) {
-            this.tracingConfiguration = tracingConfiguration;
+            $.tracingConfiguration = tracingConfiguration;
             return this;
         }
-        public Builder tracingConfiguration(@Nullable StateMachineTracingConfigurationArgs tracingConfiguration) {
-            this.tracingConfiguration = Codegen.ofNullable(tracingConfiguration);
-            return this;
-        }        public StateMachineArgs build() {
-            return new StateMachineArgs(definition, definitionS3Location, definitionString, definitionSubstitutions, loggingConfiguration, roleArn, stateMachineName, stateMachineType, tags, tracingConfiguration);
+
+        public Builder tracingConfiguration(StateMachineTracingConfigurationArgs tracingConfiguration) {
+            return tracingConfiguration(Output.of(tracingConfiguration));
+        }
+
+        public StateMachineArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

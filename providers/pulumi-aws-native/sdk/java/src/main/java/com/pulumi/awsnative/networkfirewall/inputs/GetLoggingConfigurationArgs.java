@@ -13,45 +13,45 @@ public final class GetLoggingConfigurationArgs extends com.pulumi.resources.Invo
     public static final GetLoggingConfigurationArgs Empty = new GetLoggingConfigurationArgs();
 
     @Import(name="firewallArn", required=true)
-      private final String firewallArn;
+    private String firewallArn;
 
     public String firewallArn() {
         return this.firewallArn;
     }
 
-    public GetLoggingConfigurationArgs(String firewallArn) {
-        this.firewallArn = Objects.requireNonNull(firewallArn, "expected parameter 'firewallArn' to be non-null");
-    }
+    private GetLoggingConfigurationArgs() {}
 
-    private GetLoggingConfigurationArgs() {
-        this.firewallArn = null;
+    private GetLoggingConfigurationArgs(GetLoggingConfigurationArgs $) {
+        this.firewallArn = $.firewallArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallArn;
+        private GetLoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoggingConfigurationArgs();
         }
 
         public Builder(GetLoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallArn = defaults.firewallArn;
+            $ = new GetLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallArn(String firewallArn) {
-            this.firewallArn = Objects.requireNonNull(firewallArn);
+            $.firewallArn = firewallArn;
             return this;
-        }        public GetLoggingConfigurationArgs build() {
-            return new GetLoggingConfigurationArgs(firewallArn);
+        }
+
+        public GetLoggingConfigurationArgs build() {
+            $.firewallArn = Objects.requireNonNull($.firewallArn, "expected parameter 'firewallArn' to be non-null");
+            return $;
         }
     }
+
 }

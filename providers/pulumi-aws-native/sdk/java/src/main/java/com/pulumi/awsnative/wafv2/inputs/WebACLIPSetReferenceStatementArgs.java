@@ -6,9 +6,9 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLIPSetForwardedIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class WebACLIPSetReferenceStatementArgs extends com.pulumi.resource
     public static final WebACLIPSetReferenceStatementArgs Empty = new WebACLIPSetReferenceStatementArgs();
 
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="iPSetForwardedIPConfig")
-      private final @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
+    private @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
-    public Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig() {
-        return this.iPSetForwardedIPConfig == null ? Codegen.empty() : this.iPSetForwardedIPConfig;
+    public Optional<Output<WebACLIPSetForwardedIPConfigurationArgs>> iPSetForwardedIPConfig() {
+        return Optional.ofNullable(this.iPSetForwardedIPConfig);
     }
 
-    public WebACLIPSetReferenceStatementArgs(
-        Output<String> arn,
-        @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
-    }
+    private WebACLIPSetReferenceStatementArgs() {}
 
-    private WebACLIPSetReferenceStatementArgs() {
-        this.arn = Codegen.empty();
-        this.iPSetForwardedIPConfig = Codegen.empty();
+    private WebACLIPSetReferenceStatementArgs(WebACLIPSetReferenceStatementArgs $) {
+        this.arn = $.arn;
+        this.iPSetForwardedIPConfig = $.iPSetForwardedIPConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLIPSetReferenceStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
+        private WebACLIPSetReferenceStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLIPSetReferenceStatementArgs();
         }
 
         public Builder(WebACLIPSetReferenceStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
+            $ = new WebACLIPSetReferenceStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder iPSetForwardedIPConfig(@Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
+            $.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }
-        public Builder iPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = Codegen.ofNullable(iPSetForwardedIPConfig);
-            return this;
-        }        public WebACLIPSetReferenceStatementArgs build() {
-            return new WebACLIPSetReferenceStatementArgs(arn, iPSetForwardedIPConfig);
+
+        public Builder iPSetForwardedIPConfig(WebACLIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
+            return iPSetForwardedIPConfig(Output.of(iPSetForwardedIPConfig));
+        }
+
+        public WebACLIPSetReferenceStatementArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

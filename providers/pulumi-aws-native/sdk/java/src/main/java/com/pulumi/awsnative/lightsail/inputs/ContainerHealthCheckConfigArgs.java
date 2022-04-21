@@ -5,10 +5,10 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ContainerHealthCheckConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="healthyThreshold")
-      private final @Nullable Output<Integer> healthyThreshold;
+    private @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> healthyThreshold() {
-        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
+    public Optional<Output<Integer>> healthyThreshold() {
+        return Optional.ofNullable(this.healthyThreshold);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerHealthCheckConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="intervalSeconds")
-      private final @Nullable Output<Integer> intervalSeconds;
+    private @Nullable Output<Integer> intervalSeconds;
 
-    public Output<Integer> intervalSeconds() {
-        return this.intervalSeconds == null ? Codegen.empty() : this.intervalSeconds;
+    public Optional<Output<Integer>> intervalSeconds() {
+        return Optional.ofNullable(this.intervalSeconds);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ContainerHealthCheckConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContainerHealthCheckConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="successCodes")
-      private final @Nullable Output<String> successCodes;
+    private @Nullable Output<String> successCodes;
 
-    public Output<String> successCodes() {
-        return this.successCodes == null ? Codegen.empty() : this.successCodes;
+    public Optional<Output<String>> successCodes() {
+        return Optional.ofNullable(this.successCodes);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContainerHealthCheckConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Output<Integer> timeoutSeconds;
+    private @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
+    public Optional<Output<Integer>> timeoutSeconds() {
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class ContainerHealthCheckConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Output<Integer> unhealthyThreshold;
+    private @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
+    public Optional<Output<Integer>> unhealthyThreshold() {
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public ContainerHealthCheckConfigArgs(
-        @Nullable Output<Integer> healthyThreshold,
-        @Nullable Output<Integer> intervalSeconds,
-        @Nullable Output<String> path,
-        @Nullable Output<String> successCodes,
-        @Nullable Output<Integer> timeoutSeconds,
-        @Nullable Output<Integer> unhealthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
-        this.intervalSeconds = intervalSeconds;
-        this.path = path;
-        this.successCodes = successCodes;
-        this.timeoutSeconds = timeoutSeconds;
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private ContainerHealthCheckConfigArgs() {}
 
-    private ContainerHealthCheckConfigArgs() {
-        this.healthyThreshold = Codegen.empty();
-        this.intervalSeconds = Codegen.empty();
-        this.path = Codegen.empty();
-        this.successCodes = Codegen.empty();
-        this.timeoutSeconds = Codegen.empty();
-        this.unhealthyThreshold = Codegen.empty();
+    private ContainerHealthCheckConfigArgs(ContainerHealthCheckConfigArgs $) {
+        this.healthyThreshold = $.healthyThreshold;
+        this.intervalSeconds = $.intervalSeconds;
+        this.path = $.path;
+        this.successCodes = $.successCodes;
+        this.timeoutSeconds = $.timeoutSeconds;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerHealthCheckConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> healthyThreshold;
-        private @Nullable Output<Integer> intervalSeconds;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> successCodes;
-        private @Nullable Output<Integer> timeoutSeconds;
-        private @Nullable Output<Integer> unhealthyThreshold;
+        private ContainerHealthCheckConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerHealthCheckConfigArgs();
         }
 
         public Builder(ContainerHealthCheckConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.intervalSeconds = defaults.intervalSeconds;
-    	      this.path = defaults.path;
-    	      this.successCodes = defaults.successCodes;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new ContainerHealthCheckConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
-        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
-            return this;
+
+        public Builder healthyThreshold(Integer healthyThreshold) {
+            return healthyThreshold(Output.of(healthyThreshold));
         }
+
         public Builder intervalSeconds(@Nullable Output<Integer> intervalSeconds) {
-            this.intervalSeconds = intervalSeconds;
+            $.intervalSeconds = intervalSeconds;
             return this;
         }
-        public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
-            this.intervalSeconds = Codegen.ofNullable(intervalSeconds);
-            return this;
+
+        public Builder intervalSeconds(Integer intervalSeconds) {
+            return intervalSeconds(Output.of(intervalSeconds));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder successCodes(@Nullable Output<String> successCodes) {
-            this.successCodes = successCodes;
+            $.successCodes = successCodes;
             return this;
         }
-        public Builder successCodes(@Nullable String successCodes) {
-            this.successCodes = Codegen.ofNullable(successCodes);
-            return this;
+
+        public Builder successCodes(String successCodes) {
+            return successCodes(Output.of(successCodes));
         }
+
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
-        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
-            return this;
+
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
+            return timeoutSeconds(Output.of(timeoutSeconds));
         }
+
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
-            return this;
-        }        public ContainerHealthCheckConfigArgs build() {
-            return new ContainerHealthCheckConfigArgs(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);
+
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
+            return unhealthyThreshold(Output.of(unhealthyThreshold));
+        }
+
+        public ContainerHealthCheckConfigArgs build() {
+            return $;
         }
     }
+
 }

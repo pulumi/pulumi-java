@@ -20,62 +20,57 @@ public final class PackagingConfigurationMssManifest extends com.pulumi.resource
     public static final PackagingConfigurationMssManifest Empty = new PackagingConfigurationMssManifest();
 
     @Import(name="manifestName")
-      private final @Nullable String manifestName;
+    private @Nullable String manifestName;
 
     public Optional<String> manifestName() {
-        return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
+        return Optional.ofNullable(this.manifestName);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable PackagingConfigurationStreamSelection streamSelection;
+    private @Nullable PackagingConfigurationStreamSelection streamSelection;
 
     public Optional<PackagingConfigurationStreamSelection> streamSelection() {
-        return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public PackagingConfigurationMssManifest(
-        @Nullable String manifestName,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
-        this.manifestName = manifestName;
-        this.streamSelection = streamSelection;
-    }
+    private PackagingConfigurationMssManifest() {}
 
-    private PackagingConfigurationMssManifest() {
-        this.manifestName = null;
-        this.streamSelection = null;
+    private PackagingConfigurationMssManifest(PackagingConfigurationMssManifest $) {
+        this.manifestName = $.manifestName;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationMssManifest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String manifestName;
-        private @Nullable PackagingConfigurationStreamSelection streamSelection;
+        private PackagingConfigurationMssManifest $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationMssManifest();
         }
 
         public Builder(PackagingConfigurationMssManifest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manifestName = defaults.manifestName;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new PackagingConfigurationMssManifest(Objects.requireNonNull(defaults));
         }
 
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
+
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
-        }        public PackagingConfigurationMssManifest build() {
-            return new PackagingConfigurationMssManifest(manifestName, streamSelection);
+        }
+
+        public PackagingConfigurationMssManifest build() {
+            return $;
         }
     }
+
 }

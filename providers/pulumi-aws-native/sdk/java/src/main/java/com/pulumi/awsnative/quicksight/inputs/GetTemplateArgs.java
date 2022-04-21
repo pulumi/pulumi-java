@@ -13,62 +13,59 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final String awsAccountId;
+    private String awsAccountId;
 
     public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="templateId", required=true)
-      private final String templateId;
+    private String templateId;
 
     public String templateId() {
         return this.templateId;
     }
 
-    public GetTemplateArgs(
-        String awsAccountId,
-        String templateId) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.templateId = Objects.requireNonNull(templateId, "expected parameter 'templateId' to be non-null");
-    }
+    private GetTemplateArgs() {}
 
-    private GetTemplateArgs() {
-        this.awsAccountId = null;
-        this.templateId = null;
+    private GetTemplateArgs(GetTemplateArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.templateId = $.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsAccountId;
-        private String templateId;
+        private GetTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTemplateArgs();
         }
 
         public Builder(GetTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.templateId = defaults.templateId;
+            $ = new GetTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder templateId(String templateId) {
-            this.templateId = Objects.requireNonNull(templateId);
+            $.templateId = templateId;
             return this;
-        }        public GetTemplateArgs build() {
-            return new GetTemplateArgs(awsAccountId, templateId);
+        }
+
+        public GetTemplateArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.templateId = Objects.requireNonNull($.templateId, "expected parameter 'templateId' to be non-null");
+            return $;
         }
     }
+
 }

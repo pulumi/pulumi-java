@@ -13,45 +13,45 @@ public final class FlowInforNexusSourceProperties extends com.pulumi.resources.I
     public static final FlowInforNexusSourceProperties Empty = new FlowInforNexusSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowInforNexusSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowInforNexusSourceProperties() {}
 
-    private FlowInforNexusSourceProperties() {
-        this.object = null;
+    private FlowInforNexusSourceProperties(FlowInforNexusSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowInforNexusSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowInforNexusSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowInforNexusSourceProperties();
         }
 
         public Builder(FlowInforNexusSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowInforNexusSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowInforNexusSourceProperties build() {
-            return new FlowInforNexusSourceProperties(object);
+        }
+
+        public FlowInforNexusSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

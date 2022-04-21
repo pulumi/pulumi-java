@@ -15,62 +15,57 @@ public final class ContainerEnvironmentVariable extends com.pulumi.resources.Inv
     public static final ContainerEnvironmentVariable Empty = new ContainerEnvironmentVariable();
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
     @Import(name="variable")
-      private final @Nullable String variable;
+    private @Nullable String variable;
 
     public Optional<String> variable() {
-        return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
+        return Optional.ofNullable(this.variable);
     }
 
-    public ContainerEnvironmentVariable(
-        @Nullable String value,
-        @Nullable String variable) {
-        this.value = value;
-        this.variable = variable;
-    }
+    private ContainerEnvironmentVariable() {}
 
-    private ContainerEnvironmentVariable() {
-        this.value = null;
-        this.variable = null;
+    private ContainerEnvironmentVariable(ContainerEnvironmentVariable $) {
+        this.value = $.value;
+        this.variable = $.variable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerEnvironmentVariable defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String value;
-        private @Nullable String variable;
+        private ContainerEnvironmentVariable $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerEnvironmentVariable();
         }
 
         public Builder(ContainerEnvironmentVariable defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.variable = defaults.variable;
+            $ = new ContainerEnvironmentVariable(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
+
         public Builder variable(@Nullable String variable) {
-            this.variable = variable;
+            $.variable = variable;
             return this;
-        }        public ContainerEnvironmentVariable build() {
-            return new ContainerEnvironmentVariable(value, variable);
+        }
+
+        public ContainerEnvironmentVariable build() {
+            return $;
         }
     }
+
 }

@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.robomaker.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class SimulationApplicationTags extends com.pulumi.resources.Invoke
 
     public static final SimulationApplicationTags Empty = new SimulationApplicationTags();
 
-    public SimulationApplicationTags() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(SimulationApplicationTags defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private SimulationApplicationTags $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(SimulationApplicationTags defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new SimulationApplicationTags();
         }
         public SimulationApplicationTags build() {
-            return new SimulationApplicationTags();
+            return $;
         }
     }
+
 }

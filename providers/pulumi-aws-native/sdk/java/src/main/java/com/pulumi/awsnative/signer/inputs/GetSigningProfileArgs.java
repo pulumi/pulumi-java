@@ -17,45 +17,45 @@ public final class GetSigningProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetSigningProfileArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetSigningProfileArgs() {}
 
-    private GetSigningProfileArgs() {
-        this.arn = null;
+    private GetSigningProfileArgs(GetSigningProfileArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetSigningProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningProfileArgs();
         }
 
         public Builder(GetSigningProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetSigningProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetSigningProfileArgs build() {
-            return new GetSigningProfileArgs(arn);
+        }
+
+        public GetSigningProfileArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

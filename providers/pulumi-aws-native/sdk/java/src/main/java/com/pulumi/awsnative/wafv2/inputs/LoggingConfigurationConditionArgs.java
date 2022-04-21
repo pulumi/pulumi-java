@@ -7,8 +7,8 @@ import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionActionCond
 import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionLabelNameConditionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LoggingConfigurationConditionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="actionCondition")
-      private final @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
+    private @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
 
-    public Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition() {
-        return this.actionCondition == null ? Codegen.empty() : this.actionCondition;
+    public Optional<Output<LoggingConfigurationConditionActionConditionPropertiesArgs>> actionCondition() {
+        return Optional.ofNullable(this.actionCondition);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class LoggingConfigurationConditionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="labelNameCondition")
-      private final @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
+    private @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
 
-    public Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition() {
-        return this.labelNameCondition == null ? Codegen.empty() : this.labelNameCondition;
+    public Optional<Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs>> labelNameCondition() {
+        return Optional.ofNullable(this.labelNameCondition);
     }
 
-    public LoggingConfigurationConditionArgs(
-        @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition,
-        @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition) {
-        this.actionCondition = actionCondition;
-        this.labelNameCondition = labelNameCondition;
-    }
+    private LoggingConfigurationConditionArgs() {}
 
-    private LoggingConfigurationConditionArgs() {
-        this.actionCondition = Codegen.empty();
-        this.labelNameCondition = Codegen.empty();
+    private LoggingConfigurationConditionArgs(LoggingConfigurationConditionArgs $) {
+        this.actionCondition = $.actionCondition;
+        this.labelNameCondition = $.labelNameCondition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
-        private @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
+        private LoggingConfigurationConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationConditionArgs();
         }
 
         public Builder(LoggingConfigurationConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionCondition = defaults.actionCondition;
-    	      this.labelNameCondition = defaults.labelNameCondition;
+            $ = new LoggingConfigurationConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionCondition(@Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition) {
-            this.actionCondition = actionCondition;
+            $.actionCondition = actionCondition;
             return this;
         }
-        public Builder actionCondition(@Nullable LoggingConfigurationConditionActionConditionPropertiesArgs actionCondition) {
-            this.actionCondition = Codegen.ofNullable(actionCondition);
-            return this;
+
+        public Builder actionCondition(LoggingConfigurationConditionActionConditionPropertiesArgs actionCondition) {
+            return actionCondition(Output.of(actionCondition));
         }
+
         public Builder labelNameCondition(@Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition) {
-            this.labelNameCondition = labelNameCondition;
+            $.labelNameCondition = labelNameCondition;
             return this;
         }
-        public Builder labelNameCondition(@Nullable LoggingConfigurationConditionLabelNameConditionPropertiesArgs labelNameCondition) {
-            this.labelNameCondition = Codegen.ofNullable(labelNameCondition);
-            return this;
-        }        public LoggingConfigurationConditionArgs build() {
-            return new LoggingConfigurationConditionArgs(actionCondition, labelNameCondition);
+
+        public Builder labelNameCondition(LoggingConfigurationConditionLabelNameConditionPropertiesArgs labelNameCondition) {
+            return labelNameCondition(Output.of(labelNameCondition));
+        }
+
+        public LoggingConfigurationConditionArgs build() {
+            return $;
         }
     }
+
 }

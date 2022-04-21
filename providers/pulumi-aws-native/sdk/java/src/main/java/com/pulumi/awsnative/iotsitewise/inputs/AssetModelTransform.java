@@ -19,7 +19,7 @@ public final class AssetModelTransform extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
@@ -30,58 +30,56 @@ public final class AssetModelTransform extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="variables", required=true)
-      private final List<AssetModelExpressionVariable> variables;
+    private List<AssetModelExpressionVariable> variables;
 
     public List<AssetModelExpressionVariable> variables() {
         return this.variables;
     }
 
-    public AssetModelTransform(
-        String expression,
-        List<AssetModelExpressionVariable> variables) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.variables = Objects.requireNonNull(variables, "expected parameter 'variables' to be non-null");
-    }
+    private AssetModelTransform() {}
 
-    private AssetModelTransform() {
-        this.expression = null;
-        this.variables = List.of();
+    private AssetModelTransform(AssetModelTransform $) {
+        this.expression = $.expression;
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelTransform defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expression;
-        private List<AssetModelExpressionVariable> variables;
+        private AssetModelTransform $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelTransform();
         }
 
         public Builder(AssetModelTransform defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.variables = defaults.variables;
+            $ = new AssetModelTransform(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder variables(List<AssetModelExpressionVariable> variables) {
-            this.variables = Objects.requireNonNull(variables);
+            $.variables = variables;
             return this;
         }
+
         public Builder variables(AssetModelExpressionVariable... variables) {
             return variables(List.of(variables));
-        }        public AssetModelTransform build() {
-            return new AssetModelTransform(expression, variables);
+        }
+
+        public AssetModelTransform build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.variables = Objects.requireNonNull($.variables, "expected parameter 'variables' to be non-null");
+            return $;
         }
     }
+
 }

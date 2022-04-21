@@ -13,45 +13,45 @@ public final class GetRuleGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRuleGroupArgs Empty = new GetRuleGroupArgs();
 
     @Import(name="ruleGroupArn", required=true)
-      private final String ruleGroupArn;
+    private String ruleGroupArn;
 
     public String ruleGroupArn() {
         return this.ruleGroupArn;
     }
 
-    public GetRuleGroupArgs(String ruleGroupArn) {
-        this.ruleGroupArn = Objects.requireNonNull(ruleGroupArn, "expected parameter 'ruleGroupArn' to be non-null");
-    }
+    private GetRuleGroupArgs() {}
 
-    private GetRuleGroupArgs() {
-        this.ruleGroupArn = null;
+    private GetRuleGroupArgs(GetRuleGroupArgs $) {
+        this.ruleGroupArn = $.ruleGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRuleGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ruleGroupArn;
+        private GetRuleGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRuleGroupArgs();
         }
 
         public Builder(GetRuleGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleGroupArn = defaults.ruleGroupArn;
+            $ = new GetRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleGroupArn(String ruleGroupArn) {
-            this.ruleGroupArn = Objects.requireNonNull(ruleGroupArn);
+            $.ruleGroupArn = ruleGroupArn;
             return this;
-        }        public GetRuleGroupArgs build() {
-            return new GetRuleGroupArgs(ruleGroupArn);
+        }
+
+        public GetRuleGroupArgs build() {
+            $.ruleGroupArn = Objects.requireNonNull($.ruleGroupArn, "expected parameter 'ruleGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

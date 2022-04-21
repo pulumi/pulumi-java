@@ -5,7 +5,6 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class StorageLensAwsOrgArgs extends com.pulumi.resources.ResourceAr
     public static final StorageLensAwsOrgArgs Empty = new StorageLensAwsOrgArgs();
 
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
     }
 
-    public StorageLensAwsOrgArgs(Output<String> arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private StorageLensAwsOrgArgs() {}
 
-    private StorageLensAwsOrgArgs() {
-        this.arn = Codegen.empty();
+    private StorageLensAwsOrgArgs(StorageLensAwsOrgArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensAwsOrgArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
+        private StorageLensAwsOrgArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensAwsOrgArgs();
         }
 
         public Builder(StorageLensAwsOrgArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new StorageLensAwsOrgArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
-        }        public StorageLensAwsOrgArgs build() {
-            return new StorageLensAwsOrgArgs(arn);
+            return arn(Output.of(arn));
+        }
+
+        public StorageLensAwsOrgArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,222 +18,193 @@ public final class ListenerRuleAuthenticateOidcConfig extends com.pulumi.resourc
     public static final ListenerRuleAuthenticateOidcConfig Empty = new ListenerRuleAuthenticateOidcConfig();
 
     @Import(name="authenticationRequestExtraParams")
-      private final @Nullable Object authenticationRequestExtraParams;
+    private @Nullable Object authenticationRequestExtraParams;
 
     public Optional<Object> authenticationRequestExtraParams() {
-        return this.authenticationRequestExtraParams == null ? Optional.empty() : Optional.ofNullable(this.authenticationRequestExtraParams);
+        return Optional.ofNullable(this.authenticationRequestExtraParams);
     }
 
     @Import(name="authorizationEndpoint", required=true)
-      private final String authorizationEndpoint;
+    private String authorizationEndpoint;
 
     public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
     }
 
     @Import(name="clientSecret", required=true)
-      private final String clientSecret;
+    private String clientSecret;
 
     public String clientSecret() {
         return this.clientSecret;
     }
 
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
     }
 
     @Import(name="onUnauthenticatedRequest")
-      private final @Nullable String onUnauthenticatedRequest;
+    private @Nullable String onUnauthenticatedRequest;
 
     public Optional<String> onUnauthenticatedRequest() {
-        return this.onUnauthenticatedRequest == null ? Optional.empty() : Optional.ofNullable(this.onUnauthenticatedRequest);
+        return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
 
     @Import(name="scope")
-      private final @Nullable String scope;
+    private @Nullable String scope;
 
     public Optional<String> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
     @Import(name="sessionCookieName")
-      private final @Nullable String sessionCookieName;
+    private @Nullable String sessionCookieName;
 
     public Optional<String> sessionCookieName() {
-        return this.sessionCookieName == null ? Optional.empty() : Optional.ofNullable(this.sessionCookieName);
+        return Optional.ofNullable(this.sessionCookieName);
     }
 
     @Import(name="sessionTimeout")
-      private final @Nullable Integer sessionTimeout;
+    private @Nullable Integer sessionTimeout;
 
     public Optional<Integer> sessionTimeout() {
-        return this.sessionTimeout == null ? Optional.empty() : Optional.ofNullable(this.sessionTimeout);
+        return Optional.ofNullable(this.sessionTimeout);
     }
 
     @Import(name="tokenEndpoint", required=true)
-      private final String tokenEndpoint;
+    private String tokenEndpoint;
 
     public String tokenEndpoint() {
         return this.tokenEndpoint;
     }
 
     @Import(name="useExistingClientSecret")
-      private final @Nullable Boolean useExistingClientSecret;
+    private @Nullable Boolean useExistingClientSecret;
 
     public Optional<Boolean> useExistingClientSecret() {
-        return this.useExistingClientSecret == null ? Optional.empty() : Optional.ofNullable(this.useExistingClientSecret);
+        return Optional.ofNullable(this.useExistingClientSecret);
     }
 
     @Import(name="userInfoEndpoint", required=true)
-      private final String userInfoEndpoint;
+    private String userInfoEndpoint;
 
     public String userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 
-    public ListenerRuleAuthenticateOidcConfig(
-        @Nullable Object authenticationRequestExtraParams,
-        String authorizationEndpoint,
-        String clientId,
-        String clientSecret,
-        String issuer,
-        @Nullable String onUnauthenticatedRequest,
-        @Nullable String scope,
-        @Nullable String sessionCookieName,
-        @Nullable Integer sessionTimeout,
-        String tokenEndpoint,
-        @Nullable Boolean useExistingClientSecret,
-        String userInfoEndpoint) {
-        this.authenticationRequestExtraParams = authenticationRequestExtraParams;
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.onUnauthenticatedRequest = onUnauthenticatedRequest;
-        this.scope = scope;
-        this.sessionCookieName = sessionCookieName;
-        this.sessionTimeout = sessionTimeout;
-        this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint, "expected parameter 'tokenEndpoint' to be non-null");
-        this.useExistingClientSecret = useExistingClientSecret;
-        this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint, "expected parameter 'userInfoEndpoint' to be non-null");
-    }
+    private ListenerRuleAuthenticateOidcConfig() {}
 
-    private ListenerRuleAuthenticateOidcConfig() {
-        this.authenticationRequestExtraParams = null;
-        this.authorizationEndpoint = null;
-        this.clientId = null;
-        this.clientSecret = null;
-        this.issuer = null;
-        this.onUnauthenticatedRequest = null;
-        this.scope = null;
-        this.sessionCookieName = null;
-        this.sessionTimeout = null;
-        this.tokenEndpoint = null;
-        this.useExistingClientSecret = null;
-        this.userInfoEndpoint = null;
+    private ListenerRuleAuthenticateOidcConfig(ListenerRuleAuthenticateOidcConfig $) {
+        this.authenticationRequestExtraParams = $.authenticationRequestExtraParams;
+        this.authorizationEndpoint = $.authorizationEndpoint;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.issuer = $.issuer;
+        this.onUnauthenticatedRequest = $.onUnauthenticatedRequest;
+        this.scope = $.scope;
+        this.sessionCookieName = $.sessionCookieName;
+        this.sessionTimeout = $.sessionTimeout;
+        this.tokenEndpoint = $.tokenEndpoint;
+        this.useExistingClientSecret = $.useExistingClientSecret;
+        this.userInfoEndpoint = $.userInfoEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleAuthenticateOidcConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object authenticationRequestExtraParams;
-        private String authorizationEndpoint;
-        private String clientId;
-        private String clientSecret;
-        private String issuer;
-        private @Nullable String onUnauthenticatedRequest;
-        private @Nullable String scope;
-        private @Nullable String sessionCookieName;
-        private @Nullable Integer sessionTimeout;
-        private String tokenEndpoint;
-        private @Nullable Boolean useExistingClientSecret;
-        private String userInfoEndpoint;
+        private ListenerRuleAuthenticateOidcConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleAuthenticateOidcConfig();
         }
 
         public Builder(ListenerRuleAuthenticateOidcConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationRequestExtraParams = defaults.authenticationRequestExtraParams;
-    	      this.authorizationEndpoint = defaults.authorizationEndpoint;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.issuer = defaults.issuer;
-    	      this.onUnauthenticatedRequest = defaults.onUnauthenticatedRequest;
-    	      this.scope = defaults.scope;
-    	      this.sessionCookieName = defaults.sessionCookieName;
-    	      this.sessionTimeout = defaults.sessionTimeout;
-    	      this.tokenEndpoint = defaults.tokenEndpoint;
-    	      this.useExistingClientSecret = defaults.useExistingClientSecret;
-    	      this.userInfoEndpoint = defaults.userInfoEndpoint;
+            $ = new ListenerRuleAuthenticateOidcConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationRequestExtraParams(@Nullable Object authenticationRequestExtraParams) {
-            this.authenticationRequestExtraParams = authenticationRequestExtraParams;
+            $.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
+
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
+            $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
-            this.onUnauthenticatedRequest = onUnauthenticatedRequest;
+            $.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
+
         public Builder scope(@Nullable String scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
+
         public Builder sessionCookieName(@Nullable String sessionCookieName) {
-            this.sessionCookieName = sessionCookieName;
+            $.sessionCookieName = sessionCookieName;
             return this;
         }
+
         public Builder sessionTimeout(@Nullable Integer sessionTimeout) {
-            this.sessionTimeout = sessionTimeout;
+            $.sessionTimeout = sessionTimeout;
             return this;
         }
+
         public Builder tokenEndpoint(String tokenEndpoint) {
-            this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
+            $.tokenEndpoint = tokenEndpoint;
             return this;
         }
+
         public Builder useExistingClientSecret(@Nullable Boolean useExistingClientSecret) {
-            this.useExistingClientSecret = useExistingClientSecret;
+            $.useExistingClientSecret = useExistingClientSecret;
             return this;
         }
+
         public Builder userInfoEndpoint(String userInfoEndpoint) {
-            this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
+            $.userInfoEndpoint = userInfoEndpoint;
             return this;
-        }        public ListenerRuleAuthenticateOidcConfig build() {
-            return new ListenerRuleAuthenticateOidcConfig(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, useExistingClientSecret, userInfoEndpoint);
+        }
+
+        public ListenerRuleAuthenticateOidcConfig build() {
+            $.authorizationEndpoint = Objects.requireNonNull($.authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.tokenEndpoint = Objects.requireNonNull($.tokenEndpoint, "expected parameter 'tokenEndpoint' to be non-null");
+            $.userInfoEndpoint = Objects.requireNonNull($.userInfoEndpoint, "expected parameter 'userInfoEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

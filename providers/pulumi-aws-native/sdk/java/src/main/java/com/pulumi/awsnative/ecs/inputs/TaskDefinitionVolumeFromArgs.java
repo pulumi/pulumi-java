@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class TaskDefinitionVolumeFromArgs extends com.pulumi.resources.Res
     public static final TaskDefinitionVolumeFromArgs Empty = new TaskDefinitionVolumeFromArgs();
 
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     @Import(name="sourceContainer")
-      private final @Nullable Output<String> sourceContainer;
+    private @Nullable Output<String> sourceContainer;
 
-    public Output<String> sourceContainer() {
-        return this.sourceContainer == null ? Codegen.empty() : this.sourceContainer;
+    public Optional<Output<String>> sourceContainer() {
+        return Optional.ofNullable(this.sourceContainer);
     }
 
-    public TaskDefinitionVolumeFromArgs(
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<String> sourceContainer) {
-        this.readOnly = readOnly;
-        this.sourceContainer = sourceContainer;
-    }
+    private TaskDefinitionVolumeFromArgs() {}
 
-    private TaskDefinitionVolumeFromArgs() {
-        this.readOnly = Codegen.empty();
-        this.sourceContainer = Codegen.empty();
+    private TaskDefinitionVolumeFromArgs(TaskDefinitionVolumeFromArgs $) {
+        this.readOnly = $.readOnly;
+        this.sourceContainer = $.sourceContainer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionVolumeFromArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<String> sourceContainer;
+        private TaskDefinitionVolumeFromArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionVolumeFromArgs();
         }
 
         public Builder(TaskDefinitionVolumeFromArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readOnly = defaults.readOnly;
-    	      this.sourceContainer = defaults.sourceContainer;
+            $ = new TaskDefinitionVolumeFromArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder sourceContainer(@Nullable Output<String> sourceContainer) {
-            this.sourceContainer = sourceContainer;
+            $.sourceContainer = sourceContainer;
             return this;
         }
-        public Builder sourceContainer(@Nullable String sourceContainer) {
-            this.sourceContainer = Codegen.ofNullable(sourceContainer);
-            return this;
-        }        public TaskDefinitionVolumeFromArgs build() {
-            return new TaskDefinitionVolumeFromArgs(readOnly, sourceContainer);
+
+        public Builder sourceContainer(String sourceContainer) {
+            return sourceContainer(Output.of(sourceContainer));
+        }
+
+        public TaskDefinitionVolumeFromArgs build() {
+            return $;
         }
     }
+
 }

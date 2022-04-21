@@ -20,62 +20,57 @@ public final class ReplicationSetReplicationRegion extends com.pulumi.resources.
     public static final ReplicationSetReplicationRegion Empty = new ReplicationSetReplicationRegion();
 
     @Import(name="regionConfiguration")
-      private final @Nullable ReplicationSetRegionConfiguration regionConfiguration;
+    private @Nullable ReplicationSetRegionConfiguration regionConfiguration;
 
     public Optional<ReplicationSetRegionConfiguration> regionConfiguration() {
-        return this.regionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.regionConfiguration);
+        return Optional.ofNullable(this.regionConfiguration);
     }
 
     @Import(name="regionName")
-      private final @Nullable String regionName;
+    private @Nullable String regionName;
 
     public Optional<String> regionName() {
-        return this.regionName == null ? Optional.empty() : Optional.ofNullable(this.regionName);
+        return Optional.ofNullable(this.regionName);
     }
 
-    public ReplicationSetReplicationRegion(
-        @Nullable ReplicationSetRegionConfiguration regionConfiguration,
-        @Nullable String regionName) {
-        this.regionConfiguration = regionConfiguration;
-        this.regionName = regionName;
-    }
+    private ReplicationSetReplicationRegion() {}
 
-    private ReplicationSetReplicationRegion() {
-        this.regionConfiguration = null;
-        this.regionName = null;
+    private ReplicationSetReplicationRegion(ReplicationSetReplicationRegion $) {
+        this.regionConfiguration = $.regionConfiguration;
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationSetReplicationRegion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ReplicationSetRegionConfiguration regionConfiguration;
-        private @Nullable String regionName;
+        private ReplicationSetReplicationRegion $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationSetReplicationRegion();
         }
 
         public Builder(ReplicationSetReplicationRegion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regionConfiguration = defaults.regionConfiguration;
-    	      this.regionName = defaults.regionName;
+            $ = new ReplicationSetReplicationRegion(Objects.requireNonNull(defaults));
         }
 
         public Builder regionConfiguration(@Nullable ReplicationSetRegionConfiguration regionConfiguration) {
-            this.regionConfiguration = regionConfiguration;
+            $.regionConfiguration = regionConfiguration;
             return this;
         }
+
         public Builder regionName(@Nullable String regionName) {
-            this.regionName = regionName;
+            $.regionName = regionName;
             return this;
-        }        public ReplicationSetReplicationRegion build() {
-            return new ReplicationSetReplicationRegion(regionConfiguration, regionName);
+        }
+
+        public ReplicationSetReplicationRegion build() {
+            return $;
         }
     }
+
 }

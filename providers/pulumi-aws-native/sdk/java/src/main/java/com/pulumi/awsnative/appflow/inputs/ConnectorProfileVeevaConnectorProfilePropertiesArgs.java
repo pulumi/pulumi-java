@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ConnectorProfileVeevaConnectorProfilePropertiesArgs extends c
      * 
      */
     @Import(name="instanceUrl", required=true)
-      private final Output<String> instanceUrl;
+    private Output<String> instanceUrl;
 
     public Output<String> instanceUrl() {
         return this.instanceUrl;
     }
 
-    public ConnectorProfileVeevaConnectorProfilePropertiesArgs(Output<String> instanceUrl) {
-        this.instanceUrl = Objects.requireNonNull(instanceUrl, "expected parameter 'instanceUrl' to be non-null");
-    }
+    private ConnectorProfileVeevaConnectorProfilePropertiesArgs() {}
 
-    private ConnectorProfileVeevaConnectorProfilePropertiesArgs() {
-        this.instanceUrl = Codegen.empty();
+    private ConnectorProfileVeevaConnectorProfilePropertiesArgs(ConnectorProfileVeevaConnectorProfilePropertiesArgs $) {
+        this.instanceUrl = $.instanceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileVeevaConnectorProfilePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceUrl;
+        private ConnectorProfileVeevaConnectorProfilePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileVeevaConnectorProfilePropertiesArgs();
         }
 
         public Builder(ConnectorProfileVeevaConnectorProfilePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceUrl = defaults.instanceUrl;
+            $ = new ConnectorProfileVeevaConnectorProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceUrl(Output<String> instanceUrl) {
-            this.instanceUrl = Objects.requireNonNull(instanceUrl);
+            $.instanceUrl = instanceUrl;
             return this;
         }
+
         public Builder instanceUrl(String instanceUrl) {
-            this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
-            return this;
-        }        public ConnectorProfileVeevaConnectorProfilePropertiesArgs build() {
-            return new ConnectorProfileVeevaConnectorProfilePropertiesArgs(instanceUrl);
+            return instanceUrl(Output.of(instanceUrl));
+        }
+
+        public ConnectorProfileVeevaConnectorProfilePropertiesArgs build() {
+            $.instanceUrl = Objects.requireNonNull($.instanceUrl, "expected parameter 'instanceUrl' to be non-null");
+            return $;
         }
     }
+
 }

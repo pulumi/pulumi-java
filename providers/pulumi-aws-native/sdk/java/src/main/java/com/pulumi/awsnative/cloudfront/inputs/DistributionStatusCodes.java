@@ -14,65 +14,63 @@ public final class DistributionStatusCodes extends com.pulumi.resources.InvokeAr
     public static final DistributionStatusCodes Empty = new DistributionStatusCodes();
 
     @Import(name="items", required=true)
-      private final List<Integer> items;
+    private List<Integer> items;
 
     public List<Integer> items() {
         return this.items;
     }
 
     @Import(name="quantity", required=true)
-      private final Integer quantity;
+    private Integer quantity;
 
     public Integer quantity() {
         return this.quantity;
     }
 
-    public DistributionStatusCodes(
-        List<Integer> items,
-        Integer quantity) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.quantity = Objects.requireNonNull(quantity, "expected parameter 'quantity' to be non-null");
-    }
+    private DistributionStatusCodes() {}
 
-    private DistributionStatusCodes() {
-        this.items = List.of();
-        this.quantity = null;
+    private DistributionStatusCodes(DistributionStatusCodes $) {
+        this.items = $.items;
+        this.quantity = $.quantity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionStatusCodes defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> items;
-        private Integer quantity;
+        private DistributionStatusCodes $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionStatusCodes();
         }
 
         public Builder(DistributionStatusCodes defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.quantity = defaults.quantity;
+            $ = new DistributionStatusCodes(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<Integer> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(Integer... items) {
             return items(List.of(items));
         }
+
         public Builder quantity(Integer quantity) {
-            this.quantity = Objects.requireNonNull(quantity);
+            $.quantity = quantity;
             return this;
-        }        public DistributionStatusCodes build() {
-            return new DistributionStatusCodes(items, quantity);
+        }
+
+        public DistributionStatusCodes build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.quantity = Objects.requireNonNull($.quantity, "expected parameter 'quantity' to be non-null");
+            return $;
         }
     }
+
 }

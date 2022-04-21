@@ -6,10 +6,10 @@ package com.pulumi.awsnative.athena.inputs;
 import com.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,110 +22,99 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends com.pulumi.re
     public static final WorkGroupResultConfigurationUpdatesArgs Empty = new WorkGroupResultConfigurationUpdatesArgs();
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+    private @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<WorkGroupEncryptionConfigurationArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="outputLocation")
-      private final @Nullable Output<String> outputLocation;
+    private @Nullable Output<String> outputLocation;
 
-    public Output<String> outputLocation() {
-        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
+    public Optional<Output<String>> outputLocation() {
+        return Optional.ofNullable(this.outputLocation);
     }
 
     @Import(name="removeEncryptionConfiguration")
-      private final @Nullable Output<Boolean> removeEncryptionConfiguration;
+    private @Nullable Output<Boolean> removeEncryptionConfiguration;
 
-    public Output<Boolean> removeEncryptionConfiguration() {
-        return this.removeEncryptionConfiguration == null ? Codegen.empty() : this.removeEncryptionConfiguration;
+    public Optional<Output<Boolean>> removeEncryptionConfiguration() {
+        return Optional.ofNullable(this.removeEncryptionConfiguration);
     }
 
     @Import(name="removeOutputLocation")
-      private final @Nullable Output<Boolean> removeOutputLocation;
+    private @Nullable Output<Boolean> removeOutputLocation;
 
-    public Output<Boolean> removeOutputLocation() {
-        return this.removeOutputLocation == null ? Codegen.empty() : this.removeOutputLocation;
+    public Optional<Output<Boolean>> removeOutputLocation() {
+        return Optional.ofNullable(this.removeOutputLocation);
     }
 
-    public WorkGroupResultConfigurationUpdatesArgs(
-        @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Output<String> outputLocation,
-        @Nullable Output<Boolean> removeEncryptionConfiguration,
-        @Nullable Output<Boolean> removeOutputLocation) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.outputLocation = outputLocation;
-        this.removeEncryptionConfiguration = removeEncryptionConfiguration;
-        this.removeOutputLocation = removeOutputLocation;
-    }
+    private WorkGroupResultConfigurationUpdatesArgs() {}
 
-    private WorkGroupResultConfigurationUpdatesArgs() {
-        this.encryptionConfiguration = Codegen.empty();
-        this.outputLocation = Codegen.empty();
-        this.removeEncryptionConfiguration = Codegen.empty();
-        this.removeOutputLocation = Codegen.empty();
+    private WorkGroupResultConfigurationUpdatesArgs(WorkGroupResultConfigurationUpdatesArgs $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.outputLocation = $.outputLocation;
+        this.removeEncryptionConfiguration = $.removeEncryptionConfiguration;
+        this.removeOutputLocation = $.removeOutputLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupResultConfigurationUpdatesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Output<String> outputLocation;
-        private @Nullable Output<Boolean> removeEncryptionConfiguration;
-        private @Nullable Output<Boolean> removeOutputLocation;
+        private WorkGroupResultConfigurationUpdatesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupResultConfigurationUpdatesArgs();
         }
 
         public Builder(WorkGroupResultConfigurationUpdatesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.outputLocation = defaults.outputLocation;
-    	      this.removeEncryptionConfiguration = defaults.removeEncryptionConfiguration;
-    	      this.removeOutputLocation = defaults.removeOutputLocation;
+            $ = new WorkGroupResultConfigurationUpdatesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
         }
-        public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = Codegen.ofNullable(outputLocation);
-            return this;
+
+        public Builder outputLocation(String outputLocation) {
+            return outputLocation(Output.of(outputLocation));
         }
+
         public Builder removeEncryptionConfiguration(@Nullable Output<Boolean> removeEncryptionConfiguration) {
-            this.removeEncryptionConfiguration = removeEncryptionConfiguration;
+            $.removeEncryptionConfiguration = removeEncryptionConfiguration;
             return this;
         }
-        public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
-            this.removeEncryptionConfiguration = Codegen.ofNullable(removeEncryptionConfiguration);
-            return this;
+
+        public Builder removeEncryptionConfiguration(Boolean removeEncryptionConfiguration) {
+            return removeEncryptionConfiguration(Output.of(removeEncryptionConfiguration));
         }
+
         public Builder removeOutputLocation(@Nullable Output<Boolean> removeOutputLocation) {
-            this.removeOutputLocation = removeOutputLocation;
+            $.removeOutputLocation = removeOutputLocation;
             return this;
         }
-        public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
-            this.removeOutputLocation = Codegen.ofNullable(removeOutputLocation);
-            return this;
-        }        public WorkGroupResultConfigurationUpdatesArgs build() {
-            return new WorkGroupResultConfigurationUpdatesArgs(encryptionConfiguration, outputLocation, removeEncryptionConfiguration, removeOutputLocation);
+
+        public Builder removeOutputLocation(Boolean removeOutputLocation) {
+            return removeOutputLocation(Output.of(removeOutputLocation));
+        }
+
+        public WorkGroupResultConfigurationUpdatesArgs build() {
+            return $;
         }
     }
+
 }

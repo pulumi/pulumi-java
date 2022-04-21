@@ -6,7 +6,6 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLCustomHTTPHeaderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class WebACLCustomRequestHandlingArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="insertHeaders", required=true)
-      private final Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
+    private Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
 
     public Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 
-    public WebACLCustomRequestHandlingArgs(Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders) {
-        this.insertHeaders = Objects.requireNonNull(insertHeaders, "expected parameter 'insertHeaders' to be non-null");
-    }
+    private WebACLCustomRequestHandlingArgs() {}
 
-    private WebACLCustomRequestHandlingArgs() {
-        this.insertHeaders = Codegen.empty();
+    private WebACLCustomRequestHandlingArgs(WebACLCustomRequestHandlingArgs $) {
+        this.insertHeaders = $.insertHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCustomRequestHandlingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
+        private WebACLCustomRequestHandlingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCustomRequestHandlingArgs();
         }
 
         public Builder(WebACLCustomRequestHandlingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insertHeaders = defaults.insertHeaders;
+            $ = new WebACLCustomRequestHandlingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder insertHeaders(Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders) {
-            this.insertHeaders = Objects.requireNonNull(insertHeaders);
+            $.insertHeaders = insertHeaders;
             return this;
         }
+
         public Builder insertHeaders(List<WebACLCustomHTTPHeaderArgs> insertHeaders) {
-            this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
-            return this;
+            return insertHeaders(Output.of(insertHeaders));
         }
+
         public Builder insertHeaders(WebACLCustomHTTPHeaderArgs... insertHeaders) {
             return insertHeaders(List.of(insertHeaders));
-        }        public WebACLCustomRequestHandlingArgs build() {
-            return new WebACLCustomRequestHandlingArgs(insertHeaders);
+        }
+
+        public WebACLCustomRequestHandlingArgs build() {
+            $.insertHeaders = Objects.requireNonNull($.insertHeaders, "expected parameter 'insertHeaders' to be non-null");
+            return $;
         }
     }
+
 }

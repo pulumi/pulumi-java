@@ -13,45 +13,45 @@ public final class GetGeofenceCollectionArgs extends com.pulumi.resources.Invoke
     public static final GetGeofenceCollectionArgs Empty = new GetGeofenceCollectionArgs();
 
     @Import(name="collectionName", required=true)
-      private final String collectionName;
+    private String collectionName;
 
     public String collectionName() {
         return this.collectionName;
     }
 
-    public GetGeofenceCollectionArgs(String collectionName) {
-        this.collectionName = Objects.requireNonNull(collectionName, "expected parameter 'collectionName' to be non-null");
-    }
+    private GetGeofenceCollectionArgs() {}
 
-    private GetGeofenceCollectionArgs() {
-        this.collectionName = null;
+    private GetGeofenceCollectionArgs(GetGeofenceCollectionArgs $) {
+        this.collectionName = $.collectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGeofenceCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String collectionName;
+        private GetGeofenceCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGeofenceCollectionArgs();
         }
 
         public Builder(GetGeofenceCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionName = defaults.collectionName;
+            $ = new GetGeofenceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionName(String collectionName) {
-            this.collectionName = Objects.requireNonNull(collectionName);
+            $.collectionName = collectionName;
             return this;
-        }        public GetGeofenceCollectionArgs build() {
-            return new GetGeofenceCollectionArgs(collectionName);
+        }
+
+        public GetGeofenceCollectionArgs build() {
+            $.collectionName = Objects.requireNonNull($.collectionName, "expected parameter 'collectionName' to be non-null");
+            return $;
         }
     }
+
 }

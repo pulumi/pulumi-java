@@ -19,10 +19,10 @@ public final class DetectorRule extends com.pulumi.resources.InvokeArgs {
     public static final DetectorRule Empty = new DetectorRule();
 
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DetectorRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -41,31 +41,31 @@ public final class DetectorRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="detectorId")
-      private final @Nullable String detectorId;
+    private @Nullable String detectorId;
 
     public Optional<String> detectorId() {
-        return this.detectorId == null ? Optional.empty() : Optional.ofNullable(this.detectorId);
+        return Optional.ofNullable(this.detectorId);
     }
 
     @Import(name="expression")
-      private final @Nullable String expression;
+    private @Nullable String expression;
 
     public Optional<String> expression() {
-        return this.expression == null ? Optional.empty() : Optional.ofNullable(this.expression);
+        return Optional.ofNullable(this.expression);
     }
 
     @Import(name="language")
-      private final @Nullable DetectorRuleLanguage language;
+    private @Nullable DetectorRuleLanguage language;
 
     public Optional<DetectorRuleLanguage> language() {
-        return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -73,31 +73,31 @@ public final class DetectorRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable String lastUpdatedTime;
+    private @Nullable String lastUpdatedTime;
 
     public Optional<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @Import(name="outcomes")
-      private final @Nullable List<DetectorOutcome> outcomes;
+    private @Nullable List<DetectorOutcome> outcomes;
 
-    public List<DetectorOutcome> outcomes() {
-        return this.outcomes == null ? List.of() : this.outcomes;
+    public Optional<List<DetectorOutcome>> outcomes() {
+        return Optional.ofNullable(this.outcomes);
     }
 
     @Import(name="ruleId")
-      private final @Nullable String ruleId;
+    private @Nullable String ruleId;
 
     public Optional<String> ruleId() {
-        return this.ruleId == null ? Optional.empty() : Optional.ofNullable(this.ruleId);
+        return Optional.ofNullable(this.ruleId);
     }
 
     @Import(name="ruleVersion")
-      private final @Nullable String ruleVersion;
+    private @Nullable String ruleVersion;
 
     public Optional<String> ruleVersion() {
-        return this.ruleVersion == null ? Optional.empty() : Optional.ofNullable(this.ruleVersion);
+        return Optional.ofNullable(this.ruleVersion);
     }
 
     /**
@@ -105,142 +105,112 @@ public final class DetectorRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable List<DetectorTag> tags;
+    private @Nullable List<DetectorTag> tags;
 
-    public List<DetectorTag> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<DetectorTag>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DetectorRule(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String detectorId,
-        @Nullable String expression,
-        @Nullable DetectorRuleLanguage language,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<DetectorOutcome> outcomes,
-        @Nullable String ruleId,
-        @Nullable String ruleVersion,
-        @Nullable List<DetectorTag> tags) {
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.detectorId = detectorId;
-        this.expression = expression;
-        this.language = language;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.outcomes = outcomes;
-        this.ruleId = ruleId;
-        this.ruleVersion = ruleVersion;
-        this.tags = tags;
-    }
+    private DetectorRule() {}
 
-    private DetectorRule() {
-        this.arn = null;
-        this.createdTime = null;
-        this.description = null;
-        this.detectorId = null;
-        this.expression = null;
-        this.language = null;
-        this.lastUpdatedTime = null;
-        this.outcomes = List.of();
-        this.ruleId = null;
-        this.ruleVersion = null;
-        this.tags = List.of();
+    private DetectorRule(DetectorRule $) {
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.detectorId = $.detectorId;
+        this.expression = $.expression;
+        this.language = $.language;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.outcomes = $.outcomes;
+        this.ruleId = $.ruleId;
+        this.ruleVersion = $.ruleVersion;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String createdTime;
-        private @Nullable String description;
-        private @Nullable String detectorId;
-        private @Nullable String expression;
-        private @Nullable DetectorRuleLanguage language;
-        private @Nullable String lastUpdatedTime;
-        private @Nullable List<DetectorOutcome> outcomes;
-        private @Nullable String ruleId;
-        private @Nullable String ruleVersion;
-        private @Nullable List<DetectorTag> tags;
+        private DetectorRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorRule();
         }
 
         public Builder(DetectorRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.detectorId = defaults.detectorId;
-    	      this.expression = defaults.expression;
-    	      this.language = defaults.language;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.outcomes = defaults.outcomes;
-    	      this.ruleId = defaults.ruleId;
-    	      this.ruleVersion = defaults.ruleVersion;
-    	      this.tags = defaults.tags;
+            $ = new DetectorRule(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = detectorId;
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder expression(@Nullable String expression) {
-            this.expression = expression;
+            $.expression = expression;
             return this;
         }
+
         public Builder language(@Nullable DetectorRuleLanguage language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
+
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder outcomes(@Nullable List<DetectorOutcome> outcomes) {
-            this.outcomes = outcomes;
+            $.outcomes = outcomes;
             return this;
         }
+
         public Builder outcomes(DetectorOutcome... outcomes) {
             return outcomes(List.of(outcomes));
         }
+
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = ruleId;
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder ruleVersion(@Nullable String ruleVersion) {
-            this.ruleVersion = ruleVersion;
+            $.ruleVersion = ruleVersion;
             return this;
         }
+
         public Builder tags(@Nullable List<DetectorTag> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(DetectorTag... tags) {
             return tags(List.of(tags));
-        }        public DetectorRule build() {
-            return new DetectorRule(arn, createdTime, description, detectorId, expression, language, lastUpdatedTime, outcomes, ruleId, ruleVersion, tags);
+        }
+
+        public DetectorRule build() {
+            return $;
         }
     }
+
 }

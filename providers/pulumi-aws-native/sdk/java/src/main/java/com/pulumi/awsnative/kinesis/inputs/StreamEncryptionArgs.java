@@ -6,7 +6,6 @@ package com.pulumi.awsnative.kinesis.inputs;
 import com.pulumi.awsnative.kinesis.enums.StreamEncryptionEncryptionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class StreamEncryptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="encryptionType", required=true)
-      private final Output<StreamEncryptionEncryptionType> encryptionType;
+    private Output<StreamEncryptionEncryptionType> encryptionType;
 
     public Output<StreamEncryptionEncryptionType> encryptionType() {
         return this.encryptionType;
@@ -35,63 +34,60 @@ public final class StreamEncryptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
     }
 
-    public StreamEncryptionArgs(
-        Output<StreamEncryptionEncryptionType> encryptionType,
-        Output<String> keyId) {
-        this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-    }
+    private StreamEncryptionArgs() {}
 
-    private StreamEncryptionArgs() {
-        this.encryptionType = Codegen.empty();
-        this.keyId = Codegen.empty();
+    private StreamEncryptionArgs(StreamEncryptionArgs $) {
+        this.encryptionType = $.encryptionType;
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<StreamEncryptionEncryptionType> encryptionType;
-        private Output<String> keyId;
+        private StreamEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamEncryptionArgs();
         }
 
         public Builder(StreamEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.keyId = defaults.keyId;
+            $ = new StreamEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionType(Output<StreamEncryptionEncryptionType> encryptionType) {
-            this.encryptionType = Objects.requireNonNull(encryptionType);
+            $.encryptionType = encryptionType;
             return this;
         }
+
         public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
-            this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
-            return this;
+            return encryptionType(Output.of(encryptionType));
         }
+
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
-        }        public StreamEncryptionArgs build() {
-            return new StreamEncryptionArgs(encryptionType, keyId);
+            return keyId(Output.of(keyId));
+        }
+
+        public StreamEncryptionArgs build() {
+            $.encryptionType = Objects.requireNonNull($.encryptionType, "expected parameter 'encryptionType' to be non-null");
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.servicecatalogappregistry.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ApplicationTagsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ApplicationTagsArgs Empty = new ApplicationTagsArgs();
 
-    public ApplicationTagsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ApplicationTagsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ApplicationTagsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ApplicationTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ApplicationTagsArgs();
         }
         public ApplicationTagsArgs build() {
-            return new ApplicationTagsArgs();
+            return $;
         }
     }
+
 }

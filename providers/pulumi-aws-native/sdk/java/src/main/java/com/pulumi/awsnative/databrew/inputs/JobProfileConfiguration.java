@@ -19,100 +19,91 @@ public final class JobProfileConfiguration extends com.pulumi.resources.InvokeAr
     public static final JobProfileConfiguration Empty = new JobProfileConfiguration();
 
     @Import(name="columnStatisticsConfigurations")
-      private final @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations;
+    private @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations;
 
-    public List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations() {
-        return this.columnStatisticsConfigurations == null ? List.of() : this.columnStatisticsConfigurations;
+    public Optional<List<JobColumnStatisticsConfiguration>> columnStatisticsConfigurations() {
+        return Optional.ofNullable(this.columnStatisticsConfigurations);
     }
 
     @Import(name="datasetStatisticsConfiguration")
-      private final @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration;
+    private @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration;
 
     public Optional<JobStatisticsConfiguration> datasetStatisticsConfiguration() {
-        return this.datasetStatisticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.datasetStatisticsConfiguration);
+        return Optional.ofNullable(this.datasetStatisticsConfiguration);
     }
 
     @Import(name="entityDetectorConfiguration")
-      private final @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
+    private @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
 
     public Optional<JobEntityDetectorConfiguration> entityDetectorConfiguration() {
-        return this.entityDetectorConfiguration == null ? Optional.empty() : Optional.ofNullable(this.entityDetectorConfiguration);
+        return Optional.ofNullable(this.entityDetectorConfiguration);
     }
 
     @Import(name="profileColumns")
-      private final @Nullable List<JobColumnSelector> profileColumns;
+    private @Nullable List<JobColumnSelector> profileColumns;
 
-    public List<JobColumnSelector> profileColumns() {
-        return this.profileColumns == null ? List.of() : this.profileColumns;
+    public Optional<List<JobColumnSelector>> profileColumns() {
+        return Optional.ofNullable(this.profileColumns);
     }
 
-    public JobProfileConfiguration(
-        @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations,
-        @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration,
-        @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration,
-        @Nullable List<JobColumnSelector> profileColumns) {
-        this.columnStatisticsConfigurations = columnStatisticsConfigurations;
-        this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
-        this.entityDetectorConfiguration = entityDetectorConfiguration;
-        this.profileColumns = profileColumns;
-    }
+    private JobProfileConfiguration() {}
 
-    private JobProfileConfiguration() {
-        this.columnStatisticsConfigurations = List.of();
-        this.datasetStatisticsConfiguration = null;
-        this.entityDetectorConfiguration = null;
-        this.profileColumns = List.of();
+    private JobProfileConfiguration(JobProfileConfiguration $) {
+        this.columnStatisticsConfigurations = $.columnStatisticsConfigurations;
+        this.datasetStatisticsConfiguration = $.datasetStatisticsConfiguration;
+        this.entityDetectorConfiguration = $.entityDetectorConfiguration;
+        this.profileColumns = $.profileColumns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobProfileConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations;
-        private @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration;
-        private @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
-        private @Nullable List<JobColumnSelector> profileColumns;
+        private JobProfileConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobProfileConfiguration();
         }
 
         public Builder(JobProfileConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnStatisticsConfigurations = defaults.columnStatisticsConfigurations;
-    	      this.datasetStatisticsConfiguration = defaults.datasetStatisticsConfiguration;
-    	      this.entityDetectorConfiguration = defaults.entityDetectorConfiguration;
-    	      this.profileColumns = defaults.profileColumns;
+            $ = new JobProfileConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder columnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations) {
-            this.columnStatisticsConfigurations = columnStatisticsConfigurations;
+            $.columnStatisticsConfigurations = columnStatisticsConfigurations;
             return this;
         }
+
         public Builder columnStatisticsConfigurations(JobColumnStatisticsConfiguration... columnStatisticsConfigurations) {
             return columnStatisticsConfigurations(List.of(columnStatisticsConfigurations));
         }
+
         public Builder datasetStatisticsConfiguration(@Nullable JobStatisticsConfiguration datasetStatisticsConfiguration) {
-            this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
+            $.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
             return this;
         }
+
         public Builder entityDetectorConfiguration(@Nullable JobEntityDetectorConfiguration entityDetectorConfiguration) {
-            this.entityDetectorConfiguration = entityDetectorConfiguration;
+            $.entityDetectorConfiguration = entityDetectorConfiguration;
             return this;
         }
+
         public Builder profileColumns(@Nullable List<JobColumnSelector> profileColumns) {
-            this.profileColumns = profileColumns;
+            $.profileColumns = profileColumns;
             return this;
         }
+
         public Builder profileColumns(JobColumnSelector... profileColumns) {
             return profileColumns(List.of(profileColumns));
-        }        public JobProfileConfiguration build() {
-            return new JobProfileConfiguration(columnStatisticsConfigurations, datasetStatisticsConfiguration, entityDetectorConfiguration, profileColumns);
+        }
+
+        public JobProfileConfiguration build() {
+            return $;
         }
     }
+
 }

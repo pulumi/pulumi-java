@@ -13,45 +13,45 @@ public final class DatasetDeltaTimeSessionWindowConfiguration extends com.pulumi
     public static final DatasetDeltaTimeSessionWindowConfiguration Empty = new DatasetDeltaTimeSessionWindowConfiguration();
 
     @Import(name="timeoutInMinutes", required=true)
-      private final Integer timeoutInMinutes;
+    private Integer timeoutInMinutes;
 
     public Integer timeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 
-    public DatasetDeltaTimeSessionWindowConfiguration(Integer timeoutInMinutes) {
-        this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes, "expected parameter 'timeoutInMinutes' to be non-null");
-    }
+    private DatasetDeltaTimeSessionWindowConfiguration() {}
 
-    private DatasetDeltaTimeSessionWindowConfiguration() {
-        this.timeoutInMinutes = null;
+    private DatasetDeltaTimeSessionWindowConfiguration(DatasetDeltaTimeSessionWindowConfiguration $) {
+        this.timeoutInMinutes = $.timeoutInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDeltaTimeSessionWindowConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer timeoutInMinutes;
+        private DatasetDeltaTimeSessionWindowConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDeltaTimeSessionWindowConfiguration();
         }
 
         public Builder(DatasetDeltaTimeSessionWindowConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeoutInMinutes = defaults.timeoutInMinutes;
+            $ = new DatasetDeltaTimeSessionWindowConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
-            this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
+            $.timeoutInMinutes = timeoutInMinutes;
             return this;
-        }        public DatasetDeltaTimeSessionWindowConfiguration build() {
-            return new DatasetDeltaTimeSessionWindowConfiguration(timeoutInMinutes);
+        }
+
+        public DatasetDeltaTimeSessionWindowConfiguration build() {
+            $.timeoutInMinutes = Objects.requireNonNull($.timeoutInMinutes, "expected parameter 'timeoutInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

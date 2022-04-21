@@ -17,45 +17,45 @@ public final class GetRecordingConfigurationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetRecordingConfigurationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetRecordingConfigurationArgs() {}
 
-    private GetRecordingConfigurationArgs() {
-        this.arn = null;
+    private GetRecordingConfigurationArgs(GetRecordingConfigurationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRecordingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetRecordingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRecordingConfigurationArgs();
         }
 
         public Builder(GetRecordingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetRecordingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetRecordingConfigurationArgs build() {
-            return new GetRecordingConfigurationArgs(arn);
+        }
+
+        public GetRecordingConfigurationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GlobalTableStreamSpecification extends com.pulumi.resources.I
     public static final GlobalTableStreamSpecification Empty = new GlobalTableStreamSpecification();
 
     @Import(name="streamViewType", required=true)
-      private final String streamViewType;
+    private String streamViewType;
 
     public String streamViewType() {
         return this.streamViewType;
     }
 
-    public GlobalTableStreamSpecification(String streamViewType) {
-        this.streamViewType = Objects.requireNonNull(streamViewType, "expected parameter 'streamViewType' to be non-null");
-    }
+    private GlobalTableStreamSpecification() {}
 
-    private GlobalTableStreamSpecification() {
-        this.streamViewType = null;
+    private GlobalTableStreamSpecification(GlobalTableStreamSpecification $) {
+        this.streamViewType = $.streamViewType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableStreamSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String streamViewType;
+        private GlobalTableStreamSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableStreamSpecification();
         }
 
         public Builder(GlobalTableStreamSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.streamViewType = defaults.streamViewType;
+            $ = new GlobalTableStreamSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder streamViewType(String streamViewType) {
-            this.streamViewType = Objects.requireNonNull(streamViewType);
+            $.streamViewType = streamViewType;
             return this;
-        }        public GlobalTableStreamSpecification build() {
-            return new GlobalTableStreamSpecification(streamViewType);
+        }
+
+        public GlobalTableStreamSpecification build() {
+            $.streamViewType = Objects.requireNonNull($.streamViewType, "expected parameter 'streamViewType' to be non-null");
+            return $;
         }
     }
+
 }

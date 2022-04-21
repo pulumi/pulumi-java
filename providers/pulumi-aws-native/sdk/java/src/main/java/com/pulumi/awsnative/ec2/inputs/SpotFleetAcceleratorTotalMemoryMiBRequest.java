@@ -15,62 +15,57 @@ public final class SpotFleetAcceleratorTotalMemoryMiBRequest extends com.pulumi.
     public static final SpotFleetAcceleratorTotalMemoryMiBRequest Empty = new SpotFleetAcceleratorTotalMemoryMiBRequest();
 
     @Import(name="max")
-      private final @Nullable Integer max;
+    private @Nullable Integer max;
 
     public Optional<Integer> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Integer min;
+    private @Nullable Integer min;
 
     public Optional<Integer> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public SpotFleetAcceleratorTotalMemoryMiBRequest(
-        @Nullable Integer max,
-        @Nullable Integer min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SpotFleetAcceleratorTotalMemoryMiBRequest() {}
 
-    private SpotFleetAcceleratorTotalMemoryMiBRequest() {
-        this.max = null;
-        this.min = null;
+    private SpotFleetAcceleratorTotalMemoryMiBRequest(SpotFleetAcceleratorTotalMemoryMiBRequest $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetAcceleratorTotalMemoryMiBRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer max;
-        private @Nullable Integer min;
+        private SpotFleetAcceleratorTotalMemoryMiBRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetAcceleratorTotalMemoryMiBRequest();
         }
 
         public Builder(SpotFleetAcceleratorTotalMemoryMiBRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SpotFleetAcceleratorTotalMemoryMiBRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Integer max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Integer min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public SpotFleetAcceleratorTotalMemoryMiBRequest build() {
-            return new SpotFleetAcceleratorTotalMemoryMiBRequest(max, min);
+        }
+
+        public SpotFleetAcceleratorTotalMemoryMiBRequest build() {
+            return $;
         }
     }
+
 }

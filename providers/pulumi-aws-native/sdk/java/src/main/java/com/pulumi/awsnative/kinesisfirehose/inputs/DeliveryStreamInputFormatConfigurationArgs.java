@@ -6,8 +6,8 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamDeserializerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends com.pulumi
     public static final DeliveryStreamInputFormatConfigurationArgs Empty = new DeliveryStreamInputFormatConfigurationArgs();
 
     @Import(name="deserializer")
-      private final @Nullable Output<DeliveryStreamDeserializerArgs> deserializer;
+    private @Nullable Output<DeliveryStreamDeserializerArgs> deserializer;
 
-    public Output<DeliveryStreamDeserializerArgs> deserializer() {
-        return this.deserializer == null ? Codegen.empty() : this.deserializer;
+    public Optional<Output<DeliveryStreamDeserializerArgs>> deserializer() {
+        return Optional.ofNullable(this.deserializer);
     }
 
-    public DeliveryStreamInputFormatConfigurationArgs(@Nullable Output<DeliveryStreamDeserializerArgs> deserializer) {
-        this.deserializer = deserializer;
-    }
+    private DeliveryStreamInputFormatConfigurationArgs() {}
 
-    private DeliveryStreamInputFormatConfigurationArgs() {
-        this.deserializer = Codegen.empty();
+    private DeliveryStreamInputFormatConfigurationArgs(DeliveryStreamInputFormatConfigurationArgs $) {
+        this.deserializer = $.deserializer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamInputFormatConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeliveryStreamDeserializerArgs> deserializer;
+        private DeliveryStreamInputFormatConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamInputFormatConfigurationArgs();
         }
 
         public Builder(DeliveryStreamInputFormatConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deserializer = defaults.deserializer;
+            $ = new DeliveryStreamInputFormatConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deserializer(@Nullable Output<DeliveryStreamDeserializerArgs> deserializer) {
-            this.deserializer = deserializer;
+            $.deserializer = deserializer;
             return this;
         }
-        public Builder deserializer(@Nullable DeliveryStreamDeserializerArgs deserializer) {
-            this.deserializer = Codegen.ofNullable(deserializer);
-            return this;
-        }        public DeliveryStreamInputFormatConfigurationArgs build() {
-            return new DeliveryStreamInputFormatConfigurationArgs(deserializer);
+
+        public Builder deserializer(DeliveryStreamDeserializerArgs deserializer) {
+            return deserializer(Output.of(deserializer));
+        }
+
+        public DeliveryStreamInputFormatConfigurationArgs build() {
+            return $;
         }
     }
+
 }

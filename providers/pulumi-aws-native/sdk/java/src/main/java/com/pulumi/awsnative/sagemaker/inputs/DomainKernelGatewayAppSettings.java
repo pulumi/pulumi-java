@@ -25,10 +25,10 @@ public final class DomainKernelGatewayAppSettings extends com.pulumi.resources.I
      * 
      */
     @Import(name="customImages")
-      private final @Nullable List<DomainCustomImage> customImages;
+    private @Nullable List<DomainCustomImage> customImages;
 
-    public List<DomainCustomImage> customImages() {
-        return this.customImages == null ? List.of() : this.customImages;
+    public Optional<List<DomainCustomImage>> customImages() {
+        return Optional.ofNullable(this.customImages);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class DomainKernelGatewayAppSettings extends com.pulumi.resources.I
      * 
      */
     @Import(name="defaultResourceSpec")
-      private final @Nullable DomainResourceSpec defaultResourceSpec;
+    private @Nullable DomainResourceSpec defaultResourceSpec;
 
     public Optional<DomainResourceSpec> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
-    public DomainKernelGatewayAppSettings(
-        @Nullable List<DomainCustomImage> customImages,
-        @Nullable DomainResourceSpec defaultResourceSpec) {
-        this.customImages = customImages;
-        this.defaultResourceSpec = defaultResourceSpec;
-    }
+    private DomainKernelGatewayAppSettings() {}
 
-    private DomainKernelGatewayAppSettings() {
-        this.customImages = List.of();
-        this.defaultResourceSpec = null;
+    private DomainKernelGatewayAppSettings(DomainKernelGatewayAppSettings $) {
+        this.customImages = $.customImages;
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainKernelGatewayAppSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DomainCustomImage> customImages;
-        private @Nullable DomainResourceSpec defaultResourceSpec;
+        private DomainKernelGatewayAppSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainKernelGatewayAppSettings();
         }
 
         public Builder(DomainKernelGatewayAppSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customImages = defaults.customImages;
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new DomainKernelGatewayAppSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder customImages(@Nullable List<DomainCustomImage> customImages) {
-            this.customImages = customImages;
+            $.customImages = customImages;
             return this;
         }
+
         public Builder customImages(DomainCustomImage... customImages) {
             return customImages(List.of(customImages));
         }
+
         public Builder defaultResourceSpec(@Nullable DomainResourceSpec defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }        public DomainKernelGatewayAppSettings build() {
-            return new DomainKernelGatewayAppSettings(customImages, defaultResourceSpec);
+        }
+
+        public DomainKernelGatewayAppSettings build() {
+            return $;
         }
     }
+
 }

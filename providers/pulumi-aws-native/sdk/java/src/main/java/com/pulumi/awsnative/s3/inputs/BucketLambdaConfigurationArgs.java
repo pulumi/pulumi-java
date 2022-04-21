@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="event", required=true)
-      private final Output<String> event;
+    private Output<String> event;
 
     public Output<String> event() {
         return this.event;
@@ -36,10 +36,10 @@ public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BucketNotificationFilterArgs> filter;
+    private @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Output<BucketNotificationFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BucketNotificationFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class BucketLambdaConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="function", required=true)
-      private final Output<String> function;
+    private Output<String> function;
 
     public Output<String> function() {
         return this.function;
     }
 
-    public BucketLambdaConfigurationArgs(
-        Output<String> event,
-        @Nullable Output<BucketNotificationFilterArgs> filter,
-        Output<String> function) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.filter = filter;
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-    }
+    private BucketLambdaConfigurationArgs() {}
 
-    private BucketLambdaConfigurationArgs() {
-        this.event = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.function = Codegen.empty();
+    private BucketLambdaConfigurationArgs(BucketLambdaConfigurationArgs $) {
+        this.event = $.event;
+        this.filter = $.filter;
+        this.function = $.function;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLambdaConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> event;
-        private @Nullable Output<BucketNotificationFilterArgs> filter;
-        private Output<String> function;
+        private BucketLambdaConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLambdaConfigurationArgs();
         }
 
         public Builder(BucketLambdaConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.filter = defaults.filter;
-    	      this.function = defaults.function;
+            $ = new BucketLambdaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder event(Output<String> event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder event(String event) {
-            this.event = Output.of(Objects.requireNonNull(event));
-            return this;
+            return event(Output.of(event));
         }
+
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BucketNotificationFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder function(Output<String> function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
         }
+
         public Builder function(String function) {
-            this.function = Output.of(Objects.requireNonNull(function));
-            return this;
-        }        public BucketLambdaConfigurationArgs build() {
-            return new BucketLambdaConfigurationArgs(event, filter, function);
+            return function(Output.of(function));
+        }
+
+        public BucketLambdaConfigurationArgs build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            return $;
         }
     }
+
 }

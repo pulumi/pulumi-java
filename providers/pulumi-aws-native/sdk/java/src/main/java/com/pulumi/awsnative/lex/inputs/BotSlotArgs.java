@@ -8,9 +8,9 @@ import com.pulumi.awsnative.lex.inputs.BotObfuscationSettingArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotValueElicitationSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,150 +23,136 @@ public final class BotSlotArgs extends com.pulumi.resources.ResourceArgs {
     public static final BotSlotArgs Empty = new BotSlotArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="multipleValuesSetting")
-      private final @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
+    private @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
 
-    public Output<BotMultipleValuesSettingArgs> multipleValuesSetting() {
-        return this.multipleValuesSetting == null ? Codegen.empty() : this.multipleValuesSetting;
+    public Optional<Output<BotMultipleValuesSettingArgs>> multipleValuesSetting() {
+        return Optional.ofNullable(this.multipleValuesSetting);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="obfuscationSetting")
-      private final @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
+    private @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
 
-    public Output<BotObfuscationSettingArgs> obfuscationSetting() {
-        return this.obfuscationSetting == null ? Codegen.empty() : this.obfuscationSetting;
+    public Optional<Output<BotObfuscationSettingArgs>> obfuscationSetting() {
+        return Optional.ofNullable(this.obfuscationSetting);
     }
 
     @Import(name="slotTypeName", required=true)
-      private final Output<String> slotTypeName;
+    private Output<String> slotTypeName;
 
     public Output<String> slotTypeName() {
         return this.slotTypeName;
     }
 
     @Import(name="valueElicitationSetting", required=true)
-      private final Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
+    private Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
 
     public Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting() {
         return this.valueElicitationSetting;
     }
 
-    public BotSlotArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting,
-        Output<String> name,
-        @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting,
-        Output<String> slotTypeName,
-        Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
-        this.description = description;
-        this.multipleValuesSetting = multipleValuesSetting;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.obfuscationSetting = obfuscationSetting;
-        this.slotTypeName = Objects.requireNonNull(slotTypeName, "expected parameter 'slotTypeName' to be non-null");
-        this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting, "expected parameter 'valueElicitationSetting' to be non-null");
-    }
+    private BotSlotArgs() {}
 
-    private BotSlotArgs() {
-        this.description = Codegen.empty();
-        this.multipleValuesSetting = Codegen.empty();
-        this.name = Codegen.empty();
-        this.obfuscationSetting = Codegen.empty();
-        this.slotTypeName = Codegen.empty();
-        this.valueElicitationSetting = Codegen.empty();
+    private BotSlotArgs(BotSlotArgs $) {
+        this.description = $.description;
+        this.multipleValuesSetting = $.multipleValuesSetting;
+        this.name = $.name;
+        this.obfuscationSetting = $.obfuscationSetting;
+        this.slotTypeName = $.slotTypeName;
+        this.valueElicitationSetting = $.valueElicitationSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
-        private Output<String> name;
-        private @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
-        private Output<String> slotTypeName;
-        private Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
+        private BotSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotArgs();
         }
 
         public Builder(BotSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.multipleValuesSetting = defaults.multipleValuesSetting;
-    	      this.name = defaults.name;
-    	      this.obfuscationSetting = defaults.obfuscationSetting;
-    	      this.slotTypeName = defaults.slotTypeName;
-    	      this.valueElicitationSetting = defaults.valueElicitationSetting;
+            $ = new BotSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder multipleValuesSetting(@Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting) {
-            this.multipleValuesSetting = multipleValuesSetting;
+            $.multipleValuesSetting = multipleValuesSetting;
             return this;
         }
-        public Builder multipleValuesSetting(@Nullable BotMultipleValuesSettingArgs multipleValuesSetting) {
-            this.multipleValuesSetting = Codegen.ofNullable(multipleValuesSetting);
-            return this;
+
+        public Builder multipleValuesSetting(BotMultipleValuesSettingArgs multipleValuesSetting) {
+            return multipleValuesSetting(Output.of(multipleValuesSetting));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder obfuscationSetting(@Nullable Output<BotObfuscationSettingArgs> obfuscationSetting) {
-            this.obfuscationSetting = obfuscationSetting;
+            $.obfuscationSetting = obfuscationSetting;
             return this;
         }
-        public Builder obfuscationSetting(@Nullable BotObfuscationSettingArgs obfuscationSetting) {
-            this.obfuscationSetting = Codegen.ofNullable(obfuscationSetting);
-            return this;
+
+        public Builder obfuscationSetting(BotObfuscationSettingArgs obfuscationSetting) {
+            return obfuscationSetting(Output.of(obfuscationSetting));
         }
+
         public Builder slotTypeName(Output<String> slotTypeName) {
-            this.slotTypeName = Objects.requireNonNull(slotTypeName);
+            $.slotTypeName = slotTypeName;
             return this;
         }
+
         public Builder slotTypeName(String slotTypeName) {
-            this.slotTypeName = Output.of(Objects.requireNonNull(slotTypeName));
-            return this;
+            return slotTypeName(Output.of(slotTypeName));
         }
+
         public Builder valueElicitationSetting(Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
-            this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting);
+            $.valueElicitationSetting = valueElicitationSetting;
             return this;
         }
+
         public Builder valueElicitationSetting(BotSlotValueElicitationSettingArgs valueElicitationSetting) {
-            this.valueElicitationSetting = Output.of(Objects.requireNonNull(valueElicitationSetting));
-            return this;
-        }        public BotSlotArgs build() {
-            return new BotSlotArgs(description, multipleValuesSetting, name, obfuscationSetting, slotTypeName, valueElicitationSetting);
+            return valueElicitationSetting(Output.of(valueElicitationSetting));
+        }
+
+        public BotSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.slotTypeName = Objects.requireNonNull($.slotTypeName, "expected parameter 'slotTypeName' to be non-null");
+            $.valueElicitationSetting = Objects.requireNonNull($.valueElicitationSetting, "expected parameter 'valueElicitationSetting' to be non-null");
+            return $;
         }
     }
+
 }

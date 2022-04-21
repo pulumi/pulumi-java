@@ -7,9 +7,9 @@ import com.pulumi.awsnative.databrew.enums.JobDatabaseOutputDatabaseOutputMode;
 import com.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class JobDatabaseOutputArgs extends com.pulumi.resources.ResourceAr
     public static final JobDatabaseOutputArgs Empty = new JobDatabaseOutputArgs();
 
     @Import(name="databaseOptions", required=true)
-      private final Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
+    private Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
     public Output<JobDatabaseTableOutputOptionsArgs> databaseOptions() {
         return this.databaseOptions;
@@ -29,10 +29,10 @@ public final class JobDatabaseOutputArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="databaseOutputMode")
-      private final @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
+    private @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
 
-    public Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode() {
-        return this.databaseOutputMode == null ? Codegen.empty() : this.databaseOutputMode;
+    public Optional<Output<JobDatabaseOutputDatabaseOutputMode>> databaseOutputMode() {
+        return Optional.ofNullable(this.databaseOutputMode);
     }
 
     /**
@@ -40,76 +40,70 @@ public final class JobDatabaseOutputArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="glueConnectionName", required=true)
-      private final Output<String> glueConnectionName;
+    private Output<String> glueConnectionName;
 
     public Output<String> glueConnectionName() {
         return this.glueConnectionName;
     }
 
-    public JobDatabaseOutputArgs(
-        Output<JobDatabaseTableOutputOptionsArgs> databaseOptions,
-        @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode,
-        Output<String> glueConnectionName) {
-        this.databaseOptions = Objects.requireNonNull(databaseOptions, "expected parameter 'databaseOptions' to be non-null");
-        this.databaseOutputMode = databaseOutputMode;
-        this.glueConnectionName = Objects.requireNonNull(glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
-    }
+    private JobDatabaseOutputArgs() {}
 
-    private JobDatabaseOutputArgs() {
-        this.databaseOptions = Codegen.empty();
-        this.databaseOutputMode = Codegen.empty();
-        this.glueConnectionName = Codegen.empty();
+    private JobDatabaseOutputArgs(JobDatabaseOutputArgs $) {
+        this.databaseOptions = $.databaseOptions;
+        this.databaseOutputMode = $.databaseOutputMode;
+        this.glueConnectionName = $.glueConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDatabaseOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
-        private @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
-        private Output<String> glueConnectionName;
+        private JobDatabaseOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDatabaseOutputArgs();
         }
 
         public Builder(JobDatabaseOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseOptions = defaults.databaseOptions;
-    	      this.databaseOutputMode = defaults.databaseOutputMode;
-    	      this.glueConnectionName = defaults.glueConnectionName;
+            $ = new JobDatabaseOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseOptions(Output<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
-            this.databaseOptions = Objects.requireNonNull(databaseOptions);
+            $.databaseOptions = databaseOptions;
             return this;
         }
+
         public Builder databaseOptions(JobDatabaseTableOutputOptionsArgs databaseOptions) {
-            this.databaseOptions = Output.of(Objects.requireNonNull(databaseOptions));
-            return this;
+            return databaseOptions(Output.of(databaseOptions));
         }
+
         public Builder databaseOutputMode(@Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode) {
-            this.databaseOutputMode = databaseOutputMode;
+            $.databaseOutputMode = databaseOutputMode;
             return this;
         }
-        public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
-            this.databaseOutputMode = Codegen.ofNullable(databaseOutputMode);
-            return this;
+
+        public Builder databaseOutputMode(JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
+            return databaseOutputMode(Output.of(databaseOutputMode));
         }
+
         public Builder glueConnectionName(Output<String> glueConnectionName) {
-            this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
+            $.glueConnectionName = glueConnectionName;
             return this;
         }
+
         public Builder glueConnectionName(String glueConnectionName) {
-            this.glueConnectionName = Output.of(Objects.requireNonNull(glueConnectionName));
-            return this;
-        }        public JobDatabaseOutputArgs build() {
-            return new JobDatabaseOutputArgs(databaseOptions, databaseOutputMode, glueConnectionName);
+            return glueConnectionName(Output.of(glueConnectionName));
+        }
+
+        public JobDatabaseOutputArgs build() {
+            $.databaseOptions = Objects.requireNonNull($.databaseOptions, "expected parameter 'databaseOptions' to be non-null");
+            $.glueConnectionName = Objects.requireNonNull($.glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
+            return $;
         }
     }
+
 }
