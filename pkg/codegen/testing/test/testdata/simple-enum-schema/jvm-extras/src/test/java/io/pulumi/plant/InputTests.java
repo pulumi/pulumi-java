@@ -15,6 +15,7 @@ import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.Internal;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.mock;
 
 class InputTests {
@@ -28,19 +29,28 @@ class InputTests {
     }
 
     @Test
-    void testContainerArgs_nullValues() {
-        var args = ContainerArgs.Empty;
+    void testContainerArgs_exceptionWhenMissingRequiredArgs() {
+        assertThatThrownBy(() -> {
+                ContainerArgs.builder().build();
+        });
+    }
+
+    @Test
+    void testContainerArgs_incompleteValues() {
+        var args = ContainerArgs.builder()
+             .size(ContainerSize.FourInch)
+             .build();
+
         var map = Internal.from(args).toMapAsync(mock(Log.class)).join();
 
-        assertThat(map).containsKey("brightness");
-        assertThat(map).containsKey("color");
-        assertThat(map).containsKey("material");
-        assertThat(map).containsKey("size");
+        // brightness is set via schema default
+        assertThat(waitForValue(map.get("brightness"))).isEqualTo(ContainerBrightness.One);
 
-        assertThat(waitForValue((Output) map.get("brightness"))).isNull();
-        assertThat(waitForValue((Output) map.get("color"))).isNull();
-        assertThat(waitForValue((Output) map.get("material"))).isNull();
-        assertThat(waitForValue((Output) map.get("size"))).isNull();
+        // size is set explicitly in the buidler
+        assertThat(waitForValue(map.get("size"))).isEqualTo(ContainerSize.FourInch);
+
+        assertThat(waitForValue(map.get("color"))).isNull();
+        assertThat(waitForValue(map.get("material"))).isNull();
     }
 
     @Test

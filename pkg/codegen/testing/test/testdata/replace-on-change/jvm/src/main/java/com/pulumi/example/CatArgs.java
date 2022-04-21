@@ -3,35 +3,26 @@
 
 package com.pulumi.example;
 
-import java.util.Objects;
+
 
 
 public final class CatArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final CatArgs Empty = new CatArgs();
 
-    public CatArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(CatArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private CatArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(CatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new CatArgs();
         }
         public CatArgs build() {
-            return new CatArgs();
+            return $;
         }
     }
+
 }

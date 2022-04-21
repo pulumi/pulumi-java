@@ -15,45 +15,44 @@ public final class ArgFunctionArgs extends com.pulumi.resources.InvokeArgs {
     public static final ArgFunctionArgs Empty = new ArgFunctionArgs();
 
     @Import(name="arg1")
-      private final @Nullable Resource arg1;
+    private @Nullable Resource arg1;
 
     public Optional<Resource> arg1() {
-        return this.arg1 == null ? Optional.empty() : Optional.ofNullable(this.arg1);
+        return Optional.ofNullable(this.arg1);
     }
 
-    public ArgFunctionArgs(@Nullable Resource arg1) {
-        this.arg1 = arg1;
-    }
+    private ArgFunctionArgs() {}
 
-    private ArgFunctionArgs() {
-        this.arg1 = null;
+    private ArgFunctionArgs(ArgFunctionArgs $) {
+        this.arg1 = $.arg1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArgFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Resource arg1;
+        private ArgFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArgFunctionArgs();
         }
 
         public Builder(ArgFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arg1 = defaults.arg1;
+            $ = new ArgFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arg1(@Nullable Resource arg1) {
-            this.arg1 = arg1;
+            $.arg1 = arg1;
             return this;
-        }        public ArgFunctionArgs build() {
-            return new ArgFunctionArgs(arg1);
+        }
+
+        public ArgFunctionArgs build() {
+            return $;
         }
     }
+
 }

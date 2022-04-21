@@ -30,7 +30,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="availabilityInformation", required=true)
-      private final AvailabilityInformationResponse availabilityInformation;
+    private AvailabilityInformationResponse availabilityInformation;
 
     public AvailabilityInformationResponse availabilityInformation() {
         return this.availabilityInformation;
@@ -41,7 +41,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="costInformation", required=true)
-      private final CostInformationResponse costInformation;
+    private CostInformationResponse costInformation;
 
     public CostInformationResponse costInformation() {
         return this.costInformation;
@@ -52,7 +52,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final DescriptionResponse description;
+    private DescriptionResponse description;
 
     public DescriptionResponse description() {
         return this.description;
@@ -63,7 +63,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dimensions", required=true)
-      private final DimensionsResponse dimensions;
+    private DimensionsResponse dimensions;
 
     public DimensionsResponse dimensions() {
         return this.dimensions;
@@ -74,7 +74,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -85,7 +85,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filterableProperties", required=true)
-      private final List<FilterablePropertyResponse> filterableProperties;
+    private List<FilterablePropertyResponse> filterableProperties;
 
     public List<FilterablePropertyResponse> filterableProperties() {
         return this.filterableProperties;
@@ -96,7 +96,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hierarchyInformation", required=true)
-      private final HierarchyInformationResponse hierarchyInformation;
+    private HierarchyInformationResponse hierarchyInformation;
 
     public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
@@ -107,7 +107,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="imageInformation", required=true)
-      private final List<ImageInformationResponse> imageInformation;
+    private List<ImageInformationResponse> imageInformation;
 
     public List<ImageInformationResponse> imageInformation() {
         return this.imageInformation;
@@ -118,127 +118,113 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="specifications", required=true)
-      private final List<SpecificationResponse> specifications;
+    private List<SpecificationResponse> specifications;
 
     public List<SpecificationResponse> specifications() {
         return this.specifications;
     }
 
-    public ConfigurationResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        DimensionsResponse dimensions,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<SpecificationResponse> specifications) {
-        this.availabilityInformation = Objects.requireNonNull(availabilityInformation, "expected parameter 'availabilityInformation' to be non-null");
-        this.costInformation = Objects.requireNonNull(costInformation, "expected parameter 'costInformation' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.filterableProperties = Objects.requireNonNull(filterableProperties, "expected parameter 'filterableProperties' to be non-null");
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
-        this.imageInformation = Objects.requireNonNull(imageInformation, "expected parameter 'imageInformation' to be non-null");
-        this.specifications = Objects.requireNonNull(specifications, "expected parameter 'specifications' to be non-null");
-    }
+    private ConfigurationResponse() {}
 
-    private ConfigurationResponse() {
-        this.availabilityInformation = null;
-        this.costInformation = null;
-        this.description = null;
-        this.dimensions = null;
-        this.displayName = null;
-        this.filterableProperties = List.of();
-        this.hierarchyInformation = null;
-        this.imageInformation = List.of();
-        this.specifications = List.of();
+    private ConfigurationResponse(ConfigurationResponse $) {
+        this.availabilityInformation = $.availabilityInformation;
+        this.costInformation = $.costInformation;
+        this.description = $.description;
+        this.dimensions = $.dimensions;
+        this.displayName = $.displayName;
+        this.filterableProperties = $.filterableProperties;
+        this.hierarchyInformation = $.hierarchyInformation;
+        this.imageInformation = $.imageInformation;
+        this.specifications = $.specifications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AvailabilityInformationResponse availabilityInformation;
-        private CostInformationResponse costInformation;
-        private DescriptionResponse description;
-        private DimensionsResponse dimensions;
-        private String displayName;
-        private List<FilterablePropertyResponse> filterableProperties;
-        private HierarchyInformationResponse hierarchyInformation;
-        private List<ImageInformationResponse> imageInformation;
-        private List<SpecificationResponse> specifications;
+        private ConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationResponse();
         }
 
         public Builder(ConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityInformation = defaults.availabilityInformation;
-    	      this.costInformation = defaults.costInformation;
-    	      this.description = defaults.description;
-    	      this.dimensions = defaults.dimensions;
-    	      this.displayName = defaults.displayName;
-    	      this.filterableProperties = defaults.filterableProperties;
-    	      this.hierarchyInformation = defaults.hierarchyInformation;
-    	      this.imageInformation = defaults.imageInformation;
-    	      this.specifications = defaults.specifications;
+            $ = new ConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
-            this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
+            $.availabilityInformation = availabilityInformation;
             return this;
         }
+
         public Builder costInformation(CostInformationResponse costInformation) {
-            this.costInformation = Objects.requireNonNull(costInformation);
+            $.costInformation = costInformation;
             return this;
         }
+
         public Builder description(DescriptionResponse description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder dimensions(DimensionsResponse dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
-            this.filterableProperties = Objects.requireNonNull(filterableProperties);
+            $.filterableProperties = filterableProperties;
             return this;
         }
+
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
             return filterableProperties(List.of(filterableProperties));
         }
+
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            $.hierarchyInformation = hierarchyInformation;
             return this;
         }
+
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
-            this.imageInformation = Objects.requireNonNull(imageInformation);
+            $.imageInformation = imageInformation;
             return this;
         }
+
         public Builder imageInformation(ImageInformationResponse... imageInformation) {
             return imageInformation(List.of(imageInformation));
         }
+
         public Builder specifications(List<SpecificationResponse> specifications) {
-            this.specifications = Objects.requireNonNull(specifications);
+            $.specifications = specifications;
             return this;
         }
+
         public Builder specifications(SpecificationResponse... specifications) {
             return specifications(List.of(specifications));
-        }        public ConfigurationResponse build() {
-            return new ConfigurationResponse(availabilityInformation, costInformation, description, dimensions, displayName, filterableProperties, hierarchyInformation, imageInformation, specifications);
+        }
+
+        public ConfigurationResponse build() {
+            $.availabilityInformation = Objects.requireNonNull($.availabilityInformation, "expected parameter 'availabilityInformation' to be non-null");
+            $.costInformation = Objects.requireNonNull($.costInformation, "expected parameter 'costInformation' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.filterableProperties = Objects.requireNonNull($.filterableProperties, "expected parameter 'filterableProperties' to be non-null");
+            $.hierarchyInformation = Objects.requireNonNull($.hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
+            $.imageInformation = Objects.requireNonNull($.imageInformation, "expected parameter 'imageInformation' to be non-null");
+            $.specifications = Objects.requireNonNull($.specifications, "expected parameter 'specifications' to be non-null");
+            return $;
         }
     }
+
 }

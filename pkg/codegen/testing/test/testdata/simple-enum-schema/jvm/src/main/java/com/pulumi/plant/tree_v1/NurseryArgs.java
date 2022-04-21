@@ -5,13 +5,13 @@ package com.pulumi.plant.tree_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import com.pulumi.plant.tree_v1.enums.TreeSize;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NurseryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizes")
-      private final @Nullable Output<Map<String,TreeSize>> sizes;
+    private @Nullable Output<Map<String,TreeSize>> sizes;
 
-    public Output<Map<String,TreeSize>> sizes() {
-        return this.sizes == null ? Codegen.empty() : this.sizes;
+    public Optional<Output<Map<String,TreeSize>>> sizes() {
+        return Optional.ofNullable(this.sizes);
     }
 
     /**
@@ -35,66 +35,63 @@ public final class NurseryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="varieties", required=true)
-      private final Output<List<RubberTreeVariety>> varieties;
+    private Output<List<RubberTreeVariety>> varieties;
 
     public Output<List<RubberTreeVariety>> varieties() {
         return this.varieties;
     }
 
-    public NurseryArgs(
-        @Nullable Output<Map<String,TreeSize>> sizes,
-        Output<List<RubberTreeVariety>> varieties) {
-        this.sizes = sizes;
-        this.varieties = Objects.requireNonNull(varieties, "expected parameter 'varieties' to be non-null");
-    }
+    private NurseryArgs() {}
 
-    private NurseryArgs() {
-        this.sizes = Codegen.empty();
-        this.varieties = Codegen.empty();
+    private NurseryArgs(NurseryArgs $) {
+        this.sizes = $.sizes;
+        this.varieties = $.varieties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NurseryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,TreeSize>> sizes;
-        private Output<List<RubberTreeVariety>> varieties;
+        private NurseryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NurseryArgs();
         }
 
         public Builder(NurseryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sizes = defaults.sizes;
-    	      this.varieties = defaults.varieties;
+            $ = new NurseryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sizes(@Nullable Output<Map<String,TreeSize>> sizes) {
-            this.sizes = sizes;
+            $.sizes = sizes;
             return this;
         }
-        public Builder sizes(@Nullable Map<String,TreeSize> sizes) {
-            this.sizes = Codegen.ofNullable(sizes);
-            return this;
+
+        public Builder sizes(Map<String,TreeSize> sizes) {
+            return sizes(Output.of(sizes));
         }
+
         public Builder varieties(Output<List<RubberTreeVariety>> varieties) {
-            this.varieties = Objects.requireNonNull(varieties);
+            $.varieties = varieties;
             return this;
         }
+
         public Builder varieties(List<RubberTreeVariety> varieties) {
-            this.varieties = Output.of(Objects.requireNonNull(varieties));
-            return this;
+            return varieties(Output.of(varieties));
         }
+
         public Builder varieties(RubberTreeVariety... varieties) {
             return varieties(List.of(varieties));
-        }        public NurseryArgs build() {
-            return new NurseryArgs(sizes, varieties);
+        }
+
+        public NurseryArgs build() {
+            $.varieties = Objects.requireNonNull($.varieties, "expected parameter 'varieties' to be non-null");
+            return $;
         }
     }
+
 }

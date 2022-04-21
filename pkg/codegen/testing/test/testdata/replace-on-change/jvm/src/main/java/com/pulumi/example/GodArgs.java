@@ -3,35 +3,26 @@
 
 package com.pulumi.example;
 
-import java.util.Objects;
+
 
 
 public final class GodArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final GodArgs Empty = new GodArgs();
 
-    public GodArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GodArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GodArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GodArgs();
         }
         public GodArgs build() {
-            return new GodArgs();
+            return $;
         }
     }
+
 }

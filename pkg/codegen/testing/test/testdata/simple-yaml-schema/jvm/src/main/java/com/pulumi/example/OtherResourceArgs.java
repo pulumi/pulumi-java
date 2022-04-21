@@ -5,7 +5,6 @@ package com.pulumi.example;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.Resource;
 import java.lang.String;
 import java.util.List;
@@ -19,69 +18,65 @@ public final class OtherResourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final OtherResourceArgs Empty = new OtherResourceArgs();
 
     @Import(name="bar")
-      private final @Nullable List<String> bar;
+    private @Nullable List<String> bar;
 
-    public List<String> bar() {
-        return this.bar == null ? List.of() : this.bar;
+    public Optional<List<String>> bar() {
+        return Optional.ofNullable(this.bar);
     }
 
     @Import(name="foo")
-      private final @Nullable Output<Resource> foo;
+    private @Nullable Output<Resource> foo;
 
-    public Output<Resource> foo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+    public Optional<Output<Resource>> foo() {
+        return Optional.ofNullable(this.foo);
     }
 
-    public OtherResourceArgs(
-        @Nullable List<String> bar,
-        @Nullable Output<Resource> foo) {
-        this.bar = bar;
-        this.foo = foo;
-    }
+    private OtherResourceArgs() {}
 
-    private OtherResourceArgs() {
-        this.bar = List.of();
-        this.foo = Codegen.empty();
+    private OtherResourceArgs(OtherResourceArgs $) {
+        this.bar = $.bar;
+        this.foo = $.foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OtherResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> bar;
-        private @Nullable Output<Resource> foo;
+        private OtherResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OtherResourceArgs();
         }
 
         public Builder(OtherResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bar = defaults.bar;
-    	      this.foo = defaults.foo;
+            $ = new OtherResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bar(@Nullable List<String> bar) {
-            this.bar = bar;
+            $.bar = bar;
             return this;
         }
+
         public Builder bar(String... bar) {
             return bar(List.of(bar));
         }
+
         public Builder foo(@Nullable Output<Resource> foo) {
-            this.foo = foo;
+            $.foo = foo;
             return this;
         }
-        public Builder foo(@Nullable Resource foo) {
-            this.foo = Codegen.ofNullable(foo);
-            return this;
-        }        public OtherResourceArgs build() {
-            return new OtherResourceArgs(bar, foo);
+
+        public Builder foo(Resource foo) {
+            return foo(Output.of(foo));
+        }
+
+        public OtherResourceArgs build() {
+            return $;
         }
     }
+
 }

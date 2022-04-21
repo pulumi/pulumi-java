@@ -21,10 +21,10 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-      private final @Nullable List<String> executableUsers;
+    private @Nullable List<String> executableUsers;
 
-    public List<String> executableUsers() {
-        return this.executableUsers == null ? List.of() : this.executableUsers;
+    public Optional<List<String>> executableUsers() {
+        return Optional.ofNullable(this.executableUsers);
     }
 
     /**
@@ -32,61 +32,59 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners", required=true)
-      private final List<String> owners;
+    private List<String> owners;
 
     public List<String> owners() {
         return this.owners;
     }
 
-    public GetAmiArgs(
-        @Nullable List<String> executableUsers,
-        List<String> owners) {
-        this.executableUsers = executableUsers;
-        this.owners = Objects.requireNonNull(owners, "expected parameter 'owners' to be non-null");
-    }
+    private GetAmiArgs() {}
 
-    private GetAmiArgs() {
-        this.executableUsers = List.of();
-        this.owners = List.of();
+    private GetAmiArgs(GetAmiArgs $) {
+        this.executableUsers = $.executableUsers;
+        this.owners = $.owners;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAmiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> executableUsers;
-        private List<String> owners;
+        private GetAmiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAmiArgs();
         }
 
         public Builder(GetAmiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executableUsers = defaults.executableUsers;
-    	      this.owners = defaults.owners;
+            $ = new GetAmiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executableUsers(@Nullable List<String> executableUsers) {
-            this.executableUsers = executableUsers;
+            $.executableUsers = executableUsers;
             return this;
         }
+
         public Builder executableUsers(String... executableUsers) {
             return executableUsers(List.of(executableUsers));
         }
+
         public Builder owners(List<String> owners) {
-            this.owners = Objects.requireNonNull(owners);
+            $.owners = owners;
             return this;
         }
+
         public Builder owners(String... owners) {
             return owners(List.of(owners));
-        }        public GetAmiArgs build() {
-            return new GetAmiArgs(executableUsers, owners);
+        }
+
+        public GetAmiArgs build() {
+            $.owners = Objects.requireNonNull($.owners, "expected parameter 'owners' to be non-null");
+            return $;
         }
     }
+
 }

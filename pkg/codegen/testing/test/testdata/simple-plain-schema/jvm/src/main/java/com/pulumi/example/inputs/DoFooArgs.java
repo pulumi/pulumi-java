@@ -13,45 +13,45 @@ public final class DoFooArgs extends com.pulumi.resources.InvokeArgs {
     public static final DoFooArgs Empty = new DoFooArgs();
 
     @Import(name="foo", required=true)
-      private final Foo foo;
+    private Foo foo;
 
     public Foo foo() {
         return this.foo;
     }
 
-    public DoFooArgs(Foo foo) {
-        this.foo = Objects.requireNonNull(foo, "expected parameter 'foo' to be non-null");
-    }
+    private DoFooArgs() {}
 
-    private DoFooArgs() {
-        this.foo = null;
+    private DoFooArgs(DoFooArgs $) {
+        this.foo = $.foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DoFooArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Foo foo;
+        private DoFooArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DoFooArgs();
         }
 
         public Builder(DoFooArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.foo = defaults.foo;
+            $ = new DoFooArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder foo(Foo foo) {
-            this.foo = Objects.requireNonNull(foo);
+            $.foo = foo;
             return this;
-        }        public DoFooArgs build() {
-            return new DoFooArgs(foo);
+        }
+
+        public DoFooArgs build() {
+            $.foo = Objects.requireNonNull($.foo, "expected parameter 'foo' to be non-null");
+            return $;
         }
     }
+
 }

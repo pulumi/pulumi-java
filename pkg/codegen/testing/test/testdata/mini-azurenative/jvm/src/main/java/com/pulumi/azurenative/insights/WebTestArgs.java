@@ -12,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frequency")
-      private final @Nullable Output<Integer> frequency;
+    private @Nullable Output<Integer> frequency;
 
-    public Output<Integer> frequency() {
-        return this.frequency == null ? Codegen.empty() : this.frequency;
+    public Optional<Output<Integer>> frequency() {
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<WebTestKind> kind;
+    private @Nullable Output<WebTestKind> kind;
 
-    public Output<WebTestKind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<WebTestKind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,7 +80,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +91,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryEnabled")
-      private final @Nullable Output<Boolean> retryEnabled;
+    private @Nullable Output<Boolean> retryEnabled;
 
-    public Output<Boolean> retryEnabled() {
-        return this.retryEnabled == null ? Codegen.empty() : this.retryEnabled;
+    public Optional<Output<Boolean>> retryEnabled() {
+        return Optional.ofNullable(this.retryEnabled);
     }
 
     /**
@@ -101,7 +102,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syntheticMonitorId", required=true)
-      private final Output<String> syntheticMonitorId;
+    private Output<String> syntheticMonitorId;
 
     public Output<String> syntheticMonitorId() {
         return this.syntheticMonitorId;
@@ -112,10 +113,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -123,10 +124,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -134,7 +135,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webTestKind", required=true)
-      private final Output<WebTestKind> webTestKind;
+    private Output<WebTestKind> webTestKind;
 
     public Output<WebTestKind> webTestKind() {
         return this.webTestKind;
@@ -145,193 +146,164 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webTestName")
-      private final @Nullable Output<String> webTestName;
+    private @Nullable Output<String> webTestName;
 
-    public Output<String> webTestName() {
-        return this.webTestName == null ? Codegen.empty() : this.webTestName;
+    public Optional<Output<String>> webTestName() {
+        return Optional.ofNullable(this.webTestName);
     }
 
-    public WebTestArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Integer> frequency,
-        @Nullable Output<WebTestKind> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> retryEnabled,
-        Output<String> syntheticMonitorId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> timeout,
-        Output<WebTestKind> webTestKind,
-        @Nullable Output<String> webTestName) {
-        this.description = description;
-        this.enabled = enabled;
-        this.frequency = Codegen.integerProp("frequency").output().arg(frequency).def(300).getNullable();
-        this.kind = Codegen.objectProp("kind", WebTestKind.class).output().arg(kind).def(WebTestKind.Ping).getNullable();
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.retryEnabled = retryEnabled;
-        this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId, "expected parameter 'syntheticMonitorId' to be non-null");
-        this.tags = tags;
-        this.timeout = Codegen.integerProp("timeout").output().arg(timeout).def(30).getNullable();
-        this.webTestKind = Codegen.objectProp("webTestKind", WebTestKind.class).output().arg(webTestKind).def(WebTestKind.Ping).require();
-        this.webTestName = webTestName;
-    }
+    private WebTestArgs() {}
 
-    private WebTestArgs() {
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.retryEnabled = Codegen.empty();
-        this.syntheticMonitorId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.webTestKind = Codegen.empty();
-        this.webTestName = Codegen.empty();
+    private WebTestArgs(WebTestArgs $) {
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.frequency = $.frequency;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.retryEnabled = $.retryEnabled;
+        this.syntheticMonitorId = $.syntheticMonitorId;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
+        this.webTestKind = $.webTestKind;
+        this.webTestName = $.webTestName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Integer> frequency;
-        private @Nullable Output<WebTestKind> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> retryEnabled;
-        private Output<String> syntheticMonitorId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> timeout;
-        private Output<WebTestKind> webTestKind;
-        private @Nullable Output<String> webTestName;
+        private WebTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebTestArgs();
         }
 
         public Builder(WebTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.frequency = defaults.frequency;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.retryEnabled = defaults.retryEnabled;
-    	      this.syntheticMonitorId = defaults.syntheticMonitorId;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
-    	      this.webTestKind = defaults.webTestKind;
-    	      this.webTestName = defaults.webTestName;
+            $ = new WebTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder frequency(@Nullable Output<Integer> frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
-        public Builder frequency(@Nullable Integer frequency) {
-            this.frequency = Codegen.ofNullable(frequency);
-            return this;
+
+        public Builder frequency(Integer frequency) {
+            return frequency(Output.of(frequency));
         }
+
         public Builder kind(@Nullable Output<WebTestKind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable WebTestKind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(WebTestKind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder retryEnabled(@Nullable Output<Boolean> retryEnabled) {
-            this.retryEnabled = retryEnabled;
+            $.retryEnabled = retryEnabled;
             return this;
         }
-        public Builder retryEnabled(@Nullable Boolean retryEnabled) {
-            this.retryEnabled = Codegen.ofNullable(retryEnabled);
-            return this;
+
+        public Builder retryEnabled(Boolean retryEnabled) {
+            return retryEnabled(Output.of(retryEnabled));
         }
+
         public Builder syntheticMonitorId(Output<String> syntheticMonitorId) {
-            this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId);
+            $.syntheticMonitorId = syntheticMonitorId;
             return this;
         }
+
         public Builder syntheticMonitorId(String syntheticMonitorId) {
-            this.syntheticMonitorId = Output.of(Objects.requireNonNull(syntheticMonitorId));
-            return this;
+            return syntheticMonitorId(Output.of(syntheticMonitorId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder webTestKind(Output<WebTestKind> webTestKind) {
-            this.webTestKind = Objects.requireNonNull(webTestKind);
+            $.webTestKind = webTestKind;
             return this;
         }
+
         public Builder webTestKind(WebTestKind webTestKind) {
-            this.webTestKind = Output.of(Objects.requireNonNull(webTestKind));
-            return this;
+            return webTestKind(Output.of(webTestKind));
         }
+
         public Builder webTestName(@Nullable Output<String> webTestName) {
-            this.webTestName = webTestName;
+            $.webTestName = webTestName;
             return this;
         }
-        public Builder webTestName(@Nullable String webTestName) {
-            this.webTestName = Codegen.ofNullable(webTestName);
-            return this;
-        }        public WebTestArgs build() {
-            return new WebTestArgs(description, enabled, frequency, kind, location, resourceGroupName, retryEnabled, syntheticMonitorId, tags, timeout, webTestKind, webTestName);
+
+        public Builder webTestName(String webTestName) {
+            return webTestName(Output.of(webTestName));
+        }
+
+        public WebTestArgs build() {
+            $.frequency = Codegen.integerProp("frequency").output().arg($.frequency).def(300).getNullable();
+            $.kind = Codegen.objectProp("kind", WebTestKind.class).output().arg($.kind).def(WebTestKind.Ping).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.syntheticMonitorId = Objects.requireNonNull($.syntheticMonitorId, "expected parameter 'syntheticMonitorId' to be non-null");
+            $.timeout = Codegen.integerProp("timeout").output().arg($.timeout).def(30).getNullable();
+            $.webTestKind = Codegen.objectProp("webTestKind", WebTestKind.class).output().arg($.webTestKind).def(WebTestKind.Ping).require();
+            return $;
         }
     }
+
 }
