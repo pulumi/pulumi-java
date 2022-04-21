@@ -21,8 +21,8 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     public static final PatchDeploymentState Empty = new PatchDeploymentState();
 
     /**
-     * Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
-     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="createTime")
@@ -45,7 +45,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
 
     /**
      * Duration of the patch. After the duration ends, the patch times out.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
      * 
      */
     @Import(name="duration")
@@ -70,7 +70,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     /**
      * - 
      * The time the last patch job ran successfully.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="lastExecuteTime")
@@ -169,8 +169,8 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
-     * format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34;
+     * format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="updateTime")

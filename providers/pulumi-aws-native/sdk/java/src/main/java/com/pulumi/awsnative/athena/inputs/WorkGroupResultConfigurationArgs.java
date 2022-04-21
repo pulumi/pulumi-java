@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The location in Amazon S3 where query results are stored and the encryption option, if any, used for query results. These are known as "client-side settings". If workgroup settings override client-side settings, then the query uses the workgroup settings.
+ * The location in Amazon S3 where query results are stored and the encryption option, if any, used for query results. These are known as &#34;client-side settings&#34;. If workgroup settings override client-side settings, then the query uses the workgroup settings.
  * 
  */
 public final class WorkGroupResultConfigurationArgs extends com.pulumi.resources.ResourceArgs {

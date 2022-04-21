@@ -17,7 +17,7 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
     public static final GitRepoSourceResponse Empty = new GitRepoSourceResponse();
 
     /**
-     * The branch or tag to use. Must start with "refs/" (required).
+     * The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
      */
     @Import(name="ref", required=true)

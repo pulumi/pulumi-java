@@ -16,7 +16,7 @@ public final class CertificateSigningRequestConditionArgs extends com.pulumi.res
     public static final CertificateSigningRequestConditionArgs Empty = new CertificateSigningRequestConditionArgs();
 
     /**
-     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
+     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
      * 
      */
     @Import(name="lastTransitionTime")
@@ -60,7 +60,7 @@ public final class CertificateSigningRequestConditionArgs extends com.pulumi.res
     }
 
     /**
-     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown". Defaults to "True". If unset, should be treated as "True".
+     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;. Defaults to &#34;True&#34;. If unset, should be treated as &#34;True&#34;.
      * 
      */
     @Import(name="status")

@@ -35,7 +35,7 @@ public final class GetFunctionResult {
      */
     private final String codeSigningConfigArn;
     /**
-     * Configure the function's *dead letter queue*.
+     * Configure the function&#39;s *dead letter queue*.
      * 
      */
     private final GetFunctionDeadLetterConfig deadLetterConfig;
@@ -45,7 +45,7 @@ public final class GetFunctionResult {
      */
     private final String description;
     /**
-     * The Lambda environment's configuration settings.
+     * The Lambda environment&#39;s configuration settings.
      * 
      */
     private final GetFunctionEnvironment environment;
@@ -244,7 +244,7 @@ public final class GetFunctionResult {
         return this.codeSigningConfigArn;
     }
     /**
-     * Configure the function's *dead letter queue*.
+     * Configure the function&#39;s *dead letter queue*.
      * 
     */
     public GetFunctionDeadLetterConfig deadLetterConfig() {
@@ -258,7 +258,7 @@ public final class GetFunctionResult {
         return this.description;
     }
     /**
-     * The Lambda environment's configuration settings.
+     * The Lambda environment&#39;s configuration settings.
      * 
     */
     public GetFunctionEnvironment environment() {

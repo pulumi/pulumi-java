@@ -49,7 +49,7 @@ public final class AzureMySqlSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AzureMySqlSource'.
+     * Expected value is &#39;AzureMySqlSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class AzureMySqlSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureMySqlSource'.
+     * Expected value is &#39;AzureMySqlSource&#39;.
      * 
     */
     public String type() {

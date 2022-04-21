@@ -118,14 +118,14 @@ public class Environment extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * The identifier of the resource group containing the environment's resources.
+     * The identifier of the resource group containing the environment&#39;s resources.
      * 
      */
     @Export(name="resourceGroupId", type=String.class, parameters={})
     private Output<String> resourceGroupId;
 
     /**
-     * @return The identifier of the resource group containing the environment's resources.
+     * @return The identifier of the resource group containing the environment&#39;s resources.
      * 
      */
     public Output<String> resourceGroupId() {

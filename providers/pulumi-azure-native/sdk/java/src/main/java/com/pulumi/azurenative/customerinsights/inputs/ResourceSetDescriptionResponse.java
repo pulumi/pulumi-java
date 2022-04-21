@@ -31,7 +31,7 @@ public final class ResourceSetDescriptionResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
+     * The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
      * 
      */
     @Import(name="exceptions")

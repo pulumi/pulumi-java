@@ -9,18 +9,18 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Required. The state of the pipeline. When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
+     * Required. The state of the pipeline. When the pipeline is created, the state is set to &#39;PIPELINE_STATE_ACTIVE&#39; by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
      * 
      */
     @EnumType
     public enum PipelineState {
         /**
-         * The pipeline state isn't specified.
+         * The pipeline state isn&#39;t specified.
          * 
          */
         StateUnspecified("STATE_UNSPECIFIED"),
         /**
-         * The pipeline is getting started or resumed. When finished, the pipeline state will be 'PIPELINE_STATE_ACTIVE'.
+         * The pipeline is getting started or resumed. When finished, the pipeline state will be &#39;PIPELINE_STATE_ACTIVE&#39;.
          * 
          */
         StateResuming("STATE_RESUMING"),
@@ -30,7 +30,7 @@ import java.util.StringJoiner;
          */
         StateActive("STATE_ACTIVE"),
         /**
-         * The pipeline is in the process of stopping. When finished, the pipeline state will be 'PIPELINE_STATE_ARCHIVED'.
+         * The pipeline is in the process of stopping. When finished, the pipeline state will be &#39;PIPELINE_STATE_ARCHIVED&#39;.
          * 
          */
         StateStopping("STATE_STOPPING"),

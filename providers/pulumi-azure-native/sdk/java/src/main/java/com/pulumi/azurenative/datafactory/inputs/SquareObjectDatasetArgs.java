@@ -115,7 +115,7 @@ public final class SquareObjectDatasetArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of dataset.
-     * Expected value is 'SquareObject'.
+     * Expected value is &#39;SquareObject&#39;.
      * 
      */
     @Import(name="type", required=true)

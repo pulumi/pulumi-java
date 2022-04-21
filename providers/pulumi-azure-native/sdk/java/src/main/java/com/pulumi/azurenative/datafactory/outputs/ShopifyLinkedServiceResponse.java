@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ShopifyLinkedServiceResponse {
     /**
-     * The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
+     * The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
@@ -56,7 +56,7 @@ public final class ShopifyLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'Shopify'.
+     * Expected value is &#39;Shopify&#39;.
      * 
      */
     private final String type;
@@ -66,7 +66,7 @@ public final class ShopifyLinkedServiceResponse {
      */
     private final @Nullable Object useEncryptedEndpoints;
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
     private final @Nullable Object useHostVerification;
@@ -103,7 +103,7 @@ public final class ShopifyLinkedServiceResponse {
     }
 
     /**
-     * The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
+     * The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
      * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
@@ -153,7 +153,7 @@ public final class ShopifyLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Shopify'.
+     * Expected value is &#39;Shopify&#39;.
      * 
     */
     public String type() {
@@ -167,7 +167,7 @@ public final class ShopifyLinkedServiceResponse {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
     */
     public Optional<Object> useHostVerification() {

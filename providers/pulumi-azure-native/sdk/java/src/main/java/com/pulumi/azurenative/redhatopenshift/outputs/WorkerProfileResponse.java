@@ -23,7 +23,7 @@ public final class WorkerProfileResponse {
      */
     private final @Nullable Integer diskSizeGB;
     /**
-     * The worker profile name.  Must be "worker" (immutable).
+     * The worker profile name.  Must be &#34;worker&#34; (immutable).
      * 
      */
     private final @Nullable String name;
@@ -67,7 +67,7 @@ public final class WorkerProfileResponse {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * The worker profile name.  Must be "worker" (immutable).
+     * The worker profile name.  Must be &#34;worker&#34; (immutable).
      * 
     */
     public Optional<String> name() {

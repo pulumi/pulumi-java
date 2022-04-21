@@ -99,7 +99,7 @@ public final class CouchbaseSourceArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Copy source type.
-     * Expected value is 'CouchbaseSource'.
+     * Expected value is &#39;CouchbaseSource&#39;.
      * 
      */
     @Import(name="type", required=true)

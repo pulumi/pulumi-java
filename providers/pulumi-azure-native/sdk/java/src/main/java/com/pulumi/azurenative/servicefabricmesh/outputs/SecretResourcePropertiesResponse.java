@@ -23,7 +23,7 @@ public final class SecretResourcePropertiesResponse {
     private final @Nullable String description;
     /**
      * Describes the kind of secret.
-     * Expected value is 'SecretResourceProperties'.
+     * Expected value is &#39;SecretResourceProperties&#39;.
      * 
      */
     private final String kind;
@@ -75,7 +75,7 @@ public final class SecretResourcePropertiesResponse {
     }
     /**
      * Describes the kind of secret.
-     * Expected value is 'SecretResourceProperties'.
+     * Expected value is &#39;SecretResourceProperties&#39;.
      * 
     */
     public String kind() {

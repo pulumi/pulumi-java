@@ -41,7 +41,7 @@ public final class GetFunctionResult {
     private final String lastModifiedTime;
     private final String name;
     /**
-     * Identifier of the function's runtime.
+     * Identifier of the function&#39;s runtime.
      * 
      */
     private final String runtime;
@@ -122,7 +122,7 @@ public final class GetFunctionResult {
         return this.name;
     }
     /**
-     * Identifier of the function's runtime.
+     * Identifier of the function&#39;s runtime.
      * 
     */
     public String runtime() {

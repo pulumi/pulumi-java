@@ -24,7 +24,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'GenericProtectionPolicy'.
+     * Expected value is &#39;GenericProtectionPolicy&#39;.
      * 
      */
     @Import(name="backupManagementType", required=true)
@@ -35,7 +35,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Name of this policy's fabric.
+     * Name of this policy&#39;s fabric.
      * 
      */
     @Import(name="fabricName")
@@ -68,7 +68,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     @Import(name="timeZone")

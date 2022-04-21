@@ -26,7 +26,7 @@ public final class ComponentSetupResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
     /**
      * The type of custom setup.
-     * Expected value is 'ComponentSetup'.
+     * Expected value is &#39;ComponentSetup&#39;.
      * 
      */
     private final String type;
@@ -57,7 +57,7 @@ public final class ComponentSetupResponse {
     }
     /**
      * The type of custom setup.
-     * Expected value is 'ComponentSetup'.
+     * Expected value is &#39;ComponentSetup&#39;.
      * 
     */
     public String type() {

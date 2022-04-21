@@ -111,14 +111,14 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
         return this.p2SVpnGateways;
     }
     /**
-     * The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     * The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
      * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
-     * @return The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     * @return The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
      * 
      */
     public Output<String> provisioningState() {

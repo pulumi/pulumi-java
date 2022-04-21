@@ -21,7 +21,7 @@ public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.
     public static final DiskEncryptionConfigurationArgs Empty = new DiskEncryptionConfigurationArgs();
 
     /**
-     * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+     * On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
      * 
      */
     @Import(name="targets")

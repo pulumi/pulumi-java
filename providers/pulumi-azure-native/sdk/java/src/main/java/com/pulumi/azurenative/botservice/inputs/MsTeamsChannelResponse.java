@@ -22,7 +22,7 @@ public final class MsTeamsChannelResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * The channel name
-     * Expected value is 'MsTeamsChannel'.
+     * Expected value is &#39;MsTeamsChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

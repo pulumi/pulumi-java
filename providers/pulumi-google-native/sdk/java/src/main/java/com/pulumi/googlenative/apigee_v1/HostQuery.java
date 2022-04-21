@@ -15,8 +15,8 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Submit a query at host level to be processed in the background. If the submission of the query succeeds, the API returns a 201 status and an ID that refer to the query. In addition to the HTTP status 201, the `state` of "enqueued" means that the request succeeded.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Submit a query at host level to be processed in the background. If the submission of the query succeeds, the API returns a 201 status and an ID that refer to the query. In addition to the HTTP status 201, the `state` of &#34;enqueued&#34; means that the request succeeded.
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -177,14 +177,14 @@ public class HostQuery extends com.pulumi.resources.CustomResource {
         return this.self;
     }
     /**
-     * Query state could be "enqueued", "running", "completed", "failed".
+     * Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
      * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
-     * @return Query state could be "enqueued", "running", "completed", "failed".
+     * @return Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
      * 
      */
     public Output<String> state() {

@@ -33,7 +33,7 @@ public final class ServiceBusResponse {
     private final @Nullable String deadLetterUri;
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'ServiceBus'.
+     * Expected value is &#39;ServiceBus&#39;.
      * 
      */
     private final String endpointType;
@@ -117,7 +117,7 @@ public final class ServiceBusResponse {
     }
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'ServiceBus'.
+     * Expected value is &#39;ServiceBus&#39;.
      * 
     */
     public String endpointType() {

@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class Elasticloadbalancingv2Functions {
     /**
-     * > **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
+     * &gt; **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
      * 
      * Provides information about a Load Balancer Listener.
      * 
@@ -25,7 +25,7 @@ public final class Elasticloadbalancingv2Functions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.elasticloadbalancingv2.getListener has been deprecated in favor of aws.lb.getListener
      * 
      */
@@ -40,7 +40,7 @@ public final class Elasticloadbalancingv2Functions {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancingv2/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
+     * &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
      * 
      * Provides information about a Load Balancer.
      * 
@@ -50,7 +50,7 @@ public final class Elasticloadbalancingv2Functions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.elasticloadbalancingv2.getLoadBalancer has been deprecated in favor of aws.lb.getLoadBalancer
      * 
      */
@@ -65,7 +65,7 @@ public final class Elasticloadbalancingv2Functions {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancingv2/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * > **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
+     * &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
      * 
      * Provides information about a Load Balancer Target Group.
      * 
@@ -75,7 +75,7 @@ public final class Elasticloadbalancingv2Functions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.elasticloadbalancingv2.getTargetGroup has been deprecated in favor of aws.lb.getTargetGroup
      * 
      */

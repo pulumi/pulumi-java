@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Upcoming Maintenance notification information. TODO(b/196881882) Deprecate this proto once it's fully migrated to be under proto ResourceStatus.UpcomingMaintenance.
+ * Upcoming Maintenance notification information. TODO(b/196881882) Deprecate this proto once it&#39;s fully migrated to be under proto ResourceStatus.UpcomingMaintenance.
  * 
  */
 public final class UpcomingMaintenanceResponse extends com.pulumi.resources.InvokeArgs {

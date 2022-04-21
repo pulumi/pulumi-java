@@ -40,7 +40,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
     }
 
     /**
-     * The encryption key for the report's encrypted raw data. The KMS key ARN.
+     * The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
      * 
      */
     @Import(name="encryptionKey", required=true)
@@ -62,7 +62,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
     }
 
     /**
-     * The path to the exported report's raw data results.
+     * The path to the exported report&#39;s raw data results.
      * 
      */
     @Import(name="path")

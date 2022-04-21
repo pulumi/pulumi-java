@@ -19,7 +19,7 @@ public final class ClassifierCsvClassifier {
      */
     private final @Nullable Boolean allowSingleColumn;
     /**
-     * Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
+     * Indicates whether the CSV file contains a header. This can be one of &#34;ABSENT&#34;, &#34;PRESENT&#34;, or &#34;UNKNOWN&#34;.
      * 
      */
     private final @Nullable String containsHeader;
@@ -68,7 +68,7 @@ public final class ClassifierCsvClassifier {
         return Optional.ofNullable(this.allowSingleColumn);
     }
     /**
-     * Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
+     * Indicates whether the CSV file contains a header. This can be one of &#34;ABSENT&#34;, &#34;PRESENT&#34;, or &#34;UNKNOWN&#34;.
      * 
     */
     public Optional<String> containsHeader() {

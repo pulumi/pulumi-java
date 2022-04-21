@@ -74,11 +74,11 @@ public final class TargetGrpcProxyArgs extends com.pulumi.resources.ResourceArgs
      * the urlMap may be accessed by gRPC applications without using
      * a sidecar proxy. This will enable configuration checks on urlMap
      * and its referenced BackendServices to not allow unsupported features.
-     * A gRPC application must use "xds:///" scheme in the target URI
+     * A gRPC application must use &#34;xds:///&#34; scheme in the target URI
      * of the service it is connecting to. If false, indicates that the
      * BackendServices referenced by the urlMap will be accessed by gRPC
      * applications via a sidecar proxy. In this case, a gRPC application
-     * must not use "xds:///" scheme in the target URI of the service
+     * must not use &#34;xds:///&#34; scheme in the target URI of the service
      * it is connecting to
      * 
      */

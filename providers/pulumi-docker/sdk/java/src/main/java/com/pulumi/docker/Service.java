@@ -25,15 +25,15 @@ import javax.annotation.Nullable;
 /**
  * ## Import
  * 
- * ### Example Assuming you created a `service` as follows #!/bin/bash docker service create --name foo -p 8080:80 nginx # prints th ID 4pcphbxkfn2rffhbhe6czytgi you provide the definition for the resource as follows terraform resource "docker_service" "foo" {
+ * ### Example Assuming you created a `service` as follows #!/bin/bash docker service create --name foo -p 8080:80 nginx # prints th ID 4pcphbxkfn2rffhbhe6czytgi you provide the definition for the resource as follows terraform resource &#34;docker_service&#34; &#34;foo&#34; {
  * 
- *  name = "foo"
+ *  name = &#34;foo&#34;
  * 
  *  task_spec {
  * 
  *  container_spec {
  * 
- *  image = "nginx"
+ *  image = &#34;nginx&#34;
  * 
  *  }
  * 
@@ -45,9 +45,9 @@ import javax.annotation.Nullable;
  * 
  *  target_port
  * 
- * = "80"
+ * = &#34;80&#34;
  * 
- *  published_port = "8080"
+ *  published_port = &#34;8080&#34;
  * 
  *  }
  * 

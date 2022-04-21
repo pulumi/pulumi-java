@@ -51,14 +51,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+     * Optional. Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
      * 
      */
     @Export(name="metadata", type=ObjectMetaResponse.class, parameters={})
     private Output<ObjectMetaResponse> metadata;
 
     /**
-     * @return Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+     * @return Optional. Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
      * 
      */
     public Output<ObjectMetaResponse> metadata() {

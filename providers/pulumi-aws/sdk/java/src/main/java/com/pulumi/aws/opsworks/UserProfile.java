@@ -65,14 +65,14 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
         return this.sshUsername;
     }
     /**
-     * The user's IAM ARN
+     * The user&#39;s IAM ARN
      * 
      */
     @Export(name="userArn", type=String.class, parameters={})
     private Output<String> userArn;
 
     /**
-     * @return The user's IAM ARN
+     * @return The user&#39;s IAM ARN
      * 
      */
     public Output<String> userArn() {

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Prevents a term in the query from being used in search. Example: Don't search for "shoddy".
+ * Prevents a term in the query from being used in search. Example: Don&#39;t search for &#34;shoddy&#34;.
  * 
  */
 public final class GoogleCloudRetailV2betaRuleIgnoreActionArgs extends com.pulumi.resources.ResourceArgs {

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TemplateColumnSchema {
     /**
-     * <p>The data type of the column schema.</p>
+     * &lt;p&gt;The data type of the column schema.&lt;/p&gt;
      * 
      */
     private final @Nullable String dataType;
     /**
-     * <p>The geographic role of the column schema.</p>
+     * &lt;p&gt;The geographic role of the column schema.&lt;/p&gt;
      * 
      */
     private final @Nullable String geographicRole;
     /**
-     * <p>The name of the column schema.</p>
+     * &lt;p&gt;The name of the column schema.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
@@ -38,21 +38,21 @@ public final class TemplateColumnSchema {
     }
 
     /**
-     * <p>The data type of the column schema.</p>
+     * &lt;p&gt;The data type of the column schema.&lt;/p&gt;
      * 
     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * <p>The geographic role of the column schema.</p>
+     * &lt;p&gt;The geographic role of the column schema.&lt;/p&gt;
      * 
     */
     public Optional<String> geographicRole() {
         return Optional.ofNullable(this.geographicRole);
     }
     /**
-     * <p>The name of the column schema.</p>
+     * &lt;p&gt;The name of the column schema.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {

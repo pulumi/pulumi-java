@@ -24,14 +24,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:quicksight:Template")
 public class Template extends com.pulumi.resources.CustomResource {
     /**
-     * <p>The Amazon Resource Name (ARN) of the template.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the template.&lt;/p&gt;
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return <p>The Amazon Resource Name (ARN) of the template.</p>
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the template.&lt;/p&gt;
      * 
      */
     public Output<String> arn() {
@@ -44,56 +44,56 @@ public class Template extends com.pulumi.resources.CustomResource {
         return this.awsAccountId;
     }
     /**
-     * <p>Time when this was created.</p>
+     * &lt;p&gt;Time when this was created.&lt;/p&gt;
      * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
-     * @return <p>Time when this was created.</p>
+     * @return &lt;p&gt;Time when this was created.&lt;/p&gt;
      * 
      */
     public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
-     * <p>Time when this was last updated.</p>
+     * &lt;p&gt;Time when this was last updated.&lt;/p&gt;
      * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
-     * @return <p>Time when this was last updated.</p>
+     * @return &lt;p&gt;Time when this was last updated.&lt;/p&gt;
      * 
      */
     public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * <p>A display name for the template.</p>
+     * &lt;p&gt;A display name for the template.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return <p>A display name for the template.</p>
+     * @return &lt;p&gt;A display name for the template.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
-     * <p>A list of resource permissions to be set on the template. </p>
+     * &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
      * 
      */
     @Export(name="permissions", type=List.class, parameters={TemplateResourcePermission.class})
     private Output</* @Nullable */ List<TemplateResourcePermission>> permissions;
 
     /**
-     * @return <p>A list of resource permissions to be set on the template. </p>
+     * @return &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<TemplateResourcePermission>> permissions() {
@@ -106,14 +106,14 @@ public class Template extends com.pulumi.resources.CustomResource {
         return this.sourceEntity;
     }
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
      * 
      */
     @Export(name="tags", type=List.class, parameters={TemplateTag.class})
     private Output</* @Nullable */ List<TemplateTag>> tags;
 
     /**
-     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<TemplateTag>> tags() {
@@ -132,20 +132,20 @@ public class Template extends com.pulumi.resources.CustomResource {
         return this.version;
     }
     /**
-     * <p>A description of the current template version being created. This API operation creates the
-     * 			first version of the template. Every time <code>UpdateTemplate</code> is called, a new
+     * &lt;p&gt;A description of the current template version being created. This API operation creates the
+     * 			first version of the template. Every time &lt;code&gt;UpdateTemplate&lt;/code&gt; is called, a new
      * 			version is created. Each version of the template maintains a description of the version
-     * 			in the <code>VersionDescription</code> field.</p>
+     * 			in the &lt;code&gt;VersionDescription&lt;/code&gt; field.&lt;/p&gt;
      * 
      */
     @Export(name="versionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionDescription;
 
     /**
-     * @return <p>A description of the current template version being created. This API operation creates the
-     * 			first version of the template. Every time <code>UpdateTemplate</code> is called, a new
+     * @return &lt;p&gt;A description of the current template version being created. This API operation creates the
+     * 			first version of the template. Every time &lt;code&gt;UpdateTemplate&lt;/code&gt; is called, a new
      * 			version is created. Each version of the template maintains a description of the version
-     * 			in the <code>VersionDescription</code> field.</p>
+     * 			in the &lt;code&gt;VersionDescription&lt;/code&gt; field.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> versionDescription() {

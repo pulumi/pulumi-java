@@ -15,7 +15,7 @@ public final class WebAclRuleStatementNotStatementStatementIpSetReferenceStateme
     public static final WebAclRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs Empty = new WebAclRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs();
 
     /**
-     * - The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+     * - The match status to assign to the web request if the request doesn&#39;t have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
      * 
      */
     @Import(name="fallbackBehavior", required=true)

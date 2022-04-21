@@ -32,7 +32,7 @@ public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
+     * Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
      * 
      */
     @Import(name="type")

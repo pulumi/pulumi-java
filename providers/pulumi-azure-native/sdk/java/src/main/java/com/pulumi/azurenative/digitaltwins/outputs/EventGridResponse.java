@@ -43,7 +43,7 @@ public final class EventGridResponse {
     private final @Nullable String deadLetterUri;
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'EventGrid'.
+     * Expected value is &#39;EventGrid&#39;.
      * 
      */
     private final String endpointType;
@@ -124,7 +124,7 @@ public final class EventGridResponse {
     }
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'EventGrid'.
+     * Expected value is &#39;EventGrid&#39;.
      * 
     */
     public String endpointType() {

@@ -23,7 +23,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     public static final CertificateDescriptionResponse Empty = new CertificateDescriptionResponse();
 
     /**
-     * Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.
+     * Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
      */
     @Import(name="aiaIssuingCertificateUrls", required=true)

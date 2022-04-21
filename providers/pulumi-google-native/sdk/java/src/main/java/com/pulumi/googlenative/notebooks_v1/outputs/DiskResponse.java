@@ -53,7 +53,7 @@ public final class DiskResponse {
      */
     private final String kind;
     /**
-     * A list of publicly visible licenses. Reserved for Google's use. A License represents billing and aggregate usage data for public and marketplace images.
+     * A list of publicly visible licenses. Reserved for Google&#39;s use. A License represents billing and aggregate usage data for public and marketplace images.
      * 
      */
     private final List<String> licenses;
@@ -158,7 +158,7 @@ public final class DiskResponse {
         return this.kind;
     }
     /**
-     * A list of publicly visible licenses. Reserved for Google's use. A License represents billing and aggregate usage data for public and marketplace images.
+     * A list of publicly visible licenses. Reserved for Google&#39;s use. A License represents billing and aggregate usage data for public and marketplace images.
      * 
     */
     public List<String> licenses() {

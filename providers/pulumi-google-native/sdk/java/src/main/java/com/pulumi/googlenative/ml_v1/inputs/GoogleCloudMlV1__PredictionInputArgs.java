@@ -67,7 +67,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     }
 
     /**
-     * Use this field if you want to use the default version for the specified model. The string must use the following format: `"projects/YOUR_PROJECT/models/YOUR_MODEL"`
+     * Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
      * 
      */
     @Import(name="modelName")
@@ -122,7 +122,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     }
 
     /**
-     * Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is "serving_default".
+     * Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
      * 
      */
     @Import(name="signatureName")
@@ -144,7 +144,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     }
 
     /**
-     * Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `"projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION"`
+     * Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
      * 
      */
     @Import(name="versionName")

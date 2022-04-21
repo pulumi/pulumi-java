@@ -50,14 +50,14 @@ public class SavedQuery extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The account's email address who has created this saved query.
+     * The account&#39;s email address who has created this saved query.
      * 
      */
     @Export(name="creator", type=String.class, parameters={})
     private Output<String> creator;
 
     /**
-     * @return The account's email address who has created this saved query.
+     * @return The account&#39;s email address who has created this saved query.
      * 
      */
     public Output<String> creator() {
@@ -106,14 +106,14 @@ public class SavedQuery extends com.pulumi.resources.CustomResource {
         return this.lastUpdateTime;
     }
     /**
-     * The account's email address who has updated this saved query most recently.
+     * The account&#39;s email address who has updated this saved query most recently.
      * 
      */
     @Export(name="lastUpdater", type=String.class, parameters={})
     private Output<String> lastUpdater;
 
     /**
-     * @return The account's email address who has updated this saved query most recently.
+     * @return The account&#39;s email address who has updated this saved query most recently.
      * 
      */
     public Output<String> lastUpdater() {

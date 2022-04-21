@@ -45,7 +45,7 @@ public final class AwsFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.getAmi has been deprecated in favor of aws.ec2.getAmi
      * 
      */
@@ -61,7 +61,7 @@ public final class AwsFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
      * 
      */
@@ -90,7 +90,7 @@ public final class AwsFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds
      * 
      */
@@ -135,7 +135,7 @@ public final class AwsFunctions {
      * This is different from the `aws.getAvailabilityZone` (singular) data source,
      * which provides some details about a specific availability zone.
      * 
-     * > When [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.
+     * &gt; When [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.
      * 
      * ## Example Usage
      * 
@@ -186,7 +186,7 @@ public final class AwsFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId
      * 
      */
@@ -214,7 +214,7 @@ public final class AwsFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp
      * 
      */
@@ -257,7 +257,7 @@ public final class AwsFunctions {
     }
     /**
      * 
-     * @Deprecated
+     * @deprecated
      * aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList
      * 
      */

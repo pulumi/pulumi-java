@@ -11,12 +11,12 @@ import java.util.Objects;
 public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     /**
      * The Cloud Secret Manager secret version.
-     * Can be 'latest' for the latest value or an integer for a specific version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
      */
     private final String key;
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final String name;
@@ -31,14 +31,14 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
 
     /**
      * The Cloud Secret Manager secret version.
-     * Can be 'latest' for the latest value or an integer for a specific version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
     */
     public String key() {
         return this.key;
     }
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public String name() {

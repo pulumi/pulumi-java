@@ -34,7 +34,7 @@ public final class JobInputSequenceResponse extends com.pulumi.resources.InvokeA
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobInputSequence'.
+     * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
      * 
      */
     @Import(name="odataType", required=true)

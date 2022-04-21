@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The multi cloud resource's cloud name.
+     * The multi cloud resource&#39;s cloud name.
      * 
      */
     @EnumType

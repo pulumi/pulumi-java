@@ -16,7 +16,7 @@ public final class DeviceFleetOutputConfigGetArgs extends com.pulumi.resources.R
     public static final DeviceFleetOutputConfigGetArgs Empty = new DeviceFleetOutputConfigGetArgs();
 
     /**
-     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.
+     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don&#39;t provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role&#39;s account.
      * 
      */
     @Import(name="kmsKeyId")

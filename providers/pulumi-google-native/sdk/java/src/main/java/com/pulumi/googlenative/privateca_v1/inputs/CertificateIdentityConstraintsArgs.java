@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes constraints on a Certificate's Subject and SubjectAltNames.
+ * Describes constraints on a Certificate&#39;s Subject and SubjectAltNames.
  * 
  */
 public final class CertificateIdentityConstraintsArgs extends com.pulumi.resources.ResourceArgs {

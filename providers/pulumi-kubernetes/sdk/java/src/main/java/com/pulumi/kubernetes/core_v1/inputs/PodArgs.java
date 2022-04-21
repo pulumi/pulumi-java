@@ -22,15 +22,15 @@ import javax.annotation.Nullable;
  * The following conditions are used to determine whether the resource creation has
  * succeeded or failed:
  * 
- * 1. The Pod is scheduled ("PodScheduled"" '.status.condition' is true).
- * 2. The Pod is initialized ("Initialized" '.status.condition' is true).
- * 3. The Pod is ready ("Ready" '.status.condition' is true) and the '.status.phase' is
- *    set to "Running".
- *    Or (for Jobs): The Pod succeeded ('.status.phase' set to "Succeeded").
+ * 1. The Pod is scheduled (&#34;PodScheduled&#34;&#34; &#39;.status.condition&#39; is true).
+ * 2. The Pod is initialized (&#34;Initialized&#34; &#39;.status.condition&#39; is true).
+ * 3. The Pod is ready (&#34;Ready&#34; &#39;.status.condition&#39; is true) and the &#39;.status.phase&#39; is
+ *    set to &#34;Running&#34;.
+ *    Or (for Jobs): The Pod succeeded (&#39;.status.phase&#39; set to &#34;Succeeded&#34;).
  * 
  * If the Pod has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
- * by setting the 'customTimeouts' option on the resource.
+ * by setting the &#39;customTimeouts&#39; option on the resource.
  * 
  */
 public final class PodArgs extends com.pulumi.resources.ResourceArgs {
@@ -60,7 +60,7 @@ public final class PodArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

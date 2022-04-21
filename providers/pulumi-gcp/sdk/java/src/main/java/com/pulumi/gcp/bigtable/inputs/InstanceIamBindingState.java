@@ -25,7 +25,7 @@ public final class InstanceIamBindingState extends com.pulumi.resources.Resource
     }
 
     /**
-     * (Computed) The etag of the instances's IAM policy.
+     * (Computed) The etag of the instances&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

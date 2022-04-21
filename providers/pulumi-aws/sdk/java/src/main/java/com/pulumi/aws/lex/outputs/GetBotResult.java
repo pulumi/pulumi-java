@@ -20,7 +20,7 @@ public final class GetBotResult {
      */
     private final String arn;
     /**
-     * Checksum of the bot used to identify a specific revision of the bot's `$LATEST` version.
+     * Checksum of the bot used to identify a specific revision of the bot&#39;s `$LATEST` version.
      * 
      */
     private final String checksum;
@@ -146,7 +146,7 @@ public final class GetBotResult {
         return this.arn;
     }
     /**
-     * Checksum of the bot used to identify a specific revision of the bot's `$LATEST` version.
+     * Checksum of the bot used to identify a specific revision of the bot&#39;s `$LATEST` version.
      * 
     */
     public String checksum() {

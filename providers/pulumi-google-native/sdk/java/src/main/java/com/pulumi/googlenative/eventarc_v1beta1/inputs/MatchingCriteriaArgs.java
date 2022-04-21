@@ -19,7 +19,7 @@ public final class MatchingCriteriaArgs extends com.pulumi.resources.ResourceArg
     public static final MatchingCriteriaArgs Empty = new MatchingCriteriaArgs();
 
     /**
-     * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
+     * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the &#39;type&#39; attribute.
      * 
      */
     @Import(name="attribute", required=true)

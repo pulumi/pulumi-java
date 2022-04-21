@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DiskExclusionPropertiesResponse {
     /**
-     * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
+     * List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
      * 
      */
     private final @Nullable List<Integer> diskLunList;
@@ -33,7 +33,7 @@ public final class DiskExclusionPropertiesResponse {
     }
 
     /**
-     * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
+     * List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
      * 
     */
     public List<Integer> diskLunList() {

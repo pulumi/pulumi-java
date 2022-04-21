@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * template. For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/manager)
  * and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroupManagers)
  * 
- * > **Note:** Use [gcp.compute.RegionInstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html) to create a regional (multi-zone) instance group manager.
+ * &gt; **Note:** Use [gcp.compute.RegionInstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html) to create a regional (multi-zone) instance group manager.
  * 
  * ## Example Usage
  * 

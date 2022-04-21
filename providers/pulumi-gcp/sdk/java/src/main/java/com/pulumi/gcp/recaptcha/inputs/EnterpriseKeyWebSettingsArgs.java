@@ -40,7 +40,7 @@ public final class EnterpriseKeyWebSettingsArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: &#39;example.com&#39; or &#39;subdomain.example.com&#39;
      * 
      */
     @Import(name="allowedDomains")

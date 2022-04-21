@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:autonomousdevelopmentplatform:Account")
 public class Account extends com.pulumi.resources.CustomResource {
     /**
-     * The account's data-plane ID
+     * The account&#39;s data-plane ID
      * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
-     * @return The account's data-plane ID
+     * @return The account&#39;s data-plane ID
      * 
      */
     public Output<String> accountId() {
@@ -118,14 +118,14 @@ public class Account extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

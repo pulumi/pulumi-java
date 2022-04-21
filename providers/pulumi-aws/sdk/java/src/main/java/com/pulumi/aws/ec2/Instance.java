@@ -99,14 +99,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.availabilityZone;
     }
     /**
-     * Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
+     * Describes an instance&#39;s Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
     @Export(name="capacityReservationSpecification", type=InstanceCapacityReservationSpecification.class, parameters={})
     private Output<InstanceCapacityReservationSpecification> capacityReservationSpecification;
 
     /**
-     * @return Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
+     * @return Describes an instance&#39;s Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
     public Output<InstanceCapacityReservationSpecification> capacityReservationSpecification() {
@@ -211,14 +211,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.enclaveOptions;
     }
     /**
-     * One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
+     * One or more configuration blocks to customize Ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
     @Export(name="ephemeralBlockDevices", type=List.class, parameters={InstanceEphemeralBlockDevice.class})
     private Output<List<InstanceEphemeralBlockDevice>> ephemeralBlockDevices;
 
     /**
-     * @return One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
+     * @return One or more configuration blocks to customize Ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
     public Output<List<InstanceEphemeralBlockDevice>> ephemeralBlockDevices() {
@@ -465,42 +465,42 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.placementGroup;
     }
     /**
-     * The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+     * The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource&#39;s `strategy` argument is set to `&#34;partition&#34;`.
      * 
      */
     @Export(name="placementPartitionNumber", type=Integer.class, parameters={})
     private Output<Integer> placementPartitionNumber;
 
     /**
-     * @return The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+     * @return The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource&#39;s `strategy` argument is set to `&#34;partition&#34;`.
      * 
      */
     public Output<Integer> placementPartitionNumber() {
         return this.placementPartitionNumber;
     }
     /**
-     * The ID of the instance's primary network interface.
+     * The ID of the instance&#39;s primary network interface.
      * 
      */
     @Export(name="primaryNetworkInterfaceId", type=String.class, parameters={})
     private Output<String> primaryNetworkInterfaceId;
 
     /**
-     * @return The ID of the instance's primary network interface.
+     * @return The ID of the instance&#39;s primary network interface.
      * 
      */
     public Output<String> primaryNetworkInterfaceId() {
         return this.primaryNetworkInterfaceId;
     }
     /**
-     * The private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you've enabled DNS hostnames for your VPC.
+     * The private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     @Export(name="privateDns", type=String.class, parameters={})
     private Output<String> privateDns;
 
     /**
-     * @return The private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you've enabled DNS hostnames for your VPC.
+     * @return The private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     public Output<String> privateDns() {
@@ -521,28 +521,28 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.privateIp;
     }
     /**
-     * The public DNS name assigned to the instance. For EC2-VPC, this is only available if you've enabled DNS hostnames for your VPC.
+     * The public DNS name assigned to the instance. For EC2-VPC, this is only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     @Export(name="publicDns", type=String.class, parameters={})
     private Output<String> publicDns;
 
     /**
-     * @return The public DNS name assigned to the instance. For EC2-VPC, this is only available if you've enabled DNS hostnames for your VPC.
+     * @return The public DNS name assigned to the instance. For EC2-VPC, this is only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     public Output<String> publicDns() {
         return this.publicDns;
     }
     /**
-     * The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached.
+     * The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP&#39;s address directly and not use `public_ip` as this field will change after the EIP is attached.
      * 
      */
     @Export(name="publicIp", type=String.class, parameters={})
     private Output<String> publicIp;
 
     /**
-     * @return The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached.
+     * @return The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP&#39;s address directly and not use `public_ip` as this field will change after the EIP is attached.
      * 
      */
     public Output<String> publicIp() {
@@ -563,14 +563,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.rootBlockDevice;
     }
     /**
-     * A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
+     * A list of secondary private IPv4 addresses to assign to the instance&#39;s primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
      * 
      */
     @Export(name="secondaryPrivateIps", type=List.class, parameters={String.class})
     private Output<List<String>> secondaryPrivateIps;
 
     /**
-     * @return A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
+     * @return A list of secondary private IPv4 addresses to assign to the instance&#39;s primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
      * 
      */
     public Output<List<String>> secondaryPrivateIps() {
@@ -579,7 +579,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * A list of security group names to associate with.
      * 
-     * @Deprecated
+     * @deprecated
      * Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.
      * 
      */

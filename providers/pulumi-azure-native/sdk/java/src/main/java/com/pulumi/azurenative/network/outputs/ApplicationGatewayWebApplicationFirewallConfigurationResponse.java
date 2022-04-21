@@ -57,7 +57,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      */
     private final @Nullable Boolean requestBodyCheck;
     /**
-     * The type of the web application firewall rule set. Possible values are: 'OWASP'.
+     * The type of the web application firewall rule set. Possible values are: &#39;OWASP&#39;.
      * 
      */
     private final String ruleSetType;
@@ -148,7 +148,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
         return Optional.ofNullable(this.requestBodyCheck);
     }
     /**
-     * The type of the web application firewall rule set. Possible values are: 'OWASP'.
+     * The type of the web application firewall rule set. Possible values are: &#39;OWASP&#39;.
      * 
     */
     public String ruleSetType() {

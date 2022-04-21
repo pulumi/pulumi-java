@@ -21,7 +21,7 @@ public final class GetCanaryEvaluationResult {
      */
     private final String createTime;
     /**
-     * End time for the evaluation's analysis.
+     * End time for the evaluation&#39;s analysis.
      * 
      */
     private final String endTime;
@@ -36,7 +36,7 @@ public final class GetCanaryEvaluationResult {
      */
     private final String name;
     /**
-     * Start time for the canary evaluation's analysis.
+     * Start time for the canary evaluation&#39;s analysis.
      * 
      */
     private final String startTime;
@@ -93,7 +93,7 @@ public final class GetCanaryEvaluationResult {
         return this.createTime;
     }
     /**
-     * End time for the evaluation's analysis.
+     * End time for the evaluation&#39;s analysis.
      * 
     */
     public String endTime() {
@@ -114,7 +114,7 @@ public final class GetCanaryEvaluationResult {
         return this.name;
     }
     /**
-     * Start time for the canary evaluation's analysis.
+     * Start time for the canary evaluation&#39;s analysis.
      * 
     */
     public String startTime() {

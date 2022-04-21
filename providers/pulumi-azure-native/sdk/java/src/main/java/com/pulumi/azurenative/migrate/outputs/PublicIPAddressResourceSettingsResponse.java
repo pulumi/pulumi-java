@@ -28,7 +28,7 @@ public final class PublicIPAddressResourceSettingsResponse {
     private final @Nullable String publicIpAllocationMethod;
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/publicIPAddresses'.
+     * Expected value is &#39;Microsoft.Network/publicIPAddresses&#39;.
      * 
      */
     private final String resourceType;
@@ -89,7 +89,7 @@ public final class PublicIPAddressResourceSettingsResponse {
     }
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/publicIPAddresses'.
+     * Expected value is &#39;Microsoft.Network/publicIPAddresses&#39;.
      * 
     */
     public String resourceType() {

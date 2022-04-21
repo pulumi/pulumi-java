@@ -22,7 +22,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Image name of a custom base image.
-     * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
+     * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
      * 
      */
     @Import(name="dockerImageUri", required=true)
@@ -34,7 +34,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
-     * Expected value is 'Image'.
+     * Expected value is &#39;Image&#39;.
      * 
      */
     @Import(name="dockerSpecificationType", required=true)

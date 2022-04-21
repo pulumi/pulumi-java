@@ -91,7 +91,7 @@ public class MachineGroup extends com.pulumi.resources.CustomResource {
     }
     /**
      * Additional resource type qualifier.
-     * Expected value is 'machineGroup'.
+     * Expected value is &#39;machineGroup&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -99,7 +99,7 @@ public class MachineGroup extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Additional resource type qualifier.
-     * Expected value is 'machineGroup'.
+     * Expected value is &#39;machineGroup&#39;.
      * 
      */
     public Output<String> kind() {

@@ -24,7 +24,7 @@ public final class GetInstanceResult {
      */
     private final String alternativeLocationId;
     /**
-     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to &#34;true&#34; AUTH is enabled on the instance. Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
      */
     private final Boolean authEnabled;
@@ -99,7 +99,7 @@ public final class GetInstanceResult {
      */
     private final PersistenceConfigResponse persistenceConfig;
     /**
-     * Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export operation.
+     * Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is &#34;serviceAccount:&#34;. The value may change over time for a given instance so should be checked before each import/export operation.
      * 
      */
     private final String persistenceIamIdentity;
@@ -109,12 +109,12 @@ public final class GetInstanceResult {
      */
     private final Integer port;
     /**
-     * Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target 'host'.
+     * Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target &#39;host&#39;.
      * 
      */
     private final String readEndpoint;
     /**
-     * The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target 'port'.
+     * The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target &#39;port&#39;.
      * 
      */
     private final Integer readEndpointPort;
@@ -248,7 +248,7 @@ public final class GetInstanceResult {
         return this.alternativeLocationId;
     }
     /**
-     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to &#34;true&#34; AUTH is enabled on the instance. Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
     */
     public Boolean authEnabled() {
@@ -353,7 +353,7 @@ public final class GetInstanceResult {
         return this.persistenceConfig;
     }
     /**
-     * Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export operation.
+     * Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is &#34;serviceAccount:&#34;. The value may change over time for a given instance so should be checked before each import/export operation.
      * 
     */
     public String persistenceIamIdentity() {
@@ -367,14 +367,14 @@ public final class GetInstanceResult {
         return this.port;
     }
     /**
-     * Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target 'host'.
+     * Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target &#39;host&#39;.
      * 
     */
     public String readEndpoint() {
         return this.readEndpoint;
     }
     /**
-     * The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target 'port'.
+     * The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target &#39;port&#39;.
      * 
     */
     public Integer readEndpointPort() {

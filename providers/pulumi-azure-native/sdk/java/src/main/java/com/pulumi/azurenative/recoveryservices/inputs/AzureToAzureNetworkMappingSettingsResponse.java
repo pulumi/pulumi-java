@@ -21,7 +21,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
 
     /**
      * Gets the Instance type.
-     * Expected value is 'AzureToAzure'.
+     * Expected value is &#39;AzureToAzure&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

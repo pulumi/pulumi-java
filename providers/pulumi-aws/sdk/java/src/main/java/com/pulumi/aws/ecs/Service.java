@@ -26,7 +26,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * > **Note:** To prevent a race condition during service deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicy`; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the `DRAINING` state.
+ * &gt; **Note:** To prevent a race condition during service deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicy`; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the `DRAINING` state.
  * 
  * Provides an ECS service - effectively a task that is expected to run until an error occurs or a user terminates it (typically a webserver or a database).
  * 
@@ -102,28 +102,28 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.deploymentController;
     }
     /**
-     * Upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
+     * Upper limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
      * 
      */
     @Export(name="deploymentMaximumPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> deploymentMaximumPercent;
 
     /**
-     * @return Upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
+     * @return Upper limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
      * 
      */
     public Output</* @Nullable */ Integer> deploymentMaximumPercent() {
         return this.deploymentMaximumPercent;
     }
     /**
-     * Lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+     * Lower limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
      * 
      */
     @Export(name="deploymentMinimumHealthyPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> deploymentMinimumHealthyPercent;
 
     /**
-     * @return Lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+     * @return Lower limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
      * 
      */
     public Output</* @Nullable */ Integer> deploymentMinimumHealthyPercent() {
@@ -326,14 +326,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.propagateTags;
     }
     /**
-     * Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
+     * Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don&#39;t support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
      * 
      */
     @Export(name="schedulingStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedulingStrategy;
 
     /**
-     * @return Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
+     * @return Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don&#39;t support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
      * 
      */
     public Output</* @Nullable */ String> schedulingStrategy() {

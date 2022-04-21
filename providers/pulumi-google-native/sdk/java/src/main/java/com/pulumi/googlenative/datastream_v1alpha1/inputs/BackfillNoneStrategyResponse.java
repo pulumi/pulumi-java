@@ -7,7 +7,7 @@ import java.util.Objects;
 
 
 /**
- * Backfill strategy to disable automatic backfill for the Stream's objects.
+ * Backfill strategy to disable automatic backfill for the Stream&#39;s objects.
  * 
  */
 public final class BackfillNoneStrategyResponse extends com.pulumi.resources.InvokeArgs {

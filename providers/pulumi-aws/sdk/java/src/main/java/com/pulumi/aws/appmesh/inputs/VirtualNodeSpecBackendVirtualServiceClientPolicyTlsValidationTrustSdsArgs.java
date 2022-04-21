@@ -15,7 +15,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     public static final VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs Empty = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs();
 
     /**
-     * The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+     * The name of the secret for a virtual node&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
      */
     @Import(name="secretName", required=true)

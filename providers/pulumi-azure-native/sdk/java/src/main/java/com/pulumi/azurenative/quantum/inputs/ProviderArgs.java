@@ -22,7 +22,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProviderArgs Empty = new ProviderArgs();
 
     /**
-     * The provider's marketplace application display name.
+     * The provider&#39;s marketplace application display name.
      * 
      */
     @Import(name="applicationName")

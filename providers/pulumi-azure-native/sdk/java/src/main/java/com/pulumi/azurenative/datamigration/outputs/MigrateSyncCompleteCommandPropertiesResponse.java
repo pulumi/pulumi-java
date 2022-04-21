@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public final class MigrateSyncCompleteCommandPropertiesResponse {
     /**
      * Command type.
-     * Expected value is 'Migrate.Sync.Complete.Database'.
+     * Expected value is &#39;Migrate.Sync.Complete.Database&#39;.
      * 
      */
     private final String commandType;
@@ -58,7 +58,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
 
     /**
      * Command type.
-     * Expected value is 'Migrate.Sync.Complete.Database'.
+     * Expected value is &#39;Migrate.Sync.Complete.Database&#39;.
      * 
     */
     public String commandType() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class SecureStringResponse {
     /**
      * Type of the secret.
-     * Expected value is 'SecureString'.
+     * Expected value is &#39;SecureString&#39;.
      * 
      */
     private final String type;
@@ -31,7 +31,7 @@ public final class SecureStringResponse {
 
     /**
      * Type of the secret.
-     * Expected value is 'SecureString'.
+     * Expected value is &#39;SecureString&#39;.
      * 
     */
     public String type() {

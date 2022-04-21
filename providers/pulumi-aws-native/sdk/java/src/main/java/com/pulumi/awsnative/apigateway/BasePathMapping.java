@@ -61,14 +61,14 @@ public class BasePathMapping extends com.pulumi.resources.CustomResource {
         return this.restApiId;
     }
     /**
-     * The name of the API's stage.
+     * The name of the API&#39;s stage.
      * 
      */
     @Export(name="stage", type=String.class, parameters={})
     private Output</* @Nullable */ String> stage;
 
     /**
-     * @return The name of the API's stage.
+     * @return The name of the API&#39;s stage.
      * 
      */
     public Output</* @Nullable */ String> stage() {

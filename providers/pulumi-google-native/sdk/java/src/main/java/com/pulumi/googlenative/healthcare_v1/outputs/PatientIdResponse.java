@@ -15,7 +15,7 @@ public final class PatientIdResponse {
      */
     private final String type;
     /**
-     * The patient's unique identifier.
+     * The patient&#39;s unique identifier.
      * 
      */
     private final String value;
@@ -36,7 +36,7 @@ public final class PatientIdResponse {
         return this.type;
     }
     /**
-     * The patient's unique identifier.
+     * The patient&#39;s unique identifier.
      * 
     */
     public String value() {

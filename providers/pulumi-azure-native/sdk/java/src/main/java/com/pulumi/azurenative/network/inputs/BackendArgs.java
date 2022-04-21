@@ -45,7 +45,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Import(name="enabledState")
@@ -89,7 +89,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     @Import(name="privateLinkAlias")
@@ -111,7 +111,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
      */
     @Import(name="privateLinkLocation")
@@ -122,7 +122,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     @Import(name="privateLinkResourceId")

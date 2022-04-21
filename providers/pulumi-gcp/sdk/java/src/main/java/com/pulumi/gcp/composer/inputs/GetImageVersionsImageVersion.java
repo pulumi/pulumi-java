@@ -14,7 +14,7 @@ public final class GetImageVersionsImageVersion extends com.pulumi.resources.Inv
     public static final GetImageVersionsImageVersion Empty = new GetImageVersionsImageVersion();
 
     /**
-     * The string identifier of the image version, in the form: "composer-x.y.z-airflow-a.b(.c)"
+     * The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
      * 
      */
     @Import(name="imageVersionId", required=true)

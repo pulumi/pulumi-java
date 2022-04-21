@@ -57,7 +57,7 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
+     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
      * 
      */
     @Import(name="name")

@@ -99,7 +99,7 @@ public final class SquareSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'SquareSource'.
+     * Expected value is &#39;SquareSource&#39;.
      * 
      */
     @Import(name="type", required=true)

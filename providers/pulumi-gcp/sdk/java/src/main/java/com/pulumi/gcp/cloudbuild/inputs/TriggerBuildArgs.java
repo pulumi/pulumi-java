@@ -49,8 +49,8 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * A list of images to be pushed upon the successful completion of all build steps.
-     * The images will be pushed using the builder service account's credentials.
-     * The digests of the pushed images will be stored in the Build resource's results field.
+     * The images will be pushed using the builder service account&#39;s credentials.
+     * The digests of the pushed images will be stored in the Build resource&#39;s results field.
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
      */
@@ -89,7 +89,7 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * TTL in queue for this build. If provided and the build is enqueued longer than this value,
      * the build will expire and the build status will be EXPIRED.
      * The TTL starts ticking from createTime.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="queueTtl")

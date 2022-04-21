@@ -7,7 +7,7 @@ import java.util.Objects;
 
 
 /**
- * Enable Stackdriver metric dlp.googleapis.com/finding_count. This will publish a metric to stack driver on each infotype requested and how many findings were found for it. CustomDetectors will be bucketed as 'Custom' under the Stackdriver label 'info_type'.
+ * Enable Stackdriver metric dlp.googleapis.com/finding_count. This will publish a metric to stack driver on each infotype requested and how many findings were found for it. CustomDetectors will be bucketed as &#39;Custom&#39; under the Stackdriver label &#39;info_type&#39;.
  * 
  */
 public final class GooglePrivacyDlpV2PublishToStackdriverResponse extends com.pulumi.resources.InvokeArgs {

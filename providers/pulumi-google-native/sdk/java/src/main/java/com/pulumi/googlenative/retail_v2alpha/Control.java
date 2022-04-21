@@ -79,14 +79,14 @@ public class Control extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
+     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
      * 
      */
     @Export(name="rule", type=GoogleCloudRetailV2alphaRuleResponse.class, parameters={})
     private Output<GoogleCloudRetailV2alphaRuleResponse> rule;
 
     /**
-     * @return A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
+     * @return A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
      * 
      */
     public Output<GoogleCloudRetailV2alphaRuleResponse> rule() {

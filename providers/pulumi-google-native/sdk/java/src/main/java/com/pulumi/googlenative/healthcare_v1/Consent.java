@@ -22,14 +22,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:healthcare/v1:Consent")
 public class Consent extends com.pulumi.resources.CustomResource {
     /**
-     * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+     * The resource name of the Consent artifact that contains proof of the end user&#39;s consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
      */
     @Export(name="consentArtifact", type=String.class, parameters={})
     private Output<String> consentArtifact;
 
     /**
-     * @return The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+     * @return The resource name of the Consent artifact that contains proof of the end user&#39;s consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
      */
     public Output<String> consentArtifact() {
@@ -78,14 +78,14 @@ public class Consent extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
+     * Optional. Represents a user&#39;s consent in terms of the resources that can be accessed and under what conditions.
      * 
      */
     @Export(name="policies", type=List.class, parameters={GoogleCloudHealthcareV1ConsentPolicyResponse.class})
     private Output<List<GoogleCloudHealthcareV1ConsentPolicyResponse>> policies;
 
     /**
-     * @return Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
+     * @return Optional. Represents a user&#39;s consent in terms of the resources that can be accessed and under what conditions.
      * 
      */
     public Output<List<GoogleCloudHealthcareV1ConsentPolicyResponse>> policies() {
@@ -106,14 +106,14 @@ public class Consent extends com.pulumi.resources.CustomResource {
         return this.revisionCreateTime;
     }
     /**
-     * The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's resource name.
+     * The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent&#39;s resource name.
      * 
      */
     @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
     /**
-     * @return The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's resource name.
+     * @return The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent&#39;s resource name.
      * 
      */
     public Output<String> revisionId() {
@@ -148,14 +148,14 @@ public class Consent extends com.pulumi.resources.CustomResource {
         return this.ttl;
     }
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
-     * @return User's UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
      */
     public Output<String> userId() {

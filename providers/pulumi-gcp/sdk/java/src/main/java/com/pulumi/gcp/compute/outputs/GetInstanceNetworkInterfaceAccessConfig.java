@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceNetworkInterfaceAccessConfig {
     /**
-     * The IP address that is be 1:1 mapped to the instance's
+     * The IP address that is be 1:1 mapped to the instance&#39;s
      * network ip.
      * 
      */
@@ -37,7 +37,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig {
     }
 
     /**
-     * The IP address that is be 1:1 mapped to the instance's
+     * The IP address that is be 1:1 mapped to the instance&#39;s
      * network ip.
      * 
     */

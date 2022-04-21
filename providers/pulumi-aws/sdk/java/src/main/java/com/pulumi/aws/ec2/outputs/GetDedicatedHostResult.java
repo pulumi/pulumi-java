@@ -47,12 +47,12 @@ public final class GetDedicatedHostResult {
      */
     private final String id;
     /**
-     * The instance family supported by the Dedicated Host. For example, "m5".
+     * The instance family supported by the Dedicated Host. For example, &#34;m5&#34;.
      * 
      */
     private final String instanceFamily;
     /**
-     * The instance type supported by the Dedicated Host. For example, "m5.large". If the host supports multiple instance types, no instanceType is returned.
+     * The instance type supported by the Dedicated Host. For example, &#34;m5.large&#34;. If the host supports multiple instance types, no instanceType is returned.
      * 
      */
     private final String instanceType;
@@ -154,14 +154,14 @@ public final class GetDedicatedHostResult {
         return this.id;
     }
     /**
-     * The instance family supported by the Dedicated Host. For example, "m5".
+     * The instance family supported by the Dedicated Host. For example, &#34;m5&#34;.
      * 
     */
     public String instanceFamily() {
         return this.instanceFamily;
     }
     /**
-     * The instance type supported by the Dedicated Host. For example, "m5.large". If the host supports multiple instance types, no instanceType is returned.
+     * The instance type supported by the Dedicated Host. For example, &#34;m5.large&#34;. If the host supports multiple instance types, no instanceType is returned.
      * 
     */
     public String instanceType() {

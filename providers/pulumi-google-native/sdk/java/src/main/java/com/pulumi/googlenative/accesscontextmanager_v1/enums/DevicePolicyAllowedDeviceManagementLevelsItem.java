@@ -11,7 +11,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum DevicePolicyAllowedDeviceManagementLevelsItem {
         /**
-         * The device's management level is not specified or not known.
+         * The device&#39;s management level is not specified or not known.
          * 
          */
         ManagementUnspecified("MANAGEMENT_UNSPECIFIED"),

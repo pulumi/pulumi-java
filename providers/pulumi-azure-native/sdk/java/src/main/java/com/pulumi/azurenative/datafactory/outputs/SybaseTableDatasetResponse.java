@@ -59,7 +59,7 @@ public final class SybaseTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'SybaseTable'.
+     * Expected value is &#39;SybaseTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SybaseTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SybaseTable'.
+     * Expected value is &#39;SybaseTable&#39;.
      * 
     */
     public String type() {

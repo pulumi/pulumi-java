@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * For working with Redis (Cluster Mode Enabled) replication groups, see the
  * `aws.elasticache.ReplicationGroup` resource.
  * 
- * > **Note:** When you change an attribute, such as `num_cache_nodes`, by default
+ * &gt; **Note:** When you change an attribute, such as `num_cache_nodes`, by default
  * it is applied in the next maintenance window. Because of this, this provider may report
  * a difference in its planning phase because the actual modification has not yet taken
  * place. You can use the `apply_immediately` flag to instruct the service to apply the
@@ -37,7 +37,7 @@ import javax.annotation.Nullable;
  * [ElastiCache for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Modify.html)
  * for more information.
  * 
- * > **Note:** Any attribute changes that re-create the resource will be applied immediately, regardless of the value of `apply_immediately`.
+ * &gt; **Note:** Any attribute changes that re-create the resource will be applied immediately, regardless of the value of `apply_immediately`.
  * 
  * ## Example Usage
  * 
@@ -95,14 +95,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.availabilityZone;
     }
     /**
-     * Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
+     * Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster&#39;s region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
      * 
      */
     @Export(name="azMode", type=String.class, parameters={})
     private Output<String> azMode;
 
     /**
-     * @return Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
+     * @return Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster&#39;s region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
      * 
      */
     public Output<String> azMode() {

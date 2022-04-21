@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         CountTypeUnspecified("COUNT_TYPE_UNSPECIFIED"),
         /**
-         * Total number of occurrences of a 'NO_MATCH'.
+         * Total number of occurrences of a &#39;NO_MATCH&#39;.
          * 
          */
         TotalNoMatchCount("TOTAL_NO_MATCH_COUNT"),

@@ -47,7 +47,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
 
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
      */
     @Import(name="jobSecretsType", required=true)

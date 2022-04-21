@@ -89,7 +89,7 @@ public final class GetApplicationDefinitionResult {
      */
     private final @Nullable String managedBy;
     /**
-     * The managed application management policy that determines publisher's access to the managed resource group.
+     * The managed application management policy that determines publisher&#39;s access to the managed resource group.
      * 
      */
     private final @Nullable ApplicationManagementPolicyResponse managementPolicy;
@@ -267,7 +267,7 @@ public final class GetApplicationDefinitionResult {
         return Optional.ofNullable(this.managedBy);
     }
     /**
-     * The managed application management policy that determines publisher's access to the managed resource group.
+     * The managed application management policy that determines publisher&#39;s access to the managed resource group.
      * 
     */
     public Optional<ApplicationManagementPolicyResponse> managementPolicy() {

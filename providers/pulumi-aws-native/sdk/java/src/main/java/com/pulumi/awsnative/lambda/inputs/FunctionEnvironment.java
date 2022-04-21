@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A function's environment variable settings.
+ * A function&#39;s environment variable settings.
  * 
  */
 public final class FunctionEnvironment extends com.pulumi.resources.InvokeArgs {

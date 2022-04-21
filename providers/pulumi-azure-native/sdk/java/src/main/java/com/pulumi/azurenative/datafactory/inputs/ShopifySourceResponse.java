@@ -99,7 +99,7 @@ public final class ShopifySourceResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Copy source type.
-     * Expected value is 'ShopifySource'.
+     * Expected value is &#39;ShopifySource&#39;.
      * 
      */
     @Import(name="type", required=true)

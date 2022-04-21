@@ -16,7 +16,7 @@ public final class EncoderSystemPresetResponse {
     private final String name;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
      * 
      */
     private final String type;
@@ -38,7 +38,7 @@ public final class EncoderSystemPresetResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
      * 
     */
     public String type() {

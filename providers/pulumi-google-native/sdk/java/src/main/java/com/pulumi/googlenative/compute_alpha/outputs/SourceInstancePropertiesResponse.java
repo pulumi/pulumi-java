@@ -40,7 +40,7 @@ public final class SourceInstancePropertiesResponse {
      */
     private final List<SavedAttachedDiskResponse> disks;
     /**
-     * A list of guest accelerator cards' type and count to use for instances created from this machine image.
+     * A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
      * 
      */
     private final List<AcceleratorConfigResponse> guestAccelerators;
@@ -65,7 +65,7 @@ public final class SourceInstancePropertiesResponse {
      */
     private final MetadataResponse metadata;
     /**
-     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
+     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
      */
     private final String minCpuPlatform;
@@ -158,7 +158,7 @@ public final class SourceInstancePropertiesResponse {
         return this.disks;
     }
     /**
-     * A list of guest accelerator cards' type and count to use for instances created from this machine image.
+     * A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
      * 
     */
     public List<AcceleratorConfigResponse> guestAccelerators() {
@@ -193,7 +193,7 @@ public final class SourceInstancePropertiesResponse {
         return this.metadata;
     }
     /**
-     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
+     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
     */
     public String minCpuPlatform() {

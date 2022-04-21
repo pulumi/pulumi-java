@@ -15,7 +15,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse {
      */
     private final String secret;
     /**
-     * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
+     * The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
      */
     private final String version;
@@ -36,7 +36,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse {
         return this.secret;
     }
     /**
-     * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
+     * The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
     */
     public String version() {

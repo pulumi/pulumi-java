@@ -19,7 +19,7 @@ public final class VideoTrackDescriptorResponse extends com.pulumi.resources.Inv
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.VideoTrackDescriptor'.
+     * Expected value is &#39;#Microsoft.Media.VideoTrackDescriptor&#39;.
      * 
      */
     @Import(name="odataType", required=true)

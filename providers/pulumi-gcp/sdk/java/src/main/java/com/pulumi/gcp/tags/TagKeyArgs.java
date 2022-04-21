@@ -27,7 +27,7 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id}.
+     * Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
      * 
      */
     @Import(name="parent", required=true)

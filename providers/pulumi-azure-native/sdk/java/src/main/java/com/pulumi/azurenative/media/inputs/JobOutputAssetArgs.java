@@ -31,7 +31,7 @@ public final class JobOutputAssetArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
+     * A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of &#39;{presetName}_{outputIndex}&#39; will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
      * 
      */
     @Import(name="label")
@@ -43,7 +43,7 @@ public final class JobOutputAssetArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobOutputAsset'.
+     * Expected value is &#39;#Microsoft.Media.JobOutputAsset&#39;.
      * 
      */
     @Import(name="odataType", required=true)

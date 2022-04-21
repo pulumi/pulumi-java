@@ -32,7 +32,7 @@ public final class GetADLSGen2FileDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
      */
     private final String kind;
@@ -123,7 +123,7 @@ public final class GetADLSGen2FileDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
     */
     public String kind() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * The date range for data in the export. This should only be specified with timeFrame set to 'Custom'. The maximum date range is 3 months.
+ * The date range for data in the export. This should only be specified with timeFrame set to &#39;Custom&#39;. The maximum date range is 3 months.
  * 
  */
 public final class ExportTimePeriodArgs extends com.pulumi.resources.ResourceArgs {

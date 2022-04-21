@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A container to reference an id for any resource type. A `resource` in Google Cloud Platform is a generic term for something you (a developer) may want to interact with through one of our API's. Some examples are an App Engine app, a Compute Engine instance, a Cloud SQL database, and so on.
+ * A container to reference an id for any resource type. A `resource` in Google Cloud Platform is a generic term for something you (a developer) may want to interact with through one of our API&#39;s. Some examples are an App Engine app, a Compute Engine instance, a Cloud SQL database, and so on.
  * 
  */
 public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
     public static final ResourceIdArgs Empty = new ResourceIdArgs();
 
     /**
-     * Required field for the type-specific id. This should correspond to the id used in the type-specific API's.
+     * Required field for the type-specific id. This should correspond to the id used in the type-specific API&#39;s.
      * 
      */
     @Import(name="id")
@@ -31,7 +31,7 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required field representing the resource type this id is for. At present, the valid types are "project", "folder", and "organization".
+     * Required field representing the resource type this id is for. At present, the valid types are &#34;project&#34;, &#34;folder&#34;, and &#34;organization&#34;.
      * 
      */
     @Import(name="type")

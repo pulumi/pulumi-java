@@ -31,7 +31,7 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
+     * A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
      * 
      */
     @Import(name="isEssential", required=true)

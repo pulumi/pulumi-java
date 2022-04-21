@@ -51,7 +51,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * A policy that specifies the conditions for dead lettering messages in
      * this subscription. If dead_letter_policy is not set, dead lettering
      * is disabled.
-     * The Cloud Pub/Sub service account associated with this subscription's
+     * The Cloud Pub/Sub service account associated with this subscription&#39;s
      * parent project (i.e.,
      * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
      * permission to Acknowledge() messages on this subscription.
@@ -79,11 +79,11 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A policy that specifies the conditions for this subscription's expiration.
+     * A policy that specifies the conditions for this subscription&#39;s expiration.
      * A subscription is considered active as long as any connected subscriber
      * is successfully consuming messages from the subscription or is issuing
      * operations on the subscription. If expirationPolicy is not set, a default
-     * policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+     * policy with ttl of 31 days will be used.  If it is set but ttl is &#34;&#34;, the
      * resource never expires.  The minimum allowed value for expirationPolicy.ttl
      * is 1 day.
      * Structure is documented below.
@@ -98,9 +98,9 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The subscription only delivers the messages that match the filter.
-     * Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+     * Pub/Sub automatically acknowledges the messages that don&#39;t match the filter. You can filter messages
      * by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
-     * you can't modify the filter.
+     * you can&#39;t modify the filter.
      * 
      */
     @Import(name="filter")
@@ -122,14 +122,14 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * How long to retain unacknowledged messages in the subscription's
+     * How long to retain unacknowledged messages in the subscription&#39;s
      * backlog, from the moment a message is published. If
      * retainAckedMessages is true, then this also configures the retention
      * of acknowledged messages, and thus configures how far back in time a
      * subscriptions.seek can be done. Defaults to 7 days. Cannot be more
-     * than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+     * than 7 days (`&#34;604800s&#34;`) or less than 10 minutes (`&#34;600s&#34;`).
      * A duration in seconds with up to nine fractional digits, terminated
-     * by 's'. Example: `"600.5s"`.
+     * by &#39;s&#39;. Example: `&#34;600.5s&#34;`.
      * 
      */
     @Import(name="messageRetentionDuration")
@@ -178,7 +178,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether to retain acknowledged messages. If `true`, then
-     * messages are not expunged from the subscription's backlog, even if
+     * messages are not expunged from the subscription&#39;s backlog, even if
      * they are acknowledged, until they fall out of the
      * messageRetentionDuration window.
      * 

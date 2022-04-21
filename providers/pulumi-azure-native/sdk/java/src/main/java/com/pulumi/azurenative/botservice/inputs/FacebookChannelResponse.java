@@ -22,7 +22,7 @@ public final class FacebookChannelResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * The channel name
-     * Expected value is 'FacebookChannel'.
+     * Expected value is &#39;FacebookChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

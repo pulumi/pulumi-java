@@ -47,7 +47,7 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means "no deadline".
+     * The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;no deadline&#34;.
      * 
      */
     @Import(name="progressDeadlineSeconds")
@@ -69,7 +69,7 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means "retaining all old RelicaSets".
+     * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;retaining all old RelicaSets&#34;.
      * 
      */
     @Import(name="revisionHistoryLimit")

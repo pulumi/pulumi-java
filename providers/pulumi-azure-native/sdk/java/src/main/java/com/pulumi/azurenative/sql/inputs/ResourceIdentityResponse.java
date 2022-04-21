@@ -43,7 +43,7 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
      */
     @Import(name="type")

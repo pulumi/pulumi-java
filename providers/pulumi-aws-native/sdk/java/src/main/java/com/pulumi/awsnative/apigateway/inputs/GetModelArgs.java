@@ -13,7 +13,7 @@ public final class GetModelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetModelArgs Empty = new GetModelArgs();
 
     /**
-     * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
     @Import(name="name", required=true)

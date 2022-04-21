@@ -94,7 +94,7 @@ public final class GetTableResult {
      */
     private final MaterializedViewDefinitionResponse materializedView;
     /**
-     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
+     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
      * 
      */
     private final ModelDefinitionResponse model;
@@ -104,7 +104,7 @@ public final class GetTableResult {
      */
     private final String numBytes;
     /**
-     * The number of bytes in the table that are considered "long-term storage".
+     * The number of bytes in the table that are considered &#34;long-term storage&#34;.
      * 
      */
     private final String numLongTermBytes;
@@ -144,7 +144,7 @@ public final class GetTableResult {
      */
     private final SnapshotDefinitionResponse snapshotDefinition;
     /**
-     * Contains information regarding this table's streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
+     * Contains information regarding this table&#39;s streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
      * 
      */
     private final StreamingbufferResponse streamingBuffer;
@@ -330,7 +330,7 @@ public final class GetTableResult {
         return this.materializedView;
     }
     /**
-     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
+     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
      * 
     */
     public ModelDefinitionResponse model() {
@@ -344,7 +344,7 @@ public final class GetTableResult {
         return this.numBytes;
     }
     /**
-     * The number of bytes in the table that are considered "long-term storage".
+     * The number of bytes in the table that are considered &#34;long-term storage&#34;.
      * 
     */
     public String numLongTermBytes() {
@@ -400,7 +400,7 @@ public final class GetTableResult {
         return this.snapshotDefinition;
     }
     /**
-     * Contains information regarding this table's streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
+     * Contains information regarding this table&#39;s streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
      * 
     */
     public StreamingbufferResponse streamingBuffer() {

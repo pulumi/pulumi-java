@@ -38,7 +38,7 @@ public final class ClientCertAuthenticationResponse {
     private final @Nullable String pfx;
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'ClientCertificate'.
+     * Expected value is &#39;ClientCertificate&#39;.
      * 
      */
     private final String type;
@@ -96,7 +96,7 @@ public final class ClientCertAuthenticationResponse {
     }
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'ClientCertificate'.
+     * Expected value is &#39;ClientCertificate&#39;.
      * 
     */
     public String type() {

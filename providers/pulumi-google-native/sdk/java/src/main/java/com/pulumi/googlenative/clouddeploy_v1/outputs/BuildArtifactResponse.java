@@ -15,7 +15,7 @@ public final class BuildArtifactResponse {
      */
     private final String image;
     /**
-     * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
+     * Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
      * 
      */
     private final String tag;
@@ -36,7 +36,7 @@ public final class BuildArtifactResponse {
         return this.image;
     }
     /**
-     * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
+     * Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
      * 
     */
     public String tag() {

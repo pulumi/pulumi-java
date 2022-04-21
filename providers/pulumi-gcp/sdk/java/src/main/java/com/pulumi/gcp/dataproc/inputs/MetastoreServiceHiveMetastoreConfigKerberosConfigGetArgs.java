@@ -39,7 +39,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     }
 
     /**
-     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form "primary/instance@REALM", but there is no exact format.
+     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form &#34;primary/instance@REALM&#34;, but there is no exact format.
      * 
      */
     @Import(name="principal", required=true)

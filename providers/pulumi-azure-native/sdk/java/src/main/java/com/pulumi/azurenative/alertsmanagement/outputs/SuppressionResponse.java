@@ -61,7 +61,7 @@ public final class SuppressionResponse {
     private final SuppressionConfigResponse suppressionConfig;
     /**
      * Indicates type of action rule
-     * Expected value is 'Suppression'.
+     * Expected value is &#39;Suppression&#39;.
      * 
      */
     private final String type;
@@ -155,7 +155,7 @@ public final class SuppressionResponse {
     }
     /**
      * Indicates type of action rule
-     * Expected value is 'Suppression'.
+     * Expected value is &#39;Suppression&#39;.
      * 
     */
     public String type() {

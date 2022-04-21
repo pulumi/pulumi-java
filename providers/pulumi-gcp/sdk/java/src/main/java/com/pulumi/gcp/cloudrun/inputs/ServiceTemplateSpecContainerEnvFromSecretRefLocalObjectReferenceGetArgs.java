@@ -15,7 +15,7 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
     public static final ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceGetArgs Empty = new ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceGetArgs();
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name", required=true)

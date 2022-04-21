@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceRdsParameters {
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     private final String database;
     /**
-     * <p>Instance ID.</p>
+     * &lt;p&gt;Instance ID.&lt;/p&gt;
      * 
      */
     private final String instanceId;
@@ -29,14 +29,14 @@ public final class DataSourceRdsParameters {
     }
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
     */
     public String database() {
         return this.database;
     }
     /**
-     * <p>Instance ID.</p>
+     * &lt;p&gt;Instance ID.&lt;/p&gt;
      * 
     */
     public String instanceId() {

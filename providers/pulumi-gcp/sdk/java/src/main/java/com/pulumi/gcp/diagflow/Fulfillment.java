@@ -18,7 +18,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * By default, your agent responds to a matched intent with a static response. If you're using one of the integration options, you can provide a more dynamic response by using fulfillment. When you enable fulfillment for an intent, Dialogflow responds to that intent by calling a service that you define. For example, if an end-user wants to schedule a haircut on Friday, your service can check your database and respond to the end-user with availability information for Friday.
+ * By default, your agent responds to a matched intent with a static response. If you&#39;re using one of the integration options, you can provide a more dynamic response by using fulfillment. When you enable fulfillment for an intent, Dialogflow responds to that intent by calling a service that you define. For example, if an end-user wants to schedule a haircut on Friday, your service can check your database and respond to the end-user with availability information for Friday.
  * 
  * To get more information about Fulfillment, see:
  * 
@@ -100,16 +100,16 @@ public class Fulfillment extends com.pulumi.resources.CustomResource {
         return this.genericWebService;
     }
     /**
-     * The unique identifier of the fulfillment. Format: projects/<Project ID>/agent/fulfillment - projects/<Project
-     * ID>/locations/<Location ID>/agent/fulfillment
+     * The unique identifier of the fulfillment. Format: projects/&lt;Project ID&gt;/agent/fulfillment - projects/&lt;Project
+     * ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The unique identifier of the fulfillment. Format: projects/<Project ID>/agent/fulfillment - projects/<Project
-     * ID>/locations/<Location ID>/agent/fulfillment
+     * @return The unique identifier of the fulfillment. Format: projects/&lt;Project ID&gt;/agent/fulfillment - projects/&lt;Project
+     * ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment
      * 
      */
     public Output<String> name() {

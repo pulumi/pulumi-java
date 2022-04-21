@@ -32,7 +32,7 @@ public final class IsNotNullAdvancedFilterArgs extends com.pulumi.resources.Reso
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'IsNotNull'.
+     * Expected value is &#39;IsNotNull&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

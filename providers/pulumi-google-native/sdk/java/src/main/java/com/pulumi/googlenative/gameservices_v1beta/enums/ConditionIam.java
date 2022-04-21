@@ -30,7 +30,7 @@ import java.util.StringJoiner;
          */
         Attribution("ATTRIBUTION"),
         /**
-         * Any of the security realms in the IAMContext (go/security-realms). When used with IN, the condition indicates "any of the request's realms match one of the given values; with NOT_IN, "none of the realms match any of the given values". Note that a value can be: - 'self' (i.e., allow connections from clients that are in the same security realm, which is currently but not guaranteed to be campus-sized) - 'self:metro' (i.e., clients that are in the same metro) - 'self:cloud-region' (i.e., allow connections from clients that are in the same cloud region) - 'self:prod-region' (i.e., allow connections from clients that are in the same prod region) - 'guardians' (i.e., allow connections from its guardian realms. See go/security-realms-glossary#guardian for more information.) - a realm (e.g., 'campus-abc') - a realm group (e.g., 'realms-for-borg-cell-xx', see: go/realm-groups) A match is determined by a realm group membership check performed by a RealmAclRep object (go/realm-acl-howto). It is not permitted to grant access based on the *absence* of a realm, so realm conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).
+         * Any of the security realms in the IAMContext (go/security-realms). When used with IN, the condition indicates &#34;any of the request&#39;s realms match one of the given values; with NOT_IN, &#34;none of the realms match any of the given values&#34;. Note that a value can be: - &#39;self&#39; (i.e., allow connections from clients that are in the same security realm, which is currently but not guaranteed to be campus-sized) - &#39;self:metro&#39; (i.e., clients that are in the same metro) - &#39;self:cloud-region&#39; (i.e., allow connections from clients that are in the same cloud region) - &#39;self:prod-region&#39; (i.e., allow connections from clients that are in the same prod region) - &#39;guardians&#39; (i.e., allow connections from its guardian realms. See go/security-realms-glossary#guardian for more information.) - a realm (e.g., &#39;campus-abc&#39;) - a realm group (e.g., &#39;realms-for-borg-cell-xx&#39;, see: go/realm-groups) A match is determined by a realm group membership check performed by a RealmAclRep object (go/realm-acl-howto). It is not permitted to grant access based on the *absence* of a realm, so realm conditions can only be used in a &#34;positive&#34; context (e.g., ALLOW/IN or DENY/NOT_IN).
          * 
          */
         SecurityRealm("SECURITY_REALM"),
@@ -40,17 +40,17 @@ import java.util.StringJoiner;
          */
         Approver("APPROVER"),
         /**
-         * What types of justifications have been supplied with this request. String values should match enum names from security.credentials.JustificationType, e.g. "MANUAL_STRING". It is not permitted to grant access based on the *absence* of a justification, so justification conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN). Multiple justifications, e.g., a Buganizer ID and a manually-entered reason, are normal and supported.
+         * What types of justifications have been supplied with this request. String values should match enum names from security.credentials.JustificationType, e.g. &#34;MANUAL_STRING&#34;. It is not permitted to grant access based on the *absence* of a justification, so justification conditions can only be used in a &#34;positive&#34; context (e.g., ALLOW/IN or DENY/NOT_IN). Multiple justifications, e.g., a Buganizer ID and a manually-entered reason, are normal and supported.
          * 
          */
         JustificationType("JUSTIFICATION_TYPE"),
         /**
-         * What type of credentials have been supplied with this request. String values should match enum names from security_loas_l2.CredentialsType - currently, only CREDS_TYPE_EMERGENCY is supported. It is not permitted to grant access based on the *absence* of a credentials type, so the conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).
+         * What type of credentials have been supplied with this request. String values should match enum names from security_loas_l2.CredentialsType - currently, only CREDS_TYPE_EMERGENCY is supported. It is not permitted to grant access based on the *absence* of a credentials type, so the conditions can only be used in a &#34;positive&#34; context (e.g., ALLOW/IN or DENY/NOT_IN).
          * 
          */
         CredentialsType("CREDENTIALS_TYPE"),
         /**
-         * EXPERIMENTAL -- DO NOT USE. The conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).
+         * EXPERIMENTAL -- DO NOT USE. The conditions can only be used in a &#34;positive&#34; context (e.g., ALLOW/IN or DENY/NOT_IN).
          * 
          */
         CredsAssertion("CREDS_ASSERTION");

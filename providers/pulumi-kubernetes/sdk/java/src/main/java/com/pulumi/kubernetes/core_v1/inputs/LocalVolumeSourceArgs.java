@@ -20,7 +20,7 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     public static final LocalVolumeSourceArgs Empty = new LocalVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a filesystem if unspecified.
+     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
      * 
      */
     @Import(name="fsType")

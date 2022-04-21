@@ -24,7 +24,7 @@ public final class EnterpriseKeyWebSettings {
      */
     private final @Nullable Boolean allowAmpTraffic;
     /**
-     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: &#39;example.com&#39; or &#39;subdomain.example.com&#39;
      * 
      */
     private final @Nullable List<String> allowedDomains;
@@ -68,7 +68,7 @@ public final class EnterpriseKeyWebSettings {
         return Optional.ofNullable(this.allowAmpTraffic);
     }
     /**
-     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: &#39;example.com&#39; or &#39;subdomain.example.com&#39;
      * 
     */
     public List<String> allowedDomains() {

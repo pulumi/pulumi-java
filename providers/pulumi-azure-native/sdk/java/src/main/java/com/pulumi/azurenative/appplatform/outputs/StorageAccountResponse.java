@@ -16,7 +16,7 @@ public final class StorageAccountResponse {
     private final String accountName;
     /**
      * The type of the storage.
-     * Expected value is 'StorageAccount'.
+     * Expected value is &#39;StorageAccount&#39;.
      * 
      */
     private final String storageType;
@@ -38,7 +38,7 @@ public final class StorageAccountResponse {
     }
     /**
      * The type of the storage.
-     * Expected value is 'StorageAccount'.
+     * Expected value is &#39;StorageAccount&#39;.
      * 
     */
     public String storageType() {

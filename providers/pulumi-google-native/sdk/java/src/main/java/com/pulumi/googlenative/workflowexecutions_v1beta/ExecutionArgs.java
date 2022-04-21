@@ -17,7 +17,7 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
     public static final ExecutionArgs Empty = new ExecutionArgs();
 
     /**
-     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
      * 
      */
     @Import(name="argument")

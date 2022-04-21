@@ -33,7 +33,7 @@ public final class GetPortalResult {
      */
     private final @Nullable String portalClientId;
     /**
-     * The AWS administrator's contact email address.
+     * The AWS administrator&#39;s contact email address.
      * 
      */
     private final @Nullable String portalContactEmail;
@@ -58,7 +58,7 @@ public final class GetPortalResult {
      */
     private final @Nullable String portalStartUrl;
     /**
-     * The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
+     * The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
      * 
      */
     private final @Nullable String roleArn;
@@ -116,7 +116,7 @@ public final class GetPortalResult {
         return Optional.ofNullable(this.portalClientId);
     }
     /**
-     * The AWS administrator's contact email address.
+     * The AWS administrator&#39;s contact email address.
      * 
     */
     public Optional<String> portalContactEmail() {
@@ -151,7 +151,7 @@ public final class GetPortalResult {
         return Optional.ofNullable(this.portalStartUrl);
     }
     /**
-     * The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
+     * The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
      * 
     */
     public Optional<String> roleArn() {

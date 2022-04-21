@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>TODO</p>
+ * &lt;p&gt;TODO&lt;/p&gt;
  * 
  */
 public final class StreamingImageEncryptionConfiguration extends com.pulumi.resources.InvokeArgs {
@@ -20,7 +20,7 @@ public final class StreamingImageEncryptionConfiguration extends com.pulumi.reso
     public static final StreamingImageEncryptionConfiguration Empty = new StreamingImageEncryptionConfiguration();
 
     /**
-     * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+     * &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
      * 
      */
     @Import(name="keyArn")

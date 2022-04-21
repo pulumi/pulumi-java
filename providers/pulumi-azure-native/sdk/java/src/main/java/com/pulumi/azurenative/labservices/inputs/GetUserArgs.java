@@ -15,7 +15,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetUserArgs Empty = new GetUserArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=email)'
+     * Specify the $expand query. Example: &#39;properties($select=email)&#39;
      * 
      */
     @Import(name="expand")

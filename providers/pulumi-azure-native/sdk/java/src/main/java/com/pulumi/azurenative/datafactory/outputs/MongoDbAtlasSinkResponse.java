@@ -34,7 +34,7 @@ public final class MongoDbAtlasSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'MongoDbAtlasSink'.
+     * Expected value is &#39;MongoDbAtlasSink&#39;.
      * 
      */
     private final String type;
@@ -49,7 +49,7 @@ public final class MongoDbAtlasSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
     /**
-     * Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+     * Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is &#34;insert&#34;. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object writeBehavior;
@@ -104,7 +104,7 @@ public final class MongoDbAtlasSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'MongoDbAtlasSink'.
+     * Expected value is &#39;MongoDbAtlasSink&#39;.
      * 
     */
     public String type() {
@@ -125,7 +125,7 @@ public final class MongoDbAtlasSinkResponse {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
-     * Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+     * Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is &#34;insert&#34;. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> writeBehavior() {

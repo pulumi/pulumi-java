@@ -53,7 +53,7 @@ public final class IngressClassParametersReferenceArgs extends com.pulumi.resour
     }
 
     /**
-     * Namespace is the namespace of the resource being referenced. This field is required when scope is set to "Namespace" and must be unset when scope is set to "Cluster".
+     * Namespace is the namespace of the resource being referenced. This field is required when scope is set to &#34;Namespace&#34; and must be unset when scope is set to &#34;Cluster&#34;.
      * 
      */
     @Import(name="namespace")
@@ -64,7 +64,7 @@ public final class IngressClassParametersReferenceArgs extends com.pulumi.resour
     }
 
     /**
-     * Scope represents if this refers to a cluster or namespace scoped resource. This may be set to "Cluster" (default) or "Namespace".
+     * Scope represents if this refers to a cluster or namespace scoped resource. This may be set to &#34;Cluster&#34; (default) or &#34;Namespace&#34;.
      * 
      */
     @Import(name="scope")

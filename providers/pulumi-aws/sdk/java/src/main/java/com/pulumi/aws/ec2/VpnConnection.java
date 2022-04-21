@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  * Manages a Site-to-Site VPN connection. A Site-to-Site VPN connection is an Internet Protocol security (IPsec) VPN connection between a VPC and an on-premises network.
  * Any new Site-to-Site VPN connection that you create is an [AWS VPN connection](https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-categories.html).
  * 
- * > **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
+ * &gt; **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
  * [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
  * 
  * ## Example Usage
@@ -54,14 +54,14 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The configuration information for the VPN connection's customer gateway (in the native XML format).
+     * The configuration information for the VPN connection&#39;s customer gateway (in the native XML format).
      * 
      */
     @Export(name="customerGatewayConfiguration", type=String.class, parameters={})
     private Output<String> customerGatewayConfiguration;
 
     /**
-     * @return The configuration information for the VPN connection's customer gateway (in the native XML format).
+     * @return The configuration information for the VPN connection&#39;s customer gateway (in the native XML format).
      * 
      */
     public Output<String> customerGatewayConfiguration() {
@@ -166,14 +166,14 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
         return this.routes;
     }
     /**
-     * Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
+     * Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don&#39;t support BGP.
      * 
      */
     @Export(name="staticRoutesOnly", type=Boolean.class, parameters={})
     private Output<Boolean> staticRoutesOnly;
 
     /**
-     * @return Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
+     * @return Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don&#39;t support BGP.
      * 
      */
     public Output<Boolean> staticRoutesOnly() {
@@ -894,14 +894,14 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
         return this.tunnelInsideIpVersion;
     }
     /**
-     * The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
+     * The type of VPN connection. The only type AWS supports at this time is &#34;ipsec.1&#34;.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
+     * @return The type of VPN connection. The only type AWS supports at this time is &#34;ipsec.1&#34;.
      * 
      */
     public Output<String> type() {

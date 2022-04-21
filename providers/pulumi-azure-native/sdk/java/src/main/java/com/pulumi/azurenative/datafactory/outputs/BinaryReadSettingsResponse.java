@@ -22,7 +22,7 @@ public final class BinaryReadSettingsResponse {
     private final @Nullable Object compressionProperties;
     /**
      * The read setting type.
-     * Expected value is 'BinaryReadSettings'.
+     * Expected value is &#39;BinaryReadSettings&#39;.
      * 
      */
     private final String type;
@@ -44,7 +44,7 @@ public final class BinaryReadSettingsResponse {
     }
     /**
      * The read setting type.
-     * Expected value is 'BinaryReadSettings'.
+     * Expected value is &#39;BinaryReadSettings&#39;.
      * 
     */
     public String type() {

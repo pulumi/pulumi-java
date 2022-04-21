@@ -21,7 +21,7 @@ public final class IssuancePolicyResponse {
      */
     private final IssuanceModesResponse allowedIssuanceModes;
     /**
-     * Optional. If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here. Otherwise, any key may be used.
+     * Optional. If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here. Otherwise, any key may be used.
      * 
      */
     private final List<AllowedKeyTypeResponse> allowedKeyTypes;
@@ -31,17 +31,17 @@ public final class IssuancePolicyResponse {
      */
     private final X509ParametersResponse baselineValues;
     /**
-     * Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity.
+     * Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
      * 
      */
     private final CertificateIdentityConstraintsResponse identityConstraints;
     /**
-     * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+     * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
      * 
      */
     private final String maximumLifetime;
     /**
-     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool's baseline_values.
+     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool&#39;s baseline_values.
      * 
      */
     private final CertificateExtensionConstraintsResponse passthroughExtensions;
@@ -70,7 +70,7 @@ public final class IssuancePolicyResponse {
         return this.allowedIssuanceModes;
     }
     /**
-     * Optional. If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here. Otherwise, any key may be used.
+     * Optional. If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here. Otherwise, any key may be used.
      * 
     */
     public List<AllowedKeyTypeResponse> allowedKeyTypes() {
@@ -84,21 +84,21 @@ public final class IssuancePolicyResponse {
         return this.baselineValues;
     }
     /**
-     * Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity.
+     * Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
      * 
     */
     public CertificateIdentityConstraintsResponse identityConstraints() {
         return this.identityConstraints;
     }
     /**
-     * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+     * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
      * 
     */
     public String maximumLifetime() {
         return this.maximumLifetime;
     }
     /**
-     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool's baseline_values.
+     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool&#39;s baseline_values.
      * 
     */
     public CertificateExtensionConstraintsResponse passthroughExtensions() {

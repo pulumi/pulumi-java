@@ -92,7 +92,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends com.pulumi.re
 
     /**
      * Type of distribution.
-     * Expected value is 'SharedImage'.
+     * Expected value is &#39;SharedImage&#39;.
      * 
      */
     @Import(name="type", required=true)

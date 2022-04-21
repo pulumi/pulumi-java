@@ -22,7 +22,7 @@ public final class PerformanceThresholdResponse {
      */
     private final RequestBasedSliResponse performance;
     /**
-     * If window performance >= threshold, the window is counted as good.
+     * If window performance &gt;= threshold, the window is counted as good.
      * 
      */
     private final Double threshold;
@@ -52,7 +52,7 @@ public final class PerformanceThresholdResponse {
         return this.performance;
     }
     /**
-     * If window performance >= threshold, the window is counted as good.
+     * If window performance &gt;= threshold, the window is counted as good.
      * 
     */
     public Double threshold() {

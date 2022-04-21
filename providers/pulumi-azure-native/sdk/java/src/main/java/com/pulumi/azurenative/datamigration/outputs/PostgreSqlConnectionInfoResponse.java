@@ -34,7 +34,7 @@ public final class PostgreSqlConnectionInfoResponse {
     private final String serverName;
     /**
      * Type of connection info
-     * Expected value is 'PostgreSqlConnectionInfo'.
+     * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
      * 
      */
     private final String type;
@@ -90,7 +90,7 @@ public final class PostgreSqlConnectionInfoResponse {
     }
     /**
      * Type of connection info
-     * Expected value is 'PostgreSqlConnectionInfo'.
+     * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
      * 
     */
     public String type() {

@@ -43,7 +43,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
     }
 
     /**
-     * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
+     * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of &#34;2018-12-01T05:00:00Z&#34;. Default value is NULL. Type: integer (or Expression with resultType integer).
      * 
      */
     @Import(name="expiryDateTime")
@@ -66,7 +66,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
 
     /**
      * The write setting type.
-     * Expected value is 'AzureDataLakeStoreWriteSettings'.
+     * Expected value is &#39;AzureDataLakeStoreWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

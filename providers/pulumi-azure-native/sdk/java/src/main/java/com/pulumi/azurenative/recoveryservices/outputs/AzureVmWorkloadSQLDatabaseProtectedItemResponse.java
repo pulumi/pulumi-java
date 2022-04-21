@@ -123,7 +123,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse {
     private final @Nullable String protectedItemHealthStatus;
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSQLDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSQLDatabase&#39;.
      * 
      */
     private final String protectedItemType;
@@ -360,7 +360,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSQLDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSQLDatabase&#39;.
      * 
     */
     public String protectedItemType() {

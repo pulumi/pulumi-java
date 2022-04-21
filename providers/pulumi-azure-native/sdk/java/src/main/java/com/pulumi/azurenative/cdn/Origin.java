@@ -147,14 +147,14 @@ public class Origin extends com.pulumi.resources.CustomResource {
         return this.privateEndpointStatus;
     }
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
+     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
      * 
      */
     @Export(name="privateLinkAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkAlias;
 
     /**
-     * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
+     * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
      * 
      */
     public Output</* @Nullable */ String> privateLinkAlias() {
@@ -175,28 +175,28 @@ public class Origin extends com.pulumi.resources.CustomResource {
         return this.privateLinkApprovalMessage;
     }
     /**
-     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
      */
     @Export(name="privateLinkLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkLocation;
 
     /**
-     * @return The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
      */
     public Output</* @Nullable */ String> privateLinkLocation() {
         return this.privateLinkLocation;
     }
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     @Export(name="privateLinkResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkResourceId;
 
     /**
-     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     public Output</* @Nullable */ String> privateLinkResourceId() {

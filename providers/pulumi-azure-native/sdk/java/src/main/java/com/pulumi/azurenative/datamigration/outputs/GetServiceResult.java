@@ -24,7 +24,7 @@ public final class GetServiceResult {
      */
     private final String id;
     /**
-     * The resource kind. Only 'vm' (the default) is supported.
+     * The resource kind. Only &#39;vm&#39; (the default) is supported.
      * 
      */
     private final @Nullable String kind;
@@ -39,7 +39,7 @@ public final class GetServiceResult {
      */
     private final String name;
     /**
-     * The resource's provisioning state
+     * The resource&#39;s provisioning state
      * 
      */
     private final String provisioningState;
@@ -110,7 +110,7 @@ public final class GetServiceResult {
         return this.id;
     }
     /**
-     * The resource kind. Only 'vm' (the default) is supported.
+     * The resource kind. Only &#39;vm&#39; (the default) is supported.
      * 
     */
     public Optional<String> kind() {
@@ -131,7 +131,7 @@ public final class GetServiceResult {
         return this.name;
     }
     /**
-     * The resource's provisioning state
+     * The resource&#39;s provisioning state
      * 
     */
     public String provisioningState() {

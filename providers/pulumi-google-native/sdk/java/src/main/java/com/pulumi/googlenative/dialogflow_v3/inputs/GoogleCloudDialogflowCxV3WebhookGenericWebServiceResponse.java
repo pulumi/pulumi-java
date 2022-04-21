@@ -19,7 +19,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
     public static final GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse Empty = new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse();
 
     /**
-     * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with "subject alt name". For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
+     * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
      * 
      */
     @Import(name="allowedCaCerts", required=true)

@@ -21,7 +21,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
     private final String modulus;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
      * 
      */
     private final String odataType;
@@ -52,7 +52,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
      * 
     */
     public String odataType() {

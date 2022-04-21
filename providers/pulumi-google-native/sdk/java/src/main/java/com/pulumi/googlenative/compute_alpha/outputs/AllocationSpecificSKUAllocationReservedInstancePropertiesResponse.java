@@ -34,7 +34,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      */
     private final String machineType;
     /**
-     * Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.
+     * Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
      * 
      */
     private final Integer maintenanceFreezeDurationHours;
@@ -96,7 +96,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         return this.machineType;
     }
     /**
-     * Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.
+     * Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
      * 
     */
     public Integer maintenanceFreezeDurationHours() {

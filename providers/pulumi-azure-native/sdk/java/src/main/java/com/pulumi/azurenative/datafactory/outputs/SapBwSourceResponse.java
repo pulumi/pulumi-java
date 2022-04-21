@@ -49,7 +49,7 @@ public final class SapBwSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SapBwSource'.
+     * Expected value is &#39;SapBwSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class SapBwSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SapBwSource'.
+     * Expected value is &#39;SapBwSource&#39;.
      * 
     */
     public String type() {

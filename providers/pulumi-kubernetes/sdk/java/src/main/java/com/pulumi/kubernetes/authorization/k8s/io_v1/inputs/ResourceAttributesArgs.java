@@ -20,7 +20,7 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     public static final ResourceAttributesArgs Empty = new ResourceAttributesArgs();
 
     /**
-     * Group is the API Group of the Resource.  "*" means all.
+     * Group is the API Group of the Resource.  &#34;*&#34; means all.
      * 
      */
     @Import(name="group")
@@ -31,7 +31,7 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
+     * Name is the name of the resource being requested for a &#34;get&#34; or deleted for a &#34;delete&#34;. &#34;&#34; (empty) means all.
      * 
      */
     @Import(name="name")
@@ -42,7 +42,7 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces "" (empty) is defaulted for LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
+     * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces &#34;&#34; (empty) is defaulted for LocalSubjectAccessReviews &#34;&#34; (empty) is empty for cluster-scoped resources &#34;&#34; (empty) means &#34;all&#34; for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
      * 
      */
     @Import(name="namespace")
@@ -53,7 +53,7 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Resource is one of the existing resource types.  "*" means all.
+     * Resource is one of the existing resource types.  &#34;*&#34; means all.
      * 
      */
     @Import(name="resource")
@@ -64,7 +64,7 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Subresource is one of the existing resource types.  "" means none.
+     * Subresource is one of the existing resource types.  &#34;&#34; means none.
      * 
      */
     @Import(name="subresource")
@@ -75,7 +75,7 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
+     * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
      * 
      */
     @Import(name="verb")
@@ -86,7 +86,7 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Version is the API Version of the Resource.  "*" means all.
+     * Version is the API Version of the Resource.  &#34;*&#34; means all.
      * 
      */
     @Import(name="version")

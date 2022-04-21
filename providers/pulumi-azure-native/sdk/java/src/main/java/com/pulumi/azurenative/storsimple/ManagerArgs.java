@@ -52,7 +52,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
+     * Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
      * 
      */
     @Import(name="provisioningState")

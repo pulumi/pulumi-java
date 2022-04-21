@@ -38,7 +38,7 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The base resource of the scope assignment to create. The scope can be any REST resource instance. For example, use 'subscriptions/{subscription-id}' for a subscription, 'subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and 'subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.
+     * The base resource of the scope assignment to create. The scope can be any REST resource instance. For example, use &#39;subscriptions/{subscription-id}&#39; for a subscription, &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}&#39; for a resource group, and &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}&#39; for a resource.
      * 
      */
     @Import(name="scope", required=true)

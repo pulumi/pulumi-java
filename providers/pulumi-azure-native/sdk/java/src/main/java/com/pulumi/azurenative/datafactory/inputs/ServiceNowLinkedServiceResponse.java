@@ -105,7 +105,7 @@ public final class ServiceNowLinkedServiceResponse extends com.pulumi.resources.
     }
 
     /**
-     * The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
+     * The endpoint of the ServiceNow server. (i.e. &lt;instance&gt;.service-now.com)
      * 
      */
     @Import(name="endpoint", required=true)
@@ -139,7 +139,7 @@ public final class ServiceNowLinkedServiceResponse extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'ServiceNow'.
+     * Expected value is &#39;ServiceNow&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -161,7 +161,7 @@ public final class ServiceNowLinkedServiceResponse extends com.pulumi.resources.
     }
 
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
     @Import(name="useHostVerification")

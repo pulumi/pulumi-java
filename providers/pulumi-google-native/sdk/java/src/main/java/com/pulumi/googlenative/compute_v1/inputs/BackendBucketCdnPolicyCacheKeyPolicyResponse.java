@@ -29,7 +29,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends com.pulu
     }
 
     /**
-     * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
+     * Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
     @Import(name="queryStringWhitelist", required=true)

@@ -420,7 +420,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		}
 
 		if prop.DeprecationMessage != "" {
-			fprintf(w, "     * @Deprecated\n")
+			fprintf(w, "     * @deprecated\n")
 			fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 		}
@@ -650,7 +650,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
 			}
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "     * @deprecated\n")
 				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
@@ -699,7 +699,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			}
 
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "     * @deprecated\n")
 				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
@@ -850,7 +850,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
 			}
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "     * @deprecated\n")
 				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
@@ -926,7 +926,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			}
 
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "     * @deprecated\n")
 				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
@@ -1101,7 +1101,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		}
 
 		if r.DeprecationMessage != "" {
-			fprintf(w, " * @Deprecated\n")
+			fprintf(w, " * @deprecated\n")
 			fprintf(w, "%s\n", formatBlockComment(r.DeprecationMessage, ""))
 
 		}
@@ -1157,7 +1157,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			}
 
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "     * @deprecated\n")
 				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, "    "))
 
 			}
@@ -1396,7 +1396,7 @@ func printCommentFunction(ctx *classFileContext, fun *schema.Function, indent st
 		fprintf(w, "    /**\n")
 		fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
 		if fun.DeprecationMessage != "" {
-			fprintf(w, "     * @Deprecated\n")
+			fprintf(w, "     * @deprecated\n")
 			fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, indent))
 		}
 		fprintf(w, "     */\n")
@@ -1608,7 +1608,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 				}
 
 				if e.DeprecationMessage != "" {
-					fprintf(w, "%s * @Deprecated\n", indent)
+					fprintf(w, "%s * @deprecated\n", indent)
 					fprintf(w, "%s * %s\n", indent, e.DeprecationMessage)
 				}
 				fprintf(w, "%s */\n", indent)

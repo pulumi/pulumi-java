@@ -38,7 +38,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The application's Java/Spark main class.
+     * The application&#39;s Java/Spark main class.
      * 
      */
     @Import(name="className")
@@ -137,7 +137,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string).
+     * The root path in &#39;sparkJobLinkedService&#39; for all the job’s files. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="rootPath", required=true)
@@ -171,7 +171,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
 
     /**
      * Type of activity.
-     * Expected value is 'HDInsightSpark'.
+     * Expected value is &#39;HDInsightSpark&#39;.
      * 
      */
     @Import(name="type", required=true)

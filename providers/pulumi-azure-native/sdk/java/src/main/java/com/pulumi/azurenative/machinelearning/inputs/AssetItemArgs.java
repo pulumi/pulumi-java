@@ -28,7 +28,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
     public static final AssetItemArgs Empty = new AssetItemArgs();
 
     /**
-     * Asset's Id.
+     * Asset&#39;s Id.
      * 
      */
     @Import(name="id")
@@ -39,7 +39,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Information about the asset's input ports.
+     * Information about the asset&#39;s input ports.
      * 
      */
     @Import(name="inputPorts")
@@ -61,7 +61,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the asset is a custom module, this holds the module's metadata.
+     * If the asset is a custom module, this holds the module&#39;s metadata.
      * 
      */
     @Import(name="metadata")
@@ -72,7 +72,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Asset's friendly name.
+     * Asset&#39;s friendly name.
      * 
      */
     @Import(name="name", required=true)
@@ -83,7 +83,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Information about the asset's output ports.
+     * Information about the asset&#39;s output ports.
      * 
      */
     @Import(name="outputPorts")
@@ -94,7 +94,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the asset is a custom module, this holds the module's parameters.
+     * If the asset is a custom module, this holds the module&#39;s parameters.
      * 
      */
     @Import(name="parameters")
@@ -105,7 +105,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Asset's type.
+     * Asset&#39;s type.
      * 
      */
     @Import(name="type", required=true)

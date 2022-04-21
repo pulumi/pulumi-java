@@ -108,14 +108,14 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
         return this.namePrefix;
     }
     /**
-     * The description of the option group. Defaults to "Managed by Pulumi".
+     * The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="optionGroupDescription", type=String.class, parameters={})
     private Output<String> optionGroupDescription;
 
     /**
-     * @return The description of the option group. Defaults to "Managed by Pulumi".
+     * @return The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output<String> optionGroupDescription() {

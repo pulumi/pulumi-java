@@ -74,7 +74,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
 
     /**
      * Enum to determine endpoint compute type.
-     * Expected value is 'K8S'.
+     * Expected value is &#39;K8S&#39;.
      * 
      */
     @Import(name="endpointComputeType", required=true)

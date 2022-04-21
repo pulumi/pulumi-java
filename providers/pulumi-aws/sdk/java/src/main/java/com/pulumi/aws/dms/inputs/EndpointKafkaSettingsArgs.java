@@ -106,7 +106,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Set this optional parameter to true to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `'0x'` prefix.
+     * Set this optional parameter to true to avoid adding a &#39;0x&#39; prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a &#39;0x&#39; prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `&#39;0x&#39;` prefix.
      * 
      */
     @Import(name="noHexPrefix")

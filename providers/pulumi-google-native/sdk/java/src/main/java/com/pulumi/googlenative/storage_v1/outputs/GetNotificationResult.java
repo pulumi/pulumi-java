@@ -47,7 +47,7 @@ public final class GetNotificationResult {
      */
     private final String selfLink;
     /**
-     * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
+     * The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
      * 
      */
     private final String topic;
@@ -122,7 +122,7 @@ public final class GetNotificationResult {
         return this.selfLink;
     }
     /**
-     * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
+     * The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
      * 
     */
     public String topic() {

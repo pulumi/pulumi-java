@@ -77,7 +77,7 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The type of the query's source entity
+     * The type of the query&#39;s source entity
      * 
      */
     @Import(name="inputEntityType")
@@ -89,7 +89,7 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
 
     /**
      * The kind of the entity query that supports put request.
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
      */
     @Import(name="kind", required=true)

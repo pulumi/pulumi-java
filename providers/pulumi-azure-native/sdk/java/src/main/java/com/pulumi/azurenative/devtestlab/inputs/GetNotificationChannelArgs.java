@@ -15,7 +15,7 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=webHookUrl)'
+     * Specify the $expand query. Example: &#39;properties($select=webHookUrl)&#39;
      * 
      */
     @Import(name="expand")

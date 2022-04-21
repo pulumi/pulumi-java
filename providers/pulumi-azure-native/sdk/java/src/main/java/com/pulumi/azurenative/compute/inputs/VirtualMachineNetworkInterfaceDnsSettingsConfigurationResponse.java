@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes a virtual machines network configuration's DNS settings.
+ * Describes a virtual machines network configuration&#39;s DNS settings.
  * 
  */
 public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse extends com.pulumi.resources.InvokeArgs {

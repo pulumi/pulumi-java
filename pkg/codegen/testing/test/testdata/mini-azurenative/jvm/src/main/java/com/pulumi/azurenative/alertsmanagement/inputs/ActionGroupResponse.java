@@ -98,7 +98,7 @@ public final class ActionGroupResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates type of action rule
-     * Expected value is 'ActionGroup'.
+     * Expected value is &#39;ActionGroup&#39;.
      * 
      */
     @Import(name="type", required=true)

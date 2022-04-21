@@ -112,7 +112,7 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
+     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
      */
     @Import(name="homePage")

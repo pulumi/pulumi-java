@@ -26,7 +26,7 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
     }
 
     /**
-     * Specify the $expand query. Example: 'properties($expand=environment)'
+     * Specify the $expand query. Example: &#39;properties($expand=environment)&#39;
      * 
      */
     @Import(name="expand")

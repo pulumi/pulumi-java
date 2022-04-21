@@ -22,7 +22,7 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'Mpi'.
+     * Expected value is &#39;Mpi&#39;.
      * 
      */
     @Import(name="distributionType", required=true)

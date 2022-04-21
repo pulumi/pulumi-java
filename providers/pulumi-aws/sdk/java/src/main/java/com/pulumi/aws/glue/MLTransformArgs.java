@@ -33,7 +33,7 @@ public final class MLTransformArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
+     * The version of glue to use, for example &#34;1.0&#34;. For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
     @Import(name="glueVersion")

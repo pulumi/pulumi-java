@@ -115,7 +115,7 @@ public final class SapCloudForCustomerResourceDatasetResponse extends com.pulumi
 
     /**
      * Type of dataset.
-     * Expected value is 'SapCloudForCustomerResource'.
+     * Expected value is &#39;SapCloudForCustomerResource&#39;.
      * 
      */
     @Import(name="type", required=true)

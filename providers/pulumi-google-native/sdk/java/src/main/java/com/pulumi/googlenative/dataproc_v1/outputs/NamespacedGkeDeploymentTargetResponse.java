@@ -15,7 +15,7 @@ public final class NamespacedGkeDeploymentTargetResponse {
      */
     private final String clusterNamespace;
     /**
-     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
      */
     private final String targetGkeCluster;
@@ -36,7 +36,7 @@ public final class NamespacedGkeDeploymentTargetResponse {
         return this.clusterNamespace;
     }
     /**
-     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
     */
     public String targetGkeCluster() {

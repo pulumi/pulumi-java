@@ -74,7 +74,7 @@ public final class GetP2sVpnGatewayResult {
      */
     private final @Nullable SubResourceResponse virtualHub;
     /**
-     * All P2S VPN clients' connection health status.
+     * All P2S VPN clients&#39; connection health status.
      * 
      */
     private final VpnClientConnectionHealthResponse vpnClientConnectionHealth;
@@ -199,7 +199,7 @@ public final class GetP2sVpnGatewayResult {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
-     * All P2S VPN clients' connection health status.
+     * All P2S VPN clients&#39; connection health status.
      * 
     */
     public VpnClientConnectionHealthResponse vpnClientConnectionHealth() {

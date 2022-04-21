@@ -56,7 +56,7 @@ public final class CustomEventsTriggerResponse {
     private final @Nullable String subjectEndsWith;
     /**
      * Trigger type.
-     * Expected value is 'CustomEventsTrigger'.
+     * Expected value is &#39;CustomEventsTrigger&#39;.
      * 
      */
     private final String type;
@@ -141,7 +141,7 @@ public final class CustomEventsTriggerResponse {
     }
     /**
      * Trigger type.
-     * Expected value is 'CustomEventsTrigger'.
+     * Expected value is &#39;CustomEventsTrigger&#39;.
      * 
     */
     public String type() {

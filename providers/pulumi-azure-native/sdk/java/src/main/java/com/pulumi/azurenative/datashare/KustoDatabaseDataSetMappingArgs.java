@@ -50,7 +50,7 @@ public final class KustoDatabaseDataSetMappingArgs extends com.pulumi.resources.
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
      */
     @Import(name="kind", required=true)

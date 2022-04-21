@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class RolloutIdentityAuthenticationResponse {
     /**
      * The authentication type.
-     * Expected value is 'RolloutIdentity'.
+     * Expected value is &#39;RolloutIdentity&#39;.
      * 
      */
     private final String type;
@@ -23,7 +23,7 @@ public final class RolloutIdentityAuthenticationResponse {
 
     /**
      * The authentication type.
-     * Expected value is 'RolloutIdentity'.
+     * Expected value is &#39;RolloutIdentity&#39;.
      * 
     */
     public String type() {

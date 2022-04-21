@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Optional. The experience level associated with the job, such as "Entry Level".
+     * Optional. The experience level associated with the job, such as &#34;Entry Level&#34;.
      * 
      */
     @EnumType

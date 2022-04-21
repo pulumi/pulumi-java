@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
- * @Deprecated
+ * @deprecated
  * aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favor of aws.elb.LoadBalancerBackendServerPolicy
  * 
  */

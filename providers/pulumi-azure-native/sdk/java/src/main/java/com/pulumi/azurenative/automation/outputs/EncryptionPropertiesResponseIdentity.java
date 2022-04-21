@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EncryptionPropertiesResponseIdentity {
     /**
-     * The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The user identity used for CMK. It will be an ARM resource id in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     private final @Nullable Object userAssignedIdentity;
@@ -23,7 +23,7 @@ public final class EncryptionPropertiesResponseIdentity {
     }
 
     /**
-     * The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The user identity used for CMK. It will be an ARM resource id in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
     */
     public Optional<Object> userAssignedIdentity() {

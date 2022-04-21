@@ -83,7 +83,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends c
 
     /**
      * Task type.
-     * Expected value is 'ConnectToSource.PostgreSql.Sync'.
+     * Expected value is &#39;ConnectToSource.PostgreSql.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

@@ -76,14 +76,14 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
         return this.eniId;
     }
     /**
-     * The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
+     * The ARN for the IAM role that&#39;s used to post flow logs to a CloudWatch Logs log group
      * 
      */
     @Export(name="iamRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamRoleArn;
 
     /**
-     * @return The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
+     * @return The ARN for the IAM role that&#39;s used to post flow logs to a CloudWatch Logs log group
      * 
      */
     public Output</* @Nullable */ String> iamRoleArn() {
@@ -134,8 +134,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
     /**
      * *Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
      * 
-     * @Deprecated
-     * use 'log_destination' argument instead
+     * @deprecated
+     * use &#39;log_destination&#39; argument instead
      * 
      */
     @Deprecated /* use 'log_destination' argument instead */

@@ -61,7 +61,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Remote VPN gateway's IP address.
+     * Remote VPN gateway&#39;s IP address.
      * 
      */
     @Import(name="remoteGatewayIp", required=true)
@@ -94,7 +94,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Local VPN gateway's IP address.
+     * Local VPN gateway&#39;s IP address.
      * 
      */
     @Import(name="sourceGatewayIp", required=true)

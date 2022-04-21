@@ -20,7 +20,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * <!-- Bug: Type and Name are switched -->
+ * &lt;!-- Bug: Type and Name are switched --&gt;
  * `docker.Network` provides details about a specific Docker Network.
  * 
  * ## Example Usage
@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  * - **scope** (String) Scope of the network. One of `swarm`, `global`, or `local`.
  * 
- * <a id="nestedblock--ipam_config"></a>
+ * &lt;a id=&#34;nestedblock--ipam_config&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `ipam_config`
  * 
  * Optional:
@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  * - **ip_range** (String) The ip range in CIDR form
  * - **subnet** (String) The subnet in CIDR form
  * 
- * <a id="nestedblock--labels"></a>
+ * &lt;a id=&#34;nestedblock--labels&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `labels`
  * 
  * Required:
@@ -68,9 +68,9 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * ### Example Assuming you created a `network` as follows #!/bin/bash docker network create foo # prints the long ID 87b57a9b91ecab2db2a6dbf38df74c67d7c7108cbe479d6576574ec2cd8c2d73 you provide the definition for the resource as follows terraform resource "docker_network" "foo" {
+ * ### Example Assuming you created a `network` as follows #!/bin/bash docker network create foo # prints the long ID 87b57a9b91ecab2db2a6dbf38df74c67d7c7108cbe479d6576574ec2cd8c2d73 you provide the definition for the resource as follows terraform resource &#34;docker_network&#34; &#34;foo&#34; {
  * 
- *  name = "foo" } then the import command is as follows #!/bin/bash
+ *  name = &#34;foo&#34; } then the import command is as follows #!/bin/bash
  * 
  * ```sh
  *  $ pulumi import docker:index/network:Network foo 87b57a9b91ecab2db2a6dbf38df74c67d7c7108cbe479d6576574ec2cd8c2d73

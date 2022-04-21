@@ -52,7 +52,7 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The plan's version.
+     * The plan&#39;s version.
      * 
      */
     @Import(name="version", required=true)

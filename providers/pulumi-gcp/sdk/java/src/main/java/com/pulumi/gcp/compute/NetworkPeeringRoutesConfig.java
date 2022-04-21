@@ -15,9 +15,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Manage a network peering's route settings without managing the peering as
+ * Manage a network peering&#39;s route settings without managing the peering as
  * a whole. This resource is primarily intended for use with GCP-generated
- * peerings that shouldn't otherwise be managed by other tools. Deleting this
+ * peerings that shouldn&#39;t otherwise be managed by other tools. Deleting this
  * resource is a no-op and the peering will not be modified.
  * 
  * To get more information about NetworkPeeringRoutesConfig, see:

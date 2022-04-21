@@ -30,7 +30,7 @@ public final class SystemParameterRuleResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
+     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
     @Import(name="selector", required=true)

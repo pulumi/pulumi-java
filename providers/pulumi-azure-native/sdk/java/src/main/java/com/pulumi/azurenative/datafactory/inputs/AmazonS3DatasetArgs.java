@@ -120,7 +120,7 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The end of S3 object's modified datetime. Type: string (or Expression with resultType string).
+     * The end of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -131,7 +131,7 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The start of S3 object's modified datetime. Type: string (or Expression with resultType string).
+     * The start of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -187,7 +187,7 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Type of dataset.
-     * Expected value is 'AmazonS3Object'.
+     * Expected value is &#39;AmazonS3Object&#39;.
      * 
      */
     @Import(name="type", required=true)

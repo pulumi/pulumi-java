@@ -77,7 +77,7 @@ public final class AzurePostgreSqlSinkResponse extends com.pulumi.resources.Invo
 
     /**
      * Copy sink type.
-     * Expected value is 'AzurePostgreSqlSink'.
+     * Expected value is &#39;AzurePostgreSqlSink&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -32,7 +32,7 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Logical zone for Disk pool resource; example: ["1"].
+     * Logical zone for Disk pool resource; example: [&#34;1&#34;].
      * 
      */
     @Import(name="availabilityZones", required=true)

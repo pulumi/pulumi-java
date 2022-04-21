@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:insights:LogProfile")
 public class LogProfile extends com.pulumi.resources.CustomResource {
     /**
-     * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
+     * the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
      * 
      */
     @Export(name="categories", type=List.class, parameters={String.class})
     private Output<List<String>> categories;
 
     /**
-     * @return the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
+     * @return the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
      * 
      */
     public Output<List<String>> categories() {
@@ -62,14 +62,14 @@ public class LogProfile extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
+     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
      * 
      */
     @Export(name="locations", type=List.class, parameters={String.class})
     private Output<List<String>> locations;
 
     /**
-     * @return List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
+     * @return List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
      * 
      */
     public Output<List<String>> locations() {
@@ -104,14 +104,14 @@ public class LogProfile extends com.pulumi.resources.CustomResource {
         return this.retentionPolicy;
     }
     /**
-     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
+     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
      * 
      */
     @Export(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
     /**
-     * @return The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
+     * @return The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
      * 
      */
     public Output</* @Nullable */ String> serviceBusRuleId() {

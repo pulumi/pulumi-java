@@ -15,12 +15,12 @@ public final class SigningKeyResponse {
      */
     private final String keyId;
     /**
-     * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
+     * This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
      * 
      */
     private final String keyScheme;
     /**
-     * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
+     * This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
      * 
      */
     private final String keyType;
@@ -50,14 +50,14 @@ public final class SigningKeyResponse {
         return this.keyId;
     }
     /**
-     * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
+     * This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
      * 
     */
     public String keyScheme() {
         return this.keyScheme;
     }
     /**
-     * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
+     * This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
      * 
     */
     public String keyType() {

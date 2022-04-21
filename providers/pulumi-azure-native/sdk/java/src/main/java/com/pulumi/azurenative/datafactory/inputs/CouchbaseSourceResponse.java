@@ -99,7 +99,7 @@ public final class CouchbaseSourceResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Copy source type.
-     * Expected value is 'CouchbaseSource'.
+     * Expected value is &#39;CouchbaseSource&#39;.
      * 
      */
     @Import(name="type", required=true)

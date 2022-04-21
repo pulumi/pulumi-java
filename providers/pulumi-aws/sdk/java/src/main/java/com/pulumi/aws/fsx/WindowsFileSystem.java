@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 /**
  * Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html) for more information.
  * 
- * > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
+ * &gt; **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
  * 
  * ## Example Usage
  * 
@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:fsx/windowsFileSystem:WindowsFileSystem example fs-543ab12b1ca672f33
  * ```
  * 
- *  Certain resource arguments, like `security_group_ids` and the `self_managed_active_directory` configuation block `password`, do not have a FSx API method for reading the information after creation. If these arguments are set in the provider configuration on an imported resource, the povider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_fsx_windows_file_system" "example" {
+ *  Certain resource arguments, like `security_group_ids` and the `self_managed_active_directory` configuation block `password`, do not have a FSx API method for reading the information after creation. If these arguments are set in the provider configuration on an imported resource, the povider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource &#34;aws_fsx_windows_file_system&#34; &#34;example&#34; {
  * 
  * # ... other configuration ...
  * 
@@ -52,14 +52,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:fsx/windowsFileSystem:WindowsFileSystem")
 public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
     /**
-     * The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+     * The ID for an existing Microsoft Active Directory instance that the file system should join when it&#39;s created. Cannot be specified with `self_managed_active_directory`.
      * 
      */
     @Export(name="activeDirectoryId", type=String.class, parameters={})
     private Output</* @Nullable */ String> activeDirectoryId;
 
     /**
-     * @return The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+     * @return The ID for an existing Microsoft Active Directory instance that the file system should join when it&#39;s created. Cannot be specified with `self_managed_active_directory`.
      * 
      */
     public Output</* @Nullable */ String> activeDirectoryId() {

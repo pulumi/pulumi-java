@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         AutomaticRestart("AUTOMATIC_RESTART"),
         /**
-         * The Instance isn't automatically restarted whenever it is terminated by Compute Engine.
+         * The Instance isn&#39;t automatically restarted whenever it is terminated by Compute Engine.
          * 
          */
         NoAutomaticRestart("NO_AUTOMATIC_RESTART");

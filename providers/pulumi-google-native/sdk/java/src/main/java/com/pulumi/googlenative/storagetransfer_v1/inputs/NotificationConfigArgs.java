@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Specification to configure notifications published to Pub/Sub. Notifications are published to the customer-provided topic using the following `PubsubMessage.attributes`: * `"eventType"`: one of the EventType values * `"payloadFormat"`: one of the PayloadFormat values * `"projectId"`: the project_id of the `TransferOperation` * `"transferJobName"`: the transfer_job_name of the `TransferOperation` * `"transferOperationName"`: the name of the `TransferOperation` The `PubsubMessage.data` contains a TransferOperation resource formatted according to the specified `PayloadFormat`.
+ * Specification to configure notifications published to Pub/Sub. Notifications are published to the customer-provided topic using the following `PubsubMessage.attributes`: * `&#34;eventType&#34;`: one of the EventType values * `&#34;payloadFormat&#34;`: one of the PayloadFormat values * `&#34;projectId&#34;`: the project_id of the `TransferOperation` * `&#34;transferJobName&#34;`: the transfer_job_name of the `TransferOperation` * `&#34;transferOperationName&#34;`: the name of the `TransferOperation` The `PubsubMessage.data` contains a TransferOperation resource formatted according to the specified `PayloadFormat`.
  * 
  */
 public final class NotificationConfigArgs extends com.pulumi.resources.ResourceArgs {

@@ -23,14 +23,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:autoscaling:LaunchConfiguration")
 public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
     /**
-     * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances.
+     * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group&#39;s instances.
      * 
      */
     @Export(name="associatePublicIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> associatePublicIpAddress;
 
     /**
-     * @return For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances.
+     * @return For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group&#39;s instances.
      * 
      */
     public Output</* @Nullable */ Boolean> associatePublicIpAddress() {

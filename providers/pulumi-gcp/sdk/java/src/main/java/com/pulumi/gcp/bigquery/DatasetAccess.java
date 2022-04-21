@@ -84,7 +84,7 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
         return this.groupByEmail;
     }
     /**
-     * Some other type of member that appears in the IAM Policy but isn't a user,
+     * Some other type of member that appears in the IAM Policy but isn&#39;t a user,
      * group, domain, or special group. For example: `allUsers`
      * 
      */
@@ -92,7 +92,7 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> iamMember;
 
     /**
-     * @return Some other type of member that appears in the IAM Policy but isn't a user,
+     * @return Some other type of member that appears in the IAM Policy but isn&#39;t a user,
      * group, domain, or special group. For example: `allUsers`
      * 
      */

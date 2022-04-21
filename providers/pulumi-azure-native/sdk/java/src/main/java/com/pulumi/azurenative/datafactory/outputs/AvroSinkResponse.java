@@ -51,7 +51,7 @@ public final class AvroSinkResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy sink type.
-     * Expected value is 'AvroSink'.
+     * Expected value is &#39;AvroSink&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class AvroSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AvroSink'.
+     * Expected value is &#39;AvroSink&#39;.
      * 
     */
     public String type() {

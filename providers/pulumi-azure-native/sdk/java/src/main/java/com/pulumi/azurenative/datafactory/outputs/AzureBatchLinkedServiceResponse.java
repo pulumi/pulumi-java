@@ -78,7 +78,7 @@ public final class AzureBatchLinkedServiceResponse {
     private final Object poolName;
     /**
      * Type of linked service.
-     * Expected value is 'AzureBatch'.
+     * Expected value is &#39;AzureBatch&#39;.
      * 
      */
     private final String type;
@@ -190,7 +190,7 @@ public final class AzureBatchLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureBatch'.
+     * Expected value is &#39;AzureBatch&#39;.
      * 
     */
     public String type() {

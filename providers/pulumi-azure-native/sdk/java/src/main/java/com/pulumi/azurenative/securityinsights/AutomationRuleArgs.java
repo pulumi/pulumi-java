@@ -77,7 +77,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

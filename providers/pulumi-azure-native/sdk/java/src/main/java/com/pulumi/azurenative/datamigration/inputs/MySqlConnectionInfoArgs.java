@@ -55,7 +55,7 @@ public final class MySqlConnectionInfoArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of connection info
-     * Expected value is 'MySqlConnectionInfo'.
+     * Expected value is &#39;MySqlConnectionInfo&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -21,7 +21,7 @@ public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.Resourc
     public static final SafetyRuleRuleConfigArgs Empty = new SafetyRuleRuleConfigArgs();
 
     /**
-     * Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+     * Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
      * 
      */
     @Import(name="inverted", required=true)

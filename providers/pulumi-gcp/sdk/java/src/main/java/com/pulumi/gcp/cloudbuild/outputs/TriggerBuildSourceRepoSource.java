@@ -26,15 +26,15 @@ public final class TriggerBuildSourceRepoSource {
      */
     private final @Nullable String commitSha;
     /**
-     * Working directory to use when running this step's container.
-     * If this value is a relative path, it is relative to the build's working
-     * directory. If this value is absolute, it may be outside the build's working
+     * Working directory to use when running this step&#39;s container.
+     * If this value is a relative path, it is relative to the build&#39;s working
+     * directory. If this value is absolute, it may be outside the build&#39;s working
      * directory, in which case the contents of the path may not be persisted
      * across build step executions, unless a `volume` for that path is specified.
      * If the build specifies a `RepoSource` with `dir` and a step with a
      * `dir`,
      * which specifies an absolute path, the `RepoSource` `dir` is ignored
-     * for the step's execution.
+     * for the step&#39;s execution.
      * 
      */
     private final @Nullable String dir;
@@ -104,15 +104,15 @@ public final class TriggerBuildSourceRepoSource {
         return Optional.ofNullable(this.commitSha);
     }
     /**
-     * Working directory to use when running this step's container.
-     * If this value is a relative path, it is relative to the build's working
-     * directory. If this value is absolute, it may be outside the build's working
+     * Working directory to use when running this step&#39;s container.
+     * If this value is a relative path, it is relative to the build&#39;s working
+     * directory. If this value is absolute, it may be outside the build&#39;s working
      * directory, in which case the contents of the path may not be persisted
      * across build step executions, unless a `volume` for that path is specified.
      * If the build specifies a `RepoSource` with `dir` and a step with a
      * `dir`,
      * which specifies an absolute path, the `RepoSource` `dir` is ignored
-     * for the step's execution.
+     * for the step&#39;s execution.
      * 
     */
     public Optional<String> dir() {

@@ -83,14 +83,14 @@ public class BackendService extends com.pulumi.resources.CustomResource {
         return this.circuitBreakers;
     }
     /**
-     * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+     * Compress text responses using Brotli or gzip compression, based on the client&#39;s Accept-Encoding header.
      * 
      */
     @Export(name="compressionMode", type=String.class, parameters={})
     private Output<String> compressionMode;
 
     /**
-     * @return Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+     * @return Compress text responses using Brotli or gzip compression, based on the client&#39;s Accept-Encoding header.
      * 
      */
     public Output<String> compressionMode() {

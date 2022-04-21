@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     private final QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
     /**
      * Result type
-     * Expected value is 'MigrationDatabaseLevelValidationOutput'.
+     * Expected value is &#39;MigrationDatabaseLevelValidationOutput&#39;.
      * 
      */
     private final String resultType;
@@ -132,7 +132,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     }
     /**
      * Result type
-     * Expected value is 'MigrationDatabaseLevelValidationOutput'.
+     * Expected value is &#39;MigrationDatabaseLevelValidationOutput&#39;.
      * 
     */
     public String resultType() {

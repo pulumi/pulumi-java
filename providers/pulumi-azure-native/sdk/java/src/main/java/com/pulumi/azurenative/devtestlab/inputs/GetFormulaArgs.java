@@ -15,7 +15,7 @@ public final class GetFormulaArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFormulaArgs Empty = new GetFormulaArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=description)'
+     * Specify the $expand query. Example: &#39;properties($select=description)&#39;
      * 
      */
     @Import(name="expand")

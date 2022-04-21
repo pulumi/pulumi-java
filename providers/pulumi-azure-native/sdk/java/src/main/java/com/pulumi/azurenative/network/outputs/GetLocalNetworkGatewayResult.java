@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLocalNetworkGatewayResult {
     /**
-     * Local network gateway's BGP speaker settings.
+     * Local network gateway&#39;s BGP speaker settings.
      * 
      */
     private final @Nullable BgpSettingsResponse bgpSettings;
@@ -104,7 +104,7 @@ public final class GetLocalNetworkGatewayResult {
     }
 
     /**
-     * Local network gateway's BGP speaker settings.
+     * Local network gateway&#39;s BGP speaker settings.
      * 
     */
     public Optional<BgpSettingsResponse> bgpSettings() {

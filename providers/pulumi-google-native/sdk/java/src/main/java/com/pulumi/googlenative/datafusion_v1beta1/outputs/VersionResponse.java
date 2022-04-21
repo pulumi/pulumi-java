@@ -27,7 +27,7 @@ public final class VersionResponse {
      */
     private final String type;
     /**
-     * The version number of the Data Fusion instance, such as '6.0.1.0'.
+     * The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
      * 
      */
     private final String versionNumber;
@@ -66,7 +66,7 @@ public final class VersionResponse {
         return this.type;
     }
     /**
-     * The version number of the Data Fusion instance, such as '6.0.1.0'.
+     * The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
      * 
     */
     public String versionNumber() {

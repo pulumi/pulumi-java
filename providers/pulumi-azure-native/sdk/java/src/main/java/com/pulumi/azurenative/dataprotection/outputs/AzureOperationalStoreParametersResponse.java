@@ -18,7 +18,7 @@ public final class AzureOperationalStoreParametersResponse {
     private final String dataStoreType;
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AzureOperationalStoreParameters'.
+     * Expected value is &#39;AzureOperationalStoreParameters&#39;.
      * 
      */
     private final String objectType;
@@ -47,7 +47,7 @@ public final class AzureOperationalStoreParametersResponse {
     }
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AzureOperationalStoreParameters'.
+     * Expected value is &#39;AzureOperationalStoreParameters&#39;.
      * 
     */
     public String objectType() {

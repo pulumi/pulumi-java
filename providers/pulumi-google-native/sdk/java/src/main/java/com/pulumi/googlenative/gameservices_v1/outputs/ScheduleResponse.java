@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ScheduleResponse {
     /**
-     * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
+     * The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
      * 
      */
     private final String cronJobDuration;
@@ -43,7 +43,7 @@ public final class ScheduleResponse {
     }
 
     /**
-     * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
+     * The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
      * 
     */
     public String cronJobDuration() {

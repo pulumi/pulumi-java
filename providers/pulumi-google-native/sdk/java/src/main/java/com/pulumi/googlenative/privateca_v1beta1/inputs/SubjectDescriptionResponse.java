@@ -19,7 +19,7 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     public static final SubjectDescriptionResponse Empty = new SubjectDescriptionResponse();
 
     /**
-     * The "common name" of the distinguished name.
+     * The &#34;common name&#34; of the distinguished name.
      * 
      */
     @Import(name="commonName", required=true)
@@ -41,7 +41,7 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
+     * For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
      * 
      */
     @Import(name="lifetime", required=true)

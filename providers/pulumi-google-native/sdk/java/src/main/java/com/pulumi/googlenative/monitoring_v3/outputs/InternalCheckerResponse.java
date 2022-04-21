@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InternalCheckerResponse {
     /**
-     * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
      */
     private final String displayName;
@@ -25,7 +25,7 @@ public final class InternalCheckerResponse {
      */
     private final String name;
     /**
-     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
+     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
      * 
      */
     private final String network;
@@ -57,7 +57,7 @@ public final class InternalCheckerResponse {
     }
 
     /**
-     * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
     */
     public String displayName() {
@@ -78,7 +78,7 @@ public final class InternalCheckerResponse {
         return this.name;
     }
     /**
-     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
+     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
      * 
     */
     public String network() {

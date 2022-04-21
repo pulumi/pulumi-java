@@ -81,7 +81,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
     private final Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataLakeAnalytics'.
+     * Expected value is &#39;AzureDataLakeAnalytics&#39;.
      * 
      */
     private final String type;
@@ -202,7 +202,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataLakeAnalytics'.
+     * Expected value is &#39;AzureDataLakeAnalytics&#39;.
      * 
     */
     public String type() {

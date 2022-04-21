@@ -17,7 +17,7 @@ public final class SolutionPlanResponse {
      */
     private final @Nullable String name;
     /**
-     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
+     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
      * 
      */
     private final @Nullable String product;
@@ -52,7 +52,7 @@ public final class SolutionPlanResponse {
         return Optional.ofNullable(this.name);
     }
     /**
-     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
+     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
      * 
     */
     public Optional<String> product() {

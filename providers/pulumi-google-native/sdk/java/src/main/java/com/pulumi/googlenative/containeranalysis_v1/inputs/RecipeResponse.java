@@ -19,7 +19,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     public static final RecipeResponse Empty = new RecipeResponse();
 
     /**
-     * Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were "make", then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the arguments field can greatly vary in structure, depending on the builder and recipe type, this is of form "Any".
+     * Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were &#34;make&#34;, then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the arguments field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
      * 
      */
     @Import(name="arguments", required=true)
@@ -30,7 +30,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were "make", then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn't come from a material, as zero is default unset value for int64.
+     * Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were &#34;make&#34;, then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn&#39;t come from a material, as zero is default unset value for int64.
      * 
      */
     @Import(name="definedInMaterial", required=true)
@@ -41,7 +41,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were "make", then this would reference the directory in which to run make as well as which target to use.
+     * String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were &#34;make&#34;, then this would reference the directory in which to run make as well as which target to use.
      * 
      */
     @Import(name="entryPoint", required=true)
@@ -52,7 +52,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy. Since the environment field can greatly vary in structure, depending on the builder and recipe type, this is of form "Any".
+     * Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy. Since the environment field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
      * 
      */
     @Import(name="environment", required=true)

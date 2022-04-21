@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Excluding Logs](https://cloud.google.com/logging/docs/exclusions)
  * 
- * > You can specify exclusions for log sinks created by the provider by using the exclusions field of `gcp.logging.FolderSink`
+ * &gt; You can specify exclusions for log sinks created by the provider by using the exclusions field of `gcp.logging.FolderSink`
  * 
  * ## Example Usage
  * 
@@ -85,7 +85,7 @@ public class FolderExclusion extends com.pulumi.resources.CustomResource {
         return this.filter;
     }
     /**
-     * The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * The folder to be exported to the sink. Note that either [FOLDER_ID] or &#34;folders/[FOLDER_ID]&#34; is
      * accepted.
      * 
      */
@@ -93,7 +93,7 @@ public class FolderExclusion extends com.pulumi.resources.CustomResource {
     private Output<String> folder;
 
     /**
-     * @return The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * @return The folder to be exported to the sink. Note that either [FOLDER_ID] or &#34;folders/[FOLDER_ID]&#34; is
      * accepted.
      * 
      */

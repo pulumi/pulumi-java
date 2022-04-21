@@ -62,7 +62,7 @@ public class BlobFolderDataSet extends com.pulumi.resources.CustomResource {
     }
     /**
      * Kind of data set.
-     * Expected value is 'BlobFolder'.
+     * Expected value is &#39;BlobFolder&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class BlobFolderDataSet extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Kind of data set.
-     * Expected value is 'BlobFolder'.
+     * Expected value is &#39;BlobFolder&#39;.
      * 
      */
     public Output<String> kind() {

@@ -89,14 +89,14 @@ public class TargetInstance extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+     * NAT option controlling how IPs are NAT&#39;ed to the instance. Currently only NO_NAT (default value) is supported.
      * 
      */
     @Export(name="natPolicy", type=String.class, parameters={})
     private Output<String> natPolicy;
 
     /**
-     * @return NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+     * @return NAT option controlling how IPs are NAT&#39;ed to the instance. Currently only NO_NAT (default value) is supported.
      * 
      */
     public Output<String> natPolicy() {

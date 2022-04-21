@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The user ID (UID) of the file's owner.
+     * The user ID (UID) of the file&#39;s owner.
      * 
      */
     @EnumType

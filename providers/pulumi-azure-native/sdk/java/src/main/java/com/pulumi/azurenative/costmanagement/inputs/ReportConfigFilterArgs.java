@@ -21,7 +21,7 @@ public final class ReportConfigFilterArgs extends com.pulumi.resources.ResourceA
     public static final ReportConfigFilterArgs Empty = new ReportConfigFilterArgs();
 
     /**
-     * The logical "AND" expression. Must have at least 2 items.
+     * The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
      */
     @Import(name="and")
@@ -43,7 +43,7 @@ public final class ReportConfigFilterArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The logical "OR" expression. Must have at least 2 items.
+     * The logical &#34;OR&#34; expression. Must have at least 2 items.
      * 
      */
     @Import(name="or")

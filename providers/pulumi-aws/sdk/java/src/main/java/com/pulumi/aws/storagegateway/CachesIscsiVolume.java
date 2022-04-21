@@ -19,13 +19,13 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Storage Gateway cached iSCSI volume.
  * 
- * > **NOTE:** The gateway must have cache added (e.g. via the `aws.storagegateway.Cache` resource) before creating volumes otherwise the Storage Gateway API will return an error.
+ * &gt; **NOTE:** The gateway must have cache added (e.g. via the `aws.storagegateway.Cache` resource) before creating volumes otherwise the Storage Gateway API will return an error.
  * 
- * > **NOTE:** The gateway must have an upload buffer added (e.g. via the `aws.storagegateway.UploadBuffer` resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `UPLOAD BUFFER NOT CONFIGURED`.
+ * &gt; **NOTE:** The gateway must have an upload buffer added (e.g. via the `aws.storagegateway.UploadBuffer` resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `UPLOAD BUFFER NOT CONFIGURED`.
  * 
  * ## Example Usage
  * 
- * > **NOTE:** These examples are referencing the `aws.storagegateway.Cache` resource `gateway_arn` attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via `depends_on = [aws_storagegateway_cache.example]`) to ensure proper ordering.
+ * &gt; **NOTE:** These examples are referencing the `aws.storagegateway.Cache` resource `gateway_arn` attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via `depends_on = [aws_storagegateway_cache.example]`) to ensure proper ordering.
  * 
  * ## Import
  * 
@@ -165,14 +165,14 @@ public class CachesIscsiVolume extends com.pulumi.resources.CustomResource {
         return this.snapshotId;
     }
     /**
-     * The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume's latest recovery point. The `volume_size_in_bytes` value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
+     * The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume&#39;s latest recovery point. The `volume_size_in_bytes` value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
      * 
      */
     @Export(name="sourceVolumeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceVolumeArn;
 
     /**
-     * @return The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume's latest recovery point. The `volume_size_in_bytes` value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
+     * @return The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume&#39;s latest recovery point. The `volume_size_in_bytes` value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
      * 
      */
     public Output</* @Nullable */ String> sourceVolumeArn() {

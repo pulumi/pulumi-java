@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceSparkParameters {
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     private final String host;
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     private final Double port;
@@ -30,14 +30,14 @@ public final class DataSourceSparkParameters {
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
     */
     public String host() {
         return this.host;
     }
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
     */
     public Double port() {

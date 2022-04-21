@@ -39,7 +39,7 @@ public final class KeyRingImportJobArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The KeyRing that this import job belongs to.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
      * 
      */
     @Import(name="keyRing", required=true)

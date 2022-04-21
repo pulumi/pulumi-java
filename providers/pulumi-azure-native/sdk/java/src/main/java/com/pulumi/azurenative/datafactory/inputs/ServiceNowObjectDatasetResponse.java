@@ -115,7 +115,7 @@ public final class ServiceNowObjectDatasetResponse extends com.pulumi.resources.
 
     /**
      * Type of dataset.
-     * Expected value is 'ServiceNowObject'.
+     * Expected value is &#39;ServiceNowObject&#39;.
      * 
      */
     @Import(name="type", required=true)

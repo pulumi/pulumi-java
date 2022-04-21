@@ -39,7 +39,7 @@ public final class EventBusState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the new event bus. The names of custom event buses can't contain the / character. To create a partner event bus, ensure the `name` matches the `event_source_name`.
+     * The name of the new event bus. The names of custom event buses can&#39;t contain the / character. To create a partner event bus, ensure the `name` matches the `event_source_name`.
      * 
      */
     @Import(name="name")

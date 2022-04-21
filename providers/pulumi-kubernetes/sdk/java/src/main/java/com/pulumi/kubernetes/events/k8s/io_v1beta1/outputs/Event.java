@@ -57,7 +57,7 @@ public final class Event {
      */
     private final @Nullable String kind;
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     private final @Nullable ObjectMeta metadata;
@@ -72,7 +72,7 @@ public final class Event {
      */
     private final @Nullable String reason;
     /**
-     * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+     * regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
      */
     private final @Nullable ObjectReference regarding;
@@ -92,7 +92,7 @@ public final class Event {
      */
     private final @Nullable String reportingInstance;
     /**
-     * series is data about the Event series this event represents or nil if it's a singleton Event.
+     * series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
      */
     private final @Nullable EventSeries series;
@@ -197,7 +197,7 @@ public final class Event {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
     */
     public Optional<ObjectMeta> metadata() {
@@ -218,7 +218,7 @@ public final class Event {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+     * regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
     */
     public Optional<ObjectReference> regarding() {
@@ -246,7 +246,7 @@ public final class Event {
         return Optional.ofNullable(this.reportingInstance);
     }
     /**
-     * series is data about the Event series this event represents or nil if it's a singleton Event.
+     * series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
     */
     public Optional<EventSeries> series() {

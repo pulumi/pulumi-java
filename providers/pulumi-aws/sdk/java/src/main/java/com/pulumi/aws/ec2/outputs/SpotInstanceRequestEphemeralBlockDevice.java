@@ -18,7 +18,7 @@ public final class SpotInstanceRequestEphemeralBlockDevice {
      */
     private final String deviceName;
     /**
-     * Suppresses the specified device included in the AMI's block device mapping.
+     * Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
      */
     private final @Nullable Boolean noDevice;
@@ -46,7 +46,7 @@ public final class SpotInstanceRequestEphemeralBlockDevice {
         return this.deviceName;
     }
     /**
-     * Suppresses the specified device included in the AMI's block device mapping.
+     * Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
     */
     public Optional<Boolean> noDevice() {

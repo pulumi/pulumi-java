@@ -39,7 +39,7 @@ public final class EnvironmentConfigResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The Cloud Storage prefix of the DAGs for this environment. Although Cloud Storage objects reside in a flat namespace, a hierarchical file tree can be simulated using "/"-delimited object name prefixes. DAG objects for this environment reside in a simulated directory with the given prefix.
+     * The Cloud Storage prefix of the DAGs for this environment. Although Cloud Storage objects reside in a flat namespace, a hierarchical file tree can be simulated using &#34;/&#34;-delimited object name prefixes. DAG objects for this environment reside in a simulated directory with the given prefix.
      * 
      */
     @Import(name="dagGcsPrefix", required=true)

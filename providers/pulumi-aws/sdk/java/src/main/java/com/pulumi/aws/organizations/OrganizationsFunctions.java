@@ -48,7 +48,7 @@ public final class OrganizationsFunctions {
         return Deployment.getInstance().invokeAsync("aws:organizations/getDelegatedServices:getDelegatedServices", TypeShape.of(GetDelegatedServicesResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Get information about the organization that the user's account belongs to
+     * Get information about the organization that the user&#39;s account belongs to
      * 
      * ## Example Usage
      * 

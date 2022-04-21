@@ -172,7 +172,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The managed application management policy that determines publisher's access to the managed resource group.
+     * The managed application management policy that determines publisher&#39;s access to the managed resource group.
      * 
      */
     @Import(name="managementPolicy")

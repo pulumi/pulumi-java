@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class JwtClaimsResponse {
     /**
-     * Value for the "aud" claim.
+     * Value for the &#34;aud&#34; claim.
      * 
      */
     private final String audience;
     /**
-     * Value for the "iss" claim.
+     * Value for the &#34;iss&#34; claim.
      * 
      */
     private final String issuer;
     /**
-     * Value for the "sub" claim.
+     * Value for the &#34;sub&#34; claim.
      * 
      */
     private final String subject;
@@ -36,21 +36,21 @@ public final class JwtClaimsResponse {
     }
 
     /**
-     * Value for the "aud" claim.
+     * Value for the &#34;aud&#34; claim.
      * 
     */
     public String audience() {
         return this.audience;
     }
     /**
-     * Value for the "iss" claim.
+     * Value for the &#34;iss&#34; claim.
      * 
     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * Value for the "sub" claim.
+     * Value for the &#34;sub&#34; claim.
      * 
     */
     public String subject() {

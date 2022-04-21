@@ -23,7 +23,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProviderArgs Empty = new ProviderArgs();
 
     /**
-     * The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+     * The access key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
     @Import(name="accessKey")
@@ -96,7 +96,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
+     * Explicitly allow the provider to perform &#34;insecure&#34; SSL requests. If omitted, default value is `false`
      * 
      */
     @Import(name="insecure", json=true)
@@ -153,7 +153,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+     * The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
     @Import(name="secretKey")
@@ -187,7 +187,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
+     * Skip getting the supported EC2 platforms. Used by users that don&#39;t have ec2:DescribeAccountAttributes permissions.
      * 
      */
     @Import(name="skipGetEc2Platforms", json=true)

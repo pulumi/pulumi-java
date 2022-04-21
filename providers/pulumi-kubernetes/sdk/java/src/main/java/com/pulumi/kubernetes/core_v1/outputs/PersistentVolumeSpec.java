@@ -43,7 +43,7 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable List<String> accessModes;
     /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     private final @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore;
@@ -58,12 +58,12 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable AzureFilePersistentVolumeSource azureFile;
     /**
-     * A description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
+     * A description of the persistent volume&#39;s resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
      * 
      */
     private final @Nullable Map<String,String> capacity;
     /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
+     * CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
      */
     private final @Nullable CephFSPersistentVolumeSource cephfs;
@@ -83,7 +83,7 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable CSIPersistentVolumeSource csi;
     /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
+     * FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
      */
     private final @Nullable FCVolumeSource fc;
@@ -93,12 +93,12 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable FlexPersistentVolumeSource flexVolume;
     /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running
+     * Flocker represents a Flocker volume attached to a kubelet&#39;s host machine and exposed to the pod for its usage. This depends on the Flocker control service being running
      * 
      */
     private final @Nullable FlockerVolumeSource flocker;
     /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
      */
     private final @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk;
@@ -113,7 +113,7 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable HostPathVolumeSource hostPath;
     /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.
+     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin.
      * 
      */
     private final @Nullable ISCSIPersistentVolumeSource iscsi;
@@ -123,7 +123,7 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable LocalVolumeSource local;
     /**
-     * A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
+     * A list of mount options, e.g. [&#34;ro&#34;, &#34;soft&#34;]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
      * 
      */
     private final @Nullable List<String> mountOptions;
@@ -141,9 +141,9 @@ public final class PersistentVolumeSpec {
      * What happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming
      * 
      * Possible enum values:
-     *  - `"Delete"` means the volume will be deleted from Kubernetes on release from its claim. The volume plugin must support Deletion.
-     *  - `"Recycle"` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
-     *  - `"Retain"` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
+     *  - `&#34;Delete&#34;` means the volume will be deleted from Kubernetes on release from its claim. The volume plugin must support Deletion.
+     *  - `&#34;Recycle&#34;` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
+     *  - `&#34;Retain&#34;` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
      * 
      */
     private final @Nullable String persistentVolumeReclaimPolicy;
@@ -158,12 +158,12 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable PortworxVolumeSource portworxVolume;
     /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+     * Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
      */
     private final @Nullable QuobyteVolumeSource quobyte;
     /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
      */
     private final @Nullable RBDPersistentVolumeSource rbd;
@@ -178,7 +178,7 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable String storageClassName;
     /**
-     * StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md
+     * StorageOS represents a StorageOS volume that is attached to the kubelet&#39;s host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md
      * 
      */
     private final @Nullable StorageOSPersistentVolumeSource storageos;
@@ -265,7 +265,7 @@ public final class PersistentVolumeSpec {
         return this.accessModes == null ? List.of() : this.accessModes;
     }
     /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
     */
     public Optional<AWSElasticBlockStoreVolumeSource> awsElasticBlockStore() {
@@ -286,14 +286,14 @@ public final class PersistentVolumeSpec {
         return Optional.ofNullable(this.azureFile);
     }
     /**
-     * A description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
+     * A description of the persistent volume&#39;s resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
      * 
     */
     public Map<String,String> capacity() {
         return this.capacity == null ? Map.of() : this.capacity;
     }
     /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
+     * CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
     */
     public Optional<CephFSPersistentVolumeSource> cephfs() {
@@ -321,7 +321,7 @@ public final class PersistentVolumeSpec {
         return Optional.ofNullable(this.csi);
     }
     /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
+     * FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
     */
     public Optional<FCVolumeSource> fc() {
@@ -335,14 +335,14 @@ public final class PersistentVolumeSpec {
         return Optional.ofNullable(this.flexVolume);
     }
     /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running
+     * Flocker represents a Flocker volume attached to a kubelet&#39;s host machine and exposed to the pod for its usage. This depends on the Flocker control service being running
      * 
     */
     public Optional<FlockerVolumeSource> flocker() {
         return Optional.ofNullable(this.flocker);
     }
     /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
     */
     public Optional<GCEPersistentDiskVolumeSource> gcePersistentDisk() {
@@ -363,7 +363,7 @@ public final class PersistentVolumeSpec {
         return Optional.ofNullable(this.hostPath);
     }
     /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.
+     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin.
      * 
     */
     public Optional<ISCSIPersistentVolumeSource> iscsi() {
@@ -377,7 +377,7 @@ public final class PersistentVolumeSpec {
         return Optional.ofNullable(this.local);
     }
     /**
-     * A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
+     * A list of mount options, e.g. [&#34;ro&#34;, &#34;soft&#34;]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
      * 
     */
     public List<String> mountOptions() {
@@ -401,9 +401,9 @@ public final class PersistentVolumeSpec {
      * What happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming
      * 
      * Possible enum values:
-     *  - `"Delete"` means the volume will be deleted from Kubernetes on release from its claim. The volume plugin must support Deletion.
-     *  - `"Recycle"` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
-     *  - `"Retain"` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
+     *  - `&#34;Delete&#34;` means the volume will be deleted from Kubernetes on release from its claim. The volume plugin must support Deletion.
+     *  - `&#34;Recycle&#34;` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
+     *  - `&#34;Retain&#34;` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
      * 
     */
     public Optional<String> persistentVolumeReclaimPolicy() {
@@ -424,14 +424,14 @@ public final class PersistentVolumeSpec {
         return Optional.ofNullable(this.portworxVolume);
     }
     /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+     * Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
     */
     public Optional<QuobyteVolumeSource> quobyte() {
         return Optional.ofNullable(this.quobyte);
     }
     /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
     */
     public Optional<RBDPersistentVolumeSource> rbd() {
@@ -452,7 +452,7 @@ public final class PersistentVolumeSpec {
         return Optional.ofNullable(this.storageClassName);
     }
     /**
-     * StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md
+     * StorageOS represents a StorageOS volume that is attached to the kubelet&#39;s host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md
      * 
     */
     public Optional<StorageOSPersistentVolumeSource> storageos() {

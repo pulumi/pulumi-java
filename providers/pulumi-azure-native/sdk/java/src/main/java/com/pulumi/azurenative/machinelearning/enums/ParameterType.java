@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Graph parameter's type.
+     * Graph parameter&#39;s type.
      * 
      */
     @EnumType

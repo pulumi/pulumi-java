@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A router appliance instance is a Compute Engine virtual machine (VM) instance that acts as a BGP speaker. A router appliance instance is specified by the URI of the VM and the internal IP address of one of the VM's network interfaces.
+ * A router appliance instance is a Compute Engine virtual machine (VM) instance that acts as a BGP speaker. A router appliance instance is specified by the URI of the VM and the internal IP address of one of the VM&#39;s network interfaces.
  * 
  */
 public final class RouterApplianceInstanceArgs extends com.pulumi.resources.ResourceArgs {

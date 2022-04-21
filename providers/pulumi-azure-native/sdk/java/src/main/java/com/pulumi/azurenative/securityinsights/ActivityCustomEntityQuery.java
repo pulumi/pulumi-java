@@ -120,14 +120,14 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
         return this.etag;
     }
     /**
-     * The type of the query's source entity
+     * The type of the query&#39;s source entity
      * 
      */
     @Export(name="inputEntityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputEntityType;
 
     /**
-     * @return The type of the query's source entity
+     * @return The type of the query&#39;s source entity
      * 
      */
     public Output</* @Nullable */ String> inputEntityType() {
@@ -135,7 +135,7 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
     }
     /**
      * The kind of the entity query
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -143,7 +143,7 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
 
     /**
      * @return The kind of the entity query
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
      */
     public Output<String> kind() {

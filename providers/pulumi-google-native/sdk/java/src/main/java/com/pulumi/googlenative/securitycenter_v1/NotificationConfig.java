@@ -34,42 +34,42 @@ public class NotificationConfig extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     @Export(name="pubsubTopic", type=String.class, parameters={})
     private Output<String> pubsubTopic;
 
     /**
-     * @return The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * @return The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
     /**
-     * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
      */
     @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
-     * @return The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * @return The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
      */
     public Output<String> serviceAccount() {

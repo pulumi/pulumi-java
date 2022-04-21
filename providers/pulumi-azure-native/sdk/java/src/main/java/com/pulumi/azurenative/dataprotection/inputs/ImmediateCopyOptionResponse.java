@@ -19,7 +19,7 @@ public final class ImmediateCopyOptionResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ImmediateCopyOption'.
+     * Expected value is &#39;ImmediateCopyOption&#39;.
      * 
      */
     @Import(name="objectType", required=true)

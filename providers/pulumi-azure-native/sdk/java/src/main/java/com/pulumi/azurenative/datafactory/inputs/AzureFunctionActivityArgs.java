@@ -72,7 +72,7 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="headers")
@@ -128,7 +128,7 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
 
     /**
      * Type of activity.
-     * Expected value is 'AzureFunctionActivity'.
+     * Expected value is &#39;AzureFunctionActivity&#39;.
      * 
      */
     @Import(name="type", required=true)

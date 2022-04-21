@@ -17,7 +17,7 @@ import java.util.Objects;
 @CustomType
 public final class GetConnectionResult {
     /**
-     * Optional. Configuration for establishing the connection's authentication with an external system.
+     * Optional. Configuration for establishing the connection&#39;s authentication with an external system.
      * 
      */
     private final AuthConfigResponse authConfig;
@@ -77,7 +77,7 @@ public final class GetConnectionResult {
      */
     private final String serviceAccount;
     /**
-     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
+     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
      * 
      */
     private final String serviceDirectory;
@@ -134,7 +134,7 @@ public final class GetConnectionResult {
     }
 
     /**
-     * Optional. Configuration for establishing the connection's authentication with an external system.
+     * Optional. Configuration for establishing the connection&#39;s authentication with an external system.
      * 
     */
     public AuthConfigResponse authConfig() {
@@ -218,7 +218,7 @@ public final class GetConnectionResult {
         return this.serviceAccount;
     }
     /**
-     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
+     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
      * 
     */
     public String serviceDirectory() {

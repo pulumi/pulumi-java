@@ -54,7 +54,7 @@ public final class NetezzaLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
     /**
      * Type of linked service.
-     * Expected value is 'Netezza'.
+     * Expected value is &#39;Netezza&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class NetezzaLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Netezza'.
+     * Expected value is &#39;Netezza&#39;.
      * 
     */
     public String type() {

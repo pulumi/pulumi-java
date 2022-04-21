@@ -19,7 +19,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends com.
     public static final VirtualMachineScaleSetVMProtectionPolicyResponse Empty = new VirtualMachineScaleSetVMProtectionPolicyResponse();
 
     /**
-     * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+     * Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
      * 
      */
     @Import(name="protectFromScaleIn")

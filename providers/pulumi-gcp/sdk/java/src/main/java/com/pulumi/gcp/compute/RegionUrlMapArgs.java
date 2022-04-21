@@ -23,7 +23,7 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * A reference to a RegionBackendService resource. This will be used if
      * none of the pathRules defined by this PathMatcher is matched by
-     * the URL's path portion.
+     * the URL&#39;s path portion.
      * 
      */
     @Import(name="defaultService")
@@ -84,7 +84,7 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the PathMatcher to use to match the path portion of
-     * the URL if the hostRule matches the URL's host portion.
+     * the URL if the hostRule matches the URL&#39;s host portion.
      * 
      */
     @Import(name="pathMatchers")

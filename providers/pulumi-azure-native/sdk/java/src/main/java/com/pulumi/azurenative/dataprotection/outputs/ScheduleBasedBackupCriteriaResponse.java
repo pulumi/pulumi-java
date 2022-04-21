@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduleBasedBackupCriteriaResponse {
     /**
-     * it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
+     * it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
      * and should be part of AbsoluteMarker enum
      * 
      */
@@ -35,7 +35,7 @@ public final class ScheduleBasedBackupCriteriaResponse {
     private final @Nullable List<String> monthsOfYear;
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ScheduleBasedBackupCriteria'.
+     * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
      * 
      */
     private final String objectType;
@@ -69,7 +69,7 @@ public final class ScheduleBasedBackupCriteriaResponse {
     }
 
     /**
-     * it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
+     * it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
      * and should be part of AbsoluteMarker enum
      * 
     */
@@ -99,7 +99,7 @@ public final class ScheduleBasedBackupCriteriaResponse {
     }
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ScheduleBasedBackupCriteria'.
+     * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
      * 
     */
     public String objectType() {

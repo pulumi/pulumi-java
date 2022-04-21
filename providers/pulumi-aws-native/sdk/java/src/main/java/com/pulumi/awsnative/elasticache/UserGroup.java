@@ -49,14 +49,14 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
         return this.engine;
     }
     /**
-     * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
+     * Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return Indicates user group status. Can be "creating", "active", "modifying", "deleting".
+     * @return Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
      */
     public Output<String> status() {

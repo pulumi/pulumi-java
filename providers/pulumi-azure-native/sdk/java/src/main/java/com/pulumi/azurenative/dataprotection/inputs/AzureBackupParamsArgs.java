@@ -31,7 +31,7 @@ public final class AzureBackupParamsArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AzureBackupParams'.
+     * Expected value is &#39;AzureBackupParams&#39;.
      * 
      */
     @Import(name="objectType", required=true)

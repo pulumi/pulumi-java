@@ -46,7 +46,7 @@ public final class ReportScheduleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+     * The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
      * 
      */
     @Import(name="status")

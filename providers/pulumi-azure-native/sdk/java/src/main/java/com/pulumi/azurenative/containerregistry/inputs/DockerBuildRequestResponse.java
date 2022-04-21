@@ -183,7 +183,7 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
 
     /**
      * The type of the run request.
-     * Expected value is 'DockerBuildRequest'.
+     * Expected value is &#39;DockerBuildRequest&#39;.
      * 
      */
     @Import(name="type", required=true)

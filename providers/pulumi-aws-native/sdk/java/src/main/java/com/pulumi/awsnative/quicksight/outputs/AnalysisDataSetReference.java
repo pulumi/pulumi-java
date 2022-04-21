@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AnalysisDataSetReference {
     /**
-     * <p>Dataset Amazon Resource Name (ARN).</p>
+     * &lt;p&gt;Dataset Amazon Resource Name (ARN).&lt;/p&gt;
      * 
      */
     private final String dataSetArn;
     /**
-     * <p>Dataset placeholder.</p>
+     * &lt;p&gt;Dataset placeholder.&lt;/p&gt;
      * 
      */
     private final String dataSetPlaceholder;
@@ -29,14 +29,14 @@ public final class AnalysisDataSetReference {
     }
 
     /**
-     * <p>Dataset Amazon Resource Name (ARN).</p>
+     * &lt;p&gt;Dataset Amazon Resource Name (ARN).&lt;/p&gt;
      * 
     */
     public String dataSetArn() {
         return this.dataSetArn;
     }
     /**
-     * <p>Dataset placeholder.</p>
+     * &lt;p&gt;Dataset placeholder.&lt;/p&gt;
      * 
     */
     public String dataSetPlaceholder() {

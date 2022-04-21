@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Runs a shell script during the customization phase (Linux). Corresponds to Packer shell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
+ * Runs a shell script during the customization phase (Linux). Corresponds to Packer shell provisioner. Exactly one of &#39;scriptUri&#39; or &#39;inline&#39; can be specified.
  * 
  */
 public final class ImageTemplateShellCustomizerArgs extends com.pulumi.resources.ResourceArgs {
@@ -65,8 +65,8 @@ public final class ImageTemplateShellCustomizerArgs extends com.pulumi.resources
     }
 
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'Shell'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;Shell&#39;.
      * 
      */
     @Import(name="type", required=true)

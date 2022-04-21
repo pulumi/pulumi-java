@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Rules defining user's geo access within a CDN endpoint.
+ * Rules defining user&#39;s geo access within a CDN endpoint.
  * 
  */
 public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
@@ -40,7 +40,7 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
+     * Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
      * 
      */
     @Import(name="relativePath", required=true)

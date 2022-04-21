@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The group ID (GID) of the file's owners.
+     * The group ID (GID) of the file&#39;s owners.
      * 
      */
     @EnumType

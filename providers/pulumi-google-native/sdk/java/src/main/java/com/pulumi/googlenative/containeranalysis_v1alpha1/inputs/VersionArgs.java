@@ -34,7 +34,7 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
+     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
      * 
      */
     @Import(name="inclusive")

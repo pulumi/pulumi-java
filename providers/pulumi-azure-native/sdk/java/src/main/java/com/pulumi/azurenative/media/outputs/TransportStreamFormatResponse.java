@@ -19,7 +19,7 @@ public final class TransportStreamFormatResponse {
     private final String filenamePattern;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.TransportStreamFormat'.
+     * Expected value is &#39;#Microsoft.Media.TransportStreamFormat&#39;.
      * 
      */
     private final String odataType;
@@ -48,7 +48,7 @@ public final class TransportStreamFormatResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.TransportStreamFormat'.
+     * Expected value is &#39;#Microsoft.Media.TransportStreamFormat&#39;.
      * 
     */
     public String odataType() {

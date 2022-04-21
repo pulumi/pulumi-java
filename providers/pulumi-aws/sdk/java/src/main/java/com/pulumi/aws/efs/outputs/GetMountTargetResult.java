@@ -66,7 +66,7 @@ public final class GetMountTargetResult {
      */
     private final List<String> securityGroups;
     /**
-     * ID of the mount target's subnet.
+     * ID of the mount target&#39;s subnet.
      * 
      */
     private final String subnetId;
@@ -183,7 +183,7 @@ public final class GetMountTargetResult {
         return this.securityGroups;
     }
     /**
-     * ID of the mount target's subnet.
+     * ID of the mount target&#39;s subnet.
      * 
     */
     public String subnetId() {

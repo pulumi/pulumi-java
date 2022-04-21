@@ -82,7 +82,7 @@ public final class AzureSqlDWLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlDW'.
+     * Expected value is &#39;AzureSqlDW&#39;.
      * 
      */
     private final String type;
@@ -203,7 +203,7 @@ public final class AzureSqlDWLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlDW'.
+     * Expected value is &#39;AzureSqlDW&#39;.
      * 
     */
     public String type() {

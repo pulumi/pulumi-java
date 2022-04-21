@@ -24,7 +24,7 @@ public final class HdfsLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'HdfsLocation'.
+     * Expected value is &#39;HdfsLocation&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class HdfsLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'HdfsLocation'.
+     * Expected value is &#39;HdfsLocation&#39;.
      * 
     */
     public String type() {

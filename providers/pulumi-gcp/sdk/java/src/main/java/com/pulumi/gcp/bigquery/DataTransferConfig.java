@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/bigquery/docs/reference/datatransfer/rest/)
  * 
- * > **Warning:** All arguments including `sensitive_params.secret_access_key` will be stored in the raw
+ * &gt; **Warning:** All arguments including `sensitive_params.secret_access_key` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
  * ## Example Usage
@@ -192,7 +192,7 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
         return this.notificationPubsubTopic;
     }
     /**
-     * Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
+     * Parameters specific to each data source. For more information see the bq tab in the &#39;Setting up a data transfer&#39;
      * section for each data source. For example the parameters for Cloud Storage transfers are listed here:
      * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
      * 
@@ -201,7 +201,7 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
     private Output<Map<String,String>> params;
 
     /**
-     * @return Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
+     * @return Parameters specific to each data source. For more information see the bq tab in the &#39;Setting up a data transfer&#39;
      * section for each data source. For example the parameters for Cloud Storage transfers are listed here:
      * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
      * 

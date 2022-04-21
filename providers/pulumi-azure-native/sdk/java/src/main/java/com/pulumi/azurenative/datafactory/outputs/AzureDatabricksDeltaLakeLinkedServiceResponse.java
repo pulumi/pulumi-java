@@ -51,7 +51,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
      */
     private final @Nullable String description;
     /**
-     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
      */
     private final Object domain;
@@ -67,7 +67,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'AzureDatabricksDeltaLake'.
+     * Expected value is &#39;AzureDatabricksDeltaLake&#39;.
      * 
      */
     private final String type;
@@ -146,7 +146,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
     */
     public Object domain() {
@@ -168,7 +168,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureDatabricksDeltaLake'.
+     * Expected value is &#39;AzureDatabricksDeltaLake&#39;.
      * 
     */
     public String type() {

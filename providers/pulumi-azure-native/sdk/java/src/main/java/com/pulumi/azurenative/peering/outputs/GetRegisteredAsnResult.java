@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRegisteredAsnResult {
     /**
-     * The customer's ASN from which traffic originates.
+     * The customer&#39;s ASN from which traffic originates.
      * 
      */
     private final @Nullable Integer asn;
@@ -60,7 +60,7 @@ public final class GetRegisteredAsnResult {
     }
 
     /**
-     * The customer's ASN from which traffic originates.
+     * The customer&#39;s ASN from which traffic originates.
      * 
     */
     public Optional<Integer> asn() {

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Attaches a Managed IAM Policy to an IAM user
  * 
- * > **NOTE:** The usage of this resource conflicts with the `aws.iam.PolicyAttachment` resource and will permanently show a difference if both are defined.
+ * &gt; **NOTE:** The usage of this resource conflicts with the `aws.iam.PolicyAttachment` resource and will permanently show a difference if both are defined.
  * 
  * ## Example Usage
  * 

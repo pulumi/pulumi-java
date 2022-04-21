@@ -295,7 +295,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     }
 
     /**
-     * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM's replication group into account. This is a string representation of the ProtectionHealth enumeration.
+     * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM&#39;s replication group into account. This is a string representation of the ProtectionHealth enumeration.
      * 
      */
     @Import(name="replicationHealth")

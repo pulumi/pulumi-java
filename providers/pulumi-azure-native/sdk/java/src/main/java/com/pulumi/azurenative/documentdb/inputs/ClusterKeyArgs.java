@@ -31,7 +31,7 @@ public final class ClusterKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
+     * Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
      * 
      */
     @Import(name="orderBy")

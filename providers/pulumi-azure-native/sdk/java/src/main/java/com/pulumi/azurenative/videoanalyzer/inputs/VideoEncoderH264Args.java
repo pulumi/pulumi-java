@@ -55,7 +55,7 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoEncoderH264&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -23,7 +23,7 @@ public final class ExportScheduleResponse {
      */
     private final @Nullable ExportRecurrencePeriodResponse recurrencePeriod;
     /**
-     * The status of the export's schedule. If 'Inactive', the export's schedule is paused.
+     * The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
      * 
      */
     private final @Nullable String status;
@@ -53,7 +53,7 @@ public final class ExportScheduleResponse {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
-     * The status of the export's schedule. If 'Inactive', the export's schedule is paused.
+     * The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
      * 
     */
     public Optional<String> status() {

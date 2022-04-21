@@ -15,7 +15,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
      */
     private final String framework;
     /**
-     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
+     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
      * 
      */
     private final String modelPath;
@@ -50,7 +50,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
         return this.framework;
     }
     /**
-     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
+     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
      * 
     */
     public String modelPath() {

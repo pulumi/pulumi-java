@@ -20,8 +20,8 @@ public final class RoutineArgument {
     private final @Nullable String argumentKind;
     /**
      * A JSON schema for the data type. Required unless argumentKind = ANY_TYPE.
-     * ~>**NOTE**: Because this field expects a JSON string, any changes to the string
-     * will create a diff, even if the JSON itself hasn't changed. If the API returns
+     * ~&gt;**NOTE**: Because this field expects a JSON string, any changes to the string
+     * will create a diff, even if the JSON itself hasn&#39;t changed. If the API returns
      * a different value for the same schema, e.g. it switched the order of values
      * or replaced STRUCT field type with RECORD field type, we currently cannot
      * suppress the recurring diff this causes. As a workaround, we recommend using
@@ -64,8 +64,8 @@ public final class RoutineArgument {
     }
     /**
      * A JSON schema for the data type. Required unless argumentKind = ANY_TYPE.
-     * ~>**NOTE**: Because this field expects a JSON string, any changes to the string
-     * will create a diff, even if the JSON itself hasn't changed. If the API returns
+     * ~&gt;**NOTE**: Because this field expects a JSON string, any changes to the string
+     * will create a diff, even if the JSON itself hasn&#39;t changed. If the API returns
      * a different value for the same schema, e.g. it switched the order of values
      * or replaced STRUCT field type with RECORD field type, we currently cannot
      * suppress the recurring diff this causes. As a workaround, we recommend using

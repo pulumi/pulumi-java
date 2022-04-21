@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  * using it. Please read this document in its entirety before using this resource.
  * 
  * The `aws.ec2.DefaultVpc` behaves differently from normal resources, in that
- * this provider does not _create_ this resource, but instead "adopts" it
+ * this provider does not _create_ this resource, but instead &#34;adopts&#34; it
  * into management.
  * 
  * ## Example Usage
@@ -259,7 +259,7 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
     }
     /**
      * The ID of the main route table associated with
-     * this VPC. Note that you can change a VPC's main route table by using an
+     * this VPC. Note that you can change a VPC&#39;s main route table by using an
      * `aws.ec2.MainRouteTableAssociation`
      * 
      */
@@ -268,7 +268,7 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The ID of the main route table associated with
-     * this VPC. Note that you can change a VPC's main route table by using an
+     * this VPC. Note that you can change a VPC&#39;s main route table by using an
      * `aws.ec2.MainRouteTableAssociation`
      * 
      */

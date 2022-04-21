@@ -35,7 +35,7 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
      * 
      */
     @Import(name="mainVolume")
@@ -90,7 +90,7 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     @Import(name="subnetId", required=true)

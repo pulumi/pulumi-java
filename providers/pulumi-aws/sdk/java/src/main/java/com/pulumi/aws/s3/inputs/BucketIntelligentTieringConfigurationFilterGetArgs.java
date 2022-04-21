@@ -28,7 +28,7 @@ public final class BucketIntelligentTieringConfigurationFilterGetArgs extends co
     }
 
     /**
-     * All of these tags must exist in the object's tag set in order for the configuration to apply.
+     * All of these tags must exist in the object&#39;s tag set in order for the configuration to apply.
      * 
      */
     @Import(name="tags")

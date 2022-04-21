@@ -16,7 +16,7 @@ public final class GetTestablePermissionsPermission {
      */
     private final Boolean apiDisabled;
     /**
-     * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
+     * The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
      */
     private final String customSupportLevel;
@@ -58,7 +58,7 @@ public final class GetTestablePermissionsPermission {
         return this.apiDisabled;
     }
     /**
-     * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
+     * The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
     */
     public String customSupportLevel() {

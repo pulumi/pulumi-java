@@ -53,7 +53,7 @@ public final class GetControllerResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * DNS of the target container host's API server
+     * DNS of the target container host&#39;s API server
      * 
      */
     private final String targetContainerHostApiServerFqdn;
@@ -151,7 +151,7 @@ public final class GetControllerResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * DNS of the target container host's API server
+     * DNS of the target container host&#39;s API server
      * 
     */
     public String targetContainerHostApiServerFqdn() {

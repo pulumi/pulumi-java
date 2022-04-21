@@ -26,7 +26,7 @@ public final class GetBucketResult {
      */
     private final String bucketRegionalDomainName;
     /**
-     * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
+     * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket&#39;s region.
      * 
      */
     private final String hostedZoneId;
@@ -98,7 +98,7 @@ public final class GetBucketResult {
         return this.bucketRegionalDomainName;
     }
     /**
-     * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
+     * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket&#39;s region.
      * 
     */
     public String hostedZoneId() {

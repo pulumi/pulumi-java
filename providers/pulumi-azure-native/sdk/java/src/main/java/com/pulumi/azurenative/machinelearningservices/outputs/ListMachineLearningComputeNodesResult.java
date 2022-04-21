@@ -13,7 +13,7 @@ import java.util.Objects;
 public final class ListMachineLearningComputeNodesResult {
     /**
      * The type of compute
-     * Expected value is 'AmlCompute'.
+     * Expected value is &#39;AmlCompute&#39;.
      * 
      */
     private final String computeType;
@@ -40,7 +40,7 @@ public final class ListMachineLearningComputeNodesResult {
 
     /**
      * The type of compute
-     * Expected value is 'AmlCompute'.
+     * Expected value is &#39;AmlCompute&#39;.
      * 
     */
     public String computeType() {

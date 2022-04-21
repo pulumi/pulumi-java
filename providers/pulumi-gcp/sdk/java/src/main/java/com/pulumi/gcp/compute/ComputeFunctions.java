@@ -96,7 +96,7 @@ public final class ComputeFunctions {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendBucket:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Provide access to a Backend Service's attribute. For more information
+     * Provide access to a Backend Service&#39;s attribute. For more information
      * see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
      * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
      * 
@@ -317,7 +317,7 @@ public final class ComputeFunctions {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Use this data source to access a Network Endpoint Group's attributes.
+     * Use this data source to access a Network Endpoint Group&#39;s attributes.
      * 
      * The NEG may be found by providing either a `self_link`, or a `name` and a `zone`.
      * 
@@ -392,7 +392,7 @@ public final class ComputeFunctions {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
+     * Provide access to a Resource Policy&#39;s attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
      * 
      */
     public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
@@ -468,7 +468,7 @@ public final class ComputeFunctions {
         return Deployment.getInstance().invokeAsync("gcp:compute/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Get a Cloud Router's status within GCE from its name and region. This data source exposes the
+     * Get a Cloud Router&#39;s status within GCE from its name and region. This data source exposes the
      * routes learned by a Cloud Router via BGP peers.
      * 
      * For more information see [the official documentation](https://cloud.google.com/network-connectivity/docs/router/how-to/viewing-router-details)

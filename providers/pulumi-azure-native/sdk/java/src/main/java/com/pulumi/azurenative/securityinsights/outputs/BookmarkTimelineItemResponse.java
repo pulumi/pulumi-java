@@ -40,7 +40,7 @@ public final class BookmarkTimelineItemResponse {
     private final @Nullable String eventTime;
     /**
      * The entity query kind
-     * Expected value is 'Bookmark'.
+     * Expected value is &#39;Bookmark&#39;.
      * 
      */
     private final String kind;
@@ -119,7 +119,7 @@ public final class BookmarkTimelineItemResponse {
     }
     /**
      * The entity query kind
-     * Expected value is 'Bookmark'.
+     * Expected value is &#39;Bookmark&#39;.
      * 
     */
     public String kind() {

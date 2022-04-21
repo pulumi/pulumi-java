@@ -63,14 +63,14 @@ public class ContainerApp extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Resource ID of the Container App's KubeEnvironment.
+     * Resource ID of the Container App&#39;s KubeEnvironment.
      * 
      */
     @Export(name="kubeEnvironmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kubeEnvironmentId;
 
     /**
-     * @return Resource ID of the Container App's KubeEnvironment.
+     * @return Resource ID of the Container App&#39;s KubeEnvironment.
      * 
      */
     public Output</* @Nullable */ String> kubeEnvironmentId() {

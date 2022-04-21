@@ -53,7 +53,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
      * 
      */
     @Import(name="customQueryString")
@@ -64,7 +64,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'.
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
      * 
      */
     @Import(name="odataType", required=true)

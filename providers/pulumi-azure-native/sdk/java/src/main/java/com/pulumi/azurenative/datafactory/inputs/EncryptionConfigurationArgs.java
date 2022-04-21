@@ -21,7 +21,7 @@ public final class EncryptionConfigurationArgs extends com.pulumi.resources.Reso
     public static final EncryptionConfigurationArgs Empty = new EncryptionConfigurationArgs();
 
     /**
-     * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
+     * User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
      * 
      */
     @Import(name="identity")

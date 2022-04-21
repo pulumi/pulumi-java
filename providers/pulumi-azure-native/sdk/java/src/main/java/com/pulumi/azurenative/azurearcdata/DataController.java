@@ -78,14 +78,14 @@ public class DataController extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The data controller's properties
+     * The data controller&#39;s properties
      * 
      */
     @Export(name="properties", type=DataControllerPropertiesResponse.class, parameters={})
     private Output<DataControllerPropertiesResponse> properties;
 
     /**
-     * @return The data controller's properties
+     * @return The data controller&#39;s properties
      * 
      */
     public Output<DataControllerPropertiesResponse> properties() {

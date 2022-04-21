@@ -62,14 +62,14 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+     * The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
      */
     @Export(name="destinationAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationAddressPrefix;
 
     /**
-     * @return The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+     * @return The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
      */
     public Output</* @Nullable */ String> destinationAddressPrefix() {
@@ -104,14 +104,14 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return this.destinationApplicationSecurityGroups;
     }
     /**
-     * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     @Export(name="destinationPortRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationPortRange;
 
     /**
-     * @return The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * @return The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     public Output</* @Nullable */ String> destinationPortRange() {
@@ -216,14 +216,14 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
     @Export(name="sourceAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceAddressPrefix;
 
     /**
-     * @return The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * @return The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
     public Output</* @Nullable */ String> sourceAddressPrefix() {
@@ -258,14 +258,14 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return this.sourceApplicationSecurityGroups;
     }
     /**
-     * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     @Export(name="sourcePortRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourcePortRange;
 
     /**
-     * @return The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * @return The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     public Output</* @Nullable */ String> sourcePortRange() {

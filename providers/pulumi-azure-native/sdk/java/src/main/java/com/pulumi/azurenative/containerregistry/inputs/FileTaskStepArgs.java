@@ -56,7 +56,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the step.
-     * Expected value is 'FileTask'.
+     * Expected value is &#39;FileTask&#39;.
      * 
      */
     @Import(name="type", required=true)

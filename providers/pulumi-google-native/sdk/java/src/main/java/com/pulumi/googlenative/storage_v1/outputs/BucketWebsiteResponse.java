@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BucketWebsiteResponse {
     /**
-     * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+     * If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
      * 
      */
     private final String mainPageSuffix;
@@ -29,7 +29,7 @@ public final class BucketWebsiteResponse {
     }
 
     /**
-     * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+     * If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
      * 
     */
     public String mainPageSuffix() {

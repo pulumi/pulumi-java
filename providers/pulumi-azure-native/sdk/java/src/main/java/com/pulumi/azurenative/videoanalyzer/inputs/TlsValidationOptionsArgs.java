@@ -20,7 +20,7 @@ public final class TlsValidationOptionsArgs extends com.pulumi.resources.Resourc
     public static final TlsValidationOptionsArgs Empty = new TlsValidationOptionsArgs();
 
     /**
-     * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
      * 
      */
     @Import(name="ignoreHostname")
@@ -31,7 +31,7 @@ public final class TlsValidationOptionsArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
      * 
      */
     @Import(name="ignoreSignature")

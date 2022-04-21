@@ -16,7 +16,7 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
     public static final CustomerEncryptionKeyArgs Empty = new CustomerEncryptionKeyArgs();
 
     /**
-     * The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName": "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
+     * The name of the encryption key that is stored in Google Cloud KMS. For example: &#34;kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
      * 
      */
     @Import(name="kmsKeyName")
@@ -27,7 +27,7 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: "kmsKeyServiceAccount": "name@project_id.iam.gserviceaccount.com/
+     * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: &#34;kmsKeyServiceAccount&#34;: &#34;name@project_id.iam.gserviceaccount.com/
      * 
      */
     @Import(name="kmsKeyServiceAccount")
@@ -38,7 +38,7 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
+     * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rawKey&#34;: &#34;SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=&#34;
      * 
      */
     @Import(name="rawKey")
@@ -49,7 +49,7 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+     * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rsaEncryptedKey&#34;: &#34;ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==&#34; The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
      * 
      */
     @Import(name="rsaEncryptedKey")

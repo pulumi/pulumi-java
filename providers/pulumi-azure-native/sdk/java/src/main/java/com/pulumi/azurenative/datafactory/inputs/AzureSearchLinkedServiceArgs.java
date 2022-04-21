@@ -95,7 +95,7 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureSearch'.
+     * Expected value is &#39;AzureSearch&#39;.
      * 
      */
     @Import(name="type", required=true)

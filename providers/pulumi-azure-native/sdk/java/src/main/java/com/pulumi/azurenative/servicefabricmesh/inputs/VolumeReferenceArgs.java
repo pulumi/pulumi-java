@@ -43,7 +43,7 @@ public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
+     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
      */
     @Import(name="readOnly")

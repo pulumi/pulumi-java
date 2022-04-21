@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The drive's current state.
+     * The drive&#39;s current state.
      * 
      */
     @EnumType

@@ -63,7 +63,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
+     * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test&#39;s destination is a [global load balancer VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
      * 
      */
     @Import(name="ipAddress", required=true)

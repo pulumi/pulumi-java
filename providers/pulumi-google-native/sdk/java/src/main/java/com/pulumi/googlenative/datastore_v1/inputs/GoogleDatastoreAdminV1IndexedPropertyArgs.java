@@ -20,7 +20,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends com.pulumi.
     public static final GoogleDatastoreAdminV1IndexedPropertyArgs Empty = new GoogleDatastoreAdminV1IndexedPropertyArgs();
 
     /**
-     * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
+     * The indexed property&#39;s direction. Must not be DIRECTION_UNSPECIFIED.
      * 
      */
     @Import(name="direction", required=true)

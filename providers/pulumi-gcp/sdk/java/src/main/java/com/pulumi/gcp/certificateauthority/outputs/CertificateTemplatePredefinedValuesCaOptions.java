@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateTemplatePredefinedValuesCaOptions {
     /**
-     * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
      * 
      */
     private final @Nullable Boolean isCa;
@@ -32,7 +32,7 @@ public final class CertificateTemplatePredefinedValuesCaOptions {
     }
 
     /**
-     * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
      * 
     */
     public Optional<Boolean> isCa() {

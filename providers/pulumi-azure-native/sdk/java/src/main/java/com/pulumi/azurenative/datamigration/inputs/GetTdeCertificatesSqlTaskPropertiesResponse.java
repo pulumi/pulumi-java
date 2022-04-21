@@ -83,7 +83,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends com.pulum
 
     /**
      * Task type.
-     * Expected value is 'GetTDECertificates.Sql'.
+     * Expected value is &#39;GetTDECertificates.Sql&#39;.
      * 
      */
     @Import(name="taskType", required=true)

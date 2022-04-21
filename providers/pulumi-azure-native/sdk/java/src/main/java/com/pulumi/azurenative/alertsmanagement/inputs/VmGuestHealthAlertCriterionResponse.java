@@ -56,7 +56,7 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
 
     /**
      * specifies the type of the alert criterion.
-     * Expected value is 'GuestVmHealth'.
+     * Expected value is &#39;GuestVmHealth&#39;.
      * 
      */
     @Import(name="namespace", required=true)

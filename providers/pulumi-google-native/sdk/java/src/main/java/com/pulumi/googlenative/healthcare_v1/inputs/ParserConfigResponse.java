@@ -41,7 +41,7 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
+     * Byte(s) to use as the segment terminator. If this is unset, &#39;\r&#39; is used as segment terminator, matching the HL7 version 2 specification.
      * 
      */
     @Import(name="segmentTerminator", required=true)

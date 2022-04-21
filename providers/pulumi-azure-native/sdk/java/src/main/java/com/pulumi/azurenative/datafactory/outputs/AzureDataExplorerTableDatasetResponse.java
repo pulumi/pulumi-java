@@ -59,7 +59,7 @@ public final class AzureDataExplorerTableDatasetResponse {
     private final @Nullable Object table;
     /**
      * Type of dataset.
-     * Expected value is 'AzureDataExplorerTable'.
+     * Expected value is &#39;AzureDataExplorerTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class AzureDataExplorerTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureDataExplorerTable'.
+     * Expected value is &#39;AzureDataExplorerTable&#39;.
      * 
     */
     public String type() {

@@ -99,7 +99,7 @@ public final class GreenplumSourceResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Copy source type.
-     * Expected value is 'GreenplumSource'.
+     * Expected value is &#39;GreenplumSource&#39;.
      * 
      */
     @Import(name="type", required=true)

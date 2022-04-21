@@ -104,7 +104,7 @@ public final class AzureMySqlLinkedServiceResponse extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureMySql'.
+     * Expected value is &#39;AzureMySql&#39;.
      * 
      */
     @Import(name="type", required=true)

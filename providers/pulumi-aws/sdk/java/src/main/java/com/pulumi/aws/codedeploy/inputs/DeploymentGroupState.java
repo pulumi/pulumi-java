@@ -105,7 +105,7 @@ public final class DeploymentGroupState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
+     * The name of the group&#39;s deployment config. The default is &#34;CodeDeployDefault.OneAtATime&#34;.
      * 
      */
     @Import(name="deploymentConfigName")

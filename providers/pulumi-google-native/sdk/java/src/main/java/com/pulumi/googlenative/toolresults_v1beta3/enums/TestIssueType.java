@@ -155,7 +155,7 @@ import java.util.StringJoiner;
          */
         OverlappingUiElements("overlappingUiElements"),
         /**
-         * An uncaught Unity exception was detected (these don't crash apps).
+         * An uncaught Unity exception was detected (these don&#39;t crash apps).
          * 
          */
         UnityException("unityException"),

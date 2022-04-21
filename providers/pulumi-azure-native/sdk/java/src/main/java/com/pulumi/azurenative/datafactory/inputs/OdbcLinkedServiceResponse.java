@@ -128,7 +128,7 @@ public final class OdbcLinkedServiceResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of linked service.
-     * Expected value is 'Odbc'.
+     * Expected value is &#39;Odbc&#39;.
      * 
      */
     @Import(name="type", required=true)

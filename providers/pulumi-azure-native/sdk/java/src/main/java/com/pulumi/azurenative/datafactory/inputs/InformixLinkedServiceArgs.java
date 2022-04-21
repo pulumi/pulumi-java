@@ -128,7 +128,7 @@ public final class InformixLinkedServiceArgs extends com.pulumi.resources.Resour
 
     /**
      * Type of linked service.
-     * Expected value is 'Informix'.
+     * Expected value is &#39;Informix&#39;.
      * 
      */
     @Import(name="type", required=true)

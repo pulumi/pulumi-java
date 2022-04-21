@@ -15,7 +15,7 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
     public static final GetVirtualMachineArgs Empty = new GetVirtualMachineArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)'
+     * Specify the $expand query. Example: &#39;properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)&#39;
      * 
      */
     @Import(name="expand")

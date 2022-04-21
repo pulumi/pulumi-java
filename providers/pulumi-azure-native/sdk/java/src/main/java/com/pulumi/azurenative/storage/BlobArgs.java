@@ -97,7 +97,7 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the resource group within the user's subscription.
+     * The name of the resource group within the user&#39;s subscription.
      * 
      */
     @Import(name="resourceGroupName", required=true)
@@ -119,7 +119,7 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The type of the storage blob to be created. Defaults to 'Block'.
+     * The type of the storage blob to be created. Defaults to &#39;Block&#39;.
      * 
      */
     @Import(name="type")

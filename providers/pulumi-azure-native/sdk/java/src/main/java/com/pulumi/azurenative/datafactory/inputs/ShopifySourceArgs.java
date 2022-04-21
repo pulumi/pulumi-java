@@ -99,7 +99,7 @@ public final class ShopifySourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'ShopifySource'.
+     * Expected value is &#39;ShopifySource&#39;.
      * 
      */
     @Import(name="type", required=true)

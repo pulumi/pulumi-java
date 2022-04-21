@@ -23,7 +23,7 @@ public final class GetComponentResult {
      */
     private final String appId;
     /**
-     * The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
+     * The unique ID of your application. This field mirrors the &#39;Name&#39; field and cannot be changed.
      * 
      */
     private final String applicationId;
@@ -48,7 +48,7 @@ public final class GetComponentResult {
      */
     private final @Nullable Boolean disableIpMasking;
     /**
-     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
+     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to &#39;Bluefield&#39; when creating/updating a component via the REST API.
      * 
      */
     private final @Nullable String flowType;
@@ -108,7 +108,7 @@ public final class GetComponentResult {
      */
     private final String provisioningState;
     /**
-     * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
+     * Describes what tool created this Application Insights component. Customers using this API should set this to the default &#39;rest&#39;.
      * 
      */
     private final @Nullable String requestSource;
@@ -198,7 +198,7 @@ public final class GetComponentResult {
         return this.appId;
     }
     /**
-     * The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
+     * The unique ID of your application. This field mirrors the &#39;Name&#39; field and cannot be changed.
      * 
     */
     public String applicationId() {
@@ -233,7 +233,7 @@ public final class GetComponentResult {
         return Optional.ofNullable(this.disableIpMasking);
     }
     /**
-     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
+     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to &#39;Bluefield&#39; when creating/updating a component via the REST API.
      * 
     */
     public Optional<String> flowType() {
@@ -317,7 +317,7 @@ public final class GetComponentResult {
         return this.provisioningState;
     }
     /**
-     * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
+     * Describes what tool created this Application Insights component. Customers using this API should set this to the default &#39;rest&#39;.
      * 
     */
     public Optional<String> requestSource() {

@@ -17,7 +17,7 @@ public final class ServiceMeshTypeResponse extends com.pulumi.resources.InvokeAr
     public static final ServiceMeshTypeResponse Empty = new ServiceMeshTypeResponse();
 
     /**
-     * A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. "IST0001" is mapped to the "InternalError" message type.)
+     * A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. &#34;IST0001&#34; is mapped to the &#34;InternalError&#34; message type.)
      * 
      */
     @Import(name="code", required=true)
@@ -28,7 +28,7 @@ public final class ServiceMeshTypeResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * A human-readable name for the message type. e.g. "InternalError", "PodMissingProxy". This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
+     * A human-readable name for the message type. e.g. &#34;InternalError&#34;, &#34;PodMissingProxy&#34;. This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
      * 
      */
     @Import(name="displayName", required=true)

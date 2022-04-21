@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The cluster's GKE config.
+ * The cluster&#39;s GKE config.
  * 
  */
 public final class GkeClusterConfigResponse extends com.pulumi.resources.InvokeArgs {

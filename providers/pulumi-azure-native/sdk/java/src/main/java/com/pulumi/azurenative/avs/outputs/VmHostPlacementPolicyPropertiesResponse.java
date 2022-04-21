@@ -39,7 +39,7 @@ public final class VmHostPlacementPolicyPropertiesResponse {
     private final @Nullable String state;
     /**
      * placement policy type
-     * Expected value is 'VmHost'.
+     * Expected value is &#39;VmHost&#39;.
      * 
      */
     private final String type;
@@ -104,7 +104,7 @@ public final class VmHostPlacementPolicyPropertiesResponse {
     }
     /**
      * placement policy type
-     * Expected value is 'VmHost'.
+     * Expected value is &#39;VmHost&#39;.
      * 
     */
     public String type() {

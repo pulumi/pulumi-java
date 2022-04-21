@@ -83,7 +83,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of activity.
-     * Expected value is 'ExecutePipeline'.
+     * Expected value is &#39;ExecutePipeline&#39;.
      * 
      */
     @Import(name="type", required=true)

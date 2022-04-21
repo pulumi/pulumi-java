@@ -59,7 +59,7 @@ public final class MySqlTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'MySqlTable'.
+     * Expected value is &#39;MySqlTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class MySqlTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'MySqlTable'.
+     * Expected value is &#39;MySqlTable&#39;.
      * 
     */
     public String type() {

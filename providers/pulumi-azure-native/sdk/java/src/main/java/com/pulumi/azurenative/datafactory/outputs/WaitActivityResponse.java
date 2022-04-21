@@ -32,7 +32,7 @@ public final class WaitActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'Wait'.
+     * Expected value is &#39;Wait&#39;.
      * 
      */
     private final String type;
@@ -86,7 +86,7 @@ public final class WaitActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Wait'.
+     * Expected value is &#39;Wait&#39;.
      * 
     */
     public String type() {

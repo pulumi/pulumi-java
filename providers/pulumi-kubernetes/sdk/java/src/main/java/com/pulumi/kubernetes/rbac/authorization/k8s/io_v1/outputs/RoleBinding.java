@@ -26,7 +26,7 @@ public final class RoleBinding {
      */
     private final @Nullable String kind;
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     private final @Nullable ObjectMeta metadata;
@@ -70,7 +70,7 @@ public final class RoleBinding {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
     */
     public Optional<ObjectMeta> metadata() {

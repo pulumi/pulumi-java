@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Each pivot must contain a 'type' and 'name'.
+ * Each pivot must contain a &#39;type&#39; and &#39;name&#39;.
  * 
  */
 public final class PivotPropertiesArgs extends com.pulumi.resources.ResourceArgs {

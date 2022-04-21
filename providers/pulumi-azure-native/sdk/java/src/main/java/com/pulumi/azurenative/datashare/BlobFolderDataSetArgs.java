@@ -50,7 +50,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Kind of data set.
-     * Expected value is 'BlobFolder'.
+     * Expected value is &#39;BlobFolder&#39;.
      * 
      */
     @Import(name="kind", required=true)

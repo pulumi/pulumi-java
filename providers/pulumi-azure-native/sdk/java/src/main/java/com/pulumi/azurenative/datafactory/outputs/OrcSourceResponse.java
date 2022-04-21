@@ -57,7 +57,7 @@ public final class OrcSourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'OrcSource'.
+     * Expected value is &#39;OrcSource&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class OrcSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'OrcSource'.
+     * Expected value is &#39;OrcSource&#39;.
      * 
     */
     public String type() {

@@ -20,7 +20,7 @@ public final class CmkKekIdentityResponse extends com.pulumi.resources.InvokeArg
     public static final CmkKekIdentityResponse Empty = new CmkKekIdentityResponse();
 
     /**
-     * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
+     * Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
      * 
      */
     @Import(name="useSystemAssignedIdentity")

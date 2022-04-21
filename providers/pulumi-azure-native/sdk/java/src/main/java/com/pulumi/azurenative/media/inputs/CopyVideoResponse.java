@@ -32,7 +32,7 @@ public final class CopyVideoResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.CopyVideo'.
+     * Expected value is &#39;#Microsoft.Media.CopyVideo&#39;.
      * 
      */
     @Import(name="odataType", required=true)

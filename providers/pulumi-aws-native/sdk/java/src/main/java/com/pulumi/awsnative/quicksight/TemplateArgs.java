@@ -27,7 +27,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A display name for the template.</p>
+     * &lt;p&gt;A display name for the template.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -38,7 +38,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A list of resource permissions to be set on the template. </p>
+     * &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
      * 
      */
     @Import(name="permissions")
@@ -56,7 +56,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
      * 
      */
     @Import(name="tags")
@@ -74,10 +74,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A description of the current template version being created. This API operation creates the
-     * 			first version of the template. Every time <code>UpdateTemplate</code> is called, a new
+     * &lt;p&gt;A description of the current template version being created. This API operation creates the
+     * 			first version of the template. Every time &lt;code&gt;UpdateTemplate&lt;/code&gt; is called, a new
      * 			version is created. Each version of the template maintains a description of the version
-     * 			in the <code>VersionDescription</code> field.</p>
+     * 			in the &lt;code&gt;VersionDescription&lt;/code&gt; field.&lt;/p&gt;
      * 
      */
     @Import(name="versionDescription")

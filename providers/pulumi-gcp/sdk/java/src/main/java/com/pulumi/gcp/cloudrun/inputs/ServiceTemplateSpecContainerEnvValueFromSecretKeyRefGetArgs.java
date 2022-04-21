@@ -16,7 +16,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs e
 
     /**
      * The Cloud Secret Manager secret version.
-     * Can be 'latest' for the latest value or an integer for a specific version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
      */
     @Import(name="key", required=true)
@@ -27,7 +27,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs e
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name", required=true)

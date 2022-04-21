@@ -17,7 +17,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * <!-- Bug: Type and Name are switched -->
+ * &lt;!-- Bug: Type and Name are switched --&gt;
  * Pulls a Docker image to a given Docker host from a Docker Registry.
  *  This resource will *not* pull new layers of the image automatically unless used in conjunction with docker.RegistryImage data source to update the `pull_triggers` field.
  * 
@@ -33,17 +33,17 @@ import javax.annotation.Nullable;
  * - **build** (Block Set, Max: 1) Configuration to build an image. Please see [docker build command reference](https://docs.docker.com/engine/reference/commandline/build/#options) too. (see below for nested schema)
  * - **force_remove** (Boolean) If true, then the image is removed forcibly when the resource is destroyed.
  * - **id** (String) The ID of this resource.
- * - **keep_locally** (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
+ * - **keep_locally** (Boolean) If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
  * - **pull_trigger** (String, Deprecated) A value which cause an image pull when changed
  * - **pull_triggers** (Set of String) List of values which cause an image pull when changed. This is used to store the image digest from the registry when using the docker_registry_image.
  * 
  * ### Read-Only
  * 
- * - **latest** (String, Deprecated) The ID of the image in the form of `sha256:<hash>` image digest. Do not confuse it with the default `latest` tag.
+ * - **latest** (String, Deprecated) The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
  * - **output** (String, Deprecated)
- * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`.
+ * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
  * 
- * <a id="nestedblock--build"></a>
+ * &lt;a id=&#34;nestedblock--build&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `build`
  * 
  * Required:
@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  * - **label** (Map of String) Set metadata for an image
  * - **no_cache** (Boolean) Do not use cache when building the image
  * - **remove** (Boolean) Remove intermediate containers after a successful build. Defaults to  `true`.
- * - **tag** (List of String) Name and optionally a tag in the 'name:tag' format
+ * - **tag** (List of String) Name and optionally a tag in the &#39;name:tag&#39; format
  * - **target** (String) Set the target build stage to build
  * 
  */
@@ -95,7 +95,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
         return this.forceRemove;
     }
     /**
-     * If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from
+     * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
      * the docker local storage on destroy operation.
      * 
      */
@@ -103,7 +103,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Boolean> keepLocally;
 
     /**
-     * @return If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from
+     * @return If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
      * the docker local storage on destroy operation.
      * 
      */
@@ -111,9 +111,9 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
         return this.keepLocally;
     }
     /**
-     * The ID of the image in the form of `sha256:<hash>` image digest. Do not confuse it with the default `latest` tag.
+     * The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
      * 
-     * @Deprecated
+     * @deprecated
      * Use repo_digest instead
      * 
      */
@@ -122,7 +122,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
     private Output<String> latest;
 
     /**
-     * @return The ID of the image in the form of `sha256:<hash>` image digest. Do not confuse it with the default `latest` tag.
+     * @return The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
      * 
      */
     public Output<String> latest() {
@@ -143,7 +143,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * @Deprecated
+     * @deprecated
      * Is unused and will be removed.
      * 
      */
@@ -157,7 +157,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
     /**
      * A value which cause an image pull when changed
      * 
-     * @Deprecated
+     * @deprecated
      * Use field pull_triggers instead
      * 
      */
@@ -189,14 +189,14 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
         return this.pullTriggers;
     }
     /**
-     * The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`.
+     * The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
      * 
      */
     @Export(name="repoDigest", type=String.class, parameters={})
     private Output<String> repoDigest;
 
     /**
-     * @return The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`.
+     * @return The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
      * 
      */
     public Output<String> repoDigest() {

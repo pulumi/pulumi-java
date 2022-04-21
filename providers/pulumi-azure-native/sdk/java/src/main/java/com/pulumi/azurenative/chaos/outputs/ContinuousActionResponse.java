@@ -33,7 +33,7 @@ public final class ContinuousActionResponse {
     private final String selectorId;
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'continuous'.
+     * Expected value is &#39;continuous&#39;.
      * 
      */
     private final String type;
@@ -82,7 +82,7 @@ public final class ContinuousActionResponse {
     }
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'continuous'.
+     * Expected value is &#39;continuous&#39;.
      * 
     */
     public String type() {

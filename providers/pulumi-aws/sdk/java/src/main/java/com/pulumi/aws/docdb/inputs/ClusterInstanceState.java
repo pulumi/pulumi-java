@@ -222,7 +222,7 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
 
     /**
      * The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;.
      * 
      */
     @Import(name="preferredMaintenanceWindow")

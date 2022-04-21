@@ -22,7 +22,7 @@ public final class Hl7StoreArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * 
      */
     @Import(name="dataset", required=true)
@@ -39,8 +39,8 @@ public final class Hl7StoreArgs extends com.pulumi.resources.ResourceArgs {
      * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
      * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
      * No more than 64 labels can be associated with a given store.
-     * An object containing a list of "key": value pairs.
-     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")
@@ -68,7 +68,7 @@ public final class Hl7StoreArgs extends com.pulumi.resources.ResourceArgs {
      * A nested object resource
      * Structure is documented below.
      * 
-     * @Deprecated
+     * @deprecated
      * This field has been replaced by notificationConfigs
      * 
      */
@@ -83,7 +83,7 @@ public final class Hl7StoreArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * A list of notification configs. Each configuration uses a filter to determine whether to publish a
-     * message (both Ingest & Create) on the corresponding notification destination. Only the message name
+     * message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
      * is sent as part of the notification. Supplied by the client.
      * Structure is documented below.
      * 

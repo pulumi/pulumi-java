@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's uniform bucket-level access configuration.
+ * The bucket&#39;s uniform bucket-level access configuration.
  * 
  */
 public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends com.pulumi.resources.ResourceArgs {

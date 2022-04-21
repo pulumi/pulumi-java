@@ -16,7 +16,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends com.pulumi.resourc
     public static final DatasetCreateRequestTimeSeriesArgs Empty = new DatasetCreateRequestTimeSeriesArgs();
 
     /**
-     * Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
+     * Column name to be used as CoarseGrainTimestamp. Can only be used if &#39;fineGrainTimestamp&#39; is specified and cannot be same as &#39;fineGrainTimestamp&#39;.
      * 
      */
     @Import(name="coarseGrainTimestamp")

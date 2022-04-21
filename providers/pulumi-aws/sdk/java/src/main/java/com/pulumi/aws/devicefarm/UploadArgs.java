@@ -16,7 +16,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
     public static final UploadArgs Empty = new UploadArgs();
 
     /**
-     * The upload's content type (for example, application/octet-stream).
+     * The upload&#39;s content type (for example, application/octet-stream).
      * 
      */
     @Import(name="contentType")
@@ -27,7 +27,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload's file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
+     * The upload&#39;s file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
      * 
      */
     @Import(name="name")
@@ -49,7 +49,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload's upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
+     * The upload&#39;s upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
      * 
      */
     @Import(name="type", required=true)

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A rule for NAT - exposing a VM's port (backendPort) on the public IP address using a load balancer.
+ * A rule for NAT - exposing a VM&#39;s port (backendPort) on the public IP address using a load balancer.
  * 
  */
 public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArgs {

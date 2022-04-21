@@ -30,7 +30,7 @@ import java.util.StringJoiner;
          */
         Movable("MOVABLE"),
         /**
-         * Used to specify non-standard aliases. For example, if a Git repo has a ref named "refs/foo/bar".
+         * Used to specify non-standard aliases. For example, if a Git repo has a ref named &#34;refs/foo/bar&#34;.
          * 
          */
         Other("OTHER");

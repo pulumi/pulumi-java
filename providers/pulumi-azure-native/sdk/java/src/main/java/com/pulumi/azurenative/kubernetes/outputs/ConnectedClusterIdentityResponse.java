@@ -20,7 +20,7 @@ public final class ConnectedClusterIdentityResponse {
      */
     private final String tenantId;
     /**
-     * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
+     * The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
      * 
      */
     private final String type;
@@ -50,7 +50,7 @@ public final class ConnectedClusterIdentityResponse {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
+     * The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
      * 
     */
     public String type() {

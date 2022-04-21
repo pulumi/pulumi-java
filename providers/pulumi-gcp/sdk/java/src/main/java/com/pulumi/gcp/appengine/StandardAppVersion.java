@@ -295,8 +295,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
     }
     /**
      * The version of the API in the given runtime environment.
-     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/<language>/config/appref`\
-     * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+     * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
     @Export(name="runtimeApiVersion", type=String.class, parameters={})
@@ -304,8 +304,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The version of the API in the given runtime environment.
-     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/<language>/config/appref`\
-     * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+     * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
     public Output</* @Nullable */ String> runtimeApiVersion() {
@@ -340,14 +340,14 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
         return this.threadsafe;
     }
     /**
-     * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+     * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
     @Export(name="versionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionId;
 
     /**
-     * @return Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+     * @return Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
     public Output</* @Nullable */ String> versionId() {

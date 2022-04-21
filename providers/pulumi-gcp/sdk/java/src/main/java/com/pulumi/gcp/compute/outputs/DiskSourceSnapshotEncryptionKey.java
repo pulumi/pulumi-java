@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class DiskSourceSnapshotEncryptionKey {
     /**
      * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
-     * in the cloud console. Your project's Compute Engine System service account
+     * in the cloud console. Your project&#39;s Compute Engine System service account
      * (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
      * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
      * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
@@ -54,7 +54,7 @@ public final class DiskSourceSnapshotEncryptionKey {
 
     /**
      * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
-     * in the cloud console. Your project's Compute Engine System service account
+     * in the cloud console. Your project&#39;s Compute Engine System service account
      * (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
      * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
      * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys

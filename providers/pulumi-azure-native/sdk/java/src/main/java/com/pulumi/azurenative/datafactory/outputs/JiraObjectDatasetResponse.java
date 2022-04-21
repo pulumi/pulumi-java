@@ -59,7 +59,7 @@ public final class JiraObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'JiraObject'.
+     * Expected value is &#39;JiraObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class JiraObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'JiraObject'.
+     * Expected value is &#39;JiraObject&#39;.
      * 
     */
     public String type() {

@@ -21,7 +21,7 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     public static final CustomMetricArgs Empty = new CustomMetricArgs();
 
     /**
-     * Allows filtering on the metric's fields.
+     * Allows filtering on the metric&#39;s fields.
      * 
      */
     @Import(name="filter")

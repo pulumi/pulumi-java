@@ -13,7 +13,7 @@ public interface Mocks {
 
     /**
      * Invoked when a new resource is created by the program.
-     * <p/>
+     * <p>
      *
      * @return A tuple of a resource identifier and resource state. State can be either a POJO
      * or a dictionary bag. The returned ID may be null for component resources.
@@ -22,7 +22,7 @@ public interface Mocks {
 
     /**
      * Invoked when the program needs to call a provider to load data (e.g., to retrieve an existing resource).
-     * <p/>
+     * <p>
      *
      * @return Invocation result, can be either a POCO or a dictionary bag.
      */

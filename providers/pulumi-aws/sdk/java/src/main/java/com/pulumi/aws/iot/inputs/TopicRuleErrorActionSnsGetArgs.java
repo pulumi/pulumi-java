@@ -16,7 +16,7 @@ public final class TopicRuleErrorActionSnsGetArgs extends com.pulumi.resources.R
     public static final TopicRuleErrorActionSnsGetArgs Empty = new TopicRuleErrorActionSnsGetArgs();
 
     /**
-     * The message format of the message to publish. Accepted values are "JSON" and "RAW".
+     * The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
      * 
      */
     @Import(name="messageFormat")

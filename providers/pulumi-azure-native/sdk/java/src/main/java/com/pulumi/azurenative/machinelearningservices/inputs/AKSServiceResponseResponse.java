@@ -90,7 +90,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
 
     /**
      * The compute environment type for the service.
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
      */
     @Import(name="computeType", required=true)

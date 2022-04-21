@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class DataSetResponse {
     /**
-     * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
+     * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value.
      * 
      */
     private final String legendTemplate;
@@ -51,7 +51,7 @@ public final class DataSetResponse {
     }
 
     /**
-     * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
+     * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value.
      * 
     */
     public String legendTemplate() {

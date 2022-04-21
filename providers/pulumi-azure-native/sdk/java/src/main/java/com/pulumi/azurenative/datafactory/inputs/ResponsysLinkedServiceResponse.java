@@ -117,7 +117,7 @@ public final class ResponsysLinkedServiceResponse extends com.pulumi.resources.I
 
     /**
      * Type of linked service.
-     * Expected value is 'Responsys'.
+     * Expected value is &#39;Responsys&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -139,7 +139,7 @@ public final class ResponsysLinkedServiceResponse extends com.pulumi.resources.I
     }
 
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
     @Import(name="useHostVerification")

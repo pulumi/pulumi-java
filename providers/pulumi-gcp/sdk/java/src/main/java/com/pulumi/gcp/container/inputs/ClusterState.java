@@ -72,7 +72,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     /**
      * Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
      * automatically adjust the size of the cluster and create/delete node pools based
-     * on the current needs of the cluster's workload. See the
+     * on the current needs of the cluster&#39;s workload. See the
      * [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
      * for more details. Structure is documented below.
      * 
@@ -146,8 +146,8 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The default maximum number of pods
-     * per node in this cluster. This doesn't work on "routes-based" clusters, clusters
-     * that don't have IP Aliasing enabled. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+     * per node in this cluster. This doesn&#39;t work on &#34;routes-based&#34; clusters, clusters
+     * that don&#39;t have IP Aliasing enabled. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
      * for more information.
      * 
      */
@@ -290,7 +290,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IP address of this cluster's Kubernetes master.
+     * The IP address of this cluster&#39;s Kubernetes master.
      * 
      */
     @Import(name="endpoint")
@@ -313,9 +313,9 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The number of nodes to create in this
-     * cluster's default node pool. In regional or multi-zonal clusters, this is the
-     * number of nodes per zone. Must be set if `node_pool` is not set. If you're using
-     * `gcp.container.NodePool` objects with no default node pool, you'll need to
+     * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+     * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
      * set this to a value of at least `1`, alongside setting
      * `remove_default_node_pool` to `true`.
      * 
@@ -453,7 +453,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * The minimum version of the master. GKE
      * will auto-update the master to new versions, so this does not guarantee the
      * current master version--use the read-only `master_version` field to obtain that.
-     * If unset, the cluster's version will be set by GKE to the version of the most recent
+     * If unset, the cluster&#39;s version will be set by GKE to the version of the most recent
      * official release (which is not necessarily the latest version).  Most users will find
      * the `gcp.container.getEngineVersions` data source useful - it indicates which versions
      * are available. If you intend to specify versions manually,
@@ -552,7 +552,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Parameters used in creating the default node pool.
      * Generally, this field should not be used at the same time as a
      * `gcp.container.NodePool` or a `node_pool` block; this configuration
-     * manages the default node pool, which isn't recommended to be used.
+     * manages the default node pool, which isn&#39;t recommended to be used.
      * Structure is documented below.
      * 
      */
@@ -564,10 +564,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The list of zones in which the cluster's nodes
+     * The list of zones in which the cluster&#39;s nodes
      * are located. Nodes must be in the region of their regional cluster or in the
-     * same region as their cluster's zone for zonal clusters. If this is specified for
-     * a zonal cluster, omit the cluster's zone.
+     * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster&#39;s zone.
      * 
      */
     @Import(name="nodeLocations")
@@ -580,9 +580,9 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     /**
      * List of node pools associated with this cluster.
      * See gcp.container.NodePool for schema.
-     * **Warning:** node pools defined inside a cluster can't be changed (or added/removed) after
+     * **Warning:** node pools defined inside a cluster can&#39;t be changed (or added/removed) after
      * cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability
-     * to say "these are the _only_ node pools associated with this cluster", use the
+     * to say &#34;these are the _only_ node pools associated with this cluster&#34;, use the
      * gcp.container.NodePool resource instead of this property.
      * 
      */
@@ -597,9 +597,9 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * The Kubernetes version on the nodes. Must either be unset
      * or set to the same value as `min_master_version` on create. Defaults to the default
      * version set by GKE which is not necessarily the latest version. This only affects
-     * nodes in the default node pool. While a fuzzy version can be specified, it's
+     * nodes in the default node pool. While a fuzzy version can be specified, it&#39;s
      * recommended that you specify explicit versions as the provider will see spurious diffs
-     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
+     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
      * `version_prefix` field to approximate fuzzy versions.
      * To update nodes in other node pools, use the `version` attribute on the node pool.
      * 
@@ -684,8 +684,8 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * [Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
      * for more details; the `gcp.container.getEngineVersions` datasource can provide
      * the default version for a channel. Note that removing the `release_channel`
-     * field from your config will cause the provider to stop managing your cluster's
-     * release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+     * field from your config will cause the provider to stop managing your cluster&#39;s
+     * release channel, but will not unenroll it. Instead, use the `&#34;UNSPECIFIED&#34;`
      * channel. Structure is documented below.
      * 
      */
@@ -698,7 +698,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * If `true`, deletes the default node
-     * pool upon cluster creation. If you're using `gcp.container.NodePool`
+     * pool upon cluster creation. If you&#39;re using `gcp.container.NodePool`
      * resources with no default node pool, this should be set to `true`, alongside
      * setting `initial_node_count` to at least `1`.
      * 
@@ -761,7 +761,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name or self_link of the Google Compute Engine
-     * subnetwork in which the cluster's instances are launched.
+     * subnetwork in which the cluster&#39;s instances are launched.
      * 
      */
     @Import(name="subnetwork")

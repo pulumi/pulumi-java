@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class GuestPoliciesRecipeArtifactRemote {
     /**
      * Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
-     * If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
+     * If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any
      * of the steps.
      * 
      */
@@ -34,7 +34,7 @@ public final class GuestPoliciesRecipeArtifactRemote {
 
     /**
      * Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
-     * If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
+     * If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any
      * of the steps.
      * 
     */

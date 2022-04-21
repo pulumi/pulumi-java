@@ -13,12 +13,12 @@ import java.util.Objects;
 @CustomType
 public final class GetDomainMappingResult {
     /**
-     * The API version for this call such as "domains.cloudrun.com/v1".
+     * The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
      * 
      */
     private final String apiVersion;
     /**
-     * The kind of resource, in this case "DomainMapping".
+     * The kind of resource, in this case &#34;DomainMapping&#34;.
      * 
      */
     private final String kind;
@@ -53,14 +53,14 @@ public final class GetDomainMappingResult {
     }
 
     /**
-     * The API version for this call such as "domains.cloudrun.com/v1".
+     * The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
      * 
     */
     public String apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The kind of resource, in this case "DomainMapping".
+     * The kind of resource, in this case &#34;DomainMapping&#34;.
      * 
     */
     public String kind() {

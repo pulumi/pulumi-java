@@ -32,15 +32,15 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+     * Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
      * 
      * Possible enum values:
-     *  - `"DoesNotExist"`
-     *  - `"Exists"`
-     *  - `"Gt"`
-     *  - `"In"`
-     *  - `"Lt"`
-     *  - `"NotIn"`
+     *  - `&#34;DoesNotExist&#34;`
+     *  - `&#34;Exists&#34;`
+     *  - `&#34;Gt&#34;`
+     *  - `&#34;In&#34;`
+     *  - `&#34;Lt&#34;`
+     *  - `&#34;NotIn&#34;`
      * 
      */
     @Import(name="operator", required=true)

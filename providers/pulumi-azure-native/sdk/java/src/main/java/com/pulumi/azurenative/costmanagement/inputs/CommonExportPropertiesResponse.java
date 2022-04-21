@@ -44,7 +44,7 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The format of the export being delivered. Currently only 'Csv' is supported.
+     * The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
      * 
      */
     @Import(name="format")

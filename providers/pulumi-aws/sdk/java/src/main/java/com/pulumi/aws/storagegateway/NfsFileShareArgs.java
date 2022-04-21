@@ -43,7 +43,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
+     * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `[&#34;0.0.0.0/0&#34;]` to not limit access. Minimum 1 item. Maximum 100 items.
      * 
      */
     @Import(name="clientLists", required=true)

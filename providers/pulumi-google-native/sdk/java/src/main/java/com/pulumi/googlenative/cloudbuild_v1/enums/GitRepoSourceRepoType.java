@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         CloudSourceRepositories("CLOUD_SOURCE_REPOSITORIES"),
         /**
-         * A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).
+         * A GitHub-hosted repo not necessarily on &#34;github.com&#34; (i.e. GitHub Enterprise).
          * 
          */
         Github("GITHUB");

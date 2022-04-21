@@ -17,7 +17,7 @@ public final class DocumentNoteResponse extends com.pulumi.resources.InvokeArgs 
     public static final DocumentNoteResponse Empty = new DocumentNoteResponse();
 
     /**
-     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
+     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
      * 
      */
     @Import(name="dataLicence", required=true)

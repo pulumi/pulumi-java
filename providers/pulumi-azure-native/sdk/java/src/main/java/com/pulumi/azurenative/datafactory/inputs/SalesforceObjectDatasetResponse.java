@@ -115,7 +115,7 @@ public final class SalesforceObjectDatasetResponse extends com.pulumi.resources.
 
     /**
      * Type of dataset.
-     * Expected value is 'SalesforceObject'.
+     * Expected value is &#39;SalesforceObject&#39;.
      * 
      */
     @Import(name="type", required=true)

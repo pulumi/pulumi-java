@@ -36,7 +36,7 @@ public final class HDInsightResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of compute
-     * Expected value is 'HDInsight'.
+     * Expected value is &#39;HDInsight&#39;.
      * 
      */
     @Import(name="computeType", required=true)

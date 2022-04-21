@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class Billingbudgets_v1beta1Functions {
     /**
-     * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
+     * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren&#39;t available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
      * 
      */
     public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args) {

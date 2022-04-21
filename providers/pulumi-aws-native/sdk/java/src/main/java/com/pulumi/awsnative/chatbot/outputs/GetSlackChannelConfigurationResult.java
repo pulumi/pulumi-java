@@ -19,7 +19,7 @@ public final class GetSlackChannelConfigurationResult {
      */
     private final @Nullable String arn;
     /**
-     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
+     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
      * 
      */
     private final @Nullable List<String> guardrailPolicies;
@@ -75,7 +75,7 @@ public final class GetSlackChannelConfigurationResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
+     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
      * 
     */
     public List<String> guardrailPolicies() {

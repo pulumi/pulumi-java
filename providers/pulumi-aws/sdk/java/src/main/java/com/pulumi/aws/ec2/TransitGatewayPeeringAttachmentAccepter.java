@@ -15,7 +15,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Manages the accepter's side of an EC2 Transit Gateway Peering Attachment.
+ * Manages the accepter&#39;s side of an EC2 Transit Gateway Peering Attachment.
  * 
  * ## Example Usage
  * 

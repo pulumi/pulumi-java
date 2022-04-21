@@ -37,7 +37,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The settings for this topic's partitions.
+     * The settings for this topic&#39;s partitions.
      * 
      */
     @Import(name="partitionConfig")
@@ -55,7 +55,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The settings for this topic's Reservation usage.
+     * The settings for this topic&#39;s Reservation usage.
      * 
      */
     @Import(name="reservationConfig")
@@ -66,7 +66,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The settings for this topic's message retention.
+     * The settings for this topic&#39;s message retention.
      * 
      */
     @Import(name="retentionConfig")

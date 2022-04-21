@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse();
 
     /**
-     * Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.
+     * Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
      * 
      */
     @Import(name="values", required=true)

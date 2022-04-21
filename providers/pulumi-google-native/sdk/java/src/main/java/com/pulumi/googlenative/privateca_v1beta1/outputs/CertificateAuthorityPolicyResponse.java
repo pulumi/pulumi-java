@@ -41,7 +41,7 @@ public final class CertificateAuthorityPolicyResponse {
      */
     private final AllowedSubjectAltNamesResponse allowedSans;
     /**
-     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated.
      * 
      */
     private final String maximumLifetime;
@@ -105,7 +105,7 @@ public final class CertificateAuthorityPolicyResponse {
         return this.allowedSans;
     }
     /**
-     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated.
      * 
     */
     public String maximumLifetime() {

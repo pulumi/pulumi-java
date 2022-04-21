@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     public static final GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs Empty = new GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs();
 
     /**
-     * Only get facet values that contains the given strings. For example, suppose "categories" has three values "Women > Shoe", "Women > Dress" and "Men > Shoe". If set "contains" to "Shoe", the "categories" facet will give only "Women > Shoe" and "Men > Shoe". Only supported on textual fields. Maximum is 10.
+     * Only get facet values that contains the given strings. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;contains&#34; to &#34;Shoe&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Men &gt; Shoe&#34;. Only supported on textual fields. Maximum is 10.
      * 
      */
     @Import(name="contains")
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     }
 
     /**
-     * Supported textual and numerical facet keys in Product object, over which the facet values are computed. Facet key is case-sensitive. Allowed facet keys when FacetKey.query is not specified: * textual_field = * "brands" * "categories" * "genders" * "ageGroups" * "availability" * "colorFamilies" * "colors" * "sizes" * "materials" * "patterns" * "conditions" * "attributes.key" * "pickupInStore" * "shipToStore" * "sameDayDelivery" * "nextDayDelivery" * "customFulfillment1" * "customFulfillment2" * "customFulfillment3" * "customFulfillment4" * "customFulfillment5" * "inventory(place_id,attributes.key)" * numerical_field = * "price" * "discount" * "rating" * "ratingCount" * "attributes.key" * "inventory(place_id,price)" * "inventory(place_id,original_price)" * "inventory(place_id,attributes.key)"
+     * Supported textual and numerical facet keys in Product object, over which the facet values are computed. Facet key is case-sensitive. Allowed facet keys when FacetKey.query is not specified: * textual_field = * &#34;brands&#34; * &#34;categories&#34; * &#34;genders&#34; * &#34;ageGroups&#34; * &#34;availability&#34; * &#34;colorFamilies&#34; * &#34;colors&#34; * &#34;sizes&#34; * &#34;materials&#34; * &#34;patterns&#34; * &#34;conditions&#34; * &#34;attributes.key&#34; * &#34;pickupInStore&#34; * &#34;shipToStore&#34; * &#34;sameDayDelivery&#34; * &#34;nextDayDelivery&#34; * &#34;customFulfillment1&#34; * &#34;customFulfillment2&#34; * &#34;customFulfillment3&#34; * &#34;customFulfillment4&#34; * &#34;customFulfillment5&#34; * &#34;inventory(place_id,attributes.key)&#34; * numerical_field = * &#34;price&#34; * &#34;discount&#34; * &#34;rating&#34; * &#34;ratingCount&#34; * &#34;attributes.key&#34; * &#34;inventory(place_id,price)&#34; * &#34;inventory(place_id,original_price)&#34; * &#34;inventory(place_id,attributes.key)&#34;
      * 
      */
     @Import(name="key", required=true)
@@ -55,7 +55,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     }
 
     /**
-     * The order in which Facet.values are returned. Allowed values are: * "count desc", which means order by Facet.FacetValue.count descending. * "value desc", which means order by Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical intervals are sorted in the order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.place_ids are sorted in the order given by FacetSpec.FacetKey.restricted_values.
+     * The order in which Facet.values are returned. Allowed values are: * &#34;count desc&#34;, which means order by Facet.FacetValue.count descending. * &#34;value desc&#34;, which means order by Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical intervals are sorted in the order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.place_ids are sorted in the order given by FacetSpec.FacetKey.restricted_values.
      * 
      */
     @Import(name="orderBy")
@@ -66,7 +66,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     }
 
     /**
-     * Only get facet values that start with the given string prefix. For example, suppose "categories" has three values "Women > Shoe", "Women > Dress" and "Men > Shoe". If set "prefixes" to "Women", the "categories" facet will give only "Women > Shoe" and "Women > Dress". Only supported on textual fields. Maximum is 10.
+     * Only get facet values that start with the given string prefix. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;prefixes&#34; to &#34;Women&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Women &gt; Dress&#34;. Only supported on textual fields. Maximum is 10.
      * 
      */
     @Import(name="prefixes")
@@ -77,7 +77,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     }
 
     /**
-     * The query that is used to compute facet for the given facet key. When provided, it will override the default behavior of facet computation. The query syntax is the same as a filter expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no limitation on FacetKey.key when query is specified. In the response, FacetValue.value will be always "1" and FacetValue.count will be the number of results that matches the query. For example, you can set a customized facet for "shipToStore", where FacetKey.key is "customizedShipToStore", and FacetKey.query is "availability: ANY(\"IN_STOCK\") AND shipToStore: ANY(\"123\")". Then the facet will count the products that are both in stock and ship to store "123".
+     * The query that is used to compute facet for the given facet key. When provided, it will override the default behavior of facet computation. The query syntax is the same as a filter expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no limitation on FacetKey.key when query is specified. In the response, FacetValue.value will be always &#34;1&#34; and FacetValue.count will be the number of results that matches the query. For example, you can set a customized facet for &#34;shipToStore&#34;, where FacetKey.key is &#34;customizedShipToStore&#34;, and FacetKey.query is &#34;availability: ANY(\&#34;IN_STOCK\&#34;) AND shipToStore: ANY(\&#34;123\&#34;)&#34;. Then the facet will count the products that are both in stock and ship to store &#34;123&#34;.
      * 
      */
     @Import(name="query")
@@ -88,7 +88,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     }
 
     /**
-     * Only get facet for the given restricted values. For example, when using "pickupInStore" as key and set restricted values to ["store123", "store456"], only facets for "store123" and "store456" are returned. Only supported on textual fields and fulfillments. Maximum is 20. Must be set for the fulfillment facet keys: * pickupInStore * shipToStore * sameDayDelivery * nextDayDelivery * customFulfillment1 * customFulfillment2 * customFulfillment3 * customFulfillment4 * customFulfillment5
+     * Only get facet for the given restricted values. For example, when using &#34;pickupInStore&#34; as key and set restricted values to [&#34;store123&#34;, &#34;store456&#34;], only facets for &#34;store123&#34; and &#34;store456&#34; are returned. Only supported on textual fields and fulfillments. Maximum is 20. Must be set for the fulfillment facet keys: * pickupInStore * shipToStore * sameDayDelivery * nextDayDelivery * customFulfillment1 * customFulfillment2 * customFulfillment3 * customFulfillment4 * customFulfillment5
      * 
      */
     @Import(name="restrictedValues")

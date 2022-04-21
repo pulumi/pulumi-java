@@ -16,7 +16,7 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     public static final CacheArgs Empty = new CacheArgs();
 
     /**
-     * Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).
+     * Identifier of the Cache entity. Cache identifier (should be either &#39;default&#39; or valid Azure region identifier).
      * 
      */
     @Import(name="cacheId")
@@ -82,7 +82,7 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+     * Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
      * 
      */
     @Import(name="useFromLocation", required=true)

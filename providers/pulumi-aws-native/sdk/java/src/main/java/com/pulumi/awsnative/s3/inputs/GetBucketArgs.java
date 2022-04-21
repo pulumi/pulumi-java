@@ -13,7 +13,7 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBucketArgs Empty = new GetBucketArgs();
 
     /**
-     * A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
+     * A name for the bucket. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
      * 
      */
     @Import(name="bucketName", required=true)

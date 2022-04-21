@@ -45,7 +45,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The stage's cache cluster size.
+     * The stage&#39;s cache cluster size.
      * 
      */
     @Import(name="cacheClusterSize")
@@ -122,7 +122,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the RestApi resource that you're deploying with this stage.
+     * The ID of the RestApi resource that you&#39;re deploying with this stage.
      * 
      */
     @Import(name="restApiId", required=true)

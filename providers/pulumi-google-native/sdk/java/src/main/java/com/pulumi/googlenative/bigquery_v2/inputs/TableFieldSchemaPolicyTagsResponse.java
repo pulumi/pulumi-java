@@ -14,7 +14,7 @@ public final class TableFieldSchemaPolicyTagsResponse extends com.pulumi.resourc
     public static final TableFieldSchemaPolicyTagsResponse Empty = new TableFieldSchemaPolicyTagsResponse();
 
     /**
-     * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * A list of category resource names. For example, &#34;projects/1/location/eu/taxonomies/2/policyTags/3&#34;. At most 1 policy tag is allowed.
      * 
      */
     @Import(name="names", required=true)

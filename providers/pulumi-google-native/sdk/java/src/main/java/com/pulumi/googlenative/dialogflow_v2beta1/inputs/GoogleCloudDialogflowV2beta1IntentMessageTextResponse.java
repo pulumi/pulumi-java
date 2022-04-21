@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse extends
     public static final GoogleCloudDialogflowV2beta1IntentMessageTextResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageTextResponse();
 
     /**
-     * Optional. The collection of the agent's responses.
+     * Optional. The collection of the agent&#39;s responses.
      * 
      */
     @Import(name="text", required=true)

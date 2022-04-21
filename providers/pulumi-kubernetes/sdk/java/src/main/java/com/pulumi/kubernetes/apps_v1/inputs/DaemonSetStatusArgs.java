@@ -33,7 +33,7 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Represents the latest available observations of a DaemonSet's current state.
+     * Represents the latest available observations of a DaemonSet&#39;s current state.
      * 
      */
     @Import(name="conditions")

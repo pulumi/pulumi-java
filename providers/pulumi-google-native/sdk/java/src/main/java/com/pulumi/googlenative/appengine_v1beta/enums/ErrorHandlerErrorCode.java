@@ -30,7 +30,7 @@ import java.util.StringJoiner;
          */
         ErrorCodeOverQuota("ERROR_CODE_OVER_QUOTA"),
         /**
-         * Client blocked by the application's Denial of Service protection configuration.
+         * Client blocked by the application&#39;s Denial of Service protection configuration.
          * 
          */
         ErrorCodeDosApiDenial("ERROR_CODE_DOS_API_DENIAL"),

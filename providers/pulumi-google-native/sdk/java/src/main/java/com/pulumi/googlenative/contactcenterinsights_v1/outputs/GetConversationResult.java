@@ -63,7 +63,7 @@ public final class GetConversationResult {
      */
     private final String languageCode;
     /**
-     * The conversation's latest analysis, if one exists.
+     * The conversation&#39;s latest analysis, if one exists.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis;
@@ -219,7 +219,7 @@ public final class GetConversationResult {
         return this.languageCode;
     }
     /**
-     * The conversation's latest analysis, if one exists.
+     * The conversation&#39;s latest analysis, if one exists.
      * 
     */
     public GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis() {

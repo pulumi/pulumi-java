@@ -22,7 +22,7 @@ public final class GetKustoClusterDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'KustoCluster'.
+     * Expected value is &#39;KustoCluster&#39;.
      * 
      */
     private final String kind;
@@ -95,7 +95,7 @@ public final class GetKustoClusterDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'KustoCluster'.
+     * Expected value is &#39;KustoCluster&#39;.
      * 
     */
     public String kind() {

@@ -18,7 +18,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
     /**
      * The minimum allowed OS version. If not set, any version
      * of this OS satisfies the constraint.
-     * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+     * Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
      * 
      */
     @Import(name="minimumVersion")

@@ -63,7 +63,7 @@ import java.util.StringJoiner;
         AWSElasticBeanstalkService("arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService"),
         AWSElasticBeanstalkWebTier("arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier"),
         /**
-         * @Deprecated
+         * @deprecated
          * This has been deprecated in favour of `AWSElasticBeanstalkWorkerTier`
          */
         @Deprecated /* This has been deprecated in favour of `AWSElasticBeanstalkWorkerTier` */
@@ -86,7 +86,7 @@ import java.util.StringJoiner;
         AWSLambdaENIManagementAccess("arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess"),
         AWSLambdaExecute("arn:aws:iam::aws:policy/AWSLambdaExecute"),
         /**
-         * @Deprecated
+         * @deprecated
          * This has been deprecated in favour of `LambdaFullAccess`
          */
         @Deprecated /* This has been deprecated in favour of `LambdaFullAccess` */
@@ -95,7 +95,7 @@ import java.util.StringJoiner;
         AWSLambdaInvocationDynamoDB("arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB"),
         AWSLambdaKinesisExecutionRole("arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole"),
         /**
-         * @Deprecated
+         * @deprecated
          * This has been deprecated in favour of `LambdaReadOnlyAccess`
          */
         @Deprecated /* This has been deprecated in favour of `LambdaReadOnlyAccess` */

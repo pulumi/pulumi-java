@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class SkypeChannelResponse {
     /**
      * The channel name
-     * Expected value is 'SkypeChannel'.
+     * Expected value is &#39;SkypeChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class SkypeChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'SkypeChannel'.
+     * Expected value is &#39;SkypeChannel&#39;.
      * 
     */
     public String channelName() {

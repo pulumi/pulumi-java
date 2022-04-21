@@ -44,14 +44,14 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
         return this.apiId;
     }
     /**
-     * The API key description. Defaults to "Managed by Pulumi".
+     * The API key description. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return The API key description. Defaults to "Managed by Pulumi".
+     * @return The API key description. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output<String> description() {

@@ -51,7 +51,7 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The key type like 'ServiceManaged', 'AzureKeyVault'.
+     * The key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     @Import(name="serverKeyType", required=true)

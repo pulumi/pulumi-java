@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ClusterNotificationConfig {
     /**
-     * The pubsub config for the cluster's upgrade notifications.
+     * The pubsub config for the cluster&#39;s upgrade notifications.
      * 
      */
     private final ClusterNotificationConfigPubsub pubsub;
@@ -21,7 +21,7 @@ public final class ClusterNotificationConfig {
     }
 
     /**
-     * The pubsub config for the cluster's upgrade notifications.
+     * The pubsub config for the cluster&#39;s upgrade notifications.
      * 
     */
     public ClusterNotificationConfigPubsub pubsub() {

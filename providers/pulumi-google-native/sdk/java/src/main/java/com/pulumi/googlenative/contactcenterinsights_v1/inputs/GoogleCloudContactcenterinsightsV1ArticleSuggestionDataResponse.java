@@ -19,7 +19,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     public static final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse Empty = new GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse();
 
     /**
-     * The system's confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * The system&#39;s confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
     @Import(name="confidenceScore", required=true)

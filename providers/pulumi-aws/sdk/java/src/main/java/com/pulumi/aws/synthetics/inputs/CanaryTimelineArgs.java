@@ -38,7 +38,7 @@ public final class CanaryTimelineArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Date and time that the canary's most recent run started.
+     * Date and time that the canary&#39;s most recent run started.
      * 
      */
     @Import(name="lastStarted")
@@ -49,7 +49,7 @@ public final class CanaryTimelineArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Date and time that the canary's most recent run ended.
+     * Date and time that the canary&#39;s most recent run ended.
      * 
      */
     @Import(name="lastStopped")

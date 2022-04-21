@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * A test of an iOS application that uses the XCTest framework. Xcode supports the option to "build for testing", which generates an .xctestrun file that contains a test specification (arguments, test methods, etc). This test type accepts a zip file containing the .xctestrun file and the corresponding contents of the Build/Products directory that contains all the binaries needed to run the tests.
+ * A test of an iOS application that uses the XCTest framework. Xcode supports the option to &#34;build for testing&#34;, which generates an .xctestrun file that contains a test specification (arguments, test methods, etc). This test type accepts a zip file containing the .xctestrun file and the corresponding contents of the Build/Products directory that contains all the binaries needed to run the tests.
  * 
  */
 public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {

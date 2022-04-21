@@ -18,7 +18,7 @@ public final class PipelineConditionResponse extends com.pulumi.resources.Invoke
     public static final PipelineConditionResponse Empty = new PipelineConditionResponse();
 
     /**
-     * Details around the Pipeline's overall status.
+     * Details around the Pipeline&#39;s overall status.
      * 
      */
     @Import(name="pipelineReadyCondition", required=true)

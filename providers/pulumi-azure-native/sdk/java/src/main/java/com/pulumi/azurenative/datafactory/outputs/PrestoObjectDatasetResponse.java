@@ -64,7 +64,7 @@ public final class PrestoObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'PrestoObject'.
+     * Expected value is &#39;PrestoObject&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class PrestoObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'PrestoObject'.
+     * Expected value is &#39;PrestoObject&#39;.
      * 
     */
     public String type() {

@@ -23,7 +23,7 @@ public final class GetCloudEdgeManagementRoleResult {
     private final String id;
     /**
      * Role type.
-     * Expected value is 'CloudEdgeManagement'.
+     * Expected value is &#39;CloudEdgeManagement&#39;.
      * 
      */
     private final String kind;
@@ -89,7 +89,7 @@ public final class GetCloudEdgeManagementRoleResult {
     }
     /**
      * Role type.
-     * Expected value is 'CloudEdgeManagement'.
+     * Expected value is &#39;CloudEdgeManagement&#39;.
      * 
     */
     public String kind() {

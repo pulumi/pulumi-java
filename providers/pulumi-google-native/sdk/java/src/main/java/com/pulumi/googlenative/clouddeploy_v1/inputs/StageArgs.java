@@ -21,7 +21,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     public static final StageArgs Empty = new StageArgs();
 
     /**
-     * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+     * Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
      * 
      */
     @Import(name="profiles")

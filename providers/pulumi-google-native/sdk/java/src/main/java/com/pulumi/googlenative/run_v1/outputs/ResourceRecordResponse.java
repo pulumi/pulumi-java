@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ResourceRecordResponse {
     /**
-     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
+     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
      * 
      */
     private final String name;
@@ -36,7 +36,7 @@ public final class ResourceRecordResponse {
     }
 
     /**
-     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
+     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
      * 
     */
     public String name() {

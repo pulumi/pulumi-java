@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * Manages a job resource within a Dataproc cluster within GCE. For more information see
  * [the official dataproc documentation](https://cloud.google.com/dataproc/).
  * 
- * !> **Note:** This resource does not support 'update' and changing any attributes will cause the resource to be recreated.
+ * !&gt; **Note:** This resource does not support &#39;update&#39; and changing any attributes will cause the resource to be recreated.
  * 
  * ## Example Usage
  * 
@@ -56,14 +56,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.driverControlsFilesUri;
     }
     /**
-     * A URI pointing to the location of the stdout of the job's driver program.
+     * A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
      */
     @Export(name="driverOutputResourceUri", type=String.class, parameters={})
     private Output<String> driverOutputResourceUri;
 
     /**
-     * @return A URI pointing to the location of the stdout of the job's driver program.
+     * @return A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
      */
     public Output<String> driverOutputResourceUri() {

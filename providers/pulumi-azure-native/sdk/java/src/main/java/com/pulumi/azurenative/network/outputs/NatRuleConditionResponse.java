@@ -39,7 +39,7 @@ public final class NatRuleConditionResponse {
     private final @Nullable String name;
     /**
      * Rule Condition Type.
-     * Expected value is 'NatRuleCondition'.
+     * Expected value is &#39;NatRuleCondition&#39;.
      * 
      */
     private final String ruleConditionType;
@@ -111,7 +111,7 @@ public final class NatRuleConditionResponse {
     }
     /**
      * Rule Condition Type.
-     * Expected value is 'NatRuleCondition'.
+     * Expected value is &#39;NatRuleCondition&#39;.
      * 
     */
     public String ruleConditionType() {

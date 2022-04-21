@@ -44,7 +44,7 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
 
     /**
      * The type of the custom alert rule.
-     * Expected value is 'DenylistCustomAlertRule'.
+     * Expected value is &#39;DenylistCustomAlertRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

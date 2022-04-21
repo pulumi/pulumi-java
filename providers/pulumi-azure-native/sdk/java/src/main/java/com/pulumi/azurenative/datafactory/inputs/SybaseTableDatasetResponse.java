@@ -115,7 +115,7 @@ public final class SybaseTableDatasetResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of dataset.
-     * Expected value is 'SybaseTable'.
+     * Expected value is &#39;SybaseTable&#39;.
      * 
      */
     @Import(name="type", required=true)

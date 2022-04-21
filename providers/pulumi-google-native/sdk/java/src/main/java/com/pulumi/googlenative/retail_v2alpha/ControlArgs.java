@@ -81,7 +81,7 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
+     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
      * 
      */
     @Import(name="rule")

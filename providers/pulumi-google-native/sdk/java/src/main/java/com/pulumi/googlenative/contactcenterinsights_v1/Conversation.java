@@ -153,14 +153,14 @@ public class Conversation extends com.pulumi.resources.CustomResource {
         return this.languageCode;
     }
     /**
-     * The conversation's latest analysis, if one exists.
+     * The conversation&#39;s latest analysis, if one exists.
      * 
      */
     @Export(name="latestAnalysis", type=GoogleCloudContactcenterinsightsV1AnalysisResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1AnalysisResponse> latestAnalysis;
 
     /**
-     * @return The conversation's latest analysis, if one exists.
+     * @return The conversation&#39;s latest analysis, if one exists.
      * 
      */
     public Output<GoogleCloudContactcenterinsightsV1AnalysisResponse> latestAnalysis() {

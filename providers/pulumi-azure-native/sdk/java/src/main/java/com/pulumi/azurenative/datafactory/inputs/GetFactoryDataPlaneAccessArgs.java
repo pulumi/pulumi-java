@@ -48,7 +48,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     }
 
     /**
-     * The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.
+     * The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
      * 
      */
     @Import(name="permissions")

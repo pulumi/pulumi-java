@@ -80,7 +80,7 @@ public final class FilterActivityResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Type of activity.
-     * Expected value is 'Filter'.
+     * Expected value is &#39;Filter&#39;.
      * 
      */
     @Import(name="type", required=true)

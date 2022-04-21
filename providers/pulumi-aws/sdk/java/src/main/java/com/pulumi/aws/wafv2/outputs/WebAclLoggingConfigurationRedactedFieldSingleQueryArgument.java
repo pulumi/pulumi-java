@@ -12,7 +12,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
     /**
      * The name of the query header to redact. This setting must be provided as lower case characters.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -27,7 +27,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
     /**
      * The name of the query header to redact. This setting must be provided as lower case characters.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
     */

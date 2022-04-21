@@ -27,9 +27,9 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
      * addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
      * 
      * Possible enum values:
-     *  - `"FQDN"` represents a FQDN.
-     *  - `"IPv4"` represents an IPv4 Address.
-     *  - `"IPv6"` represents an IPv6 Address.
+     *  - `&#34;FQDN&#34;` represents a FQDN.
+     *  - `&#34;IPv4&#34;` represents an IPv4 Address.
+     *  - `&#34;IPv6&#34;` represents an IPv6 Address.
      * 
      */
     @Import(name="addressType", required=true)
@@ -73,7 +73,7 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     @Import(name="metadata")
@@ -84,7 +84,7 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
+     * ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates &#34;all ports&#34;. Each slice may include a maximum of 100 ports.
      * 
      */
     @Import(name="ports")

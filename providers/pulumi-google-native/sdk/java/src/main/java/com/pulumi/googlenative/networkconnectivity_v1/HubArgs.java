@@ -73,7 +73,7 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+     * The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
     @Import(name="routingVpcs")

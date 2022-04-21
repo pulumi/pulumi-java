@@ -39,7 +39,7 @@ public final class HttpSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'HttpSource'.
+     * Expected value is &#39;HttpSource&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class HttpSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'HttpSource'.
+     * Expected value is &#39;HttpSource&#39;.
      * 
     */
     public String type() {

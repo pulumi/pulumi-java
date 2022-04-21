@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an EKS add-on.
  * 
- * > **Note:** Amazon EKS add-on can only be used with Amazon EKS Clusters
+ * &gt; **Note:** Amazon EKS add-on can only be used with Amazon EKS Clusters
  * running version 1.18 with platform version eks.3 or later
  * because add-ons rely on the Server-side Apply Kubernetes feature,
  * which is only available in Kubernetes 1.18 and later.
@@ -143,8 +143,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) of an
-     * existing IAM role to bind to the add-on's service account. The role must be
-     * assigned the IAM permissions required by the add-on. If you don't specify
+     * existing IAM role to bind to the add-on&#39;s service account. The role must be
+     * assigned the IAM permissions required by the add-on. If you don&#39;t specify
      * an existing IAM role, then the add-on uses the permissions assigned to the node
      * IAM role. For more information, see [Amazon EKS node IAM role](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html)
      * in the Amazon EKS User Guide.
@@ -155,8 +155,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The Amazon Resource Name (ARN) of an
-     * existing IAM role to bind to the add-on's service account. The role must be
-     * assigned the IAM permissions required by the add-on. If you don't specify
+     * existing IAM role to bind to the add-on&#39;s service account. The role must be
+     * assigned the IAM permissions required by the add-on. If you don&#39;t specify
      * an existing IAM role, then the add-on uses the permissions assigned to the node
      * IAM role. For more information, see [Amazon EKS node IAM role](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html)
      * in the Amazon EKS User Guide.

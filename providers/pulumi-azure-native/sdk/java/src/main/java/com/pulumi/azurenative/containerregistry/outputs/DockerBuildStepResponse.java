@@ -62,7 +62,7 @@ public final class DockerBuildStepResponse {
     private final @Nullable String target;
     /**
      * The type of the step.
-     * Expected value is 'Docker'.
+     * Expected value is &#39;Docker&#39;.
      * 
      */
     private final String type;
@@ -156,7 +156,7 @@ public final class DockerBuildStepResponse {
     }
     /**
      * The type of the step.
-     * Expected value is 'Docker'.
+     * Expected value is &#39;Docker&#39;.
      * 
     */
     public String type() {

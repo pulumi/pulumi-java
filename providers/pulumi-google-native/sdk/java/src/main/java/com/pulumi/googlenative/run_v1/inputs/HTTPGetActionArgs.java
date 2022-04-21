@@ -22,7 +22,7 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     public static final HTTPGetActionArgs Empty = new HTTPGetActionArgs();
 
     /**
-     * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+     * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
      * 
      */
     @Import(name="host")

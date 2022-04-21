@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+ * The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
  * 
  */
 public final class BucketIamConfigurationBucketPolicyOnlyArgs extends com.pulumi.resources.ResourceArgs {

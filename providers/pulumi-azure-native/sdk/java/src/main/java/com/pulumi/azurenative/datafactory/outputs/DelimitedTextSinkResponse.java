@@ -51,7 +51,7 @@ public final class DelimitedTextSinkResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy sink type.
-     * Expected value is 'DelimitedTextSink'.
+     * Expected value is &#39;DelimitedTextSink&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class DelimitedTextSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'DelimitedTextSink'.
+     * Expected value is &#39;DelimitedTextSink&#39;.
      * 
     */
     public String type() {

@@ -49,7 +49,7 @@ public final class ResponsysSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'ResponsysSource'.
+     * Expected value is &#39;ResponsysSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class ResponsysSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ResponsysSource'.
+     * Expected value is &#39;ResponsysSource&#39;.
      * 
     */
     public String type() {

@@ -17,7 +17,7 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
     public static final ResourceRecordResponse Empty = new ResourceRecordResponse();
 
     /**
-     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
+     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
      * 
      */
     @Import(name="name", required=true)

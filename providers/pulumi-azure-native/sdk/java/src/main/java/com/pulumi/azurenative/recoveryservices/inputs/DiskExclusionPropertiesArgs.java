@@ -18,7 +18,7 @@ public final class DiskExclusionPropertiesArgs extends com.pulumi.resources.Reso
     public static final DiskExclusionPropertiesArgs Empty = new DiskExclusionPropertiesArgs();
 
     /**
-     * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
+     * List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
      * 
      */
     @Import(name="diskLunList")

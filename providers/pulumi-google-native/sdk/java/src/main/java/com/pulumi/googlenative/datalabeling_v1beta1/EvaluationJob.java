@@ -24,14 +24,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:datalabeling/v1beta1:EvaluationJob")
 public class EvaluationJob extends com.pulumi.resources.CustomResource {
     /**
-     * Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
+     * Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
      */
     @Export(name="annotationSpecSet", type=String.class, parameters={})
     private Output<String> annotationSpecSet;
 
     /**
-     * @return Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
+     * @return Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
      */
     public Output<String> annotationSpecSet() {
@@ -94,42 +94,42 @@ public class EvaluationJob extends com.pulumi.resources.CustomResource {
         return this.evaluationJobConfig;
     }
     /**
-     * Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.
+     * Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job&#39;s BigQuery table, set this to `false`.
      * 
      */
     @Export(name="labelMissingGroundTruth", type=Boolean.class, parameters={})
     private Output<Boolean> labelMissingGroundTruth;
 
     /**
-     * @return Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.
+     * @return Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job&#39;s BigQuery table, set this to `false`.
      * 
      */
     public Output<Boolean> labelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
     }
     /**
-     * The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.
+     * The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: &#34;projects/{project_id}/models/{model_name}/versions/{version_name}&#34; There can only be one evaluation job per model version.
      * 
      */
     @Export(name="modelVersion", type=String.class, parameters={})
     private Output<String> modelVersion;
 
     /**
-     * @return The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.
+     * @return The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: &#34;projects/{project_id}/models/{model_name}/versions/{version_name}&#34; There can only be one evaluation job per model version.
      * 
      */
     public Output<String> modelVersion() {
         return this.modelVersion;
     }
     /**
-     * After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"
+     * After you create a job, Data Labeling Service assigns a name to the job with the following format: &#34;projects/{project_id}/evaluationJobs/ {evaluation_job_id}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"
+     * @return After you create a job, Data Labeling Service assigns a name to the job with the following format: &#34;projects/{project_id}/evaluationJobs/ {evaluation_job_id}&#34;
      * 
      */
     public Output<String> name() {

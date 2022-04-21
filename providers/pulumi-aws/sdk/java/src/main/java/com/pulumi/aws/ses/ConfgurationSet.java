@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/confgurationSet:ConfgurationSet test some-configuration-set-test
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * aws.ses.ConfgurationSet has been deprecated in favor of aws.ses.ConfigurationSet
  * 
  */

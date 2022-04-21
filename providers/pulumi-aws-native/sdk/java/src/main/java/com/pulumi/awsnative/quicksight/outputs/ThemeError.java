@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThemeError {
     /**
-     * <p>The error message.</p>
+     * &lt;p&gt;The error message.&lt;/p&gt;
      * 
      */
     private final @Nullable String message;
@@ -28,7 +28,7 @@ public final class ThemeError {
     }
 
     /**
-     * <p>The error message.</p>
+     * &lt;p&gt;The error message.&lt;/p&gt;
      * 
     */
     public Optional<String> message() {

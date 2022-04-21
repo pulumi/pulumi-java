@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFlowVpcInterfaceResult {
     /**
-     * IDs of the network interfaces created in customer's account by MediaConnect.
+     * IDs of the network interfaces created in customer&#39;s account by MediaConnect.
      * 
      */
     private final @Nullable List<String> networkInterfaceIds;
     /**
-     * Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
      * 
      */
     private final @Nullable String roleArn;
@@ -46,14 +46,14 @@ public final class GetFlowVpcInterfaceResult {
     }
 
     /**
-     * IDs of the network interfaces created in customer's account by MediaConnect.
+     * IDs of the network interfaces created in customer&#39;s account by MediaConnect.
      * 
     */
     public List<String> networkInterfaceIds() {
         return this.networkInterfaceIds == null ? List.of() : this.networkInterfaceIds;
     }
     /**
-     * Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
      * 
     */
     public Optional<String> roleArn() {

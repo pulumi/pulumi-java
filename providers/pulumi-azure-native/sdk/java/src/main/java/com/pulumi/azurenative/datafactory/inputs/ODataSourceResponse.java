@@ -65,7 +65,7 @@ public final class ODataSourceResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="query")
@@ -99,7 +99,7 @@ public final class ODataSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'ODataSource'.
+     * Expected value is &#39;ODataSource&#39;.
      * 
      */
     @Import(name="type", required=true)

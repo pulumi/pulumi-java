@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.
+ * Backfill strategy to automatically backfill the Stream&#39;s objects. Specific objects can be excluded.
  * 
  */
 public final class BackfillAllStrategyArgs extends com.pulumi.resources.ResourceArgs {

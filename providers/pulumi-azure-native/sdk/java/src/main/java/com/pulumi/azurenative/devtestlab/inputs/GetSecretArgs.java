@@ -15,7 +15,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSecretArgs Empty = new GetSecretArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=value)'
+     * Specify the $expand query. Example: &#39;properties($select=value)&#39;
      * 
      */
     @Import(name="expand")

@@ -22,7 +22,7 @@ public final class ParserConfigResponse {
      */
     private final SchemaPackageResponse schema;
     /**
-     * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
+     * Byte(s) to use as the segment terminator. If this is unset, &#39;\r&#39; is used as segment terminator, matching the HL7 version 2 specification.
      * 
      */
     private final String segmentTerminator;
@@ -59,7 +59,7 @@ public final class ParserConfigResponse {
         return this.schema;
     }
     /**
-     * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
+     * Byte(s) to use as the segment terminator. If this is unset, &#39;\r&#39; is used as segment terminator, matching the HL7 version 2 specification.
      * 
     */
     public String segmentTerminator() {

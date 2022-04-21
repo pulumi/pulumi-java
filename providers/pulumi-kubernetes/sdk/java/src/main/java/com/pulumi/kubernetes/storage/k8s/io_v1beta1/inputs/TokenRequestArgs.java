@@ -21,7 +21,7 @@ public final class TokenRequestArgs extends com.pulumi.resources.ResourceArgs {
     public static final TokenRequestArgs Empty = new TokenRequestArgs();
 
     /**
-     * Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.
+     * Audience is the intended audience of the token in &#34;TokenRequestSpec&#34;. It will default to the audiences of kube apiserver.
      * 
      */
     @Import(name="audience", required=true)
@@ -32,7 +32,7 @@ public final class TokenRequestArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
+     * ExpirationSeconds is the duration of validity of the token in &#34;TokenRequestSpec&#34;. It has the same default value of &#34;ExpirationSeconds&#34; in &#34;TokenRequestSpec&#34;
      * 
      */
     @Import(name="expirationSeconds")

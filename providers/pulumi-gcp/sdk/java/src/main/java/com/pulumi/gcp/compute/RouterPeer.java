@@ -79,8 +79,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
      * User-specified list of prefix groups to advertise in custom
      * mode, which can take one of the following options:
      * * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
-     * * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
-     * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
+     * * `ALL_VPC_SUBNETS`: Advertises the router&#39;s own VPC subnets.
+     * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router&#39;s VPC network.
      * 
      */
     @Export(name="advertisedGroups", type=List.class, parameters={String.class})
@@ -90,8 +90,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
      * @return User-specified list of prefix groups to advertise in custom
      * mode, which can take one of the following options:
      * * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
-     * * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
-     * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
+     * * `ALL_VPC_SUBNETS`: Advertises the router&#39;s own VPC subnets.
+     * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router&#39;s VPC network.
      * 
      */
     public Output</* @Nullable */ List<String>> advertisedGroups() {
@@ -206,8 +206,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
         return this.ipAddress;
     }
     /**
-     * The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
-     * you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
+     * The resource that configures and manages this BGP peer. * &#39;MANAGED_BY_USER&#39; is the default value and can be managed by
+     * you or other users * &#39;MANAGED_BY_ATTACHMENT&#39; is a BGP peer that is configured and managed by Cloud Interconnect,
      * specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
      * of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
      * 
@@ -216,8 +216,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
     private Output<String> managementType;
 
     /**
-     * @return The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
-     * you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
+     * @return The resource that configures and manages this BGP peer. * &#39;MANAGED_BY_USER&#39; is the default value and can be managed by
+     * you or other users * &#39;MANAGED_BY_ATTACHMENT&#39; is a BGP peer that is configured and managed by Cloud Interconnect,
      * specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
      * of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
      * 

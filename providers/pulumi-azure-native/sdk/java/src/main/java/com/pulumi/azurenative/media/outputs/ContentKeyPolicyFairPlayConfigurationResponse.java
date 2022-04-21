@@ -30,7 +30,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
     private final String fairPlayPfxPassword;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
      * 
      */
     private final String odataType;
@@ -91,7 +91,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
      * 
     */
     public String odataType() {

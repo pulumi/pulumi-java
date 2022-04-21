@@ -68,7 +68,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
 
     /**
      * ServiceType for the service.
-     * Expected value is 'DataTransfer'.
+     * Expected value is &#39;DataTransfer&#39;.
      * 
      */
     @Import(name="serviceType", required=true)

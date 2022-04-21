@@ -137,7 +137,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
 
     /**
      * Gets the Instance type.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

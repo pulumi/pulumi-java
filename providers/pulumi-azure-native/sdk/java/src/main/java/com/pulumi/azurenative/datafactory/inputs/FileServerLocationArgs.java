@@ -44,7 +44,7 @@ public final class FileServerLocationArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'FileServerLocation'.
+     * Expected value is &#39;FileServerLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

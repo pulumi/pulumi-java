@@ -126,7 +126,7 @@ public final class AzureStorageLinkedServiceArgs extends com.pulumi.resources.Re
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureStorage'.
+     * Expected value is &#39;AzureStorage&#39;.
      * 
      */
     @Import(name="type", required=true)

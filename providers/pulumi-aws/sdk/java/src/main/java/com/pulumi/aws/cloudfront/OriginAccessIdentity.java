@@ -98,7 +98,7 @@ public class OriginAccessIdentity extends com.pulumi.resources.CustomResource {
         return this.comment;
     }
     /**
-     * The current version of the origin access identity's information.
+     * The current version of the origin access identity&#39;s information.
      * For example: `E2QWRUHAPOMQZL`.
      * 
      */
@@ -106,7 +106,7 @@ public class OriginAccessIdentity extends com.pulumi.resources.CustomResource {
     private Output<String> etag;
 
     /**
-     * @return The current version of the origin access identity's information.
+     * @return The current version of the origin access identity&#39;s information.
      * For example: `E2QWRUHAPOMQZL`.
      * 
      */

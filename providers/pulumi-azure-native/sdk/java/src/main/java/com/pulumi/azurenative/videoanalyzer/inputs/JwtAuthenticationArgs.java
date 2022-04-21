@@ -70,7 +70,7 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
      * 
      */
     @Import(name="type", required=true)

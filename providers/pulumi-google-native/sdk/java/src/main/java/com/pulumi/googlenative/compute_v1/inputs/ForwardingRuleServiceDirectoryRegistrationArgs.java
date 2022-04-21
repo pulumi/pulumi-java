@@ -42,7 +42,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends com.pu
     }
 
     /**
-     * [Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
+     * [Optional] Service Directory region to register this global forwarding rule under. Default to &#34;us-central1&#34;. Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
      * 
      */
     @Import(name="serviceDirectoryRegion")

@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class PurchaseMeterDetailsResponse {
     /**
      * Represents billing type.
-     * Expected value is 'Purchase'.
+     * Expected value is &#39;Purchase&#39;.
      * 
      */
     private final String billingType;
@@ -60,7 +60,7 @@ public final class PurchaseMeterDetailsResponse {
 
     /**
      * Represents billing type.
-     * Expected value is 'Purchase'.
+     * Expected value is &#39;Purchase&#39;.
      * 
     */
     public String billingType() {

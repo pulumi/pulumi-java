@@ -64,7 +64,7 @@ public final class Db2TableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'Db2Table'.
+     * Expected value is &#39;Db2Table&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class Db2TableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Db2Table'.
+     * Expected value is &#39;Db2Table&#39;.
      * 
     */
     public String type() {

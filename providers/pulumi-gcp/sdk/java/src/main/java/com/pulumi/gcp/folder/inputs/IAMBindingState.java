@@ -25,7 +25,7 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Computed) The etag of the folder's IAM policy.
+     * (Computed) The etag of the folder&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

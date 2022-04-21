@@ -66,7 +66,7 @@ public final class AmazonS3CompatibleLinkedServiceResponse {
     private final @Nullable Object serviceUrl;
     /**
      * Type of linked service.
-     * Expected value is 'AmazonS3Compatible'.
+     * Expected value is &#39;AmazonS3Compatible&#39;.
      * 
      */
     private final String type;
@@ -160,7 +160,7 @@ public final class AmazonS3CompatibleLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AmazonS3Compatible'.
+     * Expected value is &#39;AmazonS3Compatible&#39;.
      * 
     */
     public String type() {

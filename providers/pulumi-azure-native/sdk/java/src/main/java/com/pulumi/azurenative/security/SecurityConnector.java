@@ -39,14 +39,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:security:SecurityConnector")
 public class SecurityConnector extends com.pulumi.resources.CustomResource {
     /**
-     * The multi cloud resource's cloud name.
+     * The multi cloud resource&#39;s cloud name.
      * 
      */
     @Export(name="cloudName", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudName;
 
     /**
-     * @return The multi cloud resource's cloud name.
+     * @return The multi cloud resource&#39;s cloud name.
      * 
      */
     public Output</* @Nullable */ String> cloudName() {
@@ -137,14 +137,14 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
         return this.offerings;
     }
     /**
-     * The multi cloud account's organizational data
+     * The multi cloud account&#39;s organizational data
      * 
      */
     @Export(name="organizationalData", type=SecurityConnectorPropertiesResponseOrganizationalData.class, parameters={})
     private Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> organizationalData;
 
     /**
-     * @return The multi cloud account's organizational data
+     * @return The multi cloud account&#39;s organizational data
      * 
      */
     public Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> organizationalData() {

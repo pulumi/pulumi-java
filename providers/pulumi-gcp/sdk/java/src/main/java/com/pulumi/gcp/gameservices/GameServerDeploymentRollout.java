@@ -102,7 +102,7 @@ public class GameServerDeploymentRollout extends com.pulumi.resources.CustomReso
     }
     /**
      * The resource id of the game server deployment eg:
-     * 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
+     * &#39;projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -110,7 +110,7 @@ public class GameServerDeploymentRollout extends com.pulumi.resources.CustomReso
 
     /**
      * @return The resource id of the game server deployment eg:
-     * 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
+     * &#39;projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout&#39;.
      * 
      */
     public Output<String> name() {

@@ -21,7 +21,7 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
     public static final WebServiceParameterArgs Empty = new WebServiceParameterArgs();
 
     /**
-     * If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
+     * If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
      * 
      */
     @Import(name="certificateThumbprint")

@@ -57,7 +57,7 @@ public final class ApiPortalPropertiesResponse {
      */
     private final @Nullable SsoPropertiesResponse ssoProperties;
     /**
-     * URL of the API portal, exposed when 'public' is true.
+     * URL of the API portal, exposed when &#39;public&#39; is true.
      * 
      */
     private final String url;
@@ -141,7 +141,7 @@ public final class ApiPortalPropertiesResponse {
         return Optional.ofNullable(this.ssoProperties);
     }
     /**
-     * URL of the API portal, exposed when 'public' is true.
+     * URL of the API portal, exposed when &#39;public&#39; is true.
      * 
     */
     public String url() {

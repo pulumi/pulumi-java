@@ -27,7 +27,7 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload's category.
+     * The upload&#39;s category.
      * 
      */
     @Import(name="category")
@@ -38,7 +38,7 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload's content type (for example, application/octet-stream).
+     * The upload&#39;s content type (for example, application/octet-stream).
      * 
      */
     @Import(name="contentType")
@@ -49,7 +49,7 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload's metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
+     * The upload&#39;s metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
      * 
      */
     @Import(name="metadata")
@@ -60,7 +60,7 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload's file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
+     * The upload&#39;s file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
      * 
      */
     @Import(name="name")
@@ -82,7 +82,7 @@ public final class UploadState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The upload's upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
+     * The upload&#39;s upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
      * 
      */
     @Import(name="type")

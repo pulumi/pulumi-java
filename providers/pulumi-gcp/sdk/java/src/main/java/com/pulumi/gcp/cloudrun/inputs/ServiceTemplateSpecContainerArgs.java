@@ -23,8 +23,8 @@ public final class ServiceTemplateSpecContainerArgs extends com.pulumi.resources
 
     /**
      * Arguments to the entrypoint.
-     * The docker image's CMD is used if this is not provided.
-     * Variable references $(VAR_NAME) are expanded using the container's
+     * The docker image&#39;s CMD is used if this is not provided.
+     * Variable references $(VAR_NAME) are expanded using the container&#39;s
      * environment. If a variable cannot be resolved, the reference in the input
      * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
      * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
@@ -42,8 +42,8 @@ public final class ServiceTemplateSpecContainerArgs extends com.pulumi.resources
 
     /**
      * Entrypoint array. Not executed within a shell.
-     * The docker image's ENTRYPOINT is used if this is not provided.
-     * Variable references $(VAR_NAME) are expanded using the container's
+     * The docker image&#39;s ENTRYPOINT is used if this is not provided.
+     * Variable references $(VAR_NAME) are expanded using the container&#39;s
      * environment. If a variable cannot be resolved, the reference in the input
      * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
      * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
@@ -69,7 +69,7 @@ public final class ServiceTemplateSpecContainerArgs extends com.pulumi.resources
      * precedence.
      * Structure is documented below.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by Cloud Run fully managed
      * 
      */
@@ -136,7 +136,7 @@ public final class ServiceTemplateSpecContainerArgs extends com.pulumi.resources
     }
 
     /**
-     * Volume to mount into the container's filesystem.
+     * Volume to mount into the container&#39;s filesystem.
      * Only supports SecretVolumeSources.
      * Structure is documented below.
      * 
@@ -151,11 +151,11 @@ public final class ServiceTemplateSpecContainerArgs extends com.pulumi.resources
     /**
      * - 
      * (Optional, Deprecated)
-     * Container's working directory.
-     * If not specified, the container runtime's default will be used, which
+     * Container&#39;s working directory.
+     * If not specified, the container runtime&#39;s default will be used, which
      * might be configured in the container image.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by Cloud Run fully managed
      * 
      */

@@ -31,7 +31,7 @@ public final class AlertPolicyDocumentationArgs extends com.pulumi.resources.Res
 
     /**
      * The format of the content field. Presently, only the value
-     * "text/markdown" is supported.
+     * &#34;text/markdown&#34; is supported.
      * 
      */
     @Import(name="mimeType")

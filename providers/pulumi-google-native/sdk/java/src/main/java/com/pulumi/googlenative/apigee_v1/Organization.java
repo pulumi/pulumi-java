@@ -262,14 +262,14 @@ public class Organization extends com.pulumi.resources.CustomResource {
         return this.properties;
     }
     /**
-     * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
+     * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: &#34;projects/foo/locations/us/keyRings/bar/cryptoKeys/baz&#34;. **Note:** Not supported for Apigee hybrid.
      * 
      */
     @Export(name="runtimeDatabaseEncryptionKeyName", type=String.class, parameters={})
     private Output<String> runtimeDatabaseEncryptionKeyName;
 
     /**
-     * @return Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
+     * @return Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: &#34;projects/foo/locations/us/keyRings/bar/cryptoKeys/baz&#34;. **Note:** Not supported for Apigee hybrid.
      * 
      */
     public Output<String> runtimeDatabaseEncryptionKeyName() {

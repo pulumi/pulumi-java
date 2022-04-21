@@ -51,7 +51,7 @@ public final class MeshState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The AWS account ID of the service mesh's owner.
+     * The AWS account ID of the service mesh&#39;s owner.
      * 
      */
     @Import(name="meshOwner")
@@ -73,7 +73,7 @@ public final class MeshState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource owner's AWS account ID.
+     * The resource owner&#39;s AWS account ID.
      * 
      */
     @Import(name="resourceOwner")

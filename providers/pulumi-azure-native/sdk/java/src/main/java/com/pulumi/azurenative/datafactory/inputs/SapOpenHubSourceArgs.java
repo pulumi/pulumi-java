@@ -132,7 +132,7 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Copy source type.
-     * Expected value is 'SapOpenHubSource'.
+     * Expected value is &#39;SapOpenHubSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -77,7 +77,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: "None", "PartitionOnInt", "PartitionOnCalendarYear", "PartitionOnCalendarMonth", "PartitionOnCalendarDate", "PartitionOnTime".
+     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: &#34;None&#34;, &#34;PartitionOnInt&#34;, &#34;PartitionOnCalendarYear&#34;, &#34;PartitionOnCalendarMonth&#34;, &#34;PartitionOnCalendarDate&#34;, &#34;PartitionOnTime&#34;.
      * 
      */
     @Import(name="partitionOption")
@@ -188,7 +188,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'SapTableSource'.
+     * Expected value is &#39;SapTableSource&#39;.
      * 
      */
     @Import(name="type", required=true)

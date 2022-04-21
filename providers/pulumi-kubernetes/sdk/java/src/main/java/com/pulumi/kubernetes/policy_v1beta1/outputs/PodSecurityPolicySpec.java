@@ -34,12 +34,12 @@ public final class PodSecurityPolicySpec {
      */
     private final @Nullable List<AllowedCSIDriver> allowedCSIDrivers;
     /**
-     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
      * 
      */
     private final @Nullable List<String> allowedCapabilities;
     /**
-     * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.
+     * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
      * 
      */
     private final @Nullable List<AllowedFlexVolume> allowedFlexVolumes;
@@ -54,9 +54,9 @@ public final class PodSecurityPolicySpec {
      */
     private final @Nullable List<String> allowedProcMountTypes;
     /**
-     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
      * 
-     * Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "foo.bar", "foo.baz", etc.
+     * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
      */
     private final @Nullable List<String> allowedUnsafeSysctls;
@@ -71,9 +71,9 @@ public final class PodSecurityPolicySpec {
      */
     private final @Nullable Boolean defaultAllowPrivilegeEscalation;
     /**
-     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
      * 
-     * Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "foo.bar", "foo.baz", etc.
+     * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
      */
     private final @Nullable List<String> forbiddenSysctls;
@@ -118,7 +118,7 @@ public final class PodSecurityPolicySpec {
      */
     private final @Nullable List<String> requiredDropCapabilities;
     /**
-     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
      * 
      */
     private final @Nullable RunAsGroupStrategyOptions runAsGroup;
@@ -128,7 +128,7 @@ public final class PodSecurityPolicySpec {
      */
     private final RunAsUserStrategyOptions runAsUser;
     /**
-     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
      * 
      */
     private final @Nullable RuntimeClassStrategyOptions runtimeClass;
@@ -143,7 +143,7 @@ public final class PodSecurityPolicySpec {
      */
     private final SupplementalGroupsStrategyOptions supplementalGroups;
     /**
-     * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
+     * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
      * 
      */
     private final @Nullable List<String> volumes;
@@ -215,14 +215,14 @@ public final class PodSecurityPolicySpec {
         return this.allowedCSIDrivers == null ? List.of() : this.allowedCSIDrivers;
     }
     /**
-     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
      * 
     */
     public List<String> allowedCapabilities() {
         return this.allowedCapabilities == null ? List.of() : this.allowedCapabilities;
     }
     /**
-     * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.
+     * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
      * 
     */
     public List<AllowedFlexVolume> allowedFlexVolumes() {
@@ -243,9 +243,9 @@ public final class PodSecurityPolicySpec {
         return this.allowedProcMountTypes == null ? List.of() : this.allowedProcMountTypes;
     }
     /**
-     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
      * 
-     * Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "foo.bar", "foo.baz", etc.
+     * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
     */
     public List<String> allowedUnsafeSysctls() {
@@ -266,9 +266,9 @@ public final class PodSecurityPolicySpec {
         return Optional.ofNullable(this.defaultAllowPrivilegeEscalation);
     }
     /**
-     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
      * 
-     * Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "foo.bar", "foo.baz", etc.
+     * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
     */
     public List<String> forbiddenSysctls() {
@@ -331,7 +331,7 @@ public final class PodSecurityPolicySpec {
         return this.requiredDropCapabilities == null ? List.of() : this.requiredDropCapabilities;
     }
     /**
-     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
      * 
     */
     public Optional<RunAsGroupStrategyOptions> runAsGroup() {
@@ -345,7 +345,7 @@ public final class PodSecurityPolicySpec {
         return this.runAsUser;
     }
     /**
-     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
      * 
     */
     public Optional<RuntimeClassStrategyOptions> runtimeClass() {
@@ -366,7 +366,7 @@ public final class PodSecurityPolicySpec {
         return this.supplementalGroups;
     }
     /**
-     * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
+     * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
      * 
     */
     public List<String> volumes() {

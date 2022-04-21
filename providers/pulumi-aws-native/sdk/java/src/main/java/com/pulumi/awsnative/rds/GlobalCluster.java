@@ -21,14 +21,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:rds:GlobalCluster")
 public class GlobalCluster extends com.pulumi.resources.CustomResource {
     /**
-     * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
+     * The deletion protection setting for the new global database. The global database can&#39;t be deleted when deletion protection is enabled.
      * 
      */
     @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
-     * @return The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
+     * @return The deletion protection setting for the new global database. The global database can&#39;t be deleted when deletion protection is enabled.
      * 
      */
     public Output</* @Nullable */ Boolean> deletionProtection() {
@@ -36,7 +36,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
     }
     /**
      * The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
-     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     @Export(name="engine", type=GlobalClusterEngine.class, parameters={})
@@ -44,21 +44,21 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
-     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     public Output</* @Nullable */ GlobalClusterEngine> engine() {
         return this.engine;
     }
     /**
-     * The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     @Export(name="engineVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineVersion;
 
     /**
-     * @return The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * @return The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     public Output</* @Nullable */ String> engineVersion() {
@@ -94,7 +94,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
     }
     /**
      *  The storage encryption setting for the new global database cluster.
-     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     @Export(name="storageEncrypted", type=Boolean.class, parameters={})
@@ -102,7 +102,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
 
     /**
      * @return  The storage encryption setting for the new global database cluster.
-     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     public Output</* @Nullable */ Boolean> storageEncrypted() {

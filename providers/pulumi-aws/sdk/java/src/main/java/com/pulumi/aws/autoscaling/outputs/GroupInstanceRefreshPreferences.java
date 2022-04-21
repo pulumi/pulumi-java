@@ -24,7 +24,7 @@ public final class GroupInstanceRefreshPreferences {
      */
     private final @Nullable List<Integer> checkpointPercentages;
     /**
-     * The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
+     * The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group&#39;s health check grace period.
      * 
      */
     private final @Nullable String instanceWarmup;
@@ -61,7 +61,7 @@ public final class GroupInstanceRefreshPreferences {
         return this.checkpointPercentages == null ? List.of() : this.checkpointPercentages;
     }
     /**
-     * The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
+     * The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group&#39;s health check grace period.
      * 
     */
     public Optional<String> instanceWarmup() {

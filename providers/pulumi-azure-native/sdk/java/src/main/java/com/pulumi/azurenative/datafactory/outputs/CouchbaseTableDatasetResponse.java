@@ -59,7 +59,7 @@ public final class CouchbaseTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'CouchbaseTable'.
+     * Expected value is &#39;CouchbaseTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class CouchbaseTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'CouchbaseTable'.
+     * Expected value is &#39;CouchbaseTable&#39;.
      * 
     */
     public String type() {

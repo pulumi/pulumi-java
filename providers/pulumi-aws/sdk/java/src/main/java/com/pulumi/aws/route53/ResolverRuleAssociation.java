@@ -30,14 +30,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:route53/resolverRuleAssociation:ResolverRuleAssociation")
 public class ResolverRuleAssociation extends com.pulumi.resources.CustomResource {
     /**
-     * A name for the association that you're creating between a resolver rule and a VPC.
+     * A name for the association that you&#39;re creating between a resolver rule and a VPC.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return A name for the association that you're creating between a resolver rule and a VPC.
+     * @return A name for the association that you&#39;re creating between a resolver rule and a VPC.
      * 
      */
     public Output<String> name() {

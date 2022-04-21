@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Adding a persistent disk](https://cloud.google.com/compute/docs/disks/add-persistent-disk)
  * 
- * > **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
+ * &gt; **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
@@ -135,11 +135,11 @@ public class Disk extends com.pulumi.resources.CustomResource {
     }
     /**
      * The image from which to initialize this disk. This can be
-     * one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
+     * one of: the image&#39;s `self_link`, `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
      * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
      * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
-     * images names must include the family name. If they don't, use the
+     * images names must include the family name. If they don&#39;t, use the
      * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
      * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
      * These images can be referred by family name here.
@@ -150,11 +150,11 @@ public class Disk extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The image from which to initialize this disk. This can be
-     * one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
+     * one of: the image&#39;s `self_link`, `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
      * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
      * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
-     * images names must include the family name. If they don't, use the
+     * images names must include the family name. If they don&#39;t, use the
      * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
      * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
      * These images can be referred by family name here.
@@ -166,7 +166,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
      * 
-     * @Deprecated
+     * @deprecated
      * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
      * 
      */
@@ -196,14 +196,14 @@ public class Disk extends com.pulumi.resources.CustomResource {
         return this.labelFingerprint;
     }
     /**
-     * Labels to apply to this disk.  A list of key->value pairs.
+     * Labels to apply to this disk.  A list of key-&gt;value pairs.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
-     * @return Labels to apply to this disk.  A list of key->value pairs.
+     * @return Labels to apply to this disk.  A list of key-&gt;value pairs.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> labels() {
@@ -282,7 +282,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * in a request, a default value is used. Currently supported sizes
      * are 4096 and 16384, other sizes may be added in the future.
      * If an unsupported value is requested, the error message will list
-     * the supported values for the caller's project.
+     * the supported values for the caller&#39;s project.
      * 
      */
     @Export(name="physicalBlockSizeBytes", type=Integer.class, parameters={})
@@ -293,7 +293,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * in a request, a default value is used. Currently supported sizes
      * are 4096 and 16384, other sizes may be added in the future.
      * If an unsupported value is requested, the error message will list
-     * the supported values for the caller's project.
+     * the supported values for the caller&#39;s project.
      * 
      */
     public Output<Integer> physicalBlockSizeBytes() {
@@ -331,7 +331,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
     }
     /**
      * Resource policies applied to this disk for automatic snapshot creations.
-     * ~>**NOTE** This value does not support updating the
+     * ~&gt;**NOTE** This value does not support updating the
      * resource policy, as resource policies can not be updated more than
      * one at a time. Use
      * `gcp.compute.DiskResourcePolicyAttachment`
@@ -343,7 +343,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Resource policies applied to this disk for automatic snapshot creations.
-     * ~>**NOTE** This value does not support updating the
+     * ~&gt;**NOTE** This value does not support updating the
      * resource policy, as resource policies can not be updated more than
      * one at a time. Use
      * `gcp.compute.DiskResourcePolicyAttachment`
@@ -375,7 +375,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * If you specify this field along with `image` or `snapshot`,
      * the value must not be less than the size of the image
      * or the size of the snapshot.
-     * ~>**NOTE** If you change the size, the provider updates the disk size
+     * ~&gt;**NOTE** If you change the size, the provider updates the disk size
      * if upsizing is detected but recreates the disk if downsizing is requested.
      * You can add `lifecycle.prevent_destroy` in the config to prevent destroying
      * and recreating.
@@ -392,7 +392,7 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * If you specify this field along with `image` or `snapshot`,
      * the value must not be less than the size of the image
      * or the size of the snapshot.
-     * ~>**NOTE** If you change the size, the provider updates the disk size
+     * ~&gt;**NOTE** If you change the size, the provider updates the disk size
      * if upsizing is detected but recreates the disk if downsizing is requested.
      * You can add `lifecycle.prevent_destroy` in the config to prevent destroying
      * and recreating.

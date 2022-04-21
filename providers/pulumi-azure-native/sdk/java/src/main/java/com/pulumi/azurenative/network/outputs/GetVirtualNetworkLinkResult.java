@@ -20,7 +20,7 @@ public final class GetVirtualNetworkLinkResult {
      */
     private final @Nullable String etag;
     /**
-     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
      * 
      */
     private final String id;
@@ -50,7 +50,7 @@ public final class GetVirtualNetworkLinkResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
      */
     private final String type;
@@ -60,7 +60,7 @@ public final class GetVirtualNetworkLinkResult {
      */
     private final @Nullable SubResourceResponse virtualNetwork;
     /**
-     * The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
+     * The status of the virtual network link to the Private DNS zone. Possible values are &#39;InProgress&#39; and &#39;Done&#39;. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
     private final String virtualNetworkLinkState;
@@ -97,7 +97,7 @@ public final class GetVirtualNetworkLinkResult {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
      * 
     */
     public String id() {
@@ -139,7 +139,7 @@ public final class GetVirtualNetworkLinkResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
     */
     public String type() {
@@ -153,7 +153,7 @@ public final class GetVirtualNetworkLinkResult {
         return Optional.ofNullable(this.virtualNetwork);
     }
     /**
-     * The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
+     * The status of the virtual network link to the Private DNS zone. Possible values are &#39;InProgress&#39; and &#39;Done&#39;. This is a read-only property and any attempt to set this value will be ignored.
      * 
     */
     public String virtualNetworkLinkState() {

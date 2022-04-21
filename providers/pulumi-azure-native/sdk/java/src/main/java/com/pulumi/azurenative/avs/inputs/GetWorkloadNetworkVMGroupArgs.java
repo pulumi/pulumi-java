@@ -35,7 +35,7 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
     }
 
     /**
-     * NSX VM Group identifier. Generally the same as the VM Group's display name
+     * NSX VM Group identifier. Generally the same as the VM Group&#39;s display name
      * 
      */
     @Import(name="vmGroupId", required=true)

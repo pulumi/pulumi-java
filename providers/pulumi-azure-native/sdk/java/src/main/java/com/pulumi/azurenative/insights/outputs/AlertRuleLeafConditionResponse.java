@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertRuleLeafConditionResponse {
     /**
-     * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+     * The value of the event&#39;s field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
      * 
      */
     private final @Nullable List<String> containsAny;
     /**
-     * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
+     * The value of the event&#39;s field will be compared to this value (case-insensitive) to determine if the condition is met.
      * 
      */
     private final @Nullable String equals;
     /**
-     * The name of the Activity Log event's field that this condition will examine.
-     * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
+     * The name of the Activity Log event&#39;s field that this condition will examine.
+     * The possible values for this field are (case-insensitive): &#39;resourceId&#39;, &#39;category&#39;, &#39;caller&#39;, &#39;level&#39;, &#39;operationName&#39;, &#39;resourceGroup&#39;, &#39;resourceProvider&#39;, &#39;status&#39;, &#39;subStatus&#39;, &#39;resourceType&#39;, or anything beginning with &#39;properties&#39;.
      * 
      */
     private final @Nullable String field;
@@ -40,22 +40,22 @@ public final class AlertRuleLeafConditionResponse {
     }
 
     /**
-     * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+     * The value of the event&#39;s field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
      * 
     */
     public List<String> containsAny() {
         return this.containsAny == null ? List.of() : this.containsAny;
     }
     /**
-     * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
+     * The value of the event&#39;s field will be compared to this value (case-insensitive) to determine if the condition is met.
      * 
     */
     public Optional<String> equals_() {
         return Optional.ofNullable(this.equals);
     }
     /**
-     * The name of the Activity Log event's field that this condition will examine.
-     * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
+     * The name of the Activity Log event&#39;s field that this condition will examine.
+     * The possible values for this field are (case-insensitive): &#39;resourceId&#39;, &#39;category&#39;, &#39;caller&#39;, &#39;level&#39;, &#39;operationName&#39;, &#39;resourceGroup&#39;, &#39;resourceProvider&#39;, &#39;status&#39;, &#39;subStatus&#39;, &#39;resourceType&#39;, or anything beginning with &#39;properties&#39;.
      * 
     */
     public Optional<String> field() {

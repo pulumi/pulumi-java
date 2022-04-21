@@ -18,7 +18,7 @@ public final class CopyVideoResponse {
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.CopyVideo'.
+     * Expected value is &#39;#Microsoft.Media.CopyVideo&#39;.
      * 
      */
     private final String odataType;
@@ -40,7 +40,7 @@ public final class CopyVideoResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.CopyVideo'.
+     * Expected value is &#39;#Microsoft.Media.CopyVideo&#39;.
      * 
     */
     public String odataType() {

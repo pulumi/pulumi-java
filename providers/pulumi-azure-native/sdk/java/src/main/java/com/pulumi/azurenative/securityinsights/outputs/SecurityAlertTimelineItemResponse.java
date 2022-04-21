@@ -38,7 +38,7 @@ public final class SecurityAlertTimelineItemResponse {
     private final String endTimeUtc;
     /**
      * The entity query kind
-     * Expected value is 'SecurityAlert'.
+     * Expected value is &#39;SecurityAlert&#39;.
      * 
      */
     private final String kind;
@@ -124,7 +124,7 @@ public final class SecurityAlertTimelineItemResponse {
     }
     /**
      * The entity query kind
-     * Expected value is 'SecurityAlert'.
+     * Expected value is &#39;SecurityAlert&#39;.
      * 
     */
     public String kind() {

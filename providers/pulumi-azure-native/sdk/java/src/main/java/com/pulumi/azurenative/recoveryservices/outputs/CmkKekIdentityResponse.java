@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CmkKekIdentityResponse {
     /**
-     * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
+     * Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
      * 
      */
     private final @Nullable Boolean useSystemAssignedIdentity;
@@ -32,7 +32,7 @@ public final class CmkKekIdentityResponse {
     }
 
     /**
-     * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
+     * Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
      * 
     */
     public Optional<Boolean> useSystemAssignedIdentity() {

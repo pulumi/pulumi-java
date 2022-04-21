@@ -21,7 +21,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     public static final RuntimeSoftwareConfigResponse Empty = new RuntimeSoftwareConfigResponse();
 
     /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     @Import(name="customGpuDriverPath", required=true)

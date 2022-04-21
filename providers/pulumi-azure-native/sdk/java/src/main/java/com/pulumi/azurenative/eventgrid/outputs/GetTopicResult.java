@@ -65,7 +65,7 @@ public final class GetTopicResult {
     private final String provisioningState;
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
-     * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -185,7 +185,7 @@ public final class GetTopicResult {
     }
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
-     * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
      * 
     */
     public Optional<String> publicNetworkAccess() {

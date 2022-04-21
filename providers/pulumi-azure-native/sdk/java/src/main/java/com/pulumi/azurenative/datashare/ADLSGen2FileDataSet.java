@@ -76,7 +76,7 @@ public class ADLSGen2FileDataSet extends com.pulumi.resources.CustomResource {
     }
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -84,7 +84,7 @@ public class ADLSGen2FileDataSet extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Kind of data set.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
      */
     public Output<String> kind() {

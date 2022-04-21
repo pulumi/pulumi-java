@@ -45,7 +45,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureDbForPostgreSql.Sync'.
+     * Expected value is &#39;ConnectToTarget.AzureDbForPostgreSql.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureDbForPostgreSql.Sync'.
+     * Expected value is &#39;ConnectToTarget.AzureDbForPostgreSql.Sync&#39;.
      * 
     */
     public String taskType() {

@@ -19,7 +19,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     /**
-     * The API version for this call such as "serving.knative.dev/v1".
+     * The API version for this call such as &#34;serving.knative.dev/v1&#34;.
      * 
      */
     @Import(name="apiVersion")
@@ -37,7 +37,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The kind of resource, in this case "Service".
+     * The kind of resource, in this case &#34;Service&#34;.
      * 
      */
     @Import(name="kind")

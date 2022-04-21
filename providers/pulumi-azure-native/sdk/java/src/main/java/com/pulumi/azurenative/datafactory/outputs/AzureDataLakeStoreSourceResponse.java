@@ -39,7 +39,7 @@ public final class AzureDataLakeStoreSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AzureDataLakeStoreSource'.
+     * Expected value is &#39;AzureDataLakeStoreSource&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class AzureDataLakeStoreSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureDataLakeStoreSource'.
+     * Expected value is &#39;AzureDataLakeStoreSource&#39;.
      * 
     */
     public String type() {

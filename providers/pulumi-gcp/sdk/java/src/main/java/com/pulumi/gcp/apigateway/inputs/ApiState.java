@@ -73,7 +73,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name of the API. Format 'projects/{{project}}/locations/global/apis/{{apiId}}'
+     * The resource name of the API. Format &#39;projects/{{project}}/locations/global/apis/{{apiId}}&#39;
      * 
      */
     @Import(name="name")

@@ -111,8 +111,8 @@ public class Hub extends com.pulumi.resources.CustomResource {
         return this.project;
     }
     /**
-     * The VPC network associated with this hub's spokes. All of the VPN tunnels, VLAN attachments, and router appliance
-     * instances referenced by this hub's spokes must belong to this VPC network. This field is read-only. Network Connectivity
+     * The VPC network associated with this hub&#39;s spokes. All of the VPN tunnels, VLAN attachments, and router appliance
+     * instances referenced by this hub&#39;s spokes must belong to this VPC network. This field is read-only. Network Connectivity
      * Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
@@ -120,8 +120,8 @@ public class Hub extends com.pulumi.resources.CustomResource {
     private Output<List<HubRoutingVpc>> routingVpcs;
 
     /**
-     * @return The VPC network associated with this hub's spokes. All of the VPN tunnels, VLAN attachments, and router appliance
-     * instances referenced by this hub's spokes must belong to this VPC network. This field is read-only. Network Connectivity
+     * @return The VPC network associated with this hub&#39;s spokes. All of the VPN tunnels, VLAN attachments, and router appliance
+     * instances referenced by this hub&#39;s spokes must belong to this VPC network. This field is read-only. Network Connectivity
      * Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */

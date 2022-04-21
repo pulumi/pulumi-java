@@ -30,7 +30,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureIaasVM'.
+     * Expected value is &#39;AzureIaasVM&#39;.
      * 
      */
     @Import(name="backupManagementType", required=true)
@@ -92,7 +92,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
     }
 
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     @Import(name="timeZone")

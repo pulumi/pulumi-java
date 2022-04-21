@@ -15,14 +15,14 @@ public final class GCPolicyMaxAge {
     /**
      * Number of days before applying GC policy.
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated in favor of duration
      * 
      */
         @Deprecated /* Deprecated in favor of duration */
     private final @Nullable Integer days;
     /**
-     * Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
+     * Duration before applying GC policy (ex. &#34;8h&#34;). This is required when `days` isn&#39;t set
      * 
      */
     private final @Nullable String duration;
@@ -38,7 +38,7 @@ public final class GCPolicyMaxAge {
     /**
      * Number of days before applying GC policy.
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated in favor of duration
      * 
     */
@@ -47,7 +47,7 @@ public final class GCPolicyMaxAge {
         return Optional.ofNullable(this.days);
     }
     /**
-     * Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
+     * Duration before applying GC policy (ex. &#34;8h&#34;). This is required when `days` isn&#39;t set
      * 
     */
     public Optional<String> duration() {

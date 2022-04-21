@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The display options for tile borders for visuals.</p>
+ * &lt;p&gt;The display options for tile borders for visuals.&lt;/p&gt;
  * 
  */
 public final class ThemeBorderStyleArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class ThemeBorderStyleArgs extends com.pulumi.resources.ResourceArg
     public static final ThemeBorderStyleArgs Empty = new ThemeBorderStyleArgs();
 
     /**
-     * <p>The option to enable display of borders for visuals.</p>
+     * &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
      * 
      */
     @Import(name="show")

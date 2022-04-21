@@ -40,13 +40,13 @@ public final class JobInputHttpResponse {
      */
     private final @Nullable List<Object> inputDefinitions;
     /**
-     * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
+     * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
      * 
      */
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobInputHttp'.
+     * Expected value is &#39;#Microsoft.Media.JobInputHttp&#39;.
      * 
      */
     private final String odataType;
@@ -103,7 +103,7 @@ public final class JobInputHttpResponse {
         return this.inputDefinitions == null ? List.of() : this.inputDefinitions;
     }
     /**
-     * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
+     * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
      * 
     */
     public Optional<String> label() {
@@ -111,7 +111,7 @@ public final class JobInputHttpResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobInputHttp'.
+     * Expected value is &#39;#Microsoft.Media.JobInputHttp&#39;.
      * 
     */
     public String odataType() {

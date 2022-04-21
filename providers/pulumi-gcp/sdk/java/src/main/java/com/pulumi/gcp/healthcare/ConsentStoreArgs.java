@@ -19,7 +19,7 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * 
      */
     @Import(name="dataset", required=true)
@@ -31,7 +31,7 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="defaultConsentTtl")
@@ -59,8 +59,8 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
      * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
      * bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`
      * No more than 64 labels can be associated with a given store.
-     * An object containing a list of "key": value pairs.
-     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")
@@ -72,7 +72,7 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name of this ConsentStore, for example:
-     * "consent1"
+     * &#34;consent1&#34;
      * 
      */
     @Import(name="name")

@@ -45,7 +45,7 @@ public final class ExecutePipelineActivityResponse {
     private final PipelineReferenceResponse pipeline;
     /**
      * Type of activity.
-     * Expected value is 'ExecutePipeline'.
+     * Expected value is &#39;ExecutePipeline&#39;.
      * 
      */
     private final String type;
@@ -117,7 +117,7 @@ public final class ExecutePipelineActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'ExecutePipeline'.
+     * Expected value is &#39;ExecutePipeline&#39;.
      * 
     */
     public String type() {

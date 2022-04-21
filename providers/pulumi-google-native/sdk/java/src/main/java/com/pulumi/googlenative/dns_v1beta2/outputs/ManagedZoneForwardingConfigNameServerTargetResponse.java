@@ -20,7 +20,7 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
      */
     private final String ipv4Address;
     /**
-     * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.
+     * IPv6 address of a target name server. Does not accept both fields (ipv4 &amp; ipv6) being populated.
      * 
      */
     private final String ipv6Address;
@@ -53,7 +53,7 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
         return this.ipv4Address;
     }
     /**
-     * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.
+     * IPv6 address of a target name server. Does not accept both fields (ipv4 &amp; ipv6) being populated.
      * 
     */
     public String ipv6Address() {

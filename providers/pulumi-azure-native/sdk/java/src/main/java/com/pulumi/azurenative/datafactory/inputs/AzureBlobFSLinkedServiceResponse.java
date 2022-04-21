@@ -117,7 +117,7 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
     }
 
     /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
      */
     @Import(name="servicePrincipalCredential")
@@ -128,7 +128,7 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
     }
 
     /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+     * The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="servicePrincipalCredentialType")
@@ -173,7 +173,7 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureBlobFS'.
+     * Expected value is &#39;AzureBlobFS&#39;.
      * 
      */
     @Import(name="type", required=true)

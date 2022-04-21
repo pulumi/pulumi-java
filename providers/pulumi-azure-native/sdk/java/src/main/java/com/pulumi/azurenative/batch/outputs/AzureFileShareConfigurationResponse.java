@@ -14,12 +14,12 @@ public final class AzureFileShareConfigurationResponse {
     private final String accountKey;
     private final String accountName;
     /**
-     * This is of the form 'https://{account}.file.core.windows.net/'.
+     * This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
      * 
      */
     private final String azureFileUrl;
     /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
      */
     private final @Nullable String mountOptions;
@@ -50,14 +50,14 @@ public final class AzureFileShareConfigurationResponse {
         return this.accountName;
     }
     /**
-     * This is of the form 'https://{account}.file.core.windows.net/'.
+     * This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
      * 
     */
     public String azureFileUrl() {
         return this.azureFileUrl;
     }
     /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
     */
     public Optional<String> mountOptions() {

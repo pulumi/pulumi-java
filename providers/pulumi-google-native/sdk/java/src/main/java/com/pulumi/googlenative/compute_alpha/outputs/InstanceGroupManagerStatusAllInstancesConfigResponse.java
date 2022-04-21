@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
     /**
-     * Current instances' config revision. This value is in RFC3339 text format.
+     * Current instances&#39; config revision. This value is in RFC3339 text format.
      * 
      */
     private final String currentRevision;
     /**
-     * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
+     * A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
      * 
      */
     private final Boolean effective;
@@ -30,14 +30,14 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
     }
 
     /**
-     * Current instances' config revision. This value is in RFC3339 text format.
+     * Current instances&#39; config revision. This value is in RFC3339 text format.
      * 
     */
     public String currentRevision() {
         return this.currentRevision;
     }
     /**
-     * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
+     * A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
      * 
     */
     public Boolean effective() {

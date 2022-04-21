@@ -19,7 +19,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
 
     /**
      * The authorization type for integration runtime sharing.
-     * Expected value is 'RBAC'.
+     * Expected value is &#39;RBAC&#39;.
      * 
      */
     @Import(name="authorizationType", required=true)

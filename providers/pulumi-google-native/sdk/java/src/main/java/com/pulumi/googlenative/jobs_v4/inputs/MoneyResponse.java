@@ -40,7 +40,7 @@ public final class MoneyResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
+     * The whole units of the amount. For example if `currencyCode` is `&#34;USD&#34;`, then 1 unit is one US dollar.
      * 
      */
     @Import(name="units", required=true)

@@ -17,7 +17,7 @@ public final class QueryParameterValueResponse {
      */
     private final List<QueryParameterValueResponse> arrayValues;
     /**
-     * [Optional] The struct field values, in order of the struct type's declaration.
+     * [Optional] The struct field values, in order of the struct type&#39;s declaration.
      * 
      */
     private final Map<String,String> structValues;
@@ -45,7 +45,7 @@ public final class QueryParameterValueResponse {
         return this.arrayValues;
     }
     /**
-     * [Optional] The struct field values, in order of the struct type's declaration.
+     * [Optional] The struct field values, in order of the struct type&#39;s declaration.
      * 
     */
     public Map<String,String> structValues() {

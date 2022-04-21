@@ -36,7 +36,7 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The read setting type.
-     * Expected value is 'BinaryReadSettings'.
+     * Expected value is &#39;BinaryReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

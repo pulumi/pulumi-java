@@ -33,7 +33,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Conditions communicates information about ongoing/complete reconciliation processes that bring the "spec" inline with the observed state of the world. Service-specific conditions include: * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true when the underlying Route is ready. * "Ready": true when both the underlying Route and Configuration are ready.
+     * Conditions communicates information about ongoing/complete reconciliation processes that bring the &#34;spec&#34; inline with the observed state of the world. Service-specific conditions include: * &#34;ConfigurationsReady&#34;: true when the underlying Configuration is ready. * &#34;RoutesReady&#34;: true when the underlying Route is ready. * &#34;Ready&#34;: true when both the underlying Route and Configuration are ready.
      * 
      */
     @Import(name="conditions", required=true)
@@ -44,7 +44,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+     * From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service&#39;s Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
      * 
      */
     @Import(name="latestCreatedRevisionName", required=true)
@@ -55,7 +55,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".
+     * From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service&#39;s Configuration that has had its &#34;Ready&#34; condition become &#34;True&#34;.
      * 
      */
     @Import(name="latestReadyRevisionName", required=true)
@@ -66,7 +66,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+     * ObservedGeneration is the &#39;Generation&#39; of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
      * 
      */
     @Import(name="observedGeneration", required=true)

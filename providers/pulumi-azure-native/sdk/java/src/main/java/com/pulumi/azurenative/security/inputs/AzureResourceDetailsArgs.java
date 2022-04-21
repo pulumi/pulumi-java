@@ -20,7 +20,7 @@ public final class AzureResourceDetailsArgs extends com.pulumi.resources.Resourc
 
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'Azure'.
+     * Expected value is &#39;Azure&#39;.
      * 
      */
     @Import(name="source", required=true)

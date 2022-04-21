@@ -33,7 +33,7 @@ public final class GetInstanceBootDisk {
     private final List<GetInstanceBootDiskInitializeParam> initializeParams;
     private final String kmsKeySelfLink;
     /**
-     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
      * 
      */
     private final String mode;
@@ -96,7 +96,7 @@ public final class GetInstanceBootDisk {
         return this.kmsKeySelfLink;
     }
     /**
-     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
      * 
     */
     public String mode() {

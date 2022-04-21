@@ -88,7 +88,7 @@ public final class RelationalSourceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Copy source type.
-     * Expected value is 'RelationalSource'.
+     * Expected value is &#39;RelationalSource&#39;.
      * 
      */
     @Import(name="type", required=true)

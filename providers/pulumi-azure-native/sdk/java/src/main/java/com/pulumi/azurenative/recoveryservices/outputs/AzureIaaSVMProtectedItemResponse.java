@@ -120,7 +120,7 @@ public final class AzureIaaSVMProtectedItemResponse {
     private final @Nullable String protectedItemDataId;
     /**
      * backup item type.
-     * Expected value is 'AzureIaaSVMProtectedItem'.
+     * Expected value is &#39;AzureIaaSVMProtectedItem&#39;.
      * 
      */
     private final String protectedItemType;
@@ -348,7 +348,7 @@ public final class AzureIaaSVMProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'AzureIaaSVMProtectedItem'.
+     * Expected value is &#39;AzureIaaSVMProtectedItem&#39;.
      * 
     */
     public String protectedItemType() {

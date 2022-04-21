@@ -102,7 +102,7 @@ public final class AzureBlobStorageLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureBlobStorage'.
+     * Expected value is &#39;AzureBlobStorage&#39;.
      * 
      */
     private final String type;
@@ -259,7 +259,7 @@ public final class AzureBlobStorageLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureBlobStorage'.
+     * Expected value is &#39;AzureBlobStorage&#39;.
      * 
     */
     public String type() {

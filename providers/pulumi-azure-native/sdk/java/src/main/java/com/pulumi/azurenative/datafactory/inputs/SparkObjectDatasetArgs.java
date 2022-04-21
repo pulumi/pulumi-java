@@ -126,7 +126,7 @@ public final class SparkObjectDatasetArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of dataset.
-     * Expected value is 'SparkObject'.
+     * Expected value is &#39;SparkObject&#39;.
      * 
      */
     @Import(name="type", required=true)

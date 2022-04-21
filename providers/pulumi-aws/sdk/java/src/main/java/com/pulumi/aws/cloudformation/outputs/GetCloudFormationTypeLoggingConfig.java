@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetCloudFormationTypeLoggingConfig {
     /**
-     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type's handlers.
+     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
      */
     private final String logGroupName;
@@ -29,7 +29,7 @@ public final class GetCloudFormationTypeLoggingConfig {
     }
 
     /**
-     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type's handlers.
+     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
     */
     public String logGroupName() {

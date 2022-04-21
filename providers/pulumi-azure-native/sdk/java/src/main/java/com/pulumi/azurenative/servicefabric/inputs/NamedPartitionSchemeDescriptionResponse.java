@@ -43,7 +43,7 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
 
     /**
      * Enumerates the ways that a service can be partitioned.
-     * Expected value is 'Named'.
+     * Expected value is &#39;Named&#39;.
      * 
      */
     @Import(name="partitionScheme", required=true)

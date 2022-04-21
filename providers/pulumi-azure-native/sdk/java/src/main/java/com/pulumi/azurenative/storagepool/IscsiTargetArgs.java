@@ -51,7 +51,7 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
+     * iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
      * 
      */
     @Import(name="targetIqn")

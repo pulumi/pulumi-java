@@ -76,14 +76,14 @@ public class WebPubSubHub extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     public Output<String> type() {

@@ -17,7 +17,7 @@ public final class DiskResponse {
      */
     private final String mountPoint;
     /**
-     * The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.
+     * The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name &#34;boot&#34; is reserved for system use.
      * 
      */
     private final String name;
@@ -66,7 +66,7 @@ public final class DiskResponse {
         return this.mountPoint;
     }
     /**
-     * The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.
+     * The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name &#34;boot&#34; is reserved for system use.
      * 
     */
     public String name() {

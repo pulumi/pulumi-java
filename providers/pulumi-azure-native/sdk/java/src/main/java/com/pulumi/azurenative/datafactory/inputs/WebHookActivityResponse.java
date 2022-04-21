@@ -69,7 +69,7 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="headers")
@@ -102,7 +102,7 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
+     * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode &gt;= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     @Import(name="reportStatusOnCallBack")
@@ -125,7 +125,7 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Type of activity.
-     * Expected value is 'WebHook'.
+     * Expected value is &#39;WebHook&#39;.
      * 
      */
     @Import(name="type", required=true)

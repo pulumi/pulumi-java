@@ -69,7 +69,7 @@ public final class InMageRcmReplicationDetailsResponse {
     private final Double initialReplicationTransferredBytes;
     /**
      * Gets the Instance type.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
      */
     private final String instanceType;
@@ -410,7 +410,7 @@ public final class InMageRcmReplicationDetailsResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
     */
     public String instanceType() {

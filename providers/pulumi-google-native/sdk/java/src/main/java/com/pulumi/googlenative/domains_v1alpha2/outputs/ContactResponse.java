@@ -16,12 +16,12 @@ public final class ContactResponse {
      */
     private final String email;
     /**
-     * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
      */
     private final String faxNumber;
     /**
-     * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
      */
     private final String phoneNumber;
@@ -51,14 +51,14 @@ public final class ContactResponse {
         return this.email;
     }
     /**
-     * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
     */
     public String faxNumber() {
         return this.faxNumber;
     }
     /**
-     * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
     */
     public String phoneNumber() {

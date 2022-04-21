@@ -49,7 +49,7 @@ public final class BlobSourceResponse {
     private final @Nullable Object treatEmptyAsNull;
     /**
      * Copy source type.
-     * Expected value is 'BlobSource'.
+     * Expected value is &#39;BlobSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class BlobSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'BlobSource'.
+     * Expected value is &#39;BlobSource&#39;.
      * 
     */
     public String type() {

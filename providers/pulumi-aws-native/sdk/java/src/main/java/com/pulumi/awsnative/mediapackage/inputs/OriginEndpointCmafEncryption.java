@@ -21,7 +21,7 @@ public final class OriginEndpointCmafEncryption extends com.pulumi.resources.Inv
     public static final OriginEndpointCmafEncryption Empty = new OriginEndpointCmafEncryption();
 
     /**
-     * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
+     * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
      * 
      */
     @Import(name="constantInitializationVector")

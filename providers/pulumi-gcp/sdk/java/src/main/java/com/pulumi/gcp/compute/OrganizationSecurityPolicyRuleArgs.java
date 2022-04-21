@@ -21,7 +21,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
 
     /**
      * The Action to perform when the client connection triggers the rule. Can currently be either
-     * "allow", "deny" or "goto_next".
+     * &#34;allow&#34;, &#34;deny&#34; or &#34;goto_next&#34;.
      * 
      */
     @Import(name="action", required=true)
@@ -68,7 +68,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
     }
 
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * Structure is documented below.
      * 
      */
@@ -116,7 +116,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
 
     /**
      * A list of network resource URLs to which this rule applies.
-     * This field allows you to control which network's VMs get
+     * This field allows you to control which network&#39;s VMs get
      * this rule. If this field is left blank, all VMs
      * within the organization will receive the rule.
      * 

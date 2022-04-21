@@ -24,7 +24,7 @@ public final class OrcFormatResponse {
     private final @Nullable Object serializer;
     /**
      * Type of dataset storage format.
-     * Expected value is 'OrcFormat'.
+     * Expected value is &#39;OrcFormat&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class OrcFormatResponse {
     }
     /**
      * Type of dataset storage format.
-     * Expected value is 'OrcFormat'.
+     * Expected value is &#39;OrcFormat&#39;.
      * 
     */
     public String type() {

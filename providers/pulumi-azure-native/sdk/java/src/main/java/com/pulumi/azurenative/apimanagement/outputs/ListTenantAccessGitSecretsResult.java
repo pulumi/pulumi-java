@@ -23,12 +23,12 @@ public final class ListTenantAccessGitSecretsResult {
      */
     private final @Nullable String id;
     /**
-     * Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Primary access key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     private final @Nullable String primaryKey;
     /**
-     * Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Secondary access key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     private final @Nullable String secondaryKey;
@@ -60,14 +60,14 @@ public final class ListTenantAccessGitSecretsResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Primary access key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
-     * Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Secondary access key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
     */
     public Optional<String> secondaryKey() {

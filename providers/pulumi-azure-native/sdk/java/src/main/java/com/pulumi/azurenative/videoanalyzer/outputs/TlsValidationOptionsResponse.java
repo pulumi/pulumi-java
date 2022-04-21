@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TlsValidationOptionsResponse {
     /**
-     * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
      * 
      */
     private final @Nullable String ignoreHostname;
     /**
-     * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
      * 
      */
     private final @Nullable String ignoreSignature;
@@ -31,14 +31,14 @@ public final class TlsValidationOptionsResponse {
     }
 
     /**
-     * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
      * 
     */
     public Optional<String> ignoreHostname() {
         return Optional.ofNullable(this.ignoreHostname);
     }
     /**
-     * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
      * 
     */
     public Optional<String> ignoreSignature() {

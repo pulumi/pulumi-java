@@ -21,7 +21,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
 
     /**
      * Enumerates the mechanisms for auto scaling.
-     * Expected value is 'AddRemoveReplica'.
+     * Expected value is &#39;AddRemoveReplica&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -32,7 +32,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
     }
 
     /**
-     * Maximum number of containers (scale up won't be performed above this number).
+     * Maximum number of containers (scale up won&#39;t be performed above this number).
      * 
      */
     @Import(name="maxCount", required=true)
@@ -43,7 +43,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
     }
 
     /**
-     * Minimum number of containers (scale down won't be performed below this number).
+     * Minimum number of containers (scale down won&#39;t be performed below this number).
      * 
      */
     @Import(name="minCount", required=true)

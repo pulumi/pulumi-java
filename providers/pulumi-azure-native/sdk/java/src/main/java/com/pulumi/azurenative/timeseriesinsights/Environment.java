@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:timeseriesinsights:Environment env1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: Gen1Environment, Gen2Environment.
  * 
  */

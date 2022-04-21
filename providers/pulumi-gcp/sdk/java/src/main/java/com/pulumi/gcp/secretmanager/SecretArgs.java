@@ -22,7 +22,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="expireTime")
@@ -39,8 +39,8 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
      * and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
      * No more than 64 labels can be assigned to a given resource.
-     * An object containing a list of "key": value pairs. Example:
-     * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example:
+     * { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")
@@ -112,7 +112,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The TTL for the Secret.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="ttl")

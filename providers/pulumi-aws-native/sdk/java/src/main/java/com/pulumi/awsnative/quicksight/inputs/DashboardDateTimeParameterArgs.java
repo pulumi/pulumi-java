@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * <p>A date-time parameter.</p>
+ * &lt;p&gt;A date-time parameter.&lt;/p&gt;
  * 
  */
 public final class DashboardDateTimeParameterArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class DashboardDateTimeParameterArgs extends com.pulumi.resources.R
     public static final DashboardDateTimeParameterArgs Empty = new DashboardDateTimeParameterArgs();
 
     /**
-     * <p>A display name for the date-time parameter.</p>
+     * &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
      * 
      */
     @Import(name="name", required=true)
@@ -31,7 +31,7 @@ public final class DashboardDateTimeParameterArgs extends com.pulumi.resources.R
     }
 
     /**
-     * <p>The values for the date-time parameter.</p>
+     * &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
      * 
      */
     @Import(name="values", required=true)

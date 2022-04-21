@@ -31,7 +31,7 @@ public final class GetAliasResult {
      */
     private final String id;
     /**
-     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration's `uri`.
+     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration&#39;s `uri`.
      * 
      */
     private final String invokeArn;
@@ -87,7 +87,7 @@ public final class GetAliasResult {
         return this.id;
     }
     /**
-     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration's `uri`.
+     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration&#39;s `uri`.
      * 
     */
     public String invokeArn() {

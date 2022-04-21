@@ -24,7 +24,7 @@ public final class IntentFollowupIntentInfoArgs extends com.pulumi.resources.Res
 
     /**
      * The unique identifier of the parent intent in the chain of followup intents.
-     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     @Import(name="parentFollowupIntentName")

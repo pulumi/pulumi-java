@@ -110,7 +110,7 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     @Import(name="type", required=true)

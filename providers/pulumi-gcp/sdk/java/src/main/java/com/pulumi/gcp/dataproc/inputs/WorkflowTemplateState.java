@@ -33,7 +33,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * (Beta only) Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
+     * (Beta only) Optional. Timeout duration for the DAG of jobs. You can use &#34;s&#34;, &#34;m&#34;, &#34;h&#34;, and &#34;d&#34; suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes (&#34;10m&#34;) to 24 hours (&#34;24h&#34; or &#34;1d&#34;). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
      * 
      */
     @Import(name="dagTimeout")
@@ -134,7 +134,7 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
     /**
      * Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
      * 
-     * @Deprecated
+     * @deprecated
      * version is not useful as a configurable field, and will be removed in the future.
      * 
      */

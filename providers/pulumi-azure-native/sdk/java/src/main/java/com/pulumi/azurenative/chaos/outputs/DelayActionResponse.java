@@ -21,7 +21,7 @@ public final class DelayActionResponse {
     private final String name;
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'delay'.
+     * Expected value is &#39;delay&#39;.
      * 
      */
     private final String type;
@@ -52,7 +52,7 @@ public final class DelayActionResponse {
     }
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'delay'.
+     * Expected value is &#39;delay&#39;.
      * 
     */
     public String type() {

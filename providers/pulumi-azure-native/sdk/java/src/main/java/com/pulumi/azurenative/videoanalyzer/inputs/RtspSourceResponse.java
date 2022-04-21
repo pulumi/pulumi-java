@@ -57,7 +57,7 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.RtspSource'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
      * 
      */
     @Import(name="type", required=true)

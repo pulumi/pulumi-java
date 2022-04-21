@@ -39,7 +39,7 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     }
 
     /**
-     * Optional. One-word CamelCase reason for the condition's last transition.
+     * Optional. One-word CamelCase reason for the condition&#39;s last transition.
      * 
      */
     @Import(name="reason", required=true)
@@ -72,7 +72,7 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     }
 
     /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
+     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
      * 
      */
     @Import(name="type", required=true)

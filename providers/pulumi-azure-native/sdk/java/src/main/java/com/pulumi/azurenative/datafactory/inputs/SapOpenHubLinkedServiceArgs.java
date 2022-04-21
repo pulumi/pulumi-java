@@ -183,7 +183,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of linked service.
-     * Expected value is 'SapOpenHub'.
+     * Expected value is &#39;SapOpenHub&#39;.
      * 
      */
     @Import(name="type", required=true)

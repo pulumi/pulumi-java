@@ -43,7 +43,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The command to execute on startup of the job. eg. "python train.py"
+     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     @Import(name="command", required=true)
@@ -109,7 +109,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
      */
     @Import(name="experimentName")
@@ -144,7 +144,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to determine the type of job.
-     * Expected value is 'Command'.
+     * Expected value is &#39;Command&#39;.
      * 
      */
     @Import(name="jobType", required=true)

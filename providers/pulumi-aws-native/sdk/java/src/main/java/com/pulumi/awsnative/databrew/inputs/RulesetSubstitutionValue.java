@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * A key-value pair to associate expression's substitution variable names with their values
+ * A key-value pair to associate expression&#39;s substitution variable names with their values
  * 
  */
 public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeArgs {

@@ -146,28 +146,28 @@ public class Resolver extends com.pulumi.resources.CustomResource {
         return this.pipelineConfig;
     }
     /**
-     * The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+     * The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
     @Export(name="requestTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestTemplate;
 
     /**
-     * @return The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+     * @return The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
     public Output</* @Nullable */ String> requestTemplate() {
         return this.requestTemplate;
     }
     /**
-     * The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+     * The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
     @Export(name="responseTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> responseTemplate;
 
     /**
-     * @return The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+     * @return The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
     public Output</* @Nullable */ String> responseTemplate() {

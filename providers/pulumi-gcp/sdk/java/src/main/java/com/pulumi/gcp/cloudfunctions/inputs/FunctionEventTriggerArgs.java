@@ -17,7 +17,7 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
     public static final FunctionEventTriggerArgs Empty = new FunctionEventTriggerArgs();
 
     /**
-     * The type of event to observe. For example: `"google.storage.object.finalize"`.
+     * The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
      * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
      * full reference of accepted triggers.
      * 
@@ -42,7 +42,7 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
 
     /**
      * Required. The name or partial URI of the resource from
-     * which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
+     * which to observe events. For example, `&#34;myBucket&#34;` or `&#34;projects/my-project/topics/my-topic&#34;`
      * 
      */
     @Import(name="resource", required=true)

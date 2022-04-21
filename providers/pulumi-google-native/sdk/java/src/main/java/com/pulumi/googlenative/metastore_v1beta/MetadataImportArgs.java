@@ -17,7 +17,7 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
     public static final MetadataImportArgs Empty = new MetadataImportArgs();
 
     /**
-     * Immutable. A database dump from a pre-existing metastore's database.
+     * Immutable. A database dump from a pre-existing metastore&#39;s database.
      * 
      */
     @Import(name="databaseDump")

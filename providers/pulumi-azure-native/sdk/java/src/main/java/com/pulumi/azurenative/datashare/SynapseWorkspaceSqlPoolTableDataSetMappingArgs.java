@@ -50,7 +50,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends com.pu
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     @Import(name="kind", required=true)

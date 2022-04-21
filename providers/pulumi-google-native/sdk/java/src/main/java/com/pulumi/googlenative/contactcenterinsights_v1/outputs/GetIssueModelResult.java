@@ -37,7 +37,7 @@ public final class GetIssueModelResult {
      */
     private final String state;
     /**
-     * Immutable. The issue model's label statistics on its training data.
+     * Immutable. The issue model&#39;s label statistics on its training data.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats;
@@ -101,7 +101,7 @@ public final class GetIssueModelResult {
         return this.state;
     }
     /**
-     * Immutable. The issue model's label statistics on its training data.
+     * Immutable. The issue model&#39;s label statistics on its training data.
      * 
     */
     public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats() {

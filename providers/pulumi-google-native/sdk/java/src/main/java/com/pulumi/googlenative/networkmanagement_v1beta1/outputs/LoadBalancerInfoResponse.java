@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class LoadBalancerInfoResponse {
     /**
-     * Type of load balancer's backend configuration.
+     * Type of load balancer&#39;s backend configuration.
      * 
      */
     private final String backendType;
@@ -52,7 +52,7 @@ public final class LoadBalancerInfoResponse {
     }
 
     /**
-     * Type of load balancer's backend configuration.
+     * Type of load balancer&#39;s backend configuration.
      * 
     */
     public String backendType() {

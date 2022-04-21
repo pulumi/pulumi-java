@@ -80,7 +80,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com
 
     /**
      * Indicates the function binding type.
-     * Expected value is 'Microsoft.MachineLearning/WebService'.
+     * Expected value is &#39;Microsoft.MachineLearning/WebService&#39;.
      * 
      */
     @Import(name="type", required=true)

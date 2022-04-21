@@ -104,7 +104,7 @@ public final class SnowflakeLinkedServiceArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of linked service.
-     * Expected value is 'Snowflake'.
+     * Expected value is &#39;Snowflake&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -98,7 +98,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * the list of resource id's that this health alert is scoped to.
+     * the list of resource id&#39;s that this health alert is scoped to.
      * 
      */
     @Import(name="scopes")

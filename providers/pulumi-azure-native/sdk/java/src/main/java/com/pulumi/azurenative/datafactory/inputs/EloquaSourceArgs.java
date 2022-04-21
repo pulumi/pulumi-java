@@ -99,7 +99,7 @@ public final class EloquaSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'EloquaSource'.
+     * Expected value is &#39;EloquaSource&#39;.
      * 
      */
     @Import(name="type", required=true)

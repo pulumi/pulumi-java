@@ -104,7 +104,7 @@ public final class GreenplumLinkedServiceArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of linked service.
-     * Expected value is 'Greenplum'.
+     * Expected value is &#39;Greenplum&#39;.
      * 
      */
     @Import(name="type", required=true)

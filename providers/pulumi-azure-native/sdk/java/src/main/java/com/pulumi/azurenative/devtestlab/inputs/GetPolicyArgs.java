@@ -15,7 +15,7 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=description)'
+     * Specify the $expand query. Example: &#39;properties($select=description)&#39;
      * 
      */
     @Import(name="expand")

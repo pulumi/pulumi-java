@@ -139,7 +139,7 @@ public final class GetVersionResult {
      */
     private final LivenessCheckResponse livenessCheck;
     /**
-     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
+     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
      * 
      */
     private final ManualScalingResponse manualScaling;
@@ -184,7 +184,7 @@ public final class GetVersionResult {
      */
     private final String runtimeChannel;
     /**
-     * The path or name of the app's main executable.
+     * The path or name of the app&#39;s main executable.
      * 
      */
     private final String runtimeMainExecutablePath;
@@ -204,7 +204,7 @@ public final class GetVersionResult {
      */
     private final Boolean threadsafe;
     /**
-     * Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"
+     * Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
      * 
      */
     private final String versionUrl;
@@ -454,7 +454,7 @@ public final class GetVersionResult {
         return this.livenessCheck;
     }
     /**
-     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
+     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
      * 
     */
     public ManualScalingResponse manualScaling() {
@@ -517,7 +517,7 @@ public final class GetVersionResult {
         return this.runtimeChannel;
     }
     /**
-     * The path or name of the app's main executable.
+     * The path or name of the app&#39;s main executable.
      * 
     */
     public String runtimeMainExecutablePath() {
@@ -545,7 +545,7 @@ public final class GetVersionResult {
         return this.threadsafe;
     }
     /**
-     * Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"
+     * Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
      * 
     */
     public String versionUrl() {

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Initialization scripts for studio components.</p>
+ * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
  * 
  */
 public final class StudioComponentInitializationScript extends com.pulumi.resources.InvokeArgs {
@@ -21,7 +21,7 @@ public final class StudioComponentInitializationScript extends com.pulumi.resour
     public static final StudioComponentInitializationScript Empty = new StudioComponentInitializationScript();
 
     /**
-     * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
+     * &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
      * 
      */
     @Import(name="launchProfileProtocolVersion")
@@ -46,7 +46,7 @@ public final class StudioComponentInitializationScript extends com.pulumi.resour
     }
 
     /**
-     * <p>The initialization script.</p>
+     * &lt;p&gt;The initialization script.&lt;/p&gt;
      * 
      */
     @Import(name="script")

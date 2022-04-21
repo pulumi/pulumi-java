@@ -117,7 +117,7 @@ public final class DelimitedTextDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'DelimitedText'.
+     * Expected value is &#39;DelimitedText&#39;.
      * 
      */
     private final String type;
@@ -283,7 +283,7 @@ public final class DelimitedTextDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'DelimitedText'.
+     * Expected value is &#39;DelimitedText&#39;.
      * 
     */
     public String type() {

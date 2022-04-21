@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * A Duration represents a fixed-length span of time represented as a count of seconds and fractions of seconds at nanosecond resolution. It is independent of any calendar and concepts like "day" or "month". Range is approximately 10,000 years.
+ * A Duration represents a fixed-length span of time represented as a count of seconds and fractions of seconds at nanosecond resolution. It is independent of any calendar and concepts like &#34;day&#34; or &#34;month&#34;. Range is approximately 10,000 years.
  * 
  */
 public final class DurationResponse extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DurationResponse extends com.pulumi.resources.InvokeArgs {
     public static final DurationResponse Empty = new DurationResponse();
 
     /**
-     * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.
+     * Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
      */
     @Import(name="nanos", required=true)

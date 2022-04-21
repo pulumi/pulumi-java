@@ -21,7 +21,7 @@ public final class DocumentOccurrenceResponse {
      */
     private final String creatorComment;
     /**
-     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name
+     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
      * 
      */
     private final List<String> creators;
@@ -86,7 +86,7 @@ public final class DocumentOccurrenceResponse {
         return this.creatorComment;
     }
     /**
-     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name
+     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
      * 
     */
     public List<String> creators() {

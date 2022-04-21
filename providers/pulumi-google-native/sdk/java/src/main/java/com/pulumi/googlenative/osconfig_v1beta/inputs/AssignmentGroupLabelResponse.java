@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Represents a group of VM intances that can be identified as having all these labels, for example "env=prod and app=web".
+ * Represents a group of VM intances that can be identified as having all these labels, for example &#34;env=prod and app=web&#34;.
  * 
  */
 public final class AssignmentGroupLabelResponse extends com.pulumi.resources.InvokeArgs {

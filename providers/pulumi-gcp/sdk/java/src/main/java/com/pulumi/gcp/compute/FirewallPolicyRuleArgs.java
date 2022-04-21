@@ -20,7 +20,7 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     public static final FirewallPolicyRuleArgs Empty = new FirewallPolicyRuleArgs();
 
     /**
-     * The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
+     * The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
      * 
      */
     @Import(name="action", required=true)
@@ -64,7 +64,7 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules.
      * 
      */
     @Import(name="enableLogging")
@@ -86,7 +86,7 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced. Structure is documented below.
      * 
      */
     @Import(name="match", required=true)
@@ -108,7 +108,7 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
+     * A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
      * 
      */
     @Import(name="targetResources")

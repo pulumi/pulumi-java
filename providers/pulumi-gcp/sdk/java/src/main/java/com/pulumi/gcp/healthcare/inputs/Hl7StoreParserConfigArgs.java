@@ -40,7 +40,7 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
+     * Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
      * A base64-encoded string.
      * 
      */

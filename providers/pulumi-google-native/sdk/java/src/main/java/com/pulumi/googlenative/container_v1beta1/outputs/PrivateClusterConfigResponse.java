@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class PrivateClusterConfigResponse {
     /**
-     * Whether the master's internal IP address is used as the cluster endpoint.
+     * Whether the master&#39;s internal IP address is used as the cluster endpoint.
      * 
      */
     private final Boolean enablePrivateEndpoint;
@@ -27,7 +27,7 @@ public final class PrivateClusterConfigResponse {
      */
     private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
     /**
-     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
+     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
      * 
      */
     private final String masterIpv4CidrBlock;
@@ -37,12 +37,12 @@ public final class PrivateClusterConfigResponse {
      */
     private final String peeringName;
     /**
-     * The internal IP address of this cluster's master endpoint.
+     * The internal IP address of this cluster&#39;s master endpoint.
      * 
      */
     private final String privateEndpoint;
     /**
-     * The external IP address of this cluster's master endpoint.
+     * The external IP address of this cluster&#39;s master endpoint.
      * 
      */
     private final String publicEndpoint;
@@ -66,7 +66,7 @@ public final class PrivateClusterConfigResponse {
     }
 
     /**
-     * Whether the master's internal IP address is used as the cluster endpoint.
+     * Whether the master&#39;s internal IP address is used as the cluster endpoint.
      * 
     */
     public Boolean enablePrivateEndpoint() {
@@ -87,7 +87,7 @@ public final class PrivateClusterConfigResponse {
         return this.masterGlobalAccessConfig;
     }
     /**
-     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
+     * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
      * 
     */
     public String masterIpv4CidrBlock() {
@@ -101,14 +101,14 @@ public final class PrivateClusterConfigResponse {
         return this.peeringName;
     }
     /**
-     * The internal IP address of this cluster's master endpoint.
+     * The internal IP address of this cluster&#39;s master endpoint.
      * 
     */
     public String privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * The external IP address of this cluster's master endpoint.
+     * The external IP address of this cluster&#39;s master endpoint.
      * 
     */
     public String publicEndpoint() {

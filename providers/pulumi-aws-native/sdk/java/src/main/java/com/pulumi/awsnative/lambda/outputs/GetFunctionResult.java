@@ -64,17 +64,17 @@ public final class GetFunctionResult {
      */
     private final @Nullable FunctionImageConfig imageConfig;
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
     private final @Nullable String kmsKeyArn;
     /**
-     * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
+     * A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
      */
     private final @Nullable List<String> layers;
     /**
-     * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
     private final @Nullable Integer memorySize;
@@ -89,12 +89,12 @@ public final class GetFunctionResult {
      */
     private final @Nullable Integer reservedConcurrentExecutions;
     /**
-     * The Amazon Resource Name (ARN) of the function's execution role.
+     * The Amazon Resource Name (ARN) of the function&#39;s execution role.
      * 
      */
     private final @Nullable String role;
     /**
-     * The identifier of the function's runtime.
+     * The identifier of the function&#39;s runtime.
      * 
      */
     private final @Nullable String runtime;
@@ -223,21 +223,21 @@ public final class GetFunctionResult {
         return Optional.ofNullable(this.imageConfig);
     }
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
+     * A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
     */
     public List<String> layers() {
         return this.layers == null ? List.of() : this.layers;
     }
     /**
-     * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
     */
     public Optional<Integer> memorySize() {
@@ -258,14 +258,14 @@ public final class GetFunctionResult {
         return Optional.ofNullable(this.reservedConcurrentExecutions);
     }
     /**
-     * The Amazon Resource Name (ARN) of the function's execution role.
+     * The Amazon Resource Name (ARN) of the function&#39;s execution role.
      * 
     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
-     * The identifier of the function's runtime.
+     * The identifier of the function&#39;s runtime.
      * 
     */
     public Optional<String> runtime() {

@@ -21,15 +21,15 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
     /**
      * The CPU CFS quota period value. Specified
      * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
-     * such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
-     * "h". The value must be a positive duration.
+     * such as `&#34;300ms&#34;`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;,
+     * &#34;h&#34;. The value must be a positive duration.
      * 
      */
     private final @Nullable String cpuCfsQuotaPeriod;
     /**
      * The CPU management policy on the node. See
      * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
-     * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
+     * One of `&#34;none&#34;` or `&#34;static&#34;`. Defaults to `none` when `kubelet_config` is unset.
      * 
      */
     private final String cpuManagerPolicy;
@@ -55,8 +55,8 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
     /**
      * The CPU CFS quota period value. Specified
      * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
-     * such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
-     * "h". The value must be a positive duration.
+     * such as `&#34;300ms&#34;`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;,
+     * &#34;h&#34;. The value must be a positive duration.
      * 
     */
     public Optional<String> cpuCfsQuotaPeriod() {
@@ -65,7 +65,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
     /**
      * The CPU management policy on the node. See
      * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
-     * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
+     * One of `&#34;none&#34;` or `&#34;static&#34;`. Defaults to `none` when `kubelet_config` is unset.
      * 
     */
     public String cpuManagerPolicy() {

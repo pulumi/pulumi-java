@@ -70,7 +70,7 @@ public final class GetInstanceResult {
      */
     private final String statusMessage;
     /**
-     * field indicates all the reasons the instance is in "SUSPENDED" state.
+     * field indicates all the reasons the instance is in &#34;SUSPENDED&#34; state.
      * 
      */
     private final List<String> suspensionReasons;
@@ -188,7 +188,7 @@ public final class GetInstanceResult {
         return this.statusMessage;
     }
     /**
-     * field indicates all the reasons the instance is in "SUSPENDED" state.
+     * field indicates all the reasons the instance is in &#34;SUSPENDED&#34; state.
      * 
     */
     public List<String> suspensionReasons() {

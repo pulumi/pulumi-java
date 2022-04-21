@@ -88,7 +88,7 @@ public final class AzureSqlMILinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlMI'.
+     * Expected value is &#39;AzureSqlMI&#39;.
      * 
      */
     private final String type;
@@ -218,7 +218,7 @@ public final class AzureSqlMILinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlMI'.
+     * Expected value is &#39;AzureSqlMI&#39;.
      * 
     */
     public String type() {

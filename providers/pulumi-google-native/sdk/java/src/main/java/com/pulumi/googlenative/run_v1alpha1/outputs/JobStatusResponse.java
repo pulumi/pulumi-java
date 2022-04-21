@@ -24,7 +24,7 @@ public final class JobStatusResponse {
      */
     private final String completionTime;
     /**
-     * Optional. The latest available observations of a job's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
      * 
      */
     private final List<JobConditionResponse> conditions;
@@ -44,7 +44,7 @@ public final class JobStatusResponse {
      */
     private final List<InstanceStatusResponse> instances;
     /**
-     * Optional. The 'generation' of the job that was last processed by the controller.
+     * Optional. The &#39;generation&#39; of the job that was last processed by the controller.
      * 
      */
     private final Integer observedGeneration;
@@ -96,7 +96,7 @@ public final class JobStatusResponse {
         return this.completionTime;
     }
     /**
-     * Optional. The latest available observations of a job's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
      * 
     */
     public List<JobConditionResponse> conditions() {
@@ -124,7 +124,7 @@ public final class JobStatusResponse {
         return this.instances;
     }
     /**
-     * Optional. The 'generation' of the job that was last processed by the controller.
+     * Optional. The &#39;generation&#39; of the job that was last processed by the controller.
      * 
     */
     public Integer observedGeneration() {

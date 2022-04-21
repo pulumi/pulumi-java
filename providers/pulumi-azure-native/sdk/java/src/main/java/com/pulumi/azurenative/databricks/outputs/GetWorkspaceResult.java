@@ -54,7 +54,7 @@ public final class GetWorkspaceResult {
      */
     private final String name;
     /**
-     * The workspace's custom parameters.
+     * The workspace&#39;s custom parameters.
      * 
      */
     private final @Nullable WorkspaceCustomParametersResponse parameters;
@@ -99,7 +99,7 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceId;
     /**
-     * The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
+     * The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
      * 
      */
     private final String workspaceUrl;
@@ -192,7 +192,7 @@ public final class GetWorkspaceResult {
         return this.name;
     }
     /**
-     * The workspace's custom parameters.
+     * The workspace&#39;s custom parameters.
      * 
     */
     public Optional<WorkspaceCustomParametersResponse> parameters() {
@@ -255,7 +255,7 @@ public final class GetWorkspaceResult {
         return this.workspaceId;
     }
     /**
-     * The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
+     * The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
      * 
     */
     public String workspaceUrl() {

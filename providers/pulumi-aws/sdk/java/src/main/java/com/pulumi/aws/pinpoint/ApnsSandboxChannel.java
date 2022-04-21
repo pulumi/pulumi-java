@@ -45,14 +45,14 @@ public class ApnsSandboxChannel extends com.pulumi.resources.CustomResource {
         return this.applicationId;
     }
     /**
-     * The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
+     * The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
      * 
      */
     @Export(name="bundleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> bundleId;
 
     /**
-     * @return The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
+     * @return The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
      * 
      */
     public Output</* @Nullable */ String> bundleId() {
@@ -76,7 +76,7 @@ public class ApnsSandboxChannel extends com.pulumi.resources.CustomResource {
      * The default authentication method used for APNs Sandbox.
      * __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
      * You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
-     * If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
+     * If your default authentication type fails, Amazon Pinpoint doesn&#39;t attempt to use the other authentication type.
      * 
      */
     @Export(name="defaultAuthenticationMethod", type=String.class, parameters={})
@@ -86,7 +86,7 @@ public class ApnsSandboxChannel extends com.pulumi.resources.CustomResource {
      * @return The default authentication method used for APNs Sandbox.
      * __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
      * You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
-     * If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
+     * If your default authentication type fails, Amazon Pinpoint doesn&#39;t attempt to use the other authentication type.
      * 
      */
     public Output</* @Nullable */ String> defaultAuthenticationMethod() {
@@ -149,14 +149,14 @@ public class ApnsSandboxChannel extends com.pulumi.resources.CustomResource {
         return this.tokenKey;
     }
     /**
-     * The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
+     * The ID assigned to your signing key. To find this value, choose Certificates, IDs &amp; Profiles, and choose your key in the Keys section.
      * 
      */
     @Export(name="tokenKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tokenKeyId;
 
     /**
-     * @return The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
+     * @return The ID assigned to your signing key. To find this value, choose Certificates, IDs &amp; Profiles, and choose your key in the Keys section.
      * 
      */
     public Output</* @Nullable */ String> tokenKeyId() {

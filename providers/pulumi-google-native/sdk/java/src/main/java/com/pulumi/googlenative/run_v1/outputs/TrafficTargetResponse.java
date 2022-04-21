@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class TrafficTargetResponse {
     /**
-     * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
+     * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
      * 
      */
     private final String configurationName;
@@ -59,7 +59,7 @@ public final class TrafficTargetResponse {
     }
 
     /**
-     * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
+     * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
      * 
     */
     public String configurationName() {

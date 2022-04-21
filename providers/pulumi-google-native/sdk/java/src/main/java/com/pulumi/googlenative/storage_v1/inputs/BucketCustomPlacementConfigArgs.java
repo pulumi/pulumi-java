@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's custom placement configuration for Custom Dual Regions.
+ * The bucket&#39;s custom placement configuration for Custom Dual Regions.
  * 
  */
 public final class BucketCustomPlacementConfigArgs extends com.pulumi.resources.ResourceArgs {

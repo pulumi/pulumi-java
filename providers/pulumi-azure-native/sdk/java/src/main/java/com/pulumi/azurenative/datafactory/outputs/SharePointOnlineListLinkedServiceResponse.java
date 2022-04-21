@@ -66,7 +66,7 @@ public final class SharePointOnlineListLinkedServiceResponse {
     private final Object tenantId;
     /**
      * Type of linked service.
-     * Expected value is 'SharePointOnlineList'.
+     * Expected value is &#39;SharePointOnlineList&#39;.
      * 
      */
     private final String type;
@@ -160,7 +160,7 @@ public final class SharePointOnlineListLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SharePointOnlineList'.
+     * Expected value is &#39;SharePointOnlineList&#39;.
      * 
     */
     public String type() {

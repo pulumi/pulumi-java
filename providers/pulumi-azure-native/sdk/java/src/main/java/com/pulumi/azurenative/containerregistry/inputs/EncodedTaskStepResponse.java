@@ -79,7 +79,7 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * The type of the step.
-     * Expected value is 'EncodedTask'.
+     * Expected value is &#39;EncodedTask&#39;.
      * 
      */
     @Import(name="type", required=true)

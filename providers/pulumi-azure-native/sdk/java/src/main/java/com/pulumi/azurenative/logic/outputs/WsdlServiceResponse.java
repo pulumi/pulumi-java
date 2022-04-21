@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WsdlServiceResponse {
     /**
-     * The list of endpoints' qualified names.
+     * The list of endpoints&#39; qualified names.
      * 
      */
     private final @Nullable List<String> endpointQualifiedNames;
@@ -32,7 +32,7 @@ public final class WsdlServiceResponse {
     }
 
     /**
-     * The list of endpoints' qualified names.
+     * The list of endpoints&#39; qualified names.
      * 
     */
     public List<String> endpointQualifiedNames() {

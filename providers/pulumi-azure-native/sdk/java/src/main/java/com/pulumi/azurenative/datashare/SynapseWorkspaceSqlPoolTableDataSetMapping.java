@@ -62,7 +62,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends com.pulumi.resou
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends com.pulumi.resou
 
     /**
      * @return Kind of data set mapping.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     public Output<String> kind() {

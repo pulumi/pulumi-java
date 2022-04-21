@@ -56,7 +56,7 @@ public final class GetVirtualMachineImageTemplateResult {
      */
     private final ImageTemplateIdentityResponse identity;
     /**
-     * State of 'run' that is currently executing or was last executed.
+     * State of &#39;run&#39; that is currently executing or was last executed.
      * 
      */
     private final ImageTemplateLastRunStatusResponse lastRunStatus;
@@ -169,7 +169,7 @@ public final class GetVirtualMachineImageTemplateResult {
         return this.identity;
     }
     /**
-     * State of 'run' that is currently executing or was last executed.
+     * State of &#39;run&#39; that is currently executing or was last executed.
      * 
     */
     public ImageTemplateLastRunStatusResponse lastRunStatus() {

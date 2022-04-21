@@ -36,7 +36,7 @@ public final class GetDataControllerResult {
      */
     private final String name;
     /**
-     * The data controller's properties
+     * The data controller&#39;s properties
      * 
      */
     private final DataControllerPropertiesResponse properties;
@@ -105,7 +105,7 @@ public final class GetDataControllerResult {
         return this.name;
     }
     /**
-     * The data controller's properties
+     * The data controller&#39;s properties
      * 
     */
     public DataControllerPropertiesResponse properties() {

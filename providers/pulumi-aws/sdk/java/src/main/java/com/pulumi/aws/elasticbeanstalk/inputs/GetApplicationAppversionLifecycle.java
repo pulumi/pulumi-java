@@ -15,7 +15,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     public static final GetApplicationAppversionLifecycle Empty = new GetApplicationAppversionLifecycle();
 
     /**
-     * Specifies whether delete a version's source bundle from S3 when the application version is deleted.
+     * Specifies whether delete a version&#39;s source bundle from S3 when the application version is deleted.
      * 
      */
     @Import(name="deleteSourceFromS3", required=true)

@@ -120,7 +120,7 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
+     * The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
      * 
      */
     @Import(name="topic")

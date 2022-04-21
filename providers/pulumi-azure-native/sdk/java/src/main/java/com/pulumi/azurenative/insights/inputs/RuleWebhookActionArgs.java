@@ -22,7 +22,7 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
      * 
      */
     @Import(name="odataType", required=true)

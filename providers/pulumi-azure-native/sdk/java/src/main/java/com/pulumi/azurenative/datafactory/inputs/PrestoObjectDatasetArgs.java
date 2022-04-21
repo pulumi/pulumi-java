@@ -126,7 +126,7 @@ public final class PrestoObjectDatasetArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of dataset.
-     * Expected value is 'PrestoObject'.
+     * Expected value is &#39;PrestoObject&#39;.
      * 
      */
     @Import(name="type", required=true)

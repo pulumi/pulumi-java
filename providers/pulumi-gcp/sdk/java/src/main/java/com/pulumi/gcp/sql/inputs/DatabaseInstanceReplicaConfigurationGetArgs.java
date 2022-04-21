@@ -18,7 +18,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     public static final DatabaseInstanceReplicaConfigurationGetArgs Empty = new DatabaseInstanceReplicaConfigurationGetArgs();
 
     /**
-     * PEM representation of the trusted CA's x509
+     * PEM representation of the trusted CA&#39;s x509
      * certificate.
      * 
      */
@@ -30,7 +30,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     }
 
     /**
-     * PEM representation of the replica's x509
+     * PEM representation of the replica&#39;s x509
      * certificate.
      * 
      */
@@ -42,7 +42,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     }
 
     /**
-     * PEM representation of the replica's private key. The
+     * PEM representation of the replica&#39;s private key. The
      * corresponding public key in encoded in the `client_certificate`.
      * 
      */
@@ -133,7 +133,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends com.pulum
     }
 
     /**
-     * True if the master's common name
+     * True if the master&#39;s common name
      * value is checked during the SSL handshake.
      * 
      */

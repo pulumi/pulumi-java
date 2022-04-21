@@ -89,7 +89,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
 
     /**
      * The type of integration runtime.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
      */
     @Import(name="type", required=true)

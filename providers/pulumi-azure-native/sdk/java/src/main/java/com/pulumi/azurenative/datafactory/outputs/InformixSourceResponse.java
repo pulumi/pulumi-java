@@ -49,7 +49,7 @@ public final class InformixSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'InformixSource'.
+     * Expected value is &#39;InformixSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class InformixSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'InformixSource'.
+     * Expected value is &#39;InformixSource&#39;.
      * 
     */
     public String type() {

@@ -26,7 +26,7 @@ public final class EndpointInfoResponse {
      */
     private final Integer destinationPort;
     /**
-     * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
+     * IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
      * 
      */
     private final String protocol;
@@ -93,7 +93,7 @@ public final class EndpointInfoResponse {
         return this.destinationPort;
     }
     /**
-     * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
+     * IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
      * 
     */
     public String protocol() {

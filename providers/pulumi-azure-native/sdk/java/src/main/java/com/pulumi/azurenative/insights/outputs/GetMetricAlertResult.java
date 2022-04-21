@@ -76,7 +76,7 @@ public final class GetMetricAlertResult {
      */
     private final String name;
     /**
-     * the list of resource id's that this metric alert is scoped to.
+     * the list of resource id&#39;s that this metric alert is scoped to.
      * 
      */
     private final List<String> scopes;
@@ -229,7 +229,7 @@ public final class GetMetricAlertResult {
         return this.name;
     }
     /**
-     * the list of resource id's that this metric alert is scoped to.
+     * the list of resource id&#39;s that this metric alert is scoped to.
      * 
     */
     public List<String> scopes() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TestBaseAccountSKUCapabilityResponse {
     /**
-     * An invariant to describe the feature, such as 'SLA'.
+     * An invariant to describe the feature, such as &#39;SLA&#39;.
      * 
      */
     private final String name;
@@ -29,7 +29,7 @@ public final class TestBaseAccountSKUCapabilityResponse {
     }
 
     /**
-     * An invariant to describe the feature, such as 'SLA'.
+     * An invariant to describe the feature, such as &#39;SLA&#39;.
      * 
     */
     public String name() {

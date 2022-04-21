@@ -79,7 +79,7 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * interface.
      * A reachability analysis proceeds even if the destination location
      * is ambiguous. However, the result can include endpoints that you
-     * don't intend to test.
+     * don&#39;t intend to test.
      * Structure is documented below.
      * 
      */
@@ -100,7 +100,7 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * interface.
      * A reachability analysis proceeds even if the destination location
      * is ambiguous. However, the result can include endpoints that you
-     * don't intend to test.
+     * don&#39;t intend to test.
      * Structure is documented below.
      * 
      */
@@ -152,14 +152,14 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
         return this.project;
     }
     /**
-     * IP Protocol of the test. When not provided, "TCP" is assumed.
+     * IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed.
      * 
      */
     @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     /**
-     * @return IP Protocol of the test. When not provided, "TCP" is assumed.
+     * @return IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed.
      * 
      */
     public Output</* @Nullable */ String> protocol() {
@@ -201,7 +201,7 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * address or VPC network.
      * A reachability analysis proceeds even if the source location is
      * ambiguous. However, the test result may include endpoints that
-     * you don't intend to test.
+     * you don&#39;t intend to test.
      * Structure is documented below.
      * 
      */
@@ -226,7 +226,7 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * address or VPC network.
      * A reachability analysis proceeds even if the source location is
      * ambiguous. However, the test result may include endpoints that
-     * you don't intend to test.
+     * you don&#39;t intend to test.
      * Structure is documented below.
      * 
      */

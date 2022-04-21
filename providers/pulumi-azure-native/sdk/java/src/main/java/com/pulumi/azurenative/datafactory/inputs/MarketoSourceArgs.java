@@ -99,7 +99,7 @@ public final class MarketoSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'MarketoSource'.
+     * Expected value is &#39;MarketoSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -138,14 +138,14 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
         return this.kubeconfig;
     }
     /**
-     * The security group for the cluster's nodes.
+     * The security group for the cluster&#39;s nodes.
      * 
      */
     @Export(name="nodeSecurityGroup", type=SecurityGroup.class, parameters={})
     private Output<SecurityGroup> nodeSecurityGroup;
 
     /**
-     * @return The security group for the cluster's nodes.
+     * @return The security group for the cluster&#39;s nodes.
      * 
      */
     public Output<SecurityGroup> nodeSecurityGroup() {

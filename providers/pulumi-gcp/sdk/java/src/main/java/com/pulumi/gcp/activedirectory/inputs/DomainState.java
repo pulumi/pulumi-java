@@ -89,7 +89,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
+     * The unique name of the domain using the format: &#39;projects/{project}/locations/global/domains/{domainName}&#39;.
      * 
      */
     @Import(name="name")

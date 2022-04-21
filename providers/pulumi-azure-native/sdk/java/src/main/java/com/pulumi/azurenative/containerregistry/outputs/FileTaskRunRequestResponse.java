@@ -66,7 +66,7 @@ public final class FileTaskRunRequestResponse {
     private final @Nullable Integer timeout;
     /**
      * The type of the run request.
-     * Expected value is 'FileTaskRunRequest'.
+     * Expected value is &#39;FileTaskRunRequest&#39;.
      * 
      */
     private final String type;
@@ -175,7 +175,7 @@ public final class FileTaskRunRequestResponse {
     }
     /**
      * The type of the run request.
-     * Expected value is 'FileTaskRunRequest'.
+     * Expected value is &#39;FileTaskRunRequest&#39;.
      * 
     */
     public String type() {

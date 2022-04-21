@@ -21,7 +21,7 @@ public final class KubernetesConnectionDetailsResponse extends com.pulumi.resour
 
     /**
      * Gets the Instance type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

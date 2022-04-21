@@ -95,7 +95,7 @@ public final class WebAppVnetConnectionArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Virtual Network's resource ID.
+     * The Virtual Network&#39;s resource ID.
      * 
      */
     @Import(name="vnetResourceId")

@@ -25,7 +25,7 @@ public final class ApiResponse {
      */
     private final List<MixinResponse> mixins;
     /**
-     * The fully qualified name of this interface, including package name followed by the interface's simple name.
+     * The fully qualified name of this interface, including package name followed by the interface&#39;s simple name.
      * 
      */
     private final String name;
@@ -83,7 +83,7 @@ public final class ApiResponse {
         return this.mixins;
     }
     /**
-     * The fully qualified name of this interface, including package name followed by the interface's simple name.
+     * The fully qualified name of this interface, including package name followed by the interface&#39;s simple name.
      * 
     */
     public String name() {

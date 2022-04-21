@@ -40,7 +40,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The virtual network gateway's local address.
+     * The virtual network gateway&#39;s local address.
      * 
      */
     @Import(name="localAddress", required=true)

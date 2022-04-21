@@ -105,7 +105,7 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the alert rule
-     * Expected value is 'Scheduled'.
+     * Expected value is &#39;Scheduled&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -113,7 +113,7 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the alert rule
-     * Expected value is 'Scheduled'.
+     * Expected value is &#39;Scheduled&#39;.
      * 
      */
     public Output<String> kind() {

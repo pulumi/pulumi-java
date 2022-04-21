@@ -90,7 +90,7 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
     }
     /**
      * Resource name of this policy tag, whose format is:
-     * "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
+     * &#34;projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -98,14 +98,14 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Resource name of this policy tag, whose format is:
-     * "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
+     * &#34;projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}&#34;
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * Resource name of this policy tag's parent policy tag.
+     * Resource name of this policy tag&#39;s parent policy tag.
      * If empty, it means this policy tag is a top level policy tag.
      * If not set, defaults to an empty string.
      * 
@@ -114,7 +114,7 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> parentPolicyTag;
 
     /**
-     * @return Resource name of this policy tag's parent policy tag.
+     * @return Resource name of this policy tag&#39;s parent policy tag.
      * If empty, it means this policy tag is a top level policy tag.
      * If not set, defaults to an empty string.
      * 

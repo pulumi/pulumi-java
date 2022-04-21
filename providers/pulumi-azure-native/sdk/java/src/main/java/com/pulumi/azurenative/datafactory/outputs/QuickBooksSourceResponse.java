@@ -49,7 +49,7 @@ public final class QuickBooksSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'QuickBooksSource'.
+     * Expected value is &#39;QuickBooksSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class QuickBooksSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'QuickBooksSource'.
+     * Expected value is &#39;QuickBooksSource&#39;.
      * 
     */
     public String type() {

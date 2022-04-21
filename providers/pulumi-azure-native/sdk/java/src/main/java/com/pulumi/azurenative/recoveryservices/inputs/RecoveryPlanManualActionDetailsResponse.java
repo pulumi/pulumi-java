@@ -32,7 +32,7 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
 
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is 'ManualActionDetails'.
+     * Expected value is &#39;ManualActionDetails&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

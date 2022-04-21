@@ -67,7 +67,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     }
 
     /**
-     * Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
+     * Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
      * 
      */
     @Import(name="encoding")

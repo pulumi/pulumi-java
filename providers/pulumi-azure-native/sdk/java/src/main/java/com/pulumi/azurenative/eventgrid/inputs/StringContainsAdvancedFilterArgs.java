@@ -33,7 +33,7 @@ public final class StringContainsAdvancedFilterArgs extends com.pulumi.resources
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringContains'.
+     * Expected value is &#39;StringContains&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

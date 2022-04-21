@@ -50,7 +50,7 @@ public class FileEventTrigger extends com.pulumi.resources.CustomResource {
     }
     /**
      * Trigger Kind.
-     * Expected value is 'FileEvent'.
+     * Expected value is &#39;FileEvent&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -58,7 +58,7 @@ public class FileEventTrigger extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Trigger Kind.
-     * Expected value is 'FileEvent'.
+     * Expected value is &#39;FileEvent&#39;.
      * 
      */
     public Output<String> kind() {

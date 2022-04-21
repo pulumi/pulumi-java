@@ -21,7 +21,7 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
 
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'Anonymous'.
+     * Expected value is &#39;Anonymous&#39;.
      * 
      */
     @Import(name="authenticationType", required=true)

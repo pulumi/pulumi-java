@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebAclRule {
     /**
-     * The action that AWS WAF should take on a web request when it matches the rule's statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
+     * The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
      * 
      */
     private final @Nullable WebAclRuleAction action;
@@ -73,7 +73,7 @@ public final class WebAclRule {
     }
 
     /**
-     * The action that AWS WAF should take on a web request when it matches the rule's statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
+     * The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
      * 
     */
     public Optional<WebAclRuleAction> action() {

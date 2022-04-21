@@ -115,7 +115,7 @@ public final class SnowflakeDatasetArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Type of dataset.
-     * Expected value is 'SnowflakeTable'.
+     * Expected value is &#39;SnowflakeTable&#39;.
      * 
      */
     @Import(name="type", required=true)

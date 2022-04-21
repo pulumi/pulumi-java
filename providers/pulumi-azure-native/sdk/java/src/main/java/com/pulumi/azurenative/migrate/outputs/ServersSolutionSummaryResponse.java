@@ -24,7 +24,7 @@ public final class ServersSolutionSummaryResponse {
     private final @Nullable Integer discoveredCount;
     /**
      * Gets the Instance type.
-     * Expected value is 'Servers'.
+     * Expected value is &#39;Servers&#39;.
      * 
      */
     private final String instanceType;
@@ -76,7 +76,7 @@ public final class ServersSolutionSummaryResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'Servers'.
+     * Expected value is &#39;Servers&#39;.
      * 
     */
     public String instanceType() {

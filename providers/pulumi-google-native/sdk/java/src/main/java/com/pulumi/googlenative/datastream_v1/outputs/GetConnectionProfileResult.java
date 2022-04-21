@@ -47,7 +47,7 @@ public final class GetConnectionProfileResult {
      */
     private final MysqlProfileResponse mysqlProfile;
     /**
-     * The resource's name.
+     * The resource&#39;s name.
      * 
      */
     private final String name;
@@ -141,7 +141,7 @@ public final class GetConnectionProfileResult {
         return this.mysqlProfile;
     }
     /**
-     * The resource's name.
+     * The resource&#39;s name.
      * 
     */
     public String name() {

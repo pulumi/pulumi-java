@@ -125,7 +125,7 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+     * The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
      * 
      */
     @Import(name="typeUrl")

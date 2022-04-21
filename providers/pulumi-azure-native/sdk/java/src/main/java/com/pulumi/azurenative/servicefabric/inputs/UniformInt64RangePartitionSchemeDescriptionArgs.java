@@ -56,7 +56,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends com.p
 
     /**
      * Enumerates the ways that a service can be partitioned.
-     * Expected value is 'UniformInt64Range'.
+     * Expected value is &#39;UniformInt64Range&#39;.
      * 
      */
     @Import(name="partitionScheme", required=true)

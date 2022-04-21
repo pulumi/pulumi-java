@@ -27,7 +27,7 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     }
 
     /**
-     * Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+     * Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
      * 
      */
     @Import(name="path")
@@ -60,7 +60,7 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     }
 
     /**
-     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
+     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
      * 
      */
     @Import(name="query")

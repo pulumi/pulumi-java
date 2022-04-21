@@ -85,14 +85,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.retentionProperties;
     }
     /**
-     * The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
+     * The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
      * 
      */
     @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
-     * @return The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
+     * @return The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
      * 
      */
     public Output</* @Nullable */ String> tableName() {

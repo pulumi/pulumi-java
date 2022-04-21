@@ -16,7 +16,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends com.pulumi.re
     public static final NfsFileShareNfsFileShareDefaultsGetArgs Empty = new NfsFileShareNfsFileShareDefaultsGetArgs();
 
     /**
-     * The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
+     * The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0777&#34;`.
      * 
      */
     @Import(name="directoryMode")
@@ -27,7 +27,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends com.pulumi.re
     }
 
     /**
-     * The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
+     * The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34;`.
      * 
      */
     @Import(name="fileMode")

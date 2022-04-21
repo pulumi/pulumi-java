@@ -45,7 +45,7 @@ public final class AlertPolicyCondition {
     /**
      * A short name or phrase used to identify the
      * condition in dashboards, notifications, and
-     * incidents. To avoid confusion, don't use the same
+     * incidents. To avoid confusion, don&#39;t use the same
      * display name for multiple conditions in the same
      * policy.
      * 
@@ -117,7 +117,7 @@ public final class AlertPolicyCondition {
     /**
      * A short name or phrase used to identify the
      * condition in dashboards, notifications, and
-     * incidents. To avoid confusion, don't use the same
+     * incidents. To avoid confusion, don&#39;t use the same
      * display name for multiple conditions in the same
      * policy.
      * 

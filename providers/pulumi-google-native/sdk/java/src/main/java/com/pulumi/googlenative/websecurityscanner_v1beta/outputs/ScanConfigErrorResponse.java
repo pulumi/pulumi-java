@@ -15,7 +15,7 @@ public final class ScanConfigErrorResponse {
      */
     private final String code;
     /**
-     * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     * Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
      * 
      */
     private final String fieldName;
@@ -36,7 +36,7 @@ public final class ScanConfigErrorResponse {
         return this.code;
     }
     /**
-     * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     * Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
      * 
     */
     public String fieldName() {

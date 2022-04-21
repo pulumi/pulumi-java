@@ -38,7 +38,7 @@ public final class BudgetAllUpdatesRule {
      */
     private final @Nullable String pubsubTopic;
     /**
-     * The schema version of the notification. Only "1.0" is
+     * The schema version of the notification. Only &#34;1.0&#34; is
      * accepted. It represents the JSON schema as defined in
      * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
      * 
@@ -88,7 +88,7 @@ public final class BudgetAllUpdatesRule {
         return Optional.ofNullable(this.pubsubTopic);
     }
     /**
-     * The schema version of the notification. Only "1.0" is
+     * The schema version of the notification. Only &#34;1.0&#34; is
      * accepted. It represents the JSON schema as defined in
      * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
      * 

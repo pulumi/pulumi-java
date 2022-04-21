@@ -20,7 +20,7 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     public static final DevicePoolArgs Empty = new DevicePoolArgs();
 
     /**
-     * The device pool's description.
+     * The device pool&#39;s description.
      * 
      */
     @Import(name="description")
@@ -64,7 +64,7 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The device pool's rules. See Rule.
+     * The device pool&#39;s rules. See Rule.
      * 
      */
     @Import(name="rules", required=true)

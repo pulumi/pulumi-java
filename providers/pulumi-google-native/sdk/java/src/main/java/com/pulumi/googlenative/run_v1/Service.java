@@ -23,28 +23,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:run/v1:Service")
 public class Service extends com.pulumi.resources.CustomResource {
     /**
-     * The API version for this call such as "serving.knative.dev/v1".
+     * The API version for this call such as &#34;serving.knative.dev/v1&#34;.
      * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
-     * @return The API version for this call such as "serving.knative.dev/v1".
+     * @return The API version for this call such as &#34;serving.knative.dev/v1&#34;.
      * 
      */
     public Output<String> apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The kind of resource, in this case "Service".
+     * The kind of resource, in this case &#34;Service&#34;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
-     * @return The kind of resource, in this case "Service".
+     * @return The kind of resource, in this case &#34;Service&#34;.
      * 
      */
     public Output<String> kind() {

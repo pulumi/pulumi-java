@@ -44,7 +44,7 @@ public final class ParquetFormatResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Type of dataset storage format.
-     * Expected value is 'ParquetFormat'.
+     * Expected value is &#39;ParquetFormat&#39;.
      * 
      */
     @Import(name="type", required=true)

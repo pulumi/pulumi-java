@@ -22,7 +22,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorRespo
     private final String id;
     /**
      * Result type
-     * Expected value is 'ErrorOutput'.
+     * Expected value is &#39;ErrorOutput&#39;.
      * 
      */
     private final String resultType;
@@ -53,7 +53,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorRespo
     }
     /**
      * Result type
-     * Expected value is 'ErrorOutput'.
+     * Expected value is &#39;ErrorOutput&#39;.
      * 
     */
     public String resultType() {

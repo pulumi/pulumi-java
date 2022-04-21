@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Initiates a Cutover of a specific migrating VM. The returned LRO is completed when the cutover job resource is created and the job is initiated.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -53,14 +53,14 @@ public class CutoverJob extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * Provides details for the errors that led to the Cutover Job's state.
+     * Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
-     * @return Provides details for the errors that led to the Cutover Job's state.
+     * @return Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
      */
     public Output<StatusResponse> error() {

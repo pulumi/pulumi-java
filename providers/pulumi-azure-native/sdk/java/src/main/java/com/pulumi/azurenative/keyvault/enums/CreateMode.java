@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The vault's create mode to indicate whether the vault need to be recovered or not.
+     * The vault&#39;s create mode to indicate whether the vault need to be recovered or not.
      * 
      */
     @EnumType

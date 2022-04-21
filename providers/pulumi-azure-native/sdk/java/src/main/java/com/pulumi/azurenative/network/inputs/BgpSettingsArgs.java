@@ -24,7 +24,7 @@ public final class BgpSettingsArgs extends com.pulumi.resources.ResourceArgs {
     public static final BgpSettingsArgs Empty = new BgpSettingsArgs();
 
     /**
-     * The BGP speaker's ASN.
+     * The BGP speaker&#39;s ASN.
      * 
      */
     @Import(name="asn")

@@ -19,7 +19,7 @@ public final class GetPolicyResult {
      */
     private final PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig;
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
+     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
      * 
      */
     private final String description;
@@ -71,7 +71,7 @@ public final class GetPolicyResult {
         return this.alternativeNameServerConfig;
     }
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
+     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
      * 
     */
     public String description() {

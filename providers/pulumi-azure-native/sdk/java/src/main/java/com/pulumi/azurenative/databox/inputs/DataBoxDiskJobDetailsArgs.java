@@ -74,7 +74,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
 
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     @Import(name="jobDetailsType", required=true)

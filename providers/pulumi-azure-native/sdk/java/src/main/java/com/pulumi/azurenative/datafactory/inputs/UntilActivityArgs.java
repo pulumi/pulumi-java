@@ -129,7 +129,7 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of activity.
-     * Expected value is 'Until'.
+     * Expected value is &#39;Until&#39;.
      * 
      */
     @Import(name="type", required=true)

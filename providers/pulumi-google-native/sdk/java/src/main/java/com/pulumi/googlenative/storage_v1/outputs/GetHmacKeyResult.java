@@ -35,7 +35,7 @@ public final class GetHmacKeyResult {
      */
     private final String selfLink;
     /**
-     * The email address of the key's associated service account.
+     * The email address of the key&#39;s associated service account.
      * 
      */
     private final String serviceAccountEmail;
@@ -113,7 +113,7 @@ public final class GetHmacKeyResult {
         return this.selfLink;
     }
     /**
-     * The email address of the key's associated service account.
+     * The email address of the key&#39;s associated service account.
      * 
     */
     public String serviceAccountEmail() {

@@ -115,7 +115,7 @@ public final class CosmosDbSqlApiCollectionDatasetArgs extends com.pulumi.resour
 
     /**
      * Type of dataset.
-     * Expected value is 'CosmosDbSqlApiCollection'.
+     * Expected value is &#39;CosmosDbSqlApiCollection&#39;.
      * 
      */
     @Import(name="type", required=true)

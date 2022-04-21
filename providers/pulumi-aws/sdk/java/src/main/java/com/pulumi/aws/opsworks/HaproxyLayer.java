@@ -42,28 +42,28 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Whether to automatically assign an elastic IP address to the layer's instances.
+     * Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     @Export(name="autoAssignElasticIps", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoAssignElasticIps;
 
     /**
-     * @return Whether to automatically assign an elastic IP address to the layer's instances.
+     * @return Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ Boolean> autoAssignElasticIps() {
         return this.autoAssignElasticIps;
     }
     /**
-     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     @Export(name="autoAssignPublicIps", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoAssignPublicIps;
 
     /**
-     * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ Boolean> autoAssignPublicIps() {
@@ -102,14 +102,14 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
         return this.customDeployRecipes;
     }
     /**
-     * The ARN of an IAM profile that will be used for the layer's instances.
+     * The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     @Export(name="customInstanceProfileArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> customInstanceProfileArn;
 
     /**
-     * @return The ARN of an IAM profile that will be used for the layer's instances.
+     * @return The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ String> customInstanceProfileArn() {
@@ -130,14 +130,14 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
         return this.customJson;
     }
     /**
-     * Ids for a set of security groups to apply to the layer's instances.
+     * Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     @Export(name="customSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customSecurityGroupIds;
 
     /**
-     * @return Ids for a set of security groups to apply to the layer's instances.
+     * @return Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<String>> customSecurityGroupIds() {
@@ -176,14 +176,14 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
         return this.drainElbOnShutdown;
     }
     /**
-     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     @Export(name="ebsVolumes", type=List.class, parameters={HaproxyLayerEbsVolume.class})
     private Output</* @Nullable */ List<HaproxyLayerEbsVolume>> ebsVolumes;
 
     /**
-     * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<HaproxyLayerEbsVolume>> ebsVolumes() {
@@ -204,28 +204,28 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
         return this.elasticLoadBalancer;
     }
     /**
-     * HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
+     * HTTP method to use for instance healthchecks. Defaults to &#34;OPTIONS&#34;.
      * 
      */
     @Export(name="healthcheckMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthcheckMethod;
 
     /**
-     * @return HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
+     * @return HTTP method to use for instance healthchecks. Defaults to &#34;OPTIONS&#34;.
      * 
      */
     public Output</* @Nullable */ String> healthcheckMethod() {
         return this.healthcheckMethod;
     }
     /**
-     * URL path to use for instance healthchecks. Defaults to "/".
+     * URL path to use for instance healthchecks. Defaults to &#34;/&#34;.
      * 
      */
     @Export(name="healthcheckUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthcheckUrl;
 
     /**
-     * @return URL path to use for instance healthchecks. Defaults to "/".
+     * @return URL path to use for instance healthchecks. Defaults to &#34;/&#34;.
      * 
      */
     public Output</* @Nullable */ String> healthcheckUrl() {
@@ -316,42 +316,42 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
         return this.statsPassword;
     }
     /**
-     * The HAProxy stats URL. Defaults to "/haproxy?stats".
+     * The HAProxy stats URL. Defaults to &#34;/haproxy?stats&#34;.
      * 
      */
     @Export(name="statsUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> statsUrl;
 
     /**
-     * @return The HAProxy stats URL. Defaults to "/haproxy?stats".
+     * @return The HAProxy stats URL. Defaults to &#34;/haproxy?stats&#34;.
      * 
      */
     public Output</* @Nullable */ String> statsUrl() {
         return this.statsUrl;
     }
     /**
-     * The username for HAProxy stats. Defaults to "opsworks".
+     * The username for HAProxy stats. Defaults to &#34;opsworks&#34;.
      * 
      */
     @Export(name="statsUser", type=String.class, parameters={})
     private Output</* @Nullable */ String> statsUser;
 
     /**
-     * @return The username for HAProxy stats. Defaults to "opsworks".
+     * @return The username for HAProxy stats. Defaults to &#34;opsworks&#34;.
      * 
      */
     public Output</* @Nullable */ String> statsUser() {
         return this.statsUser;
     }
     /**
-     * Names of a set of system packages to install on the layer's instances.
+     * Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     @Export(name="systemPackages", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> systemPackages;
 
     /**
-     * @return Names of a set of system packages to install on the layer's instances.
+     * @return Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<String>> systemPackages() {

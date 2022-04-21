@@ -30,7 +30,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The description of the DB parameter group. Defaults to "Managed by Pulumi".
+     * The description of the DB parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

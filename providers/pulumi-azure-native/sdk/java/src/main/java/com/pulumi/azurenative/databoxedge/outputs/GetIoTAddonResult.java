@@ -38,7 +38,7 @@ public final class GetIoTAddonResult {
     private final IoTDeviceInfoResponse ioTEdgeDeviceDetails;
     /**
      * Addon type.
-     * Expected value is 'IotEdge'.
+     * Expected value is &#39;IotEdge&#39;.
      * 
      */
     private final String kind;
@@ -131,7 +131,7 @@ public final class GetIoTAddonResult {
     }
     /**
      * Addon type.
-     * Expected value is 'IotEdge'.
+     * Expected value is &#39;IotEdge&#39;.
      * 
     */
     public String kind() {

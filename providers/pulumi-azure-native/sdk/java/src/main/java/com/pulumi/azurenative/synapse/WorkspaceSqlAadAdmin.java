@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  * Workspace active directory administrator
  * API Version: 2021-03-01.
  * 
- * Note: SQL AAD Admin is configured automatically during workspace creation and assigned to the current user. One can't add more admins with this resource unless you manually delete the current SQL AAD Admin.
+ * Note: SQL AAD Admin is configured automatically during workspace creation and assigned to the current user. One can&#39;t add more admins with this resource unless you manually delete the current SQL AAD Admin.
  * 
  * ## Example Usage
  * 
@@ -104,14 +104,14 @@ public class WorkspaceSqlAadAdmin extends com.pulumi.resources.CustomResource {
         return this.tenantId;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

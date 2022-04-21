@@ -18,7 +18,7 @@ public final class FirewallFirewallStatusSyncStateArgs extends com.pulumi.resour
     public static final FirewallFirewallStatusSyncStateArgs Empty = new FirewallFirewallStatusSyncStateArgs();
 
     /**
-     * Nested list describing the attachment status of the firewall's association with a single VPC subnet.
+     * Nested list describing the attachment status of the firewall&#39;s association with a single VPC subnet.
      * 
      */
     @Import(name="attachments")

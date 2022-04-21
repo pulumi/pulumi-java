@@ -126,7 +126,7 @@ public final class TeradataTableDatasetResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of dataset.
-     * Expected value is 'TeradataTable'.
+     * Expected value is &#39;TeradataTable&#39;.
      * 
      */
     @Import(name="type", required=true)

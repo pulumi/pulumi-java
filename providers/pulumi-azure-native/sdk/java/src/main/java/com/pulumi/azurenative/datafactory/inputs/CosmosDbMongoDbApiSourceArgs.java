@@ -33,7 +33,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property&#39;s main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
      * 
      */
     @Import(name="batchSize")
@@ -122,7 +122,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends com.pulumi.resources.Res
 
     /**
      * Copy source type.
-     * Expected value is 'CosmosDbMongoDbApiSource'.
+     * Expected value is &#39;CosmosDbMongoDbApiSource&#39;.
      * 
      */
     @Import(name="type", required=true)

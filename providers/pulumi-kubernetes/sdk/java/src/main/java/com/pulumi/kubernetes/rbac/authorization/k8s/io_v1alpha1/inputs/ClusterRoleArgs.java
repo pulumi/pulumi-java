@@ -57,7 +57,7 @@ public final class ClusterRoleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     @Import(name="metadata")

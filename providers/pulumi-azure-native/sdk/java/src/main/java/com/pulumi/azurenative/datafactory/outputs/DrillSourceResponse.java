@@ -49,7 +49,7 @@ public final class DrillSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'DrillSource'.
+     * Expected value is &#39;DrillSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class DrillSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'DrillSource'.
+     * Expected value is &#39;DrillSource&#39;.
      * 
     */
     public String type() {

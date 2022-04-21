@@ -27,7 +27,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     public static final ScheduleBasedBackupCriteriaArgs Empty = new ScheduleBasedBackupCriteriaArgs();
 
     /**
-     * it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
+     * it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
      * and should be part of AbsoluteMarker enum
      * 
      */
@@ -73,7 +73,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ScheduleBasedBackupCriteria'.
+     * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
      * 
      */
     @Import(name="objectType", required=true)

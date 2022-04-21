@@ -17,7 +17,7 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
     public static final GraphParameterLinkResponse Empty = new GraphParameterLinkResponse();
 
     /**
-     * The graph node's identifier
+     * The graph node&#39;s identifier
      * 
      */
     @Import(name="nodeId", required=true)

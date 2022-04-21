@@ -64,14 +64,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.driverControlFilesUri;
     }
     /**
-     * A URI pointing to the location of the stdout of the job's driver program.
+     * A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
      */
     @Export(name="driverOutputResourceUri", type=String.class, parameters={})
     private Output<String> driverOutputResourceUri;
 
     /**
-     * @return A URI pointing to the location of the stdout of the job's driver program.
+     * @return A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
      */
     public Output<String> driverOutputResourceUri() {

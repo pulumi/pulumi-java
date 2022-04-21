@@ -50,7 +50,7 @@ public final class GetMessageResult {
      */
     private final List<PatientIdResponse> patientIds;
     /**
-     * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
+     * The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
      * 
      */
     private final SchematizedDataResponse schematizedData;
@@ -139,7 +139,7 @@ public final class GetMessageResult {
         return this.patientIds;
     }
     /**
-     * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
+     * The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
      * 
     */
     public SchematizedDataResponse schematizedData() {

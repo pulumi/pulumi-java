@@ -46,7 +46,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends com.pulumi.resou
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/networkInterfaces'.
+     * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

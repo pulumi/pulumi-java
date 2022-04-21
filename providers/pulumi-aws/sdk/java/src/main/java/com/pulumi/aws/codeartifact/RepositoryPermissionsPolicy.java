@@ -72,14 +72,14 @@ public class RepositoryPermissionsPolicy extends com.pulumi.resources.CustomReso
         return this.policyDocument;
     }
     /**
-     * The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
+     * The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain&#39;s resource policy.
      * 
      */
     @Export(name="policyRevision", type=String.class, parameters={})
     private Output<String> policyRevision;
 
     /**
-     * @return The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
+     * @return The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain&#39;s resource policy.
      * 
      */
     public Output<String> policyRevision() {

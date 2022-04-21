@@ -31,7 +31,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends com.pulumi.re
     }
 
     /**
-     * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
+     * The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
      */
     @Import(name="version")

@@ -20,7 +20,7 @@ public final class BootstrapConfigurationResponse extends com.pulumi.resources.I
     public static final BootstrapConfigurationResponse Empty = new BootstrapConfigurationResponse();
 
     /**
-     * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
+     * Repository containing the source code for the pipeline. Currently only &#39;azurePipeline&#39; pipeline type supports this.
      * 
      */
     @Import(name="sourceRepository")

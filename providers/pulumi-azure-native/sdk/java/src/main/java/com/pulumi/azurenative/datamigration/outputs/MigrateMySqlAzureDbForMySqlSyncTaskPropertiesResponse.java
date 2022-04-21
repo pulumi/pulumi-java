@@ -50,7 +50,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'Migrate.MySql.AzureDbForMySql.Sync'.
+     * Expected value is &#39;Migrate.MySql.AzureDbForMySql.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -108,7 +108,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'Migrate.MySql.AzureDbForMySql.Sync'.
+     * Expected value is &#39;Migrate.MySql.AzureDbForMySql.Sync&#39;.
      * 
     */
     public String taskType() {

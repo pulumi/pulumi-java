@@ -43,7 +43,7 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
 
     /**
      * Describes the kind of secret.
-     * Expected value is 'SecretResourceProperties'.
+     * Expected value is &#39;SecretResourceProperties&#39;.
      * 
      */
     @Import(name="kind", required=true)

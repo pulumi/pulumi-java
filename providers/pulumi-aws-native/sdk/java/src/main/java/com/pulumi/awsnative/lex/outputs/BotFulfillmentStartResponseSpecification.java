@@ -20,7 +20,7 @@ public final class BotFulfillmentStartResponseSpecification {
      */
     private final @Nullable Boolean allowInterrupt;
     /**
-     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn't played.
+     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
      * 
      */
     private final Integer delayInSeconds;
@@ -44,7 +44,7 @@ public final class BotFulfillmentStartResponseSpecification {
         return Optional.ofNullable(this.allowInterrupt);
     }
     /**
-     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn't played.
+     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
      * 
     */
     public Integer delayInSeconds() {

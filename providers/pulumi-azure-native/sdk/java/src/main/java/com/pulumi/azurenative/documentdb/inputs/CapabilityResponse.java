@@ -19,7 +19,7 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     public static final CapabilityResponse Empty = new CapabilityResponse();
 
     /**
-     * Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".
+     * Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
      * 
      */
     @Import(name="name")

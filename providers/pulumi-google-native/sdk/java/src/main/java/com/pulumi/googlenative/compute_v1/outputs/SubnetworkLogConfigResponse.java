@@ -38,7 +38,7 @@ public final class SubnetworkLogConfigResponse {
      */
     private final String metadata;
     /**
-     * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.
+     * Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
      * 
      */
     private final List<String> metadataFields;
@@ -95,7 +95,7 @@ public final class SubnetworkLogConfigResponse {
         return this.metadata;
     }
     /**
-     * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.
+     * Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
      * 
     */
     public List<String> metadataFields() {

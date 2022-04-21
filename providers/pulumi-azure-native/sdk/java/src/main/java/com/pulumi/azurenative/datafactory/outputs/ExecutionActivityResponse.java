@@ -43,7 +43,7 @@ public final class ExecutionActivityResponse {
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * Type of activity.
-     * Expected value is 'Execution'.
+     * Expected value is &#39;Execution&#39;.
      * 
      */
     private final String type;
@@ -108,7 +108,7 @@ public final class ExecutionActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Execution'.
+     * Expected value is &#39;Execution&#39;.
      * 
     */
     public String type() {

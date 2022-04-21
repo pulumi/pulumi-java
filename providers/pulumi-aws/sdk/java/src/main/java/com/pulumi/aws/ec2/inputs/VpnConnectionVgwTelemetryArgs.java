@@ -50,7 +50,7 @@ public final class VpnConnectionVgwTelemetryArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Internet-routable IP address of the virtual private gateway's outside interface.
+     * The Internet-routable IP address of the virtual private gateway&#39;s outside interface.
      * 
      */
     @Import(name="outsideIpAddress")

@@ -62,7 +62,7 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
+     * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven&#39;t been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
      * 
      */
     @Import(name="tasksCount", required=true)

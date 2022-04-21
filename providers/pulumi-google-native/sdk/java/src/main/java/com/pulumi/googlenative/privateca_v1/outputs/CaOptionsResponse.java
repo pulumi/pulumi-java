@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class CaOptionsResponse {
     /**
-     * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
      * 
      */
     private final Boolean isCa;
@@ -30,7 +30,7 @@ public final class CaOptionsResponse {
     }
 
     /**
-     * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
      * 
     */
     public Boolean isCa() {

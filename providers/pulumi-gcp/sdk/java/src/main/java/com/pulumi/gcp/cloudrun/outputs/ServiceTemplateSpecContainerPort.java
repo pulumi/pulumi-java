@@ -18,7 +18,7 @@ public final class ServiceTemplateSpecContainerPort {
      */
     private final Integer containerPort;
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final @Nullable String name;
@@ -46,7 +46,7 @@ public final class ServiceTemplateSpecContainerPort {
         return this.containerPort;
     }
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public Optional<String> name() {

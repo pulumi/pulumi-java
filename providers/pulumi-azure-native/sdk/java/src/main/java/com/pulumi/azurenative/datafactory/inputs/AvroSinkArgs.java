@@ -95,7 +95,7 @@ public final class AvroSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'AvroSink'.
+     * Expected value is &#39;AvroSink&#39;.
      * 
      */
     @Import(name="type", required=true)

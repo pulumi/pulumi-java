@@ -67,7 +67,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of the custom mapping
-     * Expected value is 'Json'.
+     * Expected value is &#39;Json&#39;.
      * 
      */
     @Import(name="inputSchemaMappingType", required=true)

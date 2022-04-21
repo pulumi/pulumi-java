@@ -54,7 +54,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
 
     /**
      * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
      * 
      */
     @Import(name="odataType", required=true)

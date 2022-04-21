@@ -31,7 +31,7 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Metric Trigger Type - 'Consecutive' or 'Total'
+     * Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
      * 
      */
     @Import(name="metricTriggerType")
@@ -53,7 +53,7 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
+     * Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
      * 
      */
     @Import(name="thresholdOperator")

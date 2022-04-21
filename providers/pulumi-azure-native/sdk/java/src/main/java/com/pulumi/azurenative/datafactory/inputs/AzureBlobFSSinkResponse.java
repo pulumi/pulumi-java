@@ -90,7 +90,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureBlobFSSink'.
+     * Expected value is &#39;AzureBlobFSSink&#39;.
      * 
      */
     @Import(name="type", required=true)

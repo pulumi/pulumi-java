@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * SubjectAltNames corresponds to a more modern way of listing what the asserted identity is in a certificate (i.e., compared to the "common name" in the distinguished name).
+ * SubjectAltNames corresponds to a more modern way of listing what the asserted identity is in a certificate (i.e., compared to the &#34;common name&#34; in the distinguished name).
  * 
  */
 public final class SubjectAltNamesArgs extends com.pulumi.resources.ResourceArgs {

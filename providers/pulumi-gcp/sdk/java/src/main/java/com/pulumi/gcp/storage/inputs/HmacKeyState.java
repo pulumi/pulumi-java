@@ -50,7 +50,7 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The email address of the key's associated service account.
+     * The email address of the key&#39;s associated service account.
      * 
      */
     @Import(name="serviceAccountEmail")
@@ -74,7 +74,7 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * 'The creation time of the HMAC key in RFC 3339 format. '
+     * &#39;The creation time of the HMAC key in RFC 3339 format. &#39;
      * 
      */
     @Import(name="timeCreated")
@@ -85,7 +85,7 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * 'The last modification time of the HMAC key metadata in RFC 3339 format.'
+     * &#39;The last modification time of the HMAC key metadata in RFC 3339 format.&#39;
      * 
      */
     @Import(name="updated")

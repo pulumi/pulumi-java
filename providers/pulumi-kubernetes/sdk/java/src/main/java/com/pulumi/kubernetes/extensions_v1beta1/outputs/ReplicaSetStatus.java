@@ -19,7 +19,7 @@ public final class ReplicaSetStatus {
      */
     private final @Nullable Integer availableReplicas;
     /**
-     * Represents the latest available observations of a replica set's current state.
+     * Represents the latest available observations of a replica set&#39;s current state.
      * 
      */
     private final @Nullable List<ReplicaSetCondition> conditions;
@@ -68,7 +68,7 @@ public final class ReplicaSetStatus {
         return Optional.ofNullable(this.availableReplicas);
     }
     /**
-     * Represents the latest available observations of a replica set's current state.
+     * Represents the latest available observations of a replica set&#39;s current state.
      * 
     */
     public List<ReplicaSetCondition> conditions() {

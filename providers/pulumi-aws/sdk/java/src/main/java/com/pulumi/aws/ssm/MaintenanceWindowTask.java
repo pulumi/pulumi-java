@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * AWS Maintenance Window Task can be imported using the `window_id` and `window_task_id` separated by `/`.
  * 
  * ```sh
- *  $ pulumi import aws:ssm/maintenanceWindowTask:MaintenanceWindowTask task <window_id>/<window_task_id>
+ *  $ pulumi import aws:ssm/maintenanceWindowTask:MaintenanceWindowTask task &lt;window_id&gt;/&lt;window_task_id&gt;
  * ```
  * 
  */
@@ -104,14 +104,14 @@ public class MaintenanceWindowTask extends com.pulumi.resources.CustomResource {
         return this.priority;
     }
     /**
-     * The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account's service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
+     * The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account&#39;s service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
      * 
      */
     @Export(name="serviceRoleArn", type=String.class, parameters={})
     private Output<String> serviceRoleArn;
 
     /**
-     * @return The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account's service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
+     * @return The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account&#39;s service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
      * 
      */
     public Output<String> serviceRoleArn() {

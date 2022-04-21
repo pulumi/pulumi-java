@@ -20,7 +20,7 @@ public final class HealthAlertCriteriaResponse extends com.pulumi.resources.Invo
     public static final HealthAlertCriteriaResponse Empty = new HealthAlertCriteriaResponse();
 
     /**
-     * The list of metric criteria for this 'all of' operation.
+     * The list of metric criteria for this &#39;all of&#39; operation.
      * 
      */
     @Import(name="allOf")

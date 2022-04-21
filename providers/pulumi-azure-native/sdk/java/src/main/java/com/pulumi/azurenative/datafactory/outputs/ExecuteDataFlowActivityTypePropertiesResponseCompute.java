@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
     /**
-     * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+     * Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
      * 
      */
     private final @Nullable Object computeType;
@@ -31,7 +31,7 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
     }
 
     /**
-     * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+     * Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
      * 
     */
     public Optional<Object> computeType() {

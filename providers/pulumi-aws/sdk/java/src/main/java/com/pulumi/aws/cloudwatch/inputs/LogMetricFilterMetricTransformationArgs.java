@@ -72,7 +72,7 @@ public final class LogMetricFilterMetricTransformationArgs extends com.pulumi.re
     }
 
     /**
-     * What to publish to the metric. For example, if you're counting the occurrences of a particular term like "Error", the value will be "1" for each occurrence. If you're counting the bytes transferred the published value will be the value in the log event.
+     * What to publish to the metric. For example, if you&#39;re counting the occurrences of a particular term like &#34;Error&#34;, the value will be &#34;1&#34; for each occurrence. If you&#39;re counting the bytes transferred the published value will be the value in the log event.
      * 
      */
     @Import(name="value", required=true)

@@ -76,7 +76,7 @@ public final class AzureMLLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureML'.
+     * Expected value is &#39;AzureML&#39;.
      * 
      */
     private final String type;
@@ -195,7 +195,7 @@ public final class AzureMLLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureML'.
+     * Expected value is &#39;AzureML&#39;.
      * 
     */
     public String type() {

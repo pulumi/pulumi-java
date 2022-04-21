@@ -19,7 +19,7 @@ public final class StorageAccountDetailsResponse extends com.pulumi.resources.In
 
     /**
      * Account Type of the data to be transferred.
-     * Expected value is 'StorageAccount'.
+     * Expected value is &#39;StorageAccount&#39;.
      * 
      */
     @Import(name="dataAccountType", required=true)

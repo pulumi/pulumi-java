@@ -31,12 +31,12 @@ public final class VmwareVmDetailsResponse {
      */
     private final Integer cpuCount;
     /**
-     * The descriptive name of the vCenter's datacenter this VM is contained in.
+     * The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
      * 
      */
     private final String datacenterDescription;
     /**
-     * The id of the vCenter's datacenter this VM is contained in.
+     * The id of the vCenter&#39;s datacenter this VM is contained in.
      * 
      */
     private final String datacenterId;
@@ -51,7 +51,7 @@ public final class VmwareVmDetailsResponse {
      */
     private final String displayName;
     /**
-     * The VM's OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     * The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
      * 
      */
     private final String guestDescription;
@@ -71,7 +71,7 @@ public final class VmwareVmDetailsResponse {
      */
     private final String uuid;
     /**
-     * The VM's id in the source (note that this is not the MigratingVm's id). This is the moref id of the VM.
+     * The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
      * 
      */
     private final String vmId;
@@ -135,14 +135,14 @@ public final class VmwareVmDetailsResponse {
         return this.cpuCount;
     }
     /**
-     * The descriptive name of the vCenter's datacenter this VM is contained in.
+     * The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
      * 
     */
     public String datacenterDescription() {
         return this.datacenterDescription;
     }
     /**
-     * The id of the vCenter's datacenter this VM is contained in.
+     * The id of the vCenter&#39;s datacenter this VM is contained in.
      * 
     */
     public String datacenterId() {
@@ -163,7 +163,7 @@ public final class VmwareVmDetailsResponse {
         return this.displayName;
     }
     /**
-     * The VM's OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     * The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
      * 
     */
     public String guestDescription() {
@@ -191,7 +191,7 @@ public final class VmwareVmDetailsResponse {
         return this.uuid;
     }
     /**
-     * The VM's id in the source (note that this is not the MigratingVm's id). This is the moref id of the VM.
+     * The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
      * 
     */
     public String vmId() {

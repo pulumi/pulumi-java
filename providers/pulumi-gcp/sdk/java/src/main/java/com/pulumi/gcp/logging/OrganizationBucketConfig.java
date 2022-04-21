@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  * [the official logging documentation](https://cloud.google.com/logging/docs/) and
  * [Storing Logs](https://cloud.google.com/logging/docs/storage).
  * 
- * > **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are "_Default" and "_Required".
+ * &gt; **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are &#34;_Default&#34; and &#34;_Required&#34;.
  * 
  * ## Example Usage
  * 
@@ -63,42 +63,42 @@ public class OrganizationBucketConfig extends com.pulumi.resources.CustomResourc
         return this.description;
     }
     /**
-     * The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+     * The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
      * 
      */
     @Export(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
     /**
-     * @return The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+     * @return The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
      * 
      */
     public Output<String> lifecycleState() {
         return this.lifecycleState;
     }
     /**
-     * The location of the bucket. The supported locations are: "global" "us-central1"
+     * The location of the bucket. The supported locations are: &#34;global&#34; &#34;us-central1&#34;
      * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
-     * @return The location of the bucket. The supported locations are: "global" "us-central1"
+     * @return The location of the bucket. The supported locations are: &#34;global&#34; &#34;us-central1&#34;
      * 
      */
     public Output<String> location() {
         return this.location;
     }
     /**
-     * The resource name of the bucket. For example: "organizations/my-organization-id/locations/my-location/buckets/my-bucket-id"
+     * The resource name of the bucket. For example: &#34;organizations/my-organization-id/locations/my-location/buckets/my-bucket-id&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the bucket. For example: "organizations/my-organization-id/locations/my-location/buckets/my-bucket-id"
+     * @return The resource name of the bucket. For example: &#34;organizations/my-organization-id/locations/my-location/buckets/my-bucket-id&#34;
      * 
      */
     public Output<String> name() {

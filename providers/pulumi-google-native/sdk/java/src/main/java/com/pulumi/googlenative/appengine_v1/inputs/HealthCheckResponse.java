@@ -52,7 +52,7 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
+     * Host header to send when performing an HTTP health check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     @Import(name="host", required=true)

@@ -50,42 +50,42 @@ public class Gen1Environment extends com.pulumi.resources.CustomResource {
         return this.creationTime;
     }
     /**
-     * The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     @Export(name="dataAccessFqdn", type=String.class, parameters={})
     private Output<String> dataAccessFqdn;
 
     /**
-     * @return The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * @return The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     public Output<String> dataAccessFqdn() {
         return this.dataAccessFqdn;
     }
     /**
-     * An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     @Export(name="dataAccessId", type=String.class, parameters={})
     private Output<String> dataAccessId;
 
     /**
-     * @return An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * @return An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     public Output<String> dataAccessId() {
         return this.dataAccessId;
     }
     /**
-     * ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
+     * ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
      * 
      */
     @Export(name="dataRetentionTime", type=String.class, parameters={})
     private Output<String> dataRetentionTime;
 
     /**
-     * @return ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
+     * @return ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
      * 
      */
     public Output<String> dataRetentionTime() {
@@ -93,7 +93,7 @@ public class Gen1Environment extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the environment.
-     * Expected value is 'Gen1'.
+     * Expected value is &#39;Gen1&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -101,7 +101,7 @@ public class Gen1Environment extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the environment.
-     * Expected value is 'Gen1'.
+     * Expected value is &#39;Gen1&#39;.
      * 
      */
     public Output<String> kind() {
@@ -192,14 +192,14 @@ public class Gen1Environment extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+     * The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
     @Export(name="storageLimitExceededBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageLimitExceededBehavior;
 
     /**
-     * @return The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+     * @return The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
     public Output</* @Nullable */ String> storageLimitExceededBehavior() {

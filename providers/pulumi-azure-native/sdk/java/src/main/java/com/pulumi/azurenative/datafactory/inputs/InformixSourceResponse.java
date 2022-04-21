@@ -99,7 +99,7 @@ public final class InformixSourceResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Copy source type.
-     * Expected value is 'InformixSource'.
+     * Expected value is &#39;InformixSource&#39;.
      * 
      */
     @Import(name="type", required=true)

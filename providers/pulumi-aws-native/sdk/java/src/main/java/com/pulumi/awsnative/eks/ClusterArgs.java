@@ -83,7 +83,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
     @Import(name="version")

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ResourceIdResponse {
     /**
-     * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
+     * The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
      * 
      */
     private final String type;
@@ -21,7 +21,7 @@ public final class ResourceIdResponse {
     }
 
     /**
-     * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
+     * The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
      * 
     */
     public String type() {

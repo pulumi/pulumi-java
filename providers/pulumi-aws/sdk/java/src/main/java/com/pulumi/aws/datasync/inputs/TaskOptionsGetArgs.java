@@ -39,7 +39,7 @@ public final class TaskOptionsGetArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Group identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
+     * Group identifier of the file&#39;s owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
      */
     @Import(name="gid")
@@ -138,7 +138,7 @@ public final class TaskOptionsGetArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * User identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
+     * User identifier of the file&#39;s owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
      */
     @Import(name="uid")

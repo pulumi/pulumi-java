@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The cluster's GKE config.
+ * The cluster&#39;s GKE config.
  * 
  */
 public final class GkeClusterConfigArgs extends com.pulumi.resources.ResourceArgs {

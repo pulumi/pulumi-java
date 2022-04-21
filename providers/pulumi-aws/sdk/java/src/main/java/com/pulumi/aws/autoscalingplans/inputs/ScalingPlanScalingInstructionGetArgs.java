@@ -135,7 +135,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     }
 
     /**
-     * Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
+     * Controls whether a resource&#39;s externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
      * 
      */
     @Import(name="scalingPolicyUpdateBehavior")

@@ -88,7 +88,7 @@ public final class MicrosoftAccessSourceResponse extends com.pulumi.resources.In
 
     /**
      * Copy source type.
-     * Expected value is 'MicrosoftAccessSource'.
+     * Expected value is &#39;MicrosoftAccessSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     /**
-     * Whether to perform a 'guest aware' snapshot.
+     * Whether to perform a &#39;guest aware&#39; snapshot.
      * 
      */
     private final @Nullable Boolean guestFlush;
@@ -41,7 +41,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     }
 
     /**
-     * Whether to perform a 'guest aware' snapshot.
+     * Whether to perform a &#39;guest aware&#39; snapshot.
      * 
     */
     public Optional<Boolean> guestFlush() {

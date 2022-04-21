@@ -126,7 +126,7 @@ public final class PhoenixObjectDatasetResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of dataset.
-     * Expected value is 'PhoenixObject'.
+     * Expected value is &#39;PhoenixObject&#39;.
      * 
      */
     @Import(name="type", required=true)

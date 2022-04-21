@@ -15,22 +15,22 @@ import java.util.StringJoiner;
     @EnumType
     public enum TargetPoolSessionAffinity {
         /**
-         * 2-tuple hash on packet's source and destination IP addresses. Connections from the same source IP address to the same destination IP address will be served by the same backend VM while that VM remains healthy.
+         * 2-tuple hash on packet&#39;s source and destination IP addresses. Connections from the same source IP address to the same destination IP address will be served by the same backend VM while that VM remains healthy.
          * 
          */
         ClientIp("CLIENT_IP"),
         /**
-         * 1-tuple hash only on packet's source IP address. Connections from the same source IP address will be served by the same backend VM while that VM remains healthy. This option can only be used for Internal TCP/UDP Load Balancing.
+         * 1-tuple hash only on packet&#39;s source IP address. Connections from the same source IP address will be served by the same backend VM while that VM remains healthy. This option can only be used for Internal TCP/UDP Load Balancing.
          * 
          */
         ClientIpNoDestination("CLIENT_IP_NO_DESTINATION"),
         /**
-         * 5-tuple hash on packet's source and destination IP addresses, IP protocol, and source and destination ports. Connections for the same IP protocol from the same source IP address and port to the same destination IP address and port will be served by the same backend VM while that VM remains healthy. This option cannot be used for HTTP(S) load balancing.
+         * 5-tuple hash on packet&#39;s source and destination IP addresses, IP protocol, and source and destination ports. Connections for the same IP protocol from the same source IP address and port to the same destination IP address and port will be served by the same backend VM while that VM remains healthy. This option cannot be used for HTTP(S) load balancing.
          * 
          */
         ClientIpPortProto("CLIENT_IP_PORT_PROTO"),
         /**
-         * 3-tuple hash on packet's source and destination IP addresses, and IP protocol. Connections for the same IP protocol from the same source IP address to the same destination IP address will be served by the same backend VM while that VM remains healthy. This option cannot be used for HTTP(S) load balancing.
+         * 3-tuple hash on packet&#39;s source and destination IP addresses, and IP protocol. Connections for the same IP protocol from the same source IP address to the same destination IP address will be served by the same backend VM while that VM remains healthy. This option cannot be used for HTTP(S) load balancing.
          * 
          */
         ClientIpProto("CLIENT_IP_PROTO"),

@@ -54,7 +54,7 @@ public final class CustomDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'CustomDataset'.
+     * Expected value is &#39;CustomDataset&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class CustomDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'CustomDataset'.
+     * Expected value is &#39;CustomDataset&#39;.
      * 
     */
     public String type() {

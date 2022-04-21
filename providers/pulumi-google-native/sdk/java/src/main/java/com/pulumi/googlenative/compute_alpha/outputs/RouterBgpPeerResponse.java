@@ -20,12 +20,12 @@ public final class RouterBgpPeerResponse {
      */
     private final String advertiseMode;
     /**
-     * User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+     * User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
      * 
      */
     private final List<String> advertisedGroups;
     /**
-     * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+     * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
      * 
      */
     private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
@@ -146,14 +146,14 @@ public final class RouterBgpPeerResponse {
         return this.advertiseMode;
     }
     /**
-     * User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+     * User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
      * 
     */
     public List<String> advertisedGroups() {
         return this.advertisedGroups;
     }
     /**
-     * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+     * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
      * 
     */
     public List<RouterAdvertisedIpRangeResponse> advertisedIpRanges() {

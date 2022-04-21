@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class VMwareCbtProtectionContainerMappingDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMwareCbt'.
+     * Expected value is &#39;VMwareCbt&#39;.
      * 
      */
     private final String instanceType;
@@ -66,7 +66,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMwareCbt'.
+     * Expected value is &#39;VMwareCbt&#39;.
      * 
     */
     public String instanceType() {

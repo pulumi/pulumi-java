@@ -18,7 +18,7 @@ public final class AzureRetentionRuleResponse {
     private final List<SourceLifeCycleResponse> lifecycles;
     private final String name;
     /**
-     * Expected value is 'AzureRetentionRule'.
+     * Expected value is &#39;AzureRetentionRule&#39;.
      * 
      */
     private final String objectType;
@@ -45,7 +45,7 @@ public final class AzureRetentionRuleResponse {
         return this.name;
     }
     /**
-     * Expected value is 'AzureRetentionRule'.
+     * Expected value is &#39;AzureRetentionRule&#39;.
      * 
     */
     public String objectType() {

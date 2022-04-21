@@ -41,7 +41,7 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
 
     /**
      * Trigger Kind.
-     * Expected value is 'PeriodicTimerEvent'.
+     * Expected value is &#39;PeriodicTimerEvent&#39;.
      * 
      */
     @Import(name="kind", required=true)

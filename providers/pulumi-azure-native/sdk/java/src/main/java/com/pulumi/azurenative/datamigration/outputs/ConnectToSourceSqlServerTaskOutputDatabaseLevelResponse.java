@@ -39,7 +39,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     private final String name;
     /**
      * Type of result - database level or task level
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -104,7 +104,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     }
     /**
      * Type of result - database level or task level
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
     */
     public String resultType() {

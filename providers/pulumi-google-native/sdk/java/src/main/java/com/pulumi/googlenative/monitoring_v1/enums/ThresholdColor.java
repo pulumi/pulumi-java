@@ -20,12 +20,12 @@ import java.util.StringJoiner;
          */
         ColorUnspecified("COLOR_UNSPECIFIED"),
         /**
-         * Crossing the threshold is "concerning" behavior.
+         * Crossing the threshold is &#34;concerning&#34; behavior.
          * 
          */
         Yellow("YELLOW"),
         /**
-         * Crossing the threshold is "emergency" behavior.
+         * Crossing the threshold is &#34;emergency&#34; behavior.
          * 
          */
         Red("RED");

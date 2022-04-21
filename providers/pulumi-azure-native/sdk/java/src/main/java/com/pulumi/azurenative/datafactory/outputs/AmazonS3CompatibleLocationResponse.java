@@ -29,7 +29,7 @@ public final class AmazonS3CompatibleLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'AmazonS3CompatibleLocation'.
+     * Expected value is &#39;AmazonS3CompatibleLocation&#39;.
      * 
      */
     private final String type;
@@ -76,7 +76,7 @@ public final class AmazonS3CompatibleLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'AmazonS3CompatibleLocation'.
+     * Expected value is &#39;AmazonS3CompatibleLocation&#39;.
      * 
     */
     public String type() {

@@ -28,7 +28,7 @@ public final class GetTaxonomyResult {
      */
     private final String displayName;
     /**
-     * Resource name of this taxonomy, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+     * Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
      * 
      */
     private final String name;
@@ -81,7 +81,7 @@ public final class GetTaxonomyResult {
         return this.displayName;
     }
     /**
-     * Resource name of this taxonomy, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+     * Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
      * 
     */
     public String name() {

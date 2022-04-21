@@ -44,7 +44,7 @@ public final class FtpServerLocationArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'FtpServerLocation'.
+     * Expected value is &#39;FtpServerLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

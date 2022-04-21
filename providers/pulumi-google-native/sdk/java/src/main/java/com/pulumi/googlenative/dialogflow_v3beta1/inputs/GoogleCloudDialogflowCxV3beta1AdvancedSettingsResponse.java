@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at lower level overrides the settings exposed at higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter.
+ * Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at lower level overrides the settings exposed at higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter.
  * 
  */
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extends com.pulumi.resources.InvokeArgs {

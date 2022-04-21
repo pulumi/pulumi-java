@@ -27,7 +27,7 @@ public final class ApplicationAppSource {
      */
     private final @Nullable String sshKey;
     /**
-     * The type of source to use. For example, "archive".
+     * The type of source to use. For example, &#34;archive&#34;.
      * 
      */
     private final String type;
@@ -80,7 +80,7 @@ public final class ApplicationAppSource {
         return Optional.ofNullable(this.sshKey);
     }
     /**
-     * The type of source to use. For example, "archive".
+     * The type of source to use. For example, &#34;archive&#34;.
      * 
     */
     public String type() {

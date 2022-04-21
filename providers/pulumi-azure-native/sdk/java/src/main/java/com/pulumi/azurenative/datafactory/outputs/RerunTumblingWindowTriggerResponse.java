@@ -51,7 +51,7 @@ public final class RerunTumblingWindowTriggerResponse {
     private final String runtimeState;
     /**
      * Trigger type.
-     * Expected value is 'RerunTumblingWindowTrigger'.
+     * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
      * 
      */
     private final String type;
@@ -127,7 +127,7 @@ public final class RerunTumblingWindowTriggerResponse {
     }
     /**
      * Trigger type.
-     * Expected value is 'RerunTumblingWindowTrigger'.
+     * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
      * 
     */
     public String type() {

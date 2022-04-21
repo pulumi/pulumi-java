@@ -17,7 +17,7 @@ public final class UserPoolDeviceConfiguration {
      */
     private final @Nullable Boolean challengeRequiredOnNewDevice;
     /**
-     * Whether a device is only remembered on user prompt. `false` equates to "Always" remember, `true` is "User Opt In," and not using a `device_configuration` block is "No."
+     * Whether a device is only remembered on user prompt. `false` equates to &#34;Always&#34; remember, `true` is &#34;User Opt In,&#34; and not using a `device_configuration` block is &#34;No.&#34;
      * 
      */
     private final @Nullable Boolean deviceOnlyRememberedOnUserPrompt;
@@ -38,7 +38,7 @@ public final class UserPoolDeviceConfiguration {
         return Optional.ofNullable(this.challengeRequiredOnNewDevice);
     }
     /**
-     * Whether a device is only remembered on user prompt. `false` equates to "Always" remember, `true` is "User Opt In," and not using a `device_configuration` block is "No."
+     * Whether a device is only remembered on user prompt. `false` equates to &#34;Always&#34; remember, `true` is &#34;User Opt In,&#34; and not using a `device_configuration` block is &#34;No.&#34;
      * 
     */
     public Optional<Boolean> deviceOnlyRememberedOnUserPrompt() {

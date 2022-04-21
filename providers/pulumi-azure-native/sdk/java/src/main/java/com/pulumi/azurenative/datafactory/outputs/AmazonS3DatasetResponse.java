@@ -64,12 +64,12 @@ public final class AmazonS3DatasetResponse {
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * The end of S3 object's modified datetime. Type: string (or Expression with resultType string).
+     * The end of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeEnd;
     /**
-     * The start of S3 object's modified datetime. Type: string (or Expression with resultType string).
+     * The start of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeStart;
@@ -95,7 +95,7 @@ public final class AmazonS3DatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'AmazonS3Object'.
+     * Expected value is &#39;AmazonS3Object&#39;.
      * 
      */
     private final String type;
@@ -198,14 +198,14 @@ public final class AmazonS3DatasetResponse {
         return this.linkedServiceName;
     }
     /**
-     * The end of S3 object's modified datetime. Type: string (or Expression with resultType string).
+     * The end of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
-     * The start of S3 object's modified datetime. Type: string (or Expression with resultType string).
+     * The start of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeStart() {
@@ -241,7 +241,7 @@ public final class AmazonS3DatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AmazonS3Object'.
+     * Expected value is &#39;AmazonS3Object&#39;.
      * 
     */
     public String type() {

@@ -115,7 +115,7 @@ public final class CosmosDbSqlApiCollectionDatasetResponse extends com.pulumi.re
 
     /**
      * Type of dataset.
-     * Expected value is 'CosmosDbSqlApiCollection'.
+     * Expected value is &#39;CosmosDbSqlApiCollection&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -19,7 +19,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     public static final ImageReferenceResponse Empty = new ImageReferenceResponse();
 
     /**
-     * Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from 'version', only if the value specified in 'version' field is 'latest'.
+     * Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from &#39;version&#39;, only if the value specified in &#39;version&#39; field is &#39;latest&#39;.
      * 
      */
     @Import(name="exactVersion", required=true)
@@ -74,7 +74,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
+     * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
      * 
      */
     @Import(name="version")

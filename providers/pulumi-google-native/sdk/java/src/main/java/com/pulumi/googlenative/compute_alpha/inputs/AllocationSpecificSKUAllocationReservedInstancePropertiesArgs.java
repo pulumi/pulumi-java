@@ -69,7 +69,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     }
 
     /**
-     * Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.
+     * Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
      * 
      */
     @Import(name="maintenanceFreezeDurationHours")

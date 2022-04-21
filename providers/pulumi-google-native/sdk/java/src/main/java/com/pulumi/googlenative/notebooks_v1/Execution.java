@@ -49,14 +49,14 @@ public class Execution extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores '_'.
+     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores &#39;_&#39;.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return Name used for UI purposes. Name can only contain alphanumeric characters and underscores '_'.
+     * @return Name used for UI purposes. Name can only contain alphanumeric characters and underscores &#39;_&#39;.
      * 
      */
     public Output<String> displayName() {

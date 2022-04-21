@@ -30,7 +30,7 @@ public final class VpnTunnelInfoResponse {
      */
     private final String remoteGateway;
     /**
-     * Remote VPN gateway's IP address.
+     * Remote VPN gateway&#39;s IP address.
      * 
      */
     private final String remoteGatewayIp;
@@ -45,7 +45,7 @@ public final class VpnTunnelInfoResponse {
      */
     private final String sourceGateway;
     /**
-     * Local VPN gateway's IP address.
+     * Local VPN gateway&#39;s IP address.
      * 
      */
     private final String sourceGatewayIp;
@@ -106,7 +106,7 @@ public final class VpnTunnelInfoResponse {
         return this.remoteGateway;
     }
     /**
-     * Remote VPN gateway's IP address.
+     * Remote VPN gateway&#39;s IP address.
      * 
     */
     public String remoteGatewayIp() {
@@ -127,7 +127,7 @@ public final class VpnTunnelInfoResponse {
         return this.sourceGateway;
     }
     /**
-     * Local VPN gateway's IP address.
+     * Local VPN gateway&#39;s IP address.
      * 
     */
     public String sourceGatewayIp() {

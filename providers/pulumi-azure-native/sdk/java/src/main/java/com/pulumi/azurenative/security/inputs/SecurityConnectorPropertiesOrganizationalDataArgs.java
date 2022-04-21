@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The multi cloud account's organizational data
+ * The multi cloud account&#39;s organizational data
  * 
  */
 public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com.pulumi.resources.ResourceArgs {
@@ -34,7 +34,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com
     }
 
     /**
-     * The multi cloud account's membership type in the organization
+     * The multi cloud account&#39;s membership type in the organization
      * 
      */
     @Import(name="organizationMembershipType")
@@ -45,7 +45,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com
     }
 
     /**
-     * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
+     * If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
      * 
      */
     @Import(name="parentHierarchyId")

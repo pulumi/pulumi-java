@@ -19,8 +19,8 @@ public final class EventChannelSourceResponse extends com.pulumi.resources.Invok
     public static final EventChannelSourceResponse Empty = new EventChannelSourceResponse();
 
     /**
-     * The identifier of the resource that's the source of the events.
-     * This represents a unique resource in the partner's resource model.
+     * The identifier of the resource that&#39;s the source of the events.
+     * This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     @Import(name="source")

@@ -41,7 +41,7 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.
+     * The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
      * 
      */
     @Import(name="permissions")

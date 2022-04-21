@@ -15,7 +15,7 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationGetArgs e
     public static final BucketReplicationConfigRuleExistingObjectReplicationGetArgs Empty = new BucketReplicationConfigRuleExistingObjectReplicationGetArgs();
 
     /**
-     * Whether the existing objects should be replicated. Either `"Enabled"` or `"Disabled"`.
+     * Whether the existing objects should be replicated. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
      */
     @Import(name="status", required=true)

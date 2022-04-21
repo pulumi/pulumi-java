@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an IAM managed policy for a Single Sign-On (SSO) Permission Set resource
  * 
- * > **NOTE:** Creating this resource will automatically [Provision the Permission Set](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ProvisionPermissionSet.html) to apply the corresponding updates to all assigned accounts.
+ * &gt; **NOTE:** Creating this resource will automatically [Provision the Permission Set](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ProvisionPermissionSet.html) to apply the corresponding updates to all assigned accounts.
  * 
  * ## Import
  * 

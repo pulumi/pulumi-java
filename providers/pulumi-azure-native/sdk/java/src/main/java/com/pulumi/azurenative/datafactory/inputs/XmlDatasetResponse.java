@@ -162,7 +162,7 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Type of dataset.
-     * Expected value is 'Xml'.
+     * Expected value is &#39;Xml&#39;.
      * 
      */
     @Import(name="type", required=true)

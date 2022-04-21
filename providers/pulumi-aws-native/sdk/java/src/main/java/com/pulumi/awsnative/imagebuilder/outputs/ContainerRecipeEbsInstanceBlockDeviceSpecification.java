@@ -45,12 +45,12 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecification {
      */
     private final @Nullable Integer throughput;
     /**
-     * Use to override the device's volume size.
+     * Use to override the device&#39;s volume size.
      * 
      */
     private final @Nullable Integer volumeSize;
     /**
-     * Use to override the device's volume type.
+     * Use to override the device&#39;s volume type.
      * 
      */
     private final @Nullable ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType;
@@ -118,14 +118,14 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecification {
         return Optional.ofNullable(this.throughput);
     }
     /**
-     * Use to override the device's volume size.
+     * Use to override the device&#39;s volume size.
      * 
     */
     public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
-     * Use to override the device's volume type.
+     * Use to override the device&#39;s volume type.
      * 
     */
     public Optional<ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType() {

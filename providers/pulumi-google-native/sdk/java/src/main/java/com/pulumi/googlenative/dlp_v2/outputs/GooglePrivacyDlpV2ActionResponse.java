@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ActionResponse {
     /**
-     * Enable email notification for project owners and editors on job's completion/failure.
+     * Enable email notification for project owners and editors on job&#39;s completion/failure.
      * 
      */
     private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2ActionResponse {
     }
 
     /**
-     * Enable email notification for project owners and editors on job's completion/failure.
+     * Enable email notification for project owners and editors on job&#39;s completion/failure.
      * 
     */
     public GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails() {

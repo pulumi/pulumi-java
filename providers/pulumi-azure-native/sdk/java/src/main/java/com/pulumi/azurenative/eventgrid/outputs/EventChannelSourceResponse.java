@@ -12,8 +12,8 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventChannelSourceResponse {
     /**
-     * The identifier of the resource that's the source of the events.
-     * This represents a unique resource in the partner's resource model.
+     * The identifier of the resource that&#39;s the source of the events.
+     * This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     private final @Nullable String source;
@@ -24,8 +24,8 @@ public final class EventChannelSourceResponse {
     }
 
     /**
-     * The identifier of the resource that's the source of the events.
-     * This represents a unique resource in the partner's resource model.
+     * The identifier of the resource that&#39;s the source of the events.
+     * This represents a unique resource in the partner&#39;s resource model.
      * 
     */
     public Optional<String> source() {

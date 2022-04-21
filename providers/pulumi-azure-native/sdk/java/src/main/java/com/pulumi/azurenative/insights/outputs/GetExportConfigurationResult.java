@@ -47,7 +47,7 @@ public final class GetExportConfigurationResult {
      */
     private final String exportId;
     /**
-     * This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
+     * This indicates current Continuous Export configuration status. The possible values are &#39;Preparing&#39;, &#39;Success&#39;, &#39;Failure&#39;.
      * 
      */
     private final String exportStatus;
@@ -57,7 +57,7 @@ public final class GetExportConfigurationResult {
      */
     private final String instrumentationKey;
     /**
-     * This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
+     * This will be &#39;true&#39; if the Continuous Export configuration is enabled, otherwise it will be &#39;false&#39;.
      * 
      */
     private final String isUserEnabled;
@@ -82,12 +82,12 @@ public final class GetExportConfigurationResult {
      */
     private final @Nullable String notificationQueueEnabled;
     /**
-     * This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
+     * This is the reason the Continuous Export configuration started failing. It can be &#39;AzureStorageNotFound&#39; or &#39;AzureStorageAccessDenied&#39;.
      * 
      */
     private final String permanentErrorReason;
     /**
-     * This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
+     * This comma separated list of document types that will be exported. The possible values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
      * 
      */
     private final @Nullable String recordTypes;
@@ -199,7 +199,7 @@ public final class GetExportConfigurationResult {
         return this.exportId;
     }
     /**
-     * This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
+     * This indicates current Continuous Export configuration status. The possible values are &#39;Preparing&#39;, &#39;Success&#39;, &#39;Failure&#39;.
      * 
     */
     public String exportStatus() {
@@ -213,7 +213,7 @@ public final class GetExportConfigurationResult {
         return this.instrumentationKey;
     }
     /**
-     * This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
+     * This will be &#39;true&#39; if the Continuous Export configuration is enabled, otherwise it will be &#39;false&#39;.
      * 
     */
     public String isUserEnabled() {
@@ -248,14 +248,14 @@ public final class GetExportConfigurationResult {
         return Optional.ofNullable(this.notificationQueueEnabled);
     }
     /**
-     * This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
+     * This is the reason the Continuous Export configuration started failing. It can be &#39;AzureStorageNotFound&#39; or &#39;AzureStorageAccessDenied&#39;.
      * 
     */
     public String permanentErrorReason() {
         return this.permanentErrorReason;
     }
     /**
-     * This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
+     * This comma separated list of document types that will be exported. The possible values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
      * 
     */
     public Optional<String> recordTypes() {

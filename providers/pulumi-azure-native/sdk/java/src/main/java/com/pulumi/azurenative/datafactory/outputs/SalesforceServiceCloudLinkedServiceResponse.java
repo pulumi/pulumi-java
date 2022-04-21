@@ -45,7 +45,7 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+     * The URL of Salesforce Service Cloud instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object environmentUrl;
@@ -71,7 +71,7 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
     /**
      * Type of linked service.
-     * Expected value is 'SalesforceServiceCloud'.
+     * Expected value is &#39;SalesforceServiceCloud&#39;.
      * 
      */
     private final String type;
@@ -145,7 +145,7 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+     * The URL of Salesforce Service Cloud instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> environmentUrl() {
@@ -181,7 +181,7 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SalesforceServiceCloud'.
+     * Expected value is &#39;SalesforceServiceCloud&#39;.
      * 
     */
     public String type() {

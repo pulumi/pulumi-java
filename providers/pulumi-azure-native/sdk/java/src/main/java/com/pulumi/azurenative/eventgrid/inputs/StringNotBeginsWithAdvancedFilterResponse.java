@@ -33,7 +33,7 @@ public final class StringNotBeginsWithAdvancedFilterResponse extends com.pulumi.
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringNotBeginsWith'.
+     * Expected value is &#39;StringNotBeginsWith&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

@@ -16,12 +16,12 @@ public final class CertificatePropertiesResponse {
      */
     private final String certificate;
     /**
-     * The certificate's creation date and time.
+     * The certificate&#39;s creation date and time.
      * 
      */
     private final String created;
     /**
-     * The certificate's expiration date and time.
+     * The certificate&#39;s expiration date and time.
      * 
      */
     private final String expiry;
@@ -31,17 +31,17 @@ public final class CertificatePropertiesResponse {
      */
     private final Boolean isVerified;
     /**
-     * The certificate's subject name.
+     * The certificate&#39;s subject name.
      * 
      */
     private final String subject;
     /**
-     * The certificate's thumbprint.
+     * The certificate&#39;s thumbprint.
      * 
      */
     private final String thumbprint;
     /**
-     * The certificate's last update date and time.
+     * The certificate&#39;s last update date and time.
      * 
      */
     private final String updated;
@@ -72,14 +72,14 @@ public final class CertificatePropertiesResponse {
         return this.certificate;
     }
     /**
-     * The certificate's creation date and time.
+     * The certificate&#39;s creation date and time.
      * 
     */
     public String created() {
         return this.created;
     }
     /**
-     * The certificate's expiration date and time.
+     * The certificate&#39;s expiration date and time.
      * 
     */
     public String expiry() {
@@ -93,21 +93,21 @@ public final class CertificatePropertiesResponse {
         return this.isVerified;
     }
     /**
-     * The certificate's subject name.
+     * The certificate&#39;s subject name.
      * 
     */
     public String subject() {
         return this.subject;
     }
     /**
-     * The certificate's thumbprint.
+     * The certificate&#39;s thumbprint.
      * 
     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * The certificate's last update date and time.
+     * The certificate&#39;s last update date and time.
      * 
     */
     public String updated() {

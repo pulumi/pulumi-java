@@ -22,7 +22,7 @@ public final class ElasticloadbalancingFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.elasticloadbalancing.getHostedZoneId has been deprecated in favor of aws.elb.getHostedZoneId
      * 
      */
@@ -37,8 +37,8 @@ public final class ElasticloadbalancingFunctions {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancing/getHostedZoneId:getHostedZoneId", TypeShape.of(GetHostedZoneIdResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Provides information about a "classic" Elastic Load Balancer (ELB).
-     * See `LB` Data Source if you are looking for "v2"
+     * Provides information about a &#34;classic&#34; Elastic Load Balancer (ELB).
+     * See `LB` Data Source if you are looking for &#34;v2&#34;
      * Application Load Balancer (ALB) or Network Load Balancer (NLB).
      * 
      * This data source can prove useful when a module accepts an LB as an input
@@ -47,7 +47,7 @@ public final class ElasticloadbalancingFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.elasticloadbalancing.getLoadBalancer has been deprecated in favor of aws.elb.getLoadBalancer
      * 
      */
@@ -64,7 +64,7 @@ public final class ElasticloadbalancingFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.elasticloadbalancing.getServiceAccount has been deprecated in favor of aws.elb.getServiceAccount
      * 
      */

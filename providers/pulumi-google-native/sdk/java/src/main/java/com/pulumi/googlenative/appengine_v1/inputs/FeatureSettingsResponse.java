@@ -17,7 +17,7 @@ public final class FeatureSettingsResponse extends com.pulumi.resources.InvokeAr
     public static final FeatureSettingsResponse Empty = new FeatureSettingsResponse();
 
     /**
-     * Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.
+     * Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to &#39;readiness_check&#39; and &#39;liveness_check&#39; values instead of &#39;health_check&#39; ones. Once the legacy &#39;health_check&#39; behavior is deprecated, and this value is always true, this setting can be removed.
      * 
      */
     @Import(name="splitHealthChecks", required=true)

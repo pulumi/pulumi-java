@@ -126,7 +126,7 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * URL of the Spring Cloud Gateway, exposed when 'public' is true.
+     * URL of the Spring Cloud Gateway, exposed when &#39;public&#39; is true.
      * 
      */
     @Import(name="url", required=true)

@@ -30,7 +30,7 @@ public final class OnPremiseResourceDetailsResponse extends com.pulumi.resources
 
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'OnPremise'.
+     * Expected value is &#39;OnPremise&#39;.
      * 
      */
     @Import(name="source", required=true)

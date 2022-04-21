@@ -13,7 +13,7 @@ import java.util.Objects;
 
 
 /**
- * The secret's value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret_name. The contents of the target Secret's Data field will be presented in a volume as files using the keys in the Data field as the file names.
+ * The secret&#39;s value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret_name. The contents of the target Secret&#39;s Data field will be presented in a volume as files using the keys in the Data field as the file names.
  * 
  */
 public final class SecretVolumeSourceResponse extends com.pulumi.resources.InvokeArgs {
@@ -54,7 +54,7 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.
+     * The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container&#39;s namespace to use.
      * 
      */
     @Import(name="secretName", required=true)

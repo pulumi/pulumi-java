@@ -55,7 +55,7 @@ public final class ServiceNowLinkedServiceResponse {
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
+     * The endpoint of the ServiceNow server. (i.e. &lt;instance&gt;.service-now.com)
      * 
      */
     private final Object endpoint;
@@ -71,7 +71,7 @@ public final class ServiceNowLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'ServiceNow'.
+     * Expected value is &#39;ServiceNow&#39;.
      * 
      */
     private final String type;
@@ -81,7 +81,7 @@ public final class ServiceNowLinkedServiceResponse {
      */
     private final @Nullable Object useEncryptedEndpoints;
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
     private final @Nullable Object useHostVerification;
@@ -180,7 +180,7 @@ public final class ServiceNowLinkedServiceResponse {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
+     * The endpoint of the ServiceNow server. (i.e. &lt;instance&gt;.service-now.com)
      * 
     */
     public Object endpoint() {
@@ -202,7 +202,7 @@ public final class ServiceNowLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'ServiceNow'.
+     * Expected value is &#39;ServiceNow&#39;.
      * 
     */
     public String type() {
@@ -216,7 +216,7 @@ public final class ServiceNowLinkedServiceResponse {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
     */
     public Optional<Object> useHostVerification() {

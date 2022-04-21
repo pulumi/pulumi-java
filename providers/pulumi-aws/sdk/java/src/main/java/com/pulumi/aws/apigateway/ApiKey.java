@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an API Gateway API Key.
  * 
- * > **NOTE:** Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now **required** to associate an API key with an API stage.
+ * &gt; **NOTE:** Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now **required** to associate an API key with an API stage.
  * 
  * ## Example Usage
  * 
@@ -62,14 +62,14 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
         return this.createdDate;
     }
     /**
-     * The API key description. Defaults to "Managed by Pulumi".
+     * The API key description. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return The API key description. Defaults to "Managed by Pulumi".
+     * @return The API key description. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output<String> description() {

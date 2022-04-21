@@ -19,17 +19,17 @@ public final class SourceProvenanceResponse {
      */
     private final Map<String,String> fileHashes;
     /**
-     * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
+     * A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
      * 
      */
     private final RepoSourceResponse resolvedRepoSource;
     /**
-     * A copy of the build's `source.storage_source`, if exists, with any generations resolved.
+     * A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
      * 
      */
     private final StorageSourceResponse resolvedStorageSource;
     /**
-     * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
+     * A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
      * 
      */
     private final StorageSourceManifestResponse resolvedStorageSourceManifest;
@@ -54,21 +54,21 @@ public final class SourceProvenanceResponse {
         return this.fileHashes;
     }
     /**
-     * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
+     * A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
      * 
     */
     public RepoSourceResponse resolvedRepoSource() {
         return this.resolvedRepoSource;
     }
     /**
-     * A copy of the build's `source.storage_source`, if exists, with any generations resolved.
+     * A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
      * 
     */
     public StorageSourceResponse resolvedStorageSource() {
         return this.resolvedStorageSource;
     }
     /**
-     * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
+     * A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
      * 
     */
     public StorageSourceManifestResponse resolvedStorageSourceManifest() {

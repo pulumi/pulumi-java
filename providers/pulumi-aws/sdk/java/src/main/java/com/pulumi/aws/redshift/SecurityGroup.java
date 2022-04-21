@@ -32,14 +32,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:redshift/securityGroup:SecurityGroup")
 public class SecurityGroup extends com.pulumi.resources.CustomResource {
     /**
-     * The description of the Redshift security group. Defaults to "Managed by Pulumi".
+     * The description of the Redshift security group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return The description of the Redshift security group. Defaults to "Managed by Pulumi".
+     * @return The description of the Redshift security group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output<String> description() {

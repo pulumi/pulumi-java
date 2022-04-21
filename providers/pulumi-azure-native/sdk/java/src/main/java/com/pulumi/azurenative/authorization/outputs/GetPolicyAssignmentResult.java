@@ -63,7 +63,7 @@ public final class GetPolicyAssignmentResult {
      */
     private final @Nullable List<NonComplianceMessageResponse> nonComplianceMessages;
     /**
-     * The policy's excluded scopes.
+     * The policy&#39;s excluded scopes.
      * 
      */
     private final @Nullable List<String> notScopes;
@@ -184,7 +184,7 @@ public final class GetPolicyAssignmentResult {
         return this.nonComplianceMessages == null ? List.of() : this.nonComplianceMessages;
     }
     /**
-     * The policy's excluded scopes.
+     * The policy&#39;s excluded scopes.
      * 
     */
     public List<String> notScopes() {

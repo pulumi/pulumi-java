@@ -52,7 +52,7 @@ public final class StatefulSetListArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Standard list's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard list&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The owner of the bucket. This is always the project team's owner group.
+ * The owner of the bucket. This is always the project team&#39;s owner group.
  * 
  */
 public final class BucketOwnerResponse extends com.pulumi.resources.InvokeArgs {

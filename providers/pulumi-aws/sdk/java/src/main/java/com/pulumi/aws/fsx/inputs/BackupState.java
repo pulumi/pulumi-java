@@ -39,7 +39,7 @@ public final class BackupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's data at rest.
+     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system&#39;s data at rest.
      * 
      */
     @Import(name="kmsKeyId")

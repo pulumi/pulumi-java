@@ -31,7 +31,7 @@ public final class PemCertificateListResponse extends com.pulumi.resources.Invok
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
      * 
      */
     @Import(name="type", required=true)

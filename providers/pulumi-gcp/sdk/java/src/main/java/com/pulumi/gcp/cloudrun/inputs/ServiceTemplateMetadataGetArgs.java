@@ -26,7 +26,7 @@ public final class ServiceTemplateMetadataGetArgs extends com.pulumi.resources.R
      * or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
      * Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
      * - `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
-     *   for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
+     *   for the Service. For example, `&#34;run.googleapis.com/ingress&#34; = &#34;all&#34;`.
      * 
      */
     @Import(name="annotations")
@@ -63,7 +63,7 @@ public final class ServiceTemplateMetadataGetArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name")

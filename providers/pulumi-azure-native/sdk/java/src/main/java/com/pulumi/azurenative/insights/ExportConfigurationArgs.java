@@ -60,7 +60,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Continuous Export destination type. This has to be 'Blob'.
+     * The Continuous Export destination type. This has to be &#39;Blob&#39;.
      * 
      */
     @Import(name="destinationType")
@@ -82,7 +82,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Set to 'true' to create a Continuous Export configuration as enabled, otherwise set it to 'false'.
+     * Set to &#39;true&#39; to create a Continuous Export configuration as enabled, otherwise set it to &#39;false&#39;.
      * 
      */
     @Import(name="isEnabled")
@@ -115,7 +115,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The document types to be exported, as comma separated values. Allowed values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
+     * The document types to be exported, as comma separated values. Allowed values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
      * 
      */
     @Import(name="recordTypes")

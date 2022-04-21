@@ -18,7 +18,7 @@ public final class SensitiveTextAnnotationResponse extends com.pulumi.resources.
     public static final SensitiveTextAnnotationResponse Empty = new SensitiveTextAnnotationResponse();
 
     /**
-     * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}
+     * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
      * 
      */
     @Import(name="details", required=true)

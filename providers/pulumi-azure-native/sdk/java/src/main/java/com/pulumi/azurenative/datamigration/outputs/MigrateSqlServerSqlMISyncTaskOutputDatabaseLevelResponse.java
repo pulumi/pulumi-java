@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
     private final String migrationState;
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -182,7 +182,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
     */
     public String resultType() {

@@ -47,14 +47,14 @@ public class Rule extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
+     * The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can&#39;t contain whitespace.
      * 
      */
     @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
-     * @return The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
+     * @return The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can&#39;t contain whitespace.
      * 
      */
     public Output<String> metricName() {

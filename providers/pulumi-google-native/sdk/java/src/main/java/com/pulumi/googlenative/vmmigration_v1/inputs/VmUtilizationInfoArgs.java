@@ -33,7 +33,7 @@ public final class VmUtilizationInfoArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The VM's ID in the source.
+     * The VM&#39;s ID in the source.
      * 
      */
     @Import(name="vmId")

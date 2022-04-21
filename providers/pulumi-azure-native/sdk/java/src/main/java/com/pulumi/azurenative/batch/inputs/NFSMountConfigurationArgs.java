@@ -16,7 +16,7 @@ public final class NFSMountConfigurationArgs extends com.pulumi.resources.Resour
     public static final NFSMountConfigurationArgs Empty = new NFSMountConfigurationArgs();
 
     /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
      */
     @Import(name="mountOptions")

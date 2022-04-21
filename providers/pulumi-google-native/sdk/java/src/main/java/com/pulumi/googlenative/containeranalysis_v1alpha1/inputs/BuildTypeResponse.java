@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Note holding the version of the provider's builder and the signature of the provenance message in linked BuildDetails.
+ * Note holding the version of the provider&#39;s builder and the signature of the provenance message in linked BuildDetails.
  * 
  */
 public final class BuildTypeResponse extends com.pulumi.resources.InvokeArgs {

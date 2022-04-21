@@ -36,7 +36,7 @@ public final class JsonReadSettingsArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The read setting type.
-     * Expected value is 'JsonReadSettings'.
+     * Expected value is &#39;JsonReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

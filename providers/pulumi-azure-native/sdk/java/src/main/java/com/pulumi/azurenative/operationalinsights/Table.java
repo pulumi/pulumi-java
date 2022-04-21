@@ -94,14 +94,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.plan;
     }
     /**
-     * Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
+     * Table&#39;s current provisioning state. If set to &#39;updating&#39;, indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
      * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
-     * @return Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
+     * @return Table&#39;s current provisioning state. If set to &#39;updating&#39;, indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
      * 
      */
     public Output<String> provisioningState() {
@@ -206,14 +206,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.totalRetentionInDays;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

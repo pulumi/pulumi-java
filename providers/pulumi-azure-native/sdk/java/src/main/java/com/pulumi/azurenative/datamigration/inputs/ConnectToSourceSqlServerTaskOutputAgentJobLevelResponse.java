@@ -98,7 +98,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * Type of result - database level or task level
-     * Expected value is 'AgentJobLevelOutput'.
+     * Expected value is &#39;AgentJobLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

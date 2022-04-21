@@ -28,7 +28,7 @@ public final class WebAclRuleOverrideActionArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Don't override the rule action setting. Configured as an empty block `{}`.
+     * Don&#39;t override the rule action setting. Configured as an empty block `{}`.
      * 
      */
     @Import(name="none")

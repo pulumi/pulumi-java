@@ -126,7 +126,7 @@ public final class AmazonRedshiftTableDatasetArgs extends com.pulumi.resources.R
 
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRedshiftTable'.
+     * Expected value is &#39;AmazonRedshiftTable&#39;.
      * 
      */
     @Import(name="type", required=true)

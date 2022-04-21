@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Apt patching is completed by executing `apt-get update && apt-get upgrade`. Additional options can be set to control how this is executed.
+ * Apt patching is completed by executing `apt-get update &amp;&amp; apt-get upgrade`. Additional options can be set to control how this is executed.
  * 
  */
 public final class AptSettingsArgs extends com.pulumi.resources.ResourceArgs {

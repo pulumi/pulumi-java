@@ -17,7 +17,7 @@ public final class GuestPoliciesAssignmentOsType {
      */
     private final @Nullable String osArchitecture;
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
+     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
      */
     private final @Nullable String osShortName;
@@ -45,7 +45,7 @@ public final class GuestPoliciesAssignmentOsType {
         return Optional.ofNullable(this.osArchitecture);
     }
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
+     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
     */
     public Optional<String> osShortName() {

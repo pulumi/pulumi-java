@@ -134,7 +134,7 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
+     * The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="tableOption")
@@ -146,7 +146,7 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureSqlSink'.
+     * Expected value is &#39;AzureSqlSink&#39;.
      * 
      */
     @Import(name="type", required=true)

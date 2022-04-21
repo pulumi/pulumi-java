@@ -78,14 +78,14 @@ public class Publisher extends com.pulumi.resources.CustomResource {
         return this.publisherId;
     }
     /**
-     * The URL to the publisher's profile with the identity provider.
+     * The URL to the publisher&#39;s profile with the identity provider.
      * 
      */
     @Export(name="publisherProfile", type=String.class, parameters={})
     private Output<String> publisherProfile;
 
     /**
-     * @return The URL to the publisher's profile with the identity provider.
+     * @return The URL to the publisher&#39;s profile with the identity provider.
      * 
      */
     public Output<String> publisherProfile() {

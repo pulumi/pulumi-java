@@ -37,7 +37,7 @@ public final class AutoShutdownProfileResponse {
      */
     private final @Nullable String shutdownOnIdle;
     /**
-     * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
+     * Whether a VM will get shutdown when it hasn&#39;t been connected to after a period of time.
      * 
      */
     private final @Nullable String shutdownWhenNotConnected;
@@ -94,7 +94,7 @@ public final class AutoShutdownProfileResponse {
         return Optional.ofNullable(this.shutdownOnIdle);
     }
     /**
-     * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
+     * Whether a VM will get shutdown when it hasn&#39;t been connected to after a period of time.
      * 
     */
     public Optional<String> shutdownWhenNotConnected() {

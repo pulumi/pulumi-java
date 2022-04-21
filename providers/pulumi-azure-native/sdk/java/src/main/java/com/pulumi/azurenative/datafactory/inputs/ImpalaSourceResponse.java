@@ -99,7 +99,7 @@ public final class ImpalaSourceResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'ImpalaSource'.
+     * Expected value is &#39;ImpalaSource&#39;.
      * 
      */
     @Import(name="type", required=true)

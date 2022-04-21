@@ -45,7 +45,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.SqlDb.Sync'.
+     * Expected value is &#39;ConnectToTarget.SqlDb.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.SqlDb.Sync'.
+     * Expected value is &#39;ConnectToTarget.SqlDb.Sync&#39;.
      * 
     */
     public String taskType() {

@@ -23,7 +23,7 @@ public final class OutputPathAssetReferenceResponse {
     private final @Nullable String path;
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'OutputPath'.
+     * Expected value is &#39;OutputPath&#39;.
      * 
      */
     private final String referenceType;
@@ -54,7 +54,7 @@ public final class OutputPathAssetReferenceResponse {
     }
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'OutputPath'.
+     * Expected value is &#39;OutputPath&#39;.
      * 
     */
     public String referenceType() {

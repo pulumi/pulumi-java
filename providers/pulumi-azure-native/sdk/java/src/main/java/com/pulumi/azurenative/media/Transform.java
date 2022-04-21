@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:media:Transform")
 public class Transform extends com.pulumi.resources.CustomResource {
     /**
-     * The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
-     * @return The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * @return The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     public Output<String> created() {
@@ -62,14 +62,14 @@ public class Transform extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
-     * @return The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * @return The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     public Output<String> lastModified() {
@@ -118,14 +118,14 @@ public class Transform extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

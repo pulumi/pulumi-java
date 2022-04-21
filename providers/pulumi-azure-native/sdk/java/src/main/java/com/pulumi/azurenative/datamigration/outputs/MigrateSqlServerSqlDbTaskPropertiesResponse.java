@@ -51,7 +51,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.SqlDb'.
+     * Expected value is &#39;Migrate.SqlServer.SqlDb&#39;.
      * 
      */
     private final String taskType;
@@ -109,7 +109,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.SqlDb'.
+     * Expected value is &#39;Migrate.SqlServer.SqlDb&#39;.
      * 
     */
     public String taskType() {

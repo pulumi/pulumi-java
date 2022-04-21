@@ -128,7 +128,7 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of linked service.
-     * Expected value is 'SapBW'.
+     * Expected value is &#39;SapBW&#39;.
      * 
      */
     @Import(name="type", required=true)

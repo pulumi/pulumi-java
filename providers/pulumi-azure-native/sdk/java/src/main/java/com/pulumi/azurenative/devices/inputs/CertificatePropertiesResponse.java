@@ -29,7 +29,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The certificate's creation date and time.
+     * The certificate&#39;s creation date and time.
      * 
      */
     @Import(name="created", required=true)
@@ -40,7 +40,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The certificate's expiration date and time.
+     * The certificate&#39;s expiration date and time.
      * 
      */
     @Import(name="expiry", required=true)
@@ -62,7 +62,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The certificate's subject name.
+     * The certificate&#39;s subject name.
      * 
      */
     @Import(name="subject", required=true)
@@ -73,7 +73,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The certificate's thumbprint.
+     * The certificate&#39;s thumbprint.
      * 
      */
     @Import(name="thumbprint", required=true)
@@ -84,7 +84,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The certificate's last update date and time.
+     * The certificate&#39;s last update date and time.
      * 
      */
     @Import(name="updated", required=true)

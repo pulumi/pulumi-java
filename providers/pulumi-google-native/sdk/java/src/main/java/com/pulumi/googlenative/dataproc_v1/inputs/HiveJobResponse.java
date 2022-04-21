@@ -76,7 +76,7 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
      * 
      */
     @Import(name="scriptVariables", required=true)

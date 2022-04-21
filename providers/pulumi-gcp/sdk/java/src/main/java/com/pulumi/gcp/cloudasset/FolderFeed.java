@@ -65,7 +65,7 @@ public class FolderFeed extends com.pulumi.resources.CustomResource {
     /**
      * A list of types of the assets to receive updates. You must specify either or both of assetNames
      * and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
-     * the feed. For example: "compute.googleapis.com/Disk"
+     * the feed. For example: &#34;compute.googleapis.com/Disk&#34;
      * See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
      * supported asset types.
      * 
@@ -76,7 +76,7 @@ public class FolderFeed extends com.pulumi.resources.CustomResource {
     /**
      * @return A list of types of the assets to receive updates. You must specify either or both of assetNames
      * and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
-     * the feed. For example: "compute.googleapis.com/Disk"
+     * the feed. For example: &#34;compute.googleapis.com/Disk&#34;
      * See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
      * supported asset types.
      * 
@@ -106,7 +106,7 @@ public class FolderFeed extends com.pulumi.resources.CustomResource {
      * A condition which determines whether an asset update should be published. If specified, an asset
      * will be returned only when the expression evaluates to true. When set, expression field
      * must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
-     * expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+     * expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
      * condition are optional.
      * Structure is documented below.
      * 
@@ -118,7 +118,7 @@ public class FolderFeed extends com.pulumi.resources.CustomResource {
      * @return A condition which determines whether an asset update should be published. If specified, an asset
      * will be returned only when the expression evaluates to true. When set, expression field
      * must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
-     * expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+     * expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
      * condition are optional.
      * Structure is documented below.
      * 

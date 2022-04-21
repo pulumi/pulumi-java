@@ -70,14 +70,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to "1" and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
+     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
      */
     @Export(name="desiredEC2Instances", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> desiredEC2Instances;
 
     /**
-     * @return [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to "1" and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
+     * @return [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
      */
     public Output</* @Nullable */ Integer> desiredEC2Instances() {
@@ -140,14 +140,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.fleetType;
     }
     /**
-     * A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN from the IAM dashboard in the AWS Management Console.
+     * A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role&#39;s ARN from the IAM dashboard in the AWS Management Console.
      * 
      */
     @Export(name="instanceRoleARN", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceRoleARN;
 
     /**
-     * @return A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN from the IAM dashboard in the AWS Management Console.
+     * @return A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role&#39;s ARN from the IAM dashboard in the AWS Management Console.
      * 
      */
     public Output</* @Nullable */ String> instanceRoleARN() {
@@ -174,14 +174,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.logPaths;
     }
     /**
-     * [DEPRECATED] The maximum value that is allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
      */
     @Export(name="maxSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSize;
 
     /**
-     * @return [DEPRECATED] The maximum value that is allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * @return [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
      */
     public Output</* @Nullable */ Integer> maxSize() {
@@ -202,14 +202,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.metricGroups;
     }
     /**
-     * [DEPRECATED] The minimum value allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
      */
     @Export(name="minSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSize;
 
     /**
-     * @return [DEPRECATED] The minimum value allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * @return [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
      */
     public Output</* @Nullable */ Integer> minSize() {
@@ -230,14 +230,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet's protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
+     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
      */
     @Export(name="newGameSessionProtectionPolicy", type=FleetNewGameSessionProtectionPolicy.class, parameters={})
     private Output</* @Nullable */ FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy;
 
     /**
-     * @return A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet's protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
+     * @return A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
      */
     public Output</* @Nullable */ FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy() {

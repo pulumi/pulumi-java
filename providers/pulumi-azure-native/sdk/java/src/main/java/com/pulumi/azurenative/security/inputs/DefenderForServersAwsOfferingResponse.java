@@ -56,7 +56,7 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
 
     /**
      * The type of the security offering.
-     * Expected value is 'DefenderForServersAWS'.
+     * Expected value is &#39;DefenderForServersAWS&#39;.
      * 
      */
     @Import(name="offeringType", required=true)

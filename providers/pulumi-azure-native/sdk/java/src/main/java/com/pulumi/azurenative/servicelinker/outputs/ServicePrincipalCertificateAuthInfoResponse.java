@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ServicePrincipalCertificateAuthInfoResponse {
     /**
      * The authentication type.
-     * Expected value is 'servicePrincipalCertificate'.
+     * Expected value is &#39;servicePrincipalCertificate&#39;.
      * 
      */
     private final String authType;
@@ -45,7 +45,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
 
     /**
      * The authentication type.
-     * Expected value is 'servicePrincipalCertificate'.
+     * Expected value is &#39;servicePrincipalCertificate&#39;.
      * 
     */
     public String authType() {

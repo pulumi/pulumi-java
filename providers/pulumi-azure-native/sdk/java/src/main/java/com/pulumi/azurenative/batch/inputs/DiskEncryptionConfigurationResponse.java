@@ -20,7 +20,7 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
     public static final DiskEncryptionConfigurationResponse Empty = new DiskEncryptionConfigurationResponse();
 
     /**
-     * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+     * On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
      * 
      */
     @Import(name="targets")

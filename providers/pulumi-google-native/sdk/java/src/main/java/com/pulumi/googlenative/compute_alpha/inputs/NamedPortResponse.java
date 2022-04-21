@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * The named port. For example: <"http", 80>.
+ * The named port. For example: &lt;&#34;http&#34;, 80&gt;.
  * 
  */
 public final class NamedPortResponse extends com.pulumi.resources.InvokeArgs {

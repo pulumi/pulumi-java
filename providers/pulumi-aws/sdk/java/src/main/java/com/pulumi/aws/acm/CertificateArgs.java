@@ -30,7 +30,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The certificate's PEM-formatted public key
+     * The certificate&#39;s PEM-formatted public key
      * 
      */
     @Import(name="certificateBody")
@@ -41,7 +41,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The certificate's PEM-formatted chain
+     * The certificate&#39;s PEM-formatted chain
      * * Creating a private CA issued certificate
      * 
      */
@@ -76,7 +76,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The certificate's PEM-formatted private key
+     * The certificate&#39;s PEM-formatted private key
      * 
      */
     @Import(name="privateKey")

@@ -25,7 +25,7 @@ public final class SubscriptionIAMBindingState extends com.pulumi.resources.Reso
     }
 
     /**
-     * (Computed) The etag of the subscription's IAM policy.
+     * (Computed) The etag of the subscription&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

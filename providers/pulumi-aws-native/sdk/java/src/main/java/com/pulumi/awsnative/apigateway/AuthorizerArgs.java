@@ -51,7 +51,7 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the authorizer's Uniform Resource Identifier (URI).
+     * Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
      * 
      */
     @Import(name="authorizerUri")

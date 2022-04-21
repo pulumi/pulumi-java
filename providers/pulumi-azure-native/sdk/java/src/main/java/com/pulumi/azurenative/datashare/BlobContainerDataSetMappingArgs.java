@@ -61,7 +61,7 @@ public final class BlobContainerDataSetMappingArgs extends com.pulumi.resources.
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -33,7 +33,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The configuration information for the VPN connection's customer gateway (in the native XML format).
+     * The configuration information for the VPN connection&#39;s customer gateway (in the native XML format).
      * 
      */
     @Import(name="customerGatewayConfiguration")
@@ -121,7 +121,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
+     * Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don&#39;t support BGP.
      * 
      */
     @Import(name="staticRoutesOnly")
@@ -693,7 +693,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
+     * The type of VPN connection. The only type AWS supports at this time is &#34;ipsec.1&#34;.
      * 
      */
     @Import(name="type")

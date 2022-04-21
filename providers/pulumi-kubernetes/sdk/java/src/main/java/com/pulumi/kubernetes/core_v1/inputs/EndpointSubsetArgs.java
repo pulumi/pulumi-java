@@ -16,8 +16,8 @@ import javax.annotation.Nullable;
 /**
  * EndpointSubset is a group of addresses with a common set of ports. The expanded set of endpoints is the Cartesian product of Addresses x Ports. For example, given:
  *   {
- *     Addresses: [{"ip": "10.10.1.1"}, {"ip": "10.10.2.2"}],
- *     Ports:     [{"name": "a", "port": 8675}, {"name": "b", "port": 309}]
+ *     Addresses: [{&#34;ip&#34;: &#34;10.10.1.1&#34;}, {&#34;ip&#34;: &#34;10.10.2.2&#34;}],
+ *     Ports:     [{&#34;name&#34;: &#34;a&#34;, &#34;port&#34;: 8675}, {&#34;name&#34;: &#34;b&#34;, &#34;port&#34;: 309}]
  *   }
  * The resulting set of endpoints can be viewed as:
  *     a: [ 10.10.1.1:8675, 10.10.2.2:8675 ],

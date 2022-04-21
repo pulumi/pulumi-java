@@ -39,7 +39,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
 
     /**
      * Kind of data set.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
      */
     @Import(name="kind", required=true)

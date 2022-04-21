@@ -16,7 +16,7 @@ public final class JpgFormatResponse {
     private final String filenamePattern;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgFormat'.
+     * Expected value is &#39;#Microsoft.Media.JpgFormat&#39;.
      * 
      */
     private final String odataType;
@@ -38,7 +38,7 @@ public final class JpgFormatResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgFormat'.
+     * Expected value is &#39;#Microsoft.Media.JpgFormat&#39;.
      * 
     */
     public String odataType() {

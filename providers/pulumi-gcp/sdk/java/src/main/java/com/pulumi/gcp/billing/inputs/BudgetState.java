@@ -22,7 +22,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Defines notifications that are sent on every update to the
-     * billing account's spend, regardless of the thresholds defined
+     * billing account&#39;s spend, regardless of the thresholds defined
      * using threshold rules.
      * Structure is documented below.
      * 
@@ -71,7 +71,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User data for display name in UI. Must be <= 60 chars.
+     * User data for display name in UI. Must be &lt;= 60 chars.
      * 
      */
     @Import(name="displayName")

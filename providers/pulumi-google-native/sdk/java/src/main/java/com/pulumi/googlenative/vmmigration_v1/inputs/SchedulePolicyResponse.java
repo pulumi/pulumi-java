@@ -29,7 +29,7 @@ public final class SchedulePolicyResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM's operating system undergoes changes and adaptations to fully function on Compute Engine.
+     * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM&#39;s operating system undergoes changes and adaptations to fully function on Compute Engine.
      * 
      */
     @Import(name="skipOsAdaptation", required=true)

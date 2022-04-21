@@ -53,7 +53,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn't specified, no database is created in the database resource. For PostgreSQL, if this parameter isn't specified, a database named postgres is created in the database resource.
+     * The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn&#39;t specified, no database is created in the database resource. For PostgreSQL, if this parameter isn&#39;t specified, a database named postgres is created in the database resource.
      * 
      */
     @Import(name="masterDatabaseName", required=true)
@@ -64,7 +64,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@". It cannot contain spaces.
+     * The password for the master user. The password can include any printable ASCII character except &#34;/&#34;, &#34;&#34;&#34;, or &#34;@&#34;. It cannot contain spaces.
      * 
      */
     @Import(name="masterUserPassword")

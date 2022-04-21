@@ -21,7 +21,7 @@ public final class SandboxConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final SandboxConfigArgs Empty = new SandboxConfigArgs();
 
     /**
-     * Type of the sandbox to use for the node (e.g. 'gvisor')
+     * Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
      * 
      */
     @Import(name="sandboxType")

@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class Cloudresourcemanager_v1beta1Functions {
     /**
-     * Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123".
+     * Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization&#39;s resource name, e.g. &#34;organizations/123&#34;.
      * 
      */
     public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(GetOrganizationIamPolicyArgs args) {

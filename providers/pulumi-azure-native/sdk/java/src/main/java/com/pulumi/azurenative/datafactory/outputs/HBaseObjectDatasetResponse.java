@@ -59,7 +59,7 @@ public final class HBaseObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'HBaseObject'.
+     * Expected value is &#39;HBaseObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class HBaseObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'HBaseObject'.
+     * Expected value is &#39;HBaseObject&#39;.
      * 
     */
     public String type() {

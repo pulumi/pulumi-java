@@ -89,14 +89,14 @@ public class TagValue extends com.pulumi.resources.CustomResource {
         return this.namespacedName;
     }
     /**
-     * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
      */
     @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
-     * @return Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * @return Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
      */
     public Output<String> parent() {

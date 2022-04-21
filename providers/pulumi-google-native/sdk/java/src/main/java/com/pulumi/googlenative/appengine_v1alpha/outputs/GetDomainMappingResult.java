@@ -18,7 +18,7 @@ public final class GetDomainMappingResult {
      */
     private final String name;
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
      */
     private final List<ResourceRecordResponse> resourceRecords;
@@ -46,7 +46,7 @@ public final class GetDomainMappingResult {
         return this.name;
     }
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
     */
     public List<ResourceRecordResponse> resourceRecords() {

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>A metadata error structure for an analysis.</p>
+ * &lt;p&gt;A metadata error structure for an analysis.&lt;/p&gt;
  * 
  */
 public final class AnalysisError extends com.pulumi.resources.InvokeArgs {
@@ -20,7 +20,7 @@ public final class AnalysisError extends com.pulumi.resources.InvokeArgs {
     public static final AnalysisError Empty = new AnalysisError();
 
     /**
-     * <p>The message associated with the analysis error.</p>
+     * &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
      * 
      */
     @Import(name="message")

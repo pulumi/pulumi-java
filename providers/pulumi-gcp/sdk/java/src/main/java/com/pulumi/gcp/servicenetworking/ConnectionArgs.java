@@ -42,7 +42,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Provider peering service that is managing peering connectivity for a
      * service provider organization. For Google services that support this functionality it is
-     * 'servicenetworking.googleapis.com'.
+     * &#39;servicenetworking.googleapis.com&#39;.
      * 
      */
     @Import(name="service", required=true)

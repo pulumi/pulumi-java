@@ -69,7 +69,7 @@ public final class TextFormatResponse {
     private final @Nullable Object treatEmptyAsNull;
     /**
      * Type of dataset storage format.
-     * Expected value is 'TextFormat'.
+     * Expected value is &#39;TextFormat&#39;.
      * 
      */
     private final String type;
@@ -181,7 +181,7 @@ public final class TextFormatResponse {
     }
     /**
      * Type of dataset storage format.
-     * Expected value is 'TextFormat'.
+     * Expected value is &#39;TextFormat&#39;.
      * 
     */
     public String type() {

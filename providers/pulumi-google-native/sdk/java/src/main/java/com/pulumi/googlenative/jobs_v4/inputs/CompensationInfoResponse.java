@@ -19,7 +19,7 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
     public static final CompensationInfoResponse Empty = new CompensationInfoResponse();
 
     /**
-     * Annualized base compensation range. Computed as base compensation entry's CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
     @Import(name="annualizedBaseCompensationRange", required=true)
@@ -30,7 +30,7 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Annualized total compensation range. Computed as all compensation entries' CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
     @Import(name="annualizedTotalCompensationRange", required=true)

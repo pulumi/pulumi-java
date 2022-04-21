@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ManagedCertificateParametersResponse {
     /**
      * The type of the Secret to create.
-     * Expected value is 'ManagedCertificate'.
+     * Expected value is &#39;ManagedCertificate&#39;.
      * 
      */
     private final String type;
@@ -23,7 +23,7 @@ public final class ManagedCertificateParametersResponse {
 
     /**
      * The type of the Secret to create.
-     * Expected value is 'ManagedCertificate'.
+     * Expected value is &#39;ManagedCertificate&#39;.
      * 
     */
     public String type() {

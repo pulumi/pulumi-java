@@ -109,7 +109,7 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
+     * The unique ID of the VM in the source. The VM&#39;s name in vSphere can be changed, so this is not the VM&#39;s name but rather its moRef id. This id is of the form vm-.
      * 
      */
     @Import(name="sourceVmId")

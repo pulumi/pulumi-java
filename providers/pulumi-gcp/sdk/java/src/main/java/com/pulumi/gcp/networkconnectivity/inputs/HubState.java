@@ -74,8 +74,8 @@ public final class HubState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The VPC network associated with this hub's spokes. All of the VPN tunnels, VLAN attachments, and router appliance
-     * instances referenced by this hub's spokes must belong to this VPC network. This field is read-only. Network Connectivity
+     * The VPC network associated with this hub&#39;s spokes. All of the VPN tunnels, VLAN attachments, and router appliance
+     * instances referenced by this hub&#39;s spokes must belong to this VPC network. This field is read-only. Network Connectivity
      * Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */

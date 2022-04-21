@@ -36,7 +36,7 @@ public final class BucketRule {
      */
     private final @Nullable BucketRuleFilterProperties filter;
     /**
-     * Unique identifier for the lifecycle rule. The value can't be longer than 255 characters.
+     * Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
      * 
      */
     private final @Nullable String id;
@@ -87,7 +87,7 @@ public final class BucketRule {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * Unique identifier for the lifecycle rule. The value can't be longer than 255 characters.
+     * Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
      * 
     */
     public Optional<String> id() {

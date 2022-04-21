@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The settings for this topic's Reservation usage.
+ * The settings for this topic&#39;s Reservation usage.
  * 
  */
 public final class ReservationConfigResponse extends com.pulumi.resources.InvokeArgs {
@@ -17,7 +17,7 @@ public final class ReservationConfigResponse extends com.pulumi.resources.Invoke
     public static final ReservationConfigResponse Empty = new ReservationConfigResponse();
 
     /**
-     * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+     * The Reservation to use for this topic&#39;s throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
      * 
      */
     @Import(name="throughputReservation", required=true)

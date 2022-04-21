@@ -131,14 +131,14 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * This instance's version of the data model. This can change as new features are added.
+     * This instance&#39;s version of the data model. This can change as new features are added.
      * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
-     * @return This instance's version of the data model. This can change as new features are added.
+     * @return This instance&#39;s version of the data model. This can change as new features are added.
      * 
      */
     public Output<String> version() {

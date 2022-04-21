@@ -123,7 +123,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse {
     private final @Nullable String protectedItemHealthStatus;
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSAPHanaDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSAPHanaDatabase&#39;.
      * 
      */
     private final String protectedItemType;
@@ -360,7 +360,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSAPHanaDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSAPHanaDatabase&#39;.
      * 
     */
     public String protectedItemType() {

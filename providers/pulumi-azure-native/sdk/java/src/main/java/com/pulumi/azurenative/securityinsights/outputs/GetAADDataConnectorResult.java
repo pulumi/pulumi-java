@@ -29,7 +29,7 @@ public final class GetAADDataConnectorResult {
     private final String id;
     /**
      * The kind of the data connector
-     * Expected value is 'AzureActiveDirectory'.
+     * Expected value is &#39;AzureActiveDirectory&#39;.
      * 
      */
     private final String kind;
@@ -90,7 +90,7 @@ public final class GetAADDataConnectorResult {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'AzureActiveDirectory'.
+     * Expected value is &#39;AzureActiveDirectory&#39;.
      * 
     */
     public String kind() {

@@ -63,7 +63,7 @@ public final class ReservationResponse {
      */
     private final AllocationSpecificSKUReservationResponse specificReservation;
     /**
-     * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+     * Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
      * 
      */
     private final Boolean specificReservationRequired;
@@ -179,7 +179,7 @@ public final class ReservationResponse {
         return this.specificReservation;
     }
     /**
-     * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+     * Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
      * 
     */
     public Boolean specificReservationRequired() {

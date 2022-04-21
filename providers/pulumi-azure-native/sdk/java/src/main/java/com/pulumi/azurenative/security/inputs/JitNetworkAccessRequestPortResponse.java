@@ -17,7 +17,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     public static final JitNetworkAccessRequestPortResponse Empty = new JitNetworkAccessRequestPortResponse();
 
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
      */
     @Import(name="allowedSourceAddressPrefix")
@@ -28,7 +28,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     }
 
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
      */
     @Import(name="allowedSourceAddressPrefixes")
@@ -39,7 +39,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     }
 
     /**
-     * The date & time at which the request ends in UTC
+     * The date &amp; time at which the request ends in UTC
      * 
      */
     @Import(name="endTimeUtc", required=true)
@@ -50,7 +50,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     }
 
     /**
-     * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
+     * The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
      * 
      */
     @Import(name="mappedPort")

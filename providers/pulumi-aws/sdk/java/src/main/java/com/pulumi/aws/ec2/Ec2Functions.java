@@ -290,9 +290,9 @@ public final class Ec2Functions {
      * e.g., to allow easier migration from another management solution
      * or to make it easier for an operator to connect through bastion host(s).
      * 
-     * > **Note:** It's strongly discouraged to use this data source for querying ephemeral
+     * &gt; **Note:** It&#39;s strongly discouraged to use this data source for querying ephemeral
      * instances (e.g., managed via autoscaling group), as the output may change at any time
-     * and you'd need to re-run `apply` every time an instance comes up or dies.
+     * and you&#39;d need to re-run `apply` every time an instance comes up or dies.
      * 
      */
     public static CompletableFuture<GetInstancesResult> getInstances() {
@@ -773,7 +773,7 @@ public final class Ec2Functions {
      * `aws.ec2.VpcIpamPool` provides details about an IPAM pool.
      * 
      * This resource can prove useful when an ipam pool was created in another root
-     * module and you need the pool's id as an input variable. For example, pools
+     * module and you need the pool&#39;s id as an input variable. For example, pools
      * can be shared via RAM and used to create vpcs with CIDRs from that pool.
      * 
      * ## Example Usage
@@ -821,7 +821,7 @@ public final class Ec2Functions {
     /**
      * This resource can be useful for getting back a list of VPC Ids for a region.
      * 
-     * The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of "production".
+     * The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of &#34;production&#34;.
      * 
      */
     public static CompletableFuture<GetVpcsResult> getVpcs() {

@@ -19,7 +19,7 @@ public final class LabelSelector {
      */
     private final @Nullable List<LabelSelectorRequirement> matchExpressions;
     /**
-     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
+     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is &#34;key&#34;, the operator is &#34;In&#34;, and the values array contains only &#34;value&#34;. The requirements are ANDed.
      * 
      */
     private final @Nullable Map<String,String> matchLabels;
@@ -40,7 +40,7 @@ public final class LabelSelector {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }
     /**
-     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
+     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is &#34;key&#34;, the operator is &#34;In&#34;, and the values array contains only &#34;value&#34;. The requirements are ANDed.
      * 
     */
     public Map<String,String> matchLabels() {

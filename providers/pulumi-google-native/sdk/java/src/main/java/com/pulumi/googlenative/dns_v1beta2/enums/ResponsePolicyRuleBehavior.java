@@ -16,7 +16,7 @@ import java.util.StringJoiner;
     public enum ResponsePolicyRuleBehavior {
         BehaviorUnspecified("behaviorUnspecified"),
         /**
-         * Skip a less-specific ResponsePolicyRule and continue normal query logic. This can be used in conjunction with a wildcard to exempt a subset of the wildcard ResponsePolicyRule from the ResponsePolicy behavior and e.g., query the public internet instead. For instance, if these rules exist: *.example.com -> 1.2.3.4 foo.example.com -> PASSTHRU Then a query for 'foo.example.com' skips the wildcard.
+         * Skip a less-specific ResponsePolicyRule and continue normal query logic. This can be used in conjunction with a wildcard to exempt a subset of the wildcard ResponsePolicyRule from the ResponsePolicy behavior and e.g., query the public internet instead. For instance, if these rules exist: *.example.com -&gt; 1.2.3.4 foo.example.com -&gt; PASSTHRU Then a query for &#39;foo.example.com&#39; skips the wildcard.
          * 
          */
         BypassResponsePolicy("bypassResponsePolicy");

@@ -19,7 +19,7 @@ public final class GetACLResult {
      */
     private final @Nullable String arn;
     /**
-     * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
+     * Indicates acl status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
      */
     private final @Nullable String status;
@@ -54,7 +54,7 @@ public final class GetACLResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
+     * Indicates acl status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
     */
     public Optional<String> status() {

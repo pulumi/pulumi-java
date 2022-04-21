@@ -38,7 +38,7 @@ public final class ThresholdCustomAlertRuleResponse {
     private final Integer minThreshold;
     /**
      * The type of the custom alert rule.
-     * Expected value is 'ThresholdCustomAlertRule'.
+     * Expected value is &#39;ThresholdCustomAlertRule&#39;.
      * 
      */
     private final String ruleType;
@@ -96,7 +96,7 @@ public final class ThresholdCustomAlertRuleResponse {
     }
     /**
      * The type of the custom alert rule.
-     * Expected value is 'ThresholdCustomAlertRule'.
+     * Expected value is &#39;ThresholdCustomAlertRule&#39;.
      * 
     */
     public String ruleType() {

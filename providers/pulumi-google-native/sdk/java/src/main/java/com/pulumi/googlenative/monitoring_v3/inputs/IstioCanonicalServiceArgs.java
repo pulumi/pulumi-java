@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Canonical service scoped to an Istio mesh. Anthos clusters running ASM >= 1.6.8 will have their services ingested as this type.
+ * Canonical service scoped to an Istio mesh. Anthos clusters running ASM &gt;= 1.6.8 will have their services ingested as this type.
  * 
  */
 public final class IstioCanonicalServiceArgs extends com.pulumi.resources.ResourceArgs {

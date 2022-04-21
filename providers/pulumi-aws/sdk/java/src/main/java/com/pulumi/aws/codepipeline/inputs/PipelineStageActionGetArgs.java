@@ -30,7 +30,7 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
+     * A map of the action declaration&#39;s configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
      * 
      */
     @Import(name="configuration")
@@ -52,7 +52,7 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The action declaration's name.
+     * The action declaration&#39;s name.
      * 
      */
     @Import(name="name", required=true)

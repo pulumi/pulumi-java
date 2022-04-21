@@ -38,7 +38,7 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     }
 
     /**
-     * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
+     * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
      * 
      */
     @Import(name="indexDocument")
@@ -49,7 +49,7 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

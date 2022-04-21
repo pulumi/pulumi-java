@@ -53,7 +53,7 @@ public final class IdentityPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
+     * The &#34;domain&#34; by which Cognito will refer to your users. This name acts as a placeholder that allows your
      * backend and the Cognito service to communicate about the developer provider.
      * 
      */

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CacheUsernameDownloadSettingsResponse {
     /**
-     * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
+     * Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
      * 
      */
     private final @Nullable Boolean autoDownloadCertificate;
     /**
-     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
+     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
      * 
      */
     private final @Nullable String caCertificateURI;
@@ -39,7 +39,7 @@ public final class CacheUsernameDownloadSettingsResponse {
      */
     private final @Nullable Boolean extendedGroups;
     /**
-     * The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
+     * The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
      */
     private final @Nullable String groupFileURI;
@@ -59,7 +59,7 @@ public final class CacheUsernameDownloadSettingsResponse {
      */
     private final @Nullable Boolean requireValidCertificate;
     /**
-     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
+     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
      */
     private final @Nullable String userFileURI;
@@ -103,14 +103,14 @@ public final class CacheUsernameDownloadSettingsResponse {
     }
 
     /**
-     * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
+     * Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
      * 
     */
     public Optional<Boolean> autoDownloadCertificate() {
         return Optional.ofNullable(this.autoDownloadCertificate);
     }
     /**
-     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
+     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
      * 
     */
     public Optional<String> caCertificateURI() {
@@ -138,7 +138,7 @@ public final class CacheUsernameDownloadSettingsResponse {
         return Optional.ofNullable(this.extendedGroups);
     }
     /**
-     * The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
+     * The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
     */
     public Optional<String> groupFileURI() {
@@ -166,7 +166,7 @@ public final class CacheUsernameDownloadSettingsResponse {
         return Optional.ofNullable(this.requireValidCertificate);
     }
     /**
-     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
+     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
     */
     public Optional<String> userFileURI() {

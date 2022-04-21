@@ -107,7 +107,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The execution ARN to be used in `lambda_permission`'s `source_arn`
+     * The execution ARN to be used in `lambda_permission`&#39;s `source_arn`
      * when allowing API Gateway to invoke a Lambda function,
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
      * 

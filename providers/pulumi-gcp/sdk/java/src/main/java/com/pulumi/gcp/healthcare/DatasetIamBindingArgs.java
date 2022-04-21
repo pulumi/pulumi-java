@@ -27,7 +27,7 @@ public final class DatasetIamBindingArgs extends com.pulumi.resources.ResourceAr
     /**
      * The dataset ID, in the form
      * `{project_id}/{location_name}/{dataset_name}` or
-     * `{location_name}/{dataset_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

@@ -19,7 +19,7 @@ public final class ResourceGroupResourceSettingsResponse extends com.pulumi.reso
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'resourceGroups'.
+     * Expected value is &#39;resourceGroups&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

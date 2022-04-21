@@ -82,7 +82,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The list of context names required for this intent to be triggered.
-     * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;.
      * 
      */
     @Import(name="inputContextNames")
@@ -117,7 +117,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * The unique identifier of this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     @Import(name="name")
@@ -129,7 +129,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identifier of the parent intent in the chain of followup intents.
-     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     @Import(name="parentFollowupIntentName")
@@ -178,7 +178,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
-     * chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * chain for this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     @Import(name="rootFollowupIntentName")

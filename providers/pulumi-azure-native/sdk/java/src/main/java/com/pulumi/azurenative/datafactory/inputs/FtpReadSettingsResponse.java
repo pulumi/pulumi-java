@@ -111,7 +111,7 @@ public final class FtpReadSettingsResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * The read setting type.
-     * Expected value is 'FtpReadSettings'.
+     * Expected value is &#39;FtpReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

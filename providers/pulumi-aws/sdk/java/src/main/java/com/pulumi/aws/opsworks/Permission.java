@@ -79,14 +79,14 @@ public class Permission extends com.pulumi.resources.CustomResource {
         return this.stackId;
     }
     /**
-     * The user's IAM ARN to set permissions for
+     * The user&#39;s IAM ARN to set permissions for
      * 
      */
     @Export(name="userArn", type=String.class, parameters={})
     private Output<String> userArn;
 
     /**
-     * @return The user's IAM ARN to set permissions for
+     * @return The user&#39;s IAM ARN to set permissions for
      * 
      */
     public Output<String> userArn() {

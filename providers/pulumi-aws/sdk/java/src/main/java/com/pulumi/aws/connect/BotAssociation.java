@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  * Allows the specified Amazon Connect instance to access the specified Amazon Lex (V1) bot. For more information see
  * [Amazon Connect: Getting Started](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html) and [Add an Amazon Lex bot](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-lex.html).
  * 
- * > **NOTE:** This resource only currently supports Amazon Lex (V1) Associations.
+ * &gt; **NOTE:** This resource only currently supports Amazon Lex (V1) Associations.
  * 
  * ## Example Usage
  * 

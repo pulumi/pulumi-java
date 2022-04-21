@@ -65,14 +65,14 @@ public class Gateway extends com.pulumi.resources.CustomResource {
         return this.gatewayName;
     }
     /**
-     * The gateway's platform. You can only specify one platform in a gateway.
+     * The gateway&#39;s platform. You can only specify one platform in a gateway.
      * 
      */
     @Export(name="gatewayPlatform", type=GatewayPlatform.class, parameters={})
     private Output<GatewayPlatform> gatewayPlatform;
 
     /**
-     * @return The gateway's platform. You can only specify one platform in a gateway.
+     * @return The gateway&#39;s platform. You can only specify one platform in a gateway.
      * 
      */
     public Output<GatewayPlatform> gatewayPlatform() {

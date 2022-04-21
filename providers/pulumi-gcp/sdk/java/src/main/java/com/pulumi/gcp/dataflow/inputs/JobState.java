@@ -21,7 +21,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     public static final JobState Empty = new JobState();
 
     /**
-     * List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+     * List of experiments that should be used by the job. An example value is `[&#34;enable_stackdriver_agent_metrics&#34;]`.
      * 
      */
     @Import(name="additionalExperiments")
@@ -43,7 +43,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
+     * The configuration for VM IPs.  Options are `&#34;WORKER_IP_PUBLIC&#34;` or `&#34;WORKER_IP_PRIVATE&#34;`.
      * 
      */
     @Import(name="ipConfiguration")
@@ -80,7 +80,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
      * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
      * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-     * <<<<<<< HEAD
+     * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
     @Import(name="labels")
@@ -124,7 +124,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The network to which VMs will be assigned. If it is not provided, "default" will be used.
+     * The network to which VMs will be assigned. If it is not provided, &#34;default&#34; will be used.
      * 
      */
     @Import(name="network")
@@ -135,7 +135,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
+     * One of &#34;drain&#34; or &#34;cancel&#34;.  Specifies behavior of deletion during `pulumi destroy`.  See above note.
      * 
      */
     @Import(name="onDelete")
@@ -201,7 +201,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK". If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `"googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME"`
+     * The subnetwork to which VMs will be assigned. Should be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `&#34;googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME&#34;`
      * 
      */
     @Import(name="subnetwork")
@@ -235,7 +235,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * > > > > > > > v4.1.0
+     * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
     @Import(name="transformNameMapping")

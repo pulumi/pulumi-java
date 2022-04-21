@@ -64,7 +64,7 @@ public final class AzureTableStorageLinkedServiceResponse {
     private final @Nullable Object sasUri;
     /**
      * Type of linked service.
-     * Expected value is 'AzureTableStorage'.
+     * Expected value is &#39;AzureTableStorage&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class AzureTableStorageLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureTableStorage'.
+     * Expected value is &#39;AzureTableStorage&#39;.
      * 
     */
     public String type() {

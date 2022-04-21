@@ -119,14 +119,14 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
         return this.jobStatus;
     }
     /**
-     * The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don't specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
+     * The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don&#39;t specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
      * 
      */
     @Export(name="jobType", type=String.class, parameters={})
     private Output<String> jobType;
 
     /**
-     * @return The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don't specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
+     * @return The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don&#39;t specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
      * 
      */
     public Output<String> jobType() {
@@ -181,14 +181,14 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
         return this.samplingPercentage;
     }
     /**
-     * The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
+     * The recurrence pattern for running the job. To run the job only once, don&#39;t specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
      * 
      */
     @Export(name="scheduleFrequency", type=ClassificationJobScheduleFrequency.class, parameters={})
     private Output<ClassificationJobScheduleFrequency> scheduleFrequency;
 
     /**
-     * @return The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
+     * @return The recurrence pattern for running the job. To run the job only once, don&#39;t specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
      * 
      */
     public Output<ClassificationJobScheduleFrequency> scheduleFrequency() {
@@ -215,14 +215,14 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
+     * If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn&#39;t resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
      * 
      */
     @Export(name="userPausedDetails", type=List.class, parameters={ClassificationJobUserPausedDetail.class})
     private Output<List<ClassificationJobUserPausedDetail>> userPausedDetails;
 
     /**
-     * @return If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
+     * @return If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn&#39;t resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
      * 
      */
     public Output<List<ClassificationJobUserPausedDetail>> userPausedDetails() {

@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         CurrentSpend("CURRENT_SPEND"),
         /**
-         * Use forecasted spend for the period as the basis for comparison against the threshold. FORECASTED_SPEND can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+         * Use forecasted spend for the period as the basis for comparison against the threshold. FORECASTED_SPEND can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
          * 
          */
         ForecastedSpend("FORECASTED_SPEND");

@@ -64,7 +64,7 @@ public final class DrillTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'DrillTable'.
+     * Expected value is &#39;DrillTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class DrillTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'DrillTable'.
+     * Expected value is &#39;DrillTable&#39;.
      * 
     */
     public String type() {

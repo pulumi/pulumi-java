@@ -17,7 +17,7 @@ public final class GetUserResult {
      */
     private final @Nullable String arn;
     /**
-     * Indicates the user status. Can be "active", "modifying" or "deleting".
+     * Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
      * 
      */
     private final @Nullable String status;
@@ -38,7 +38,7 @@ public final class GetUserResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Indicates the user status. Can be "active", "modifying" or "deleting".
+     * Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
      * 
     */
     public Optional<String> status() {

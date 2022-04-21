@@ -27,7 +27,7 @@ public final class GuestPoliciesAssignmentOsTypeArgs extends com.pulumi.resource
     }
 
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
+     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
      */
     @Import(name="osShortName")

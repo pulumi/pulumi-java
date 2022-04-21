@@ -62,7 +62,7 @@ public class Ueba extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the setting
-     * Expected value is 'Ueba'.
+     * Expected value is &#39;Ueba&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class Ueba extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the setting
-     * Expected value is 'Ueba'.
+     * Expected value is &#39;Ueba&#39;.
      * 
      */
     public Output<String> kind() {

@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
+ * The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
  * 
  */
 public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.resources.InvokeArgs {

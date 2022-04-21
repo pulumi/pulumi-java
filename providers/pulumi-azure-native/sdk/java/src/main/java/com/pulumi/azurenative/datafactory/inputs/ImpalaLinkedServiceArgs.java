@@ -173,7 +173,7 @@ public final class ImpalaLinkedServiceArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of linked service.
-     * Expected value is 'Impala'.
+     * Expected value is &#39;Impala&#39;.
      * 
      */
     @Import(name="type", required=true)

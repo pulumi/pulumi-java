@@ -54,7 +54,7 @@ public final class FirewallPolicyFirewallPolicyGetArgs extends com.pulumi.resour
     }
 
     /**
-     * Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
+     * Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy&#39;s `stateless_default_actions`. See Stateless Custom Action below for details.
      * 
      */
     @Import(name="statelessCustomActions")

@@ -27,7 +27,7 @@ public final class GetRuleResult {
      */
     private final String stage;
     /**
-     * is a friendly title for the role, such as "Role Viewer"
+     * is a friendly title for the role, such as &#34;Role Viewer&#34;
      * 
      */
     private final String title;
@@ -71,7 +71,7 @@ public final class GetRuleResult {
         return this.stage;
     }
     /**
-     * is a friendly title for the role, such as "Role Viewer"
+     * is a friendly title for the role, such as &#34;Role Viewer&#34;
      * 
     */
     public String title() {

@@ -15,7 +15,7 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDiskArgs Empty = new GetDiskArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=diskType)'
+     * Specify the $expand query. Example: &#39;properties($select=diskType)&#39;
      * 
      */
     @Import(name="expand")

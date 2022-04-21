@@ -7,7 +7,7 @@ import java.util.Objects;
 
 
 /**
- * The source database will allow incoming connections from the destination database's public IP. You can retrieve the Cloud SQL instance's public IP from the Cloud SQL console or using Cloud SQL APIs. No additional configuration is required.
+ * The source database will allow incoming connections from the destination database&#39;s public IP. You can retrieve the Cloud SQL instance&#39;s public IP from the Cloud SQL console or using Cloud SQL APIs. No additional configuration is required.
  * 
  */
 public final class StaticIpConnectivityArgs extends com.pulumi.resources.ResourceArgs {

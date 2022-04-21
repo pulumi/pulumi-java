@@ -52,7 +52,7 @@ public final class PackagingConfigurationDashManifest extends com.pulumi.resourc
     }
 
     /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
      * 
      */
     @Import(name="profile")

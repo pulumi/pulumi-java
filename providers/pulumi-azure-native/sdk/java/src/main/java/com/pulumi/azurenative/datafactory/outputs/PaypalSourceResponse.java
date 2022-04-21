@@ -49,7 +49,7 @@ public final class PaypalSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'PaypalSource'.
+     * Expected value is &#39;PaypalSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class PaypalSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'PaypalSource'.
+     * Expected value is &#39;PaypalSource&#39;.
      * 
     */
     public String type() {

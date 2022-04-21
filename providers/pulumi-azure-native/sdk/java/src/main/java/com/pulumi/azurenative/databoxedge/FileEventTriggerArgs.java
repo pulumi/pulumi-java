@@ -41,7 +41,7 @@ public final class FileEventTriggerArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Trigger Kind.
-     * Expected value is 'FileEvent'.
+     * Expected value is &#39;FileEvent&#39;.
      * 
      */
     @Import(name="kind", required=true)

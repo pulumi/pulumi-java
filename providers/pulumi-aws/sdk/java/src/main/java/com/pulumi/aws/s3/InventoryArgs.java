@@ -54,7 +54,7 @@ public final class InventoryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria (documented below).
+     * Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
     @Import(name="filter")

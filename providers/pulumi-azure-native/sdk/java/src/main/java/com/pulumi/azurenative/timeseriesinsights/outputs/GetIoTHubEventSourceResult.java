@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIoTHubEventSourceResult {
     /**
-     * The name of the iot hub's consumer group that holds the partitions from which events will be read.
+     * The name of the iot hub&#39;s consumer group that holds the partitions from which events will be read.
      * 
      */
     private final String consumerGroupName;
@@ -39,18 +39,18 @@ public final class GetIoTHubEventSourceResult {
      */
     private final String iotHubName;
     /**
-     * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
+     * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant &#39;service connect&#39; permissions to the iot hub.
      * 
      */
     private final String keyName;
     /**
      * The kind of the event source.
-     * Expected value is 'Microsoft.IoTHub'.
+     * Expected value is &#39;Microsoft.IoTHub&#39;.
      * 
      */
     private final String kind;
     /**
-     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
     private final @Nullable LocalTimestampResponse localTimestamp;
@@ -80,7 +80,7 @@ public final class GetIoTHubEventSourceResult {
      */
     private final @Nullable String time;
     /**
-     * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     * The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
     private final @Nullable String timestampPropertyName;
@@ -125,7 +125,7 @@ public final class GetIoTHubEventSourceResult {
     }
 
     /**
-     * The name of the iot hub's consumer group that holds the partitions from which events will be read.
+     * The name of the iot hub&#39;s consumer group that holds the partitions from which events will be read.
      * 
     */
     public String consumerGroupName() {
@@ -160,7 +160,7 @@ public final class GetIoTHubEventSourceResult {
         return this.iotHubName;
     }
     /**
-     * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
+     * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant &#39;service connect&#39; permissions to the iot hub.
      * 
     */
     public String keyName() {
@@ -168,14 +168,14 @@ public final class GetIoTHubEventSourceResult {
     }
     /**
      * The kind of the event source.
-     * Expected value is 'Microsoft.IoTHub'.
+     * Expected value is &#39;Microsoft.IoTHub&#39;.
      * 
     */
     public String kind() {
         return this.kind;
     }
     /**
-     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
     */
     public Optional<LocalTimestampResponse> localTimestamp() {
@@ -217,7 +217,7 @@ public final class GetIoTHubEventSourceResult {
         return Optional.ofNullable(this.time);
     }
     /**
-     * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     * The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
     */
     public Optional<String> timestampPropertyName() {

@@ -24,7 +24,7 @@ public final class AzureDataLakeStoreLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'AzureDataLakeStoreLocation'.
+     * Expected value is &#39;AzureDataLakeStoreLocation&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class AzureDataLakeStoreLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'AzureDataLakeStoreLocation'.
+     * Expected value is &#39;AzureDataLakeStoreLocation&#39;.
      * 
     */
     public String type() {

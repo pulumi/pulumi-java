@@ -25,7 +25,7 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends com.pu
 
     /**
      * Command type.
-     * Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
+     * Expected value is &#39;Migrate.SqlServer.AzureDbSqlMi.Complete&#39;.
      * 
      */
     @Import(name="commandType", required=true)

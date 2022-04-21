@@ -68,7 +68,7 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
      * 
      */
     @Import(name="odataType", required=true)

@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum JobCurrentState {
         /**
-         * The job's run state isn't specified.
+         * The job&#39;s run state isn&#39;t specified.
          * 
          */
         JobStateUnknown("JOB_STATE_UNKNOWN"),
@@ -75,7 +75,7 @@ import java.util.StringJoiner;
          */
         JobStateQueued("JOB_STATE_QUEUED"),
         /**
-         * `JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.
+         * `JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job&#39;s associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.
          * 
          */
         JobStateResourceCleaningUp("JOB_STATE_RESOURCE_CLEANING_UP");

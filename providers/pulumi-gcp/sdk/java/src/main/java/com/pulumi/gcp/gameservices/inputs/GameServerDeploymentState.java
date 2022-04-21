@@ -63,8 +63,8 @@ public final class GameServerDeploymentState extends com.pulumi.resources.Resour
 
     /**
      * The resource id of the game server deployment, eg:
-     * 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}'. For example,
-     * 'projects/my-project/locations/{location}/gameServerDeployments/my-deployment'.
+     * &#39;projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/gameServerDeployments/my-deployment&#39;.
      * 
      */
     @Import(name="name")

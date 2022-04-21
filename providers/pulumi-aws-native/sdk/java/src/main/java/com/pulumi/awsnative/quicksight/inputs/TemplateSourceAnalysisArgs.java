@@ -13,7 +13,7 @@ import java.util.Objects;
 
 
 /**
- * <p>The source analysis of the template.</p>
+ * &lt;p&gt;The source analysis of the template.&lt;/p&gt;
  * 
  */
 public final class TemplateSourceAnalysisArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class TemplateSourceAnalysisArgs extends com.pulumi.resources.Resou
     public static final TemplateSourceAnalysisArgs Empty = new TemplateSourceAnalysisArgs();
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     @Import(name="arn", required=true)
@@ -32,8 +32,8 @@ public final class TemplateSourceAnalysisArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * <p>A structure containing information about the dataset references used as placeholders
-     *             in the template.</p>
+     * &lt;p&gt;A structure containing information about the dataset references used as placeholders
+     *             in the template.&lt;/p&gt;
      * 
      */
     @Import(name="dataSetReferences", required=true)

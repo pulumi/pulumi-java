@@ -106,7 +106,7 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of linked service.
-     * Expected value is 'Hdfs'.
+     * Expected value is &#39;Hdfs&#39;.
      * 
      */
     @Import(name="type", required=true)

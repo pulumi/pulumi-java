@@ -115,7 +115,7 @@ public final class HBaseObjectDatasetResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of dataset.
-     * Expected value is 'HBaseObject'.
+     * Expected value is &#39;HBaseObject&#39;.
      * 
      */
     @Import(name="type", required=true)

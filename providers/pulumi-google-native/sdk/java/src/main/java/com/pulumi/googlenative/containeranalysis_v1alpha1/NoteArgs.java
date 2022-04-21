@@ -131,7 +131,7 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
+     * The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
      * 
      */
     @Import(name="name")

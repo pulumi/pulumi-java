@@ -209,14 +209,14 @@ public class SpotFleetRequest extends com.pulumi.resources.CustomResource {
         return this.onDemandAllocationStrategy;
     }
     /**
-     * The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+     * The maximum amount per hour for On-Demand Instances that you&#39;re willing to pay. When the maximum amount you&#39;re willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
      * 
      */
     @Export(name="onDemandMaxTotalPrice", type=String.class, parameters={})
     private Output</* @Nullable */ String> onDemandMaxTotalPrice;
 
     /**
-     * @return The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+     * @return The maximum amount per hour for On-Demand Instances that you&#39;re willing to pay. When the maximum amount you&#39;re willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
      * 
      */
     public Output</* @Nullable */ String> onDemandMaxTotalPrice() {

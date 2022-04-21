@@ -20,7 +20,7 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     public static final NetworkArgs Empty = new NetworkArgs();
 
     /**
-     * Network on which the workers are created. "default" network is used if empty.
+     * Network on which the workers are created. &#34;default&#34; network is used if empty.
      * 
      */
     @Import(name="network")
@@ -42,7 +42,7 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
+     * Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
      * 
      */
     @Import(name="subnetwork")

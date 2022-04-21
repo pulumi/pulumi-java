@@ -78,7 +78,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'EventHub'.
+     * Expected value is &#39;EventHub&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

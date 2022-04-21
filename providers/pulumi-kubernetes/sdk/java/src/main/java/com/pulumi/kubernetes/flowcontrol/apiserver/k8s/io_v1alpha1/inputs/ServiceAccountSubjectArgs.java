@@ -19,7 +19,7 @@ public final class ServiceAccountSubjectArgs extends com.pulumi.resources.Resour
     public static final ServiceAccountSubjectArgs Empty = new ServiceAccountSubjectArgs();
 
     /**
-     * `name` is the name of matching ServiceAccount objects, or "*" to match regardless of name. Required.
+     * `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
      * 
      */
     @Import(name="name", required=true)

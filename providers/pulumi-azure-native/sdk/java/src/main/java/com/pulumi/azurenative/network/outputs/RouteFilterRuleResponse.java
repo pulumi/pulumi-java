@@ -18,7 +18,7 @@ public final class RouteFilterRuleResponse {
      */
     private final String access;
     /**
-     * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     * The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
      * 
      */
     private final List<String> communities;
@@ -81,7 +81,7 @@ public final class RouteFilterRuleResponse {
         return this.access;
     }
     /**
-     * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     * The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
      * 
     */
     public List<String> communities() {

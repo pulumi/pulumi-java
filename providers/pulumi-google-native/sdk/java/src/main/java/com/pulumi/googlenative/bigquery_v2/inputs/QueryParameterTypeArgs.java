@@ -18,7 +18,7 @@ public final class QueryParameterTypeArgs extends com.pulumi.resources.ResourceA
     public static final QueryParameterTypeArgs Empty = new QueryParameterTypeArgs();
 
     /**
-     * [Optional] The type of the array's elements, if this is an array.
+     * [Optional] The type of the array&#39;s elements, if this is an array.
      * 
      */
     @Import(name="arrayType")

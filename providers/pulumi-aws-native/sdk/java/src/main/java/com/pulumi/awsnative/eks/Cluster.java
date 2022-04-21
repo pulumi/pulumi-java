@@ -127,14 +127,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
      */
     @Export(name="openIdConnectIssuerUrl", type=String.class, parameters={})
     private Output<String> openIdConnectIssuerUrl;
 
     /**
-     * @return The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * @return The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
      */
     public Output<String> openIdConnectIssuerUrl() {
@@ -175,14 +175,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
-     * @return The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * @return The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
     public Output</* @Nullable */ String> version() {

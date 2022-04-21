@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies how Device Farm compares the rule's attribute to the value.
+     * Specifies how Device Farm compares the rule&#39;s attribute to the value.
      * 
      */
     @EnumType

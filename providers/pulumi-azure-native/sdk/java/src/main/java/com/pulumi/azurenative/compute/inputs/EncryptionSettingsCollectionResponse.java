@@ -44,7 +44,7 @@ public final class EncryptionSettingsCollectionResponse extends com.pulumi.resou
     }
 
     /**
-     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
+     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
      * 
      */
     @Import(name="encryptionSettingsVersion")

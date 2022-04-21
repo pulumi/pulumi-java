@@ -67,7 +67,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS
+     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS
      * configuration in order to serve the application via this domain mapping.
      * 
      */

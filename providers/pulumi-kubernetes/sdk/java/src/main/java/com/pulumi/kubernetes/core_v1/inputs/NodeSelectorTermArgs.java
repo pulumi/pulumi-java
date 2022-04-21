@@ -21,7 +21,7 @@ public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArg
     public static final NodeSelectorTermArgs Empty = new NodeSelectorTermArgs();
 
     /**
-     * A list of node selector requirements by node's labels.
+     * A list of node selector requirements by node&#39;s labels.
      * 
      */
     @Import(name="matchExpressions")
@@ -32,7 +32,7 @@ public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * A list of node selector requirements by node's fields.
+     * A list of node selector requirements by node&#39;s fields.
      * 
      */
     @Import(name="matchFields")

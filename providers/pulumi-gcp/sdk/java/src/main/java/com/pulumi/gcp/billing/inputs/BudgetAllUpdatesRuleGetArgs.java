@@ -60,7 +60,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The schema version of the notification. Only "1.0" is
+     * The schema version of the notification. Only &#34;1.0&#34; is
      * accepted. It represents the JSON schema as defined in
      * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
      * 

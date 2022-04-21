@@ -33,14 +33,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:batch:Certificate")
 public class Certificate extends com.pulumi.resources.CustomResource {
     /**
-     * This is only returned when the certificate provisioningState is 'Failed'.
+     * This is only returned when the certificate provisioningState is &#39;Failed&#39;.
      * 
      */
     @Export(name="deleteCertificateError", type=DeleteCertificateErrorResponse.class, parameters={})
     private Output<DeleteCertificateErrorResponse> deleteCertificateError;
 
     /**
-     * @return This is only returned when the certificate provisioningState is 'Failed'.
+     * @return This is only returned when the certificate provisioningState is &#39;Failed&#39;.
      * 
      */
     public Output<DeleteCertificateErrorResponse> deleteCertificateError() {
@@ -149,14 +149,14 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.thumbprint;
     }
     /**
-     * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     * This must match the first portion of the certificate name. Currently required to be &#39;SHA1&#39;.
      * 
      */
     @Export(name="thumbprintAlgorithm", type=String.class, parameters={})
     private Output</* @Nullable */ String> thumbprintAlgorithm;
 
     /**
-     * @return This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     * @return This must match the first portion of the certificate name. Currently required to be &#39;SHA1&#39;.
      * 
      */
     public Output</* @Nullable */ String> thumbprintAlgorithm() {

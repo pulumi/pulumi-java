@@ -38,7 +38,7 @@ public final class TimeWindowCustomAlertRuleResponse {
     private final Integer minThreshold;
     /**
      * The type of the custom alert rule.
-     * Expected value is 'TimeWindowCustomAlertRule'.
+     * Expected value is &#39;TimeWindowCustomAlertRule&#39;.
      * 
      */
     private final String ruleType;
@@ -103,7 +103,7 @@ public final class TimeWindowCustomAlertRuleResponse {
     }
     /**
      * The type of the custom alert rule.
-     * Expected value is 'TimeWindowCustomAlertRule'.
+     * Expected value is &#39;TimeWindowCustomAlertRule&#39;.
      * 
     */
     public String ruleType() {

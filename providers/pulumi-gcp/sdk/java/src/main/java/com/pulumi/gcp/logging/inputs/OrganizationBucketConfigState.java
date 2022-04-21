@@ -39,7 +39,7 @@ public final class OrganizationBucketConfigState extends com.pulumi.resources.Re
     }
 
     /**
-     * The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+     * The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
      * 
      */
     @Import(name="lifecycleState")
@@ -50,7 +50,7 @@ public final class OrganizationBucketConfigState extends com.pulumi.resources.Re
     }
 
     /**
-     * The location of the bucket. The supported locations are: "global" "us-central1"
+     * The location of the bucket. The supported locations are: &#34;global&#34; &#34;us-central1&#34;
      * 
      */
     @Import(name="location")
@@ -61,7 +61,7 @@ public final class OrganizationBucketConfigState extends com.pulumi.resources.Re
     }
 
     /**
-     * The resource name of the bucket. For example: "organizations/my-organization-id/locations/my-location/buckets/my-bucket-id"
+     * The resource name of the bucket. For example: &#34;organizations/my-organization-id/locations/my-location/buckets/my-bucket-id&#34;
      * 
      */
     @Import(name="name")

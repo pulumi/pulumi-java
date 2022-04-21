@@ -23,7 +23,7 @@ public final class IosTestSetupResponse {
      */
     private final String networkProfile;
     /**
-     * List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.
+     * List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
      * 
      */
     private final List<IosDeviceFileResponse> pullDirectories;
@@ -60,7 +60,7 @@ public final class IosTestSetupResponse {
         return this.networkProfile;
     }
     /**
-     * List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.
+     * List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
      * 
     */
     public List<IosDeviceFileResponse> pullDirectories() {

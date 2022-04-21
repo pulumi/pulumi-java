@@ -20,7 +20,7 @@ public final class WebAclLoggingConfigurationRedactedField {
     /**
      * Redact all query arguments.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -29,7 +29,7 @@ public final class WebAclLoggingConfigurationRedactedField {
     /**
      * Redact the request body, which immediately follows the request headers.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -53,7 +53,7 @@ public final class WebAclLoggingConfigurationRedactedField {
     /**
      * Redact a single query argument. See Single Query Argument below for details.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -86,7 +86,7 @@ public final class WebAclLoggingConfigurationRedactedField {
     /**
      * Redact all query arguments.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
     */
@@ -97,7 +97,7 @@ public final class WebAclLoggingConfigurationRedactedField {
     /**
      * Redact the request body, which immediately follows the request headers.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
     */
@@ -129,7 +129,7 @@ public final class WebAclLoggingConfigurationRedactedField {
     /**
      * Redact a single query argument. See Single Query Argument below for details.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
     */

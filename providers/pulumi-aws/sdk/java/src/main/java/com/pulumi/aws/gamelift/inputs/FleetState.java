@@ -138,7 +138,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Operating system of the fleet's computing resources.
+     * Operating system of the fleet&#39;s computing resources.
      * 
      */
     @Import(name="operatingSystem")

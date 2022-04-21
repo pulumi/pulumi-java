@@ -79,7 +79,7 @@ public final class Storage_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getDefaultObjectAccessControl", TypeShape.of(GetDefaultObjectAccessControlResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Retrieves an HMAC key's metadata
+     * Retrieves an HMAC key&#39;s metadata
      * 
      */
     public static CompletableFuture<GetHmacKeyResult> getHmacKey(GetHmacKeyArgs args) {

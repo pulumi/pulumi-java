@@ -42,7 +42,7 @@ public final class SlsaCompletenessArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
+     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
      * 
      */
     @Import(name="materials")

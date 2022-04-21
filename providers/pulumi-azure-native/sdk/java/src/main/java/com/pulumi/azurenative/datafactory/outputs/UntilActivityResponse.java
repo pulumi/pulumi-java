@@ -85,7 +85,7 @@ public final class UntilActivityResponse {
     private final @Nullable Object timeout;
     /**
      * Type of activity.
-     * Expected value is 'Until'.
+     * Expected value is &#39;Until&#39;.
      * 
      */
     private final String type;
@@ -159,7 +159,7 @@ public final class UntilActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Until'.
+     * Expected value is &#39;Until&#39;.
      * 
     */
     public String type() {

@@ -147,7 +147,7 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
 
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
      */
     @Import(name="kind", required=true)

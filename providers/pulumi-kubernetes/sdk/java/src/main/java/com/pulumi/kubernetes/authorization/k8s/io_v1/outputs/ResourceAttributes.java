@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceAttributes {
     /**
-     * Group is the API Group of the Resource.  "*" means all.
+     * Group is the API Group of the Resource.  &#34;*&#34; means all.
      * 
      */
     private final @Nullable String group;
     /**
-     * Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
+     * Name is the name of the resource being requested for a &#34;get&#34; or deleted for a &#34;delete&#34;. &#34;&#34; (empty) means all.
      * 
      */
     private final @Nullable String name;
     /**
-     * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces "" (empty) is defaulted for LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
+     * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces &#34;&#34; (empty) is defaulted for LocalSubjectAccessReviews &#34;&#34; (empty) is empty for cluster-scoped resources &#34;&#34; (empty) means &#34;all&#34; for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
      * 
      */
     private final @Nullable String namespace;
     /**
-     * Resource is one of the existing resource types.  "*" means all.
+     * Resource is one of the existing resource types.  &#34;*&#34; means all.
      * 
      */
     private final @Nullable String resource;
     /**
-     * Subresource is one of the existing resource types.  "" means none.
+     * Subresource is one of the existing resource types.  &#34;&#34; means none.
      * 
      */
     private final @Nullable String subresource;
     /**
-     * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
+     * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
      * 
      */
     private final @Nullable String verb;
     /**
-     * Version is the API Version of the Resource.  "*" means all.
+     * Version is the API Version of the Resource.  &#34;*&#34; means all.
      * 
      */
     private final @Nullable String version;
@@ -66,49 +66,49 @@ public final class ResourceAttributes {
     }
 
     /**
-     * Group is the API Group of the Resource.  "*" means all.
+     * Group is the API Group of the Resource.  &#34;*&#34; means all.
      * 
     */
     public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
     /**
-     * Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
+     * Name is the name of the resource being requested for a &#34;get&#34; or deleted for a &#34;delete&#34;. &#34;&#34; (empty) means all.
      * 
     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces "" (empty) is defaulted for LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
+     * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces &#34;&#34; (empty) is defaulted for LocalSubjectAccessReviews &#34;&#34; (empty) is empty for cluster-scoped resources &#34;&#34; (empty) means &#34;all&#34; for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
      * 
     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * Resource is one of the existing resource types.  "*" means all.
+     * Resource is one of the existing resource types.  &#34;*&#34; means all.
      * 
     */
     public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
     /**
-     * Subresource is one of the existing resource types.  "" means none.
+     * Subresource is one of the existing resource types.  &#34;&#34; means none.
      * 
     */
     public Optional<String> subresource() {
         return Optional.ofNullable(this.subresource);
     }
     /**
-     * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
+     * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
      * 
     */
     public Optional<String> verb() {
         return Optional.ofNullable(this.verb);
     }
     /**
-     * Version is the API Version of the Resource.  "*" means all.
+     * Version is the API Version of the Resource.  &#34;*&#34; means all.
      * 
     */
     public Optional<String> version() {

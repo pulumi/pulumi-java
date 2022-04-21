@@ -161,7 +161,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataLakeAnalytics'.
+     * Expected value is &#39;AzureDataLakeAnalytics&#39;.
      * 
      */
     @Import(name="type", required=true)

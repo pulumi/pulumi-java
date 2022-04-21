@@ -65,7 +65,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
+     * The deletion recovery level currently in effect for the object. If it contains &#39;Purgeable&#39;, then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
      * 
      */
     @Import(name="recoveryLevel", required=true)

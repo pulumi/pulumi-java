@@ -30,7 +30,7 @@ public final class AndroidRoboTestResponse {
      */
     private final String appInitialActivity;
     /**
-     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     private final String appPackageId;
@@ -97,7 +97,7 @@ public final class AndroidRoboTestResponse {
         return this.appInitialActivity;
     }
     /**
-     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
      * 
     */
     public String appPackageId() {

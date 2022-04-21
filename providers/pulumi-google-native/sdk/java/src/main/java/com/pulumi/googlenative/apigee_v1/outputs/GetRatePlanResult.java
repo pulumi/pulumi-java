@@ -25,7 +25,7 @@ public final class GetRatePlanResult {
      */
     private final String billingPeriod;
     /**
-     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
      */
     private final List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates;
@@ -160,7 +160,7 @@ public final class GetRatePlanResult {
         return this.billingPeriod;
     }
     /**
-     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
     */
     public List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates() {

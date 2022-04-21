@@ -40,7 +40,7 @@ public final class SecretCiphertextState extends com.pulumi.resources.ResourceAr
 
     /**
      * The full name of the CryptoKey that will be used to encrypt the provided plaintext.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;`
      * 
      */
     @Import(name="cryptoKey")

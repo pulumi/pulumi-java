@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
+     * Type of managed service identity. The type &#39;SystemAssigned&#39; includes an implicitly created identity. The type &#39;None&#39; will remove any identities from the resource.
      * 
      */
     @EnumType

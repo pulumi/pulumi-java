@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         CloudSqlInstance("CLOUD_SQL_INSTANCE"),
         /**
-         * An instance running on the customer's premises that is not managed by Cloud SQL.
+         * An instance running on the customer&#39;s premises that is not managed by Cloud SQL.
          * 
          */
         OnPremisesInstance("ON_PREMISES_INSTANCE"),

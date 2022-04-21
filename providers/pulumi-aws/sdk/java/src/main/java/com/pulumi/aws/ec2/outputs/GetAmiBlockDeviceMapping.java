@@ -16,7 +16,7 @@ public final class GetAmiBlockDeviceMapping {
      */
     private final String deviceName;
     /**
-     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
+     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
      * 
      */
     private final Map<String,String> ebs;
@@ -51,7 +51,7 @@ public final class GetAmiBlockDeviceMapping {
         return this.deviceName;
     }
     /**
-     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
+     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
      * 
     */
     public Map<String,String> ebs() {

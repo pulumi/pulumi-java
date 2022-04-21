@@ -25,7 +25,7 @@ public final class GetReferenceResult {
      */
     private final String refers;
     /**
-     * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     * The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
      * 
      */
     private final String resourceType;
@@ -64,7 +64,7 @@ public final class GetReferenceResult {
         return this.refers;
     }
     /**
-     * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     * The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
      * 
     */
     public String resourceType() {

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TemplateError {
     /**
-     * <p>Description of the error type.</p>
+     * &lt;p&gt;Description of the error type.&lt;/p&gt;
      * 
      */
     private final @Nullable String message;
@@ -28,7 +28,7 @@ public final class TemplateError {
     }
 
     /**
-     * <p>Description of the error type.</p>
+     * &lt;p&gt;Description of the error type.&lt;/p&gt;
      * 
     */
     public Optional<String> message() {

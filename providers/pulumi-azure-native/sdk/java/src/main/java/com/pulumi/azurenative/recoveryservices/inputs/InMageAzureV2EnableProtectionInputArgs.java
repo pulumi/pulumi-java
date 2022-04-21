@@ -69,7 +69,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
 
     /**
      * The class type.
-     * Expected value is 'InMageAzureV2'.
+     * Expected value is &#39;InMageAzureV2&#39;.
      * 
      */
     @Import(name="instanceType")

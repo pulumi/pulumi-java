@@ -39,7 +39,7 @@ public final class CxVersionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The Flow to create an Version for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     @Import(name="parent")

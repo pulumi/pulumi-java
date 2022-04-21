@@ -44,7 +44,7 @@ public final class SqlFilterResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The SQL expression. e.g. MyProperty='ABC'
+     * The SQL expression. e.g. MyProperty=&#39;ABC&#39;
      * 
      */
     @Import(name="sqlExpression")

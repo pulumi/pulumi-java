@@ -18,27 +18,27 @@ import javax.annotation.Nullable;
 public final class GetStudioComponentResult {
     private final @Nullable StudioComponentConfiguration configuration;
     /**
-     * <p>The description.</p>
+     * &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     /**
-     * <p>The EC2 security groups that control access to the studio component.</p>
+     * &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
      */
     private final @Nullable List<String> ec2SecurityGroupIds;
     /**
-     * <p>Initialization scripts for studio components.</p>
+     * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
      */
     private final @Nullable List<StudioComponentInitializationScript> initializationScripts;
     /**
-     * <p>The name for the studio component.</p>
+     * &lt;p&gt;The name for the studio component.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * <p>Parameters for the studio component scripts.</p>
+     * &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
      */
     private final @Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters;
@@ -69,35 +69,35 @@ public final class GetStudioComponentResult {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * <p>The description.</p>
+     * &lt;p&gt;The description.&lt;/p&gt;
      * 
     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * <p>The EC2 security groups that control access to the studio component.</p>
+     * &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
     */
     public List<String> ec2SecurityGroupIds() {
         return this.ec2SecurityGroupIds == null ? List.of() : this.ec2SecurityGroupIds;
     }
     /**
-     * <p>Initialization scripts for studio components.</p>
+     * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
     */
     public List<StudioComponentInitializationScript> initializationScripts() {
         return this.initializationScripts == null ? List.of() : this.initializationScripts;
     }
     /**
-     * <p>The name for the studio component.</p>
+     * &lt;p&gt;The name for the studio component.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * <p>Parameters for the studio component scripts.</p>
+     * &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
     */
     public List<StudioComponentScriptParameterKeyValue> scriptParameters() {

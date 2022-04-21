@@ -77,7 +77,7 @@ public final class NatRuleConditionResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Rule Condition Type.
-     * Expected value is 'NatRuleCondition'.
+     * Expected value is &#39;NatRuleCondition&#39;.
      * 
      */
     @Import(name="ruleConditionType", required=true)

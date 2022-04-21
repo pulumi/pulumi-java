@@ -79,7 +79,7 @@ public final class BackendBucketCdnPolicyGetArgs extends com.pulumi.resources.Re
 
     /**
      * Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
-     * Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
+     * Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs.
      * Structure is documented below.
      * 
      */
@@ -107,8 +107,8 @@ public final class BackendBucketCdnPolicyGetArgs extends com.pulumi.resources.Re
      * the response will be revalidated before being served.
      * When serving responses to signed URL requests,
      * Cloud CDN will internally behave as though
-     * all responses from this backend had a "Cache-Control: public,
-     * max-age=[TTL]" header, regardless of any existing Cache-Control
+     * all responses from this backend had a &#34;Cache-Control: public,
+     * max-age=[TTL]&#34; header, regardless of any existing Cache-Control
      * header. The actual headers served in responses will not be altered.
      * 
      */

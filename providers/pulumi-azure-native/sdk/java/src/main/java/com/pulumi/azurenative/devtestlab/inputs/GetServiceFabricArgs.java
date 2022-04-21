@@ -15,7 +15,7 @@ public final class GetServiceFabricArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetServiceFabricArgs Empty = new GetServiceFabricArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($expand=applicableSchedule)'
+     * Specify the $expand query. Example: &#39;properties($expand=applicableSchedule)&#39;
      * 
      */
     @Import(name="expand")

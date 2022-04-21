@@ -53,7 +53,7 @@ public final class GetAppResult {
      */
     private final String developerId;
     /**
-     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
+     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
      * 
      */
     private final String keyExpiresIn;
@@ -165,7 +165,7 @@ public final class GetAppResult {
         return this.developerId;
     }
     /**
-     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
+     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
      * 
     */
     public String keyExpiresIn() {

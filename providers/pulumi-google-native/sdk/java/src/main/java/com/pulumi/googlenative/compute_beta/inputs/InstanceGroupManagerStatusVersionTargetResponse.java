@@ -13,7 +13,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends com.p
     public static final InstanceGroupManagerStatusVersionTargetResponse Empty = new InstanceGroupManagerStatusVersionTargetResponse();
 
     /**
-     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
      * 
      */
     @Import(name="isReached", required=true)

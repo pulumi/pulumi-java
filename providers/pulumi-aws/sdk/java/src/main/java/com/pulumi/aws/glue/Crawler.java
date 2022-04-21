@@ -249,14 +249,14 @@ public class Crawler extends com.pulumi.resources.CustomResource {
         return this.schedule;
     }
     /**
-     * Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
+     * Policy for the crawler&#39;s update and deletion behavior. See Schema Change Policy below.
      * 
      */
     @Export(name="schemaChangePolicy", type=CrawlerSchemaChangePolicy.class, parameters={})
     private Output</* @Nullable */ CrawlerSchemaChangePolicy> schemaChangePolicy;
 
     /**
-     * @return Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
+     * @return Policy for the crawler&#39;s update and deletion behavior. See Schema Change Policy below.
      * 
      */
     public Output</* @Nullable */ CrawlerSchemaChangePolicy> schemaChangePolicy() {

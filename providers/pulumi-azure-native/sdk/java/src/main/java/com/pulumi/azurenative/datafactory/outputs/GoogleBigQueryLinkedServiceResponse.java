@@ -96,7 +96,7 @@ public final class GoogleBigQueryLinkedServiceResponse {
     private final @Nullable Object trustedCertPath;
     /**
      * Type of linked service.
-     * Expected value is 'GoogleBigQuery'.
+     * Expected value is &#39;GoogleBigQuery&#39;.
      * 
      */
     private final String type;
@@ -251,7 +251,7 @@ public final class GoogleBigQueryLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'GoogleBigQuery'.
+     * Expected value is &#39;GoogleBigQuery&#39;.
      * 
     */
     public String type() {

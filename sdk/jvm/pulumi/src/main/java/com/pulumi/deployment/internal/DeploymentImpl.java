@@ -1673,7 +1673,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          * to populate it.
          * This works well, however we have to make sure the console app
          * doesn't exit because it thinks there is no work to do.
-         * <p/>
+         * <p>
          * To ensure that doesn't happen, we have the main entrypoint of the app just
          * continuously, asynchronously loop, waiting for these tasks to complete, and only
          * exiting once the set becomes empty.

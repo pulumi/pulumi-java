@@ -28,7 +28,7 @@ public final class ScanConfigErrorResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     * Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
      * 
      */
     @Import(name="fieldName", required=true)

@@ -27,7 +27,7 @@ public final class GetSqlDWTableDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'SqlDWTable'.
+     * Expected value is &#39;SqlDWTable&#39;.
      * 
      */
     private final String kind;
@@ -109,7 +109,7 @@ public final class GetSqlDWTableDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'SqlDWTable'.
+     * Expected value is &#39;SqlDWTable&#39;.
      * 
     */
     public String kind() {

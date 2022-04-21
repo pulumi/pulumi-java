@@ -31,7 +31,7 @@ public final class JpgImageResponse {
     private final @Nullable List<JpgLayerResponse> layers;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgImage'.
+     * Expected value is &#39;#Microsoft.Media.JpgImage&#39;.
      * 
      */
     private final String odataType;
@@ -113,7 +113,7 @@ public final class JpgImageResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgImage'.
+     * Expected value is &#39;#Microsoft.Media.JpgImage&#39;.
      * 
     */
     public String odataType() {

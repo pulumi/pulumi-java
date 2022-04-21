@@ -92,8 +92,8 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The GCE disk type. Can be either `"pd-ssd"`,
-     * `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
+     * The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
+     * `&#34;local-ssd&#34;`, `&#34;pd-balanced&#34;` or `&#34;pd-standard&#34;`.
      * 
      */
     @Import(name="diskType")
@@ -156,7 +156,7 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
     /**
      * The name (**not self_link**)
      * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
-     * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+     * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
      */
     @Import(name="source")
@@ -168,12 +168,12 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
 
     /**
      * The image from which to
-     * initialize this disk. This can be one of: the image's `self_link`,
+     * initialize this disk. This can be one of: the image&#39;s `self_link`,
      * `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
      * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
      * `{project}/{image}`, `{family}`, or `{image}`.
-     * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+     * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
      */
     @Import(name="sourceImage")

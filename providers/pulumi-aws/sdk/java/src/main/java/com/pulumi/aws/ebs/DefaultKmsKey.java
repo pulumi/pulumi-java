@@ -19,9 +19,9 @@ import javax.annotation.Nullable;
  * Your AWS account has an AWS-managed default CMK that is used for encrypting an EBS volume when no CMK is specified in the API call that creates the volume.
  * By using the `aws.ebs.DefaultKmsKey` resource, you can specify a customer-managed CMK to use in place of the AWS-managed default CMK.
  * 
- * > **NOTE:** Creating an `aws.ebs.DefaultKmsKey` resource does not enable default EBS encryption. Use the `aws.ebs.EncryptionByDefault` to enable default EBS encryption.
+ * &gt; **NOTE:** Creating an `aws.ebs.DefaultKmsKey` resource does not enable default EBS encryption. Use the `aws.ebs.EncryptionByDefault` to enable default EBS encryption.
  * 
- * > **NOTE:** Destroying this resource will reset the default CMK to the account's AWS-managed default CMK for EBS.
+ * &gt; **NOTE:** Destroying this resource will reset the default CMK to the account&#39;s AWS-managed default CMK for EBS.
  * 
  * ## Example Usage
  * 

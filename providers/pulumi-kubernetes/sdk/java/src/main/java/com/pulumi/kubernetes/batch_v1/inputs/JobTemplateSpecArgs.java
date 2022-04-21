@@ -21,7 +21,7 @@ public final class JobTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
     public static final JobTemplateSpecArgs Empty = new JobTemplateSpecArgs();
 
     /**
-     * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

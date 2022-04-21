@@ -124,7 +124,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     }
 
     /**
-     * Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
+     * Configuration block for serialization and deserialization (&#34;SerDe&#34;) information. See `ser_de_info` below.
      * 
      */
     @Import(name="serDeInfo")

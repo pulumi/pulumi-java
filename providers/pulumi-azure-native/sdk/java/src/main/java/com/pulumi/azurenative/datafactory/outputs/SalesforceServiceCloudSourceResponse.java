@@ -49,7 +49,7 @@ public final class SalesforceServiceCloudSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SalesforceServiceCloudSource'.
+     * Expected value is &#39;SalesforceServiceCloudSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class SalesforceServiceCloudSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SalesforceServiceCloudSource'.
+     * Expected value is &#39;SalesforceServiceCloudSource&#39;.
      * 
     */
     public String type() {

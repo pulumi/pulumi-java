@@ -39,7 +39,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
     @Import(name="name")
@@ -61,7 +61,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don&#39;t want to specify a schema.
      * 
      */
     @Import(name="schema")

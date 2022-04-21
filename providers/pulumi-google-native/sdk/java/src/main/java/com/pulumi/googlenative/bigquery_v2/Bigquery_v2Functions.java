@@ -33,7 +33,7 @@ public final class Bigquery_v2Functions {
         return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Returns information about a specific job. Job information is available for a six month period after creation. Requires that you're the person who ran the job, or have the Is Owner project role.
+     * Returns information about a specific job. Job information is available for a six month period after creation. Requires that you&#39;re the person who ran the job, or have the Is Owner project role.
      * 
      */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {

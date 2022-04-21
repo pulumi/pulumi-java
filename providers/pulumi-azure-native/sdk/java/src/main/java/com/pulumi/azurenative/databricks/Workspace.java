@@ -122,14 +122,14 @@ public class Workspace extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The workspace's custom parameters.
+     * The workspace&#39;s custom parameters.
      * 
      */
     @Export(name="parameters", type=WorkspaceCustomParametersResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceCustomParametersResponse> parameters;
 
     /**
-     * @return The workspace's custom parameters.
+     * @return The workspace&#39;s custom parameters.
      * 
      */
     public Output</* @Nullable */ WorkspaceCustomParametersResponse> parameters() {
@@ -248,14 +248,14 @@ public class Workspace extends com.pulumi.resources.CustomResource {
         return this.workspaceId;
     }
     /**
-     * The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
+     * The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
      * 
      */
     @Export(name="workspaceUrl", type=String.class, parameters={})
     private Output<String> workspaceUrl;
 
     /**
-     * @return The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
+     * @return The workspace URL which is of the format &#39;adb-{workspaceId}.{random}.azuredatabricks.net&#39;
      * 
      */
     public Output<String> workspaceUrl() {

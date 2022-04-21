@@ -39,7 +39,7 @@ public final class GetSecurityContactResult {
      */
     private final @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole;
     /**
-     * The security contact's phone number
+     * The security contact&#39;s phone number
      * 
      */
     private final @Nullable String phone;
@@ -103,7 +103,7 @@ public final class GetSecurityContactResult {
         return Optional.ofNullable(this.notificationsByRole);
     }
     /**
-     * The security contact's phone number
+     * The security contact&#39;s phone number
      * 
     */
     public Optional<String> phone() {

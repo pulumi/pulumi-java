@@ -17,7 +17,7 @@ public final class TargetsPresentConditionResponse {
      */
     private final List<String> missingTargets;
     /**
-     * True if there aren't any missing Targets.
+     * True if there aren&#39;t any missing Targets.
      * 
      */
     private final Boolean status;
@@ -45,7 +45,7 @@ public final class TargetsPresentConditionResponse {
         return this.missingTargets;
     }
     /**
-     * True if there aren't any missing Targets.
+     * True if there aren&#39;t any missing Targets.
      * 
     */
     public Boolean status() {

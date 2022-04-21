@@ -22,7 +22,7 @@ public final class GetSavedQueryResult {
      */
     private final String createTime;
     /**
-     * The account's email address who has created this saved query.
+     * The account&#39;s email address who has created this saved query.
      * 
      */
     private final String creator;
@@ -42,7 +42,7 @@ public final class GetSavedQueryResult {
      */
     private final String lastUpdateTime;
     /**
-     * The account's email address who has updated this saved query most recently.
+     * The account&#39;s email address who has updated this saved query most recently.
      * 
      */
     private final String lastUpdater;
@@ -87,7 +87,7 @@ public final class GetSavedQueryResult {
         return this.createTime;
     }
     /**
-     * The account's email address who has created this saved query.
+     * The account&#39;s email address who has created this saved query.
      * 
     */
     public String creator() {
@@ -115,7 +115,7 @@ public final class GetSavedQueryResult {
         return this.lastUpdateTime;
     }
     /**
-     * The account's email address who has updated this saved query most recently.
+     * The account&#39;s email address who has updated this saved query most recently.
      * 
     */
     public String lastUpdater() {

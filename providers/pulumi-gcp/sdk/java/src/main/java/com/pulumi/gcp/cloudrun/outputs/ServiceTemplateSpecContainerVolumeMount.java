@@ -11,12 +11,12 @@ import java.util.Objects;
 public final class ServiceTemplateSpecContainerVolumeMount {
     /**
      * Path within the container at which the volume should be mounted.  Must
-     * not contain ':'.
+     * not contain &#39;:&#39;.
      * 
      */
     private final String mountPath;
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final String name;
@@ -31,14 +31,14 @@ public final class ServiceTemplateSpecContainerVolumeMount {
 
     /**
      * Path within the container at which the volume should be mounted.  Must
-     * not contain ':'.
+     * not contain &#39;:&#39;.
      * 
     */
     public String mountPath() {
         return this.mountPath;
     }
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public String name() {

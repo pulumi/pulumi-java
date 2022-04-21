@@ -57,7 +57,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.
+     * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc&#39;s accesses to cloud resources.
      * 
      */
     @Import(name="dataprocServiceAccount")
@@ -130,7 +130,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character '=' is not allowed to be used within the labels.
+     * The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character &#39;=&#39; is not allowed to be used within the labels.
      * 
      */
     @Import(name="labels")

@@ -20,7 +20,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
 
     /**
      * The authentication type.
-     * Expected value is 'userAssignedIdentity'.
+     * Expected value is &#39;userAssignedIdentity&#39;.
      * 
      */
     @Import(name="authType", required=true)

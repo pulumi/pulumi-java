@@ -36,7 +36,7 @@ public final class MultiplePipelineTriggerResponse {
     private final String runtimeState;
     /**
      * Trigger type.
-     * Expected value is 'MultiplePipelineTrigger'.
+     * Expected value is &#39;MultiplePipelineTrigger&#39;.
      * 
      */
     private final String type;
@@ -85,7 +85,7 @@ public final class MultiplePipelineTriggerResponse {
     }
     /**
      * Trigger type.
-     * Expected value is 'MultiplePipelineTrigger'.
+     * Expected value is &#39;MultiplePipelineTrigger&#39;.
      * 
     */
     public String type() {

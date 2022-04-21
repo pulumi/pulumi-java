@@ -44,7 +44,7 @@ public final class GetClientTlsPolicyResult {
      */
     private final List<ValidationCAResponse> serverValidationCa;
     /**
-     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
+     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
      * 
      */
     private final String sni;
@@ -117,7 +117,7 @@ public final class GetClientTlsPolicyResult {
         return this.serverValidationCa;
     }
     /**
-     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
+     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
      * 
     */
     public String sni() {

@@ -22,7 +22,7 @@ public final class DomainDefaultUserSettings {
      */
     private final String executionRole;
     /**
-     * The Jupyter server's app settings. See Jupyter Server App Settings below.
+     * The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
      * 
      */
     private final @Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings;
@@ -71,7 +71,7 @@ public final class DomainDefaultUserSettings {
         return this.executionRole;
     }
     /**
-     * The Jupyter server's app settings. See Jupyter Server App Settings below.
+     * The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
      * 
     */
     public Optional<DomainDefaultUserSettingsJupyterServerAppSettings> jupyterServerAppSettings() {

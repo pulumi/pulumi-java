@@ -53,7 +53,7 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (brief) reason for the condition's last transition.
+     * (brief) reason for the condition&#39;s last transition.
      * 
      */
     @Import(name="reason")
@@ -78,9 +78,9 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
      * Type of job condition, Complete or Failed.
      * 
      * Possible enum values:
-     *  - `"Complete"` means the job has completed its execution.
-     *  - `"Failed"` means the job has failed its execution.
-     *  - `"Suspended"` means the job has been suspended.
+     *  - `&#34;Complete&#34;` means the job has completed its execution.
+     *  - `&#34;Failed&#34;` means the job has failed its execution.
+     *  - `&#34;Suspended&#34;` means the job has been suspended.
      * 
      */
     @Import(name="type", required=true)

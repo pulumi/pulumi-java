@@ -104,7 +104,7 @@ public final class CustomDatasetResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Type of dataset.
-     * Expected value is 'CustomDataset'.
+     * Expected value is &#39;CustomDataset&#39;.
      * 
      */
     @Import(name="type", required=true)

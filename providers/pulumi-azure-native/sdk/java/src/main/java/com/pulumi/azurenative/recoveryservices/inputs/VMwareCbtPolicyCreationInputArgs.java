@@ -44,7 +44,7 @@ public final class VMwareCbtPolicyCreationInputArgs extends com.pulumi.resources
 
     /**
      * The class type.
-     * Expected value is 'VMwareCbt'.
+     * Expected value is &#39;VMwareCbt&#39;.
      * 
      */
     @Import(name="instanceType")

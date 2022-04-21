@@ -32,7 +32,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
      * 
      */
     @Import(name="enabled")

@@ -45,7 +45,7 @@ public final class GetFusionAlertRuleResult {
     private final String id;
     /**
      * The kind of the alert rule
-     * Expected value is 'Fusion'.
+     * Expected value is &#39;Fusion&#39;.
      * 
      */
     private final String kind;
@@ -147,7 +147,7 @@ public final class GetFusionAlertRuleResult {
     }
     /**
      * The kind of the alert rule
-     * Expected value is 'Fusion'.
+     * Expected value is &#39;Fusion&#39;.
      * 
     */
     public String kind() {

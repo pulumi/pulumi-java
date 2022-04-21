@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceTemplateNetworkInterfaceAccessConfig {
     /**
-     * The IP address that will be 1:1 mapped to the instance's
+     * The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
      */
@@ -36,7 +36,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
     }
 
     /**
-     * The IP address that will be 1:1 mapped to the instance's
+     * The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
     */

@@ -20,7 +20,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     public static final OntapVolumeArgs Empty = new OntapVolumeArgs();
 
     /**
-     * Specifies the location in the storage virtual machine's namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
+     * Specifies the location in the storage virtual machine&#39;s namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
      * 
      */
     @Import(name="junctionPath", required=true)

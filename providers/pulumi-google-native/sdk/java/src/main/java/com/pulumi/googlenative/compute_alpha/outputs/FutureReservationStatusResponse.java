@@ -16,7 +16,7 @@ public final class FutureReservationStatusResponse {
      */
     private final List<String> autoCreatedReservations;
     /**
-     * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state. This count also includes capacity delivered as part of existing matching reservations.
+     * This count indicates the fulfilled capacity so far. This is set during &#34;PROVISIONING&#34; state. This count also includes capacity delivered as part of existing matching reservations.
      * 
      */
     private final String fulfilledCount;
@@ -51,7 +51,7 @@ public final class FutureReservationStatusResponse {
         return this.autoCreatedReservations;
     }
     /**
-     * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state. This count also includes capacity delivered as part of existing matching reservations.
+     * This count indicates the fulfilled capacity so far. This is set during &#34;PROVISIONING&#34; state. This count also includes capacity delivered as part of existing matching reservations.
      * 
     */
     public String fulfilledCount() {

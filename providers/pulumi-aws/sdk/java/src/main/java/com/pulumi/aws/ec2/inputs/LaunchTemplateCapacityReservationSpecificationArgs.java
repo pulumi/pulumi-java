@@ -17,7 +17,7 @@ public final class LaunchTemplateCapacityReservationSpecificationArgs extends co
     public static final LaunchTemplateCapacityReservationSpecificationArgs Empty = new LaunchTemplateCapacityReservationSpecificationArgs();
 
     /**
-     * Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
+     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
      * 
      */
     @Import(name="capacityReservationPreference")

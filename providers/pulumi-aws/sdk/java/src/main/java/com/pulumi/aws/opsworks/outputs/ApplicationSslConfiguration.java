@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationSslConfiguration {
     /**
-     * The contents of the certificate's domain.crt file.
+     * The contents of the certificate&#39;s domain.crt file.
      * 
      */
     private final String certificate;
@@ -22,7 +22,7 @@ public final class ApplicationSslConfiguration {
      */
     private final @Nullable String chain;
     /**
-     * The private key; the contents of the certificate's domain.key file.
+     * The private key; the contents of the certificate&#39;s domain.key file.
      * 
      */
     private final String privateKey;
@@ -38,7 +38,7 @@ public final class ApplicationSslConfiguration {
     }
 
     /**
-     * The contents of the certificate's domain.crt file.
+     * The contents of the certificate&#39;s domain.crt file.
      * 
     */
     public String certificate() {
@@ -52,7 +52,7 @@ public final class ApplicationSslConfiguration {
         return Optional.ofNullable(this.chain);
     }
     /**
-     * The private key; the contents of the certificate's domain.key file.
+     * The private key; the contents of the certificate&#39;s domain.key file.
      * 
     */
     public String privateKey() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * <p>MySQL parameters.</p>
+ * &lt;p&gt;MySQL parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceMySqlParameters extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSourceMySqlParameters extends com.pulumi.resources.Invoke
     public static final DataSourceMySqlParameters Empty = new DataSourceMySqlParameters();
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     @Import(name="database", required=true)
@@ -29,7 +29,7 @@ public final class DataSourceMySqlParameters extends com.pulumi.resources.Invoke
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -40,7 +40,7 @@ public final class DataSourceMySqlParameters extends com.pulumi.resources.Invoke
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

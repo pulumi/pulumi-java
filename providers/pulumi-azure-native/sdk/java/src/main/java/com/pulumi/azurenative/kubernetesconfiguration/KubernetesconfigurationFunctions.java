@@ -28,7 +28,7 @@ public final class KubernetesconfigurationFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The Flux Configuration object returned in Get & Put response.
+     * The Flux Configuration object returned in Get &amp; Put response.
      * API Version: 2021-11-01-preview.
      * 
      */
@@ -39,7 +39,7 @@ public final class KubernetesconfigurationFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getFluxConfiguration", TypeShape.of(GetFluxConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The SourceControl Configuration object returned in Get & Put response.
+     * The SourceControl Configuration object returned in Get &amp; Put response.
      * API Version: 2021-03-01.
      * 
      */

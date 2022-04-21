@@ -27,7 +27,7 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The AWS account ID of the service mesh's owner.
+     * The AWS account ID of the service mesh&#39;s owner.
      * 
      */
     @Import(name="meshOwner")

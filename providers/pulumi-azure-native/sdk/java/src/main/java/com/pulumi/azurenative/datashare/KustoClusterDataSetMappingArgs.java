@@ -50,7 +50,7 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'KustoCluster'.
+     * Expected value is &#39;KustoCluster&#39;.
      * 
      */
     @Import(name="kind", required=true)

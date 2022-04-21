@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Asset's type.
+     * Asset&#39;s type.
      * 
      */
     @EnumType

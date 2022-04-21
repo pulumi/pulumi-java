@@ -45,7 +45,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.SqlDb'.
+     * Expected value is &#39;ConnectToTarget.SqlDb&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.SqlDb'.
+     * Expected value is &#39;ConnectToTarget.SqlDb&#39;.
      * 
     */
     public String taskType() {

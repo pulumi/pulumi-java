@@ -22,19 +22,19 @@ public final class StandardAppVersionHandlerStaticFiles {
     private final @Nullable Boolean applicationReadable;
     /**
      * Time a static file served by this handler should be cached by web proxies and browsers.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example &#34;3.5s&#34;.
      * 
      */
     private final @Nullable String expiration;
     /**
      * HTTP headers to use for all responses from these URLs.
-     * An object containing a list of "key:value" value pairs.".
+     * An object containing a list of &#34;key:value&#34; value pairs.&#34;.
      * 
      */
     private final @Nullable Map<String,String> httpHeaders;
     /**
      * MIME type used to serve all files served by this handler.
-     * Defaults to file-specific MIME types, which are derived from each file's filename extension.
+     * Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
      * 
      */
     private final @Nullable String mimeType;
@@ -83,7 +83,7 @@ public final class StandardAppVersionHandlerStaticFiles {
     }
     /**
      * Time a static file served by this handler should be cached by web proxies and browsers.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example &#34;3.5s&#34;.
      * 
     */
     public Optional<String> expiration() {
@@ -91,7 +91,7 @@ public final class StandardAppVersionHandlerStaticFiles {
     }
     /**
      * HTTP headers to use for all responses from these URLs.
-     * An object containing a list of "key:value" value pairs.".
+     * An object containing a list of &#34;key:value&#34; value pairs.&#34;.
      * 
     */
     public Map<String,String> httpHeaders() {
@@ -99,7 +99,7 @@ public final class StandardAppVersionHandlerStaticFiles {
     }
     /**
      * MIME type used to serve all files served by this handler.
-     * Defaults to file-specific MIME types, which are derived from each file's filename extension.
+     * Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
      * 
     */
     public Optional<String> mimeType() {

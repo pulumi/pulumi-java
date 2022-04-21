@@ -24,7 +24,7 @@ public final class GetFleetResult {
      */
     private final @Nullable String description;
     /**
-     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to "1" and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
+     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
      */
     private final @Nullable Integer desiredEC2Instances;
@@ -40,7 +40,7 @@ public final class GetFleetResult {
     private final @Nullable String fleetId;
     private final @Nullable List<FleetLocationConfiguration> locations;
     /**
-     * [DEPRECATED] The maximum value that is allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
      */
     private final @Nullable Integer maxSize;
@@ -50,7 +50,7 @@ public final class GetFleetResult {
      */
     private final @Nullable List<String> metricGroups;
     /**
-     * [DEPRECATED] The minimum value allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
      */
     private final @Nullable Integer minSize;
@@ -60,7 +60,7 @@ public final class GetFleetResult {
      */
     private final @Nullable String name;
     /**
-     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet's protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
+     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
      */
     private final @Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy;
@@ -113,7 +113,7 @@ public final class GetFleetResult {
         return Optional.ofNullable(this.description);
     }
     /**
-     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to "1" and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
+     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
     */
     public Optional<Integer> desiredEC2Instances() {
@@ -137,7 +137,7 @@ public final class GetFleetResult {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
-     * [DEPRECATED] The maximum value that is allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
     */
     public Optional<Integer> maxSize() {
@@ -151,7 +151,7 @@ public final class GetFleetResult {
         return this.metricGroups == null ? List.of() : this.metricGroups;
     }
     /**
-     * [DEPRECATED] The minimum value allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
     */
     public Optional<Integer> minSize() {
@@ -165,7 +165,7 @@ public final class GetFleetResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet's protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
+     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
     */
     public Optional<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy() {

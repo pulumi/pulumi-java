@@ -47,7 +47,7 @@ public final class SsisProjectResponse {
     private final @Nullable List<SsisParameterResponse> parameters;
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Project'.
+     * Expected value is &#39;Project&#39;.
      * 
      */
     private final String type;
@@ -121,7 +121,7 @@ public final class SsisProjectResponse {
     }
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Project'.
+     * Expected value is &#39;Project&#39;.
      * 
     */
     public String type() {

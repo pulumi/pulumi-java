@@ -68,7 +68,7 @@ public final class MembershipEndpointArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
      * 
      */
     @Import(name="onPremCluster")

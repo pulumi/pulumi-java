@@ -131,14 +131,14 @@ public class Invitation extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The target Azure AD Id. Can't be combined with email.
+     * The target Azure AD Id. Can&#39;t be combined with email.
      * 
      */
     @Export(name="targetActiveDirectoryId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetActiveDirectoryId;
 
     /**
-     * @return The target Azure AD Id. Can't be combined with email.
+     * @return The target Azure AD Id. Can&#39;t be combined with email.
      * 
      */
     public Output</* @Nullable */ String> targetActiveDirectoryId() {

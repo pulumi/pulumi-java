@@ -48,7 +48,7 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
 
     /**
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Reference'.
+     * Expected value is &#39;Reference&#39;.
      * 
      */
     @Import(name="type", required=true)

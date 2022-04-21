@@ -30,7 +30,7 @@ public final class PngImageResponse {
     private final @Nullable List<PngLayerResponse> layers;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.PngImage'.
+     * Expected value is &#39;#Microsoft.Media.PngImage&#39;.
      * 
      */
     private final String odataType;
@@ -105,7 +105,7 @@ public final class PngImageResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.PngImage'.
+     * Expected value is &#39;#Microsoft.Media.PngImage&#39;.
      * 
     */
     public String odataType() {

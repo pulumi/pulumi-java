@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  * 
  * See [CloudFront Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html)
  * 
- * > **NOTE:** You cannot delete a function if it’s associated with a cache behavior. First, update your distributions to remove the function association from all cache behaviors, then delete the function.
+ * &gt; **NOTE:** You cannot delete a function if it’s associated with a cache behavior. First, update your distributions to remove the function association from all cache behaviors, then delete the function.
  * 
  * ## Example Usage
  * 
@@ -133,14 +133,14 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.publish;
     }
     /**
-     * Identifier of the function's runtime. Currently only `cloudfront-js-1.0` is valid.
+     * Identifier of the function&#39;s runtime. Currently only `cloudfront-js-1.0` is valid.
      * 
      */
     @Export(name="runtime", type=String.class, parameters={})
     private Output<String> runtime;
 
     /**
-     * @return Identifier of the function's runtime. Currently only `cloudfront-js-1.0` is valid.
+     * @return Identifier of the function&#39;s runtime. Currently only `cloudfront-js-1.0` is valid.
      * 
      */
     public Output<String> runtime() {

@@ -17,7 +17,7 @@ public final class PolicyRule {
      */
     private final @Nullable List<String> apiGroups;
     /**
-     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as "pods" or "secrets") or non-resource URL paths (such as "/api"),  but not both.
+     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
      * 
      */
     private final @Nullable List<String> nonResourceURLs;
@@ -27,7 +27,7 @@ public final class PolicyRule {
      */
     private final @Nullable List<String> resourceNames;
     /**
-     * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '*{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
+     * Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
      * 
      */
     private final @Nullable List<String> resources;
@@ -59,7 +59,7 @@ public final class PolicyRule {
         return this.apiGroups == null ? List.of() : this.apiGroups;
     }
     /**
-     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as "pods" or "secrets") or non-resource URL paths (such as "/api"),  but not both.
+     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
      * 
     */
     public List<String> nonResourceURLs() {
@@ -73,7 +73,7 @@ public final class PolicyRule {
         return this.resourceNames == null ? List.of() : this.resourceNames;
     }
     /**
-     * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '*{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
+     * Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
      * 
     */
     public List<String> resources() {

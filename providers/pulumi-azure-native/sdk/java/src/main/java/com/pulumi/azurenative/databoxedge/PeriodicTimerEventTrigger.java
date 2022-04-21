@@ -50,7 +50,7 @@ public class PeriodicTimerEventTrigger extends com.pulumi.resources.CustomResour
     }
     /**
      * Trigger Kind.
-     * Expected value is 'PeriodicTimerEvent'.
+     * Expected value is &#39;PeriodicTimerEvent&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -58,7 +58,7 @@ public class PeriodicTimerEventTrigger extends com.pulumi.resources.CustomResour
 
     /**
      * @return Trigger Kind.
-     * Expected value is 'PeriodicTimerEvent'.
+     * Expected value is &#39;PeriodicTimerEvent&#39;.
      * 
      */
     public Output<String> kind() {

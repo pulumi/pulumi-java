@@ -118,7 +118,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.
+     * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there&#39;s a matching configuration in the peer network.
      * 
      */
     @Import(name="state", required=true)

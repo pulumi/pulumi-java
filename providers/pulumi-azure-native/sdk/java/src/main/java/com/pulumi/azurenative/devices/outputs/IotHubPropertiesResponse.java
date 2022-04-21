@@ -75,7 +75,7 @@ public final class IotHubPropertiesResponse {
      */
     private final @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints;
     /**
-     * Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.
+     * Specifies the minimum TLS version to support for this hub. Can be set to &#34;1.2&#34; to have clients that use a TLS version below 1.2 to be rejected.
      * 
      */
     private final @Nullable String minTlsVersion;
@@ -226,7 +226,7 @@ public final class IotHubPropertiesResponse {
         return this.messagingEndpoints == null ? Map.of() : this.messagingEndpoints;
     }
     /**
-     * Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.
+     * Specifies the minimum TLS version to support for this hub. Can be set to &#34;1.2&#34; to have clients that use a TLS version below 1.2 to be rejected.
      * 
     */
     public Optional<String> minTlsVersion() {

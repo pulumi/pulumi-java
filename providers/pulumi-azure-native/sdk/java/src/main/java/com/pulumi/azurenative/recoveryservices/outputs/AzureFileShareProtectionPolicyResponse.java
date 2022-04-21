@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 public final class AzureFileShareProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureStorage'.
+     * Expected value is &#39;AzureStorage&#39;.
      * 
      */
     private final String backupManagementType;
@@ -41,7 +41,7 @@ public final class AzureFileShareProtectionPolicyResponse {
      */
     private final @Nullable Object schedulePolicy;
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     private final @Nullable String timeZone;
@@ -69,7 +69,7 @@ public final class AzureFileShareProtectionPolicyResponse {
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureStorage'.
+     * Expected value is &#39;AzureStorage&#39;.
      * 
     */
     public String backupManagementType() {
@@ -97,7 +97,7 @@ public final class AzureFileShareProtectionPolicyResponse {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
     */
     public Optional<String> timeZone() {

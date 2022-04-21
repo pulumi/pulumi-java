@@ -147,7 +147,7 @@ public final class MonitoringFunctions {
     }
     /**
      * 
-     * @Deprecated
+     * @deprecated
      * gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion
      * 
      */

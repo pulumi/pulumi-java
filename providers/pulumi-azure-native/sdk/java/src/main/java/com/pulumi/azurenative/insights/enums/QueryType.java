@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Set value to 'ResultCount' .
+     * Set value to &#39;ResultCount&#39; .
      * 
      */
     @EnumType

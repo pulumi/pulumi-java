@@ -33,7 +33,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
 
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureDbForPostgreSql.Sync'.
+     * Expected value is &#39;ConnectToTarget.AzureDbForPostgreSql.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

@@ -29,7 +29,7 @@ public final class GetAATPDataConnectorResult {
     private final String id;
     /**
      * The kind of the data connector
-     * Expected value is 'AzureAdvancedThreatProtection'.
+     * Expected value is &#39;AzureAdvancedThreatProtection&#39;.
      * 
      */
     private final String kind;
@@ -90,7 +90,7 @@ public final class GetAATPDataConnectorResult {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'AzureAdvancedThreatProtection'.
+     * Expected value is &#39;AzureAdvancedThreatProtection&#39;.
      * 
     */
     public String kind() {

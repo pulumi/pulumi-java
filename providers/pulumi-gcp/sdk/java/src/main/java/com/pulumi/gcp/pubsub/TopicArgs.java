@@ -20,7 +20,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the Cloud KMS CryptoKey to be used to protect access
-     * to messages published on this topic. Your project's PubSub service account
+     * to messages published on this topic. Your project&#39;s PubSub service account
      * (`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
      * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
      * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`

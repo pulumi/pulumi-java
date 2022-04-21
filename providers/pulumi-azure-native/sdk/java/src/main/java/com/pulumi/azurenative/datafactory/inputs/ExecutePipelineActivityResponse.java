@@ -83,7 +83,7 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
 
     /**
      * Type of activity.
-     * Expected value is 'ExecutePipeline'.
+     * Expected value is &#39;ExecutePipeline&#39;.
      * 
      */
     @Import(name="type", required=true)

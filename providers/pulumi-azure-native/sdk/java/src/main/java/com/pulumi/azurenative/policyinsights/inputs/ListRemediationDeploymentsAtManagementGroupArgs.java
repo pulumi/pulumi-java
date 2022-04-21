@@ -27,7 +27,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
     }
 
     /**
-     * The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.
+     * The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
      * 
      */
     @Import(name="managementGroupsNamespace", required=true)

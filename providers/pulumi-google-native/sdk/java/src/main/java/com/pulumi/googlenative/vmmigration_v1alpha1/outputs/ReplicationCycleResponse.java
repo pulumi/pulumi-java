@@ -33,7 +33,7 @@ public final class ReplicationCycleResponse {
      */
     private final String startTime;
     /**
-     * The cycle's steps list reflecting its progress.
+     * The cycle&#39;s steps list reflecting its progress.
      * 
      */
     private final List<CycleStepResponse> steps;
@@ -88,7 +88,7 @@ public final class ReplicationCycleResponse {
         return this.startTime;
     }
     /**
-     * The cycle's steps list reflecting its progress.
+     * The cycle&#39;s steps list reflecting its progress.
      * 
     */
     public List<CycleStepResponse> steps() {

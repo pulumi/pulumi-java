@@ -21,7 +21,7 @@ public final class ResourceOptionsResponse {
      */
     private final String k8sVersion;
     /**
-     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.
+     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
      * 
      */
     private final Boolean v1beta1Crd;
@@ -51,7 +51,7 @@ public final class ResourceOptionsResponse {
         return this.k8sVersion;
     }
     /**
-     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.
+     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
      * 
     */
     public Boolean v1beta1Crd() {

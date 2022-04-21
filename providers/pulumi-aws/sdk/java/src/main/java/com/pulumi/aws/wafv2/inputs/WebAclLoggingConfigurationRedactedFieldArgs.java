@@ -24,7 +24,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     /**
      * Redact all query arguments.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -40,7 +40,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     /**
      * Redact the request body, which immediately follows the request headers.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -89,7 +89,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     /**
      * Redact a single query argument. See Single Query Argument below for details.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by WAFv2 API
      * 
      */

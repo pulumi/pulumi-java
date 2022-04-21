@@ -22,14 +22,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:jobs/v3:Company")
 public class Company extends com.pulumi.resources.CustomResource {
     /**
-     * Optional. The URI to employer's career site or careers page on the employer's web site, for example, "https://careers.google.com".
+     * Optional. The URI to employer&#39;s career site or careers page on the employer&#39;s web site, for example, &#34;https://careers.google.com&#34;.
      * 
      */
     @Export(name="careerSiteUri", type=String.class, parameters={})
     private Output<String> careerSiteUri;
 
     /**
-     * @return Optional. The URI to employer's career site or careers page on the employer's web site, for example, "https://careers.google.com".
+     * @return Optional. The URI to employer&#39;s career site or careers page on the employer&#39;s web site, for example, &#34;https://careers.google.com&#34;.
      * 
      */
     public Output<String> careerSiteUri() {
@@ -50,14 +50,14 @@ public class Company extends com.pulumi.resources.CustomResource {
         return this.derivedInfo;
     }
     /**
-     * The display name of the company, for example, "Google LLC".
+     * The display name of the company, for example, &#34;Google LLC&#34;.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return The display name of the company, for example, "Google LLC".
+     * @return The display name of the company, for example, &#34;Google LLC&#34;.
      * 
      */
     public Output<String> displayName() {
@@ -92,14 +92,14 @@ public class Company extends com.pulumi.resources.CustomResource {
         return this.externalId;
     }
     /**
-     * Optional. The street address of the company's main headquarters, which may be different from the job location. The service attempts to geolocate the provided address, and populates a more specific location wherever possible in DerivedInfo.headquarters_location.
+     * Optional. The street address of the company&#39;s main headquarters, which may be different from the job location. The service attempts to geolocate the provided address, and populates a more specific location wherever possible in DerivedInfo.headquarters_location.
      * 
      */
     @Export(name="headquartersAddress", type=String.class, parameters={})
     private Output<String> headquartersAddress;
 
     /**
-     * @return Optional. The street address of the company's main headquarters, which may be different from the job location. The service attempts to geolocate the provided address, and populates a more specific location wherever possible in DerivedInfo.headquarters_location.
+     * @return Optional. The street address of the company&#39;s main headquarters, which may be different from the job location. The service attempts to geolocate the provided address, and populates a more specific location wherever possible in DerivedInfo.headquarters_location.
      * 
      */
     public Output<String> headquartersAddress() {
@@ -120,56 +120,56 @@ public class Company extends com.pulumi.resources.CustomResource {
         return this.hiringAgency;
     }
     /**
-     * Optional. A URI that hosts the employer's company logo.
+     * Optional. A URI that hosts the employer&#39;s company logo.
      * 
      */
     @Export(name="imageUri", type=String.class, parameters={})
     private Output<String> imageUri;
 
     /**
-     * @return Optional. A URI that hosts the employer's company logo.
+     * @return Optional. A URI that hosts the employer&#39;s company logo.
      * 
      */
     public Output<String> imageUri() {
         return this.imageUri;
     }
     /**
-     * Optional. A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are used in keyword search. Jobs with `string_values` under these specified field keys are returned if any of the values matches the search keyword. Custom field values with parenthesis, brackets and special symbols won't be properly searchable, and those keyword queries need to be surrounded by quotes.
+     * Optional. A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are used in keyword search. Jobs with `string_values` under these specified field keys are returned if any of the values matches the search keyword. Custom field values with parenthesis, brackets and special symbols won&#39;t be properly searchable, and those keyword queries need to be surrounded by quotes.
      * 
      */
     @Export(name="keywordSearchableJobCustomAttributes", type=List.class, parameters={String.class})
     private Output<List<String>> keywordSearchableJobCustomAttributes;
 
     /**
-     * @return Optional. A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are used in keyword search. Jobs with `string_values` under these specified field keys are returned if any of the values matches the search keyword. Custom field values with parenthesis, brackets and special symbols won't be properly searchable, and those keyword queries need to be surrounded by quotes.
+     * @return Optional. A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are used in keyword search. Jobs with `string_values` under these specified field keys are returned if any of the values matches the search keyword. Custom field values with parenthesis, brackets and special symbols won&#39;t be properly searchable, and those keyword queries need to be surrounded by quotes.
      * 
      */
     public Output<List<String>> keywordSearchableJobCustomAttributes() {
         return this.keywordSearchableJobCustomAttributes;
     }
     /**
-     * Required during company update. The resource name for a company. This is generated by the service when a company is created. The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-project/companies/foo".
+     * Required during company update. The resource name for a company. This is generated by the service when a company is created. The format is &#34;projects/{project_id}/companies/{company_id}&#34;, for example, &#34;projects/api-test-project/companies/foo&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Required during company update. The resource name for a company. This is generated by the service when a company is created. The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-project/companies/foo".
+     * @return Required during company update. The resource name for a company. This is generated by the service when a company is created. The format is &#34;projects/{project_id}/companies/{company_id}&#34;, for example, &#34;projects/api-test-project/companies/foo&#34;.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * Optional. The employer's company size.
+     * Optional. The employer&#39;s company size.
      * 
      */
     @Export(name="size", type=String.class, parameters={})
     private Output<String> size;
 
     /**
-     * @return Optional. The employer's company size.
+     * @return Optional. The employer&#39;s company size.
      * 
      */
     public Output<String> size() {
@@ -190,14 +190,14 @@ public class Company extends com.pulumi.resources.CustomResource {
         return this.suspended;
     }
     /**
-     * Optional. The URI representing the company's primary web site or home page, for example, "https://www.google.com". The maximum number of allowed characters is 255.
+     * Optional. The URI representing the company&#39;s primary web site or home page, for example, &#34;https://www.google.com&#34;. The maximum number of allowed characters is 255.
      * 
      */
     @Export(name="websiteUri", type=String.class, parameters={})
     private Output<String> websiteUri;
 
     /**
-     * @return Optional. The URI representing the company's primary web site or home page, for example, "https://www.google.com". The maximum number of allowed characters is 255.
+     * @return Optional. The URI representing the company&#39;s primary web site or home page, for example, &#34;https://www.google.com&#34;. The maximum number of allowed characters is 255.
      * 
      */
     public Output<String> websiteUri() {

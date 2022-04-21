@@ -20,7 +20,7 @@ public final class ResourceStatusResponse {
      */
     private final String message;
     /**
-     * The reason for the condition's status.
+     * The reason for the condition&#39;s status.
      * 
      */
     private final String reason;
@@ -71,7 +71,7 @@ public final class ResourceStatusResponse {
         return this.message;
     }
     /**
-     * The reason for the condition's status.
+     * The reason for the condition&#39;s status.
      * 
     */
     public String reason() {

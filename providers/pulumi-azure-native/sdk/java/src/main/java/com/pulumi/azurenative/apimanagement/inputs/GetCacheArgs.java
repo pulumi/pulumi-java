@@ -13,7 +13,7 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCacheArgs Empty = new GetCacheArgs();
 
     /**
-     * Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).
+     * Identifier of the Cache entity. Cache identifier (should be either &#39;default&#39; or valid Azure region identifier).
      * 
      */
     @Import(name="cacheId", required=true)

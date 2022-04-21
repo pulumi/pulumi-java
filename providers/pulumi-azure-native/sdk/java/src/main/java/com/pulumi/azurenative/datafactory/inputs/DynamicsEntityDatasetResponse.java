@@ -115,7 +115,7 @@ public final class DynamicsEntityDatasetResponse extends com.pulumi.resources.In
 
     /**
      * Type of dataset.
-     * Expected value is 'DynamicsEntity'.
+     * Expected value is &#39;DynamicsEntity&#39;.
      * 
      */
     @Import(name="type", required=true)

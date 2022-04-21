@@ -15,7 +15,7 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs extend
     public static final InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs Empty = new InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs();
 
     /**
-     * A finding's CIDR value.
+     * A finding&#39;s CIDR value.
      * 
      */
     @Import(name="cidr", required=true)

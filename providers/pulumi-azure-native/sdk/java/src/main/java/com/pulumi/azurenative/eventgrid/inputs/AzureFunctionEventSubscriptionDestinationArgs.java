@@ -22,7 +22,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends com.pul
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'AzureFunction'.
+     * Expected value is &#39;AzureFunction&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

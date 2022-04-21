@@ -32,7 +32,7 @@ public final class DomainDefaultUserSettingsGetArgs extends com.pulumi.resources
     }
 
     /**
-     * The Jupyter server's app settings. See Jupyter Server App Settings below.
+     * The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
      * 
      */
     @Import(name="jupyterServerAppSettings")

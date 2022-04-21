@@ -89,7 +89,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
 
     /**
      * Copy source type.
-     * Expected value is 'AzureDatabricksDeltaLakeSource'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeSource&#39;.
      * 
      */
     @Import(name="type", required=true)

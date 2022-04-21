@@ -27,7 +27,7 @@ public final class NodeCondition {
      */
     private final @Nullable String message;
     /**
-     * (brief) reason for the condition's last transition.
+     * (brief) reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
@@ -40,11 +40,11 @@ public final class NodeCondition {
      * Type of node condition.
      * 
      * Possible enum values:
-     *  - `"DiskPressure"` means the kubelet is under pressure due to insufficient available disk.
-     *  - `"MemoryPressure"` means the kubelet is under pressure due to insufficient available memory.
-     *  - `"NetworkUnavailable"` means that network for the node is not correctly configured.
-     *  - `"PIDPressure"` means the kubelet is under pressure due to insufficient available PID.
-     *  - `"Ready"` means kubelet is healthy and ready to accept pods.
+     *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
+     *  - `&#34;MemoryPressure&#34;` means the kubelet is under pressure due to insufficient available memory.
+     *  - `&#34;NetworkUnavailable&#34;` means that network for the node is not correctly configured.
+     *  - `&#34;PIDPressure&#34;` means the kubelet is under pressure due to insufficient available PID.
+     *  - `&#34;Ready&#34;` means kubelet is healthy and ready to accept pods.
      * 
      */
     private final String type;
@@ -87,7 +87,7 @@ public final class NodeCondition {
         return Optional.ofNullable(this.message);
     }
     /**
-     * (brief) reason for the condition's last transition.
+     * (brief) reason for the condition&#39;s last transition.
      * 
     */
     public Optional<String> reason() {
@@ -104,11 +104,11 @@ public final class NodeCondition {
      * Type of node condition.
      * 
      * Possible enum values:
-     *  - `"DiskPressure"` means the kubelet is under pressure due to insufficient available disk.
-     *  - `"MemoryPressure"` means the kubelet is under pressure due to insufficient available memory.
-     *  - `"NetworkUnavailable"` means that network for the node is not correctly configured.
-     *  - `"PIDPressure"` means the kubelet is under pressure due to insufficient available PID.
-     *  - `"Ready"` means kubelet is healthy and ready to accept pods.
+     *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
+     *  - `&#34;MemoryPressure&#34;` means the kubelet is under pressure due to insufficient available memory.
+     *  - `&#34;NetworkUnavailable&#34;` means that network for the node is not correctly configured.
+     *  - `&#34;PIDPressure&#34;` means the kubelet is under pressure due to insufficient available PID.
+     *  - `&#34;Ready&#34;` means kubelet is healthy and ready to accept pods.
      * 
     */
     public String type() {

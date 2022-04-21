@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum IncidentStatus {
         /**
-         * An active incident which isn't being handled currently
+         * An active incident which isn&#39;t being handled currently
          * 
          */
         New("New"),

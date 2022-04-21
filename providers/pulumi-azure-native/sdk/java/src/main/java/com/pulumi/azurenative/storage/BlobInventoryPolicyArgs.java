@@ -28,7 +28,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The name of the storage account blob inventory policy. It should always be 'default'
+     * The name of the storage account blob inventory policy. It should always be &#39;default&#39;
      * 
      */
     @Import(name="blobInventoryPolicyName")
@@ -50,7 +50,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

@@ -161,7 +161,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of linked service.
-     * Expected value is 'QuickBooks'.
+     * Expected value is &#39;QuickBooks&#39;.
      * 
      */
     @Import(name="type", required=true)

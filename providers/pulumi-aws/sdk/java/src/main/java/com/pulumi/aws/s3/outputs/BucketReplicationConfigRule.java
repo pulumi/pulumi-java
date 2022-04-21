@@ -58,7 +58,7 @@ public final class BucketReplicationConfigRule {
      */
     private final @Nullable BucketReplicationConfigRuleSourceSelectionCriteria sourceSelectionCriteria;
     /**
-     * The status of the rule. Either `"Enabled"` or `"Disabled"`. The rule is ignored if status is not "Enabled".
+     * The status of the rule. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`. The rule is ignored if status is not &#34;Enabled&#34;.
      * 
      */
     private final String status;
@@ -142,7 +142,7 @@ public final class BucketReplicationConfigRule {
         return Optional.ofNullable(this.sourceSelectionCriteria);
     }
     /**
-     * The status of the rule. Either `"Enabled"` or `"Disabled"`. The rule is ignored if status is not "Enabled".
+     * The status of the rule. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`. The rule is ignored if status is not &#34;Enabled&#34;.
      * 
     */
     public String status() {

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse {
     /**
-     * Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.
+     * Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
      * 
      */
     private final Boolean allowPlaybackInterruption;
     /**
-     * Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.
+     * Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
      * 
      */
     private final String audio;
@@ -37,14 +37,14 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
     }
 
     /**
-     * Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.
+     * Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
      * 
     */
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
-     * Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.
+     * Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
      * 
     */
     public String audio() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class LoggingFilterProperties {
     /**
-     * Default handling for logs that don't match any of the specified filtering conditions.
+     * Default handling for logs that don&#39;t match any of the specified filtering conditions.
      * 
      */
     private final LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior;
@@ -31,7 +31,7 @@ public final class LoggingFilterProperties {
     }
 
     /**
-     * Default handling for logs that don't match any of the specified filtering conditions.
+     * Default handling for logs that don&#39;t match any of the specified filtering conditions.
      * 
     */
     public LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior() {

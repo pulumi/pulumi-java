@@ -28,7 +28,7 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<String> destIpRanges;
     /**
-     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.
+     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
      * 
      */
     private final List<String> destRegionCodes;
@@ -53,7 +53,7 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<String> srcIpRanges;
     /**
-     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.
+     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
      * 
      */
     private final List<String> srcRegionCodes;
@@ -109,7 +109,7 @@ public final class FirewallPolicyRuleMatcherResponse {
         return this.destIpRanges;
     }
     /**
-     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.
+     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
      * 
     */
     public List<String> destRegionCodes() {
@@ -144,7 +144,7 @@ public final class FirewallPolicyRuleMatcherResponse {
         return this.srcIpRanges;
     }
     /**
-     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.
+     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
      * 
     */
     public List<String> srcRegionCodes() {

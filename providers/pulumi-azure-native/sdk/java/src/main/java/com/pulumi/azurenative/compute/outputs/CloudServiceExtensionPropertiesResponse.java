@@ -45,7 +45,7 @@ public final class CloudServiceExtensionPropertiesResponse {
      */
     private final @Nullable String publisher;
     /**
-     * Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
+     * Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
      * 
      */
     private final @Nullable List<String> rolesAppliedTo;
@@ -132,7 +132,7 @@ public final class CloudServiceExtensionPropertiesResponse {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
+     * Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
      * 
     */
     public List<String> rolesAppliedTo() {

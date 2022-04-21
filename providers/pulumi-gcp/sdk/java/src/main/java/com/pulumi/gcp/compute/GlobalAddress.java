@@ -145,14 +145,14 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
         return this.labelFingerprint;
     }
     /**
-     * Labels to apply to this address.  A list of key->value pairs.
+     * Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
-     * @return Labels to apply to this address.  A list of key->value pairs.
+     * @return Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> labels() {

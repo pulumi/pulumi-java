@@ -28,7 +28,7 @@ public final class RedhatopenshiftFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:getOpenShiftCluster", TypeShape.of(GetOpenShiftClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
+     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster&#39;s admin kubeconfig.
      * API Version: 2021-09-01-preview.
      * 
      */
@@ -39,7 +39,7 @@ public final class RedhatopenshiftFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterAdminCredentials", TypeShape.of(ListOpenShiftClusterAdminCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
+     * OpenShiftClusterCredentials represents an OpenShift cluster&#39;s credentials
      * API Version: 2020-04-30.
      * 
      */

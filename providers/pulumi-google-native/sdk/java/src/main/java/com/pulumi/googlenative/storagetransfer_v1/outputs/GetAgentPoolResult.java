@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAgentPoolResult {
     /**
-     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
+     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
      * 
      */
     private final BandwidthLimitResponse bandwidthLimit;
@@ -44,7 +44,7 @@ public final class GetAgentPoolResult {
     }
 
     /**
-     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
+     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
      * 
     */
     public BandwidthLimitResponse bandwidthLimit() {

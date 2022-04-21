@@ -19,9 +19,9 @@ import javax.annotation.Nullable;
  * of projects to include in a `gcp.accesscontextmanager.ServicePerimeter` resource,
  * to enable them to be added separately.
  * 
- * > **Note:** If this resource is used alongside a `gcp.accesscontextmanager.ServicePerimeter` resource,
+ * &gt; **Note:** If this resource is used alongside a `gcp.accesscontextmanager.ServicePerimeter` resource,
  * the service perimeter resource must have a `lifecycle` block with `ignore_changes = [status[0].resources]` so
- * they don't fight over which resources should be in the policy.
+ * they don&#39;t fight over which resources should be in the policy.
  * 
  * To get more information about ServicePerimeterResource, see:
  * 
@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
  * 
- * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * &gt; **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
  * you must specify a `billing_project` and set `user_project_override` to true
  * in the provider configuration. Otherwise the ACM API will return a 403 error.
  * Your account must have the `serviceusage.services.use` permission on the

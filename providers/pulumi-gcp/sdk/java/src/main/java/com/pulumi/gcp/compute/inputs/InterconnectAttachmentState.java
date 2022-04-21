@@ -53,7 +53,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * All prefixes must be within link-local address space (169.254.0.0/16)
      * and must be /29 or shorter (/28, /27, etc). Google will attempt to select
      * an unused /29 from the supplied candidate prefix(es). The request will
-     * fail if all possible /29s are in use on Google's edge. If not supplied,
+     * fail if all possible /29s are in use on Google&#39;s edge. If not supplied,
      * Google will randomly select an unused /29 from all of link-local space.
      * 
      */
@@ -160,7 +160,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
     }
 
     /**
-     * URL of the underlying Interconnect object that this attachment's
+     * URL of the underlying Interconnect object that this attachment&#39;s
      * traffic will traverse through. Required if type is DEDICATED, must not
      * be set if type is PARTNER.
      * 
@@ -178,16 +178,16 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * encryption option as IPSEC.
      * The addresses must be RFC 1918 IP address ranges. When creating HA
      * VPN gateway over the interconnect attachment, if the attachment is
-     * configured to use an RFC 1918 IP address, then the VPN gateway's IP
+     * configured to use an RFC 1918 IP address, then the VPN gateway&#39;s IP
      * address will be allocated from the IP address range specified
      * here.
-     * For example, if the HA VPN gateway's interface 0 is paired to this
+     * For example, if the HA VPN gateway&#39;s interface 0 is paired to this
      * interconnect attachment, then an RFC 1918 IP address for the VPN
      * gateway interface 0 will be allocated from the IP address specified
      * for this interconnect attachment.
      * If this field is not specified for interconnect attachment that has
      * encryption option as IPSEC, later on when creating HA VPN gateway on
-     * this interconnect attachment, the HA VPN gateway's IP address will be
+     * this interconnect attachment, the HA VPN gateway&#39;s IP address will be
      * allocated from regional external IP address pool.
      * 
      */
@@ -228,7 +228,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
 
     /**
      * [Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
-     * initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
+     * initiate provisioning with a selected partner. Of the form &#34;XXXXX/region/domain&#34;
      * 
      */
     @Import(name="pairingKey")
@@ -288,7 +288,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
     /**
      * URL of the cloud router to be used for dynamic routing. This router must be in
      * the same region as this InterconnectAttachment. The InterconnectAttachment will
-     * automatically connect the Interconnect to the network & region within which the
+     * automatically connect the Interconnect to the network &amp; region within which the
      * Cloud Router is configured.
      * 
      */
@@ -311,7 +311,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
     }
 
     /**
-     * [Output Only] The current state of this attachment's functionality.
+     * [Output Only] The current state of this attachment&#39;s functionality.
      * 
      */
     @Import(name="state")

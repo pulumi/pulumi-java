@@ -19,7 +19,7 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
     public static final ExecuteDataFlowActivityTypePropertiesResponseCompute Empty = new ExecuteDataFlowActivityTypePropertiesResponseCompute();
 
     /**
-     * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+     * Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
      * 
      */
     @Import(name="computeType")

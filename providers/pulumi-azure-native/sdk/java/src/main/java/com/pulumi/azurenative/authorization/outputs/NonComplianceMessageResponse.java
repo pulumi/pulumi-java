@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NonComplianceMessageResponse {
     /**
-     * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
+     * A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
      * 
      */
     private final String message;
@@ -31,7 +31,7 @@ public final class NonComplianceMessageResponse {
     }
 
     /**
-     * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
+     * A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
      * 
     */
     public String message() {

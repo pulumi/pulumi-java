@@ -17,8 +17,8 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeGetArgs extends com.p
 
     /**
      * max value for the range (inclusive). If not given,
-     * will be set to "infinity", defining an open range
-     * ">= range.min"
+     * will be set to &#34;infinity&#34;, defining an open range
+     * &#34;&gt;= range.min&#34;
      * 
      */
     @Import(name="max")
@@ -30,8 +30,8 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeGetArgs extends com.p
 
     /**
      * Min value for the range (inclusive). If not given,
-     * will be set to "-infinity", defining an open range
-     * "< range.max"
+     * will be set to &#34;-infinity&#34;, defining an open range
+     * &#34;&lt; range.max&#34;
      * 
      */
     @Import(name="min")

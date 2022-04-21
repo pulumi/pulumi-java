@@ -31,7 +31,7 @@ public final class GetGroupResult {
      */
     private final String name;
     /**
-     * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
+     * The name of the group&#39;s parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, &#34;&#34;.
      * 
      */
     private final String parentName;
@@ -79,7 +79,7 @@ public final class GetGroupResult {
         return this.name;
     }
     /**
-     * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
+     * The name of the group&#39;s parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, &#34;&#34;.
      * 
     */
     public String parentName() {
