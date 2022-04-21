@@ -5,7 +5,6 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class UserMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groups", required=true)
-      private final Output<List<String>> groups;
+    private Output<List<String>> groups;
 
     public Output<List<String>> groups() {
         return this.groups;
@@ -35,7 +34,7 @@ public final class UserMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userArn", required=true)
-      private final Output<String> userArn;
+    private Output<String> userArn;
 
     public Output<String> userArn() {
         return this.userArn;
@@ -46,79 +45,75 @@ public final class UserMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public UserMappingArgs(
-        Output<List<String>> groups,
-        Output<String> userArn,
-        Output<String> username) {
-        this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
-        this.userArn = Objects.requireNonNull(userArn, "expected parameter 'userArn' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private UserMappingArgs() {}
 
-    private UserMappingArgs() {
-        this.groups = Codegen.empty();
-        this.userArn = Codegen.empty();
-        this.username = Codegen.empty();
+    private UserMappingArgs(UserMappingArgs $) {
+        this.groups = $.groups;
+        this.userArn = $.userArn;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> groups;
-        private Output<String> userArn;
-        private Output<String> username;
+        private UserMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserMappingArgs();
         }
 
         public Builder(UserMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.userArn = defaults.userArn;
-    	      this.username = defaults.username;
+            $ = new UserMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(Output<List<String>> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(List<String> groups) {
-            this.groups = Output.of(Objects.requireNonNull(groups));
-            return this;
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder userArn(Output<String> userArn) {
-            this.userArn = Objects.requireNonNull(userArn);
+            $.userArn = userArn;
             return this;
         }
+
         public Builder userArn(String userArn) {
-            this.userArn = Output.of(Objects.requireNonNull(userArn));
-            return this;
+            return userArn(Output.of(userArn));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public UserMappingArgs build() {
-            return new UserMappingArgs(groups, userArn, username);
+            return username(Output.of(username));
+        }
+
+        public UserMappingArgs build() {
+            $.groups = Objects.requireNonNull($.groups, "expected parameter 'groups' to be non-null");
+            $.userArn = Objects.requireNonNull($.userArn, "expected parameter 'userArn' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }
