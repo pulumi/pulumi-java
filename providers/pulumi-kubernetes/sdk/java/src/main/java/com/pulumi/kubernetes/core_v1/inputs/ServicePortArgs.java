@@ -175,6 +175,14 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
             return targetPort(Output.of(targetPort));
         }
 
+        public Builder targetPort(Integer targetPort) {
+            return targetPort(Either.ofLeft(targetPort));
+        }
+
+        public Builder targetPort(String targetPort) {
+            return targetPort(Either.ofRight(targetPort));
+        }
+
         public ServicePortArgs build() {
             $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
             return $;

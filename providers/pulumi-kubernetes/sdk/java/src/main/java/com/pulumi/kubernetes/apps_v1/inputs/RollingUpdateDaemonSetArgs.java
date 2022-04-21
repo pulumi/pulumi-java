@@ -77,6 +77,14 @@ public final class RollingUpdateDaemonSetArgs extends com.pulumi.resources.Resou
             return maxSurge(Output.of(maxSurge));
         }
 
+        public Builder maxSurge(Integer maxSurge) {
+            return maxSurge(Either.ofLeft(maxSurge));
+        }
+
+        public Builder maxSurge(String maxSurge) {
+            return maxSurge(Either.ofRight(maxSurge));
+        }
+
         public Builder maxUnavailable(@Nullable Output<Either<Integer,String>> maxUnavailable) {
             $.maxUnavailable = maxUnavailable;
             return this;
@@ -84,6 +92,14 @@ public final class RollingUpdateDaemonSetArgs extends com.pulumi.resources.Resou
 
         public Builder maxUnavailable(Either<Integer,String> maxUnavailable) {
             return maxUnavailable(Output.of(maxUnavailable));
+        }
+
+        public Builder maxUnavailable(Integer maxUnavailable) {
+            return maxUnavailable(Either.ofLeft(maxUnavailable));
+        }
+
+        public Builder maxUnavailable(String maxUnavailable) {
+            return maxUnavailable(Either.ofRight(maxUnavailable));
         }
 
         public RollingUpdateDaemonSetArgs build() {
