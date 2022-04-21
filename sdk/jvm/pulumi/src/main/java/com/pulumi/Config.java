@@ -27,6 +27,7 @@ import static java.util.Objects.requireNonNull;
  * {@code a}, {@code b}, and {@code c}, is entirely separate from a bag whose name is
  * {@code pulumi:bar} with the same simple key names.  Each key has a fully qualified names,
  * such as {@code pulumi:foo:a}, ..., and {@code pulumi:bar:a}, respectively.
+ * @see com.pulumi.context.ConfigContext
  */
 @ParametersAreNonnullByDefault
 public class Config {
