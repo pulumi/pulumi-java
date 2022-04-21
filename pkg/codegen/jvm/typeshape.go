@@ -209,3 +209,10 @@ func (ts TypeShape) UnNullable() (bool, TypeShape) {
 	}
 	return false, ts
 }
+
+func (ts TypeShape) UnEither() (bool, TypeShape, TypeShape) {
+	if ts.Type.Equal(names.Either) {
+		return true, ts.Parameters[0], ts.Parameters[1]
+	}
+	return false, TypeShape{}, TypeShape{}
+}
