@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Component")
@@ -21,8 +22,8 @@ public class Component extends com.pulumi.resources.ComponentResource {
     @Export(name="a", type=Boolean.class, parameters={})
     private Output<Boolean> a;
 
-    public Output<Boolean> a() {
-        return this.a;
+    public Output<Optional<Boolean>> a() {
+        return Codegen.optional(this.a);
     }
     @Export(name="b", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> b;
@@ -45,8 +46,8 @@ public class Component extends com.pulumi.resources.ComponentResource {
     @Export(name="c", type=Integer.class, parameters={})
     private Output<Integer> c;
 
-    public Output<Integer> c() {
-        return this.c;
+    public Output<Optional<Integer>> c() {
+        return Codegen.optional(this.c);
     }
     @Export(name="d", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> d;
@@ -57,8 +58,8 @@ public class Component extends com.pulumi.resources.ComponentResource {
     @Export(name="e", type=String.class, parameters={})
     private Output<String> e;
 
-    public Output<String> e() {
-        return this.e;
+    public Output<Optional<String>> e() {
+        return Codegen.optional(this.e);
     }
     @Export(name="f", type=String.class, parameters={})
     private Output</* @Nullable */ String> f;

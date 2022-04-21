@@ -15,6 +15,7 @@ import com.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import com.pulumi.plant.tree_v1.enums.TreeSize;
 import com.pulumi.plant.tree_v1.inputs.RubberTreeState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:RubberTree")
@@ -28,8 +29,8 @@ public class RubberTree extends com.pulumi.resources.CustomResource {
     @Export(name="diameter", type=Diameter.class, parameters={})
     private Output<Diameter> diameter;
 
-    public Output<Diameter> diameter() {
-        return this.diameter;
+    public Output<Optional<Diameter>> diameter() {
+        return Codegen.optional(this.diameter);
     }
     @Export(name="farm", type=String.class, parameters={})
     private Output</* @Nullable */ String> farm;
@@ -46,8 +47,8 @@ public class RubberTree extends com.pulumi.resources.CustomResource {
     @Export(name="type", type=RubberTreeVariety.class, parameters={})
     private Output<RubberTreeVariety> type;
 
-    public Output<RubberTreeVariety> type() {
-        return this.type;
+    public Output<Optional<RubberTreeVariety>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

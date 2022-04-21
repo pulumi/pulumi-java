@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="azure-native:insights:WebTest")
@@ -86,8 +87,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Azure resource name
@@ -100,8 +101,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
@@ -114,8 +115,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    public Output<String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Allow for retries should this WebTest fail.
@@ -142,8 +143,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
      */
-    public Output<String> syntheticMonitorId() {
-        return this.syntheticMonitorId;
+    public Output<Optional<String>> syntheticMonitorId() {
+        return Codegen.optional(this.syntheticMonitorId);
     }
     /**
      * Resource tags
@@ -184,8 +185,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * The kind of web test this is, valid choices are ping and multistep.
@@ -198,8 +199,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return The kind of web test this is, valid choices are ping and multistep.
      * 
      */
-    public Output<String> webTestKind() {
-        return this.webTestKind;
+    public Output<Optional<String>> webTestKind() {
+        return Codegen.optional(this.webTestKind);
     }
     /**
      * User defined name if this WebTest.
@@ -212,8 +213,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return User defined name if this WebTest.
      * 
      */
-    public Output<String> webTestName() {
-        return this.webTestName;
+    public Output<Optional<String>> webTestName() {
+        return Codegen.optional(this.webTestName);
     }
 
     /**
