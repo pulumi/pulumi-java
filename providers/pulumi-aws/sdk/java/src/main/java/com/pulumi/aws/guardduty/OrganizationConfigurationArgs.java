@@ -6,10 +6,10 @@ package com.pulumi.aws.guardduty;
 import com.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class OrganizationConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="autoEnable", required=true)
-      private final Output<Boolean> autoEnable;
+    private Output<Boolean> autoEnable;
 
     public Output<Boolean> autoEnable() {
         return this.autoEnable;
@@ -33,10 +33,10 @@ public final class OrganizationConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="datasources")
-      private final @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
+    private @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
 
-    public Output<OrganizationConfigurationDatasourcesArgs> datasources() {
-        return this.datasources == null ? Codegen.empty() : this.datasources;
+    public Optional<Output<OrganizationConfigurationDatasourcesArgs>> datasources() {
+        return Optional.ofNullable(this.datasources);
     }
 
     /**
@@ -44,76 +44,70 @@ public final class OrganizationConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="detectorId", required=true)
-      private final Output<String> detectorId;
+    private Output<String> detectorId;
 
     public Output<String> detectorId() {
         return this.detectorId;
     }
 
-    public OrganizationConfigurationArgs(
-        Output<Boolean> autoEnable,
-        @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources,
-        Output<String> detectorId) {
-        this.autoEnable = Objects.requireNonNull(autoEnable, "expected parameter 'autoEnable' to be non-null");
-        this.datasources = datasources;
-        this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
-    }
+    private OrganizationConfigurationArgs() {}
 
-    private OrganizationConfigurationArgs() {
-        this.autoEnable = Codegen.empty();
-        this.datasources = Codegen.empty();
-        this.detectorId = Codegen.empty();
+    private OrganizationConfigurationArgs(OrganizationConfigurationArgs $) {
+        this.autoEnable = $.autoEnable;
+        this.datasources = $.datasources;
+        this.detectorId = $.detectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> autoEnable;
-        private @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
-        private Output<String> detectorId;
+        private OrganizationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationConfigurationArgs();
         }
 
         public Builder(OrganizationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoEnable = defaults.autoEnable;
-    	      this.datasources = defaults.datasources;
-    	      this.detectorId = defaults.detectorId;
+            $ = new OrganizationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoEnable(Output<Boolean> autoEnable) {
-            this.autoEnable = Objects.requireNonNull(autoEnable);
+            $.autoEnable = autoEnable;
             return this;
         }
+
         public Builder autoEnable(Boolean autoEnable) {
-            this.autoEnable = Output.of(Objects.requireNonNull(autoEnable));
-            return this;
+            return autoEnable(Output.of(autoEnable));
         }
+
         public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources) {
-            this.datasources = datasources;
+            $.datasources = datasources;
             return this;
         }
-        public Builder datasources(@Nullable OrganizationConfigurationDatasourcesArgs datasources) {
-            this.datasources = Codegen.ofNullable(datasources);
-            return this;
+
+        public Builder datasources(OrganizationConfigurationDatasourcesArgs datasources) {
+            return datasources(Output.of(datasources));
         }
+
         public Builder detectorId(Output<String> detectorId) {
-            this.detectorId = Objects.requireNonNull(detectorId);
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder detectorId(String detectorId) {
-            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
-            return this;
-        }        public OrganizationConfigurationArgs build() {
-            return new OrganizationConfigurationArgs(autoEnable, datasources, detectorId);
+            return detectorId(Output.of(detectorId));
+        }
+
+        public OrganizationConfigurationArgs build() {
+            $.autoEnable = Objects.requireNonNull($.autoEnable, "expected parameter 'autoEnable' to be non-null");
+            $.detectorId = Objects.requireNonNull($.detectorId, "expected parameter 'detectorId' to be non-null");
+            return $;
         }
     }
+
 }

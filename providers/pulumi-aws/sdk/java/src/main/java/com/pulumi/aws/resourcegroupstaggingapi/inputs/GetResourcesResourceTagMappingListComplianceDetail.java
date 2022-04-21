@@ -21,84 +21,81 @@ public final class GetResourcesResourceTagMappingListComplianceDetail extends co
      * 
      */
     @Import(name="complianceStatus", required=true)
-      private final Boolean complianceStatus;
+    private Boolean complianceStatus;
 
     public Boolean complianceStatus() {
         return this.complianceStatus;
     }
 
     @Import(name="keysWithNoncompliantValues", required=true)
-      private final List<String> keysWithNoncompliantValues;
+    private List<String> keysWithNoncompliantValues;
 
     public List<String> keysWithNoncompliantValues() {
         return this.keysWithNoncompliantValues;
     }
 
     @Import(name="nonCompliantKeys", required=true)
-      private final List<String> nonCompliantKeys;
+    private List<String> nonCompliantKeys;
 
     public List<String> nonCompliantKeys() {
         return this.nonCompliantKeys;
     }
 
-    public GetResourcesResourceTagMappingListComplianceDetail(
-        Boolean complianceStatus,
-        List<String> keysWithNoncompliantValues,
-        List<String> nonCompliantKeys) {
-        this.complianceStatus = Objects.requireNonNull(complianceStatus, "expected parameter 'complianceStatus' to be non-null");
-        this.keysWithNoncompliantValues = Objects.requireNonNull(keysWithNoncompliantValues, "expected parameter 'keysWithNoncompliantValues' to be non-null");
-        this.nonCompliantKeys = Objects.requireNonNull(nonCompliantKeys, "expected parameter 'nonCompliantKeys' to be non-null");
-    }
+    private GetResourcesResourceTagMappingListComplianceDetail() {}
 
-    private GetResourcesResourceTagMappingListComplianceDetail() {
-        this.complianceStatus = null;
-        this.keysWithNoncompliantValues = List.of();
-        this.nonCompliantKeys = List.of();
+    private GetResourcesResourceTagMappingListComplianceDetail(GetResourcesResourceTagMappingListComplianceDetail $) {
+        this.complianceStatus = $.complianceStatus;
+        this.keysWithNoncompliantValues = $.keysWithNoncompliantValues;
+        this.nonCompliantKeys = $.nonCompliantKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcesResourceTagMappingListComplianceDetail defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean complianceStatus;
-        private List<String> keysWithNoncompliantValues;
-        private List<String> nonCompliantKeys;
+        private GetResourcesResourceTagMappingListComplianceDetail $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcesResourceTagMappingListComplianceDetail();
         }
 
         public Builder(GetResourcesResourceTagMappingListComplianceDetail defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complianceStatus = defaults.complianceStatus;
-    	      this.keysWithNoncompliantValues = defaults.keysWithNoncompliantValues;
-    	      this.nonCompliantKeys = defaults.nonCompliantKeys;
+            $ = new GetResourcesResourceTagMappingListComplianceDetail(Objects.requireNonNull(defaults));
         }
 
         public Builder complianceStatus(Boolean complianceStatus) {
-            this.complianceStatus = Objects.requireNonNull(complianceStatus);
+            $.complianceStatus = complianceStatus;
             return this;
         }
+
         public Builder keysWithNoncompliantValues(List<String> keysWithNoncompliantValues) {
-            this.keysWithNoncompliantValues = Objects.requireNonNull(keysWithNoncompliantValues);
+            $.keysWithNoncompliantValues = keysWithNoncompliantValues;
             return this;
         }
+
         public Builder keysWithNoncompliantValues(String... keysWithNoncompliantValues) {
             return keysWithNoncompliantValues(List.of(keysWithNoncompliantValues));
         }
+
         public Builder nonCompliantKeys(List<String> nonCompliantKeys) {
-            this.nonCompliantKeys = Objects.requireNonNull(nonCompliantKeys);
+            $.nonCompliantKeys = nonCompliantKeys;
             return this;
         }
+
         public Builder nonCompliantKeys(String... nonCompliantKeys) {
             return nonCompliantKeys(List.of(nonCompliantKeys));
-        }        public GetResourcesResourceTagMappingListComplianceDetail build() {
-            return new GetResourcesResourceTagMappingListComplianceDetail(complianceStatus, keysWithNoncompliantValues, nonCompliantKeys);
+        }
+
+        public GetResourcesResourceTagMappingListComplianceDetail build() {
+            $.complianceStatus = Objects.requireNonNull($.complianceStatus, "expected parameter 'complianceStatus' to be non-null");
+            $.keysWithNoncompliantValues = Objects.requireNonNull($.keysWithNoncompliantValues, "expected parameter 'keysWithNoncompliantValues' to be non-null");
+            $.nonCompliantKeys = Objects.requireNonNull($.nonCompliantKeys, "expected parameter 'nonCompliantKeys' to be non-null");
+            return $;
         }
     }
+
 }

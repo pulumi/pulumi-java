@@ -6,13 +6,13 @@ package com.pulumi.aws.elasticache;
 import com.pulumi.aws.elasticache.inputs.ReplicationGroupClusterModeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="applyImmediately")
-      private final @Nullable Output<Boolean> applyImmediately;
+    private @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> applyImmediately() {
-        return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
+    public Optional<Output<Boolean>> applyImmediately() {
+        return Optional.ofNullable(this.applyImmediately);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="atRestEncryptionEnabled")
-      private final @Nullable Output<Boolean> atRestEncryptionEnabled;
+    private @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Output<Boolean> atRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled == null ? Codegen.empty() : this.atRestEncryptionEnabled;
+    public Optional<Output<Boolean>> atRestEncryptionEnabled() {
+        return Optional.ofNullable(this.atRestEncryptionEnabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authToken")
-      private final @Nullable Output<String> authToken;
+    private @Nullable Output<String> authToken;
 
-    public Output<String> authToken() {
-        return this.authToken == null ? Codegen.empty() : this.authToken;
+    public Optional<Output<String>> authToken() {
+        return Optional.ofNullable(this.authToken);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="autoMinorVersionUpgrade")
-      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
+    private @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
+    public Optional<Output<Boolean>> autoMinorVersionUpgrade() {
+        return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="automaticFailoverEnabled")
-      private final @Nullable Output<Boolean> automaticFailoverEnabled;
+    private @Nullable Output<Boolean> automaticFailoverEnabled;
 
-    public Output<Boolean> automaticFailoverEnabled() {
-        return this.automaticFailoverEnabled == null ? Codegen.empty() : this.automaticFailoverEnabled;
+    public Optional<Output<Boolean>> automaticFailoverEnabled() {
+        return Optional.ofNullable(this.automaticFailoverEnabled);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="availabilityZones")
-      private final @Nullable Output<List<String>> availabilityZones;
+    private @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> availabilityZones() {
-        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
+    public Optional<Output<List<String>>> availabilityZones() {
+        return Optional.ofNullable(this.availabilityZones);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clusterMode")
-      private final @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode;
+    private @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode;
 
-    public Output<ReplicationGroupClusterModeArgs> clusterMode() {
-        return this.clusterMode == null ? Codegen.empty() : this.clusterMode;
+    public Optional<Output<ReplicationGroupClusterModeArgs>> clusterMode() {
+        return Optional.ofNullable(this.clusterMode);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataTieringEnabled")
-      private final @Nullable Output<Boolean> dataTieringEnabled;
+    private @Nullable Output<Boolean> dataTieringEnabled;
 
-    public Output<Boolean> dataTieringEnabled() {
-        return this.dataTieringEnabled == null ? Codegen.empty() : this.dataTieringEnabled;
+    public Optional<Output<Boolean>> dataTieringEnabled() {
+        return Optional.ofNullable(this.dataTieringEnabled);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="finalSnapshotIdentifier")
-      private final @Nullable Output<String> finalSnapshotIdentifier;
+    private @Nullable Output<String> finalSnapshotIdentifier;
 
-    public Output<String> finalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier == null ? Codegen.empty() : this.finalSnapshotIdentifier;
+    public Optional<Output<String>> finalSnapshotIdentifier() {
+        return Optional.ofNullable(this.finalSnapshotIdentifier);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="globalReplicationGroupId")
-      private final @Nullable Output<String> globalReplicationGroupId;
+    private @Nullable Output<String> globalReplicationGroupId;
 
-    public Output<String> globalReplicationGroupId() {
-        return this.globalReplicationGroupId == null ? Codegen.empty() : this.globalReplicationGroupId;
+    public Optional<Output<String>> globalReplicationGroupId() {
+        return Optional.ofNullable(this.globalReplicationGroupId);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<String> maintenanceWindow;
+    private @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<String>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="multiAzEnabled")
-      private final @Nullable Output<Boolean> multiAzEnabled;
+    private @Nullable Output<Boolean> multiAzEnabled;
 
-    public Output<Boolean> multiAzEnabled() {
-        return this.multiAzEnabled == null ? Codegen.empty() : this.multiAzEnabled;
+    public Optional<Output<Boolean>> multiAzEnabled() {
+        return Optional.ofNullable(this.multiAzEnabled);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nodeType")
-      private final @Nullable Output<String> nodeType;
+    private @Nullable Output<String> nodeType;
 
-    public Output<String> nodeType() {
-        return this.nodeType == null ? Codegen.empty() : this.nodeType;
+    public Optional<Output<String>> nodeType() {
+        return Optional.ofNullable(this.nodeType);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notificationTopicArn")
-      private final @Nullable Output<String> notificationTopicArn;
+    private @Nullable Output<String> notificationTopicArn;
 
-    public Output<String> notificationTopicArn() {
-        return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
+    public Optional<Output<String>> notificationTopicArn() {
+        return Optional.ofNullable(this.notificationTopicArn);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="numberCacheClusters")
-      private final @Nullable Output<Integer> numberCacheClusters;
+    private @Nullable Output<Integer> numberCacheClusters;
 
-    public Output<Integer> numberCacheClusters() {
-        return this.numberCacheClusters == null ? Codegen.empty() : this.numberCacheClusters;
+    public Optional<Output<Integer>> numberCacheClusters() {
+        return Optional.ofNullable(this.numberCacheClusters);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="parameterGroupName")
-      private final @Nullable Output<String> parameterGroupName;
+    private @Nullable Output<String> parameterGroupName;
 
-    public Output<String> parameterGroupName() {
-        return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
+    public Optional<Output<String>> parameterGroupName() {
+        return Optional.ofNullable(this.parameterGroupName);
     }
 
     /**
@@ -234,10 +234,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -245,7 +245,7 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicationGroupDescription", required=true)
-      private final Output<String> replicationGroupDescription;
+    private Output<String> replicationGroupDescription;
 
     public Output<String> replicationGroupDescription() {
         return this.replicationGroupDescription;
@@ -256,10 +256,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicationGroupId")
-      private final @Nullable Output<String> replicationGroupId;
+    private @Nullable Output<String> replicationGroupId;
 
-    public Output<String> replicationGroupId() {
-        return this.replicationGroupId == null ? Codegen.empty() : this.replicationGroupId;
+    public Optional<Output<String>> replicationGroupId() {
+        return Optional.ofNullable(this.replicationGroupId);
     }
 
     /**
@@ -267,10 +267,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -278,10 +278,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityGroupNames")
-      private final @Nullable Output<List<String>> securityGroupNames;
+    private @Nullable Output<List<String>> securityGroupNames;
 
-    public Output<List<String>> securityGroupNames() {
-        return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
+    public Optional<Output<List<String>>> securityGroupNames() {
+        return Optional.ofNullable(this.securityGroupNames);
     }
 
     /**
@@ -289,10 +289,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="snapshotArns")
-      private final @Nullable Output<List<String>> snapshotArns;
+    private @Nullable Output<List<String>> snapshotArns;
 
-    public Output<List<String>> snapshotArns() {
-        return this.snapshotArns == null ? Codegen.empty() : this.snapshotArns;
+    public Optional<Output<List<String>>> snapshotArns() {
+        return Optional.ofNullable(this.snapshotArns);
     }
 
     /**
@@ -300,10 +300,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="snapshotName")
-      private final @Nullable Output<String> snapshotName;
+    private @Nullable Output<String> snapshotName;
 
-    public Output<String> snapshotName() {
-        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
+    public Optional<Output<String>> snapshotName() {
+        return Optional.ofNullable(this.snapshotName);
     }
 
     /**
@@ -311,10 +311,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="snapshotRetentionLimit")
-      private final @Nullable Output<Integer> snapshotRetentionLimit;
+    private @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Output<Integer> snapshotRetentionLimit() {
-        return this.snapshotRetentionLimit == null ? Codegen.empty() : this.snapshotRetentionLimit;
+    public Optional<Output<Integer>> snapshotRetentionLimit() {
+        return Optional.ofNullable(this.snapshotRetentionLimit);
     }
 
     /**
@@ -322,10 +322,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="snapshotWindow")
-      private final @Nullable Output<String> snapshotWindow;
+    private @Nullable Output<String> snapshotWindow;
 
-    public Output<String> snapshotWindow() {
-        return this.snapshotWindow == null ? Codegen.empty() : this.snapshotWindow;
+    public Optional<Output<String>> snapshotWindow() {
+        return Optional.ofNullable(this.snapshotWindow);
     }
 
     /**
@@ -333,17 +333,17 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetGroupName")
-      private final @Nullable Output<String> subnetGroupName;
+    private @Nullable Output<String> subnetGroupName;
 
-    public Output<String> subnetGroupName() {
-        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
+    public Optional<Output<String>> subnetGroupName() {
+        return Optional.ofNullable(this.subnetGroupName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -351,10 +351,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="transitEncryptionEnabled")
-      private final @Nullable Output<Boolean> transitEncryptionEnabled;
+    private @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Output<Boolean> transitEncryptionEnabled() {
-        return this.transitEncryptionEnabled == null ? Codegen.empty() : this.transitEncryptionEnabled;
+    public Optional<Output<Boolean>> transitEncryptionEnabled() {
+        return Optional.ofNullable(this.transitEncryptionEnabled);
     }
 
     /**
@@ -362,468 +362,379 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="userGroupIds")
-      private final @Nullable Output<List<String>> userGroupIds;
+    private @Nullable Output<List<String>> userGroupIds;
 
-    public Output<List<String>> userGroupIds() {
-        return this.userGroupIds == null ? Codegen.empty() : this.userGroupIds;
+    public Optional<Output<List<String>>> userGroupIds() {
+        return Optional.ofNullable(this.userGroupIds);
     }
 
-    public ReplicationGroupArgs(
-        @Nullable Output<Boolean> applyImmediately,
-        @Nullable Output<Boolean> atRestEncryptionEnabled,
-        @Nullable Output<String> authToken,
-        @Nullable Output<Boolean> autoMinorVersionUpgrade,
-        @Nullable Output<Boolean> automaticFailoverEnabled,
-        @Nullable Output<List<String>> availabilityZones,
-        @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode,
-        @Nullable Output<Boolean> dataTieringEnabled,
-        @Nullable Output<String> engine,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<String> finalSnapshotIdentifier,
-        @Nullable Output<String> globalReplicationGroupId,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> maintenanceWindow,
-        @Nullable Output<Boolean> multiAzEnabled,
-        @Nullable Output<String> nodeType,
-        @Nullable Output<String> notificationTopicArn,
-        @Nullable Output<Integer> numberCacheClusters,
-        @Nullable Output<String> parameterGroupName,
-        @Nullable Output<Integer> port,
-        Output<String> replicationGroupDescription,
-        @Nullable Output<String> replicationGroupId,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<List<String>> securityGroupNames,
-        @Nullable Output<List<String>> snapshotArns,
-        @Nullable Output<String> snapshotName,
-        @Nullable Output<Integer> snapshotRetentionLimit,
-        @Nullable Output<String> snapshotWindow,
-        @Nullable Output<String> subnetGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Boolean> transitEncryptionEnabled,
-        @Nullable Output<List<String>> userGroupIds) {
-        this.applyImmediately = applyImmediately;
-        this.atRestEncryptionEnabled = atRestEncryptionEnabled;
-        this.authToken = authToken;
-        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
-        this.automaticFailoverEnabled = automaticFailoverEnabled;
-        this.availabilityZones = availabilityZones;
-        this.clusterMode = clusterMode;
-        this.dataTieringEnabled = dataTieringEnabled;
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.finalSnapshotIdentifier = finalSnapshotIdentifier;
-        this.globalReplicationGroupId = globalReplicationGroupId;
-        this.kmsKeyId = kmsKeyId;
-        this.maintenanceWindow = maintenanceWindow;
-        this.multiAzEnabled = multiAzEnabled;
-        this.nodeType = nodeType;
-        this.notificationTopicArn = notificationTopicArn;
-        this.numberCacheClusters = numberCacheClusters;
-        this.parameterGroupName = parameterGroupName;
-        this.port = port;
-        this.replicationGroupDescription = Objects.requireNonNull(replicationGroupDescription, "expected parameter 'replicationGroupDescription' to be non-null");
-        this.replicationGroupId = replicationGroupId;
-        this.securityGroupIds = securityGroupIds;
-        this.securityGroupNames = securityGroupNames;
-        this.snapshotArns = snapshotArns;
-        this.snapshotName = snapshotName;
-        this.snapshotRetentionLimit = snapshotRetentionLimit;
-        this.snapshotWindow = snapshotWindow;
-        this.subnetGroupName = subnetGroupName;
-        this.tags = tags;
-        this.transitEncryptionEnabled = transitEncryptionEnabled;
-        this.userGroupIds = userGroupIds;
-    }
+    private ReplicationGroupArgs() {}
 
-    private ReplicationGroupArgs() {
-        this.applyImmediately = Codegen.empty();
-        this.atRestEncryptionEnabled = Codegen.empty();
-        this.authToken = Codegen.empty();
-        this.autoMinorVersionUpgrade = Codegen.empty();
-        this.automaticFailoverEnabled = Codegen.empty();
-        this.availabilityZones = Codegen.empty();
-        this.clusterMode = Codegen.empty();
-        this.dataTieringEnabled = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.finalSnapshotIdentifier = Codegen.empty();
-        this.globalReplicationGroupId = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.multiAzEnabled = Codegen.empty();
-        this.nodeType = Codegen.empty();
-        this.notificationTopicArn = Codegen.empty();
-        this.numberCacheClusters = Codegen.empty();
-        this.parameterGroupName = Codegen.empty();
-        this.port = Codegen.empty();
-        this.replicationGroupDescription = Codegen.empty();
-        this.replicationGroupId = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.securityGroupNames = Codegen.empty();
-        this.snapshotArns = Codegen.empty();
-        this.snapshotName = Codegen.empty();
-        this.snapshotRetentionLimit = Codegen.empty();
-        this.snapshotWindow = Codegen.empty();
-        this.subnetGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transitEncryptionEnabled = Codegen.empty();
-        this.userGroupIds = Codegen.empty();
+    private ReplicationGroupArgs(ReplicationGroupArgs $) {
+        this.applyImmediately = $.applyImmediately;
+        this.atRestEncryptionEnabled = $.atRestEncryptionEnabled;
+        this.authToken = $.authToken;
+        this.autoMinorVersionUpgrade = $.autoMinorVersionUpgrade;
+        this.automaticFailoverEnabled = $.automaticFailoverEnabled;
+        this.availabilityZones = $.availabilityZones;
+        this.clusterMode = $.clusterMode;
+        this.dataTieringEnabled = $.dataTieringEnabled;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.finalSnapshotIdentifier = $.finalSnapshotIdentifier;
+        this.globalReplicationGroupId = $.globalReplicationGroupId;
+        this.kmsKeyId = $.kmsKeyId;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.multiAzEnabled = $.multiAzEnabled;
+        this.nodeType = $.nodeType;
+        this.notificationTopicArn = $.notificationTopicArn;
+        this.numberCacheClusters = $.numberCacheClusters;
+        this.parameterGroupName = $.parameterGroupName;
+        this.port = $.port;
+        this.replicationGroupDescription = $.replicationGroupDescription;
+        this.replicationGroupId = $.replicationGroupId;
+        this.securityGroupIds = $.securityGroupIds;
+        this.securityGroupNames = $.securityGroupNames;
+        this.snapshotArns = $.snapshotArns;
+        this.snapshotName = $.snapshotName;
+        this.snapshotRetentionLimit = $.snapshotRetentionLimit;
+        this.snapshotWindow = $.snapshotWindow;
+        this.subnetGroupName = $.subnetGroupName;
+        this.tags = $.tags;
+        this.transitEncryptionEnabled = $.transitEncryptionEnabled;
+        this.userGroupIds = $.userGroupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> applyImmediately;
-        private @Nullable Output<Boolean> atRestEncryptionEnabled;
-        private @Nullable Output<String> authToken;
-        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Output<Boolean> automaticFailoverEnabled;
-        private @Nullable Output<List<String>> availabilityZones;
-        private @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode;
-        private @Nullable Output<Boolean> dataTieringEnabled;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<String> finalSnapshotIdentifier;
-        private @Nullable Output<String> globalReplicationGroupId;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> maintenanceWindow;
-        private @Nullable Output<Boolean> multiAzEnabled;
-        private @Nullable Output<String> nodeType;
-        private @Nullable Output<String> notificationTopicArn;
-        private @Nullable Output<Integer> numberCacheClusters;
-        private @Nullable Output<String> parameterGroupName;
-        private @Nullable Output<Integer> port;
-        private Output<String> replicationGroupDescription;
-        private @Nullable Output<String> replicationGroupId;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<List<String>> securityGroupNames;
-        private @Nullable Output<List<String>> snapshotArns;
-        private @Nullable Output<String> snapshotName;
-        private @Nullable Output<Integer> snapshotRetentionLimit;
-        private @Nullable Output<String> snapshotWindow;
-        private @Nullable Output<String> subnetGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Boolean> transitEncryptionEnabled;
-        private @Nullable Output<List<String>> userGroupIds;
+        private ReplicationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationGroupArgs();
         }
 
         public Builder(ReplicationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyImmediately = defaults.applyImmediately;
-    	      this.atRestEncryptionEnabled = defaults.atRestEncryptionEnabled;
-    	      this.authToken = defaults.authToken;
-    	      this.autoMinorVersionUpgrade = defaults.autoMinorVersionUpgrade;
-    	      this.automaticFailoverEnabled = defaults.automaticFailoverEnabled;
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.clusterMode = defaults.clusterMode;
-    	      this.dataTieringEnabled = defaults.dataTieringEnabled;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.finalSnapshotIdentifier = defaults.finalSnapshotIdentifier;
-    	      this.globalReplicationGroupId = defaults.globalReplicationGroupId;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.multiAzEnabled = defaults.multiAzEnabled;
-    	      this.nodeType = defaults.nodeType;
-    	      this.notificationTopicArn = defaults.notificationTopicArn;
-    	      this.numberCacheClusters = defaults.numberCacheClusters;
-    	      this.parameterGroupName = defaults.parameterGroupName;
-    	      this.port = defaults.port;
-    	      this.replicationGroupDescription = defaults.replicationGroupDescription;
-    	      this.replicationGroupId = defaults.replicationGroupId;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.securityGroupNames = defaults.securityGroupNames;
-    	      this.snapshotArns = defaults.snapshotArns;
-    	      this.snapshotName = defaults.snapshotName;
-    	      this.snapshotRetentionLimit = defaults.snapshotRetentionLimit;
-    	      this.snapshotWindow = defaults.snapshotWindow;
-    	      this.subnetGroupName = defaults.subnetGroupName;
-    	      this.tags = defaults.tags;
-    	      this.transitEncryptionEnabled = defaults.transitEncryptionEnabled;
-    	      this.userGroupIds = defaults.userGroupIds;
+            $ = new ReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
-            this.applyImmediately = applyImmediately;
+            $.applyImmediately = applyImmediately;
             return this;
         }
-        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Codegen.ofNullable(applyImmediately);
-            return this;
+
+        public Builder applyImmediately(Boolean applyImmediately) {
+            return applyImmediately(Output.of(applyImmediately));
         }
+
         public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = atRestEncryptionEnabled;
+            $.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
-        public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = Codegen.ofNullable(atRestEncryptionEnabled);
-            return this;
+
+        public Builder atRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
+            return atRestEncryptionEnabled(Output.of(atRestEncryptionEnabled));
         }
+
         public Builder authToken(@Nullable Output<String> authToken) {
-            this.authToken = authToken;
+            $.authToken = authToken;
             return this;
         }
-        public Builder authToken(@Nullable String authToken) {
-            this.authToken = Codegen.ofNullable(authToken);
-            return this;
+
+        public Builder authToken(String authToken) {
+            return authToken(Output.of(authToken));
         }
+
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+            $.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Codegen.ofNullable(autoMinorVersionUpgrade);
-            return this;
+
+        public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+            return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
+
         public Builder automaticFailoverEnabled(@Nullable Output<Boolean> automaticFailoverEnabled) {
-            this.automaticFailoverEnabled = automaticFailoverEnabled;
+            $.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
-        public Builder automaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
-            this.automaticFailoverEnabled = Codegen.ofNullable(automaticFailoverEnabled);
-            return this;
+
+        public Builder automaticFailoverEnabled(Boolean automaticFailoverEnabled) {
+            return automaticFailoverEnabled(Output.of(automaticFailoverEnabled));
         }
+
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
-            this.availabilityZones = availabilityZones;
+            $.availabilityZones = availabilityZones;
             return this;
         }
-        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Codegen.ofNullable(availabilityZones);
-            return this;
+
+        public Builder availabilityZones(List<String> availabilityZones) {
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder clusterMode(@Nullable Output<ReplicationGroupClusterModeArgs> clusterMode) {
-            this.clusterMode = clusterMode;
+            $.clusterMode = clusterMode;
             return this;
         }
-        public Builder clusterMode(@Nullable ReplicationGroupClusterModeArgs clusterMode) {
-            this.clusterMode = Codegen.ofNullable(clusterMode);
-            return this;
+
+        public Builder clusterMode(ReplicationGroupClusterModeArgs clusterMode) {
+            return clusterMode(Output.of(clusterMode));
         }
+
         public Builder dataTieringEnabled(@Nullable Output<Boolean> dataTieringEnabled) {
-            this.dataTieringEnabled = dataTieringEnabled;
+            $.dataTieringEnabled = dataTieringEnabled;
             return this;
         }
-        public Builder dataTieringEnabled(@Nullable Boolean dataTieringEnabled) {
-            this.dataTieringEnabled = Codegen.ofNullable(dataTieringEnabled);
-            return this;
+
+        public Builder dataTieringEnabled(Boolean dataTieringEnabled) {
+            return dataTieringEnabled(Output.of(dataTieringEnabled));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
-            this.finalSnapshotIdentifier = finalSnapshotIdentifier;
+            $.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
-        public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
-            this.finalSnapshotIdentifier = Codegen.ofNullable(finalSnapshotIdentifier);
-            return this;
+
+        public Builder finalSnapshotIdentifier(String finalSnapshotIdentifier) {
+            return finalSnapshotIdentifier(Output.of(finalSnapshotIdentifier));
         }
+
         public Builder globalReplicationGroupId(@Nullable Output<String> globalReplicationGroupId) {
-            this.globalReplicationGroupId = globalReplicationGroupId;
+            $.globalReplicationGroupId = globalReplicationGroupId;
             return this;
         }
-        public Builder globalReplicationGroupId(@Nullable String globalReplicationGroupId) {
-            this.globalReplicationGroupId = Codegen.ofNullable(globalReplicationGroupId);
-            return this;
+
+        public Builder globalReplicationGroupId(String globalReplicationGroupId) {
+            return globalReplicationGroupId(Output.of(globalReplicationGroupId));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(String maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder multiAzEnabled(@Nullable Output<Boolean> multiAzEnabled) {
-            this.multiAzEnabled = multiAzEnabled;
+            $.multiAzEnabled = multiAzEnabled;
             return this;
         }
-        public Builder multiAzEnabled(@Nullable Boolean multiAzEnabled) {
-            this.multiAzEnabled = Codegen.ofNullable(multiAzEnabled);
-            return this;
+
+        public Builder multiAzEnabled(Boolean multiAzEnabled) {
+            return multiAzEnabled(Output.of(multiAzEnabled));
         }
+
         public Builder nodeType(@Nullable Output<String> nodeType) {
-            this.nodeType = nodeType;
+            $.nodeType = nodeType;
             return this;
         }
-        public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Codegen.ofNullable(nodeType);
-            return this;
+
+        public Builder nodeType(String nodeType) {
+            return nodeType(Output.of(nodeType));
         }
+
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
-            this.notificationTopicArn = notificationTopicArn;
+            $.notificationTopicArn = notificationTopicArn;
             return this;
         }
-        public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Codegen.ofNullable(notificationTopicArn);
-            return this;
+
+        public Builder notificationTopicArn(String notificationTopicArn) {
+            return notificationTopicArn(Output.of(notificationTopicArn));
         }
+
         public Builder numberCacheClusters(@Nullable Output<Integer> numberCacheClusters) {
-            this.numberCacheClusters = numberCacheClusters;
+            $.numberCacheClusters = numberCacheClusters;
             return this;
         }
-        public Builder numberCacheClusters(@Nullable Integer numberCacheClusters) {
-            this.numberCacheClusters = Codegen.ofNullable(numberCacheClusters);
-            return this;
+
+        public Builder numberCacheClusters(Integer numberCacheClusters) {
+            return numberCacheClusters(Output.of(numberCacheClusters));
         }
+
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
-            this.parameterGroupName = parameterGroupName;
+            $.parameterGroupName = parameterGroupName;
             return this;
         }
-        public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Codegen.ofNullable(parameterGroupName);
-            return this;
+
+        public Builder parameterGroupName(String parameterGroupName) {
+            return parameterGroupName(Output.of(parameterGroupName));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder replicationGroupDescription(Output<String> replicationGroupDescription) {
-            this.replicationGroupDescription = Objects.requireNonNull(replicationGroupDescription);
+            $.replicationGroupDescription = replicationGroupDescription;
             return this;
         }
+
         public Builder replicationGroupDescription(String replicationGroupDescription) {
-            this.replicationGroupDescription = Output.of(Objects.requireNonNull(replicationGroupDescription));
-            return this;
+            return replicationGroupDescription(Output.of(replicationGroupDescription));
         }
+
         public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
-            this.replicationGroupId = replicationGroupId;
+            $.replicationGroupId = replicationGroupId;
             return this;
         }
-        public Builder replicationGroupId(@Nullable String replicationGroupId) {
-            this.replicationGroupId = Codegen.ofNullable(replicationGroupId);
-            return this;
+
+        public Builder replicationGroupId(String replicationGroupId) {
+            return replicationGroupId(Output.of(replicationGroupId));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
-            this.securityGroupNames = securityGroupNames;
+            $.securityGroupNames = securityGroupNames;
             return this;
         }
-        public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Codegen.ofNullable(securityGroupNames);
-            return this;
+
+        public Builder securityGroupNames(List<String> securityGroupNames) {
+            return securityGroupNames(Output.of(securityGroupNames));
         }
+
         public Builder securityGroupNames(String... securityGroupNames) {
             return securityGroupNames(List.of(securityGroupNames));
         }
+
         public Builder snapshotArns(@Nullable Output<List<String>> snapshotArns) {
-            this.snapshotArns = snapshotArns;
+            $.snapshotArns = snapshotArns;
             return this;
         }
-        public Builder snapshotArns(@Nullable List<String> snapshotArns) {
-            this.snapshotArns = Codegen.ofNullable(snapshotArns);
-            return this;
+
+        public Builder snapshotArns(List<String> snapshotArns) {
+            return snapshotArns(Output.of(snapshotArns));
         }
+
         public Builder snapshotArns(String... snapshotArns) {
             return snapshotArns(List.of(snapshotArns));
         }
+
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
-            this.snapshotName = snapshotName;
+            $.snapshotName = snapshotName;
             return this;
         }
-        public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Codegen.ofNullable(snapshotName);
-            return this;
+
+        public Builder snapshotName(String snapshotName) {
+            return snapshotName(Output.of(snapshotName));
         }
+
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = snapshotRetentionLimit;
+            $.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
-        public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = Codegen.ofNullable(snapshotRetentionLimit);
-            return this;
+
+        public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
+            return snapshotRetentionLimit(Output.of(snapshotRetentionLimit));
         }
+
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
-            this.snapshotWindow = snapshotWindow;
+            $.snapshotWindow = snapshotWindow;
             return this;
         }
-        public Builder snapshotWindow(@Nullable String snapshotWindow) {
-            this.snapshotWindow = Codegen.ofNullable(snapshotWindow);
-            return this;
+
+        public Builder snapshotWindow(String snapshotWindow) {
+            return snapshotWindow(Output.of(snapshotWindow));
         }
+
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
-            this.subnetGroupName = subnetGroupName;
+            $.subnetGroupName = subnetGroupName;
             return this;
         }
-        public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
-            return this;
+
+        public Builder subnetGroupName(String subnetGroupName) {
+            return subnetGroupName(Output.of(subnetGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = transitEncryptionEnabled;
+            $.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
-        public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = Codegen.ofNullable(transitEncryptionEnabled);
-            return this;
+
+        public Builder transitEncryptionEnabled(Boolean transitEncryptionEnabled) {
+            return transitEncryptionEnabled(Output.of(transitEncryptionEnabled));
         }
+
         public Builder userGroupIds(@Nullable Output<List<String>> userGroupIds) {
-            this.userGroupIds = userGroupIds;
+            $.userGroupIds = userGroupIds;
             return this;
         }
-        public Builder userGroupIds(@Nullable List<String> userGroupIds) {
-            this.userGroupIds = Codegen.ofNullable(userGroupIds);
-            return this;
+
+        public Builder userGroupIds(List<String> userGroupIds) {
+            return userGroupIds(Output.of(userGroupIds));
         }
+
         public Builder userGroupIds(String... userGroupIds) {
             return userGroupIds(List.of(userGroupIds));
-        }        public ReplicationGroupArgs build() {
-            return new ReplicationGroupArgs(applyImmediately, atRestEncryptionEnabled, authToken, autoMinorVersionUpgrade, automaticFailoverEnabled, availabilityZones, clusterMode, dataTieringEnabled, engine, engineVersion, finalSnapshotIdentifier, globalReplicationGroupId, kmsKeyId, maintenanceWindow, multiAzEnabled, nodeType, notificationTopicArn, numberCacheClusters, parameterGroupName, port, replicationGroupDescription, replicationGroupId, securityGroupIds, securityGroupNames, snapshotArns, snapshotName, snapshotRetentionLimit, snapshotWindow, subnetGroupName, tags, transitEncryptionEnabled, userGroupIds);
+        }
+
+        public ReplicationGroupArgs build() {
+            $.replicationGroupDescription = Objects.requireNonNull($.replicationGroupDescription, "expected parameter 'replicationGroupDescription' to be non-null");
+            return $;
         }
     }
+
 }

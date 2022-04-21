@@ -5,7 +5,6 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ResourceServerScopeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="scopeDescription", required=true)
-      private final Output<String> scopeDescription;
+    private Output<String> scopeDescription;
 
     public Output<String> scopeDescription() {
         return this.scopeDescription;
@@ -30,63 +29,60 @@ public final class ResourceServerScopeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="scopeName", required=true)
-      private final Output<String> scopeName;
+    private Output<String> scopeName;
 
     public Output<String> scopeName() {
         return this.scopeName;
     }
 
-    public ResourceServerScopeGetArgs(
-        Output<String> scopeDescription,
-        Output<String> scopeName) {
-        this.scopeDescription = Objects.requireNonNull(scopeDescription, "expected parameter 'scopeDescription' to be non-null");
-        this.scopeName = Objects.requireNonNull(scopeName, "expected parameter 'scopeName' to be non-null");
-    }
+    private ResourceServerScopeGetArgs() {}
 
-    private ResourceServerScopeGetArgs() {
-        this.scopeDescription = Codegen.empty();
-        this.scopeName = Codegen.empty();
+    private ResourceServerScopeGetArgs(ResourceServerScopeGetArgs $) {
+        this.scopeDescription = $.scopeDescription;
+        this.scopeName = $.scopeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceServerScopeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> scopeDescription;
-        private Output<String> scopeName;
+        private ResourceServerScopeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceServerScopeGetArgs();
         }
 
         public Builder(ResourceServerScopeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scopeDescription = defaults.scopeDescription;
-    	      this.scopeName = defaults.scopeName;
+            $ = new ResourceServerScopeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scopeDescription(Output<String> scopeDescription) {
-            this.scopeDescription = Objects.requireNonNull(scopeDescription);
+            $.scopeDescription = scopeDescription;
             return this;
         }
+
         public Builder scopeDescription(String scopeDescription) {
-            this.scopeDescription = Output.of(Objects.requireNonNull(scopeDescription));
-            return this;
+            return scopeDescription(Output.of(scopeDescription));
         }
+
         public Builder scopeName(Output<String> scopeName) {
-            this.scopeName = Objects.requireNonNull(scopeName);
+            $.scopeName = scopeName;
             return this;
         }
+
         public Builder scopeName(String scopeName) {
-            this.scopeName = Output.of(Objects.requireNonNull(scopeName));
-            return this;
-        }        public ResourceServerScopeGetArgs build() {
-            return new ResourceServerScopeGetArgs(scopeDescription, scopeName);
+            return scopeName(Output.of(scopeName));
+        }
+
+        public ResourceServerScopeGetArgs build() {
+            $.scopeDescription = Objects.requireNonNull($.scopeDescription, "expected parameter 'scopeDescription' to be non-null");
+            $.scopeName = Objects.requireNonNull($.scopeName, "expected parameter 'scopeName' to be non-null");
+            return $;
         }
     }
+
 }

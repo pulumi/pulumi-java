@@ -5,10 +5,10 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -33,10 +33,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
      * 
      */
     @Import(name="encryptionDisabled")
-      private final @Nullable Output<Boolean> encryptionDisabled;
+    private @Nullable Output<Boolean> encryptionDisabled;
 
-    public Output<Boolean> encryptionDisabled() {
-        return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
+    public Optional<Output<Boolean>> encryptionDisabled() {
+        return Optional.ofNullable(this.encryptionDisabled);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
      * 
      */
     @Import(name="encryptionKey", required=true)
-      private final Output<String> encryptionKey;
+    private Output<String> encryptionKey;
 
     public Output<String> encryptionKey() {
         return this.encryptionKey;
@@ -55,10 +55,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
      * 
      */
     @Import(name="packaging")
-      private final @Nullable Output<String> packaging;
+    private @Nullable Output<String> packaging;
 
-    public Output<String> packaging() {
-        return this.packaging == null ? Codegen.empty() : this.packaging;
+    public Optional<Output<String>> packaging() {
+        return Optional.ofNullable(this.packaging);
     }
 
     /**
@@ -66,102 +66,90 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public ReportGroupExportConfigS3DestinationArgs(
-        Output<String> bucket,
-        @Nullable Output<Boolean> encryptionDisabled,
-        Output<String> encryptionKey,
-        @Nullable Output<String> packaging,
-        @Nullable Output<String> path) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.encryptionDisabled = encryptionDisabled;
-        this.encryptionKey = Objects.requireNonNull(encryptionKey, "expected parameter 'encryptionKey' to be non-null");
-        this.packaging = packaging;
-        this.path = path;
-    }
+    private ReportGroupExportConfigS3DestinationArgs() {}
 
-    private ReportGroupExportConfigS3DestinationArgs() {
-        this.bucket = Codegen.empty();
-        this.encryptionDisabled = Codegen.empty();
-        this.encryptionKey = Codegen.empty();
-        this.packaging = Codegen.empty();
-        this.path = Codegen.empty();
+    private ReportGroupExportConfigS3DestinationArgs(ReportGroupExportConfigS3DestinationArgs $) {
+        this.bucket = $.bucket;
+        this.encryptionDisabled = $.encryptionDisabled;
+        this.encryptionKey = $.encryptionKey;
+        this.packaging = $.packaging;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportGroupExportConfigS3DestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<Boolean> encryptionDisabled;
-        private Output<String> encryptionKey;
-        private @Nullable Output<String> packaging;
-        private @Nullable Output<String> path;
+        private ReportGroupExportConfigS3DestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportGroupExportConfigS3DestinationArgs();
         }
 
         public Builder(ReportGroupExportConfigS3DestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.encryptionDisabled = defaults.encryptionDisabled;
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.packaging = defaults.packaging;
-    	      this.path = defaults.path;
+            $ = new ReportGroupExportConfigS3DestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
-            this.encryptionDisabled = encryptionDisabled;
+            $.encryptionDisabled = encryptionDisabled;
             return this;
         }
-        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Codegen.ofNullable(encryptionDisabled);
-            return this;
+
+        public Builder encryptionDisabled(Boolean encryptionDisabled) {
+            return encryptionDisabled(Output.of(encryptionDisabled));
         }
+
         public Builder encryptionKey(Output<String> encryptionKey) {
-            this.encryptionKey = Objects.requireNonNull(encryptionKey);
+            $.encryptionKey = encryptionKey;
             return this;
         }
+
         public Builder encryptionKey(String encryptionKey) {
-            this.encryptionKey = Output.of(Objects.requireNonNull(encryptionKey));
-            return this;
+            return encryptionKey(Output.of(encryptionKey));
         }
+
         public Builder packaging(@Nullable Output<String> packaging) {
-            this.packaging = packaging;
+            $.packaging = packaging;
             return this;
         }
-        public Builder packaging(@Nullable String packaging) {
-            this.packaging = Codegen.ofNullable(packaging);
-            return this;
+
+        public Builder packaging(String packaging) {
+            return packaging(Output.of(packaging));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public ReportGroupExportConfigS3DestinationArgs build() {
-            return new ReportGroupExportConfigS3DestinationArgs(bucket, encryptionDisabled, encryptionKey, packaging, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public ReportGroupExportConfigS3DestinationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.encryptionKey = Objects.requireNonNull($.encryptionKey, "expected parameter 'encryptionKey' to be non-null");
+            return $;
         }
     }
+
 }

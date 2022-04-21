@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DomainIdentityVerificationState extends com.pulumi.resources.
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DomainIdentityVerificationState extends com.pulumi.resources.
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
-    public DomainIdentityVerificationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> domain) {
-        this.arn = arn;
-        this.domain = domain;
-    }
+    private DomainIdentityVerificationState() {}
 
-    private DomainIdentityVerificationState() {
-        this.arn = Codegen.empty();
-        this.domain = Codegen.empty();
+    private DomainIdentityVerificationState(DomainIdentityVerificationState $) {
+        this.arn = $.arn;
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainIdentityVerificationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> domain;
+        private DomainIdentityVerificationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainIdentityVerificationState();
         }
 
         public Builder(DomainIdentityVerificationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.domain = defaults.domain;
+            $ = new DomainIdentityVerificationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
-        }        public DomainIdentityVerificationState build() {
-            return new DomainIdentityVerificationState(arn, domain);
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
+        }
+
+        public DomainIdentityVerificationState build() {
+            return $;
         }
     }
+
 }

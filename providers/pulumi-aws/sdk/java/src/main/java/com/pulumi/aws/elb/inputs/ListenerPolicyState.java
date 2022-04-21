@@ -5,11 +5,11 @@ package com.pulumi.aws.elb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ListenerPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="loadBalancerName")
-      private final @Nullable Output<String> loadBalancerName;
+    private @Nullable Output<String> loadBalancerName;
 
-    public Output<String> loadBalancerName() {
-        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
+    public Optional<Output<String>> loadBalancerName() {
+        return Optional.ofNullable(this.loadBalancerName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ListenerPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="loadBalancerPort")
-      private final @Nullable Output<Integer> loadBalancerPort;
+    private @Nullable Output<Integer> loadBalancerPort;
 
-    public Output<Integer> loadBalancerPort() {
-        return this.loadBalancerPort == null ? Codegen.empty() : this.loadBalancerPort;
+    public Optional<Output<Integer>> loadBalancerPort() {
+        return Optional.ofNullable(this.loadBalancerPort);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class ListenerPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyNames")
-      private final @Nullable Output<List<String>> policyNames;
+    private @Nullable Output<List<String>> policyNames;
 
-    public Output<List<String>> policyNames() {
-        return this.policyNames == null ? Codegen.empty() : this.policyNames;
+    public Optional<Output<List<String>>> policyNames() {
+        return Optional.ofNullable(this.policyNames);
     }
 
-    public ListenerPolicyState(
-        @Nullable Output<String> loadBalancerName,
-        @Nullable Output<Integer> loadBalancerPort,
-        @Nullable Output<List<String>> policyNames) {
-        this.loadBalancerName = loadBalancerName;
-        this.loadBalancerPort = loadBalancerPort;
-        this.policyNames = policyNames;
-    }
+    private ListenerPolicyState() {}
 
-    private ListenerPolicyState() {
-        this.loadBalancerName = Codegen.empty();
-        this.loadBalancerPort = Codegen.empty();
-        this.policyNames = Codegen.empty();
+    private ListenerPolicyState(ListenerPolicyState $) {
+        this.loadBalancerName = $.loadBalancerName;
+        this.loadBalancerPort = $.loadBalancerPort;
+        this.policyNames = $.policyNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> loadBalancerName;
-        private @Nullable Output<Integer> loadBalancerPort;
-        private @Nullable Output<List<String>> policyNames;
+        private ListenerPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerPolicyState();
         }
 
         public Builder(ListenerPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.loadBalancerPort = defaults.loadBalancerPort;
-    	      this.policyNames = defaults.policyNames;
+            $ = new ListenerPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
-            this.loadBalancerName = loadBalancerName;
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
-        public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
-            return this;
+
+        public Builder loadBalancerName(String loadBalancerName) {
+            return loadBalancerName(Output.of(loadBalancerName));
         }
+
         public Builder loadBalancerPort(@Nullable Output<Integer> loadBalancerPort) {
-            this.loadBalancerPort = loadBalancerPort;
+            $.loadBalancerPort = loadBalancerPort;
             return this;
         }
-        public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
-            this.loadBalancerPort = Codegen.ofNullable(loadBalancerPort);
-            return this;
+
+        public Builder loadBalancerPort(Integer loadBalancerPort) {
+            return loadBalancerPort(Output.of(loadBalancerPort));
         }
+
         public Builder policyNames(@Nullable Output<List<String>> policyNames) {
-            this.policyNames = policyNames;
+            $.policyNames = policyNames;
             return this;
         }
-        public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Codegen.ofNullable(policyNames);
-            return this;
+
+        public Builder policyNames(List<String> policyNames) {
+            return policyNames(Output.of(policyNames));
         }
+
         public Builder policyNames(String... policyNames) {
             return policyNames(List.of(policyNames));
-        }        public ListenerPolicyState build() {
-            return new ListenerPolicyState(loadBalancerName, loadBalancerPort, policyNames);
+        }
+
+        public ListenerPolicyState build() {
+            return $;
         }
     }
+
 }

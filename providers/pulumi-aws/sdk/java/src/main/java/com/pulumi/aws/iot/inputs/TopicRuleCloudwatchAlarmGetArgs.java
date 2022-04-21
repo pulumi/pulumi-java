@@ -5,7 +5,6 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TopicRuleCloudwatchAlarmGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="alarmName", required=true)
-      private final Output<String> alarmName;
+    private Output<String> alarmName;
 
     public Output<String> alarmName() {
         return this.alarmName;
@@ -30,7 +29,7 @@ public final class TopicRuleCloudwatchAlarmGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -41,7 +40,7 @@ public final class TopicRuleCloudwatchAlarmGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="stateReason", required=true)
-      private final Output<String> stateReason;
+    private Output<String> stateReason;
 
     public Output<String> stateReason() {
         return this.stateReason;
@@ -52,89 +51,82 @@ public final class TopicRuleCloudwatchAlarmGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="stateValue", required=true)
-      private final Output<String> stateValue;
+    private Output<String> stateValue;
 
     public Output<String> stateValue() {
         return this.stateValue;
     }
 
-    public TopicRuleCloudwatchAlarmGetArgs(
-        Output<String> alarmName,
-        Output<String> roleArn,
-        Output<String> stateReason,
-        Output<String> stateValue) {
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stateReason = Objects.requireNonNull(stateReason, "expected parameter 'stateReason' to be non-null");
-        this.stateValue = Objects.requireNonNull(stateValue, "expected parameter 'stateValue' to be non-null");
-    }
+    private TopicRuleCloudwatchAlarmGetArgs() {}
 
-    private TopicRuleCloudwatchAlarmGetArgs() {
-        this.alarmName = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.stateReason = Codegen.empty();
-        this.stateValue = Codegen.empty();
+    private TopicRuleCloudwatchAlarmGetArgs(TopicRuleCloudwatchAlarmGetArgs $) {
+        this.alarmName = $.alarmName;
+        this.roleArn = $.roleArn;
+        this.stateReason = $.stateReason;
+        this.stateValue = $.stateValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleCloudwatchAlarmGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alarmName;
-        private Output<String> roleArn;
-        private Output<String> stateReason;
-        private Output<String> stateValue;
+        private TopicRuleCloudwatchAlarmGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleCloudwatchAlarmGetArgs();
         }
 
         public Builder(TopicRuleCloudwatchAlarmGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stateReason = defaults.stateReason;
-    	      this.stateValue = defaults.stateValue;
+            $ = new TopicRuleCloudwatchAlarmGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(Output<String> alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
         }
+
         public Builder alarmName(String alarmName) {
-            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
-            return this;
+            return alarmName(Output.of(alarmName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder stateReason(Output<String> stateReason) {
-            this.stateReason = Objects.requireNonNull(stateReason);
+            $.stateReason = stateReason;
             return this;
         }
+
         public Builder stateReason(String stateReason) {
-            this.stateReason = Output.of(Objects.requireNonNull(stateReason));
-            return this;
+            return stateReason(Output.of(stateReason));
         }
+
         public Builder stateValue(Output<String> stateValue) {
-            this.stateValue = Objects.requireNonNull(stateValue);
+            $.stateValue = stateValue;
             return this;
         }
+
         public Builder stateValue(String stateValue) {
-            this.stateValue = Output.of(Objects.requireNonNull(stateValue));
-            return this;
-        }        public TopicRuleCloudwatchAlarmGetArgs build() {
-            return new TopicRuleCloudwatchAlarmGetArgs(alarmName, roleArn, stateReason, stateValue);
+            return stateValue(Output.of(stateValue));
+        }
+
+        public TopicRuleCloudwatchAlarmGetArgs build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.stateReason = Objects.requireNonNull($.stateReason, "expected parameter 'stateReason' to be non-null");
+            $.stateValue = Objects.requireNonNull($.stateValue, "expected parameter 'stateValue' to be non-null");
+            return $;
         }
     }
+
 }

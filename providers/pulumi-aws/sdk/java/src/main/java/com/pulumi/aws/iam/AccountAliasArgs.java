@@ -5,7 +5,6 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AccountAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountAlias", required=true)
-      private final Output<String> accountAlias;
+    private Output<String> accountAlias;
 
     public Output<String> accountAlias() {
         return this.accountAlias;
     }
 
-    public AccountAliasArgs(Output<String> accountAlias) {
-        this.accountAlias = Objects.requireNonNull(accountAlias, "expected parameter 'accountAlias' to be non-null");
-    }
+    private AccountAliasArgs() {}
 
-    private AccountAliasArgs() {
-        this.accountAlias = Codegen.empty();
+    private AccountAliasArgs(AccountAliasArgs $) {
+        this.accountAlias = $.accountAlias;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountAlias;
+        private AccountAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAliasArgs();
         }
 
         public Builder(AccountAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountAlias = defaults.accountAlias;
+            $ = new AccountAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountAlias(Output<String> accountAlias) {
-            this.accountAlias = Objects.requireNonNull(accountAlias);
+            $.accountAlias = accountAlias;
             return this;
         }
+
         public Builder accountAlias(String accountAlias) {
-            this.accountAlias = Output.of(Objects.requireNonNull(accountAlias));
-            return this;
-        }        public AccountAliasArgs build() {
-            return new AccountAliasArgs(accountAlias);
+            return accountAlias(Output.of(accountAlias));
+        }
+
+        public AccountAliasArgs build() {
+            $.accountAlias = Objects.requireNonNull($.accountAlias, "expected parameter 'accountAlias' to be non-null");
+            return $;
         }
     }
+
 }

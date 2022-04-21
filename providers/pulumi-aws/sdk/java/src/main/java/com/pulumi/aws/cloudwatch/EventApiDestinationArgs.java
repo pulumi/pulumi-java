@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="connectionArn", required=true)
-      private final Output<String> connectionArn;
+    private Output<String> connectionArn;
 
     public Output<String> connectionArn() {
         return this.connectionArn;
@@ -32,10 +32,10 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="httpMethod", required=true)
-      private final Output<String> httpMethod;
+    private Output<String> httpMethod;
 
     public Output<String> httpMethod() {
         return this.httpMethod;
@@ -54,7 +54,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="invocationEndpoint", required=true)
-      private final Output<String> invocationEndpoint;
+    private Output<String> invocationEndpoint;
 
     public Output<String> invocationEndpoint() {
         return this.invocationEndpoint;
@@ -65,10 +65,10 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="invocationRateLimitPerSecond")
-      private final @Nullable Output<Integer> invocationRateLimitPerSecond;
+    private @Nullable Output<Integer> invocationRateLimitPerSecond;
 
-    public Output<Integer> invocationRateLimitPerSecond() {
-        return this.invocationRateLimitPerSecond == null ? Codegen.empty() : this.invocationRateLimitPerSecond;
+    public Optional<Output<Integer>> invocationRateLimitPerSecond() {
+        return Optional.ofNullable(this.invocationRateLimitPerSecond);
     }
 
     /**
@@ -76,115 +76,101 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public EventApiDestinationArgs(
-        Output<String> connectionArn,
-        @Nullable Output<String> description,
-        Output<String> httpMethod,
-        Output<String> invocationEndpoint,
-        @Nullable Output<Integer> invocationRateLimitPerSecond,
-        @Nullable Output<String> name) {
-        this.connectionArn = Objects.requireNonNull(connectionArn, "expected parameter 'connectionArn' to be non-null");
-        this.description = description;
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.invocationEndpoint = Objects.requireNonNull(invocationEndpoint, "expected parameter 'invocationEndpoint' to be non-null");
-        this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
-        this.name = name;
-    }
+    private EventApiDestinationArgs() {}
 
-    private EventApiDestinationArgs() {
-        this.connectionArn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.invocationEndpoint = Codegen.empty();
-        this.invocationRateLimitPerSecond = Codegen.empty();
-        this.name = Codegen.empty();
+    private EventApiDestinationArgs(EventApiDestinationArgs $) {
+        this.connectionArn = $.connectionArn;
+        this.description = $.description;
+        this.httpMethod = $.httpMethod;
+        this.invocationEndpoint = $.invocationEndpoint;
+        this.invocationRateLimitPerSecond = $.invocationRateLimitPerSecond;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventApiDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionArn;
-        private @Nullable Output<String> description;
-        private Output<String> httpMethod;
-        private Output<String> invocationEndpoint;
-        private @Nullable Output<Integer> invocationRateLimitPerSecond;
-        private @Nullable Output<String> name;
+        private EventApiDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventApiDestinationArgs();
         }
 
         public Builder(EventApiDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionArn = defaults.connectionArn;
-    	      this.description = defaults.description;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.invocationEndpoint = defaults.invocationEndpoint;
-    	      this.invocationRateLimitPerSecond = defaults.invocationRateLimitPerSecond;
-    	      this.name = defaults.name;
+            $ = new EventApiDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionArn(Output<String> connectionArn) {
-            this.connectionArn = Objects.requireNonNull(connectionArn);
+            $.connectionArn = connectionArn;
             return this;
         }
+
         public Builder connectionArn(String connectionArn) {
-            this.connectionArn = Output.of(Objects.requireNonNull(connectionArn));
-            return this;
+            return connectionArn(Output.of(connectionArn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder httpMethod(Output<String> httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
-            return this;
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder invocationEndpoint(Output<String> invocationEndpoint) {
-            this.invocationEndpoint = Objects.requireNonNull(invocationEndpoint);
+            $.invocationEndpoint = invocationEndpoint;
             return this;
         }
+
         public Builder invocationEndpoint(String invocationEndpoint) {
-            this.invocationEndpoint = Output.of(Objects.requireNonNull(invocationEndpoint));
-            return this;
+            return invocationEndpoint(Output.of(invocationEndpoint));
         }
+
         public Builder invocationRateLimitPerSecond(@Nullable Output<Integer> invocationRateLimitPerSecond) {
-            this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
+            $.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
-        public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
-            this.invocationRateLimitPerSecond = Codegen.ofNullable(invocationRateLimitPerSecond);
-            return this;
+
+        public Builder invocationRateLimitPerSecond(Integer invocationRateLimitPerSecond) {
+            return invocationRateLimitPerSecond(Output.of(invocationRateLimitPerSecond));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public EventApiDestinationArgs build() {
-            return new EventApiDestinationArgs(connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public EventApiDestinationArgs build() {
+            $.connectionArn = Objects.requireNonNull($.connectionArn, "expected parameter 'connectionArn' to be non-null");
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            $.invocationEndpoint = Objects.requireNonNull($.invocationEndpoint, "expected parameter 'invocationEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

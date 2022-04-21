@@ -5,10 +5,10 @@ package com.pulumi.aws.directoryservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class DirectoryConnectSettingsArgs extends com.pulumi.resources.Res
     public static final DirectoryConnectSettingsArgs Empty = new DirectoryConnectSettingsArgs();
 
     @Import(name="availabilityZones")
-      private final @Nullable Output<List<String>> availabilityZones;
+    private @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> availabilityZones() {
-        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
+    public Optional<Output<List<String>>> availabilityZones() {
+        return Optional.ofNullable(this.availabilityZones);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class DirectoryConnectSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="connectIps")
-      private final @Nullable Output<List<String>> connectIps;
+    private @Nullable Output<List<String>> connectIps;
 
-    public Output<List<String>> connectIps() {
-        return this.connectIps == null ? Codegen.empty() : this.connectIps;
+    public Optional<Output<List<String>>> connectIps() {
+        return Optional.ofNullable(this.connectIps);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DirectoryConnectSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="customerDnsIps", required=true)
-      private final Output<List<String>> customerDnsIps;
+    private Output<List<String>> customerDnsIps;
 
     public Output<List<String>> customerDnsIps() {
         return this.customerDnsIps;
@@ -50,7 +50,7 @@ public final class DirectoryConnectSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="customerUsername", required=true)
-      private final Output<String> customerUsername;
+    private Output<String> customerUsername;
 
     public Output<String> customerUsername() {
         return this.customerUsername;
@@ -61,7 +61,7 @@ public final class DirectoryConnectSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -72,127 +72,118 @@ public final class DirectoryConnectSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public DirectoryConnectSettingsArgs(
-        @Nullable Output<List<String>> availabilityZones,
-        @Nullable Output<List<String>> connectIps,
-        Output<List<String>> customerDnsIps,
-        Output<String> customerUsername,
-        Output<List<String>> subnetIds,
-        Output<String> vpcId) {
-        this.availabilityZones = availabilityZones;
-        this.connectIps = connectIps;
-        this.customerDnsIps = Objects.requireNonNull(customerDnsIps, "expected parameter 'customerDnsIps' to be non-null");
-        this.customerUsername = Objects.requireNonNull(customerUsername, "expected parameter 'customerUsername' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private DirectoryConnectSettingsArgs() {}
 
-    private DirectoryConnectSettingsArgs() {
-        this.availabilityZones = Codegen.empty();
-        this.connectIps = Codegen.empty();
-        this.customerDnsIps = Codegen.empty();
-        this.customerUsername = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private DirectoryConnectSettingsArgs(DirectoryConnectSettingsArgs $) {
+        this.availabilityZones = $.availabilityZones;
+        this.connectIps = $.connectIps;
+        this.customerDnsIps = $.customerDnsIps;
+        this.customerUsername = $.customerUsername;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryConnectSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> availabilityZones;
-        private @Nullable Output<List<String>> connectIps;
-        private Output<List<String>> customerDnsIps;
-        private Output<String> customerUsername;
-        private Output<List<String>> subnetIds;
-        private Output<String> vpcId;
+        private DirectoryConnectSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryConnectSettingsArgs();
         }
 
         public Builder(DirectoryConnectSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.connectIps = defaults.connectIps;
-    	      this.customerDnsIps = defaults.customerDnsIps;
-    	      this.customerUsername = defaults.customerUsername;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new DirectoryConnectSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
-            this.availabilityZones = availabilityZones;
+            $.availabilityZones = availabilityZones;
             return this;
         }
-        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Codegen.ofNullable(availabilityZones);
-            return this;
+
+        public Builder availabilityZones(List<String> availabilityZones) {
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder connectIps(@Nullable Output<List<String>> connectIps) {
-            this.connectIps = connectIps;
+            $.connectIps = connectIps;
             return this;
         }
-        public Builder connectIps(@Nullable List<String> connectIps) {
-            this.connectIps = Codegen.ofNullable(connectIps);
-            return this;
+
+        public Builder connectIps(List<String> connectIps) {
+            return connectIps(Output.of(connectIps));
         }
+
         public Builder connectIps(String... connectIps) {
             return connectIps(List.of(connectIps));
         }
+
         public Builder customerDnsIps(Output<List<String>> customerDnsIps) {
-            this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
+            $.customerDnsIps = customerDnsIps;
             return this;
         }
+
         public Builder customerDnsIps(List<String> customerDnsIps) {
-            this.customerDnsIps = Output.of(Objects.requireNonNull(customerDnsIps));
-            return this;
+            return customerDnsIps(Output.of(customerDnsIps));
         }
+
         public Builder customerDnsIps(String... customerDnsIps) {
             return customerDnsIps(List.of(customerDnsIps));
         }
+
         public Builder customerUsername(Output<String> customerUsername) {
-            this.customerUsername = Objects.requireNonNull(customerUsername);
+            $.customerUsername = customerUsername;
             return this;
         }
+
         public Builder customerUsername(String customerUsername) {
-            this.customerUsername = Output.of(Objects.requireNonNull(customerUsername));
-            return this;
+            return customerUsername(Output.of(customerUsername));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public DirectoryConnectSettingsArgs build() {
-            return new DirectoryConnectSettingsArgs(availabilityZones, connectIps, customerDnsIps, customerUsername, subnetIds, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public DirectoryConnectSettingsArgs build() {
+            $.customerDnsIps = Objects.requireNonNull($.customerDnsIps, "expected parameter 'customerDnsIps' to be non-null");
+            $.customerUsername = Objects.requireNonNull($.customerUsername, "expected parameter 'customerUsername' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

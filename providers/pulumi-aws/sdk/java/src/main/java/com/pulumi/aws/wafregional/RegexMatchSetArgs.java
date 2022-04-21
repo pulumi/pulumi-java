@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional;
 import com.pulumi.aws.wafregional.inputs.RegexMatchSetRegexMatchTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegexMatchSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class RegexMatchSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regexMatchTuples")
-      private final @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
+    private @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
 
-    public Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples() {
-        return this.regexMatchTuples == null ? Codegen.empty() : this.regexMatchTuples;
+    public Optional<Output<List<RegexMatchSetRegexMatchTupleArgs>>> regexMatchTuples() {
+        return Optional.ofNullable(this.regexMatchTuples);
     }
 
-    public RegexMatchSetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
-        this.name = name;
-        this.regexMatchTuples = regexMatchTuples;
-    }
+    private RegexMatchSetArgs() {}
 
-    private RegexMatchSetArgs() {
-        this.name = Codegen.empty();
-        this.regexMatchTuples = Codegen.empty();
+    private RegexMatchSetArgs(RegexMatchSetArgs $) {
+        this.name = $.name;
+        this.regexMatchTuples = $.regexMatchTuples;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegexMatchSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
+        private RegexMatchSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegexMatchSetArgs();
         }
 
         public Builder(RegexMatchSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.regexMatchTuples = defaults.regexMatchTuples;
+            $ = new RegexMatchSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder regexMatchTuples(@Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
-            this.regexMatchTuples = regexMatchTuples;
+            $.regexMatchTuples = regexMatchTuples;
             return this;
         }
-        public Builder regexMatchTuples(@Nullable List<RegexMatchSetRegexMatchTupleArgs> regexMatchTuples) {
-            this.regexMatchTuples = Codegen.ofNullable(regexMatchTuples);
-            return this;
+
+        public Builder regexMatchTuples(List<RegexMatchSetRegexMatchTupleArgs> regexMatchTuples) {
+            return regexMatchTuples(Output.of(regexMatchTuples));
         }
+
         public Builder regexMatchTuples(RegexMatchSetRegexMatchTupleArgs... regexMatchTuples) {
             return regexMatchTuples(List.of(regexMatchTuples));
-        }        public RegexMatchSetArgs build() {
-            return new RegexMatchSetArgs(name, regexMatchTuples);
+        }
+
+        public RegexMatchSetArgs build() {
+            return $;
         }
     }
+
 }

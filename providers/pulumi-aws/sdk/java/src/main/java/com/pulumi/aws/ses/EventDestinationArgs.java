@@ -8,11 +8,11 @@ import com.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationArgs;
 import com.pulumi.aws.ses.inputs.EventDestinationSnsDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EventDestinationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudwatchDestinations")
-      private final @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
+    private @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
 
-    public Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations() {
-        return this.cloudwatchDestinations == null ? Codegen.empty() : this.cloudwatchDestinations;
+    public Optional<Output<List<EventDestinationCloudwatchDestinationArgs>>> cloudwatchDestinations() {
+        return Optional.ofNullable(this.cloudwatchDestinations);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class EventDestinationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="configurationSetName", required=true)
-      private final Output<String> configurationSetName;
+    private Output<String> configurationSetName;
 
     public Output<String> configurationSetName() {
         return this.configurationSetName;
@@ -47,10 +47,10 @@ public final class EventDestinationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EventDestinationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kinesisDestination")
-      private final @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination;
+    private @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination;
 
-    public Output<EventDestinationKinesisDestinationArgs> kinesisDestination() {
-        return this.kinesisDestination == null ? Codegen.empty() : this.kinesisDestination;
+    public Optional<Output<EventDestinationKinesisDestinationArgs>> kinesisDestination() {
+        return Optional.ofNullable(this.kinesisDestination);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class EventDestinationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="matchingTypes", required=true)
-      private final Output<List<String>> matchingTypes;
+    private Output<List<String>> matchingTypes;
 
     public Output<List<String>> matchingTypes() {
         return this.matchingTypes;
@@ -80,10 +80,10 @@ public final class EventDestinationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,134 +91,118 @@ public final class EventDestinationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="snsDestination")
-      private final @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination;
+    private @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination;
 
-    public Output<EventDestinationSnsDestinationArgs> snsDestination() {
-        return this.snsDestination == null ? Codegen.empty() : this.snsDestination;
+    public Optional<Output<EventDestinationSnsDestinationArgs>> snsDestination() {
+        return Optional.ofNullable(this.snsDestination);
     }
 
-    public EventDestinationArgs(
-        @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations,
-        Output<String> configurationSetName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination,
-        Output<List<String>> matchingTypes,
-        @Nullable Output<String> name,
-        @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination) {
-        this.cloudwatchDestinations = cloudwatchDestinations;
-        this.configurationSetName = Objects.requireNonNull(configurationSetName, "expected parameter 'configurationSetName' to be non-null");
-        this.enabled = enabled;
-        this.kinesisDestination = kinesisDestination;
-        this.matchingTypes = Objects.requireNonNull(matchingTypes, "expected parameter 'matchingTypes' to be non-null");
-        this.name = name;
-        this.snsDestination = snsDestination;
-    }
+    private EventDestinationArgs() {}
 
-    private EventDestinationArgs() {
-        this.cloudwatchDestinations = Codegen.empty();
-        this.configurationSetName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.kinesisDestination = Codegen.empty();
-        this.matchingTypes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.snsDestination = Codegen.empty();
+    private EventDestinationArgs(EventDestinationArgs $) {
+        this.cloudwatchDestinations = $.cloudwatchDestinations;
+        this.configurationSetName = $.configurationSetName;
+        this.enabled = $.enabled;
+        this.kinesisDestination = $.kinesisDestination;
+        this.matchingTypes = $.matchingTypes;
+        this.name = $.name;
+        this.snsDestination = $.snsDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
-        private Output<String> configurationSetName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination;
-        private Output<List<String>> matchingTypes;
-        private @Nullable Output<String> name;
-        private @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination;
+        private EventDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventDestinationArgs();
         }
 
         public Builder(EventDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchDestinations = defaults.cloudwatchDestinations;
-    	      this.configurationSetName = defaults.configurationSetName;
-    	      this.enabled = defaults.enabled;
-    	      this.kinesisDestination = defaults.kinesisDestination;
-    	      this.matchingTypes = defaults.matchingTypes;
-    	      this.name = defaults.name;
-    	      this.snsDestination = defaults.snsDestination;
+            $ = new EventDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchDestinations(@Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations) {
-            this.cloudwatchDestinations = cloudwatchDestinations;
+            $.cloudwatchDestinations = cloudwatchDestinations;
             return this;
         }
-        public Builder cloudwatchDestinations(@Nullable List<EventDestinationCloudwatchDestinationArgs> cloudwatchDestinations) {
-            this.cloudwatchDestinations = Codegen.ofNullable(cloudwatchDestinations);
-            return this;
+
+        public Builder cloudwatchDestinations(List<EventDestinationCloudwatchDestinationArgs> cloudwatchDestinations) {
+            return cloudwatchDestinations(Output.of(cloudwatchDestinations));
         }
+
         public Builder cloudwatchDestinations(EventDestinationCloudwatchDestinationArgs... cloudwatchDestinations) {
             return cloudwatchDestinations(List.of(cloudwatchDestinations));
         }
+
         public Builder configurationSetName(Output<String> configurationSetName) {
-            this.configurationSetName = Objects.requireNonNull(configurationSetName);
+            $.configurationSetName = configurationSetName;
             return this;
         }
+
         public Builder configurationSetName(String configurationSetName) {
-            this.configurationSetName = Output.of(Objects.requireNonNull(configurationSetName));
-            return this;
+            return configurationSetName(Output.of(configurationSetName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder kinesisDestination(@Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination) {
-            this.kinesisDestination = kinesisDestination;
+            $.kinesisDestination = kinesisDestination;
             return this;
         }
-        public Builder kinesisDestination(@Nullable EventDestinationKinesisDestinationArgs kinesisDestination) {
-            this.kinesisDestination = Codegen.ofNullable(kinesisDestination);
-            return this;
+
+        public Builder kinesisDestination(EventDestinationKinesisDestinationArgs kinesisDestination) {
+            return kinesisDestination(Output.of(kinesisDestination));
         }
+
         public Builder matchingTypes(Output<List<String>> matchingTypes) {
-            this.matchingTypes = Objects.requireNonNull(matchingTypes);
+            $.matchingTypes = matchingTypes;
             return this;
         }
+
         public Builder matchingTypes(List<String> matchingTypes) {
-            this.matchingTypes = Output.of(Objects.requireNonNull(matchingTypes));
-            return this;
+            return matchingTypes(Output.of(matchingTypes));
         }
+
         public Builder matchingTypes(String... matchingTypes) {
             return matchingTypes(List.of(matchingTypes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder snsDestination(@Nullable Output<EventDestinationSnsDestinationArgs> snsDestination) {
-            this.snsDestination = snsDestination;
+            $.snsDestination = snsDestination;
             return this;
         }
-        public Builder snsDestination(@Nullable EventDestinationSnsDestinationArgs snsDestination) {
-            this.snsDestination = Codegen.ofNullable(snsDestination);
-            return this;
-        }        public EventDestinationArgs build() {
-            return new EventDestinationArgs(cloudwatchDestinations, configurationSetName, enabled, kinesisDestination, matchingTypes, name, snsDestination);
+
+        public Builder snsDestination(EventDestinationSnsDestinationArgs snsDestination) {
+            return snsDestination(Output.of(snsDestination));
+        }
+
+        public EventDestinationArgs build() {
+            $.configurationSetName = Objects.requireNonNull($.configurationSetName, "expected parameter 'configurationSetName' to be non-null");
+            $.matchingTypes = Objects.requireNonNull($.matchingTypes, "expected parameter 'matchingTypes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
      * 
      */
     @Import(name="customSecurityGroupId", required=true)
-      private final String customSecurityGroupId;
+    private String customSecurityGroupId;
 
     public String customSecurityGroupId() {
         return this.customSecurityGroupId;
@@ -29,7 +29,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
      * 
      */
     @Import(name="defaultOu", required=true)
-      private final String defaultOu;
+    private String defaultOu;
 
     public String defaultOu() {
         return this.defaultOu;
@@ -40,7 +40,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
      * 
      */
     @Import(name="enableInternetAccess", required=true)
-      private final Boolean enableInternetAccess;
+    private Boolean enableInternetAccess;
 
     public Boolean enableInternetAccess() {
         return this.enableInternetAccess;
@@ -51,7 +51,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
      * 
      */
     @Import(name="enableMaintenanceMode", required=true)
-      private final Boolean enableMaintenanceMode;
+    private Boolean enableMaintenanceMode;
 
     public Boolean enableMaintenanceMode() {
         return this.enableMaintenanceMode;
@@ -62,82 +62,73 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
      * 
      */
     @Import(name="userEnabledAsLocalAdministrator", required=true)
-      private final Boolean userEnabledAsLocalAdministrator;
+    private Boolean userEnabledAsLocalAdministrator;
 
     public Boolean userEnabledAsLocalAdministrator() {
         return this.userEnabledAsLocalAdministrator;
     }
 
-    public GetDirectoryWorkspaceCreationProperty(
-        String customSecurityGroupId,
-        String defaultOu,
-        Boolean enableInternetAccess,
-        Boolean enableMaintenanceMode,
-        Boolean userEnabledAsLocalAdministrator) {
-        this.customSecurityGroupId = Objects.requireNonNull(customSecurityGroupId, "expected parameter 'customSecurityGroupId' to be non-null");
-        this.defaultOu = Objects.requireNonNull(defaultOu, "expected parameter 'defaultOu' to be non-null");
-        this.enableInternetAccess = Objects.requireNonNull(enableInternetAccess, "expected parameter 'enableInternetAccess' to be non-null");
-        this.enableMaintenanceMode = Objects.requireNonNull(enableMaintenanceMode, "expected parameter 'enableMaintenanceMode' to be non-null");
-        this.userEnabledAsLocalAdministrator = Objects.requireNonNull(userEnabledAsLocalAdministrator, "expected parameter 'userEnabledAsLocalAdministrator' to be non-null");
-    }
+    private GetDirectoryWorkspaceCreationProperty() {}
 
-    private GetDirectoryWorkspaceCreationProperty() {
-        this.customSecurityGroupId = null;
-        this.defaultOu = null;
-        this.enableInternetAccess = null;
-        this.enableMaintenanceMode = null;
-        this.userEnabledAsLocalAdministrator = null;
+    private GetDirectoryWorkspaceCreationProperty(GetDirectoryWorkspaceCreationProperty $) {
+        this.customSecurityGroupId = $.customSecurityGroupId;
+        this.defaultOu = $.defaultOu;
+        this.enableInternetAccess = $.enableInternetAccess;
+        this.enableMaintenanceMode = $.enableMaintenanceMode;
+        this.userEnabledAsLocalAdministrator = $.userEnabledAsLocalAdministrator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDirectoryWorkspaceCreationProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customSecurityGroupId;
-        private String defaultOu;
-        private Boolean enableInternetAccess;
-        private Boolean enableMaintenanceMode;
-        private Boolean userEnabledAsLocalAdministrator;
+        private GetDirectoryWorkspaceCreationProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDirectoryWorkspaceCreationProperty();
         }
 
         public Builder(GetDirectoryWorkspaceCreationProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customSecurityGroupId = defaults.customSecurityGroupId;
-    	      this.defaultOu = defaults.defaultOu;
-    	      this.enableInternetAccess = defaults.enableInternetAccess;
-    	      this.enableMaintenanceMode = defaults.enableMaintenanceMode;
-    	      this.userEnabledAsLocalAdministrator = defaults.userEnabledAsLocalAdministrator;
+            $ = new GetDirectoryWorkspaceCreationProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder customSecurityGroupId(String customSecurityGroupId) {
-            this.customSecurityGroupId = Objects.requireNonNull(customSecurityGroupId);
+            $.customSecurityGroupId = customSecurityGroupId;
             return this;
         }
+
         public Builder defaultOu(String defaultOu) {
-            this.defaultOu = Objects.requireNonNull(defaultOu);
+            $.defaultOu = defaultOu;
             return this;
         }
+
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
-            this.enableInternetAccess = Objects.requireNonNull(enableInternetAccess);
+            $.enableInternetAccess = enableInternetAccess;
             return this;
         }
+
         public Builder enableMaintenanceMode(Boolean enableMaintenanceMode) {
-            this.enableMaintenanceMode = Objects.requireNonNull(enableMaintenanceMode);
+            $.enableMaintenanceMode = enableMaintenanceMode;
             return this;
         }
+
         public Builder userEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
-            this.userEnabledAsLocalAdministrator = Objects.requireNonNull(userEnabledAsLocalAdministrator);
+            $.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
             return this;
-        }        public GetDirectoryWorkspaceCreationProperty build() {
-            return new GetDirectoryWorkspaceCreationProperty(customSecurityGroupId, defaultOu, enableInternetAccess, enableMaintenanceMode, userEnabledAsLocalAdministrator);
+        }
+
+        public GetDirectoryWorkspaceCreationProperty build() {
+            $.customSecurityGroupId = Objects.requireNonNull($.customSecurityGroupId, "expected parameter 'customSecurityGroupId' to be non-null");
+            $.defaultOu = Objects.requireNonNull($.defaultOu, "expected parameter 'defaultOu' to be non-null");
+            $.enableInternetAccess = Objects.requireNonNull($.enableInternetAccess, "expected parameter 'enableInternetAccess' to be non-null");
+            $.enableMaintenanceMode = Objects.requireNonNull($.enableMaintenanceMode, "expected parameter 'enableMaintenanceMode' to be non-null");
+            $.userEnabledAsLocalAdministrator = Objects.requireNonNull($.userEnabledAsLocalAdministrator, "expected parameter 'userEnabledAsLocalAdministrator' to be non-null");
+            return $;
         }
     }
+
 }

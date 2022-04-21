@@ -20,7 +20,7 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -31,55 +31,51 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetKeyArgs(
-        String id,
-        @Nullable Map<String,String> tags) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.tags = tags;
-    }
+    private GetKeyArgs() {}
 
-    private GetKeyArgs() {
-        this.id = null;
-        this.tags = Map.of();
+    private GetKeyArgs(GetKeyArgs $) {
+        this.id = $.id;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable Map<String,String> tags;
+        private GetKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyArgs();
         }
 
         public Builder(GetKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.tags = defaults.tags;
+            $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetKeyArgs build() {
-            return new GetKeyArgs(id, tags);
+        }
+
+        public GetKeyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

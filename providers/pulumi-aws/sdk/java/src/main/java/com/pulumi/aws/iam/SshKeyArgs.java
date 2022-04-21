@@ -5,9 +5,9 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encoding", required=true)
-      private final Output<String> encoding;
+    private Output<String> encoding;
 
     public Output<String> encoding() {
         return this.encoding;
@@ -31,7 +31,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey", required=true)
-      private final Output<String> publicKey;
+    private Output<String> publicKey;
 
     public Output<String> publicKey() {
         return this.publicKey;
@@ -42,10 +42,10 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -53,89 +53,81 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public SshKeyArgs(
-        Output<String> encoding,
-        Output<String> publicKey,
-        @Nullable Output<String> status,
-        Output<String> username) {
-        this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.status = status;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private SshKeyArgs() {}
 
-    private SshKeyArgs() {
-        this.encoding = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.status = Codegen.empty();
-        this.username = Codegen.empty();
+    private SshKeyArgs(SshKeyArgs $) {
+        this.encoding = $.encoding;
+        this.publicKey = $.publicKey;
+        this.status = $.status;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> encoding;
-        private Output<String> publicKey;
-        private @Nullable Output<String> status;
-        private Output<String> username;
+        private SshKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshKeyArgs();
         }
 
         public Builder(SshKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.publicKey = defaults.publicKey;
-    	      this.status = defaults.status;
-    	      this.username = defaults.username;
+            $ = new SshKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(Output<String> encoding) {
-            this.encoding = Objects.requireNonNull(encoding);
+            $.encoding = encoding;
             return this;
         }
+
         public Builder encoding(String encoding) {
-            this.encoding = Output.of(Objects.requireNonNull(encoding));
-            return this;
+            return encoding(Output.of(encoding));
         }
+
         public Builder publicKey(Output<String> publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder publicKey(String publicKey) {
-            this.publicKey = Output.of(Objects.requireNonNull(publicKey));
-            return this;
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public SshKeyArgs build() {
-            return new SshKeyArgs(encoding, publicKey, status, username);
+            return username(Output.of(username));
+        }
+
+        public SshKeyArgs build() {
+            $.encoding = Objects.requireNonNull($.encoding, "expected parameter 'encoding' to be non-null");
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

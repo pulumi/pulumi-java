@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AccessPointVpcConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public AccessPointVpcConfigurationArgs(Output<String> vpcId) {
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private AccessPointVpcConfigurationArgs() {}
 
-    private AccessPointVpcConfigurationArgs() {
-        this.vpcId = Codegen.empty();
+    private AccessPointVpcConfigurationArgs(AccessPointVpcConfigurationArgs $) {
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointVpcConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> vpcId;
+        private AccessPointVpcConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointVpcConfigurationArgs();
         }
 
         public Builder(AccessPointVpcConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcId = defaults.vpcId;
+            $ = new AccessPointVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public AccessPointVpcConfigurationArgs build() {
-            return new AccessPointVpcConfigurationArgs(vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public AccessPointVpcConfigurationArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

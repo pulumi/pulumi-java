@@ -5,9 +5,9 @@ package com.pulumi.aws.directconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ConnectionConfirmationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
-    public ConnectionConfirmationState(@Nullable Output<String> connectionId) {
-        this.connectionId = connectionId;
-    }
+    private ConnectionConfirmationState() {}
 
-    private ConnectionConfirmationState() {
-        this.connectionId = Codegen.empty();
+    private ConnectionConfirmationState(ConnectionConfirmationState $) {
+        this.connectionId = $.connectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionConfirmationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionId;
+        private ConnectionConfirmationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionConfirmationState();
         }
 
         public Builder(ConnectionConfirmationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionId = defaults.connectionId;
+            $ = new ConnectionConfirmationState(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
-        }        public ConnectionConfirmationState build() {
-            return new ConnectionConfirmationState(connectionId);
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
+        }
+
+        public ConnectionConfirmationState build() {
+            return $;
         }
     }
+
 }

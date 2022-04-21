@@ -5,7 +5,6 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class CatalogTableTargetTableArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="catalogId", required=true)
-      private final Output<String> catalogId;
+    private Output<String> catalogId;
 
     public Output<String> catalogId() {
         return this.catalogId;
@@ -30,7 +29,7 @@ public final class CatalogTableTargetTableArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -41,76 +40,71 @@ public final class CatalogTableTargetTableArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public CatalogTableTargetTableArgs(
-        Output<String> catalogId,
-        Output<String> databaseName,
-        Output<String> name) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private CatalogTableTargetTableArgs() {}
 
-    private CatalogTableTargetTableArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.name = Codegen.empty();
+    private CatalogTableTargetTableArgs(CatalogTableTargetTableArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogTableTargetTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> catalogId;
-        private Output<String> databaseName;
-        private Output<String> name;
+        private CatalogTableTargetTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogTableTargetTableArgs();
         }
 
         public Builder(CatalogTableTargetTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.name = defaults.name;
+            $ = new CatalogTableTargetTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(Output<String> catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder catalogId(String catalogId) {
-            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
-            return this;
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public CatalogTableTargetTableArgs build() {
-            return new CatalogTableTargetTableArgs(catalogId, databaseName, name);
+            return name(Output.of(name));
+        }
+
+        public CatalogTableTargetTableArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.codebuild;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authType", required=true)
-      private final Output<String> authType;
+    private Output<String> authType;
 
     public Output<String> authType() {
         return this.authType;
@@ -31,7 +31,7 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serverType", required=true)
-      private final Output<String> serverType;
+    private Output<String> serverType;
 
     public Output<String> serverType() {
         return this.serverType;
@@ -42,7 +42,7 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="token", required=true)
-      private final Output<String> token;
+    private Output<String> token;
 
     public Output<String> token() {
         return this.token;
@@ -53,89 +53,81 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public SourceCredentialArgs(
-        Output<String> authType,
-        Output<String> serverType,
-        Output<String> token,
-        @Nullable Output<String> userName) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
-        this.serverType = Objects.requireNonNull(serverType, "expected parameter 'serverType' to be non-null");
-        this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
-        this.userName = userName;
-    }
+    private SourceCredentialArgs() {}
 
-    private SourceCredentialArgs() {
-        this.authType = Codegen.empty();
-        this.serverType = Codegen.empty();
-        this.token = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SourceCredentialArgs(SourceCredentialArgs $) {
+        this.authType = $.authType;
+        this.serverType = $.serverType;
+        this.token = $.token;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authType;
-        private Output<String> serverType;
-        private Output<String> token;
-        private @Nullable Output<String> userName;
+        private SourceCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceCredentialArgs();
         }
 
         public Builder(SourceCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.serverType = defaults.serverType;
-    	      this.token = defaults.token;
-    	      this.userName = defaults.userName;
+            $ = new SourceCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(Output<String> authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder authType(String authType) {
-            this.authType = Output.of(Objects.requireNonNull(authType));
-            return this;
+            return authType(Output.of(authType));
         }
+
         public Builder serverType(Output<String> serverType) {
-            this.serverType = Objects.requireNonNull(serverType);
+            $.serverType = serverType;
             return this;
         }
+
         public Builder serverType(String serverType) {
-            this.serverType = Output.of(Objects.requireNonNull(serverType));
-            return this;
+            return serverType(Output.of(serverType));
         }
+
         public Builder token(Output<String> token) {
-            this.token = Objects.requireNonNull(token);
+            $.token = token;
             return this;
         }
+
         public Builder token(String token) {
-            this.token = Output.of(Objects.requireNonNull(token));
-            return this;
+            return token(Output.of(token));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public SourceCredentialArgs build() {
-            return new SourceCredentialArgs(authType, serverType, token, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public SourceCredentialArgs build() {
+            $.authType = Objects.requireNonNull($.authType, "expected parameter 'authType' to be non-null");
+            $.serverType = Objects.requireNonNull($.serverType, "expected parameter 'serverType' to be non-null");
+            $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
+            return $;
         }
     }
+
 }

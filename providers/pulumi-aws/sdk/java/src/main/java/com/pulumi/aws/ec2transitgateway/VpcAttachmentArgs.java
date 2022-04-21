@@ -5,12 +5,12 @@ package com.pulumi.aws.ec2transitgateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applianceModeSupport")
-      private final @Nullable Output<String> applianceModeSupport;
+    private @Nullable Output<String> applianceModeSupport;
 
-    public Output<String> applianceModeSupport() {
-        return this.applianceModeSupport == null ? Codegen.empty() : this.applianceModeSupport;
+    public Optional<Output<String>> applianceModeSupport() {
+        return Optional.ofNullable(this.applianceModeSupport);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsSupport")
-      private final @Nullable Output<String> dnsSupport;
+    private @Nullable Output<String> dnsSupport;
 
-    public Output<String> dnsSupport() {
-        return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
+    public Optional<Output<String>> dnsSupport() {
+        return Optional.ofNullable(this.dnsSupport);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv6Support")
-      private final @Nullable Output<String> ipv6Support;
+    private @Nullable Output<String> ipv6Support;
 
-    public Output<String> ipv6Support() {
-        return this.ipv6Support == null ? Codegen.empty() : this.ipv6Support;
+    public Optional<Output<String>> ipv6Support() {
+        return Optional.ofNullable(this.ipv6Support);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -67,10 +67,10 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitGatewayDefaultRouteTableAssociation")
-      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
+    private @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
-    public Output<Boolean> transitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTableAssociation;
+    public Optional<Output<Boolean>> transitGatewayDefaultRouteTableAssociation() {
+        return Optional.ofNullable(this.transitGatewayDefaultRouteTableAssociation);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitGatewayDefaultRouteTablePropagation")
-      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
+    private @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
-    public Output<Boolean> transitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTablePropagation;
+    public Optional<Output<Boolean>> transitGatewayDefaultRouteTablePropagation() {
+        return Optional.ofNullable(this.transitGatewayDefaultRouteTablePropagation);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitGatewayId", required=true)
-      private final Output<String> transitGatewayId;
+    private Output<String> transitGatewayId;
 
     public Output<String> transitGatewayId() {
         return this.transitGatewayId;
@@ -111,157 +111,135 @@ public final class VpcAttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public VpcAttachmentArgs(
-        @Nullable Output<String> applianceModeSupport,
-        @Nullable Output<String> dnsSupport,
-        @Nullable Output<String> ipv6Support,
-        Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation,
-        @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation,
-        Output<String> transitGatewayId,
-        Output<String> vpcId) {
-        this.applianceModeSupport = applianceModeSupport;
-        this.dnsSupport = dnsSupport;
-        this.ipv6Support = ipv6Support;
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.tags = tags;
-        this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
-        this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private VpcAttachmentArgs() {}
 
-    private VpcAttachmentArgs() {
-        this.applianceModeSupport = Codegen.empty();
-        this.dnsSupport = Codegen.empty();
-        this.ipv6Support = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transitGatewayDefaultRouteTableAssociation = Codegen.empty();
-        this.transitGatewayDefaultRouteTablePropagation = Codegen.empty();
-        this.transitGatewayId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private VpcAttachmentArgs(VpcAttachmentArgs $) {
+        this.applianceModeSupport = $.applianceModeSupport;
+        this.dnsSupport = $.dnsSupport;
+        this.ipv6Support = $.ipv6Support;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.transitGatewayDefaultRouteTableAssociation = $.transitGatewayDefaultRouteTableAssociation;
+        this.transitGatewayDefaultRouteTablePropagation = $.transitGatewayDefaultRouteTablePropagation;
+        this.transitGatewayId = $.transitGatewayId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applianceModeSupport;
-        private @Nullable Output<String> dnsSupport;
-        private @Nullable Output<String> ipv6Support;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
-        private @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
-        private Output<String> transitGatewayId;
-        private Output<String> vpcId;
+        private VpcAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcAttachmentArgs();
         }
 
         public Builder(VpcAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applianceModeSupport = defaults.applianceModeSupport;
-    	      this.dnsSupport = defaults.dnsSupport;
-    	      this.ipv6Support = defaults.ipv6Support;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.transitGatewayDefaultRouteTableAssociation = defaults.transitGatewayDefaultRouteTableAssociation;
-    	      this.transitGatewayDefaultRouteTablePropagation = defaults.transitGatewayDefaultRouteTablePropagation;
-    	      this.transitGatewayId = defaults.transitGatewayId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new VpcAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applianceModeSupport(@Nullable Output<String> applianceModeSupport) {
-            this.applianceModeSupport = applianceModeSupport;
+            $.applianceModeSupport = applianceModeSupport;
             return this;
         }
-        public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
-            this.applianceModeSupport = Codegen.ofNullable(applianceModeSupport);
-            return this;
+
+        public Builder applianceModeSupport(String applianceModeSupport) {
+            return applianceModeSupport(Output.of(applianceModeSupport));
         }
+
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
-            this.dnsSupport = dnsSupport;
+            $.dnsSupport = dnsSupport;
             return this;
         }
-        public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Codegen.ofNullable(dnsSupport);
-            return this;
+
+        public Builder dnsSupport(String dnsSupport) {
+            return dnsSupport(Output.of(dnsSupport));
         }
+
         public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
-            this.ipv6Support = ipv6Support;
+            $.ipv6Support = ipv6Support;
             return this;
         }
-        public Builder ipv6Support(@Nullable String ipv6Support) {
-            this.ipv6Support = Codegen.ofNullable(ipv6Support);
-            return this;
+
+        public Builder ipv6Support(String ipv6Support) {
+            return ipv6Support(Output.of(ipv6Support));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
+            $.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
-        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = Codegen.ofNullable(transitGatewayDefaultRouteTableAssociation);
-            return this;
+
+        public Builder transitGatewayDefaultRouteTableAssociation(Boolean transitGatewayDefaultRouteTableAssociation) {
+            return transitGatewayDefaultRouteTableAssociation(Output.of(transitGatewayDefaultRouteTableAssociation));
         }
+
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
+            $.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
-        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = Codegen.ofNullable(transitGatewayDefaultRouteTablePropagation);
-            return this;
+
+        public Builder transitGatewayDefaultRouteTablePropagation(Boolean transitGatewayDefaultRouteTablePropagation) {
+            return transitGatewayDefaultRouteTablePropagation(Output.of(transitGatewayDefaultRouteTablePropagation));
         }
+
         public Builder transitGatewayId(Output<String> transitGatewayId) {
-            this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
+
         public Builder transitGatewayId(String transitGatewayId) {
-            this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
-            return this;
+            return transitGatewayId(Output.of(transitGatewayId));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public VpcAttachmentArgs build() {
-            return new VpcAttachmentArgs(applianceModeSupport, dnsSupport, ipv6Support, subnetIds, tags, transitGatewayDefaultRouteTableAssociation, transitGatewayDefaultRouteTablePropagation, transitGatewayId, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public VpcAttachmentArgs build() {
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.transitGatewayId = Objects.requireNonNull($.transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

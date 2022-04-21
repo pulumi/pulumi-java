@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="onCreate")
-      private final @Nullable Output<String> onCreate;
+    private @Nullable Output<String> onCreate;
 
-    public Output<String> onCreate() {
-        return this.onCreate == null ? Codegen.empty() : this.onCreate;
+    public Optional<Output<String>> onCreate() {
+        return Optional.ofNullable(this.onCreate);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="onStart")
-      private final @Nullable Output<String> onStart;
+    private @Nullable Output<String> onStart;
 
-    public Output<String> onStart() {
-        return this.onStart == null ? Codegen.empty() : this.onStart;
+    public Optional<Output<String>> onStart() {
+        return Optional.ofNullable(this.onStart);
     }
 
-    public NotebookInstanceLifecycleConfigurationArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> onCreate,
-        @Nullable Output<String> onStart) {
-        this.name = name;
-        this.onCreate = onCreate;
-        this.onStart = onStart;
-    }
+    private NotebookInstanceLifecycleConfigurationArgs() {}
 
-    private NotebookInstanceLifecycleConfigurationArgs() {
-        this.name = Codegen.empty();
-        this.onCreate = Codegen.empty();
-        this.onStart = Codegen.empty();
+    private NotebookInstanceLifecycleConfigurationArgs(NotebookInstanceLifecycleConfigurationArgs $) {
+        this.name = $.name;
+        this.onCreate = $.onCreate;
+        this.onStart = $.onStart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotebookInstanceLifecycleConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> onCreate;
-        private @Nullable Output<String> onStart;
+        private NotebookInstanceLifecycleConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotebookInstanceLifecycleConfigurationArgs();
         }
 
         public Builder(NotebookInstanceLifecycleConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.onCreate = defaults.onCreate;
-    	      this.onStart = defaults.onStart;
+            $ = new NotebookInstanceLifecycleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder onCreate(@Nullable Output<String> onCreate) {
-            this.onCreate = onCreate;
+            $.onCreate = onCreate;
             return this;
         }
-        public Builder onCreate(@Nullable String onCreate) {
-            this.onCreate = Codegen.ofNullable(onCreate);
-            return this;
+
+        public Builder onCreate(String onCreate) {
+            return onCreate(Output.of(onCreate));
         }
+
         public Builder onStart(@Nullable Output<String> onStart) {
-            this.onStart = onStart;
+            $.onStart = onStart;
             return this;
         }
-        public Builder onStart(@Nullable String onStart) {
-            this.onStart = Codegen.ofNullable(onStart);
-            return this;
-        }        public NotebookInstanceLifecycleConfigurationArgs build() {
-            return new NotebookInstanceLifecycleConfigurationArgs(name, onCreate, onStart);
+
+        public Builder onStart(String onStart) {
+            return onStart(Output.of(onStart));
+        }
+
+        public NotebookInstanceLifecycleConfigurationArgs build() {
+            return $;
         }
     }
+
 }

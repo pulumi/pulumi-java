@@ -5,11 +5,11 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultClientId")
-      private final @Nullable Output<String> defaultClientId;
+    private @Nullable Output<String> defaultClientId;
 
-    public Output<String> defaultClientId() {
-        return this.defaultClientId == null ? Codegen.empty() : this.defaultClientId;
+    public Optional<Output<String>> defaultClientId() {
+        return Optional.ofNullable(this.defaultClientId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thingTypeName")
-      private final @Nullable Output<String> thingTypeName;
+    private @Nullable Output<String> thingTypeName;
 
-    public Output<String> thingTypeName() {
-        return this.thingTypeName == null ? Codegen.empty() : this.thingTypeName;
+    public Optional<Output<String>> thingTypeName() {
+        return Optional.ofNullable(this.thingTypeName);
     }
 
     /**
@@ -77,115 +77,98 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ThingState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<String> defaultClientId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> thingTypeName,
-        @Nullable Output<Integer> version) {
-        this.arn = arn;
-        this.attributes = attributes;
-        this.defaultClientId = defaultClientId;
-        this.name = name;
-        this.thingTypeName = thingTypeName;
-        this.version = version;
-    }
+    private ThingState() {}
 
-    private ThingState() {
-        this.arn = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.defaultClientId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.thingTypeName = Codegen.empty();
-        this.version = Codegen.empty();
+    private ThingState(ThingState $) {
+        this.arn = $.arn;
+        this.attributes = $.attributes;
+        this.defaultClientId = $.defaultClientId;
+        this.name = $.name;
+        this.thingTypeName = $.thingTypeName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<String> defaultClientId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> thingTypeName;
-        private @Nullable Output<Integer> version;
+        private ThingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingState();
         }
 
         public Builder(ThingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.attributes = defaults.attributes;
-    	      this.defaultClientId = defaults.defaultClientId;
-    	      this.name = defaults.name;
-    	      this.thingTypeName = defaults.thingTypeName;
-    	      this.version = defaults.version;
+            $ = new ThingState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder defaultClientId(@Nullable Output<String> defaultClientId) {
-            this.defaultClientId = defaultClientId;
+            $.defaultClientId = defaultClientId;
             return this;
         }
-        public Builder defaultClientId(@Nullable String defaultClientId) {
-            this.defaultClientId = Codegen.ofNullable(defaultClientId);
-            return this;
+
+        public Builder defaultClientId(String defaultClientId) {
+            return defaultClientId(Output.of(defaultClientId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
-            this.thingTypeName = thingTypeName;
+            $.thingTypeName = thingTypeName;
             return this;
         }
-        public Builder thingTypeName(@Nullable String thingTypeName) {
-            this.thingTypeName = Codegen.ofNullable(thingTypeName);
-            return this;
+
+        public Builder thingTypeName(String thingTypeName) {
+            return thingTypeName(Output.of(thingTypeName));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ThingState build() {
-            return new ThingState(arn, attributes, defaultClientId, name, thingTypeName, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ThingState build() {
+            return $;
         }
     }
+
 }

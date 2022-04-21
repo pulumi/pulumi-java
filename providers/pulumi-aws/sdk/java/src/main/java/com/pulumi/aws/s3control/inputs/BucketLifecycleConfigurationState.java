@@ -6,10 +6,10 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
+    private @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
-    public Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<BucketLifecycleConfigurationRuleGetArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public BucketLifecycleConfigurationState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
-        this.bucket = bucket;
-        this.rules = rules;
-    }
+    private BucketLifecycleConfigurationState() {}
 
-    private BucketLifecycleConfigurationState() {
-        this.bucket = Codegen.empty();
-        this.rules = Codegen.empty();
+    private BucketLifecycleConfigurationState(BucketLifecycleConfigurationState $) {
+        this.bucket = $.bucket;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
+        private BucketLifecycleConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleConfigurationState();
         }
 
         public Builder(BucketLifecycleConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.rules = defaults.rules;
+            $ = new BucketLifecycleConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder rules(@Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<BucketLifecycleConfigurationRuleGetArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<BucketLifecycleConfigurationRuleGetArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(BucketLifecycleConfigurationRuleGetArgs... rules) {
             return rules(List.of(rules));
-        }        public BucketLifecycleConfigurationState build() {
-            return new BucketLifecycleConfigurationState(bucket, rules);
+        }
+
+        public BucketLifecycleConfigurationState build() {
+            return $;
         }
     }
+
 }

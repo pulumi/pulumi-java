@@ -7,7 +7,6 @@ import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryp
 import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +19,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
      * 
      */
     @Import(name="connectionPasswordEncryption", required=true)
-      private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
+    private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
 
     public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption() {
         return this.connectionPasswordEncryption;
@@ -31,63 +30,60 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
      * 
      */
     @Import(name="encryptionAtRest", required=true)
-      private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
+    private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
 
     public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest() {
         return this.encryptionAtRest;
     }
 
-    public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs(
-        Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption,
-        Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest) {
-        this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption, "expected parameter 'connectionPasswordEncryption' to be non-null");
-        this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest, "expected parameter 'encryptionAtRest' to be non-null");
-    }
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs() {}
 
-    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs() {
-        this.connectionPasswordEncryption = Codegen.empty();
-        this.encryptionAtRest = Codegen.empty();
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs $) {
+        this.connectionPasswordEncryption = $.connectionPasswordEncryption;
+        this.encryptionAtRest = $.encryptionAtRest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
-        private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
+        private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs();
         }
 
         public Builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPasswordEncryption = defaults.connectionPasswordEncryption;
-    	      this.encryptionAtRest = defaults.encryptionAtRest;
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPasswordEncryption(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption) {
-            this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption);
+            $.connectionPasswordEncryption = connectionPasswordEncryption;
             return this;
         }
+
         public Builder connectionPasswordEncryption(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs connectionPasswordEncryption) {
-            this.connectionPasswordEncryption = Output.of(Objects.requireNonNull(connectionPasswordEncryption));
-            return this;
+            return connectionPasswordEncryption(Output.of(connectionPasswordEncryption));
         }
+
         public Builder encryptionAtRest(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest) {
-            this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest);
+            $.encryptionAtRest = encryptionAtRest;
             return this;
         }
+
         public Builder encryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs encryptionAtRest) {
-            this.encryptionAtRest = Output.of(Objects.requireNonNull(encryptionAtRest));
-            return this;
-        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs build() {
-            return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs(connectionPasswordEncryption, encryptionAtRest);
+            return encryptionAtRest(Output.of(encryptionAtRest));
+        }
+
+        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs build() {
+            $.connectionPasswordEncryption = Objects.requireNonNull($.connectionPasswordEncryption, "expected parameter 'connectionPasswordEncryption' to be non-null");
+            $.encryptionAtRest = Objects.requireNonNull($.encryptionAtRest, "expected parameter 'encryptionAtRest' to be non-null");
+            return $;
         }
     }
+
 }

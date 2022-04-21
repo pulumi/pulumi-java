@@ -17,45 +17,45 @@ public final class GetEventConnectionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetEventConnectionArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetEventConnectionArgs() {}
 
-    private GetEventConnectionArgs() {
-        this.name = null;
+    private GetEventConnectionArgs(GetEventConnectionArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetEventConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventConnectionArgs();
         }
 
         public Builder(GetEventConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetEventConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetEventConnectionArgs build() {
-            return new GetEventConnectionArgs(name);
+        }
+
+        public GetEventConnectionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

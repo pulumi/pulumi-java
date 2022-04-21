@@ -5,10 +5,10 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebhookFilterGroupFilterGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="excludeMatchedPattern")
-      private final @Nullable Output<Boolean> excludeMatchedPattern;
+    private @Nullable Output<Boolean> excludeMatchedPattern;
 
-    public Output<Boolean> excludeMatchedPattern() {
-        return this.excludeMatchedPattern == null ? Codegen.empty() : this.excludeMatchedPattern;
+    public Optional<Output<Boolean>> excludeMatchedPattern() {
+        return Optional.ofNullable(this.excludeMatchedPattern);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class WebhookFilterGroupFilterGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="pattern", required=true)
-      private final Output<String> pattern;
+    private Output<String> pattern;
 
     public Output<String> pattern() {
         return this.pattern;
@@ -43,76 +43,70 @@ public final class WebhookFilterGroupFilterGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public WebhookFilterGroupFilterGetArgs(
-        @Nullable Output<Boolean> excludeMatchedPattern,
-        Output<String> pattern,
-        Output<String> type) {
-        this.excludeMatchedPattern = excludeMatchedPattern;
-        this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private WebhookFilterGroupFilterGetArgs() {}
 
-    private WebhookFilterGroupFilterGetArgs() {
-        this.excludeMatchedPattern = Codegen.empty();
-        this.pattern = Codegen.empty();
-        this.type = Codegen.empty();
+    private WebhookFilterGroupFilterGetArgs(WebhookFilterGroupFilterGetArgs $) {
+        this.excludeMatchedPattern = $.excludeMatchedPattern;
+        this.pattern = $.pattern;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookFilterGroupFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> excludeMatchedPattern;
-        private Output<String> pattern;
-        private Output<String> type;
+        private WebhookFilterGroupFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookFilterGroupFilterGetArgs();
         }
 
         public Builder(WebhookFilterGroupFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeMatchedPattern = defaults.excludeMatchedPattern;
-    	      this.pattern = defaults.pattern;
-    	      this.type = defaults.type;
+            $ = new WebhookFilterGroupFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeMatchedPattern(@Nullable Output<Boolean> excludeMatchedPattern) {
-            this.excludeMatchedPattern = excludeMatchedPattern;
+            $.excludeMatchedPattern = excludeMatchedPattern;
             return this;
         }
-        public Builder excludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
-            this.excludeMatchedPattern = Codegen.ofNullable(excludeMatchedPattern);
-            return this;
+
+        public Builder excludeMatchedPattern(Boolean excludeMatchedPattern) {
+            return excludeMatchedPattern(Output.of(excludeMatchedPattern));
         }
+
         public Builder pattern(Output<String> pattern) {
-            this.pattern = Objects.requireNonNull(pattern);
+            $.pattern = pattern;
             return this;
         }
+
         public Builder pattern(String pattern) {
-            this.pattern = Output.of(Objects.requireNonNull(pattern));
-            return this;
+            return pattern(Output.of(pattern));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public WebhookFilterGroupFilterGetArgs build() {
-            return new WebhookFilterGroupFilterGetArgs(excludeMatchedPattern, pattern, type);
+            return type(Output.of(type));
+        }
+
+        public WebhookFilterGroupFilterGetArgs build() {
+            $.pattern = Objects.requireNonNull($.pattern, "expected parameter 'pattern' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

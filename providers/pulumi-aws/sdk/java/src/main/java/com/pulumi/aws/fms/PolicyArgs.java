@@ -8,12 +8,12 @@ import com.pulumi.aws.fms.inputs.PolicyIncludeMapArgs;
 import com.pulumi.aws.fms.inputs.PolicySecurityServicePolicyDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteAllPolicyResources")
-      private final @Nullable Output<Boolean> deleteAllPolicyResources;
+    private @Nullable Output<Boolean> deleteAllPolicyResources;
 
-    public Output<Boolean> deleteAllPolicyResources() {
-        return this.deleteAllPolicyResources == null ? Codegen.empty() : this.deleteAllPolicyResources;
+    public Optional<Output<Boolean>> deleteAllPolicyResources() {
+        return Optional.ofNullable(this.deleteAllPolicyResources);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludeMap")
-      private final @Nullable Output<PolicyExcludeMapArgs> excludeMap;
+    private @Nullable Output<PolicyExcludeMapArgs> excludeMap;
 
-    public Output<PolicyExcludeMapArgs> excludeMap() {
-        return this.excludeMap == null ? Codegen.empty() : this.excludeMap;
+    public Optional<Output<PolicyExcludeMapArgs>> excludeMap() {
+        return Optional.ofNullable(this.excludeMap);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludeResourceTags", required=true)
-      private final Output<Boolean> excludeResourceTags;
+    private Output<Boolean> excludeResourceTags;
 
     public Output<Boolean> excludeResourceTags() {
         return this.excludeResourceTags;
@@ -59,10 +59,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="includeMap")
-      private final @Nullable Output<PolicyIncludeMapArgs> includeMap;
+    private @Nullable Output<PolicyIncludeMapArgs> includeMap;
 
-    public Output<PolicyIncludeMapArgs> includeMap() {
-        return this.includeMap == null ? Codegen.empty() : this.includeMap;
+    public Optional<Output<PolicyIncludeMapArgs>> includeMap() {
+        return Optional.ofNullable(this.includeMap);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remediationEnabled")
-      private final @Nullable Output<Boolean> remediationEnabled;
+    private @Nullable Output<Boolean> remediationEnabled;
 
-    public Output<Boolean> remediationEnabled() {
-        return this.remediationEnabled == null ? Codegen.empty() : this.remediationEnabled;
+    public Optional<Output<Boolean>> remediationEnabled() {
+        return Optional.ofNullable(this.remediationEnabled);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceTags")
-      private final @Nullable Output<Map<String,String>> resourceTags;
+    private @Nullable Output<Map<String,String>> resourceTags;
 
-    public Output<Map<String,String>> resourceTags() {
-        return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
+    public Optional<Output<Map<String,String>>> resourceTags() {
+        return Optional.ofNullable(this.resourceTags);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceTypeLists")
-      private final @Nullable Output<List<String>> resourceTypeLists;
+    private @Nullable Output<List<String>> resourceTypeLists;
 
-    public Output<List<String>> resourceTypeLists() {
-        return this.resourceTypeLists == null ? Codegen.empty() : this.resourceTypeLists;
+    public Optional<Output<List<String>>> resourceTypeLists() {
+        return Optional.ofNullable(this.resourceTypeLists);
     }
 
     /**
@@ -125,170 +125,144 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityServicePolicyData", required=true)
-      private final Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData;
+    private Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData;
 
     public Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData() {
         return this.securityServicePolicyData;
     }
 
-    public PolicyArgs(
-        @Nullable Output<Boolean> deleteAllPolicyResources,
-        @Nullable Output<PolicyExcludeMapArgs> excludeMap,
-        Output<Boolean> excludeResourceTags,
-        @Nullable Output<PolicyIncludeMapArgs> includeMap,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> remediationEnabled,
-        @Nullable Output<Map<String,String>> resourceTags,
-        @Nullable Output<String> resourceType,
-        @Nullable Output<List<String>> resourceTypeLists,
-        Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData) {
-        this.deleteAllPolicyResources = deleteAllPolicyResources;
-        this.excludeMap = excludeMap;
-        this.excludeResourceTags = Objects.requireNonNull(excludeResourceTags, "expected parameter 'excludeResourceTags' to be non-null");
-        this.includeMap = includeMap;
-        this.name = name;
-        this.remediationEnabled = remediationEnabled;
-        this.resourceTags = resourceTags;
-        this.resourceType = resourceType;
-        this.resourceTypeLists = resourceTypeLists;
-        this.securityServicePolicyData = Objects.requireNonNull(securityServicePolicyData, "expected parameter 'securityServicePolicyData' to be non-null");
-    }
+    private PolicyArgs() {}
 
-    private PolicyArgs() {
-        this.deleteAllPolicyResources = Codegen.empty();
-        this.excludeMap = Codegen.empty();
-        this.excludeResourceTags = Codegen.empty();
-        this.includeMap = Codegen.empty();
-        this.name = Codegen.empty();
-        this.remediationEnabled = Codegen.empty();
-        this.resourceTags = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.resourceTypeLists = Codegen.empty();
-        this.securityServicePolicyData = Codegen.empty();
+    private PolicyArgs(PolicyArgs $) {
+        this.deleteAllPolicyResources = $.deleteAllPolicyResources;
+        this.excludeMap = $.excludeMap;
+        this.excludeResourceTags = $.excludeResourceTags;
+        this.includeMap = $.includeMap;
+        this.name = $.name;
+        this.remediationEnabled = $.remediationEnabled;
+        this.resourceTags = $.resourceTags;
+        this.resourceType = $.resourceType;
+        this.resourceTypeLists = $.resourceTypeLists;
+        this.securityServicePolicyData = $.securityServicePolicyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteAllPolicyResources;
-        private @Nullable Output<PolicyExcludeMapArgs> excludeMap;
-        private Output<Boolean> excludeResourceTags;
-        private @Nullable Output<PolicyIncludeMapArgs> includeMap;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> remediationEnabled;
-        private @Nullable Output<Map<String,String>> resourceTags;
-        private @Nullable Output<String> resourceType;
-        private @Nullable Output<List<String>> resourceTypeLists;
-        private Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData;
+        private PolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyArgs();
         }
 
         public Builder(PolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteAllPolicyResources = defaults.deleteAllPolicyResources;
-    	      this.excludeMap = defaults.excludeMap;
-    	      this.excludeResourceTags = defaults.excludeResourceTags;
-    	      this.includeMap = defaults.includeMap;
-    	      this.name = defaults.name;
-    	      this.remediationEnabled = defaults.remediationEnabled;
-    	      this.resourceTags = defaults.resourceTags;
-    	      this.resourceType = defaults.resourceType;
-    	      this.resourceTypeLists = defaults.resourceTypeLists;
-    	      this.securityServicePolicyData = defaults.securityServicePolicyData;
+            $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteAllPolicyResources(@Nullable Output<Boolean> deleteAllPolicyResources) {
-            this.deleteAllPolicyResources = deleteAllPolicyResources;
+            $.deleteAllPolicyResources = deleteAllPolicyResources;
             return this;
         }
-        public Builder deleteAllPolicyResources(@Nullable Boolean deleteAllPolicyResources) {
-            this.deleteAllPolicyResources = Codegen.ofNullable(deleteAllPolicyResources);
-            return this;
+
+        public Builder deleteAllPolicyResources(Boolean deleteAllPolicyResources) {
+            return deleteAllPolicyResources(Output.of(deleteAllPolicyResources));
         }
+
         public Builder excludeMap(@Nullable Output<PolicyExcludeMapArgs> excludeMap) {
-            this.excludeMap = excludeMap;
+            $.excludeMap = excludeMap;
             return this;
         }
-        public Builder excludeMap(@Nullable PolicyExcludeMapArgs excludeMap) {
-            this.excludeMap = Codegen.ofNullable(excludeMap);
-            return this;
+
+        public Builder excludeMap(PolicyExcludeMapArgs excludeMap) {
+            return excludeMap(Output.of(excludeMap));
         }
+
         public Builder excludeResourceTags(Output<Boolean> excludeResourceTags) {
-            this.excludeResourceTags = Objects.requireNonNull(excludeResourceTags);
+            $.excludeResourceTags = excludeResourceTags;
             return this;
         }
+
         public Builder excludeResourceTags(Boolean excludeResourceTags) {
-            this.excludeResourceTags = Output.of(Objects.requireNonNull(excludeResourceTags));
-            return this;
+            return excludeResourceTags(Output.of(excludeResourceTags));
         }
+
         public Builder includeMap(@Nullable Output<PolicyIncludeMapArgs> includeMap) {
-            this.includeMap = includeMap;
+            $.includeMap = includeMap;
             return this;
         }
-        public Builder includeMap(@Nullable PolicyIncludeMapArgs includeMap) {
-            this.includeMap = Codegen.ofNullable(includeMap);
-            return this;
+
+        public Builder includeMap(PolicyIncludeMapArgs includeMap) {
+            return includeMap(Output.of(includeMap));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder remediationEnabled(@Nullable Output<Boolean> remediationEnabled) {
-            this.remediationEnabled = remediationEnabled;
+            $.remediationEnabled = remediationEnabled;
             return this;
         }
-        public Builder remediationEnabled(@Nullable Boolean remediationEnabled) {
-            this.remediationEnabled = Codegen.ofNullable(remediationEnabled);
-            return this;
+
+        public Builder remediationEnabled(Boolean remediationEnabled) {
+            return remediationEnabled(Output.of(remediationEnabled));
         }
+
         public Builder resourceTags(@Nullable Output<Map<String,String>> resourceTags) {
-            this.resourceTags = resourceTags;
+            $.resourceTags = resourceTags;
             return this;
         }
-        public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
-            this.resourceTags = Codegen.ofNullable(resourceTags);
-            return this;
+
+        public Builder resourceTags(Map<String,String> resourceTags) {
+            return resourceTags(Output.of(resourceTags));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder resourceTypeLists(@Nullable Output<List<String>> resourceTypeLists) {
-            this.resourceTypeLists = resourceTypeLists;
+            $.resourceTypeLists = resourceTypeLists;
             return this;
         }
-        public Builder resourceTypeLists(@Nullable List<String> resourceTypeLists) {
-            this.resourceTypeLists = Codegen.ofNullable(resourceTypeLists);
-            return this;
+
+        public Builder resourceTypeLists(List<String> resourceTypeLists) {
+            return resourceTypeLists(Output.of(resourceTypeLists));
         }
+
         public Builder resourceTypeLists(String... resourceTypeLists) {
             return resourceTypeLists(List.of(resourceTypeLists));
         }
+
         public Builder securityServicePolicyData(Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData) {
-            this.securityServicePolicyData = Objects.requireNonNull(securityServicePolicyData);
+            $.securityServicePolicyData = securityServicePolicyData;
             return this;
         }
+
         public Builder securityServicePolicyData(PolicySecurityServicePolicyDataArgs securityServicePolicyData) {
-            this.securityServicePolicyData = Output.of(Objects.requireNonNull(securityServicePolicyData));
-            return this;
-        }        public PolicyArgs build() {
-            return new PolicyArgs(deleteAllPolicyResources, excludeMap, excludeResourceTags, includeMap, name, remediationEnabled, resourceTags, resourceType, resourceTypeLists, securityServicePolicyData);
+            return securityServicePolicyData(Output.of(securityServicePolicyData));
+        }
+
+        public PolicyArgs build() {
+            $.excludeResourceTags = Objects.requireNonNull($.excludeResourceTags, "expected parameter 'excludeResourceTags' to be non-null");
+            $.securityServicePolicyData = Objects.requireNonNull($.securityServicePolicyData, "expected parameter 'securityServicePolicyData' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RouteTablePropagationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RouteTablePropagationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RouteTablePropagationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="transitGatewayAttachmentId")
-      private final @Nullable Output<String> transitGatewayAttachmentId;
+    private @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> transitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
+    public Optional<Output<String>> transitGatewayAttachmentId() {
+        return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class RouteTablePropagationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="transitGatewayRouteTableId")
-      private final @Nullable Output<String> transitGatewayRouteTableId;
+    private @Nullable Output<String> transitGatewayRouteTableId;
 
-    public Output<String> transitGatewayRouteTableId() {
-        return this.transitGatewayRouteTableId == null ? Codegen.empty() : this.transitGatewayRouteTableId;
+    public Optional<Output<String>> transitGatewayRouteTableId() {
+        return Optional.ofNullable(this.transitGatewayRouteTableId);
     }
 
-    public RouteTablePropagationState(
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> resourceType,
-        @Nullable Output<String> transitGatewayAttachmentId,
-        @Nullable Output<String> transitGatewayRouteTableId) {
-        this.resourceId = resourceId;
-        this.resourceType = resourceType;
-        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
-        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
-    }
+    private RouteTablePropagationState() {}
 
-    private RouteTablePropagationState() {
-        this.resourceId = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.transitGatewayAttachmentId = Codegen.empty();
-        this.transitGatewayRouteTableId = Codegen.empty();
+    private RouteTablePropagationState(RouteTablePropagationState $) {
+        this.resourceId = $.resourceId;
+        this.resourceType = $.resourceType;
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
+        this.transitGatewayRouteTableId = $.transitGatewayRouteTableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteTablePropagationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> resourceType;
-        private @Nullable Output<String> transitGatewayAttachmentId;
-        private @Nullable Output<String> transitGatewayRouteTableId;
+        private RouteTablePropagationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteTablePropagationState();
         }
 
         public Builder(RouteTablePropagationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceType = defaults.resourceType;
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
-    	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
+            $ = new RouteTablePropagationState(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
-            return this;
+
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
+            return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
+
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+            $.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
-        public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Codegen.ofNullable(transitGatewayRouteTableId);
-            return this;
-        }        public RouteTablePropagationState build() {
-            return new RouteTablePropagationState(resourceId, resourceType, transitGatewayAttachmentId, transitGatewayRouteTableId);
+
+        public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
+            return transitGatewayRouteTableId(Output.of(transitGatewayRouteTableId));
+        }
+
+        public RouteTablePropagationState build() {
+            return $;
         }
     }
+
 }

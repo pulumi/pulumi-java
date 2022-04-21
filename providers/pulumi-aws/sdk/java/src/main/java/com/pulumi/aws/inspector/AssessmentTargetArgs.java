@@ -5,9 +5,9 @@ package com.pulumi.aws.inspector;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AssessmentTargetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class AssessmentTargetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupArn")
-      private final @Nullable Output<String> resourceGroupArn;
+    private @Nullable Output<String> resourceGroupArn;
 
-    public Output<String> resourceGroupArn() {
-        return this.resourceGroupArn == null ? Codegen.empty() : this.resourceGroupArn;
+    public Optional<Output<String>> resourceGroupArn() {
+        return Optional.ofNullable(this.resourceGroupArn);
     }
 
-    public AssessmentTargetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> resourceGroupArn) {
-        this.name = name;
-        this.resourceGroupArn = resourceGroupArn;
-    }
+    private AssessmentTargetArgs() {}
 
-    private AssessmentTargetArgs() {
-        this.name = Codegen.empty();
-        this.resourceGroupArn = Codegen.empty();
+    private AssessmentTargetArgs(AssessmentTargetArgs $) {
+        this.name = $.name;
+        this.resourceGroupArn = $.resourceGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resourceGroupArn;
+        private AssessmentTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentTargetArgs();
         }
 
         public Builder(AssessmentTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupArn = defaults.resourceGroupArn;
+            $ = new AssessmentTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupArn(@Nullable Output<String> resourceGroupArn) {
-            this.resourceGroupArn = resourceGroupArn;
+            $.resourceGroupArn = resourceGroupArn;
             return this;
         }
-        public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
-            this.resourceGroupArn = Codegen.ofNullable(resourceGroupArn);
-            return this;
-        }        public AssessmentTargetArgs build() {
-            return new AssessmentTargetArgs(name, resourceGroupArn);
+
+        public Builder resourceGroupArn(String resourceGroupArn) {
+            return resourceGroupArn(Output.of(resourceGroupArn));
+        }
+
+        public AssessmentTargetArgs build() {
+            return $;
         }
     }
+
 }

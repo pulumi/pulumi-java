@@ -5,7 +5,6 @@ package com.pulumi.aws.ebs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DefaultKmsKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyArn", required=true)
-      private final Output<String> keyArn;
+    private Output<String> keyArn;
 
     public Output<String> keyArn() {
         return this.keyArn;
     }
 
-    public DefaultKmsKeyArgs(Output<String> keyArn) {
-        this.keyArn = Objects.requireNonNull(keyArn, "expected parameter 'keyArn' to be non-null");
-    }
+    private DefaultKmsKeyArgs() {}
 
-    private DefaultKmsKeyArgs() {
-        this.keyArn = Codegen.empty();
+    private DefaultKmsKeyArgs(DefaultKmsKeyArgs $) {
+        this.keyArn = $.keyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultKmsKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyArn;
+        private DefaultKmsKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultKmsKeyArgs();
         }
 
         public Builder(DefaultKmsKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyArn = defaults.keyArn;
+            $ = new DefaultKmsKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyArn(Output<String> keyArn) {
-            this.keyArn = Objects.requireNonNull(keyArn);
+            $.keyArn = keyArn;
             return this;
         }
+
         public Builder keyArn(String keyArn) {
-            this.keyArn = Output.of(Objects.requireNonNull(keyArn));
-            return this;
-        }        public DefaultKmsKeyArgs build() {
-            return new DefaultKmsKeyArgs(keyArn);
+            return keyArn(Output.of(keyArn));
+        }
+
+        public DefaultKmsKeyArgs build() {
+            $.keyArn = Objects.requireNonNull($.keyArn, "expected parameter 'keyArn' to be non-null");
+            return $;
         }
     }
+
 }

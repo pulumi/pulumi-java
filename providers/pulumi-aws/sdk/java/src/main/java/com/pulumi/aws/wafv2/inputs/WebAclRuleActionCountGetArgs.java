@@ -6,8 +6,8 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleActionCountCustomRequestHandlingGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WebAclRuleActionCountGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="customRequestHandling")
-      private final @Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling;
+    private @Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling;
 
-    public Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling() {
-        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
+    public Optional<Output<WebAclRuleActionCountCustomRequestHandlingGetArgs>> customRequestHandling() {
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public WebAclRuleActionCountGetArgs(@Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private WebAclRuleActionCountGetArgs() {}
 
-    private WebAclRuleActionCountGetArgs() {
-        this.customRequestHandling = Codegen.empty();
+    private WebAclRuleActionCountGetArgs(WebAclRuleActionCountGetArgs $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleActionCountGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling;
+        private WebAclRuleActionCountGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleActionCountGetArgs();
         }
 
         public Builder(WebAclRuleActionCountGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new WebAclRuleActionCountGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
         }
-        public Builder customRequestHandling(@Nullable WebAclRuleActionCountCustomRequestHandlingGetArgs customRequestHandling) {
-            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
-            return this;
-        }        public WebAclRuleActionCountGetArgs build() {
-            return new WebAclRuleActionCountGetArgs(customRequestHandling);
+
+        public Builder customRequestHandling(WebAclRuleActionCountCustomRequestHandlingGetArgs customRequestHandling) {
+            return customRequestHandling(Output.of(customRequestHandling));
+        }
+
+        public WebAclRuleActionCountGetArgs build() {
+            return $;
         }
     }
+
 }

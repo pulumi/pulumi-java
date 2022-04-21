@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends com.pu
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends com.pu
      * 
      */
     @Import(name="signature")
-      private final @Nullable Output<String> signature;
+    private @Nullable Output<String> signature;
 
-    public Output<String> signature() {
-        return this.signature == null ? Codegen.empty() : this.signature;
+    public Optional<Output<String>> signature() {
+        return Optional.ofNullable(this.signature);
     }
 
-    public VpcIpamPoolCidrCidrAuthorizationContextGetArgs(
-        @Nullable Output<String> message,
-        @Nullable Output<String> signature) {
-        this.message = message;
-        this.signature = signature;
-    }
+    private VpcIpamPoolCidrCidrAuthorizationContextGetArgs() {}
 
-    private VpcIpamPoolCidrCidrAuthorizationContextGetArgs() {
-        this.message = Codegen.empty();
-        this.signature = Codegen.empty();
+    private VpcIpamPoolCidrCidrAuthorizationContextGetArgs(VpcIpamPoolCidrCidrAuthorizationContextGetArgs $) {
+        this.message = $.message;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcIpamPoolCidrCidrAuthorizationContextGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> signature;
+        private VpcIpamPoolCidrCidrAuthorizationContextGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcIpamPoolCidrCidrAuthorizationContextGetArgs();
         }
 
         public Builder(VpcIpamPoolCidrCidrAuthorizationContextGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.signature = defaults.signature;
+            $ = new VpcIpamPoolCidrCidrAuthorizationContextGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder signature(@Nullable Output<String> signature) {
-            this.signature = signature;
+            $.signature = signature;
             return this;
         }
-        public Builder signature(@Nullable String signature) {
-            this.signature = Codegen.ofNullable(signature);
-            return this;
-        }        public VpcIpamPoolCidrCidrAuthorizationContextGetArgs build() {
-            return new VpcIpamPoolCidrCidrAuthorizationContextGetArgs(message, signature);
+
+        public Builder signature(String signature) {
+            return signature(Output.of(signature));
+        }
+
+        public VpcIpamPoolCidrCidrAuthorizationContextGetArgs build() {
+            return $;
         }
     }
+
 }

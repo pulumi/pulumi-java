@@ -22,10 +22,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetRouteTableFilter> filters;
+    private @Nullable List<GetRouteTableFilter> filters;
 
-    public List<GetRouteTableFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetRouteTableFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId")
-      private final @Nullable String gatewayId;
+    private @Nullable String gatewayId;
 
     public Optional<String> gatewayId() {
-        return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableId")
-      private final @Nullable String routeTableId;
+    private @Nullable String routeTableId;
 
     public Optional<String> routeTableId() {
-        return this.routeTableId == null ? Optional.empty() : Optional.ofNullable(this.routeTableId);
+        return Optional.ofNullable(this.routeTableId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -77,94 +77,78 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public GetRouteTableArgs(
-        @Nullable List<GetRouteTableFilter> filters,
-        @Nullable String gatewayId,
-        @Nullable String routeTableId,
-        @Nullable String subnetId,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId) {
-        this.filters = filters;
-        this.gatewayId = gatewayId;
-        this.routeTableId = routeTableId;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private GetRouteTableArgs() {}
 
-    private GetRouteTableArgs() {
-        this.filters = List.of();
-        this.gatewayId = null;
-        this.routeTableId = null;
-        this.subnetId = null;
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetRouteTableArgs(GetRouteTableArgs $) {
+        this.filters = $.filters;
+        this.gatewayId = $.gatewayId;
+        this.routeTableId = $.routeTableId;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetRouteTableFilter> filters;
-        private @Nullable String gatewayId;
-        private @Nullable String routeTableId;
-        private @Nullable String subnetId;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
+        private GetRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteTableArgs();
         }
 
         public Builder(GetRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetRouteTableFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = routeTableId;
+            $.routeTableId = routeTableId;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public GetRouteTableArgs build() {
-            return new GetRouteTableArgs(filters, gatewayId, routeTableId, subnetId, tags, vpcId);
+        }
+
+        public GetRouteTableArgs build() {
+            return $;
         }
     }
+
 }

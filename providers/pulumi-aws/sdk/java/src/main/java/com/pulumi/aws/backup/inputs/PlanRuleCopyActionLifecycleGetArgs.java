@@ -5,9 +5,9 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PlanRuleCopyActionLifecycleGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="coldStorageAfter")
-      private final @Nullable Output<Integer> coldStorageAfter;
+    private @Nullable Output<Integer> coldStorageAfter;
 
-    public Output<Integer> coldStorageAfter() {
-        return this.coldStorageAfter == null ? Codegen.empty() : this.coldStorageAfter;
+    public Optional<Output<Integer>> coldStorageAfter() {
+        return Optional.ofNullable(this.coldStorageAfter);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class PlanRuleCopyActionLifecycleGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deleteAfter")
-      private final @Nullable Output<Integer> deleteAfter;
+    private @Nullable Output<Integer> deleteAfter;
 
-    public Output<Integer> deleteAfter() {
-        return this.deleteAfter == null ? Codegen.empty() : this.deleteAfter;
+    public Optional<Output<Integer>> deleteAfter() {
+        return Optional.ofNullable(this.deleteAfter);
     }
 
-    public PlanRuleCopyActionLifecycleGetArgs(
-        @Nullable Output<Integer> coldStorageAfter,
-        @Nullable Output<Integer> deleteAfter) {
-        this.coldStorageAfter = coldStorageAfter;
-        this.deleteAfter = deleteAfter;
-    }
+    private PlanRuleCopyActionLifecycleGetArgs() {}
 
-    private PlanRuleCopyActionLifecycleGetArgs() {
-        this.coldStorageAfter = Codegen.empty();
-        this.deleteAfter = Codegen.empty();
+    private PlanRuleCopyActionLifecycleGetArgs(PlanRuleCopyActionLifecycleGetArgs $) {
+        this.coldStorageAfter = $.coldStorageAfter;
+        this.deleteAfter = $.deleteAfter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanRuleCopyActionLifecycleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> coldStorageAfter;
-        private @Nullable Output<Integer> deleteAfter;
+        private PlanRuleCopyActionLifecycleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanRuleCopyActionLifecycleGetArgs();
         }
 
         public Builder(PlanRuleCopyActionLifecycleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coldStorageAfter = defaults.coldStorageAfter;
-    	      this.deleteAfter = defaults.deleteAfter;
+            $ = new PlanRuleCopyActionLifecycleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coldStorageAfter(@Nullable Output<Integer> coldStorageAfter) {
-            this.coldStorageAfter = coldStorageAfter;
+            $.coldStorageAfter = coldStorageAfter;
             return this;
         }
-        public Builder coldStorageAfter(@Nullable Integer coldStorageAfter) {
-            this.coldStorageAfter = Codegen.ofNullable(coldStorageAfter);
-            return this;
+
+        public Builder coldStorageAfter(Integer coldStorageAfter) {
+            return coldStorageAfter(Output.of(coldStorageAfter));
         }
+
         public Builder deleteAfter(@Nullable Output<Integer> deleteAfter) {
-            this.deleteAfter = deleteAfter;
+            $.deleteAfter = deleteAfter;
             return this;
         }
-        public Builder deleteAfter(@Nullable Integer deleteAfter) {
-            this.deleteAfter = Codegen.ofNullable(deleteAfter);
-            return this;
-        }        public PlanRuleCopyActionLifecycleGetArgs build() {
-            return new PlanRuleCopyActionLifecycleGetArgs(coldStorageAfter, deleteAfter);
+
+        public Builder deleteAfter(Integer deleteAfter) {
+            return deleteAfter(Output.of(deleteAfter));
+        }
+
+        public PlanRuleCopyActionLifecycleGetArgs build() {
+            return $;
         }
     }
+
 }

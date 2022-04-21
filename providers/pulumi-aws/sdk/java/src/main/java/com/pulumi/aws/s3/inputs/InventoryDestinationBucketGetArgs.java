@@ -6,9 +6,9 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InventoryDestinationBucketGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class InventoryDestinationBucketGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="bucketArn", required=true)
-      private final Output<String> bucketArn;
+    private Output<String> bucketArn;
 
     public Output<String> bucketArn() {
         return this.bucketArn;
@@ -43,10 +43,10 @@ public final class InventoryDestinationBucketGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<InventoryDestinationBucketEncryptionGetArgs> encryption;
+    private @Nullable Output<InventoryDestinationBucketEncryptionGetArgs> encryption;
 
-    public Output<InventoryDestinationBucketEncryptionGetArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<InventoryDestinationBucketEncryptionGetArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class InventoryDestinationBucketGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -65,102 +65,90 @@ public final class InventoryDestinationBucketGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public InventoryDestinationBucketGetArgs(
-        @Nullable Output<String> accountId,
-        Output<String> bucketArn,
-        @Nullable Output<InventoryDestinationBucketEncryptionGetArgs> encryption,
-        Output<String> format,
-        @Nullable Output<String> prefix) {
-        this.accountId = accountId;
-        this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
-        this.encryption = encryption;
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.prefix = prefix;
-    }
+    private InventoryDestinationBucketGetArgs() {}
 
-    private InventoryDestinationBucketGetArgs() {
-        this.accountId = Codegen.empty();
-        this.bucketArn = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.format = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private InventoryDestinationBucketGetArgs(InventoryDestinationBucketGetArgs $) {
+        this.accountId = $.accountId;
+        this.bucketArn = $.bucketArn;
+        this.encryption = $.encryption;
+        this.format = $.format;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InventoryDestinationBucketGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private Output<String> bucketArn;
-        private @Nullable Output<InventoryDestinationBucketEncryptionGetArgs> encryption;
-        private Output<String> format;
-        private @Nullable Output<String> prefix;
+        private InventoryDestinationBucketGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InventoryDestinationBucketGetArgs();
         }
 
         public Builder(InventoryDestinationBucketGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.bucketArn = defaults.bucketArn;
-    	      this.encryption = defaults.encryption;
-    	      this.format = defaults.format;
-    	      this.prefix = defaults.prefix;
+            $ = new InventoryDestinationBucketGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder bucketArn(Output<String> bucketArn) {
-            this.bucketArn = Objects.requireNonNull(bucketArn);
+            $.bucketArn = bucketArn;
             return this;
         }
+
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
-            return this;
+            return bucketArn(Output.of(bucketArn));
         }
+
         public Builder encryption(@Nullable Output<InventoryDestinationBucketEncryptionGetArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable InventoryDestinationBucketEncryptionGetArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(InventoryDestinationBucketEncryptionGetArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public InventoryDestinationBucketGetArgs build() {
-            return new InventoryDestinationBucketGetArgs(accountId, bucketArn, encryption, format, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public InventoryDestinationBucketGetArgs build() {
+            $.bucketArn = Objects.requireNonNull($.bucketArn, "expected parameter 'bucketArn' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

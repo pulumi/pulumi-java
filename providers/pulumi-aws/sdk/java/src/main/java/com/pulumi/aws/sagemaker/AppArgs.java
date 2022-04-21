@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker;
 import com.pulumi.aws.sagemaker.inputs.AppResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appName", required=true)
-      private final Output<String> appName;
+    private Output<String> appName;
 
     public Output<String> appName() {
         return this.appName;
@@ -33,7 +33,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appType", required=true)
-      private final Output<String> appType;
+    private Output<String> appType;
 
     public Output<String> appType() {
         return this.appType;
@@ -44,7 +44,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainId", required=true)
-      private final Output<String> domainId;
+    private Output<String> domainId;
 
     public Output<String> domainId() {
         return this.domainId;
@@ -55,10 +55,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSpec")
-      private final @Nullable Output<AppResourceSpecArgs> resourceSpec;
+    private @Nullable Output<AppResourceSpecArgs> resourceSpec;
 
-    public Output<AppResourceSpecArgs> resourceSpec() {
-        return this.resourceSpec == null ? Codegen.empty() : this.resourceSpec;
+    public Optional<Output<AppResourceSpecArgs>> resourceSpec() {
+        return Optional.ofNullable(this.resourceSpec);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -77,115 +77,102 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userProfileName", required=true)
-      private final Output<String> userProfileName;
+    private Output<String> userProfileName;
 
     public Output<String> userProfileName() {
         return this.userProfileName;
     }
 
-    public AppArgs(
-        Output<String> appName,
-        Output<String> appType,
-        Output<String> domainId,
-        @Nullable Output<AppResourceSpecArgs> resourceSpec,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> userProfileName) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.appType = Objects.requireNonNull(appType, "expected parameter 'appType' to be non-null");
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.resourceSpec = resourceSpec;
-        this.tags = tags;
-        this.userProfileName = Objects.requireNonNull(userProfileName, "expected parameter 'userProfileName' to be non-null");
-    }
+    private AppArgs() {}
 
-    private AppArgs() {
-        this.appName = Codegen.empty();
-        this.appType = Codegen.empty();
-        this.domainId = Codegen.empty();
-        this.resourceSpec = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userProfileName = Codegen.empty();
+    private AppArgs(AppArgs $) {
+        this.appName = $.appName;
+        this.appType = $.appType;
+        this.domainId = $.domainId;
+        this.resourceSpec = $.resourceSpec;
+        this.tags = $.tags;
+        this.userProfileName = $.userProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appName;
-        private Output<String> appType;
-        private Output<String> domainId;
-        private @Nullable Output<AppResourceSpecArgs> resourceSpec;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> userProfileName;
+        private AppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppArgs();
         }
 
         public Builder(AppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.appType = defaults.appType;
-    	      this.domainId = defaults.domainId;
-    	      this.resourceSpec = defaults.resourceSpec;
-    	      this.tags = defaults.tags;
-    	      this.userProfileName = defaults.userProfileName;
+            $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(Output<String> appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder appName(String appName) {
-            this.appName = Output.of(Objects.requireNonNull(appName));
-            return this;
+            return appName(Output.of(appName));
         }
+
         public Builder appType(Output<String> appType) {
-            this.appType = Objects.requireNonNull(appType);
+            $.appType = appType;
             return this;
         }
+
         public Builder appType(String appType) {
-            this.appType = Output.of(Objects.requireNonNull(appType));
-            return this;
+            return appType(Output.of(appType));
         }
+
         public Builder domainId(Output<String> domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder domainId(String domainId) {
-            this.domainId = Output.of(Objects.requireNonNull(domainId));
-            return this;
+            return domainId(Output.of(domainId));
         }
+
         public Builder resourceSpec(@Nullable Output<AppResourceSpecArgs> resourceSpec) {
-            this.resourceSpec = resourceSpec;
+            $.resourceSpec = resourceSpec;
             return this;
         }
-        public Builder resourceSpec(@Nullable AppResourceSpecArgs resourceSpec) {
-            this.resourceSpec = Codegen.ofNullable(resourceSpec);
-            return this;
+
+        public Builder resourceSpec(AppResourceSpecArgs resourceSpec) {
+            return resourceSpec(Output.of(resourceSpec));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userProfileName(Output<String> userProfileName) {
-            this.userProfileName = Objects.requireNonNull(userProfileName);
+            $.userProfileName = userProfileName;
             return this;
         }
+
         public Builder userProfileName(String userProfileName) {
-            this.userProfileName = Output.of(Objects.requireNonNull(userProfileName));
-            return this;
-        }        public AppArgs build() {
-            return new AppArgs(appName, appType, domainId, resourceSpec, tags, userProfileName);
+            return userProfileName(Output.of(userProfileName));
+        }
+
+        public AppArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.appType = Objects.requireNonNull($.appType, "expected parameter 'appType' to be non-null");
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            $.userProfileName = Objects.requireNonNull($.userProfileName, "expected parameter 'userProfileName' to be non-null");
+            return $;
         }
     }
+
 }

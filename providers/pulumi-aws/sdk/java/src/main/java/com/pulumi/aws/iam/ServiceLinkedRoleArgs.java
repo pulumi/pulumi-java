@@ -5,10 +5,10 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ServiceLinkedRoleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="awsServiceName", required=true)
-      private final Output<String> awsServiceName;
+    private Output<String> awsServiceName;
 
     public Output<String> awsServiceName() {
         return this.awsServiceName;
@@ -32,10 +32,10 @@ public final class ServiceLinkedRoleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="customSuffix")
-      private final @Nullable Output<String> customSuffix;
+    private @Nullable Output<String> customSuffix;
 
-    public Output<String> customSuffix() {
-        return this.customSuffix == null ? Codegen.empty() : this.customSuffix;
+    public Optional<Output<String>> customSuffix() {
+        return Optional.ofNullable(this.customSuffix);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceLinkedRoleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServiceLinkedRoleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -65,102 +65,89 @@ public final class ServiceLinkedRoleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ServiceLinkedRoleArgs(
-        Output<String> awsServiceName,
-        @Nullable Output<String> customSuffix,
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.awsServiceName = Objects.requireNonNull(awsServiceName, "expected parameter 'awsServiceName' to be non-null");
-        this.customSuffix = customSuffix;
-        this.description = description;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ServiceLinkedRoleArgs() {}
 
-    private ServiceLinkedRoleArgs() {
-        this.awsServiceName = Codegen.empty();
-        this.customSuffix = Codegen.empty();
-        this.description = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ServiceLinkedRoleArgs(ServiceLinkedRoleArgs $) {
+        this.awsServiceName = $.awsServiceName;
+        this.customSuffix = $.customSuffix;
+        this.description = $.description;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceLinkedRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> awsServiceName;
-        private @Nullable Output<String> customSuffix;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ServiceLinkedRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceLinkedRoleArgs();
         }
 
         public Builder(ServiceLinkedRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsServiceName = defaults.awsServiceName;
-    	      this.customSuffix = defaults.customSuffix;
-    	      this.description = defaults.description;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ServiceLinkedRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsServiceName(Output<String> awsServiceName) {
-            this.awsServiceName = Objects.requireNonNull(awsServiceName);
+            $.awsServiceName = awsServiceName;
             return this;
         }
+
         public Builder awsServiceName(String awsServiceName) {
-            this.awsServiceName = Output.of(Objects.requireNonNull(awsServiceName));
-            return this;
+            return awsServiceName(Output.of(awsServiceName));
         }
+
         public Builder customSuffix(@Nullable Output<String> customSuffix) {
-            this.customSuffix = customSuffix;
+            $.customSuffix = customSuffix;
             return this;
         }
-        public Builder customSuffix(@Nullable String customSuffix) {
-            this.customSuffix = Codegen.ofNullable(customSuffix);
-            return this;
+
+        public Builder customSuffix(String customSuffix) {
+            return customSuffix(Output.of(customSuffix));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ServiceLinkedRoleArgs build() {
-            return new ServiceLinkedRoleArgs(awsServiceName, customSuffix, description, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ServiceLinkedRoleArgs build() {
+            $.awsServiceName = Objects.requireNonNull($.awsServiceName, "expected parameter 'awsServiceName' to be non-null");
+            return $;
         }
     }
+
 }

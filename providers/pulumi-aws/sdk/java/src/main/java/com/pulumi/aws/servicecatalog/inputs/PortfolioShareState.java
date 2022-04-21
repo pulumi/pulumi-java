@@ -5,10 +5,10 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PortfolioShareState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PortfolioShareState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="accepted")
-      private final @Nullable Output<Boolean> accepted;
+    private @Nullable Output<Boolean> accepted;
 
-    public Output<Boolean> accepted() {
-        return this.accepted == null ? Codegen.empty() : this.accepted;
+    public Optional<Output<Boolean>> accepted() {
+        return Optional.ofNullable(this.accepted);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PortfolioShareState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="portfolioId")
-      private final @Nullable Output<String> portfolioId;
+    private @Nullable Output<String> portfolioId;
 
-    public Output<String> portfolioId() {
-        return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
+    public Optional<Output<String>> portfolioId() {
+        return Optional.ofNullable(this.portfolioId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PortfolioShareState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PortfolioShareState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="shareTagOptions")
-      private final @Nullable Output<Boolean> shareTagOptions;
+    private @Nullable Output<Boolean> shareTagOptions;
 
-    public Output<Boolean> shareTagOptions() {
-        return this.shareTagOptions == null ? Codegen.empty() : this.shareTagOptions;
+    public Optional<Output<Boolean>> shareTagOptions() {
+        return Optional.ofNullable(this.shareTagOptions);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class PortfolioShareState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -87,128 +87,108 @@ public final class PortfolioShareState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="waitForAcceptance")
-      private final @Nullable Output<Boolean> waitForAcceptance;
+    private @Nullable Output<Boolean> waitForAcceptance;
 
-    public Output<Boolean> waitForAcceptance() {
-        return this.waitForAcceptance == null ? Codegen.empty() : this.waitForAcceptance;
+    public Optional<Output<Boolean>> waitForAcceptance() {
+        return Optional.ofNullable(this.waitForAcceptance);
     }
 
-    public PortfolioShareState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<Boolean> accepted,
-        @Nullable Output<String> portfolioId,
-        @Nullable Output<String> principalId,
-        @Nullable Output<Boolean> shareTagOptions,
-        @Nullable Output<String> type,
-        @Nullable Output<Boolean> waitForAcceptance) {
-        this.acceptLanguage = acceptLanguage;
-        this.accepted = accepted;
-        this.portfolioId = portfolioId;
-        this.principalId = principalId;
-        this.shareTagOptions = shareTagOptions;
-        this.type = type;
-        this.waitForAcceptance = waitForAcceptance;
-    }
+    private PortfolioShareState() {}
 
-    private PortfolioShareState() {
-        this.acceptLanguage = Codegen.empty();
-        this.accepted = Codegen.empty();
-        this.portfolioId = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.shareTagOptions = Codegen.empty();
-        this.type = Codegen.empty();
-        this.waitForAcceptance = Codegen.empty();
+    private PortfolioShareState(PortfolioShareState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.accepted = $.accepted;
+        this.portfolioId = $.portfolioId;
+        this.principalId = $.principalId;
+        this.shareTagOptions = $.shareTagOptions;
+        this.type = $.type;
+        this.waitForAcceptance = $.waitForAcceptance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PortfolioShareState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<Boolean> accepted;
-        private @Nullable Output<String> portfolioId;
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<Boolean> shareTagOptions;
-        private @Nullable Output<String> type;
-        private @Nullable Output<Boolean> waitForAcceptance;
+        private PortfolioShareState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PortfolioShareState();
         }
 
         public Builder(PortfolioShareState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.accepted = defaults.accepted;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.principalId = defaults.principalId;
-    	      this.shareTagOptions = defaults.shareTagOptions;
-    	      this.type = defaults.type;
-    	      this.waitForAcceptance = defaults.waitForAcceptance;
+            $ = new PortfolioShareState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder accepted(@Nullable Output<Boolean> accepted) {
-            this.accepted = accepted;
+            $.accepted = accepted;
             return this;
         }
-        public Builder accepted(@Nullable Boolean accepted) {
-            this.accepted = Codegen.ofNullable(accepted);
-            return this;
+
+        public Builder accepted(Boolean accepted) {
+            return accepted(Output.of(accepted));
         }
+
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
-            this.portfolioId = portfolioId;
+            $.portfolioId = portfolioId;
             return this;
         }
-        public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Codegen.ofNullable(portfolioId);
-            return this;
+
+        public Builder portfolioId(String portfolioId) {
+            return portfolioId(Output.of(portfolioId));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder shareTagOptions(@Nullable Output<Boolean> shareTagOptions) {
-            this.shareTagOptions = shareTagOptions;
+            $.shareTagOptions = shareTagOptions;
             return this;
         }
-        public Builder shareTagOptions(@Nullable Boolean shareTagOptions) {
-            this.shareTagOptions = Codegen.ofNullable(shareTagOptions);
-            return this;
+
+        public Builder shareTagOptions(Boolean shareTagOptions) {
+            return shareTagOptions(Output.of(shareTagOptions));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder waitForAcceptance(@Nullable Output<Boolean> waitForAcceptance) {
-            this.waitForAcceptance = waitForAcceptance;
+            $.waitForAcceptance = waitForAcceptance;
             return this;
         }
-        public Builder waitForAcceptance(@Nullable Boolean waitForAcceptance) {
-            this.waitForAcceptance = Codegen.ofNullable(waitForAcceptance);
-            return this;
-        }        public PortfolioShareState build() {
-            return new PortfolioShareState(acceptLanguage, accepted, portfolioId, principalId, shareTagOptions, type, waitForAcceptance);
+
+        public Builder waitForAcceptance(Boolean waitForAcceptance) {
+            return waitForAcceptance(Output.of(waitForAcceptance));
+        }
+
+        public PortfolioShareState build() {
+            return $;
         }
     }
+
 }

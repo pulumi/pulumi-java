@@ -5,9 +5,9 @@ package com.pulumi.aws.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -31,10 +31,10 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
      * 
      */
     @Import(name="onExitCode")
-      private final @Nullable Output<String> onExitCode;
+    private @Nullable Output<String> onExitCode;
 
-    public Output<String> onExitCode() {
-        return this.onExitCode == null ? Codegen.empty() : this.onExitCode;
+    public Optional<Output<String>> onExitCode() {
+        return Optional.ofNullable(this.onExitCode);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
      * 
      */
     @Import(name="onReason")
-      private final @Nullable Output<String> onReason;
+    private @Nullable Output<String> onReason;
 
-    public Output<String> onReason() {
-        return this.onReason == null ? Codegen.empty() : this.onReason;
+    public Optional<Output<String>> onReason() {
+        return Optional.ofNullable(this.onReason);
     }
 
     /**
@@ -53,89 +53,79 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
      * 
      */
     @Import(name="onStatusReason")
-      private final @Nullable Output<String> onStatusReason;
+    private @Nullable Output<String> onStatusReason;
 
-    public Output<String> onStatusReason() {
-        return this.onStatusReason == null ? Codegen.empty() : this.onStatusReason;
+    public Optional<Output<String>> onStatusReason() {
+        return Optional.ofNullable(this.onStatusReason);
     }
 
-    public JobDefinitionRetryStrategyEvaluateOnExitArgs(
-        Output<String> action,
-        @Nullable Output<String> onExitCode,
-        @Nullable Output<String> onReason,
-        @Nullable Output<String> onStatusReason) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.onExitCode = onExitCode;
-        this.onReason = onReason;
-        this.onStatusReason = onStatusReason;
-    }
+    private JobDefinitionRetryStrategyEvaluateOnExitArgs() {}
 
-    private JobDefinitionRetryStrategyEvaluateOnExitArgs() {
-        this.action = Codegen.empty();
-        this.onExitCode = Codegen.empty();
-        this.onReason = Codegen.empty();
-        this.onStatusReason = Codegen.empty();
+    private JobDefinitionRetryStrategyEvaluateOnExitArgs(JobDefinitionRetryStrategyEvaluateOnExitArgs $) {
+        this.action = $.action;
+        this.onExitCode = $.onExitCode;
+        this.onReason = $.onReason;
+        this.onStatusReason = $.onStatusReason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDefinitionRetryStrategyEvaluateOnExitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private @Nullable Output<String> onExitCode;
-        private @Nullable Output<String> onReason;
-        private @Nullable Output<String> onStatusReason;
+        private JobDefinitionRetryStrategyEvaluateOnExitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDefinitionRetryStrategyEvaluateOnExitArgs();
         }
 
         public Builder(JobDefinitionRetryStrategyEvaluateOnExitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.onExitCode = defaults.onExitCode;
-    	      this.onReason = defaults.onReason;
-    	      this.onStatusReason = defaults.onStatusReason;
+            $ = new JobDefinitionRetryStrategyEvaluateOnExitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder onExitCode(@Nullable Output<String> onExitCode) {
-            this.onExitCode = onExitCode;
+            $.onExitCode = onExitCode;
             return this;
         }
-        public Builder onExitCode(@Nullable String onExitCode) {
-            this.onExitCode = Codegen.ofNullable(onExitCode);
-            return this;
+
+        public Builder onExitCode(String onExitCode) {
+            return onExitCode(Output.of(onExitCode));
         }
+
         public Builder onReason(@Nullable Output<String> onReason) {
-            this.onReason = onReason;
+            $.onReason = onReason;
             return this;
         }
-        public Builder onReason(@Nullable String onReason) {
-            this.onReason = Codegen.ofNullable(onReason);
-            return this;
+
+        public Builder onReason(String onReason) {
+            return onReason(Output.of(onReason));
         }
+
         public Builder onStatusReason(@Nullable Output<String> onStatusReason) {
-            this.onStatusReason = onStatusReason;
+            $.onStatusReason = onStatusReason;
             return this;
         }
-        public Builder onStatusReason(@Nullable String onStatusReason) {
-            this.onStatusReason = Codegen.ofNullable(onStatusReason);
-            return this;
-        }        public JobDefinitionRetryStrategyEvaluateOnExitArgs build() {
-            return new JobDefinitionRetryStrategyEvaluateOnExitArgs(action, onExitCode, onReason, onStatusReason);
+
+        public Builder onStatusReason(String onStatusReason) {
+            return onStatusReason(Output.of(onStatusReason));
+        }
+
+        public JobDefinitionRetryStrategyEvaluateOnExitArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

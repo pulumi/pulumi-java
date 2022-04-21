@@ -17,45 +17,45 @@ public final class GetLaunchTemplateEnclaveOption extends com.pulumi.resources.I
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetLaunchTemplateEnclaveOption(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetLaunchTemplateEnclaveOption() {}
 
-    private GetLaunchTemplateEnclaveOption() {
-        this.enabled = null;
+    private GetLaunchTemplateEnclaveOption(GetLaunchTemplateEnclaveOption $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateEnclaveOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetLaunchTemplateEnclaveOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateEnclaveOption();
         }
 
         public Builder(GetLaunchTemplateEnclaveOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetLaunchTemplateEnclaveOption(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetLaunchTemplateEnclaveOption build() {
-            return new GetLaunchTemplateEnclaveOption(enabled);
+        }
+
+        public GetLaunchTemplateEnclaveOption build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

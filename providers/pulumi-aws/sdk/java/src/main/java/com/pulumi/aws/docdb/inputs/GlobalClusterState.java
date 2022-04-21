@@ -6,11 +6,11 @@ package com.pulumi.aws.docdb.inputs;
 import com.pulumi.aws.docdb.inputs.GlobalClusterGlobalClusterMemberGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="globalClusterIdentifier")
-      private final @Nullable Output<String> globalClusterIdentifier;
+    private @Nullable Output<String> globalClusterIdentifier;
 
-    public Output<String> globalClusterIdentifier() {
-        return this.globalClusterIdentifier == null ? Codegen.empty() : this.globalClusterIdentifier;
+    public Optional<Output<String>> globalClusterIdentifier() {
+        return Optional.ofNullable(this.globalClusterIdentifier);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="globalClusterMembers")
-      private final @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
+    private @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
 
-    public Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers() {
-        return this.globalClusterMembers == null ? Codegen.empty() : this.globalClusterMembers;
+    public Optional<Output<List<GlobalClusterGlobalClusterMemberGetArgs>>> globalClusterMembers() {
+        return Optional.ofNullable(this.globalClusterMembers);
     }
 
     /**
@@ -97,204 +97,173 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="globalClusterResourceId")
-      private final @Nullable Output<String> globalClusterResourceId;
+    private @Nullable Output<String> globalClusterResourceId;
 
-    public Output<String> globalClusterResourceId() {
-        return this.globalClusterResourceId == null ? Codegen.empty() : this.globalClusterResourceId;
+    public Optional<Output<String>> globalClusterResourceId() {
+        return Optional.ofNullable(this.globalClusterResourceId);
     }
 
     @Import(name="sourceDbClusterIdentifier")
-      private final @Nullable Output<String> sourceDbClusterIdentifier;
+    private @Nullable Output<String> sourceDbClusterIdentifier;
 
-    public Output<String> sourceDbClusterIdentifier() {
-        return this.sourceDbClusterIdentifier == null ? Codegen.empty() : this.sourceDbClusterIdentifier;
+    public Optional<Output<String>> sourceDbClusterIdentifier() {
+        return Optional.ofNullable(this.sourceDbClusterIdentifier);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     @Import(name="storageEncrypted")
-      private final @Nullable Output<Boolean> storageEncrypted;
+    private @Nullable Output<Boolean> storageEncrypted;
 
-    public Output<Boolean> storageEncrypted() {
-        return this.storageEncrypted == null ? Codegen.empty() : this.storageEncrypted;
+    public Optional<Output<Boolean>> storageEncrypted() {
+        return Optional.ofNullable(this.storageEncrypted);
     }
 
-    public GlobalClusterState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> engine,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<String> globalClusterIdentifier,
-        @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers,
-        @Nullable Output<String> globalClusterResourceId,
-        @Nullable Output<String> sourceDbClusterIdentifier,
-        @Nullable Output<String> status,
-        @Nullable Output<Boolean> storageEncrypted) {
-        this.arn = arn;
-        this.databaseName = databaseName;
-        this.deletionProtection = deletionProtection;
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.globalClusterIdentifier = globalClusterIdentifier;
-        this.globalClusterMembers = globalClusterMembers;
-        this.globalClusterResourceId = globalClusterResourceId;
-        this.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
-        this.status = status;
-        this.storageEncrypted = storageEncrypted;
-    }
+    private GlobalClusterState() {}
 
-    private GlobalClusterState() {
-        this.arn = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.globalClusterIdentifier = Codegen.empty();
-        this.globalClusterMembers = Codegen.empty();
-        this.globalClusterResourceId = Codegen.empty();
-        this.sourceDbClusterIdentifier = Codegen.empty();
-        this.status = Codegen.empty();
-        this.storageEncrypted = Codegen.empty();
+    private GlobalClusterState(GlobalClusterState $) {
+        this.arn = $.arn;
+        this.databaseName = $.databaseName;
+        this.deletionProtection = $.deletionProtection;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.globalClusterIdentifier = $.globalClusterIdentifier;
+        this.globalClusterMembers = $.globalClusterMembers;
+        this.globalClusterResourceId = $.globalClusterResourceId;
+        this.sourceDbClusterIdentifier = $.sourceDbClusterIdentifier;
+        this.status = $.status;
+        this.storageEncrypted = $.storageEncrypted;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<String> globalClusterIdentifier;
-        private @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
-        private @Nullable Output<String> globalClusterResourceId;
-        private @Nullable Output<String> sourceDbClusterIdentifier;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Boolean> storageEncrypted;
+        private GlobalClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalClusterState();
         }
 
         public Builder(GlobalClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.databaseName = defaults.databaseName;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.globalClusterIdentifier = defaults.globalClusterIdentifier;
-    	      this.globalClusterMembers = defaults.globalClusterMembers;
-    	      this.globalClusterResourceId = defaults.globalClusterResourceId;
-    	      this.sourceDbClusterIdentifier = defaults.sourceDbClusterIdentifier;
-    	      this.status = defaults.status;
-    	      this.storageEncrypted = defaults.storageEncrypted;
+            $ = new GlobalClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
-            this.globalClusterIdentifier = globalClusterIdentifier;
+            $.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
-        public Builder globalClusterIdentifier(@Nullable String globalClusterIdentifier) {
-            this.globalClusterIdentifier = Codegen.ofNullable(globalClusterIdentifier);
-            return this;
+
+        public Builder globalClusterIdentifier(String globalClusterIdentifier) {
+            return globalClusterIdentifier(Output.of(globalClusterIdentifier));
         }
+
         public Builder globalClusterMembers(@Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers) {
-            this.globalClusterMembers = globalClusterMembers;
+            $.globalClusterMembers = globalClusterMembers;
             return this;
         }
-        public Builder globalClusterMembers(@Nullable List<GlobalClusterGlobalClusterMemberGetArgs> globalClusterMembers) {
-            this.globalClusterMembers = Codegen.ofNullable(globalClusterMembers);
-            return this;
+
+        public Builder globalClusterMembers(List<GlobalClusterGlobalClusterMemberGetArgs> globalClusterMembers) {
+            return globalClusterMembers(Output.of(globalClusterMembers));
         }
+
         public Builder globalClusterMembers(GlobalClusterGlobalClusterMemberGetArgs... globalClusterMembers) {
             return globalClusterMembers(List.of(globalClusterMembers));
         }
+
         public Builder globalClusterResourceId(@Nullable Output<String> globalClusterResourceId) {
-            this.globalClusterResourceId = globalClusterResourceId;
+            $.globalClusterResourceId = globalClusterResourceId;
             return this;
         }
-        public Builder globalClusterResourceId(@Nullable String globalClusterResourceId) {
-            this.globalClusterResourceId = Codegen.ofNullable(globalClusterResourceId);
-            return this;
+
+        public Builder globalClusterResourceId(String globalClusterResourceId) {
+            return globalClusterResourceId(Output.of(globalClusterResourceId));
         }
+
         public Builder sourceDbClusterIdentifier(@Nullable Output<String> sourceDbClusterIdentifier) {
-            this.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
+            $.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
             return this;
         }
-        public Builder sourceDbClusterIdentifier(@Nullable String sourceDbClusterIdentifier) {
-            this.sourceDbClusterIdentifier = Codegen.ofNullable(sourceDbClusterIdentifier);
-            return this;
+
+        public Builder sourceDbClusterIdentifier(String sourceDbClusterIdentifier) {
+            return sourceDbClusterIdentifier(Output.of(sourceDbClusterIdentifier));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
-            this.storageEncrypted = storageEncrypted;
+            $.storageEncrypted = storageEncrypted;
             return this;
         }
-        public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Codegen.ofNullable(storageEncrypted);
-            return this;
-        }        public GlobalClusterState build() {
-            return new GlobalClusterState(arn, databaseName, deletionProtection, engine, engineVersion, globalClusterIdentifier, globalClusterMembers, globalClusterResourceId, sourceDbClusterIdentifier, status, storageEncrypted);
+
+        public Builder storageEncrypted(Boolean storageEncrypted) {
+            return storageEncrypted(Output.of(storageEncrypted));
+        }
+
+        public GlobalClusterState build() {
+            return $;
         }
     }
+
 }

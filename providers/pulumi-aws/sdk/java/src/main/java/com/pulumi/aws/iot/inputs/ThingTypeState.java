@@ -6,11 +6,11 @@ package com.pulumi.aws.iot.inputs;
 import com.pulumi.aws.iot.inputs.ThingTypePropertiesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deprecated")
-      private final @Nullable Output<Boolean> deprecated;
+    private @Nullable Output<Boolean> deprecated;
 
-    public Output<Boolean> deprecated() {
-        return this.deprecated == null ? Codegen.empty() : this.deprecated;
+    public Optional<Output<Boolean>> deprecated() {
+        return Optional.ofNullable(this.deprecated);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ThingTypePropertiesGetArgs> properties;
+    private @Nullable Output<ThingTypePropertiesGetArgs> properties;
 
-    public Output<ThingTypePropertiesGetArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ThingTypePropertiesGetArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,115 +78,98 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ThingTypeState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> deprecated,
-        @Nullable Output<String> name,
-        @Nullable Output<ThingTypePropertiesGetArgs> properties,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.deprecated = deprecated;
-        this.name = name;
-        this.properties = properties;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ThingTypeState() {}
 
-    private ThingTypeState() {
-        this.arn = Codegen.empty();
-        this.deprecated = Codegen.empty();
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ThingTypeState(ThingTypeState $) {
+        this.arn = $.arn;
+        this.deprecated = $.deprecated;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingTypeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> deprecated;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ThingTypePropertiesGetArgs> properties;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ThingTypeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingTypeState();
         }
 
         public Builder(ThingTypeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.deprecated = defaults.deprecated;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ThingTypeState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder deprecated(@Nullable Output<Boolean> deprecated) {
-            this.deprecated = deprecated;
+            $.deprecated = deprecated;
             return this;
         }
-        public Builder deprecated(@Nullable Boolean deprecated) {
-            this.deprecated = Codegen.ofNullable(deprecated);
-            return this;
+
+        public Builder deprecated(Boolean deprecated) {
+            return deprecated(Output.of(deprecated));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder properties(@Nullable Output<ThingTypePropertiesGetArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ThingTypePropertiesGetArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ThingTypePropertiesGetArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ThingTypeState build() {
-            return new ThingTypeState(arn, deprecated, name, properties, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ThingTypeState build() {
+            return $;
         }
     }
+
 }

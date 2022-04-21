@@ -6,9 +6,9 @@ package com.pulumi.aws.efs.inputs;
 import com.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BackupPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupPolicy")
-      private final @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy;
+    private @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy;
 
-    public Output<BackupPolicyBackupPolicyGetArgs> backupPolicy() {
-        return this.backupPolicy == null ? Codegen.empty() : this.backupPolicy;
+    public Optional<Output<BackupPolicyBackupPolicyGetArgs>> backupPolicy() {
+        return Optional.ofNullable(this.backupPolicy);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BackupPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable Output<String> fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
-    public Output<String> fileSystemId() {
-        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
+    public Optional<Output<String>> fileSystemId() {
+        return Optional.ofNullable(this.fileSystemId);
     }
 
-    public BackupPolicyState(
-        @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy,
-        @Nullable Output<String> fileSystemId) {
-        this.backupPolicy = backupPolicy;
-        this.fileSystemId = fileSystemId;
-    }
+    private BackupPolicyState() {}
 
-    private BackupPolicyState() {
-        this.backupPolicy = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
+    private BackupPolicyState(BackupPolicyState $) {
+        this.backupPolicy = $.backupPolicy;
+        this.fileSystemId = $.fileSystemId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy;
-        private @Nullable Output<String> fileSystemId;
+        private BackupPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPolicyState();
         }
 
         public Builder(BackupPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPolicy = defaults.backupPolicy;
-    	      this.fileSystemId = defaults.fileSystemId;
+            $ = new BackupPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPolicy(@Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy) {
-            this.backupPolicy = backupPolicy;
+            $.backupPolicy = backupPolicy;
             return this;
         }
-        public Builder backupPolicy(@Nullable BackupPolicyBackupPolicyGetArgs backupPolicy) {
-            this.backupPolicy = Codegen.ofNullable(backupPolicy);
-            return this;
+
+        public Builder backupPolicy(BackupPolicyBackupPolicyGetArgs backupPolicy) {
+            return backupPolicy(Output.of(backupPolicy));
         }
+
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
-        public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Codegen.ofNullable(fileSystemId);
-            return this;
-        }        public BackupPolicyState build() {
-            return new BackupPolicyState(backupPolicy, fileSystemId);
+
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
+        }
+
+        public BackupPolicyState build() {
+            return $;
         }
     }
+
 }

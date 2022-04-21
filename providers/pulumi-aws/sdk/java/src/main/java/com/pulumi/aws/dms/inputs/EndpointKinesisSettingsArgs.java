@@ -5,10 +5,10 @@ package com.pulumi.aws.dms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="includeControlDetails")
-      private final @Nullable Output<Boolean> includeControlDetails;
+    private @Nullable Output<Boolean> includeControlDetails;
 
-    public Output<Boolean> includeControlDetails() {
-        return this.includeControlDetails == null ? Codegen.empty() : this.includeControlDetails;
+    public Optional<Output<Boolean>> includeControlDetails() {
+        return Optional.ofNullable(this.includeControlDetails);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="includeNullAndEmpty")
-      private final @Nullable Output<Boolean> includeNullAndEmpty;
+    private @Nullable Output<Boolean> includeNullAndEmpty;
 
-    public Output<Boolean> includeNullAndEmpty() {
-        return this.includeNullAndEmpty == null ? Codegen.empty() : this.includeNullAndEmpty;
+    public Optional<Output<Boolean>> includeNullAndEmpty() {
+        return Optional.ofNullable(this.includeNullAndEmpty);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="includePartitionValue")
-      private final @Nullable Output<Boolean> includePartitionValue;
+    private @Nullable Output<Boolean> includePartitionValue;
 
-    public Output<Boolean> includePartitionValue() {
-        return this.includePartitionValue == null ? Codegen.empty() : this.includePartitionValue;
+    public Optional<Output<Boolean>> includePartitionValue() {
+        return Optional.ofNullable(this.includePartitionValue);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="includeTableAlterOperations")
-      private final @Nullable Output<Boolean> includeTableAlterOperations;
+    private @Nullable Output<Boolean> includeTableAlterOperations;
 
-    public Output<Boolean> includeTableAlterOperations() {
-        return this.includeTableAlterOperations == null ? Codegen.empty() : this.includeTableAlterOperations;
+    public Optional<Output<Boolean>> includeTableAlterOperations() {
+        return Optional.ofNullable(this.includeTableAlterOperations);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="includeTransactionDetails")
-      private final @Nullable Output<Boolean> includeTransactionDetails;
+    private @Nullable Output<Boolean> includeTransactionDetails;
 
-    public Output<Boolean> includeTransactionDetails() {
-        return this.includeTransactionDetails == null ? Codegen.empty() : this.includeTransactionDetails;
+    public Optional<Output<Boolean>> includeTransactionDetails() {
+        return Optional.ofNullable(this.includeTransactionDetails);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="messageFormat")
-      private final @Nullable Output<String> messageFormat;
+    private @Nullable Output<String> messageFormat;
 
-    public Output<String> messageFormat() {
-        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
+    public Optional<Output<String>> messageFormat() {
+        return Optional.ofNullable(this.messageFormat);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partitionIncludeSchemaTable")
-      private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
+    private @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
-    public Output<Boolean> partitionIncludeSchemaTable() {
-        return this.partitionIncludeSchemaTable == null ? Codegen.empty() : this.partitionIncludeSchemaTable;
+    public Optional<Output<Boolean>> partitionIncludeSchemaTable() {
+        return Optional.ofNullable(this.partitionIncludeSchemaTable);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serviceAccessRoleArn")
-      private final @Nullable Output<String> serviceAccessRoleArn;
+    private @Nullable Output<String> serviceAccessRoleArn;
 
-    public Output<String> serviceAccessRoleArn() {
-        return this.serviceAccessRoleArn == null ? Codegen.empty() : this.serviceAccessRoleArn;
+    public Optional<Output<String>> serviceAccessRoleArn() {
+        return Optional.ofNullable(this.serviceAccessRoleArn);
     }
 
     /**
@@ -109,154 +109,128 @@ public final class EndpointKinesisSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="streamArn")
-      private final @Nullable Output<String> streamArn;
+    private @Nullable Output<String> streamArn;
 
-    public Output<String> streamArn() {
-        return this.streamArn == null ? Codegen.empty() : this.streamArn;
+    public Optional<Output<String>> streamArn() {
+        return Optional.ofNullable(this.streamArn);
     }
 
-    public EndpointKinesisSettingsArgs(
-        @Nullable Output<Boolean> includeControlDetails,
-        @Nullable Output<Boolean> includeNullAndEmpty,
-        @Nullable Output<Boolean> includePartitionValue,
-        @Nullable Output<Boolean> includeTableAlterOperations,
-        @Nullable Output<Boolean> includeTransactionDetails,
-        @Nullable Output<String> messageFormat,
-        @Nullable Output<Boolean> partitionIncludeSchemaTable,
-        @Nullable Output<String> serviceAccessRoleArn,
-        @Nullable Output<String> streamArn) {
-        this.includeControlDetails = includeControlDetails;
-        this.includeNullAndEmpty = includeNullAndEmpty;
-        this.includePartitionValue = includePartitionValue;
-        this.includeTableAlterOperations = includeTableAlterOperations;
-        this.includeTransactionDetails = includeTransactionDetails;
-        this.messageFormat = messageFormat;
-        this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
-        this.serviceAccessRoleArn = serviceAccessRoleArn;
-        this.streamArn = streamArn;
-    }
+    private EndpointKinesisSettingsArgs() {}
 
-    private EndpointKinesisSettingsArgs() {
-        this.includeControlDetails = Codegen.empty();
-        this.includeNullAndEmpty = Codegen.empty();
-        this.includePartitionValue = Codegen.empty();
-        this.includeTableAlterOperations = Codegen.empty();
-        this.includeTransactionDetails = Codegen.empty();
-        this.messageFormat = Codegen.empty();
-        this.partitionIncludeSchemaTable = Codegen.empty();
-        this.serviceAccessRoleArn = Codegen.empty();
-        this.streamArn = Codegen.empty();
+    private EndpointKinesisSettingsArgs(EndpointKinesisSettingsArgs $) {
+        this.includeControlDetails = $.includeControlDetails;
+        this.includeNullAndEmpty = $.includeNullAndEmpty;
+        this.includePartitionValue = $.includePartitionValue;
+        this.includeTableAlterOperations = $.includeTableAlterOperations;
+        this.includeTransactionDetails = $.includeTransactionDetails;
+        this.messageFormat = $.messageFormat;
+        this.partitionIncludeSchemaTable = $.partitionIncludeSchemaTable;
+        this.serviceAccessRoleArn = $.serviceAccessRoleArn;
+        this.streamArn = $.streamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointKinesisSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> includeControlDetails;
-        private @Nullable Output<Boolean> includeNullAndEmpty;
-        private @Nullable Output<Boolean> includePartitionValue;
-        private @Nullable Output<Boolean> includeTableAlterOperations;
-        private @Nullable Output<Boolean> includeTransactionDetails;
-        private @Nullable Output<String> messageFormat;
-        private @Nullable Output<Boolean> partitionIncludeSchemaTable;
-        private @Nullable Output<String> serviceAccessRoleArn;
-        private @Nullable Output<String> streamArn;
+        private EndpointKinesisSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointKinesisSettingsArgs();
         }
 
         public Builder(EndpointKinesisSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeControlDetails = defaults.includeControlDetails;
-    	      this.includeNullAndEmpty = defaults.includeNullAndEmpty;
-    	      this.includePartitionValue = defaults.includePartitionValue;
-    	      this.includeTableAlterOperations = defaults.includeTableAlterOperations;
-    	      this.includeTransactionDetails = defaults.includeTransactionDetails;
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.partitionIncludeSchemaTable = defaults.partitionIncludeSchemaTable;
-    	      this.serviceAccessRoleArn = defaults.serviceAccessRoleArn;
-    	      this.streamArn = defaults.streamArn;
+            $ = new EndpointKinesisSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includeControlDetails(@Nullable Output<Boolean> includeControlDetails) {
-            this.includeControlDetails = includeControlDetails;
+            $.includeControlDetails = includeControlDetails;
             return this;
         }
-        public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
-            this.includeControlDetails = Codegen.ofNullable(includeControlDetails);
-            return this;
+
+        public Builder includeControlDetails(Boolean includeControlDetails) {
+            return includeControlDetails(Output.of(includeControlDetails));
         }
+
         public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
-            this.includeNullAndEmpty = includeNullAndEmpty;
+            $.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
-        public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
-            this.includeNullAndEmpty = Codegen.ofNullable(includeNullAndEmpty);
-            return this;
+
+        public Builder includeNullAndEmpty(Boolean includeNullAndEmpty) {
+            return includeNullAndEmpty(Output.of(includeNullAndEmpty));
         }
+
         public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
-            this.includePartitionValue = includePartitionValue;
+            $.includePartitionValue = includePartitionValue;
             return this;
         }
-        public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
-            this.includePartitionValue = Codegen.ofNullable(includePartitionValue);
-            return this;
+
+        public Builder includePartitionValue(Boolean includePartitionValue) {
+            return includePartitionValue(Output.of(includePartitionValue));
         }
+
         public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
-            this.includeTableAlterOperations = includeTableAlterOperations;
+            $.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
-        public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
-            this.includeTableAlterOperations = Codegen.ofNullable(includeTableAlterOperations);
-            return this;
+
+        public Builder includeTableAlterOperations(Boolean includeTableAlterOperations) {
+            return includeTableAlterOperations(Output.of(includeTableAlterOperations));
         }
+
         public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
-            this.includeTransactionDetails = includeTransactionDetails;
+            $.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
-        public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
-            this.includeTransactionDetails = Codegen.ofNullable(includeTransactionDetails);
-            return this;
+
+        public Builder includeTransactionDetails(Boolean includeTransactionDetails) {
+            return includeTransactionDetails(Output.of(includeTransactionDetails));
         }
+
         public Builder messageFormat(@Nullable Output<String> messageFormat) {
-            this.messageFormat = messageFormat;
+            $.messageFormat = messageFormat;
             return this;
         }
-        public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Codegen.ofNullable(messageFormat);
-            return this;
+
+        public Builder messageFormat(String messageFormat) {
+            return messageFormat(Output.of(messageFormat));
         }
+
         public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
-            this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
+            $.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
-        public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
-            this.partitionIncludeSchemaTable = Codegen.ofNullable(partitionIncludeSchemaTable);
-            return this;
+
+        public Builder partitionIncludeSchemaTable(Boolean partitionIncludeSchemaTable) {
+            return partitionIncludeSchemaTable(Output.of(partitionIncludeSchemaTable));
         }
+
         public Builder serviceAccessRoleArn(@Nullable Output<String> serviceAccessRoleArn) {
-            this.serviceAccessRoleArn = serviceAccessRoleArn;
+            $.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
-        public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
-            this.serviceAccessRoleArn = Codegen.ofNullable(serviceAccessRoleArn);
-            return this;
+
+        public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
+            return serviceAccessRoleArn(Output.of(serviceAccessRoleArn));
         }
+
         public Builder streamArn(@Nullable Output<String> streamArn) {
-            this.streamArn = streamArn;
+            $.streamArn = streamArn;
             return this;
         }
-        public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Codegen.ofNullable(streamArn);
-            return this;
-        }        public EndpointKinesisSettingsArgs build() {
-            return new EndpointKinesisSettingsArgs(includeControlDetails, includeNullAndEmpty, includePartitionValue, includeTableAlterOperations, includeTransactionDetails, messageFormat, partitionIncludeSchemaTable, serviceAccessRoleArn, streamArn);
+
+        public Builder streamArn(String streamArn) {
+            return streamArn(Output.of(streamArn));
+        }
+
+        public EndpointKinesisSettingsArgs build() {
+            return $;
         }
     }
+
 }

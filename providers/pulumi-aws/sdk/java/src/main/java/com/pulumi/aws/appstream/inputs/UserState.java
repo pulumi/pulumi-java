@@ -5,10 +5,10 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<String> authenticationType;
+    private @Nullable Output<String> authenticationType;
 
-    public Output<String> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<String>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstName")
-      private final @Nullable Output<String> firstName;
+    private @Nullable Output<String> firstName;
 
-    public Output<String> firstName() {
-        return this.firstName == null ? Codegen.empty() : this.firstName;
+    public Optional<Output<String>> firstName() {
+        return Optional.ofNullable(this.firstName);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastName")
-      private final @Nullable Output<String> lastName;
+    private @Nullable Output<String> lastName;
 
-    public Output<String> lastName() {
-        return this.lastName == null ? Codegen.empty() : this.lastName;
+    public Optional<Output<String>> lastName() {
+        return Optional.ofNullable(this.lastName);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sendEmailNotification")
-      private final @Nullable Output<Boolean> sendEmailNotification;
+    private @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> sendEmailNotification() {
-        return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
+    public Optional<Output<Boolean>> sendEmailNotification() {
+        return Optional.ofNullable(this.sendEmailNotification);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> authenticationType,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> firstName,
-        @Nullable Output<String> lastName,
-        @Nullable Output<Boolean> sendEmailNotification,
-        @Nullable Output<String> userName) {
-        this.arn = arn;
-        this.authenticationType = authenticationType;
-        this.createdTime = createdTime;
-        this.enabled = enabled;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.sendEmailNotification = sendEmailNotification;
-        this.userName = userName;
-    }
+    private UserState() {}
 
-    private UserState() {
-        this.arn = Codegen.empty();
-        this.authenticationType = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.firstName = Codegen.empty();
-        this.lastName = Codegen.empty();
-        this.sendEmailNotification = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserState(UserState $) {
+        this.arn = $.arn;
+        this.authenticationType = $.authenticationType;
+        this.createdTime = $.createdTime;
+        this.enabled = $.enabled;
+        this.firstName = $.firstName;
+        this.lastName = $.lastName;
+        this.sendEmailNotification = $.sendEmailNotification;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> authenticationType;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> firstName;
-        private @Nullable Output<String> lastName;
-        private @Nullable Output<Boolean> sendEmailNotification;
-        private @Nullable Output<String> userName;
+        private UserState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserState();
         }
 
         public Builder(UserState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.createdTime = defaults.createdTime;
-    	      this.enabled = defaults.enabled;
-    	      this.firstName = defaults.firstName;
-    	      this.lastName = defaults.lastName;
-    	      this.sendEmailNotification = defaults.sendEmailNotification;
-    	      this.userName = defaults.userName;
+            $ = new UserState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder firstName(@Nullable Output<String> firstName) {
-            this.firstName = firstName;
+            $.firstName = firstName;
             return this;
         }
-        public Builder firstName(@Nullable String firstName) {
-            this.firstName = Codegen.ofNullable(firstName);
-            return this;
+
+        public Builder firstName(String firstName) {
+            return firstName(Output.of(firstName));
         }
+
         public Builder lastName(@Nullable Output<String> lastName) {
-            this.lastName = lastName;
+            $.lastName = lastName;
             return this;
         }
-        public Builder lastName(@Nullable String lastName) {
-            this.lastName = Codegen.ofNullable(lastName);
-            return this;
+
+        public Builder lastName(String lastName) {
+            return lastName(Output.of(lastName));
         }
+
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
-            this.sendEmailNotification = sendEmailNotification;
+            $.sendEmailNotification = sendEmailNotification;
             return this;
         }
-        public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Codegen.ofNullable(sendEmailNotification);
-            return this;
+
+        public Builder sendEmailNotification(Boolean sendEmailNotification) {
+            return sendEmailNotification(Output.of(sendEmailNotification));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public UserState build() {
-            return new UserState(arn, authenticationType, createdTime, enabled, firstName, lastName, sendEmailNotification, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public UserState build() {
+            return $;
         }
     }
+
 }

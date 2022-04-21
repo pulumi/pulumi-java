@@ -18,7 +18,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption exte
      * 
      */
     @Import(name="frameOption", required=true)
-      private final String frameOption;
+    private String frameOption;
 
     public String frameOption() {
         return this.frameOption;
@@ -29,55 +29,52 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption exte
      * 
      */
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
     }
 
-    public GetResponseHeadersPolicySecurityHeadersConfigFrameOption(
-        String frameOption,
-        Boolean override) {
-        this.frameOption = Objects.requireNonNull(frameOption, "expected parameter 'frameOption' to be non-null");
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private GetResponseHeadersPolicySecurityHeadersConfigFrameOption() {}
 
-    private GetResponseHeadersPolicySecurityHeadersConfigFrameOption() {
-        this.frameOption = null;
-        this.override = null;
+    private GetResponseHeadersPolicySecurityHeadersConfigFrameOption(GetResponseHeadersPolicySecurityHeadersConfigFrameOption $) {
+        this.frameOption = $.frameOption;
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicySecurityHeadersConfigFrameOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String frameOption;
-        private Boolean override;
+        private GetResponseHeadersPolicySecurityHeadersConfigFrameOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigFrameOption();
         }
 
         public Builder(GetResponseHeadersPolicySecurityHeadersConfigFrameOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frameOption = defaults.frameOption;
-    	      this.override = defaults.override;
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigFrameOption(Objects.requireNonNull(defaults));
         }
 
         public Builder frameOption(String frameOption) {
-            this.frameOption = Objects.requireNonNull(frameOption);
+            $.frameOption = frameOption;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
-        }        public GetResponseHeadersPolicySecurityHeadersConfigFrameOption build() {
-            return new GetResponseHeadersPolicySecurityHeadersConfigFrameOption(frameOption, override);
+        }
+
+        public GetResponseHeadersPolicySecurityHeadersConfigFrameOption build() {
+            $.frameOption = Objects.requireNonNull($.frameOption, "expected parameter 'frameOption' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

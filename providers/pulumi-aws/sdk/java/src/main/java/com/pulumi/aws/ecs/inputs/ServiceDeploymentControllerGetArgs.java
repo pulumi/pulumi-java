@@ -5,9 +5,9 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ServiceDeploymentControllerGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceDeploymentControllerGetArgs(@Nullable Output<String> type) {
-        this.type = type;
-    }
+    private ServiceDeploymentControllerGetArgs() {}
 
-    private ServiceDeploymentControllerGetArgs() {
-        this.type = Codegen.empty();
+    private ServiceDeploymentControllerGetArgs(ServiceDeploymentControllerGetArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceDeploymentControllerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
+        private ServiceDeploymentControllerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceDeploymentControllerGetArgs();
         }
 
         public Builder(ServiceDeploymentControllerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServiceDeploymentControllerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServiceDeploymentControllerGetArgs build() {
-            return new ServiceDeploymentControllerGetArgs(type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ServiceDeploymentControllerGetArgs build() {
+            return $;
         }
     }
+
 }

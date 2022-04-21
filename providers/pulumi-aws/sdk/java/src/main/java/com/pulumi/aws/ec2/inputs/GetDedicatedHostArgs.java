@@ -22,10 +22,10 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetDedicatedHostFilter> filters;
+    private @Nullable List<GetDedicatedHostFilter> filters;
 
-    public List<GetDedicatedHostFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetDedicatedHostFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,74 +33,67 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hostId")
-      private final @Nullable String hostId;
+    private @Nullable String hostId;
 
     public Optional<String> hostId() {
-        return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
+        return Optional.ofNullable(this.hostId);
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetDedicatedHostArgs(
-        @Nullable List<GetDedicatedHostFilter> filters,
-        @Nullable String hostId,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.hostId = hostId;
-        this.tags = tags;
-    }
+    private GetDedicatedHostArgs() {}
 
-    private GetDedicatedHostArgs() {
-        this.filters = List.of();
-        this.hostId = null;
-        this.tags = Map.of();
+    private GetDedicatedHostArgs(GetDedicatedHostArgs $) {
+        this.filters = $.filters;
+        this.hostId = $.hostId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDedicatedHostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetDedicatedHostFilter> filters;
-        private @Nullable String hostId;
-        private @Nullable Map<String,String> tags;
+        private GetDedicatedHostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDedicatedHostArgs();
         }
 
         public Builder(GetDedicatedHostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.hostId = defaults.hostId;
-    	      this.tags = defaults.tags;
+            $ = new GetDedicatedHostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetDedicatedHostFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetDedicatedHostFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = hostId;
+            $.hostId = hostId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetDedicatedHostArgs build() {
-            return new GetDedicatedHostArgs(filters, hostId, tags);
+        }
+
+        public GetDedicatedHostArgs build() {
+            return $;
         }
     }
+
 }

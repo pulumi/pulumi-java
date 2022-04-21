@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ActiveReceiptRuleSetState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ActiveReceiptRuleSetState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ruleSetName")
-      private final @Nullable Output<String> ruleSetName;
+    private @Nullable Output<String> ruleSetName;
 
-    public Output<String> ruleSetName() {
-        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
+    public Optional<Output<String>> ruleSetName() {
+        return Optional.ofNullable(this.ruleSetName);
     }
 
-    public ActiveReceiptRuleSetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> ruleSetName) {
-        this.arn = arn;
-        this.ruleSetName = ruleSetName;
-    }
+    private ActiveReceiptRuleSetState() {}
 
-    private ActiveReceiptRuleSetState() {
-        this.arn = Codegen.empty();
-        this.ruleSetName = Codegen.empty();
+    private ActiveReceiptRuleSetState(ActiveReceiptRuleSetState $) {
+        this.arn = $.arn;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActiveReceiptRuleSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> ruleSetName;
+        private ActiveReceiptRuleSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActiveReceiptRuleSetState();
         }
 
         public Builder(ActiveReceiptRuleSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new ActiveReceiptRuleSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
-            this.ruleSetName = ruleSetName;
+            $.ruleSetName = ruleSetName;
             return this;
         }
-        public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Codegen.ofNullable(ruleSetName);
-            return this;
-        }        public ActiveReceiptRuleSetState build() {
-            return new ActiveReceiptRuleSetState(arn, ruleSetName);
+
+        public Builder ruleSetName(String ruleSetName) {
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        public ActiveReceiptRuleSetState build() {
+            return $;
         }
     }
+
 }

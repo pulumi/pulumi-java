@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class LocalGatewayRouteArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destinationCidrBlock", required=true)
-      private final Output<String> destinationCidrBlock;
+    private Output<String> destinationCidrBlock;
 
     public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -30,7 +29,7 @@ public final class LocalGatewayRouteArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="localGatewayRouteTableId", required=true)
-      private final Output<String> localGatewayRouteTableId;
+    private Output<String> localGatewayRouteTableId;
 
     public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
@@ -41,76 +40,71 @@ public final class LocalGatewayRouteArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="localGatewayVirtualInterfaceGroupId", required=true)
-      private final Output<String> localGatewayVirtualInterfaceGroupId;
+    private Output<String> localGatewayVirtualInterfaceGroupId;
 
     public Output<String> localGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId;
     }
 
-    public LocalGatewayRouteArgs(
-        Output<String> destinationCidrBlock,
-        Output<String> localGatewayRouteTableId,
-        Output<String> localGatewayVirtualInterfaceGroupId) {
-        this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
-        this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId, "expected parameter 'localGatewayRouteTableId' to be non-null");
-        this.localGatewayVirtualInterfaceGroupId = Objects.requireNonNull(localGatewayVirtualInterfaceGroupId, "expected parameter 'localGatewayVirtualInterfaceGroupId' to be non-null");
-    }
+    private LocalGatewayRouteArgs() {}
 
-    private LocalGatewayRouteArgs() {
-        this.destinationCidrBlock = Codegen.empty();
-        this.localGatewayRouteTableId = Codegen.empty();
-        this.localGatewayVirtualInterfaceGroupId = Codegen.empty();
+    private LocalGatewayRouteArgs(LocalGatewayRouteArgs $) {
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.localGatewayRouteTableId = $.localGatewayRouteTableId;
+        this.localGatewayVirtualInterfaceGroupId = $.localGatewayVirtualInterfaceGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalGatewayRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationCidrBlock;
-        private Output<String> localGatewayRouteTableId;
-        private Output<String> localGatewayVirtualInterfaceGroupId;
+        private LocalGatewayRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalGatewayRouteArgs();
         }
 
         public Builder(LocalGatewayRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
-    	      this.localGatewayVirtualInterfaceGroupId = defaults.localGatewayVirtualInterfaceGroupId;
+            $ = new LocalGatewayRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
+
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
-            return this;
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder localGatewayRouteTableId(Output<String> localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
+
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Output.of(Objects.requireNonNull(localGatewayRouteTableId));
-            return this;
+            return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
+
         public Builder localGatewayVirtualInterfaceGroupId(Output<String> localGatewayVirtualInterfaceGroupId) {
-            this.localGatewayVirtualInterfaceGroupId = Objects.requireNonNull(localGatewayVirtualInterfaceGroupId);
+            $.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
             return this;
         }
+
         public Builder localGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
-            this.localGatewayVirtualInterfaceGroupId = Output.of(Objects.requireNonNull(localGatewayVirtualInterfaceGroupId));
-            return this;
-        }        public LocalGatewayRouteArgs build() {
-            return new LocalGatewayRouteArgs(destinationCidrBlock, localGatewayRouteTableId, localGatewayVirtualInterfaceGroupId);
+            return localGatewayVirtualInterfaceGroupId(Output.of(localGatewayVirtualInterfaceGroupId));
+        }
+
+        public LocalGatewayRouteArgs build() {
+            $.destinationCidrBlock = Objects.requireNonNull($.destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
+            $.localGatewayRouteTableId = Objects.requireNonNull($.localGatewayRouteTableId, "expected parameter 'localGatewayRouteTableId' to be non-null");
+            $.localGatewayVirtualInterfaceGroupId = Objects.requireNonNull($.localGatewayVirtualInterfaceGroupId, "expected parameter 'localGatewayVirtualInterfaceGroupId' to be non-null");
+            return $;
         }
     }
+
 }

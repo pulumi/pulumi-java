@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="peerAccountId")
-      private final @Nullable Output<String> peerAccountId;
+    private @Nullable Output<String> peerAccountId;
 
-    public Output<String> peerAccountId() {
-        return this.peerAccountId == null ? Codegen.empty() : this.peerAccountId;
+    public Optional<Output<String>> peerAccountId() {
+        return Optional.ofNullable(this.peerAccountId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="peerRegion")
-      private final @Nullable Output<String> peerRegion;
+    private @Nullable Output<String> peerRegion;
 
-    public Output<String> peerRegion() {
-        return this.peerRegion == null ? Codegen.empty() : this.peerRegion;
+    public Optional<Output<String>> peerRegion() {
+        return Optional.ofNullable(this.peerRegion);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="peerTransitGatewayId")
-      private final @Nullable Output<String> peerTransitGatewayId;
+    private @Nullable Output<String> peerTransitGatewayId;
 
-    public Output<String> peerTransitGatewayId() {
-        return this.peerTransitGatewayId == null ? Codegen.empty() : this.peerTransitGatewayId;
+    public Optional<Output<String>> peerTransitGatewayId() {
+        return Optional.ofNullable(this.peerTransitGatewayId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="transitGatewayId")
-      private final @Nullable Output<String> transitGatewayId;
+    private @Nullable Output<String> transitGatewayId;
 
-    public Output<String> transitGatewayId() {
-        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
+    public Optional<Output<String>> transitGatewayId() {
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
-    public PeeringAttachmentState(
-        @Nullable Output<String> peerAccountId,
-        @Nullable Output<String> peerRegion,
-        @Nullable Output<String> peerTransitGatewayId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> transitGatewayId) {
-        this.peerAccountId = peerAccountId;
-        this.peerRegion = peerRegion;
-        this.peerTransitGatewayId = peerTransitGatewayId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.transitGatewayId = transitGatewayId;
-    }
+    private PeeringAttachmentState() {}
 
-    private PeeringAttachmentState() {
-        this.peerAccountId = Codegen.empty();
-        this.peerRegion = Codegen.empty();
-        this.peerTransitGatewayId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.transitGatewayId = Codegen.empty();
+    private PeeringAttachmentState(PeeringAttachmentState $) {
+        this.peerAccountId = $.peerAccountId;
+        this.peerRegion = $.peerRegion;
+        this.peerTransitGatewayId = $.peerTransitGatewayId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.transitGatewayId = $.transitGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> peerAccountId;
-        private @Nullable Output<String> peerRegion;
-        private @Nullable Output<String> peerTransitGatewayId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> transitGatewayId;
+        private PeeringAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringAttachmentState();
         }
 
         public Builder(PeeringAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peerAccountId = defaults.peerAccountId;
-    	      this.peerRegion = defaults.peerRegion;
-    	      this.peerTransitGatewayId = defaults.peerTransitGatewayId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.transitGatewayId = defaults.transitGatewayId;
+            $ = new PeeringAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder peerAccountId(@Nullable Output<String> peerAccountId) {
-            this.peerAccountId = peerAccountId;
+            $.peerAccountId = peerAccountId;
             return this;
         }
-        public Builder peerAccountId(@Nullable String peerAccountId) {
-            this.peerAccountId = Codegen.ofNullable(peerAccountId);
-            return this;
+
+        public Builder peerAccountId(String peerAccountId) {
+            return peerAccountId(Output.of(peerAccountId));
         }
+
         public Builder peerRegion(@Nullable Output<String> peerRegion) {
-            this.peerRegion = peerRegion;
+            $.peerRegion = peerRegion;
             return this;
         }
-        public Builder peerRegion(@Nullable String peerRegion) {
-            this.peerRegion = Codegen.ofNullable(peerRegion);
-            return this;
+
+        public Builder peerRegion(String peerRegion) {
+            return peerRegion(Output.of(peerRegion));
         }
+
         public Builder peerTransitGatewayId(@Nullable Output<String> peerTransitGatewayId) {
-            this.peerTransitGatewayId = peerTransitGatewayId;
+            $.peerTransitGatewayId = peerTransitGatewayId;
             return this;
         }
-        public Builder peerTransitGatewayId(@Nullable String peerTransitGatewayId) {
-            this.peerTransitGatewayId = Codegen.ofNullable(peerTransitGatewayId);
-            return this;
+
+        public Builder peerTransitGatewayId(String peerTransitGatewayId) {
+            return peerTransitGatewayId(Output.of(peerTransitGatewayId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
-            this.transitGatewayId = transitGatewayId;
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
-        public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
-            return this;
-        }        public PeeringAttachmentState build() {
-            return new PeeringAttachmentState(peerAccountId, peerRegion, peerTransitGatewayId, tags, tagsAll, transitGatewayId);
+
+        public Builder transitGatewayId(String transitGatewayId) {
+            return transitGatewayId(Output.of(transitGatewayId));
+        }
+
+        public PeeringAttachmentState build() {
+            return $;
         }
     }
+
 }

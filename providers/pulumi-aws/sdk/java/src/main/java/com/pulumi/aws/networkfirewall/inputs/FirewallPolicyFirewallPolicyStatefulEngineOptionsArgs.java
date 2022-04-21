@@ -5,7 +5,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs extends
      * 
      */
     @Import(name="ruleOrder", required=true)
-      private final Output<String> ruleOrder;
+    private Output<String> ruleOrder;
 
     public Output<String> ruleOrder() {
         return this.ruleOrder;
     }
 
-    public FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs(Output<String> ruleOrder) {
-        this.ruleOrder = Objects.requireNonNull(ruleOrder, "expected parameter 'ruleOrder' to be non-null");
-    }
+    private FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs() {}
 
-    private FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs() {
-        this.ruleOrder = Codegen.empty();
+    private FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs(FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs $) {
+        this.ruleOrder = $.ruleOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ruleOrder;
+        private FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs();
         }
 
         public Builder(FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleOrder = defaults.ruleOrder;
+            $ = new FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleOrder(Output<String> ruleOrder) {
-            this.ruleOrder = Objects.requireNonNull(ruleOrder);
+            $.ruleOrder = ruleOrder;
             return this;
         }
+
         public Builder ruleOrder(String ruleOrder) {
-            this.ruleOrder = Output.of(Objects.requireNonNull(ruleOrder));
-            return this;
-        }        public FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs build() {
-            return new FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs(ruleOrder);
+            return ruleOrder(Output.of(ruleOrder));
+        }
+
+        public FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs build() {
+            $.ruleOrder = Objects.requireNonNull($.ruleOrder, "expected parameter 'ruleOrder' to be non-null");
+            return $;
         }
     }
+
 }

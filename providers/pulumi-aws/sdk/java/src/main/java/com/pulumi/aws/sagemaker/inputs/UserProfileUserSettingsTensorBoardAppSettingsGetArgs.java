@@ -6,7 +6,6 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsGetArgs extends 
      * 
      */
     @Import(name="defaultResourceSpec", required=true)
-      private final Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+    private Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
     public Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
-    public UserProfileUserSettingsTensorBoardAppSettingsGetArgs(Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
-        this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec, "expected parameter 'defaultResourceSpec' to be non-null");
-    }
+    private UserProfileUserSettingsTensorBoardAppSettingsGetArgs() {}
 
-    private UserProfileUserSettingsTensorBoardAppSettingsGetArgs() {
-        this.defaultResourceSpec = Codegen.empty();
+    private UserProfileUserSettingsTensorBoardAppSettingsGetArgs(UserProfileUserSettingsTensorBoardAppSettingsGetArgs $) {
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileUserSettingsTensorBoardAppSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+        private UserProfileUserSettingsTensorBoardAppSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileUserSettingsTensorBoardAppSettingsGetArgs();
         }
 
         public Builder(UserProfileUserSettingsTensorBoardAppSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new UserProfileUserSettingsTensorBoardAppSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceSpec(Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
-            this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
+
         public Builder defaultResourceSpec(UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.of(Objects.requireNonNull(defaultResourceSpec));
-            return this;
-        }        public UserProfileUserSettingsTensorBoardAppSettingsGetArgs build() {
-            return new UserProfileUserSettingsTensorBoardAppSettingsGetArgs(defaultResourceSpec);
+            return defaultResourceSpec(Output.of(defaultResourceSpec));
+        }
+
+        public UserProfileUserSettingsTensorBoardAppSettingsGetArgs build() {
+            $.defaultResourceSpec = Objects.requireNonNull($.defaultResourceSpec, "expected parameter 'defaultResourceSpec' to be non-null");
+            return $;
         }
     }
+
 }

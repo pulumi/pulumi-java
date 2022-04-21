@@ -5,10 +5,10 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class DataRepositoryAssociationS3AutoImportPolicyArgs extends com.p
      * 
      */
     @Import(name="events")
-      private final @Nullable Output<List<String>> events;
+    private @Nullable Output<List<String>> events;
 
-    public Output<List<String>> events() {
-        return this.events == null ? Codegen.empty() : this.events;
+    public Optional<Output<List<String>>> events() {
+        return Optional.ofNullable(this.events);
     }
 
-    public DataRepositoryAssociationS3AutoImportPolicyArgs(@Nullable Output<List<String>> events) {
-        this.events = events;
-    }
+    private DataRepositoryAssociationS3AutoImportPolicyArgs() {}
 
-    private DataRepositoryAssociationS3AutoImportPolicyArgs() {
-        this.events = Codegen.empty();
+    private DataRepositoryAssociationS3AutoImportPolicyArgs(DataRepositoryAssociationS3AutoImportPolicyArgs $) {
+        this.events = $.events;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataRepositoryAssociationS3AutoImportPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> events;
+        private DataRepositoryAssociationS3AutoImportPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataRepositoryAssociationS3AutoImportPolicyArgs();
         }
 
         public Builder(DataRepositoryAssociationS3AutoImportPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
+            $ = new DataRepositoryAssociationS3AutoImportPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder events(@Nullable Output<List<String>> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
-        public Builder events(@Nullable List<String> events) {
-            this.events = Codegen.ofNullable(events);
-            return this;
+
+        public Builder events(List<String> events) {
+            return events(Output.of(events));
         }
+
         public Builder events(String... events) {
             return events(List.of(events));
-        }        public DataRepositoryAssociationS3AutoImportPolicyArgs build() {
-            return new DataRepositoryAssociationS3AutoImportPolicyArgs(events);
+        }
+
+        public DataRepositoryAssociationS3AutoImportPolicyArgs build() {
+            return $;
         }
     }
+
 }

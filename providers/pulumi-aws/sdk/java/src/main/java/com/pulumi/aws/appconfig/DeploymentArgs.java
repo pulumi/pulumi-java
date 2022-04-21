@@ -5,10 +5,10 @@ package com.pulumi.aws.appconfig;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -32,7 +32,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationProfileId", required=true)
-      private final Output<String> configurationProfileId;
+    private Output<String> configurationProfileId;
 
     public Output<String> configurationProfileId() {
         return this.configurationProfileId;
@@ -43,7 +43,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationVersion", required=true)
-      private final Output<String> configurationVersion;
+    private Output<String> configurationVersion;
 
     public Output<String> configurationVersion() {
         return this.configurationVersion;
@@ -54,7 +54,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentStrategyId", required=true)
-      private final Output<String> deploymentStrategyId;
+    private Output<String> deploymentStrategyId;
 
     public Output<String> deploymentStrategyId() {
         return this.deploymentStrategyId;
@@ -65,10 +65,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -87,128 +87,113 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DeploymentArgs(
-        Output<String> applicationId,
-        Output<String> configurationProfileId,
-        Output<String> configurationVersion,
-        Output<String> deploymentStrategyId,
-        @Nullable Output<String> description,
-        Output<String> environmentId,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.configurationProfileId = Objects.requireNonNull(configurationProfileId, "expected parameter 'configurationProfileId' to be non-null");
-        this.configurationVersion = Objects.requireNonNull(configurationVersion, "expected parameter 'configurationVersion' to be non-null");
-        this.deploymentStrategyId = Objects.requireNonNull(deploymentStrategyId, "expected parameter 'deploymentStrategyId' to be non-null");
-        this.description = description;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.tags = tags;
-    }
+    private DeploymentArgs() {}
 
-    private DeploymentArgs() {
-        this.applicationId = Codegen.empty();
-        this.configurationProfileId = Codegen.empty();
-        this.configurationVersion = Codegen.empty();
-        this.deploymentStrategyId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DeploymentArgs(DeploymentArgs $) {
+        this.applicationId = $.applicationId;
+        this.configurationProfileId = $.configurationProfileId;
+        this.configurationVersion = $.configurationVersion;
+        this.deploymentStrategyId = $.deploymentStrategyId;
+        this.description = $.description;
+        this.environmentId = $.environmentId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private Output<String> configurationProfileId;
-        private Output<String> configurationVersion;
-        private Output<String> deploymentStrategyId;
-        private @Nullable Output<String> description;
-        private Output<String> environmentId;
-        private @Nullable Output<Map<String,String>> tags;
+        private DeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentArgs();
         }
 
         public Builder(DeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.configurationProfileId = defaults.configurationProfileId;
-    	      this.configurationVersion = defaults.configurationVersion;
-    	      this.deploymentStrategyId = defaults.deploymentStrategyId;
-    	      this.description = defaults.description;
-    	      this.environmentId = defaults.environmentId;
-    	      this.tags = defaults.tags;
+            $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder configurationProfileId(Output<String> configurationProfileId) {
-            this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
+            $.configurationProfileId = configurationProfileId;
             return this;
         }
+
         public Builder configurationProfileId(String configurationProfileId) {
-            this.configurationProfileId = Output.of(Objects.requireNonNull(configurationProfileId));
-            return this;
+            return configurationProfileId(Output.of(configurationProfileId));
         }
+
         public Builder configurationVersion(Output<String> configurationVersion) {
-            this.configurationVersion = Objects.requireNonNull(configurationVersion);
+            $.configurationVersion = configurationVersion;
             return this;
         }
+
         public Builder configurationVersion(String configurationVersion) {
-            this.configurationVersion = Output.of(Objects.requireNonNull(configurationVersion));
-            return this;
+            return configurationVersion(Output.of(configurationVersion));
         }
+
         public Builder deploymentStrategyId(Output<String> deploymentStrategyId) {
-            this.deploymentStrategyId = Objects.requireNonNull(deploymentStrategyId);
+            $.deploymentStrategyId = deploymentStrategyId;
             return this;
         }
+
         public Builder deploymentStrategyId(String deploymentStrategyId) {
-            this.deploymentStrategyId = Output.of(Objects.requireNonNull(deploymentStrategyId));
-            return this;
+            return deploymentStrategyId(Output.of(deploymentStrategyId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DeploymentArgs build() {
-            return new DeploymentArgs(applicationId, configurationProfileId, configurationVersion, deploymentStrategyId, description, environmentId, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DeploymentArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.configurationProfileId = Objects.requireNonNull($.configurationProfileId, "expected parameter 'configurationProfileId' to be non-null");
+            $.configurationVersion = Objects.requireNonNull($.configurationVersion, "expected parameter 'configurationVersion' to be non-null");
+            $.deploymentStrategyId = Objects.requireNonNull($.deploymentStrategyId, "expected parameter 'deploymentStrategyId' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataSourceParametersJiraGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="siteBaseUrl", required=true)
-      private final Output<String> siteBaseUrl;
+    private Output<String> siteBaseUrl;
 
     public Output<String> siteBaseUrl() {
         return this.siteBaseUrl;
     }
 
-    public DataSourceParametersJiraGetArgs(Output<String> siteBaseUrl) {
-        this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl, "expected parameter 'siteBaseUrl' to be non-null");
-    }
+    private DataSourceParametersJiraGetArgs() {}
 
-    private DataSourceParametersJiraGetArgs() {
-        this.siteBaseUrl = Codegen.empty();
+    private DataSourceParametersJiraGetArgs(DataSourceParametersJiraGetArgs $) {
+        this.siteBaseUrl = $.siteBaseUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersJiraGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> siteBaseUrl;
+        private DataSourceParametersJiraGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersJiraGetArgs();
         }
 
         public Builder(DataSourceParametersJiraGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteBaseUrl = defaults.siteBaseUrl;
+            $ = new DataSourceParametersJiraGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder siteBaseUrl(Output<String> siteBaseUrl) {
-            this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
+            $.siteBaseUrl = siteBaseUrl;
             return this;
         }
+
         public Builder siteBaseUrl(String siteBaseUrl) {
-            this.siteBaseUrl = Output.of(Objects.requireNonNull(siteBaseUrl));
-            return this;
-        }        public DataSourceParametersJiraGetArgs build() {
-            return new DataSourceParametersJiraGetArgs(siteBaseUrl);
+            return siteBaseUrl(Output.of(siteBaseUrl));
+        }
+
+        public DataSourceParametersJiraGetArgs build() {
+            $.siteBaseUrl = Objects.requireNonNull($.siteBaseUrl, "expected parameter 'siteBaseUrl' to be non-null");
+            return $;
         }
     }
+
 }

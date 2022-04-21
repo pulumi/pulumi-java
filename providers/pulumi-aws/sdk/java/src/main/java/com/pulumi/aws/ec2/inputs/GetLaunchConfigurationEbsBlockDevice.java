@@ -19,7 +19,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="deleteOnTermination", required=true)
-      private final Boolean deleteOnTermination;
+    private Boolean deleteOnTermination;
 
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
@@ -30,7 +30,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -41,7 +41,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="encrypted", required=true)
-      private final Boolean encrypted;
+    private Boolean encrypted;
 
     public Boolean encrypted() {
         return this.encrypted;
@@ -52,7 +52,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="iops", required=true)
-      private final Integer iops;
+    private Integer iops;
 
     public Integer iops() {
         return this.iops;
@@ -63,7 +63,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="noDevice", required=true)
-      private final Boolean noDevice;
+    private Boolean noDevice;
 
     public Boolean noDevice() {
         return this.noDevice;
@@ -74,7 +74,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="snapshotId", required=true)
-      private final String snapshotId;
+    private String snapshotId;
 
     public String snapshotId() {
         return this.snapshotId;
@@ -85,7 +85,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="throughput", required=true)
-      private final Boolean throughput;
+    private Boolean throughput;
 
     public Boolean throughput() {
         return this.throughput;
@@ -96,7 +96,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="volumeSize", required=true)
-      private final Integer volumeSize;
+    private Integer volumeSize;
 
     public Integer volumeSize() {
         return this.volumeSize;
@@ -107,118 +107,101 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
      * 
      */
     @Import(name="volumeType", required=true)
-      private final String volumeType;
+    private String volumeType;
 
     public String volumeType() {
         return this.volumeType;
     }
 
-    public GetLaunchConfigurationEbsBlockDevice(
-        Boolean deleteOnTermination,
-        String deviceName,
-        Boolean encrypted,
-        Integer iops,
-        Boolean noDevice,
-        String snapshotId,
-        Boolean throughput,
-        Integer volumeSize,
-        String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.encrypted = Objects.requireNonNull(encrypted, "expected parameter 'encrypted' to be non-null");
-        this.iops = Objects.requireNonNull(iops, "expected parameter 'iops' to be non-null");
-        this.noDevice = Objects.requireNonNull(noDevice, "expected parameter 'noDevice' to be non-null");
-        this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
-        this.throughput = Objects.requireNonNull(throughput, "expected parameter 'throughput' to be non-null");
-        this.volumeSize = Objects.requireNonNull(volumeSize, "expected parameter 'volumeSize' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private GetLaunchConfigurationEbsBlockDevice() {}
 
-    private GetLaunchConfigurationEbsBlockDevice() {
-        this.deleteOnTermination = null;
-        this.deviceName = null;
-        this.encrypted = null;
-        this.iops = null;
-        this.noDevice = null;
-        this.snapshotId = null;
-        this.throughput = null;
-        this.volumeSize = null;
-        this.volumeType = null;
+    private GetLaunchConfigurationEbsBlockDevice(GetLaunchConfigurationEbsBlockDevice $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.deviceName = $.deviceName;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.noDevice = $.noDevice;
+        this.snapshotId = $.snapshotId;
+        this.throughput = $.throughput;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchConfigurationEbsBlockDevice defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean deleteOnTermination;
-        private String deviceName;
-        private Boolean encrypted;
-        private Integer iops;
-        private Boolean noDevice;
-        private String snapshotId;
-        private Boolean throughput;
-        private Integer volumeSize;
-        private String volumeType;
+        private GetLaunchConfigurationEbsBlockDevice $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchConfigurationEbsBlockDevice();
         }
 
         public Builder(GetLaunchConfigurationEbsBlockDevice defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.deviceName = defaults.deviceName;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.noDevice = defaults.noDevice;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.throughput = defaults.throughput;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new GetLaunchConfigurationEbsBlockDevice(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
-            this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder encrypted(Boolean encrypted) {
-            this.encrypted = Objects.requireNonNull(encrypted);
+            $.encrypted = encrypted;
             return this;
         }
+
         public Builder iops(Integer iops) {
-            this.iops = Objects.requireNonNull(iops);
+            $.iops = iops;
             return this;
         }
+
         public Builder noDevice(Boolean noDevice) {
-            this.noDevice = Objects.requireNonNull(noDevice);
+            $.noDevice = noDevice;
             return this;
         }
+
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Objects.requireNonNull(snapshotId);
+            $.snapshotId = snapshotId;
             return this;
         }
+
         public Builder throughput(Boolean throughput) {
-            this.throughput = Objects.requireNonNull(throughput);
+            $.throughput = throughput;
             return this;
         }
+
         public Builder volumeSize(Integer volumeSize) {
-            this.volumeSize = Objects.requireNonNull(volumeSize);
+            $.volumeSize = volumeSize;
             return this;
         }
+
         public Builder volumeType(String volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
-        }        public GetLaunchConfigurationEbsBlockDevice build() {
-            return new GetLaunchConfigurationEbsBlockDevice(deleteOnTermination, deviceName, encrypted, iops, noDevice, snapshotId, throughput, volumeSize, volumeType);
+        }
+
+        public GetLaunchConfigurationEbsBlockDevice build() {
+            $.deleteOnTermination = Objects.requireNonNull($.deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.encrypted = Objects.requireNonNull($.encrypted, "expected parameter 'encrypted' to be non-null");
+            $.iops = Objects.requireNonNull($.iops, "expected parameter 'iops' to be non-null");
+            $.noDevice = Objects.requireNonNull($.noDevice, "expected parameter 'noDevice' to be non-null");
+            $.snapshotId = Objects.requireNonNull($.snapshotId, "expected parameter 'snapshotId' to be non-null");
+            $.throughput = Objects.requireNonNull($.throughput, "expected parameter 'throughput' to be non-null");
+            $.volumeSize = Objects.requireNonNull($.volumeSize, "expected parameter 'volumeSize' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

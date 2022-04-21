@@ -22,7 +22,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dagEdges", required=true)
-      private final List<GetScriptDagEdge> dagEdges;
+    private List<GetScriptDagEdge> dagEdges;
 
     public List<GetScriptDagEdge> dagEdges() {
         return this.dagEdges;
@@ -33,7 +33,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dagNodes", required=true)
-      private final List<GetScriptDagNode> dagNodes;
+    private List<GetScriptDagNode> dagNodes;
 
     public List<GetScriptDagNode> dagNodes() {
         return this.dagNodes;
@@ -44,70 +44,66 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="language")
-      private final @Nullable String language;
+    private @Nullable String language;
 
     public Optional<String> language() {
-        return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
+        return Optional.ofNullable(this.language);
     }
 
-    public GetScriptArgs(
-        List<GetScriptDagEdge> dagEdges,
-        List<GetScriptDagNode> dagNodes,
-        @Nullable String language) {
-        this.dagEdges = Objects.requireNonNull(dagEdges, "expected parameter 'dagEdges' to be non-null");
-        this.dagNodes = Objects.requireNonNull(dagNodes, "expected parameter 'dagNodes' to be non-null");
-        this.language = language;
-    }
+    private GetScriptArgs() {}
 
-    private GetScriptArgs() {
-        this.dagEdges = List.of();
-        this.dagNodes = List.of();
-        this.language = null;
+    private GetScriptArgs(GetScriptArgs $) {
+        this.dagEdges = $.dagEdges;
+        this.dagNodes = $.dagNodes;
+        this.language = $.language;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScriptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetScriptDagEdge> dagEdges;
-        private List<GetScriptDagNode> dagNodes;
-        private @Nullable String language;
+        private GetScriptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScriptArgs();
         }
 
         public Builder(GetScriptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dagEdges = defaults.dagEdges;
-    	      this.dagNodes = defaults.dagNodes;
-    	      this.language = defaults.language;
+            $ = new GetScriptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dagEdges(List<GetScriptDagEdge> dagEdges) {
-            this.dagEdges = Objects.requireNonNull(dagEdges);
+            $.dagEdges = dagEdges;
             return this;
         }
+
         public Builder dagEdges(GetScriptDagEdge... dagEdges) {
             return dagEdges(List.of(dagEdges));
         }
+
         public Builder dagNodes(List<GetScriptDagNode> dagNodes) {
-            this.dagNodes = Objects.requireNonNull(dagNodes);
+            $.dagNodes = dagNodes;
             return this;
         }
+
         public Builder dagNodes(GetScriptDagNode... dagNodes) {
             return dagNodes(List.of(dagNodes));
         }
+
         public Builder language(@Nullable String language) {
-            this.language = language;
+            $.language = language;
             return this;
-        }        public GetScriptArgs build() {
-            return new GetScriptArgs(dagEdges, dagNodes, language);
+        }
+
+        public GetScriptArgs build() {
+            $.dagEdges = Objects.requireNonNull($.dagEdges, "expected parameter 'dagEdges' to be non-null");
+            $.dagNodes = Objects.requireNonNull($.dagNodes, "expected parameter 'dagNodes' to be non-null");
+            return $;
         }
     }
+
 }

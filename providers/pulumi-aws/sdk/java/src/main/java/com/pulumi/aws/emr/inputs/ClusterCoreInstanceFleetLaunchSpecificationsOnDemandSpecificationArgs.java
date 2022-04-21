@@ -5,7 +5,6 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecifica
      * 
      */
     @Import(name="allocationStrategy", required=true)
-      private final Output<String> allocationStrategy;
+    private Output<String> allocationStrategy;
 
     public Output<String> allocationStrategy() {
         return this.allocationStrategy;
     }
 
-    public ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs(Output<String> allocationStrategy) {
-        this.allocationStrategy = Objects.requireNonNull(allocationStrategy, "expected parameter 'allocationStrategy' to be non-null");
-    }
+    private ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs() {}
 
-    private ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs() {
-        this.allocationStrategy = Codegen.empty();
+    private ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs(ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs $) {
+        this.allocationStrategy = $.allocationStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> allocationStrategy;
+        private ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs();
         }
 
         public Builder(ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationStrategy = defaults.allocationStrategy;
+            $ = new ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationStrategy(Output<String> allocationStrategy) {
-            this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
+            $.allocationStrategy = allocationStrategy;
             return this;
         }
+
         public Builder allocationStrategy(String allocationStrategy) {
-            this.allocationStrategy = Output.of(Objects.requireNonNull(allocationStrategy));
-            return this;
-        }        public ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs build() {
-            return new ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs(allocationStrategy);
+            return allocationStrategy(Output.of(allocationStrategy));
+        }
+
+        public ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs build() {
+            $.allocationStrategy = Objects.requireNonNull($.allocationStrategy, "expected parameter 'allocationStrategy' to be non-null");
+            return $;
         }
     }
+
 }

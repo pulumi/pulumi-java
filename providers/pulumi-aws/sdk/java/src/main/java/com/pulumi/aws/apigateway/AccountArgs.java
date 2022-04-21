@@ -5,9 +5,9 @@ package com.pulumi.aws.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchRoleArn")
-      private final @Nullable Output<String> cloudwatchRoleArn;
+    private @Nullable Output<String> cloudwatchRoleArn;
 
-    public Output<String> cloudwatchRoleArn() {
-        return this.cloudwatchRoleArn == null ? Codegen.empty() : this.cloudwatchRoleArn;
+    public Optional<Output<String>> cloudwatchRoleArn() {
+        return Optional.ofNullable(this.cloudwatchRoleArn);
     }
 
-    public AccountArgs(@Nullable Output<String> cloudwatchRoleArn) {
-        this.cloudwatchRoleArn = cloudwatchRoleArn;
-    }
+    private AccountArgs() {}
 
-    private AccountArgs() {
-        this.cloudwatchRoleArn = Codegen.empty();
+    private AccountArgs(AccountArgs $) {
+        this.cloudwatchRoleArn = $.cloudwatchRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudwatchRoleArn;
+        private AccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountArgs();
         }
 
         public Builder(AccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchRoleArn = defaults.cloudwatchRoleArn;
+            $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchRoleArn(@Nullable Output<String> cloudwatchRoleArn) {
-            this.cloudwatchRoleArn = cloudwatchRoleArn;
+            $.cloudwatchRoleArn = cloudwatchRoleArn;
             return this;
         }
-        public Builder cloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
-            this.cloudwatchRoleArn = Codegen.ofNullable(cloudwatchRoleArn);
-            return this;
-        }        public AccountArgs build() {
-            return new AccountArgs(cloudwatchRoleArn);
+
+        public Builder cloudwatchRoleArn(String cloudwatchRoleArn) {
+            return cloudwatchRoleArn(Output.of(cloudwatchRoleArn));
+        }
+
+        public AccountArgs build() {
+            return $;
         }
     }
+
 }

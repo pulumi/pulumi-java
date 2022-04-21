@@ -7,9 +7,9 @@ import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatel
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
      * 
      */
     @Import(name="customActions")
-      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions;
+    private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions() {
-        return this.customActions == null ? Codegen.empty() : this.customActions;
+    public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>>> customActions() {
+        return Optional.ofNullable(this.customActions);
     }
 
     /**
@@ -33,69 +33,67 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
      * 
      */
     @Import(name="statelessRules", required=true)
-      private final Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules;
+    private Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules() {
         return this.statelessRules;
     }
 
-    public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs(
-        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions,
-        Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules) {
-        this.customActions = customActions;
-        this.statelessRules = Objects.requireNonNull(statelessRules, "expected parameter 'statelessRules' to be non-null");
-    }
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs() {
-        this.customActions = Codegen.empty();
-        this.statelessRules = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs $) {
+        this.customActions = $.customActions;
+        this.statelessRules = $.statelessRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions;
-        private Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules;
+        private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customActions = defaults.customActions;
-    	      this.statelessRules = defaults.statelessRules;
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customActions(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions) {
-            this.customActions = customActions;
+            $.customActions = customActions;
             return this;
         }
-        public Builder customActions(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs> customActions) {
-            this.customActions = Codegen.ofNullable(customActions);
-            return this;
+
+        public Builder customActions(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs> customActions) {
+            return customActions(Output.of(customActions));
         }
+
         public Builder customActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs... customActions) {
             return customActions(List.of(customActions));
         }
+
         public Builder statelessRules(Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules) {
-            this.statelessRules = Objects.requireNonNull(statelessRules);
+            $.statelessRules = statelessRules;
             return this;
         }
+
         public Builder statelessRules(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs> statelessRules) {
-            this.statelessRules = Output.of(Objects.requireNonNull(statelessRules));
-            return this;
+            return statelessRules(Output.of(statelessRules));
         }
+
         public Builder statelessRules(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs... statelessRules) {
             return statelessRules(List.of(statelessRules));
-        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs(customActions, statelessRules);
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs build() {
+            $.statelessRules = Objects.requireNonNull($.statelessRules, "expected parameter 'statelessRules' to be non-null");
+            return $;
         }
     }
+
 }

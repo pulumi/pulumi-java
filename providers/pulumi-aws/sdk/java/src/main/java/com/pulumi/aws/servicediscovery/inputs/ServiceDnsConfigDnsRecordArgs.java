@@ -5,7 +5,6 @@ package com.pulumi.aws.servicediscovery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ServiceDnsConfigDnsRecordArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ttl", required=true)
-      private final Output<Integer> ttl;
+    private Output<Integer> ttl;
 
     public Output<Integer> ttl() {
         return this.ttl;
@@ -31,63 +30,60 @@ public final class ServiceDnsConfigDnsRecordArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ServiceDnsConfigDnsRecordArgs(
-        Output<Integer> ttl,
-        Output<String> type) {
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServiceDnsConfigDnsRecordArgs() {}
 
-    private ServiceDnsConfigDnsRecordArgs() {
-        this.ttl = Codegen.empty();
-        this.type = Codegen.empty();
+    private ServiceDnsConfigDnsRecordArgs(ServiceDnsConfigDnsRecordArgs $) {
+        this.ttl = $.ttl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceDnsConfigDnsRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> ttl;
-        private Output<String> type;
+        private ServiceDnsConfigDnsRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceDnsConfigDnsRecordArgs();
         }
 
         public Builder(ServiceDnsConfigDnsRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
+            $ = new ServiceDnsConfigDnsRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ttl(Output<Integer> ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
         }
+
         public Builder ttl(Integer ttl) {
-            this.ttl = Output.of(Objects.requireNonNull(ttl));
-            return this;
+            return ttl(Output.of(ttl));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ServiceDnsConfigDnsRecordArgs build() {
-            return new ServiceDnsConfigDnsRecordArgs(ttl, type);
+            return type(Output.of(type));
+        }
+
+        public ServiceDnsConfigDnsRecordArgs build() {
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

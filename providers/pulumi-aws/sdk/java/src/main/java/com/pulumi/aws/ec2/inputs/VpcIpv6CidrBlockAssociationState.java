@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VpcIpv6CidrBlockAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="ipv6CidrBlock")
-      private final @Nullable Output<String> ipv6CidrBlock;
+    private @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
+    public Optional<Output<String>> ipv6CidrBlock() {
+        return Optional.ofNullable(this.ipv6CidrBlock);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VpcIpv6CidrBlockAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="ipv6IpamPoolId")
-      private final @Nullable Output<String> ipv6IpamPoolId;
+    private @Nullable Output<String> ipv6IpamPoolId;
 
-    public Output<String> ipv6IpamPoolId() {
-        return this.ipv6IpamPoolId == null ? Codegen.empty() : this.ipv6IpamPoolId;
+    public Optional<Output<String>> ipv6IpamPoolId() {
+        return Optional.ofNullable(this.ipv6IpamPoolId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VpcIpv6CidrBlockAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="ipv6NetmaskLength")
-      private final @Nullable Output<Integer> ipv6NetmaskLength;
+    private @Nullable Output<Integer> ipv6NetmaskLength;
 
-    public Output<Integer> ipv6NetmaskLength() {
-        return this.ipv6NetmaskLength == null ? Codegen.empty() : this.ipv6NetmaskLength;
+    public Optional<Output<Integer>> ipv6NetmaskLength() {
+        return Optional.ofNullable(this.ipv6NetmaskLength);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class VpcIpv6CidrBlockAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public VpcIpv6CidrBlockAssociationState(
-        @Nullable Output<String> ipv6CidrBlock,
-        @Nullable Output<String> ipv6IpamPoolId,
-        @Nullable Output<Integer> ipv6NetmaskLength,
-        @Nullable Output<String> vpcId) {
-        this.ipv6CidrBlock = ipv6CidrBlock;
-        this.ipv6IpamPoolId = ipv6IpamPoolId;
-        this.ipv6NetmaskLength = ipv6NetmaskLength;
-        this.vpcId = vpcId;
-    }
+    private VpcIpv6CidrBlockAssociationState() {}
 
-    private VpcIpv6CidrBlockAssociationState() {
-        this.ipv6CidrBlock = Codegen.empty();
-        this.ipv6IpamPoolId = Codegen.empty();
-        this.ipv6NetmaskLength = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private VpcIpv6CidrBlockAssociationState(VpcIpv6CidrBlockAssociationState $) {
+        this.ipv6CidrBlock = $.ipv6CidrBlock;
+        this.ipv6IpamPoolId = $.ipv6IpamPoolId;
+        this.ipv6NetmaskLength = $.ipv6NetmaskLength;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcIpv6CidrBlockAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipv6CidrBlock;
-        private @Nullable Output<String> ipv6IpamPoolId;
-        private @Nullable Output<Integer> ipv6NetmaskLength;
-        private @Nullable Output<String> vpcId;
+        private VpcIpv6CidrBlockAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcIpv6CidrBlockAssociationState();
         }
 
         public Builder(VpcIpv6CidrBlockAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipv6CidrBlock = defaults.ipv6CidrBlock;
-    	      this.ipv6IpamPoolId = defaults.ipv6IpamPoolId;
-    	      this.ipv6NetmaskLength = defaults.ipv6NetmaskLength;
-    	      this.vpcId = defaults.vpcId;
+            $ = new VpcIpv6CidrBlockAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
+            $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
-            return this;
+
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            return ipv6CidrBlock(Output.of(ipv6CidrBlock));
         }
+
         public Builder ipv6IpamPoolId(@Nullable Output<String> ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = ipv6IpamPoolId;
+            $.ipv6IpamPoolId = ipv6IpamPoolId;
             return this;
         }
-        public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = Codegen.ofNullable(ipv6IpamPoolId);
-            return this;
+
+        public Builder ipv6IpamPoolId(String ipv6IpamPoolId) {
+            return ipv6IpamPoolId(Output.of(ipv6IpamPoolId));
         }
+
         public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = ipv6NetmaskLength;
+            $.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
-        public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = Codegen.ofNullable(ipv6NetmaskLength);
-            return this;
+
+        public Builder ipv6NetmaskLength(Integer ipv6NetmaskLength) {
+            return ipv6NetmaskLength(Output.of(ipv6NetmaskLength));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public VpcIpv6CidrBlockAssociationState build() {
-            return new VpcIpv6CidrBlockAssociationState(ipv6CidrBlock, ipv6IpamPoolId, ipv6NetmaskLength, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public VpcIpv6CidrBlockAssociationState build() {
+            return $;
         }
     }
+
 }

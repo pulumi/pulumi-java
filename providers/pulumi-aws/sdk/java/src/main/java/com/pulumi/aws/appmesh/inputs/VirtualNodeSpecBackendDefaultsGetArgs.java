@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="clientPolicy")
-      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
+    private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy() {
-        return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
+    public Optional<Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs>> clientPolicy() {
+        return Optional.ofNullable(this.clientPolicy);
     }
 
-    public VirtualNodeSpecBackendDefaultsGetArgs(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
-        this.clientPolicy = clientPolicy;
-    }
+    private VirtualNodeSpecBackendDefaultsGetArgs() {}
 
-    private VirtualNodeSpecBackendDefaultsGetArgs() {
-        this.clientPolicy = Codegen.empty();
+    private VirtualNodeSpecBackendDefaultsGetArgs(VirtualNodeSpecBackendDefaultsGetArgs $) {
+        this.clientPolicy = $.clientPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendDefaultsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
+        private VirtualNodeSpecBackendDefaultsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendDefaultsGetArgs();
         }
 
         public Builder(VirtualNodeSpecBackendDefaultsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientPolicy = defaults.clientPolicy;
+            $ = new VirtualNodeSpecBackendDefaultsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientPolicy(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
-            this.clientPolicy = clientPolicy;
+            $.clientPolicy = clientPolicy;
             return this;
         }
-        public Builder clientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyGetArgs clientPolicy) {
-            this.clientPolicy = Codegen.ofNullable(clientPolicy);
-            return this;
-        }        public VirtualNodeSpecBackendDefaultsGetArgs build() {
-            return new VirtualNodeSpecBackendDefaultsGetArgs(clientPolicy);
+
+        public Builder clientPolicy(VirtualNodeSpecBackendDefaultsClientPolicyGetArgs clientPolicy) {
+            return clientPolicy(Output.of(clientPolicy));
+        }
+
+        public VirtualNodeSpecBackendDefaultsGetArgs build() {
+            return $;
         }
     }
+
 }

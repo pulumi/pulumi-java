@@ -9,12 +9,12 @@ import com.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorArgs;
 import com.pulumi.aws.glue.inputs.CatalogTableTargetTableArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -49,10 +49,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionIndices")
-      private final @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices;
+    private @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices;
 
-    public Output<List<CatalogTablePartitionIndexArgs>> partitionIndices() {
-        return this.partitionIndices == null ? Codegen.empty() : this.partitionIndices;
+    public Optional<Output<List<CatalogTablePartitionIndexArgs>>> partitionIndices() {
+        return Optional.ofNullable(this.partitionIndices);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionKeys")
-      private final @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys;
+    private @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys;
 
-    public Output<List<CatalogTablePartitionKeyArgs>> partitionKeys() {
-        return this.partitionKeys == null ? Codegen.empty() : this.partitionKeys;
+    public Optional<Output<List<CatalogTablePartitionKeyArgs>>> partitionKeys() {
+        return Optional.ofNullable(this.partitionKeys);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retention")
-      private final @Nullable Output<Integer> retention;
+    private @Nullable Output<Integer> retention;
 
-    public Output<Integer> retention() {
-        return this.retention == null ? Codegen.empty() : this.retention;
+    public Optional<Output<Integer>> retention() {
+        return Optional.ofNullable(this.retention);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageDescriptor")
-      private final @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor;
+    private @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor;
 
-    public Output<CatalogTableStorageDescriptorArgs> storageDescriptor() {
-        return this.storageDescriptor == null ? Codegen.empty() : this.storageDescriptor;
+    public Optional<Output<CatalogTableStorageDescriptorArgs>> storageDescriptor() {
+        return Optional.ofNullable(this.storageDescriptor);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableType")
-      private final @Nullable Output<String> tableType;
+    private @Nullable Output<String> tableType;
 
-    public Output<String> tableType() {
-        return this.tableType == null ? Codegen.empty() : this.tableType;
+    public Optional<Output<String>> tableType() {
+        return Optional.ofNullable(this.tableType);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetTable")
-      private final @Nullable Output<CatalogTableTargetTableArgs> targetTable;
+    private @Nullable Output<CatalogTableTargetTableArgs> targetTable;
 
-    public Output<CatalogTableTargetTableArgs> targetTable() {
-        return this.targetTable == null ? Codegen.empty() : this.targetTable;
+    public Optional<Output<CatalogTableTargetTableArgs>> targetTable() {
+        return Optional.ofNullable(this.targetTable);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="viewExpandedText")
-      private final @Nullable Output<String> viewExpandedText;
+    private @Nullable Output<String> viewExpandedText;
 
-    public Output<String> viewExpandedText() {
-        return this.viewExpandedText == null ? Codegen.empty() : this.viewExpandedText;
+    public Optional<Output<String>> viewExpandedText() {
+        return Optional.ofNullable(this.viewExpandedText);
     }
 
     /**
@@ -170,225 +170,187 @@ public final class CatalogTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="viewOriginalText")
-      private final @Nullable Output<String> viewOriginalText;
+    private @Nullable Output<String> viewOriginalText;
 
-    public Output<String> viewOriginalText() {
-        return this.viewOriginalText == null ? Codegen.empty() : this.viewOriginalText;
+    public Optional<Output<String>> viewOriginalText() {
+        return Optional.ofNullable(this.viewOriginalText);
     }
 
-    public CatalogTableArgs(
-        @Nullable Output<String> catalogId,
-        Output<String> databaseName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> owner,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices,
-        @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys,
-        @Nullable Output<Integer> retention,
-        @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor,
-        @Nullable Output<String> tableType,
-        @Nullable Output<CatalogTableTargetTableArgs> targetTable,
-        @Nullable Output<String> viewExpandedText,
-        @Nullable Output<String> viewOriginalText) {
-        this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.owner = owner;
-        this.parameters = parameters;
-        this.partitionIndices = partitionIndices;
-        this.partitionKeys = partitionKeys;
-        this.retention = retention;
-        this.storageDescriptor = storageDescriptor;
-        this.tableType = tableType;
-        this.targetTable = targetTable;
-        this.viewExpandedText = viewExpandedText;
-        this.viewOriginalText = viewOriginalText;
-    }
+    private CatalogTableArgs() {}
 
-    private CatalogTableArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.partitionIndices = Codegen.empty();
-        this.partitionKeys = Codegen.empty();
-        this.retention = Codegen.empty();
-        this.storageDescriptor = Codegen.empty();
-        this.tableType = Codegen.empty();
-        this.targetTable = Codegen.empty();
-        this.viewExpandedText = Codegen.empty();
-        this.viewOriginalText = Codegen.empty();
+    private CatalogTableArgs(CatalogTableArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.description = $.description;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.parameters = $.parameters;
+        this.partitionIndices = $.partitionIndices;
+        this.partitionKeys = $.partitionKeys;
+        this.retention = $.retention;
+        this.storageDescriptor = $.storageDescriptor;
+        this.tableType = $.tableType;
+        this.targetTable = $.targetTable;
+        this.viewExpandedText = $.viewExpandedText;
+        this.viewOriginalText = $.viewOriginalText;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private Output<String> databaseName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices;
-        private @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys;
-        private @Nullable Output<Integer> retention;
-        private @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor;
-        private @Nullable Output<String> tableType;
-        private @Nullable Output<CatalogTableTargetTableArgs> targetTable;
-        private @Nullable Output<String> viewExpandedText;
-        private @Nullable Output<String> viewOriginalText;
+        private CatalogTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogTableArgs();
         }
 
         public Builder(CatalogTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.parameters = defaults.parameters;
-    	      this.partitionIndices = defaults.partitionIndices;
-    	      this.partitionKeys = defaults.partitionKeys;
-    	      this.retention = defaults.retention;
-    	      this.storageDescriptor = defaults.storageDescriptor;
-    	      this.tableType = defaults.tableType;
-    	      this.targetTable = defaults.targetTable;
-    	      this.viewExpandedText = defaults.viewExpandedText;
-    	      this.viewOriginalText = defaults.viewOriginalText;
+            $ = new CatalogTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder partitionIndices(@Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices) {
-            this.partitionIndices = partitionIndices;
+            $.partitionIndices = partitionIndices;
             return this;
         }
-        public Builder partitionIndices(@Nullable List<CatalogTablePartitionIndexArgs> partitionIndices) {
-            this.partitionIndices = Codegen.ofNullable(partitionIndices);
-            return this;
+
+        public Builder partitionIndices(List<CatalogTablePartitionIndexArgs> partitionIndices) {
+            return partitionIndices(Output.of(partitionIndices));
         }
+
         public Builder partitionIndices(CatalogTablePartitionIndexArgs... partitionIndices) {
             return partitionIndices(List.of(partitionIndices));
         }
+
         public Builder partitionKeys(@Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys) {
-            this.partitionKeys = partitionKeys;
+            $.partitionKeys = partitionKeys;
             return this;
         }
-        public Builder partitionKeys(@Nullable List<CatalogTablePartitionKeyArgs> partitionKeys) {
-            this.partitionKeys = Codegen.ofNullable(partitionKeys);
-            return this;
+
+        public Builder partitionKeys(List<CatalogTablePartitionKeyArgs> partitionKeys) {
+            return partitionKeys(Output.of(partitionKeys));
         }
+
         public Builder partitionKeys(CatalogTablePartitionKeyArgs... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }
+
         public Builder retention(@Nullable Output<Integer> retention) {
-            this.retention = retention;
+            $.retention = retention;
             return this;
         }
-        public Builder retention(@Nullable Integer retention) {
-            this.retention = Codegen.ofNullable(retention);
-            return this;
+
+        public Builder retention(Integer retention) {
+            return retention(Output.of(retention));
         }
+
         public Builder storageDescriptor(@Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor) {
-            this.storageDescriptor = storageDescriptor;
+            $.storageDescriptor = storageDescriptor;
             return this;
         }
-        public Builder storageDescriptor(@Nullable CatalogTableStorageDescriptorArgs storageDescriptor) {
-            this.storageDescriptor = Codegen.ofNullable(storageDescriptor);
-            return this;
+
+        public Builder storageDescriptor(CatalogTableStorageDescriptorArgs storageDescriptor) {
+            return storageDescriptor(Output.of(storageDescriptor));
         }
+
         public Builder tableType(@Nullable Output<String> tableType) {
-            this.tableType = tableType;
+            $.tableType = tableType;
             return this;
         }
-        public Builder tableType(@Nullable String tableType) {
-            this.tableType = Codegen.ofNullable(tableType);
-            return this;
+
+        public Builder tableType(String tableType) {
+            return tableType(Output.of(tableType));
         }
+
         public Builder targetTable(@Nullable Output<CatalogTableTargetTableArgs> targetTable) {
-            this.targetTable = targetTable;
+            $.targetTable = targetTable;
             return this;
         }
-        public Builder targetTable(@Nullable CatalogTableTargetTableArgs targetTable) {
-            this.targetTable = Codegen.ofNullable(targetTable);
-            return this;
+
+        public Builder targetTable(CatalogTableTargetTableArgs targetTable) {
+            return targetTable(Output.of(targetTable));
         }
+
         public Builder viewExpandedText(@Nullable Output<String> viewExpandedText) {
-            this.viewExpandedText = viewExpandedText;
+            $.viewExpandedText = viewExpandedText;
             return this;
         }
-        public Builder viewExpandedText(@Nullable String viewExpandedText) {
-            this.viewExpandedText = Codegen.ofNullable(viewExpandedText);
-            return this;
+
+        public Builder viewExpandedText(String viewExpandedText) {
+            return viewExpandedText(Output.of(viewExpandedText));
         }
+
         public Builder viewOriginalText(@Nullable Output<String> viewOriginalText) {
-            this.viewOriginalText = viewOriginalText;
+            $.viewOriginalText = viewOriginalText;
             return this;
         }
-        public Builder viewOriginalText(@Nullable String viewOriginalText) {
-            this.viewOriginalText = Codegen.ofNullable(viewOriginalText);
-            return this;
-        }        public CatalogTableArgs build() {
-            return new CatalogTableArgs(catalogId, databaseName, description, name, owner, parameters, partitionIndices, partitionKeys, retention, storageDescriptor, tableType, targetTable, viewExpandedText, viewOriginalText);
+
+        public Builder viewOriginalText(String viewOriginalText) {
+            return viewOriginalText(Output.of(viewOriginalText));
+        }
+
+        public CatalogTableArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            return $;
         }
     }
+
 }

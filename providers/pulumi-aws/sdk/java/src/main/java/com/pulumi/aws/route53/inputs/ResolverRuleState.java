@@ -6,11 +6,11 @@ package com.pulumi.aws.route53.inputs;
 import com.pulumi.aws.route53.inputs.ResolverRuleTargetIpGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resolverEndpointId")
-      private final @Nullable Output<String> resolverEndpointId;
+    private @Nullable Output<String> resolverEndpointId;
 
-    public Output<String> resolverEndpointId() {
-        return this.resolverEndpointId == null ? Codegen.empty() : this.resolverEndpointId;
+    public Optional<Output<String>> resolverEndpointId() {
+        return Optional.ofNullable(this.resolverEndpointId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleType")
-      private final @Nullable Output<String> ruleType;
+    private @Nullable Output<String> ruleType;
 
-    public Output<String> ruleType() {
-        return this.ruleType == null ? Codegen.empty() : this.ruleType;
+    public Optional<Output<String>> ruleType() {
+        return Optional.ofNullable(this.ruleType);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareStatus")
-      private final @Nullable Output<String> shareStatus;
+    private @Nullable Output<String> shareStatus;
 
-    public Output<String> shareStatus() {
-        return this.shareStatus == null ? Codegen.empty() : this.shareStatus;
+    public Optional<Output<String>> shareStatus() {
+        return Optional.ofNullable(this.shareStatus);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -125,170 +125,142 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetIps")
-      private final @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
+    private @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
 
-    public Output<List<ResolverRuleTargetIpGetArgs>> targetIps() {
-        return this.targetIps == null ? Codegen.empty() : this.targetIps;
+    public Optional<Output<List<ResolverRuleTargetIpGetArgs>>> targetIps() {
+        return Optional.ofNullable(this.targetIps);
     }
 
-    public ResolverRuleState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<String> resolverEndpointId,
-        @Nullable Output<String> ruleType,
-        @Nullable Output<String> shareStatus,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps) {
-        this.arn = arn;
-        this.domainName = domainName;
-        this.name = name;
-        this.ownerId = ownerId;
-        this.resolverEndpointId = resolverEndpointId;
-        this.ruleType = ruleType;
-        this.shareStatus = shareStatus;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.targetIps = targetIps;
-    }
+    private ResolverRuleState() {}
 
-    private ResolverRuleState() {
-        this.arn = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.resolverEndpointId = Codegen.empty();
-        this.ruleType = Codegen.empty();
-        this.shareStatus = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.targetIps = Codegen.empty();
+    private ResolverRuleState(ResolverRuleState $) {
+        this.arn = $.arn;
+        this.domainName = $.domainName;
+        this.name = $.name;
+        this.ownerId = $.ownerId;
+        this.resolverEndpointId = $.resolverEndpointId;
+        this.ruleType = $.ruleType;
+        this.shareStatus = $.shareStatus;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.targetIps = $.targetIps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<String> resolverEndpointId;
-        private @Nullable Output<String> ruleType;
-        private @Nullable Output<String> shareStatus;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
+        private ResolverRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverRuleState();
         }
 
         public Builder(ResolverRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.domainName = defaults.domainName;
-    	      this.name = defaults.name;
-    	      this.ownerId = defaults.ownerId;
-    	      this.resolverEndpointId = defaults.resolverEndpointId;
-    	      this.ruleType = defaults.ruleType;
-    	      this.shareStatus = defaults.shareStatus;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.targetIps = defaults.targetIps;
+            $ = new ResolverRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
-            this.resolverEndpointId = resolverEndpointId;
+            $.resolverEndpointId = resolverEndpointId;
             return this;
         }
-        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            this.resolverEndpointId = Codegen.ofNullable(resolverEndpointId);
-            return this;
+
+        public Builder resolverEndpointId(String resolverEndpointId) {
+            return resolverEndpointId(Output.of(resolverEndpointId));
         }
+
         public Builder ruleType(@Nullable Output<String> ruleType) {
-            this.ruleType = ruleType;
+            $.ruleType = ruleType;
             return this;
         }
-        public Builder ruleType(@Nullable String ruleType) {
-            this.ruleType = Codegen.ofNullable(ruleType);
-            return this;
+
+        public Builder ruleType(String ruleType) {
+            return ruleType(Output.of(ruleType));
         }
+
         public Builder shareStatus(@Nullable Output<String> shareStatus) {
-            this.shareStatus = shareStatus;
+            $.shareStatus = shareStatus;
             return this;
         }
-        public Builder shareStatus(@Nullable String shareStatus) {
-            this.shareStatus = Codegen.ofNullable(shareStatus);
-            return this;
+
+        public Builder shareStatus(String shareStatus) {
+            return shareStatus(Output.of(shareStatus));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps) {
-            this.targetIps = targetIps;
+            $.targetIps = targetIps;
             return this;
         }
-        public Builder targetIps(@Nullable List<ResolverRuleTargetIpGetArgs> targetIps) {
-            this.targetIps = Codegen.ofNullable(targetIps);
-            return this;
+
+        public Builder targetIps(List<ResolverRuleTargetIpGetArgs> targetIps) {
+            return targetIps(Output.of(targetIps));
         }
+
         public Builder targetIps(ResolverRuleTargetIpGetArgs... targetIps) {
             return targetIps(List.of(targetIps));
-        }        public ResolverRuleState build() {
-            return new ResolverRuleState(arn, domainName, name, ownerId, resolverEndpointId, ruleType, shareStatus, tags, tagsAll, targetIps);
+        }
+
+        public ResolverRuleState build() {
+            return $;
         }
     }
+
 }

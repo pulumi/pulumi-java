@@ -18,7 +18,7 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -29,7 +29,7 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="identityPoolId", required=true)
-      private final String identityPoolId;
+    private String identityPoolId;
 
     public String identityPoolId() {
         return this.identityPoolId;
@@ -40,7 +40,7 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
@@ -51,73 +51,66 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final String userPoolId;
+    private String userPoolId;
 
     public String userPoolId() {
         return this.userPoolId;
     }
 
-    public GetDomainCognitoOption(
-        Boolean enabled,
-        String identityPoolId,
-        String roleArn,
-        String userPoolId) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.identityPoolId = Objects.requireNonNull(identityPoolId, "expected parameter 'identityPoolId' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private GetDomainCognitoOption() {}
 
-    private GetDomainCognitoOption() {
-        this.enabled = null;
-        this.identityPoolId = null;
-        this.roleArn = null;
-        this.userPoolId = null;
+    private GetDomainCognitoOption(GetDomainCognitoOption $) {
+        this.enabled = $.enabled;
+        this.identityPoolId = $.identityPoolId;
+        this.roleArn = $.roleArn;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainCognitoOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String identityPoolId;
-        private String roleArn;
-        private String userPoolId;
+        private GetDomainCognitoOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainCognitoOption();
         }
 
         public Builder(GetDomainCognitoOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.identityPoolId = defaults.identityPoolId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new GetDomainCognitoOption(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder identityPoolId(String identityPoolId) {
-            this.identityPoolId = Objects.requireNonNull(identityPoolId);
+            $.identityPoolId = identityPoolId;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
-        }        public GetDomainCognitoOption build() {
-            return new GetDomainCognitoOption(enabled, identityPoolId, roleArn, userPoolId);
+        }
+
+        public GetDomainCognitoOption build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.identityPoolId = Objects.requireNonNull($.identityPoolId, "expected parameter 'identityPoolId' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

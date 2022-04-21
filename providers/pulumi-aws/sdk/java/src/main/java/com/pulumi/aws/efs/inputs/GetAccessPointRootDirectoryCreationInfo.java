@@ -18,7 +18,7 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
      * 
      */
     @Import(name="ownerGid", required=true)
-      private final Integer ownerGid;
+    private Integer ownerGid;
 
     public Integer ownerGid() {
         return this.ownerGid;
@@ -29,7 +29,7 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
      * 
      */
     @Import(name="ownerUid", required=true)
-      private final Integer ownerUid;
+    private Integer ownerUid;
 
     public Integer ownerUid() {
         return this.ownerUid;
@@ -40,64 +40,59 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
      * 
      */
     @Import(name="permissions", required=true)
-      private final String permissions;
+    private String permissions;
 
     public String permissions() {
         return this.permissions;
     }
 
-    public GetAccessPointRootDirectoryCreationInfo(
-        Integer ownerGid,
-        Integer ownerUid,
-        String permissions) {
-        this.ownerGid = Objects.requireNonNull(ownerGid, "expected parameter 'ownerGid' to be non-null");
-        this.ownerUid = Objects.requireNonNull(ownerUid, "expected parameter 'ownerUid' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-    }
+    private GetAccessPointRootDirectoryCreationInfo() {}
 
-    private GetAccessPointRootDirectoryCreationInfo() {
-        this.ownerGid = null;
-        this.ownerUid = null;
-        this.permissions = null;
+    private GetAccessPointRootDirectoryCreationInfo(GetAccessPointRootDirectoryCreationInfo $) {
+        this.ownerGid = $.ownerGid;
+        this.ownerUid = $.ownerUid;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPointRootDirectoryCreationInfo defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer ownerGid;
-        private Integer ownerUid;
-        private String permissions;
+        private GetAccessPointRootDirectoryCreationInfo $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPointRootDirectoryCreationInfo();
         }
 
         public Builder(GetAccessPointRootDirectoryCreationInfo defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ownerGid = defaults.ownerGid;
-    	      this.ownerUid = defaults.ownerUid;
-    	      this.permissions = defaults.permissions;
+            $ = new GetAccessPointRootDirectoryCreationInfo(Objects.requireNonNull(defaults));
         }
 
         public Builder ownerGid(Integer ownerGid) {
-            this.ownerGid = Objects.requireNonNull(ownerGid);
+            $.ownerGid = ownerGid;
             return this;
         }
+
         public Builder ownerUid(Integer ownerUid) {
-            this.ownerUid = Objects.requireNonNull(ownerUid);
+            $.ownerUid = ownerUid;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
-        }        public GetAccessPointRootDirectoryCreationInfo build() {
-            return new GetAccessPointRootDirectoryCreationInfo(ownerGid, ownerUid, permissions);
+        }
+
+        public GetAccessPointRootDirectoryCreationInfo build() {
+            $.ownerGid = Objects.requireNonNull($.ownerGid, "expected parameter 'ownerGid' to be non-null");
+            $.ownerUid = Objects.requireNonNull($.ownerUid, "expected parameter 'ownerUid' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            return $;
         }
     }
+
 }

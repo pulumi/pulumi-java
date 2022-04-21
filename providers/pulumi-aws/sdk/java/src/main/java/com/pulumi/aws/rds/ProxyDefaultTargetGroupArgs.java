@@ -6,9 +6,9 @@ package com.pulumi.aws.rds;
 import com.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProxyDefaultTargetGroupArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connectionPoolConfig")
-      private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
+    private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
 
-    public Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig() {
-        return this.connectionPoolConfig == null ? Codegen.empty() : this.connectionPoolConfig;
+    public Optional<Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs>> connectionPoolConfig() {
+        return Optional.ofNullable(this.connectionPoolConfig);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ProxyDefaultTargetGroupArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dbProxyName", required=true)
-      private final Output<String> dbProxyName;
+    private Output<String> dbProxyName;
 
     public Output<String> dbProxyName() {
         return this.dbProxyName;
     }
 
-    public ProxyDefaultTargetGroupArgs(
-        @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig,
-        Output<String> dbProxyName) {
-        this.connectionPoolConfig = connectionPoolConfig;
-        this.dbProxyName = Objects.requireNonNull(dbProxyName, "expected parameter 'dbProxyName' to be non-null");
-    }
+    private ProxyDefaultTargetGroupArgs() {}
 
-    private ProxyDefaultTargetGroupArgs() {
-        this.connectionPoolConfig = Codegen.empty();
-        this.dbProxyName = Codegen.empty();
+    private ProxyDefaultTargetGroupArgs(ProxyDefaultTargetGroupArgs $) {
+        this.connectionPoolConfig = $.connectionPoolConfig;
+        this.dbProxyName = $.dbProxyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyDefaultTargetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
-        private Output<String> dbProxyName;
+        private ProxyDefaultTargetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyDefaultTargetGroupArgs();
         }
 
         public Builder(ProxyDefaultTargetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPoolConfig = defaults.connectionPoolConfig;
-    	      this.dbProxyName = defaults.dbProxyName;
+            $ = new ProxyDefaultTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig) {
-            this.connectionPoolConfig = connectionPoolConfig;
+            $.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
-        public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigArgs connectionPoolConfig) {
-            this.connectionPoolConfig = Codegen.ofNullable(connectionPoolConfig);
-            return this;
+
+        public Builder connectionPoolConfig(ProxyDefaultTargetGroupConnectionPoolConfigArgs connectionPoolConfig) {
+            return connectionPoolConfig(Output.of(connectionPoolConfig));
         }
+
         public Builder dbProxyName(Output<String> dbProxyName) {
-            this.dbProxyName = Objects.requireNonNull(dbProxyName);
+            $.dbProxyName = dbProxyName;
             return this;
         }
+
         public Builder dbProxyName(String dbProxyName) {
-            this.dbProxyName = Output.of(Objects.requireNonNull(dbProxyName));
-            return this;
-        }        public ProxyDefaultTargetGroupArgs build() {
-            return new ProxyDefaultTargetGroupArgs(connectionPoolConfig, dbProxyName);
+            return dbProxyName(Output.of(dbProxyName));
+        }
+
+        public ProxyDefaultTargetGroupArgs build() {
+            $.dbProxyName = Objects.requireNonNull($.dbProxyName, "expected parameter 'dbProxyName' to be non-null");
+            return $;
         }
     }
+
 }

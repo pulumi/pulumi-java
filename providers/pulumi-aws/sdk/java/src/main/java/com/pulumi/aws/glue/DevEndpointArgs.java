@@ -5,13 +5,13 @@ package com.pulumi.aws.glue;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<Map<String,Object>> arguments;
+    private @Nullable Output<Map<String,Object>> arguments;
 
-    public Output<Map<String,Object>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<Map<String,Object>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extraJarsS3Path")
-      private final @Nullable Output<String> extraJarsS3Path;
+    private @Nullable Output<String> extraJarsS3Path;
 
-    public Output<String> extraJarsS3Path() {
-        return this.extraJarsS3Path == null ? Codegen.empty() : this.extraJarsS3Path;
+    public Optional<Output<String>> extraJarsS3Path() {
+        return Optional.ofNullable(this.extraJarsS3Path);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extraPythonLibsS3Path")
-      private final @Nullable Output<String> extraPythonLibsS3Path;
+    private @Nullable Output<String> extraPythonLibsS3Path;
 
-    public Output<String> extraPythonLibsS3Path() {
-        return this.extraPythonLibsS3Path == null ? Codegen.empty() : this.extraPythonLibsS3Path;
+    public Optional<Output<String>> extraPythonLibsS3Path() {
+        return Optional.ofNullable(this.extraPythonLibsS3Path);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="glueVersion")
-      private final @Nullable Output<String> glueVersion;
+    private @Nullable Output<String> glueVersion;
 
-    public Output<String> glueVersion() {
-        return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
+    public Optional<Output<String>> glueVersion() {
+        return Optional.ofNullable(this.glueVersion);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfNodes")
-      private final @Nullable Output<Integer> numberOfNodes;
+    private @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> numberOfNodes() {
-        return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
+    public Optional<Output<Integer>> numberOfNodes() {
+        return Optional.ofNullable(this.numberOfNodes);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfWorkers")
-      private final @Nullable Output<Integer> numberOfWorkers;
+    private @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> numberOfWorkers() {
-        return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
+    public Optional<Output<Integer>> numberOfWorkers() {
+        return Optional.ofNullable(this.numberOfWorkers);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable Output<List<String>> publicKeys;
+    private @Nullable Output<List<String>> publicKeys;
 
-    public Output<List<String>> publicKeys() {
-        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
+    public Optional<Output<List<String>>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -134,10 +134,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityConfiguration")
-      private final @Nullable Output<String> securityConfiguration;
+    private @Nullable Output<String> securityConfiguration;
 
-    public Output<String> securityConfiguration() {
-        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
+    public Optional<Output<String>> securityConfiguration() {
+        return Optional.ofNullable(this.securityConfiguration);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -178,238 +178,197 @@ public final class DevEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerType")
-      private final @Nullable Output<String> workerType;
+    private @Nullable Output<String> workerType;
 
-    public Output<String> workerType() {
-        return this.workerType == null ? Codegen.empty() : this.workerType;
+    public Optional<Output<String>> workerType() {
+        return Optional.ofNullable(this.workerType);
     }
 
-    public DevEndpointArgs(
-        @Nullable Output<Map<String,Object>> arguments,
-        @Nullable Output<String> extraJarsS3Path,
-        @Nullable Output<String> extraPythonLibsS3Path,
-        @Nullable Output<String> glueVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> numberOfNodes,
-        @Nullable Output<Integer> numberOfWorkers,
-        @Nullable Output<String> publicKey,
-        @Nullable Output<List<String>> publicKeys,
-        Output<String> roleArn,
-        @Nullable Output<String> securityConfiguration,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> workerType) {
-        this.arguments = arguments;
-        this.extraJarsS3Path = extraJarsS3Path;
-        this.extraPythonLibsS3Path = extraPythonLibsS3Path;
-        this.glueVersion = glueVersion;
-        this.name = name;
-        this.numberOfNodes = numberOfNodes;
-        this.numberOfWorkers = numberOfWorkers;
-        this.publicKey = publicKey;
-        this.publicKeys = publicKeys;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.securityConfiguration = securityConfiguration;
-        this.securityGroupIds = securityGroupIds;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.workerType = workerType;
-    }
+    private DevEndpointArgs() {}
 
-    private DevEndpointArgs() {
-        this.arguments = Codegen.empty();
-        this.extraJarsS3Path = Codegen.empty();
-        this.extraPythonLibsS3Path = Codegen.empty();
-        this.glueVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.numberOfNodes = Codegen.empty();
-        this.numberOfWorkers = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.publicKeys = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.securityConfiguration = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workerType = Codegen.empty();
+    private DevEndpointArgs(DevEndpointArgs $) {
+        this.arguments = $.arguments;
+        this.extraJarsS3Path = $.extraJarsS3Path;
+        this.extraPythonLibsS3Path = $.extraPythonLibsS3Path;
+        this.glueVersion = $.glueVersion;
+        this.name = $.name;
+        this.numberOfNodes = $.numberOfNodes;
+        this.numberOfWorkers = $.numberOfWorkers;
+        this.publicKey = $.publicKey;
+        this.publicKeys = $.publicKeys;
+        this.roleArn = $.roleArn;
+        this.securityConfiguration = $.securityConfiguration;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.workerType = $.workerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DevEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> arguments;
-        private @Nullable Output<String> extraJarsS3Path;
-        private @Nullable Output<String> extraPythonLibsS3Path;
-        private @Nullable Output<String> glueVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> numberOfNodes;
-        private @Nullable Output<Integer> numberOfWorkers;
-        private @Nullable Output<String> publicKey;
-        private @Nullable Output<List<String>> publicKeys;
-        private Output<String> roleArn;
-        private @Nullable Output<String> securityConfiguration;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> workerType;
+        private DevEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DevEndpointArgs();
         }
 
         public Builder(DevEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.extraJarsS3Path = defaults.extraJarsS3Path;
-    	      this.extraPythonLibsS3Path = defaults.extraPythonLibsS3Path;
-    	      this.glueVersion = defaults.glueVersion;
-    	      this.name = defaults.name;
-    	      this.numberOfNodes = defaults.numberOfNodes;
-    	      this.numberOfWorkers = defaults.numberOfWorkers;
-    	      this.publicKey = defaults.publicKey;
-    	      this.publicKeys = defaults.publicKeys;
-    	      this.roleArn = defaults.roleArn;
-    	      this.securityConfiguration = defaults.securityConfiguration;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.workerType = defaults.workerType;
+            $ = new DevEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<Map<String,Object>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable Map<String,Object> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(Map<String,Object> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder extraJarsS3Path(@Nullable Output<String> extraJarsS3Path) {
-            this.extraJarsS3Path = extraJarsS3Path;
+            $.extraJarsS3Path = extraJarsS3Path;
             return this;
         }
-        public Builder extraJarsS3Path(@Nullable String extraJarsS3Path) {
-            this.extraJarsS3Path = Codegen.ofNullable(extraJarsS3Path);
-            return this;
+
+        public Builder extraJarsS3Path(String extraJarsS3Path) {
+            return extraJarsS3Path(Output.of(extraJarsS3Path));
         }
+
         public Builder extraPythonLibsS3Path(@Nullable Output<String> extraPythonLibsS3Path) {
-            this.extraPythonLibsS3Path = extraPythonLibsS3Path;
+            $.extraPythonLibsS3Path = extraPythonLibsS3Path;
             return this;
         }
-        public Builder extraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
-            this.extraPythonLibsS3Path = Codegen.ofNullable(extraPythonLibsS3Path);
-            return this;
+
+        public Builder extraPythonLibsS3Path(String extraPythonLibsS3Path) {
+            return extraPythonLibsS3Path(Output.of(extraPythonLibsS3Path));
         }
+
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
-            this.glueVersion = glueVersion;
+            $.glueVersion = glueVersion;
             return this;
         }
-        public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Codegen.ofNullable(glueVersion);
-            return this;
+
+        public Builder glueVersion(String glueVersion) {
+            return glueVersion(Output.of(glueVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
-            this.numberOfNodes = numberOfNodes;
+            $.numberOfNodes = numberOfNodes;
             return this;
         }
-        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Codegen.ofNullable(numberOfNodes);
-            return this;
+
+        public Builder numberOfNodes(Integer numberOfNodes) {
+            return numberOfNodes(Output.of(numberOfNodes));
         }
+
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
-            this.numberOfWorkers = numberOfWorkers;
+            $.numberOfWorkers = numberOfWorkers;
             return this;
         }
-        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Codegen.ofNullable(numberOfWorkers);
-            return this;
+
+        public Builder numberOfWorkers(Integer numberOfWorkers) {
+            return numberOfWorkers(Output.of(numberOfWorkers));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder publicKeys(@Nullable Output<List<String>> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
-        public Builder publicKeys(@Nullable List<String> publicKeys) {
-            this.publicKeys = Codegen.ofNullable(publicKeys);
-            return this;
+
+        public Builder publicKeys(List<String> publicKeys) {
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(String... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
-            this.securityConfiguration = securityConfiguration;
+            $.securityConfiguration = securityConfiguration;
             return this;
         }
-        public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
-            return this;
+
+        public Builder securityConfiguration(String securityConfiguration) {
+            return securityConfiguration(Output.of(securityConfiguration));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workerType(@Nullable Output<String> workerType) {
-            this.workerType = workerType;
+            $.workerType = workerType;
             return this;
         }
-        public Builder workerType(@Nullable String workerType) {
-            this.workerType = Codegen.ofNullable(workerType);
-            return this;
-        }        public DevEndpointArgs build() {
-            return new DevEndpointArgs(arguments, extraJarsS3Path, extraPythonLibsS3Path, glueVersion, name, numberOfNodes, numberOfWorkers, publicKey, publicKeys, roleArn, securityConfiguration, securityGroupIds, subnetId, tags, workerType);
+
+        public Builder workerType(String workerType) {
+            return workerType(Output.of(workerType));
+        }
+
+        public DevEndpointArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

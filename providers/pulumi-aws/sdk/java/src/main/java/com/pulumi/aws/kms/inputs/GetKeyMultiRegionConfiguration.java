@@ -16,84 +16,81 @@ public final class GetKeyMultiRegionConfiguration extends com.pulumi.resources.I
     public static final GetKeyMultiRegionConfiguration Empty = new GetKeyMultiRegionConfiguration();
 
     @Import(name="multiRegionKeyType", required=true)
-      private final String multiRegionKeyType;
+    private String multiRegionKeyType;
 
     public String multiRegionKeyType() {
         return this.multiRegionKeyType;
     }
 
     @Import(name="primaryKeys", required=true)
-      private final List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
+    private List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
 
     public List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys() {
         return this.primaryKeys;
     }
 
     @Import(name="replicaKeys", required=true)
-      private final List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
+    private List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
 
     public List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys() {
         return this.replicaKeys;
     }
 
-    public GetKeyMultiRegionConfiguration(
-        String multiRegionKeyType,
-        List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys,
-        List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
-        this.multiRegionKeyType = Objects.requireNonNull(multiRegionKeyType, "expected parameter 'multiRegionKeyType' to be non-null");
-        this.primaryKeys = Objects.requireNonNull(primaryKeys, "expected parameter 'primaryKeys' to be non-null");
-        this.replicaKeys = Objects.requireNonNull(replicaKeys, "expected parameter 'replicaKeys' to be non-null");
-    }
+    private GetKeyMultiRegionConfiguration() {}
 
-    private GetKeyMultiRegionConfiguration() {
-        this.multiRegionKeyType = null;
-        this.primaryKeys = List.of();
-        this.replicaKeys = List.of();
+    private GetKeyMultiRegionConfiguration(GetKeyMultiRegionConfiguration $) {
+        this.multiRegionKeyType = $.multiRegionKeyType;
+        this.primaryKeys = $.primaryKeys;
+        this.replicaKeys = $.replicaKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyMultiRegionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String multiRegionKeyType;
-        private List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
-        private List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
+        private GetKeyMultiRegionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyMultiRegionConfiguration();
         }
 
         public Builder(GetKeyMultiRegionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multiRegionKeyType = defaults.multiRegionKeyType;
-    	      this.primaryKeys = defaults.primaryKeys;
-    	      this.replicaKeys = defaults.replicaKeys;
+            $ = new GetKeyMultiRegionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder multiRegionKeyType(String multiRegionKeyType) {
-            this.multiRegionKeyType = Objects.requireNonNull(multiRegionKeyType);
+            $.multiRegionKeyType = multiRegionKeyType;
             return this;
         }
+
         public Builder primaryKeys(List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys) {
-            this.primaryKeys = Objects.requireNonNull(primaryKeys);
+            $.primaryKeys = primaryKeys;
             return this;
         }
+
         public Builder primaryKeys(GetKeyMultiRegionConfigurationPrimaryKey... primaryKeys) {
             return primaryKeys(List.of(primaryKeys));
         }
+
         public Builder replicaKeys(List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
-            this.replicaKeys = Objects.requireNonNull(replicaKeys);
+            $.replicaKeys = replicaKeys;
             return this;
         }
+
         public Builder replicaKeys(GetKeyMultiRegionConfigurationReplicaKey... replicaKeys) {
             return replicaKeys(List.of(replicaKeys));
-        }        public GetKeyMultiRegionConfiguration build() {
-            return new GetKeyMultiRegionConfiguration(multiRegionKeyType, primaryKeys, replicaKeys);
+        }
+
+        public GetKeyMultiRegionConfiguration build() {
+            $.multiRegionKeyType = Objects.requireNonNull($.multiRegionKeyType, "expected parameter 'multiRegionKeyType' to be non-null");
+            $.primaryKeys = Objects.requireNonNull($.primaryKeys, "expected parameter 'primaryKeys' to be non-null");
+            $.replicaKeys = Objects.requireNonNull($.replicaKeys, "expected parameter 'replicaKeys' to be non-null");
+            return $;
         }
     }
+
 }

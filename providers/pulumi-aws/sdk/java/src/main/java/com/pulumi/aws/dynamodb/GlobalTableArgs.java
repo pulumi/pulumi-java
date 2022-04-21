@@ -6,10 +6,10 @@ package com.pulumi.aws.dynamodb;
 import com.pulumi.aws.dynamodb.inputs.GlobalTableReplicaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GlobalTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class GlobalTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicas", required=true)
-      private final Output<List<GlobalTableReplicaArgs>> replicas;
+    private Output<List<GlobalTableReplicaArgs>> replicas;
 
     public Output<List<GlobalTableReplicaArgs>> replicas() {
         return this.replicas;
     }
 
-    public GlobalTableArgs(
-        @Nullable Output<String> name,
-        Output<List<GlobalTableReplicaArgs>> replicas) {
-        this.name = name;
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-    }
+    private GlobalTableArgs() {}
 
-    private GlobalTableArgs() {
-        this.name = Codegen.empty();
-        this.replicas = Codegen.empty();
+    private GlobalTableArgs(GlobalTableArgs $) {
+        this.name = $.name;
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<List<GlobalTableReplicaArgs>> replicas;
+        private GlobalTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableArgs();
         }
 
         public Builder(GlobalTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.replicas = defaults.replicas;
+            $ = new GlobalTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder replicas(Output<List<GlobalTableReplicaArgs>> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(List<GlobalTableReplicaArgs> replicas) {
-            this.replicas = Output.of(Objects.requireNonNull(replicas));
-            return this;
+            return replicas(Output.of(replicas));
         }
+
         public Builder replicas(GlobalTableReplicaArgs... replicas) {
             return replicas(List.of(replicas));
-        }        public GlobalTableArgs build() {
-            return new GlobalTableArgs(name, replicas);
+        }
+
+        public GlobalTableArgs build() {
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DomainIdentityState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DomainIdentityState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class DomainIdentityState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="verificationToken")
-      private final @Nullable Output<String> verificationToken;
+    private @Nullable Output<String> verificationToken;
 
-    public Output<String> verificationToken() {
-        return this.verificationToken == null ? Codegen.empty() : this.verificationToken;
+    public Optional<Output<String>> verificationToken() {
+        return Optional.ofNullable(this.verificationToken);
     }
 
-    public DomainIdentityState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> verificationToken) {
-        this.arn = arn;
-        this.domain = domain;
-        this.verificationToken = verificationToken;
-    }
+    private DomainIdentityState() {}
 
-    private DomainIdentityState() {
-        this.arn = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.verificationToken = Codegen.empty();
+    private DomainIdentityState(DomainIdentityState $) {
+        this.arn = $.arn;
+        this.domain = $.domain;
+        this.verificationToken = $.verificationToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainIdentityState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> verificationToken;
+        private DomainIdentityState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainIdentityState();
         }
 
         public Builder(DomainIdentityState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.domain = defaults.domain;
-    	      this.verificationToken = defaults.verificationToken;
+            $ = new DomainIdentityState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder verificationToken(@Nullable Output<String> verificationToken) {
-            this.verificationToken = verificationToken;
+            $.verificationToken = verificationToken;
             return this;
         }
-        public Builder verificationToken(@Nullable String verificationToken) {
-            this.verificationToken = Codegen.ofNullable(verificationToken);
-            return this;
-        }        public DomainIdentityState build() {
-            return new DomainIdentityState(arn, domain, verificationToken);
+
+        public Builder verificationToken(String verificationToken) {
+            return verificationToken(Output.of(verificationToken));
+        }
+
+        public DomainIdentityState build() {
+            return $;
         }
     }
+
 }

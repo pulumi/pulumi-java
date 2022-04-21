@@ -17,7 +17,7 @@ public final class GetPromptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -28,55 +28,52 @@ public final class GetPromptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetPromptArgs(
-        String instanceId,
-        String name) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetPromptArgs() {}
 
-    private GetPromptArgs() {
-        this.instanceId = null;
-        this.name = null;
+    private GetPromptArgs(GetPromptArgs $) {
+        this.instanceId = $.instanceId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPromptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String name;
+        private GetPromptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPromptArgs();
         }
 
         public Builder(GetPromptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
+            $ = new GetPromptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetPromptArgs build() {
-            return new GetPromptArgs(instanceId, name);
+        }
+
+        public GetPromptArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

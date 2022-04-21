@@ -19,7 +19,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterSecurityGroupId", required=true)
-      private final String clusterSecurityGroupId;
+    private String clusterSecurityGroupId;
 
     public String clusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
@@ -30,7 +30,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointPrivateAccess", required=true)
-      private final Boolean endpointPrivateAccess;
+    private Boolean endpointPrivateAccess;
 
     public Boolean endpointPrivateAccess() {
         return this.endpointPrivateAccess;
@@ -41,7 +41,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointPublicAccess", required=true)
-      private final Boolean endpointPublicAccess;
+    private Boolean endpointPublicAccess;
 
     public Boolean endpointPublicAccess() {
         return this.endpointPublicAccess;
@@ -52,7 +52,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicAccessCidrs", required=true)
-      private final List<String> publicAccessCidrs;
+    private List<String> publicAccessCidrs;
 
     public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs;
@@ -63,7 +63,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final List<String> securityGroupIds;
+    private List<String> securityGroupIds;
 
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
@@ -74,7 +74,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
@@ -85,109 +85,99 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetClusterVpcConfig(
-        String clusterSecurityGroupId,
-        Boolean endpointPrivateAccess,
-        Boolean endpointPublicAccess,
-        List<String> publicAccessCidrs,
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
-        this.clusterSecurityGroupId = Objects.requireNonNull(clusterSecurityGroupId, "expected parameter 'clusterSecurityGroupId' to be non-null");
-        this.endpointPrivateAccess = Objects.requireNonNull(endpointPrivateAccess, "expected parameter 'endpointPrivateAccess' to be non-null");
-        this.endpointPublicAccess = Objects.requireNonNull(endpointPublicAccess, "expected parameter 'endpointPublicAccess' to be non-null");
-        this.publicAccessCidrs = Objects.requireNonNull(publicAccessCidrs, "expected parameter 'publicAccessCidrs' to be non-null");
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetClusterVpcConfig() {}
 
-    private GetClusterVpcConfig() {
-        this.clusterSecurityGroupId = null;
-        this.endpointPrivateAccess = null;
-        this.endpointPublicAccess = null;
-        this.publicAccessCidrs = List.of();
-        this.securityGroupIds = List.of();
-        this.subnetIds = List.of();
-        this.vpcId = null;
+    private GetClusterVpcConfig(GetClusterVpcConfig $) {
+        this.clusterSecurityGroupId = $.clusterSecurityGroupId;
+        this.endpointPrivateAccess = $.endpointPrivateAccess;
+        this.endpointPublicAccess = $.endpointPublicAccess;
+        this.publicAccessCidrs = $.publicAccessCidrs;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterVpcConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterSecurityGroupId;
-        private Boolean endpointPrivateAccess;
-        private Boolean endpointPublicAccess;
-        private List<String> publicAccessCidrs;
-        private List<String> securityGroupIds;
-        private List<String> subnetIds;
-        private String vpcId;
+        private GetClusterVpcConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterVpcConfig();
         }
 
         public Builder(GetClusterVpcConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterSecurityGroupId = defaults.clusterSecurityGroupId;
-    	      this.endpointPrivateAccess = defaults.endpointPrivateAccess;
-    	      this.endpointPublicAccess = defaults.endpointPublicAccess;
-    	      this.publicAccessCidrs = defaults.publicAccessCidrs;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetClusterVpcConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterSecurityGroupId(String clusterSecurityGroupId) {
-            this.clusterSecurityGroupId = Objects.requireNonNull(clusterSecurityGroupId);
+            $.clusterSecurityGroupId = clusterSecurityGroupId;
             return this;
         }
+
         public Builder endpointPrivateAccess(Boolean endpointPrivateAccess) {
-            this.endpointPrivateAccess = Objects.requireNonNull(endpointPrivateAccess);
+            $.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
+
         public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
-            this.endpointPublicAccess = Objects.requireNonNull(endpointPublicAccess);
+            $.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
+
         public Builder publicAccessCidrs(List<String> publicAccessCidrs) {
-            this.publicAccessCidrs = Objects.requireNonNull(publicAccessCidrs);
+            $.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
+
         public Builder publicAccessCidrs(String... publicAccessCidrs) {
             return publicAccessCidrs(List.of(publicAccessCidrs));
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetClusterVpcConfig build() {
-            return new GetClusterVpcConfig(clusterSecurityGroupId, endpointPrivateAccess, endpointPublicAccess, publicAccessCidrs, securityGroupIds, subnetIds, vpcId);
+        }
+
+        public GetClusterVpcConfig build() {
+            $.clusterSecurityGroupId = Objects.requireNonNull($.clusterSecurityGroupId, "expected parameter 'clusterSecurityGroupId' to be non-null");
+            $.endpointPrivateAccess = Objects.requireNonNull($.endpointPrivateAccess, "expected parameter 'endpointPrivateAccess' to be non-null");
+            $.endpointPublicAccess = Objects.requireNonNull($.endpointPublicAccess, "expected parameter 'endpointPublicAccess' to be non-null");
+            $.publicAccessCidrs = Objects.requireNonNull($.publicAccessCidrs, "expected parameter 'publicAccessCidrs' to be non-null");
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

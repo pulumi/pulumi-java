@@ -7,12 +7,12 @@ import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCap
 import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends com.pul
      * 
      */
     @Import(name="captureContentTypeHeader")
-      private final @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader;
+    private @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader;
 
-    public Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader() {
-        return this.captureContentTypeHeader == null ? Codegen.empty() : this.captureContentTypeHeader;
+    public Optional<Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs>> captureContentTypeHeader() {
+        return Optional.ofNullable(this.captureContentTypeHeader);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends com.pul
      * 
      */
     @Import(name="captureOptions", required=true)
-      private final Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions;
+    private Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions;
 
     public Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions() {
         return this.captureOptions;
@@ -47,7 +47,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends com.pul
      * 
      */
     @Import(name="destinationS3Uri", required=true)
-      private final Output<String> destinationS3Uri;
+    private Output<String> destinationS3Uri;
 
     public Output<String> destinationS3Uri() {
         return this.destinationS3Uri;
@@ -58,10 +58,10 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends com.pul
      * 
      */
     @Import(name="enableCapture")
-      private final @Nullable Output<Boolean> enableCapture;
+    private @Nullable Output<Boolean> enableCapture;
 
-    public Output<Boolean> enableCapture() {
-        return this.enableCapture == null ? Codegen.empty() : this.enableCapture;
+    public Optional<Output<Boolean>> enableCapture() {
+        return Optional.ofNullable(this.enableCapture);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends com.pul
      * 
      */
     @Import(name="initialSamplingPercentage", required=true)
-      private final Output<Integer> initialSamplingPercentage;
+    private Output<Integer> initialSamplingPercentage;
 
     public Output<Integer> initialSamplingPercentage() {
         return this.initialSamplingPercentage;
@@ -80,118 +80,105 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends com.pul
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
-    public EndpointConfigurationDataCaptureConfigGetArgs(
-        @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader,
-        Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions,
-        Output<String> destinationS3Uri,
-        @Nullable Output<Boolean> enableCapture,
-        Output<Integer> initialSamplingPercentage,
-        @Nullable Output<String> kmsKeyId) {
-        this.captureContentTypeHeader = captureContentTypeHeader;
-        this.captureOptions = Objects.requireNonNull(captureOptions, "expected parameter 'captureOptions' to be non-null");
-        this.destinationS3Uri = Objects.requireNonNull(destinationS3Uri, "expected parameter 'destinationS3Uri' to be non-null");
-        this.enableCapture = enableCapture;
-        this.initialSamplingPercentage = Objects.requireNonNull(initialSamplingPercentage, "expected parameter 'initialSamplingPercentage' to be non-null");
-        this.kmsKeyId = kmsKeyId;
-    }
+    private EndpointConfigurationDataCaptureConfigGetArgs() {}
 
-    private EndpointConfigurationDataCaptureConfigGetArgs() {
-        this.captureContentTypeHeader = Codegen.empty();
-        this.captureOptions = Codegen.empty();
-        this.destinationS3Uri = Codegen.empty();
-        this.enableCapture = Codegen.empty();
-        this.initialSamplingPercentage = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
+    private EndpointConfigurationDataCaptureConfigGetArgs(EndpointConfigurationDataCaptureConfigGetArgs $) {
+        this.captureContentTypeHeader = $.captureContentTypeHeader;
+        this.captureOptions = $.captureOptions;
+        this.destinationS3Uri = $.destinationS3Uri;
+        this.enableCapture = $.enableCapture;
+        this.initialSamplingPercentage = $.initialSamplingPercentage;
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigurationDataCaptureConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader;
-        private Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions;
-        private Output<String> destinationS3Uri;
-        private @Nullable Output<Boolean> enableCapture;
-        private Output<Integer> initialSamplingPercentage;
-        private @Nullable Output<String> kmsKeyId;
+        private EndpointConfigurationDataCaptureConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigurationDataCaptureConfigGetArgs();
         }
 
         public Builder(EndpointConfigurationDataCaptureConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.captureContentTypeHeader = defaults.captureContentTypeHeader;
-    	      this.captureOptions = defaults.captureOptions;
-    	      this.destinationS3Uri = defaults.destinationS3Uri;
-    	      this.enableCapture = defaults.enableCapture;
-    	      this.initialSamplingPercentage = defaults.initialSamplingPercentage;
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new EndpointConfigurationDataCaptureConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder captureContentTypeHeader(@Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader) {
-            this.captureContentTypeHeader = captureContentTypeHeader;
+            $.captureContentTypeHeader = captureContentTypeHeader;
             return this;
         }
-        public Builder captureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs captureContentTypeHeader) {
-            this.captureContentTypeHeader = Codegen.ofNullable(captureContentTypeHeader);
-            return this;
+
+        public Builder captureContentTypeHeader(EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs captureContentTypeHeader) {
+            return captureContentTypeHeader(Output.of(captureContentTypeHeader));
         }
+
         public Builder captureOptions(Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions) {
-            this.captureOptions = Objects.requireNonNull(captureOptions);
+            $.captureOptions = captureOptions;
             return this;
         }
+
         public Builder captureOptions(List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs> captureOptions) {
-            this.captureOptions = Output.of(Objects.requireNonNull(captureOptions));
-            return this;
+            return captureOptions(Output.of(captureOptions));
         }
+
         public Builder captureOptions(EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs... captureOptions) {
             return captureOptions(List.of(captureOptions));
         }
+
         public Builder destinationS3Uri(Output<String> destinationS3Uri) {
-            this.destinationS3Uri = Objects.requireNonNull(destinationS3Uri);
+            $.destinationS3Uri = destinationS3Uri;
             return this;
         }
+
         public Builder destinationS3Uri(String destinationS3Uri) {
-            this.destinationS3Uri = Output.of(Objects.requireNonNull(destinationS3Uri));
-            return this;
+            return destinationS3Uri(Output.of(destinationS3Uri));
         }
+
         public Builder enableCapture(@Nullable Output<Boolean> enableCapture) {
-            this.enableCapture = enableCapture;
+            $.enableCapture = enableCapture;
             return this;
         }
-        public Builder enableCapture(@Nullable Boolean enableCapture) {
-            this.enableCapture = Codegen.ofNullable(enableCapture);
-            return this;
+
+        public Builder enableCapture(Boolean enableCapture) {
+            return enableCapture(Output.of(enableCapture));
         }
+
         public Builder initialSamplingPercentage(Output<Integer> initialSamplingPercentage) {
-            this.initialSamplingPercentage = Objects.requireNonNull(initialSamplingPercentage);
+            $.initialSamplingPercentage = initialSamplingPercentage;
             return this;
         }
+
         public Builder initialSamplingPercentage(Integer initialSamplingPercentage) {
-            this.initialSamplingPercentage = Output.of(Objects.requireNonNull(initialSamplingPercentage));
-            return this;
+            return initialSamplingPercentage(Output.of(initialSamplingPercentage));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
-        }        public EndpointConfigurationDataCaptureConfigGetArgs build() {
-            return new EndpointConfigurationDataCaptureConfigGetArgs(captureContentTypeHeader, captureOptions, destinationS3Uri, enableCapture, initialSamplingPercentage, kmsKeyId);
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        public EndpointConfigurationDataCaptureConfigGetArgs build() {
+            $.captureOptions = Objects.requireNonNull($.captureOptions, "expected parameter 'captureOptions' to be non-null");
+            $.destinationS3Uri = Objects.requireNonNull($.destinationS3Uri, "expected parameter 'destinationS3Uri' to be non-null");
+            $.initialSamplingPercentage = Objects.requireNonNull($.initialSamplingPercentage, "expected parameter 'initialSamplingPercentage' to be non-null");
+            return $;
         }
     }
+
 }

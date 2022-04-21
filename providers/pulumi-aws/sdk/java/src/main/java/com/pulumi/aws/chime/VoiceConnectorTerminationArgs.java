@@ -5,12 +5,12 @@ package com.pulumi.aws.chime;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class VoiceConnectorTerminationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="callingRegions", required=true)
-      private final Output<List<String>> callingRegions;
+    private Output<List<String>> callingRegions;
 
     public Output<List<String>> callingRegions() {
         return this.callingRegions;
@@ -34,7 +34,7 @@ public final class VoiceConnectorTerminationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="cidrAllowLists", required=true)
-      private final Output<List<String>> cidrAllowLists;
+    private Output<List<String>> cidrAllowLists;
 
     public Output<List<String>> cidrAllowLists() {
         return this.cidrAllowLists;
@@ -45,10 +45,10 @@ public final class VoiceConnectorTerminationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="cpsLimit")
-      private final @Nullable Output<Integer> cpsLimit;
+    private @Nullable Output<Integer> cpsLimit;
 
-    public Output<Integer> cpsLimit() {
-        return this.cpsLimit == null ? Codegen.empty() : this.cpsLimit;
+    public Optional<Output<Integer>> cpsLimit() {
+        return Optional.ofNullable(this.cpsLimit);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class VoiceConnectorTerminationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="defaultPhoneNumber")
-      private final @Nullable Output<String> defaultPhoneNumber;
+    private @Nullable Output<String> defaultPhoneNumber;
 
-    public Output<String> defaultPhoneNumber() {
-        return this.defaultPhoneNumber == null ? Codegen.empty() : this.defaultPhoneNumber;
+    public Optional<Output<String>> defaultPhoneNumber() {
+        return Optional.ofNullable(this.defaultPhoneNumber);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class VoiceConnectorTerminationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -78,121 +78,109 @@ public final class VoiceConnectorTerminationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="voiceConnectorId", required=true)
-      private final Output<String> voiceConnectorId;
+    private Output<String> voiceConnectorId;
 
     public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 
-    public VoiceConnectorTerminationArgs(
-        Output<List<String>> callingRegions,
-        Output<List<String>> cidrAllowLists,
-        @Nullable Output<Integer> cpsLimit,
-        @Nullable Output<String> defaultPhoneNumber,
-        @Nullable Output<Boolean> disabled,
-        Output<String> voiceConnectorId) {
-        this.callingRegions = Objects.requireNonNull(callingRegions, "expected parameter 'callingRegions' to be non-null");
-        this.cidrAllowLists = Objects.requireNonNull(cidrAllowLists, "expected parameter 'cidrAllowLists' to be non-null");
-        this.cpsLimit = cpsLimit;
-        this.defaultPhoneNumber = defaultPhoneNumber;
-        this.disabled = disabled;
-        this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
-    }
+    private VoiceConnectorTerminationArgs() {}
 
-    private VoiceConnectorTerminationArgs() {
-        this.callingRegions = Codegen.empty();
-        this.cidrAllowLists = Codegen.empty();
-        this.cpsLimit = Codegen.empty();
-        this.defaultPhoneNumber = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.voiceConnectorId = Codegen.empty();
+    private VoiceConnectorTerminationArgs(VoiceConnectorTerminationArgs $) {
+        this.callingRegions = $.callingRegions;
+        this.cidrAllowLists = $.cidrAllowLists;
+        this.cpsLimit = $.cpsLimit;
+        this.defaultPhoneNumber = $.defaultPhoneNumber;
+        this.disabled = $.disabled;
+        this.voiceConnectorId = $.voiceConnectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorTerminationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> callingRegions;
-        private Output<List<String>> cidrAllowLists;
-        private @Nullable Output<Integer> cpsLimit;
-        private @Nullable Output<String> defaultPhoneNumber;
-        private @Nullable Output<Boolean> disabled;
-        private Output<String> voiceConnectorId;
+        private VoiceConnectorTerminationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorTerminationArgs();
         }
 
         public Builder(VoiceConnectorTerminationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callingRegions = defaults.callingRegions;
-    	      this.cidrAllowLists = defaults.cidrAllowLists;
-    	      this.cpsLimit = defaults.cpsLimit;
-    	      this.defaultPhoneNumber = defaults.defaultPhoneNumber;
-    	      this.disabled = defaults.disabled;
-    	      this.voiceConnectorId = defaults.voiceConnectorId;
+            $ = new VoiceConnectorTerminationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder callingRegions(Output<List<String>> callingRegions) {
-            this.callingRegions = Objects.requireNonNull(callingRegions);
+            $.callingRegions = callingRegions;
             return this;
         }
+
         public Builder callingRegions(List<String> callingRegions) {
-            this.callingRegions = Output.of(Objects.requireNonNull(callingRegions));
-            return this;
+            return callingRegions(Output.of(callingRegions));
         }
+
         public Builder callingRegions(String... callingRegions) {
             return callingRegions(List.of(callingRegions));
         }
+
         public Builder cidrAllowLists(Output<List<String>> cidrAllowLists) {
-            this.cidrAllowLists = Objects.requireNonNull(cidrAllowLists);
+            $.cidrAllowLists = cidrAllowLists;
             return this;
         }
+
         public Builder cidrAllowLists(List<String> cidrAllowLists) {
-            this.cidrAllowLists = Output.of(Objects.requireNonNull(cidrAllowLists));
-            return this;
+            return cidrAllowLists(Output.of(cidrAllowLists));
         }
+
         public Builder cidrAllowLists(String... cidrAllowLists) {
             return cidrAllowLists(List.of(cidrAllowLists));
         }
+
         public Builder cpsLimit(@Nullable Output<Integer> cpsLimit) {
-            this.cpsLimit = cpsLimit;
+            $.cpsLimit = cpsLimit;
             return this;
         }
-        public Builder cpsLimit(@Nullable Integer cpsLimit) {
-            this.cpsLimit = Codegen.ofNullable(cpsLimit);
-            return this;
+
+        public Builder cpsLimit(Integer cpsLimit) {
+            return cpsLimit(Output.of(cpsLimit));
         }
+
         public Builder defaultPhoneNumber(@Nullable Output<String> defaultPhoneNumber) {
-            this.defaultPhoneNumber = defaultPhoneNumber;
+            $.defaultPhoneNumber = defaultPhoneNumber;
             return this;
         }
-        public Builder defaultPhoneNumber(@Nullable String defaultPhoneNumber) {
-            this.defaultPhoneNumber = Codegen.ofNullable(defaultPhoneNumber);
-            return this;
+
+        public Builder defaultPhoneNumber(String defaultPhoneNumber) {
+            return defaultPhoneNumber(Output.of(defaultPhoneNumber));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
-            this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
+            $.voiceConnectorId = voiceConnectorId;
             return this;
         }
+
         public Builder voiceConnectorId(String voiceConnectorId) {
-            this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
-            return this;
-        }        public VoiceConnectorTerminationArgs build() {
-            return new VoiceConnectorTerminationArgs(callingRegions, cidrAllowLists, cpsLimit, defaultPhoneNumber, disabled, voiceConnectorId);
+            return voiceConnectorId(Output.of(voiceConnectorId));
+        }
+
+        public VoiceConnectorTerminationArgs build() {
+            $.callingRegions = Objects.requireNonNull($.callingRegions, "expected parameter 'callingRegions' to be non-null");
+            $.cidrAllowLists = Objects.requireNonNull($.cidrAllowLists, "expected parameter 'cidrAllowLists' to be non-null");
+            $.voiceConnectorId = Objects.requireNonNull($.voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
+            return $;
         }
     }
+
 }

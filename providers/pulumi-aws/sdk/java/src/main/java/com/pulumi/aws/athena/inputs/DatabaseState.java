@@ -6,10 +6,10 @@ package com.pulumi.aws.athena.inputs;
 import com.pulumi.aws.athena.inputs.DatabaseEncryptionConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration;
+    private @Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<DatabaseEncryptionConfigurationGetArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public DatabaseState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<String> name) {
-        this.bucket = bucket;
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.forceDestroy = forceDestroy;
-        this.name = name;
-    }
+    private DatabaseState() {}
 
-    private DatabaseState() {
-        this.bucket = Codegen.empty();
-        this.encryptionConfiguration = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.name = Codegen.empty();
+    private DatabaseState(DatabaseState $) {
+        this.bucket = $.bucket;
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.forceDestroy = $.forceDestroy;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<String> name;
+        private DatabaseState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseState();
         }
 
         public Builder(DatabaseState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.name = defaults.name;
+            $ = new DatabaseState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder encryptionConfiguration(@Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable DatabaseEncryptionConfigurationGetArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(DatabaseEncryptionConfigurationGetArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public DatabaseState build() {
-            return new DatabaseState(bucket, encryptionConfiguration, forceDestroy, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public DatabaseState build() {
+            return $;
         }
     }
+
 }

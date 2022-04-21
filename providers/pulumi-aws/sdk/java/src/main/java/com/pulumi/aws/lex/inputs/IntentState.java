@@ -12,11 +12,11 @@ import com.pulumi.aws.lex.inputs.IntentRejectionStatementGetArgs;
 import com.pulumi.aws.lex.inputs.IntentSlotGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="checksum")
-      private final @Nullable Output<String> checksum;
+    private @Nullable Output<String> checksum;
 
-    public Output<String> checksum() {
-        return this.checksum == null ? Codegen.empty() : this.checksum;
+    public Optional<Output<String>> checksum() {
+        return Optional.ofNullable(this.checksum);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conclusionStatement")
-      private final @Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement;
+    private @Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement;
 
-    public Output<IntentConclusionStatementGetArgs> conclusionStatement() {
-        return this.conclusionStatement == null ? Codegen.empty() : this.conclusionStatement;
+    public Optional<Output<IntentConclusionStatementGetArgs>> conclusionStatement() {
+        return Optional.ofNullable(this.conclusionStatement);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="confirmationPrompt")
-      private final @Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt;
+    private @Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt;
 
-    public Output<IntentConfirmationPromptGetArgs> confirmationPrompt() {
-        return this.confirmationPrompt == null ? Codegen.empty() : this.confirmationPrompt;
+    public Optional<Output<IntentConfirmationPromptGetArgs>> confirmationPrompt() {
+        return Optional.ofNullable(this.confirmationPrompt);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createVersion")
-      private final @Nullable Output<Boolean> createVersion;
+    private @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> createVersion() {
-        return this.createVersion == null ? Codegen.empty() : this.createVersion;
+    public Optional<Output<Boolean>> createVersion() {
+        return Optional.ofNullable(this.createVersion);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dialogCodeHook")
-      private final @Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook;
+    private @Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook;
 
-    public Output<IntentDialogCodeHookGetArgs> dialogCodeHook() {
-        return this.dialogCodeHook == null ? Codegen.empty() : this.dialogCodeHook;
+    public Optional<Output<IntentDialogCodeHookGetArgs>> dialogCodeHook() {
+        return Optional.ofNullable(this.dialogCodeHook);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="followUpPrompt")
-      private final @Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt;
+    private @Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt;
 
-    public Output<IntentFollowUpPromptGetArgs> followUpPrompt() {
-        return this.followUpPrompt == null ? Codegen.empty() : this.followUpPrompt;
+    public Optional<Output<IntentFollowUpPromptGetArgs>> followUpPrompt() {
+        return Optional.ofNullable(this.followUpPrompt);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fulfillmentActivity")
-      private final @Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity;
+    private @Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity;
 
-    public Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity() {
-        return this.fulfillmentActivity == null ? Codegen.empty() : this.fulfillmentActivity;
+    public Optional<Output<IntentFulfillmentActivityGetArgs>> fulfillmentActivity() {
+        return Optional.ofNullable(this.fulfillmentActivity);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdatedDate")
-      private final @Nullable Output<String> lastUpdatedDate;
+    private @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> lastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
+    public Optional<Output<String>> lastUpdatedDate() {
+        return Optional.ofNullable(this.lastUpdatedDate);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentIntentSignature")
-      private final @Nullable Output<String> parentIntentSignature;
+    private @Nullable Output<String> parentIntentSignature;
 
-    public Output<String> parentIntentSignature() {
-        return this.parentIntentSignature == null ? Codegen.empty() : this.parentIntentSignature;
+    public Optional<Output<String>> parentIntentSignature() {
+        return Optional.ofNullable(this.parentIntentSignature);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rejectionStatement")
-      private final @Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement;
+    private @Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement;
 
-    public Output<IntentRejectionStatementGetArgs> rejectionStatement() {
-        return this.rejectionStatement == null ? Codegen.empty() : this.rejectionStatement;
+    public Optional<Output<IntentRejectionStatementGetArgs>> rejectionStatement() {
+        return Optional.ofNullable(this.rejectionStatement);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sampleUtterances")
-      private final @Nullable Output<List<String>> sampleUtterances;
+    private @Nullable Output<List<String>> sampleUtterances;
 
-    public Output<List<String>> sampleUtterances() {
-        return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
+    public Optional<Output<List<String>>> sampleUtterances() {
+        return Optional.ofNullable(this.sampleUtterances);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slots")
-      private final @Nullable Output<List<IntentSlotGetArgs>> slots;
+    private @Nullable Output<List<IntentSlotGetArgs>> slots;
 
-    public Output<List<IntentSlotGetArgs>> slots() {
-        return this.slots == null ? Codegen.empty() : this.slots;
+    public Optional<Output<List<IntentSlotGetArgs>>> slots() {
+        return Optional.ofNullable(this.slots);
     }
 
     /**
@@ -227,264 +227,216 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public IntentState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> checksum,
-        @Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement,
-        @Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt,
-        @Nullable Output<Boolean> createVersion,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook,
-        @Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt,
-        @Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity,
-        @Nullable Output<String> lastUpdatedDate,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentIntentSignature,
-        @Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement,
-        @Nullable Output<List<String>> sampleUtterances,
-        @Nullable Output<List<IntentSlotGetArgs>> slots,
-        @Nullable Output<String> version) {
-        this.arn = arn;
-        this.checksum = checksum;
-        this.conclusionStatement = conclusionStatement;
-        this.confirmationPrompt = confirmationPrompt;
-        this.createVersion = createVersion;
-        this.createdDate = createdDate;
-        this.description = description;
-        this.dialogCodeHook = dialogCodeHook;
-        this.followUpPrompt = followUpPrompt;
-        this.fulfillmentActivity = fulfillmentActivity;
-        this.lastUpdatedDate = lastUpdatedDate;
-        this.name = name;
-        this.parentIntentSignature = parentIntentSignature;
-        this.rejectionStatement = rejectionStatement;
-        this.sampleUtterances = sampleUtterances;
-        this.slots = slots;
-        this.version = version;
-    }
+    private IntentState() {}
 
-    private IntentState() {
-        this.arn = Codegen.empty();
-        this.checksum = Codegen.empty();
-        this.conclusionStatement = Codegen.empty();
-        this.confirmationPrompt = Codegen.empty();
-        this.createVersion = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dialogCodeHook = Codegen.empty();
-        this.followUpPrompt = Codegen.empty();
-        this.fulfillmentActivity = Codegen.empty();
-        this.lastUpdatedDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentIntentSignature = Codegen.empty();
-        this.rejectionStatement = Codegen.empty();
-        this.sampleUtterances = Codegen.empty();
-        this.slots = Codegen.empty();
-        this.version = Codegen.empty();
+    private IntentState(IntentState $) {
+        this.arn = $.arn;
+        this.checksum = $.checksum;
+        this.conclusionStatement = $.conclusionStatement;
+        this.confirmationPrompt = $.confirmationPrompt;
+        this.createVersion = $.createVersion;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.dialogCodeHook = $.dialogCodeHook;
+        this.followUpPrompt = $.followUpPrompt;
+        this.fulfillmentActivity = $.fulfillmentActivity;
+        this.lastUpdatedDate = $.lastUpdatedDate;
+        this.name = $.name;
+        this.parentIntentSignature = $.parentIntentSignature;
+        this.rejectionStatement = $.rejectionStatement;
+        this.sampleUtterances = $.sampleUtterances;
+        this.slots = $.slots;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> checksum;
-        private @Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement;
-        private @Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt;
-        private @Nullable Output<Boolean> createVersion;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook;
-        private @Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt;
-        private @Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity;
-        private @Nullable Output<String> lastUpdatedDate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentIntentSignature;
-        private @Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement;
-        private @Nullable Output<List<String>> sampleUtterances;
-        private @Nullable Output<List<IntentSlotGetArgs>> slots;
-        private @Nullable Output<String> version;
+        private IntentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentState();
         }
 
         public Builder(IntentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.checksum = defaults.checksum;
-    	      this.conclusionStatement = defaults.conclusionStatement;
-    	      this.confirmationPrompt = defaults.confirmationPrompt;
-    	      this.createVersion = defaults.createVersion;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.dialogCodeHook = defaults.dialogCodeHook;
-    	      this.followUpPrompt = defaults.followUpPrompt;
-    	      this.fulfillmentActivity = defaults.fulfillmentActivity;
-    	      this.lastUpdatedDate = defaults.lastUpdatedDate;
-    	      this.name = defaults.name;
-    	      this.parentIntentSignature = defaults.parentIntentSignature;
-    	      this.rejectionStatement = defaults.rejectionStatement;
-    	      this.sampleUtterances = defaults.sampleUtterances;
-    	      this.slots = defaults.slots;
-    	      this.version = defaults.version;
+            $ = new IntentState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder checksum(@Nullable Output<String> checksum) {
-            this.checksum = checksum;
+            $.checksum = checksum;
             return this;
         }
-        public Builder checksum(@Nullable String checksum) {
-            this.checksum = Codegen.ofNullable(checksum);
-            return this;
+
+        public Builder checksum(String checksum) {
+            return checksum(Output.of(checksum));
         }
+
         public Builder conclusionStatement(@Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement) {
-            this.conclusionStatement = conclusionStatement;
+            $.conclusionStatement = conclusionStatement;
             return this;
         }
-        public Builder conclusionStatement(@Nullable IntentConclusionStatementGetArgs conclusionStatement) {
-            this.conclusionStatement = Codegen.ofNullable(conclusionStatement);
-            return this;
+
+        public Builder conclusionStatement(IntentConclusionStatementGetArgs conclusionStatement) {
+            return conclusionStatement(Output.of(conclusionStatement));
         }
+
         public Builder confirmationPrompt(@Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt) {
-            this.confirmationPrompt = confirmationPrompt;
+            $.confirmationPrompt = confirmationPrompt;
             return this;
         }
-        public Builder confirmationPrompt(@Nullable IntentConfirmationPromptGetArgs confirmationPrompt) {
-            this.confirmationPrompt = Codegen.ofNullable(confirmationPrompt);
-            return this;
+
+        public Builder confirmationPrompt(IntentConfirmationPromptGetArgs confirmationPrompt) {
+            return confirmationPrompt(Output.of(confirmationPrompt));
         }
+
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
-            this.createVersion = createVersion;
+            $.createVersion = createVersion;
             return this;
         }
-        public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Codegen.ofNullable(createVersion);
-            return this;
+
+        public Builder createVersion(Boolean createVersion) {
+            return createVersion(Output.of(createVersion));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dialogCodeHook(@Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook) {
-            this.dialogCodeHook = dialogCodeHook;
+            $.dialogCodeHook = dialogCodeHook;
             return this;
         }
-        public Builder dialogCodeHook(@Nullable IntentDialogCodeHookGetArgs dialogCodeHook) {
-            this.dialogCodeHook = Codegen.ofNullable(dialogCodeHook);
-            return this;
+
+        public Builder dialogCodeHook(IntentDialogCodeHookGetArgs dialogCodeHook) {
+            return dialogCodeHook(Output.of(dialogCodeHook));
         }
+
         public Builder followUpPrompt(@Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt) {
-            this.followUpPrompt = followUpPrompt;
+            $.followUpPrompt = followUpPrompt;
             return this;
         }
-        public Builder followUpPrompt(@Nullable IntentFollowUpPromptGetArgs followUpPrompt) {
-            this.followUpPrompt = Codegen.ofNullable(followUpPrompt);
-            return this;
+
+        public Builder followUpPrompt(IntentFollowUpPromptGetArgs followUpPrompt) {
+            return followUpPrompt(Output.of(followUpPrompt));
         }
+
         public Builder fulfillmentActivity(@Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity) {
-            this.fulfillmentActivity = fulfillmentActivity;
+            $.fulfillmentActivity = fulfillmentActivity;
             return this;
         }
-        public Builder fulfillmentActivity(@Nullable IntentFulfillmentActivityGetArgs fulfillmentActivity) {
-            this.fulfillmentActivity = Codegen.ofNullable(fulfillmentActivity);
-            return this;
+
+        public Builder fulfillmentActivity(IntentFulfillmentActivityGetArgs fulfillmentActivity) {
+            return fulfillmentActivity(Output.of(fulfillmentActivity));
         }
+
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
-            this.lastUpdatedDate = lastUpdatedDate;
+            $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Codegen.ofNullable(lastUpdatedDate);
-            return this;
+
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
+            return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentIntentSignature(@Nullable Output<String> parentIntentSignature) {
-            this.parentIntentSignature = parentIntentSignature;
+            $.parentIntentSignature = parentIntentSignature;
             return this;
         }
-        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
-            this.parentIntentSignature = Codegen.ofNullable(parentIntentSignature);
-            return this;
+
+        public Builder parentIntentSignature(String parentIntentSignature) {
+            return parentIntentSignature(Output.of(parentIntentSignature));
         }
+
         public Builder rejectionStatement(@Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement) {
-            this.rejectionStatement = rejectionStatement;
+            $.rejectionStatement = rejectionStatement;
             return this;
         }
-        public Builder rejectionStatement(@Nullable IntentRejectionStatementGetArgs rejectionStatement) {
-            this.rejectionStatement = Codegen.ofNullable(rejectionStatement);
-            return this;
+
+        public Builder rejectionStatement(IntentRejectionStatementGetArgs rejectionStatement) {
+            return rejectionStatement(Output.of(rejectionStatement));
         }
+
         public Builder sampleUtterances(@Nullable Output<List<String>> sampleUtterances) {
-            this.sampleUtterances = sampleUtterances;
+            $.sampleUtterances = sampleUtterances;
             return this;
         }
-        public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
-            this.sampleUtterances = Codegen.ofNullable(sampleUtterances);
-            return this;
+
+        public Builder sampleUtterances(List<String> sampleUtterances) {
+            return sampleUtterances(Output.of(sampleUtterances));
         }
+
         public Builder sampleUtterances(String... sampleUtterances) {
             return sampleUtterances(List.of(sampleUtterances));
         }
+
         public Builder slots(@Nullable Output<List<IntentSlotGetArgs>> slots) {
-            this.slots = slots;
+            $.slots = slots;
             return this;
         }
-        public Builder slots(@Nullable List<IntentSlotGetArgs> slots) {
-            this.slots = Codegen.ofNullable(slots);
-            return this;
+
+        public Builder slots(List<IntentSlotGetArgs> slots) {
+            return slots(Output.of(slots));
         }
+
         public Builder slots(IntentSlotGetArgs... slots) {
             return slots(List.of(slots));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public IntentState build() {
-            return new IntentState(arn, checksum, conclusionStatement, confirmationPrompt, createVersion, createdDate, description, dialogCodeHook, followUpPrompt, fulfillmentActivity, lastUpdatedDate, name, parentIntentSignature, rejectionStatement, sampleUtterances, slots, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public IntentState build() {
+            return $;
         }
     }
+
 }

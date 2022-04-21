@@ -6,7 +6,6 @@ package com.pulumi.aws.imagebuilder.inputs;
 import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingS3LogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class InfrastructureConfigurationLoggingArgs extends com.pulumi.res
      * 
      */
     @Import(name="s3Logs", required=true)
-      private final Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
+    private Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
 
     public Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs() {
         return this.s3Logs;
     }
 
-    public InfrastructureConfigurationLoggingArgs(Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs) {
-        this.s3Logs = Objects.requireNonNull(s3Logs, "expected parameter 's3Logs' to be non-null");
-    }
+    private InfrastructureConfigurationLoggingArgs() {}
 
-    private InfrastructureConfigurationLoggingArgs() {
-        this.s3Logs = Codegen.empty();
+    private InfrastructureConfigurationLoggingArgs(InfrastructureConfigurationLoggingArgs $) {
+        this.s3Logs = $.s3Logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
+        private InfrastructureConfigurationLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationLoggingArgs();
         }
 
         public Builder(InfrastructureConfigurationLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Logs = defaults.s3Logs;
+            $ = new InfrastructureConfigurationLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Logs(Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs) {
-            this.s3Logs = Objects.requireNonNull(s3Logs);
+            $.s3Logs = s3Logs;
             return this;
         }
+
         public Builder s3Logs(InfrastructureConfigurationLoggingS3LogsArgs s3Logs) {
-            this.s3Logs = Output.of(Objects.requireNonNull(s3Logs));
-            return this;
-        }        public InfrastructureConfigurationLoggingArgs build() {
-            return new InfrastructureConfigurationLoggingArgs(s3Logs);
+            return s3Logs(Output.of(s3Logs));
+        }
+
+        public InfrastructureConfigurationLoggingArgs build() {
+            $.s3Logs = Objects.requireNonNull($.s3Logs, "expected parameter 's3Logs' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.emr.inputs;
 import com.pulumi.aws.emr.inputs.ClusterCoreInstanceGroupEbsConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="autoscalingPolicy")
-      private final @Nullable Output<String> autoscalingPolicy;
+    private @Nullable Output<String> autoscalingPolicy;
 
-    public Output<String> autoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
+    public Optional<Output<String>> autoscalingPolicy() {
+        return Optional.ofNullable(this.autoscalingPolicy);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="bidPrice")
-      private final @Nullable Output<String> bidPrice;
+    private @Nullable Output<String> bidPrice;
 
-    public Output<String> bidPrice() {
-        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
+    public Optional<Output<String>> bidPrice() {
+        return Optional.ofNullable(this.bidPrice);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ebsConfigs")
-      private final @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
+    private @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
-    public Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs() {
-        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
+    public Optional<Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>>> ebsConfigs() {
+        return Optional.ofNullable(this.ebsConfigs);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ClusterCoreInstanceGroupGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Output<Integer> instanceCount;
+    private @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> instanceCount() {
-        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
+    public Optional<Output<Integer>> instanceCount() {
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -89,131 +89,113 @@ public final class ClusterCoreInstanceGroupGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ClusterCoreInstanceGroupGetArgs(
-        @Nullable Output<String> autoscalingPolicy,
-        @Nullable Output<String> bidPrice,
-        @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> instanceCount,
-        Output<String> instanceType,
-        @Nullable Output<String> name) {
-        this.autoscalingPolicy = autoscalingPolicy;
-        this.bidPrice = bidPrice;
-        this.ebsConfigs = ebsConfigs;
-        this.id = id;
-        this.instanceCount = instanceCount;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.name = name;
-    }
+    private ClusterCoreInstanceGroupGetArgs() {}
 
-    private ClusterCoreInstanceGroupGetArgs() {
-        this.autoscalingPolicy = Codegen.empty();
-        this.bidPrice = Codegen.empty();
-        this.ebsConfigs = Codegen.empty();
-        this.id = Codegen.empty();
-        this.instanceCount = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.name = Codegen.empty();
+    private ClusterCoreInstanceGroupGetArgs(ClusterCoreInstanceGroupGetArgs $) {
+        this.autoscalingPolicy = $.autoscalingPolicy;
+        this.bidPrice = $.bidPrice;
+        this.ebsConfigs = $.ebsConfigs;
+        this.id = $.id;
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCoreInstanceGroupGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoscalingPolicy;
-        private @Nullable Output<String> bidPrice;
-        private @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> instanceCount;
-        private Output<String> instanceType;
-        private @Nullable Output<String> name;
+        private ClusterCoreInstanceGroupGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCoreInstanceGroupGetArgs();
         }
 
         public Builder(ClusterCoreInstanceGroupGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicy = defaults.autoscalingPolicy;
-    	      this.bidPrice = defaults.bidPrice;
-    	      this.ebsConfigs = defaults.ebsConfigs;
-    	      this.id = defaults.id;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.name = defaults.name;
+            $ = new ClusterCoreInstanceGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicy(@Nullable Output<String> autoscalingPolicy) {
-            this.autoscalingPolicy = autoscalingPolicy;
+            $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-        public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
-            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
-            return this;
+
+        public Builder autoscalingPolicy(String autoscalingPolicy) {
+            return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
+
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
-            this.bidPrice = bidPrice;
+            $.bidPrice = bidPrice;
             return this;
         }
-        public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Codegen.ofNullable(bidPrice);
-            return this;
+
+        public Builder bidPrice(String bidPrice) {
+            return bidPrice(Output.of(bidPrice));
         }
+
         public Builder ebsConfigs(@Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
-            this.ebsConfigs = ebsConfigs;
+            $.ebsConfigs = ebsConfigs;
             return this;
         }
-        public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceGroupEbsConfigGetArgs> ebsConfigs) {
-            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
-            return this;
+
+        public Builder ebsConfigs(List<ClusterCoreInstanceGroupEbsConfigGetArgs> ebsConfigs) {
+            return ebsConfigs(Output.of(ebsConfigs));
         }
+
         public Builder ebsConfigs(ClusterCoreInstanceGroupEbsConfigGetArgs... ebsConfigs) {
             return ebsConfigs(List.of(ebsConfigs));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
-        public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Codegen.ofNullable(instanceCount);
-            return this;
+
+        public Builder instanceCount(Integer instanceCount) {
+            return instanceCount(Output.of(instanceCount));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ClusterCoreInstanceGroupGetArgs build() {
-            return new ClusterCoreInstanceGroupGetArgs(autoscalingPolicy, bidPrice, ebsConfigs, id, instanceCount, instanceType, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ClusterCoreInstanceGroupGetArgs build() {
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

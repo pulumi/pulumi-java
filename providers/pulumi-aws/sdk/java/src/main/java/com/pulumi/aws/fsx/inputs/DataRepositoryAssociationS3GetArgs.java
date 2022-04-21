@@ -7,8 +7,8 @@ import com.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoExportPolicyGetA
 import com.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoImportPolicyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataRepositoryAssociationS3GetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="autoExportPolicy")
-      private final @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy;
+    private @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy;
 
-    public Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy() {
-        return this.autoExportPolicy == null ? Codegen.empty() : this.autoExportPolicy;
+    public Optional<Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs>> autoExportPolicy() {
+        return Optional.ofNullable(this.autoExportPolicy);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class DataRepositoryAssociationS3GetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="autoImportPolicy")
-      private final @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy;
+    private @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy;
 
-    public Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy() {
-        return this.autoImportPolicy == null ? Codegen.empty() : this.autoImportPolicy;
+    public Optional<Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs>> autoImportPolicy() {
+        return Optional.ofNullable(this.autoImportPolicy);
     }
 
-    public DataRepositoryAssociationS3GetArgs(
-        @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy,
-        @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy) {
-        this.autoExportPolicy = autoExportPolicy;
-        this.autoImportPolicy = autoImportPolicy;
-    }
+    private DataRepositoryAssociationS3GetArgs() {}
 
-    private DataRepositoryAssociationS3GetArgs() {
-        this.autoExportPolicy = Codegen.empty();
-        this.autoImportPolicy = Codegen.empty();
+    private DataRepositoryAssociationS3GetArgs(DataRepositoryAssociationS3GetArgs $) {
+        this.autoExportPolicy = $.autoExportPolicy;
+        this.autoImportPolicy = $.autoImportPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataRepositoryAssociationS3GetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy;
-        private @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy;
+        private DataRepositoryAssociationS3GetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataRepositoryAssociationS3GetArgs();
         }
 
         public Builder(DataRepositoryAssociationS3GetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoExportPolicy = defaults.autoExportPolicy;
-    	      this.autoImportPolicy = defaults.autoImportPolicy;
+            $ = new DataRepositoryAssociationS3GetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoExportPolicy(@Nullable Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy) {
-            this.autoExportPolicy = autoExportPolicy;
+            $.autoExportPolicy = autoExportPolicy;
             return this;
         }
-        public Builder autoExportPolicy(@Nullable DataRepositoryAssociationS3AutoExportPolicyGetArgs autoExportPolicy) {
-            this.autoExportPolicy = Codegen.ofNullable(autoExportPolicy);
-            return this;
+
+        public Builder autoExportPolicy(DataRepositoryAssociationS3AutoExportPolicyGetArgs autoExportPolicy) {
+            return autoExportPolicy(Output.of(autoExportPolicy));
         }
+
         public Builder autoImportPolicy(@Nullable Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy) {
-            this.autoImportPolicy = autoImportPolicy;
+            $.autoImportPolicy = autoImportPolicy;
             return this;
         }
-        public Builder autoImportPolicy(@Nullable DataRepositoryAssociationS3AutoImportPolicyGetArgs autoImportPolicy) {
-            this.autoImportPolicy = Codegen.ofNullable(autoImportPolicy);
-            return this;
-        }        public DataRepositoryAssociationS3GetArgs build() {
-            return new DataRepositoryAssociationS3GetArgs(autoExportPolicy, autoImportPolicy);
+
+        public Builder autoImportPolicy(DataRepositoryAssociationS3AutoImportPolicyGetArgs autoImportPolicy) {
+            return autoImportPolicy(Output.of(autoImportPolicy));
+        }
+
+        public DataRepositoryAssociationS3GetArgs build() {
+            return $;
         }
     }
+
 }

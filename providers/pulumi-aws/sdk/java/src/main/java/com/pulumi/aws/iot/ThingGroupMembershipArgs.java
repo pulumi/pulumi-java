@@ -5,10 +5,10 @@ package com.pulumi.aws.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ThingGroupMembershipArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="overrideDynamicGroup")
-      private final @Nullable Output<Boolean> overrideDynamicGroup;
+    private @Nullable Output<Boolean> overrideDynamicGroup;
 
-    public Output<Boolean> overrideDynamicGroup() {
-        return this.overrideDynamicGroup == null ? Codegen.empty() : this.overrideDynamicGroup;
+    public Optional<Output<Boolean>> overrideDynamicGroup() {
+        return Optional.ofNullable(this.overrideDynamicGroup);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ThingGroupMembershipArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="thingGroupName", required=true)
-      private final Output<String> thingGroupName;
+    private Output<String> thingGroupName;
 
     public Output<String> thingGroupName() {
         return this.thingGroupName;
@@ -43,76 +43,70 @@ public final class ThingGroupMembershipArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="thingName", required=true)
-      private final Output<String> thingName;
+    private Output<String> thingName;
 
     public Output<String> thingName() {
         return this.thingName;
     }
 
-    public ThingGroupMembershipArgs(
-        @Nullable Output<Boolean> overrideDynamicGroup,
-        Output<String> thingGroupName,
-        Output<String> thingName) {
-        this.overrideDynamicGroup = overrideDynamicGroup;
-        this.thingGroupName = Objects.requireNonNull(thingGroupName, "expected parameter 'thingGroupName' to be non-null");
-        this.thingName = Objects.requireNonNull(thingName, "expected parameter 'thingName' to be non-null");
-    }
+    private ThingGroupMembershipArgs() {}
 
-    private ThingGroupMembershipArgs() {
-        this.overrideDynamicGroup = Codegen.empty();
-        this.thingGroupName = Codegen.empty();
-        this.thingName = Codegen.empty();
+    private ThingGroupMembershipArgs(ThingGroupMembershipArgs $) {
+        this.overrideDynamicGroup = $.overrideDynamicGroup;
+        this.thingGroupName = $.thingGroupName;
+        this.thingName = $.thingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingGroupMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> overrideDynamicGroup;
-        private Output<String> thingGroupName;
-        private Output<String> thingName;
+        private ThingGroupMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingGroupMembershipArgs();
         }
 
         public Builder(ThingGroupMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.overrideDynamicGroup = defaults.overrideDynamicGroup;
-    	      this.thingGroupName = defaults.thingGroupName;
-    	      this.thingName = defaults.thingName;
+            $ = new ThingGroupMembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder overrideDynamicGroup(@Nullable Output<Boolean> overrideDynamicGroup) {
-            this.overrideDynamicGroup = overrideDynamicGroup;
+            $.overrideDynamicGroup = overrideDynamicGroup;
             return this;
         }
-        public Builder overrideDynamicGroup(@Nullable Boolean overrideDynamicGroup) {
-            this.overrideDynamicGroup = Codegen.ofNullable(overrideDynamicGroup);
-            return this;
+
+        public Builder overrideDynamicGroup(Boolean overrideDynamicGroup) {
+            return overrideDynamicGroup(Output.of(overrideDynamicGroup));
         }
+
         public Builder thingGroupName(Output<String> thingGroupName) {
-            this.thingGroupName = Objects.requireNonNull(thingGroupName);
+            $.thingGroupName = thingGroupName;
             return this;
         }
+
         public Builder thingGroupName(String thingGroupName) {
-            this.thingGroupName = Output.of(Objects.requireNonNull(thingGroupName));
-            return this;
+            return thingGroupName(Output.of(thingGroupName));
         }
+
         public Builder thingName(Output<String> thingName) {
-            this.thingName = Objects.requireNonNull(thingName);
+            $.thingName = thingName;
             return this;
         }
+
         public Builder thingName(String thingName) {
-            this.thingName = Output.of(Objects.requireNonNull(thingName));
-            return this;
-        }        public ThingGroupMembershipArgs build() {
-            return new ThingGroupMembershipArgs(overrideDynamicGroup, thingGroupName, thingName);
+            return thingName(Output.of(thingName));
+        }
+
+        public ThingGroupMembershipArgs build() {
+            $.thingGroupName = Objects.requireNonNull($.thingGroupName, "expected parameter 'thingGroupName' to be non-null");
+            $.thingName = Objects.requireNonNull($.thingName, "expected parameter 'thingName' to be non-null");
+            return $;
         }
     }
+
 }

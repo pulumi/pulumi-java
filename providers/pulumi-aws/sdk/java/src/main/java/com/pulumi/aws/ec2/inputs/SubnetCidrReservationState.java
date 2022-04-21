@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable Output<String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="reservationType")
-      private final @Nullable Output<String> reservationType;
+    private @Nullable Output<String> reservationType;
 
-    public Output<String> reservationType() {
-        return this.reservationType == null ? Codegen.empty() : this.reservationType;
+    public Optional<Output<String>> reservationType() {
+        return Optional.ofNullable(this.reservationType);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public SubnetCidrReservationState(
-        @Nullable Output<String> cidrBlock,
-        @Nullable Output<String> description,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<String> reservationType,
-        @Nullable Output<String> subnetId) {
-        this.cidrBlock = cidrBlock;
-        this.description = description;
-        this.ownerId = ownerId;
-        this.reservationType = reservationType;
-        this.subnetId = subnetId;
-    }
+    private SubnetCidrReservationState() {}
 
-    private SubnetCidrReservationState() {
-        this.cidrBlock = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.reservationType = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private SubnetCidrReservationState(SubnetCidrReservationState $) {
+        this.cidrBlock = $.cidrBlock;
+        this.description = $.description;
+        this.ownerId = $.ownerId;
+        this.reservationType = $.reservationType;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetCidrReservationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidrBlock;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<String> reservationType;
-        private @Nullable Output<String> subnetId;
+        private SubnetCidrReservationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetCidrReservationState();
         }
 
         public Builder(SubnetCidrReservationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.description = defaults.description;
-    	      this.ownerId = defaults.ownerId;
-    	      this.reservationType = defaults.reservationType;
-    	      this.subnetId = defaults.subnetId;
+            $ = new SubnetCidrReservationState(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
-        public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Codegen.ofNullable(cidrBlock);
-            return this;
+
+        public Builder cidrBlock(String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder reservationType(@Nullable Output<String> reservationType) {
-            this.reservationType = reservationType;
+            $.reservationType = reservationType;
             return this;
         }
-        public Builder reservationType(@Nullable String reservationType) {
-            this.reservationType = Codegen.ofNullable(reservationType);
-            return this;
+
+        public Builder reservationType(String reservationType) {
+            return reservationType(Output.of(reservationType));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public SubnetCidrReservationState build() {
-            return new SubnetCidrReservationState(cidrBlock, description, ownerId, reservationType, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public SubnetCidrReservationState build() {
+            return $;
         }
     }
+
 }

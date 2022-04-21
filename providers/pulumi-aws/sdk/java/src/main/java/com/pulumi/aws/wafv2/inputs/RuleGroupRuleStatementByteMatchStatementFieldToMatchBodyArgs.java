@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs Empty = new RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs();
 
-    public RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs();
         }
         public RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs build() {
-            return new RuleGroupRuleStatementByteMatchStatementFieldToMatchBodyArgs();
+            return $;
         }
     }
+
 }

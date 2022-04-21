@@ -5,10 +5,10 @@ package com.pulumi.aws.secretsmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blockPublicPolicy")
-      private final @Nullable Output<Boolean> blockPublicPolicy;
+    private @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Output<Boolean> blockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
+    public Optional<Output<Boolean>> blockPublicPolicy() {
+        return Optional.ofNullable(this.blockPublicPolicy);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SecretPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class SecretPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretArn")
-      private final @Nullable Output<String> secretArn;
+    private @Nullable Output<String> secretArn;
 
-    public Output<String> secretArn() {
-        return this.secretArn == null ? Codegen.empty() : this.secretArn;
+    public Optional<Output<String>> secretArn() {
+        return Optional.ofNullable(this.secretArn);
     }
 
-    public SecretPolicyState(
-        @Nullable Output<Boolean> blockPublicPolicy,
-        @Nullable Output<String> policy,
-        @Nullable Output<String> secretArn) {
-        this.blockPublicPolicy = blockPublicPolicy;
-        this.policy = policy;
-        this.secretArn = secretArn;
-    }
+    private SecretPolicyState() {}
 
-    private SecretPolicyState() {
-        this.blockPublicPolicy = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.secretArn = Codegen.empty();
+    private SecretPolicyState(SecretPolicyState $) {
+        this.blockPublicPolicy = $.blockPublicPolicy;
+        this.policy = $.policy;
+        this.secretArn = $.secretArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> blockPublicPolicy;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> secretArn;
+        private SecretPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretPolicyState();
         }
 
         public Builder(SecretPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockPublicPolicy = defaults.blockPublicPolicy;
-    	      this.policy = defaults.policy;
-    	      this.secretArn = defaults.secretArn;
+            $ = new SecretPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
-            this.blockPublicPolicy = blockPublicPolicy;
+            $.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-        public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Codegen.ofNullable(blockPublicPolicy);
-            return this;
+
+        public Builder blockPublicPolicy(Boolean blockPublicPolicy) {
+            return blockPublicPolicy(Output.of(blockPublicPolicy));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder secretArn(@Nullable Output<String> secretArn) {
-            this.secretArn = secretArn;
+            $.secretArn = secretArn;
             return this;
         }
-        public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Codegen.ofNullable(secretArn);
-            return this;
-        }        public SecretPolicyState build() {
-            return new SecretPolicyState(blockPublicPolicy, policy, secretArn);
+
+        public Builder secretArn(String secretArn) {
+            return secretArn(Output.of(secretArn));
+        }
+
+        public SecretPolicyState build() {
+            return $;
         }
     }
+
 }

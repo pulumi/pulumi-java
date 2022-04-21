@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends com.pulumi.
     public static final LocalGatewayRouteTableVpcAssociationState Empty = new LocalGatewayRouteTableVpcAssociationState();
 
     @Import(name="localGatewayId")
-      private final @Nullable Output<String> localGatewayId;
+    private @Nullable Output<String> localGatewayId;
 
-    public Output<String> localGatewayId() {
-        return this.localGatewayId == null ? Codegen.empty() : this.localGatewayId;
+    public Optional<Output<String>> localGatewayId() {
+        return Optional.ofNullable(this.localGatewayId);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends com.pulumi.
      * 
      */
     @Import(name="localGatewayRouteTableId")
-      private final @Nullable Output<String> localGatewayRouteTableId;
+    private @Nullable Output<String> localGatewayRouteTableId;
 
-    public Output<String> localGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Codegen.empty() : this.localGatewayRouteTableId;
+    public Optional<Output<String>> localGatewayRouteTableId() {
+        return Optional.ofNullable(this.localGatewayRouteTableId);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends com.pulumi.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends com.pulumi.
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -61,102 +61,88 @@ public final class LocalGatewayRouteTableVpcAssociationState extends com.pulumi.
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public LocalGatewayRouteTableVpcAssociationState(
-        @Nullable Output<String> localGatewayId,
-        @Nullable Output<String> localGatewayRouteTableId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> vpcId) {
-        this.localGatewayId = localGatewayId;
-        this.localGatewayRouteTableId = localGatewayRouteTableId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcId = vpcId;
-    }
+    private LocalGatewayRouteTableVpcAssociationState() {}
 
-    private LocalGatewayRouteTableVpcAssociationState() {
-        this.localGatewayId = Codegen.empty();
-        this.localGatewayRouteTableId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private LocalGatewayRouteTableVpcAssociationState(LocalGatewayRouteTableVpcAssociationState $) {
+        this.localGatewayId = $.localGatewayId;
+        this.localGatewayRouteTableId = $.localGatewayRouteTableId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalGatewayRouteTableVpcAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> localGatewayId;
-        private @Nullable Output<String> localGatewayRouteTableId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> vpcId;
+        private LocalGatewayRouteTableVpcAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalGatewayRouteTableVpcAssociationState();
         }
 
         public Builder(LocalGatewayRouteTableVpcAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localGatewayId = defaults.localGatewayId;
-    	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcId = defaults.vpcId;
+            $ = new LocalGatewayRouteTableVpcAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
-            this.localGatewayId = localGatewayId;
+            $.localGatewayId = localGatewayId;
             return this;
         }
-        public Builder localGatewayId(@Nullable String localGatewayId) {
-            this.localGatewayId = Codegen.ofNullable(localGatewayId);
-            return this;
+
+        public Builder localGatewayId(String localGatewayId) {
+            return localGatewayId(Output.of(localGatewayId));
         }
+
         public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = localGatewayRouteTableId;
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
-        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Codegen.ofNullable(localGatewayRouteTableId);
-            return this;
+
+        public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
+            return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public LocalGatewayRouteTableVpcAssociationState build() {
-            return new LocalGatewayRouteTableVpcAssociationState(localGatewayId, localGatewayRouteTableId, tags, tagsAll, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public LocalGatewayRouteTableVpcAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final String applicationId;
+    private String applicationId;
 
     public String applicationId() {
         return this.applicationId;
@@ -30,55 +30,51 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="semanticVersion")
-      private final @Nullable String semanticVersion;
+    private @Nullable String semanticVersion;
 
     public Optional<String> semanticVersion() {
-        return this.semanticVersion == null ? Optional.empty() : Optional.ofNullable(this.semanticVersion);
+        return Optional.ofNullable(this.semanticVersion);
     }
 
-    public GetApplicationArgs(
-        String applicationId,
-        @Nullable String semanticVersion) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.semanticVersion = semanticVersion;
-    }
+    private GetApplicationArgs() {}
 
-    private GetApplicationArgs() {
-        this.applicationId = null;
-        this.semanticVersion = null;
+    private GetApplicationArgs(GetApplicationArgs $) {
+        this.applicationId = $.applicationId;
+        this.semanticVersion = $.semanticVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationId;
-        private @Nullable String semanticVersion;
+        private GetApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationArgs();
         }
 
         public Builder(GetApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.semanticVersion = defaults.semanticVersion;
+            $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder semanticVersion(@Nullable String semanticVersion) {
-            this.semanticVersion = semanticVersion;
+            $.semanticVersion = semanticVersion;
             return this;
-        }        public GetApplicationArgs build() {
-            return new GetApplicationArgs(applicationId, semanticVersion);
+        }
+
+        public GetApplicationArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            return $;
         }
     }
+
 }

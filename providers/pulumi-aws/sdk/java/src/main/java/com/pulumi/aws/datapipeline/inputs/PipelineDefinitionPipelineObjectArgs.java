@@ -6,10 +6,10 @@ package com.pulumi.aws.datapipeline.inputs;
 import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectFieldArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PipelineDefinitionPipelineObjectArgs extends com.pulumi.resou
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields;
+    private @Nullable Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields;
 
-    public Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<PipelineDefinitionPipelineObjectFieldArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class PipelineDefinitionPipelineObjectArgs extends com.pulumi.resou
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -44,79 +44,74 @@ public final class PipelineDefinitionPipelineObjectArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PipelineDefinitionPipelineObjectArgs(
-        @Nullable Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields,
-        Output<String> id,
-        Output<String> name) {
-        this.fields = fields;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PipelineDefinitionPipelineObjectArgs() {}
 
-    private PipelineDefinitionPipelineObjectArgs() {
-        this.fields = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
+    private PipelineDefinitionPipelineObjectArgs(PipelineDefinitionPipelineObjectArgs $) {
+        this.fields = $.fields;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDefinitionPipelineObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields;
-        private Output<String> id;
-        private Output<String> name;
+        private PipelineDefinitionPipelineObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDefinitionPipelineObjectArgs();
         }
 
         public Builder(PipelineDefinitionPipelineObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new PipelineDefinitionPipelineObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(@Nullable Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<PipelineDefinitionPipelineObjectFieldArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<PipelineDefinitionPipelineObjectFieldArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(PipelineDefinitionPipelineObjectFieldArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PipelineDefinitionPipelineObjectArgs build() {
-            return new PipelineDefinitionPipelineObjectArgs(fields, id, name);
+            return name(Output.of(name));
+        }
+
+        public PipelineDefinitionPipelineObjectArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class IntegrationResponseParameterGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="mappings", required=true)
-      private final Output<Map<String,String>> mappings;
+    private Output<Map<String,String>> mappings;
 
     public Output<Map<String,String>> mappings() {
         return this.mappings;
@@ -32,63 +31,60 @@ public final class IntegrationResponseParameterGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="statusCode", required=true)
-      private final Output<String> statusCode;
+    private Output<String> statusCode;
 
     public Output<String> statusCode() {
         return this.statusCode;
     }
 
-    public IntegrationResponseParameterGetArgs(
-        Output<Map<String,String>> mappings,
-        Output<String> statusCode) {
-        this.mappings = Objects.requireNonNull(mappings, "expected parameter 'mappings' to be non-null");
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private IntegrationResponseParameterGetArgs() {}
 
-    private IntegrationResponseParameterGetArgs() {
-        this.mappings = Codegen.empty();
-        this.statusCode = Codegen.empty();
+    private IntegrationResponseParameterGetArgs(IntegrationResponseParameterGetArgs $) {
+        this.mappings = $.mappings;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationResponseParameterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> mappings;
-        private Output<String> statusCode;
+        private IntegrationResponseParameterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationResponseParameterGetArgs();
         }
 
         public Builder(IntegrationResponseParameterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mappings = defaults.mappings;
-    	      this.statusCode = defaults.statusCode;
+            $ = new IntegrationResponseParameterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mappings(Output<Map<String,String>> mappings) {
-            this.mappings = Objects.requireNonNull(mappings);
+            $.mappings = mappings;
             return this;
         }
+
         public Builder mappings(Map<String,String> mappings) {
-            this.mappings = Output.of(Objects.requireNonNull(mappings));
-            return this;
+            return mappings(Output.of(mappings));
         }
+
         public Builder statusCode(Output<String> statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
-            return this;
-        }        public IntegrationResponseParameterGetArgs build() {
-            return new IntegrationResponseParameterGetArgs(mappings, statusCode);
+            return statusCode(Output.of(statusCode));
+        }
+
+        public IntegrationResponseParameterGetArgs build() {
+            $.mappings = Objects.requireNonNull($.mappings, "expected parameter 'mappings' to be non-null");
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

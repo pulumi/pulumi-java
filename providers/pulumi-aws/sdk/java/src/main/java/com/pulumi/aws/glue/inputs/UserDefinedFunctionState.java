@@ -6,10 +6,10 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
     public static final UserDefinedFunctionState Empty = new UserDefinedFunctionState();
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -40,17 +40,17 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="className")
-      private final @Nullable Output<String> className;
+    private @Nullable Output<String> className;
 
-    public Output<String> className() {
-        return this.className == null ? Codegen.empty() : this.className;
+    public Optional<Output<String>> className() {
+        return Optional.ofNullable(this.className);
     }
 
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ownerName")
-      private final @Nullable Output<String> ownerName;
+    private @Nullable Output<String> ownerName;
 
-    public Output<String> ownerName() {
-        return this.ownerName == null ? Codegen.empty() : this.ownerName;
+    public Optional<Output<String>> ownerName() {
+        return Optional.ofNullable(this.ownerName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ownerType")
-      private final @Nullable Output<String> ownerType;
+    private @Nullable Output<String> ownerType;
 
-    public Output<String> ownerType() {
-        return this.ownerType == null ? Codegen.empty() : this.ownerType;
+    public Optional<Output<String>> ownerType() {
+        return Optional.ofNullable(this.ownerType);
     }
 
     /**
@@ -102,157 +102,132 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceUris")
-      private final @Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris;
+    private @Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris;
 
-    public Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris() {
-        return this.resourceUris == null ? Codegen.empty() : this.resourceUris;
+    public Optional<Output<List<UserDefinedFunctionResourceUriGetArgs>>> resourceUris() {
+        return Optional.ofNullable(this.resourceUris);
     }
 
-    public UserDefinedFunctionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> catalogId,
-        @Nullable Output<String> className,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ownerName,
-        @Nullable Output<String> ownerType,
-        @Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris) {
-        this.arn = arn;
-        this.catalogId = catalogId;
-        this.className = className;
-        this.createTime = createTime;
-        this.databaseName = databaseName;
-        this.name = name;
-        this.ownerName = ownerName;
-        this.ownerType = ownerType;
-        this.resourceUris = resourceUris;
-    }
+    private UserDefinedFunctionState() {}
 
-    private UserDefinedFunctionState() {
-        this.arn = Codegen.empty();
-        this.catalogId = Codegen.empty();
-        this.className = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerName = Codegen.empty();
-        this.ownerType = Codegen.empty();
-        this.resourceUris = Codegen.empty();
+    private UserDefinedFunctionState(UserDefinedFunctionState $) {
+        this.arn = $.arn;
+        this.catalogId = $.catalogId;
+        this.className = $.className;
+        this.createTime = $.createTime;
+        this.databaseName = $.databaseName;
+        this.name = $.name;
+        this.ownerName = $.ownerName;
+        this.ownerType = $.ownerType;
+        this.resourceUris = $.resourceUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserDefinedFunctionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<String> className;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ownerName;
-        private @Nullable Output<String> ownerType;
-        private @Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris;
+        private UserDefinedFunctionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserDefinedFunctionState();
         }
 
         public Builder(UserDefinedFunctionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.catalogId = defaults.catalogId;
-    	      this.className = defaults.className;
-    	      this.createTime = defaults.createTime;
-    	      this.databaseName = defaults.databaseName;
-    	      this.name = defaults.name;
-    	      this.ownerName = defaults.ownerName;
-    	      this.ownerType = defaults.ownerType;
-    	      this.resourceUris = defaults.resourceUris;
+            $ = new UserDefinedFunctionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder className(@Nullable Output<String> className) {
-            this.className = className;
+            $.className = className;
             return this;
         }
-        public Builder className(@Nullable String className) {
-            this.className = Codegen.ofNullable(className);
-            return this;
+
+        public Builder className(String className) {
+            return className(Output.of(className));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerName(@Nullable Output<String> ownerName) {
-            this.ownerName = ownerName;
+            $.ownerName = ownerName;
             return this;
         }
-        public Builder ownerName(@Nullable String ownerName) {
-            this.ownerName = Codegen.ofNullable(ownerName);
-            return this;
+
+        public Builder ownerName(String ownerName) {
+            return ownerName(Output.of(ownerName));
         }
+
         public Builder ownerType(@Nullable Output<String> ownerType) {
-            this.ownerType = ownerType;
+            $.ownerType = ownerType;
             return this;
         }
-        public Builder ownerType(@Nullable String ownerType) {
-            this.ownerType = Codegen.ofNullable(ownerType);
-            return this;
+
+        public Builder ownerType(String ownerType) {
+            return ownerType(Output.of(ownerType));
         }
+
         public Builder resourceUris(@Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris) {
-            this.resourceUris = resourceUris;
+            $.resourceUris = resourceUris;
             return this;
         }
-        public Builder resourceUris(@Nullable List<UserDefinedFunctionResourceUriGetArgs> resourceUris) {
-            this.resourceUris = Codegen.ofNullable(resourceUris);
-            return this;
+
+        public Builder resourceUris(List<UserDefinedFunctionResourceUriGetArgs> resourceUris) {
+            return resourceUris(Output.of(resourceUris));
         }
+
         public Builder resourceUris(UserDefinedFunctionResourceUriGetArgs... resourceUris) {
             return resourceUris(List.of(resourceUris));
-        }        public UserDefinedFunctionState build() {
-            return new UserDefinedFunctionState(arn, catalogId, className, createTime, databaseName, name, ownerName, ownerType, resourceUris);
+        }
+
+        public UserDefinedFunctionState build() {
+            return $;
         }
     }
+
 }

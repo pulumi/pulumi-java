@@ -5,10 +5,10 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="layerName")
-      private final @Nullable Output<String> layerName;
+    private @Nullable Output<String> layerName;
 
-    public Output<String> layerName() {
-        return this.layerName == null ? Codegen.empty() : this.layerName;
+    public Optional<Output<String>> layerName() {
+        return Optional.ofNullable(this.layerName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="organizationId")
-      private final @Nullable Output<String> organizationId;
+    private @Nullable Output<String> organizationId;
 
-    public Output<String> organizationId() {
-        return this.organizationId == null ? Codegen.empty() : this.organizationId;
+    public Optional<Output<String>> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="revisionId")
-      private final @Nullable Output<String> revisionId;
+    private @Nullable Output<String> revisionId;
 
-    public Output<String> revisionId() {
-        return this.revisionId == null ? Codegen.empty() : this.revisionId;
+    public Optional<Output<String>> revisionId() {
+        return Optional.ofNullable(this.revisionId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="statementId")
-      private final @Nullable Output<String> statementId;
+    private @Nullable Output<String> statementId;
 
-    public Output<String> statementId() {
-        return this.statementId == null ? Codegen.empty() : this.statementId;
+    public Optional<Output<String>> statementId() {
+        return Optional.ofNullable(this.statementId);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="versionNumber")
-      private final @Nullable Output<Integer> versionNumber;
+    private @Nullable Output<Integer> versionNumber;
 
-    public Output<Integer> versionNumber() {
-        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
+    public Optional<Output<Integer>> versionNumber() {
+        return Optional.ofNullable(this.versionNumber);
     }
 
-    public LayerVersionPermissionState(
-        @Nullable Output<String> action,
-        @Nullable Output<String> layerName,
-        @Nullable Output<String> organizationId,
-        @Nullable Output<String> policy,
-        @Nullable Output<String> principal,
-        @Nullable Output<String> revisionId,
-        @Nullable Output<String> statementId,
-        @Nullable Output<Integer> versionNumber) {
-        this.action = action;
-        this.layerName = layerName;
-        this.organizationId = organizationId;
-        this.policy = policy;
-        this.principal = principal;
-        this.revisionId = revisionId;
-        this.statementId = statementId;
-        this.versionNumber = versionNumber;
-    }
+    private LayerVersionPermissionState() {}
 
-    private LayerVersionPermissionState() {
-        this.action = Codegen.empty();
-        this.layerName = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.revisionId = Codegen.empty();
-        this.statementId = Codegen.empty();
-        this.versionNumber = Codegen.empty();
+    private LayerVersionPermissionState(LayerVersionPermissionState $) {
+        this.action = $.action;
+        this.layerName = $.layerName;
+        this.organizationId = $.organizationId;
+        this.policy = $.policy;
+        this.principal = $.principal;
+        this.revisionId = $.revisionId;
+        this.statementId = $.statementId;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LayerVersionPermissionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> layerName;
-        private @Nullable Output<String> organizationId;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> principal;
-        private @Nullable Output<String> revisionId;
-        private @Nullable Output<String> statementId;
-        private @Nullable Output<Integer> versionNumber;
+        private LayerVersionPermissionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LayerVersionPermissionState();
         }
 
         public Builder(LayerVersionPermissionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.layerName = defaults.layerName;
-    	      this.organizationId = defaults.organizationId;
-    	      this.policy = defaults.policy;
-    	      this.principal = defaults.principal;
-    	      this.revisionId = defaults.revisionId;
-    	      this.statementId = defaults.statementId;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new LayerVersionPermissionState(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder layerName(@Nullable Output<String> layerName) {
-            this.layerName = layerName;
+            $.layerName = layerName;
             return this;
         }
-        public Builder layerName(@Nullable String layerName) {
-            this.layerName = Codegen.ofNullable(layerName);
-            return this;
+
+        public Builder layerName(String layerName) {
+            return layerName(Output.of(layerName));
         }
+
         public Builder organizationId(@Nullable Output<String> organizationId) {
-            this.organizationId = organizationId;
+            $.organizationId = organizationId;
             return this;
         }
-        public Builder organizationId(@Nullable String organizationId) {
-            this.organizationId = Codegen.ofNullable(organizationId);
-            return this;
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
         }
+
         public Builder revisionId(@Nullable Output<String> revisionId) {
-            this.revisionId = revisionId;
+            $.revisionId = revisionId;
             return this;
         }
-        public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Codegen.ofNullable(revisionId);
-            return this;
+
+        public Builder revisionId(String revisionId) {
+            return revisionId(Output.of(revisionId));
         }
+
         public Builder statementId(@Nullable Output<String> statementId) {
-            this.statementId = statementId;
+            $.statementId = statementId;
             return this;
         }
-        public Builder statementId(@Nullable String statementId) {
-            this.statementId = Codegen.ofNullable(statementId);
-            return this;
+
+        public Builder statementId(String statementId) {
+            return statementId(Output.of(statementId));
         }
+
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
-            this.versionNumber = versionNumber;
+            $.versionNumber = versionNumber;
             return this;
         }
-        public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Codegen.ofNullable(versionNumber);
-            return this;
-        }        public LayerVersionPermissionState build() {
-            return new LayerVersionPermissionState(action, layerName, organizationId, policy, principal, revisionId, statementId, versionNumber);
+
+        public Builder versionNumber(Integer versionNumber) {
+            return versionNumber(Output.of(versionNumber));
+        }
+
+        public LayerVersionPermissionState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LogDestinationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accessPolicy")
-      private final @Nullable Output<String> accessPolicy;
+    private @Nullable Output<String> accessPolicy;
 
-    public Output<String> accessPolicy() {
-        return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
+    public Optional<Output<String>> accessPolicy() {
+        return Optional.ofNullable(this.accessPolicy);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LogDestinationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="destinationName")
-      private final @Nullable Output<String> destinationName;
+    private @Nullable Output<String> destinationName;
 
-    public Output<String> destinationName() {
-        return this.destinationName == null ? Codegen.empty() : this.destinationName;
+    public Optional<Output<String>> destinationName() {
+        return Optional.ofNullable(this.destinationName);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class LogDestinationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="forceUpdate")
-      private final @Nullable Output<Boolean> forceUpdate;
+    private @Nullable Output<Boolean> forceUpdate;
 
-    public Output<Boolean> forceUpdate() {
-        return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
+    public Optional<Output<Boolean>> forceUpdate() {
+        return Optional.ofNullable(this.forceUpdate);
     }
 
-    public LogDestinationPolicyState(
-        @Nullable Output<String> accessPolicy,
-        @Nullable Output<String> destinationName,
-        @Nullable Output<Boolean> forceUpdate) {
-        this.accessPolicy = accessPolicy;
-        this.destinationName = destinationName;
-        this.forceUpdate = forceUpdate;
-    }
+    private LogDestinationPolicyState() {}
 
-    private LogDestinationPolicyState() {
-        this.accessPolicy = Codegen.empty();
-        this.destinationName = Codegen.empty();
-        this.forceUpdate = Codegen.empty();
+    private LogDestinationPolicyState(LogDestinationPolicyState $) {
+        this.accessPolicy = $.accessPolicy;
+        this.destinationName = $.destinationName;
+        this.forceUpdate = $.forceUpdate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogDestinationPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPolicy;
-        private @Nullable Output<String> destinationName;
-        private @Nullable Output<Boolean> forceUpdate;
+        private LogDestinationPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogDestinationPolicyState();
         }
 
         public Builder(LogDestinationPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicy = defaults.accessPolicy;
-    	      this.destinationName = defaults.destinationName;
-    	      this.forceUpdate = defaults.forceUpdate;
+            $ = new LogDestinationPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicy(@Nullable Output<String> accessPolicy) {
-            this.accessPolicy = accessPolicy;
+            $.accessPolicy = accessPolicy;
             return this;
         }
-        public Builder accessPolicy(@Nullable String accessPolicy) {
-            this.accessPolicy = Codegen.ofNullable(accessPolicy);
-            return this;
+
+        public Builder accessPolicy(String accessPolicy) {
+            return accessPolicy(Output.of(accessPolicy));
         }
+
         public Builder destinationName(@Nullable Output<String> destinationName) {
-            this.destinationName = destinationName;
+            $.destinationName = destinationName;
             return this;
         }
-        public Builder destinationName(@Nullable String destinationName) {
-            this.destinationName = Codegen.ofNullable(destinationName);
-            return this;
+
+        public Builder destinationName(String destinationName) {
+            return destinationName(Output.of(destinationName));
         }
+
         public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
-            this.forceUpdate = forceUpdate;
+            $.forceUpdate = forceUpdate;
             return this;
         }
-        public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Codegen.ofNullable(forceUpdate);
-            return this;
-        }        public LogDestinationPolicyState build() {
-            return new LogDestinationPolicyState(accessPolicy, destinationName, forceUpdate);
+
+        public Builder forceUpdate(Boolean forceUpdate) {
+            return forceUpdate(Output.of(forceUpdate));
+        }
+
+        public LogDestinationPolicyState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class MetricStreamIncludeFilterGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
     }
 
-    public MetricStreamIncludeFilterGetArgs(Output<String> namespace) {
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private MetricStreamIncludeFilterGetArgs() {}
 
-    private MetricStreamIncludeFilterGetArgs() {
-        this.namespace = Codegen.empty();
+    private MetricStreamIncludeFilterGetArgs(MetricStreamIncludeFilterGetArgs $) {
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricStreamIncludeFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> namespace;
+        private MetricStreamIncludeFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricStreamIncludeFilterGetArgs();
         }
 
         public Builder(MetricStreamIncludeFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
+            $ = new MetricStreamIncludeFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
-        }        public MetricStreamIncludeFilterGetArgs build() {
-            return new MetricStreamIncludeFilterGetArgs(namespace);
+            return namespace(Output.of(namespace));
+        }
+
+        public MetricStreamIncludeFilterGetArgs build() {
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

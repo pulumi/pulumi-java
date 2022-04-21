@@ -5,7 +5,6 @@ package com.pulumi.aws.signer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,70 +15,67 @@ public final class SigningProfileSignatureValidityPeriodArgs extends com.pulumi.
     public static final SigningProfileSignatureValidityPeriodArgs Empty = new SigningProfileSignatureValidityPeriodArgs();
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
-      private final Output<Integer> value;
+    private Output<Integer> value;
 
     public Output<Integer> value() {
         return this.value;
     }
 
-    public SigningProfileSignatureValidityPeriodArgs(
-        Output<String> type,
-        Output<Integer> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SigningProfileSignatureValidityPeriodArgs() {}
 
-    private SigningProfileSignatureValidityPeriodArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private SigningProfileSignatureValidityPeriodArgs(SigningProfileSignatureValidityPeriodArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningProfileSignatureValidityPeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<Integer> value;
+        private SigningProfileSignatureValidityPeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningProfileSignatureValidityPeriodArgs();
         }
 
         public Builder(SigningProfileSignatureValidityPeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new SigningProfileSignatureValidityPeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<Integer> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Integer value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public SigningProfileSignatureValidityPeriodArgs build() {
-            return new SigningProfileSignatureValidityPeriodArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public SigningProfileSignatureValidityPeriodArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

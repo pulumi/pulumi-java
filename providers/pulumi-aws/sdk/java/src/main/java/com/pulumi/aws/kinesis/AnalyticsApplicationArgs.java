@@ -9,12 +9,12 @@ import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputArgs;
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cloudwatchLoggingOptions")
-      private final @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+    private @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
+    public Optional<Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs>> cloudwatchLoggingOptions() {
+        return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<String> code;
+    private @Nullable Output<String> code;
 
-    public Output<String> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<String>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
+    private @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
 
-    public Output<AnalyticsApplicationInputsArgs> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<AnalyticsApplicationInputsArgs>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="outputs")
-      private final @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
+    private @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
 
-    public Output<List<AnalyticsApplicationOutputArgs>> outputs() {
-        return this.outputs == null ? Codegen.empty() : this.outputs;
+    public Optional<Output<List<AnalyticsApplicationOutputArgs>>> outputs() {
+        return Optional.ofNullable(this.outputs);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="referenceDataSources")
-      private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
+    private @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources() {
-        return this.referenceDataSources == null ? Codegen.empty() : this.referenceDataSources;
+    public Optional<Output<AnalyticsApplicationReferenceDataSourcesArgs>> referenceDataSources() {
+        return Optional.ofNullable(this.referenceDataSources);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="startApplication")
-      private final @Nullable Output<Boolean> startApplication;
+    private @Nullable Output<Boolean> startApplication;
 
-    public Output<Boolean> startApplication() {
-        return this.startApplication == null ? Codegen.empty() : this.startApplication;
+    public Optional<Output<Boolean>> startApplication() {
+        return Optional.ofNullable(this.startApplication);
     }
 
     /**
@@ -118,157 +118,132 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AnalyticsApplicationArgs(
-        @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
-        @Nullable Output<String> code,
-        @Nullable Output<String> description,
-        @Nullable Output<AnalyticsApplicationInputsArgs> inputs,
-        @Nullable Output<String> name,
-        @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs,
-        @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources,
-        @Nullable Output<Boolean> startApplication,
-        @Nullable Output<Map<String,String>> tags) {
-        this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
-        this.code = code;
-        this.description = description;
-        this.inputs = inputs;
-        this.name = name;
-        this.outputs = outputs;
-        this.referenceDataSources = referenceDataSources;
-        this.startApplication = startApplication;
-        this.tags = tags;
-    }
+    private AnalyticsApplicationArgs() {}
 
-    private AnalyticsApplicationArgs() {
-        this.cloudwatchLoggingOptions = Codegen.empty();
-        this.code = Codegen.empty();
-        this.description = Codegen.empty();
-        this.inputs = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputs = Codegen.empty();
-        this.referenceDataSources = Codegen.empty();
-        this.startApplication = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AnalyticsApplicationArgs(AnalyticsApplicationArgs $) {
+        this.cloudwatchLoggingOptions = $.cloudwatchLoggingOptions;
+        this.code = $.code;
+        this.description = $.description;
+        this.inputs = $.inputs;
+        this.name = $.name;
+        this.outputs = $.outputs;
+        this.referenceDataSources = $.referenceDataSources;
+        this.startApplication = $.startApplication;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
-        private @Nullable Output<String> code;
-        private @Nullable Output<String> description;
-        private @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
-        private @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
-        private @Nullable Output<Boolean> startApplication;
-        private @Nullable Output<Map<String,String>> tags;
+        private AnalyticsApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationArgs();
         }
 
         public Builder(AnalyticsApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLoggingOptions = defaults.cloudwatchLoggingOptions;
-    	      this.code = defaults.code;
-    	      this.description = defaults.description;
-    	      this.inputs = defaults.inputs;
-    	      this.name = defaults.name;
-    	      this.outputs = defaults.outputs;
-    	      this.referenceDataSources = defaults.referenceDataSources;
-    	      this.startApplication = defaults.startApplication;
-    	      this.tags = defaults.tags;
+            $ = new AnalyticsApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
+            $.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-        public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
-            return this;
+
+        public Builder cloudwatchLoggingOptions(AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
+            return cloudwatchLoggingOptions(Output.of(cloudwatchLoggingOptions));
         }
+
         public Builder code(@Nullable Output<String> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable String code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(String code) {
+            return code(Output.of(code));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder inputs(@Nullable Output<AnalyticsApplicationInputsArgs> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable AnalyticsApplicationInputsArgs inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
+
+        public Builder inputs(AnalyticsApplicationInputsArgs inputs) {
+            return inputs(Output.of(inputs));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs) {
-            this.outputs = outputs;
+            $.outputs = outputs;
             return this;
         }
-        public Builder outputs(@Nullable List<AnalyticsApplicationOutputArgs> outputs) {
-            this.outputs = Codegen.ofNullable(outputs);
-            return this;
+
+        public Builder outputs(List<AnalyticsApplicationOutputArgs> outputs) {
+            return outputs(Output.of(outputs));
         }
+
         public Builder outputs(AnalyticsApplicationOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
+
         public Builder referenceDataSources(@Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources) {
-            this.referenceDataSources = referenceDataSources;
+            $.referenceDataSources = referenceDataSources;
             return this;
         }
-        public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
-            this.referenceDataSources = Codegen.ofNullable(referenceDataSources);
-            return this;
+
+        public Builder referenceDataSources(AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
+            return referenceDataSources(Output.of(referenceDataSources));
         }
+
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
-            this.startApplication = startApplication;
+            $.startApplication = startApplication;
             return this;
         }
-        public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Codegen.ofNullable(startApplication);
-            return this;
+
+        public Builder startApplication(Boolean startApplication) {
+            return startApplication(Output.of(startApplication));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AnalyticsApplicationArgs build() {
-            return new AnalyticsApplicationArgs(cloudwatchLoggingOptions, code, description, inputs, name, outputs, referenceDataSources, startApplication, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AnalyticsApplicationArgs build() {
+            return $;
         }
     }
+
 }

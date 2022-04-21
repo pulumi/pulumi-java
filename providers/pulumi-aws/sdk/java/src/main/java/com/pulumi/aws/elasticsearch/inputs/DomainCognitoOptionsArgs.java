@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="identityPoolId", required=true)
-      private final Output<String> identityPoolId;
+    private Output<String> identityPoolId;
 
     public Output<String> identityPoolId() {
         return this.identityPoolId;
@@ -43,7 +43,7 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -54,89 +54,81 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final Output<String> userPoolId;
+    private Output<String> userPoolId;
 
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
-    public DomainCognitoOptionsArgs(
-        @Nullable Output<Boolean> enabled,
-        Output<String> identityPoolId,
-        Output<String> roleArn,
-        Output<String> userPoolId) {
-        this.enabled = enabled;
-        this.identityPoolId = Objects.requireNonNull(identityPoolId, "expected parameter 'identityPoolId' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private DomainCognitoOptionsArgs() {}
 
-    private DomainCognitoOptionsArgs() {
-        this.enabled = Codegen.empty();
-        this.identityPoolId = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private DomainCognitoOptionsArgs(DomainCognitoOptionsArgs $) {
+        this.enabled = $.enabled;
+        this.identityPoolId = $.identityPoolId;
+        this.roleArn = $.roleArn;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainCognitoOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> identityPoolId;
-        private Output<String> roleArn;
-        private Output<String> userPoolId;
+        private DomainCognitoOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainCognitoOptionsArgs();
         }
 
         public Builder(DomainCognitoOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.identityPoolId = defaults.identityPoolId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new DomainCognitoOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder identityPoolId(Output<String> identityPoolId) {
-            this.identityPoolId = Objects.requireNonNull(identityPoolId);
+            $.identityPoolId = identityPoolId;
             return this;
         }
+
         public Builder identityPoolId(String identityPoolId) {
-            this.identityPoolId = Output.of(Objects.requireNonNull(identityPoolId));
-            return this;
+            return identityPoolId(Output.of(identityPoolId));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder userPoolId(Output<String> userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
-            return this;
-        }        public DomainCognitoOptionsArgs build() {
-            return new DomainCognitoOptionsArgs(enabled, identityPoolId, roleArn, userPoolId);
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public DomainCognitoOptionsArgs build() {
+            $.identityPoolId = Objects.requireNonNull($.identityPoolId, "expected parameter 'identityPoolId' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.iot.inputs;
 import com.pulumi.aws.iot.inputs.ThingGroupMetadataRootToParentGroupGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ThingGroupMetadataGetArgs extends com.pulumi.resources.Resour
     public static final ThingGroupMetadataGetArgs Empty = new ThingGroupMetadataGetArgs();
 
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -29,86 +29,79 @@ public final class ThingGroupMetadataGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="parentGroupName")
-      private final @Nullable Output<String> parentGroupName;
+    private @Nullable Output<String> parentGroupName;
 
-    public Output<String> parentGroupName() {
-        return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
+    public Optional<Output<String>> parentGroupName() {
+        return Optional.ofNullable(this.parentGroupName);
     }
 
     @Import(name="rootToParentGroups")
-      private final @Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups;
+    private @Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups;
 
-    public Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups() {
-        return this.rootToParentGroups == null ? Codegen.empty() : this.rootToParentGroups;
+    public Optional<Output<List<ThingGroupMetadataRootToParentGroupGetArgs>>> rootToParentGroups() {
+        return Optional.ofNullable(this.rootToParentGroups);
     }
 
-    public ThingGroupMetadataGetArgs(
-        @Nullable Output<String> creationDate,
-        @Nullable Output<String> parentGroupName,
-        @Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups) {
-        this.creationDate = creationDate;
-        this.parentGroupName = parentGroupName;
-        this.rootToParentGroups = rootToParentGroups;
-    }
+    private ThingGroupMetadataGetArgs() {}
 
-    private ThingGroupMetadataGetArgs() {
-        this.creationDate = Codegen.empty();
-        this.parentGroupName = Codegen.empty();
-        this.rootToParentGroups = Codegen.empty();
+    private ThingGroupMetadataGetArgs(ThingGroupMetadataGetArgs $) {
+        this.creationDate = $.creationDate;
+        this.parentGroupName = $.parentGroupName;
+        this.rootToParentGroups = $.rootToParentGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingGroupMetadataGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<String> parentGroupName;
-        private @Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups;
+        private ThingGroupMetadataGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingGroupMetadataGetArgs();
         }
 
         public Builder(ThingGroupMetadataGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationDate = defaults.creationDate;
-    	      this.parentGroupName = defaults.parentGroupName;
-    	      this.rootToParentGroups = defaults.rootToParentGroups;
+            $ = new ThingGroupMetadataGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
-            this.parentGroupName = parentGroupName;
+            $.parentGroupName = parentGroupName;
             return this;
         }
-        public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Codegen.ofNullable(parentGroupName);
-            return this;
+
+        public Builder parentGroupName(String parentGroupName) {
+            return parentGroupName(Output.of(parentGroupName));
         }
+
         public Builder rootToParentGroups(@Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups) {
-            this.rootToParentGroups = rootToParentGroups;
+            $.rootToParentGroups = rootToParentGroups;
             return this;
         }
-        public Builder rootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroupGetArgs> rootToParentGroups) {
-            this.rootToParentGroups = Codegen.ofNullable(rootToParentGroups);
-            return this;
+
+        public Builder rootToParentGroups(List<ThingGroupMetadataRootToParentGroupGetArgs> rootToParentGroups) {
+            return rootToParentGroups(Output.of(rootToParentGroups));
         }
+
         public Builder rootToParentGroups(ThingGroupMetadataRootToParentGroupGetArgs... rootToParentGroups) {
             return rootToParentGroups(List.of(rootToParentGroups));
-        }        public ThingGroupMetadataGetArgs build() {
-            return new ThingGroupMetadataGetArgs(creationDate, parentGroupName, rootToParentGroups);
+        }
+
+        public ThingGroupMetadataGetArgs build() {
+            return $;
         }
     }
+
 }

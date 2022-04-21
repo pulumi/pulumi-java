@@ -6,12 +6,12 @@ package com.pulumi.aws.efs;
 import com.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZoneName")
-      private final @Nullable Output<String> availabilityZoneName;
+    private @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> availabilityZoneName() {
-        return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
+    public Optional<Output<String>> availabilityZoneName() {
+        return Optional.ofNullable(this.availabilityZoneName);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationToken")
-      private final @Nullable Output<String> creationToken;
+    private @Nullable Output<String> creationToken;
 
-    public Output<String> creationToken() {
-        return this.creationToken == null ? Codegen.empty() : this.creationToken;
+    public Optional<Output<String>> creationToken() {
+        return Optional.ofNullable(this.creationToken);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecyclePolicy")
-      private final @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy;
+    private @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy;
 
-    public Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy() {
-        return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
+    public Optional<Output<FileSystemLifecyclePolicyArgs>> lifecyclePolicy() {
+        return Optional.ofNullable(this.lifecyclePolicy);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="performanceMode")
-      private final @Nullable Output<String> performanceMode;
+    private @Nullable Output<String> performanceMode;
 
-    public Output<String> performanceMode() {
-        return this.performanceMode == null ? Codegen.empty() : this.performanceMode;
+    public Optional<Output<String>> performanceMode() {
+        return Optional.ofNullable(this.performanceMode);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisionedThroughputInMibps")
-      private final @Nullable Output<Double> provisionedThroughputInMibps;
+    private @Nullable Output<Double> provisionedThroughputInMibps;
 
-    public Output<Double> provisionedThroughputInMibps() {
-        return this.provisionedThroughputInMibps == null ? Codegen.empty() : this.provisionedThroughputInMibps;
+    public Optional<Output<Double>> provisionedThroughputInMibps() {
+        return Optional.ofNullable(this.provisionedThroughputInMibps);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -115,154 +115,128 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throughputMode")
-      private final @Nullable Output<String> throughputMode;
+    private @Nullable Output<String> throughputMode;
 
-    public Output<String> throughputMode() {
-        return this.throughputMode == null ? Codegen.empty() : this.throughputMode;
+    public Optional<Output<String>> throughputMode() {
+        return Optional.ofNullable(this.throughputMode);
     }
 
-    public FileSystemArgs(
-        @Nullable Output<String> availabilityZoneName,
-        @Nullable Output<String> creationToken,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy,
-        @Nullable Output<String> performanceMode,
-        @Nullable Output<Double> provisionedThroughputInMibps,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> throughputMode) {
-        this.availabilityZoneName = availabilityZoneName;
-        this.creationToken = creationToken;
-        this.encrypted = encrypted;
-        this.kmsKeyId = kmsKeyId;
-        this.lifecyclePolicy = lifecyclePolicy;
-        this.performanceMode = performanceMode;
-        this.provisionedThroughputInMibps = provisionedThroughputInMibps;
-        this.tags = tags;
-        this.throughputMode = throughputMode;
-    }
+    private FileSystemArgs() {}
 
-    private FileSystemArgs() {
-        this.availabilityZoneName = Codegen.empty();
-        this.creationToken = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.lifecyclePolicy = Codegen.empty();
-        this.performanceMode = Codegen.empty();
-        this.provisionedThroughputInMibps = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.throughputMode = Codegen.empty();
+    private FileSystemArgs(FileSystemArgs $) {
+        this.availabilityZoneName = $.availabilityZoneName;
+        this.creationToken = $.creationToken;
+        this.encrypted = $.encrypted;
+        this.kmsKeyId = $.kmsKeyId;
+        this.lifecyclePolicy = $.lifecyclePolicy;
+        this.performanceMode = $.performanceMode;
+        this.provisionedThroughputInMibps = $.provisionedThroughputInMibps;
+        this.tags = $.tags;
+        this.throughputMode = $.throughputMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZoneName;
-        private @Nullable Output<String> creationToken;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy;
-        private @Nullable Output<String> performanceMode;
-        private @Nullable Output<Double> provisionedThroughputInMibps;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> throughputMode;
+        private FileSystemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemArgs();
         }
 
         public Builder(FileSystemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneName = defaults.availabilityZoneName;
-    	      this.creationToken = defaults.creationToken;
-    	      this.encrypted = defaults.encrypted;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.lifecyclePolicy = defaults.lifecyclePolicy;
-    	      this.performanceMode = defaults.performanceMode;
-    	      this.provisionedThroughputInMibps = defaults.provisionedThroughputInMibps;
-    	      this.tags = defaults.tags;
-    	      this.throughputMode = defaults.throughputMode;
+            $ = new FileSystemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
-            this.availabilityZoneName = availabilityZoneName;
+            $.availabilityZoneName = availabilityZoneName;
             return this;
         }
-        public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Codegen.ofNullable(availabilityZoneName);
-            return this;
+
+        public Builder availabilityZoneName(String availabilityZoneName) {
+            return availabilityZoneName(Output.of(availabilityZoneName));
         }
+
         public Builder creationToken(@Nullable Output<String> creationToken) {
-            this.creationToken = creationToken;
+            $.creationToken = creationToken;
             return this;
         }
-        public Builder creationToken(@Nullable String creationToken) {
-            this.creationToken = Codegen.ofNullable(creationToken);
-            return this;
+
+        public Builder creationToken(String creationToken) {
+            return creationToken(Output.of(creationToken));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy) {
-            this.lifecyclePolicy = lifecyclePolicy;
+            $.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
-        public Builder lifecyclePolicy(@Nullable FileSystemLifecyclePolicyArgs lifecyclePolicy) {
-            this.lifecyclePolicy = Codegen.ofNullable(lifecyclePolicy);
-            return this;
+
+        public Builder lifecyclePolicy(FileSystemLifecyclePolicyArgs lifecyclePolicy) {
+            return lifecyclePolicy(Output.of(lifecyclePolicy));
         }
+
         public Builder performanceMode(@Nullable Output<String> performanceMode) {
-            this.performanceMode = performanceMode;
+            $.performanceMode = performanceMode;
             return this;
         }
-        public Builder performanceMode(@Nullable String performanceMode) {
-            this.performanceMode = Codegen.ofNullable(performanceMode);
-            return this;
+
+        public Builder performanceMode(String performanceMode) {
+            return performanceMode(Output.of(performanceMode));
         }
+
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = provisionedThroughputInMibps;
+            $.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
-        public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = Codegen.ofNullable(provisionedThroughputInMibps);
-            return this;
+
+        public Builder provisionedThroughputInMibps(Double provisionedThroughputInMibps) {
+            return provisionedThroughputInMibps(Output.of(provisionedThroughputInMibps));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
-            this.throughputMode = throughputMode;
+            $.throughputMode = throughputMode;
             return this;
         }
-        public Builder throughputMode(@Nullable String throughputMode) {
-            this.throughputMode = Codegen.ofNullable(throughputMode);
-            return this;
-        }        public FileSystemArgs build() {
-            return new FileSystemArgs(availabilityZoneName, creationToken, encrypted, kmsKeyId, lifecyclePolicy, performanceMode, provisionedThroughputInMibps, tags, throughputMode);
+
+        public Builder throughputMode(String throughputMode) {
+            return throughputMode(Output.of(throughputMode));
+        }
+
+        public FileSystemArgs build() {
+            return $;
         }
     }
+
 }

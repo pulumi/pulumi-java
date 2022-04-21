@@ -5,10 +5,10 @@ package com.pulumi.aws.glacier;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class VaultLockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completeLock", required=true)
-      private final Output<Boolean> completeLock;
+    private Output<Boolean> completeLock;
 
     public Output<Boolean> completeLock() {
         return this.completeLock;
@@ -32,10 +32,10 @@ public final class VaultLockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoreDeletionError")
-      private final @Nullable Output<Boolean> ignoreDeletionError;
+    private @Nullable Output<Boolean> ignoreDeletionError;
 
-    public Output<Boolean> ignoreDeletionError() {
-        return this.ignoreDeletionError == null ? Codegen.empty() : this.ignoreDeletionError;
+    public Optional<Output<Boolean>> ignoreDeletionError() {
+        return Optional.ofNullable(this.ignoreDeletionError);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class VaultLockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -54,89 +54,81 @@ public final class VaultLockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vaultName", required=true)
-      private final Output<String> vaultName;
+    private Output<String> vaultName;
 
     public Output<String> vaultName() {
         return this.vaultName;
     }
 
-    public VaultLockArgs(
-        Output<Boolean> completeLock,
-        @Nullable Output<Boolean> ignoreDeletionError,
-        Output<String> policy,
-        Output<String> vaultName) {
-        this.completeLock = Objects.requireNonNull(completeLock, "expected parameter 'completeLock' to be non-null");
-        this.ignoreDeletionError = ignoreDeletionError;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private VaultLockArgs() {}
 
-    private VaultLockArgs() {
-        this.completeLock = Codegen.empty();
-        this.ignoreDeletionError = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.vaultName = Codegen.empty();
+    private VaultLockArgs(VaultLockArgs $) {
+        this.completeLock = $.completeLock;
+        this.ignoreDeletionError = $.ignoreDeletionError;
+        this.policy = $.policy;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultLockArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> completeLock;
-        private @Nullable Output<Boolean> ignoreDeletionError;
-        private Output<String> policy;
-        private Output<String> vaultName;
+        private VaultLockArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultLockArgs();
         }
 
         public Builder(VaultLockArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completeLock = defaults.completeLock;
-    	      this.ignoreDeletionError = defaults.ignoreDeletionError;
-    	      this.policy = defaults.policy;
-    	      this.vaultName = defaults.vaultName;
+            $ = new VaultLockArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder completeLock(Output<Boolean> completeLock) {
-            this.completeLock = Objects.requireNonNull(completeLock);
+            $.completeLock = completeLock;
             return this;
         }
+
         public Builder completeLock(Boolean completeLock) {
-            this.completeLock = Output.of(Objects.requireNonNull(completeLock));
-            return this;
+            return completeLock(Output.of(completeLock));
         }
+
         public Builder ignoreDeletionError(@Nullable Output<Boolean> ignoreDeletionError) {
-            this.ignoreDeletionError = ignoreDeletionError;
+            $.ignoreDeletionError = ignoreDeletionError;
             return this;
         }
-        public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
-            this.ignoreDeletionError = Codegen.ofNullable(ignoreDeletionError);
-            return this;
+
+        public Builder ignoreDeletionError(Boolean ignoreDeletionError) {
+            return ignoreDeletionError(Output.of(ignoreDeletionError));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder vaultName(Output<String> vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
-            return this;
-        }        public VaultLockArgs build() {
-            return new VaultLockArgs(completeLock, ignoreDeletionError, policy, vaultName);
+            return vaultName(Output.of(vaultName));
+        }
+
+        public VaultLockArgs build() {
+            $.completeLock = Objects.requireNonNull($.completeLock, "expected parameter 'completeLock' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

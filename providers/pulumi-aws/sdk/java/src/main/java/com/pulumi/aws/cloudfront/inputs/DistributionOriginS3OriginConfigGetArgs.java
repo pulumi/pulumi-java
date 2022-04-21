@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class DistributionOriginS3OriginConfigGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="originAccessIdentity", required=true)
-      private final Output<String> originAccessIdentity;
+    private Output<String> originAccessIdentity;
 
     public Output<String> originAccessIdentity() {
         return this.originAccessIdentity;
     }
 
-    public DistributionOriginS3OriginConfigGetArgs(Output<String> originAccessIdentity) {
-        this.originAccessIdentity = Objects.requireNonNull(originAccessIdentity, "expected parameter 'originAccessIdentity' to be non-null");
-    }
+    private DistributionOriginS3OriginConfigGetArgs() {}
 
-    private DistributionOriginS3OriginConfigGetArgs() {
-        this.originAccessIdentity = Codegen.empty();
+    private DistributionOriginS3OriginConfigGetArgs(DistributionOriginS3OriginConfigGetArgs $) {
+        this.originAccessIdentity = $.originAccessIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginS3OriginConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> originAccessIdentity;
+        private DistributionOriginS3OriginConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginS3OriginConfigGetArgs();
         }
 
         public Builder(DistributionOriginS3OriginConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originAccessIdentity = defaults.originAccessIdentity;
+            $ = new DistributionOriginS3OriginConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder originAccessIdentity(Output<String> originAccessIdentity) {
-            this.originAccessIdentity = Objects.requireNonNull(originAccessIdentity);
+            $.originAccessIdentity = originAccessIdentity;
             return this;
         }
+
         public Builder originAccessIdentity(String originAccessIdentity) {
-            this.originAccessIdentity = Output.of(Objects.requireNonNull(originAccessIdentity));
-            return this;
-        }        public DistributionOriginS3OriginConfigGetArgs build() {
-            return new DistributionOriginS3OriginConfigGetArgs(originAccessIdentity);
+            return originAccessIdentity(Output.of(originAccessIdentity));
+        }
+
+        public DistributionOriginS3OriginConfigGetArgs build() {
+            $.originAccessIdentity = Objects.requireNonNull($.originAccessIdentity, "expected parameter 'originAccessIdentity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends com.pulumi.r
     public static final GatewaySmbActiveDirectorySettingsGetArgs Empty = new GatewaySmbActiveDirectorySettingsGetArgs();
 
     @Import(name="activeDirectoryStatus")
-      private final @Nullable Output<String> activeDirectoryStatus;
+    private @Nullable Output<String> activeDirectoryStatus;
 
-    public Output<String> activeDirectoryStatus() {
-        return this.activeDirectoryStatus == null ? Codegen.empty() : this.activeDirectoryStatus;
+    public Optional<Output<String>> activeDirectoryStatus() {
+        return Optional.ofNullable(this.activeDirectoryStatus);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="domainControllers")
-      private final @Nullable Output<List<String>> domainControllers;
+    private @Nullable Output<List<String>> domainControllers;
 
-    public Output<List<String>> domainControllers() {
-        return this.domainControllers == null ? Codegen.empty() : this.domainControllers;
+    public Optional<Output<List<String>>> domainControllers() {
+        return Optional.ofNullable(this.domainControllers);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -53,10 +53,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="organizationalUnit")
-      private final @Nullable Output<String> organizationalUnit;
+    private @Nullable Output<String> organizationalUnit;
 
-    public Output<String> organizationalUnit() {
-        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
+    public Optional<Output<String>> organizationalUnit() {
+        return Optional.ofNullable(this.organizationalUnit);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -75,10 +75,10 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Output<Integer> timeoutInSeconds;
+    private @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
+    public Optional<Output<Integer>> timeoutInSeconds() {
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
     /**
@@ -86,131 +86,115 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public GatewaySmbActiveDirectorySettingsGetArgs(
-        @Nullable Output<String> activeDirectoryStatus,
-        @Nullable Output<List<String>> domainControllers,
-        Output<String> domainName,
-        @Nullable Output<String> organizationalUnit,
-        Output<String> password,
-        @Nullable Output<Integer> timeoutInSeconds,
-        Output<String> username) {
-        this.activeDirectoryStatus = activeDirectoryStatus;
-        this.domainControllers = domainControllers;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.organizationalUnit = organizationalUnit;
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.timeoutInSeconds = timeoutInSeconds;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private GatewaySmbActiveDirectorySettingsGetArgs() {}
 
-    private GatewaySmbActiveDirectorySettingsGetArgs() {
-        this.activeDirectoryStatus = Codegen.empty();
-        this.domainControllers = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.organizationalUnit = Codegen.empty();
-        this.password = Codegen.empty();
-        this.timeoutInSeconds = Codegen.empty();
-        this.username = Codegen.empty();
+    private GatewaySmbActiveDirectorySettingsGetArgs(GatewaySmbActiveDirectorySettingsGetArgs $) {
+        this.activeDirectoryStatus = $.activeDirectoryStatus;
+        this.domainControllers = $.domainControllers;
+        this.domainName = $.domainName;
+        this.organizationalUnit = $.organizationalUnit;
+        this.password = $.password;
+        this.timeoutInSeconds = $.timeoutInSeconds;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewaySmbActiveDirectorySettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activeDirectoryStatus;
-        private @Nullable Output<List<String>> domainControllers;
-        private Output<String> domainName;
-        private @Nullable Output<String> organizationalUnit;
-        private Output<String> password;
-        private @Nullable Output<Integer> timeoutInSeconds;
-        private Output<String> username;
+        private GatewaySmbActiveDirectorySettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewaySmbActiveDirectorySettingsGetArgs();
         }
 
         public Builder(GatewaySmbActiveDirectorySettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryStatus = defaults.activeDirectoryStatus;
-    	      this.domainControllers = defaults.domainControllers;
-    	      this.domainName = defaults.domainName;
-    	      this.organizationalUnit = defaults.organizationalUnit;
-    	      this.password = defaults.password;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
-    	      this.username = defaults.username;
+            $ = new GatewaySmbActiveDirectorySettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryStatus(@Nullable Output<String> activeDirectoryStatus) {
-            this.activeDirectoryStatus = activeDirectoryStatus;
+            $.activeDirectoryStatus = activeDirectoryStatus;
             return this;
         }
-        public Builder activeDirectoryStatus(@Nullable String activeDirectoryStatus) {
-            this.activeDirectoryStatus = Codegen.ofNullable(activeDirectoryStatus);
-            return this;
+
+        public Builder activeDirectoryStatus(String activeDirectoryStatus) {
+            return activeDirectoryStatus(Output.of(activeDirectoryStatus));
         }
+
         public Builder domainControllers(@Nullable Output<List<String>> domainControllers) {
-            this.domainControllers = domainControllers;
+            $.domainControllers = domainControllers;
             return this;
         }
-        public Builder domainControllers(@Nullable List<String> domainControllers) {
-            this.domainControllers = Codegen.ofNullable(domainControllers);
-            return this;
+
+        public Builder domainControllers(List<String> domainControllers) {
+            return domainControllers(Output.of(domainControllers));
         }
+
         public Builder domainControllers(String... domainControllers) {
             return domainControllers(List.of(domainControllers));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
-            this.organizationalUnit = organizationalUnit;
+            $.organizationalUnit = organizationalUnit;
             return this;
         }
-        public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
-            return this;
+
+        public Builder organizationalUnit(String organizationalUnit) {
+            return organizationalUnit(Output.of(organizationalUnit));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
-            return this;
+
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
+            return timeoutInSeconds(Output.of(timeoutInSeconds));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public GatewaySmbActiveDirectorySettingsGetArgs build() {
-            return new GatewaySmbActiveDirectorySettingsGetArgs(activeDirectoryStatus, domainControllers, domainName, organizationalUnit, password, timeoutInSeconds, username);
+            return username(Output.of(username));
+        }
+
+        public GatewaySmbActiveDirectorySettingsGetArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

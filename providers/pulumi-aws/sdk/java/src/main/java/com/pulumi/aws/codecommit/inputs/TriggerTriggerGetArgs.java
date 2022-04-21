@@ -5,10 +5,10 @@ package com.pulumi.aws.codecommit.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TriggerTriggerGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="branches")
-      private final @Nullable Output<List<String>> branches;
+    private @Nullable Output<List<String>> branches;
 
-    public Output<List<String>> branches() {
-        return this.branches == null ? Codegen.empty() : this.branches;
+    public Optional<Output<List<String>>> branches() {
+        return Optional.ofNullable(this.branches);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TriggerTriggerGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="customData")
-      private final @Nullable Output<String> customData;
+    private @Nullable Output<String> customData;
 
-    public Output<String> customData() {
-        return this.customData == null ? Codegen.empty() : this.customData;
+    public Optional<Output<String>> customData() {
+        return Optional.ofNullable(this.customData);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class TriggerTriggerGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destinationArn", required=true)
-      private final Output<String> destinationArn;
+    private Output<String> destinationArn;
 
     public Output<String> destinationArn() {
         return this.destinationArn;
@@ -54,7 +54,7 @@ public final class TriggerTriggerGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="events", required=true)
-      private final Output<List<String>> events;
+    private Output<List<String>> events;
 
     public Output<List<String>> events() {
         return this.events;
@@ -65,108 +65,99 @@ public final class TriggerTriggerGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public TriggerTriggerGetArgs(
-        @Nullable Output<List<String>> branches,
-        @Nullable Output<String> customData,
-        Output<String> destinationArn,
-        Output<List<String>> events,
-        Output<String> name) {
-        this.branches = branches;
-        this.customData = customData;
-        this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private TriggerTriggerGetArgs() {}
 
-    private TriggerTriggerGetArgs() {
-        this.branches = Codegen.empty();
-        this.customData = Codegen.empty();
-        this.destinationArn = Codegen.empty();
-        this.events = Codegen.empty();
-        this.name = Codegen.empty();
+    private TriggerTriggerGetArgs(TriggerTriggerGetArgs $) {
+        this.branches = $.branches;
+        this.customData = $.customData;
+        this.destinationArn = $.destinationArn;
+        this.events = $.events;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerTriggerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> branches;
-        private @Nullable Output<String> customData;
-        private Output<String> destinationArn;
-        private Output<List<String>> events;
-        private Output<String> name;
+        private TriggerTriggerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerTriggerGetArgs();
         }
 
         public Builder(TriggerTriggerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branches = defaults.branches;
-    	      this.customData = defaults.customData;
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.events = defaults.events;
-    	      this.name = defaults.name;
+            $ = new TriggerTriggerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branches(@Nullable Output<List<String>> branches) {
-            this.branches = branches;
+            $.branches = branches;
             return this;
         }
-        public Builder branches(@Nullable List<String> branches) {
-            this.branches = Codegen.ofNullable(branches);
-            return this;
+
+        public Builder branches(List<String> branches) {
+            return branches(Output.of(branches));
         }
+
         public Builder branches(String... branches) {
             return branches(List.of(branches));
         }
+
         public Builder customData(@Nullable Output<String> customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
-        public Builder customData(@Nullable String customData) {
-            this.customData = Codegen.ofNullable(customData);
-            return this;
+
+        public Builder customData(String customData) {
+            return customData(Output.of(customData));
         }
+
         public Builder destinationArn(Output<String> destinationArn) {
-            this.destinationArn = Objects.requireNonNull(destinationArn);
+            $.destinationArn = destinationArn;
             return this;
         }
+
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
-            return this;
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder events(Output<List<String>> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(List<String> events) {
-            this.events = Output.of(Objects.requireNonNull(events));
-            return this;
+            return events(Output.of(events));
         }
+
         public Builder events(String... events) {
             return events(List.of(events));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public TriggerTriggerGetArgs build() {
-            return new TriggerTriggerGetArgs(branches, customData, destinationArn, events, name);
+            return name(Output.of(name));
+        }
+
+        public TriggerTriggerGetArgs build() {
+            $.destinationArn = Objects.requireNonNull($.destinationArn, "expected parameter 'destinationArn' to be non-null");
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

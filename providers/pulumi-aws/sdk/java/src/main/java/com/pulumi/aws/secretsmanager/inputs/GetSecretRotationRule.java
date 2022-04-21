@@ -13,45 +13,45 @@ public final class GetSecretRotationRule extends com.pulumi.resources.InvokeArgs
     public static final GetSecretRotationRule Empty = new GetSecretRotationRule();
 
     @Import(name="automaticallyAfterDays", required=true)
-      private final Integer automaticallyAfterDays;
+    private Integer automaticallyAfterDays;
 
     public Integer automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 
-    public GetSecretRotationRule(Integer automaticallyAfterDays) {
-        this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays, "expected parameter 'automaticallyAfterDays' to be non-null");
-    }
+    private GetSecretRotationRule() {}
 
-    private GetSecretRotationRule() {
-        this.automaticallyAfterDays = null;
+    private GetSecretRotationRule(GetSecretRotationRule $) {
+        this.automaticallyAfterDays = $.automaticallyAfterDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretRotationRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer automaticallyAfterDays;
+        private GetSecretRotationRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretRotationRule();
         }
 
         public Builder(GetSecretRotationRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticallyAfterDays = defaults.automaticallyAfterDays;
+            $ = new GetSecretRotationRule(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
-            this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
+            $.automaticallyAfterDays = automaticallyAfterDays;
             return this;
-        }        public GetSecretRotationRule build() {
-            return new GetSecretRotationRule(automaticallyAfterDays);
+        }
+
+        public GetSecretRotationRule build() {
+            $.automaticallyAfterDays = Objects.requireNonNull($.automaticallyAfterDays, "expected parameter 'automaticallyAfterDays' to be non-null");
+            return $;
         }
     }
+
 }

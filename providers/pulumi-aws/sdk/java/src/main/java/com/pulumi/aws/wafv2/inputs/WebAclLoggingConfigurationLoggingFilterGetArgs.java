@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends com.pu
      * 
      */
     @Import(name="defaultBehavior", required=true)
-      private final Output<String> defaultBehavior;
+    private Output<String> defaultBehavior;
 
     public Output<String> defaultBehavior() {
         return this.defaultBehavior;
@@ -32,66 +31,64 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends com.pu
      * 
      */
     @Import(name="filters", required=true)
-      private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
+    private Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
 
     public Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters() {
         return this.filters;
     }
 
-    public WebAclLoggingConfigurationLoggingFilterGetArgs(
-        Output<String> defaultBehavior,
-        Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
-        this.defaultBehavior = Objects.requireNonNull(defaultBehavior, "expected parameter 'defaultBehavior' to be non-null");
-        this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
-    }
+    private WebAclLoggingConfigurationLoggingFilterGetArgs() {}
 
-    private WebAclLoggingConfigurationLoggingFilterGetArgs() {
-        this.defaultBehavior = Codegen.empty();
-        this.filters = Codegen.empty();
+    private WebAclLoggingConfigurationLoggingFilterGetArgs(WebAclLoggingConfigurationLoggingFilterGetArgs $) {
+        this.defaultBehavior = $.defaultBehavior;
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationLoggingFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> defaultBehavior;
-        private Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
+        private WebAclLoggingConfigurationLoggingFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationLoggingFilterGetArgs();
         }
 
         public Builder(WebAclLoggingConfigurationLoggingFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultBehavior = defaults.defaultBehavior;
-    	      this.filters = defaults.filters;
+            $ = new WebAclLoggingConfigurationLoggingFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultBehavior(Output<String> defaultBehavior) {
-            this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
+            $.defaultBehavior = defaultBehavior;
             return this;
         }
+
         public Builder defaultBehavior(String defaultBehavior) {
-            this.defaultBehavior = Output.of(Objects.requireNonNull(defaultBehavior));
-            return this;
+            return defaultBehavior(Output.of(defaultBehavior));
         }
+
         public Builder filters(Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
-            this.filters = Objects.requireNonNull(filters);
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs> filters) {
-            this.filters = Output.of(Objects.requireNonNull(filters));
-            return this;
+            return filters(Output.of(filters));
         }
+
         public Builder filters(WebAclLoggingConfigurationLoggingFilterFilterGetArgs... filters) {
             return filters(List.of(filters));
-        }        public WebAclLoggingConfigurationLoggingFilterGetArgs build() {
-            return new WebAclLoggingConfigurationLoggingFilterGetArgs(defaultBehavior, filters);
+        }
+
+        public WebAclLoggingConfigurationLoggingFilterGetArgs build() {
+            $.defaultBehavior = Objects.requireNonNull($.defaultBehavior, "expected parameter 'defaultBehavior' to be non-null");
+            $.filters = Objects.requireNonNull($.filters, "expected parameter 'filters' to be non-null");
+            return $;
         }
     }
+
 }

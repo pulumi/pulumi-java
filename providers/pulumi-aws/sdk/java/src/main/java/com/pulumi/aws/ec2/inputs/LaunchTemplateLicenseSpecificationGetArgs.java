@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class LaunchTemplateLicenseSpecificationGetArgs extends com.pulumi.
      * 
      */
     @Import(name="licenseConfigurationArn", required=true)
-      private final Output<String> licenseConfigurationArn;
+    private Output<String> licenseConfigurationArn;
 
     public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
 
-    public LaunchTemplateLicenseSpecificationGetArgs(Output<String> licenseConfigurationArn) {
-        this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn, "expected parameter 'licenseConfigurationArn' to be non-null");
-    }
+    private LaunchTemplateLicenseSpecificationGetArgs() {}
 
-    private LaunchTemplateLicenseSpecificationGetArgs() {
-        this.licenseConfigurationArn = Codegen.empty();
+    private LaunchTemplateLicenseSpecificationGetArgs(LaunchTemplateLicenseSpecificationGetArgs $) {
+        this.licenseConfigurationArn = $.licenseConfigurationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateLicenseSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> licenseConfigurationArn;
+        private LaunchTemplateLicenseSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateLicenseSpecificationGetArgs();
         }
 
         public Builder(LaunchTemplateLicenseSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.licenseConfigurationArn = defaults.licenseConfigurationArn;
+            $ = new LaunchTemplateLicenseSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder licenseConfigurationArn(Output<String> licenseConfigurationArn) {
-            this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
+            $.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
+
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
-            this.licenseConfigurationArn = Output.of(Objects.requireNonNull(licenseConfigurationArn));
-            return this;
-        }        public LaunchTemplateLicenseSpecificationGetArgs build() {
-            return new LaunchTemplateLicenseSpecificationGetArgs(licenseConfigurationArn);
+            return licenseConfigurationArn(Output.of(licenseConfigurationArn));
+        }
+
+        public LaunchTemplateLicenseSpecificationGetArgs build() {
+            $.licenseConfigurationArn = Objects.requireNonNull($.licenseConfigurationArn, "expected parameter 'licenseConfigurationArn' to be non-null");
+            return $;
         }
     }
+
 }

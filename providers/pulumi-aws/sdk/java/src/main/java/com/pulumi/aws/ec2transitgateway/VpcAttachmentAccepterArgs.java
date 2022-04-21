@@ -5,11 +5,11 @@ package com.pulumi.aws.ec2transitgateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
-      private final Output<String> transitGatewayAttachmentId;
+    private Output<String> transitGatewayAttachmentId;
 
     public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -44,10 +44,10 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transitGatewayDefaultRouteTableAssociation")
-      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
+    private @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
-    public Output<Boolean> transitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTableAssociation;
+    public Optional<Output<Boolean>> transitGatewayDefaultRouteTableAssociation() {
+        return Optional.ofNullable(this.transitGatewayDefaultRouteTableAssociation);
     }
 
     /**
@@ -55,89 +55,79 @@ public final class VpcAttachmentAccepterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transitGatewayDefaultRouteTablePropagation")
-      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
+    private @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
-    public Output<Boolean> transitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTablePropagation;
+    public Optional<Output<Boolean>> transitGatewayDefaultRouteTablePropagation() {
+        return Optional.ofNullable(this.transitGatewayDefaultRouteTablePropagation);
     }
 
-    public VpcAttachmentAccepterArgs(
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> transitGatewayAttachmentId,
-        @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation,
-        @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
-        this.tags = tags;
-        this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
-        this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
-        this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
-    }
+    private VpcAttachmentAccepterArgs() {}
 
-    private VpcAttachmentAccepterArgs() {
-        this.tags = Codegen.empty();
-        this.transitGatewayAttachmentId = Codegen.empty();
-        this.transitGatewayDefaultRouteTableAssociation = Codegen.empty();
-        this.transitGatewayDefaultRouteTablePropagation = Codegen.empty();
+    private VpcAttachmentAccepterArgs(VpcAttachmentAccepterArgs $) {
+        this.tags = $.tags;
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
+        this.transitGatewayDefaultRouteTableAssociation = $.transitGatewayDefaultRouteTableAssociation;
+        this.transitGatewayDefaultRouteTablePropagation = $.transitGatewayDefaultRouteTablePropagation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcAttachmentAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> transitGatewayAttachmentId;
-        private @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
-        private @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
+        private VpcAttachmentAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcAttachmentAccepterArgs();
         }
 
         public Builder(VpcAttachmentAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
-    	      this.transitGatewayDefaultRouteTableAssociation = defaults.transitGatewayDefaultRouteTableAssociation;
-    	      this.transitGatewayDefaultRouteTablePropagation = defaults.transitGatewayDefaultRouteTablePropagation;
+            $ = new VpcAttachmentAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
+
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.of(Objects.requireNonNull(transitGatewayAttachmentId));
-            return this;
+            return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
+
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
+            $.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
-        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = Codegen.ofNullable(transitGatewayDefaultRouteTableAssociation);
-            return this;
+
+        public Builder transitGatewayDefaultRouteTableAssociation(Boolean transitGatewayDefaultRouteTableAssociation) {
+            return transitGatewayDefaultRouteTableAssociation(Output.of(transitGatewayDefaultRouteTableAssociation));
         }
+
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
+            $.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
-        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = Codegen.ofNullable(transitGatewayDefaultRouteTablePropagation);
-            return this;
-        }        public VpcAttachmentAccepterArgs build() {
-            return new VpcAttachmentAccepterArgs(tags, transitGatewayAttachmentId, transitGatewayDefaultRouteTableAssociation, transitGatewayDefaultRouteTablePropagation);
+
+        public Builder transitGatewayDefaultRouteTablePropagation(Boolean transitGatewayDefaultRouteTablePropagation) {
+            return transitGatewayDefaultRouteTablePropagation(Output.of(transitGatewayDefaultRouteTablePropagation));
+        }
+
+        public VpcAttachmentAccepterArgs build() {
+            $.transitGatewayAttachmentId = Objects.requireNonNull($.transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
+            return $;
         }
     }
+
 }

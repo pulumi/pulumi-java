@@ -5,9 +5,9 @@ package com.pulumi.aws.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class GameSessionQueuePlayerLatencyPolicyArgs extends com.pulumi.re
      * 
      */
     @Import(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
-      private final Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
+    private Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
 
     public Output<Integer> maximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
@@ -31,63 +31,59 @@ public final class GameSessionQueuePlayerLatencyPolicyArgs extends com.pulumi.re
      * 
      */
     @Import(name="policyDurationSeconds")
-      private final @Nullable Output<Integer> policyDurationSeconds;
+    private @Nullable Output<Integer> policyDurationSeconds;
 
-    public Output<Integer> policyDurationSeconds() {
-        return this.policyDurationSeconds == null ? Codegen.empty() : this.policyDurationSeconds;
+    public Optional<Output<Integer>> policyDurationSeconds() {
+        return Optional.ofNullable(this.policyDurationSeconds);
     }
 
-    public GameSessionQueuePlayerLatencyPolicyArgs(
-        Output<Integer> maximumIndividualPlayerLatencyMilliseconds,
-        @Nullable Output<Integer> policyDurationSeconds) {
-        this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds, "expected parameter 'maximumIndividualPlayerLatencyMilliseconds' to be non-null");
-        this.policyDurationSeconds = policyDurationSeconds;
-    }
+    private GameSessionQueuePlayerLatencyPolicyArgs() {}
 
-    private GameSessionQueuePlayerLatencyPolicyArgs() {
-        this.maximumIndividualPlayerLatencyMilliseconds = Codegen.empty();
-        this.policyDurationSeconds = Codegen.empty();
+    private GameSessionQueuePlayerLatencyPolicyArgs(GameSessionQueuePlayerLatencyPolicyArgs $) {
+        this.maximumIndividualPlayerLatencyMilliseconds = $.maximumIndividualPlayerLatencyMilliseconds;
+        this.policyDurationSeconds = $.policyDurationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameSessionQueuePlayerLatencyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
-        private @Nullable Output<Integer> policyDurationSeconds;
+        private GameSessionQueuePlayerLatencyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameSessionQueuePlayerLatencyPolicyArgs();
         }
 
         public Builder(GameSessionQueuePlayerLatencyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximumIndividualPlayerLatencyMilliseconds = defaults.maximumIndividualPlayerLatencyMilliseconds;
-    	      this.policyDurationSeconds = defaults.policyDurationSeconds;
+            $ = new GameSessionQueuePlayerLatencyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maximumIndividualPlayerLatencyMilliseconds(Output<Integer> maximumIndividualPlayerLatencyMilliseconds) {
-            this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds);
+            $.maximumIndividualPlayerLatencyMilliseconds = maximumIndividualPlayerLatencyMilliseconds;
             return this;
         }
+
         public Builder maximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
-            this.maximumIndividualPlayerLatencyMilliseconds = Output.of(Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds));
-            return this;
+            return maximumIndividualPlayerLatencyMilliseconds(Output.of(maximumIndividualPlayerLatencyMilliseconds));
         }
+
         public Builder policyDurationSeconds(@Nullable Output<Integer> policyDurationSeconds) {
-            this.policyDurationSeconds = policyDurationSeconds;
+            $.policyDurationSeconds = policyDurationSeconds;
             return this;
         }
-        public Builder policyDurationSeconds(@Nullable Integer policyDurationSeconds) {
-            this.policyDurationSeconds = Codegen.ofNullable(policyDurationSeconds);
-            return this;
-        }        public GameSessionQueuePlayerLatencyPolicyArgs build() {
-            return new GameSessionQueuePlayerLatencyPolicyArgs(maximumIndividualPlayerLatencyMilliseconds, policyDurationSeconds);
+
+        public Builder policyDurationSeconds(Integer policyDurationSeconds) {
+            return policyDurationSeconds(Output.of(policyDurationSeconds));
+        }
+
+        public GameSessionQueuePlayerLatencyPolicyArgs build() {
+            $.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull($.maximumIndividualPlayerLatencyMilliseconds, "expected parameter 'maximumIndividualPlayerLatencyMilliseconds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
      * 
      */
     @Import(name="awsKmsKeyId", required=true)
-      private final String awsKmsKeyId;
+    private String awsKmsKeyId;
 
     public String awsKmsKeyId() {
         return this.awsKmsKeyId;
@@ -29,55 +29,52 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
      * 
      */
     @Import(name="returnConnectionPasswordEncrypted", required=true)
-      private final Boolean returnConnectionPasswordEncrypted;
+    private Boolean returnConnectionPasswordEncrypted;
 
     public Boolean returnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }
 
-    public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(
-        String awsKmsKeyId,
-        Boolean returnConnectionPasswordEncrypted) {
-        this.awsKmsKeyId = Objects.requireNonNull(awsKmsKeyId, "expected parameter 'awsKmsKeyId' to be non-null");
-        this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted, "expected parameter 'returnConnectionPasswordEncrypted' to be non-null");
-    }
+    private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption() {}
 
-    private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption() {
-        this.awsKmsKeyId = null;
-        this.returnConnectionPasswordEncrypted = null;
+    private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption $) {
+        this.awsKmsKeyId = $.awsKmsKeyId;
+        this.returnConnectionPasswordEncrypted = $.returnConnectionPasswordEncrypted;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsKmsKeyId;
-        private Boolean returnConnectionPasswordEncrypted;
+        private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption();
         }
 
         public Builder(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsKmsKeyId = defaults.awsKmsKeyId;
-    	      this.returnConnectionPasswordEncrypted = defaults.returnConnectionPasswordEncrypted;
+            $ = new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder awsKmsKeyId(String awsKmsKeyId) {
-            this.awsKmsKeyId = Objects.requireNonNull(awsKmsKeyId);
+            $.awsKmsKeyId = awsKmsKeyId;
             return this;
         }
+
         public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
-            this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
+            $.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
             return this;
-        }        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption build() {
-            return new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(awsKmsKeyId, returnConnectionPasswordEncrypted);
+        }
+
+        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption build() {
+            $.awsKmsKeyId = Objects.requireNonNull($.awsKmsKeyId, "expected parameter 'awsKmsKeyId' to be non-null");
+            $.returnConnectionPasswordEncrypted = Objects.requireNonNull($.returnConnectionPasswordEncrypted, "expected parameter 'returnConnectionPasswordEncrypted' to be non-null");
+            return $;
         }
     }
+
 }

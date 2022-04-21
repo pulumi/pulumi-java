@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudfront;
 import com.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Output<Integer> defaultTtl;
+    private @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
+    public Optional<Output<Integer>> defaultTtl() {
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxTtl")
-      private final @Nullable Output<Integer> maxTtl;
+    private @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> maxTtl() {
-        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
+    public Optional<Output<Integer>> maxTtl() {
+        return Optional.ofNullable(this.maxTtl);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minTtl")
-      private final @Nullable Output<Integer> minTtl;
+    private @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> minTtl() {
-        return this.minTtl == null ? Codegen.empty() : this.minTtl;
+    public Optional<Output<Integer>> minTtl() {
+        return Optional.ofNullable(this.minTtl);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,115 +77,99 @@ public final class CachePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
-      private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
+    private Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 
-    public CachePolicyArgs(
-        @Nullable Output<String> comment,
-        @Nullable Output<Integer> defaultTtl,
-        @Nullable Output<Integer> maxTtl,
-        @Nullable Output<Integer> minTtl,
-        @Nullable Output<String> name,
-        Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
-        this.comment = comment;
-        this.defaultTtl = defaultTtl;
-        this.maxTtl = maxTtl;
-        this.minTtl = minTtl;
-        this.name = name;
-        this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin, "expected parameter 'parametersInCacheKeyAndForwardedToOrigin' to be non-null");
-    }
+    private CachePolicyArgs() {}
 
-    private CachePolicyArgs() {
-        this.comment = Codegen.empty();
-        this.defaultTtl = Codegen.empty();
-        this.maxTtl = Codegen.empty();
-        this.minTtl = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parametersInCacheKeyAndForwardedToOrigin = Codegen.empty();
+    private CachePolicyArgs(CachePolicyArgs $) {
+        this.comment = $.comment;
+        this.defaultTtl = $.defaultTtl;
+        this.maxTtl = $.maxTtl;
+        this.minTtl = $.minTtl;
+        this.name = $.name;
+        this.parametersInCacheKeyAndForwardedToOrigin = $.parametersInCacheKeyAndForwardedToOrigin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private @Nullable Output<Integer> defaultTtl;
-        private @Nullable Output<Integer> maxTtl;
-        private @Nullable Output<Integer> minTtl;
-        private @Nullable Output<String> name;
-        private Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
+        private CachePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyArgs();
         }
 
         public Builder(CachePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.maxTtl = defaults.maxTtl;
-    	      this.minTtl = defaults.minTtl;
-    	      this.name = defaults.name;
-    	      this.parametersInCacheKeyAndForwardedToOrigin = defaults.parametersInCacheKeyAndForwardedToOrigin;
+            $ = new CachePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
-        public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Codegen.ofNullable(defaultTtl);
-            return this;
+
+        public Builder defaultTtl(Integer defaultTtl) {
+            return defaultTtl(Output.of(defaultTtl));
         }
+
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
-            this.maxTtl = maxTtl;
+            $.maxTtl = maxTtl;
             return this;
         }
-        public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Codegen.ofNullable(maxTtl);
-            return this;
+
+        public Builder maxTtl(Integer maxTtl) {
+            return maxTtl(Output.of(maxTtl));
         }
+
         public Builder minTtl(@Nullable Output<Integer> minTtl) {
-            this.minTtl = minTtl;
+            $.minTtl = minTtl;
             return this;
         }
-        public Builder minTtl(@Nullable Integer minTtl) {
-            this.minTtl = Codegen.ofNullable(minTtl);
-            return this;
+
+        public Builder minTtl(Integer minTtl) {
+            return minTtl(Output.of(minTtl));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parametersInCacheKeyAndForwardedToOrigin(Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
-            this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
+            $.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
             return this;
         }
+
         public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs parametersInCacheKeyAndForwardedToOrigin) {
-            this.parametersInCacheKeyAndForwardedToOrigin = Output.of(Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin));
-            return this;
-        }        public CachePolicyArgs build() {
-            return new CachePolicyArgs(comment, defaultTtl, maxTtl, minTtl, name, parametersInCacheKeyAndForwardedToOrigin);
+            return parametersInCacheKeyAndForwardedToOrigin(Output.of(parametersInCacheKeyAndForwardedToOrigin));
+        }
+
+        public CachePolicyArgs build() {
+            $.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull($.parametersInCacheKeyAndForwardedToOrigin, "expected parameter 'parametersInCacheKeyAndForwardedToOrigin' to be non-null");
+            return $;
         }
     }
+
 }

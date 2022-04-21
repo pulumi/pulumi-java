@@ -5,9 +5,9 @@ package com.pulumi.aws.cloud9.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<String> permissions;
+    private @Nullable Output<String> permissions;
 
-    public Output<String> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<String>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="userArn")
-      private final @Nullable Output<String> userArn;
+    private @Nullable Output<String> userArn;
 
-    public Output<String> userArn() {
-        return this.userArn == null ? Codegen.empty() : this.userArn;
+    public Optional<Output<String>> userArn() {
+        return Optional.ofNullable(this.userArn);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="userId")
-      private final @Nullable Output<String> userId;
+    private @Nullable Output<String> userId;
 
-    public Output<String> userId() {
-        return this.userId == null ? Codegen.empty() : this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
-    public EnvironmentMembershipState(
-        @Nullable Output<String> environmentId,
-        @Nullable Output<String> permissions,
-        @Nullable Output<String> userArn,
-        @Nullable Output<String> userId) {
-        this.environmentId = environmentId;
-        this.permissions = permissions;
-        this.userArn = userArn;
-        this.userId = userId;
-    }
+    private EnvironmentMembershipState() {}
 
-    private EnvironmentMembershipState() {
-        this.environmentId = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.userArn = Codegen.empty();
-        this.userId = Codegen.empty();
+    private EnvironmentMembershipState(EnvironmentMembershipState $) {
+        this.environmentId = $.environmentId;
+        this.permissions = $.permissions;
+        this.userArn = $.userArn;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentMembershipState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<String> permissions;
-        private @Nullable Output<String> userArn;
-        private @Nullable Output<String> userId;
+        private EnvironmentMembershipState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentMembershipState();
         }
 
         public Builder(EnvironmentMembershipState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.permissions = defaults.permissions;
-    	      this.userArn = defaults.userArn;
-    	      this.userId = defaults.userId;
+            $ = new EnvironmentMembershipState(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder permissions(@Nullable Output<String> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable String permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(String permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder userArn(@Nullable Output<String> userArn) {
-            this.userArn = userArn;
+            $.userArn = userArn;
             return this;
         }
-        public Builder userArn(@Nullable String userArn) {
-            this.userArn = Codegen.ofNullable(userArn);
-            return this;
+
+        public Builder userArn(String userArn) {
+            return userArn(Output.of(userArn));
         }
+
         public Builder userId(@Nullable Output<String> userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
-        public Builder userId(@Nullable String userId) {
-            this.userId = Codegen.ofNullable(userId);
-            return this;
-        }        public EnvironmentMembershipState build() {
-            return new EnvironmentMembershipState(environmentId, permissions, userArn, userId);
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
+        }
+
+        public EnvironmentMembershipState build() {
+            return $;
         }
     }
+
 }

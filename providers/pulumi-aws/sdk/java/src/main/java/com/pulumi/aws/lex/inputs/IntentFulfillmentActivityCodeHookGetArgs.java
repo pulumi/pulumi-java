@@ -5,7 +5,6 @@ package com.pulumi.aws.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class IntentFulfillmentActivityCodeHookGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="messageVersion", required=true)
-      private final Output<String> messageVersion;
+    private Output<String> messageVersion;
 
     public Output<String> messageVersion() {
         return this.messageVersion;
@@ -32,63 +31,60 @@ public final class IntentFulfillmentActivityCodeHookGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public IntentFulfillmentActivityCodeHookGetArgs(
-        Output<String> messageVersion,
-        Output<String> uri) {
-        this.messageVersion = Objects.requireNonNull(messageVersion, "expected parameter 'messageVersion' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private IntentFulfillmentActivityCodeHookGetArgs() {}
 
-    private IntentFulfillmentActivityCodeHookGetArgs() {
-        this.messageVersion = Codegen.empty();
-        this.uri = Codegen.empty();
+    private IntentFulfillmentActivityCodeHookGetArgs(IntentFulfillmentActivityCodeHookGetArgs $) {
+        this.messageVersion = $.messageVersion;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentFulfillmentActivityCodeHookGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> messageVersion;
-        private Output<String> uri;
+        private IntentFulfillmentActivityCodeHookGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentFulfillmentActivityCodeHookGetArgs();
         }
 
         public Builder(IntentFulfillmentActivityCodeHookGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageVersion = defaults.messageVersion;
-    	      this.uri = defaults.uri;
+            $ = new IntentFulfillmentActivityCodeHookGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageVersion(Output<String> messageVersion) {
-            this.messageVersion = Objects.requireNonNull(messageVersion);
+            $.messageVersion = messageVersion;
             return this;
         }
+
         public Builder messageVersion(String messageVersion) {
-            this.messageVersion = Output.of(Objects.requireNonNull(messageVersion));
-            return this;
+            return messageVersion(Output.of(messageVersion));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public IntentFulfillmentActivityCodeHookGetArgs build() {
-            return new IntentFulfillmentActivityCodeHookGetArgs(messageVersion, uri);
+            return uri(Output.of(uri));
+        }
+
+        public IntentFulfillmentActivityCodeHookGetArgs build() {
+            $.messageVersion = Objects.requireNonNull($.messageVersion, "expected parameter 'messageVersion' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

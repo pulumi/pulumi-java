@@ -5,12 +5,12 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allowUnassociatedTargets")
-      private final @Nullable Output<Boolean> allowUnassociatedTargets;
+    private @Nullable Output<Boolean> allowUnassociatedTargets;
 
-    public Output<Boolean> allowUnassociatedTargets() {
-        return this.allowUnassociatedTargets == null ? Codegen.empty() : this.allowUnassociatedTargets;
+    public Optional<Output<Boolean>> allowUnassociatedTargets() {
+        return Optional.ofNullable(this.allowUnassociatedTargets);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cutoff")
-      private final @Nullable Output<Integer> cutoff;
+    private @Nullable Output<Integer> cutoff;
 
-    public Output<Integer> cutoff() {
-        return this.cutoff == null ? Codegen.empty() : this.cutoff;
+    public Optional<Output<Integer>> cutoff() {
+        return Optional.ofNullable(this.cutoff);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<Integer> duration;
+    private @Nullable Output<Integer> duration;
 
-    public Output<Integer> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<Integer>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="scheduleOffset")
-      private final @Nullable Output<Integer> scheduleOffset;
+    private @Nullable Output<Integer> scheduleOffset;
 
-    public Output<Integer> scheduleOffset() {
-        return this.scheduleOffset == null ? Codegen.empty() : this.scheduleOffset;
+    public Optional<Output<Integer>> scheduleOffset() {
+        return Optional.ofNullable(this.scheduleOffset);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="scheduleTimezone")
-      private final @Nullable Output<String> scheduleTimezone;
+    private @Nullable Output<String> scheduleTimezone;
 
-    public Output<String> scheduleTimezone() {
-        return this.scheduleTimezone == null ? Codegen.empty() : this.scheduleTimezone;
+    public Optional<Output<String>> scheduleTimezone() {
+        return Optional.ofNullable(this.scheduleTimezone);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="startDate")
-      private final @Nullable Output<String> startDate;
+    private @Nullable Output<String> startDate;
 
-    public Output<String> startDate() {
-        return this.startDate == null ? Codegen.empty() : this.startDate;
+    public Optional<Output<String>> startDate() {
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -155,206 +155,168 @@ public final class MaintenanceWindowState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public MaintenanceWindowState(
-        @Nullable Output<Boolean> allowUnassociatedTargets,
-        @Nullable Output<Integer> cutoff,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> duration,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> name,
-        @Nullable Output<String> schedule,
-        @Nullable Output<Integer> scheduleOffset,
-        @Nullable Output<String> scheduleTimezone,
-        @Nullable Output<String> startDate,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.allowUnassociatedTargets = allowUnassociatedTargets;
-        this.cutoff = cutoff;
-        this.description = description;
-        this.duration = duration;
-        this.enabled = enabled;
-        this.endDate = endDate;
-        this.name = name;
-        this.schedule = schedule;
-        this.scheduleOffset = scheduleOffset;
-        this.scheduleTimezone = scheduleTimezone;
-        this.startDate = startDate;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private MaintenanceWindowState() {}
 
-    private MaintenanceWindowState() {
-        this.allowUnassociatedTargets = Codegen.empty();
-        this.cutoff = Codegen.empty();
-        this.description = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.endDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.scheduleOffset = Codegen.empty();
-        this.scheduleTimezone = Codegen.empty();
-        this.startDate = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private MaintenanceWindowState(MaintenanceWindowState $) {
+        this.allowUnassociatedTargets = $.allowUnassociatedTargets;
+        this.cutoff = $.cutoff;
+        this.description = $.description;
+        this.duration = $.duration;
+        this.enabled = $.enabled;
+        this.endDate = $.endDate;
+        this.name = $.name;
+        this.schedule = $.schedule;
+        this.scheduleOffset = $.scheduleOffset;
+        this.scheduleTimezone = $.scheduleTimezone;
+        this.startDate = $.startDate;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowUnassociatedTargets;
-        private @Nullable Output<Integer> cutoff;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> duration;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<Integer> scheduleOffset;
-        private @Nullable Output<String> scheduleTimezone;
-        private @Nullable Output<String> startDate;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private MaintenanceWindowState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowState();
         }
 
         public Builder(MaintenanceWindowState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowUnassociatedTargets = defaults.allowUnassociatedTargets;
-    	      this.cutoff = defaults.cutoff;
-    	      this.description = defaults.description;
-    	      this.duration = defaults.duration;
-    	      this.enabled = defaults.enabled;
-    	      this.endDate = defaults.endDate;
-    	      this.name = defaults.name;
-    	      this.schedule = defaults.schedule;
-    	      this.scheduleOffset = defaults.scheduleOffset;
-    	      this.scheduleTimezone = defaults.scheduleTimezone;
-    	      this.startDate = defaults.startDate;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new MaintenanceWindowState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowUnassociatedTargets(@Nullable Output<Boolean> allowUnassociatedTargets) {
-            this.allowUnassociatedTargets = allowUnassociatedTargets;
+            $.allowUnassociatedTargets = allowUnassociatedTargets;
             return this;
         }
-        public Builder allowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
-            this.allowUnassociatedTargets = Codegen.ofNullable(allowUnassociatedTargets);
-            return this;
+
+        public Builder allowUnassociatedTargets(Boolean allowUnassociatedTargets) {
+            return allowUnassociatedTargets(Output.of(allowUnassociatedTargets));
         }
+
         public Builder cutoff(@Nullable Output<Integer> cutoff) {
-            this.cutoff = cutoff;
+            $.cutoff = cutoff;
             return this;
         }
-        public Builder cutoff(@Nullable Integer cutoff) {
-            this.cutoff = Codegen.ofNullable(cutoff);
-            return this;
+
+        public Builder cutoff(Integer cutoff) {
+            return cutoff(Output.of(cutoff));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder duration(@Nullable Output<Integer> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable Integer duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(Integer duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
-            this.scheduleOffset = scheduleOffset;
+            $.scheduleOffset = scheduleOffset;
             return this;
         }
-        public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
-            this.scheduleOffset = Codegen.ofNullable(scheduleOffset);
-            return this;
+
+        public Builder scheduleOffset(Integer scheduleOffset) {
+            return scheduleOffset(Output.of(scheduleOffset));
         }
+
         public Builder scheduleTimezone(@Nullable Output<String> scheduleTimezone) {
-            this.scheduleTimezone = scheduleTimezone;
+            $.scheduleTimezone = scheduleTimezone;
             return this;
         }
-        public Builder scheduleTimezone(@Nullable String scheduleTimezone) {
-            this.scheduleTimezone = Codegen.ofNullable(scheduleTimezone);
-            return this;
+
+        public Builder scheduleTimezone(String scheduleTimezone) {
+            return scheduleTimezone(Output.of(scheduleTimezone));
         }
+
         public Builder startDate(@Nullable Output<String> startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
-        public Builder startDate(@Nullable String startDate) {
-            this.startDate = Codegen.ofNullable(startDate);
-            return this;
+
+        public Builder startDate(String startDate) {
+            return startDate(Output.of(startDate));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public MaintenanceWindowState build() {
-            return new MaintenanceWindowState(allowUnassociatedTargets, cutoff, description, duration, enabled, endDate, name, schedule, scheduleOffset, scheduleTimezone, startDate, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public MaintenanceWindowState build() {
+            return $;
         }
     }
+
 }

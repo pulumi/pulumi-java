@@ -6,8 +6,8 @@ package com.pulumi.aws.timestreamwrite.inputs;
 import com.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * 
      */
     @Import(name="s3Configuration")
-      private final @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration;
+    private @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration;
 
-    public Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration() {
-        return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
+    public Optional<Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs>> s3Configuration() {
+        return Optional.ofNullable(this.s3Configuration);
     }
 
-    public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs(@Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration) {
-        this.s3Configuration = s3Configuration;
-    }
+    private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs() {}
 
-    private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs() {
-        this.s3Configuration = Codegen.empty();
+    private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs(TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs $) {
+        this.s3Configuration = $.s3Configuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration;
+        private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs();
         }
 
         public Builder(TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Configuration = defaults.s3Configuration;
+            $ = new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Configuration(@Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration) {
-            this.s3Configuration = s3Configuration;
+            $.s3Configuration = s3Configuration;
             return this;
         }
-        public Builder s3Configuration(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs s3Configuration) {
-            this.s3Configuration = Codegen.ofNullable(s3Configuration);
-            return this;
-        }        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs build() {
-            return new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs(s3Configuration);
+
+        public Builder s3Configuration(TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs s3Configuration) {
+            return s3Configuration(Output.of(s3Configuration));
+        }
+
+        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs build() {
+            return $;
         }
     }
+
 }

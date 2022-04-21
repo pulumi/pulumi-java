@@ -17,7 +17,7 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -28,7 +28,7 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -39,7 +39,7 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
@@ -50,73 +50,66 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public GetGroupUser(
-        String arn,
-        String path,
-        String userId,
-        String userName) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private GetGroupUser() {}
 
-    private GetGroupUser() {
-        this.arn = null;
-        this.path = null;
-        this.userId = null;
-        this.userName = null;
+    private GetGroupUser(GetGroupUser $) {
+        this.arn = $.arn;
+        this.path = $.path;
+        this.userId = $.userId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupUser defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String path;
-        private String userId;
-        private String userName;
+        private GetGroupUser $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupUser();
         }
 
         public Builder(GetGroupUser defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.path = defaults.path;
-    	      this.userId = defaults.userId;
-    	      this.userName = defaults.userName;
+            $ = new GetGroupUser(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public GetGroupUser build() {
-            return new GetGroupUser(arn, path, userId, userName);
+        }
+
+        public GetGroupUser build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
      * 
      */
     @Import(name="snapshotsEnabled", required=true)
-      private final Output<Boolean> snapshotsEnabled;
+    private Output<Boolean> snapshotsEnabled;
 
     public Output<Boolean> snapshotsEnabled() {
         return this.snapshotsEnabled;
     }
 
-    public ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs(Output<Boolean> snapshotsEnabled) {
-        this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled, "expected parameter 'snapshotsEnabled' to be non-null");
-    }
+    private ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs() {
-        this.snapshotsEnabled = Codegen.empty();
+    private ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs(ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs $) {
+        this.snapshotsEnabled = $.snapshotsEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> snapshotsEnabled;
+        private ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snapshotsEnabled = defaults.snapshotsEnabled;
+            $ = new ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder snapshotsEnabled(Output<Boolean> snapshotsEnabled) {
-            this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled);
+            $.snapshotsEnabled = snapshotsEnabled;
             return this;
         }
+
         public Builder snapshotsEnabled(Boolean snapshotsEnabled) {
-            this.snapshotsEnabled = Output.of(Objects.requireNonNull(snapshotsEnabled));
-            return this;
-        }        public ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs(snapshotsEnabled);
+            return snapshotsEnabled(Output.of(snapshotsEnabled));
+        }
+
+        public ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs build() {
+            $.snapshotsEnabled = Objects.requireNonNull($.snapshotsEnabled, "expected parameter 'snapshotsEnabled' to be non-null");
+            return $;
         }
     }
+
 }

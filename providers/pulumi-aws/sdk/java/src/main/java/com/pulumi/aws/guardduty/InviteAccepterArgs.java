@@ -5,7 +5,6 @@ package com.pulumi.aws.guardduty;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="detectorId", required=true)
-      private final Output<String> detectorId;
+    private Output<String> detectorId;
 
     public Output<String> detectorId() {
         return this.detectorId;
@@ -30,63 +29,60 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="masterAccountId", required=true)
-      private final Output<String> masterAccountId;
+    private Output<String> masterAccountId;
 
     public Output<String> masterAccountId() {
         return this.masterAccountId;
     }
 
-    public InviteAccepterArgs(
-        Output<String> detectorId,
-        Output<String> masterAccountId) {
-        this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
-        this.masterAccountId = Objects.requireNonNull(masterAccountId, "expected parameter 'masterAccountId' to be non-null");
-    }
+    private InviteAccepterArgs() {}
 
-    private InviteAccepterArgs() {
-        this.detectorId = Codegen.empty();
-        this.masterAccountId = Codegen.empty();
+    private InviteAccepterArgs(InviteAccepterArgs $) {
+        this.detectorId = $.detectorId;
+        this.masterAccountId = $.masterAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InviteAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> detectorId;
-        private Output<String> masterAccountId;
+        private InviteAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InviteAccepterArgs();
         }
 
         public Builder(InviteAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detectorId = defaults.detectorId;
-    	      this.masterAccountId = defaults.masterAccountId;
+            $ = new InviteAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder detectorId(Output<String> detectorId) {
-            this.detectorId = Objects.requireNonNull(detectorId);
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder detectorId(String detectorId) {
-            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
-            return this;
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder masterAccountId(Output<String> masterAccountId) {
-            this.masterAccountId = Objects.requireNonNull(masterAccountId);
+            $.masterAccountId = masterAccountId;
             return this;
         }
+
         public Builder masterAccountId(String masterAccountId) {
-            this.masterAccountId = Output.of(Objects.requireNonNull(masterAccountId));
-            return this;
-        }        public InviteAccepterArgs build() {
-            return new InviteAccepterArgs(detectorId, masterAccountId);
+            return masterAccountId(Output.of(masterAccountId));
+        }
+
+        public InviteAccepterArgs build() {
+            $.detectorId = Objects.requireNonNull($.detectorId, "expected parameter 'detectorId' to be non-null");
+            $.masterAccountId = Objects.requireNonNull($.masterAccountId, "expected parameter 'masterAccountId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class JobCommandGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class JobCommandGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pythonVersion")
-      private final @Nullable Output<String> pythonVersion;
+    private @Nullable Output<String> pythonVersion;
 
-    public Output<String> pythonVersion() {
-        return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
+    public Optional<Output<String>> pythonVersion() {
+        return Optional.ofNullable(this.pythonVersion);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class JobCommandGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptLocation", required=true)
-      private final Output<String> scriptLocation;
+    private Output<String> scriptLocation;
 
     public Output<String> scriptLocation() {
         return this.scriptLocation;
     }
 
-    public JobCommandGetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> pythonVersion,
-        Output<String> scriptLocation) {
-        this.name = name;
-        this.pythonVersion = pythonVersion;
-        this.scriptLocation = Objects.requireNonNull(scriptLocation, "expected parameter 'scriptLocation' to be non-null");
-    }
+    private JobCommandGetArgs() {}
 
-    private JobCommandGetArgs() {
-        this.name = Codegen.empty();
-        this.pythonVersion = Codegen.empty();
-        this.scriptLocation = Codegen.empty();
+    private JobCommandGetArgs(JobCommandGetArgs $) {
+        this.name = $.name;
+        this.pythonVersion = $.pythonVersion;
+        this.scriptLocation = $.scriptLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCommandGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> pythonVersion;
-        private Output<String> scriptLocation;
+        private JobCommandGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCommandGetArgs();
         }
 
         public Builder(JobCommandGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.scriptLocation = defaults.scriptLocation;
+            $ = new JobCommandGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
-            this.pythonVersion = pythonVersion;
+            $.pythonVersion = pythonVersion;
             return this;
         }
-        public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Codegen.ofNullable(pythonVersion);
-            return this;
+
+        public Builder pythonVersion(String pythonVersion) {
+            return pythonVersion(Output.of(pythonVersion));
         }
+
         public Builder scriptLocation(Output<String> scriptLocation) {
-            this.scriptLocation = Objects.requireNonNull(scriptLocation);
+            $.scriptLocation = scriptLocation;
             return this;
         }
+
         public Builder scriptLocation(String scriptLocation) {
-            this.scriptLocation = Output.of(Objects.requireNonNull(scriptLocation));
-            return this;
-        }        public JobCommandGetArgs build() {
-            return new JobCommandGetArgs(name, pythonVersion, scriptLocation);
+            return scriptLocation(Output.of(scriptLocation));
+        }
+
+        public JobCommandGetArgs build() {
+            $.scriptLocation = Objects.requireNonNull($.scriptLocation, "expected parameter 'scriptLocation' to be non-null");
+            return $;
         }
     }
+
 }

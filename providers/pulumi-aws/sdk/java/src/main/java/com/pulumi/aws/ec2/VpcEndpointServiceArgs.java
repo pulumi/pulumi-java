@@ -5,12 +5,12 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="acceptanceRequired", required=true)
-      private final Output<Boolean> acceptanceRequired;
+    private Output<Boolean> acceptanceRequired;
 
     public Output<Boolean> acceptanceRequired() {
         return this.acceptanceRequired;
@@ -34,10 +34,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allowedPrincipals")
-      private final @Nullable Output<List<String>> allowedPrincipals;
+    private @Nullable Output<List<String>> allowedPrincipals;
 
-    public Output<List<String>> allowedPrincipals() {
-        return this.allowedPrincipals == null ? Codegen.empty() : this.allowedPrincipals;
+    public Optional<Output<List<String>>> allowedPrincipals() {
+        return Optional.ofNullable(this.allowedPrincipals);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="gatewayLoadBalancerArns")
-      private final @Nullable Output<List<String>> gatewayLoadBalancerArns;
+    private @Nullable Output<List<String>> gatewayLoadBalancerArns;
 
-    public Output<List<String>> gatewayLoadBalancerArns() {
-        return this.gatewayLoadBalancerArns == null ? Codegen.empty() : this.gatewayLoadBalancerArns;
+    public Optional<Output<List<String>>> gatewayLoadBalancerArns() {
+        return Optional.ofNullable(this.gatewayLoadBalancerArns);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="networkLoadBalancerArns")
-      private final @Nullable Output<List<String>> networkLoadBalancerArns;
+    private @Nullable Output<List<String>> networkLoadBalancerArns;
 
-    public Output<List<String>> networkLoadBalancerArns() {
-        return this.networkLoadBalancerArns == null ? Codegen.empty() : this.networkLoadBalancerArns;
+    public Optional<Output<List<String>>> networkLoadBalancerArns() {
+        return Optional.ofNullable(this.networkLoadBalancerArns);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateDnsName")
-      private final @Nullable Output<String> privateDnsName;
+    private @Nullable Output<String> privateDnsName;
 
-    public Output<String> privateDnsName() {
-        return this.privateDnsName == null ? Codegen.empty() : this.privateDnsName;
+    public Optional<Output<String>> privateDnsName() {
+        return Optional.ofNullable(this.privateDnsName);
     }
 
     /**
@@ -78,124 +78,111 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public VpcEndpointServiceArgs(
-        Output<Boolean> acceptanceRequired,
-        @Nullable Output<List<String>> allowedPrincipals,
-        @Nullable Output<List<String>> gatewayLoadBalancerArns,
-        @Nullable Output<List<String>> networkLoadBalancerArns,
-        @Nullable Output<String> privateDnsName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.acceptanceRequired = Objects.requireNonNull(acceptanceRequired, "expected parameter 'acceptanceRequired' to be non-null");
-        this.allowedPrincipals = allowedPrincipals;
-        this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
-        this.networkLoadBalancerArns = networkLoadBalancerArns;
-        this.privateDnsName = privateDnsName;
-        this.tags = tags;
-    }
+    private VpcEndpointServiceArgs() {}
 
-    private VpcEndpointServiceArgs() {
-        this.acceptanceRequired = Codegen.empty();
-        this.allowedPrincipals = Codegen.empty();
-        this.gatewayLoadBalancerArns = Codegen.empty();
-        this.networkLoadBalancerArns = Codegen.empty();
-        this.privateDnsName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private VpcEndpointServiceArgs(VpcEndpointServiceArgs $) {
+        this.acceptanceRequired = $.acceptanceRequired;
+        this.allowedPrincipals = $.allowedPrincipals;
+        this.gatewayLoadBalancerArns = $.gatewayLoadBalancerArns;
+        this.networkLoadBalancerArns = $.networkLoadBalancerArns;
+        this.privateDnsName = $.privateDnsName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> acceptanceRequired;
-        private @Nullable Output<List<String>> allowedPrincipals;
-        private @Nullable Output<List<String>> gatewayLoadBalancerArns;
-        private @Nullable Output<List<String>> networkLoadBalancerArns;
-        private @Nullable Output<String> privateDnsName;
-        private @Nullable Output<Map<String,String>> tags;
+        private VpcEndpointServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointServiceArgs();
         }
 
         public Builder(VpcEndpointServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptanceRequired = defaults.acceptanceRequired;
-    	      this.allowedPrincipals = defaults.allowedPrincipals;
-    	      this.gatewayLoadBalancerArns = defaults.gatewayLoadBalancerArns;
-    	      this.networkLoadBalancerArns = defaults.networkLoadBalancerArns;
-    	      this.privateDnsName = defaults.privateDnsName;
-    	      this.tags = defaults.tags;
+            $ = new VpcEndpointServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptanceRequired(Output<Boolean> acceptanceRequired) {
-            this.acceptanceRequired = Objects.requireNonNull(acceptanceRequired);
+            $.acceptanceRequired = acceptanceRequired;
             return this;
         }
+
         public Builder acceptanceRequired(Boolean acceptanceRequired) {
-            this.acceptanceRequired = Output.of(Objects.requireNonNull(acceptanceRequired));
-            return this;
+            return acceptanceRequired(Output.of(acceptanceRequired));
         }
+
         public Builder allowedPrincipals(@Nullable Output<List<String>> allowedPrincipals) {
-            this.allowedPrincipals = allowedPrincipals;
+            $.allowedPrincipals = allowedPrincipals;
             return this;
         }
-        public Builder allowedPrincipals(@Nullable List<String> allowedPrincipals) {
-            this.allowedPrincipals = Codegen.ofNullable(allowedPrincipals);
-            return this;
+
+        public Builder allowedPrincipals(List<String> allowedPrincipals) {
+            return allowedPrincipals(Output.of(allowedPrincipals));
         }
+
         public Builder allowedPrincipals(String... allowedPrincipals) {
             return allowedPrincipals(List.of(allowedPrincipals));
         }
+
         public Builder gatewayLoadBalancerArns(@Nullable Output<List<String>> gatewayLoadBalancerArns) {
-            this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
+            $.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
             return this;
         }
-        public Builder gatewayLoadBalancerArns(@Nullable List<String> gatewayLoadBalancerArns) {
-            this.gatewayLoadBalancerArns = Codegen.ofNullable(gatewayLoadBalancerArns);
-            return this;
+
+        public Builder gatewayLoadBalancerArns(List<String> gatewayLoadBalancerArns) {
+            return gatewayLoadBalancerArns(Output.of(gatewayLoadBalancerArns));
         }
+
         public Builder gatewayLoadBalancerArns(String... gatewayLoadBalancerArns) {
             return gatewayLoadBalancerArns(List.of(gatewayLoadBalancerArns));
         }
+
         public Builder networkLoadBalancerArns(@Nullable Output<List<String>> networkLoadBalancerArns) {
-            this.networkLoadBalancerArns = networkLoadBalancerArns;
+            $.networkLoadBalancerArns = networkLoadBalancerArns;
             return this;
         }
-        public Builder networkLoadBalancerArns(@Nullable List<String> networkLoadBalancerArns) {
-            this.networkLoadBalancerArns = Codegen.ofNullable(networkLoadBalancerArns);
-            return this;
+
+        public Builder networkLoadBalancerArns(List<String> networkLoadBalancerArns) {
+            return networkLoadBalancerArns(Output.of(networkLoadBalancerArns));
         }
+
         public Builder networkLoadBalancerArns(String... networkLoadBalancerArns) {
             return networkLoadBalancerArns(List.of(networkLoadBalancerArns));
         }
+
         public Builder privateDnsName(@Nullable Output<String> privateDnsName) {
-            this.privateDnsName = privateDnsName;
+            $.privateDnsName = privateDnsName;
             return this;
         }
-        public Builder privateDnsName(@Nullable String privateDnsName) {
-            this.privateDnsName = Codegen.ofNullable(privateDnsName);
-            return this;
+
+        public Builder privateDnsName(String privateDnsName) {
+            return privateDnsName(Output.of(privateDnsName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public VpcEndpointServiceArgs build() {
-            return new VpcEndpointServiceArgs(acceptanceRequired, allowedPrincipals, gatewayLoadBalancerArns, networkLoadBalancerArns, privateDnsName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public VpcEndpointServiceArgs build() {
+            $.acceptanceRequired = Objects.requireNonNull($.acceptanceRequired, "expected parameter 'acceptanceRequired' to be non-null");
+            return $;
         }
     }
+
 }

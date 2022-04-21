@@ -6,7 +6,6 @@ package com.pulumi.aws.cognito.inputs;
 import com.pulumi.aws.cognito.inputs.UserPoolAccountRecoverySettingRecoveryMechanismArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class UserPoolAccountRecoverySettingArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="recoveryMechanisms", required=true)
-      private final Output<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms;
+    private Output<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms;
 
     public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms() {
         return this.recoveryMechanisms;
     }
 
-    public UserPoolAccountRecoverySettingArgs(Output<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms) {
-        this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms, "expected parameter 'recoveryMechanisms' to be non-null");
-    }
+    private UserPoolAccountRecoverySettingArgs() {}
 
-    private UserPoolAccountRecoverySettingArgs() {
-        this.recoveryMechanisms = Codegen.empty();
+    private UserPoolAccountRecoverySettingArgs(UserPoolAccountRecoverySettingArgs $) {
+        this.recoveryMechanisms = $.recoveryMechanisms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolAccountRecoverySettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms;
+        private UserPoolAccountRecoverySettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolAccountRecoverySettingArgs();
         }
 
         public Builder(UserPoolAccountRecoverySettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recoveryMechanisms = defaults.recoveryMechanisms;
+            $ = new UserPoolAccountRecoverySettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recoveryMechanisms(Output<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms) {
-            this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms);
+            $.recoveryMechanisms = recoveryMechanisms;
             return this;
         }
+
         public Builder recoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanismArgs> recoveryMechanisms) {
-            this.recoveryMechanisms = Output.of(Objects.requireNonNull(recoveryMechanisms));
-            return this;
+            return recoveryMechanisms(Output.of(recoveryMechanisms));
         }
+
         public Builder recoveryMechanisms(UserPoolAccountRecoverySettingRecoveryMechanismArgs... recoveryMechanisms) {
             return recoveryMechanisms(List.of(recoveryMechanisms));
-        }        public UserPoolAccountRecoverySettingArgs build() {
-            return new UserPoolAccountRecoverySettingArgs(recoveryMechanisms);
+        }
+
+        public UserPoolAccountRecoverySettingArgs build() {
+            $.recoveryMechanisms = Objects.requireNonNull($.recoveryMechanisms, "expected parameter 'recoveryMechanisms' to be non-null");
+            return $;
         }
     }
+
 }

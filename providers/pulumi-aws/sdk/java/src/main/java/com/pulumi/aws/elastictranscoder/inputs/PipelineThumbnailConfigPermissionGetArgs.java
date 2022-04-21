@@ -5,10 +5,10 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PipelineThumbnailConfigPermissionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="accesses")
-      private final @Nullable Output<List<String>> accesses;
+    private @Nullable Output<List<String>> accesses;
 
-    public Output<List<String>> accesses() {
-        return this.accesses == null ? Codegen.empty() : this.accesses;
+    public Optional<Output<List<String>>> accesses() {
+        return Optional.ofNullable(this.accesses);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PipelineThumbnailConfigPermissionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="grantee")
-      private final @Nullable Output<String> grantee;
+    private @Nullable Output<String> grantee;
 
-    public Output<String> grantee() {
-        return this.grantee == null ? Codegen.empty() : this.grantee;
+    public Optional<Output<String>> grantee() {
+        return Optional.ofNullable(this.grantee);
     }
 
     /**
@@ -43,79 +43,72 @@ public final class PipelineThumbnailConfigPermissionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="granteeType")
-      private final @Nullable Output<String> granteeType;
+    private @Nullable Output<String> granteeType;
 
-    public Output<String> granteeType() {
-        return this.granteeType == null ? Codegen.empty() : this.granteeType;
+    public Optional<Output<String>> granteeType() {
+        return Optional.ofNullable(this.granteeType);
     }
 
-    public PipelineThumbnailConfigPermissionGetArgs(
-        @Nullable Output<List<String>> accesses,
-        @Nullable Output<String> grantee,
-        @Nullable Output<String> granteeType) {
-        this.accesses = accesses;
-        this.grantee = grantee;
-        this.granteeType = granteeType;
-    }
+    private PipelineThumbnailConfigPermissionGetArgs() {}
 
-    private PipelineThumbnailConfigPermissionGetArgs() {
-        this.accesses = Codegen.empty();
-        this.grantee = Codegen.empty();
-        this.granteeType = Codegen.empty();
+    private PipelineThumbnailConfigPermissionGetArgs(PipelineThumbnailConfigPermissionGetArgs $) {
+        this.accesses = $.accesses;
+        this.grantee = $.grantee;
+        this.granteeType = $.granteeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineThumbnailConfigPermissionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> accesses;
-        private @Nullable Output<String> grantee;
-        private @Nullable Output<String> granteeType;
+        private PipelineThumbnailConfigPermissionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineThumbnailConfigPermissionGetArgs();
         }
 
         public Builder(PipelineThumbnailConfigPermissionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accesses = defaults.accesses;
-    	      this.grantee = defaults.grantee;
-    	      this.granteeType = defaults.granteeType;
+            $ = new PipelineThumbnailConfigPermissionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accesses(@Nullable Output<List<String>> accesses) {
-            this.accesses = accesses;
+            $.accesses = accesses;
             return this;
         }
-        public Builder accesses(@Nullable List<String> accesses) {
-            this.accesses = Codegen.ofNullable(accesses);
-            return this;
+
+        public Builder accesses(List<String> accesses) {
+            return accesses(Output.of(accesses));
         }
+
         public Builder accesses(String... accesses) {
             return accesses(List.of(accesses));
         }
+
         public Builder grantee(@Nullable Output<String> grantee) {
-            this.grantee = grantee;
+            $.grantee = grantee;
             return this;
         }
-        public Builder grantee(@Nullable String grantee) {
-            this.grantee = Codegen.ofNullable(grantee);
-            return this;
+
+        public Builder grantee(String grantee) {
+            return grantee(Output.of(grantee));
         }
+
         public Builder granteeType(@Nullable Output<String> granteeType) {
-            this.granteeType = granteeType;
+            $.granteeType = granteeType;
             return this;
         }
-        public Builder granteeType(@Nullable String granteeType) {
-            this.granteeType = Codegen.ofNullable(granteeType);
-            return this;
-        }        public PipelineThumbnailConfigPermissionGetArgs build() {
-            return new PipelineThumbnailConfigPermissionGetArgs(accesses, grantee, granteeType);
+
+        public Builder granteeType(String granteeType) {
+            return granteeType(Output.of(granteeType));
+        }
+
+        public PipelineThumbnailConfigPermissionGetArgs build() {
+            return $;
         }
     }
+
 }

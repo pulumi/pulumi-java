@@ -5,12 +5,12 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataTraceEnabled")
-      private final @Nullable Output<Boolean> dataTraceEnabled;
+    private @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Output<Boolean> dataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
+    public Optional<Output<Boolean>> dataTraceEnabled() {
+        return Optional.ofNullable(this.dataTraceEnabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="detailedMetricsEnabled")
-      private final @Nullable Output<Boolean> detailedMetricsEnabled;
+    private @Nullable Output<Boolean> detailedMetricsEnabled;
 
-    public Output<Boolean> detailedMetricsEnabled() {
-        return this.detailedMetricsEnabled == null ? Codegen.empty() : this.detailedMetricsEnabled;
+    public Optional<Output<Boolean>> detailedMetricsEnabled() {
+        return Optional.ofNullable(this.detailedMetricsEnabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="loggingLevel")
-      private final @Nullable Output<String> loggingLevel;
+    private @Nullable Output<String> loggingLevel;
 
-    public Output<String> loggingLevel() {
-        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
+    public Optional<Output<String>> loggingLevel() {
+        return Optional.ofNullable(this.loggingLevel);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="routeKey", required=true)
-      private final Output<String> routeKey;
+    private Output<String> routeKey;
 
     public Output<String> routeKey() {
         return this.routeKey;
@@ -69,10 +69,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="throttlingBurstLimit")
-      private final @Nullable Output<Integer> throttlingBurstLimit;
+    private @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Output<Integer> throttlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
+    public Optional<Output<Integer>> throttlingBurstLimit() {
+        return Optional.ofNullable(this.throttlingBurstLimit);
     }
 
     /**
@@ -80,115 +80,99 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="throttlingRateLimit")
-      private final @Nullable Output<Double> throttlingRateLimit;
+    private @Nullable Output<Double> throttlingRateLimit;
 
-    public Output<Double> throttlingRateLimit() {
-        return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
+    public Optional<Output<Double>> throttlingRateLimit() {
+        return Optional.ofNullable(this.throttlingRateLimit);
     }
 
-    public StageRouteSettingArgs(
-        @Nullable Output<Boolean> dataTraceEnabled,
-        @Nullable Output<Boolean> detailedMetricsEnabled,
-        @Nullable Output<String> loggingLevel,
-        Output<String> routeKey,
-        @Nullable Output<Integer> throttlingBurstLimit,
-        @Nullable Output<Double> throttlingRateLimit) {
-        this.dataTraceEnabled = dataTraceEnabled;
-        this.detailedMetricsEnabled = detailedMetricsEnabled;
-        this.loggingLevel = loggingLevel;
-        this.routeKey = Objects.requireNonNull(routeKey, "expected parameter 'routeKey' to be non-null");
-        this.throttlingBurstLimit = throttlingBurstLimit;
-        this.throttlingRateLimit = throttlingRateLimit;
-    }
+    private StageRouteSettingArgs() {}
 
-    private StageRouteSettingArgs() {
-        this.dataTraceEnabled = Codegen.empty();
-        this.detailedMetricsEnabled = Codegen.empty();
-        this.loggingLevel = Codegen.empty();
-        this.routeKey = Codegen.empty();
-        this.throttlingBurstLimit = Codegen.empty();
-        this.throttlingRateLimit = Codegen.empty();
+    private StageRouteSettingArgs(StageRouteSettingArgs $) {
+        this.dataTraceEnabled = $.dataTraceEnabled;
+        this.detailedMetricsEnabled = $.detailedMetricsEnabled;
+        this.loggingLevel = $.loggingLevel;
+        this.routeKey = $.routeKey;
+        this.throttlingBurstLimit = $.throttlingBurstLimit;
+        this.throttlingRateLimit = $.throttlingRateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageRouteSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> dataTraceEnabled;
-        private @Nullable Output<Boolean> detailedMetricsEnabled;
-        private @Nullable Output<String> loggingLevel;
-        private Output<String> routeKey;
-        private @Nullable Output<Integer> throttlingBurstLimit;
-        private @Nullable Output<Double> throttlingRateLimit;
+        private StageRouteSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageRouteSettingArgs();
         }
 
         public Builder(StageRouteSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataTraceEnabled = defaults.dataTraceEnabled;
-    	      this.detailedMetricsEnabled = defaults.detailedMetricsEnabled;
-    	      this.loggingLevel = defaults.loggingLevel;
-    	      this.routeKey = defaults.routeKey;
-    	      this.throttlingBurstLimit = defaults.throttlingBurstLimit;
-    	      this.throttlingRateLimit = defaults.throttlingRateLimit;
+            $ = new StageRouteSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
-            this.dataTraceEnabled = dataTraceEnabled;
+            $.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = Codegen.ofNullable(dataTraceEnabled);
-            return this;
+
+        public Builder dataTraceEnabled(Boolean dataTraceEnabled) {
+            return dataTraceEnabled(Output.of(dataTraceEnabled));
         }
+
         public Builder detailedMetricsEnabled(@Nullable Output<Boolean> detailedMetricsEnabled) {
-            this.detailedMetricsEnabled = detailedMetricsEnabled;
+            $.detailedMetricsEnabled = detailedMetricsEnabled;
             return this;
         }
-        public Builder detailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
-            this.detailedMetricsEnabled = Codegen.ofNullable(detailedMetricsEnabled);
-            return this;
+
+        public Builder detailedMetricsEnabled(Boolean detailedMetricsEnabled) {
+            return detailedMetricsEnabled(Output.of(detailedMetricsEnabled));
         }
+
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
-            this.loggingLevel = loggingLevel;
+            $.loggingLevel = loggingLevel;
             return this;
         }
-        public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Codegen.ofNullable(loggingLevel);
-            return this;
+
+        public Builder loggingLevel(String loggingLevel) {
+            return loggingLevel(Output.of(loggingLevel));
         }
+
         public Builder routeKey(Output<String> routeKey) {
-            this.routeKey = Objects.requireNonNull(routeKey);
+            $.routeKey = routeKey;
             return this;
         }
+
         public Builder routeKey(String routeKey) {
-            this.routeKey = Output.of(Objects.requireNonNull(routeKey));
-            return this;
+            return routeKey(Output.of(routeKey));
         }
+
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
-            this.throttlingBurstLimit = throttlingBurstLimit;
+            $.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = Codegen.ofNullable(throttlingBurstLimit);
-            return this;
+
+        public Builder throttlingBurstLimit(Integer throttlingBurstLimit) {
+            return throttlingBurstLimit(Output.of(throttlingBurstLimit));
         }
+
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
-            this.throttlingRateLimit = throttlingRateLimit;
+            $.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = Codegen.ofNullable(throttlingRateLimit);
-            return this;
-        }        public StageRouteSettingArgs build() {
-            return new StageRouteSettingArgs(dataTraceEnabled, detailedMetricsEnabled, loggingLevel, routeKey, throttlingBurstLimit, throttlingRateLimit);
+
+        public Builder throttlingRateLimit(Double throttlingRateLimit) {
+            return throttlingRateLimit(Output.of(throttlingRateLimit));
+        }
+
+        public StageRouteSettingArgs build() {
+            $.routeKey = Objects.requireNonNull($.routeKey, "expected parameter 'routeKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.rds.inputs;
 import com.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="connectionPoolConfig")
-      private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
+    private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
 
-    public Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig() {
-        return this.connectionPoolConfig == null ? Codegen.empty() : this.connectionPoolConfig;
+    public Optional<Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs>> connectionPoolConfig() {
+        return Optional.ofNullable(this.connectionPoolConfig);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dbProxyName")
-      private final @Nullable Output<String> dbProxyName;
+    private @Nullable Output<String> dbProxyName;
 
-    public Output<String> dbProxyName() {
-        return this.dbProxyName == null ? Codegen.empty() : this.dbProxyName;
+    public Optional<Output<String>> dbProxyName() {
+        return Optional.ofNullable(this.dbProxyName);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ProxyDefaultTargetGroupState(
-        @Nullable Output<String> arn,
-        @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig,
-        @Nullable Output<String> dbProxyName,
-        @Nullable Output<String> name) {
-        this.arn = arn;
-        this.connectionPoolConfig = connectionPoolConfig;
-        this.dbProxyName = dbProxyName;
-        this.name = name;
-    }
+    private ProxyDefaultTargetGroupState() {}
 
-    private ProxyDefaultTargetGroupState() {
-        this.arn = Codegen.empty();
-        this.connectionPoolConfig = Codegen.empty();
-        this.dbProxyName = Codegen.empty();
-        this.name = Codegen.empty();
+    private ProxyDefaultTargetGroupState(ProxyDefaultTargetGroupState $) {
+        this.arn = $.arn;
+        this.connectionPoolConfig = $.connectionPoolConfig;
+        this.dbProxyName = $.dbProxyName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyDefaultTargetGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
-        private @Nullable Output<String> dbProxyName;
-        private @Nullable Output<String> name;
+        private ProxyDefaultTargetGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyDefaultTargetGroupState();
         }
 
         public Builder(ProxyDefaultTargetGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.connectionPoolConfig = defaults.connectionPoolConfig;
-    	      this.dbProxyName = defaults.dbProxyName;
-    	      this.name = defaults.name;
+            $ = new ProxyDefaultTargetGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
-            this.connectionPoolConfig = connectionPoolConfig;
+            $.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
-        public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
-            this.connectionPoolConfig = Codegen.ofNullable(connectionPoolConfig);
-            return this;
+
+        public Builder connectionPoolConfig(ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
+            return connectionPoolConfig(Output.of(connectionPoolConfig));
         }
+
         public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
-            this.dbProxyName = dbProxyName;
+            $.dbProxyName = dbProxyName;
             return this;
         }
-        public Builder dbProxyName(@Nullable String dbProxyName) {
-            this.dbProxyName = Codegen.ofNullable(dbProxyName);
-            return this;
+
+        public Builder dbProxyName(String dbProxyName) {
+            return dbProxyName(Output.of(dbProxyName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ProxyDefaultTargetGroupState build() {
-            return new ProxyDefaultTargetGroupState(arn, connectionPoolConfig, dbProxyName, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ProxyDefaultTargetGroupState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,10 +34,10 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="nonKeyAttributes")
-      private final @Nullable Output<List<String>> nonKeyAttributes;
+    private @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Output<List<String>> nonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
+    public Optional<Output<List<String>>> nonKeyAttributes() {
+        return Optional.ofNullable(this.nonKeyAttributes);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="projectionType", required=true)
-      private final Output<String> projectionType;
+    private Output<String> projectionType;
 
     public Output<String> projectionType() {
         return this.projectionType;
@@ -60,92 +60,85 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="rangeKey", required=true)
-      private final Output<String> rangeKey;
+    private Output<String> rangeKey;
 
     public Output<String> rangeKey() {
         return this.rangeKey;
     }
 
-    public TableLocalSecondaryIndexArgs(
-        Output<String> name,
-        @Nullable Output<List<String>> nonKeyAttributes,
-        Output<String> projectionType,
-        Output<String> rangeKey) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nonKeyAttributes = nonKeyAttributes;
-        this.projectionType = Objects.requireNonNull(projectionType, "expected parameter 'projectionType' to be non-null");
-        this.rangeKey = Objects.requireNonNull(rangeKey, "expected parameter 'rangeKey' to be non-null");
-    }
+    private TableLocalSecondaryIndexArgs() {}
 
-    private TableLocalSecondaryIndexArgs() {
-        this.name = Codegen.empty();
-        this.nonKeyAttributes = Codegen.empty();
-        this.projectionType = Codegen.empty();
-        this.rangeKey = Codegen.empty();
+    private TableLocalSecondaryIndexArgs(TableLocalSecondaryIndexArgs $) {
+        this.name = $.name;
+        this.nonKeyAttributes = $.nonKeyAttributes;
+        this.projectionType = $.projectionType;
+        this.rangeKey = $.rangeKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableLocalSecondaryIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<List<String>> nonKeyAttributes;
-        private Output<String> projectionType;
-        private Output<String> rangeKey;
+        private TableLocalSecondaryIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableLocalSecondaryIndexArgs();
         }
 
         public Builder(TableLocalSecondaryIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.nonKeyAttributes = defaults.nonKeyAttributes;
-    	      this.projectionType = defaults.projectionType;
-    	      this.rangeKey = defaults.rangeKey;
+            $ = new TableLocalSecondaryIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
-            this.nonKeyAttributes = nonKeyAttributes;
+            $.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-        public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Codegen.ofNullable(nonKeyAttributes);
-            return this;
+
+        public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
+            return nonKeyAttributes(Output.of(nonKeyAttributes));
         }
+
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
             return nonKeyAttributes(List.of(nonKeyAttributes));
         }
+
         public Builder projectionType(Output<String> projectionType) {
-            this.projectionType = Objects.requireNonNull(projectionType);
+            $.projectionType = projectionType;
             return this;
         }
+
         public Builder projectionType(String projectionType) {
-            this.projectionType = Output.of(Objects.requireNonNull(projectionType));
-            return this;
+            return projectionType(Output.of(projectionType));
         }
+
         public Builder rangeKey(Output<String> rangeKey) {
-            this.rangeKey = Objects.requireNonNull(rangeKey);
+            $.rangeKey = rangeKey;
             return this;
         }
+
         public Builder rangeKey(String rangeKey) {
-            this.rangeKey = Output.of(Objects.requireNonNull(rangeKey));
-            return this;
-        }        public TableLocalSecondaryIndexArgs build() {
-            return new TableLocalSecondaryIndexArgs(name, nonKeyAttributes, projectionType, rangeKey);
+            return rangeKey(Output.of(rangeKey));
+        }
+
+        public TableLocalSecondaryIndexArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.projectionType = Objects.requireNonNull($.projectionType, "expected parameter 'projectionType' to be non-null");
+            $.rangeKey = Objects.requireNonNull($.rangeKey, "expected parameter 'rangeKey' to be non-null");
+            return $;
         }
     }
+
 }

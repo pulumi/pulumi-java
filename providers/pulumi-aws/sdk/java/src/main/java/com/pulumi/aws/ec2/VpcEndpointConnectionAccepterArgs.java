@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VpcEndpointConnectionAccepterArgs extends com.pulumi.resource
      * 
      */
     @Import(name="vpcEndpointId", required=true)
-      private final Output<String> vpcEndpointId;
+    private Output<String> vpcEndpointId;
 
     public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
@@ -30,63 +29,60 @@ public final class VpcEndpointConnectionAccepterArgs extends com.pulumi.resource
      * 
      */
     @Import(name="vpcEndpointServiceId", required=true)
-      private final Output<String> vpcEndpointServiceId;
+    private Output<String> vpcEndpointServiceId;
 
     public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 
-    public VpcEndpointConnectionAccepterArgs(
-        Output<String> vpcEndpointId,
-        Output<String> vpcEndpointServiceId) {
-        this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
-        this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId, "expected parameter 'vpcEndpointServiceId' to be non-null");
-    }
+    private VpcEndpointConnectionAccepterArgs() {}
 
-    private VpcEndpointConnectionAccepterArgs() {
-        this.vpcEndpointId = Codegen.empty();
-        this.vpcEndpointServiceId = Codegen.empty();
+    private VpcEndpointConnectionAccepterArgs(VpcEndpointConnectionAccepterArgs $) {
+        this.vpcEndpointId = $.vpcEndpointId;
+        this.vpcEndpointServiceId = $.vpcEndpointServiceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointConnectionAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> vpcEndpointId;
-        private Output<String> vpcEndpointServiceId;
+        private VpcEndpointConnectionAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointConnectionAccepterArgs();
         }
 
         public Builder(VpcEndpointConnectionAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
-    	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
+            $ = new VpcEndpointConnectionAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcEndpointId(Output<String> vpcEndpointId) {
-            this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
+
         public Builder vpcEndpointId(String vpcEndpointId) {
-            this.vpcEndpointId = Output.of(Objects.requireNonNull(vpcEndpointId));
-            return this;
+            return vpcEndpointId(Output.of(vpcEndpointId));
         }
+
         public Builder vpcEndpointServiceId(Output<String> vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId);
+            $.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
+
         public Builder vpcEndpointServiceId(String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Output.of(Objects.requireNonNull(vpcEndpointServiceId));
-            return this;
-        }        public VpcEndpointConnectionAccepterArgs build() {
-            return new VpcEndpointConnectionAccepterArgs(vpcEndpointId, vpcEndpointServiceId);
+            return vpcEndpointServiceId(Output.of(vpcEndpointServiceId));
+        }
+
+        public VpcEndpointConnectionAccepterArgs build() {
+            $.vpcEndpointId = Objects.requireNonNull($.vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
+            $.vpcEndpointServiceId = Objects.requireNonNull($.vpcEndpointServiceId, "expected parameter 'vpcEndpointServiceId' to be non-null");
+            return $;
         }
     }
+
 }

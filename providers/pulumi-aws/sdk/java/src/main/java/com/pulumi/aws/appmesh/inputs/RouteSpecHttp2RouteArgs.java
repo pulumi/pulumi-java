@@ -9,8 +9,8 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteRetryPolicyArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="action", required=true)
-      private final Output<RouteSpecHttp2RouteActionArgs> action;
+    private Output<RouteSpecHttp2RouteActionArgs> action;
 
     public Output<RouteSpecHttp2RouteActionArgs> action() {
         return this.action;
@@ -34,7 +34,7 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="match", required=true)
-      private final Output<RouteSpecHttp2RouteMatchArgs> match;
+    private Output<RouteSpecHttp2RouteMatchArgs> match;
 
     public Output<RouteSpecHttp2RouteMatchArgs> match() {
         return this.match;
@@ -45,10 +45,10 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy;
+    private @Nullable Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy;
 
-    public Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<RouteSpecHttp2RouteRetryPolicyArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -56,89 +56,80 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<RouteSpecHttp2RouteTimeoutArgs> timeout;
+    private @Nullable Output<RouteSpecHttp2RouteTimeoutArgs> timeout;
 
-    public Output<RouteSpecHttp2RouteTimeoutArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<RouteSpecHttp2RouteTimeoutArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public RouteSpecHttp2RouteArgs(
-        Output<RouteSpecHttp2RouteActionArgs> action,
-        Output<RouteSpecHttp2RouteMatchArgs> match,
-        @Nullable Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy,
-        @Nullable Output<RouteSpecHttp2RouteTimeoutArgs> timeout) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-        this.retryPolicy = retryPolicy;
-        this.timeout = timeout;
-    }
+    private RouteSpecHttp2RouteArgs() {}
 
-    private RouteSpecHttp2RouteArgs() {
-        this.action = Codegen.empty();
-        this.match = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private RouteSpecHttp2RouteArgs(RouteSpecHttp2RouteArgs $) {
+        this.action = $.action;
+        this.match = $.match;
+        this.retryPolicy = $.retryPolicy;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecHttp2RouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RouteSpecHttp2RouteActionArgs> action;
-        private Output<RouteSpecHttp2RouteMatchArgs> match;
-        private @Nullable Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy;
-        private @Nullable Output<RouteSpecHttp2RouteTimeoutArgs> timeout;
+        private RouteSpecHttp2RouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecHttp2RouteArgs();
         }
 
         public Builder(RouteSpecHttp2RouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.match = defaults.match;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.timeout = defaults.timeout;
+            $ = new RouteSpecHttp2RouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<RouteSpecHttp2RouteActionArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(RouteSpecHttp2RouteActionArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder match(Output<RouteSpecHttp2RouteMatchArgs> match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder match(RouteSpecHttp2RouteMatchArgs match) {
-            this.match = Output.of(Objects.requireNonNull(match));
-            return this;
+            return match(Output.of(match));
         }
+
         public Builder retryPolicy(@Nullable Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable RouteSpecHttp2RouteRetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(RouteSpecHttp2RouteRetryPolicyArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder timeout(@Nullable Output<RouteSpecHttp2RouteTimeoutArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable RouteSpecHttp2RouteTimeoutArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public RouteSpecHttp2RouteArgs build() {
-            return new RouteSpecHttp2RouteArgs(action, match, retryPolicy, timeout);
+
+        public Builder timeout(RouteSpecHttp2RouteTimeoutArgs timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public RouteSpecHttp2RouteArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            return $;
         }
     }
+
 }

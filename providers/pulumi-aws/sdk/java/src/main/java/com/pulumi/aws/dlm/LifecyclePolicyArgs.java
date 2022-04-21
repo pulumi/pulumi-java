@@ -6,10 +6,10 @@ package com.pulumi.aws.dlm;
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -33,7 +33,7 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="executionRoleArn", required=true)
-      private final Output<String> executionRoleArn;
+    private Output<String> executionRoleArn;
 
     public Output<String> executionRoleArn() {
         return this.executionRoleArn;
@@ -44,7 +44,7 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyDetails", required=true)
-      private final Output<LifecyclePolicyPolicyDetailsArgs> policyDetails;
+    private Output<LifecyclePolicyPolicyDetailsArgs> policyDetails;
 
     public Output<LifecyclePolicyPolicyDetailsArgs> policyDetails() {
         return this.policyDetails;
@@ -55,10 +55,10 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -66,102 +66,91 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LifecyclePolicyArgs(
-        Output<String> description,
-        Output<String> executionRoleArn,
-        Output<LifecyclePolicyPolicyDetailsArgs> policyDetails,
-        @Nullable Output<String> state,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.executionRoleArn = Objects.requireNonNull(executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
-        this.policyDetails = Objects.requireNonNull(policyDetails, "expected parameter 'policyDetails' to be non-null");
-        this.state = state;
-        this.tags = tags;
-    }
+    private LifecyclePolicyArgs() {}
 
-    private LifecyclePolicyArgs() {
-        this.description = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.policyDetails = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LifecyclePolicyArgs(LifecyclePolicyArgs $) {
+        this.description = $.description;
+        this.executionRoleArn = $.executionRoleArn;
+        this.policyDetails = $.policyDetails;
+        this.state = $.state;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> description;
-        private Output<String> executionRoleArn;
-        private Output<LifecyclePolicyPolicyDetailsArgs> policyDetails;
-        private @Nullable Output<String> state;
-        private @Nullable Output<Map<String,String>> tags;
+        private LifecyclePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyArgs();
         }
 
         public Builder(LifecyclePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.policyDetails = defaults.policyDetails;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
+            $ = new LifecyclePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder executionRoleArn(Output<String> executionRoleArn) {
-            this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
+
         public Builder executionRoleArn(String executionRoleArn) {
-            this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
-            return this;
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder policyDetails(Output<LifecyclePolicyPolicyDetailsArgs> policyDetails) {
-            this.policyDetails = Objects.requireNonNull(policyDetails);
+            $.policyDetails = policyDetails;
             return this;
         }
+
         public Builder policyDetails(LifecyclePolicyPolicyDetailsArgs policyDetails) {
-            this.policyDetails = Output.of(Objects.requireNonNull(policyDetails));
-            return this;
+            return policyDetails(Output.of(policyDetails));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LifecyclePolicyArgs build() {
-            return new LifecyclePolicyArgs(description, executionRoleArn, policyDetails, state, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LifecyclePolicyArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.executionRoleArn = Objects.requireNonNull($.executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
+            $.policyDetails = Objects.requireNonNull($.policyDetails, "expected parameter 'policyDetails' to be non-null");
+            return $;
         }
     }
+
 }

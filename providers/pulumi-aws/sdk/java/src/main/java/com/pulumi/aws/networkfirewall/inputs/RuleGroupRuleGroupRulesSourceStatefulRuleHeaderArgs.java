@@ -5,7 +5,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends c
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
@@ -30,7 +29,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends c
      * 
      */
     @Import(name="destinationPort", required=true)
-      private final Output<String> destinationPort;
+    private Output<String> destinationPort;
 
     public Output<String> destinationPort() {
         return this.destinationPort;
@@ -41,7 +40,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends c
      * 
      */
     @Import(name="direction", required=true)
-      private final Output<String> direction;
+    private Output<String> direction;
 
     public Output<String> direction() {
         return this.direction;
@@ -52,7 +51,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends c
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
@@ -63,7 +62,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends c
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
@@ -74,115 +73,104 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends c
      * 
      */
     @Import(name="sourcePort", required=true)
-      private final Output<String> sourcePort;
+    private Output<String> sourcePort;
 
     public Output<String> sourcePort() {
         return this.sourcePort;
     }
 
-    public RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs(
-        Output<String> destination,
-        Output<String> destinationPort,
-        Output<String> direction,
-        Output<String> protocol,
-        Output<String> source,
-        Output<String> sourcePort) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.destinationPort = Objects.requireNonNull(destinationPort, "expected parameter 'destinationPort' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.sourcePort = Objects.requireNonNull(sourcePort, "expected parameter 'sourcePort' to be non-null");
-    }
+    private RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs() {
-        this.destination = Codegen.empty();
-        this.destinationPort = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourcePort = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs $) {
+        this.destination = $.destination;
+        this.destinationPort = $.destinationPort;
+        this.direction = $.direction;
+        this.protocol = $.protocol;
+        this.source = $.source;
+        this.sourcePort = $.sourcePort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destination;
-        private Output<String> destinationPort;
-        private Output<String> direction;
-        private Output<String> protocol;
-        private Output<String> source;
-        private Output<String> sourcePort;
+        private RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.direction = defaults.direction;
-    	      this.protocol = defaults.protocol;
-    	      this.source = defaults.source;
-    	      this.sourcePort = defaults.sourcePort;
+            $ = new RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder destinationPort(Output<String> destinationPort) {
-            this.destinationPort = Objects.requireNonNull(destinationPort);
+            $.destinationPort = destinationPort;
             return this;
         }
+
         public Builder destinationPort(String destinationPort) {
-            this.destinationPort = Output.of(Objects.requireNonNull(destinationPort));
-            return this;
+            return destinationPort(Output.of(destinationPort));
         }
+
         public Builder direction(Output<String> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(String direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder sourcePort(Output<String> sourcePort) {
-            this.sourcePort = Objects.requireNonNull(sourcePort);
+            $.sourcePort = sourcePort;
             return this;
         }
+
         public Builder sourcePort(String sourcePort) {
-            this.sourcePort = Output.of(Objects.requireNonNull(sourcePort));
-            return this;
-        }        public RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs(destination, destinationPort, direction, protocol, source, sourcePort);
+            return sourcePort(Output.of(sourcePort));
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.destinationPort = Objects.requireNonNull($.destinationPort, "expected parameter 'destinationPort' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.sourcePort = Objects.requireNonNull($.sourcePort, "expected parameter 'sourcePort' to be non-null");
+            return $;
         }
     }
+
 }

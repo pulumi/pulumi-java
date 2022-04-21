@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CrawlerSchemaChangePolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="deleteBehavior")
-      private final @Nullable Output<String> deleteBehavior;
+    private @Nullable Output<String> deleteBehavior;
 
-    public Output<String> deleteBehavior() {
-        return this.deleteBehavior == null ? Codegen.empty() : this.deleteBehavior;
+    public Optional<Output<String>> deleteBehavior() {
+        return Optional.ofNullable(this.deleteBehavior);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class CrawlerSchemaChangePolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="updateBehavior")
-      private final @Nullable Output<String> updateBehavior;
+    private @Nullable Output<String> updateBehavior;
 
-    public Output<String> updateBehavior() {
-        return this.updateBehavior == null ? Codegen.empty() : this.updateBehavior;
+    public Optional<Output<String>> updateBehavior() {
+        return Optional.ofNullable(this.updateBehavior);
     }
 
-    public CrawlerSchemaChangePolicyGetArgs(
-        @Nullable Output<String> deleteBehavior,
-        @Nullable Output<String> updateBehavior) {
-        this.deleteBehavior = deleteBehavior;
-        this.updateBehavior = updateBehavior;
-    }
+    private CrawlerSchemaChangePolicyGetArgs() {}
 
-    private CrawlerSchemaChangePolicyGetArgs() {
-        this.deleteBehavior = Codegen.empty();
-        this.updateBehavior = Codegen.empty();
+    private CrawlerSchemaChangePolicyGetArgs(CrawlerSchemaChangePolicyGetArgs $) {
+        this.deleteBehavior = $.deleteBehavior;
+        this.updateBehavior = $.updateBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerSchemaChangePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deleteBehavior;
-        private @Nullable Output<String> updateBehavior;
+        private CrawlerSchemaChangePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerSchemaChangePolicyGetArgs();
         }
 
         public Builder(CrawlerSchemaChangePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteBehavior = defaults.deleteBehavior;
-    	      this.updateBehavior = defaults.updateBehavior;
+            $ = new CrawlerSchemaChangePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteBehavior(@Nullable Output<String> deleteBehavior) {
-            this.deleteBehavior = deleteBehavior;
+            $.deleteBehavior = deleteBehavior;
             return this;
         }
-        public Builder deleteBehavior(@Nullable String deleteBehavior) {
-            this.deleteBehavior = Codegen.ofNullable(deleteBehavior);
-            return this;
+
+        public Builder deleteBehavior(String deleteBehavior) {
+            return deleteBehavior(Output.of(deleteBehavior));
         }
+
         public Builder updateBehavior(@Nullable Output<String> updateBehavior) {
-            this.updateBehavior = updateBehavior;
+            $.updateBehavior = updateBehavior;
             return this;
         }
-        public Builder updateBehavior(@Nullable String updateBehavior) {
-            this.updateBehavior = Codegen.ofNullable(updateBehavior);
-            return this;
-        }        public CrawlerSchemaChangePolicyGetArgs build() {
-            return new CrawlerSchemaChangePolicyGetArgs(deleteBehavior, updateBehavior);
+
+        public Builder updateBehavior(String updateBehavior) {
+            return updateBehavior(Output.of(updateBehavior));
+        }
+
+        public CrawlerSchemaChangePolicyGetArgs build() {
+            return $;
         }
     }
+
 }

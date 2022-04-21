@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolDeviceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="challengeRequiredOnNewDevice")
-      private final @Nullable Output<Boolean> challengeRequiredOnNewDevice;
+    private @Nullable Output<Boolean> challengeRequiredOnNewDevice;
 
-    public Output<Boolean> challengeRequiredOnNewDevice() {
-        return this.challengeRequiredOnNewDevice == null ? Codegen.empty() : this.challengeRequiredOnNewDevice;
+    public Optional<Output<Boolean>> challengeRequiredOnNewDevice() {
+        return Optional.ofNullable(this.challengeRequiredOnNewDevice);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class UserPoolDeviceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="deviceOnlyRememberedOnUserPrompt")
-      private final @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
+    private @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
 
-    public Output<Boolean> deviceOnlyRememberedOnUserPrompt() {
-        return this.deviceOnlyRememberedOnUserPrompt == null ? Codegen.empty() : this.deviceOnlyRememberedOnUserPrompt;
+    public Optional<Output<Boolean>> deviceOnlyRememberedOnUserPrompt() {
+        return Optional.ofNullable(this.deviceOnlyRememberedOnUserPrompt);
     }
 
-    public UserPoolDeviceConfigurationArgs(
-        @Nullable Output<Boolean> challengeRequiredOnNewDevice,
-        @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt) {
-        this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
-        this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
-    }
+    private UserPoolDeviceConfigurationArgs() {}
 
-    private UserPoolDeviceConfigurationArgs() {
-        this.challengeRequiredOnNewDevice = Codegen.empty();
-        this.deviceOnlyRememberedOnUserPrompt = Codegen.empty();
+    private UserPoolDeviceConfigurationArgs(UserPoolDeviceConfigurationArgs $) {
+        this.challengeRequiredOnNewDevice = $.challengeRequiredOnNewDevice;
+        this.deviceOnlyRememberedOnUserPrompt = $.deviceOnlyRememberedOnUserPrompt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolDeviceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> challengeRequiredOnNewDevice;
-        private @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
+        private UserPoolDeviceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolDeviceConfigurationArgs();
         }
 
         public Builder(UserPoolDeviceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.challengeRequiredOnNewDevice = defaults.challengeRequiredOnNewDevice;
-    	      this.deviceOnlyRememberedOnUserPrompt = defaults.deviceOnlyRememberedOnUserPrompt;
+            $ = new UserPoolDeviceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder challengeRequiredOnNewDevice(@Nullable Output<Boolean> challengeRequiredOnNewDevice) {
-            this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
+            $.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
             return this;
         }
-        public Builder challengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
-            this.challengeRequiredOnNewDevice = Codegen.ofNullable(challengeRequiredOnNewDevice);
-            return this;
+
+        public Builder challengeRequiredOnNewDevice(Boolean challengeRequiredOnNewDevice) {
+            return challengeRequiredOnNewDevice(Output.of(challengeRequiredOnNewDevice));
         }
+
         public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt) {
-            this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
+            $.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
             return this;
         }
-        public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
-            this.deviceOnlyRememberedOnUserPrompt = Codegen.ofNullable(deviceOnlyRememberedOnUserPrompt);
-            return this;
-        }        public UserPoolDeviceConfigurationArgs build() {
-            return new UserPoolDeviceConfigurationArgs(challengeRequiredOnNewDevice, deviceOnlyRememberedOnUserPrompt);
+
+        public Builder deviceOnlyRememberedOnUserPrompt(Boolean deviceOnlyRememberedOnUserPrompt) {
+            return deviceOnlyRememberedOnUserPrompt(Output.of(deviceOnlyRememberedOnUserPrompt));
+        }
+
+        public UserPoolDeviceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

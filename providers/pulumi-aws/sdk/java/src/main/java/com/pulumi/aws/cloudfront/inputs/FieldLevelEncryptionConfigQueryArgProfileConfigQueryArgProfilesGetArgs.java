@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     public static final FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs Empty = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs();
 
     @Import(name="items")
-      private final @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items;
+    private @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items;
 
-    public Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs(@Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items) {
-        this.items = items;
-    }
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs() {}
 
-    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs() {
-        this.items = Codegen.empty();
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items;
+        private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs... items) {
             return items(List.of(items));
-        }        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs build() {
-            return new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs(items);
+        }
+
+        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs build() {
+            return $;
         }
     }
+
 }

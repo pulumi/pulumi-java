@@ -20,7 +20,7 @@ public final class GetApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
@@ -31,55 +31,51 @@ public final class GetApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetApiArgs(
-        String apiId,
-        @Nullable Map<String,String> tags) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.tags = tags;
-    }
+    private GetApiArgs() {}
 
-    private GetApiArgs() {
-        this.apiId = null;
-        this.tags = Map.of();
+    private GetApiArgs(GetApiArgs $) {
+        this.apiId = $.apiId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private @Nullable Map<String,String> tags;
+        private GetApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiArgs();
         }
 
         public Builder(GetApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.tags = defaults.tags;
+            $ = new GetApiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetApiArgs build() {
-            return new GetApiArgs(apiId, tags);
+        }
+
+        public GetApiArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            return $;
         }
     }
+
 }

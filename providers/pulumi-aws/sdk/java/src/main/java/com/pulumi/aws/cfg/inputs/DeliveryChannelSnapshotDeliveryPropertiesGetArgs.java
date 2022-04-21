@@ -5,9 +5,9 @@ package com.pulumi.aws.cfg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesGetArgs extends com.
      * 
      */
     @Import(name="deliveryFrequency")
-      private final @Nullable Output<String> deliveryFrequency;
+    private @Nullable Output<String> deliveryFrequency;
 
-    public Output<String> deliveryFrequency() {
-        return this.deliveryFrequency == null ? Codegen.empty() : this.deliveryFrequency;
+    public Optional<Output<String>> deliveryFrequency() {
+        return Optional.ofNullable(this.deliveryFrequency);
     }
 
-    public DeliveryChannelSnapshotDeliveryPropertiesGetArgs(@Nullable Output<String> deliveryFrequency) {
-        this.deliveryFrequency = deliveryFrequency;
-    }
+    private DeliveryChannelSnapshotDeliveryPropertiesGetArgs() {}
 
-    private DeliveryChannelSnapshotDeliveryPropertiesGetArgs() {
-        this.deliveryFrequency = Codegen.empty();
+    private DeliveryChannelSnapshotDeliveryPropertiesGetArgs(DeliveryChannelSnapshotDeliveryPropertiesGetArgs $) {
+        this.deliveryFrequency = $.deliveryFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryChannelSnapshotDeliveryPropertiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deliveryFrequency;
+        private DeliveryChannelSnapshotDeliveryPropertiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryChannelSnapshotDeliveryPropertiesGetArgs();
         }
 
         public Builder(DeliveryChannelSnapshotDeliveryPropertiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryFrequency = defaults.deliveryFrequency;
+            $ = new DeliveryChannelSnapshotDeliveryPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryFrequency(@Nullable Output<String> deliveryFrequency) {
-            this.deliveryFrequency = deliveryFrequency;
+            $.deliveryFrequency = deliveryFrequency;
             return this;
         }
-        public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
-            this.deliveryFrequency = Codegen.ofNullable(deliveryFrequency);
-            return this;
-        }        public DeliveryChannelSnapshotDeliveryPropertiesGetArgs build() {
-            return new DeliveryChannelSnapshotDeliveryPropertiesGetArgs(deliveryFrequency);
+
+        public Builder deliveryFrequency(String deliveryFrequency) {
+            return deliveryFrequency(Output.of(deliveryFrequency));
+        }
+
+        public DeliveryChannelSnapshotDeliveryPropertiesGetArgs build() {
+            return $;
         }
     }
+
 }

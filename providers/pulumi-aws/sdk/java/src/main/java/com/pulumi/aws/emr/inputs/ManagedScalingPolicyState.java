@@ -6,10 +6,10 @@ package com.pulumi.aws.emr.inputs;
 import com.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Output<String> clusterId;
+    private @Nullable Output<String> clusterId;
 
-    public Output<String> clusterId() {
-        return this.clusterId == null ? Codegen.empty() : this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="computeLimits")
-      private final @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
+    private @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
 
-    public Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits() {
-        return this.computeLimits == null ? Codegen.empty() : this.computeLimits;
+    public Optional<Output<List<ManagedScalingPolicyComputeLimitGetArgs>>> computeLimits() {
+        return Optional.ofNullable(this.computeLimits);
     }
 
-    public ManagedScalingPolicyState(
-        @Nullable Output<String> clusterId,
-        @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits) {
-        this.clusterId = clusterId;
-        this.computeLimits = computeLimits;
-    }
+    private ManagedScalingPolicyState() {}
 
-    private ManagedScalingPolicyState() {
-        this.clusterId = Codegen.empty();
-        this.computeLimits = Codegen.empty();
+    private ManagedScalingPolicyState(ManagedScalingPolicyState $) {
+        this.clusterId = $.clusterId;
+        this.computeLimits = $.computeLimits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedScalingPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterId;
-        private @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
+        private ManagedScalingPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedScalingPolicyState();
         }
 
         public Builder(ManagedScalingPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.computeLimits = defaults.computeLimits;
+            $ = new ManagedScalingPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(@Nullable Output<String> clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
-        public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Codegen.ofNullable(clusterId);
-            return this;
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder computeLimits(@Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits) {
-            this.computeLimits = computeLimits;
+            $.computeLimits = computeLimits;
             return this;
         }
-        public Builder computeLimits(@Nullable List<ManagedScalingPolicyComputeLimitGetArgs> computeLimits) {
-            this.computeLimits = Codegen.ofNullable(computeLimits);
-            return this;
+
+        public Builder computeLimits(List<ManagedScalingPolicyComputeLimitGetArgs> computeLimits) {
+            return computeLimits(Output.of(computeLimits));
         }
+
         public Builder computeLimits(ManagedScalingPolicyComputeLimitGetArgs... computeLimits) {
             return computeLimits(List.of(computeLimits));
-        }        public ManagedScalingPolicyState build() {
-            return new ManagedScalingPolicyState(clusterId, computeLimits);
+        }
+
+        public ManagedScalingPolicyState build() {
+            return $;
         }
     }
+
 }

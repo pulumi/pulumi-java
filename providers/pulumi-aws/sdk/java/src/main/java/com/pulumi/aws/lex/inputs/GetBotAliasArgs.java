@@ -17,7 +17,7 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="botName", required=true)
-      private final String botName;
+    private String botName;
 
     public String botName() {
         return this.botName;
@@ -28,55 +28,52 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetBotAliasArgs(
-        String botName,
-        String name) {
-        this.botName = Objects.requireNonNull(botName, "expected parameter 'botName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetBotAliasArgs() {}
 
-    private GetBotAliasArgs() {
-        this.botName = null;
-        this.name = null;
+    private GetBotAliasArgs(GetBotAliasArgs $) {
+        this.botName = $.botName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBotAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String botName;
-        private String name;
+        private GetBotAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBotAliasArgs();
         }
 
         public Builder(GetBotAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botName = defaults.botName;
-    	      this.name = defaults.name;
+            $ = new GetBotAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder botName(String botName) {
-            this.botName = Objects.requireNonNull(botName);
+            $.botName = botName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetBotAliasArgs build() {
-            return new GetBotAliasArgs(botName, name);
+        }
+
+        public GetBotAliasArgs build() {
+            $.botName = Objects.requireNonNull($.botName, "expected parameter 'botName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

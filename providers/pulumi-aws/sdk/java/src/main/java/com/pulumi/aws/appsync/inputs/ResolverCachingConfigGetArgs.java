@@ -5,11 +5,11 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ResolverCachingConfigGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="cachingKeys")
-      private final @Nullable Output<List<String>> cachingKeys;
+    private @Nullable Output<List<String>> cachingKeys;
 
-    public Output<List<String>> cachingKeys() {
-        return this.cachingKeys == null ? Codegen.empty() : this.cachingKeys;
+    public Optional<Output<List<String>>> cachingKeys() {
+        return Optional.ofNullable(this.cachingKeys);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ResolverCachingConfigGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<Integer> ttl;
+    private @Nullable Output<Integer> ttl;
 
-    public Output<Integer> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<Integer>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public ResolverCachingConfigGetArgs(
-        @Nullable Output<List<String>> cachingKeys,
-        @Nullable Output<Integer> ttl) {
-        this.cachingKeys = cachingKeys;
-        this.ttl = ttl;
-    }
+    private ResolverCachingConfigGetArgs() {}
 
-    private ResolverCachingConfigGetArgs() {
-        this.cachingKeys = Codegen.empty();
-        this.ttl = Codegen.empty();
+    private ResolverCachingConfigGetArgs(ResolverCachingConfigGetArgs $) {
+        this.cachingKeys = $.cachingKeys;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverCachingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cachingKeys;
-        private @Nullable Output<Integer> ttl;
+        private ResolverCachingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverCachingConfigGetArgs();
         }
 
         public Builder(ResolverCachingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cachingKeys = defaults.cachingKeys;
-    	      this.ttl = defaults.ttl;
+            $ = new ResolverCachingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cachingKeys(@Nullable Output<List<String>> cachingKeys) {
-            this.cachingKeys = cachingKeys;
+            $.cachingKeys = cachingKeys;
             return this;
         }
-        public Builder cachingKeys(@Nullable List<String> cachingKeys) {
-            this.cachingKeys = Codegen.ofNullable(cachingKeys);
-            return this;
+
+        public Builder cachingKeys(List<String> cachingKeys) {
+            return cachingKeys(Output.of(cachingKeys));
         }
+
         public Builder cachingKeys(String... cachingKeys) {
             return cachingKeys(List.of(cachingKeys));
         }
+
         public Builder ttl(@Nullable Output<Integer> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public ResolverCachingConfigGetArgs build() {
-            return new ResolverCachingConfigGetArgs(cachingKeys, ttl);
+
+        public Builder ttl(Integer ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public ResolverCachingConfigGetArgs build() {
+            return $;
         }
     }
+
 }

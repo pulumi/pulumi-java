@@ -5,9 +5,9 @@ package com.pulumi.aws.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class OrganizationRootPolicyTypeGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public OrganizationRootPolicyTypeGetArgs(
-        @Nullable Output<String> status,
-        @Nullable Output<String> type) {
-        this.status = status;
-        this.type = type;
-    }
+    private OrganizationRootPolicyTypeGetArgs() {}
 
-    private OrganizationRootPolicyTypeGetArgs() {
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private OrganizationRootPolicyTypeGetArgs(OrganizationRootPolicyTypeGetArgs $) {
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationRootPolicyTypeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> type;
+        private OrganizationRootPolicyTypeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationRootPolicyTypeGetArgs();
         }
 
         public Builder(OrganizationRootPolicyTypeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new OrganizationRootPolicyTypeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public OrganizationRootPolicyTypeGetArgs build() {
-            return new OrganizationRootPolicyTypeGetArgs(status, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public OrganizationRootPolicyTypeGetArgs build() {
+            return $;
         }
     }
+
 }

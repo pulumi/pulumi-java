@@ -5,10 +5,10 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="authTtl")
-      private final @Nullable Output<Integer> authTtl;
+    private @Nullable Output<Integer> authTtl;
 
-    public Output<Integer> authTtl() {
-        return this.authTtl == null ? Codegen.empty() : this.authTtl;
+    public Optional<Output<Integer>> authTtl() {
+        return Optional.ofNullable(this.authTtl);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="iatTtl")
-      private final @Nullable Output<Integer> iatTtl;
+    private @Nullable Output<Integer> iatTtl;
 
-    public Output<Integer> iatTtl() {
-        return this.iatTtl == null ? Codegen.empty() : this.iatTtl;
+    public Optional<Output<Integer>> iatTtl() {
+        return Optional.ofNullable(this.iatTtl);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="issuer", required=true)
-      private final Output<String> issuer;
+    private Output<String> issuer;
 
     public Output<String> issuer() {
         return this.issuer;
     }
 
-    public GraphQLApiOpenidConnectConfigArgs(
-        @Nullable Output<Integer> authTtl,
-        @Nullable Output<String> clientId,
-        @Nullable Output<Integer> iatTtl,
-        Output<String> issuer) {
-        this.authTtl = authTtl;
-        this.clientId = clientId;
-        this.iatTtl = iatTtl;
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-    }
+    private GraphQLApiOpenidConnectConfigArgs() {}
 
-    private GraphQLApiOpenidConnectConfigArgs() {
-        this.authTtl = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.iatTtl = Codegen.empty();
-        this.issuer = Codegen.empty();
+    private GraphQLApiOpenidConnectConfigArgs(GraphQLApiOpenidConnectConfigArgs $) {
+        this.authTtl = $.authTtl;
+        this.clientId = $.clientId;
+        this.iatTtl = $.iatTtl;
+        this.issuer = $.issuer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphQLApiOpenidConnectConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> authTtl;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<Integer> iatTtl;
-        private Output<String> issuer;
+        private GraphQLApiOpenidConnectConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphQLApiOpenidConnectConfigArgs();
         }
 
         public Builder(GraphQLApiOpenidConnectConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authTtl = defaults.authTtl;
-    	      this.clientId = defaults.clientId;
-    	      this.iatTtl = defaults.iatTtl;
-    	      this.issuer = defaults.issuer;
+            $ = new GraphQLApiOpenidConnectConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authTtl(@Nullable Output<Integer> authTtl) {
-            this.authTtl = authTtl;
+            $.authTtl = authTtl;
             return this;
         }
-        public Builder authTtl(@Nullable Integer authTtl) {
-            this.authTtl = Codegen.ofNullable(authTtl);
-            return this;
+
+        public Builder authTtl(Integer authTtl) {
+            return authTtl(Output.of(authTtl));
         }
+
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder iatTtl(@Nullable Output<Integer> iatTtl) {
-            this.iatTtl = iatTtl;
+            $.iatTtl = iatTtl;
             return this;
         }
-        public Builder iatTtl(@Nullable Integer iatTtl) {
-            this.iatTtl = Codegen.ofNullable(iatTtl);
-            return this;
+
+        public Builder iatTtl(Integer iatTtl) {
+            return iatTtl(Output.of(iatTtl));
         }
+
         public Builder issuer(Output<String> issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Output.of(Objects.requireNonNull(issuer));
-            return this;
-        }        public GraphQLApiOpenidConnectConfigArgs build() {
-            return new GraphQLApiOpenidConnectConfigArgs(authTtl, clientId, iatTtl, issuer);
+            return issuer(Output.of(issuer));
+        }
+
+        public GraphQLApiOpenidConnectConfigArgs build() {
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            return $;
         }
     }
+
 }

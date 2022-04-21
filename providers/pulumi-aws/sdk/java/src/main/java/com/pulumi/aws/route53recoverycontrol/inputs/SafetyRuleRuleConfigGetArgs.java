@@ -5,7 +5,6 @@ package com.pulumi.aws.route53recoverycontrol.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +20,7 @@ public final class SafetyRuleRuleConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="inverted", required=true)
-      private final Output<Boolean> inverted;
+    private Output<Boolean> inverted;
 
     public Output<Boolean> inverted() {
         return this.inverted;
@@ -32,7 +31,7 @@ public final class SafetyRuleRuleConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="threshold", required=true)
-      private final Output<Integer> threshold;
+    private Output<Integer> threshold;
 
     public Output<Integer> threshold() {
         return this.threshold;
@@ -43,76 +42,71 @@ public final class SafetyRuleRuleConfigGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SafetyRuleRuleConfigGetArgs(
-        Output<Boolean> inverted,
-        Output<Integer> threshold,
-        Output<String> type) {
-        this.inverted = Objects.requireNonNull(inverted, "expected parameter 'inverted' to be non-null");
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SafetyRuleRuleConfigGetArgs() {}
 
-    private SafetyRuleRuleConfigGetArgs() {
-        this.inverted = Codegen.empty();
-        this.threshold = Codegen.empty();
-        this.type = Codegen.empty();
+    private SafetyRuleRuleConfigGetArgs(SafetyRuleRuleConfigGetArgs $) {
+        this.inverted = $.inverted;
+        this.threshold = $.threshold;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SafetyRuleRuleConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> inverted;
-        private Output<Integer> threshold;
-        private Output<String> type;
+        private SafetyRuleRuleConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SafetyRuleRuleConfigGetArgs();
         }
 
         public Builder(SafetyRuleRuleConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inverted = defaults.inverted;
-    	      this.threshold = defaults.threshold;
-    	      this.type = defaults.type;
+            $ = new SafetyRuleRuleConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inverted(Output<Boolean> inverted) {
-            this.inverted = Objects.requireNonNull(inverted);
+            $.inverted = inverted;
             return this;
         }
+
         public Builder inverted(Boolean inverted) {
-            this.inverted = Output.of(Objects.requireNonNull(inverted));
-            return this;
+            return inverted(Output.of(inverted));
         }
+
         public Builder threshold(Output<Integer> threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder threshold(Integer threshold) {
-            this.threshold = Output.of(Objects.requireNonNull(threshold));
-            return this;
+            return threshold(Output.of(threshold));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SafetyRuleRuleConfigGetArgs build() {
-            return new SafetyRuleRuleConfigGetArgs(inverted, threshold, type);
+            return type(Output.of(type));
+        }
+
+        public SafetyRuleRuleConfigGetArgs build() {
+            $.inverted = Objects.requireNonNull($.inverted, "expected parameter 'inverted' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

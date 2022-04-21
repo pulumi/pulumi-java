@@ -5,10 +5,10 @@ package com.pulumi.aws.s3control.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="accessPointArn")
-      private final @Nullable Output<String> accessPointArn;
+    private @Nullable Output<String> accessPointArn;
 
-    public Output<String> accessPointArn() {
-        return this.accessPointArn == null ? Codegen.empty() : this.accessPointArn;
+    public Optional<Output<String>> accessPointArn() {
+        return Optional.ofNullable(this.accessPointArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hasPublicAccessPolicy")
-      private final @Nullable Output<Boolean> hasPublicAccessPolicy;
+    private @Nullable Output<Boolean> hasPublicAccessPolicy;
 
-    public Output<Boolean> hasPublicAccessPolicy() {
-        return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
+    public Optional<Output<Boolean>> hasPublicAccessPolicy() {
+        return Optional.ofNullable(this.hasPublicAccessPolicy);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public AccessPointPolicyState(
-        @Nullable Output<String> accessPointArn,
-        @Nullable Output<Boolean> hasPublicAccessPolicy,
-        @Nullable Output<String> policy) {
-        this.accessPointArn = accessPointArn;
-        this.hasPublicAccessPolicy = hasPublicAccessPolicy;
-        this.policy = policy;
-    }
+    private AccessPointPolicyState() {}
 
-    private AccessPointPolicyState() {
-        this.accessPointArn = Codegen.empty();
-        this.hasPublicAccessPolicy = Codegen.empty();
-        this.policy = Codegen.empty();
+    private AccessPointPolicyState(AccessPointPolicyState $) {
+        this.accessPointArn = $.accessPointArn;
+        this.hasPublicAccessPolicy = $.hasPublicAccessPolicy;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPointArn;
-        private @Nullable Output<Boolean> hasPublicAccessPolicy;
-        private @Nullable Output<String> policy;
+        private AccessPointPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointPolicyState();
         }
 
         public Builder(AccessPointPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointArn = defaults.accessPointArn;
-    	      this.hasPublicAccessPolicy = defaults.hasPublicAccessPolicy;
-    	      this.policy = defaults.policy;
+            $ = new AccessPointPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointArn(@Nullable Output<String> accessPointArn) {
-            this.accessPointArn = accessPointArn;
+            $.accessPointArn = accessPointArn;
             return this;
         }
-        public Builder accessPointArn(@Nullable String accessPointArn) {
-            this.accessPointArn = Codegen.ofNullable(accessPointArn);
-            return this;
+
+        public Builder accessPointArn(String accessPointArn) {
+            return accessPointArn(Output.of(accessPointArn));
         }
+
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = hasPublicAccessPolicy;
+            $.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
-        public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = Codegen.ofNullable(hasPublicAccessPolicy);
-            return this;
+
+        public Builder hasPublicAccessPolicy(Boolean hasPublicAccessPolicy) {
+            return hasPublicAccessPolicy(Output.of(hasPublicAccessPolicy));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public AccessPointPolicyState build() {
-            return new AccessPointPolicyState(accessPointArn, hasPublicAccessPolicy, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public AccessPointPolicyState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.account;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="alternateContactType", required=true)
-      private final Output<String> alternateContactType;
+    private Output<String> alternateContactType;
 
     public Output<String> alternateContactType() {
         return this.alternateContactType;
@@ -42,7 +42,7 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final Output<String> emailAddress;
+    private Output<String> emailAddress;
 
     public Output<String> emailAddress() {
         return this.emailAddress;
@@ -53,10 +53,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final Output<String> phoneNumber;
+    private Output<String> phoneNumber;
 
     public Output<String> phoneNumber() {
         return this.phoneNumber;
@@ -75,115 +75,102 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public AlternativeContactArgs(
-        @Nullable Output<String> accountId,
-        Output<String> alternateContactType,
-        Output<String> emailAddress,
-        @Nullable Output<String> name,
-        Output<String> phoneNumber,
-        Output<String> title) {
-        this.accountId = accountId;
-        this.alternateContactType = Objects.requireNonNull(alternateContactType, "expected parameter 'alternateContactType' to be non-null");
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.name = name;
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private AlternativeContactArgs() {}
 
-    private AlternativeContactArgs() {
-        this.accountId = Codegen.empty();
-        this.alternateContactType = Codegen.empty();
-        this.emailAddress = Codegen.empty();
-        this.name = Codegen.empty();
-        this.phoneNumber = Codegen.empty();
-        this.title = Codegen.empty();
+    private AlternativeContactArgs(AlternativeContactArgs $) {
+        this.accountId = $.accountId;
+        this.alternateContactType = $.alternateContactType;
+        this.emailAddress = $.emailAddress;
+        this.name = $.name;
+        this.phoneNumber = $.phoneNumber;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlternativeContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private Output<String> alternateContactType;
-        private Output<String> emailAddress;
-        private @Nullable Output<String> name;
-        private Output<String> phoneNumber;
-        private Output<String> title;
+        private AlternativeContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlternativeContactArgs();
         }
 
         public Builder(AlternativeContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.alternateContactType = defaults.alternateContactType;
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.name = defaults.name;
-    	      this.phoneNumber = defaults.phoneNumber;
-    	      this.title = defaults.title;
+            $ = new AlternativeContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder alternateContactType(Output<String> alternateContactType) {
-            this.alternateContactType = Objects.requireNonNull(alternateContactType);
+            $.alternateContactType = alternateContactType;
             return this;
         }
+
         public Builder alternateContactType(String alternateContactType) {
-            this.alternateContactType = Output.of(Objects.requireNonNull(alternateContactType));
-            return this;
+            return alternateContactType(Output.of(alternateContactType));
         }
+
         public Builder emailAddress(Output<String> emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
-            return this;
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder phoneNumber(Output<String> phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
         }
+
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
-            return this;
+            return phoneNumber(Output.of(phoneNumber));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public AlternativeContactArgs build() {
-            return new AlternativeContactArgs(accountId, alternateContactType, emailAddress, name, phoneNumber, title);
+            return title(Output.of(title));
+        }
+
+        public AlternativeContactArgs build() {
+            $.alternateContactType = Objects.requireNonNull($.alternateContactType, "expected parameter 'alternateContactType' to be non-null");
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateFileGe
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateSdsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VirtualNodeSpecListenerTlsCertificateGetArgs extends com.pulu
      * 
      */
     @Import(name="acm")
-      private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> acm;
+    private @Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> acm;
 
-    public Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> acm() {
-        return this.acm == null ? Codegen.empty() : this.acm;
+    public Optional<Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs>> acm() {
+        return Optional.ofNullable(this.acm);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VirtualNodeSpecListenerTlsCertificateGetArgs extends com.pulu
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file;
+    private @Nullable Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file;
 
-    public Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class VirtualNodeSpecListenerTlsCertificateGetArgs extends com.pulu
      * 
      */
     @Import(name="sds")
-      private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds;
+    private @Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds;
 
-    public Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds() {
-        return this.sds == null ? Codegen.empty() : this.sds;
+    public Optional<Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs>> sds() {
+        return Optional.ofNullable(this.sds);
     }
 
-    public VirtualNodeSpecListenerTlsCertificateGetArgs(
-        @Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> acm,
-        @Nullable Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file,
-        @Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds) {
-        this.acm = acm;
-        this.file = file;
-        this.sds = sds;
-    }
+    private VirtualNodeSpecListenerTlsCertificateGetArgs() {}
 
-    private VirtualNodeSpecListenerTlsCertificateGetArgs() {
-        this.acm = Codegen.empty();
-        this.file = Codegen.empty();
-        this.sds = Codegen.empty();
+    private VirtualNodeSpecListenerTlsCertificateGetArgs(VirtualNodeSpecListenerTlsCertificateGetArgs $) {
+        this.acm = $.acm;
+        this.file = $.file;
+        this.sds = $.sds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerTlsCertificateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> acm;
-        private @Nullable Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file;
-        private @Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds;
+        private VirtualNodeSpecListenerTlsCertificateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerTlsCertificateGetArgs();
         }
 
         public Builder(VirtualNodeSpecListenerTlsCertificateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acm = defaults.acm;
-    	      this.file = defaults.file;
-    	      this.sds = defaults.sds;
+            $ = new VirtualNodeSpecListenerTlsCertificateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acm(@Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> acm) {
-            this.acm = acm;
+            $.acm = acm;
             return this;
         }
-        public Builder acm(@Nullable VirtualNodeSpecListenerTlsCertificateAcmGetArgs acm) {
-            this.acm = Codegen.ofNullable(acm);
-            return this;
+
+        public Builder acm(VirtualNodeSpecListenerTlsCertificateAcmGetArgs acm) {
+            return acm(Output.of(acm));
         }
+
         public Builder file(@Nullable Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable VirtualNodeSpecListenerTlsCertificateFileGetArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(VirtualNodeSpecListenerTlsCertificateFileGetArgs file) {
+            return file(Output.of(file));
         }
+
         public Builder sds(@Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds) {
-            this.sds = sds;
+            $.sds = sds;
             return this;
         }
-        public Builder sds(@Nullable VirtualNodeSpecListenerTlsCertificateSdsGetArgs sds) {
-            this.sds = Codegen.ofNullable(sds);
-            return this;
-        }        public VirtualNodeSpecListenerTlsCertificateGetArgs build() {
-            return new VirtualNodeSpecListenerTlsCertificateGetArgs(acm, file, sds);
+
+        public Builder sds(VirtualNodeSpecListenerTlsCertificateSdsGetArgs sds) {
+            return sds(Output.of(sds));
+        }
+
+        public VirtualNodeSpecListenerTlsCertificateGetArgs build() {
+            return $;
         }
     }
+
 }

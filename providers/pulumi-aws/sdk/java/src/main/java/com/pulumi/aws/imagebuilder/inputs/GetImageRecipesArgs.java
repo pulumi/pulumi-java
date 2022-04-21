@@ -21,10 +21,10 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetImageRecipesFilter> filters;
+    private @Nullable List<GetImageRecipesFilter> filters;
 
-    public List<GetImageRecipesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetImageRecipesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -32,58 +32,54 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable String owner;
+    private @Nullable String owner;
 
     public Optional<String> owner() {
-        return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
+        return Optional.ofNullable(this.owner);
     }
 
-    public GetImageRecipesArgs(
-        @Nullable List<GetImageRecipesFilter> filters,
-        @Nullable String owner) {
-        this.filters = filters;
-        this.owner = owner;
-    }
+    private GetImageRecipesArgs() {}
 
-    private GetImageRecipesArgs() {
-        this.filters = List.of();
-        this.owner = null;
+    private GetImageRecipesArgs(GetImageRecipesArgs $) {
+        this.filters = $.filters;
+        this.owner = $.owner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageRecipesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetImageRecipesFilter> filters;
-        private @Nullable String owner;
+        private GetImageRecipesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageRecipesArgs();
         }
 
         public Builder(GetImageRecipesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.owner = defaults.owner;
+            $ = new GetImageRecipesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetImageRecipesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetImageRecipesFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder owner(@Nullable String owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
-        }        public GetImageRecipesArgs build() {
-            return new GetImageRecipesArgs(filters, owner);
+        }
+
+        public GetImageRecipesArgs build() {
+            return $;
         }
     }
+
 }

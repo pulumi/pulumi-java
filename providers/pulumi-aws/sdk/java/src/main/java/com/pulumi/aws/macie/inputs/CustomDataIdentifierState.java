@@ -5,12 +5,12 @@ package com.pulumi.aws.macie.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ignoreWords")
-      private final @Nullable Output<List<String>> ignoreWords;
+    private @Nullable Output<List<String>> ignoreWords;
 
-    public Output<List<String>> ignoreWords() {
-        return this.ignoreWords == null ? Codegen.empty() : this.ignoreWords;
+    public Optional<Output<List<String>>> ignoreWords() {
+        return Optional.ofNullable(this.ignoreWords);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="keywords")
-      private final @Nullable Output<List<String>> keywords;
+    private @Nullable Output<List<String>> keywords;
 
-    public Output<List<String>> keywords() {
-        return this.keywords == null ? Codegen.empty() : this.keywords;
+    public Optional<Output<List<String>>> keywords() {
+        return Optional.ofNullable(this.keywords);
     }
 
     /**
@@ -78,17 +78,17 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maximumMatchDistance")
-      private final @Nullable Output<Integer> maximumMatchDistance;
+    private @Nullable Output<Integer> maximumMatchDistance;
 
-    public Output<Integer> maximumMatchDistance() {
-        return this.maximumMatchDistance == null ? Codegen.empty() : this.maximumMatchDistance;
+    public Optional<Output<Integer>> maximumMatchDistance() {
+        return Optional.ofNullable(this.maximumMatchDistance);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="regex")
-      private final @Nullable Output<String> regex;
+    private @Nullable Output<String> regex;
 
-    public Output<String> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<String>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
     /**
@@ -118,193 +118,163 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public CustomDataIdentifierState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> ignoreWords,
-        @Nullable Output<List<String>> keywords,
-        @Nullable Output<Integer> maximumMatchDistance,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> regex,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.createdAt = createdAt;
-        this.description = description;
-        this.ignoreWords = ignoreWords;
-        this.keywords = keywords;
-        this.maximumMatchDistance = maximumMatchDistance;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.regex = regex;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private CustomDataIdentifierState() {}
 
-    private CustomDataIdentifierState() {
-        this.arn = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ignoreWords = Codegen.empty();
-        this.keywords = Codegen.empty();
-        this.maximumMatchDistance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.regex = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private CustomDataIdentifierState(CustomDataIdentifierState $) {
+        this.arn = $.arn;
+        this.createdAt = $.createdAt;
+        this.description = $.description;
+        this.ignoreWords = $.ignoreWords;
+        this.keywords = $.keywords;
+        this.maximumMatchDistance = $.maximumMatchDistance;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.regex = $.regex;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDataIdentifierState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> ignoreWords;
-        private @Nullable Output<List<String>> keywords;
-        private @Nullable Output<Integer> maximumMatchDistance;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> regex;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private CustomDataIdentifierState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDataIdentifierState();
         }
 
         public Builder(CustomDataIdentifierState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdAt = defaults.createdAt;
-    	      this.description = defaults.description;
-    	      this.ignoreWords = defaults.ignoreWords;
-    	      this.keywords = defaults.keywords;
-    	      this.maximumMatchDistance = defaults.maximumMatchDistance;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.regex = defaults.regex;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new CustomDataIdentifierState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ignoreWords(@Nullable Output<List<String>> ignoreWords) {
-            this.ignoreWords = ignoreWords;
+            $.ignoreWords = ignoreWords;
             return this;
         }
-        public Builder ignoreWords(@Nullable List<String> ignoreWords) {
-            this.ignoreWords = Codegen.ofNullable(ignoreWords);
-            return this;
+
+        public Builder ignoreWords(List<String> ignoreWords) {
+            return ignoreWords(Output.of(ignoreWords));
         }
+
         public Builder ignoreWords(String... ignoreWords) {
             return ignoreWords(List.of(ignoreWords));
         }
+
         public Builder keywords(@Nullable Output<List<String>> keywords) {
-            this.keywords = keywords;
+            $.keywords = keywords;
             return this;
         }
-        public Builder keywords(@Nullable List<String> keywords) {
-            this.keywords = Codegen.ofNullable(keywords);
-            return this;
+
+        public Builder keywords(List<String> keywords) {
+            return keywords(Output.of(keywords));
         }
+
         public Builder keywords(String... keywords) {
             return keywords(List.of(keywords));
         }
+
         public Builder maximumMatchDistance(@Nullable Output<Integer> maximumMatchDistance) {
-            this.maximumMatchDistance = maximumMatchDistance;
+            $.maximumMatchDistance = maximumMatchDistance;
             return this;
         }
-        public Builder maximumMatchDistance(@Nullable Integer maximumMatchDistance) {
-            this.maximumMatchDistance = Codegen.ofNullable(maximumMatchDistance);
-            return this;
+
+        public Builder maximumMatchDistance(Integer maximumMatchDistance) {
+            return maximumMatchDistance(Output.of(maximumMatchDistance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder regex(@Nullable Output<String> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable String regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
+
+        public Builder regex(String regex) {
+            return regex(Output.of(regex));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public CustomDataIdentifierState build() {
-            return new CustomDataIdentifierState(arn, createdAt, description, ignoreWords, keywords, maximumMatchDistance, name, namePrefix, regex, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public CustomDataIdentifierState build() {
+            return $;
         }
     }
+
 }

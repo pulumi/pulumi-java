@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends com.pulumi.res
      * 
      */
     @Import(name="principalArn", required=true)
-      private final Output<String> principalArn;
+    private Output<String> principalArn;
 
     public Output<String> principalArn() {
         return this.principalArn;
@@ -30,63 +29,60 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends com.pulumi.res
      * 
      */
     @Import(name="vpcEndpointServiceId", required=true)
-      private final Output<String> vpcEndpointServiceId;
+    private Output<String> vpcEndpointServiceId;
 
     public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 
-    public VpcEndpointServiceAllowedPrincipleArgs(
-        Output<String> principalArn,
-        Output<String> vpcEndpointServiceId) {
-        this.principalArn = Objects.requireNonNull(principalArn, "expected parameter 'principalArn' to be non-null");
-        this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId, "expected parameter 'vpcEndpointServiceId' to be non-null");
-    }
+    private VpcEndpointServiceAllowedPrincipleArgs() {}
 
-    private VpcEndpointServiceAllowedPrincipleArgs() {
-        this.principalArn = Codegen.empty();
-        this.vpcEndpointServiceId = Codegen.empty();
+    private VpcEndpointServiceAllowedPrincipleArgs(VpcEndpointServiceAllowedPrincipleArgs $) {
+        this.principalArn = $.principalArn;
+        this.vpcEndpointServiceId = $.vpcEndpointServiceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointServiceAllowedPrincipleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> principalArn;
-        private Output<String> vpcEndpointServiceId;
+        private VpcEndpointServiceAllowedPrincipleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointServiceAllowedPrincipleArgs();
         }
 
         public Builder(VpcEndpointServiceAllowedPrincipleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalArn = defaults.principalArn;
-    	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
+            $ = new VpcEndpointServiceAllowedPrincipleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principalArn(Output<String> principalArn) {
-            this.principalArn = Objects.requireNonNull(principalArn);
+            $.principalArn = principalArn;
             return this;
         }
+
         public Builder principalArn(String principalArn) {
-            this.principalArn = Output.of(Objects.requireNonNull(principalArn));
-            return this;
+            return principalArn(Output.of(principalArn));
         }
+
         public Builder vpcEndpointServiceId(Output<String> vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId);
+            $.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
+
         public Builder vpcEndpointServiceId(String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Output.of(Objects.requireNonNull(vpcEndpointServiceId));
-            return this;
-        }        public VpcEndpointServiceAllowedPrincipleArgs build() {
-            return new VpcEndpointServiceAllowedPrincipleArgs(principalArn, vpcEndpointServiceId);
+            return vpcEndpointServiceId(Output.of(vpcEndpointServiceId));
+        }
+
+        public VpcEndpointServiceAllowedPrincipleArgs build() {
+            $.principalArn = Objects.requireNonNull($.principalArn, "expected parameter 'principalArn' to be non-null");
+            $.vpcEndpointServiceId = Objects.requireNonNull($.vpcEndpointServiceId, "expected parameter 'vpcEndpointServiceId' to be non-null");
+            return $;
         }
     }
+
 }

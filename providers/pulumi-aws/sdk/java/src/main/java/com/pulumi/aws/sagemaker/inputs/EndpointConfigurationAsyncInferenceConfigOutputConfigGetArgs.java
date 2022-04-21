@@ -6,9 +6,9 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs 
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs 
      * 
      */
     @Import(name="notificationConfig")
-      private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig;
+    private @Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs 
      * 
      */
     @Import(name="s3OutputPath", required=true)
-      private final Output<String> s3OutputPath;
+    private Output<String> s3OutputPath;
 
     public Output<String> s3OutputPath() {
         return this.s3OutputPath;
     }
 
-    public EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs(
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig,
-        Output<String> s3OutputPath) {
-        this.kmsKeyId = kmsKeyId;
-        this.notificationConfig = notificationConfig;
-        this.s3OutputPath = Objects.requireNonNull(s3OutputPath, "expected parameter 's3OutputPath' to be non-null");
-    }
+    private EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs() {}
 
-    private EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
-        this.s3OutputPath = Codegen.empty();
+    private EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs(EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.notificationConfig = $.notificationConfig;
+        this.s3OutputPath = $.s3OutputPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig;
-        private Output<String> s3OutputPath;
+        private EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs();
         }
 
         public Builder(EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.notificationConfig = defaults.notificationConfig;
-    	      this.s3OutputPath = defaults.s3OutputPath;
+            $ = new EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder notificationConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
+
+        public Builder notificationConfig(EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
         }
+
         public Builder s3OutputPath(Output<String> s3OutputPath) {
-            this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
+            $.s3OutputPath = s3OutputPath;
             return this;
         }
+
         public Builder s3OutputPath(String s3OutputPath) {
-            this.s3OutputPath = Output.of(Objects.requireNonNull(s3OutputPath));
-            return this;
-        }        public EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs build() {
-            return new EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs(kmsKeyId, notificationConfig, s3OutputPath);
+            return s3OutputPath(Output.of(s3OutputPath));
+        }
+
+        public EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs build() {
+            $.s3OutputPath = Objects.requireNonNull($.s3OutputPath, "expected parameter 's3OutputPath' to be non-null");
+            return $;
         }
     }
+
 }

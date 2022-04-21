@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ManagedPrefixListEntryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="cidr", required=true)
-      private final Output<String> cidr;
+    private Output<String> cidr;
 
     public Output<String> cidr() {
         return this.cidr;
@@ -31,63 +31,59 @@ public final class ManagedPrefixListEntryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public ManagedPrefixListEntryGetArgs(
-        Output<String> cidr,
-        @Nullable Output<String> description) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-        this.description = description;
-    }
+    private ManagedPrefixListEntryGetArgs() {}
 
-    private ManagedPrefixListEntryGetArgs() {
-        this.cidr = Codegen.empty();
-        this.description = Codegen.empty();
+    private ManagedPrefixListEntryGetArgs(ManagedPrefixListEntryGetArgs $) {
+        this.cidr = $.cidr;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPrefixListEntryGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidr;
-        private @Nullable Output<String> description;
+        private ManagedPrefixListEntryGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPrefixListEntryGetArgs();
         }
 
         public Builder(ManagedPrefixListEntryGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.description = defaults.description;
+            $ = new ManagedPrefixListEntryGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(Output<String> cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder cidr(String cidr) {
-            this.cidr = Output.of(Objects.requireNonNull(cidr));
-            return this;
+            return cidr(Output.of(cidr));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public ManagedPrefixListEntryGetArgs build() {
-            return new ManagedPrefixListEntryGetArgs(cidr, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public ManagedPrefixListEntryGetArgs build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            return $;
         }
     }
+
 }

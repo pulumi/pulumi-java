@@ -17,7 +17,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterArn", required=true)
-      private final String clusterArn;
+    private String clusterArn;
 
     public String clusterArn() {
         return this.clusterArn;
@@ -28,55 +28,52 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetServiceArgs(
-        String clusterArn,
-        String serviceName) {
-        this.clusterArn = Objects.requireNonNull(clusterArn, "expected parameter 'clusterArn' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetServiceArgs() {}
 
-    private GetServiceArgs() {
-        this.clusterArn = null;
-        this.serviceName = null;
+    private GetServiceArgs(GetServiceArgs $) {
+        this.clusterArn = $.clusterArn;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterArn;
-        private String serviceName;
+        private GetServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceArgs();
         }
 
         public Builder(GetServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterArn = defaults.clusterArn;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterArn(String clusterArn) {
-            this.clusterArn = Objects.requireNonNull(clusterArn);
+            $.clusterArn = clusterArn;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetServiceArgs build() {
-            return new GetServiceArgs(clusterArn, serviceName);
+        }
+
+        public GetServiceArgs build() {
+            $.clusterArn = Objects.requireNonNull($.clusterArn, "expected parameter 'clusterArn' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

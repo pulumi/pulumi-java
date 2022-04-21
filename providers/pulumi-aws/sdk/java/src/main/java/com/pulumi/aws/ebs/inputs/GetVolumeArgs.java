@@ -25,10 +25,10 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVolumeFilter> filters;
+    private @Nullable List<GetVolumeFilter> filters;
 
-    public List<GetVolumeFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVolumeFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVolumeArgs(
-        @Nullable List<GetVolumeFilter> filters,
-        @Nullable Boolean mostRecent,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.mostRecent = mostRecent;
-        this.tags = tags;
-    }
+    private GetVolumeArgs() {}
 
-    private GetVolumeArgs() {
-        this.filters = List.of();
-        this.mostRecent = null;
-        this.tags = Map.of();
+    private GetVolumeArgs(GetVolumeArgs $) {
+        this.filters = $.filters;
+        this.mostRecent = $.mostRecent;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetVolumeFilter> filters;
-        private @Nullable Boolean mostRecent;
-        private @Nullable Map<String,String> tags;
+        private GetVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVolumeArgs();
         }
 
         public Builder(GetVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.tags = defaults.tags;
+            $ = new GetVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetVolumeFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVolumeFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVolumeArgs build() {
-            return new GetVolumeArgs(filters, mostRecent, tags);
+        }
+
+        public GetVolumeArgs build() {
+            return $;
         }
     }
+
 }

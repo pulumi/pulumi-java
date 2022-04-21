@@ -6,7 +6,6 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketObjectLockConfigurationRuleDefaultRetentionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class BucketObjectLockConfigurationRuleGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="defaultRetention", required=true)
-      private final Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention;
+    private Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention;
 
     public Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention() {
         return this.defaultRetention;
     }
 
-    public BucketObjectLockConfigurationRuleGetArgs(Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention) {
-        this.defaultRetention = Objects.requireNonNull(defaultRetention, "expected parameter 'defaultRetention' to be non-null");
-    }
+    private BucketObjectLockConfigurationRuleGetArgs() {}
 
-    private BucketObjectLockConfigurationRuleGetArgs() {
-        this.defaultRetention = Codegen.empty();
+    private BucketObjectLockConfigurationRuleGetArgs(BucketObjectLockConfigurationRuleGetArgs $) {
+        this.defaultRetention = $.defaultRetention;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectLockConfigurationRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention;
+        private BucketObjectLockConfigurationRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectLockConfigurationRuleGetArgs();
         }
 
         public Builder(BucketObjectLockConfigurationRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultRetention = defaults.defaultRetention;
+            $ = new BucketObjectLockConfigurationRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultRetention(Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention) {
-            this.defaultRetention = Objects.requireNonNull(defaultRetention);
+            $.defaultRetention = defaultRetention;
             return this;
         }
+
         public Builder defaultRetention(BucketObjectLockConfigurationRuleDefaultRetentionGetArgs defaultRetention) {
-            this.defaultRetention = Output.of(Objects.requireNonNull(defaultRetention));
-            return this;
-        }        public BucketObjectLockConfigurationRuleGetArgs build() {
-            return new BucketObjectLockConfigurationRuleGetArgs(defaultRetention);
+            return defaultRetention(Output.of(defaultRetention));
+        }
+
+        public BucketObjectLockConfigurationRuleGetArgs build() {
+            $.defaultRetention = Objects.requireNonNull($.defaultRetention, "expected parameter 'defaultRetention' to be non-null");
+            return $;
         }
     }
+
 }

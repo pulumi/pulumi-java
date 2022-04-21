@@ -5,7 +5,6 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends com.pulumi.resour
      * 
      */
     @Import(name="entityId", required=true)
-      private final Output<String> entityId;
+    private Output<String> entityId;
 
     public Output<String> entityId() {
         return this.entityId;
@@ -30,63 +29,60 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends com.pulumi.resour
      * 
      */
     @Import(name="metadataContent", required=true)
-      private final Output<String> metadataContent;
+    private Output<String> metadataContent;
 
     public Output<String> metadataContent() {
         return this.metadataContent;
     }
 
-    public DomainSamlOptionsSamlOptionsIdpArgs(
-        Output<String> entityId,
-        Output<String> metadataContent) {
-        this.entityId = Objects.requireNonNull(entityId, "expected parameter 'entityId' to be non-null");
-        this.metadataContent = Objects.requireNonNull(metadataContent, "expected parameter 'metadataContent' to be non-null");
-    }
+    private DomainSamlOptionsSamlOptionsIdpArgs() {}
 
-    private DomainSamlOptionsSamlOptionsIdpArgs() {
-        this.entityId = Codegen.empty();
-        this.metadataContent = Codegen.empty();
+    private DomainSamlOptionsSamlOptionsIdpArgs(DomainSamlOptionsSamlOptionsIdpArgs $) {
+        this.entityId = $.entityId;
+        this.metadataContent = $.metadataContent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSamlOptionsSamlOptionsIdpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> entityId;
-        private Output<String> metadataContent;
+        private DomainSamlOptionsSamlOptionsIdpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSamlOptionsSamlOptionsIdpArgs();
         }
 
         public Builder(DomainSamlOptionsSamlOptionsIdpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityId = defaults.entityId;
-    	      this.metadataContent = defaults.metadataContent;
+            $ = new DomainSamlOptionsSamlOptionsIdpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityId(Output<String> entityId) {
-            this.entityId = Objects.requireNonNull(entityId);
+            $.entityId = entityId;
             return this;
         }
+
         public Builder entityId(String entityId) {
-            this.entityId = Output.of(Objects.requireNonNull(entityId));
-            return this;
+            return entityId(Output.of(entityId));
         }
+
         public Builder metadataContent(Output<String> metadataContent) {
-            this.metadataContent = Objects.requireNonNull(metadataContent);
+            $.metadataContent = metadataContent;
             return this;
         }
+
         public Builder metadataContent(String metadataContent) {
-            this.metadataContent = Output.of(Objects.requireNonNull(metadataContent));
-            return this;
-        }        public DomainSamlOptionsSamlOptionsIdpArgs build() {
-            return new DomainSamlOptionsSamlOptionsIdpArgs(entityId, metadataContent);
+            return metadataContent(Output.of(metadataContent));
+        }
+
+        public DomainSamlOptionsSamlOptionsIdpArgs build() {
+            $.entityId = Objects.requireNonNull($.entityId, "expected parameter 'entityId' to be non-null");
+            $.metadataContent = Objects.requireNonNull($.metadataContent, "expected parameter 'metadataContent' to be non-null");
+            return $;
         }
     }
+
 }

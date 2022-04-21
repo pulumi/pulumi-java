@@ -13,62 +13,59 @@ public final class GetKeyMultiRegionConfigurationReplicaKey extends com.pulumi.r
     public static final GetKeyMultiRegionConfigurationReplicaKey Empty = new GetKeyMultiRegionConfigurationReplicaKey();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetKeyMultiRegionConfigurationReplicaKey(
-        String arn,
-        String region) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetKeyMultiRegionConfigurationReplicaKey() {}
 
-    private GetKeyMultiRegionConfigurationReplicaKey() {
-        this.arn = null;
-        this.region = null;
+    private GetKeyMultiRegionConfigurationReplicaKey(GetKeyMultiRegionConfigurationReplicaKey $) {
+        this.arn = $.arn;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyMultiRegionConfigurationReplicaKey defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String region;
+        private GetKeyMultiRegionConfigurationReplicaKey $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyMultiRegionConfigurationReplicaKey();
         }
 
         public Builder(GetKeyMultiRegionConfigurationReplicaKey defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.region = defaults.region;
+            $ = new GetKeyMultiRegionConfigurationReplicaKey(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetKeyMultiRegionConfigurationReplicaKey build() {
-            return new GetKeyMultiRegionConfigurationReplicaKey(arn, region);
+        }
+
+        public GetKeyMultiRegionConfigurationReplicaKey build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

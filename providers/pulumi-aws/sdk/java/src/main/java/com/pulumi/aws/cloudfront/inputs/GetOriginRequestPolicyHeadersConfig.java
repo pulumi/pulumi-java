@@ -15,65 +15,63 @@ public final class GetOriginRequestPolicyHeadersConfig extends com.pulumi.resour
     public static final GetOriginRequestPolicyHeadersConfig Empty = new GetOriginRequestPolicyHeadersConfig();
 
     @Import(name="headerBehavior", required=true)
-      private final String headerBehavior;
+    private String headerBehavior;
 
     public String headerBehavior() {
         return this.headerBehavior;
     }
 
     @Import(name="headers", required=true)
-      private final List<GetOriginRequestPolicyHeadersConfigHeader> headers;
+    private List<GetOriginRequestPolicyHeadersConfigHeader> headers;
 
     public List<GetOriginRequestPolicyHeadersConfigHeader> headers() {
         return this.headers;
     }
 
-    public GetOriginRequestPolicyHeadersConfig(
-        String headerBehavior,
-        List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
-        this.headerBehavior = Objects.requireNonNull(headerBehavior, "expected parameter 'headerBehavior' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-    }
+    private GetOriginRequestPolicyHeadersConfig() {}
 
-    private GetOriginRequestPolicyHeadersConfig() {
-        this.headerBehavior = null;
-        this.headers = List.of();
+    private GetOriginRequestPolicyHeadersConfig(GetOriginRequestPolicyHeadersConfig $) {
+        this.headerBehavior = $.headerBehavior;
+        this.headers = $.headers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOriginRequestPolicyHeadersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerBehavior;
-        private List<GetOriginRequestPolicyHeadersConfigHeader> headers;
+        private GetOriginRequestPolicyHeadersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOriginRequestPolicyHeadersConfig();
         }
 
         public Builder(GetOriginRequestPolicyHeadersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerBehavior = defaults.headerBehavior;
-    	      this.headers = defaults.headers;
+            $ = new GetOriginRequestPolicyHeadersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder headerBehavior(String headerBehavior) {
-            this.headerBehavior = Objects.requireNonNull(headerBehavior);
+            $.headerBehavior = headerBehavior;
             return this;
         }
+
         public Builder headers(List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(GetOriginRequestPolicyHeadersConfigHeader... headers) {
             return headers(List.of(headers));
-        }        public GetOriginRequestPolicyHeadersConfig build() {
-            return new GetOriginRequestPolicyHeadersConfig(headerBehavior, headers);
+        }
+
+        public GetOriginRequestPolicyHeadersConfig build() {
+            $.headerBehavior = Objects.requireNonNull($.headerBehavior, "expected parameter 'headerBehavior' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            return $;
         }
     }
+
 }

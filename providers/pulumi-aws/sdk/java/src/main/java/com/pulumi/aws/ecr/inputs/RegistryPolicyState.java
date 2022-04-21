@@ -5,9 +5,9 @@ package com.pulumi.aws.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class RegistryPolicyState extends com.pulumi.resources.ResourceArgs
     public static final RegistryPolicyState Empty = new RegistryPolicyState();
 
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -27,63 +27,58 @@ public final class RegistryPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="registryId")
-      private final @Nullable Output<String> registryId;
+    private @Nullable Output<String> registryId;
 
-    public Output<String> registryId() {
-        return this.registryId == null ? Codegen.empty() : this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
-    public RegistryPolicyState(
-        @Nullable Output<String> policy,
-        @Nullable Output<String> registryId) {
-        this.policy = policy;
-        this.registryId = registryId;
-    }
+    private RegistryPolicyState() {}
 
-    private RegistryPolicyState() {
-        this.policy = Codegen.empty();
-        this.registryId = Codegen.empty();
+    private RegistryPolicyState(RegistryPolicyState $) {
+        this.policy = $.policy;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> registryId;
+        private RegistryPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryPolicyState();
         }
 
         public Builder(RegistryPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.registryId = defaults.registryId;
+            $ = new RegistryPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder registryId(@Nullable Output<String> registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
         }
-        public Builder registryId(@Nullable String registryId) {
-            this.registryId = Codegen.ofNullable(registryId);
-            return this;
-        }        public RegistryPolicyState build() {
-            return new RegistryPolicyState(policy, registryId);
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
+        }
+
+        public RegistryPolicyState build() {
+            return $;
         }
     }
+
 }

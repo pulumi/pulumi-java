@@ -6,9 +6,9 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.aws.lambda.inputs.AliasRoutingConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionName")
-      private final @Nullable Output<String> functionName;
+    private @Nullable Output<String> functionName;
 
-    public Output<String> functionName() {
-        return this.functionName == null ? Codegen.empty() : this.functionName;
+    public Optional<Output<String>> functionName() {
+        return Optional.ofNullable(this.functionName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionVersion")
-      private final @Nullable Output<String> functionVersion;
+    private @Nullable Output<String> functionVersion;
 
-    public Output<String> functionVersion() {
-        return this.functionVersion == null ? Codegen.empty() : this.functionVersion;
+    public Optional<Output<String>> functionVersion() {
+        return Optional.ofNullable(this.functionVersion);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invokeArn")
-      private final @Nullable Output<String> invokeArn;
+    private @Nullable Output<String> invokeArn;
 
-    public Output<String> invokeArn() {
-        return this.invokeArn == null ? Codegen.empty() : this.invokeArn;
+    public Optional<Output<String>> invokeArn() {
+        return Optional.ofNullable(this.invokeArn);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,128 +87,108 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingConfig")
-      private final @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
+    private @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
 
-    public Output<AliasRoutingConfigGetArgs> routingConfig() {
-        return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
+    public Optional<Output<AliasRoutingConfigGetArgs>> routingConfig() {
+        return Optional.ofNullable(this.routingConfig);
     }
 
-    public AliasState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> functionName,
-        @Nullable Output<String> functionVersion,
-        @Nullable Output<String> invokeArn,
-        @Nullable Output<String> name,
-        @Nullable Output<AliasRoutingConfigGetArgs> routingConfig) {
-        this.arn = arn;
-        this.description = description;
-        this.functionName = functionName;
-        this.functionVersion = functionVersion;
-        this.invokeArn = invokeArn;
-        this.name = name;
-        this.routingConfig = routingConfig;
-    }
+    private AliasState() {}
 
-    private AliasState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.functionName = Codegen.empty();
-        this.functionVersion = Codegen.empty();
-        this.invokeArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.routingConfig = Codegen.empty();
+    private AliasState(AliasState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.functionName = $.functionName;
+        this.functionVersion = $.functionVersion;
+        this.invokeArn = $.invokeArn;
+        this.name = $.name;
+        this.routingConfig = $.routingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> functionName;
-        private @Nullable Output<String> functionVersion;
-        private @Nullable Output<String> invokeArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
+        private AliasState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasState();
         }
 
         public Builder(AliasState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.functionName = defaults.functionName;
-    	      this.functionVersion = defaults.functionVersion;
-    	      this.invokeArn = defaults.invokeArn;
-    	      this.name = defaults.name;
-    	      this.routingConfig = defaults.routingConfig;
+            $ = new AliasState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder functionName(@Nullable Output<String> functionName) {
-            this.functionName = functionName;
+            $.functionName = functionName;
             return this;
         }
-        public Builder functionName(@Nullable String functionName) {
-            this.functionName = Codegen.ofNullable(functionName);
-            return this;
+
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
         }
+
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
-            this.functionVersion = functionVersion;
+            $.functionVersion = functionVersion;
             return this;
         }
-        public Builder functionVersion(@Nullable String functionVersion) {
-            this.functionVersion = Codegen.ofNullable(functionVersion);
-            return this;
+
+        public Builder functionVersion(String functionVersion) {
+            return functionVersion(Output.of(functionVersion));
         }
+
         public Builder invokeArn(@Nullable Output<String> invokeArn) {
-            this.invokeArn = invokeArn;
+            $.invokeArn = invokeArn;
             return this;
         }
-        public Builder invokeArn(@Nullable String invokeArn) {
-            this.invokeArn = Codegen.ofNullable(invokeArn);
-            return this;
+
+        public Builder invokeArn(String invokeArn) {
+            return invokeArn(Output.of(invokeArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder routingConfig(@Nullable Output<AliasRoutingConfigGetArgs> routingConfig) {
-            this.routingConfig = routingConfig;
+            $.routingConfig = routingConfig;
             return this;
         }
-        public Builder routingConfig(@Nullable AliasRoutingConfigGetArgs routingConfig) {
-            this.routingConfig = Codegen.ofNullable(routingConfig);
-            return this;
-        }        public AliasState build() {
-            return new AliasState(arn, description, functionName, functionVersion, invokeArn, name, routingConfig);
+
+        public Builder routingConfig(AliasRoutingConfigGetArgs routingConfig) {
+            return routingConfig(Output.of(routingConfig));
+        }
+
+        public AliasState build() {
+            return $;
         }
     }
+
 }

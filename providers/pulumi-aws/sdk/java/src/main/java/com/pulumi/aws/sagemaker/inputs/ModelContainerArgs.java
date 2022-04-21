@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.ModelContainerImageConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="containerHostname")
-      private final @Nullable Output<String> containerHostname;
+    private @Nullable Output<String> containerHostname;
 
-    public Output<String> containerHostname() {
-        return this.containerHostname == null ? Codegen.empty() : this.containerHostname;
+    public Optional<Output<String>> containerHostname() {
+        return Optional.ofNullable(this.containerHostname);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<Map<String,String>> environment;
+    private @Nullable Output<Map<String,String>> environment;
 
-    public Output<Map<String,String>> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<Map<String,String>>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -56,10 +56,10 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageConfig")
-      private final @Nullable Output<ModelContainerImageConfigArgs> imageConfig;
+    private @Nullable Output<ModelContainerImageConfigArgs> imageConfig;
 
-    public Output<ModelContainerImageConfigArgs> imageConfig() {
-        return this.imageConfig == null ? Codegen.empty() : this.imageConfig;
+    public Optional<Output<ModelContainerImageConfigArgs>> imageConfig() {
+        return Optional.ofNullable(this.imageConfig);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -78,115 +78,99 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="modelDataUrl")
-      private final @Nullable Output<String> modelDataUrl;
+    private @Nullable Output<String> modelDataUrl;
 
-    public Output<String> modelDataUrl() {
-        return this.modelDataUrl == null ? Codegen.empty() : this.modelDataUrl;
+    public Optional<Output<String>> modelDataUrl() {
+        return Optional.ofNullable(this.modelDataUrl);
     }
 
-    public ModelContainerArgs(
-        @Nullable Output<String> containerHostname,
-        @Nullable Output<Map<String,String>> environment,
-        Output<String> image,
-        @Nullable Output<ModelContainerImageConfigArgs> imageConfig,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> modelDataUrl) {
-        this.containerHostname = containerHostname;
-        this.environment = environment;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.imageConfig = imageConfig;
-        this.mode = mode;
-        this.modelDataUrl = modelDataUrl;
-    }
+    private ModelContainerArgs() {}
 
-    private ModelContainerArgs() {
-        this.containerHostname = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.image = Codegen.empty();
-        this.imageConfig = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.modelDataUrl = Codegen.empty();
+    private ModelContainerArgs(ModelContainerArgs $) {
+        this.containerHostname = $.containerHostname;
+        this.environment = $.environment;
+        this.image = $.image;
+        this.imageConfig = $.imageConfig;
+        this.mode = $.mode;
+        this.modelDataUrl = $.modelDataUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerHostname;
-        private @Nullable Output<Map<String,String>> environment;
-        private Output<String> image;
-        private @Nullable Output<ModelContainerImageConfigArgs> imageConfig;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> modelDataUrl;
+        private ModelContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelContainerArgs();
         }
 
         public Builder(ModelContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerHostname = defaults.containerHostname;
-    	      this.environment = defaults.environment;
-    	      this.image = defaults.image;
-    	      this.imageConfig = defaults.imageConfig;
-    	      this.mode = defaults.mode;
-    	      this.modelDataUrl = defaults.modelDataUrl;
+            $ = new ModelContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerHostname(@Nullable Output<String> containerHostname) {
-            this.containerHostname = containerHostname;
+            $.containerHostname = containerHostname;
             return this;
         }
-        public Builder containerHostname(@Nullable String containerHostname) {
-            this.containerHostname = Codegen.ofNullable(containerHostname);
-            return this;
+
+        public Builder containerHostname(String containerHostname) {
+            return containerHostname(Output.of(containerHostname));
         }
+
         public Builder environment(@Nullable Output<Map<String,String>> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable Map<String,String> environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(Map<String,String> environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder imageConfig(@Nullable Output<ModelContainerImageConfigArgs> imageConfig) {
-            this.imageConfig = imageConfig;
+            $.imageConfig = imageConfig;
             return this;
         }
-        public Builder imageConfig(@Nullable ModelContainerImageConfigArgs imageConfig) {
-            this.imageConfig = Codegen.ofNullable(imageConfig);
-            return this;
+
+        public Builder imageConfig(ModelContainerImageConfigArgs imageConfig) {
+            return imageConfig(Output.of(imageConfig));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder modelDataUrl(@Nullable Output<String> modelDataUrl) {
-            this.modelDataUrl = modelDataUrl;
+            $.modelDataUrl = modelDataUrl;
             return this;
         }
-        public Builder modelDataUrl(@Nullable String modelDataUrl) {
-            this.modelDataUrl = Codegen.ofNullable(modelDataUrl);
-            return this;
-        }        public ModelContainerArgs build() {
-            return new ModelContainerArgs(containerHostname, environment, image, imageConfig, mode, modelDataUrl);
+
+        public Builder modelDataUrl(String modelDataUrl) {
+            return modelDataUrl(Output.of(modelDataUrl));
+        }
+
+        public ModelContainerArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            return $;
         }
     }
+
 }

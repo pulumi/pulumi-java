@@ -5,12 +5,12 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,17 +25,17 @@ public final class DefaultVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableClassiclink")
-      private final @Nullable Output<Boolean> enableClassiclink;
+    private @Nullable Output<Boolean> enableClassiclink;
 
-    public Output<Boolean> enableClassiclink() {
-        return this.enableClassiclink == null ? Codegen.empty() : this.enableClassiclink;
+    public Optional<Output<Boolean>> enableClassiclink() {
+        return Optional.ofNullable(this.enableClassiclink);
     }
 
     @Import(name="enableClassiclinkDnsSupport")
-      private final @Nullable Output<Boolean> enableClassiclinkDnsSupport;
+    private @Nullable Output<Boolean> enableClassiclinkDnsSupport;
 
-    public Output<Boolean> enableClassiclinkDnsSupport() {
-        return this.enableClassiclinkDnsSupport == null ? Codegen.empty() : this.enableClassiclinkDnsSupport;
+    public Optional<Output<Boolean>> enableClassiclinkDnsSupport() {
+        return Optional.ofNullable(this.enableClassiclinkDnsSupport);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DefaultVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDnsHostnames")
-      private final @Nullable Output<Boolean> enableDnsHostnames;
+    private @Nullable Output<Boolean> enableDnsHostnames;
 
-    public Output<Boolean> enableDnsHostnames() {
-        return this.enableDnsHostnames == null ? Codegen.empty() : this.enableDnsHostnames;
+    public Optional<Output<Boolean>> enableDnsHostnames() {
+        return Optional.ofNullable(this.enableDnsHostnames);
     }
 
     /**
@@ -54,24 +54,24 @@ public final class DefaultVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDnsSupport")
-      private final @Nullable Output<Boolean> enableDnsSupport;
+    private @Nullable Output<Boolean> enableDnsSupport;
 
-    public Output<Boolean> enableDnsSupport() {
-        return this.enableDnsSupport == null ? Codegen.empty() : this.enableDnsSupport;
+    public Optional<Output<Boolean>> enableDnsSupport() {
+        return Optional.ofNullable(this.enableDnsSupport);
     }
 
     @Import(name="ipv4IpamPoolId")
-      private final @Nullable Output<String> ipv4IpamPoolId;
+    private @Nullable Output<String> ipv4IpamPoolId;
 
-    public Output<String> ipv4IpamPoolId() {
-        return this.ipv4IpamPoolId == null ? Codegen.empty() : this.ipv4IpamPoolId;
+    public Optional<Output<String>> ipv4IpamPoolId() {
+        return Optional.ofNullable(this.ipv4IpamPoolId);
     }
 
     @Import(name="ipv4NetmaskLength")
-      private final @Nullable Output<Integer> ipv4NetmaskLength;
+    private @Nullable Output<Integer> ipv4NetmaskLength;
 
-    public Output<Integer> ipv4NetmaskLength() {
-        return this.ipv4NetmaskLength == null ? Codegen.empty() : this.ipv4NetmaskLength;
+    public Optional<Output<Integer>> ipv4NetmaskLength() {
+        return Optional.ofNullable(this.ipv4NetmaskLength);
     }
 
     /**
@@ -79,31 +79,31 @@ public final class DefaultVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv6CidrBlock")
-      private final @Nullable Output<String> ipv6CidrBlock;
+    private @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
+    public Optional<Output<String>> ipv6CidrBlock() {
+        return Optional.ofNullable(this.ipv6CidrBlock);
     }
 
     @Import(name="ipv6CidrBlockNetworkBorderGroup")
-      private final @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
+    private @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
 
-    public Output<String> ipv6CidrBlockNetworkBorderGroup() {
-        return this.ipv6CidrBlockNetworkBorderGroup == null ? Codegen.empty() : this.ipv6CidrBlockNetworkBorderGroup;
+    public Optional<Output<String>> ipv6CidrBlockNetworkBorderGroup() {
+        return Optional.ofNullable(this.ipv6CidrBlockNetworkBorderGroup);
     }
 
     @Import(name="ipv6IpamPoolId")
-      private final @Nullable Output<String> ipv6IpamPoolId;
+    private @Nullable Output<String> ipv6IpamPoolId;
 
-    public Output<String> ipv6IpamPoolId() {
-        return this.ipv6IpamPoolId == null ? Codegen.empty() : this.ipv6IpamPoolId;
+    public Optional<Output<String>> ipv6IpamPoolId() {
+        return Optional.ofNullable(this.ipv6IpamPoolId);
     }
 
     @Import(name="ipv6NetmaskLength")
-      private final @Nullable Output<Integer> ipv6NetmaskLength;
+    private @Nullable Output<Integer> ipv6NetmaskLength;
 
-    public Output<Integer> ipv6NetmaskLength() {
-        return this.ipv6NetmaskLength == null ? Codegen.empty() : this.ipv6NetmaskLength;
+    public Optional<Output<Integer>> ipv6NetmaskLength() {
+        return Optional.ofNullable(this.ipv6NetmaskLength);
     }
 
     /**
@@ -111,180 +111,148 @@ public final class DefaultVpcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DefaultVpcArgs(
-        @Nullable Output<Boolean> enableClassiclink,
-        @Nullable Output<Boolean> enableClassiclinkDnsSupport,
-        @Nullable Output<Boolean> enableDnsHostnames,
-        @Nullable Output<Boolean> enableDnsSupport,
-        @Nullable Output<String> ipv4IpamPoolId,
-        @Nullable Output<Integer> ipv4NetmaskLength,
-        @Nullable Output<String> ipv6CidrBlock,
-        @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup,
-        @Nullable Output<String> ipv6IpamPoolId,
-        @Nullable Output<Integer> ipv6NetmaskLength,
-        @Nullable Output<Map<String,String>> tags) {
-        this.enableClassiclink = enableClassiclink;
-        this.enableClassiclinkDnsSupport = enableClassiclinkDnsSupport;
-        this.enableDnsHostnames = enableDnsHostnames;
-        this.enableDnsSupport = enableDnsSupport;
-        this.ipv4IpamPoolId = ipv4IpamPoolId;
-        this.ipv4NetmaskLength = ipv4NetmaskLength;
-        this.ipv6CidrBlock = ipv6CidrBlock;
-        this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
-        this.ipv6IpamPoolId = ipv6IpamPoolId;
-        this.ipv6NetmaskLength = ipv6NetmaskLength;
-        this.tags = tags;
-    }
+    private DefaultVpcArgs() {}
 
-    private DefaultVpcArgs() {
-        this.enableClassiclink = Codegen.empty();
-        this.enableClassiclinkDnsSupport = Codegen.empty();
-        this.enableDnsHostnames = Codegen.empty();
-        this.enableDnsSupport = Codegen.empty();
-        this.ipv4IpamPoolId = Codegen.empty();
-        this.ipv4NetmaskLength = Codegen.empty();
-        this.ipv6CidrBlock = Codegen.empty();
-        this.ipv6CidrBlockNetworkBorderGroup = Codegen.empty();
-        this.ipv6IpamPoolId = Codegen.empty();
-        this.ipv6NetmaskLength = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DefaultVpcArgs(DefaultVpcArgs $) {
+        this.enableClassiclink = $.enableClassiclink;
+        this.enableClassiclinkDnsSupport = $.enableClassiclinkDnsSupport;
+        this.enableDnsHostnames = $.enableDnsHostnames;
+        this.enableDnsSupport = $.enableDnsSupport;
+        this.ipv4IpamPoolId = $.ipv4IpamPoolId;
+        this.ipv4NetmaskLength = $.ipv4NetmaskLength;
+        this.ipv6CidrBlock = $.ipv6CidrBlock;
+        this.ipv6CidrBlockNetworkBorderGroup = $.ipv6CidrBlockNetworkBorderGroup;
+        this.ipv6IpamPoolId = $.ipv6IpamPoolId;
+        this.ipv6NetmaskLength = $.ipv6NetmaskLength;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultVpcArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableClassiclink;
-        private @Nullable Output<Boolean> enableClassiclinkDnsSupport;
-        private @Nullable Output<Boolean> enableDnsHostnames;
-        private @Nullable Output<Boolean> enableDnsSupport;
-        private @Nullable Output<String> ipv4IpamPoolId;
-        private @Nullable Output<Integer> ipv4NetmaskLength;
-        private @Nullable Output<String> ipv6CidrBlock;
-        private @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
-        private @Nullable Output<String> ipv6IpamPoolId;
-        private @Nullable Output<Integer> ipv6NetmaskLength;
-        private @Nullable Output<Map<String,String>> tags;
+        private DefaultVpcArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultVpcArgs();
         }
 
         public Builder(DefaultVpcArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableClassiclink = defaults.enableClassiclink;
-    	      this.enableClassiclinkDnsSupport = defaults.enableClassiclinkDnsSupport;
-    	      this.enableDnsHostnames = defaults.enableDnsHostnames;
-    	      this.enableDnsSupport = defaults.enableDnsSupport;
-    	      this.ipv4IpamPoolId = defaults.ipv4IpamPoolId;
-    	      this.ipv4NetmaskLength = defaults.ipv4NetmaskLength;
-    	      this.ipv6CidrBlock = defaults.ipv6CidrBlock;
-    	      this.ipv6CidrBlockNetworkBorderGroup = defaults.ipv6CidrBlockNetworkBorderGroup;
-    	      this.ipv6IpamPoolId = defaults.ipv6IpamPoolId;
-    	      this.ipv6NetmaskLength = defaults.ipv6NetmaskLength;
-    	      this.tags = defaults.tags;
+            $ = new DefaultVpcArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableClassiclink(@Nullable Output<Boolean> enableClassiclink) {
-            this.enableClassiclink = enableClassiclink;
+            $.enableClassiclink = enableClassiclink;
             return this;
         }
-        public Builder enableClassiclink(@Nullable Boolean enableClassiclink) {
-            this.enableClassiclink = Codegen.ofNullable(enableClassiclink);
-            return this;
+
+        public Builder enableClassiclink(Boolean enableClassiclink) {
+            return enableClassiclink(Output.of(enableClassiclink));
         }
+
         public Builder enableClassiclinkDnsSupport(@Nullable Output<Boolean> enableClassiclinkDnsSupport) {
-            this.enableClassiclinkDnsSupport = enableClassiclinkDnsSupport;
+            $.enableClassiclinkDnsSupport = enableClassiclinkDnsSupport;
             return this;
         }
-        public Builder enableClassiclinkDnsSupport(@Nullable Boolean enableClassiclinkDnsSupport) {
-            this.enableClassiclinkDnsSupport = Codegen.ofNullable(enableClassiclinkDnsSupport);
-            return this;
+
+        public Builder enableClassiclinkDnsSupport(Boolean enableClassiclinkDnsSupport) {
+            return enableClassiclinkDnsSupport(Output.of(enableClassiclinkDnsSupport));
         }
+
         public Builder enableDnsHostnames(@Nullable Output<Boolean> enableDnsHostnames) {
-            this.enableDnsHostnames = enableDnsHostnames;
+            $.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
-        public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
-            this.enableDnsHostnames = Codegen.ofNullable(enableDnsHostnames);
-            return this;
+
+        public Builder enableDnsHostnames(Boolean enableDnsHostnames) {
+            return enableDnsHostnames(Output.of(enableDnsHostnames));
         }
+
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
-            this.enableDnsSupport = enableDnsSupport;
+            $.enableDnsSupport = enableDnsSupport;
             return this;
         }
-        public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
-            this.enableDnsSupport = Codegen.ofNullable(enableDnsSupport);
-            return this;
+
+        public Builder enableDnsSupport(Boolean enableDnsSupport) {
+            return enableDnsSupport(Output.of(enableDnsSupport));
         }
+
         public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
-            this.ipv4IpamPoolId = ipv4IpamPoolId;
+            $.ipv4IpamPoolId = ipv4IpamPoolId;
             return this;
         }
-        public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
-            this.ipv4IpamPoolId = Codegen.ofNullable(ipv4IpamPoolId);
-            return this;
+
+        public Builder ipv4IpamPoolId(String ipv4IpamPoolId) {
+            return ipv4IpamPoolId(Output.of(ipv4IpamPoolId));
         }
+
         public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
-            this.ipv4NetmaskLength = ipv4NetmaskLength;
+            $.ipv4NetmaskLength = ipv4NetmaskLength;
             return this;
         }
-        public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
-            this.ipv4NetmaskLength = Codegen.ofNullable(ipv4NetmaskLength);
-            return this;
+
+        public Builder ipv4NetmaskLength(Integer ipv4NetmaskLength) {
+            return ipv4NetmaskLength(Output.of(ipv4NetmaskLength));
         }
+
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
+            $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
-            return this;
+
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            return ipv6CidrBlock(Output.of(ipv6CidrBlock));
         }
+
         public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable Output<String> ipv6CidrBlockNetworkBorderGroup) {
-            this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
+            $.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
             return this;
         }
-        public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable String ipv6CidrBlockNetworkBorderGroup) {
-            this.ipv6CidrBlockNetworkBorderGroup = Codegen.ofNullable(ipv6CidrBlockNetworkBorderGroup);
-            return this;
+
+        public Builder ipv6CidrBlockNetworkBorderGroup(String ipv6CidrBlockNetworkBorderGroup) {
+            return ipv6CidrBlockNetworkBorderGroup(Output.of(ipv6CidrBlockNetworkBorderGroup));
         }
+
         public Builder ipv6IpamPoolId(@Nullable Output<String> ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = ipv6IpamPoolId;
+            $.ipv6IpamPoolId = ipv6IpamPoolId;
             return this;
         }
-        public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = Codegen.ofNullable(ipv6IpamPoolId);
-            return this;
+
+        public Builder ipv6IpamPoolId(String ipv6IpamPoolId) {
+            return ipv6IpamPoolId(Output.of(ipv6IpamPoolId));
         }
+
         public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = ipv6NetmaskLength;
+            $.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
-        public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = Codegen.ofNullable(ipv6NetmaskLength);
-            return this;
+
+        public Builder ipv6NetmaskLength(Integer ipv6NetmaskLength) {
+            return ipv6NetmaskLength(Output.of(ipv6NetmaskLength));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DefaultVpcArgs build() {
-            return new DefaultVpcArgs(enableClassiclink, enableClassiclinkDnsSupport, enableDnsHostnames, enableDnsSupport, ipv4IpamPoolId, ipv4NetmaskLength, ipv6CidrBlock, ipv6CidrBlockNetworkBorderGroup, ipv6IpamPoolId, ipv6NetmaskLength, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DefaultVpcArgs build() {
+            return $;
         }
     }
+
 }

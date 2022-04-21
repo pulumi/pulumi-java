@@ -5,11 +5,11 @@ package com.pulumi.aws.rds;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbProxyEndpointName", required=true)
-      private final Output<String> dbProxyEndpointName;
+    private Output<String> dbProxyEndpointName;
 
     public Output<String> dbProxyEndpointName() {
         return this.dbProxyEndpointName;
@@ -33,7 +33,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbProxyName", required=true)
-      private final Output<String> dbProxyName;
+    private Output<String> dbProxyName;
 
     public Output<String> dbProxyName() {
         return this.dbProxyName;
@@ -44,10 +44,10 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetRole")
-      private final @Nullable Output<String> targetRole;
+    private @Nullable Output<String> targetRole;
 
-    public Output<String> targetRole() {
-        return this.targetRole == null ? Codegen.empty() : this.targetRole;
+    public Optional<Output<String>> targetRole() {
+        return Optional.ofNullable(this.targetRole);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSecurityGroupIds")
-      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
+    private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
+    public Optional<Output<List<String>>> vpcSecurityGroupIds() {
+        return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
 
     /**
@@ -77,121 +77,109 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSubnetIds", required=true)
-      private final Output<List<String>> vpcSubnetIds;
+    private Output<List<String>> vpcSubnetIds;
 
     public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
-    public ProxyEndpointArgs(
-        Output<String> dbProxyEndpointName,
-        Output<String> dbProxyName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> targetRole,
-        @Nullable Output<List<String>> vpcSecurityGroupIds,
-        Output<List<String>> vpcSubnetIds) {
-        this.dbProxyEndpointName = Objects.requireNonNull(dbProxyEndpointName, "expected parameter 'dbProxyEndpointName' to be non-null");
-        this.dbProxyName = Objects.requireNonNull(dbProxyName, "expected parameter 'dbProxyName' to be non-null");
-        this.tags = tags;
-        this.targetRole = targetRole;
-        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
-        this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds, "expected parameter 'vpcSubnetIds' to be non-null");
-    }
+    private ProxyEndpointArgs() {}
 
-    private ProxyEndpointArgs() {
-        this.dbProxyEndpointName = Codegen.empty();
-        this.dbProxyName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetRole = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
-        this.vpcSubnetIds = Codegen.empty();
+    private ProxyEndpointArgs(ProxyEndpointArgs $) {
+        this.dbProxyEndpointName = $.dbProxyEndpointName;
+        this.dbProxyName = $.dbProxyName;
+        this.tags = $.tags;
+        this.targetRole = $.targetRole;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
+        this.vpcSubnetIds = $.vpcSubnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dbProxyEndpointName;
-        private Output<String> dbProxyName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> targetRole;
-        private @Nullable Output<List<String>> vpcSecurityGroupIds;
-        private Output<List<String>> vpcSubnetIds;
+        private ProxyEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyEndpointArgs();
         }
 
         public Builder(ProxyEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbProxyEndpointName = defaults.dbProxyEndpointName;
-    	      this.dbProxyName = defaults.dbProxyName;
-    	      this.tags = defaults.tags;
-    	      this.targetRole = defaults.targetRole;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
-    	      this.vpcSubnetIds = defaults.vpcSubnetIds;
+            $ = new ProxyEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbProxyEndpointName(Output<String> dbProxyEndpointName) {
-            this.dbProxyEndpointName = Objects.requireNonNull(dbProxyEndpointName);
+            $.dbProxyEndpointName = dbProxyEndpointName;
             return this;
         }
+
         public Builder dbProxyEndpointName(String dbProxyEndpointName) {
-            this.dbProxyEndpointName = Output.of(Objects.requireNonNull(dbProxyEndpointName));
-            return this;
+            return dbProxyEndpointName(Output.of(dbProxyEndpointName));
         }
+
         public Builder dbProxyName(Output<String> dbProxyName) {
-            this.dbProxyName = Objects.requireNonNull(dbProxyName);
+            $.dbProxyName = dbProxyName;
             return this;
         }
+
         public Builder dbProxyName(String dbProxyName) {
-            this.dbProxyName = Output.of(Objects.requireNonNull(dbProxyName));
-            return this;
+            return dbProxyName(Output.of(dbProxyName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetRole(@Nullable Output<String> targetRole) {
-            this.targetRole = targetRole;
+            $.targetRole = targetRole;
             return this;
         }
-        public Builder targetRole(@Nullable String targetRole) {
-            this.targetRole = Codegen.ofNullable(targetRole);
-            return this;
+
+        public Builder targetRole(String targetRole) {
+            return targetRole(Output.of(targetRole));
         }
+
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
-            return this;
+
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
-            this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
+            $.vpcSubnetIds = vpcSubnetIds;
             return this;
         }
+
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
-            this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
-            return this;
+            return vpcSubnetIds(Output.of(vpcSubnetIds));
         }
+
         public Builder vpcSubnetIds(String... vpcSubnetIds) {
             return vpcSubnetIds(List.of(vpcSubnetIds));
-        }        public ProxyEndpointArgs build() {
-            return new ProxyEndpointArgs(dbProxyEndpointName, dbProxyName, tags, targetRole, vpcSecurityGroupIds, vpcSubnetIds);
+        }
+
+        public ProxyEndpointArgs build() {
+            $.dbProxyEndpointName = Objects.requireNonNull($.dbProxyEndpointName, "expected parameter 'dbProxyEndpointName' to be non-null");
+            $.dbProxyName = Objects.requireNonNull($.dbProxyName, "expected parameter 'dbProxyName' to be non-null");
+            $.vpcSubnetIds = Objects.requireNonNull($.vpcSubnetIds, "expected parameter 'vpcSubnetIds' to be non-null");
+            return $;
         }
     }
+
 }

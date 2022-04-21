@@ -14,62 +14,59 @@ public final class GetBrokerEncryptionOption extends com.pulumi.resources.Invoke
     public static final GetBrokerEncryptionOption Empty = new GetBrokerEncryptionOption();
 
     @Import(name="kmsKeyId", required=true)
-      private final String kmsKeyId;
+    private String kmsKeyId;
 
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
 
     @Import(name="useAwsOwnedKey", required=true)
-      private final Boolean useAwsOwnedKey;
+    private Boolean useAwsOwnedKey;
 
     public Boolean useAwsOwnedKey() {
         return this.useAwsOwnedKey;
     }
 
-    public GetBrokerEncryptionOption(
-        String kmsKeyId,
-        Boolean useAwsOwnedKey) {
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
-        this.useAwsOwnedKey = Objects.requireNonNull(useAwsOwnedKey, "expected parameter 'useAwsOwnedKey' to be non-null");
-    }
+    private GetBrokerEncryptionOption() {}
 
-    private GetBrokerEncryptionOption() {
-        this.kmsKeyId = null;
-        this.useAwsOwnedKey = null;
+    private GetBrokerEncryptionOption(GetBrokerEncryptionOption $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.useAwsOwnedKey = $.useAwsOwnedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerEncryptionOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyId;
-        private Boolean useAwsOwnedKey;
+        private GetBrokerEncryptionOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerEncryptionOption();
         }
 
         public Builder(GetBrokerEncryptionOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.useAwsOwnedKey = defaults.useAwsOwnedKey;
+            $ = new GetBrokerEncryptionOption(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(String kmsKeyId) {
-            this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder useAwsOwnedKey(Boolean useAwsOwnedKey) {
-            this.useAwsOwnedKey = Objects.requireNonNull(useAwsOwnedKey);
+            $.useAwsOwnedKey = useAwsOwnedKey;
             return this;
-        }        public GetBrokerEncryptionOption build() {
-            return new GetBrokerEncryptionOption(kmsKeyId, useAwsOwnedKey);
+        }
+
+        public GetBrokerEncryptionOption build() {
+            $.kmsKeyId = Objects.requireNonNull($.kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
+            $.useAwsOwnedKey = Objects.requireNonNull($.useAwsOwnedKey, "expected parameter 'useAwsOwnedKey' to be non-null");
+            return $;
         }
     }
+
 }

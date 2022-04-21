@@ -17,7 +17,7 @@ public final class GetLaunchTemplateIamInstanceProfile extends com.pulumi.resour
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -28,55 +28,52 @@ public final class GetLaunchTemplateIamInstanceProfile extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetLaunchTemplateIamInstanceProfile(
-        String arn,
-        String name) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetLaunchTemplateIamInstanceProfile() {}
 
-    private GetLaunchTemplateIamInstanceProfile() {
-        this.arn = null;
-        this.name = null;
+    private GetLaunchTemplateIamInstanceProfile(GetLaunchTemplateIamInstanceProfile $) {
+        this.arn = $.arn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateIamInstanceProfile defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String name;
+        private GetLaunchTemplateIamInstanceProfile $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateIamInstanceProfile();
         }
 
         public Builder(GetLaunchTemplateIamInstanceProfile defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
+            $ = new GetLaunchTemplateIamInstanceProfile(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetLaunchTemplateIamInstanceProfile build() {
-            return new GetLaunchTemplateIamInstanceProfile(arn, name);
+        }
+
+        public GetLaunchTemplateIamInstanceProfile build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

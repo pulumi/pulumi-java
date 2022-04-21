@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="attachmentId")
-      private final @Nullable Output<String> attachmentId;
+    private @Nullable Output<String> attachmentId;
 
-    public Output<String> attachmentId() {
-        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
+    public Optional<Output<String>> attachmentId() {
+        return Optional.ofNullable(this.attachmentId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="deviceIndex")
-      private final @Nullable Output<Integer> deviceIndex;
+    private @Nullable Output<Integer> deviceIndex;
 
-    public Output<Integer> deviceIndex() {
-        return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
+    public Optional<Output<Integer>> deviceIndex() {
+        return Optional.ofNullable(this.deviceIndex);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public NetworkInterfaceAttachmentState(
-        @Nullable Output<String> attachmentId,
-        @Nullable Output<Integer> deviceIndex,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<String> status) {
-        this.attachmentId = attachmentId;
-        this.deviceIndex = deviceIndex;
-        this.instanceId = instanceId;
-        this.networkInterfaceId = networkInterfaceId;
-        this.status = status;
-    }
+    private NetworkInterfaceAttachmentState() {}
 
-    private NetworkInterfaceAttachmentState() {
-        this.attachmentId = Codegen.empty();
-        this.deviceIndex = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.status = Codegen.empty();
+    private NetworkInterfaceAttachmentState(NetworkInterfaceAttachmentState $) {
+        this.attachmentId = $.attachmentId;
+        this.deviceIndex = $.deviceIndex;
+        this.instanceId = $.instanceId;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attachmentId;
-        private @Nullable Output<Integer> deviceIndex;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<String> status;
+        private NetworkInterfaceAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceAttachmentState();
         }
 
         public Builder(NetworkInterfaceAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentId = defaults.attachmentId;
-    	      this.deviceIndex = defaults.deviceIndex;
-    	      this.instanceId = defaults.instanceId;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.status = defaults.status;
+            $ = new NetworkInterfaceAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentId(@Nullable Output<String> attachmentId) {
-            this.attachmentId = attachmentId;
+            $.attachmentId = attachmentId;
             return this;
         }
-        public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Codegen.ofNullable(attachmentId);
-            return this;
+
+        public Builder attachmentId(String attachmentId) {
+            return attachmentId(Output.of(attachmentId));
         }
+
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
-            this.deviceIndex = deviceIndex;
+            $.deviceIndex = deviceIndex;
             return this;
         }
-        public Builder deviceIndex(@Nullable Integer deviceIndex) {
-            this.deviceIndex = Codegen.ofNullable(deviceIndex);
-            return this;
+
+        public Builder deviceIndex(Integer deviceIndex) {
+            return deviceIndex(Output.of(deviceIndex));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public NetworkInterfaceAttachmentState build() {
-            return new NetworkInterfaceAttachmentState(attachmentId, deviceIndex, instanceId, networkInterfaceId, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public NetworkInterfaceAttachmentState build() {
+            return $;
         }
     }
+
 }

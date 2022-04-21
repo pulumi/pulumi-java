@@ -22,10 +22,10 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetKeyPairFilter> filters;
+    private @Nullable List<GetKeyPairFilter> filters;
 
-    public List<GetKeyPairFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetKeyPairFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     @Import(name="keyPairId")
-      private final @Nullable String keyPairId;
+    private @Nullable String keyPairId;
 
     public Optional<String> keyPairId() {
-        return this.keyPairId == null ? Optional.empty() : Optional.ofNullable(this.keyPairId);
+        return Optional.ofNullable(this.keyPairId);
     }
 
     /**
@@ -51,76 +51,66 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetKeyPairArgs(
-        @Nullable List<GetKeyPairFilter> filters,
-        @Nullable String keyName,
-        @Nullable String keyPairId,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.keyName = keyName;
-        this.keyPairId = keyPairId;
-        this.tags = tags;
-    }
+    private GetKeyPairArgs() {}
 
-    private GetKeyPairArgs() {
-        this.filters = List.of();
-        this.keyName = null;
-        this.keyPairId = null;
-        this.tags = Map.of();
+    private GetKeyPairArgs(GetKeyPairArgs $) {
+        this.filters = $.filters;
+        this.keyName = $.keyName;
+        this.keyPairId = $.keyPairId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyPairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetKeyPairFilter> filters;
-        private @Nullable String keyName;
-        private @Nullable String keyPairId;
-        private @Nullable Map<String,String> tags;
+        private GetKeyPairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyPairArgs();
         }
 
         public Builder(GetKeyPairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.keyName = defaults.keyName;
-    	      this.keyPairId = defaults.keyPairId;
-    	      this.tags = defaults.tags;
+            $ = new GetKeyPairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetKeyPairFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetKeyPairFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyPairId(@Nullable String keyPairId) {
-            this.keyPairId = keyPairId;
+            $.keyPairId = keyPairId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetKeyPairArgs build() {
-            return new GetKeyPairArgs(filters, keyName, keyPairId, tags);
+        }
+
+        public GetKeyPairArgs build() {
+            return $;
         }
     }
+
 }

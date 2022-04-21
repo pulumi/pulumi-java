@@ -5,10 +5,10 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RestApiEndpointConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="types", required=true)
-      private final Output<String> types;
+    private Output<String> types;
 
     public Output<String> types() {
         return this.types;
@@ -32,66 +32,63 @@ public final class RestApiEndpointConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vpcEndpointIds")
-      private final @Nullable Output<List<String>> vpcEndpointIds;
+    private @Nullable Output<List<String>> vpcEndpointIds;
 
-    public Output<List<String>> vpcEndpointIds() {
-        return this.vpcEndpointIds == null ? Codegen.empty() : this.vpcEndpointIds;
+    public Optional<Output<List<String>>> vpcEndpointIds() {
+        return Optional.ofNullable(this.vpcEndpointIds);
     }
 
-    public RestApiEndpointConfigurationArgs(
-        Output<String> types,
-        @Nullable Output<List<String>> vpcEndpointIds) {
-        this.types = Objects.requireNonNull(types, "expected parameter 'types' to be non-null");
-        this.vpcEndpointIds = vpcEndpointIds;
-    }
+    private RestApiEndpointConfigurationArgs() {}
 
-    private RestApiEndpointConfigurationArgs() {
-        this.types = Codegen.empty();
-        this.vpcEndpointIds = Codegen.empty();
+    private RestApiEndpointConfigurationArgs(RestApiEndpointConfigurationArgs $) {
+        this.types = $.types;
+        this.vpcEndpointIds = $.vpcEndpointIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestApiEndpointConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> types;
-        private @Nullable Output<List<String>> vpcEndpointIds;
+        private RestApiEndpointConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestApiEndpointConfigurationArgs();
         }
 
         public Builder(RestApiEndpointConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.types = defaults.types;
-    	      this.vpcEndpointIds = defaults.vpcEndpointIds;
+            $ = new RestApiEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder types(Output<String> types) {
-            this.types = Objects.requireNonNull(types);
+            $.types = types;
             return this;
         }
+
         public Builder types(String types) {
-            this.types = Output.of(Objects.requireNonNull(types));
-            return this;
+            return types(Output.of(types));
         }
+
         public Builder vpcEndpointIds(@Nullable Output<List<String>> vpcEndpointIds) {
-            this.vpcEndpointIds = vpcEndpointIds;
+            $.vpcEndpointIds = vpcEndpointIds;
             return this;
         }
-        public Builder vpcEndpointIds(@Nullable List<String> vpcEndpointIds) {
-            this.vpcEndpointIds = Codegen.ofNullable(vpcEndpointIds);
-            return this;
+
+        public Builder vpcEndpointIds(List<String> vpcEndpointIds) {
+            return vpcEndpointIds(Output.of(vpcEndpointIds));
         }
+
         public Builder vpcEndpointIds(String... vpcEndpointIds) {
             return vpcEndpointIds(List.of(vpcEndpointIds));
-        }        public RestApiEndpointConfigurationArgs build() {
-            return new RestApiEndpointConfigurationArgs(types, vpcEndpointIds);
+        }
+
+        public RestApiEndpointConfigurationArgs build() {
+            $.types = Objects.requireNonNull($.types, "expected parameter 'types' to be non-null");
+            return $;
         }
     }
+
 }

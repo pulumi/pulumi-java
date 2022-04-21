@@ -17,7 +17,7 @@ public final class GetPipelineDefinitionParameterValue extends com.pulumi.resour
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -28,55 +28,52 @@ public final class GetPipelineDefinitionParameterValue extends com.pulumi.resour
      * 
      */
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
     }
 
-    public GetPipelineDefinitionParameterValue(
-        String id,
-        String stringValue) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-    }
+    private GetPipelineDefinitionParameterValue() {}
 
-    private GetPipelineDefinitionParameterValue() {
-        this.id = null;
-        this.stringValue = null;
+    private GetPipelineDefinitionParameterValue(GetPipelineDefinitionParameterValue $) {
+        this.id = $.id;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineDefinitionParameterValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String stringValue;
+        private GetPipelineDefinitionParameterValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineDefinitionParameterValue();
         }
 
         public Builder(GetPipelineDefinitionParameterValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.stringValue = defaults.stringValue;
+            $ = new GetPipelineDefinitionParameterValue(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
-        }        public GetPipelineDefinitionParameterValue build() {
-            return new GetPipelineDefinitionParameterValue(id, stringValue);
+        }
+
+        public GetPipelineDefinitionParameterValue build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class UserPolicyAttachmentArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyArn", required=true)
-      private final Output<String> policyArn;
+    private Output<String> policyArn;
 
     public Output<String> policyArn() {
         return this.policyArn;
@@ -30,59 +29,60 @@ public final class UserPolicyAttachmentArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public UserPolicyAttachmentArgs(
-        Output<String> policyArn,
-        Output<String> user) {
-        this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private UserPolicyAttachmentArgs() {}
 
-    private UserPolicyAttachmentArgs() {
-        this.policyArn = Codegen.empty();
-        this.user = Codegen.empty();
+    private UserPolicyAttachmentArgs(UserPolicyAttachmentArgs $) {
+        this.policyArn = $.policyArn;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPolicyAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyArn;
-        private Output<String> user;
+        private UserPolicyAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPolicyAttachmentArgs();
         }
 
         public Builder(UserPolicyAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyArn = defaults.policyArn;
-    	      this.user = defaults.user;
+            $ = new UserPolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyArn(Output<String> policyArn) {
-            this.policyArn = Objects.requireNonNull(policyArn);
+            $.policyArn = policyArn;
             return this;
         }
+
         public Builder policyArn(String policyArn) {
-            this.policyArn = Output.of(Objects.requireNonNull(policyArn));
+            return policyArn(Output.of(policyArn));
+        }
+
+        public Builder user(Output<String> user) {
+            $.user = user;
             return this;
         }
-        public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
-            return this;
-        }        public UserPolicyAttachmentArgs build() {
-            return new UserPolicyAttachmentArgs(policyArn, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public UserPolicyAttachmentArgs build() {
+            $.policyArn = Objects.requireNonNull($.policyArn, "expected parameter 'policyArn' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

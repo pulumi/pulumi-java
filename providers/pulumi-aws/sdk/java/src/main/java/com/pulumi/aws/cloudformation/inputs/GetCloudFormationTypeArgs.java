@@ -19,10 +19,10 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="typeName")
-      private final @Nullable String typeName;
+    private @Nullable String typeName;
 
     public Optional<String> typeName() {
-        return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
+        return Optional.ofNullable(this.typeName);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="versionId")
-      private final @Nullable String versionId;
+    private @Nullable String versionId;
 
     public Optional<String> versionId() {
-        return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
+        return Optional.ofNullable(this.versionId);
     }
 
-    public GetCloudFormationTypeArgs(
-        @Nullable String arn,
-        @Nullable String type,
-        @Nullable String typeName,
-        @Nullable String versionId) {
-        this.arn = arn;
-        this.type = type;
-        this.typeName = typeName;
-        this.versionId = versionId;
-    }
+    private GetCloudFormationTypeArgs() {}
 
-    private GetCloudFormationTypeArgs() {
-        this.arn = null;
-        this.type = null;
-        this.typeName = null;
-        this.versionId = null;
+    private GetCloudFormationTypeArgs(GetCloudFormationTypeArgs $) {
+        this.arn = $.arn;
+        this.type = $.type;
+        this.typeName = $.typeName;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudFormationTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String type;
-        private @Nullable String typeName;
-        private @Nullable String versionId;
+        private GetCloudFormationTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudFormationTypeArgs();
         }
 
         public Builder(GetCloudFormationTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.type = defaults.type;
-    	      this.typeName = defaults.typeName;
-    	      this.versionId = defaults.versionId;
+            $ = new GetCloudFormationTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
+
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
-        }        public GetCloudFormationTypeArgs build() {
-            return new GetCloudFormationTypeArgs(arn, type, typeName, versionId);
+        }
+
+        public GetCloudFormationTypeArgs build() {
+            return $;
         }
     }
+
 }

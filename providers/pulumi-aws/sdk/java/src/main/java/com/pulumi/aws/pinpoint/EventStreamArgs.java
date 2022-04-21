@@ -5,7 +5,6 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EventStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -30,7 +29,7 @@ public final class EventStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationStreamArn", required=true)
-      private final Output<String> destinationStreamArn;
+    private Output<String> destinationStreamArn;
 
     public Output<String> destinationStreamArn() {
         return this.destinationStreamArn;
@@ -41,76 +40,71 @@ public final class EventStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public EventStreamArgs(
-        Output<String> applicationId,
-        Output<String> destinationStreamArn,
-        Output<String> roleArn) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.destinationStreamArn = Objects.requireNonNull(destinationStreamArn, "expected parameter 'destinationStreamArn' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private EventStreamArgs() {}
 
-    private EventStreamArgs() {
-        this.applicationId = Codegen.empty();
-        this.destinationStreamArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private EventStreamArgs(EventStreamArgs $) {
+        this.applicationId = $.applicationId;
+        this.destinationStreamArn = $.destinationStreamArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private Output<String> destinationStreamArn;
-        private Output<String> roleArn;
+        private EventStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventStreamArgs();
         }
 
         public Builder(EventStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.destinationStreamArn = defaults.destinationStreamArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new EventStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder destinationStreamArn(Output<String> destinationStreamArn) {
-            this.destinationStreamArn = Objects.requireNonNull(destinationStreamArn);
+            $.destinationStreamArn = destinationStreamArn;
             return this;
         }
+
         public Builder destinationStreamArn(String destinationStreamArn) {
-            this.destinationStreamArn = Output.of(Objects.requireNonNull(destinationStreamArn));
-            return this;
+            return destinationStreamArn(Output.of(destinationStreamArn));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public EventStreamArgs build() {
-            return new EventStreamArgs(applicationId, destinationStreamArn, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public EventStreamArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.destinationStreamArn = Objects.requireNonNull($.destinationStreamArn, "expected parameter 'destinationStreamArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

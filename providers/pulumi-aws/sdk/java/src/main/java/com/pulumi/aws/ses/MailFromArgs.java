@@ -5,9 +5,9 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MailFromArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="behaviorOnMxFailure")
-      private final @Nullable Output<String> behaviorOnMxFailure;
+    private @Nullable Output<String> behaviorOnMxFailure;
 
-    public Output<String> behaviorOnMxFailure() {
-        return this.behaviorOnMxFailure == null ? Codegen.empty() : this.behaviorOnMxFailure;
+    public Optional<Output<String>> behaviorOnMxFailure() {
+        return Optional.ofNullable(this.behaviorOnMxFailure);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class MailFromArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
@@ -42,76 +42,70 @@ public final class MailFromArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mailFromDomain", required=true)
-      private final Output<String> mailFromDomain;
+    private Output<String> mailFromDomain;
 
     public Output<String> mailFromDomain() {
         return this.mailFromDomain;
     }
 
-    public MailFromArgs(
-        @Nullable Output<String> behaviorOnMxFailure,
-        Output<String> domain,
-        Output<String> mailFromDomain) {
-        this.behaviorOnMxFailure = behaviorOnMxFailure;
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.mailFromDomain = Objects.requireNonNull(mailFromDomain, "expected parameter 'mailFromDomain' to be non-null");
-    }
+    private MailFromArgs() {}
 
-    private MailFromArgs() {
-        this.behaviorOnMxFailure = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.mailFromDomain = Codegen.empty();
+    private MailFromArgs(MailFromArgs $) {
+        this.behaviorOnMxFailure = $.behaviorOnMxFailure;
+        this.domain = $.domain;
+        this.mailFromDomain = $.mailFromDomain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MailFromArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> behaviorOnMxFailure;
-        private Output<String> domain;
-        private Output<String> mailFromDomain;
+        private MailFromArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MailFromArgs();
         }
 
         public Builder(MailFromArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.behaviorOnMxFailure = defaults.behaviorOnMxFailure;
-    	      this.domain = defaults.domain;
-    	      this.mailFromDomain = defaults.mailFromDomain;
+            $ = new MailFromArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder behaviorOnMxFailure(@Nullable Output<String> behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = behaviorOnMxFailure;
+            $.behaviorOnMxFailure = behaviorOnMxFailure;
             return this;
         }
-        public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = Codegen.ofNullable(behaviorOnMxFailure);
-            return this;
+
+        public Builder behaviorOnMxFailure(String behaviorOnMxFailure) {
+            return behaviorOnMxFailure(Output.of(behaviorOnMxFailure));
         }
+
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
+            return domain(Output.of(domain));
         }
+
         public Builder mailFromDomain(Output<String> mailFromDomain) {
-            this.mailFromDomain = Objects.requireNonNull(mailFromDomain);
+            $.mailFromDomain = mailFromDomain;
             return this;
         }
+
         public Builder mailFromDomain(String mailFromDomain) {
-            this.mailFromDomain = Output.of(Objects.requireNonNull(mailFromDomain));
-            return this;
-        }        public MailFromArgs build() {
-            return new MailFromArgs(behaviorOnMxFailure, domain, mailFromDomain);
+            return mailFromDomain(Output.of(mailFromDomain));
+        }
+
+        public MailFromArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.mailFromDomain = Objects.requireNonNull($.mailFromDomain, "expected parameter 'mailFromDomain' to be non-null");
+            return $;
         }
     }
+
 }

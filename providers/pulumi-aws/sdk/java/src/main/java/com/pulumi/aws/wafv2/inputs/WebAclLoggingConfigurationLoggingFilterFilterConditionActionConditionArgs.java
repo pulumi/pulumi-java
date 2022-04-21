@@ -5,7 +5,6 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
     }
 
-    public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(Output<String> action) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-    }
+    private WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs() {}
 
-    private WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs() {
-        this.action = Codegen.empty();
+    private WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
+        private WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs();
         }
 
         public Builder(WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
-        }        public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs build() {
-            return new WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(action);
+            return action(Output.of(action));
+        }
+
+        public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

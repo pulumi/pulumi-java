@@ -20,7 +20,7 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="engine", required=true)
-      private final String engine;
+    private String engine;
 
     public String engine() {
         return this.engine;
@@ -31,10 +31,10 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="parameterGroupFamily")
-      private final @Nullable String parameterGroupFamily;
+    private @Nullable String parameterGroupFamily;
 
     public Optional<String> parameterGroupFamily() {
-        return this.parameterGroupFamily == null ? Optional.empty() : Optional.ofNullable(this.parameterGroupFamily);
+        return Optional.ofNullable(this.parameterGroupFamily);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="preferredVersions")
-      private final @Nullable List<String> preferredVersions;
+    private @Nullable List<String> preferredVersions;
 
-    public List<String> preferredVersions() {
-        return this.preferredVersions == null ? List.of() : this.preferredVersions;
+    public Optional<List<String>> preferredVersions() {
+        return Optional.ofNullable(this.preferredVersions);
     }
 
     /**
@@ -53,76 +53,67 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GetEngineVersionArgs(
-        String engine,
-        @Nullable String parameterGroupFamily,
-        @Nullable List<String> preferredVersions,
-        @Nullable String version) {
-        this.engine = Objects.requireNonNull(engine, "expected parameter 'engine' to be non-null");
-        this.parameterGroupFamily = parameterGroupFamily;
-        this.preferredVersions = preferredVersions;
-        this.version = version;
-    }
+    private GetEngineVersionArgs() {}
 
-    private GetEngineVersionArgs() {
-        this.engine = null;
-        this.parameterGroupFamily = null;
-        this.preferredVersions = List.of();
-        this.version = null;
+    private GetEngineVersionArgs(GetEngineVersionArgs $) {
+        this.engine = $.engine;
+        this.parameterGroupFamily = $.parameterGroupFamily;
+        this.preferredVersions = $.preferredVersions;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEngineVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String engine;
-        private @Nullable String parameterGroupFamily;
-        private @Nullable List<String> preferredVersions;
-        private @Nullable String version;
+        private GetEngineVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEngineVersionArgs();
         }
 
         public Builder(GetEngineVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.engine = defaults.engine;
-    	      this.parameterGroupFamily = defaults.parameterGroupFamily;
-    	      this.preferredVersions = defaults.preferredVersions;
-    	      this.version = defaults.version;
+            $ = new GetEngineVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder engine(String engine) {
-            this.engine = Objects.requireNonNull(engine);
+            $.engine = engine;
             return this;
         }
+
         public Builder parameterGroupFamily(@Nullable String parameterGroupFamily) {
-            this.parameterGroupFamily = parameterGroupFamily;
+            $.parameterGroupFamily = parameterGroupFamily;
             return this;
         }
+
         public Builder preferredVersions(@Nullable List<String> preferredVersions) {
-            this.preferredVersions = preferredVersions;
+            $.preferredVersions = preferredVersions;
             return this;
         }
+
         public Builder preferredVersions(String... preferredVersions) {
             return preferredVersions(List.of(preferredVersions));
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GetEngineVersionArgs build() {
-            return new GetEngineVersionArgs(engine, parameterGroupFamily, preferredVersions, version);
+        }
+
+        public GetEngineVersionArgs build() {
+            $.engine = Objects.requireNonNull($.engine, "expected parameter 'engine' to be non-null");
+            return $;
         }
     }
+
 }

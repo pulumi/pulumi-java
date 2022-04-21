@@ -18,7 +18,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="applicationArn", required=true)
-      private final String applicationArn;
+    private String applicationArn;
 
     public String applicationArn() {
         return this.applicationArn;
@@ -29,7 +29,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="applicationId", required=true)
-      private final String applicationId;
+    private String applicationId;
 
     public String applicationId() {
         return this.applicationId;
@@ -40,7 +40,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="externalId", required=true)
-      private final String externalId;
+    private String externalId;
 
     public String externalId() {
         return this.externalId;
@@ -52,89 +52,80 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="userDataShared", required=true)
-      private final Boolean userDataShared;
+    private Boolean userDataShared;
 
     public Boolean userDataShared() {
         return this.userDataShared;
     }
 
-    public GetUserPoolClientAnalyticsConfiguration(
-        String applicationArn,
-        String applicationId,
-        String externalId,
-        String roleArn,
-        Boolean userDataShared) {
-        this.applicationArn = Objects.requireNonNull(applicationArn, "expected parameter 'applicationArn' to be non-null");
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.externalId = Objects.requireNonNull(externalId, "expected parameter 'externalId' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.userDataShared = Objects.requireNonNull(userDataShared, "expected parameter 'userDataShared' to be non-null");
-    }
+    private GetUserPoolClientAnalyticsConfiguration() {}
 
-    private GetUserPoolClientAnalyticsConfiguration() {
-        this.applicationArn = null;
-        this.applicationId = null;
-        this.externalId = null;
-        this.roleArn = null;
-        this.userDataShared = null;
+    private GetUserPoolClientAnalyticsConfiguration(GetUserPoolClientAnalyticsConfiguration $) {
+        this.applicationArn = $.applicationArn;
+        this.applicationId = $.applicationId;
+        this.externalId = $.externalId;
+        this.roleArn = $.roleArn;
+        this.userDataShared = $.userDataShared;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserPoolClientAnalyticsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationArn;
-        private String applicationId;
-        private String externalId;
-        private String roleArn;
-        private Boolean userDataShared;
+        private GetUserPoolClientAnalyticsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserPoolClientAnalyticsConfiguration();
         }
 
         public Builder(GetUserPoolClientAnalyticsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationArn = defaults.applicationArn;
-    	      this.applicationId = defaults.applicationId;
-    	      this.externalId = defaults.externalId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.userDataShared = defaults.userDataShared;
+            $ = new GetUserPoolClientAnalyticsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationArn(String applicationArn) {
-            this.applicationArn = Objects.requireNonNull(applicationArn);
+            $.applicationArn = applicationArn;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder externalId(String externalId) {
-            this.externalId = Objects.requireNonNull(externalId);
+            $.externalId = externalId;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder userDataShared(Boolean userDataShared) {
-            this.userDataShared = Objects.requireNonNull(userDataShared);
+            $.userDataShared = userDataShared;
             return this;
-        }        public GetUserPoolClientAnalyticsConfiguration build() {
-            return new GetUserPoolClientAnalyticsConfiguration(applicationArn, applicationId, externalId, roleArn, userDataShared);
+        }
+
+        public GetUserPoolClientAnalyticsConfiguration build() {
+            $.applicationArn = Objects.requireNonNull($.applicationArn, "expected parameter 'applicationArn' to be non-null");
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.externalId = Objects.requireNonNull($.externalId, "expected parameter 'externalId' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.userDataShared = Objects.requireNonNull($.userDataShared, "expected parameter 'userDataShared' to be non-null");
+            return $;
         }
     }
+
 }

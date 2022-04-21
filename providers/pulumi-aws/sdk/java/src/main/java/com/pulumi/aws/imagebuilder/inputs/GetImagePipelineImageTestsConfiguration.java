@@ -18,7 +18,7 @@ public final class GetImagePipelineImageTestsConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="imageTestsEnabled", required=true)
-      private final Boolean imageTestsEnabled;
+    private Boolean imageTestsEnabled;
 
     public Boolean imageTestsEnabled() {
         return this.imageTestsEnabled;
@@ -29,55 +29,52 @@ public final class GetImagePipelineImageTestsConfiguration extends com.pulumi.re
      * 
      */
     @Import(name="timeoutMinutes", required=true)
-      private final Integer timeoutMinutes;
+    private Integer timeoutMinutes;
 
     public Integer timeoutMinutes() {
         return this.timeoutMinutes;
     }
 
-    public GetImagePipelineImageTestsConfiguration(
-        Boolean imageTestsEnabled,
-        Integer timeoutMinutes) {
-        this.imageTestsEnabled = Objects.requireNonNull(imageTestsEnabled, "expected parameter 'imageTestsEnabled' to be non-null");
-        this.timeoutMinutes = Objects.requireNonNull(timeoutMinutes, "expected parameter 'timeoutMinutes' to be non-null");
-    }
+    private GetImagePipelineImageTestsConfiguration() {}
 
-    private GetImagePipelineImageTestsConfiguration() {
-        this.imageTestsEnabled = null;
-        this.timeoutMinutes = null;
+    private GetImagePipelineImageTestsConfiguration(GetImagePipelineImageTestsConfiguration $) {
+        this.imageTestsEnabled = $.imageTestsEnabled;
+        this.timeoutMinutes = $.timeoutMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImagePipelineImageTestsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean imageTestsEnabled;
-        private Integer timeoutMinutes;
+        private GetImagePipelineImageTestsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImagePipelineImageTestsConfiguration();
         }
 
         public Builder(GetImagePipelineImageTestsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageTestsEnabled = defaults.imageTestsEnabled;
-    	      this.timeoutMinutes = defaults.timeoutMinutes;
+            $ = new GetImagePipelineImageTestsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder imageTestsEnabled(Boolean imageTestsEnabled) {
-            this.imageTestsEnabled = Objects.requireNonNull(imageTestsEnabled);
+            $.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
+
         public Builder timeoutMinutes(Integer timeoutMinutes) {
-            this.timeoutMinutes = Objects.requireNonNull(timeoutMinutes);
+            $.timeoutMinutes = timeoutMinutes;
             return this;
-        }        public GetImagePipelineImageTestsConfiguration build() {
-            return new GetImagePipelineImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
+        }
+
+        public GetImagePipelineImageTestsConfiguration build() {
+            $.imageTestsEnabled = Objects.requireNonNull($.imageTestsEnabled, "expected parameter 'imageTestsEnabled' to be non-null");
+            $.timeoutMinutes = Objects.requireNonNull($.timeoutMinutes, "expected parameter 'timeoutMinutes' to be non-null");
+            return $;
         }
     }
+
 }

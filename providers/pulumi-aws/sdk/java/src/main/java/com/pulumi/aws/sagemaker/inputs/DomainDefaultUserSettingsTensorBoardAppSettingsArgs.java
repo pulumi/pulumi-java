@@ -6,8 +6,8 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends c
      * 
      */
     @Import(name="defaultResourceSpec")
-      private final @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+    private @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
-    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
+    public Optional<Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs>> defaultResourceSpec() {
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
-    public DomainDefaultUserSettingsTensorBoardAppSettingsArgs(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
-        this.defaultResourceSpec = defaultResourceSpec;
-    }
+    private DomainDefaultUserSettingsTensorBoardAppSettingsArgs() {}
 
-    private DomainDefaultUserSettingsTensorBoardAppSettingsArgs() {
-        this.defaultResourceSpec = Codegen.empty();
+    private DomainDefaultUserSettingsTensorBoardAppSettingsArgs(DomainDefaultUserSettingsTensorBoardAppSettingsArgs $) {
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainDefaultUserSettingsTensorBoardAppSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+        private DomainDefaultUserSettingsTensorBoardAppSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainDefaultUserSettingsTensorBoardAppSettingsArgs();
         }
 
         public Builder(DomainDefaultUserSettingsTensorBoardAppSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new DomainDefaultUserSettingsTensorBoardAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceSpec(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-        public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
-            return this;
-        }        public DomainDefaultUserSettingsTensorBoardAppSettingsArgs build() {
-            return new DomainDefaultUserSettingsTensorBoardAppSettingsArgs(defaultResourceSpec);
+
+        public Builder defaultResourceSpec(DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
+            return defaultResourceSpec(Output.of(defaultResourceSpec));
+        }
+
+        public DomainDefaultUserSettingsTensorBoardAppSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.aws.cloudformation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable Output<List<String>> capabilities;
+    private @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> capabilities() {
-        return this.capabilities == null ? Codegen.empty() : this.capabilities;
+    public Optional<Output<List<String>>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableRollback")
-      private final @Nullable Output<Boolean> disableRollback;
+    private @Nullable Output<Boolean> disableRollback;
 
-    public Output<Boolean> disableRollback() {
-        return this.disableRollback == null ? Codegen.empty() : this.disableRollback;
+    public Optional<Output<Boolean>> disableRollback() {
+        return Optional.ofNullable(this.disableRollback);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRoleArn")
-      private final @Nullable Output<String> iamRoleArn;
+    private @Nullable Output<String> iamRoleArn;
 
-    public Output<String> iamRoleArn() {
-        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
+    public Optional<Output<String>> iamRoleArn() {
+        return Optional.ofNullable(this.iamRoleArn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationArns")
-      private final @Nullable Output<List<String>> notificationArns;
+    private @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> notificationArns() {
-        return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
+    public Optional<Output<List<String>>> notificationArns() {
+        return Optional.ofNullable(this.notificationArns);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onFailure")
-      private final @Nullable Output<String> onFailure;
+    private @Nullable Output<String> onFailure;
 
-    public Output<String> onFailure() {
-        return this.onFailure == null ? Codegen.empty() : this.onFailure;
+    public Optional<Output<String>> onFailure() {
+        return Optional.ofNullable(this.onFailure);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyBody")
-      private final @Nullable Output<String> policyBody;
+    private @Nullable Output<String> policyBody;
 
-    public Output<String> policyBody() {
-        return this.policyBody == null ? Codegen.empty() : this.policyBody;
+    public Optional<Output<String>> policyBody() {
+        return Optional.ofNullable(this.policyBody);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyUrl")
-      private final @Nullable Output<String> policyUrl;
+    private @Nullable Output<String> policyUrl;
 
-    public Output<String> policyUrl() {
-        return this.policyUrl == null ? Codegen.empty() : this.policyUrl;
+    public Optional<Output<String>> policyUrl() {
+        return Optional.ofNullable(this.policyUrl);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateBody")
-      private final @Nullable Output<String> templateBody;
+    private @Nullable Output<String> templateBody;
 
-    public Output<String> templateBody() {
-        return this.templateBody == null ? Codegen.empty() : this.templateBody;
+    public Optional<Output<String>> templateBody() {
+        return Optional.ofNullable(this.templateBody);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateUrl")
-      private final @Nullable Output<String> templateUrl;
+    private @Nullable Output<String> templateUrl;
 
-    public Output<String> templateUrl() {
-        return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
+    public Optional<Output<String>> templateUrl() {
+        return Optional.ofNullable(this.templateUrl);
     }
 
     /**
@@ -161,212 +161,176 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeoutInMinutes")
-      private final @Nullable Output<Integer> timeoutInMinutes;
+    private @Nullable Output<Integer> timeoutInMinutes;
 
-    public Output<Integer> timeoutInMinutes() {
-        return this.timeoutInMinutes == null ? Codegen.empty() : this.timeoutInMinutes;
+    public Optional<Output<Integer>> timeoutInMinutes() {
+        return Optional.ofNullable(this.timeoutInMinutes);
     }
 
-    public StackArgs(
-        @Nullable Output<List<String>> capabilities,
-        @Nullable Output<Boolean> disableRollback,
-        @Nullable Output<String> iamRoleArn,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> notificationArns,
-        @Nullable Output<String> onFailure,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> policyBody,
-        @Nullable Output<String> policyUrl,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> templateBody,
-        @Nullable Output<String> templateUrl,
-        @Nullable Output<Integer> timeoutInMinutes) {
-        this.capabilities = capabilities;
-        this.disableRollback = disableRollback;
-        this.iamRoleArn = iamRoleArn;
-        this.name = name;
-        this.notificationArns = notificationArns;
-        this.onFailure = onFailure;
-        this.parameters = parameters;
-        this.policyBody = policyBody;
-        this.policyUrl = policyUrl;
-        this.tags = tags;
-        this.templateBody = templateBody;
-        this.templateUrl = templateUrl;
-        this.timeoutInMinutes = timeoutInMinutes;
-    }
+    private StackArgs() {}
 
-    private StackArgs() {
-        this.capabilities = Codegen.empty();
-        this.disableRollback = Codegen.empty();
-        this.iamRoleArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationArns = Codegen.empty();
-        this.onFailure = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.policyBody = Codegen.empty();
-        this.policyUrl = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateBody = Codegen.empty();
-        this.templateUrl = Codegen.empty();
-        this.timeoutInMinutes = Codegen.empty();
+    private StackArgs(StackArgs $) {
+        this.capabilities = $.capabilities;
+        this.disableRollback = $.disableRollback;
+        this.iamRoleArn = $.iamRoleArn;
+        this.name = $.name;
+        this.notificationArns = $.notificationArns;
+        this.onFailure = $.onFailure;
+        this.parameters = $.parameters;
+        this.policyBody = $.policyBody;
+        this.policyUrl = $.policyUrl;
+        this.tags = $.tags;
+        this.templateBody = $.templateBody;
+        this.templateUrl = $.templateUrl;
+        this.timeoutInMinutes = $.timeoutInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> capabilities;
-        private @Nullable Output<Boolean> disableRollback;
-        private @Nullable Output<String> iamRoleArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> notificationArns;
-        private @Nullable Output<String> onFailure;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> policyBody;
-        private @Nullable Output<String> policyUrl;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> templateBody;
-        private @Nullable Output<String> templateUrl;
-        private @Nullable Output<Integer> timeoutInMinutes;
+        private StackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackArgs();
         }
 
         public Builder(StackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilities = defaults.capabilities;
-    	      this.disableRollback = defaults.disableRollback;
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.name = defaults.name;
-    	      this.notificationArns = defaults.notificationArns;
-    	      this.onFailure = defaults.onFailure;
-    	      this.parameters = defaults.parameters;
-    	      this.policyBody = defaults.policyBody;
-    	      this.policyUrl = defaults.policyUrl;
-    	      this.tags = defaults.tags;
-    	      this.templateBody = defaults.templateBody;
-    	      this.templateUrl = defaults.templateUrl;
-    	      this.timeoutInMinutes = defaults.timeoutInMinutes;
+            $ = new StackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
-        public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Codegen.ofNullable(capabilities);
-            return this;
+
+        public Builder capabilities(List<String> capabilities) {
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder capabilities(String... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder disableRollback(@Nullable Output<Boolean> disableRollback) {
-            this.disableRollback = disableRollback;
+            $.disableRollback = disableRollback;
             return this;
         }
-        public Builder disableRollback(@Nullable Boolean disableRollback) {
-            this.disableRollback = Codegen.ofNullable(disableRollback);
-            return this;
+
+        public Builder disableRollback(Boolean disableRollback) {
+            return disableRollback(Output.of(disableRollback));
         }
+
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
-            this.iamRoleArn = iamRoleArn;
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
-        public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
-            return this;
+
+        public Builder iamRoleArn(String iamRoleArn) {
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
-            this.notificationArns = notificationArns;
+            $.notificationArns = notificationArns;
             return this;
         }
-        public Builder notificationArns(@Nullable List<String> notificationArns) {
-            this.notificationArns = Codegen.ofNullable(notificationArns);
-            return this;
+
+        public Builder notificationArns(List<String> notificationArns) {
+            return notificationArns(Output.of(notificationArns));
         }
+
         public Builder notificationArns(String... notificationArns) {
             return notificationArns(List.of(notificationArns));
         }
+
         public Builder onFailure(@Nullable Output<String> onFailure) {
-            this.onFailure = onFailure;
+            $.onFailure = onFailure;
             return this;
         }
-        public Builder onFailure(@Nullable String onFailure) {
-            this.onFailure = Codegen.ofNullable(onFailure);
-            return this;
+
+        public Builder onFailure(String onFailure) {
+            return onFailure(Output.of(onFailure));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder policyBody(@Nullable Output<String> policyBody) {
-            this.policyBody = policyBody;
+            $.policyBody = policyBody;
             return this;
         }
-        public Builder policyBody(@Nullable String policyBody) {
-            this.policyBody = Codegen.ofNullable(policyBody);
-            return this;
+
+        public Builder policyBody(String policyBody) {
+            return policyBody(Output.of(policyBody));
         }
+
         public Builder policyUrl(@Nullable Output<String> policyUrl) {
-            this.policyUrl = policyUrl;
+            $.policyUrl = policyUrl;
             return this;
         }
-        public Builder policyUrl(@Nullable String policyUrl) {
-            this.policyUrl = Codegen.ofNullable(policyUrl);
-            return this;
+
+        public Builder policyUrl(String policyUrl) {
+            return policyUrl(Output.of(policyUrl));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateBody(@Nullable Output<String> templateBody) {
-            this.templateBody = templateBody;
+            $.templateBody = templateBody;
             return this;
         }
-        public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Codegen.ofNullable(templateBody);
-            return this;
+
+        public Builder templateBody(String templateBody) {
+            return templateBody(Output.of(templateBody));
         }
+
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
-            this.templateUrl = templateUrl;
+            $.templateUrl = templateUrl;
             return this;
         }
-        public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Codegen.ofNullable(templateUrl);
-            return this;
+
+        public Builder templateUrl(String templateUrl) {
+            return templateUrl(Output.of(templateUrl));
         }
+
         public Builder timeoutInMinutes(@Nullable Output<Integer> timeoutInMinutes) {
-            this.timeoutInMinutes = timeoutInMinutes;
+            $.timeoutInMinutes = timeoutInMinutes;
             return this;
         }
-        public Builder timeoutInMinutes(@Nullable Integer timeoutInMinutes) {
-            this.timeoutInMinutes = Codegen.ofNullable(timeoutInMinutes);
-            return this;
-        }        public StackArgs build() {
-            return new StackArgs(capabilities, disableRollback, iamRoleArn, name, notificationArns, onFailure, parameters, policyBody, policyUrl, tags, templateBody, templateUrl, timeoutInMinutes);
+
+        public Builder timeoutInMinutes(Integer timeoutInMinutes) {
+            return timeoutInMinutes(Output.of(timeoutInMinutes));
+        }
+
+        public StackArgs build() {
+            return $;
         }
     }
+
 }

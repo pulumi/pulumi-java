@@ -5,12 +5,12 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="actionsEnabled")
-      private final @Nullable Output<Boolean> actionsEnabled;
+    private @Nullable Output<Boolean> actionsEnabled;
 
-    public Output<Boolean> actionsEnabled() {
-        return this.actionsEnabled == null ? Codegen.empty() : this.actionsEnabled;
+    public Optional<Output<Boolean>> actionsEnabled() {
+        return Optional.ofNullable(this.actionsEnabled);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="alarmActions")
-      private final @Nullable Output<List<String>> alarmActions;
+    private @Nullable Output<List<String>> alarmActions;
 
-    public Output<List<String>> alarmActions() {
-        return this.alarmActions == null ? Codegen.empty() : this.alarmActions;
+    public Optional<Output<List<String>>> alarmActions() {
+        return Optional.ofNullable(this.alarmActions);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="alarmDescription")
-      private final @Nullable Output<String> alarmDescription;
+    private @Nullable Output<String> alarmDescription;
 
-    public Output<String> alarmDescription() {
-        return this.alarmDescription == null ? Codegen.empty() : this.alarmDescription;
+    public Optional<Output<String>> alarmDescription() {
+        return Optional.ofNullable(this.alarmDescription);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="alarmName")
-      private final @Nullable Output<String> alarmName;
+    private @Nullable Output<String> alarmName;
 
-    public Output<String> alarmName() {
-        return this.alarmName == null ? Codegen.empty() : this.alarmName;
+    public Optional<Output<String>> alarmName() {
+        return Optional.ofNullable(this.alarmName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="alarmRule")
-      private final @Nullable Output<String> alarmRule;
+    private @Nullable Output<String> alarmRule;
 
-    public Output<String> alarmRule() {
-        return this.alarmRule == null ? Codegen.empty() : this.alarmRule;
+    public Optional<Output<String>> alarmRule() {
+        return Optional.ofNullable(this.alarmRule);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="insufficientDataActions")
-      private final @Nullable Output<List<String>> insufficientDataActions;
+    private @Nullable Output<List<String>> insufficientDataActions;
 
-    public Output<List<String>> insufficientDataActions() {
-        return this.insufficientDataActions == null ? Codegen.empty() : this.insufficientDataActions;
+    public Optional<Output<List<String>>> insufficientDataActions() {
+        return Optional.ofNullable(this.insufficientDataActions);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="okActions")
-      private final @Nullable Output<List<String>> okActions;
+    private @Nullable Output<List<String>> okActions;
 
-    public Output<List<String>> okActions() {
-        return this.okActions == null ? Codegen.empty() : this.okActions;
+    public Optional<Output<List<String>>> okActions() {
+        return Optional.ofNullable(this.okActions);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -122,176 +122,150 @@ public final class CompositeAlarmState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public CompositeAlarmState(
-        @Nullable Output<Boolean> actionsEnabled,
-        @Nullable Output<List<String>> alarmActions,
-        @Nullable Output<String> alarmDescription,
-        @Nullable Output<String> alarmName,
-        @Nullable Output<String> alarmRule,
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> insufficientDataActions,
-        @Nullable Output<List<String>> okActions,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.actionsEnabled = actionsEnabled;
-        this.alarmActions = alarmActions;
-        this.alarmDescription = alarmDescription;
-        this.alarmName = alarmName;
-        this.alarmRule = alarmRule;
-        this.arn = arn;
-        this.insufficientDataActions = insufficientDataActions;
-        this.okActions = okActions;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private CompositeAlarmState() {}
 
-    private CompositeAlarmState() {
-        this.actionsEnabled = Codegen.empty();
-        this.alarmActions = Codegen.empty();
-        this.alarmDescription = Codegen.empty();
-        this.alarmName = Codegen.empty();
-        this.alarmRule = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.insufficientDataActions = Codegen.empty();
-        this.okActions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private CompositeAlarmState(CompositeAlarmState $) {
+        this.actionsEnabled = $.actionsEnabled;
+        this.alarmActions = $.alarmActions;
+        this.alarmDescription = $.alarmDescription;
+        this.alarmName = $.alarmName;
+        this.alarmRule = $.alarmRule;
+        this.arn = $.arn;
+        this.insufficientDataActions = $.insufficientDataActions;
+        this.okActions = $.okActions;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompositeAlarmState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> actionsEnabled;
-        private @Nullable Output<List<String>> alarmActions;
-        private @Nullable Output<String> alarmDescription;
-        private @Nullable Output<String> alarmName;
-        private @Nullable Output<String> alarmRule;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> insufficientDataActions;
-        private @Nullable Output<List<String>> okActions;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private CompositeAlarmState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompositeAlarmState();
         }
 
         public Builder(CompositeAlarmState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionsEnabled = defaults.actionsEnabled;
-    	      this.alarmActions = defaults.alarmActions;
-    	      this.alarmDescription = defaults.alarmDescription;
-    	      this.alarmName = defaults.alarmName;
-    	      this.alarmRule = defaults.alarmRule;
-    	      this.arn = defaults.arn;
-    	      this.insufficientDataActions = defaults.insufficientDataActions;
-    	      this.okActions = defaults.okActions;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new CompositeAlarmState(Objects.requireNonNull(defaults));
         }
 
         public Builder actionsEnabled(@Nullable Output<Boolean> actionsEnabled) {
-            this.actionsEnabled = actionsEnabled;
+            $.actionsEnabled = actionsEnabled;
             return this;
         }
-        public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
-            this.actionsEnabled = Codegen.ofNullable(actionsEnabled);
-            return this;
+
+        public Builder actionsEnabled(Boolean actionsEnabled) {
+            return actionsEnabled(Output.of(actionsEnabled));
         }
+
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
-            this.alarmActions = alarmActions;
+            $.alarmActions = alarmActions;
             return this;
         }
-        public Builder alarmActions(@Nullable List<String> alarmActions) {
-            this.alarmActions = Codegen.ofNullable(alarmActions);
-            return this;
+
+        public Builder alarmActions(List<String> alarmActions) {
+            return alarmActions(Output.of(alarmActions));
         }
+
         public Builder alarmActions(String... alarmActions) {
             return alarmActions(List.of(alarmActions));
         }
+
         public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
-            this.alarmDescription = alarmDescription;
+            $.alarmDescription = alarmDescription;
             return this;
         }
-        public Builder alarmDescription(@Nullable String alarmDescription) {
-            this.alarmDescription = Codegen.ofNullable(alarmDescription);
-            return this;
+
+        public Builder alarmDescription(String alarmDescription) {
+            return alarmDescription(Output.of(alarmDescription));
         }
+
         public Builder alarmName(@Nullable Output<String> alarmName) {
-            this.alarmName = alarmName;
+            $.alarmName = alarmName;
             return this;
         }
-        public Builder alarmName(@Nullable String alarmName) {
-            this.alarmName = Codegen.ofNullable(alarmName);
-            return this;
+
+        public Builder alarmName(String alarmName) {
+            return alarmName(Output.of(alarmName));
         }
+
         public Builder alarmRule(@Nullable Output<String> alarmRule) {
-            this.alarmRule = alarmRule;
+            $.alarmRule = alarmRule;
             return this;
         }
-        public Builder alarmRule(@Nullable String alarmRule) {
-            this.alarmRule = Codegen.ofNullable(alarmRule);
-            return this;
+
+        public Builder alarmRule(String alarmRule) {
+            return alarmRule(Output.of(alarmRule));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
-            this.insufficientDataActions = insufficientDataActions;
+            $.insufficientDataActions = insufficientDataActions;
             return this;
         }
-        public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
-            this.insufficientDataActions = Codegen.ofNullable(insufficientDataActions);
-            return this;
+
+        public Builder insufficientDataActions(List<String> insufficientDataActions) {
+            return insufficientDataActions(Output.of(insufficientDataActions));
         }
+
         public Builder insufficientDataActions(String... insufficientDataActions) {
             return insufficientDataActions(List.of(insufficientDataActions));
         }
+
         public Builder okActions(@Nullable Output<List<String>> okActions) {
-            this.okActions = okActions;
+            $.okActions = okActions;
             return this;
         }
-        public Builder okActions(@Nullable List<String> okActions) {
-            this.okActions = Codegen.ofNullable(okActions);
-            return this;
+
+        public Builder okActions(List<String> okActions) {
+            return okActions(Output.of(okActions));
         }
+
         public Builder okActions(String... okActions) {
             return okActions(List.of(okActions));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public CompositeAlarmState build() {
-            return new CompositeAlarmState(actionsEnabled, alarmActions, alarmDescription, alarmName, alarmRule, arn, insufficientDataActions, okActions, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public CompositeAlarmState build() {
+            return $;
         }
     }
+
 }

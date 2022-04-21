@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs ex
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
     }
 
-    public FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs(Output<String> destination) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-    }
+    private FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs() {}
 
-    private FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs() {
-        this.destination = Codegen.empty();
+    private FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs(FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs $) {
+        this.destination = $.destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destination;
+        private FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs();
         }
 
         public Builder(FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
+            $ = new FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
-        }        public FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs build() {
-            return new FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs(destination);
+            return destination(Output.of(destination));
+        }
+
+        public FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

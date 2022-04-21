@@ -14,48 +14,49 @@ public final class GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin ex
     public static final GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin Empty = new GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin();
 
     @Import(name="items", required=true)
-      private final List<String> items;
+    private List<String> items;
 
     public List<String> items() {
         return this.items;
     }
 
-    public GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin(List<String> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin() {}
 
-    private GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin() {
-        this.items = List.of();
+    private GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin(GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> items;
+        private GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin();
         }
 
         public Builder(GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<String> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin build() {
-            return new GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin(items);
+        }
+
+        public GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

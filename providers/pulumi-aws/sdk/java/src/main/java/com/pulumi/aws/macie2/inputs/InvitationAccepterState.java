@@ -5,9 +5,9 @@ package com.pulumi.aws.macie2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InvitationAccepterState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="administratorAccountId")
-      private final @Nullable Output<String> administratorAccountId;
+    private @Nullable Output<String> administratorAccountId;
 
-    public Output<String> administratorAccountId() {
-        return this.administratorAccountId == null ? Codegen.empty() : this.administratorAccountId;
+    public Optional<Output<String>> administratorAccountId() {
+        return Optional.ofNullable(this.administratorAccountId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class InvitationAccepterState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="invitationId")
-      private final @Nullable Output<String> invitationId;
+    private @Nullable Output<String> invitationId;
 
-    public Output<String> invitationId() {
-        return this.invitationId == null ? Codegen.empty() : this.invitationId;
+    public Optional<Output<String>> invitationId() {
+        return Optional.ofNullable(this.invitationId);
     }
 
-    public InvitationAccepterState(
-        @Nullable Output<String> administratorAccountId,
-        @Nullable Output<String> invitationId) {
-        this.administratorAccountId = administratorAccountId;
-        this.invitationId = invitationId;
-    }
+    private InvitationAccepterState() {}
 
-    private InvitationAccepterState() {
-        this.administratorAccountId = Codegen.empty();
-        this.invitationId = Codegen.empty();
+    private InvitationAccepterState(InvitationAccepterState $) {
+        this.administratorAccountId = $.administratorAccountId;
+        this.invitationId = $.invitationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvitationAccepterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> administratorAccountId;
-        private @Nullable Output<String> invitationId;
+        private InvitationAccepterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvitationAccepterState();
         }
 
         public Builder(InvitationAccepterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorAccountId = defaults.administratorAccountId;
-    	      this.invitationId = defaults.invitationId;
+            $ = new InvitationAccepterState(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
-            this.administratorAccountId = administratorAccountId;
+            $.administratorAccountId = administratorAccountId;
             return this;
         }
-        public Builder administratorAccountId(@Nullable String administratorAccountId) {
-            this.administratorAccountId = Codegen.ofNullable(administratorAccountId);
-            return this;
+
+        public Builder administratorAccountId(String administratorAccountId) {
+            return administratorAccountId(Output.of(administratorAccountId));
         }
+
         public Builder invitationId(@Nullable Output<String> invitationId) {
-            this.invitationId = invitationId;
+            $.invitationId = invitationId;
             return this;
         }
-        public Builder invitationId(@Nullable String invitationId) {
-            this.invitationId = Codegen.ofNullable(invitationId);
-            return this;
-        }        public InvitationAccepterState build() {
-            return new InvitationAccepterState(administratorAccountId, invitationId);
+
+        public Builder invitationId(String invitationId) {
+            return invitationId(Output.of(invitationId));
+        }
+
+        public InvitationAccepterState build() {
+            return $;
         }
     }
+
 }

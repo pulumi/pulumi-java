@@ -5,9 +5,9 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TableItemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hashKey")
-      private final @Nullable Output<String> hashKey;
+    private @Nullable Output<String> hashKey;
 
-    public Output<String> hashKey() {
-        return this.hashKey == null ? Codegen.empty() : this.hashKey;
+    public Optional<Output<String>> hashKey() {
+        return Optional.ofNullable(this.hashKey);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TableItemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="item")
-      private final @Nullable Output<String> item;
+    private @Nullable Output<String> item;
 
-    public Output<String> item() {
-        return this.item == null ? Codegen.empty() : this.item;
+    public Optional<Output<String>> item() {
+        return Optional.ofNullable(this.item);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TableItemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rangeKey")
-      private final @Nullable Output<String> rangeKey;
+    private @Nullable Output<String> rangeKey;
 
-    public Output<String> rangeKey() {
-        return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
+    public Optional<Output<String>> rangeKey() {
+        return Optional.ofNullable(this.rangeKey);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class TableItemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
-    public TableItemState(
-        @Nullable Output<String> hashKey,
-        @Nullable Output<String> item,
-        @Nullable Output<String> rangeKey,
-        @Nullable Output<String> tableName) {
-        this.hashKey = hashKey;
-        this.item = item;
-        this.rangeKey = rangeKey;
-        this.tableName = tableName;
-    }
+    private TableItemState() {}
 
-    private TableItemState() {
-        this.hashKey = Codegen.empty();
-        this.item = Codegen.empty();
-        this.rangeKey = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private TableItemState(TableItemState $) {
+        this.hashKey = $.hashKey;
+        this.item = $.item;
+        this.rangeKey = $.rangeKey;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableItemState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hashKey;
-        private @Nullable Output<String> item;
-        private @Nullable Output<String> rangeKey;
-        private @Nullable Output<String> tableName;
+        private TableItemState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableItemState();
         }
 
         public Builder(TableItemState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hashKey = defaults.hashKey;
-    	      this.item = defaults.item;
-    	      this.rangeKey = defaults.rangeKey;
-    	      this.tableName = defaults.tableName;
+            $ = new TableItemState(Objects.requireNonNull(defaults));
         }
 
         public Builder hashKey(@Nullable Output<String> hashKey) {
-            this.hashKey = hashKey;
+            $.hashKey = hashKey;
             return this;
         }
-        public Builder hashKey(@Nullable String hashKey) {
-            this.hashKey = Codegen.ofNullable(hashKey);
-            return this;
+
+        public Builder hashKey(String hashKey) {
+            return hashKey(Output.of(hashKey));
         }
+
         public Builder item(@Nullable Output<String> item) {
-            this.item = item;
+            $.item = item;
             return this;
         }
-        public Builder item(@Nullable String item) {
-            this.item = Codegen.ofNullable(item);
-            return this;
+
+        public Builder item(String item) {
+            return item(Output.of(item));
         }
+
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
-            this.rangeKey = rangeKey;
+            $.rangeKey = rangeKey;
             return this;
         }
-        public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Codegen.ofNullable(rangeKey);
-            return this;
+
+        public Builder rangeKey(String rangeKey) {
+            return rangeKey(Output.of(rangeKey));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
-        }        public TableItemState build() {
-            return new TableItemState(hashKey, item, rangeKey, tableName);
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
+        }
+
+        public TableItemState build() {
+            return $;
         }
     }
+
 }

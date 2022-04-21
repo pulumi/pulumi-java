@@ -5,10 +5,10 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DelegationSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DelegationSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="nameServers")
-      private final @Nullable Output<List<String>> nameServers;
+    private @Nullable Output<List<String>> nameServers;
 
-    public Output<List<String>> nameServers() {
-        return this.nameServers == null ? Codegen.empty() : this.nameServers;
+    public Optional<Output<List<String>>> nameServers() {
+        return Optional.ofNullable(this.nameServers);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class DelegationSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="referenceName")
-      private final @Nullable Output<String> referenceName;
+    private @Nullable Output<String> referenceName;
 
-    public Output<String> referenceName() {
-        return this.referenceName == null ? Codegen.empty() : this.referenceName;
+    public Optional<Output<String>> referenceName() {
+        return Optional.ofNullable(this.referenceName);
     }
 
-    public DelegationSetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> nameServers,
-        @Nullable Output<String> referenceName) {
-        this.arn = arn;
-        this.nameServers = nameServers;
-        this.referenceName = referenceName;
-    }
+    private DelegationSetState() {}
 
-    private DelegationSetState() {
-        this.arn = Codegen.empty();
-        this.nameServers = Codegen.empty();
-        this.referenceName = Codegen.empty();
+    private DelegationSetState(DelegationSetState $) {
+        this.arn = $.arn;
+        this.nameServers = $.nameServers;
+        this.referenceName = $.referenceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelegationSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> nameServers;
-        private @Nullable Output<String> referenceName;
+        private DelegationSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelegationSetState();
         }
 
         public Builder(DelegationSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.nameServers = defaults.nameServers;
-    	      this.referenceName = defaults.referenceName;
+            $ = new DelegationSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder nameServers(@Nullable Output<List<String>> nameServers) {
-            this.nameServers = nameServers;
+            $.nameServers = nameServers;
             return this;
         }
-        public Builder nameServers(@Nullable List<String> nameServers) {
-            this.nameServers = Codegen.ofNullable(nameServers);
-            return this;
+
+        public Builder nameServers(List<String> nameServers) {
+            return nameServers(Output.of(nameServers));
         }
+
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }
+
         public Builder referenceName(@Nullable Output<String> referenceName) {
-            this.referenceName = referenceName;
+            $.referenceName = referenceName;
             return this;
         }
-        public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Codegen.ofNullable(referenceName);
-            return this;
-        }        public DelegationSetState build() {
-            return new DelegationSetState(arn, nameServers, referenceName);
+
+        public Builder referenceName(String referenceName) {
+            return referenceName(Output.of(referenceName));
+        }
+
+        public DelegationSetState build() {
+            return $;
         }
     }
+
 }

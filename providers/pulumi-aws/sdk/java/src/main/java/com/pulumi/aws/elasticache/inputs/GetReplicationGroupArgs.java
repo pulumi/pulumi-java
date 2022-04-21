@@ -17,45 +17,45 @@ public final class GetReplicationGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="replicationGroupId", required=true)
-      private final String replicationGroupId;
+    private String replicationGroupId;
 
     public String replicationGroupId() {
         return this.replicationGroupId;
     }
 
-    public GetReplicationGroupArgs(String replicationGroupId) {
-        this.replicationGroupId = Objects.requireNonNull(replicationGroupId, "expected parameter 'replicationGroupId' to be non-null");
-    }
+    private GetReplicationGroupArgs() {}
 
-    private GetReplicationGroupArgs() {
-        this.replicationGroupId = null;
+    private GetReplicationGroupArgs(GetReplicationGroupArgs $) {
+        this.replicationGroupId = $.replicationGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String replicationGroupId;
+        private GetReplicationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationGroupArgs();
         }
 
         public Builder(GetReplicationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicationGroupId = defaults.replicationGroupId;
+            $ = new GetReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicationGroupId(String replicationGroupId) {
-            this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
+            $.replicationGroupId = replicationGroupId;
             return this;
-        }        public GetReplicationGroupArgs build() {
-            return new GetReplicationGroupArgs(replicationGroupId);
+        }
+
+        public GetReplicationGroupArgs build() {
+            $.replicationGroupId = Objects.requireNonNull($.replicationGroupId, "expected parameter 'replicationGroupId' to be non-null");
+            return $;
         }
     }
+
 }

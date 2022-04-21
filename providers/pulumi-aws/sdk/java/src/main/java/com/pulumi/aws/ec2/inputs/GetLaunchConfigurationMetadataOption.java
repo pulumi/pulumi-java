@@ -18,7 +18,7 @@ public final class GetLaunchConfigurationMetadataOption extends com.pulumi.resou
      * 
      */
     @Import(name="httpEndpoint", required=true)
-      private final String httpEndpoint;
+    private String httpEndpoint;
 
     public String httpEndpoint() {
         return this.httpEndpoint;
@@ -29,7 +29,7 @@ public final class GetLaunchConfigurationMetadataOption extends com.pulumi.resou
      * 
      */
     @Import(name="httpPutResponseHopLimit", required=true)
-      private final Integer httpPutResponseHopLimit;
+    private Integer httpPutResponseHopLimit;
 
     public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
@@ -40,64 +40,59 @@ public final class GetLaunchConfigurationMetadataOption extends com.pulumi.resou
      * 
      */
     @Import(name="httpTokens", required=true)
-      private final String httpTokens;
+    private String httpTokens;
 
     public String httpTokens() {
         return this.httpTokens;
     }
 
-    public GetLaunchConfigurationMetadataOption(
-        String httpEndpoint,
-        Integer httpPutResponseHopLimit,
-        String httpTokens) {
-        this.httpEndpoint = Objects.requireNonNull(httpEndpoint, "expected parameter 'httpEndpoint' to be non-null");
-        this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit, "expected parameter 'httpPutResponseHopLimit' to be non-null");
-        this.httpTokens = Objects.requireNonNull(httpTokens, "expected parameter 'httpTokens' to be non-null");
-    }
+    private GetLaunchConfigurationMetadataOption() {}
 
-    private GetLaunchConfigurationMetadataOption() {
-        this.httpEndpoint = null;
-        this.httpPutResponseHopLimit = null;
-        this.httpTokens = null;
+    private GetLaunchConfigurationMetadataOption(GetLaunchConfigurationMetadataOption $) {
+        this.httpEndpoint = $.httpEndpoint;
+        this.httpPutResponseHopLimit = $.httpPutResponseHopLimit;
+        this.httpTokens = $.httpTokens;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchConfigurationMetadataOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpEndpoint;
-        private Integer httpPutResponseHopLimit;
-        private String httpTokens;
+        private GetLaunchConfigurationMetadataOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchConfigurationMetadataOption();
         }
 
         public Builder(GetLaunchConfigurationMetadataOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEndpoint = defaults.httpEndpoint;
-    	      this.httpPutResponseHopLimit = defaults.httpPutResponseHopLimit;
-    	      this.httpTokens = defaults.httpTokens;
+            $ = new GetLaunchConfigurationMetadataOption(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEndpoint(String httpEndpoint) {
-            this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
+            $.httpEndpoint = httpEndpoint;
             return this;
         }
+
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
+            $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
+
         public Builder httpTokens(String httpTokens) {
-            this.httpTokens = Objects.requireNonNull(httpTokens);
+            $.httpTokens = httpTokens;
             return this;
-        }        public GetLaunchConfigurationMetadataOption build() {
-            return new GetLaunchConfigurationMetadataOption(httpEndpoint, httpPutResponseHopLimit, httpTokens);
+        }
+
+        public GetLaunchConfigurationMetadataOption build() {
+            $.httpEndpoint = Objects.requireNonNull($.httpEndpoint, "expected parameter 'httpEndpoint' to be non-null");
+            $.httpPutResponseHopLimit = Objects.requireNonNull($.httpPutResponseHopLimit, "expected parameter 'httpPutResponseHopLimit' to be non-null");
+            $.httpTokens = Objects.requireNonNull($.httpTokens, "expected parameter 'httpTokens' to be non-null");
+            return $;
         }
     }
+
 }

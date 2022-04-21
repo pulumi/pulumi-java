@@ -19,7 +19,7 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -30,7 +30,7 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
      * 
      */
     @Import(name="ebs", required=true)
-      private final List<GetImageRecipeBlockDeviceMappingEb> ebs;
+    private List<GetImageRecipeBlockDeviceMappingEb> ebs;
 
     public List<GetImageRecipeBlockDeviceMappingEb> ebs() {
         return this.ebs;
@@ -41,7 +41,7 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
      * 
      */
     @Import(name="noDevice", required=true)
-      private final String noDevice;
+    private String noDevice;
 
     public String noDevice() {
         return this.noDevice;
@@ -52,76 +52,70 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
      * 
      */
     @Import(name="virtualName", required=true)
-      private final String virtualName;
+    private String virtualName;
 
     public String virtualName() {
         return this.virtualName;
     }
 
-    public GetImageRecipeBlockDeviceMapping(
-        String deviceName,
-        List<GetImageRecipeBlockDeviceMappingEb> ebs,
-        String noDevice,
-        String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.ebs = Objects.requireNonNull(ebs, "expected parameter 'ebs' to be non-null");
-        this.noDevice = Objects.requireNonNull(noDevice, "expected parameter 'noDevice' to be non-null");
-        this.virtualName = Objects.requireNonNull(virtualName, "expected parameter 'virtualName' to be non-null");
-    }
+    private GetImageRecipeBlockDeviceMapping() {}
 
-    private GetImageRecipeBlockDeviceMapping() {
-        this.deviceName = null;
-        this.ebs = List.of();
-        this.noDevice = null;
-        this.virtualName = null;
+    private GetImageRecipeBlockDeviceMapping(GetImageRecipeBlockDeviceMapping $) {
+        this.deviceName = $.deviceName;
+        this.ebs = $.ebs;
+        this.noDevice = $.noDevice;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageRecipeBlockDeviceMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private List<GetImageRecipeBlockDeviceMappingEb> ebs;
-        private String noDevice;
-        private String virtualName;
+        private GetImageRecipeBlockDeviceMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageRecipeBlockDeviceMapping();
         }
 
         public Builder(GetImageRecipeBlockDeviceMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.ebs = defaults.ebs;
-    	      this.noDevice = defaults.noDevice;
-    	      this.virtualName = defaults.virtualName;
+            $ = new GetImageRecipeBlockDeviceMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder ebs(List<GetImageRecipeBlockDeviceMappingEb> ebs) {
-            this.ebs = Objects.requireNonNull(ebs);
+            $.ebs = ebs;
             return this;
         }
+
         public Builder ebs(GetImageRecipeBlockDeviceMappingEb... ebs) {
             return ebs(List.of(ebs));
         }
+
         public Builder noDevice(String noDevice) {
-            this.noDevice = Objects.requireNonNull(noDevice);
+            $.noDevice = noDevice;
             return this;
         }
+
         public Builder virtualName(String virtualName) {
-            this.virtualName = Objects.requireNonNull(virtualName);
+            $.virtualName = virtualName;
             return this;
-        }        public GetImageRecipeBlockDeviceMapping build() {
-            return new GetImageRecipeBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
+        }
+
+        public GetImageRecipeBlockDeviceMapping build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.ebs = Objects.requireNonNull($.ebs, "expected parameter 'ebs' to be non-null");
+            $.noDevice = Objects.requireNonNull($.noDevice, "expected parameter 'noDevice' to be non-null");
+            $.virtualName = Objects.requireNonNull($.virtualName, "expected parameter 'virtualName' to be non-null");
+            return $;
         }
     }
+
 }

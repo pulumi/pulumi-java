@@ -6,7 +6,6 @@ package com.pulumi.aws.waf.inputs;
 import com.pulumi.aws.waf.inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class WebAclLoggingConfigurationRedactedFieldsGetArgs extends com.p
      * 
      */
     @Import(name="fieldToMatches", required=true)
-      private final Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
+    private Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
 
     public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches() {
         return this.fieldToMatches;
     }
 
-    public WebAclLoggingConfigurationRedactedFieldsGetArgs(Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches) {
-        this.fieldToMatches = Objects.requireNonNull(fieldToMatches, "expected parameter 'fieldToMatches' to be non-null");
-    }
+    private WebAclLoggingConfigurationRedactedFieldsGetArgs() {}
 
-    private WebAclLoggingConfigurationRedactedFieldsGetArgs() {
-        this.fieldToMatches = Codegen.empty();
+    private WebAclLoggingConfigurationRedactedFieldsGetArgs(WebAclLoggingConfigurationRedactedFieldsGetArgs $) {
+        this.fieldToMatches = $.fieldToMatches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationRedactedFieldsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
+        private WebAclLoggingConfigurationRedactedFieldsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationRedactedFieldsGetArgs();
         }
 
         public Builder(WebAclLoggingConfigurationRedactedFieldsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatches = defaults.fieldToMatches;
+            $ = new WebAclLoggingConfigurationRedactedFieldsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatches(Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches) {
-            this.fieldToMatches = Objects.requireNonNull(fieldToMatches);
+            $.fieldToMatches = fieldToMatches;
             return this;
         }
+
         public Builder fieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs> fieldToMatches) {
-            this.fieldToMatches = Output.of(Objects.requireNonNull(fieldToMatches));
-            return this;
+            return fieldToMatches(Output.of(fieldToMatches));
         }
+
         public Builder fieldToMatches(WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs... fieldToMatches) {
             return fieldToMatches(List.of(fieldToMatches));
-        }        public WebAclLoggingConfigurationRedactedFieldsGetArgs build() {
-            return new WebAclLoggingConfigurationRedactedFieldsGetArgs(fieldToMatches);
+        }
+
+        public WebAclLoggingConfigurationRedactedFieldsGetArgs build() {
+            $.fieldToMatches = Objects.requireNonNull($.fieldToMatches, "expected parameter 'fieldToMatches' to be non-null");
+            return $;
         }
     }
+
 }

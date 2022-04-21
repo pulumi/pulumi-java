@@ -17,7 +17,7 @@ public final class GetDomainAdvancedSecurityOption extends com.pulumi.resources.
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -28,55 +28,52 @@ public final class GetDomainAdvancedSecurityOption extends com.pulumi.resources.
      * 
      */
     @Import(name="internalUserDatabaseEnabled", required=true)
-      private final Boolean internalUserDatabaseEnabled;
+    private Boolean internalUserDatabaseEnabled;
 
     public Boolean internalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled;
     }
 
-    public GetDomainAdvancedSecurityOption(
-        Boolean enabled,
-        Boolean internalUserDatabaseEnabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.internalUserDatabaseEnabled = Objects.requireNonNull(internalUserDatabaseEnabled, "expected parameter 'internalUserDatabaseEnabled' to be non-null");
-    }
+    private GetDomainAdvancedSecurityOption() {}
 
-    private GetDomainAdvancedSecurityOption() {
-        this.enabled = null;
-        this.internalUserDatabaseEnabled = null;
+    private GetDomainAdvancedSecurityOption(GetDomainAdvancedSecurityOption $) {
+        this.enabled = $.enabled;
+        this.internalUserDatabaseEnabled = $.internalUserDatabaseEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainAdvancedSecurityOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private Boolean internalUserDatabaseEnabled;
+        private GetDomainAdvancedSecurityOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainAdvancedSecurityOption();
         }
 
         public Builder(GetDomainAdvancedSecurityOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.internalUserDatabaseEnabled = defaults.internalUserDatabaseEnabled;
+            $ = new GetDomainAdvancedSecurityOption(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder internalUserDatabaseEnabled(Boolean internalUserDatabaseEnabled) {
-            this.internalUserDatabaseEnabled = Objects.requireNonNull(internalUserDatabaseEnabled);
+            $.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
-        }        public GetDomainAdvancedSecurityOption build() {
-            return new GetDomainAdvancedSecurityOption(enabled, internalUserDatabaseEnabled);
+        }
+
+        public GetDomainAdvancedSecurityOption build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.internalUserDatabaseEnabled = Objects.requireNonNull($.internalUserDatabaseEnabled, "expected parameter 'internalUserDatabaseEnabled' to be non-null");
+            return $;
         }
     }
+
 }

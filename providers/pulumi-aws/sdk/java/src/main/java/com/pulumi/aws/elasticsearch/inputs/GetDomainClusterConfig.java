@@ -23,7 +23,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dedicatedMasterCount", required=true)
-      private final Integer dedicatedMasterCount;
+    private Integer dedicatedMasterCount;
 
     public Integer dedicatedMasterCount() {
         return this.dedicatedMasterCount;
@@ -34,7 +34,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dedicatedMasterEnabled", required=true)
-      private final Boolean dedicatedMasterEnabled;
+    private Boolean dedicatedMasterEnabled;
 
     public Boolean dedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled;
@@ -45,7 +45,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dedicatedMasterType", required=true)
-      private final String dedicatedMasterType;
+    private String dedicatedMasterType;
 
     public String dedicatedMasterType() {
         return this.dedicatedMasterType;
@@ -56,7 +56,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceCount", required=true)
-      private final Integer instanceCount;
+    private Integer instanceCount;
 
     public Integer instanceCount() {
         return this.instanceCount;
@@ -67,7 +67,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -78,7 +78,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="warmCount", required=true)
-      private final Integer warmCount;
+    private Integer warmCount;
 
     public Integer warmCount() {
         return this.warmCount;
@@ -89,10 +89,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="warmEnabled")
-      private final @Nullable Boolean warmEnabled;
+    private @Nullable Boolean warmEnabled;
 
     public Optional<Boolean> warmEnabled() {
-        return this.warmEnabled == null ? Optional.empty() : Optional.ofNullable(this.warmEnabled);
+        return Optional.ofNullable(this.warmEnabled);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="warmType", required=true)
-      private final String warmType;
+    private String warmType;
 
     public String warmType() {
         return this.warmType;
@@ -111,7 +111,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="zoneAwarenessConfigs", required=true)
-      private final List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
+    private List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
 
     public List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs() {
         return this.zoneAwarenessConfigs;
@@ -122,130 +122,111 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="zoneAwarenessEnabled", required=true)
-      private final Boolean zoneAwarenessEnabled;
+    private Boolean zoneAwarenessEnabled;
 
     public Boolean zoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled;
     }
 
-    public GetDomainClusterConfig(
-        Integer dedicatedMasterCount,
-        Boolean dedicatedMasterEnabled,
-        String dedicatedMasterType,
-        Integer instanceCount,
-        String instanceType,
-        Integer warmCount,
-        @Nullable Boolean warmEnabled,
-        String warmType,
-        List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs,
-        Boolean zoneAwarenessEnabled) {
-        this.dedicatedMasterCount = Objects.requireNonNull(dedicatedMasterCount, "expected parameter 'dedicatedMasterCount' to be non-null");
-        this.dedicatedMasterEnabled = Objects.requireNonNull(dedicatedMasterEnabled, "expected parameter 'dedicatedMasterEnabled' to be non-null");
-        this.dedicatedMasterType = Objects.requireNonNull(dedicatedMasterType, "expected parameter 'dedicatedMasterType' to be non-null");
-        this.instanceCount = Objects.requireNonNull(instanceCount, "expected parameter 'instanceCount' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.warmCount = Objects.requireNonNull(warmCount, "expected parameter 'warmCount' to be non-null");
-        this.warmEnabled = warmEnabled;
-        this.warmType = Objects.requireNonNull(warmType, "expected parameter 'warmType' to be non-null");
-        this.zoneAwarenessConfigs = Objects.requireNonNull(zoneAwarenessConfigs, "expected parameter 'zoneAwarenessConfigs' to be non-null");
-        this.zoneAwarenessEnabled = Objects.requireNonNull(zoneAwarenessEnabled, "expected parameter 'zoneAwarenessEnabled' to be non-null");
-    }
+    private GetDomainClusterConfig() {}
 
-    private GetDomainClusterConfig() {
-        this.dedicatedMasterCount = null;
-        this.dedicatedMasterEnabled = null;
-        this.dedicatedMasterType = null;
-        this.instanceCount = null;
-        this.instanceType = null;
-        this.warmCount = null;
-        this.warmEnabled = null;
-        this.warmType = null;
-        this.zoneAwarenessConfigs = List.of();
-        this.zoneAwarenessEnabled = null;
+    private GetDomainClusterConfig(GetDomainClusterConfig $) {
+        this.dedicatedMasterCount = $.dedicatedMasterCount;
+        this.dedicatedMasterEnabled = $.dedicatedMasterEnabled;
+        this.dedicatedMasterType = $.dedicatedMasterType;
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.warmCount = $.warmCount;
+        this.warmEnabled = $.warmEnabled;
+        this.warmType = $.warmType;
+        this.zoneAwarenessConfigs = $.zoneAwarenessConfigs;
+        this.zoneAwarenessEnabled = $.zoneAwarenessEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainClusterConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer dedicatedMasterCount;
-        private Boolean dedicatedMasterEnabled;
-        private String dedicatedMasterType;
-        private Integer instanceCount;
-        private String instanceType;
-        private Integer warmCount;
-        private @Nullable Boolean warmEnabled;
-        private String warmType;
-        private List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
-        private Boolean zoneAwarenessEnabled;
+        private GetDomainClusterConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainClusterConfig();
         }
 
         public Builder(GetDomainClusterConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dedicatedMasterCount = defaults.dedicatedMasterCount;
-    	      this.dedicatedMasterEnabled = defaults.dedicatedMasterEnabled;
-    	      this.dedicatedMasterType = defaults.dedicatedMasterType;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.warmCount = defaults.warmCount;
-    	      this.warmEnabled = defaults.warmEnabled;
-    	      this.warmType = defaults.warmType;
-    	      this.zoneAwarenessConfigs = defaults.zoneAwarenessConfigs;
-    	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
+            $ = new GetDomainClusterConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder dedicatedMasterCount(Integer dedicatedMasterCount) {
-            this.dedicatedMasterCount = Objects.requireNonNull(dedicatedMasterCount);
+            $.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
+
         public Builder dedicatedMasterEnabled(Boolean dedicatedMasterEnabled) {
-            this.dedicatedMasterEnabled = Objects.requireNonNull(dedicatedMasterEnabled);
+            $.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
+
         public Builder dedicatedMasterType(String dedicatedMasterType) {
-            this.dedicatedMasterType = Objects.requireNonNull(dedicatedMasterType);
+            $.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
+
         public Builder instanceCount(Integer instanceCount) {
-            this.instanceCount = Objects.requireNonNull(instanceCount);
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder warmCount(Integer warmCount) {
-            this.warmCount = Objects.requireNonNull(warmCount);
+            $.warmCount = warmCount;
             return this;
         }
+
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
-            this.warmEnabled = warmEnabled;
+            $.warmEnabled = warmEnabled;
             return this;
         }
+
         public Builder warmType(String warmType) {
-            this.warmType = Objects.requireNonNull(warmType);
+            $.warmType = warmType;
             return this;
         }
+
         public Builder zoneAwarenessConfigs(List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs) {
-            this.zoneAwarenessConfigs = Objects.requireNonNull(zoneAwarenessConfigs);
+            $.zoneAwarenessConfigs = zoneAwarenessConfigs;
             return this;
         }
+
         public Builder zoneAwarenessConfigs(GetDomainClusterConfigZoneAwarenessConfig... zoneAwarenessConfigs) {
             return zoneAwarenessConfigs(List.of(zoneAwarenessConfigs));
         }
+
         public Builder zoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
-            this.zoneAwarenessEnabled = Objects.requireNonNull(zoneAwarenessEnabled);
+            $.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
-        }        public GetDomainClusterConfig build() {
-            return new GetDomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfigs, zoneAwarenessEnabled);
+        }
+
+        public GetDomainClusterConfig build() {
+            $.dedicatedMasterCount = Objects.requireNonNull($.dedicatedMasterCount, "expected parameter 'dedicatedMasterCount' to be non-null");
+            $.dedicatedMasterEnabled = Objects.requireNonNull($.dedicatedMasterEnabled, "expected parameter 'dedicatedMasterEnabled' to be non-null");
+            $.dedicatedMasterType = Objects.requireNonNull($.dedicatedMasterType, "expected parameter 'dedicatedMasterType' to be non-null");
+            $.instanceCount = Objects.requireNonNull($.instanceCount, "expected parameter 'instanceCount' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            $.warmCount = Objects.requireNonNull($.warmCount, "expected parameter 'warmCount' to be non-null");
+            $.warmType = Objects.requireNonNull($.warmType, "expected parameter 'warmType' to be non-null");
+            $.zoneAwarenessConfigs = Objects.requireNonNull($.zoneAwarenessConfigs, "expected parameter 'zoneAwarenessConfigs' to be non-null");
+            $.zoneAwarenessEnabled = Objects.requireNonNull($.zoneAwarenessEnabled, "expected parameter 'zoneAwarenessEnabled' to be non-null");
+            return $;
         }
     }
+
 }

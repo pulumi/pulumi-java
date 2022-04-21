@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs extends 
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs extends 
      * 
      */
     @Import(name="s3Uri", required=true)
-      private final Output<String> s3Uri;
+    private Output<String> s3Uri;
 
     public Output<String> s3Uri() {
         return this.s3Uri;
     }
 
-    public FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs(
-        @Nullable Output<String> kmsKeyId,
-        Output<String> s3Uri) {
-        this.kmsKeyId = kmsKeyId;
-        this.s3Uri = Objects.requireNonNull(s3Uri, "expected parameter 's3Uri' to be non-null");
-    }
+    private FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs() {}
 
-    private FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.s3Uri = Codegen.empty();
+    private FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs(FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.s3Uri = $.s3Uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private Output<String> s3Uri;
+        private FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs();
         }
 
         public Builder(FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.s3Uri = defaults.s3Uri;
+            $ = new FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder s3Uri(Output<String> s3Uri) {
-            this.s3Uri = Objects.requireNonNull(s3Uri);
+            $.s3Uri = s3Uri;
             return this;
         }
+
         public Builder s3Uri(String s3Uri) {
-            this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
-            return this;
-        }        public FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs build() {
-            return new FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs(kmsKeyId, s3Uri);
+            return s3Uri(Output.of(s3Uri));
+        }
+
+        public FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs build() {
+            $.s3Uri = Objects.requireNonNull($.s3Uri, "expected parameter 's3Uri' to be non-null");
+            return $;
         }
     }
+
 }

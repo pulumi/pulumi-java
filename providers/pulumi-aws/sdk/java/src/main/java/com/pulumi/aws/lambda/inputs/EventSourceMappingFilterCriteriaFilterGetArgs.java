@@ -5,9 +5,9 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EventSourceMappingFilterCriteriaFilterGetArgs extends com.pul
      * 
      */
     @Import(name="pattern")
-      private final @Nullable Output<String> pattern;
+    private @Nullable Output<String> pattern;
 
-    public Output<String> pattern() {
-        return this.pattern == null ? Codegen.empty() : this.pattern;
+    public Optional<Output<String>> pattern() {
+        return Optional.ofNullable(this.pattern);
     }
 
-    public EventSourceMappingFilterCriteriaFilterGetArgs(@Nullable Output<String> pattern) {
-        this.pattern = pattern;
-    }
+    private EventSourceMappingFilterCriteriaFilterGetArgs() {}
 
-    private EventSourceMappingFilterCriteriaFilterGetArgs() {
-        this.pattern = Codegen.empty();
+    private EventSourceMappingFilterCriteriaFilterGetArgs(EventSourceMappingFilterCriteriaFilterGetArgs $) {
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingFilterCriteriaFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pattern;
+        private EventSourceMappingFilterCriteriaFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingFilterCriteriaFilterGetArgs();
         }
 
         public Builder(EventSourceMappingFilterCriteriaFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pattern = defaults.pattern;
+            $ = new EventSourceMappingFilterCriteriaFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pattern(@Nullable Output<String> pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
         }
-        public Builder pattern(@Nullable String pattern) {
-            this.pattern = Codegen.ofNullable(pattern);
-            return this;
-        }        public EventSourceMappingFilterCriteriaFilterGetArgs build() {
-            return new EventSourceMappingFilterCriteriaFilterGetArgs(pattern);
+
+        public Builder pattern(String pattern) {
+            return pattern(Output.of(pattern));
+        }
+
+        public EventSourceMappingFilterCriteriaFilterGetArgs build() {
+            return $;
         }
     }
+
 }

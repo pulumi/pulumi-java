@@ -6,9 +6,9 @@ package com.pulumi.aws.codebuild.inputs;
 import com.pulumi.aws.codebuild.inputs.WebhookFilterGroupFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class WebhookFilterGroupGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters;
+    private @Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters;
 
-    public Output<List<WebhookFilterGroupFilterGetArgs>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<WebhookFilterGroupFilterGetArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public WebhookFilterGroupGetArgs(@Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters) {
-        this.filters = filters;
-    }
+    private WebhookFilterGroupGetArgs() {}
 
-    private WebhookFilterGroupGetArgs() {
-        this.filters = Codegen.empty();
+    private WebhookFilterGroupGetArgs(WebhookFilterGroupGetArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookFilterGroupGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters;
+        private WebhookFilterGroupGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookFilterGroupGetArgs();
         }
 
         public Builder(WebhookFilterGroupGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new WebhookFilterGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<WebhookFilterGroupFilterGetArgs> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<WebhookFilterGroupFilterGetArgs> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(WebhookFilterGroupFilterGetArgs... filters) {
             return filters(List.of(filters));
-        }        public WebhookFilterGroupGetArgs build() {
-            return new WebhookFilterGroupGetArgs(filters);
+        }
+
+        public WebhookFilterGroupGetArgs build() {
+            return $;
         }
     }
+
 }

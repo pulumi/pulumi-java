@@ -5,10 +5,10 @@ package com.pulumi.aws.fsx;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OpenZfsSnapshotArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OpenZfsSnapshotArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class OpenZfsSnapshotArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class OpenZfsSnapshotArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="volumeId", required=true)
-      private final Output<String> volumeId;
+    private Output<String> volumeId;
 
     public Output<String> volumeId() {
         return this.volumeId;
     }
 
-    public OpenZfsSnapshotArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        Output<String> volumeId) {
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.volumeId = Objects.requireNonNull(volumeId, "expected parameter 'volumeId' to be non-null");
-    }
+    private OpenZfsSnapshotArgs() {}
 
-    private OpenZfsSnapshotArgs() {
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.volumeId = Codegen.empty();
+    private OpenZfsSnapshotArgs(OpenZfsSnapshotArgs $) {
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.volumeId = $.volumeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenZfsSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private Output<String> volumeId;
+        private OpenZfsSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenZfsSnapshotArgs();
         }
 
         public Builder(OpenZfsSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.volumeId = defaults.volumeId;
+            $ = new OpenZfsSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder volumeId(Output<String> volumeId) {
-            this.volumeId = Objects.requireNonNull(volumeId);
+            $.volumeId = volumeId;
             return this;
         }
+
         public Builder volumeId(String volumeId) {
-            this.volumeId = Output.of(Objects.requireNonNull(volumeId));
-            return this;
-        }        public OpenZfsSnapshotArgs build() {
-            return new OpenZfsSnapshotArgs(name, tags, tagsAll, volumeId);
+            return volumeId(Output.of(volumeId));
+        }
+
+        public OpenZfsSnapshotArgs build() {
+            $.volumeId = Objects.requireNonNull($.volumeId, "expected parameter 'volumeId' to be non-null");
+            return $;
         }
     }
+
 }

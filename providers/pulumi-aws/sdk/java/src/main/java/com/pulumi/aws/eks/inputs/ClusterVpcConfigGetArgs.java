@@ -5,11 +5,11 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clusterSecurityGroupId")
-      private final @Nullable Output<String> clusterSecurityGroupId;
+    private @Nullable Output<String> clusterSecurityGroupId;
 
-    public Output<String> clusterSecurityGroupId() {
-        return this.clusterSecurityGroupId == null ? Codegen.empty() : this.clusterSecurityGroupId;
+    public Optional<Output<String>> clusterSecurityGroupId() {
+        return Optional.ofNullable(this.clusterSecurityGroupId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endpointPrivateAccess")
-      private final @Nullable Output<Boolean> endpointPrivateAccess;
+    private @Nullable Output<Boolean> endpointPrivateAccess;
 
-    public Output<Boolean> endpointPrivateAccess() {
-        return this.endpointPrivateAccess == null ? Codegen.empty() : this.endpointPrivateAccess;
+    public Optional<Output<Boolean>> endpointPrivateAccess() {
+        return Optional.ofNullable(this.endpointPrivateAccess);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endpointPublicAccess")
-      private final @Nullable Output<Boolean> endpointPublicAccess;
+    private @Nullable Output<Boolean> endpointPublicAccess;
 
-    public Output<Boolean> endpointPublicAccess() {
-        return this.endpointPublicAccess == null ? Codegen.empty() : this.endpointPublicAccess;
+    public Optional<Output<Boolean>> endpointPublicAccess() {
+        return Optional.ofNullable(this.endpointPublicAccess);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="publicAccessCidrs")
-      private final @Nullable Output<List<String>> publicAccessCidrs;
+    private @Nullable Output<List<String>> publicAccessCidrs;
 
-    public Output<List<String>> publicAccessCidrs() {
-        return this.publicAccessCidrs == null ? Codegen.empty() : this.publicAccessCidrs;
+    public Optional<Output<List<String>>> publicAccessCidrs() {
+        return Optional.ofNullable(this.publicAccessCidrs);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -88,137 +88,121 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ClusterVpcConfigGetArgs(
-        @Nullable Output<String> clusterSecurityGroupId,
-        @Nullable Output<Boolean> endpointPrivateAccess,
-        @Nullable Output<Boolean> endpointPublicAccess,
-        @Nullable Output<List<String>> publicAccessCidrs,
-        @Nullable Output<List<String>> securityGroupIds,
-        Output<List<String>> subnetIds,
-        @Nullable Output<String> vpcId) {
-        this.clusterSecurityGroupId = clusterSecurityGroupId;
-        this.endpointPrivateAccess = endpointPrivateAccess;
-        this.endpointPublicAccess = endpointPublicAccess;
-        this.publicAccessCidrs = publicAccessCidrs;
-        this.securityGroupIds = securityGroupIds;
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = vpcId;
-    }
+    private ClusterVpcConfigGetArgs() {}
 
-    private ClusterVpcConfigGetArgs() {
-        this.clusterSecurityGroupId = Codegen.empty();
-        this.endpointPrivateAccess = Codegen.empty();
-        this.endpointPublicAccess = Codegen.empty();
-        this.publicAccessCidrs = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ClusterVpcConfigGetArgs(ClusterVpcConfigGetArgs $) {
+        this.clusterSecurityGroupId = $.clusterSecurityGroupId;
+        this.endpointPrivateAccess = $.endpointPrivateAccess;
+        this.endpointPublicAccess = $.endpointPublicAccess;
+        this.publicAccessCidrs = $.publicAccessCidrs;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterVpcConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterSecurityGroupId;
-        private @Nullable Output<Boolean> endpointPrivateAccess;
-        private @Nullable Output<Boolean> endpointPublicAccess;
-        private @Nullable Output<List<String>> publicAccessCidrs;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<String> vpcId;
+        private ClusterVpcConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterVpcConfigGetArgs();
         }
 
         public Builder(ClusterVpcConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterSecurityGroupId = defaults.clusterSecurityGroupId;
-    	      this.endpointPrivateAccess = defaults.endpointPrivateAccess;
-    	      this.endpointPublicAccess = defaults.endpointPublicAccess;
-    	      this.publicAccessCidrs = defaults.publicAccessCidrs;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ClusterVpcConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterSecurityGroupId(@Nullable Output<String> clusterSecurityGroupId) {
-            this.clusterSecurityGroupId = clusterSecurityGroupId;
+            $.clusterSecurityGroupId = clusterSecurityGroupId;
             return this;
         }
-        public Builder clusterSecurityGroupId(@Nullable String clusterSecurityGroupId) {
-            this.clusterSecurityGroupId = Codegen.ofNullable(clusterSecurityGroupId);
-            return this;
+
+        public Builder clusterSecurityGroupId(String clusterSecurityGroupId) {
+            return clusterSecurityGroupId(Output.of(clusterSecurityGroupId));
         }
+
         public Builder endpointPrivateAccess(@Nullable Output<Boolean> endpointPrivateAccess) {
-            this.endpointPrivateAccess = endpointPrivateAccess;
+            $.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
-        public Builder endpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
-            this.endpointPrivateAccess = Codegen.ofNullable(endpointPrivateAccess);
-            return this;
+
+        public Builder endpointPrivateAccess(Boolean endpointPrivateAccess) {
+            return endpointPrivateAccess(Output.of(endpointPrivateAccess));
         }
+
         public Builder endpointPublicAccess(@Nullable Output<Boolean> endpointPublicAccess) {
-            this.endpointPublicAccess = endpointPublicAccess;
+            $.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
-        public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
-            this.endpointPublicAccess = Codegen.ofNullable(endpointPublicAccess);
-            return this;
+
+        public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
+            return endpointPublicAccess(Output.of(endpointPublicAccess));
         }
+
         public Builder publicAccessCidrs(@Nullable Output<List<String>> publicAccessCidrs) {
-            this.publicAccessCidrs = publicAccessCidrs;
+            $.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
-        public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
-            this.publicAccessCidrs = Codegen.ofNullable(publicAccessCidrs);
-            return this;
+
+        public Builder publicAccessCidrs(List<String> publicAccessCidrs) {
+            return publicAccessCidrs(Output.of(publicAccessCidrs));
         }
+
         public Builder publicAccessCidrs(String... publicAccessCidrs) {
             return publicAccessCidrs(List.of(publicAccessCidrs));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ClusterVpcConfigGetArgs build() {
-            return new ClusterVpcConfigGetArgs(clusterSecurityGroupId, endpointPrivateAccess, endpointPublicAccess, publicAccessCidrs, securityGroupIds, subnetIds, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ClusterVpcConfigGetArgs build() {
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

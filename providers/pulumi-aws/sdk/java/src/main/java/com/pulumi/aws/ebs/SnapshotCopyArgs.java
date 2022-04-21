@@ -5,12 +5,12 @@ package com.pulumi.aws.ebs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permanentRestore")
-      private final @Nullable Output<Boolean> permanentRestore;
+    private @Nullable Output<Boolean> permanentRestore;
 
-    public Output<Boolean> permanentRestore() {
-        return this.permanentRestore == null ? Codegen.empty() : this.permanentRestore;
+    public Optional<Output<Boolean>> permanentRestore() {
+        return Optional.ofNullable(this.permanentRestore);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRegion", required=true)
-      private final Output<String> sourceRegion;
+    private Output<String> sourceRegion;
 
     public Output<String> sourceRegion() {
         return this.sourceRegion;
@@ -78,7 +78,7 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshotId", required=true)
-      private final Output<String> sourceSnapshotId;
+    private Output<String> sourceSnapshotId;
 
     public Output<String> sourceSnapshotId() {
         return this.sourceSnapshotId;
@@ -89,17 +89,17 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageTier")
-      private final @Nullable Output<String> storageTier;
+    private @Nullable Output<String> storageTier;
 
-    public Output<String> storageTier() {
-        return this.storageTier == null ? Codegen.empty() : this.storageTier;
+    public Optional<Output<String>> storageTier() {
+        return Optional.ofNullable(this.storageTier);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -107,154 +107,130 @@ public final class SnapshotCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="temporaryRestoreDays")
-      private final @Nullable Output<Integer> temporaryRestoreDays;
+    private @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Output<Integer> temporaryRestoreDays() {
-        return this.temporaryRestoreDays == null ? Codegen.empty() : this.temporaryRestoreDays;
+    public Optional<Output<Integer>> temporaryRestoreDays() {
+        return Optional.ofNullable(this.temporaryRestoreDays);
     }
 
-    public SnapshotCopyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<Boolean> permanentRestore,
-        Output<String> sourceRegion,
-        Output<String> sourceSnapshotId,
-        @Nullable Output<String> storageTier,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> temporaryRestoreDays) {
-        this.description = description;
-        this.encrypted = encrypted;
-        this.kmsKeyId = kmsKeyId;
-        this.permanentRestore = permanentRestore;
-        this.sourceRegion = Objects.requireNonNull(sourceRegion, "expected parameter 'sourceRegion' to be non-null");
-        this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId, "expected parameter 'sourceSnapshotId' to be non-null");
-        this.storageTier = storageTier;
-        this.tags = tags;
-        this.temporaryRestoreDays = temporaryRestoreDays;
-    }
+    private SnapshotCopyArgs() {}
 
-    private SnapshotCopyArgs() {
-        this.description = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.permanentRestore = Codegen.empty();
-        this.sourceRegion = Codegen.empty();
-        this.sourceSnapshotId = Codegen.empty();
-        this.storageTier = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.temporaryRestoreDays = Codegen.empty();
+    private SnapshotCopyArgs(SnapshotCopyArgs $) {
+        this.description = $.description;
+        this.encrypted = $.encrypted;
+        this.kmsKeyId = $.kmsKeyId;
+        this.permanentRestore = $.permanentRestore;
+        this.sourceRegion = $.sourceRegion;
+        this.sourceSnapshotId = $.sourceSnapshotId;
+        this.storageTier = $.storageTier;
+        this.tags = $.tags;
+        this.temporaryRestoreDays = $.temporaryRestoreDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotCopyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<Boolean> permanentRestore;
-        private Output<String> sourceRegion;
-        private Output<String> sourceSnapshotId;
-        private @Nullable Output<String> storageTier;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> temporaryRestoreDays;
+        private SnapshotCopyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotCopyArgs();
         }
 
         public Builder(SnapshotCopyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.encrypted = defaults.encrypted;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.permanentRestore = defaults.permanentRestore;
-    	      this.sourceRegion = defaults.sourceRegion;
-    	      this.sourceSnapshotId = defaults.sourceSnapshotId;
-    	      this.storageTier = defaults.storageTier;
-    	      this.tags = defaults.tags;
-    	      this.temporaryRestoreDays = defaults.temporaryRestoreDays;
+            $ = new SnapshotCopyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
-            this.permanentRestore = permanentRestore;
+            $.permanentRestore = permanentRestore;
             return this;
         }
-        public Builder permanentRestore(@Nullable Boolean permanentRestore) {
-            this.permanentRestore = Codegen.ofNullable(permanentRestore);
-            return this;
+
+        public Builder permanentRestore(Boolean permanentRestore) {
+            return permanentRestore(Output.of(permanentRestore));
         }
+
         public Builder sourceRegion(Output<String> sourceRegion) {
-            this.sourceRegion = Objects.requireNonNull(sourceRegion);
+            $.sourceRegion = sourceRegion;
             return this;
         }
+
         public Builder sourceRegion(String sourceRegion) {
-            this.sourceRegion = Output.of(Objects.requireNonNull(sourceRegion));
-            return this;
+            return sourceRegion(Output.of(sourceRegion));
         }
+
         public Builder sourceSnapshotId(Output<String> sourceSnapshotId) {
-            this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
+            $.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
+
         public Builder sourceSnapshotId(String sourceSnapshotId) {
-            this.sourceSnapshotId = Output.of(Objects.requireNonNull(sourceSnapshotId));
-            return this;
+            return sourceSnapshotId(Output.of(sourceSnapshotId));
         }
+
         public Builder storageTier(@Nullable Output<String> storageTier) {
-            this.storageTier = storageTier;
+            $.storageTier = storageTier;
             return this;
         }
-        public Builder storageTier(@Nullable String storageTier) {
-            this.storageTier = Codegen.ofNullable(storageTier);
-            return this;
+
+        public Builder storageTier(String storageTier) {
+            return storageTier(Output.of(storageTier));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
-            this.temporaryRestoreDays = temporaryRestoreDays;
+            $.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
-        public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
-            this.temporaryRestoreDays = Codegen.ofNullable(temporaryRestoreDays);
-            return this;
-        }        public SnapshotCopyArgs build() {
-            return new SnapshotCopyArgs(description, encrypted, kmsKeyId, permanentRestore, sourceRegion, sourceSnapshotId, storageTier, tags, temporaryRestoreDays);
+
+        public Builder temporaryRestoreDays(Integer temporaryRestoreDays) {
+            return temporaryRestoreDays(Output.of(temporaryRestoreDays));
+        }
+
+        public SnapshotCopyArgs build() {
+            $.sourceRegion = Objects.requireNonNull($.sourceRegion, "expected parameter 'sourceRegion' to be non-null");
+            $.sourceSnapshotId = Objects.requireNonNull($.sourceSnapshotId, "expected parameter 'sourceSnapshotId' to be non-null");
+            return $;
         }
     }
+
 }

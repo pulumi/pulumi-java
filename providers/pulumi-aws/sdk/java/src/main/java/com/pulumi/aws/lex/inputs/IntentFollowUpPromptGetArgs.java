@@ -7,7 +7,6 @@ import com.pulumi.aws.lex.inputs.IntentFollowUpPromptPromptGetArgs;
 import com.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +19,7 @@ public final class IntentFollowUpPromptGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="prompt", required=true)
-      private final Output<IntentFollowUpPromptPromptGetArgs> prompt;
+    private Output<IntentFollowUpPromptPromptGetArgs> prompt;
 
     public Output<IntentFollowUpPromptPromptGetArgs> prompt() {
         return this.prompt;
@@ -33,63 +32,60 @@ public final class IntentFollowUpPromptGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="rejectionStatement", required=true)
-      private final Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
+    private Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
 
     public Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement() {
         return this.rejectionStatement;
     }
 
-    public IntentFollowUpPromptGetArgs(
-        Output<IntentFollowUpPromptPromptGetArgs> prompt,
-        Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
-        this.prompt = Objects.requireNonNull(prompt, "expected parameter 'prompt' to be non-null");
-        this.rejectionStatement = Objects.requireNonNull(rejectionStatement, "expected parameter 'rejectionStatement' to be non-null");
-    }
+    private IntentFollowUpPromptGetArgs() {}
 
-    private IntentFollowUpPromptGetArgs() {
-        this.prompt = Codegen.empty();
-        this.rejectionStatement = Codegen.empty();
+    private IntentFollowUpPromptGetArgs(IntentFollowUpPromptGetArgs $) {
+        this.prompt = $.prompt;
+        this.rejectionStatement = $.rejectionStatement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentFollowUpPromptGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<IntentFollowUpPromptPromptGetArgs> prompt;
-        private Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
+        private IntentFollowUpPromptGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentFollowUpPromptGetArgs();
         }
 
         public Builder(IntentFollowUpPromptGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prompt = defaults.prompt;
-    	      this.rejectionStatement = defaults.rejectionStatement;
+            $ = new IntentFollowUpPromptGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder prompt(Output<IntentFollowUpPromptPromptGetArgs> prompt) {
-            this.prompt = Objects.requireNonNull(prompt);
+            $.prompt = prompt;
             return this;
         }
+
         public Builder prompt(IntentFollowUpPromptPromptGetArgs prompt) {
-            this.prompt = Output.of(Objects.requireNonNull(prompt));
-            return this;
+            return prompt(Output.of(prompt));
         }
+
         public Builder rejectionStatement(Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
-            this.rejectionStatement = Objects.requireNonNull(rejectionStatement);
+            $.rejectionStatement = rejectionStatement;
             return this;
         }
+
         public Builder rejectionStatement(IntentFollowUpPromptRejectionStatementGetArgs rejectionStatement) {
-            this.rejectionStatement = Output.of(Objects.requireNonNull(rejectionStatement));
-            return this;
-        }        public IntentFollowUpPromptGetArgs build() {
-            return new IntentFollowUpPromptGetArgs(prompt, rejectionStatement);
+            return rejectionStatement(Output.of(rejectionStatement));
+        }
+
+        public IntentFollowUpPromptGetArgs build() {
+            $.prompt = Objects.requireNonNull($.prompt, "expected parameter 'prompt' to be non-null");
+            $.rejectionStatement = Objects.requireNonNull($.rejectionStatement, "expected parameter 'rejectionStatement' to be non-null");
+            return $;
         }
     }
+
 }

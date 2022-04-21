@@ -5,7 +5,6 @@ package com.pulumi.aws.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -30,59 +29,60 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="target", required=true)
-      private final Output<String> target;
+    private Output<String> target;
 
     public Output<String> target() {
         return this.target;
     }
 
-    public PolicyAttachmentArgs(
-        Output<String> policy,
-        Output<String> target) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private PolicyAttachmentArgs() {}
 
-    private PolicyAttachmentArgs() {
-        this.policy = Codegen.empty();
-        this.target = Codegen.empty();
+    private PolicyAttachmentArgs(PolicyAttachmentArgs $) {
+        this.policy = $.policy;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policy;
-        private Output<String> target;
+        private PolicyAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAttachmentArgs();
         }
 
         public Builder(PolicyAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.target = defaults.target;
+            $ = new PolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder target(Output<String> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public PolicyAttachmentArgs build() {
-            return new PolicyAttachmentArgs(policy, target);
+            return target(Output.of(target));
+        }
+
+        public PolicyAttachmentArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.wafregional.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ByteMatchSetByteMatchTupleFieldToMatchGetArgs extends com.pul
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class ByteMatchSetByteMatchTupleFieldToMatchGetArgs extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ByteMatchSetByteMatchTupleFieldToMatchGetArgs(
-        @Nullable Output<String> data,
-        Output<String> type) {
-        this.data = data;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ByteMatchSetByteMatchTupleFieldToMatchGetArgs() {}
 
-    private ByteMatchSetByteMatchTupleFieldToMatchGetArgs() {
-        this.data = Codegen.empty();
-        this.type = Codegen.empty();
+    private ByteMatchSetByteMatchTupleFieldToMatchGetArgs(ByteMatchSetByteMatchTupleFieldToMatchGetArgs $) {
+        this.data = $.data;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ByteMatchSetByteMatchTupleFieldToMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private Output<String> type;
+        private ByteMatchSetByteMatchTupleFieldToMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ByteMatchSetByteMatchTupleFieldToMatchGetArgs();
         }
 
         public Builder(ByteMatchSetByteMatchTupleFieldToMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.type = defaults.type;
+            $ = new ByteMatchSetByteMatchTupleFieldToMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ByteMatchSetByteMatchTupleFieldToMatchGetArgs build() {
-            return new ByteMatchSetByteMatchTupleFieldToMatchGetArgs(data, type);
+            return type(Output.of(type));
+        }
+
+        public ByteMatchSetByteMatchTupleFieldToMatchGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

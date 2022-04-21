@@ -6,11 +6,11 @@ package com.pulumi.aws.ec2;
 import com.pulumi.aws.ec2.inputs.RouteTableRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="propagatingVgws")
-      private final @Nullable Output<List<String>> propagatingVgws;
+    private @Nullable Output<List<String>> propagatingVgws;
 
-    public Output<List<String>> propagatingVgws() {
-        return this.propagatingVgws == null ? Codegen.empty() : this.propagatingVgws;
+    public Optional<Output<List<String>>> propagatingVgws() {
+        return Optional.ofNullable(this.propagatingVgws);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<List<RouteTableRouteArgs>> routes;
+    private @Nullable Output<List<RouteTableRouteArgs>> routes;
 
-    public Output<List<RouteTableRouteArgs>> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<List<RouteTableRouteArgs>>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -56,95 +56,87 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public RouteTableArgs(
-        @Nullable Output<List<String>> propagatingVgws,
-        @Nullable Output<List<RouteTableRouteArgs>> routes,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> vpcId) {
-        this.propagatingVgws = propagatingVgws;
-        this.routes = routes;
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private RouteTableArgs() {}
 
-    private RouteTableArgs() {
-        this.propagatingVgws = Codegen.empty();
-        this.routes = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private RouteTableArgs(RouteTableArgs $) {
+        this.propagatingVgws = $.propagatingVgws;
+        this.routes = $.routes;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> propagatingVgws;
-        private @Nullable Output<List<RouteTableRouteArgs>> routes;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> vpcId;
+        private RouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteTableArgs();
         }
 
         public Builder(RouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propagatingVgws = defaults.propagatingVgws;
-    	      this.routes = defaults.routes;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new RouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
-            this.propagatingVgws = propagatingVgws;
+            $.propagatingVgws = propagatingVgws;
             return this;
         }
-        public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
-            this.propagatingVgws = Codegen.ofNullable(propagatingVgws);
-            return this;
+
+        public Builder propagatingVgws(List<String> propagatingVgws) {
+            return propagatingVgws(Output.of(propagatingVgws));
         }
+
         public Builder propagatingVgws(String... propagatingVgws) {
             return propagatingVgws(List.of(propagatingVgws));
         }
+
         public Builder routes(@Nullable Output<List<RouteTableRouteArgs>> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable List<RouteTableRouteArgs> routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
+
+        public Builder routes(List<RouteTableRouteArgs> routes) {
+            return routes(Output.of(routes));
         }
+
         public Builder routes(RouteTableRouteArgs... routes) {
             return routes(List.of(routes));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public RouteTableArgs build() {
-            return new RouteTableArgs(propagatingVgws, routes, tags, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public RouteTableArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

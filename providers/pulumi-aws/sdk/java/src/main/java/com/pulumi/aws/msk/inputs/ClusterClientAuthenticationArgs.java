@@ -7,8 +7,8 @@ import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationSaslArgs;
 import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationTlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sasl")
-      private final @Nullable Output<ClusterClientAuthenticationSaslArgs> sasl;
+    private @Nullable Output<ClusterClientAuthenticationSaslArgs> sasl;
 
-    public Output<ClusterClientAuthenticationSaslArgs> sasl() {
-        return this.sasl == null ? Codegen.empty() : this.sasl;
+    public Optional<Output<ClusterClientAuthenticationSaslArgs>> sasl() {
+        return Optional.ofNullable(this.sasl);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tls")
-      private final @Nullable Output<ClusterClientAuthenticationTlsArgs> tls;
+    private @Nullable Output<ClusterClientAuthenticationTlsArgs> tls;
 
-    public Output<ClusterClientAuthenticationTlsArgs> tls() {
-        return this.tls == null ? Codegen.empty() : this.tls;
+    public Optional<Output<ClusterClientAuthenticationTlsArgs>> tls() {
+        return Optional.ofNullable(this.tls);
     }
 
-    public ClusterClientAuthenticationArgs(
-        @Nullable Output<ClusterClientAuthenticationSaslArgs> sasl,
-        @Nullable Output<ClusterClientAuthenticationTlsArgs> tls) {
-        this.sasl = sasl;
-        this.tls = tls;
-    }
+    private ClusterClientAuthenticationArgs() {}
 
-    private ClusterClientAuthenticationArgs() {
-        this.sasl = Codegen.empty();
-        this.tls = Codegen.empty();
+    private ClusterClientAuthenticationArgs(ClusterClientAuthenticationArgs $) {
+        this.sasl = $.sasl;
+        this.tls = $.tls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClientAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterClientAuthenticationSaslArgs> sasl;
-        private @Nullable Output<ClusterClientAuthenticationTlsArgs> tls;
+        private ClusterClientAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClientAuthenticationArgs();
         }
 
         public Builder(ClusterClientAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasl = defaults.sasl;
-    	      this.tls = defaults.tls;
+            $ = new ClusterClientAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sasl(@Nullable Output<ClusterClientAuthenticationSaslArgs> sasl) {
-            this.sasl = sasl;
+            $.sasl = sasl;
             return this;
         }
-        public Builder sasl(@Nullable ClusterClientAuthenticationSaslArgs sasl) {
-            this.sasl = Codegen.ofNullable(sasl);
-            return this;
+
+        public Builder sasl(ClusterClientAuthenticationSaslArgs sasl) {
+            return sasl(Output.of(sasl));
         }
+
         public Builder tls(@Nullable Output<ClusterClientAuthenticationTlsArgs> tls) {
-            this.tls = tls;
+            $.tls = tls;
             return this;
         }
-        public Builder tls(@Nullable ClusterClientAuthenticationTlsArgs tls) {
-            this.tls = Codegen.ofNullable(tls);
-            return this;
-        }        public ClusterClientAuthenticationArgs build() {
-            return new ClusterClientAuthenticationArgs(sasl, tls);
+
+        public Builder tls(ClusterClientAuthenticationTlsArgs tls) {
+            return tls(Output.of(tls));
+        }
+
+        public ClusterClientAuthenticationArgs build() {
+            return $;
         }
     }
+
 }

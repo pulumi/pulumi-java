@@ -5,11 +5,11 @@ package com.pulumi.aws.pinpoint.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EmailChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EmailChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationSet")
-      private final @Nullable Output<String> configurationSet;
+    private @Nullable Output<String> configurationSet;
 
-    public Output<String> configurationSet() {
-        return this.configurationSet == null ? Codegen.empty() : this.configurationSet;
+    public Optional<Output<String>> configurationSet() {
+        return Optional.ofNullable(this.configurationSet);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EmailChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EmailChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fromAddress")
-      private final @Nullable Output<String> fromAddress;
+    private @Nullable Output<String> fromAddress;
 
-    public Output<String> fromAddress() {
-        return this.fromAddress == null ? Codegen.empty() : this.fromAddress;
+    public Optional<Output<String>> fromAddress() {
+        return Optional.ofNullable(this.fromAddress);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EmailChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<String> identity;
+    private @Nullable Output<String> identity;
 
-    public Output<String> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<String>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EmailChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messagesPerSecond")
-      private final @Nullable Output<Integer> messagesPerSecond;
+    private @Nullable Output<Integer> messagesPerSecond;
 
-    public Output<Integer> messagesPerSecond() {
-        return this.messagesPerSecond == null ? Codegen.empty() : this.messagesPerSecond;
+    public Optional<Output<Integer>> messagesPerSecond() {
+        return Optional.ofNullable(this.messagesPerSecond);
     }
 
     /**
@@ -88,128 +88,108 @@ public final class EmailChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public EmailChannelState(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> configurationSet,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> fromAddress,
-        @Nullable Output<String> identity,
-        @Nullable Output<Integer> messagesPerSecond,
-        @Nullable Output<String> roleArn) {
-        this.applicationId = applicationId;
-        this.configurationSet = configurationSet;
-        this.enabled = enabled;
-        this.fromAddress = fromAddress;
-        this.identity = identity;
-        this.messagesPerSecond = messagesPerSecond;
-        this.roleArn = roleArn;
-    }
+    private EmailChannelState() {}
 
-    private EmailChannelState() {
-        this.applicationId = Codegen.empty();
-        this.configurationSet = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.fromAddress = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.messagesPerSecond = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private EmailChannelState(EmailChannelState $) {
+        this.applicationId = $.applicationId;
+        this.configurationSet = $.configurationSet;
+        this.enabled = $.enabled;
+        this.fromAddress = $.fromAddress;
+        this.identity = $.identity;
+        this.messagesPerSecond = $.messagesPerSecond;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailChannelState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> configurationSet;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> fromAddress;
-        private @Nullable Output<String> identity;
-        private @Nullable Output<Integer> messagesPerSecond;
-        private @Nullable Output<String> roleArn;
+        private EmailChannelState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailChannelState();
         }
 
         public Builder(EmailChannelState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.configurationSet = defaults.configurationSet;
-    	      this.enabled = defaults.enabled;
-    	      this.fromAddress = defaults.fromAddress;
-    	      this.identity = defaults.identity;
-    	      this.messagesPerSecond = defaults.messagesPerSecond;
-    	      this.roleArn = defaults.roleArn;
+            $ = new EmailChannelState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder configurationSet(@Nullable Output<String> configurationSet) {
-            this.configurationSet = configurationSet;
+            $.configurationSet = configurationSet;
             return this;
         }
-        public Builder configurationSet(@Nullable String configurationSet) {
-            this.configurationSet = Codegen.ofNullable(configurationSet);
-            return this;
+
+        public Builder configurationSet(String configurationSet) {
+            return configurationSet(Output.of(configurationSet));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder fromAddress(@Nullable Output<String> fromAddress) {
-            this.fromAddress = fromAddress;
+            $.fromAddress = fromAddress;
             return this;
         }
-        public Builder fromAddress(@Nullable String fromAddress) {
-            this.fromAddress = Codegen.ofNullable(fromAddress);
-            return this;
+
+        public Builder fromAddress(String fromAddress) {
+            return fromAddress(Output.of(fromAddress));
         }
+
         public Builder identity(@Nullable Output<String> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable String identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(String identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder messagesPerSecond(@Nullable Output<Integer> messagesPerSecond) {
-            this.messagesPerSecond = messagesPerSecond;
+            $.messagesPerSecond = messagesPerSecond;
             return this;
         }
-        public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
-            this.messagesPerSecond = Codegen.ofNullable(messagesPerSecond);
-            return this;
+
+        public Builder messagesPerSecond(Integer messagesPerSecond) {
+            return messagesPerSecond(Output.of(messagesPerSecond));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public EmailChannelState build() {
-            return new EmailChannelState(applicationId, configurationSet, enabled, fromAddress, identity, messagesPerSecond, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public EmailChannelState build() {
+            return $;
         }
     }
+
 }

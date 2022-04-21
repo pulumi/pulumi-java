@@ -6,11 +6,11 @@ package com.pulumi.aws.elasticsearch.inputs;
 import com.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsIdpGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="idp")
-      private final @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
+    private @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
 
-    public Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp() {
-        return this.idp == null ? Codegen.empty() : this.idp;
+    public Optional<Output<DomainSamlOptionsSamlOptionsIdpGetArgs>> idp() {
+        return Optional.ofNullable(this.idp);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="masterBackendRole")
-      private final @Nullable Output<String> masterBackendRole;
+    private @Nullable Output<String> masterBackendRole;
 
-    public Output<String> masterBackendRole() {
-        return this.masterBackendRole == null ? Codegen.empty() : this.masterBackendRole;
+    public Optional<Output<String>> masterBackendRole() {
+        return Optional.ofNullable(this.masterBackendRole);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="masterUserName")
-      private final @Nullable Output<String> masterUserName;
+    private @Nullable Output<String> masterUserName;
 
-    public Output<String> masterUserName() {
-        return this.masterUserName == null ? Codegen.empty() : this.masterUserName;
+    public Optional<Output<String>> masterUserName() {
+        return Optional.ofNullable(this.masterUserName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="rolesKey")
-      private final @Nullable Output<String> rolesKey;
+    private @Nullable Output<String> rolesKey;
 
-    public Output<String> rolesKey() {
-        return this.rolesKey == null ? Codegen.empty() : this.rolesKey;
+    public Optional<Output<String>> rolesKey() {
+        return Optional.ofNullable(this.rolesKey);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sessionTimeoutMinutes")
-      private final @Nullable Output<Integer> sessionTimeoutMinutes;
+    private @Nullable Output<Integer> sessionTimeoutMinutes;
 
-    public Output<Integer> sessionTimeoutMinutes() {
-        return this.sessionTimeoutMinutes == null ? Codegen.empty() : this.sessionTimeoutMinutes;
+    public Optional<Output<Integer>> sessionTimeoutMinutes() {
+        return Optional.ofNullable(this.sessionTimeoutMinutes);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="subjectKey")
-      private final @Nullable Output<String> subjectKey;
+    private @Nullable Output<String> subjectKey;
 
-    public Output<String> subjectKey() {
-        return this.subjectKey == null ? Codegen.empty() : this.subjectKey;
+    public Optional<Output<String>> subjectKey() {
+        return Optional.ofNullable(this.subjectKey);
     }
 
-    public DomainSamlOptionsSamlOptionsGetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp,
-        @Nullable Output<String> masterBackendRole,
-        @Nullable Output<String> masterUserName,
-        @Nullable Output<String> rolesKey,
-        @Nullable Output<Integer> sessionTimeoutMinutes,
-        @Nullable Output<String> subjectKey) {
-        this.enabled = enabled;
-        this.idp = idp;
-        this.masterBackendRole = masterBackendRole;
-        this.masterUserName = masterUserName;
-        this.rolesKey = rolesKey;
-        this.sessionTimeoutMinutes = sessionTimeoutMinutes;
-        this.subjectKey = subjectKey;
-    }
+    private DomainSamlOptionsSamlOptionsGetArgs() {}
 
-    private DomainSamlOptionsSamlOptionsGetArgs() {
-        this.enabled = Codegen.empty();
-        this.idp = Codegen.empty();
-        this.masterBackendRole = Codegen.empty();
-        this.masterUserName = Codegen.empty();
-        this.rolesKey = Codegen.empty();
-        this.sessionTimeoutMinutes = Codegen.empty();
-        this.subjectKey = Codegen.empty();
+    private DomainSamlOptionsSamlOptionsGetArgs(DomainSamlOptionsSamlOptionsGetArgs $) {
+        this.enabled = $.enabled;
+        this.idp = $.idp;
+        this.masterBackendRole = $.masterBackendRole;
+        this.masterUserName = $.masterUserName;
+        this.rolesKey = $.rolesKey;
+        this.sessionTimeoutMinutes = $.sessionTimeoutMinutes;
+        this.subjectKey = $.subjectKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSamlOptionsSamlOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
-        private @Nullable Output<String> masterBackendRole;
-        private @Nullable Output<String> masterUserName;
-        private @Nullable Output<String> rolesKey;
-        private @Nullable Output<Integer> sessionTimeoutMinutes;
-        private @Nullable Output<String> subjectKey;
+        private DomainSamlOptionsSamlOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSamlOptionsSamlOptionsGetArgs();
         }
 
         public Builder(DomainSamlOptionsSamlOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.idp = defaults.idp;
-    	      this.masterBackendRole = defaults.masterBackendRole;
-    	      this.masterUserName = defaults.masterUserName;
-    	      this.rolesKey = defaults.rolesKey;
-    	      this.sessionTimeoutMinutes = defaults.sessionTimeoutMinutes;
-    	      this.subjectKey = defaults.subjectKey;
+            $ = new DomainSamlOptionsSamlOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder idp(@Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp) {
-            this.idp = idp;
+            $.idp = idp;
             return this;
         }
-        public Builder idp(@Nullable DomainSamlOptionsSamlOptionsIdpGetArgs idp) {
-            this.idp = Codegen.ofNullable(idp);
-            return this;
+
+        public Builder idp(DomainSamlOptionsSamlOptionsIdpGetArgs idp) {
+            return idp(Output.of(idp));
         }
+
         public Builder masterBackendRole(@Nullable Output<String> masterBackendRole) {
-            this.masterBackendRole = masterBackendRole;
+            $.masterBackendRole = masterBackendRole;
             return this;
         }
-        public Builder masterBackendRole(@Nullable String masterBackendRole) {
-            this.masterBackendRole = Codegen.ofNullable(masterBackendRole);
-            return this;
+
+        public Builder masterBackendRole(String masterBackendRole) {
+            return masterBackendRole(Output.of(masterBackendRole));
         }
+
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
-            this.masterUserName = masterUserName;
+            $.masterUserName = masterUserName;
             return this;
         }
-        public Builder masterUserName(@Nullable String masterUserName) {
-            this.masterUserName = Codegen.ofNullable(masterUserName);
-            return this;
+
+        public Builder masterUserName(String masterUserName) {
+            return masterUserName(Output.of(masterUserName));
         }
+
         public Builder rolesKey(@Nullable Output<String> rolesKey) {
-            this.rolesKey = rolesKey;
+            $.rolesKey = rolesKey;
             return this;
         }
-        public Builder rolesKey(@Nullable String rolesKey) {
-            this.rolesKey = Codegen.ofNullable(rolesKey);
-            return this;
+
+        public Builder rolesKey(String rolesKey) {
+            return rolesKey(Output.of(rolesKey));
         }
+
         public Builder sessionTimeoutMinutes(@Nullable Output<Integer> sessionTimeoutMinutes) {
-            this.sessionTimeoutMinutes = sessionTimeoutMinutes;
+            $.sessionTimeoutMinutes = sessionTimeoutMinutes;
             return this;
         }
-        public Builder sessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
-            this.sessionTimeoutMinutes = Codegen.ofNullable(sessionTimeoutMinutes);
-            return this;
+
+        public Builder sessionTimeoutMinutes(Integer sessionTimeoutMinutes) {
+            return sessionTimeoutMinutes(Output.of(sessionTimeoutMinutes));
         }
+
         public Builder subjectKey(@Nullable Output<String> subjectKey) {
-            this.subjectKey = subjectKey;
+            $.subjectKey = subjectKey;
             return this;
         }
-        public Builder subjectKey(@Nullable String subjectKey) {
-            this.subjectKey = Codegen.ofNullable(subjectKey);
-            return this;
-        }        public DomainSamlOptionsSamlOptionsGetArgs build() {
-            return new DomainSamlOptionsSamlOptionsGetArgs(enabled, idp, masterBackendRole, masterUserName, rolesKey, sessionTimeoutMinutes, subjectKey);
+
+        public Builder subjectKey(String subjectKey) {
+            return subjectKey(Output.of(subjectKey));
+        }
+
+        public DomainSamlOptionsSamlOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

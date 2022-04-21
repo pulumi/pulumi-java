@@ -20,48 +20,48 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetAutoscalingGroupsFilter> filters;
+    private @Nullable List<GetAutoscalingGroupsFilter> filters;
 
-    public List<GetAutoscalingGroupsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetAutoscalingGroupsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public GetAutoscalingGroupsArgs(@Nullable List<GetAutoscalingGroupsFilter> filters) {
-        this.filters = filters;
-    }
+    private GetAutoscalingGroupsArgs() {}
 
-    private GetAutoscalingGroupsArgs() {
-        this.filters = List.of();
+    private GetAutoscalingGroupsArgs(GetAutoscalingGroupsArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAutoscalingGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetAutoscalingGroupsFilter> filters;
+        private GetAutoscalingGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAutoscalingGroupsArgs();
         }
 
         public Builder(GetAutoscalingGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new GetAutoscalingGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetAutoscalingGroupsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetAutoscalingGroupsFilter... filters) {
             return filters(List.of(filters));
-        }        public GetAutoscalingGroupsArgs build() {
-            return new GetAutoscalingGroupsArgs(filters);
+        }
+
+        public GetAutoscalingGroupsArgs build() {
+            return $;
         }
     }
+
 }

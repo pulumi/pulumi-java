@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataSourceParametersAmazonElasticsearchGetArgs extends com.pu
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
     }
 
-    public DataSourceParametersAmazonElasticsearchGetArgs(Output<String> domain) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-    }
+    private DataSourceParametersAmazonElasticsearchGetArgs() {}
 
-    private DataSourceParametersAmazonElasticsearchGetArgs() {
-        this.domain = Codegen.empty();
+    private DataSourceParametersAmazonElasticsearchGetArgs(DataSourceParametersAmazonElasticsearchGetArgs $) {
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersAmazonElasticsearchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domain;
+        private DataSourceParametersAmazonElasticsearchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersAmazonElasticsearchGetArgs();
         }
 
         public Builder(DataSourceParametersAmazonElasticsearchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
+            $ = new DataSourceParametersAmazonElasticsearchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
-        }        public DataSourceParametersAmazonElasticsearchGetArgs build() {
-            return new DataSourceParametersAmazonElasticsearchGetArgs(domain);
+            return domain(Output.of(domain));
+        }
+
+        public DataSourceParametersAmazonElasticsearchGetArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetUserPoolSigningCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final String userPoolId;
+    private String userPoolId;
 
     public String userPoolId() {
         return this.userPoolId;
     }
 
-    public GetUserPoolSigningCertificateArgs(String userPoolId) {
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private GetUserPoolSigningCertificateArgs() {}
 
-    private GetUserPoolSigningCertificateArgs() {
-        this.userPoolId = null;
+    private GetUserPoolSigningCertificateArgs(GetUserPoolSigningCertificateArgs $) {
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserPoolSigningCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userPoolId;
+        private GetUserPoolSigningCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserPoolSigningCertificateArgs();
         }
 
         public Builder(GetUserPoolSigningCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new GetUserPoolSigningCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
-        }        public GetUserPoolSigningCertificateArgs build() {
-            return new GetUserPoolSigningCertificateArgs(userPoolId);
+        }
+
+        public GetUserPoolSigningCertificateArgs build() {
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

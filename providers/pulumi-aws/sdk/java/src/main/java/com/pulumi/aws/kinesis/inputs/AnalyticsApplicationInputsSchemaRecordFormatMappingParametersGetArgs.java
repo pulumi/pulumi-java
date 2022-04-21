@@ -7,8 +7,8 @@ import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordForma
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @Import(name="csv")
-      private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv;
+    private @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv() {
-        return this.csv == null ? Codegen.empty() : this.csv;
+    public Optional<Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs>> csv() {
+        return Optional.ofNullable(this.csv);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @Import(name="json")
-      private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json;
+    private @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json() {
-        return this.json == null ? Codegen.empty() : this.json;
+    public Optional<Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs>> json() {
+        return Optional.ofNullable(this.json);
     }
 
-    public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs(
-        @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv,
-        @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json) {
-        this.csv = csv;
-        this.json = json;
-    }
+    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs() {}
 
-    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs() {
-        this.csv = Codegen.empty();
-        this.json = Codegen.empty();
+    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs $) {
+        this.csv = $.csv;
+        this.json = $.json;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv;
-        private @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json;
+        private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs();
         }
 
         public Builder(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csv = defaults.csv;
-    	      this.json = defaults.json;
+            $ = new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csv(@Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv) {
-            this.csv = csv;
+            $.csv = csv;
             return this;
         }
-        public Builder csv(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs csv) {
-            this.csv = Codegen.ofNullable(csv);
-            return this;
+
+        public Builder csv(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs csv) {
+            return csv(Output.of(csv));
         }
+
         public Builder json(@Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json) {
-            this.json = json;
+            $.json = json;
             return this;
         }
-        public Builder json(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs json) {
-            this.json = Codegen.ofNullable(json);
-            return this;
-        }        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs build() {
-            return new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs(csv, json);
+
+        public Builder json(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs json) {
+            return json(Output.of(json));
+        }
+
+        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -28,7 +28,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="delegationEnabledDate", required=true)
-      private final String delegationEnabledDate;
+    private String delegationEnabledDate;
 
     public String delegationEnabledDate() {
         return this.delegationEnabledDate;
@@ -39,7 +39,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -50,7 +50,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -61,7 +61,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="joinedMethod", required=true)
-      private final String joinedMethod;
+    private String joinedMethod;
 
     public String joinedMethod() {
         return this.joinedMethod;
@@ -72,7 +72,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="joinedTimestamp", required=true)
-      private final String joinedTimestamp;
+    private String joinedTimestamp;
 
     public String joinedTimestamp() {
         return this.joinedTimestamp;
@@ -83,7 +83,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -94,109 +94,94 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public GetDelegatedAdministratorsDelegatedAdministrator(
-        String arn,
-        String delegationEnabledDate,
-        String email,
-        String id,
-        String joinedMethod,
-        String joinedTimestamp,
-        String name,
-        String status) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate, "expected parameter 'delegationEnabledDate' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.joinedMethod = Objects.requireNonNull(joinedMethod, "expected parameter 'joinedMethod' to be non-null");
-        this.joinedTimestamp = Objects.requireNonNull(joinedTimestamp, "expected parameter 'joinedTimestamp' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private GetDelegatedAdministratorsDelegatedAdministrator() {}
 
-    private GetDelegatedAdministratorsDelegatedAdministrator() {
-        this.arn = null;
-        this.delegationEnabledDate = null;
-        this.email = null;
-        this.id = null;
-        this.joinedMethod = null;
-        this.joinedTimestamp = null;
-        this.name = null;
-        this.status = null;
+    private GetDelegatedAdministratorsDelegatedAdministrator(GetDelegatedAdministratorsDelegatedAdministrator $) {
+        this.arn = $.arn;
+        this.delegationEnabledDate = $.delegationEnabledDate;
+        this.email = $.email;
+        this.id = $.id;
+        this.joinedMethod = $.joinedMethod;
+        this.joinedTimestamp = $.joinedTimestamp;
+        this.name = $.name;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDelegatedAdministratorsDelegatedAdministrator defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String delegationEnabledDate;
-        private String email;
-        private String id;
-        private String joinedMethod;
-        private String joinedTimestamp;
-        private String name;
-        private String status;
+        private GetDelegatedAdministratorsDelegatedAdministrator $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDelegatedAdministratorsDelegatedAdministrator();
         }
 
         public Builder(GetDelegatedAdministratorsDelegatedAdministrator defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.delegationEnabledDate = defaults.delegationEnabledDate;
-    	      this.email = defaults.email;
-    	      this.id = defaults.id;
-    	      this.joinedMethod = defaults.joinedMethod;
-    	      this.joinedTimestamp = defaults.joinedTimestamp;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
+            $ = new GetDelegatedAdministratorsDelegatedAdministrator(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder delegationEnabledDate(String delegationEnabledDate) {
-            this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
+            $.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder joinedMethod(String joinedMethod) {
-            this.joinedMethod = Objects.requireNonNull(joinedMethod);
+            $.joinedMethod = joinedMethod;
             return this;
         }
+
         public Builder joinedTimestamp(String joinedTimestamp) {
-            this.joinedTimestamp = Objects.requireNonNull(joinedTimestamp);
+            $.joinedTimestamp = joinedTimestamp;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public GetDelegatedAdministratorsDelegatedAdministrator build() {
-            return new GetDelegatedAdministratorsDelegatedAdministrator(arn, delegationEnabledDate, email, id, joinedMethod, joinedTimestamp, name, status);
+        }
+
+        public GetDelegatedAdministratorsDelegatedAdministrator build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.delegationEnabledDate = Objects.requireNonNull($.delegationEnabledDate, "expected parameter 'delegationEnabledDate' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.joinedMethod = Objects.requireNonNull($.joinedMethod, "expected parameter 'joinedMethod' to be non-null");
+            $.joinedTimestamp = Objects.requireNonNull($.joinedTimestamp, "expected parameter 'joinedTimestamp' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.guardduty;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class PublishingDestinationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="destinationArn", required=true)
-      private final Output<String> destinationArn;
+    private Output<String> destinationArn;
 
     public Output<String> destinationArn() {
         return this.destinationArn;
@@ -31,10 +31,10 @@ public final class PublishingDestinationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="destinationType")
-      private final @Nullable Output<String> destinationType;
+    private @Nullable Output<String> destinationType;
 
-    public Output<String> destinationType() {
-        return this.destinationType == null ? Codegen.empty() : this.destinationType;
+    public Optional<Output<String>> destinationType() {
+        return Optional.ofNullable(this.destinationType);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class PublishingDestinationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="detectorId", required=true)
-      private final Output<String> detectorId;
+    private Output<String> detectorId;
 
     public Output<String> detectorId() {
         return this.detectorId;
@@ -53,89 +53,81 @@ public final class PublishingDestinationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kmsKeyArn", required=true)
-      private final Output<String> kmsKeyArn;
+    private Output<String> kmsKeyArn;
 
     public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
 
-    public PublishingDestinationArgs(
-        Output<String> destinationArn,
-        @Nullable Output<String> destinationType,
-        Output<String> detectorId,
-        Output<String> kmsKeyArn) {
-        this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
-        this.destinationType = destinationType;
-        this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
-    }
+    private PublishingDestinationArgs() {}
 
-    private PublishingDestinationArgs() {
-        this.destinationArn = Codegen.empty();
-        this.destinationType = Codegen.empty();
-        this.detectorId = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
+    private PublishingDestinationArgs(PublishingDestinationArgs $) {
+        this.destinationArn = $.destinationArn;
+        this.destinationType = $.destinationType;
+        this.detectorId = $.detectorId;
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublishingDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationArn;
-        private @Nullable Output<String> destinationType;
-        private Output<String> detectorId;
-        private Output<String> kmsKeyArn;
+        private PublishingDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublishingDestinationArgs();
         }
 
         public Builder(PublishingDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.destinationType = defaults.destinationType;
-    	      this.detectorId = defaults.detectorId;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new PublishingDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(Output<String> destinationArn) {
-            this.destinationArn = Objects.requireNonNull(destinationArn);
+            $.destinationArn = destinationArn;
             return this;
         }
+
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
-            return this;
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder destinationType(@Nullable Output<String> destinationType) {
-            this.destinationType = destinationType;
+            $.destinationType = destinationType;
             return this;
         }
-        public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Codegen.ofNullable(destinationType);
-            return this;
+
+        public Builder destinationType(String destinationType) {
+            return destinationType(Output.of(destinationType));
         }
+
         public Builder detectorId(Output<String> detectorId) {
-            this.detectorId = Objects.requireNonNull(detectorId);
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder detectorId(String detectorId) {
-            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
-            return this;
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder kmsKeyArn(Output<String> kmsKeyArn) {
-            this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
+
         public Builder kmsKeyArn(String kmsKeyArn) {
-            this.kmsKeyArn = Output.of(Objects.requireNonNull(kmsKeyArn));
-            return this;
-        }        public PublishingDestinationArgs build() {
-            return new PublishingDestinationArgs(destinationArn, destinationType, detectorId, kmsKeyArn);
+            return kmsKeyArn(Output.of(kmsKeyArn));
+        }
+
+        public PublishingDestinationArgs build() {
+            $.destinationArn = Objects.requireNonNull($.destinationArn, "expected parameter 'destinationArn' to be non-null");
+            $.detectorId = Objects.requireNonNull($.detectorId, "expected parameter 'detectorId' to be non-null");
+            $.kmsKeyArn = Objects.requireNonNull($.kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
+            return $;
         }
     }
+
 }

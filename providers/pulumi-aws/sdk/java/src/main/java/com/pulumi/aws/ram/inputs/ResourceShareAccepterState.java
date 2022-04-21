@@ -5,10 +5,10 @@ package com.pulumi.aws.ram.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="invitationArn")
-      private final @Nullable Output<String> invitationArn;
+    private @Nullable Output<String> invitationArn;
 
-    public Output<String> invitationArn() {
-        return this.invitationArn == null ? Codegen.empty() : this.invitationArn;
+    public Optional<Output<String>> invitationArn() {
+        return Optional.ofNullable(this.invitationArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="receiverAccountId")
-      private final @Nullable Output<String> receiverAccountId;
+    private @Nullable Output<String> receiverAccountId;
 
-    public Output<String> receiverAccountId() {
-        return this.receiverAccountId == null ? Codegen.empty() : this.receiverAccountId;
+    public Optional<Output<String>> receiverAccountId() {
+        return Optional.ofNullable(this.receiverAccountId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="senderAccountId")
-      private final @Nullable Output<String> senderAccountId;
+    private @Nullable Output<String> senderAccountId;
 
-    public Output<String> senderAccountId() {
-        return this.senderAccountId == null ? Codegen.empty() : this.senderAccountId;
+    public Optional<Output<String>> senderAccountId() {
+        return Optional.ofNullable(this.senderAccountId);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="shareArn")
-      private final @Nullable Output<String> shareArn;
+    private @Nullable Output<String> shareArn;
 
-    public Output<String> shareArn() {
-        return this.shareArn == null ? Codegen.empty() : this.shareArn;
+    public Optional<Output<String>> shareArn() {
+        return Optional.ofNullable(this.shareArn);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="shareId")
-      private final @Nullable Output<String> shareId;
+    private @Nullable Output<String> shareId;
 
-    public Output<String> shareId() {
-        return this.shareId == null ? Codegen.empty() : this.shareId;
+    public Optional<Output<String>> shareId() {
+        return Optional.ofNullable(this.shareId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="shareName")
-      private final @Nullable Output<String> shareName;
+    private @Nullable Output<String> shareName;
 
-    public Output<String> shareName() {
-        return this.shareName == null ? Codegen.empty() : this.shareName;
+    public Optional<Output<String>> shareName() {
+        return Optional.ofNullable(this.shareName);
     }
 
     /**
@@ -98,144 +98,122 @@ public final class ResourceShareAccepterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public ResourceShareAccepterState(
-        @Nullable Output<String> invitationArn,
-        @Nullable Output<String> receiverAccountId,
-        @Nullable Output<List<String>> resources,
-        @Nullable Output<String> senderAccountId,
-        @Nullable Output<String> shareArn,
-        @Nullable Output<String> shareId,
-        @Nullable Output<String> shareName,
-        @Nullable Output<String> status) {
-        this.invitationArn = invitationArn;
-        this.receiverAccountId = receiverAccountId;
-        this.resources = resources;
-        this.senderAccountId = senderAccountId;
-        this.shareArn = shareArn;
-        this.shareId = shareId;
-        this.shareName = shareName;
-        this.status = status;
-    }
+    private ResourceShareAccepterState() {}
 
-    private ResourceShareAccepterState() {
-        this.invitationArn = Codegen.empty();
-        this.receiverAccountId = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.senderAccountId = Codegen.empty();
-        this.shareArn = Codegen.empty();
-        this.shareId = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.status = Codegen.empty();
+    private ResourceShareAccepterState(ResourceShareAccepterState $) {
+        this.invitationArn = $.invitationArn;
+        this.receiverAccountId = $.receiverAccountId;
+        this.resources = $.resources;
+        this.senderAccountId = $.senderAccountId;
+        this.shareArn = $.shareArn;
+        this.shareId = $.shareId;
+        this.shareName = $.shareName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceShareAccepterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> invitationArn;
-        private @Nullable Output<String> receiverAccountId;
-        private @Nullable Output<List<String>> resources;
-        private @Nullable Output<String> senderAccountId;
-        private @Nullable Output<String> shareArn;
-        private @Nullable Output<String> shareId;
-        private @Nullable Output<String> shareName;
-        private @Nullable Output<String> status;
+        private ResourceShareAccepterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceShareAccepterState();
         }
 
         public Builder(ResourceShareAccepterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.invitationArn = defaults.invitationArn;
-    	      this.receiverAccountId = defaults.receiverAccountId;
-    	      this.resources = defaults.resources;
-    	      this.senderAccountId = defaults.senderAccountId;
-    	      this.shareArn = defaults.shareArn;
-    	      this.shareId = defaults.shareId;
-    	      this.shareName = defaults.shareName;
-    	      this.status = defaults.status;
+            $ = new ResourceShareAccepterState(Objects.requireNonNull(defaults));
         }
 
         public Builder invitationArn(@Nullable Output<String> invitationArn) {
-            this.invitationArn = invitationArn;
+            $.invitationArn = invitationArn;
             return this;
         }
-        public Builder invitationArn(@Nullable String invitationArn) {
-            this.invitationArn = Codegen.ofNullable(invitationArn);
-            return this;
+
+        public Builder invitationArn(String invitationArn) {
+            return invitationArn(Output.of(invitationArn));
         }
+
         public Builder receiverAccountId(@Nullable Output<String> receiverAccountId) {
-            this.receiverAccountId = receiverAccountId;
+            $.receiverAccountId = receiverAccountId;
             return this;
         }
-        public Builder receiverAccountId(@Nullable String receiverAccountId) {
-            this.receiverAccountId = Codegen.ofNullable(receiverAccountId);
-            return this;
+
+        public Builder receiverAccountId(String receiverAccountId) {
+            return receiverAccountId(Output.of(receiverAccountId));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder senderAccountId(@Nullable Output<String> senderAccountId) {
-            this.senderAccountId = senderAccountId;
+            $.senderAccountId = senderAccountId;
             return this;
         }
-        public Builder senderAccountId(@Nullable String senderAccountId) {
-            this.senderAccountId = Codegen.ofNullable(senderAccountId);
-            return this;
+
+        public Builder senderAccountId(String senderAccountId) {
+            return senderAccountId(Output.of(senderAccountId));
         }
+
         public Builder shareArn(@Nullable Output<String> shareArn) {
-            this.shareArn = shareArn;
+            $.shareArn = shareArn;
             return this;
         }
-        public Builder shareArn(@Nullable String shareArn) {
-            this.shareArn = Codegen.ofNullable(shareArn);
-            return this;
+
+        public Builder shareArn(String shareArn) {
+            return shareArn(Output.of(shareArn));
         }
+
         public Builder shareId(@Nullable Output<String> shareId) {
-            this.shareId = shareId;
+            $.shareId = shareId;
             return this;
         }
-        public Builder shareId(@Nullable String shareId) {
-            this.shareId = Codegen.ofNullable(shareId);
-            return this;
+
+        public Builder shareId(String shareId) {
+            return shareId(Output.of(shareId));
         }
+
         public Builder shareName(@Nullable Output<String> shareName) {
-            this.shareName = shareName;
+            $.shareName = shareName;
             return this;
         }
-        public Builder shareName(@Nullable String shareName) {
-            this.shareName = Codegen.ofNullable(shareName);
-            return this;
+
+        public Builder shareName(String shareName) {
+            return shareName(Output.of(shareName));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public ResourceShareAccepterState build() {
-            return new ResourceShareAccepterState(invitationArn, receiverAccountId, resources, senderAccountId, shareArn, shareId, shareName, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public ResourceShareAccepterState build() {
+            return $;
         }
     }
+
 }

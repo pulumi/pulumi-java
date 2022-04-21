@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class MonitoringSubscriptionMonitoringSubscriptionArgs extends com.
      * 
      */
     @Import(name="realtimeMetricsSubscriptionConfig", required=true)
-      private final Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig;
+    private Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig;
 
     public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }
 
-    public MonitoringSubscriptionMonitoringSubscriptionArgs(Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig) {
-        this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig, "expected parameter 'realtimeMetricsSubscriptionConfig' to be non-null");
-    }
+    private MonitoringSubscriptionMonitoringSubscriptionArgs() {}
 
-    private MonitoringSubscriptionMonitoringSubscriptionArgs() {
-        this.realtimeMetricsSubscriptionConfig = Codegen.empty();
+    private MonitoringSubscriptionMonitoringSubscriptionArgs(MonitoringSubscriptionMonitoringSubscriptionArgs $) {
+        this.realtimeMetricsSubscriptionConfig = $.realtimeMetricsSubscriptionConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringSubscriptionMonitoringSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig;
+        private MonitoringSubscriptionMonitoringSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringSubscriptionMonitoringSubscriptionArgs();
         }
 
         public Builder(MonitoringSubscriptionMonitoringSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.realtimeMetricsSubscriptionConfig = defaults.realtimeMetricsSubscriptionConfig;
+            $ = new MonitoringSubscriptionMonitoringSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder realtimeMetricsSubscriptionConfig(Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig) {
-            this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
+            $.realtimeMetricsSubscriptionConfig = realtimeMetricsSubscriptionConfig;
             return this;
         }
+
         public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs realtimeMetricsSubscriptionConfig) {
-            this.realtimeMetricsSubscriptionConfig = Output.of(Objects.requireNonNull(realtimeMetricsSubscriptionConfig));
-            return this;
-        }        public MonitoringSubscriptionMonitoringSubscriptionArgs build() {
-            return new MonitoringSubscriptionMonitoringSubscriptionArgs(realtimeMetricsSubscriptionConfig);
+            return realtimeMetricsSubscriptionConfig(Output.of(realtimeMetricsSubscriptionConfig));
+        }
+
+        public MonitoringSubscriptionMonitoringSubscriptionArgs build() {
+            $.realtimeMetricsSubscriptionConfig = Objects.requireNonNull($.realtimeMetricsSubscriptionConfig, "expected parameter 'realtimeMetricsSubscriptionConfig' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class GetKafkaVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preferredVersions")
-      private final @Nullable List<String> preferredVersions;
+    private @Nullable List<String> preferredVersions;
 
-    public List<String> preferredVersions() {
-        return this.preferredVersions == null ? List.of() : this.preferredVersions;
+    public Optional<List<String>> preferredVersions() {
+        return Optional.ofNullable(this.preferredVersions);
     }
 
     /**
@@ -31,58 +31,54 @@ public final class GetKafkaVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GetKafkaVersionArgs(
-        @Nullable List<String> preferredVersions,
-        @Nullable String version) {
-        this.preferredVersions = preferredVersions;
-        this.version = version;
-    }
+    private GetKafkaVersionArgs() {}
 
-    private GetKafkaVersionArgs() {
-        this.preferredVersions = List.of();
-        this.version = null;
+    private GetKafkaVersionArgs(GetKafkaVersionArgs $) {
+        this.preferredVersions = $.preferredVersions;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKafkaVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> preferredVersions;
-        private @Nullable String version;
+        private GetKafkaVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKafkaVersionArgs();
         }
 
         public Builder(GetKafkaVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preferredVersions = defaults.preferredVersions;
-    	      this.version = defaults.version;
+            $ = new GetKafkaVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preferredVersions(@Nullable List<String> preferredVersions) {
-            this.preferredVersions = preferredVersions;
+            $.preferredVersions = preferredVersions;
             return this;
         }
+
         public Builder preferredVersions(String... preferredVersions) {
             return preferredVersions(List.of(preferredVersions));
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GetKafkaVersionArgs build() {
-            return new GetKafkaVersionArgs(preferredVersions, version);
+        }
+
+        public GetKafkaVersionArgs build() {
+            return $;
         }
     }
+
 }

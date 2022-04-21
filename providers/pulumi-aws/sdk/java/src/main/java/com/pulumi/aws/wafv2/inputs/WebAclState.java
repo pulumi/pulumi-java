@@ -9,12 +9,12 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleGetArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclVisibilityConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customResponseBodies")
-      private final @Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies;
+    private @Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies;
 
-    public Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies() {
-        return this.customResponseBodies == null ? Codegen.empty() : this.customResponseBodies;
+    public Optional<Output<List<WebAclCustomResponseBodyGetArgs>>> customResponseBodies() {
+        return Optional.ofNullable(this.customResponseBodies);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
+    private @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
 
-    public Output<WebAclDefaultActionGetArgs> defaultAction() {
-        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
+    public Optional<Output<WebAclDefaultActionGetArgs>> defaultAction() {
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -71,17 +71,17 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="lockToken")
-      private final @Nullable Output<String> lockToken;
+    private @Nullable Output<String> lockToken;
 
-    public Output<String> lockToken() {
-        return this.lockToken == null ? Codegen.empty() : this.lockToken;
+    public Optional<Output<String>> lockToken() {
+        return Optional.ofNullable(this.lockToken);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<WebAclRuleGetArgs>> rules;
+    private @Nullable Output<List<WebAclRuleGetArgs>> rules;
 
-    public Output<List<WebAclRuleGetArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<WebAclRuleGetArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -144,199 +144,166 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibilityConfig")
-      private final @Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig;
+    private @Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig;
 
-    public Output<WebAclVisibilityConfigGetArgs> visibilityConfig() {
-        return this.visibilityConfig == null ? Codegen.empty() : this.visibilityConfig;
+    public Optional<Output<WebAclVisibilityConfigGetArgs>> visibilityConfig() {
+        return Optional.ofNullable(this.visibilityConfig);
     }
 
-    public WebAclState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Integer> capacity,
-        @Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies,
-        @Nullable Output<WebAclDefaultActionGetArgs> defaultAction,
-        @Nullable Output<String> description,
-        @Nullable Output<String> lockToken,
-        @Nullable Output<String> name,
-        @Nullable Output<List<WebAclRuleGetArgs>> rules,
-        @Nullable Output<String> scope,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig) {
-        this.arn = arn;
-        this.capacity = capacity;
-        this.customResponseBodies = customResponseBodies;
-        this.defaultAction = defaultAction;
-        this.description = description;
-        this.lockToken = lockToken;
-        this.name = name;
-        this.rules = rules;
-        this.scope = scope;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.visibilityConfig = visibilityConfig;
-    }
+    private WebAclState() {}
 
-    private WebAclState() {
-        this.arn = Codegen.empty();
-        this.capacity = Codegen.empty();
-        this.customResponseBodies = Codegen.empty();
-        this.defaultAction = Codegen.empty();
-        this.description = Codegen.empty();
-        this.lockToken = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.visibilityConfig = Codegen.empty();
+    private WebAclState(WebAclState $) {
+        this.arn = $.arn;
+        this.capacity = $.capacity;
+        this.customResponseBodies = $.customResponseBodies;
+        this.defaultAction = $.defaultAction;
+        this.description = $.description;
+        this.lockToken = $.lockToken;
+        this.name = $.name;
+        this.rules = $.rules;
+        this.scope = $.scope;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.visibilityConfig = $.visibilityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Integer> capacity;
-        private @Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies;
-        private @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> lockToken;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<WebAclRuleGetArgs>> rules;
-        private @Nullable Output<String> scope;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig;
+        private WebAclState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclState();
         }
 
         public Builder(WebAclState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.capacity = defaults.capacity;
-    	      this.customResponseBodies = defaults.customResponseBodies;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.description = defaults.description;
-    	      this.lockToken = defaults.lockToken;
-    	      this.name = defaults.name;
-    	      this.rules = defaults.rules;
-    	      this.scope = defaults.scope;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.visibilityConfig = defaults.visibilityConfig;
+            $ = new WebAclState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder customResponseBodies(@Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies) {
-            this.customResponseBodies = customResponseBodies;
+            $.customResponseBodies = customResponseBodies;
             return this;
         }
-        public Builder customResponseBodies(@Nullable List<WebAclCustomResponseBodyGetArgs> customResponseBodies) {
-            this.customResponseBodies = Codegen.ofNullable(customResponseBodies);
-            return this;
+
+        public Builder customResponseBodies(List<WebAclCustomResponseBodyGetArgs> customResponseBodies) {
+            return customResponseBodies(Output.of(customResponseBodies));
         }
+
         public Builder customResponseBodies(WebAclCustomResponseBodyGetArgs... customResponseBodies) {
             return customResponseBodies(List.of(customResponseBodies));
         }
+
         public Builder defaultAction(@Nullable Output<WebAclDefaultActionGetArgs> defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
-        public Builder defaultAction(@Nullable WebAclDefaultActionGetArgs defaultAction) {
-            this.defaultAction = Codegen.ofNullable(defaultAction);
-            return this;
+
+        public Builder defaultAction(WebAclDefaultActionGetArgs defaultAction) {
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder lockToken(@Nullable Output<String> lockToken) {
-            this.lockToken = lockToken;
+            $.lockToken = lockToken;
             return this;
         }
-        public Builder lockToken(@Nullable String lockToken) {
-            this.lockToken = Codegen.ofNullable(lockToken);
-            return this;
+
+        public Builder lockToken(String lockToken) {
+            return lockToken(Output.of(lockToken));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rules(@Nullable Output<List<WebAclRuleGetArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<WebAclRuleGetArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<WebAclRuleGetArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(WebAclRuleGetArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder visibilityConfig(@Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig) {
-            this.visibilityConfig = visibilityConfig;
+            $.visibilityConfig = visibilityConfig;
             return this;
         }
-        public Builder visibilityConfig(@Nullable WebAclVisibilityConfigGetArgs visibilityConfig) {
-            this.visibilityConfig = Codegen.ofNullable(visibilityConfig);
-            return this;
-        }        public WebAclState build() {
-            return new WebAclState(arn, capacity, customResponseBodies, defaultAction, description, lockToken, name, rules, scope, tags, tagsAll, visibilityConfig);
+
+        public Builder visibilityConfig(WebAclVisibilityConfigGetArgs visibilityConfig) {
+            return visibilityConfig(Output.of(visibilityConfig));
+        }
+
+        public WebAclState build() {
+            return $;
         }
     }
+
 }

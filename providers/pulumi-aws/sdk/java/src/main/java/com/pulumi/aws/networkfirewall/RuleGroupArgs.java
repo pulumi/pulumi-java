@@ -6,11 +6,11 @@ package com.pulumi.aws.networkfirewall;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity", required=true)
-      private final Output<Integer> capacity;
+    private Output<Integer> capacity;
 
     public Output<Integer> capacity() {
         return this.capacity;
@@ -34,10 +34,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleGroup")
-      private final @Nullable Output<RuleGroupRuleGroupArgs> ruleGroup;
+    private @Nullable Output<RuleGroupRuleGroupArgs> ruleGroup;
 
-    public Output<RuleGroupRuleGroupArgs> ruleGroup() {
-        return this.ruleGroup == null ? Codegen.empty() : this.ruleGroup;
+    public Optional<Output<RuleGroupRuleGroupArgs>> ruleGroup() {
+        return Optional.ofNullable(this.ruleGroup);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<String> rules;
+    private @Nullable Output<String> rules;
 
-    public Output<String> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<String>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -89,128 +89,110 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public RuleGroupArgs(
-        Output<Integer> capacity,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<RuleGroupRuleGroupArgs> ruleGroup,
-        @Nullable Output<String> rules,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> type) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.ruleGroup = ruleGroup;
-        this.rules = rules;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RuleGroupArgs() {}
 
-    private RuleGroupArgs() {
-        this.capacity = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ruleGroup = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private RuleGroupArgs(RuleGroupArgs $) {
+        this.capacity = $.capacity;
+        this.description = $.description;
+        this.name = $.name;
+        this.ruleGroup = $.ruleGroup;
+        this.rules = $.rules;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> capacity;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<RuleGroupRuleGroupArgs> ruleGroup;
-        private @Nullable Output<String> rules;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> type;
+        private RuleGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupArgs();
         }
 
         public Builder(RuleGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.ruleGroup = defaults.ruleGroup;
-    	      this.rules = defaults.rules;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new RuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Output<Integer> capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder capacity(Integer capacity) {
-            this.capacity = Output.of(Objects.requireNonNull(capacity));
-            return this;
+            return capacity(Output.of(capacity));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupArgs> ruleGroup) {
-            this.ruleGroup = ruleGroup;
+            $.ruleGroup = ruleGroup;
             return this;
         }
-        public Builder ruleGroup(@Nullable RuleGroupRuleGroupArgs ruleGroup) {
-            this.ruleGroup = Codegen.ofNullable(ruleGroup);
-            return this;
+
+        public Builder ruleGroup(RuleGroupRuleGroupArgs ruleGroup) {
+            return ruleGroup(Output.of(ruleGroup));
         }
+
         public Builder rules(@Nullable Output<String> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable String rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(String rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RuleGroupArgs build() {
-            return new RuleGroupArgs(capacity, description, name, ruleGroup, rules, tags, type);
+            return type(Output.of(type));
+        }
+
+        public RuleGroupArgs build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

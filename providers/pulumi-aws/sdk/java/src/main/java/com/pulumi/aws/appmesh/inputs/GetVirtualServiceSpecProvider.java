@@ -19,7 +19,7 @@ public final class GetVirtualServiceSpecProvider extends com.pulumi.resources.In
      * 
      */
     @Import(name="virtualNodes", required=true)
-      private final List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes;
+    private List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes;
 
     public List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes() {
         return this.virtualNodes;
@@ -30,61 +30,60 @@ public final class GetVirtualServiceSpecProvider extends com.pulumi.resources.In
      * 
      */
     @Import(name="virtualRouters", required=true)
-      private final List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters;
+    private List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters;
 
     public List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters() {
         return this.virtualRouters;
     }
 
-    public GetVirtualServiceSpecProvider(
-        List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes,
-        List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
-        this.virtualNodes = Objects.requireNonNull(virtualNodes, "expected parameter 'virtualNodes' to be non-null");
-        this.virtualRouters = Objects.requireNonNull(virtualRouters, "expected parameter 'virtualRouters' to be non-null");
-    }
+    private GetVirtualServiceSpecProvider() {}
 
-    private GetVirtualServiceSpecProvider() {
-        this.virtualNodes = List.of();
-        this.virtualRouters = List.of();
+    private GetVirtualServiceSpecProvider(GetVirtualServiceSpecProvider $) {
+        this.virtualNodes = $.virtualNodes;
+        this.virtualRouters = $.virtualRouters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualServiceSpecProvider defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes;
-        private List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters;
+        private GetVirtualServiceSpecProvider $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualServiceSpecProvider();
         }
 
         public Builder(GetVirtualServiceSpecProvider defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNodes = defaults.virtualNodes;
-    	      this.virtualRouters = defaults.virtualRouters;
+            $ = new GetVirtualServiceSpecProvider(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNodes(List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes) {
-            this.virtualNodes = Objects.requireNonNull(virtualNodes);
+            $.virtualNodes = virtualNodes;
             return this;
         }
+
         public Builder virtualNodes(GetVirtualServiceSpecProviderVirtualNode... virtualNodes) {
             return virtualNodes(List.of(virtualNodes));
         }
+
         public Builder virtualRouters(List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
-            this.virtualRouters = Objects.requireNonNull(virtualRouters);
+            $.virtualRouters = virtualRouters;
             return this;
         }
+
         public Builder virtualRouters(GetVirtualServiceSpecProviderVirtualRouter... virtualRouters) {
             return virtualRouters(List.of(virtualRouters));
-        }        public GetVirtualServiceSpecProvider build() {
-            return new GetVirtualServiceSpecProvider(virtualNodes, virtualRouters);
+        }
+
+        public GetVirtualServiceSpecProvider build() {
+            $.virtualNodes = Objects.requireNonNull($.virtualNodes, "expected parameter 'virtualNodes' to be non-null");
+            $.virtualRouters = Objects.requireNonNull($.virtualRouters, "expected parameter 'virtualRouters' to be non-null");
+            return $;
         }
     }
+
 }

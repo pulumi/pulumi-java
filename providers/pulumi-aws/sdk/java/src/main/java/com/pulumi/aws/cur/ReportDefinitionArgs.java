@@ -5,11 +5,11 @@ package com.pulumi.aws.cur;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="additionalArtifacts")
-      private final @Nullable Output<List<String>> additionalArtifacts;
+    private @Nullable Output<List<String>> additionalArtifacts;
 
-    public Output<List<String>> additionalArtifacts() {
-        return this.additionalArtifacts == null ? Codegen.empty() : this.additionalArtifacts;
+    public Optional<Output<List<String>>> additionalArtifacts() {
+        return Optional.ofNullable(this.additionalArtifacts);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="additionalSchemaElements", required=true)
-      private final Output<List<String>> additionalSchemaElements;
+    private Output<List<String>> additionalSchemaElements;
 
     public Output<List<String>> additionalSchemaElements() {
         return this.additionalSchemaElements;
@@ -44,7 +44,7 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="compression", required=true)
-      private final Output<String> compression;
+    private Output<String> compression;
 
     public Output<String> compression() {
         return this.compression;
@@ -55,7 +55,7 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -66,10 +66,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="refreshClosedReports")
-      private final @Nullable Output<Boolean> refreshClosedReports;
+    private @Nullable Output<Boolean> refreshClosedReports;
 
-    public Output<Boolean> refreshClosedReports() {
-        return this.refreshClosedReports == null ? Codegen.empty() : this.refreshClosedReports;
+    public Optional<Output<Boolean>> refreshClosedReports() {
+        return Optional.ofNullable(this.refreshClosedReports);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="reportName", required=true)
-      private final Output<String> reportName;
+    private Output<String> reportName;
 
     public Output<String> reportName() {
         return this.reportName;
@@ -88,10 +88,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="reportVersioning")
-      private final @Nullable Output<String> reportVersioning;
+    private @Nullable Output<String> reportVersioning;
 
-    public Output<String> reportVersioning() {
-        return this.reportVersioning == null ? Codegen.empty() : this.reportVersioning;
+    public Optional<Output<String>> reportVersioning() {
+        return Optional.ofNullable(this.reportVersioning);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="s3Bucket", required=true)
-      private final Output<String> s3Bucket;
+    private Output<String> s3Bucket;
 
     public Output<String> s3Bucket() {
         return this.s3Bucket;
@@ -110,10 +110,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="s3Prefix")
-      private final @Nullable Output<String> s3Prefix;
+    private @Nullable Output<String> s3Prefix;
 
-    public Output<String> s3Prefix() {
-        return this.s3Prefix == null ? Codegen.empty() : this.s3Prefix;
+    public Optional<Output<String>> s3Prefix() {
+        return Optional.ofNullable(this.s3Prefix);
     }
 
     /**
@@ -121,7 +121,7 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="s3Region", required=true)
-      private final Output<String> s3Region;
+    private Output<String> s3Region;
 
     public Output<String> s3Region() {
         return this.s3Region;
@@ -132,186 +132,163 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeUnit", required=true)
-      private final Output<String> timeUnit;
+    private Output<String> timeUnit;
 
     public Output<String> timeUnit() {
         return this.timeUnit;
     }
 
-    public ReportDefinitionArgs(
-        @Nullable Output<List<String>> additionalArtifacts,
-        Output<List<String>> additionalSchemaElements,
-        Output<String> compression,
-        Output<String> format,
-        @Nullable Output<Boolean> refreshClosedReports,
-        Output<String> reportName,
-        @Nullable Output<String> reportVersioning,
-        Output<String> s3Bucket,
-        @Nullable Output<String> s3Prefix,
-        Output<String> s3Region,
-        Output<String> timeUnit) {
-        this.additionalArtifacts = additionalArtifacts;
-        this.additionalSchemaElements = Objects.requireNonNull(additionalSchemaElements, "expected parameter 'additionalSchemaElements' to be non-null");
-        this.compression = Objects.requireNonNull(compression, "expected parameter 'compression' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.refreshClosedReports = refreshClosedReports;
-        this.reportName = Objects.requireNonNull(reportName, "expected parameter 'reportName' to be non-null");
-        this.reportVersioning = reportVersioning;
-        this.s3Bucket = Objects.requireNonNull(s3Bucket, "expected parameter 's3Bucket' to be non-null");
-        this.s3Prefix = s3Prefix;
-        this.s3Region = Objects.requireNonNull(s3Region, "expected parameter 's3Region' to be non-null");
-        this.timeUnit = Objects.requireNonNull(timeUnit, "expected parameter 'timeUnit' to be non-null");
-    }
+    private ReportDefinitionArgs() {}
 
-    private ReportDefinitionArgs() {
-        this.additionalArtifacts = Codegen.empty();
-        this.additionalSchemaElements = Codegen.empty();
-        this.compression = Codegen.empty();
-        this.format = Codegen.empty();
-        this.refreshClosedReports = Codegen.empty();
-        this.reportName = Codegen.empty();
-        this.reportVersioning = Codegen.empty();
-        this.s3Bucket = Codegen.empty();
-        this.s3Prefix = Codegen.empty();
-        this.s3Region = Codegen.empty();
-        this.timeUnit = Codegen.empty();
+    private ReportDefinitionArgs(ReportDefinitionArgs $) {
+        this.additionalArtifacts = $.additionalArtifacts;
+        this.additionalSchemaElements = $.additionalSchemaElements;
+        this.compression = $.compression;
+        this.format = $.format;
+        this.refreshClosedReports = $.refreshClosedReports;
+        this.reportName = $.reportName;
+        this.reportVersioning = $.reportVersioning;
+        this.s3Bucket = $.s3Bucket;
+        this.s3Prefix = $.s3Prefix;
+        this.s3Region = $.s3Region;
+        this.timeUnit = $.timeUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> additionalArtifacts;
-        private Output<List<String>> additionalSchemaElements;
-        private Output<String> compression;
-        private Output<String> format;
-        private @Nullable Output<Boolean> refreshClosedReports;
-        private Output<String> reportName;
-        private @Nullable Output<String> reportVersioning;
-        private Output<String> s3Bucket;
-        private @Nullable Output<String> s3Prefix;
-        private Output<String> s3Region;
-        private Output<String> timeUnit;
+        private ReportDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportDefinitionArgs();
         }
 
         public Builder(ReportDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalArtifacts = defaults.additionalArtifacts;
-    	      this.additionalSchemaElements = defaults.additionalSchemaElements;
-    	      this.compression = defaults.compression;
-    	      this.format = defaults.format;
-    	      this.refreshClosedReports = defaults.refreshClosedReports;
-    	      this.reportName = defaults.reportName;
-    	      this.reportVersioning = defaults.reportVersioning;
-    	      this.s3Bucket = defaults.s3Bucket;
-    	      this.s3Prefix = defaults.s3Prefix;
-    	      this.s3Region = defaults.s3Region;
-    	      this.timeUnit = defaults.timeUnit;
+            $ = new ReportDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalArtifacts(@Nullable Output<List<String>> additionalArtifacts) {
-            this.additionalArtifacts = additionalArtifacts;
+            $.additionalArtifacts = additionalArtifacts;
             return this;
         }
-        public Builder additionalArtifacts(@Nullable List<String> additionalArtifacts) {
-            this.additionalArtifacts = Codegen.ofNullable(additionalArtifacts);
-            return this;
+
+        public Builder additionalArtifacts(List<String> additionalArtifacts) {
+            return additionalArtifacts(Output.of(additionalArtifacts));
         }
+
         public Builder additionalArtifacts(String... additionalArtifacts) {
             return additionalArtifacts(List.of(additionalArtifacts));
         }
+
         public Builder additionalSchemaElements(Output<List<String>> additionalSchemaElements) {
-            this.additionalSchemaElements = Objects.requireNonNull(additionalSchemaElements);
+            $.additionalSchemaElements = additionalSchemaElements;
             return this;
         }
+
         public Builder additionalSchemaElements(List<String> additionalSchemaElements) {
-            this.additionalSchemaElements = Output.of(Objects.requireNonNull(additionalSchemaElements));
-            return this;
+            return additionalSchemaElements(Output.of(additionalSchemaElements));
         }
+
         public Builder additionalSchemaElements(String... additionalSchemaElements) {
             return additionalSchemaElements(List.of(additionalSchemaElements));
         }
+
         public Builder compression(Output<String> compression) {
-            this.compression = Objects.requireNonNull(compression);
+            $.compression = compression;
             return this;
         }
+
         public Builder compression(String compression) {
-            this.compression = Output.of(Objects.requireNonNull(compression));
-            return this;
+            return compression(Output.of(compression));
         }
+
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder refreshClosedReports(@Nullable Output<Boolean> refreshClosedReports) {
-            this.refreshClosedReports = refreshClosedReports;
+            $.refreshClosedReports = refreshClosedReports;
             return this;
         }
-        public Builder refreshClosedReports(@Nullable Boolean refreshClosedReports) {
-            this.refreshClosedReports = Codegen.ofNullable(refreshClosedReports);
-            return this;
+
+        public Builder refreshClosedReports(Boolean refreshClosedReports) {
+            return refreshClosedReports(Output.of(refreshClosedReports));
         }
+
         public Builder reportName(Output<String> reportName) {
-            this.reportName = Objects.requireNonNull(reportName);
+            $.reportName = reportName;
             return this;
         }
+
         public Builder reportName(String reportName) {
-            this.reportName = Output.of(Objects.requireNonNull(reportName));
-            return this;
+            return reportName(Output.of(reportName));
         }
+
         public Builder reportVersioning(@Nullable Output<String> reportVersioning) {
-            this.reportVersioning = reportVersioning;
+            $.reportVersioning = reportVersioning;
             return this;
         }
-        public Builder reportVersioning(@Nullable String reportVersioning) {
-            this.reportVersioning = Codegen.ofNullable(reportVersioning);
-            return this;
+
+        public Builder reportVersioning(String reportVersioning) {
+            return reportVersioning(Output.of(reportVersioning));
         }
+
         public Builder s3Bucket(Output<String> s3Bucket) {
-            this.s3Bucket = Objects.requireNonNull(s3Bucket);
+            $.s3Bucket = s3Bucket;
             return this;
         }
+
         public Builder s3Bucket(String s3Bucket) {
-            this.s3Bucket = Output.of(Objects.requireNonNull(s3Bucket));
-            return this;
+            return s3Bucket(Output.of(s3Bucket));
         }
+
         public Builder s3Prefix(@Nullable Output<String> s3Prefix) {
-            this.s3Prefix = s3Prefix;
+            $.s3Prefix = s3Prefix;
             return this;
         }
-        public Builder s3Prefix(@Nullable String s3Prefix) {
-            this.s3Prefix = Codegen.ofNullable(s3Prefix);
-            return this;
+
+        public Builder s3Prefix(String s3Prefix) {
+            return s3Prefix(Output.of(s3Prefix));
         }
+
         public Builder s3Region(Output<String> s3Region) {
-            this.s3Region = Objects.requireNonNull(s3Region);
+            $.s3Region = s3Region;
             return this;
         }
+
         public Builder s3Region(String s3Region) {
-            this.s3Region = Output.of(Objects.requireNonNull(s3Region));
-            return this;
+            return s3Region(Output.of(s3Region));
         }
+
         public Builder timeUnit(Output<String> timeUnit) {
-            this.timeUnit = Objects.requireNonNull(timeUnit);
+            $.timeUnit = timeUnit;
             return this;
         }
+
         public Builder timeUnit(String timeUnit) {
-            this.timeUnit = Output.of(Objects.requireNonNull(timeUnit));
-            return this;
-        }        public ReportDefinitionArgs build() {
-            return new ReportDefinitionArgs(additionalArtifacts, additionalSchemaElements, compression, format, refreshClosedReports, reportName, reportVersioning, s3Bucket, s3Prefix, s3Region, timeUnit);
+            return timeUnit(Output.of(timeUnit));
+        }
+
+        public ReportDefinitionArgs build() {
+            $.additionalSchemaElements = Objects.requireNonNull($.additionalSchemaElements, "expected parameter 'additionalSchemaElements' to be non-null");
+            $.compression = Objects.requireNonNull($.compression, "expected parameter 'compression' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.reportName = Objects.requireNonNull($.reportName, "expected parameter 'reportName' to be non-null");
+            $.s3Bucket = Objects.requireNonNull($.s3Bucket, "expected parameter 's3Bucket' to be non-null");
+            $.s3Region = Objects.requireNonNull($.s3Region, "expected parameter 's3Region' to be non-null");
+            $.timeUnit = Objects.requireNonNull($.timeUnit, "expected parameter 'timeUnit' to be non-null");
+            return $;
         }
     }
+
 }

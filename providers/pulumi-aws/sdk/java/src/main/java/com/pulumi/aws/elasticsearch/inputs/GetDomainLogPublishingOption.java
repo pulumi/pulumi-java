@@ -18,7 +18,7 @@ public final class GetDomainLogPublishingOption extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="cloudwatchLogGroupArn", required=true)
-      private final String cloudwatchLogGroupArn;
+    private String cloudwatchLogGroupArn;
 
     public String cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
@@ -29,7 +29,7 @@ public final class GetDomainLogPublishingOption extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -40,64 +40,59 @@ public final class GetDomainLogPublishingOption extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="logType", required=true)
-      private final String logType;
+    private String logType;
 
     public String logType() {
         return this.logType;
     }
 
-    public GetDomainLogPublishingOption(
-        String cloudwatchLogGroupArn,
-        Boolean enabled,
-        String logType) {
-        this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private GetDomainLogPublishingOption() {}
 
-    private GetDomainLogPublishingOption() {
-        this.cloudwatchLogGroupArn = null;
-        this.enabled = null;
-        this.logType = null;
+    private GetDomainLogPublishingOption(GetDomainLogPublishingOption $) {
+        this.cloudwatchLogGroupArn = $.cloudwatchLogGroupArn;
+        this.enabled = $.enabled;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainLogPublishingOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudwatchLogGroupArn;
-        private Boolean enabled;
-        private String logType;
+        private GetDomainLogPublishingOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainLogPublishingOption();
         }
 
         public Builder(GetDomainLogPublishingOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLogGroupArn = defaults.cloudwatchLogGroupArn;
-    	      this.enabled = defaults.enabled;
-    	      this.logType = defaults.logType;
+            $ = new GetDomainLogPublishingOption(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
+            $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder logType(String logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
-        }        public GetDomainLogPublishingOption build() {
-            return new GetDomainLogPublishingOption(cloudwatchLogGroupArn, enabled, logType);
+        }
+
+        public GetDomainLogPublishingOption build() {
+            $.cloudwatchLogGroupArn = Objects.requireNonNull($.cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

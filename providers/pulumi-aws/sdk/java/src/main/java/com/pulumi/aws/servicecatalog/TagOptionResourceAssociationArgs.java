@@ -5,7 +5,6 @@ package com.pulumi.aws.servicecatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TagOptionResourceAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -30,63 +29,60 @@ public final class TagOptionResourceAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tagOptionId", required=true)
-      private final Output<String> tagOptionId;
+    private Output<String> tagOptionId;
 
     public Output<String> tagOptionId() {
         return this.tagOptionId;
     }
 
-    public TagOptionResourceAssociationArgs(
-        Output<String> resourceId,
-        Output<String> tagOptionId) {
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.tagOptionId = Objects.requireNonNull(tagOptionId, "expected parameter 'tagOptionId' to be non-null");
-    }
+    private TagOptionResourceAssociationArgs() {}
 
-    private TagOptionResourceAssociationArgs() {
-        this.resourceId = Codegen.empty();
-        this.tagOptionId = Codegen.empty();
+    private TagOptionResourceAssociationArgs(TagOptionResourceAssociationArgs $) {
+        this.resourceId = $.resourceId;
+        this.tagOptionId = $.tagOptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagOptionResourceAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceId;
-        private Output<String> tagOptionId;
+        private TagOptionResourceAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagOptionResourceAssociationArgs();
         }
 
         public Builder(TagOptionResourceAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.tagOptionId = defaults.tagOptionId;
+            $ = new TagOptionResourceAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder tagOptionId(Output<String> tagOptionId) {
-            this.tagOptionId = Objects.requireNonNull(tagOptionId);
+            $.tagOptionId = tagOptionId;
             return this;
         }
+
         public Builder tagOptionId(String tagOptionId) {
-            this.tagOptionId = Output.of(Objects.requireNonNull(tagOptionId));
-            return this;
-        }        public TagOptionResourceAssociationArgs build() {
-            return new TagOptionResourceAssociationArgs(resourceId, tagOptionId);
+            return tagOptionId(Output.of(tagOptionId));
+        }
+
+        public TagOptionResourceAssociationArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.tagOptionId = Objects.requireNonNull($.tagOptionId, "expected parameter 'tagOptionId' to be non-null");
+            return $;
         }
     }
+
 }

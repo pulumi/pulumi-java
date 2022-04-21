@@ -5,10 +5,10 @@ package com.pulumi.aws.shield;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProtectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ProtectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
@@ -43,76 +43,69 @@ public final class ProtectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ProtectionArgs(
-        @Nullable Output<String> name,
-        Output<String> resourceArn,
-        @Nullable Output<Map<String,String>> tags) {
-        this.name = name;
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-        this.tags = tags;
-    }
+    private ProtectionArgs() {}
 
-    private ProtectionArgs() {
-        this.name = Codegen.empty();
-        this.resourceArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ProtectionArgs(ProtectionArgs $) {
+        this.name = $.name;
+        this.resourceArn = $.resourceArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> resourceArn;
-        private @Nullable Output<Map<String,String>> tags;
+        private ProtectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionArgs();
         }
 
         public Builder(ProtectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.tags = defaults.tags;
+            $ = new ProtectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ProtectionArgs build() {
-            return new ProtectionArgs(name, resourceArn, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ProtectionArgs build() {
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

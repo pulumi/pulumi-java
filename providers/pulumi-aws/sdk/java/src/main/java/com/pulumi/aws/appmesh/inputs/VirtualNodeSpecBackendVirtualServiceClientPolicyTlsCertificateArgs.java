@@ -7,8 +7,8 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientP
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs> file;
+    private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs> file;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
      * 
      */
     @Import(name="sds")
-      private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs> sds;
+    private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs> sds;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs> sds() {
-        return this.sds == null ? Codegen.empty() : this.sds;
+    public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs>> sds() {
+        return Optional.ofNullable(this.sds);
     }
 
-    public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs(
-        @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs> file,
-        @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs> sds) {
-        this.file = file;
-        this.sds = sds;
-    }
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs() {}
 
-    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs() {
-        this.file = Codegen.empty();
-        this.sds = Codegen.empty();
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs $) {
+        this.file = $.file;
+        this.sds = $.sds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs> file;
-        private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs> sds;
+        private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs();
         }
 
         public Builder(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.file = defaults.file;
-    	      this.sds = defaults.sds;
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder file(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileArgs file) {
+            return file(Output.of(file));
         }
+
         public Builder sds(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs> sds) {
-            this.sds = sds;
+            $.sds = sds;
             return this;
         }
-        public Builder sds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs sds) {
-            this.sds = Codegen.ofNullable(sds);
-            return this;
-        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs build() {
-            return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs(file, sds);
+
+        public Builder sds(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsArgs sds) {
+            return sds(Output.of(sds));
+        }
+
+        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateArgs build() {
+            return $;
         }
     }
+
 }

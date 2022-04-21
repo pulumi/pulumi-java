@@ -8,11 +8,11 @@ import com.pulumi.aws.codebuild.inputs.ProjectSecondarySourceBuildStatusConfigAr
 import com.pulumi.aws.codebuild.inputs.ProjectSecondarySourceGitSubmodulesConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,11 +29,11 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @Import(name="auth")
-      private final @Nullable Output<ProjectSecondarySourceAuthArgs> auth;
+    private @Nullable Output<ProjectSecondarySourceAuthArgs> auth;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Output<ProjectSecondarySourceAuthArgs> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<ProjectSecondarySourceAuthArgs>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="buildStatusConfig")
-      private final @Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig;
+    private @Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig;
 
-    public Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig() {
-        return this.buildStatusConfig == null ? Codegen.empty() : this.buildStatusConfig;
+    public Optional<Output<ProjectSecondarySourceBuildStatusConfigArgs>> buildStatusConfig() {
+        return Optional.ofNullable(this.buildStatusConfig);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="buildspec")
-      private final @Nullable Output<String> buildspec;
+    private @Nullable Output<String> buildspec;
 
-    public Output<String> buildspec() {
-        return this.buildspec == null ? Codegen.empty() : this.buildspec;
+    public Optional<Output<String>> buildspec() {
+        return Optional.ofNullable(this.buildspec);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gitCloneDepth")
-      private final @Nullable Output<Integer> gitCloneDepth;
+    private @Nullable Output<Integer> gitCloneDepth;
 
-    public Output<Integer> gitCloneDepth() {
-        return this.gitCloneDepth == null ? Codegen.empty() : this.gitCloneDepth;
+    public Optional<Output<Integer>> gitCloneDepth() {
+        return Optional.ofNullable(this.gitCloneDepth);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gitSubmodulesConfig")
-      private final @Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
+    private @Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
 
-    public Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig() {
-        return this.gitSubmodulesConfig == null ? Codegen.empty() : this.gitSubmodulesConfig;
+    public Optional<Output<ProjectSecondarySourceGitSubmodulesConfigArgs>> gitSubmodulesConfig() {
+        return Optional.ofNullable(this.gitSubmodulesConfig);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="insecureSsl")
-      private final @Nullable Output<Boolean> insecureSsl;
+    private @Nullable Output<Boolean> insecureSsl;
 
-    public Output<Boolean> insecureSsl() {
-        return this.insecureSsl == null ? Codegen.empty() : this.insecureSsl;
+    public Optional<Output<Boolean>> insecureSsl() {
+        return Optional.ofNullable(this.insecureSsl);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="reportBuildStatus")
-      private final @Nullable Output<Boolean> reportBuildStatus;
+    private @Nullable Output<Boolean> reportBuildStatus;
 
-    public Output<Boolean> reportBuildStatus() {
-        return this.reportBuildStatus == null ? Codegen.empty() : this.reportBuildStatus;
+    public Optional<Output<Boolean>> reportBuildStatus() {
+        return Optional.ofNullable(this.reportBuildStatus);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sourceIdentifier", required=true)
-      private final Output<String> sourceIdentifier;
+    private Output<String> sourceIdentifier;
 
     public Output<String> sourceIdentifier() {
         return this.sourceIdentifier;
@@ -129,167 +129,140 @@ public final class ProjectSecondarySourceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ProjectSecondarySourceArgs(
-        @Nullable Output<ProjectSecondarySourceAuthArgs> auth,
-        @Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig,
-        @Nullable Output<String> buildspec,
-        @Nullable Output<Integer> gitCloneDepth,
-        @Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig,
-        @Nullable Output<Boolean> insecureSsl,
-        @Nullable Output<String> location,
-        @Nullable Output<Boolean> reportBuildStatus,
-        Output<String> sourceIdentifier,
-        Output<String> type) {
-        this.auth = auth;
-        this.buildStatusConfig = buildStatusConfig;
-        this.buildspec = buildspec;
-        this.gitCloneDepth = gitCloneDepth;
-        this.gitSubmodulesConfig = gitSubmodulesConfig;
-        this.insecureSsl = insecureSsl;
-        this.location = location;
-        this.reportBuildStatus = reportBuildStatus;
-        this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ProjectSecondarySourceArgs() {}
 
-    private ProjectSecondarySourceArgs() {
-        this.auth = Codegen.empty();
-        this.buildStatusConfig = Codegen.empty();
-        this.buildspec = Codegen.empty();
-        this.gitCloneDepth = Codegen.empty();
-        this.gitSubmodulesConfig = Codegen.empty();
-        this.insecureSsl = Codegen.empty();
-        this.location = Codegen.empty();
-        this.reportBuildStatus = Codegen.empty();
-        this.sourceIdentifier = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProjectSecondarySourceArgs(ProjectSecondarySourceArgs $) {
+        this.auth = $.auth;
+        this.buildStatusConfig = $.buildStatusConfig;
+        this.buildspec = $.buildspec;
+        this.gitCloneDepth = $.gitCloneDepth;
+        this.gitSubmodulesConfig = $.gitSubmodulesConfig;
+        this.insecureSsl = $.insecureSsl;
+        this.location = $.location;
+        this.reportBuildStatus = $.reportBuildStatus;
+        this.sourceIdentifier = $.sourceIdentifier;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSecondarySourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProjectSecondarySourceAuthArgs> auth;
-        private @Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig;
-        private @Nullable Output<String> buildspec;
-        private @Nullable Output<Integer> gitCloneDepth;
-        private @Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
-        private @Nullable Output<Boolean> insecureSsl;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Boolean> reportBuildStatus;
-        private Output<String> sourceIdentifier;
-        private Output<String> type;
+        private ProjectSecondarySourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSecondarySourceArgs();
         }
 
         public Builder(ProjectSecondarySourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.buildStatusConfig = defaults.buildStatusConfig;
-    	      this.buildspec = defaults.buildspec;
-    	      this.gitCloneDepth = defaults.gitCloneDepth;
-    	      this.gitSubmodulesConfig = defaults.gitSubmodulesConfig;
-    	      this.insecureSsl = defaults.insecureSsl;
-    	      this.location = defaults.location;
-    	      this.reportBuildStatus = defaults.reportBuildStatus;
-    	      this.sourceIdentifier = defaults.sourceIdentifier;
-    	      this.type = defaults.type;
+            $ = new ProjectSecondarySourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<ProjectSecondarySourceAuthArgs> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable ProjectSecondarySourceAuthArgs auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(ProjectSecondarySourceAuthArgs auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder buildStatusConfig(@Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig) {
-            this.buildStatusConfig = buildStatusConfig;
+            $.buildStatusConfig = buildStatusConfig;
             return this;
         }
-        public Builder buildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfigArgs buildStatusConfig) {
-            this.buildStatusConfig = Codegen.ofNullable(buildStatusConfig);
-            return this;
+
+        public Builder buildStatusConfig(ProjectSecondarySourceBuildStatusConfigArgs buildStatusConfig) {
+            return buildStatusConfig(Output.of(buildStatusConfig));
         }
+
         public Builder buildspec(@Nullable Output<String> buildspec) {
-            this.buildspec = buildspec;
+            $.buildspec = buildspec;
             return this;
         }
-        public Builder buildspec(@Nullable String buildspec) {
-            this.buildspec = Codegen.ofNullable(buildspec);
-            return this;
+
+        public Builder buildspec(String buildspec) {
+            return buildspec(Output.of(buildspec));
         }
+
         public Builder gitCloneDepth(@Nullable Output<Integer> gitCloneDepth) {
-            this.gitCloneDepth = gitCloneDepth;
+            $.gitCloneDepth = gitCloneDepth;
             return this;
         }
-        public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
-            this.gitCloneDepth = Codegen.ofNullable(gitCloneDepth);
-            return this;
+
+        public Builder gitCloneDepth(Integer gitCloneDepth) {
+            return gitCloneDepth(Output.of(gitCloneDepth));
         }
+
         public Builder gitSubmodulesConfig(@Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig) {
-            this.gitSubmodulesConfig = gitSubmodulesConfig;
+            $.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
-        public Builder gitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfigArgs gitSubmodulesConfig) {
-            this.gitSubmodulesConfig = Codegen.ofNullable(gitSubmodulesConfig);
-            return this;
+
+        public Builder gitSubmodulesConfig(ProjectSecondarySourceGitSubmodulesConfigArgs gitSubmodulesConfig) {
+            return gitSubmodulesConfig(Output.of(gitSubmodulesConfig));
         }
+
         public Builder insecureSsl(@Nullable Output<Boolean> insecureSsl) {
-            this.insecureSsl = insecureSsl;
+            $.insecureSsl = insecureSsl;
             return this;
         }
-        public Builder insecureSsl(@Nullable Boolean insecureSsl) {
-            this.insecureSsl = Codegen.ofNullable(insecureSsl);
-            return this;
+
+        public Builder insecureSsl(Boolean insecureSsl) {
+            return insecureSsl(Output.of(insecureSsl));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder reportBuildStatus(@Nullable Output<Boolean> reportBuildStatus) {
-            this.reportBuildStatus = reportBuildStatus;
+            $.reportBuildStatus = reportBuildStatus;
             return this;
         }
-        public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
-            this.reportBuildStatus = Codegen.ofNullable(reportBuildStatus);
-            return this;
+
+        public Builder reportBuildStatus(Boolean reportBuildStatus) {
+            return reportBuildStatus(Output.of(reportBuildStatus));
         }
+
         public Builder sourceIdentifier(Output<String> sourceIdentifier) {
-            this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
+            $.sourceIdentifier = sourceIdentifier;
             return this;
         }
+
         public Builder sourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
-            return this;
+            return sourceIdentifier(Output.of(sourceIdentifier));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ProjectSecondarySourceArgs build() {
-            return new ProjectSecondarySourceArgs(auth, buildStatusConfig, buildspec, gitCloneDepth, gitSubmodulesConfig, insecureSsl, location, reportBuildStatus, sourceIdentifier, type);
+            return type(Output.of(type));
+        }
+
+        public ProjectSecondarySourceArgs build() {
+            $.sourceIdentifier = Objects.requireNonNull($.sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

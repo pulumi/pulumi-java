@@ -5,11 +5,11 @@ package com.pulumi.aws.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="basicAuthCredentials")
-      private final @Nullable Output<String> basicAuthCredentials;
+    private @Nullable Output<String> basicAuthCredentials;
 
-    public Output<String> basicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Codegen.empty() : this.basicAuthCredentials;
+    public Optional<Output<String>> basicAuthCredentials() {
+        return Optional.ofNullable(this.basicAuthCredentials);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="buildSpec")
-      private final @Nullable Output<String> buildSpec;
+    private @Nullable Output<String> buildSpec;
 
-    public Output<String> buildSpec() {
-        return this.buildSpec == null ? Codegen.empty() : this.buildSpec;
+    public Optional<Output<String>> buildSpec() {
+        return Optional.ofNullable(this.buildSpec);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enableAutoBuild")
-      private final @Nullable Output<Boolean> enableAutoBuild;
+    private @Nullable Output<Boolean> enableAutoBuild;
 
-    public Output<Boolean> enableAutoBuild() {
-        return this.enableAutoBuild == null ? Codegen.empty() : this.enableAutoBuild;
+    public Optional<Output<Boolean>> enableAutoBuild() {
+        return Optional.ofNullable(this.enableAutoBuild);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enableBasicAuth")
-      private final @Nullable Output<Boolean> enableBasicAuth;
+    private @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> enableBasicAuth() {
-        return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
+    public Optional<Output<Boolean>> enableBasicAuth() {
+        return Optional.ofNullable(this.enableBasicAuth);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enablePerformanceMode")
-      private final @Nullable Output<Boolean> enablePerformanceMode;
+    private @Nullable Output<Boolean> enablePerformanceMode;
 
-    public Output<Boolean> enablePerformanceMode() {
-        return this.enablePerformanceMode == null ? Codegen.empty() : this.enablePerformanceMode;
+    public Optional<Output<Boolean>> enablePerformanceMode() {
+        return Optional.ofNullable(this.enablePerformanceMode);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enablePullRequestPreview")
-      private final @Nullable Output<Boolean> enablePullRequestPreview;
+    private @Nullable Output<Boolean> enablePullRequestPreview;
 
-    public Output<Boolean> enablePullRequestPreview() {
-        return this.enablePullRequestPreview == null ? Codegen.empty() : this.enablePullRequestPreview;
+    public Optional<Output<Boolean>> enablePullRequestPreview() {
+        return Optional.ofNullable(this.enablePullRequestPreview);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Map<String,String>> environmentVariables;
+    private @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="framework")
-      private final @Nullable Output<String> framework;
+    private @Nullable Output<String> framework;
 
-    public Output<String> framework() {
-        return this.framework == null ? Codegen.empty() : this.framework;
+    public Optional<Output<String>> framework() {
+        return Optional.ofNullable(this.framework);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="pullRequestEnvironmentName")
-      private final @Nullable Output<String> pullRequestEnvironmentName;
+    private @Nullable Output<String> pullRequestEnvironmentName;
 
-    public Output<String> pullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName == null ? Codegen.empty() : this.pullRequestEnvironmentName;
+    public Optional<Output<String>> pullRequestEnvironmentName() {
+        return Optional.ofNullable(this.pullRequestEnvironmentName);
     }
 
     /**
@@ -121,167 +121,138 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="stage")
-      private final @Nullable Output<String> stage;
+    private @Nullable Output<String> stage;
 
-    public Output<String> stage() {
-        return this.stage == null ? Codegen.empty() : this.stage;
+    public Optional<Output<String>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
-    public AppAutoBranchCreationConfigArgs(
-        @Nullable Output<String> basicAuthCredentials,
-        @Nullable Output<String> buildSpec,
-        @Nullable Output<Boolean> enableAutoBuild,
-        @Nullable Output<Boolean> enableBasicAuth,
-        @Nullable Output<Boolean> enablePerformanceMode,
-        @Nullable Output<Boolean> enablePullRequestPreview,
-        @Nullable Output<Map<String,String>> environmentVariables,
-        @Nullable Output<String> framework,
-        @Nullable Output<String> pullRequestEnvironmentName,
-        @Nullable Output<String> stage) {
-        this.basicAuthCredentials = basicAuthCredentials;
-        this.buildSpec = buildSpec;
-        this.enableAutoBuild = enableAutoBuild;
-        this.enableBasicAuth = enableBasicAuth;
-        this.enablePerformanceMode = enablePerformanceMode;
-        this.enablePullRequestPreview = enablePullRequestPreview;
-        this.environmentVariables = environmentVariables;
-        this.framework = framework;
-        this.pullRequestEnvironmentName = pullRequestEnvironmentName;
-        this.stage = stage;
-    }
+    private AppAutoBranchCreationConfigArgs() {}
 
-    private AppAutoBranchCreationConfigArgs() {
-        this.basicAuthCredentials = Codegen.empty();
-        this.buildSpec = Codegen.empty();
-        this.enableAutoBuild = Codegen.empty();
-        this.enableBasicAuth = Codegen.empty();
-        this.enablePerformanceMode = Codegen.empty();
-        this.enablePullRequestPreview = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.framework = Codegen.empty();
-        this.pullRequestEnvironmentName = Codegen.empty();
-        this.stage = Codegen.empty();
+    private AppAutoBranchCreationConfigArgs(AppAutoBranchCreationConfigArgs $) {
+        this.basicAuthCredentials = $.basicAuthCredentials;
+        this.buildSpec = $.buildSpec;
+        this.enableAutoBuild = $.enableAutoBuild;
+        this.enableBasicAuth = $.enableBasicAuth;
+        this.enablePerformanceMode = $.enablePerformanceMode;
+        this.enablePullRequestPreview = $.enablePullRequestPreview;
+        this.environmentVariables = $.environmentVariables;
+        this.framework = $.framework;
+        this.pullRequestEnvironmentName = $.pullRequestEnvironmentName;
+        this.stage = $.stage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppAutoBranchCreationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> basicAuthCredentials;
-        private @Nullable Output<String> buildSpec;
-        private @Nullable Output<Boolean> enableAutoBuild;
-        private @Nullable Output<Boolean> enableBasicAuth;
-        private @Nullable Output<Boolean> enablePerformanceMode;
-        private @Nullable Output<Boolean> enablePullRequestPreview;
-        private @Nullable Output<Map<String,String>> environmentVariables;
-        private @Nullable Output<String> framework;
-        private @Nullable Output<String> pullRequestEnvironmentName;
-        private @Nullable Output<String> stage;
+        private AppAutoBranchCreationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppAutoBranchCreationConfigArgs();
         }
 
         public Builder(AppAutoBranchCreationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicAuthCredentials = defaults.basicAuthCredentials;
-    	      this.buildSpec = defaults.buildSpec;
-    	      this.enableAutoBuild = defaults.enableAutoBuild;
-    	      this.enableBasicAuth = defaults.enableBasicAuth;
-    	      this.enablePerformanceMode = defaults.enablePerformanceMode;
-    	      this.enablePullRequestPreview = defaults.enablePullRequestPreview;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.framework = defaults.framework;
-    	      this.pullRequestEnvironmentName = defaults.pullRequestEnvironmentName;
-    	      this.stage = defaults.stage;
+            $ = new AppAutoBranchCreationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
-            this.basicAuthCredentials = basicAuthCredentials;
+            $.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-        public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
-            this.basicAuthCredentials = Codegen.ofNullable(basicAuthCredentials);
-            return this;
+
+        public Builder basicAuthCredentials(String basicAuthCredentials) {
+            return basicAuthCredentials(Output.of(basicAuthCredentials));
         }
+
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
-            this.buildSpec = buildSpec;
+            $.buildSpec = buildSpec;
             return this;
         }
-        public Builder buildSpec(@Nullable String buildSpec) {
-            this.buildSpec = Codegen.ofNullable(buildSpec);
-            return this;
+
+        public Builder buildSpec(String buildSpec) {
+            return buildSpec(Output.of(buildSpec));
         }
+
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
-            this.enableAutoBuild = enableAutoBuild;
+            $.enableAutoBuild = enableAutoBuild;
             return this;
         }
-        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
-            this.enableAutoBuild = Codegen.ofNullable(enableAutoBuild);
-            return this;
+
+        public Builder enableAutoBuild(Boolean enableAutoBuild) {
+            return enableAutoBuild(Output.of(enableAutoBuild));
         }
+
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
-            this.enableBasicAuth = enableBasicAuth;
+            $.enableBasicAuth = enableBasicAuth;
             return this;
         }
-        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Codegen.ofNullable(enableBasicAuth);
-            return this;
+
+        public Builder enableBasicAuth(Boolean enableBasicAuth) {
+            return enableBasicAuth(Output.of(enableBasicAuth));
         }
+
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
-            this.enablePerformanceMode = enablePerformanceMode;
+            $.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
-            this.enablePerformanceMode = Codegen.ofNullable(enablePerformanceMode);
-            return this;
+
+        public Builder enablePerformanceMode(Boolean enablePerformanceMode) {
+            return enablePerformanceMode(Output.of(enablePerformanceMode));
         }
+
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
-            this.enablePullRequestPreview = enablePullRequestPreview;
+            $.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
-            this.enablePullRequestPreview = Codegen.ofNullable(enablePullRequestPreview);
-            return this;
+
+        public Builder enablePullRequestPreview(Boolean enablePullRequestPreview) {
+            return enablePullRequestPreview(Output.of(enablePullRequestPreview));
         }
+
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder framework(@Nullable Output<String> framework) {
-            this.framework = framework;
+            $.framework = framework;
             return this;
         }
-        public Builder framework(@Nullable String framework) {
-            this.framework = Codegen.ofNullable(framework);
-            return this;
+
+        public Builder framework(String framework) {
+            return framework(Output.of(framework));
         }
+
         public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = pullRequestEnvironmentName;
+            $.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = Codegen.ofNullable(pullRequestEnvironmentName);
-            return this;
+
+        public Builder pullRequestEnvironmentName(String pullRequestEnvironmentName) {
+            return pullRequestEnvironmentName(Output.of(pullRequestEnvironmentName));
         }
+
         public Builder stage(@Nullable Output<String> stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
-        public Builder stage(@Nullable String stage) {
-            this.stage = Codegen.ofNullable(stage);
-            return this;
-        }        public AppAutoBranchCreationConfigArgs build() {
-            return new AppAutoBranchCreationConfigArgs(basicAuthCredentials, buildSpec, enableAutoBuild, enableBasicAuth, enablePerformanceMode, enablePullRequestPreview, environmentVariables, framework, pullRequestEnvironmentName, stage);
+
+        public Builder stage(String stage) {
+            return stage(Output.of(stage));
+        }
+
+        public AppAutoBranchCreationConfigArgs build() {
+            return $;
         }
     }
+
 }

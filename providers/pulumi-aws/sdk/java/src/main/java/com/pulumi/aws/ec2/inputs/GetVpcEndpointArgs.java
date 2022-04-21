@@ -22,10 +22,10 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcEndpointFilter> filters;
+    private @Nullable List<GetVpcEndpointFilter> filters;
 
-    public List<GetVpcEndpointFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcEndpointFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable String serviceName;
+    private @Nullable String serviceName;
 
     public Optional<String> serviceName() {
-        return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,94 +78,78 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public GetVpcEndpointArgs(
-        @Nullable List<GetVpcEndpointFilter> filters,
-        @Nullable String id,
-        @Nullable String serviceName,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId) {
-        this.filters = filters;
-        this.id = id;
-        this.serviceName = serviceName;
-        this.state = state;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private GetVpcEndpointArgs() {}
 
-    private GetVpcEndpointArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.serviceName = null;
-        this.state = null;
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetVpcEndpointArgs(GetVpcEndpointArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.serviceName = $.serviceName;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetVpcEndpointFilter> filters;
-        private @Nullable String id;
-        private @Nullable String serviceName;
-        private @Nullable String state;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
+        private GetVpcEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcEndpointArgs();
         }
 
         public Builder(GetVpcEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.serviceName = defaults.serviceName;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetVpcEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetVpcEndpointFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcEndpointFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public GetVpcEndpointArgs build() {
-            return new GetVpcEndpointArgs(filters, id, serviceName, state, tags, vpcId);
+        }
+
+        public GetVpcEndpointArgs build() {
+            return $;
         }
     }
+
 }

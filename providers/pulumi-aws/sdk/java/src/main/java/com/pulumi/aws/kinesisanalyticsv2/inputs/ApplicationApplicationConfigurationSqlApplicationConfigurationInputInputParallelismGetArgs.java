@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs(@Nullable Output<Integer> count) {
-        this.count = count;
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs() {
-        this.count = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs $) {
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs(count);
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs build() {
+            return $;
         }
     }
+
 }

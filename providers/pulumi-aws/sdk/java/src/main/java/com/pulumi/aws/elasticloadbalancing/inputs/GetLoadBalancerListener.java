@@ -14,110 +14,101 @@ public final class GetLoadBalancerListener extends com.pulumi.resources.InvokeAr
     public static final GetLoadBalancerListener Empty = new GetLoadBalancerListener();
 
     @Import(name="instancePort", required=true)
-      private final Integer instancePort;
+    private Integer instancePort;
 
     public Integer instancePort() {
         return this.instancePort;
     }
 
     @Import(name="instanceProtocol", required=true)
-      private final String instanceProtocol;
+    private String instanceProtocol;
 
     public String instanceProtocol() {
         return this.instanceProtocol;
     }
 
     @Import(name="lbPort", required=true)
-      private final Integer lbPort;
+    private Integer lbPort;
 
     public Integer lbPort() {
         return this.lbPort;
     }
 
     @Import(name="lbProtocol", required=true)
-      private final String lbProtocol;
+    private String lbProtocol;
 
     public String lbProtocol() {
         return this.lbProtocol;
     }
 
     @Import(name="sslCertificateId", required=true)
-      private final String sslCertificateId;
+    private String sslCertificateId;
 
     public String sslCertificateId() {
         return this.sslCertificateId;
     }
 
-    public GetLoadBalancerListener(
-        Integer instancePort,
-        String instanceProtocol,
-        Integer lbPort,
-        String lbProtocol,
-        String sslCertificateId) {
-        this.instancePort = Objects.requireNonNull(instancePort, "expected parameter 'instancePort' to be non-null");
-        this.instanceProtocol = Objects.requireNonNull(instanceProtocol, "expected parameter 'instanceProtocol' to be non-null");
-        this.lbPort = Objects.requireNonNull(lbPort, "expected parameter 'lbPort' to be non-null");
-        this.lbProtocol = Objects.requireNonNull(lbProtocol, "expected parameter 'lbProtocol' to be non-null");
-        this.sslCertificateId = Objects.requireNonNull(sslCertificateId, "expected parameter 'sslCertificateId' to be non-null");
-    }
+    private GetLoadBalancerListener() {}
 
-    private GetLoadBalancerListener() {
-        this.instancePort = null;
-        this.instanceProtocol = null;
-        this.lbPort = null;
-        this.lbProtocol = null;
-        this.sslCertificateId = null;
+    private GetLoadBalancerListener(GetLoadBalancerListener $) {
+        this.instancePort = $.instancePort;
+        this.instanceProtocol = $.instanceProtocol;
+        this.lbPort = $.lbPort;
+        this.lbProtocol = $.lbProtocol;
+        this.sslCertificateId = $.sslCertificateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerListener defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer instancePort;
-        private String instanceProtocol;
-        private Integer lbPort;
-        private String lbProtocol;
-        private String sslCertificateId;
+        private GetLoadBalancerListener $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerListener();
         }
 
         public Builder(GetLoadBalancerListener defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instancePort = defaults.instancePort;
-    	      this.instanceProtocol = defaults.instanceProtocol;
-    	      this.lbPort = defaults.lbPort;
-    	      this.lbProtocol = defaults.lbProtocol;
-    	      this.sslCertificateId = defaults.sslCertificateId;
+            $ = new GetLoadBalancerListener(Objects.requireNonNull(defaults));
         }
 
         public Builder instancePort(Integer instancePort) {
-            this.instancePort = Objects.requireNonNull(instancePort);
+            $.instancePort = instancePort;
             return this;
         }
+
         public Builder instanceProtocol(String instanceProtocol) {
-            this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
+            $.instanceProtocol = instanceProtocol;
             return this;
         }
+
         public Builder lbPort(Integer lbPort) {
-            this.lbPort = Objects.requireNonNull(lbPort);
+            $.lbPort = lbPort;
             return this;
         }
+
         public Builder lbProtocol(String lbProtocol) {
-            this.lbProtocol = Objects.requireNonNull(lbProtocol);
+            $.lbProtocol = lbProtocol;
             return this;
         }
+
         public Builder sslCertificateId(String sslCertificateId) {
-            this.sslCertificateId = Objects.requireNonNull(sslCertificateId);
+            $.sslCertificateId = sslCertificateId;
             return this;
-        }        public GetLoadBalancerListener build() {
-            return new GetLoadBalancerListener(instancePort, instanceProtocol, lbPort, lbProtocol, sslCertificateId);
+        }
+
+        public GetLoadBalancerListener build() {
+            $.instancePort = Objects.requireNonNull($.instancePort, "expected parameter 'instancePort' to be non-null");
+            $.instanceProtocol = Objects.requireNonNull($.instanceProtocol, "expected parameter 'instanceProtocol' to be non-null");
+            $.lbPort = Objects.requireNonNull($.lbPort, "expected parameter 'lbPort' to be non-null");
+            $.lbProtocol = Objects.requireNonNull($.lbProtocol, "expected parameter 'lbProtocol' to be non-null");
+            $.sslCertificateId = Objects.requireNonNull($.sslCertificateId, "expected parameter 'sslCertificateId' to be non-null");
+            return $;
         }
     }
+
 }

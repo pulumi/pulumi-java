@@ -8,10 +8,10 @@ import com.pulumi.aws.budgets.inputs.BudgetActionDefinitionGetArgs;
 import com.pulumi.aws.budgets.inputs.BudgetActionSubscriberGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionId")
-      private final @Nullable Output<String> actionId;
+    private @Nullable Output<String> actionId;
 
-    public Output<String> actionId() {
-        return this.actionId == null ? Codegen.empty() : this.actionId;
+    public Optional<Output<String>> actionId() {
+        return Optional.ofNullable(this.actionId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionThreshold")
-      private final @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold;
+    private @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold;
 
-    public Output<BudgetActionActionThresholdGetArgs> actionThreshold() {
-        return this.actionThreshold == null ? Codegen.empty() : this.actionThreshold;
+    public Optional<Output<BudgetActionActionThresholdGetArgs>> actionThreshold() {
+        return Optional.ofNullable(this.actionThreshold);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionType")
-      private final @Nullable Output<String> actionType;
+    private @Nullable Output<String> actionType;
 
-    public Output<String> actionType() {
-        return this.actionType == null ? Codegen.empty() : this.actionType;
+    public Optional<Output<String>> actionType() {
+        return Optional.ofNullable(this.actionType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvalModel")
-      private final @Nullable Output<String> approvalModel;
+    private @Nullable Output<String> approvalModel;
 
-    public Output<String> approvalModel() {
-        return this.approvalModel == null ? Codegen.empty() : this.approvalModel;
+    public Optional<Output<String>> approvalModel() {
+        return Optional.ofNullable(this.approvalModel);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="budgetName")
-      private final @Nullable Output<String> budgetName;
+    private @Nullable Output<String> budgetName;
 
-    public Output<String> budgetName() {
-        return this.budgetName == null ? Codegen.empty() : this.budgetName;
+    public Optional<Output<String>> budgetName() {
+        return Optional.ofNullable(this.budgetName);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definition")
-      private final @Nullable Output<BudgetActionDefinitionGetArgs> definition;
+    private @Nullable Output<BudgetActionDefinitionGetArgs> definition;
 
-    public Output<BudgetActionDefinitionGetArgs> definition() {
-        return this.definition == null ? Codegen.empty() : this.definition;
+    public Optional<Output<BudgetActionDefinitionGetArgs>> definition() {
+        return Optional.ofNullable(this.definition);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionRoleArn")
-      private final @Nullable Output<String> executionRoleArn;
+    private @Nullable Output<String> executionRoleArn;
 
-    public Output<String> executionRoleArn() {
-        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
+    public Optional<Output<String>> executionRoleArn() {
+        return Optional.ofNullable(this.executionRoleArn);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationType")
-      private final @Nullable Output<String> notificationType;
+    private @Nullable Output<String> notificationType;
 
-    public Output<String> notificationType() {
-        return this.notificationType == null ? Codegen.empty() : this.notificationType;
+    public Optional<Output<String>> notificationType() {
+        return Optional.ofNullable(this.notificationType);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -145,196 +145,162 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscribers")
-      private final @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers;
+    private @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers;
 
-    public Output<List<BudgetActionSubscriberGetArgs>> subscribers() {
-        return this.subscribers == null ? Codegen.empty() : this.subscribers;
+    public Optional<Output<List<BudgetActionSubscriberGetArgs>>> subscribers() {
+        return Optional.ofNullable(this.subscribers);
     }
 
-    public BudgetActionState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> actionId,
-        @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold,
-        @Nullable Output<String> actionType,
-        @Nullable Output<String> approvalModel,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> budgetName,
-        @Nullable Output<BudgetActionDefinitionGetArgs> definition,
-        @Nullable Output<String> executionRoleArn,
-        @Nullable Output<String> notificationType,
-        @Nullable Output<String> status,
-        @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers) {
-        this.accountId = accountId;
-        this.actionId = actionId;
-        this.actionThreshold = actionThreshold;
-        this.actionType = actionType;
-        this.approvalModel = approvalModel;
-        this.arn = arn;
-        this.budgetName = budgetName;
-        this.definition = definition;
-        this.executionRoleArn = executionRoleArn;
-        this.notificationType = notificationType;
-        this.status = status;
-        this.subscribers = subscribers;
-    }
+    private BudgetActionState() {}
 
-    private BudgetActionState() {
-        this.accountId = Codegen.empty();
-        this.actionId = Codegen.empty();
-        this.actionThreshold = Codegen.empty();
-        this.actionType = Codegen.empty();
-        this.approvalModel = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.budgetName = Codegen.empty();
-        this.definition = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.notificationType = Codegen.empty();
-        this.status = Codegen.empty();
-        this.subscribers = Codegen.empty();
+    private BudgetActionState(BudgetActionState $) {
+        this.accountId = $.accountId;
+        this.actionId = $.actionId;
+        this.actionThreshold = $.actionThreshold;
+        this.actionType = $.actionType;
+        this.approvalModel = $.approvalModel;
+        this.arn = $.arn;
+        this.budgetName = $.budgetName;
+        this.definition = $.definition;
+        this.executionRoleArn = $.executionRoleArn;
+        this.notificationType = $.notificationType;
+        this.status = $.status;
+        this.subscribers = $.subscribers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetActionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> actionId;
-        private @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold;
-        private @Nullable Output<String> actionType;
-        private @Nullable Output<String> approvalModel;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> budgetName;
-        private @Nullable Output<BudgetActionDefinitionGetArgs> definition;
-        private @Nullable Output<String> executionRoleArn;
-        private @Nullable Output<String> notificationType;
-        private @Nullable Output<String> status;
-        private @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers;
+        private BudgetActionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetActionState();
         }
 
         public Builder(BudgetActionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.actionId = defaults.actionId;
-    	      this.actionThreshold = defaults.actionThreshold;
-    	      this.actionType = defaults.actionType;
-    	      this.approvalModel = defaults.approvalModel;
-    	      this.arn = defaults.arn;
-    	      this.budgetName = defaults.budgetName;
-    	      this.definition = defaults.definition;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.notificationType = defaults.notificationType;
-    	      this.status = defaults.status;
-    	      this.subscribers = defaults.subscribers;
+            $ = new BudgetActionState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder actionId(@Nullable Output<String> actionId) {
-            this.actionId = actionId;
+            $.actionId = actionId;
             return this;
         }
-        public Builder actionId(@Nullable String actionId) {
-            this.actionId = Codegen.ofNullable(actionId);
-            return this;
+
+        public Builder actionId(String actionId) {
+            return actionId(Output.of(actionId));
         }
+
         public Builder actionThreshold(@Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold) {
-            this.actionThreshold = actionThreshold;
+            $.actionThreshold = actionThreshold;
             return this;
         }
-        public Builder actionThreshold(@Nullable BudgetActionActionThresholdGetArgs actionThreshold) {
-            this.actionThreshold = Codegen.ofNullable(actionThreshold);
-            return this;
+
+        public Builder actionThreshold(BudgetActionActionThresholdGetArgs actionThreshold) {
+            return actionThreshold(Output.of(actionThreshold));
         }
+
         public Builder actionType(@Nullable Output<String> actionType) {
-            this.actionType = actionType;
+            $.actionType = actionType;
             return this;
         }
-        public Builder actionType(@Nullable String actionType) {
-            this.actionType = Codegen.ofNullable(actionType);
-            return this;
+
+        public Builder actionType(String actionType) {
+            return actionType(Output.of(actionType));
         }
+
         public Builder approvalModel(@Nullable Output<String> approvalModel) {
-            this.approvalModel = approvalModel;
+            $.approvalModel = approvalModel;
             return this;
         }
-        public Builder approvalModel(@Nullable String approvalModel) {
-            this.approvalModel = Codegen.ofNullable(approvalModel);
-            return this;
+
+        public Builder approvalModel(String approvalModel) {
+            return approvalModel(Output.of(approvalModel));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder budgetName(@Nullable Output<String> budgetName) {
-            this.budgetName = budgetName;
+            $.budgetName = budgetName;
             return this;
         }
-        public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Codegen.ofNullable(budgetName);
-            return this;
+
+        public Builder budgetName(String budgetName) {
+            return budgetName(Output.of(budgetName));
         }
+
         public Builder definition(@Nullable Output<BudgetActionDefinitionGetArgs> definition) {
-            this.definition = definition;
+            $.definition = definition;
             return this;
         }
-        public Builder definition(@Nullable BudgetActionDefinitionGetArgs definition) {
-            this.definition = Codegen.ofNullable(definition);
-            return this;
+
+        public Builder definition(BudgetActionDefinitionGetArgs definition) {
+            return definition(Output.of(definition));
         }
+
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
-            this.executionRoleArn = executionRoleArn;
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
-        public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
-            return this;
+
+        public Builder executionRoleArn(String executionRoleArn) {
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder notificationType(@Nullable Output<String> notificationType) {
-            this.notificationType = notificationType;
+            $.notificationType = notificationType;
             return this;
         }
-        public Builder notificationType(@Nullable String notificationType) {
-            this.notificationType = Codegen.ofNullable(notificationType);
-            return this;
+
+        public Builder notificationType(String notificationType) {
+            return notificationType(Output.of(notificationType));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder subscribers(@Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers) {
-            this.subscribers = subscribers;
+            $.subscribers = subscribers;
             return this;
         }
-        public Builder subscribers(@Nullable List<BudgetActionSubscriberGetArgs> subscribers) {
-            this.subscribers = Codegen.ofNullable(subscribers);
-            return this;
+
+        public Builder subscribers(List<BudgetActionSubscriberGetArgs> subscribers) {
+            return subscribers(Output.of(subscribers));
         }
+
         public Builder subscribers(BudgetActionSubscriberGetArgs... subscribers) {
             return subscribers(List.of(subscribers));
-        }        public BudgetActionState build() {
-            return new BudgetActionState(accountId, actionId, actionThreshold, actionType, approvalModel, arn, budgetName, definition, executionRoleArn, notificationType, status, subscribers);
+        }
+
+        public BudgetActionState build() {
+            return $;
         }
     }
+
 }

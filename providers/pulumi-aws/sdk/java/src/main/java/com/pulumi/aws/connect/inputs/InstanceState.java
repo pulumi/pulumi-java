@@ -5,10 +5,10 @@ package com.pulumi.aws.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoResolveBestVoicesEnabled")
-      private final @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
+    private @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
 
-    public Output<Boolean> autoResolveBestVoicesEnabled() {
-        return this.autoResolveBestVoicesEnabled == null ? Codegen.empty() : this.autoResolveBestVoicesEnabled;
+    public Optional<Output<Boolean>> autoResolveBestVoicesEnabled() {
+        return Optional.ofNullable(this.autoResolveBestVoicesEnabled);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactFlowLogsEnabled")
-      private final @Nullable Output<Boolean> contactFlowLogsEnabled;
+    private @Nullable Output<Boolean> contactFlowLogsEnabled;
 
-    public Output<Boolean> contactFlowLogsEnabled() {
-        return this.contactFlowLogsEnabled == null ? Codegen.empty() : this.contactFlowLogsEnabled;
+    public Optional<Output<Boolean>> contactFlowLogsEnabled() {
+        return Optional.ofNullable(this.contactFlowLogsEnabled);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactLensEnabled")
-      private final @Nullable Output<Boolean> contactLensEnabled;
+    private @Nullable Output<Boolean> contactLensEnabled;
 
-    public Output<Boolean> contactLensEnabled() {
-        return this.contactLensEnabled == null ? Codegen.empty() : this.contactLensEnabled;
+    public Optional<Output<Boolean>> contactLensEnabled() {
+        return Optional.ofNullable(this.contactLensEnabled);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoryId")
-      private final @Nullable Output<String> directoryId;
+    private @Nullable Output<String> directoryId;
 
-    public Output<String> directoryId() {
-        return this.directoryId == null ? Codegen.empty() : this.directoryId;
+    public Optional<Output<String>> directoryId() {
+        return Optional.ofNullable(this.directoryId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="earlyMediaEnabled")
-      private final @Nullable Output<Boolean> earlyMediaEnabled;
+    private @Nullable Output<Boolean> earlyMediaEnabled;
 
-    public Output<Boolean> earlyMediaEnabled() {
-        return this.earlyMediaEnabled == null ? Codegen.empty() : this.earlyMediaEnabled;
+    public Optional<Output<Boolean>> earlyMediaEnabled() {
+        return Optional.ofNullable(this.earlyMediaEnabled);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityManagementType")
-      private final @Nullable Output<String> identityManagementType;
+    private @Nullable Output<String> identityManagementType;
 
-    public Output<String> identityManagementType() {
-        return this.identityManagementType == null ? Codegen.empty() : this.identityManagementType;
+    public Optional<Output<String>> identityManagementType() {
+        return Optional.ofNullable(this.identityManagementType);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inboundCallsEnabled")
-      private final @Nullable Output<Boolean> inboundCallsEnabled;
+    private @Nullable Output<Boolean> inboundCallsEnabled;
 
-    public Output<Boolean> inboundCallsEnabled() {
-        return this.inboundCallsEnabled == null ? Codegen.empty() : this.inboundCallsEnabled;
+    public Optional<Output<Boolean>> inboundCallsEnabled() {
+        return Optional.ofNullable(this.inboundCallsEnabled);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceAlias")
-      private final @Nullable Output<String> instanceAlias;
+    private @Nullable Output<String> instanceAlias;
 
-    public Output<String> instanceAlias() {
-        return this.instanceAlias == null ? Codegen.empty() : this.instanceAlias;
+    public Optional<Output<String>> instanceAlias() {
+        return Optional.ofNullable(this.instanceAlias);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outboundCallsEnabled")
-      private final @Nullable Output<Boolean> outboundCallsEnabled;
+    private @Nullable Output<Boolean> outboundCallsEnabled;
 
-    public Output<Boolean> outboundCallsEnabled() {
-        return this.outboundCallsEnabled == null ? Codegen.empty() : this.outboundCallsEnabled;
+    public Optional<Output<Boolean>> outboundCallsEnabled() {
+        return Optional.ofNullable(this.outboundCallsEnabled);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRole")
-      private final @Nullable Output<String> serviceRole;
+    private @Nullable Output<String> serviceRole;
 
-    public Output<String> serviceRole() {
-        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
+    public Optional<Output<String>> serviceRole() {
+        return Optional.ofNullable(this.serviceRole);
     }
 
     /**
@@ -154,206 +154,168 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public InstanceState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> autoResolveBestVoicesEnabled,
-        @Nullable Output<Boolean> contactFlowLogsEnabled,
-        @Nullable Output<Boolean> contactLensEnabled,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> directoryId,
-        @Nullable Output<Boolean> earlyMediaEnabled,
-        @Nullable Output<String> identityManagementType,
-        @Nullable Output<Boolean> inboundCallsEnabled,
-        @Nullable Output<String> instanceAlias,
-        @Nullable Output<Boolean> outboundCallsEnabled,
-        @Nullable Output<String> serviceRole,
-        @Nullable Output<String> status) {
-        this.arn = arn;
-        this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
-        this.contactFlowLogsEnabled = contactFlowLogsEnabled;
-        this.contactLensEnabled = contactLensEnabled;
-        this.createdTime = createdTime;
-        this.directoryId = directoryId;
-        this.earlyMediaEnabled = earlyMediaEnabled;
-        this.identityManagementType = identityManagementType;
-        this.inboundCallsEnabled = inboundCallsEnabled;
-        this.instanceAlias = instanceAlias;
-        this.outboundCallsEnabled = outboundCallsEnabled;
-        this.serviceRole = serviceRole;
-        this.status = status;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.arn = Codegen.empty();
-        this.autoResolveBestVoicesEnabled = Codegen.empty();
-        this.contactFlowLogsEnabled = Codegen.empty();
-        this.contactLensEnabled = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.directoryId = Codegen.empty();
-        this.earlyMediaEnabled = Codegen.empty();
-        this.identityManagementType = Codegen.empty();
-        this.inboundCallsEnabled = Codegen.empty();
-        this.instanceAlias = Codegen.empty();
-        this.outboundCallsEnabled = Codegen.empty();
-        this.serviceRole = Codegen.empty();
-        this.status = Codegen.empty();
+    private InstanceState(InstanceState $) {
+        this.arn = $.arn;
+        this.autoResolveBestVoicesEnabled = $.autoResolveBestVoicesEnabled;
+        this.contactFlowLogsEnabled = $.contactFlowLogsEnabled;
+        this.contactLensEnabled = $.contactLensEnabled;
+        this.createdTime = $.createdTime;
+        this.directoryId = $.directoryId;
+        this.earlyMediaEnabled = $.earlyMediaEnabled;
+        this.identityManagementType = $.identityManagementType;
+        this.inboundCallsEnabled = $.inboundCallsEnabled;
+        this.instanceAlias = $.instanceAlias;
+        this.outboundCallsEnabled = $.outboundCallsEnabled;
+        this.serviceRole = $.serviceRole;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
-        private @Nullable Output<Boolean> contactFlowLogsEnabled;
-        private @Nullable Output<Boolean> contactLensEnabled;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> directoryId;
-        private @Nullable Output<Boolean> earlyMediaEnabled;
-        private @Nullable Output<String> identityManagementType;
-        private @Nullable Output<Boolean> inboundCallsEnabled;
-        private @Nullable Output<String> instanceAlias;
-        private @Nullable Output<Boolean> outboundCallsEnabled;
-        private @Nullable Output<String> serviceRole;
-        private @Nullable Output<String> status;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.autoResolveBestVoicesEnabled = defaults.autoResolveBestVoicesEnabled;
-    	      this.contactFlowLogsEnabled = defaults.contactFlowLogsEnabled;
-    	      this.contactLensEnabled = defaults.contactLensEnabled;
-    	      this.createdTime = defaults.createdTime;
-    	      this.directoryId = defaults.directoryId;
-    	      this.earlyMediaEnabled = defaults.earlyMediaEnabled;
-    	      this.identityManagementType = defaults.identityManagementType;
-    	      this.inboundCallsEnabled = defaults.inboundCallsEnabled;
-    	      this.instanceAlias = defaults.instanceAlias;
-    	      this.outboundCallsEnabled = defaults.outboundCallsEnabled;
-    	      this.serviceRole = defaults.serviceRole;
-    	      this.status = defaults.status;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoResolveBestVoicesEnabled(@Nullable Output<Boolean> autoResolveBestVoicesEnabled) {
-            this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
+            $.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
             return this;
         }
-        public Builder autoResolveBestVoicesEnabled(@Nullable Boolean autoResolveBestVoicesEnabled) {
-            this.autoResolveBestVoicesEnabled = Codegen.ofNullable(autoResolveBestVoicesEnabled);
-            return this;
+
+        public Builder autoResolveBestVoicesEnabled(Boolean autoResolveBestVoicesEnabled) {
+            return autoResolveBestVoicesEnabled(Output.of(autoResolveBestVoicesEnabled));
         }
+
         public Builder contactFlowLogsEnabled(@Nullable Output<Boolean> contactFlowLogsEnabled) {
-            this.contactFlowLogsEnabled = contactFlowLogsEnabled;
+            $.contactFlowLogsEnabled = contactFlowLogsEnabled;
             return this;
         }
-        public Builder contactFlowLogsEnabled(@Nullable Boolean contactFlowLogsEnabled) {
-            this.contactFlowLogsEnabled = Codegen.ofNullable(contactFlowLogsEnabled);
-            return this;
+
+        public Builder contactFlowLogsEnabled(Boolean contactFlowLogsEnabled) {
+            return contactFlowLogsEnabled(Output.of(contactFlowLogsEnabled));
         }
+
         public Builder contactLensEnabled(@Nullable Output<Boolean> contactLensEnabled) {
-            this.contactLensEnabled = contactLensEnabled;
+            $.contactLensEnabled = contactLensEnabled;
             return this;
         }
-        public Builder contactLensEnabled(@Nullable Boolean contactLensEnabled) {
-            this.contactLensEnabled = Codegen.ofNullable(contactLensEnabled);
-            return this;
+
+        public Builder contactLensEnabled(Boolean contactLensEnabled) {
+            return contactLensEnabled(Output.of(contactLensEnabled));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder directoryId(@Nullable Output<String> directoryId) {
-            this.directoryId = directoryId;
+            $.directoryId = directoryId;
             return this;
         }
-        public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Codegen.ofNullable(directoryId);
-            return this;
+
+        public Builder directoryId(String directoryId) {
+            return directoryId(Output.of(directoryId));
         }
+
         public Builder earlyMediaEnabled(@Nullable Output<Boolean> earlyMediaEnabled) {
-            this.earlyMediaEnabled = earlyMediaEnabled;
+            $.earlyMediaEnabled = earlyMediaEnabled;
             return this;
         }
-        public Builder earlyMediaEnabled(@Nullable Boolean earlyMediaEnabled) {
-            this.earlyMediaEnabled = Codegen.ofNullable(earlyMediaEnabled);
-            return this;
+
+        public Builder earlyMediaEnabled(Boolean earlyMediaEnabled) {
+            return earlyMediaEnabled(Output.of(earlyMediaEnabled));
         }
+
         public Builder identityManagementType(@Nullable Output<String> identityManagementType) {
-            this.identityManagementType = identityManagementType;
+            $.identityManagementType = identityManagementType;
             return this;
         }
-        public Builder identityManagementType(@Nullable String identityManagementType) {
-            this.identityManagementType = Codegen.ofNullable(identityManagementType);
-            return this;
+
+        public Builder identityManagementType(String identityManagementType) {
+            return identityManagementType(Output.of(identityManagementType));
         }
+
         public Builder inboundCallsEnabled(@Nullable Output<Boolean> inboundCallsEnabled) {
-            this.inboundCallsEnabled = inboundCallsEnabled;
+            $.inboundCallsEnabled = inboundCallsEnabled;
             return this;
         }
-        public Builder inboundCallsEnabled(@Nullable Boolean inboundCallsEnabled) {
-            this.inboundCallsEnabled = Codegen.ofNullable(inboundCallsEnabled);
-            return this;
+
+        public Builder inboundCallsEnabled(Boolean inboundCallsEnabled) {
+            return inboundCallsEnabled(Output.of(inboundCallsEnabled));
         }
+
         public Builder instanceAlias(@Nullable Output<String> instanceAlias) {
-            this.instanceAlias = instanceAlias;
+            $.instanceAlias = instanceAlias;
             return this;
         }
-        public Builder instanceAlias(@Nullable String instanceAlias) {
-            this.instanceAlias = Codegen.ofNullable(instanceAlias);
-            return this;
+
+        public Builder instanceAlias(String instanceAlias) {
+            return instanceAlias(Output.of(instanceAlias));
         }
+
         public Builder outboundCallsEnabled(@Nullable Output<Boolean> outboundCallsEnabled) {
-            this.outboundCallsEnabled = outboundCallsEnabled;
+            $.outboundCallsEnabled = outboundCallsEnabled;
             return this;
         }
-        public Builder outboundCallsEnabled(@Nullable Boolean outboundCallsEnabled) {
-            this.outboundCallsEnabled = Codegen.ofNullable(outboundCallsEnabled);
-            return this;
+
+        public Builder outboundCallsEnabled(Boolean outboundCallsEnabled) {
+            return outboundCallsEnabled(Output.of(outboundCallsEnabled));
         }
+
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
-            this.serviceRole = serviceRole;
+            $.serviceRole = serviceRole;
             return this;
         }
-        public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Codegen.ofNullable(serviceRole);
-            return this;
+
+        public Builder serviceRole(String serviceRole) {
+            return serviceRole(Output.of(serviceRole));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public InstanceState build() {
-            return new InstanceState(arn, autoResolveBestVoicesEnabled, contactFlowLogsEnabled, contactLensEnabled, createdTime, directoryId, earlyMediaEnabled, identityManagementType, inboundCallsEnabled, instanceAlias, outboundCallsEnabled, serviceRole, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

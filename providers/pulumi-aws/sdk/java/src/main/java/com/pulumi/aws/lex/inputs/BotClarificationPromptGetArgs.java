@@ -6,11 +6,11 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.BotClarificationPromptMessageGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class BotClarificationPromptGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="maxAttempts", required=true)
-      private final Output<Integer> maxAttempts;
+    private Output<Integer> maxAttempts;
 
     public Output<Integer> maxAttempts() {
         return this.maxAttempts;
@@ -36,7 +36,7 @@ public final class BotClarificationPromptGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="messages", required=true)
-      private final Output<List<BotClarificationPromptMessageGetArgs>> messages;
+    private Output<List<BotClarificationPromptMessageGetArgs>> messages;
 
     public Output<List<BotClarificationPromptMessageGetArgs>> messages() {
         return this.messages;
@@ -49,79 +49,74 @@ public final class BotClarificationPromptGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="responseCard")
-      private final @Nullable Output<String> responseCard;
+    private @Nullable Output<String> responseCard;
 
-    public Output<String> responseCard() {
-        return this.responseCard == null ? Codegen.empty() : this.responseCard;
+    public Optional<Output<String>> responseCard() {
+        return Optional.ofNullable(this.responseCard);
     }
 
-    public BotClarificationPromptGetArgs(
-        Output<Integer> maxAttempts,
-        Output<List<BotClarificationPromptMessageGetArgs>> messages,
-        @Nullable Output<String> responseCard) {
-        this.maxAttempts = Objects.requireNonNull(maxAttempts, "expected parameter 'maxAttempts' to be non-null");
-        this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
-        this.responseCard = responseCard;
-    }
+    private BotClarificationPromptGetArgs() {}
 
-    private BotClarificationPromptGetArgs() {
-        this.maxAttempts = Codegen.empty();
-        this.messages = Codegen.empty();
-        this.responseCard = Codegen.empty();
+    private BotClarificationPromptGetArgs(BotClarificationPromptGetArgs $) {
+        this.maxAttempts = $.maxAttempts;
+        this.messages = $.messages;
+        this.responseCard = $.responseCard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotClarificationPromptGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxAttempts;
-        private Output<List<BotClarificationPromptMessageGetArgs>> messages;
-        private @Nullable Output<String> responseCard;
+        private BotClarificationPromptGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotClarificationPromptGetArgs();
         }
 
         public Builder(BotClarificationPromptGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxAttempts = defaults.maxAttempts;
-    	      this.messages = defaults.messages;
-    	      this.responseCard = defaults.responseCard;
+            $ = new BotClarificationPromptGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxAttempts(Output<Integer> maxAttempts) {
-            this.maxAttempts = Objects.requireNonNull(maxAttempts);
+            $.maxAttempts = maxAttempts;
             return this;
         }
+
         public Builder maxAttempts(Integer maxAttempts) {
-            this.maxAttempts = Output.of(Objects.requireNonNull(maxAttempts));
-            return this;
+            return maxAttempts(Output.of(maxAttempts));
         }
+
         public Builder messages(Output<List<BotClarificationPromptMessageGetArgs>> messages) {
-            this.messages = Objects.requireNonNull(messages);
+            $.messages = messages;
             return this;
         }
+
         public Builder messages(List<BotClarificationPromptMessageGetArgs> messages) {
-            this.messages = Output.of(Objects.requireNonNull(messages));
-            return this;
+            return messages(Output.of(messages));
         }
+
         public Builder messages(BotClarificationPromptMessageGetArgs... messages) {
             return messages(List.of(messages));
         }
+
         public Builder responseCard(@Nullable Output<String> responseCard) {
-            this.responseCard = responseCard;
+            $.responseCard = responseCard;
             return this;
         }
-        public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Codegen.ofNullable(responseCard);
-            return this;
-        }        public BotClarificationPromptGetArgs build() {
-            return new BotClarificationPromptGetArgs(maxAttempts, messages, responseCard);
+
+        public Builder responseCard(String responseCard) {
+            return responseCard(Output.of(responseCard));
+        }
+
+        public BotClarificationPromptGetArgs build() {
+            $.maxAttempts = Objects.requireNonNull($.maxAttempts, "expected parameter 'maxAttempts' to be non-null");
+            $.messages = Objects.requireNonNull($.messages, "expected parameter 'messages' to be non-null");
+            return $;
         }
     }
+
 }

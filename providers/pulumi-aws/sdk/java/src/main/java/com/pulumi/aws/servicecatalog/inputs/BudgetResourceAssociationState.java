@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BudgetResourceAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="budgetName")
-      private final @Nullable Output<String> budgetName;
+    private @Nullable Output<String> budgetName;
 
-    public Output<String> budgetName() {
-        return this.budgetName == null ? Codegen.empty() : this.budgetName;
+    public Optional<Output<String>> budgetName() {
+        return Optional.ofNullable(this.budgetName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class BudgetResourceAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public BudgetResourceAssociationState(
-        @Nullable Output<String> budgetName,
-        @Nullable Output<String> resourceId) {
-        this.budgetName = budgetName;
-        this.resourceId = resourceId;
-    }
+    private BudgetResourceAssociationState() {}
 
-    private BudgetResourceAssociationState() {
-        this.budgetName = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private BudgetResourceAssociationState(BudgetResourceAssociationState $) {
+        this.budgetName = $.budgetName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetResourceAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> budgetName;
-        private @Nullable Output<String> resourceId;
+        private BudgetResourceAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetResourceAssociationState();
         }
 
         public Builder(BudgetResourceAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.budgetName = defaults.budgetName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new BudgetResourceAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder budgetName(@Nullable Output<String> budgetName) {
-            this.budgetName = budgetName;
+            $.budgetName = budgetName;
             return this;
         }
-        public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Codegen.ofNullable(budgetName);
-            return this;
+
+        public Builder budgetName(String budgetName) {
+            return budgetName(Output.of(budgetName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public BudgetResourceAssociationState build() {
-            return new BudgetResourceAssociationState(budgetName, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public BudgetResourceAssociationState build() {
+            return $;
         }
     }
+
 }

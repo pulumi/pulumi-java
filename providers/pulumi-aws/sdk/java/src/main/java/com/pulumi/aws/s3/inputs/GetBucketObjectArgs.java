@@ -20,7 +20,7 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -31,17 +31,17 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="range")
-      private final @Nullable String range;
+    private @Nullable String range;
 
     public Optional<String> range() {
-        return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -60,82 +60,70 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionId")
-      private final @Nullable String versionId;
+    private @Nullable String versionId;
 
     public Optional<String> versionId() {
-        return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
+        return Optional.ofNullable(this.versionId);
     }
 
-    public GetBucketObjectArgs(
-        String bucket,
-        String key,
-        @Nullable String range,
-        @Nullable Map<String,String> tags,
-        @Nullable String versionId) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.range = range;
-        this.tags = tags;
-        this.versionId = versionId;
-    }
+    private GetBucketObjectArgs() {}
 
-    private GetBucketObjectArgs() {
-        this.bucket = null;
-        this.key = null;
-        this.range = null;
-        this.tags = Map.of();
-        this.versionId = null;
+    private GetBucketObjectArgs(GetBucketObjectArgs $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
+        this.range = $.range;
+        this.tags = $.tags;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String key;
-        private @Nullable String range;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String versionId;
+        private GetBucketObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketObjectArgs();
         }
 
         public Builder(GetBucketObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
-    	      this.range = defaults.range;
-    	      this.tags = defaults.tags;
-    	      this.versionId = defaults.versionId;
+            $ = new GetBucketObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder range(@Nullable String range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
-        }        public GetBucketObjectArgs build() {
-            return new GetBucketObjectArgs(bucket, key, range, tags, versionId);
+        }
+
+        public GetBucketObjectArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

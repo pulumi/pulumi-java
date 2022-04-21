@@ -5,7 +5,6 @@ package com.pulumi.aws.budgets.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class BudgetActionDefinitionScpActionDefinitionArgs extends com.pul
      * 
      */
     @Import(name="policyId", required=true)
-      private final Output<String> policyId;
+    private Output<String> policyId;
 
     public Output<String> policyId() {
         return this.policyId;
@@ -31,66 +30,64 @@ public final class BudgetActionDefinitionScpActionDefinitionArgs extends com.pul
      * 
      */
     @Import(name="targetIds", required=true)
-      private final Output<List<String>> targetIds;
+    private Output<List<String>> targetIds;
 
     public Output<List<String>> targetIds() {
         return this.targetIds;
     }
 
-    public BudgetActionDefinitionScpActionDefinitionArgs(
-        Output<String> policyId,
-        Output<List<String>> targetIds) {
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.targetIds = Objects.requireNonNull(targetIds, "expected parameter 'targetIds' to be non-null");
-    }
+    private BudgetActionDefinitionScpActionDefinitionArgs() {}
 
-    private BudgetActionDefinitionScpActionDefinitionArgs() {
-        this.policyId = Codegen.empty();
-        this.targetIds = Codegen.empty();
+    private BudgetActionDefinitionScpActionDefinitionArgs(BudgetActionDefinitionScpActionDefinitionArgs $) {
+        this.policyId = $.policyId;
+        this.targetIds = $.targetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetActionDefinitionScpActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyId;
-        private Output<List<String>> targetIds;
+        private BudgetActionDefinitionScpActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetActionDefinitionScpActionDefinitionArgs();
         }
 
         public Builder(BudgetActionDefinitionScpActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.targetIds = defaults.targetIds;
+            $ = new BudgetActionDefinitionScpActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(Output<String> policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Output.of(Objects.requireNonNull(policyId));
-            return this;
+            return policyId(Output.of(policyId));
         }
+
         public Builder targetIds(Output<List<String>> targetIds) {
-            this.targetIds = Objects.requireNonNull(targetIds);
+            $.targetIds = targetIds;
             return this;
         }
+
         public Builder targetIds(List<String> targetIds) {
-            this.targetIds = Output.of(Objects.requireNonNull(targetIds));
-            return this;
+            return targetIds(Output.of(targetIds));
         }
+
         public Builder targetIds(String... targetIds) {
             return targetIds(List.of(targetIds));
-        }        public BudgetActionDefinitionScpActionDefinitionArgs build() {
-            return new BudgetActionDefinitionScpActionDefinitionArgs(policyId, targetIds);
+        }
+
+        public BudgetActionDefinitionScpActionDefinitionArgs build() {
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.targetIds = Objects.requireNonNull($.targetIds, "expected parameter 'targetIds' to be non-null");
+            return $;
         }
     }
+
 }

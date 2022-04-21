@@ -6,10 +6,10 @@ package com.pulumi.aws.dynamodb.inputs;
 import com.pulumi.aws.dynamodb.inputs.GlobalTableReplicaGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicas")
-      private final @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas;
+    private @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas;
 
-    public Output<List<GlobalTableReplicaGetArgs>> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<List<GlobalTableReplicaGetArgs>>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
-    public GlobalTableState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas) {
-        this.arn = arn;
-        this.name = name;
-        this.replicas = replicas;
-    }
+    private GlobalTableState() {}
 
-    private GlobalTableState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.replicas = Codegen.empty();
+    private GlobalTableState(GlobalTableState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas;
+        private GlobalTableState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableState();
         }
 
         public Builder(GlobalTableState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.replicas = defaults.replicas;
+            $ = new GlobalTableState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder replicas(@Nullable Output<List<GlobalTableReplicaGetArgs>> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable List<GlobalTableReplicaGetArgs> replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(List<GlobalTableReplicaGetArgs> replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder replicas(GlobalTableReplicaGetArgs... replicas) {
             return replicas(List.of(replicas));
-        }        public GlobalTableState build() {
-            return new GlobalTableState(arn, name, replicas);
+        }
+
+        public GlobalTableState build() {
+            return $;
         }
     }
+
 }

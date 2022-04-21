@@ -5,7 +5,6 @@ package com.pulumi.aws.budgets.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class BudgetActionSubscriberGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="address", required=true)
-      private final Output<String> address;
+    private Output<String> address;
 
     public Output<String> address() {
         return this.address;
@@ -30,63 +29,60 @@ public final class BudgetActionSubscriberGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subscriptionType", required=true)
-      private final Output<String> subscriptionType;
+    private Output<String> subscriptionType;
 
     public Output<String> subscriptionType() {
         return this.subscriptionType;
     }
 
-    public BudgetActionSubscriberGetArgs(
-        Output<String> address,
-        Output<String> subscriptionType) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.subscriptionType = Objects.requireNonNull(subscriptionType, "expected parameter 'subscriptionType' to be non-null");
-    }
+    private BudgetActionSubscriberGetArgs() {}
 
-    private BudgetActionSubscriberGetArgs() {
-        this.address = Codegen.empty();
-        this.subscriptionType = Codegen.empty();
+    private BudgetActionSubscriberGetArgs(BudgetActionSubscriberGetArgs $) {
+        this.address = $.address;
+        this.subscriptionType = $.subscriptionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetActionSubscriberGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> address;
-        private Output<String> subscriptionType;
+        private BudgetActionSubscriberGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetActionSubscriberGetArgs();
         }
 
         public Builder(BudgetActionSubscriberGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.subscriptionType = defaults.subscriptionType;
+            $ = new BudgetActionSubscriberGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(Output<String> address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder address(String address) {
-            this.address = Output.of(Objects.requireNonNull(address));
-            return this;
+            return address(Output.of(address));
         }
+
         public Builder subscriptionType(Output<String> subscriptionType) {
-            this.subscriptionType = Objects.requireNonNull(subscriptionType);
+            $.subscriptionType = subscriptionType;
             return this;
         }
+
         public Builder subscriptionType(String subscriptionType) {
-            this.subscriptionType = Output.of(Objects.requireNonNull(subscriptionType));
-            return this;
-        }        public BudgetActionSubscriberGetArgs build() {
-            return new BudgetActionSubscriberGetArgs(address, subscriptionType);
+            return subscriptionType(Output.of(subscriptionType));
+        }
+
+        public BudgetActionSubscriberGetArgs build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.subscriptionType = Objects.requireNonNull($.subscriptionType, "expected parameter 'subscriptionType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class ModelPackageGroupPolicyState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="modelPackageGroupName")
-      private final @Nullable Output<String> modelPackageGroupName;
+    private @Nullable Output<String> modelPackageGroupName;
 
-    public Output<String> modelPackageGroupName() {
-        return this.modelPackageGroupName == null ? Codegen.empty() : this.modelPackageGroupName;
+    public Optional<Output<String>> modelPackageGroupName() {
+        return Optional.ofNullable(this.modelPackageGroupName);
     }
 
     @Import(name="resourcePolicy")
-      private final @Nullable Output<String> resourcePolicy;
+    private @Nullable Output<String> resourcePolicy;
 
-    public Output<String> resourcePolicy() {
-        return this.resourcePolicy == null ? Codegen.empty() : this.resourcePolicy;
+    public Optional<Output<String>> resourcePolicy() {
+        return Optional.ofNullable(this.resourcePolicy);
     }
 
-    public ModelPackageGroupPolicyState(
-        @Nullable Output<String> modelPackageGroupName,
-        @Nullable Output<String> resourcePolicy) {
-        this.modelPackageGroupName = modelPackageGroupName;
-        this.resourcePolicy = resourcePolicy;
-    }
+    private ModelPackageGroupPolicyState() {}
 
-    private ModelPackageGroupPolicyState() {
-        this.modelPackageGroupName = Codegen.empty();
-        this.resourcePolicy = Codegen.empty();
+    private ModelPackageGroupPolicyState(ModelPackageGroupPolicyState $) {
+        this.modelPackageGroupName = $.modelPackageGroupName;
+        this.resourcePolicy = $.resourcePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelPackageGroupPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> modelPackageGroupName;
-        private @Nullable Output<String> resourcePolicy;
+        private ModelPackageGroupPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelPackageGroupPolicyState();
         }
 
         public Builder(ModelPackageGroupPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelPackageGroupName = defaults.modelPackageGroupName;
-    	      this.resourcePolicy = defaults.resourcePolicy;
+            $ = new ModelPackageGroupPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
-            this.modelPackageGroupName = modelPackageGroupName;
+            $.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
-        public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
-            this.modelPackageGroupName = Codegen.ofNullable(modelPackageGroupName);
-            return this;
+
+        public Builder modelPackageGroupName(String modelPackageGroupName) {
+            return modelPackageGroupName(Output.of(modelPackageGroupName));
         }
+
         public Builder resourcePolicy(@Nullable Output<String> resourcePolicy) {
-            this.resourcePolicy = resourcePolicy;
+            $.resourcePolicy = resourcePolicy;
             return this;
         }
-        public Builder resourcePolicy(@Nullable String resourcePolicy) {
-            this.resourcePolicy = Codegen.ofNullable(resourcePolicy);
-            return this;
-        }        public ModelPackageGroupPolicyState build() {
-            return new ModelPackageGroupPolicyState(modelPackageGroupName, resourcePolicy);
+
+        public Builder resourcePolicy(String resourcePolicy) {
+            return resourcePolicy(Output.of(resourcePolicy));
+        }
+
+        public ModelPackageGroupPolicyState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class StackAccessEndpointGetArgs extends com.pulumi.resources.Resou
     public static final StackAccessEndpointGetArgs Empty = new StackAccessEndpointGetArgs();
 
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
     }
 
     @Import(name="vpceId")
-      private final @Nullable Output<String> vpceId;
+    private @Nullable Output<String> vpceId;
 
-    public Output<String> vpceId() {
-        return this.vpceId == null ? Codegen.empty() : this.vpceId;
+    public Optional<Output<String>> vpceId() {
+        return Optional.ofNullable(this.vpceId);
     }
 
-    public StackAccessEndpointGetArgs(
-        Output<String> endpointType,
-        @Nullable Output<String> vpceId) {
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
-        this.vpceId = vpceId;
-    }
+    private StackAccessEndpointGetArgs() {}
 
-    private StackAccessEndpointGetArgs() {
-        this.endpointType = Codegen.empty();
-        this.vpceId = Codegen.empty();
+    private StackAccessEndpointGetArgs(StackAccessEndpointGetArgs $) {
+        this.endpointType = $.endpointType;
+        this.vpceId = $.vpceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackAccessEndpointGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endpointType;
-        private @Nullable Output<String> vpceId;
+        private StackAccessEndpointGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackAccessEndpointGetArgs();
         }
 
         public Builder(StackAccessEndpointGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.vpceId = defaults.vpceId;
+            $ = new StackAccessEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder vpceId(@Nullable Output<String> vpceId) {
-            this.vpceId = vpceId;
+            $.vpceId = vpceId;
             return this;
         }
-        public Builder vpceId(@Nullable String vpceId) {
-            this.vpceId = Codegen.ofNullable(vpceId);
-            return this;
-        }        public StackAccessEndpointGetArgs build() {
-            return new StackAccessEndpointGetArgs(endpointType, vpceId);
+
+        public Builder vpceId(String vpceId) {
+            return vpceId(Output.of(vpceId));
+        }
+
+        public StackAccessEndpointGetArgs build() {
+            $.endpointType = Objects.requireNonNull($.endpointType, "expected parameter 'endpointType' to be non-null");
+            return $;
         }
     }
+
 }

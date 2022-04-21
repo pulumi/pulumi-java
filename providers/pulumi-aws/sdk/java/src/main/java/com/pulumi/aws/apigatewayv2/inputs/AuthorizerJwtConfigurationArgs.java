@@ -5,10 +5,10 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AuthorizerJwtConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="audiences")
-      private final @Nullable Output<List<String>> audiences;
+    private @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> audiences() {
-        return this.audiences == null ? Codegen.empty() : this.audiences;
+    public Optional<Output<List<String>>> audiences() {
+        return Optional.ofNullable(this.audiences);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class AuthorizerJwtConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="issuer")
-      private final @Nullable Output<String> issuer;
+    private @Nullable Output<String> issuer;
 
-    public Output<String> issuer() {
-        return this.issuer == null ? Codegen.empty() : this.issuer;
+    public Optional<Output<String>> issuer() {
+        return Optional.ofNullable(this.issuer);
     }
 
-    public AuthorizerJwtConfigurationArgs(
-        @Nullable Output<List<String>> audiences,
-        @Nullable Output<String> issuer) {
-        this.audiences = audiences;
-        this.issuer = issuer;
-    }
+    private AuthorizerJwtConfigurationArgs() {}
 
-    private AuthorizerJwtConfigurationArgs() {
-        this.audiences = Codegen.empty();
-        this.issuer = Codegen.empty();
+    private AuthorizerJwtConfigurationArgs(AuthorizerJwtConfigurationArgs $) {
+        this.audiences = $.audiences;
+        this.issuer = $.issuer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizerJwtConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> audiences;
-        private @Nullable Output<String> issuer;
+        private AuthorizerJwtConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizerJwtConfigurationArgs();
         }
 
         public Builder(AuthorizerJwtConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.issuer = defaults.issuer;
+            $ = new AuthorizerJwtConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(@Nullable Output<List<String>> audiences) {
-            this.audiences = audiences;
+            $.audiences = audiences;
             return this;
         }
-        public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Codegen.ofNullable(audiences);
-            return this;
+
+        public Builder audiences(List<String> audiences) {
+            return audiences(Output.of(audiences));
         }
+
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
+
         public Builder issuer(@Nullable Output<String> issuer) {
-            this.issuer = issuer;
+            $.issuer = issuer;
             return this;
         }
-        public Builder issuer(@Nullable String issuer) {
-            this.issuer = Codegen.ofNullable(issuer);
-            return this;
-        }        public AuthorizerJwtConfigurationArgs build() {
-            return new AuthorizerJwtConfigurationArgs(audiences, issuer);
+
+        public Builder issuer(String issuer) {
+            return issuer(Output.of(issuer));
+        }
+
+        public AuthorizerJwtConfigurationArgs build() {
+            return $;
         }
     }
+
 }

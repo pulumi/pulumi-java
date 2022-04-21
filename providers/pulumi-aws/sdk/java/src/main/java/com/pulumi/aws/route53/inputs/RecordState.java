@@ -12,12 +12,12 @@ import com.pulumi.aws.route53.inputs.RecordWeightedRoutingPolicyGetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aliases")
-      private final @Nullable Output<List<RecordAliasGetArgs>> aliases;
+    private @Nullable Output<List<RecordAliasGetArgs>> aliases;
 
-    public Output<List<RecordAliasGetArgs>> aliases() {
-        return this.aliases == null ? Codegen.empty() : this.aliases;
+    public Optional<Output<List<RecordAliasGetArgs>>> aliases() {
+        return Optional.ofNullable(this.aliases);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowOverwrite")
-      private final @Nullable Output<Boolean> allowOverwrite;
+    private @Nullable Output<Boolean> allowOverwrite;
 
-    public Output<Boolean> allowOverwrite() {
-        return this.allowOverwrite == null ? Codegen.empty() : this.allowOverwrite;
+    public Optional<Output<Boolean>> allowOverwrite() {
+        return Optional.ofNullable(this.allowOverwrite);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failoverRoutingPolicies")
-      private final @Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies;
+    private @Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies;
 
-    public Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies() {
-        return this.failoverRoutingPolicies == null ? Codegen.empty() : this.failoverRoutingPolicies;
+    public Optional<Output<List<RecordFailoverRoutingPolicyGetArgs>>> failoverRoutingPolicies() {
+        return Optional.ofNullable(this.failoverRoutingPolicies);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="geolocationRoutingPolicies")
-      private final @Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies;
+    private @Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies;
 
-    public Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies() {
-        return this.geolocationRoutingPolicies == null ? Codegen.empty() : this.geolocationRoutingPolicies;
+    public Optional<Output<List<RecordGeolocationRoutingPolicyGetArgs>>> geolocationRoutingPolicies() {
+        return Optional.ofNullable(this.geolocationRoutingPolicies);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckId")
-      private final @Nullable Output<String> healthCheckId;
+    private @Nullable Output<String> healthCheckId;
 
-    public Output<String> healthCheckId() {
-        return this.healthCheckId == null ? Codegen.empty() : this.healthCheckId;
+    public Optional<Output<String>> healthCheckId() {
+        return Optional.ofNullable(this.healthCheckId);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latencyRoutingPolicies")
-      private final @Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies;
+    private @Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies;
 
-    public Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies() {
-        return this.latencyRoutingPolicies == null ? Codegen.empty() : this.latencyRoutingPolicies;
+    public Optional<Output<List<RecordLatencyRoutingPolicyGetArgs>>> latencyRoutingPolicies() {
+        return Optional.ofNullable(this.latencyRoutingPolicies);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multivalueAnswerRoutingPolicy")
-      private final @Nullable Output<Boolean> multivalueAnswerRoutingPolicy;
+    private @Nullable Output<Boolean> multivalueAnswerRoutingPolicy;
 
-    public Output<Boolean> multivalueAnswerRoutingPolicy() {
-        return this.multivalueAnswerRoutingPolicy == null ? Codegen.empty() : this.multivalueAnswerRoutingPolicy;
+    public Optional<Output<Boolean>> multivalueAnswerRoutingPolicy() {
+        return Optional.ofNullable(this.multivalueAnswerRoutingPolicy);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="records")
-      private final @Nullable Output<List<String>> records;
+    private @Nullable Output<List<String>> records;
 
-    public Output<List<String>> records() {
-        return this.records == null ? Codegen.empty() : this.records;
+    public Optional<Output<List<String>>> records() {
+        return Optional.ofNullable(this.records);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="setIdentifier")
-      private final @Nullable Output<String> setIdentifier;
+    private @Nullable Output<String> setIdentifier;
 
-    public Output<String> setIdentifier() {
-        return this.setIdentifier == null ? Codegen.empty() : this.setIdentifier;
+    public Optional<Output<String>> setIdentifier() {
+        return Optional.ofNullable(this.setIdentifier);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<Integer> ttl;
+    private @Nullable Output<Integer> ttl;
 
-    public Output<Integer> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<Integer>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,RecordType>> type;
+    private @Nullable Output<Either<String,RecordType>> type;
 
-    public Output<Either<String,RecordType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,RecordType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weightedRoutingPolicies")
-      private final @Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies;
+    private @Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies;
 
-    public Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies() {
-        return this.weightedRoutingPolicies == null ? Codegen.empty() : this.weightedRoutingPolicies;
+    public Optional<Output<List<RecordWeightedRoutingPolicyGetArgs>>> weightedRoutingPolicies() {
+        return Optional.ofNullable(this.weightedRoutingPolicies);
     }
 
     /**
@@ -185,250 +185,212 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zoneId")
-      private final @Nullable Output<String> zoneId;
+    private @Nullable Output<String> zoneId;
 
-    public Output<String> zoneId() {
-        return this.zoneId == null ? Codegen.empty() : this.zoneId;
+    public Optional<Output<String>> zoneId() {
+        return Optional.ofNullable(this.zoneId);
     }
 
-    public RecordState(
-        @Nullable Output<List<RecordAliasGetArgs>> aliases,
-        @Nullable Output<Boolean> allowOverwrite,
-        @Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies,
-        @Nullable Output<String> fqdn,
-        @Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies,
-        @Nullable Output<String> healthCheckId,
-        @Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies,
-        @Nullable Output<Boolean> multivalueAnswerRoutingPolicy,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> records,
-        @Nullable Output<String> setIdentifier,
-        @Nullable Output<Integer> ttl,
-        @Nullable Output<Either<String,RecordType>> type,
-        @Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies,
-        @Nullable Output<String> zoneId) {
-        this.aliases = aliases;
-        this.allowOverwrite = allowOverwrite;
-        this.failoverRoutingPolicies = failoverRoutingPolicies;
-        this.fqdn = fqdn;
-        this.geolocationRoutingPolicies = geolocationRoutingPolicies;
-        this.healthCheckId = healthCheckId;
-        this.latencyRoutingPolicies = latencyRoutingPolicies;
-        this.multivalueAnswerRoutingPolicy = multivalueAnswerRoutingPolicy;
-        this.name = name;
-        this.records = records;
-        this.setIdentifier = setIdentifier;
-        this.ttl = ttl;
-        this.type = type;
-        this.weightedRoutingPolicies = weightedRoutingPolicies;
-        this.zoneId = zoneId;
-    }
+    private RecordState() {}
 
-    private RecordState() {
-        this.aliases = Codegen.empty();
-        this.allowOverwrite = Codegen.empty();
-        this.failoverRoutingPolicies = Codegen.empty();
-        this.fqdn = Codegen.empty();
-        this.geolocationRoutingPolicies = Codegen.empty();
-        this.healthCheckId = Codegen.empty();
-        this.latencyRoutingPolicies = Codegen.empty();
-        this.multivalueAnswerRoutingPolicy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.records = Codegen.empty();
-        this.setIdentifier = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.type = Codegen.empty();
-        this.weightedRoutingPolicies = Codegen.empty();
-        this.zoneId = Codegen.empty();
+    private RecordState(RecordState $) {
+        this.aliases = $.aliases;
+        this.allowOverwrite = $.allowOverwrite;
+        this.failoverRoutingPolicies = $.failoverRoutingPolicies;
+        this.fqdn = $.fqdn;
+        this.geolocationRoutingPolicies = $.geolocationRoutingPolicies;
+        this.healthCheckId = $.healthCheckId;
+        this.latencyRoutingPolicies = $.latencyRoutingPolicies;
+        this.multivalueAnswerRoutingPolicy = $.multivalueAnswerRoutingPolicy;
+        this.name = $.name;
+        this.records = $.records;
+        this.setIdentifier = $.setIdentifier;
+        this.ttl = $.ttl;
+        this.type = $.type;
+        this.weightedRoutingPolicies = $.weightedRoutingPolicies;
+        this.zoneId = $.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RecordAliasGetArgs>> aliases;
-        private @Nullable Output<Boolean> allowOverwrite;
-        private @Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies;
-        private @Nullable Output<String> fqdn;
-        private @Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies;
-        private @Nullable Output<String> healthCheckId;
-        private @Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies;
-        private @Nullable Output<Boolean> multivalueAnswerRoutingPolicy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> records;
-        private @Nullable Output<String> setIdentifier;
-        private @Nullable Output<Integer> ttl;
-        private @Nullable Output<Either<String,RecordType>> type;
-        private @Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies;
-        private @Nullable Output<String> zoneId;
+        private RecordState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordState();
         }
 
         public Builder(RecordState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliases = defaults.aliases;
-    	      this.allowOverwrite = defaults.allowOverwrite;
-    	      this.failoverRoutingPolicies = defaults.failoverRoutingPolicies;
-    	      this.fqdn = defaults.fqdn;
-    	      this.geolocationRoutingPolicies = defaults.geolocationRoutingPolicies;
-    	      this.healthCheckId = defaults.healthCheckId;
-    	      this.latencyRoutingPolicies = defaults.latencyRoutingPolicies;
-    	      this.multivalueAnswerRoutingPolicy = defaults.multivalueAnswerRoutingPolicy;
-    	      this.name = defaults.name;
-    	      this.records = defaults.records;
-    	      this.setIdentifier = defaults.setIdentifier;
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
-    	      this.weightedRoutingPolicies = defaults.weightedRoutingPolicies;
-    	      this.zoneId = defaults.zoneId;
+            $ = new RecordState(Objects.requireNonNull(defaults));
         }
 
         public Builder aliases(@Nullable Output<List<RecordAliasGetArgs>> aliases) {
-            this.aliases = aliases;
+            $.aliases = aliases;
             return this;
         }
-        public Builder aliases(@Nullable List<RecordAliasGetArgs> aliases) {
-            this.aliases = Codegen.ofNullable(aliases);
-            return this;
+
+        public Builder aliases(List<RecordAliasGetArgs> aliases) {
+            return aliases(Output.of(aliases));
         }
+
         public Builder aliases(RecordAliasGetArgs... aliases) {
             return aliases(List.of(aliases));
         }
+
         public Builder allowOverwrite(@Nullable Output<Boolean> allowOverwrite) {
-            this.allowOverwrite = allowOverwrite;
+            $.allowOverwrite = allowOverwrite;
             return this;
         }
-        public Builder allowOverwrite(@Nullable Boolean allowOverwrite) {
-            this.allowOverwrite = Codegen.ofNullable(allowOverwrite);
-            return this;
+
+        public Builder allowOverwrite(Boolean allowOverwrite) {
+            return allowOverwrite(Output.of(allowOverwrite));
         }
+
         public Builder failoverRoutingPolicies(@Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies) {
-            this.failoverRoutingPolicies = failoverRoutingPolicies;
+            $.failoverRoutingPolicies = failoverRoutingPolicies;
             return this;
         }
-        public Builder failoverRoutingPolicies(@Nullable List<RecordFailoverRoutingPolicyGetArgs> failoverRoutingPolicies) {
-            this.failoverRoutingPolicies = Codegen.ofNullable(failoverRoutingPolicies);
-            return this;
+
+        public Builder failoverRoutingPolicies(List<RecordFailoverRoutingPolicyGetArgs> failoverRoutingPolicies) {
+            return failoverRoutingPolicies(Output.of(failoverRoutingPolicies));
         }
+
         public Builder failoverRoutingPolicies(RecordFailoverRoutingPolicyGetArgs... failoverRoutingPolicies) {
             return failoverRoutingPolicies(List.of(failoverRoutingPolicies));
         }
+
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder geolocationRoutingPolicies(@Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies) {
-            this.geolocationRoutingPolicies = geolocationRoutingPolicies;
+            $.geolocationRoutingPolicies = geolocationRoutingPolicies;
             return this;
         }
-        public Builder geolocationRoutingPolicies(@Nullable List<RecordGeolocationRoutingPolicyGetArgs> geolocationRoutingPolicies) {
-            this.geolocationRoutingPolicies = Codegen.ofNullable(geolocationRoutingPolicies);
-            return this;
+
+        public Builder geolocationRoutingPolicies(List<RecordGeolocationRoutingPolicyGetArgs> geolocationRoutingPolicies) {
+            return geolocationRoutingPolicies(Output.of(geolocationRoutingPolicies));
         }
+
         public Builder geolocationRoutingPolicies(RecordGeolocationRoutingPolicyGetArgs... geolocationRoutingPolicies) {
             return geolocationRoutingPolicies(List.of(geolocationRoutingPolicies));
         }
+
         public Builder healthCheckId(@Nullable Output<String> healthCheckId) {
-            this.healthCheckId = healthCheckId;
+            $.healthCheckId = healthCheckId;
             return this;
         }
-        public Builder healthCheckId(@Nullable String healthCheckId) {
-            this.healthCheckId = Codegen.ofNullable(healthCheckId);
-            return this;
+
+        public Builder healthCheckId(String healthCheckId) {
+            return healthCheckId(Output.of(healthCheckId));
         }
+
         public Builder latencyRoutingPolicies(@Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies) {
-            this.latencyRoutingPolicies = latencyRoutingPolicies;
+            $.latencyRoutingPolicies = latencyRoutingPolicies;
             return this;
         }
-        public Builder latencyRoutingPolicies(@Nullable List<RecordLatencyRoutingPolicyGetArgs> latencyRoutingPolicies) {
-            this.latencyRoutingPolicies = Codegen.ofNullable(latencyRoutingPolicies);
-            return this;
+
+        public Builder latencyRoutingPolicies(List<RecordLatencyRoutingPolicyGetArgs> latencyRoutingPolicies) {
+            return latencyRoutingPolicies(Output.of(latencyRoutingPolicies));
         }
+
         public Builder latencyRoutingPolicies(RecordLatencyRoutingPolicyGetArgs... latencyRoutingPolicies) {
             return latencyRoutingPolicies(List.of(latencyRoutingPolicies));
         }
+
         public Builder multivalueAnswerRoutingPolicy(@Nullable Output<Boolean> multivalueAnswerRoutingPolicy) {
-            this.multivalueAnswerRoutingPolicy = multivalueAnswerRoutingPolicy;
+            $.multivalueAnswerRoutingPolicy = multivalueAnswerRoutingPolicy;
             return this;
         }
-        public Builder multivalueAnswerRoutingPolicy(@Nullable Boolean multivalueAnswerRoutingPolicy) {
-            this.multivalueAnswerRoutingPolicy = Codegen.ofNullable(multivalueAnswerRoutingPolicy);
-            return this;
+
+        public Builder multivalueAnswerRoutingPolicy(Boolean multivalueAnswerRoutingPolicy) {
+            return multivalueAnswerRoutingPolicy(Output.of(multivalueAnswerRoutingPolicy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder records(@Nullable Output<List<String>> records) {
-            this.records = records;
+            $.records = records;
             return this;
         }
-        public Builder records(@Nullable List<String> records) {
-            this.records = Codegen.ofNullable(records);
-            return this;
+
+        public Builder records(List<String> records) {
+            return records(Output.of(records));
         }
+
         public Builder records(String... records) {
             return records(List.of(records));
         }
+
         public Builder setIdentifier(@Nullable Output<String> setIdentifier) {
-            this.setIdentifier = setIdentifier;
+            $.setIdentifier = setIdentifier;
             return this;
         }
-        public Builder setIdentifier(@Nullable String setIdentifier) {
-            this.setIdentifier = Codegen.ofNullable(setIdentifier);
-            return this;
+
+        public Builder setIdentifier(String setIdentifier) {
+            return setIdentifier(Output.of(setIdentifier));
         }
+
         public Builder ttl(@Nullable Output<Integer> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(Integer ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder type(@Nullable Output<Either<String,RecordType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,RecordType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,RecordType> type) {
+            return type(Output.of(type));
         }
+
         public Builder weightedRoutingPolicies(@Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies) {
-            this.weightedRoutingPolicies = weightedRoutingPolicies;
+            $.weightedRoutingPolicies = weightedRoutingPolicies;
             return this;
         }
-        public Builder weightedRoutingPolicies(@Nullable List<RecordWeightedRoutingPolicyGetArgs> weightedRoutingPolicies) {
-            this.weightedRoutingPolicies = Codegen.ofNullable(weightedRoutingPolicies);
-            return this;
+
+        public Builder weightedRoutingPolicies(List<RecordWeightedRoutingPolicyGetArgs> weightedRoutingPolicies) {
+            return weightedRoutingPolicies(Output.of(weightedRoutingPolicies));
         }
+
         public Builder weightedRoutingPolicies(RecordWeightedRoutingPolicyGetArgs... weightedRoutingPolicies) {
             return weightedRoutingPolicies(List.of(weightedRoutingPolicies));
         }
+
         public Builder zoneId(@Nullable Output<String> zoneId) {
-            this.zoneId = zoneId;
+            $.zoneId = zoneId;
             return this;
         }
-        public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Codegen.ofNullable(zoneId);
-            return this;
-        }        public RecordState build() {
-            return new RecordState(aliases, allowOverwrite, failoverRoutingPolicies, fqdn, geolocationRoutingPolicies, healthCheckId, latencyRoutingPolicies, multivalueAnswerRoutingPolicy, name, records, setIdentifier, ttl, type, weightedRoutingPolicies, zoneId);
+
+        public Builder zoneId(String zoneId) {
+            return zoneId(Output.of(zoneId));
+        }
+
+        public RecordState build() {
+            return $;
         }
     }
+
 }

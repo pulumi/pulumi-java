@@ -5,10 +5,10 @@ package com.pulumi.aws.guardduty.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detectorId")
-      private final @Nullable Output<String> detectorId;
+    private @Nullable Output<String> detectorId;
 
-    public Output<String> detectorId() {
-        return this.detectorId == null ? Codegen.empty() : this.detectorId;
+    public Optional<Output<String>> detectorId() {
+        return Optional.ofNullable(this.detectorId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableEmailNotification")
-      private final @Nullable Output<Boolean> disableEmailNotification;
+    private @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> disableEmailNotification() {
-        return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
+    public Optional<Output<Boolean>> disableEmailNotification() {
+        return Optional.ofNullable(this.disableEmailNotification);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitationMessage")
-      private final @Nullable Output<String> invitationMessage;
+    private @Nullable Output<String> invitationMessage;
 
-    public Output<String> invitationMessage() {
-        return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
+    public Optional<Output<String>> invitationMessage() {
+        return Optional.ofNullable(this.invitationMessage);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invite")
-      private final @Nullable Output<Boolean> invite;
+    private @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> invite() {
-        return this.invite == null ? Codegen.empty() : this.invite;
+    public Optional<Output<Boolean>> invite() {
+        return Optional.ofNullable(this.invite);
     }
 
     /**
@@ -87,128 +87,108 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relationshipStatus")
-      private final @Nullable Output<String> relationshipStatus;
+    private @Nullable Output<String> relationshipStatus;
 
-    public Output<String> relationshipStatus() {
-        return this.relationshipStatus == null ? Codegen.empty() : this.relationshipStatus;
+    public Optional<Output<String>> relationshipStatus() {
+        return Optional.ofNullable(this.relationshipStatus);
     }
 
-    public MemberState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> detectorId,
-        @Nullable Output<Boolean> disableEmailNotification,
-        @Nullable Output<String> email,
-        @Nullable Output<String> invitationMessage,
-        @Nullable Output<Boolean> invite,
-        @Nullable Output<String> relationshipStatus) {
-        this.accountId = accountId;
-        this.detectorId = detectorId;
-        this.disableEmailNotification = disableEmailNotification;
-        this.email = email;
-        this.invitationMessage = invitationMessage;
-        this.invite = invite;
-        this.relationshipStatus = relationshipStatus;
-    }
+    private MemberState() {}
 
-    private MemberState() {
-        this.accountId = Codegen.empty();
-        this.detectorId = Codegen.empty();
-        this.disableEmailNotification = Codegen.empty();
-        this.email = Codegen.empty();
-        this.invitationMessage = Codegen.empty();
-        this.invite = Codegen.empty();
-        this.relationshipStatus = Codegen.empty();
+    private MemberState(MemberState $) {
+        this.accountId = $.accountId;
+        this.detectorId = $.detectorId;
+        this.disableEmailNotification = $.disableEmailNotification;
+        this.email = $.email;
+        this.invitationMessage = $.invitationMessage;
+        this.invite = $.invite;
+        this.relationshipStatus = $.relationshipStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> detectorId;
-        private @Nullable Output<Boolean> disableEmailNotification;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> invitationMessage;
-        private @Nullable Output<Boolean> invite;
-        private @Nullable Output<String> relationshipStatus;
+        private MemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemberState();
         }
 
         public Builder(MemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.detectorId = defaults.detectorId;
-    	      this.disableEmailNotification = defaults.disableEmailNotification;
-    	      this.email = defaults.email;
-    	      this.invitationMessage = defaults.invitationMessage;
-    	      this.invite = defaults.invite;
-    	      this.relationshipStatus = defaults.relationshipStatus;
+            $ = new MemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder detectorId(@Nullable Output<String> detectorId) {
-            this.detectorId = detectorId;
+            $.detectorId = detectorId;
             return this;
         }
-        public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Codegen.ofNullable(detectorId);
-            return this;
+
+        public Builder detectorId(String detectorId) {
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
-            this.disableEmailNotification = disableEmailNotification;
+            $.disableEmailNotification = disableEmailNotification;
             return this;
         }
-        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Codegen.ofNullable(disableEmailNotification);
-            return this;
+
+        public Builder disableEmailNotification(Boolean disableEmailNotification) {
+            return disableEmailNotification(Output.of(disableEmailNotification));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
-            this.invitationMessage = invitationMessage;
+            $.invitationMessage = invitationMessage;
             return this;
         }
-        public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Codegen.ofNullable(invitationMessage);
-            return this;
+
+        public Builder invitationMessage(String invitationMessage) {
+            return invitationMessage(Output.of(invitationMessage));
         }
+
         public Builder invite(@Nullable Output<Boolean> invite) {
-            this.invite = invite;
+            $.invite = invite;
             return this;
         }
-        public Builder invite(@Nullable Boolean invite) {
-            this.invite = Codegen.ofNullable(invite);
-            return this;
+
+        public Builder invite(Boolean invite) {
+            return invite(Output.of(invite));
         }
+
         public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
-            this.relationshipStatus = relationshipStatus;
+            $.relationshipStatus = relationshipStatus;
             return this;
         }
-        public Builder relationshipStatus(@Nullable String relationshipStatus) {
-            this.relationshipStatus = Codegen.ofNullable(relationshipStatus);
-            return this;
-        }        public MemberState build() {
-            return new MemberState(accountId, detectorId, disableEmailNotification, email, invitationMessage, invite, relationshipStatus);
+
+        public Builder relationshipStatus(String relationshipStatus) {
+            return relationshipStatus(Output.of(relationshipStatus));
+        }
+
+        public MemberState build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.iot.inputs;
 import com.pulumi.aws.iot.inputs.TopicRuleDynamodbv2PutItemGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TopicRuleDynamodbv2GetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="putItem")
-      private final @Nullable Output<TopicRuleDynamodbv2PutItemGetArgs> putItem;
+    private @Nullable Output<TopicRuleDynamodbv2PutItemGetArgs> putItem;
 
-    public Output<TopicRuleDynamodbv2PutItemGetArgs> putItem() {
-        return this.putItem == null ? Codegen.empty() : this.putItem;
+    public Optional<Output<TopicRuleDynamodbv2PutItemGetArgs>> putItem() {
+        return Optional.ofNullable(this.putItem);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class TopicRuleDynamodbv2GetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleDynamodbv2GetArgs(
-        @Nullable Output<TopicRuleDynamodbv2PutItemGetArgs> putItem,
-        Output<String> roleArn) {
-        this.putItem = putItem;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleDynamodbv2GetArgs() {}
 
-    private TopicRuleDynamodbv2GetArgs() {
-        this.putItem = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private TopicRuleDynamodbv2GetArgs(TopicRuleDynamodbv2GetArgs $) {
+        this.putItem = $.putItem;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleDynamodbv2GetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TopicRuleDynamodbv2PutItemGetArgs> putItem;
-        private Output<String> roleArn;
+        private TopicRuleDynamodbv2GetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleDynamodbv2GetArgs();
         }
 
         public Builder(TopicRuleDynamodbv2GetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.putItem = defaults.putItem;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleDynamodbv2GetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder putItem(@Nullable Output<TopicRuleDynamodbv2PutItemGetArgs> putItem) {
-            this.putItem = putItem;
+            $.putItem = putItem;
             return this;
         }
-        public Builder putItem(@Nullable TopicRuleDynamodbv2PutItemGetArgs putItem) {
-            this.putItem = Codegen.ofNullable(putItem);
-            return this;
+
+        public Builder putItem(TopicRuleDynamodbv2PutItemGetArgs putItem) {
+            return putItem(Output.of(putItem));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public TopicRuleDynamodbv2GetArgs build() {
-            return new TopicRuleDynamodbv2GetArgs(putItem, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public TopicRuleDynamodbv2GetArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

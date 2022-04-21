@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EventTargetInputTransformerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="inputPaths")
-      private final @Nullable Output<Map<String,String>> inputPaths;
+    private @Nullable Output<Map<String,String>> inputPaths;
 
-    public Output<Map<String,String>> inputPaths() {
-        return this.inputPaths == null ? Codegen.empty() : this.inputPaths;
+    public Optional<Output<Map<String,String>>> inputPaths() {
+        return Optional.ofNullable(this.inputPaths);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class EventTargetInputTransformerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="inputTemplate", required=true)
-      private final Output<String> inputTemplate;
+    private Output<String> inputTemplate;
 
     public Output<String> inputTemplate() {
         return this.inputTemplate;
     }
 
-    public EventTargetInputTransformerArgs(
-        @Nullable Output<Map<String,String>> inputPaths,
-        Output<String> inputTemplate) {
-        this.inputPaths = inputPaths;
-        this.inputTemplate = Objects.requireNonNull(inputTemplate, "expected parameter 'inputTemplate' to be non-null");
-    }
+    private EventTargetInputTransformerArgs() {}
 
-    private EventTargetInputTransformerArgs() {
-        this.inputPaths = Codegen.empty();
-        this.inputTemplate = Codegen.empty();
+    private EventTargetInputTransformerArgs(EventTargetInputTransformerArgs $) {
+        this.inputPaths = $.inputPaths;
+        this.inputTemplate = $.inputTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetInputTransformerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> inputPaths;
-        private Output<String> inputTemplate;
+        private EventTargetInputTransformerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetInputTransformerArgs();
         }
 
         public Builder(EventTargetInputTransformerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputPaths = defaults.inputPaths;
-    	      this.inputTemplate = defaults.inputTemplate;
+            $ = new EventTargetInputTransformerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputPaths(@Nullable Output<Map<String,String>> inputPaths) {
-            this.inputPaths = inputPaths;
+            $.inputPaths = inputPaths;
             return this;
         }
-        public Builder inputPaths(@Nullable Map<String,String> inputPaths) {
-            this.inputPaths = Codegen.ofNullable(inputPaths);
-            return this;
+
+        public Builder inputPaths(Map<String,String> inputPaths) {
+            return inputPaths(Output.of(inputPaths));
         }
+
         public Builder inputTemplate(Output<String> inputTemplate) {
-            this.inputTemplate = Objects.requireNonNull(inputTemplate);
+            $.inputTemplate = inputTemplate;
             return this;
         }
+
         public Builder inputTemplate(String inputTemplate) {
-            this.inputTemplate = Output.of(Objects.requireNonNull(inputTemplate));
-            return this;
-        }        public EventTargetInputTransformerArgs build() {
-            return new EventTargetInputTransformerArgs(inputPaths, inputTemplate);
+            return inputTemplate(Output.of(inputTemplate));
+        }
+
+        public EventTargetInputTransformerArgs build() {
+            $.inputTemplate = Objects.requireNonNull($.inputTemplate, "expected parameter 'inputTemplate' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.datapipeline.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PipelineDefinitionParameterValueGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -30,63 +29,60 @@ public final class PipelineDefinitionParameterValueGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="stringValue", required=true)
-      private final Output<String> stringValue;
+    private Output<String> stringValue;
 
     public Output<String> stringValue() {
         return this.stringValue;
     }
 
-    public PipelineDefinitionParameterValueGetArgs(
-        Output<String> id,
-        Output<String> stringValue) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-    }
+    private PipelineDefinitionParameterValueGetArgs() {}
 
-    private PipelineDefinitionParameterValueGetArgs() {
-        this.id = Codegen.empty();
-        this.stringValue = Codegen.empty();
+    private PipelineDefinitionParameterValueGetArgs(PipelineDefinitionParameterValueGetArgs $) {
+        this.id = $.id;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDefinitionParameterValueGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> stringValue;
+        private PipelineDefinitionParameterValueGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDefinitionParameterValueGetArgs();
         }
 
         public Builder(PipelineDefinitionParameterValueGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.stringValue = defaults.stringValue;
+            $ = new PipelineDefinitionParameterValueGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder stringValue(Output<String> stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Output.of(Objects.requireNonNull(stringValue));
-            return this;
-        }        public PipelineDefinitionParameterValueGetArgs build() {
-            return new PipelineDefinitionParameterValueGetArgs(id, stringValue);
+            return stringValue(Output.of(stringValue));
+        }
+
+        public PipelineDefinitionParameterValueGetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            return $;
         }
     }
+
 }

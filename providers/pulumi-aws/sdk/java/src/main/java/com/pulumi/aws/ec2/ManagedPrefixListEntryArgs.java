@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ManagedPrefixListEntryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cidr", required=true)
-      private final Output<String> cidr;
+    private Output<String> cidr;
 
     public Output<String> cidr() {
         return this.cidr;
@@ -31,10 +31,10 @@ public final class ManagedPrefixListEntryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class ManagedPrefixListEntryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="prefixListId", required=true)
-      private final Output<String> prefixListId;
+    private Output<String> prefixListId;
 
     public Output<String> prefixListId() {
         return this.prefixListId;
     }
 
-    public ManagedPrefixListEntryArgs(
-        Output<String> cidr,
-        @Nullable Output<String> description,
-        Output<String> prefixListId) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-        this.description = description;
-        this.prefixListId = Objects.requireNonNull(prefixListId, "expected parameter 'prefixListId' to be non-null");
-    }
+    private ManagedPrefixListEntryArgs() {}
 
-    private ManagedPrefixListEntryArgs() {
-        this.cidr = Codegen.empty();
-        this.description = Codegen.empty();
-        this.prefixListId = Codegen.empty();
+    private ManagedPrefixListEntryArgs(ManagedPrefixListEntryArgs $) {
+        this.cidr = $.cidr;
+        this.description = $.description;
+        this.prefixListId = $.prefixListId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPrefixListEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidr;
-        private @Nullable Output<String> description;
-        private Output<String> prefixListId;
+        private ManagedPrefixListEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPrefixListEntryArgs();
         }
 
         public Builder(ManagedPrefixListEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.description = defaults.description;
-    	      this.prefixListId = defaults.prefixListId;
+            $ = new ManagedPrefixListEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(Output<String> cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder cidr(String cidr) {
-            this.cidr = Output.of(Objects.requireNonNull(cidr));
-            return this;
+            return cidr(Output.of(cidr));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder prefixListId(Output<String> prefixListId) {
-            this.prefixListId = Objects.requireNonNull(prefixListId);
+            $.prefixListId = prefixListId;
             return this;
         }
+
         public Builder prefixListId(String prefixListId) {
-            this.prefixListId = Output.of(Objects.requireNonNull(prefixListId));
-            return this;
-        }        public ManagedPrefixListEntryArgs build() {
-            return new ManagedPrefixListEntryArgs(cidr, description, prefixListId);
+            return prefixListId(Output.of(prefixListId));
+        }
+
+        public ManagedPrefixListEntryArgs build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            $.prefixListId = Objects.requireNonNull($.prefixListId, "expected parameter 'prefixListId' to be non-null");
+            return $;
         }
     }
+
 }

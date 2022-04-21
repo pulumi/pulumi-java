@@ -5,7 +5,6 @@ package com.pulumi.aws.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blueprintId")
-      private final @Nullable Output<String> blueprintId;
+    private @Nullable Output<String> blueprintId;
 
-    public Output<String> blueprintId() {
-        return this.blueprintId == null ? Codegen.empty() : this.blueprintId;
+    public Optional<Output<String>> blueprintId() {
+        return Optional.ofNullable(this.blueprintId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleId")
-      private final @Nullable Output<String> bundleId;
+    private @Nullable Output<String> bundleId;
 
-    public Output<String> bundleId() {
-        return this.bundleId == null ? Codegen.empty() : this.bundleId;
+    public Optional<Output<String>> bundleId() {
+        return Optional.ofNullable(this.bundleId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpuCount")
-      private final @Nullable Output<Integer> cpuCount;
+    private @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> cpuCount() {
-        return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
+    public Optional<Output<Integer>> cpuCount() {
+        return Optional.ofNullable(this.cpuCount);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -96,11 +96,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* use `ipv6_addresses` attribute instead */
     @Import(name="ipv6Address")
-      private final @Nullable Output<String> ipv6Address;
+    private @Nullable Output<String> ipv6Address;
 
     @Deprecated /* use `ipv6_addresses` attribute instead */
-    public Output<String> ipv6Address() {
-        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
+    public Optional<Output<String>> ipv6Address() {
+        return Optional.ofNullable(this.ipv6Address);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv6Addresses")
-      private final @Nullable Output<List<String>> ipv6Addresses;
+    private @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> ipv6Addresses() {
-        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
+    public Optional<Output<List<String>>> ipv6Addresses() {
+        return Optional.ofNullable(this.ipv6Addresses);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isStaticIp")
-      private final @Nullable Output<Boolean> isStaticIp;
+    private @Nullable Output<Boolean> isStaticIp;
 
-    public Output<Boolean> isStaticIp() {
-        return this.isStaticIp == null ? Codegen.empty() : this.isStaticIp;
+    public Optional<Output<Boolean>> isStaticIp() {
+        return Optional.ofNullable(this.isStaticIp);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyPairName")
-      private final @Nullable Output<String> keyPairName;
+    private @Nullable Output<String> keyPairName;
 
-    public Output<String> keyPairName() {
-        return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
+    public Optional<Output<String>> keyPairName() {
+        return Optional.ofNullable(this.keyPairName);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable Output<String> privateIpAddress;
+    private @Nullable Output<String> privateIpAddress;
 
-    public Output<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
+    public Optional<Output<String>> privateIpAddress() {
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicIpAddress")
-      private final @Nullable Output<String> publicIpAddress;
+    private @Nullable Output<String> publicIpAddress;
 
-    public Output<String> publicIpAddress() {
-        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
+    public Optional<Output<String>> publicIpAddress() {
+        return Optional.ofNullable(this.publicIpAddress);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ramSize")
-      private final @Nullable Output<Double> ramSize;
+    private @Nullable Output<Double> ramSize;
 
-    public Output<Double> ramSize() {
-        return this.ramSize == null ? Codegen.empty() : this.ramSize;
+    public Optional<Output<Double>> ramSize() {
+        return Optional.ofNullable(this.ramSize);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
     /**
@@ -219,274 +219,222 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public InstanceState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> blueprintId,
-        @Nullable Output<String> bundleId,
-        @Nullable Output<Integer> cpuCount,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> ipv6Address,
-        @Nullable Output<List<String>> ipv6Addresses,
-        @Nullable Output<Boolean> isStaticIp,
-        @Nullable Output<String> keyPairName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> privateIpAddress,
-        @Nullable Output<String> publicIpAddress,
-        @Nullable Output<Double> ramSize,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> userData,
-        @Nullable Output<String> username) {
-        this.arn = arn;
-        this.availabilityZone = availabilityZone;
-        this.blueprintId = blueprintId;
-        this.bundleId = bundleId;
-        this.cpuCount = cpuCount;
-        this.createdAt = createdAt;
-        this.ipv6Address = ipv6Address;
-        this.ipv6Addresses = ipv6Addresses;
-        this.isStaticIp = isStaticIp;
-        this.keyPairName = keyPairName;
-        this.name = name;
-        this.privateIpAddress = privateIpAddress;
-        this.publicIpAddress = publicIpAddress;
-        this.ramSize = ramSize;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userData = userData;
-        this.username = username;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.arn = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.blueprintId = Codegen.empty();
-        this.bundleId = Codegen.empty();
-        this.cpuCount = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.ipv6Address = Codegen.empty();
-        this.ipv6Addresses = Codegen.empty();
-        this.isStaticIp = Codegen.empty();
-        this.keyPairName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
-        this.publicIpAddress = Codegen.empty();
-        this.ramSize = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userData = Codegen.empty();
-        this.username = Codegen.empty();
+    private InstanceState(InstanceState $) {
+        this.arn = $.arn;
+        this.availabilityZone = $.availabilityZone;
+        this.blueprintId = $.blueprintId;
+        this.bundleId = $.bundleId;
+        this.cpuCount = $.cpuCount;
+        this.createdAt = $.createdAt;
+        this.ipv6Address = $.ipv6Address;
+        this.ipv6Addresses = $.ipv6Addresses;
+        this.isStaticIp = $.isStaticIp;
+        this.keyPairName = $.keyPairName;
+        this.name = $.name;
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
+        this.ramSize = $.ramSize;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userData = $.userData;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> blueprintId;
-        private @Nullable Output<String> bundleId;
-        private @Nullable Output<Integer> cpuCount;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> ipv6Address;
-        private @Nullable Output<List<String>> ipv6Addresses;
-        private @Nullable Output<Boolean> isStaticIp;
-        private @Nullable Output<String> keyPairName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> privateIpAddress;
-        private @Nullable Output<String> publicIpAddress;
-        private @Nullable Output<Double> ramSize;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> userData;
-        private @Nullable Output<String> username;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.blueprintId = defaults.blueprintId;
-    	      this.bundleId = defaults.bundleId;
-    	      this.cpuCount = defaults.cpuCount;
-    	      this.createdAt = defaults.createdAt;
-    	      this.ipv6Address = defaults.ipv6Address;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
-    	      this.isStaticIp = defaults.isStaticIp;
-    	      this.keyPairName = defaults.keyPairName;
-    	      this.name = defaults.name;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
-    	      this.ramSize = defaults.ramSize;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userData = defaults.userData;
-    	      this.username = defaults.username;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder blueprintId(@Nullable Output<String> blueprintId) {
-            this.blueprintId = blueprintId;
+            $.blueprintId = blueprintId;
             return this;
         }
-        public Builder blueprintId(@Nullable String blueprintId) {
-            this.blueprintId = Codegen.ofNullable(blueprintId);
-            return this;
+
+        public Builder blueprintId(String blueprintId) {
+            return blueprintId(Output.of(blueprintId));
         }
+
         public Builder bundleId(@Nullable Output<String> bundleId) {
-            this.bundleId = bundleId;
+            $.bundleId = bundleId;
             return this;
         }
-        public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Codegen.ofNullable(bundleId);
-            return this;
+
+        public Builder bundleId(String bundleId) {
+            return bundleId(Output.of(bundleId));
         }
+
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
-            this.cpuCount = cpuCount;
+            $.cpuCount = cpuCount;
             return this;
         }
-        public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Codegen.ofNullable(cpuCount);
-            return this;
+
+        public Builder cpuCount(Integer cpuCount) {
+            return cpuCount(Output.of(cpuCount));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
-            this.ipv6Address = ipv6Address;
+            $.ipv6Address = ipv6Address;
             return this;
         }
-        public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Codegen.ofNullable(ipv6Address);
-            return this;
+
+        public Builder ipv6Address(String ipv6Address) {
+            return ipv6Address(Output.of(ipv6Address));
         }
+
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
-            this.ipv6Addresses = ipv6Addresses;
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
-        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
-            return this;
+
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
+            return ipv6Addresses(Output.of(ipv6Addresses));
         }
+
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
+
         public Builder isStaticIp(@Nullable Output<Boolean> isStaticIp) {
-            this.isStaticIp = isStaticIp;
+            $.isStaticIp = isStaticIp;
             return this;
         }
-        public Builder isStaticIp(@Nullable Boolean isStaticIp) {
-            this.isStaticIp = Codegen.ofNullable(isStaticIp);
-            return this;
+
+        public Builder isStaticIp(Boolean isStaticIp) {
+            return isStaticIp(Output.of(isStaticIp));
         }
+
         public Builder keyPairName(@Nullable Output<String> keyPairName) {
-            this.keyPairName = keyPairName;
+            $.keyPairName = keyPairName;
             return this;
         }
-        public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Codegen.ofNullable(keyPairName);
-            return this;
+
+        public Builder keyPairName(String keyPairName) {
+            return keyPairName(Output.of(keyPairName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
-        public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
-            return this;
+
+        public Builder privateIpAddress(String privateIpAddress) {
+            return privateIpAddress(Output.of(privateIpAddress));
         }
+
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
-        public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
-            return this;
+
+        public Builder publicIpAddress(String publicIpAddress) {
+            return publicIpAddress(Output.of(publicIpAddress));
         }
+
         public Builder ramSize(@Nullable Output<Double> ramSize) {
-            this.ramSize = ramSize;
+            $.ramSize = ramSize;
             return this;
         }
-        public Builder ramSize(@Nullable Double ramSize) {
-            this.ramSize = Codegen.ofNullable(ramSize);
-            return this;
+
+        public Builder ramSize(Double ramSize) {
+            return ramSize(Output.of(ramSize));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public InstanceState build() {
-            return new InstanceState(arn, availabilityZone, blueprintId, bundleId, cpuCount, createdAt, ipv6Address, ipv6Addresses, isStaticIp, keyPairName, name, privateIpAddress, publicIpAddress, ramSize, tags, tagsAll, userData, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReceiptRuleBounceActionGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="message", required=true)
-      private final Output<String> message;
+    private Output<String> message;
 
     public Output<String> message() {
         return this.message;
@@ -32,7 +32,7 @@ public final class ReceiptRuleBounceActionGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="position", required=true)
-      private final Output<Integer> position;
+    private Output<Integer> position;
 
     public Output<Integer> position() {
         return this.position;
@@ -43,7 +43,7 @@ public final class ReceiptRuleBounceActionGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sender", required=true)
-      private final Output<String> sender;
+    private Output<String> sender;
 
     public Output<String> sender() {
         return this.sender;
@@ -54,7 +54,7 @@ public final class ReceiptRuleBounceActionGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="smtpReplyCode", required=true)
-      private final Output<String> smtpReplyCode;
+    private Output<String> smtpReplyCode;
 
     public Output<String> smtpReplyCode() {
         return this.smtpReplyCode;
@@ -65,10 +65,10 @@ public final class ReceiptRuleBounceActionGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="statusCode")
-      private final @Nullable Output<String> statusCode;
+    private @Nullable Output<String> statusCode;
 
-    public Output<String> statusCode() {
-        return this.statusCode == null ? Codegen.empty() : this.statusCode;
+    public Optional<Output<String>> statusCode() {
+        return Optional.ofNullable(this.statusCode);
     }
 
     /**
@@ -76,115 +76,102 @@ public final class ReceiptRuleBounceActionGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public ReceiptRuleBounceActionGetArgs(
-        Output<String> message,
-        Output<Integer> position,
-        Output<String> sender,
-        Output<String> smtpReplyCode,
-        @Nullable Output<String> statusCode,
-        @Nullable Output<String> topicArn) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-        this.sender = Objects.requireNonNull(sender, "expected parameter 'sender' to be non-null");
-        this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode, "expected parameter 'smtpReplyCode' to be non-null");
-        this.statusCode = statusCode;
-        this.topicArn = topicArn;
-    }
+    private ReceiptRuleBounceActionGetArgs() {}
 
-    private ReceiptRuleBounceActionGetArgs() {
-        this.message = Codegen.empty();
-        this.position = Codegen.empty();
-        this.sender = Codegen.empty();
-        this.smtpReplyCode = Codegen.empty();
-        this.statusCode = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private ReceiptRuleBounceActionGetArgs(ReceiptRuleBounceActionGetArgs $) {
+        this.message = $.message;
+        this.position = $.position;
+        this.sender = $.sender;
+        this.smtpReplyCode = $.smtpReplyCode;
+        this.statusCode = $.statusCode;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleBounceActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> message;
-        private Output<Integer> position;
-        private Output<String> sender;
-        private Output<String> smtpReplyCode;
-        private @Nullable Output<String> statusCode;
-        private @Nullable Output<String> topicArn;
+        private ReceiptRuleBounceActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleBounceActionGetArgs();
         }
 
         public Builder(ReceiptRuleBounceActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.position = defaults.position;
-    	      this.sender = defaults.sender;
-    	      this.smtpReplyCode = defaults.smtpReplyCode;
-    	      this.statusCode = defaults.statusCode;
-    	      this.topicArn = defaults.topicArn;
+            $ = new ReceiptRuleBounceActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(Output<String> message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Output.of(Objects.requireNonNull(message));
-            return this;
+            return message(Output.of(message));
         }
+
         public Builder position(Output<Integer> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
+            return position(Output.of(position));
         }
+
         public Builder sender(Output<String> sender) {
-            this.sender = Objects.requireNonNull(sender);
+            $.sender = sender;
             return this;
         }
+
         public Builder sender(String sender) {
-            this.sender = Output.of(Objects.requireNonNull(sender));
-            return this;
+            return sender(Output.of(sender));
         }
+
         public Builder smtpReplyCode(Output<String> smtpReplyCode) {
-            this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode);
+            $.smtpReplyCode = smtpReplyCode;
             return this;
         }
+
         public Builder smtpReplyCode(String smtpReplyCode) {
-            this.smtpReplyCode = Output.of(Objects.requireNonNull(smtpReplyCode));
-            return this;
+            return smtpReplyCode(Output.of(smtpReplyCode));
         }
+
         public Builder statusCode(@Nullable Output<String> statusCode) {
-            this.statusCode = statusCode;
+            $.statusCode = statusCode;
             return this;
         }
-        public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Codegen.ofNullable(statusCode);
-            return this;
+
+        public Builder statusCode(String statusCode) {
+            return statusCode(Output.of(statusCode));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public ReceiptRuleBounceActionGetArgs build() {
-            return new ReceiptRuleBounceActionGetArgs(message, position, sender, smtpReplyCode, statusCode, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public ReceiptRuleBounceActionGetArgs build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            $.sender = Objects.requireNonNull($.sender, "expected parameter 'sender' to be non-null");
+            $.smtpReplyCode = Objects.requireNonNull($.smtpReplyCode, "expected parameter 'smtpReplyCode' to be non-null");
+            return $;
         }
     }
+
 }

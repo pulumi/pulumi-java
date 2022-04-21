@@ -5,13 +5,13 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="blockSizeBytes")
-      private final @Nullable Output<Integer> blockSizeBytes;
+    private @Nullable Output<Integer> blockSizeBytes;
 
-    public Output<Integer> blockSizeBytes() {
-        return this.blockSizeBytes == null ? Codegen.empty() : this.blockSizeBytes;
+    public Optional<Output<Integer>> blockSizeBytes() {
+        return Optional.ofNullable(this.blockSizeBytes);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="bloomFilterColumns")
-      private final @Nullable Output<List<String>> bloomFilterColumns;
+    private @Nullable Output<List<String>> bloomFilterColumns;
 
-    public Output<List<String>> bloomFilterColumns() {
-        return this.bloomFilterColumns == null ? Codegen.empty() : this.bloomFilterColumns;
+    public Optional<Output<List<String>>> bloomFilterColumns() {
+        return Optional.ofNullable(this.bloomFilterColumns);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="bloomFilterFalsePositiveProbability")
-      private final @Nullable Output<Double> bloomFilterFalsePositiveProbability;
+    private @Nullable Output<Double> bloomFilterFalsePositiveProbability;
 
-    public Output<Double> bloomFilterFalsePositiveProbability() {
-        return this.bloomFilterFalsePositiveProbability == null ? Codegen.empty() : this.bloomFilterFalsePositiveProbability;
+    public Optional<Output<Double>> bloomFilterFalsePositiveProbability() {
+        return Optional.ofNullable(this.bloomFilterFalsePositiveProbability);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="compression")
-      private final @Nullable Output<String> compression;
+    private @Nullable Output<String> compression;
 
-    public Output<String> compression() {
-        return this.compression == null ? Codegen.empty() : this.compression;
+    public Optional<Output<String>> compression() {
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="dictionaryKeyThreshold")
-      private final @Nullable Output<Double> dictionaryKeyThreshold;
+    private @Nullable Output<Double> dictionaryKeyThreshold;
 
-    public Output<Double> dictionaryKeyThreshold() {
-        return this.dictionaryKeyThreshold == null ? Codegen.empty() : this.dictionaryKeyThreshold;
+    public Optional<Output<Double>> dictionaryKeyThreshold() {
+        return Optional.ofNullable(this.dictionaryKeyThreshold);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="enablePadding")
-      private final @Nullable Output<Boolean> enablePadding;
+    private @Nullable Output<Boolean> enablePadding;
 
-    public Output<Boolean> enablePadding() {
-        return this.enablePadding == null ? Codegen.empty() : this.enablePadding;
+    public Optional<Output<Boolean>> enablePadding() {
+        return Optional.ofNullable(this.enablePadding);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="formatVersion")
-      private final @Nullable Output<String> formatVersion;
+    private @Nullable Output<String> formatVersion;
 
-    public Output<String> formatVersion() {
-        return this.formatVersion == null ? Codegen.empty() : this.formatVersion;
+    public Optional<Output<String>> formatVersion() {
+        return Optional.ofNullable(this.formatVersion);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="paddingTolerance")
-      private final @Nullable Output<Double> paddingTolerance;
+    private @Nullable Output<Double> paddingTolerance;
 
-    public Output<Double> paddingTolerance() {
-        return this.paddingTolerance == null ? Codegen.empty() : this.paddingTolerance;
+    public Optional<Output<Double>> paddingTolerance() {
+        return Optional.ofNullable(this.paddingTolerance);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="rowIndexStride")
-      private final @Nullable Output<Integer> rowIndexStride;
+    private @Nullable Output<Integer> rowIndexStride;
 
-    public Output<Integer> rowIndexStride() {
-        return this.rowIndexStride == null ? Codegen.empty() : this.rowIndexStride;
+    public Optional<Output<Integer>> rowIndexStride() {
+        return Optional.ofNullable(this.rowIndexStride);
     }
 
     /**
@@ -123,170 +123,142 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="stripeSizeBytes")
-      private final @Nullable Output<Integer> stripeSizeBytes;
+    private @Nullable Output<Integer> stripeSizeBytes;
 
-    public Output<Integer> stripeSizeBytes() {
-        return this.stripeSizeBytes == null ? Codegen.empty() : this.stripeSizeBytes;
+    public Optional<Output<Integer>> stripeSizeBytes() {
+        return Optional.ofNullable(this.stripeSizeBytes);
     }
 
-    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs(
-        @Nullable Output<Integer> blockSizeBytes,
-        @Nullable Output<List<String>> bloomFilterColumns,
-        @Nullable Output<Double> bloomFilterFalsePositiveProbability,
-        @Nullable Output<String> compression,
-        @Nullable Output<Double> dictionaryKeyThreshold,
-        @Nullable Output<Boolean> enablePadding,
-        @Nullable Output<String> formatVersion,
-        @Nullable Output<Double> paddingTolerance,
-        @Nullable Output<Integer> rowIndexStride,
-        @Nullable Output<Integer> stripeSizeBytes) {
-        this.blockSizeBytes = blockSizeBytes;
-        this.bloomFilterColumns = bloomFilterColumns;
-        this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
-        this.compression = compression;
-        this.dictionaryKeyThreshold = dictionaryKeyThreshold;
-        this.enablePadding = enablePadding;
-        this.formatVersion = formatVersion;
-        this.paddingTolerance = paddingTolerance;
-        this.rowIndexStride = rowIndexStride;
-        this.stripeSizeBytes = stripeSizeBytes;
-    }
+    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs() {}
 
-    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs() {
-        this.blockSizeBytes = Codegen.empty();
-        this.bloomFilterColumns = Codegen.empty();
-        this.bloomFilterFalsePositiveProbability = Codegen.empty();
-        this.compression = Codegen.empty();
-        this.dictionaryKeyThreshold = Codegen.empty();
-        this.enablePadding = Codegen.empty();
-        this.formatVersion = Codegen.empty();
-        this.paddingTolerance = Codegen.empty();
-        this.rowIndexStride = Codegen.empty();
-        this.stripeSizeBytes = Codegen.empty();
+    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs $) {
+        this.blockSizeBytes = $.blockSizeBytes;
+        this.bloomFilterColumns = $.bloomFilterColumns;
+        this.bloomFilterFalsePositiveProbability = $.bloomFilterFalsePositiveProbability;
+        this.compression = $.compression;
+        this.dictionaryKeyThreshold = $.dictionaryKeyThreshold;
+        this.enablePadding = $.enablePadding;
+        this.formatVersion = $.formatVersion;
+        this.paddingTolerance = $.paddingTolerance;
+        this.rowIndexStride = $.rowIndexStride;
+        this.stripeSizeBytes = $.stripeSizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> blockSizeBytes;
-        private @Nullable Output<List<String>> bloomFilterColumns;
-        private @Nullable Output<Double> bloomFilterFalsePositiveProbability;
-        private @Nullable Output<String> compression;
-        private @Nullable Output<Double> dictionaryKeyThreshold;
-        private @Nullable Output<Boolean> enablePadding;
-        private @Nullable Output<String> formatVersion;
-        private @Nullable Output<Double> paddingTolerance;
-        private @Nullable Output<Integer> rowIndexStride;
-        private @Nullable Output<Integer> stripeSizeBytes;
+        private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs();
         }
 
         public Builder(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockSizeBytes = defaults.blockSizeBytes;
-    	      this.bloomFilterColumns = defaults.bloomFilterColumns;
-    	      this.bloomFilterFalsePositiveProbability = defaults.bloomFilterFalsePositiveProbability;
-    	      this.compression = defaults.compression;
-    	      this.dictionaryKeyThreshold = defaults.dictionaryKeyThreshold;
-    	      this.enablePadding = defaults.enablePadding;
-    	      this.formatVersion = defaults.formatVersion;
-    	      this.paddingTolerance = defaults.paddingTolerance;
-    	      this.rowIndexStride = defaults.rowIndexStride;
-    	      this.stripeSizeBytes = defaults.stripeSizeBytes;
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockSizeBytes(@Nullable Output<Integer> blockSizeBytes) {
-            this.blockSizeBytes = blockSizeBytes;
+            $.blockSizeBytes = blockSizeBytes;
             return this;
         }
-        public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
-            this.blockSizeBytes = Codegen.ofNullable(blockSizeBytes);
-            return this;
+
+        public Builder blockSizeBytes(Integer blockSizeBytes) {
+            return blockSizeBytes(Output.of(blockSizeBytes));
         }
+
         public Builder bloomFilterColumns(@Nullable Output<List<String>> bloomFilterColumns) {
-            this.bloomFilterColumns = bloomFilterColumns;
+            $.bloomFilterColumns = bloomFilterColumns;
             return this;
         }
-        public Builder bloomFilterColumns(@Nullable List<String> bloomFilterColumns) {
-            this.bloomFilterColumns = Codegen.ofNullable(bloomFilterColumns);
-            return this;
+
+        public Builder bloomFilterColumns(List<String> bloomFilterColumns) {
+            return bloomFilterColumns(Output.of(bloomFilterColumns));
         }
+
         public Builder bloomFilterColumns(String... bloomFilterColumns) {
             return bloomFilterColumns(List.of(bloomFilterColumns));
         }
+
         public Builder bloomFilterFalsePositiveProbability(@Nullable Output<Double> bloomFilterFalsePositiveProbability) {
-            this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
+            $.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
             return this;
         }
-        public Builder bloomFilterFalsePositiveProbability(@Nullable Double bloomFilterFalsePositiveProbability) {
-            this.bloomFilterFalsePositiveProbability = Codegen.ofNullable(bloomFilterFalsePositiveProbability);
-            return this;
+
+        public Builder bloomFilterFalsePositiveProbability(Double bloomFilterFalsePositiveProbability) {
+            return bloomFilterFalsePositiveProbability(Output.of(bloomFilterFalsePositiveProbability));
         }
+
         public Builder compression(@Nullable Output<String> compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
-        public Builder compression(@Nullable String compression) {
-            this.compression = Codegen.ofNullable(compression);
-            return this;
+
+        public Builder compression(String compression) {
+            return compression(Output.of(compression));
         }
+
         public Builder dictionaryKeyThreshold(@Nullable Output<Double> dictionaryKeyThreshold) {
-            this.dictionaryKeyThreshold = dictionaryKeyThreshold;
+            $.dictionaryKeyThreshold = dictionaryKeyThreshold;
             return this;
         }
-        public Builder dictionaryKeyThreshold(@Nullable Double dictionaryKeyThreshold) {
-            this.dictionaryKeyThreshold = Codegen.ofNullable(dictionaryKeyThreshold);
-            return this;
+
+        public Builder dictionaryKeyThreshold(Double dictionaryKeyThreshold) {
+            return dictionaryKeyThreshold(Output.of(dictionaryKeyThreshold));
         }
+
         public Builder enablePadding(@Nullable Output<Boolean> enablePadding) {
-            this.enablePadding = enablePadding;
+            $.enablePadding = enablePadding;
             return this;
         }
-        public Builder enablePadding(@Nullable Boolean enablePadding) {
-            this.enablePadding = Codegen.ofNullable(enablePadding);
-            return this;
+
+        public Builder enablePadding(Boolean enablePadding) {
+            return enablePadding(Output.of(enablePadding));
         }
+
         public Builder formatVersion(@Nullable Output<String> formatVersion) {
-            this.formatVersion = formatVersion;
+            $.formatVersion = formatVersion;
             return this;
         }
-        public Builder formatVersion(@Nullable String formatVersion) {
-            this.formatVersion = Codegen.ofNullable(formatVersion);
-            return this;
+
+        public Builder formatVersion(String formatVersion) {
+            return formatVersion(Output.of(formatVersion));
         }
+
         public Builder paddingTolerance(@Nullable Output<Double> paddingTolerance) {
-            this.paddingTolerance = paddingTolerance;
+            $.paddingTolerance = paddingTolerance;
             return this;
         }
-        public Builder paddingTolerance(@Nullable Double paddingTolerance) {
-            this.paddingTolerance = Codegen.ofNullable(paddingTolerance);
-            return this;
+
+        public Builder paddingTolerance(Double paddingTolerance) {
+            return paddingTolerance(Output.of(paddingTolerance));
         }
+
         public Builder rowIndexStride(@Nullable Output<Integer> rowIndexStride) {
-            this.rowIndexStride = rowIndexStride;
+            $.rowIndexStride = rowIndexStride;
             return this;
         }
-        public Builder rowIndexStride(@Nullable Integer rowIndexStride) {
-            this.rowIndexStride = Codegen.ofNullable(rowIndexStride);
-            return this;
+
+        public Builder rowIndexStride(Integer rowIndexStride) {
+            return rowIndexStride(Output.of(rowIndexStride));
         }
+
         public Builder stripeSizeBytes(@Nullable Output<Integer> stripeSizeBytes) {
-            this.stripeSizeBytes = stripeSizeBytes;
+            $.stripeSizeBytes = stripeSizeBytes;
             return this;
         }
-        public Builder stripeSizeBytes(@Nullable Integer stripeSizeBytes) {
-            this.stripeSizeBytes = Codegen.ofNullable(stripeSizeBytes);
-            return this;
-        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs build() {
-            return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs(blockSizeBytes, bloomFilterColumns, bloomFilterFalsePositiveProbability, compression, dictionaryKeyThreshold, enablePadding, formatVersion, paddingTolerance, rowIndexStride, stripeSizeBytes);
+
+        public Builder stripeSizeBytes(Integer stripeSizeBytes) {
+            return stripeSizeBytes(Output.of(stripeSizeBytes));
+        }
+
+        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs build() {
+            return $;
         }
     }
+
 }

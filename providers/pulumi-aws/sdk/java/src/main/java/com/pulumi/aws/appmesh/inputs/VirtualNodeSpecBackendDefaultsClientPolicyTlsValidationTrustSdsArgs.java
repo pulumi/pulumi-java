@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustS
      * 
      */
     @Import(name="secretName", required=true)
-      private final Output<String> secretName;
+    private Output<String> secretName;
 
     public Output<String> secretName() {
         return this.secretName;
     }
 
-    public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs(Output<String> secretName) {
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-    }
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs() {}
 
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs() {
-        this.secretName = Codegen.empty();
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs $) {
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secretName;
+        private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs();
         }
 
         public Builder(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretName = defaults.secretName;
+            $ = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretName(Output<String> secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Output.of(Objects.requireNonNull(secretName));
-            return this;
-        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs build() {
-            return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs(secretName);
+            return secretName(Output.of(secretName));
+        }
+
+        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs build() {
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            return $;
         }
     }
+
 }

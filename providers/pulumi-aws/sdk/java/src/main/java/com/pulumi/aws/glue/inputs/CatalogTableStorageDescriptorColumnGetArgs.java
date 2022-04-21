@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends com.pulumi
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -43,10 +43,10 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends com.pulumi
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends com.pulumi
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public CatalogTableStorageDescriptorColumnGetArgs(
-        @Nullable Output<String> comment,
-        Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> type) {
-        this.comment = comment;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.type = type;
-    }
+    private CatalogTableStorageDescriptorColumnGetArgs() {}
 
-    private CatalogTableStorageDescriptorColumnGetArgs() {
-        this.comment = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.type = Codegen.empty();
+    private CatalogTableStorageDescriptorColumnGetArgs(CatalogTableStorageDescriptorColumnGetArgs $) {
+        this.comment = $.comment;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogTableStorageDescriptorColumnGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> type;
+        private CatalogTableStorageDescriptorColumnGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogTableStorageDescriptorColumnGetArgs();
         }
 
         public Builder(CatalogTableStorageDescriptorColumnGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new CatalogTableStorageDescriptorColumnGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public CatalogTableStorageDescriptorColumnGetArgs build() {
-            return new CatalogTableStorageDescriptorColumnGetArgs(comment, name, parameters, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public CatalogTableStorageDescriptorColumnGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

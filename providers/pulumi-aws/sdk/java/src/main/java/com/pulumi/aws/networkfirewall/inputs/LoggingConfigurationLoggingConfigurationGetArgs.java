@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class LoggingConfigurationLoggingConfigurationGetArgs extends com.p
      * 
      */
     @Import(name="logDestinationConfigs", required=true)
-      private final Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs;
+    private Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs;
 
     public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 
-    public LoggingConfigurationLoggingConfigurationGetArgs(Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs) {
-        this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
-    }
+    private LoggingConfigurationLoggingConfigurationGetArgs() {}
 
-    private LoggingConfigurationLoggingConfigurationGetArgs() {
-        this.logDestinationConfigs = Codegen.empty();
+    private LoggingConfigurationLoggingConfigurationGetArgs(LoggingConfigurationLoggingConfigurationGetArgs $) {
+        this.logDestinationConfigs = $.logDestinationConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationLoggingConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs;
+        private LoggingConfigurationLoggingConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationLoggingConfigurationGetArgs();
         }
 
         public Builder(LoggingConfigurationLoggingConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logDestinationConfigs = defaults.logDestinationConfigs;
+            $ = new LoggingConfigurationLoggingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logDestinationConfigs(Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs) {
-            this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
+            $.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
+
         public Builder logDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs> logDestinationConfigs) {
-            this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
-            return this;
+            return logDestinationConfigs(Output.of(logDestinationConfigs));
         }
+
         public Builder logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs... logDestinationConfigs) {
             return logDestinationConfigs(List.of(logDestinationConfigs));
-        }        public LoggingConfigurationLoggingConfigurationGetArgs build() {
-            return new LoggingConfigurationLoggingConfigurationGetArgs(logDestinationConfigs);
+        }
+
+        public LoggingConfigurationLoggingConfigurationGetArgs build() {
+            $.logDestinationConfigs = Objects.requireNonNull($.logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
+            return $;
         }
     }
+
 }

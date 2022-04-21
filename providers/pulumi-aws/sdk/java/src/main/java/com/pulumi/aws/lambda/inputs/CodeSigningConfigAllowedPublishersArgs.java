@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class CodeSigningConfigAllowedPublishersArgs extends com.pulumi.res
      * 
      */
     @Import(name="signingProfileVersionArns", required=true)
-      private final Output<List<String>> signingProfileVersionArns;
+    private Output<List<String>> signingProfileVersionArns;
 
     public Output<List<String>> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
 
-    public CodeSigningConfigAllowedPublishersArgs(Output<List<String>> signingProfileVersionArns) {
-        this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns, "expected parameter 'signingProfileVersionArns' to be non-null");
-    }
+    private CodeSigningConfigAllowedPublishersArgs() {}
 
-    private CodeSigningConfigAllowedPublishersArgs() {
-        this.signingProfileVersionArns = Codegen.empty();
+    private CodeSigningConfigAllowedPublishersArgs(CodeSigningConfigAllowedPublishersArgs $) {
+        this.signingProfileVersionArns = $.signingProfileVersionArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeSigningConfigAllowedPublishersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> signingProfileVersionArns;
+        private CodeSigningConfigAllowedPublishersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeSigningConfigAllowedPublishersArgs();
         }
 
         public Builder(CodeSigningConfigAllowedPublishersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signingProfileVersionArns = defaults.signingProfileVersionArns;
+            $ = new CodeSigningConfigAllowedPublishersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder signingProfileVersionArns(Output<List<String>> signingProfileVersionArns) {
-            this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
+            $.signingProfileVersionArns = signingProfileVersionArns;
             return this;
         }
+
         public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
-            this.signingProfileVersionArns = Output.of(Objects.requireNonNull(signingProfileVersionArns));
-            return this;
+            return signingProfileVersionArns(Output.of(signingProfileVersionArns));
         }
+
         public Builder signingProfileVersionArns(String... signingProfileVersionArns) {
             return signingProfileVersionArns(List.of(signingProfileVersionArns));
-        }        public CodeSigningConfigAllowedPublishersArgs build() {
-            return new CodeSigningConfigAllowedPublishersArgs(signingProfileVersionArns);
+        }
+
+        public CodeSigningConfigAllowedPublishersArgs build() {
+            $.signingProfileVersionArns = Objects.requireNonNull($.signingProfileVersionArns, "expected parameter 'signingProfileVersionArns' to be non-null");
+            return $;
         }
     }
+
 }

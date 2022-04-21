@@ -6,7 +6,6 @@ package com.pulumi.aws.apigateway;
 import com.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="methodPath", required=true)
-      private final Output<String> methodPath;
+    private Output<String> methodPath;
 
     public Output<String> methodPath() {
         return this.methodPath;
@@ -31,7 +30,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="restApi", required=true)
-      private final Output<String> restApi;
+    private Output<String> restApi;
 
     public Output<String> restApi() {
         return this.restApi;
@@ -42,7 +41,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="settings", required=true)
-      private final Output<MethodSettingsSettingsArgs> settings;
+    private Output<MethodSettingsSettingsArgs> settings;
 
     public Output<MethodSettingsSettingsArgs> settings() {
         return this.settings;
@@ -53,85 +52,82 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="stageName", required=true)
-      private final Output<String> stageName;
+    private Output<String> stageName;
 
     public Output<String> stageName() {
         return this.stageName;
     }
 
-    public MethodSettingsArgs(
-        Output<String> methodPath,
-        Output<String> restApi,
-        Output<MethodSettingsSettingsArgs> settings,
-        Output<String> stageName) {
-        this.methodPath = Objects.requireNonNull(methodPath, "expected parameter 'methodPath' to be non-null");
-        this.restApi = Objects.requireNonNull(restApi, "expected parameter 'restApi' to be non-null");
-        this.settings = Objects.requireNonNull(settings, "expected parameter 'settings' to be non-null");
-        this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
-    }
+    private MethodSettingsArgs() {}
 
-    private MethodSettingsArgs() {
-        this.methodPath = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.stageName = Codegen.empty();
+    private MethodSettingsArgs(MethodSettingsArgs $) {
+        this.methodPath = $.methodPath;
+        this.restApi = $.restApi;
+        this.settings = $.settings;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> methodPath;
-        private Output<String> restApi;
-        private Output<MethodSettingsSettingsArgs> settings;
-        private Output<String> stageName;
+        private MethodSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodSettingsArgs();
         }
 
         public Builder(MethodSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methodPath = defaults.methodPath;
-    	      this.restApi = defaults.restApi;
-    	      this.settings = defaults.settings;
-    	      this.stageName = defaults.stageName;
+            $ = new MethodSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder methodPath(Output<String> methodPath) {
-            this.methodPath = Objects.requireNonNull(methodPath);
+            $.methodPath = methodPath;
             return this;
         }
+
         public Builder methodPath(String methodPath) {
-            this.methodPath = Output.of(Objects.requireNonNull(methodPath));
-            return this;
+            return methodPath(Output.of(methodPath));
         }
+
         public Builder restApi(Output<String> restApi) {
-            this.restApi = Objects.requireNonNull(restApi);
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder settings(Output<MethodSettingsSettingsArgs> settings) {
-            this.settings = Objects.requireNonNull(settings);
+            $.settings = settings;
             return this;
         }
+
         public Builder settings(MethodSettingsSettingsArgs settings) {
-            this.settings = Output.of(Objects.requireNonNull(settings));
-            return this;
+            return settings(Output.of(settings));
         }
+
         public Builder stageName(Output<String> stageName) {
-            this.stageName = Objects.requireNonNull(stageName);
+            $.stageName = stageName;
             return this;
         }
+
         public Builder stageName(String stageName) {
-            this.stageName = Output.of(Objects.requireNonNull(stageName));
-            return this;
-        }        public MethodSettingsArgs build() {
-            return new MethodSettingsArgs(methodPath, restApi, settings, stageName);
+            return stageName(Output.of(stageName));
+        }
+
+        public MethodSettingsArgs build() {
+            $.methodPath = Objects.requireNonNull($.methodPath, "expected parameter 'methodPath' to be non-null");
+            $.restApi = Objects.requireNonNull($.restApi, "expected parameter 'restApi' to be non-null");
+            $.settings = Objects.requireNonNull($.settings, "expected parameter 'settings' to be non-null");
+            $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");
+            return $;
         }
     }
+
 }

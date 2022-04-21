@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends c
      * 
      */
     @Import(name="accessTier", required=true)
-      private final Output<String> accessTier;
+    private Output<String> accessTier;
 
     public Output<String> accessTier() {
         return this.accessTier;
@@ -31,63 +30,60 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends c
      * 
      */
     @Import(name="days", required=true)
-      private final Output<Integer> days;
+    private Output<Integer> days;
 
     public Output<Integer> days() {
         return this.days;
     }
 
-    public BucketIntelligentTieringConfigurationTieringGetArgs(
-        Output<String> accessTier,
-        Output<Integer> days) {
-        this.accessTier = Objects.requireNonNull(accessTier, "expected parameter 'accessTier' to be non-null");
-        this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
-    }
+    private BucketIntelligentTieringConfigurationTieringGetArgs() {}
 
-    private BucketIntelligentTieringConfigurationTieringGetArgs() {
-        this.accessTier = Codegen.empty();
-        this.days = Codegen.empty();
+    private BucketIntelligentTieringConfigurationTieringGetArgs(BucketIntelligentTieringConfigurationTieringGetArgs $) {
+        this.accessTier = $.accessTier;
+        this.days = $.days;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIntelligentTieringConfigurationTieringGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessTier;
-        private Output<Integer> days;
+        private BucketIntelligentTieringConfigurationTieringGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIntelligentTieringConfigurationTieringGetArgs();
         }
 
         public Builder(BucketIntelligentTieringConfigurationTieringGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTier = defaults.accessTier;
-    	      this.days = defaults.days;
+            $ = new BucketIntelligentTieringConfigurationTieringGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTier(Output<String> accessTier) {
-            this.accessTier = Objects.requireNonNull(accessTier);
+            $.accessTier = accessTier;
             return this;
         }
+
         public Builder accessTier(String accessTier) {
-            this.accessTier = Output.of(Objects.requireNonNull(accessTier));
-            return this;
+            return accessTier(Output.of(accessTier));
         }
+
         public Builder days(Output<Integer> days) {
-            this.days = Objects.requireNonNull(days);
+            $.days = days;
             return this;
         }
+
         public Builder days(Integer days) {
-            this.days = Output.of(Objects.requireNonNull(days));
-            return this;
-        }        public BucketIntelligentTieringConfigurationTieringGetArgs build() {
-            return new BucketIntelligentTieringConfigurationTieringGetArgs(accessTier, days);
+            return days(Output.of(days));
+        }
+
+        public BucketIntelligentTieringConfigurationTieringGetArgs build() {
+            $.accessTier = Objects.requireNonNull($.accessTier, "expected parameter 'accessTier' to be non-null");
+            $.days = Objects.requireNonNull($.days, "expected parameter 'days' to be non-null");
+            return $;
         }
     }
+
 }

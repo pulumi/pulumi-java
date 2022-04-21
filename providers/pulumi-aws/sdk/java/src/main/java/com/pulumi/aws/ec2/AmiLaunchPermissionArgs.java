@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -30,63 +29,60 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="imageId", required=true)
-      private final Output<String> imageId;
+    private Output<String> imageId;
 
     public Output<String> imageId() {
         return this.imageId;
     }
 
-    public AmiLaunchPermissionArgs(
-        Output<String> accountId,
-        Output<String> imageId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
-    }
+    private AmiLaunchPermissionArgs() {}
 
-    private AmiLaunchPermissionArgs() {
-        this.accountId = Codegen.empty();
-        this.imageId = Codegen.empty();
+    private AmiLaunchPermissionArgs(AmiLaunchPermissionArgs $) {
+        this.accountId = $.accountId;
+        this.imageId = $.imageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmiLaunchPermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<String> imageId;
+        private AmiLaunchPermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmiLaunchPermissionArgs();
         }
 
         public Builder(AmiLaunchPermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.imageId = defaults.imageId;
+            $ = new AmiLaunchPermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder imageId(Output<String> imageId) {
-            this.imageId = Objects.requireNonNull(imageId);
+            $.imageId = imageId;
             return this;
         }
+
         public Builder imageId(String imageId) {
-            this.imageId = Output.of(Objects.requireNonNull(imageId));
-            return this;
-        }        public AmiLaunchPermissionArgs build() {
-            return new AmiLaunchPermissionArgs(accountId, imageId);
+            return imageId(Output.of(imageId));
+        }
+
+        public AmiLaunchPermissionArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.imageId = Objects.requireNonNull($.imageId, "expected parameter 'imageId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,49 +19,49 @@ public final class VirtualRouterSpecArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="listener", required=true)
-      private final Output<VirtualRouterSpecListenerArgs> listener;
+    private Output<VirtualRouterSpecListenerArgs> listener;
 
     public Output<VirtualRouterSpecListenerArgs> listener() {
         return this.listener;
     }
 
-    public VirtualRouterSpecArgs(Output<VirtualRouterSpecListenerArgs> listener) {
-        this.listener = Objects.requireNonNull(listener, "expected parameter 'listener' to be non-null");
-    }
+    private VirtualRouterSpecArgs() {}
 
-    private VirtualRouterSpecArgs() {
-        this.listener = Codegen.empty();
+    private VirtualRouterSpecArgs(VirtualRouterSpecArgs $) {
+        this.listener = $.listener;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualRouterSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualRouterSpecListenerArgs> listener;
+        private VirtualRouterSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualRouterSpecArgs();
         }
 
         public Builder(VirtualRouterSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.listener = defaults.listener;
+            $ = new VirtualRouterSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder listener(Output<VirtualRouterSpecListenerArgs> listener) {
-            this.listener = Objects.requireNonNull(listener);
+            $.listener = listener;
             return this;
         }
+
         public Builder listener(VirtualRouterSpecListenerArgs listener) {
-            this.listener = Output.of(Objects.requireNonNull(listener));
-            return this;
-        }        public VirtualRouterSpecArgs build() {
-            return new VirtualRouterSpecArgs(listener);
+            return listener(Output.of(listener));
+        }
+
+        public VirtualRouterSpecArgs build() {
+            $.listener = Objects.requireNonNull($.listener, "expected parameter 'listener' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
      * 
      */
     @Import(name="callerReference")
-      private final @Nullable Output<String> callerReference;
+    private @Nullable Output<String> callerReference;
 
-    public Output<String> callerReference() {
-        return this.callerReference == null ? Codegen.empty() : this.callerReference;
+    public Optional<Output<String>> callerReference() {
+        return Optional.ofNullable(this.callerReference);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
      * 
      */
     @Import(name="encryptionEntities")
-      private final @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
+    private @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
 
-    public Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities() {
-        return this.encryptionEntities == null ? Codegen.empty() : this.encryptionEntities;
+    public Optional<Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs>> encryptionEntities() {
+        return Optional.ofNullable(this.encryptionEntities);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FieldLevelEncryptionProfileState(
-        @Nullable Output<String> callerReference,
-        @Nullable Output<String> comment,
-        @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> name) {
-        this.callerReference = callerReference;
-        this.comment = comment;
-        this.encryptionEntities = encryptionEntities;
-        this.etag = etag;
-        this.name = name;
-    }
+    private FieldLevelEncryptionProfileState() {}
 
-    private FieldLevelEncryptionProfileState() {
-        this.callerReference = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.encryptionEntities = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.name = Codegen.empty();
+    private FieldLevelEncryptionProfileState(FieldLevelEncryptionProfileState $) {
+        this.callerReference = $.callerReference;
+        this.comment = $.comment;
+        this.encryptionEntities = $.encryptionEntities;
+        this.etag = $.etag;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionProfileState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> callerReference;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> name;
+        private FieldLevelEncryptionProfileState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionProfileState();
         }
 
         public Builder(FieldLevelEncryptionProfileState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callerReference = defaults.callerReference;
-    	      this.comment = defaults.comment;
-    	      this.encryptionEntities = defaults.encryptionEntities;
-    	      this.etag = defaults.etag;
-    	      this.name = defaults.name;
+            $ = new FieldLevelEncryptionProfileState(Objects.requireNonNull(defaults));
         }
 
         public Builder callerReference(@Nullable Output<String> callerReference) {
-            this.callerReference = callerReference;
+            $.callerReference = callerReference;
             return this;
         }
-        public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Codegen.ofNullable(callerReference);
-            return this;
+
+        public Builder callerReference(String callerReference) {
+            return callerReference(Output.of(callerReference));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder encryptionEntities(@Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities) {
-            this.encryptionEntities = encryptionEntities;
+            $.encryptionEntities = encryptionEntities;
             return this;
         }
-        public Builder encryptionEntities(@Nullable FieldLevelEncryptionProfileEncryptionEntitiesGetArgs encryptionEntities) {
-            this.encryptionEntities = Codegen.ofNullable(encryptionEntities);
-            return this;
+
+        public Builder encryptionEntities(FieldLevelEncryptionProfileEncryptionEntitiesGetArgs encryptionEntities) {
+            return encryptionEntities(Output.of(encryptionEntities));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FieldLevelEncryptionProfileState build() {
-            return new FieldLevelEncryptionProfileState(callerReference, comment, encryptionEntities, etag, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FieldLevelEncryptionProfileState build() {
+            return $;
         }
     }
+
 }

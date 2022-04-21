@@ -5,11 +5,11 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<String> creationTime;
+    private @Nullable Output<String> creationTime;
 
-    public Output<String> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<String>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fsxFilesystemArn")
-      private final @Nullable Output<String> fsxFilesystemArn;
+    private @Nullable Output<String> fsxFilesystemArn;
 
-    public Output<String> fsxFilesystemArn() {
-        return this.fsxFilesystemArn == null ? Codegen.empty() : this.fsxFilesystemArn;
+    public Optional<Output<String>> fsxFilesystemArn() {
+        return Optional.ofNullable(this.fsxFilesystemArn);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="securityGroupArns")
-      private final @Nullable Output<List<String>> securityGroupArns;
+    private @Nullable Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> securityGroupArns() {
-        return this.securityGroupArns == null ? Codegen.empty() : this.securityGroupArns;
+    public Optional<Output<List<String>>> securityGroupArns() {
+        return Optional.ofNullable(this.securityGroupArns);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -99,144 +99,122 @@ public final class LocationFsxLustreState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public LocationFsxLustreState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> creationTime,
-        @Nullable Output<String> fsxFilesystemArn,
-        @Nullable Output<List<String>> securityGroupArns,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> uri) {
-        this.arn = arn;
-        this.creationTime = creationTime;
-        this.fsxFilesystemArn = fsxFilesystemArn;
-        this.securityGroupArns = securityGroupArns;
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.uri = uri;
-    }
+    private LocationFsxLustreState() {}
 
-    private LocationFsxLustreState() {
-        this.arn = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.fsxFilesystemArn = Codegen.empty();
-        this.securityGroupArns = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.uri = Codegen.empty();
+    private LocationFsxLustreState(LocationFsxLustreState $) {
+        this.arn = $.arn;
+        this.creationTime = $.creationTime;
+        this.fsxFilesystemArn = $.fsxFilesystemArn;
+        this.securityGroupArns = $.securityGroupArns;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationFsxLustreState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> creationTime;
-        private @Nullable Output<String> fsxFilesystemArn;
-        private @Nullable Output<List<String>> securityGroupArns;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> uri;
+        private LocationFsxLustreState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationFsxLustreState();
         }
 
         public Builder(LocationFsxLustreState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.creationTime = defaults.creationTime;
-    	      this.fsxFilesystemArn = defaults.fsxFilesystemArn;
-    	      this.securityGroupArns = defaults.securityGroupArns;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.uri = defaults.uri;
+            $ = new LocationFsxLustreState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder creationTime(@Nullable Output<String> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(String creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder fsxFilesystemArn(@Nullable Output<String> fsxFilesystemArn) {
-            this.fsxFilesystemArn = fsxFilesystemArn;
+            $.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
-        public Builder fsxFilesystemArn(@Nullable String fsxFilesystemArn) {
-            this.fsxFilesystemArn = Codegen.ofNullable(fsxFilesystemArn);
-            return this;
+
+        public Builder fsxFilesystemArn(String fsxFilesystemArn) {
+            return fsxFilesystemArn(Output.of(fsxFilesystemArn));
         }
+
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
-            this.securityGroupArns = securityGroupArns;
+            $.securityGroupArns = securityGroupArns;
             return this;
         }
-        public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
-            this.securityGroupArns = Codegen.ofNullable(securityGroupArns);
-            return this;
+
+        public Builder securityGroupArns(List<String> securityGroupArns) {
+            return securityGroupArns(Output.of(securityGroupArns));
         }
+
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public LocationFsxLustreState build() {
-            return new LocationFsxLustreState(arn, creationTime, fsxFilesystemArn, securityGroupArns, subdirectory, tags, tagsAll, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public LocationFsxLustreState build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.aws.efs.inputs.AccessPointPosixUserArgs;
 import com.pulumi.aws.efs.inputs.AccessPointRootDirectoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemId", required=true)
-      private final Output<String> fileSystemId;
+    private Output<String> fileSystemId;
 
     public Output<String> fileSystemId() {
         return this.fileSystemId;
@@ -34,10 +34,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixUser")
-      private final @Nullable Output<AccessPointPosixUserArgs> posixUser;
+    private @Nullable Output<AccessPointPosixUserArgs> posixUser;
 
-    public Output<AccessPointPosixUserArgs> posixUser() {
-        return this.posixUser == null ? Codegen.empty() : this.posixUser;
+    public Optional<Output<AccessPointPosixUserArgs>> posixUser() {
+        return Optional.ofNullable(this.posixUser);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootDirectory")
-      private final @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
+    private @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
 
-    public Output<AccessPointRootDirectoryArgs> rootDirectory() {
-        return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
+    public Optional<Output<AccessPointRootDirectoryArgs>> rootDirectory() {
+        return Optional.ofNullable(this.rootDirectory);
     }
 
     /**
@@ -56,89 +56,79 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AccessPointArgs(
-        Output<String> fileSystemId,
-        @Nullable Output<AccessPointPosixUserArgs> posixUser,
-        @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory,
-        @Nullable Output<Map<String,String>> tags) {
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-        this.posixUser = posixUser;
-        this.rootDirectory = rootDirectory;
-        this.tags = tags;
-    }
+    private AccessPointArgs() {}
 
-    private AccessPointArgs() {
-        this.fileSystemId = Codegen.empty();
-        this.posixUser = Codegen.empty();
-        this.rootDirectory = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AccessPointArgs(AccessPointArgs $) {
+        this.fileSystemId = $.fileSystemId;
+        this.posixUser = $.posixUser;
+        this.rootDirectory = $.rootDirectory;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fileSystemId;
-        private @Nullable Output<AccessPointPosixUserArgs> posixUser;
-        private @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
-        private @Nullable Output<Map<String,String>> tags;
+        private AccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointArgs();
         }
 
         public Builder(AccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.posixUser = defaults.posixUser;
-    	      this.rootDirectory = defaults.rootDirectory;
-    	      this.tags = defaults.tags;
+            $ = new AccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileSystemId(Output<String> fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
-            return this;
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder posixUser(@Nullable Output<AccessPointPosixUserArgs> posixUser) {
-            this.posixUser = posixUser;
+            $.posixUser = posixUser;
             return this;
         }
-        public Builder posixUser(@Nullable AccessPointPosixUserArgs posixUser) {
-            this.posixUser = Codegen.ofNullable(posixUser);
-            return this;
+
+        public Builder posixUser(AccessPointPosixUserArgs posixUser) {
+            return posixUser(Output.of(posixUser));
         }
+
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryArgs> rootDirectory) {
-            this.rootDirectory = rootDirectory;
+            $.rootDirectory = rootDirectory;
             return this;
         }
-        public Builder rootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
-            this.rootDirectory = Codegen.ofNullable(rootDirectory);
-            return this;
+
+        public Builder rootDirectory(AccessPointRootDirectoryArgs rootDirectory) {
+            return rootDirectory(Output.of(rootDirectory));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AccessPointArgs build() {
-            return new AccessPointArgs(fileSystemId, posixUser, rootDirectory, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AccessPointArgs build() {
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            return $;
         }
     }
+
 }

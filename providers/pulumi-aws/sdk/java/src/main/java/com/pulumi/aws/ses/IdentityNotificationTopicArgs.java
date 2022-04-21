@@ -5,10 +5,10 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<String> identity;
+    private Output<String> identity;
 
     public Output<String> identity() {
         return this.identity;
@@ -32,10 +32,10 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="includeOriginalHeaders")
-      private final @Nullable Output<Boolean> includeOriginalHeaders;
+    private @Nullable Output<Boolean> includeOriginalHeaders;
 
-    public Output<Boolean> includeOriginalHeaders() {
-        return this.includeOriginalHeaders == null ? Codegen.empty() : this.includeOriginalHeaders;
+    public Optional<Output<Boolean>> includeOriginalHeaders() {
+        return Optional.ofNullable(this.includeOriginalHeaders);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="notificationType", required=true)
-      private final Output<String> notificationType;
+    private Output<String> notificationType;
 
     public Output<String> notificationType() {
         return this.notificationType;
@@ -54,89 +54,80 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public IdentityNotificationTopicArgs(
-        Output<String> identity,
-        @Nullable Output<Boolean> includeOriginalHeaders,
-        Output<String> notificationType,
-        @Nullable Output<String> topicArn) {
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.includeOriginalHeaders = includeOriginalHeaders;
-        this.notificationType = Objects.requireNonNull(notificationType, "expected parameter 'notificationType' to be non-null");
-        this.topicArn = topicArn;
-    }
+    private IdentityNotificationTopicArgs() {}
 
-    private IdentityNotificationTopicArgs() {
-        this.identity = Codegen.empty();
-        this.includeOriginalHeaders = Codegen.empty();
-        this.notificationType = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private IdentityNotificationTopicArgs(IdentityNotificationTopicArgs $) {
+        this.identity = $.identity;
+        this.includeOriginalHeaders = $.includeOriginalHeaders;
+        this.notificationType = $.notificationType;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityNotificationTopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> identity;
-        private @Nullable Output<Boolean> includeOriginalHeaders;
-        private Output<String> notificationType;
-        private @Nullable Output<String> topicArn;
+        private IdentityNotificationTopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityNotificationTopicArgs();
         }
 
         public Builder(IdentityNotificationTopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.includeOriginalHeaders = defaults.includeOriginalHeaders;
-    	      this.notificationType = defaults.notificationType;
-    	      this.topicArn = defaults.topicArn;
+            $ = new IdentityNotificationTopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(Output<String> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(String identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
+            return identity(Output.of(identity));
         }
+
         public Builder includeOriginalHeaders(@Nullable Output<Boolean> includeOriginalHeaders) {
-            this.includeOriginalHeaders = includeOriginalHeaders;
+            $.includeOriginalHeaders = includeOriginalHeaders;
             return this;
         }
-        public Builder includeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
-            this.includeOriginalHeaders = Codegen.ofNullable(includeOriginalHeaders);
-            return this;
+
+        public Builder includeOriginalHeaders(Boolean includeOriginalHeaders) {
+            return includeOriginalHeaders(Output.of(includeOriginalHeaders));
         }
+
         public Builder notificationType(Output<String> notificationType) {
-            this.notificationType = Objects.requireNonNull(notificationType);
+            $.notificationType = notificationType;
             return this;
         }
+
         public Builder notificationType(String notificationType) {
-            this.notificationType = Output.of(Objects.requireNonNull(notificationType));
-            return this;
+            return notificationType(Output.of(notificationType));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public IdentityNotificationTopicArgs build() {
-            return new IdentityNotificationTopicArgs(identity, includeOriginalHeaders, notificationType, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public IdentityNotificationTopicArgs build() {
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.notificationType = Objects.requireNonNull($.notificationType, "expected parameter 'notificationType' to be non-null");
+            return $;
         }
     }
+
 }

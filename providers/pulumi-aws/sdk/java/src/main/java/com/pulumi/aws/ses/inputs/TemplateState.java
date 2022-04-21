@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="html")
-      private final @Nullable Output<String> html;
+    private @Nullable Output<String> html;
 
-    public Output<String> html() {
-        return this.html == null ? Codegen.empty() : this.html;
+    public Optional<Output<String>> html() {
+        return Optional.ofNullable(this.html);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subject")
-      private final @Nullable Output<String> subject;
+    private @Nullable Output<String> subject;
 
-    public Output<String> subject() {
-        return this.subject == null ? Codegen.empty() : this.subject;
+    public Optional<Output<String>> subject() {
+        return Optional.ofNullable(this.subject);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class TemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public TemplateState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> html,
-        @Nullable Output<String> name,
-        @Nullable Output<String> subject,
-        @Nullable Output<String> text) {
-        this.arn = arn;
-        this.html = html;
-        this.name = name;
-        this.subject = subject;
-        this.text = text;
-    }
+    private TemplateState() {}
 
-    private TemplateState() {
-        this.arn = Codegen.empty();
-        this.html = Codegen.empty();
-        this.name = Codegen.empty();
-        this.subject = Codegen.empty();
-        this.text = Codegen.empty();
+    private TemplateState(TemplateState $) {
+        this.arn = $.arn;
+        this.html = $.html;
+        this.name = $.name;
+        this.subject = $.subject;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> html;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> subject;
-        private @Nullable Output<String> text;
+        private TemplateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateState();
         }
 
         public Builder(TemplateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.html = defaults.html;
-    	      this.name = defaults.name;
-    	      this.subject = defaults.subject;
-    	      this.text = defaults.text;
+            $ = new TemplateState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder html(@Nullable Output<String> html) {
-            this.html = html;
+            $.html = html;
             return this;
         }
-        public Builder html(@Nullable String html) {
-            this.html = Codegen.ofNullable(html);
-            return this;
+
+        public Builder html(String html) {
+            return html(Output.of(html));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder subject(@Nullable Output<String> subject) {
-            this.subject = subject;
+            $.subject = subject;
             return this;
         }
-        public Builder subject(@Nullable String subject) {
-            this.subject = Codegen.ofNullable(subject);
-            return this;
+
+        public Builder subject(String subject) {
+            return subject(Output.of(subject));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public TemplateState build() {
-            return new TemplateState(arn, html, name, subject, text);
+
+        public Builder text(String text) {
+            return text(Output.of(text));
+        }
+
+        public TemplateState build() {
+            return $;
         }
     }
+
 }

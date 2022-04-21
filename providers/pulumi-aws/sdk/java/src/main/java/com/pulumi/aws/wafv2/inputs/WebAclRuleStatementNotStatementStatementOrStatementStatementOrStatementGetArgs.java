@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
      * 
      */
     @Import(name="statements", required=true)
-      private final Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements;
+    private Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements;
 
     public Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 
-    public WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs(Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs() {}
 
-    private WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs() {
-        this.statements = Codegen.empty();
+    private WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs(WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements;
+        private WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs();
         }
 
         public Builder(WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs> statements) {
-            this.statements = Output.of(Objects.requireNonNull(statements));
-            return this;
+            return statements(Output.of(statements));
         }
+
         public Builder statements(WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
-        }        public WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs build() {
-            return new WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs(statements);
+        }
+
+        public WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementGetArgs build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

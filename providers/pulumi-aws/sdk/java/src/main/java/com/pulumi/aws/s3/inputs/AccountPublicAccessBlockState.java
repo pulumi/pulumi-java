@@ -5,10 +5,10 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccountPublicAccessBlockState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AccountPublicAccessBlockState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="blockPublicAcls")
-      private final @Nullable Output<Boolean> blockPublicAcls;
+    private @Nullable Output<Boolean> blockPublicAcls;
 
-    public Output<Boolean> blockPublicAcls() {
-        return this.blockPublicAcls == null ? Codegen.empty() : this.blockPublicAcls;
+    public Optional<Output<Boolean>> blockPublicAcls() {
+        return Optional.ofNullable(this.blockPublicAcls);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AccountPublicAccessBlockState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="blockPublicPolicy")
-      private final @Nullable Output<Boolean> blockPublicPolicy;
+    private @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Output<Boolean> blockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
+    public Optional<Output<Boolean>> blockPublicPolicy() {
+        return Optional.ofNullable(this.blockPublicPolicy);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AccountPublicAccessBlockState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ignorePublicAcls")
-      private final @Nullable Output<Boolean> ignorePublicAcls;
+    private @Nullable Output<Boolean> ignorePublicAcls;
 
-    public Output<Boolean> ignorePublicAcls() {
-        return this.ignorePublicAcls == null ? Codegen.empty() : this.ignorePublicAcls;
+    public Optional<Output<Boolean>> ignorePublicAcls() {
+        return Optional.ofNullable(this.ignorePublicAcls);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class AccountPublicAccessBlockState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="restrictPublicBuckets")
-      private final @Nullable Output<Boolean> restrictPublicBuckets;
+    private @Nullable Output<Boolean> restrictPublicBuckets;
 
-    public Output<Boolean> restrictPublicBuckets() {
-        return this.restrictPublicBuckets == null ? Codegen.empty() : this.restrictPublicBuckets;
+    public Optional<Output<Boolean>> restrictPublicBuckets() {
+        return Optional.ofNullable(this.restrictPublicBuckets);
     }
 
-    public AccountPublicAccessBlockState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<Boolean> blockPublicAcls,
-        @Nullable Output<Boolean> blockPublicPolicy,
-        @Nullable Output<Boolean> ignorePublicAcls,
-        @Nullable Output<Boolean> restrictPublicBuckets) {
-        this.accountId = accountId;
-        this.blockPublicAcls = blockPublicAcls;
-        this.blockPublicPolicy = blockPublicPolicy;
-        this.ignorePublicAcls = ignorePublicAcls;
-        this.restrictPublicBuckets = restrictPublicBuckets;
-    }
+    private AccountPublicAccessBlockState() {}
 
-    private AccountPublicAccessBlockState() {
-        this.accountId = Codegen.empty();
-        this.blockPublicAcls = Codegen.empty();
-        this.blockPublicPolicy = Codegen.empty();
-        this.ignorePublicAcls = Codegen.empty();
-        this.restrictPublicBuckets = Codegen.empty();
+    private AccountPublicAccessBlockState(AccountPublicAccessBlockState $) {
+        this.accountId = $.accountId;
+        this.blockPublicAcls = $.blockPublicAcls;
+        this.blockPublicPolicy = $.blockPublicPolicy;
+        this.ignorePublicAcls = $.ignorePublicAcls;
+        this.restrictPublicBuckets = $.restrictPublicBuckets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountPublicAccessBlockState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<Boolean> blockPublicAcls;
-        private @Nullable Output<Boolean> blockPublicPolicy;
-        private @Nullable Output<Boolean> ignorePublicAcls;
-        private @Nullable Output<Boolean> restrictPublicBuckets;
+        private AccountPublicAccessBlockState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountPublicAccessBlockState();
         }
 
         public Builder(AccountPublicAccessBlockState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.blockPublicAcls = defaults.blockPublicAcls;
-    	      this.blockPublicPolicy = defaults.blockPublicPolicy;
-    	      this.ignorePublicAcls = defaults.ignorePublicAcls;
-    	      this.restrictPublicBuckets = defaults.restrictPublicBuckets;
+            $ = new AccountPublicAccessBlockState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder blockPublicAcls(@Nullable Output<Boolean> blockPublicAcls) {
-            this.blockPublicAcls = blockPublicAcls;
+            $.blockPublicAcls = blockPublicAcls;
             return this;
         }
-        public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
-            this.blockPublicAcls = Codegen.ofNullable(blockPublicAcls);
-            return this;
+
+        public Builder blockPublicAcls(Boolean blockPublicAcls) {
+            return blockPublicAcls(Output.of(blockPublicAcls));
         }
+
         public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
-            this.blockPublicPolicy = blockPublicPolicy;
+            $.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-        public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Codegen.ofNullable(blockPublicPolicy);
-            return this;
+
+        public Builder blockPublicPolicy(Boolean blockPublicPolicy) {
+            return blockPublicPolicy(Output.of(blockPublicPolicy));
         }
+
         public Builder ignorePublicAcls(@Nullable Output<Boolean> ignorePublicAcls) {
-            this.ignorePublicAcls = ignorePublicAcls;
+            $.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
-        public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
-            this.ignorePublicAcls = Codegen.ofNullable(ignorePublicAcls);
-            return this;
+
+        public Builder ignorePublicAcls(Boolean ignorePublicAcls) {
+            return ignorePublicAcls(Output.of(ignorePublicAcls));
         }
+
         public Builder restrictPublicBuckets(@Nullable Output<Boolean> restrictPublicBuckets) {
-            this.restrictPublicBuckets = restrictPublicBuckets;
+            $.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-        public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
-            this.restrictPublicBuckets = Codegen.ofNullable(restrictPublicBuckets);
-            return this;
-        }        public AccountPublicAccessBlockState build() {
-            return new AccountPublicAccessBlockState(accountId, blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
+
+        public Builder restrictPublicBuckets(Boolean restrictPublicBuckets) {
+            return restrictPublicBuckets(Output.of(restrictPublicBuckets));
+        }
+
+        public AccountPublicAccessBlockState build() {
+            return $;
         }
     }
+
 }

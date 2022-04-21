@@ -5,9 +5,9 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="controlStatus", required=true)
-      private final Output<String> controlStatus;
+    private Output<String> controlStatus;
 
     public Output<String> controlStatus() {
         return this.controlStatus;
@@ -31,10 +31,10 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disabledReason")
-      private final @Nullable Output<String> disabledReason;
+    private @Nullable Output<String> disabledReason;
 
-    public Output<String> disabledReason() {
-        return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
+    public Optional<Output<String>> disabledReason() {
+        return Optional.ofNullable(this.disabledReason);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="standardsControlArn", required=true)
-      private final Output<String> standardsControlArn;
+    private Output<String> standardsControlArn;
 
     public Output<String> standardsControlArn() {
         return this.standardsControlArn;
     }
 
-    public StandardsControlArgs(
-        Output<String> controlStatus,
-        @Nullable Output<String> disabledReason,
-        Output<String> standardsControlArn) {
-        this.controlStatus = Objects.requireNonNull(controlStatus, "expected parameter 'controlStatus' to be non-null");
-        this.disabledReason = disabledReason;
-        this.standardsControlArn = Objects.requireNonNull(standardsControlArn, "expected parameter 'standardsControlArn' to be non-null");
-    }
+    private StandardsControlArgs() {}
 
-    private StandardsControlArgs() {
-        this.controlStatus = Codegen.empty();
-        this.disabledReason = Codegen.empty();
-        this.standardsControlArn = Codegen.empty();
+    private StandardsControlArgs(StandardsControlArgs $) {
+        this.controlStatus = $.controlStatus;
+        this.disabledReason = $.disabledReason;
+        this.standardsControlArn = $.standardsControlArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardsControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> controlStatus;
-        private @Nullable Output<String> disabledReason;
-        private Output<String> standardsControlArn;
+        private StandardsControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardsControlArgs();
         }
 
         public Builder(StandardsControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controlStatus = defaults.controlStatus;
-    	      this.disabledReason = defaults.disabledReason;
-    	      this.standardsControlArn = defaults.standardsControlArn;
+            $ = new StandardsControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder controlStatus(Output<String> controlStatus) {
-            this.controlStatus = Objects.requireNonNull(controlStatus);
+            $.controlStatus = controlStatus;
             return this;
         }
+
         public Builder controlStatus(String controlStatus) {
-            this.controlStatus = Output.of(Objects.requireNonNull(controlStatus));
-            return this;
+            return controlStatus(Output.of(controlStatus));
         }
+
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
-            this.disabledReason = disabledReason;
+            $.disabledReason = disabledReason;
             return this;
         }
-        public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Codegen.ofNullable(disabledReason);
-            return this;
+
+        public Builder disabledReason(String disabledReason) {
+            return disabledReason(Output.of(disabledReason));
         }
+
         public Builder standardsControlArn(Output<String> standardsControlArn) {
-            this.standardsControlArn = Objects.requireNonNull(standardsControlArn);
+            $.standardsControlArn = standardsControlArn;
             return this;
         }
+
         public Builder standardsControlArn(String standardsControlArn) {
-            this.standardsControlArn = Output.of(Objects.requireNonNull(standardsControlArn));
-            return this;
-        }        public StandardsControlArgs build() {
-            return new StandardsControlArgs(controlStatus, disabledReason, standardsControlArn);
+            return standardsControlArn(Output.of(standardsControlArn));
+        }
+
+        public StandardsControlArgs build() {
+            $.controlStatus = Objects.requireNonNull($.controlStatus, "expected parameter 'controlStatus' to be non-null");
+            $.standardsControlArn = Objects.requireNonNull($.standardsControlArn, "expected parameter 'standardsControlArn' to be non-null");
+            return $;
         }
     }
+
 }

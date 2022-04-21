@@ -5,10 +5,10 @@ package com.pulumi.aws.applicationloadbalancing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class LoadBalancerAccessLogsGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -32,10 +32,10 @@ public final class LoadBalancerAccessLogsGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class LoadBalancerAccessLogsGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public LoadBalancerAccessLogsGetArgs(
-        Output<String> bucket,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> prefix) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.enabled = enabled;
-        this.prefix = prefix;
-    }
+    private LoadBalancerAccessLogsGetArgs() {}
 
-    private LoadBalancerAccessLogsGetArgs() {
-        this.bucket = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private LoadBalancerAccessLogsGetArgs(LoadBalancerAccessLogsGetArgs $) {
+        this.bucket = $.bucket;
+        this.enabled = $.enabled;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerAccessLogsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> prefix;
+        private LoadBalancerAccessLogsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerAccessLogsGetArgs();
         }
 
         public Builder(LoadBalancerAccessLogsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.enabled = defaults.enabled;
-    	      this.prefix = defaults.prefix;
+            $ = new LoadBalancerAccessLogsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public LoadBalancerAccessLogsGetArgs build() {
-            return new LoadBalancerAccessLogsGetArgs(bucket, enabled, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public LoadBalancerAccessLogsGetArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

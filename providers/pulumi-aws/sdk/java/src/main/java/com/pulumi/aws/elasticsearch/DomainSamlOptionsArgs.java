@@ -6,9 +6,9 @@ package com.pulumi.aws.elasticsearch;
 import com.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DomainSamlOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -32,63 +32,59 @@ public final class DomainSamlOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="samlOptions")
-      private final @Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions;
+    private @Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions;
 
-    public Output<DomainSamlOptionsSamlOptionsArgs> samlOptions() {
-        return this.samlOptions == null ? Codegen.empty() : this.samlOptions;
+    public Optional<Output<DomainSamlOptionsSamlOptionsArgs>> samlOptions() {
+        return Optional.ofNullable(this.samlOptions);
     }
 
-    public DomainSamlOptionsArgs(
-        Output<String> domainName,
-        @Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.samlOptions = samlOptions;
-    }
+    private DomainSamlOptionsArgs() {}
 
-    private DomainSamlOptionsArgs() {
-        this.domainName = Codegen.empty();
-        this.samlOptions = Codegen.empty();
+    private DomainSamlOptionsArgs(DomainSamlOptionsArgs $) {
+        this.domainName = $.domainName;
+        this.samlOptions = $.samlOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSamlOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainName;
-        private @Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions;
+        private DomainSamlOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSamlOptionsArgs();
         }
 
         public Builder(DomainSamlOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.samlOptions = defaults.samlOptions;
+            $ = new DomainSamlOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions) {
-            this.samlOptions = samlOptions;
+            $.samlOptions = samlOptions;
             return this;
         }
-        public Builder samlOptions(@Nullable DomainSamlOptionsSamlOptionsArgs samlOptions) {
-            this.samlOptions = Codegen.ofNullable(samlOptions);
-            return this;
-        }        public DomainSamlOptionsArgs build() {
-            return new DomainSamlOptionsArgs(domainName, samlOptions);
+
+        public Builder samlOptions(DomainSamlOptionsSamlOptionsArgs samlOptions) {
+            return samlOptions(Output.of(samlOptions));
+        }
+
+        public DomainSamlOptionsArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

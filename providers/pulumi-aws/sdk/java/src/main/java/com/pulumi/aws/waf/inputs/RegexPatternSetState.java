@@ -5,10 +5,10 @@ package com.pulumi.aws.waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,79 +43,72 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="regexPatternStrings")
-      private final @Nullable Output<List<String>> regexPatternStrings;
+    private @Nullable Output<List<String>> regexPatternStrings;
 
-    public Output<List<String>> regexPatternStrings() {
-        return this.regexPatternStrings == null ? Codegen.empty() : this.regexPatternStrings;
+    public Optional<Output<List<String>>> regexPatternStrings() {
+        return Optional.ofNullable(this.regexPatternStrings);
     }
 
-    public RegexPatternSetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> regexPatternStrings) {
-        this.arn = arn;
-        this.name = name;
-        this.regexPatternStrings = regexPatternStrings;
-    }
+    private RegexPatternSetState() {}
 
-    private RegexPatternSetState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.regexPatternStrings = Codegen.empty();
+    private RegexPatternSetState(RegexPatternSetState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.regexPatternStrings = $.regexPatternStrings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegexPatternSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> regexPatternStrings;
+        private RegexPatternSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegexPatternSetState();
         }
 
         public Builder(RegexPatternSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.regexPatternStrings = defaults.regexPatternStrings;
+            $ = new RegexPatternSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder regexPatternStrings(@Nullable Output<List<String>> regexPatternStrings) {
-            this.regexPatternStrings = regexPatternStrings;
+            $.regexPatternStrings = regexPatternStrings;
             return this;
         }
-        public Builder regexPatternStrings(@Nullable List<String> regexPatternStrings) {
-            this.regexPatternStrings = Codegen.ofNullable(regexPatternStrings);
-            return this;
+
+        public Builder regexPatternStrings(List<String> regexPatternStrings) {
+            return regexPatternStrings(Output.of(regexPatternStrings));
         }
+
         public Builder regexPatternStrings(String... regexPatternStrings) {
             return regexPatternStrings(List.of(regexPatternStrings));
-        }        public RegexPatternSetState build() {
-            return new RegexPatternSetState(arn, name, regexPatternStrings);
+        }
+
+        public RegexPatternSetState build() {
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @Import(name="modeBlock", required=true)
-      private final Boolean modeBlock;
+    private Boolean modeBlock;
 
     public Boolean modeBlock() {
         return this.modeBlock;
@@ -29,7 +29,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
@@ -40,7 +40,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @Import(name="protection", required=true)
-      private final Boolean protection;
+    private Boolean protection;
 
     public Boolean protection() {
         return this.protection;
@@ -51,73 +51,66 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @Import(name="reportUri", required=true)
-      private final String reportUri;
+    private String reportUri;
 
     public String reportUri() {
         return this.reportUri;
     }
 
-    public GetResponseHeadersPolicySecurityHeadersConfigXssProtection(
-        Boolean modeBlock,
-        Boolean override,
-        Boolean protection,
-        String reportUri) {
-        this.modeBlock = Objects.requireNonNull(modeBlock, "expected parameter 'modeBlock' to be non-null");
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-        this.protection = Objects.requireNonNull(protection, "expected parameter 'protection' to be non-null");
-        this.reportUri = Objects.requireNonNull(reportUri, "expected parameter 'reportUri' to be non-null");
-    }
+    private GetResponseHeadersPolicySecurityHeadersConfigXssProtection() {}
 
-    private GetResponseHeadersPolicySecurityHeadersConfigXssProtection() {
-        this.modeBlock = null;
-        this.override = null;
-        this.protection = null;
-        this.reportUri = null;
+    private GetResponseHeadersPolicySecurityHeadersConfigXssProtection(GetResponseHeadersPolicySecurityHeadersConfigXssProtection $) {
+        this.modeBlock = $.modeBlock;
+        this.override = $.override;
+        this.protection = $.protection;
+        this.reportUri = $.reportUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicySecurityHeadersConfigXssProtection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean modeBlock;
-        private Boolean override;
-        private Boolean protection;
-        private String reportUri;
+        private GetResponseHeadersPolicySecurityHeadersConfigXssProtection $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigXssProtection();
         }
 
         public Builder(GetResponseHeadersPolicySecurityHeadersConfigXssProtection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modeBlock = defaults.modeBlock;
-    	      this.override = defaults.override;
-    	      this.protection = defaults.protection;
-    	      this.reportUri = defaults.reportUri;
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigXssProtection(Objects.requireNonNull(defaults));
         }
 
         public Builder modeBlock(Boolean modeBlock) {
-            this.modeBlock = Objects.requireNonNull(modeBlock);
+            $.modeBlock = modeBlock;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder protection(Boolean protection) {
-            this.protection = Objects.requireNonNull(protection);
+            $.protection = protection;
             return this;
         }
+
         public Builder reportUri(String reportUri) {
-            this.reportUri = Objects.requireNonNull(reportUri);
+            $.reportUri = reportUri;
             return this;
-        }        public GetResponseHeadersPolicySecurityHeadersConfigXssProtection build() {
-            return new GetResponseHeadersPolicySecurityHeadersConfigXssProtection(modeBlock, override, protection, reportUri);
+        }
+
+        public GetResponseHeadersPolicySecurityHeadersConfigXssProtection build() {
+            $.modeBlock = Objects.requireNonNull($.modeBlock, "expected parameter 'modeBlock' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            $.protection = Objects.requireNonNull($.protection, "expected parameter 'protection' to be non-null");
+            $.reportUri = Objects.requireNonNull($.reportUri, "expected parameter 'reportUri' to be non-null");
+            return $;
         }
     }
+
 }

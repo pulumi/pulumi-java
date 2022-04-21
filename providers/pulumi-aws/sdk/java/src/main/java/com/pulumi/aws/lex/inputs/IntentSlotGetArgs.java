@@ -6,11 +6,11 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.IntentSlotValueElicitationPromptGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,10 +48,10 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseCard")
-      private final @Nullable Output<String> responseCard;
+    private @Nullable Output<String> responseCard;
 
-    public Output<String> responseCard() {
-        return this.responseCard == null ? Codegen.empty() : this.responseCard;
+    public Optional<Output<String>> responseCard() {
+        return Optional.ofNullable(this.responseCard);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sampleUtterances")
-      private final @Nullable Output<List<String>> sampleUtterances;
+    private @Nullable Output<List<String>> sampleUtterances;
 
-    public Output<List<String>> sampleUtterances() {
-        return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
+    public Optional<Output<List<String>>> sampleUtterances() {
+        return Optional.ofNullable(this.sampleUtterances);
     }
 
     /**
@@ -85,7 +85,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slotConstraint", required=true)
-      private final Output<String> slotConstraint;
+    private Output<String> slotConstraint;
 
     public Output<String> slotConstraint() {
         return this.slotConstraint;
@@ -97,7 +97,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slotType", required=true)
-      private final Output<String> slotType;
+    private Output<String> slotType;
 
     public Output<String> slotType() {
         return this.slotType;
@@ -108,10 +108,10 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slotTypeVersion")
-      private final @Nullable Output<String> slotTypeVersion;
+    private @Nullable Output<String> slotTypeVersion;
 
-    public Output<String> slotTypeVersion() {
-        return this.slotTypeVersion == null ? Codegen.empty() : this.slotTypeVersion;
+    public Optional<Output<String>> slotTypeVersion() {
+        return Optional.ofNullable(this.slotTypeVersion);
     }
 
     /**
@@ -120,157 +120,135 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valueElicitationPrompt")
-      private final @Nullable Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt;
+    private @Nullable Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt;
 
-    public Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt() {
-        return this.valueElicitationPrompt == null ? Codegen.empty() : this.valueElicitationPrompt;
+    public Optional<Output<IntentSlotValueElicitationPromptGetArgs>> valueElicitationPrompt() {
+        return Optional.ofNullable(this.valueElicitationPrompt);
     }
 
-    public IntentSlotGetArgs(
-        @Nullable Output<String> description,
-        Output<String> name,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> responseCard,
-        @Nullable Output<List<String>> sampleUtterances,
-        Output<String> slotConstraint,
-        Output<String> slotType,
-        @Nullable Output<String> slotTypeVersion,
-        @Nullable Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt) {
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = priority;
-        this.responseCard = responseCard;
-        this.sampleUtterances = sampleUtterances;
-        this.slotConstraint = Objects.requireNonNull(slotConstraint, "expected parameter 'slotConstraint' to be non-null");
-        this.slotType = Objects.requireNonNull(slotType, "expected parameter 'slotType' to be non-null");
-        this.slotTypeVersion = slotTypeVersion;
-        this.valueElicitationPrompt = valueElicitationPrompt;
-    }
+    private IntentSlotGetArgs() {}
 
-    private IntentSlotGetArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.responseCard = Codegen.empty();
-        this.sampleUtterances = Codegen.empty();
-        this.slotConstraint = Codegen.empty();
-        this.slotType = Codegen.empty();
-        this.slotTypeVersion = Codegen.empty();
-        this.valueElicitationPrompt = Codegen.empty();
+    private IntentSlotGetArgs(IntentSlotGetArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.responseCard = $.responseCard;
+        this.sampleUtterances = $.sampleUtterances;
+        this.slotConstraint = $.slotConstraint;
+        this.slotType = $.slotType;
+        this.slotTypeVersion = $.slotTypeVersion;
+        this.valueElicitationPrompt = $.valueElicitationPrompt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentSlotGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> responseCard;
-        private @Nullable Output<List<String>> sampleUtterances;
-        private Output<String> slotConstraint;
-        private Output<String> slotType;
-        private @Nullable Output<String> slotTypeVersion;
-        private @Nullable Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt;
+        private IntentSlotGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentSlotGetArgs();
         }
 
         public Builder(IntentSlotGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.responseCard = defaults.responseCard;
-    	      this.sampleUtterances = defaults.sampleUtterances;
-    	      this.slotConstraint = defaults.slotConstraint;
-    	      this.slotType = defaults.slotType;
-    	      this.slotTypeVersion = defaults.slotTypeVersion;
-    	      this.valueElicitationPrompt = defaults.valueElicitationPrompt;
+            $ = new IntentSlotGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder responseCard(@Nullable Output<String> responseCard) {
-            this.responseCard = responseCard;
+            $.responseCard = responseCard;
             return this;
         }
-        public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Codegen.ofNullable(responseCard);
-            return this;
+
+        public Builder responseCard(String responseCard) {
+            return responseCard(Output.of(responseCard));
         }
+
         public Builder sampleUtterances(@Nullable Output<List<String>> sampleUtterances) {
-            this.sampleUtterances = sampleUtterances;
+            $.sampleUtterances = sampleUtterances;
             return this;
         }
-        public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
-            this.sampleUtterances = Codegen.ofNullable(sampleUtterances);
-            return this;
+
+        public Builder sampleUtterances(List<String> sampleUtterances) {
+            return sampleUtterances(Output.of(sampleUtterances));
         }
+
         public Builder sampleUtterances(String... sampleUtterances) {
             return sampleUtterances(List.of(sampleUtterances));
         }
+
         public Builder slotConstraint(Output<String> slotConstraint) {
-            this.slotConstraint = Objects.requireNonNull(slotConstraint);
+            $.slotConstraint = slotConstraint;
             return this;
         }
+
         public Builder slotConstraint(String slotConstraint) {
-            this.slotConstraint = Output.of(Objects.requireNonNull(slotConstraint));
-            return this;
+            return slotConstraint(Output.of(slotConstraint));
         }
+
         public Builder slotType(Output<String> slotType) {
-            this.slotType = Objects.requireNonNull(slotType);
+            $.slotType = slotType;
             return this;
         }
+
         public Builder slotType(String slotType) {
-            this.slotType = Output.of(Objects.requireNonNull(slotType));
-            return this;
+            return slotType(Output.of(slotType));
         }
+
         public Builder slotTypeVersion(@Nullable Output<String> slotTypeVersion) {
-            this.slotTypeVersion = slotTypeVersion;
+            $.slotTypeVersion = slotTypeVersion;
             return this;
         }
-        public Builder slotTypeVersion(@Nullable String slotTypeVersion) {
-            this.slotTypeVersion = Codegen.ofNullable(slotTypeVersion);
-            return this;
+
+        public Builder slotTypeVersion(String slotTypeVersion) {
+            return slotTypeVersion(Output.of(slotTypeVersion));
         }
+
         public Builder valueElicitationPrompt(@Nullable Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt) {
-            this.valueElicitationPrompt = valueElicitationPrompt;
+            $.valueElicitationPrompt = valueElicitationPrompt;
             return this;
         }
-        public Builder valueElicitationPrompt(@Nullable IntentSlotValueElicitationPromptGetArgs valueElicitationPrompt) {
-            this.valueElicitationPrompt = Codegen.ofNullable(valueElicitationPrompt);
-            return this;
-        }        public IntentSlotGetArgs build() {
-            return new IntentSlotGetArgs(description, name, priority, responseCard, sampleUtterances, slotConstraint, slotType, slotTypeVersion, valueElicitationPrompt);
+
+        public Builder valueElicitationPrompt(IntentSlotValueElicitationPromptGetArgs valueElicitationPrompt) {
+            return valueElicitationPrompt(Output.of(valueElicitationPrompt));
+        }
+
+        public IntentSlotGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.slotConstraint = Objects.requireNonNull($.slotConstraint, "expected parameter 'slotConstraint' to be non-null");
+            $.slotType = Objects.requireNonNull($.slotType, "expected parameter 'slotType' to be non-null");
+            return $;
         }
     }
+
 }

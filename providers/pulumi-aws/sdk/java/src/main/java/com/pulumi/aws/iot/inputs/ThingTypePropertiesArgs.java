@@ -5,10 +5,10 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ThingTypePropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class ThingTypePropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="searchableAttributes")
-      private final @Nullable Output<List<String>> searchableAttributes;
+    private @Nullable Output<List<String>> searchableAttributes;
 
-    public Output<List<String>> searchableAttributes() {
-        return this.searchableAttributes == null ? Codegen.empty() : this.searchableAttributes;
+    public Optional<Output<List<String>>> searchableAttributes() {
+        return Optional.ofNullable(this.searchableAttributes);
     }
 
-    public ThingTypePropertiesArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> searchableAttributes) {
-        this.description = description;
-        this.searchableAttributes = searchableAttributes;
-    }
+    private ThingTypePropertiesArgs() {}
 
-    private ThingTypePropertiesArgs() {
-        this.description = Codegen.empty();
-        this.searchableAttributes = Codegen.empty();
+    private ThingTypePropertiesArgs(ThingTypePropertiesArgs $) {
+        this.description = $.description;
+        this.searchableAttributes = $.searchableAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingTypePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> searchableAttributes;
+        private ThingTypePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingTypePropertiesArgs();
         }
 
         public Builder(ThingTypePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.searchableAttributes = defaults.searchableAttributes;
+            $ = new ThingTypePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder searchableAttributes(@Nullable Output<List<String>> searchableAttributes) {
-            this.searchableAttributes = searchableAttributes;
+            $.searchableAttributes = searchableAttributes;
             return this;
         }
-        public Builder searchableAttributes(@Nullable List<String> searchableAttributes) {
-            this.searchableAttributes = Codegen.ofNullable(searchableAttributes);
-            return this;
+
+        public Builder searchableAttributes(List<String> searchableAttributes) {
+            return searchableAttributes(Output.of(searchableAttributes));
         }
+
         public Builder searchableAttributes(String... searchableAttributes) {
             return searchableAttributes(List.of(searchableAttributes));
-        }        public ThingTypePropertiesArgs build() {
-            return new ThingTypePropertiesArgs(description, searchableAttributes);
+        }
+
+        public ThingTypePropertiesArgs build() {
+            return $;
         }
     }
+
 }

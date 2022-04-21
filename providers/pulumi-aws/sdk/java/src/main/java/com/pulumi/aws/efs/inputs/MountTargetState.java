@@ -5,10 +5,10 @@ package com.pulumi.aws.efs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZoneId")
-      private final @Nullable Output<String> availabilityZoneId;
+    private @Nullable Output<String> availabilityZoneId;
 
-    public Output<String> availabilityZoneId() {
-        return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
+    public Optional<Output<String>> availabilityZoneId() {
+        return Optional.ofNullable(this.availabilityZoneId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZoneName")
-      private final @Nullable Output<String> availabilityZoneName;
+    private @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> availabilityZoneName() {
-        return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
+    public Optional<Output<String>> availabilityZoneName() {
+        return Optional.ofNullable(this.availabilityZoneName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemArn")
-      private final @Nullable Output<String> fileSystemArn;
+    private @Nullable Output<String> fileSystemArn;
 
-    public Output<String> fileSystemArn() {
-        return this.fileSystemArn == null ? Codegen.empty() : this.fileSystemArn;
+    public Optional<Output<String>> fileSystemArn() {
+        return Optional.ofNullable(this.fileSystemArn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable Output<String> fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
-    public Output<String> fileSystemId() {
-        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
+    public Optional<Output<String>> fileSystemId() {
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountTargetDnsName")
-      private final @Nullable Output<String> mountTargetDnsName;
+    private @Nullable Output<String> mountTargetDnsName;
 
-    public Output<String> mountTargetDnsName() {
-        return this.mountTargetDnsName == null ? Codegen.empty() : this.mountTargetDnsName;
+    public Optional<Output<String>> mountTargetDnsName() {
+        return Optional.ofNullable(this.mountTargetDnsName);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -133,183 +133,152 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public MountTargetState(
-        @Nullable Output<String> availabilityZoneId,
-        @Nullable Output<String> availabilityZoneName,
-        @Nullable Output<String> dnsName,
-        @Nullable Output<String> fileSystemArn,
-        @Nullable Output<String> fileSystemId,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> mountTargetDnsName,
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<String> subnetId) {
-        this.availabilityZoneId = availabilityZoneId;
-        this.availabilityZoneName = availabilityZoneName;
-        this.dnsName = dnsName;
-        this.fileSystemArn = fileSystemArn;
-        this.fileSystemId = fileSystemId;
-        this.ipAddress = ipAddress;
-        this.mountTargetDnsName = mountTargetDnsName;
-        this.networkInterfaceId = networkInterfaceId;
-        this.ownerId = ownerId;
-        this.securityGroups = securityGroups;
-        this.subnetId = subnetId;
-    }
+    private MountTargetState() {}
 
-    private MountTargetState() {
-        this.availabilityZoneId = Codegen.empty();
-        this.availabilityZoneName = Codegen.empty();
-        this.dnsName = Codegen.empty();
-        this.fileSystemArn = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.mountTargetDnsName = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private MountTargetState(MountTargetState $) {
+        this.availabilityZoneId = $.availabilityZoneId;
+        this.availabilityZoneName = $.availabilityZoneName;
+        this.dnsName = $.dnsName;
+        this.fileSystemArn = $.fileSystemArn;
+        this.fileSystemId = $.fileSystemId;
+        this.ipAddress = $.ipAddress;
+        this.mountTargetDnsName = $.mountTargetDnsName;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.ownerId = $.ownerId;
+        this.securityGroups = $.securityGroups;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MountTargetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZoneId;
-        private @Nullable Output<String> availabilityZoneName;
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<String> fileSystemArn;
-        private @Nullable Output<String> fileSystemId;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> mountTargetDnsName;
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<String> subnetId;
+        private MountTargetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MountTargetState();
         }
 
         public Builder(MountTargetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneId = defaults.availabilityZoneId;
-    	      this.availabilityZoneName = defaults.availabilityZoneName;
-    	      this.dnsName = defaults.dnsName;
-    	      this.fileSystemArn = defaults.fileSystemArn;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.mountTargetDnsName = defaults.mountTargetDnsName;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.ownerId = defaults.ownerId;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnetId = defaults.subnetId;
+            $ = new MountTargetState(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
-            this.availabilityZoneId = availabilityZoneId;
+            $.availabilityZoneId = availabilityZoneId;
             return this;
         }
-        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Codegen.ofNullable(availabilityZoneId);
-            return this;
+
+        public Builder availabilityZoneId(String availabilityZoneId) {
+            return availabilityZoneId(Output.of(availabilityZoneId));
         }
+
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
-            this.availabilityZoneName = availabilityZoneName;
+            $.availabilityZoneName = availabilityZoneName;
             return this;
         }
-        public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Codegen.ofNullable(availabilityZoneName);
-            return this;
+
+        public Builder availabilityZoneName(String availabilityZoneName) {
+            return availabilityZoneName(Output.of(availabilityZoneName));
         }
+
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
-            this.fileSystemArn = fileSystemArn;
+            $.fileSystemArn = fileSystemArn;
             return this;
         }
-        public Builder fileSystemArn(@Nullable String fileSystemArn) {
-            this.fileSystemArn = Codegen.ofNullable(fileSystemArn);
-            return this;
+
+        public Builder fileSystemArn(String fileSystemArn) {
+            return fileSystemArn(Output.of(fileSystemArn));
         }
+
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
-        public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Codegen.ofNullable(fileSystemId);
-            return this;
+
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder mountTargetDnsName(@Nullable Output<String> mountTargetDnsName) {
-            this.mountTargetDnsName = mountTargetDnsName;
+            $.mountTargetDnsName = mountTargetDnsName;
             return this;
         }
-        public Builder mountTargetDnsName(@Nullable String mountTargetDnsName) {
-            this.mountTargetDnsName = Codegen.ofNullable(mountTargetDnsName);
-            return this;
+
+        public Builder mountTargetDnsName(String mountTargetDnsName) {
+            return mountTargetDnsName(Output.of(mountTargetDnsName));
         }
+
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public MountTargetState build() {
-            return new MountTargetState(availabilityZoneId, availabilityZoneName, dnsName, fileSystemArn, fileSystemId, ipAddress, mountTargetDnsName, networkInterfaceId, ownerId, securityGroups, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public MountTargetState build() {
+            return $;
         }
     }
+
 }

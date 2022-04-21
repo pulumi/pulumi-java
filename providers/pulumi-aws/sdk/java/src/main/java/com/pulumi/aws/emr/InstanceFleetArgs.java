@@ -7,11 +7,11 @@ import com.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigArgs;
 import com.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class InstanceFleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterId", required=true)
-      private final Output<String> clusterId;
+    private Output<String> clusterId;
 
     public Output<String> clusterId() {
         return this.clusterId;
@@ -35,10 +35,10 @@ public final class InstanceFleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceTypeConfigs")
-      private final @Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
+    private @Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
 
-    public Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs() {
-        return this.instanceTypeConfigs == null ? Codegen.empty() : this.instanceTypeConfigs;
+    public Optional<Output<List<InstanceFleetInstanceTypeConfigArgs>>> instanceTypeConfigs() {
+        return Optional.ofNullable(this.instanceTypeConfigs);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceFleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchSpecifications")
-      private final @Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
+    private @Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
 
-    public Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications() {
-        return this.launchSpecifications == null ? Codegen.empty() : this.launchSpecifications;
+    public Optional<Output<InstanceFleetLaunchSpecificationsArgs>> launchSpecifications() {
+        return Optional.ofNullable(this.launchSpecifications);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceFleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceFleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetOnDemandCapacity")
-      private final @Nullable Output<Integer> targetOnDemandCapacity;
+    private @Nullable Output<Integer> targetOnDemandCapacity;
 
-    public Output<Integer> targetOnDemandCapacity() {
-        return this.targetOnDemandCapacity == null ? Codegen.empty() : this.targetOnDemandCapacity;
+    public Optional<Output<Integer>> targetOnDemandCapacity() {
+        return Optional.ofNullable(this.targetOnDemandCapacity);
     }
 
     /**
@@ -79,118 +79,103 @@ public final class InstanceFleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetSpotCapacity")
-      private final @Nullable Output<Integer> targetSpotCapacity;
+    private @Nullable Output<Integer> targetSpotCapacity;
 
-    public Output<Integer> targetSpotCapacity() {
-        return this.targetSpotCapacity == null ? Codegen.empty() : this.targetSpotCapacity;
+    public Optional<Output<Integer>> targetSpotCapacity() {
+        return Optional.ofNullable(this.targetSpotCapacity);
     }
 
-    public InstanceFleetArgs(
-        Output<String> clusterId,
-        @Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs,
-        @Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> targetOnDemandCapacity,
-        @Nullable Output<Integer> targetSpotCapacity) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.instanceTypeConfigs = instanceTypeConfigs;
-        this.launchSpecifications = launchSpecifications;
-        this.name = name;
-        this.targetOnDemandCapacity = targetOnDemandCapacity;
-        this.targetSpotCapacity = targetSpotCapacity;
-    }
+    private InstanceFleetArgs() {}
 
-    private InstanceFleetArgs() {
-        this.clusterId = Codegen.empty();
-        this.instanceTypeConfigs = Codegen.empty();
-        this.launchSpecifications = Codegen.empty();
-        this.name = Codegen.empty();
-        this.targetOnDemandCapacity = Codegen.empty();
-        this.targetSpotCapacity = Codegen.empty();
+    private InstanceFleetArgs(InstanceFleetArgs $) {
+        this.clusterId = $.clusterId;
+        this.instanceTypeConfigs = $.instanceTypeConfigs;
+        this.launchSpecifications = $.launchSpecifications;
+        this.name = $.name;
+        this.targetOnDemandCapacity = $.targetOnDemandCapacity;
+        this.targetSpotCapacity = $.targetSpotCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterId;
-        private @Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
-        private @Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> targetOnDemandCapacity;
-        private @Nullable Output<Integer> targetSpotCapacity;
+        private InstanceFleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFleetArgs();
         }
 
         public Builder(InstanceFleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.instanceTypeConfigs = defaults.instanceTypeConfigs;
-    	      this.launchSpecifications = defaults.launchSpecifications;
-    	      this.name = defaults.name;
-    	      this.targetOnDemandCapacity = defaults.targetOnDemandCapacity;
-    	      this.targetSpotCapacity = defaults.targetSpotCapacity;
+            $ = new InstanceFleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(Output<String> clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
-            return this;
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder instanceTypeConfigs(@Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs) {
-            this.instanceTypeConfigs = instanceTypeConfigs;
+            $.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
-        public Builder instanceTypeConfigs(@Nullable List<InstanceFleetInstanceTypeConfigArgs> instanceTypeConfigs) {
-            this.instanceTypeConfigs = Codegen.ofNullable(instanceTypeConfigs);
-            return this;
+
+        public Builder instanceTypeConfigs(List<InstanceFleetInstanceTypeConfigArgs> instanceTypeConfigs) {
+            return instanceTypeConfigs(Output.of(instanceTypeConfigs));
         }
+
         public Builder instanceTypeConfigs(InstanceFleetInstanceTypeConfigArgs... instanceTypeConfigs) {
             return instanceTypeConfigs(List.of(instanceTypeConfigs));
         }
+
         public Builder launchSpecifications(@Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications) {
-            this.launchSpecifications = launchSpecifications;
+            $.launchSpecifications = launchSpecifications;
             return this;
         }
-        public Builder launchSpecifications(@Nullable InstanceFleetLaunchSpecificationsArgs launchSpecifications) {
-            this.launchSpecifications = Codegen.ofNullable(launchSpecifications);
-            return this;
+
+        public Builder launchSpecifications(InstanceFleetLaunchSpecificationsArgs launchSpecifications) {
+            return launchSpecifications(Output.of(launchSpecifications));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder targetOnDemandCapacity(@Nullable Output<Integer> targetOnDemandCapacity) {
-            this.targetOnDemandCapacity = targetOnDemandCapacity;
+            $.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
-        public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
-            this.targetOnDemandCapacity = Codegen.ofNullable(targetOnDemandCapacity);
-            return this;
+
+        public Builder targetOnDemandCapacity(Integer targetOnDemandCapacity) {
+            return targetOnDemandCapacity(Output.of(targetOnDemandCapacity));
         }
+
         public Builder targetSpotCapacity(@Nullable Output<Integer> targetSpotCapacity) {
-            this.targetSpotCapacity = targetSpotCapacity;
+            $.targetSpotCapacity = targetSpotCapacity;
             return this;
         }
-        public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
-            this.targetSpotCapacity = Codegen.ofNullable(targetSpotCapacity);
-            return this;
-        }        public InstanceFleetArgs build() {
-            return new InstanceFleetArgs(clusterId, instanceTypeConfigs, launchSpecifications, name, targetOnDemandCapacity, targetSpotCapacity);
+
+        public Builder targetSpotCapacity(Integer targetSpotCapacity) {
+            return targetSpotCapacity(Output.of(targetSpotCapacity));
+        }
+
+        public InstanceFleetArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            return $;
         }
     }
+
 }

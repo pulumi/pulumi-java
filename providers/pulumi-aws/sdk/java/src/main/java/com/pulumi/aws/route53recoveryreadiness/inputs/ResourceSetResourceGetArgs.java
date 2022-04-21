@@ -6,10 +6,10 @@ package com.pulumi.aws.route53recoveryreadiness.inputs;
 import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ResourceSetResourceGetArgs extends com.pulumi.resources.Resou
     public static final ResourceSetResourceGetArgs Empty = new ResourceSetResourceGetArgs();
 
     @Import(name="componentId")
-      private final @Nullable Output<String> componentId;
+    private @Nullable Output<String> componentId;
 
-    public Output<String> componentId() {
-        return this.componentId == null ? Codegen.empty() : this.componentId;
+    public Optional<Output<String>> componentId() {
+        return Optional.ofNullable(this.componentId);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class ResourceSetResourceGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dnsTargetResource")
-      private final @Nullable Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource;
+    private @Nullable Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource;
 
-    public Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource() {
-        return this.dnsTargetResource == null ? Codegen.empty() : this.dnsTargetResource;
+    public Optional<Output<ResourceSetResourceDnsTargetResourceGetArgs>> dnsTargetResource() {
+        return Optional.ofNullable(this.dnsTargetResource);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ResourceSetResourceGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="readinessScopes")
-      private final @Nullable Output<List<String>> readinessScopes;
+    private @Nullable Output<List<String>> readinessScopes;
 
-    public Output<List<String>> readinessScopes() {
-        return this.readinessScopes == null ? Codegen.empty() : this.readinessScopes;
+    public Optional<Output<List<String>>> readinessScopes() {
+        return Optional.ofNullable(this.readinessScopes);
     }
 
     /**
@@ -51,92 +51,82 @@ public final class ResourceSetResourceGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
-    public ResourceSetResourceGetArgs(
-        @Nullable Output<String> componentId,
-        @Nullable Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource,
-        @Nullable Output<List<String>> readinessScopes,
-        @Nullable Output<String> resourceArn) {
-        this.componentId = componentId;
-        this.dnsTargetResource = dnsTargetResource;
-        this.readinessScopes = readinessScopes;
-        this.resourceArn = resourceArn;
-    }
+    private ResourceSetResourceGetArgs() {}
 
-    private ResourceSetResourceGetArgs() {
-        this.componentId = Codegen.empty();
-        this.dnsTargetResource = Codegen.empty();
-        this.readinessScopes = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private ResourceSetResourceGetArgs(ResourceSetResourceGetArgs $) {
+        this.componentId = $.componentId;
+        this.dnsTargetResource = $.dnsTargetResource;
+        this.readinessScopes = $.readinessScopes;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetResourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> componentId;
-        private @Nullable Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource;
-        private @Nullable Output<List<String>> readinessScopes;
-        private @Nullable Output<String> resourceArn;
+        private ResourceSetResourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetResourceGetArgs();
         }
 
         public Builder(ResourceSetResourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentId = defaults.componentId;
-    	      this.dnsTargetResource = defaults.dnsTargetResource;
-    	      this.readinessScopes = defaults.readinessScopes;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new ResourceSetResourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentId(@Nullable Output<String> componentId) {
-            this.componentId = componentId;
+            $.componentId = componentId;
             return this;
         }
-        public Builder componentId(@Nullable String componentId) {
-            this.componentId = Codegen.ofNullable(componentId);
-            return this;
+
+        public Builder componentId(String componentId) {
+            return componentId(Output.of(componentId));
         }
+
         public Builder dnsTargetResource(@Nullable Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource) {
-            this.dnsTargetResource = dnsTargetResource;
+            $.dnsTargetResource = dnsTargetResource;
             return this;
         }
-        public Builder dnsTargetResource(@Nullable ResourceSetResourceDnsTargetResourceGetArgs dnsTargetResource) {
-            this.dnsTargetResource = Codegen.ofNullable(dnsTargetResource);
-            return this;
+
+        public Builder dnsTargetResource(ResourceSetResourceDnsTargetResourceGetArgs dnsTargetResource) {
+            return dnsTargetResource(Output.of(dnsTargetResource));
         }
+
         public Builder readinessScopes(@Nullable Output<List<String>> readinessScopes) {
-            this.readinessScopes = readinessScopes;
+            $.readinessScopes = readinessScopes;
             return this;
         }
-        public Builder readinessScopes(@Nullable List<String> readinessScopes) {
-            this.readinessScopes = Codegen.ofNullable(readinessScopes);
-            return this;
+
+        public Builder readinessScopes(List<String> readinessScopes) {
+            return readinessScopes(Output.of(readinessScopes));
         }
+
         public Builder readinessScopes(String... readinessScopes) {
             return readinessScopes(List.of(readinessScopes));
         }
+
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
-        }        public ResourceSetResourceGetArgs build() {
-            return new ResourceSetResourceGetArgs(componentId, dnsTargetResource, readinessScopes, resourceArn);
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public ResourceSetResourceGetArgs build() {
+            return $;
         }
     }
+
 }

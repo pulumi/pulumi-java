@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudfront;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encodedKey", required=true)
-      private final Output<String> encodedKey;
+    private Output<String> encodedKey;
 
     public Output<String> encodedKey() {
         return this.encodedKey;
@@ -42,10 +42,10 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,89 +53,79 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
-    public PublicKeyArgs(
-        @Nullable Output<String> comment,
-        Output<String> encodedKey,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix) {
-        this.comment = comment;
-        this.encodedKey = Objects.requireNonNull(encodedKey, "expected parameter 'encodedKey' to be non-null");
-        this.name = name;
-        this.namePrefix = namePrefix;
-    }
+    private PublicKeyArgs() {}
 
-    private PublicKeyArgs() {
-        this.comment = Codegen.empty();
-        this.encodedKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
+    private PublicKeyArgs(PublicKeyArgs $) {
+        this.comment = $.comment;
+        this.encodedKey = $.encodedKey;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private Output<String> encodedKey;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
+        private PublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyArgs();
         }
 
         public Builder(PublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.encodedKey = defaults.encodedKey;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
+            $ = new PublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder encodedKey(Output<String> encodedKey) {
-            this.encodedKey = Objects.requireNonNull(encodedKey);
+            $.encodedKey = encodedKey;
             return this;
         }
+
         public Builder encodedKey(String encodedKey) {
-            this.encodedKey = Output.of(Objects.requireNonNull(encodedKey));
-            return this;
+            return encodedKey(Output.of(encodedKey));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
-        }        public PublicKeyArgs build() {
-            return new PublicKeyArgs(comment, encodedKey, name, namePrefix);
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        public PublicKeyArgs build() {
+            $.encodedKey = Objects.requireNonNull($.encodedKey, "expected parameter 'encodedKey' to be non-null");
+            return $;
         }
     }
+
 }

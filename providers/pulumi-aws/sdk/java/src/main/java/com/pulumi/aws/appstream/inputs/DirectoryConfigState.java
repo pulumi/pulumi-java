@@ -6,10 +6,10 @@ package com.pulumi.aws.appstream.inputs;
 import com.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DirectoryConfigState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DirectoryConfigState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="directoryName")
-      private final @Nullable Output<String> directoryName;
+    private @Nullable Output<String> directoryName;
 
-    public Output<String> directoryName() {
-        return this.directoryName == null ? Codegen.empty() : this.directoryName;
+    public Optional<Output<String>> directoryName() {
+        return Optional.ofNullable(this.directoryName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DirectoryConfigState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="organizationalUnitDistinguishedNames")
-      private final @Nullable Output<List<String>> organizationalUnitDistinguishedNames;
+    private @Nullable Output<List<String>> organizationalUnitDistinguishedNames;
 
-    public Output<List<String>> organizationalUnitDistinguishedNames() {
-        return this.organizationalUnitDistinguishedNames == null ? Codegen.empty() : this.organizationalUnitDistinguishedNames;
+    public Optional<Output<List<String>>> organizationalUnitDistinguishedNames() {
+        return Optional.ofNullable(this.organizationalUnitDistinguishedNames);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class DirectoryConfigState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceAccountCredentials")
-      private final @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
+    private @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
 
-    public Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials() {
-        return this.serviceAccountCredentials == null ? Codegen.empty() : this.serviceAccountCredentials;
+    public Optional<Output<DirectoryConfigServiceAccountCredentialsGetArgs>> serviceAccountCredentials() {
+        return Optional.ofNullable(this.serviceAccountCredentials);
     }
 
-    public DirectoryConfigState(
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> directoryName,
-        @Nullable Output<List<String>> organizationalUnitDistinguishedNames,
-        @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
-        this.createdTime = createdTime;
-        this.directoryName = directoryName;
-        this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
-        this.serviceAccountCredentials = serviceAccountCredentials;
-    }
+    private DirectoryConfigState() {}
 
-    private DirectoryConfigState() {
-        this.createdTime = Codegen.empty();
-        this.directoryName = Codegen.empty();
-        this.organizationalUnitDistinguishedNames = Codegen.empty();
-        this.serviceAccountCredentials = Codegen.empty();
+    private DirectoryConfigState(DirectoryConfigState $) {
+        this.createdTime = $.createdTime;
+        this.directoryName = $.directoryName;
+        this.organizationalUnitDistinguishedNames = $.organizationalUnitDistinguishedNames;
+        this.serviceAccountCredentials = $.serviceAccountCredentials;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> directoryName;
-        private @Nullable Output<List<String>> organizationalUnitDistinguishedNames;
-        private @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
+        private DirectoryConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryConfigState();
         }
 
         public Builder(DirectoryConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdTime = defaults.createdTime;
-    	      this.directoryName = defaults.directoryName;
-    	      this.organizationalUnitDistinguishedNames = defaults.organizationalUnitDistinguishedNames;
-    	      this.serviceAccountCredentials = defaults.serviceAccountCredentials;
+            $ = new DirectoryConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder directoryName(@Nullable Output<String> directoryName) {
-            this.directoryName = directoryName;
+            $.directoryName = directoryName;
             return this;
         }
-        public Builder directoryName(@Nullable String directoryName) {
-            this.directoryName = Codegen.ofNullable(directoryName);
-            return this;
+
+        public Builder directoryName(String directoryName) {
+            return directoryName(Output.of(directoryName));
         }
+
         public Builder organizationalUnitDistinguishedNames(@Nullable Output<List<String>> organizationalUnitDistinguishedNames) {
-            this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
+            $.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
             return this;
         }
-        public Builder organizationalUnitDistinguishedNames(@Nullable List<String> organizationalUnitDistinguishedNames) {
-            this.organizationalUnitDistinguishedNames = Codegen.ofNullable(organizationalUnitDistinguishedNames);
-            return this;
+
+        public Builder organizationalUnitDistinguishedNames(List<String> organizationalUnitDistinguishedNames) {
+            return organizationalUnitDistinguishedNames(Output.of(organizationalUnitDistinguishedNames));
         }
+
         public Builder organizationalUnitDistinguishedNames(String... organizationalUnitDistinguishedNames) {
             return organizationalUnitDistinguishedNames(List.of(organizationalUnitDistinguishedNames));
         }
+
         public Builder serviceAccountCredentials(@Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
-            this.serviceAccountCredentials = serviceAccountCredentials;
+            $.serviceAccountCredentials = serviceAccountCredentials;
             return this;
         }
-        public Builder serviceAccountCredentials(@Nullable DirectoryConfigServiceAccountCredentialsGetArgs serviceAccountCredentials) {
-            this.serviceAccountCredentials = Codegen.ofNullable(serviceAccountCredentials);
-            return this;
-        }        public DirectoryConfigState build() {
-            return new DirectoryConfigState(createdTime, directoryName, organizationalUnitDistinguishedNames, serviceAccountCredentials);
+
+        public Builder serviceAccountCredentials(DirectoryConfigServiceAccountCredentialsGetArgs serviceAccountCredentials) {
+            return serviceAccountCredentials(Output.of(serviceAccountCredentials));
+        }
+
+        public DirectoryConfigState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class StackStorageConnectorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectorType", required=true)
-      private final Output<String> connectorType;
+    private Output<String> connectorType;
 
     public Output<String> connectorType() {
         return this.connectorType;
@@ -32,10 +32,10 @@ public final class StackStorageConnectorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="domains")
-      private final @Nullable Output<List<String>> domains;
+    private @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> domains() {
-        return this.domains == null ? Codegen.empty() : this.domains;
+    public Optional<Output<List<String>>> domains() {
+        return Optional.ofNullable(this.domains);
     }
 
     /**
@@ -43,79 +43,73 @@ public final class StackStorageConnectorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceIdentifier")
-      private final @Nullable Output<String> resourceIdentifier;
+    private @Nullable Output<String> resourceIdentifier;
 
-    public Output<String> resourceIdentifier() {
-        return this.resourceIdentifier == null ? Codegen.empty() : this.resourceIdentifier;
+    public Optional<Output<String>> resourceIdentifier() {
+        return Optional.ofNullable(this.resourceIdentifier);
     }
 
-    public StackStorageConnectorArgs(
-        Output<String> connectorType,
-        @Nullable Output<List<String>> domains,
-        @Nullable Output<String> resourceIdentifier) {
-        this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
-        this.domains = domains;
-        this.resourceIdentifier = resourceIdentifier;
-    }
+    private StackStorageConnectorArgs() {}
 
-    private StackStorageConnectorArgs() {
-        this.connectorType = Codegen.empty();
-        this.domains = Codegen.empty();
-        this.resourceIdentifier = Codegen.empty();
+    private StackStorageConnectorArgs(StackStorageConnectorArgs $) {
+        this.connectorType = $.connectorType;
+        this.domains = $.domains;
+        this.resourceIdentifier = $.resourceIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackStorageConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectorType;
-        private @Nullable Output<List<String>> domains;
-        private @Nullable Output<String> resourceIdentifier;
+        private StackStorageConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackStorageConnectorArgs();
         }
 
         public Builder(StackStorageConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorType = defaults.connectorType;
-    	      this.domains = defaults.domains;
-    	      this.resourceIdentifier = defaults.resourceIdentifier;
+            $ = new StackStorageConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorType(Output<String> connectorType) {
-            this.connectorType = Objects.requireNonNull(connectorType);
+            $.connectorType = connectorType;
             return this;
         }
+
         public Builder connectorType(String connectorType) {
-            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
-            return this;
+            return connectorType(Output.of(connectorType));
         }
+
         public Builder domains(@Nullable Output<List<String>> domains) {
-            this.domains = domains;
+            $.domains = domains;
             return this;
         }
-        public Builder domains(@Nullable List<String> domains) {
-            this.domains = Codegen.ofNullable(domains);
-            return this;
+
+        public Builder domains(List<String> domains) {
+            return domains(Output.of(domains));
         }
+
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
+
         public Builder resourceIdentifier(@Nullable Output<String> resourceIdentifier) {
-            this.resourceIdentifier = resourceIdentifier;
+            $.resourceIdentifier = resourceIdentifier;
             return this;
         }
-        public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
-            this.resourceIdentifier = Codegen.ofNullable(resourceIdentifier);
-            return this;
-        }        public StackStorageConnectorArgs build() {
-            return new StackStorageConnectorArgs(connectorType, domains, resourceIdentifier);
+
+        public Builder resourceIdentifier(String resourceIdentifier) {
+            return resourceIdentifier(Output.of(resourceIdentifier));
+        }
+
+        public StackStorageConnectorArgs build() {
+            $.connectorType = Objects.requireNonNull($.connectorType, "expected parameter 'connectorType' to be non-null");
+            return $;
         }
     }
+
 }

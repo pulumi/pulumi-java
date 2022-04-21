@@ -19,10 +19,10 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dnsSuffix")
-      private final @Nullable String dnsSuffix;
+    private @Nullable String dnsSuffix;
 
     public Optional<String> dnsSuffix() {
-        return this.dnsSuffix == null ? Optional.empty() : Optional.ofNullable(this.dnsSuffix);
+        return Optional.ofNullable(this.dnsSuffix);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="imageTag")
-      private final @Nullable String imageTag;
+    private @Nullable String imageTag;
 
     public Optional<String> imageTag() {
-        return this.imageTag == null ? Optional.empty() : Optional.ofNullable(this.imageTag);
+        return Optional.ofNullable(this.imageTag);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -52,73 +52,63 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final String repositoryName;
+    private String repositoryName;
 
     public String repositoryName() {
         return this.repositoryName;
     }
 
-    public GetPrebuiltEcrImageArgs(
-        @Nullable String dnsSuffix,
-        @Nullable String imageTag,
-        @Nullable String region,
-        String repositoryName) {
-        this.dnsSuffix = dnsSuffix;
-        this.imageTag = imageTag;
-        this.region = region;
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-    }
+    private GetPrebuiltEcrImageArgs() {}
 
-    private GetPrebuiltEcrImageArgs() {
-        this.dnsSuffix = null;
-        this.imageTag = null;
-        this.region = null;
-        this.repositoryName = null;
+    private GetPrebuiltEcrImageArgs(GetPrebuiltEcrImageArgs $) {
+        this.dnsSuffix = $.dnsSuffix;
+        this.imageTag = $.imageTag;
+        this.region = $.region;
+        this.repositoryName = $.repositoryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrebuiltEcrImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dnsSuffix;
-        private @Nullable String imageTag;
-        private @Nullable String region;
-        private String repositoryName;
+        private GetPrebuiltEcrImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrebuiltEcrImageArgs();
         }
 
         public Builder(GetPrebuiltEcrImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsSuffix = defaults.dnsSuffix;
-    	      this.imageTag = defaults.imageTag;
-    	      this.region = defaults.region;
-    	      this.repositoryName = defaults.repositoryName;
+            $ = new GetPrebuiltEcrImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsSuffix(@Nullable String dnsSuffix) {
-            this.dnsSuffix = dnsSuffix;
+            $.dnsSuffix = dnsSuffix;
             return this;
         }
+
         public Builder imageTag(@Nullable String imageTag) {
-            this.imageTag = imageTag;
+            $.imageTag = imageTag;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
-        }        public GetPrebuiltEcrImageArgs build() {
-            return new GetPrebuiltEcrImageArgs(dnsSuffix, imageTag, region, repositoryName);
+        }
+
+        public GetPrebuiltEcrImageArgs build() {
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class FleetOnDemandOptionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allocationStrategy")
-      private final @Nullable Output<String> allocationStrategy;
+    private @Nullable Output<String> allocationStrategy;
 
-    public Output<String> allocationStrategy() {
-        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
+    public Optional<Output<String>> allocationStrategy() {
+        return Optional.ofNullable(this.allocationStrategy);
     }
 
-    public FleetOnDemandOptionsArgs(@Nullable Output<String> allocationStrategy) {
-        this.allocationStrategy = allocationStrategy;
-    }
+    private FleetOnDemandOptionsArgs() {}
 
-    private FleetOnDemandOptionsArgs() {
-        this.allocationStrategy = Codegen.empty();
+    private FleetOnDemandOptionsArgs(FleetOnDemandOptionsArgs $) {
+        this.allocationStrategy = $.allocationStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetOnDemandOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocationStrategy;
+        private FleetOnDemandOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetOnDemandOptionsArgs();
         }
 
         public Builder(FleetOnDemandOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationStrategy = defaults.allocationStrategy;
+            $ = new FleetOnDemandOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
-            this.allocationStrategy = allocationStrategy;
+            $.allocationStrategy = allocationStrategy;
             return this;
         }
-        public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
-            return this;
-        }        public FleetOnDemandOptionsArgs build() {
-            return new FleetOnDemandOptionsArgs(allocationStrategy);
+
+        public Builder allocationStrategy(String allocationStrategy) {
+            return allocationStrategy(Output.of(allocationStrategy));
+        }
+
+        public FleetOnDemandOptionsArgs build() {
+            return $;
         }
     }
+
 }

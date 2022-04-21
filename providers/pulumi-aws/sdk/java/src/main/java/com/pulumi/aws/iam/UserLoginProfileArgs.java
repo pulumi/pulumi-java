@@ -5,11 +5,11 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="passwordLength")
-      private final @Nullable Output<Integer> passwordLength;
+    private @Nullable Output<Integer> passwordLength;
 
-    public Output<Integer> passwordLength() {
-        return this.passwordLength == null ? Codegen.empty() : this.passwordLength;
+    public Optional<Output<Integer>> passwordLength() {
+        return Optional.ofNullable(this.passwordLength);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="passwordResetRequired")
-      private final @Nullable Output<Boolean> passwordResetRequired;
+    private @Nullable Output<Boolean> passwordResetRequired;
 
-    public Output<Boolean> passwordResetRequired() {
-        return this.passwordResetRequired == null ? Codegen.empty() : this.passwordResetRequired;
+    public Optional<Output<Boolean>> passwordResetRequired() {
+        return Optional.ofNullable(this.passwordResetRequired);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pgpKey", required=true)
-      private final Output<String> pgpKey;
+    private Output<String> pgpKey;
 
     public Output<String> pgpKey() {
         return this.pgpKey;
@@ -55,89 +55,80 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public UserLoginProfileArgs(
-        @Nullable Output<Integer> passwordLength,
-        @Nullable Output<Boolean> passwordResetRequired,
-        Output<String> pgpKey,
-        Output<String> user) {
-        this.passwordLength = passwordLength;
-        this.passwordResetRequired = passwordResetRequired;
-        this.pgpKey = Objects.requireNonNull(pgpKey, "expected parameter 'pgpKey' to be non-null");
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private UserLoginProfileArgs() {}
 
-    private UserLoginProfileArgs() {
-        this.passwordLength = Codegen.empty();
-        this.passwordResetRequired = Codegen.empty();
-        this.pgpKey = Codegen.empty();
-        this.user = Codegen.empty();
+    private UserLoginProfileArgs(UserLoginProfileArgs $) {
+        this.passwordLength = $.passwordLength;
+        this.passwordResetRequired = $.passwordResetRequired;
+        this.pgpKey = $.pgpKey;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserLoginProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> passwordLength;
-        private @Nullable Output<Boolean> passwordResetRequired;
-        private Output<String> pgpKey;
-        private Output<String> user;
+        private UserLoginProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserLoginProfileArgs();
         }
 
         public Builder(UserLoginProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.passwordLength = defaults.passwordLength;
-    	      this.passwordResetRequired = defaults.passwordResetRequired;
-    	      this.pgpKey = defaults.pgpKey;
-    	      this.user = defaults.user;
+            $ = new UserLoginProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder passwordLength(@Nullable Output<Integer> passwordLength) {
-            this.passwordLength = passwordLength;
+            $.passwordLength = passwordLength;
             return this;
         }
-        public Builder passwordLength(@Nullable Integer passwordLength) {
-            this.passwordLength = Codegen.ofNullable(passwordLength);
-            return this;
+
+        public Builder passwordLength(Integer passwordLength) {
+            return passwordLength(Output.of(passwordLength));
         }
+
         public Builder passwordResetRequired(@Nullable Output<Boolean> passwordResetRequired) {
-            this.passwordResetRequired = passwordResetRequired;
+            $.passwordResetRequired = passwordResetRequired;
             return this;
         }
-        public Builder passwordResetRequired(@Nullable Boolean passwordResetRequired) {
-            this.passwordResetRequired = Codegen.ofNullable(passwordResetRequired);
-            return this;
+
+        public Builder passwordResetRequired(Boolean passwordResetRequired) {
+            return passwordResetRequired(Output.of(passwordResetRequired));
         }
+
         public Builder pgpKey(Output<String> pgpKey) {
-            this.pgpKey = Objects.requireNonNull(pgpKey);
+            $.pgpKey = pgpKey;
             return this;
         }
+
         public Builder pgpKey(String pgpKey) {
-            this.pgpKey = Output.of(Objects.requireNonNull(pgpKey));
-            return this;
+            return pgpKey(Output.of(pgpKey));
         }
+
         public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Output.of(Objects.requireNonNull(user));
-            return this;
-        }        public UserLoginProfileArgs build() {
-            return new UserLoginProfileArgs(passwordLength, passwordResetRequired, pgpKey, user);
+            return user(Output.of(user));
+        }
+
+        public UserLoginProfileArgs build() {
+            $.pgpKey = Objects.requireNonNull($.pgpKey, "expected parameter 'pgpKey' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

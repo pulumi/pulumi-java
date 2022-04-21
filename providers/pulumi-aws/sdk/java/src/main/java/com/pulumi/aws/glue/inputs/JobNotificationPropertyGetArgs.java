@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class JobNotificationPropertyGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="notifyDelayAfter")
-      private final @Nullable Output<Integer> notifyDelayAfter;
+    private @Nullable Output<Integer> notifyDelayAfter;
 
-    public Output<Integer> notifyDelayAfter() {
-        return this.notifyDelayAfter == null ? Codegen.empty() : this.notifyDelayAfter;
+    public Optional<Output<Integer>> notifyDelayAfter() {
+        return Optional.ofNullable(this.notifyDelayAfter);
     }
 
-    public JobNotificationPropertyGetArgs(@Nullable Output<Integer> notifyDelayAfter) {
-        this.notifyDelayAfter = notifyDelayAfter;
-    }
+    private JobNotificationPropertyGetArgs() {}
 
-    private JobNotificationPropertyGetArgs() {
-        this.notifyDelayAfter = Codegen.empty();
+    private JobNotificationPropertyGetArgs(JobNotificationPropertyGetArgs $) {
+        this.notifyDelayAfter = $.notifyDelayAfter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobNotificationPropertyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> notifyDelayAfter;
+        private JobNotificationPropertyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobNotificationPropertyGetArgs();
         }
 
         public Builder(JobNotificationPropertyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notifyDelayAfter = defaults.notifyDelayAfter;
+            $ = new JobNotificationPropertyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notifyDelayAfter(@Nullable Output<Integer> notifyDelayAfter) {
-            this.notifyDelayAfter = notifyDelayAfter;
+            $.notifyDelayAfter = notifyDelayAfter;
             return this;
         }
-        public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
-            this.notifyDelayAfter = Codegen.ofNullable(notifyDelayAfter);
-            return this;
-        }        public JobNotificationPropertyGetArgs build() {
-            return new JobNotificationPropertyGetArgs(notifyDelayAfter);
+
+        public Builder notifyDelayAfter(Integer notifyDelayAfter) {
+            return notifyDelayAfter(Output.of(notifyDelayAfter));
+        }
+
+        public JobNotificationPropertyGetArgs build() {
+            return $;
         }
     }
+
 }

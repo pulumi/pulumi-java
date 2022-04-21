@@ -5,7 +5,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FirewallSubnetMappingGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public FirewallSubnetMappingGetArgs(Output<String> subnetId) {
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private FirewallSubnetMappingGetArgs() {}
 
-    private FirewallSubnetMappingGetArgs() {
-        this.subnetId = Codegen.empty();
+    private FirewallSubnetMappingGetArgs(FirewallSubnetMappingGetArgs $) {
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallSubnetMappingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> subnetId;
+        private FirewallSubnetMappingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallSubnetMappingGetArgs();
         }
 
         public Builder(FirewallSubnetMappingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
+            $ = new FirewallSubnetMappingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public FirewallSubnetMappingGetArgs build() {
-            return new FirewallSubnetMappingGetArgs(subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public FirewallSubnetMappingGetArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

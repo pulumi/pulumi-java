@@ -5,7 +5,6 @@ package com.pulumi.aws.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class BuildStorageLocationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -30,7 +29,7 @@ public final class BuildStorageLocationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -41,76 +40,71 @@ public final class BuildStorageLocationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public BuildStorageLocationArgs(
-        Output<String> bucket,
-        Output<String> key,
-        Output<String> roleArn) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private BuildStorageLocationArgs() {}
 
-    private BuildStorageLocationArgs() {
-        this.bucket = Codegen.empty();
-        this.key = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private BuildStorageLocationArgs(BuildStorageLocationArgs $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildStorageLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> key;
-        private Output<String> roleArn;
+        private BuildStorageLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildStorageLocationArgs();
         }
 
         public Builder(BuildStorageLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
-    	      this.roleArn = defaults.roleArn;
+            $ = new BuildStorageLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public BuildStorageLocationArgs build() {
-            return new BuildStorageLocationArgs(bucket, key, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public BuildStorageLocationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends com.p
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends com.p
      * 
      */
     @Import(name="events")
-      private final @Nullable Output<List<String>> events;
+    private @Nullable Output<List<String>> events;
 
-    public Output<List<String>> events() {
-        return this.events == null ? Codegen.empty() : this.events;
+    public Optional<Output<List<String>>> events() {
+        return Optional.ofNullable(this.events);
     }
 
-    public DeploymentGroupAutoRollbackConfigurationGetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<String>> events) {
-        this.enabled = enabled;
-        this.events = events;
-    }
+    private DeploymentGroupAutoRollbackConfigurationGetArgs() {}
 
-    private DeploymentGroupAutoRollbackConfigurationGetArgs() {
-        this.enabled = Codegen.empty();
-        this.events = Codegen.empty();
+    private DeploymentGroupAutoRollbackConfigurationGetArgs(DeploymentGroupAutoRollbackConfigurationGetArgs $) {
+        this.enabled = $.enabled;
+        this.events = $.events;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupAutoRollbackConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<String>> events;
+        private DeploymentGroupAutoRollbackConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupAutoRollbackConfigurationGetArgs();
         }
 
         public Builder(DeploymentGroupAutoRollbackConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.events = defaults.events;
+            $ = new DeploymentGroupAutoRollbackConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder events(@Nullable Output<List<String>> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
-        public Builder events(@Nullable List<String> events) {
-            this.events = Codegen.ofNullable(events);
-            return this;
+
+        public Builder events(List<String> events) {
+            return events(Output.of(events));
         }
+
         public Builder events(String... events) {
             return events(List.of(events));
-        }        public DeploymentGroupAutoRollbackConfigurationGetArgs build() {
-            return new DeploymentGroupAutoRollbackConfigurationGetArgs(enabled, events);
+        }
+
+        public DeploymentGroupAutoRollbackConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

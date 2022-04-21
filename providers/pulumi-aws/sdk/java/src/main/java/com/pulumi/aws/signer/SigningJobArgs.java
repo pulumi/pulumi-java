@@ -7,10 +7,10 @@ import com.pulumi.aws.signer.inputs.SigningJobDestinationArgs;
 import com.pulumi.aws.signer.inputs.SigningJobSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class SigningJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<SigningJobDestinationArgs> destination;
+    private Output<SigningJobDestinationArgs> destination;
 
     public Output<SigningJobDestinationArgs> destination() {
         return this.destination;
@@ -34,10 +34,10 @@ public final class SigningJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoreSigningJobFailure")
-      private final @Nullable Output<Boolean> ignoreSigningJobFailure;
+    private @Nullable Output<Boolean> ignoreSigningJobFailure;
 
-    public Output<Boolean> ignoreSigningJobFailure() {
-        return this.ignoreSigningJobFailure == null ? Codegen.empty() : this.ignoreSigningJobFailure;
+    public Optional<Output<Boolean>> ignoreSigningJobFailure() {
+        return Optional.ofNullable(this.ignoreSigningJobFailure);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class SigningJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -56,89 +56,81 @@ public final class SigningJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final Output<SigningJobSourceArgs> source;
+    private Output<SigningJobSourceArgs> source;
 
     public Output<SigningJobSourceArgs> source() {
         return this.source;
     }
 
-    public SigningJobArgs(
-        Output<SigningJobDestinationArgs> destination,
-        @Nullable Output<Boolean> ignoreSigningJobFailure,
-        Output<String> profileName,
-        Output<SigningJobSourceArgs> source) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.ignoreSigningJobFailure = ignoreSigningJobFailure;
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private SigningJobArgs() {}
 
-    private SigningJobArgs() {
-        this.destination = Codegen.empty();
-        this.ignoreSigningJobFailure = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.source = Codegen.empty();
+    private SigningJobArgs(SigningJobArgs $) {
+        this.destination = $.destination;
+        this.ignoreSigningJobFailure = $.ignoreSigningJobFailure;
+        this.profileName = $.profileName;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SigningJobDestinationArgs> destination;
-        private @Nullable Output<Boolean> ignoreSigningJobFailure;
-        private Output<String> profileName;
-        private Output<SigningJobSourceArgs> source;
+        private SigningJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningJobArgs();
         }
 
         public Builder(SigningJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.ignoreSigningJobFailure = defaults.ignoreSigningJobFailure;
-    	      this.profileName = defaults.profileName;
-    	      this.source = defaults.source;
+            $ = new SigningJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<SigningJobDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(SigningJobDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder ignoreSigningJobFailure(@Nullable Output<Boolean> ignoreSigningJobFailure) {
-            this.ignoreSigningJobFailure = ignoreSigningJobFailure;
+            $.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
-        public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
-            this.ignoreSigningJobFailure = Codegen.ofNullable(ignoreSigningJobFailure);
-            return this;
+
+        public Builder ignoreSigningJobFailure(Boolean ignoreSigningJobFailure) {
+            return ignoreSigningJobFailure(Output.of(ignoreSigningJobFailure));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder source(Output<SigningJobSourceArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(SigningJobSourceArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public SigningJobArgs build() {
-            return new SigningJobArgs(destination, ignoreSigningJobFailure, profileName, source);
+            return source(Output.of(source));
+        }
+
+        public SigningJobArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ReceiptRuleSnsActionGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ReceiptRuleSnsActionGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="position", required=true)
-      private final Output<Integer> position;
+    private Output<Integer> position;
 
     public Output<Integer> position() {
         return this.position;
@@ -43,76 +43,70 @@ public final class ReceiptRuleSnsActionGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="topicArn", required=true)
-      private final Output<String> topicArn;
+    private Output<String> topicArn;
 
     public Output<String> topicArn() {
         return this.topicArn;
     }
 
-    public ReceiptRuleSnsActionGetArgs(
-        @Nullable Output<String> encoding,
-        Output<Integer> position,
-        Output<String> topicArn) {
-        this.encoding = encoding;
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-        this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
-    }
+    private ReceiptRuleSnsActionGetArgs() {}
 
-    private ReceiptRuleSnsActionGetArgs() {
-        this.encoding = Codegen.empty();
-        this.position = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private ReceiptRuleSnsActionGetArgs(ReceiptRuleSnsActionGetArgs $) {
+        this.encoding = $.encoding;
+        this.position = $.position;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleSnsActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encoding;
-        private Output<Integer> position;
-        private Output<String> topicArn;
+        private ReceiptRuleSnsActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleSnsActionGetArgs();
         }
 
         public Builder(ReceiptRuleSnsActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.position = defaults.position;
-    	      this.topicArn = defaults.topicArn;
+            $ = new ReceiptRuleSnsActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder position(Output<Integer> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
+            return position(Output.of(position));
         }
+
         public Builder topicArn(Output<String> topicArn) {
-            this.topicArn = Objects.requireNonNull(topicArn);
+            $.topicArn = topicArn;
             return this;
         }
+
         public Builder topicArn(String topicArn) {
-            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
-            return this;
-        }        public ReceiptRuleSnsActionGetArgs build() {
-            return new ReceiptRuleSnsActionGetArgs(encoding, position, topicArn);
+            return topicArn(Output.of(topicArn));
+        }
+
+        public ReceiptRuleSnsActionGetArgs build() {
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            $.topicArn = Objects.requireNonNull($.topicArn, "expected parameter 'topicArn' to be non-null");
+            return $;
         }
     }
+
 }

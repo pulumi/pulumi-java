@@ -6,7 +6,6 @@ package com.pulumi.aws.waf.inputs;
 import com.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class XssMatchSetXssMatchTupleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="fieldToMatch", required=true)
-      private final Output<XssMatchSetXssMatchTupleFieldToMatchArgs> fieldToMatch;
+    private Output<XssMatchSetXssMatchTupleFieldToMatchArgs> fieldToMatch;
 
     public Output<XssMatchSetXssMatchTupleFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
@@ -35,63 +34,60 @@ public final class XssMatchSetXssMatchTupleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="textTransformation", required=true)
-      private final Output<String> textTransformation;
+    private Output<String> textTransformation;
 
     public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
-    public XssMatchSetXssMatchTupleArgs(
-        Output<XssMatchSetXssMatchTupleFieldToMatchArgs> fieldToMatch,
-        Output<String> textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformation = Objects.requireNonNull(textTransformation, "expected parameter 'textTransformation' to be non-null");
-    }
+    private XssMatchSetXssMatchTupleArgs() {}
 
-    private XssMatchSetXssMatchTupleArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformation = Codegen.empty();
+    private XssMatchSetXssMatchTupleArgs(XssMatchSetXssMatchTupleArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformation = $.textTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(XssMatchSetXssMatchTupleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<XssMatchSetXssMatchTupleFieldToMatchArgs> fieldToMatch;
-        private Output<String> textTransformation;
+        private XssMatchSetXssMatchTupleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new XssMatchSetXssMatchTupleArgs();
         }
 
         public Builder(XssMatchSetXssMatchTupleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformation = defaults.textTransformation;
+            $ = new XssMatchSetXssMatchTupleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(Output<XssMatchSetXssMatchTupleFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(XssMatchSetXssMatchTupleFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformation(Output<String> textTransformation) {
-            this.textTransformation = Objects.requireNonNull(textTransformation);
+            $.textTransformation = textTransformation;
             return this;
         }
+
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
-            return this;
-        }        public XssMatchSetXssMatchTupleArgs build() {
-            return new XssMatchSetXssMatchTupleArgs(fieldToMatch, textTransformation);
+            return textTransformation(Output.of(textTransformation));
+        }
+
+        public XssMatchSetXssMatchTupleArgs build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformation = Objects.requireNonNull($.textTransformation, "expected parameter 'textTransformation' to be non-null");
+            return $;
         }
     }
+
 }

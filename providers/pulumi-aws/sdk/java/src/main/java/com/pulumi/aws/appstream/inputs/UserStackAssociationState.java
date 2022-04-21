@@ -5,10 +5,10 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<String> authenticationType;
+    private @Nullable Output<String> authenticationType;
 
-    public Output<String> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<String>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sendEmailNotification")
-      private final @Nullable Output<Boolean> sendEmailNotification;
+    private @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> sendEmailNotification() {
-        return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
+    public Optional<Output<Boolean>> sendEmailNotification() {
+        return Optional.ofNullable(this.sendEmailNotification);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="stackName")
-      private final @Nullable Output<String> stackName;
+    private @Nullable Output<String> stackName;
 
-    public Output<String> stackName() {
-        return this.stackName == null ? Codegen.empty() : this.stackName;
+    public Optional<Output<String>> stackName() {
+        return Optional.ofNullable(this.stackName);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserStackAssociationState(
-        @Nullable Output<String> authenticationType,
-        @Nullable Output<Boolean> sendEmailNotification,
-        @Nullable Output<String> stackName,
-        @Nullable Output<String> userName) {
-        this.authenticationType = authenticationType;
-        this.sendEmailNotification = sendEmailNotification;
-        this.stackName = stackName;
-        this.userName = userName;
-    }
+    private UserStackAssociationState() {}
 
-    private UserStackAssociationState() {
-        this.authenticationType = Codegen.empty();
-        this.sendEmailNotification = Codegen.empty();
-        this.stackName = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserStackAssociationState(UserStackAssociationState $) {
+        this.authenticationType = $.authenticationType;
+        this.sendEmailNotification = $.sendEmailNotification;
+        this.stackName = $.stackName;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserStackAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authenticationType;
-        private @Nullable Output<Boolean> sendEmailNotification;
-        private @Nullable Output<String> stackName;
-        private @Nullable Output<String> userName;
+        private UserStackAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserStackAssociationState();
         }
 
         public Builder(UserStackAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.sendEmailNotification = defaults.sendEmailNotification;
-    	      this.stackName = defaults.stackName;
-    	      this.userName = defaults.userName;
+            $ = new UserStackAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
-            this.sendEmailNotification = sendEmailNotification;
+            $.sendEmailNotification = sendEmailNotification;
             return this;
         }
-        public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Codegen.ofNullable(sendEmailNotification);
-            return this;
+
+        public Builder sendEmailNotification(Boolean sendEmailNotification) {
+            return sendEmailNotification(Output.of(sendEmailNotification));
         }
+
         public Builder stackName(@Nullable Output<String> stackName) {
-            this.stackName = stackName;
+            $.stackName = stackName;
             return this;
         }
-        public Builder stackName(@Nullable String stackName) {
-            this.stackName = Codegen.ofNullable(stackName);
-            return this;
+
+        public Builder stackName(String stackName) {
+            return stackName(Output.of(stackName));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public UserStackAssociationState build() {
-            return new UserStackAssociationState(authenticationType, sendEmailNotification, stackName, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public UserStackAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProjectLogsConfigS3LogsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bucketOwnerAccess")
-      private final @Nullable Output<String> bucketOwnerAccess;
+    private @Nullable Output<String> bucketOwnerAccess;
 
-    public Output<String> bucketOwnerAccess() {
-        return this.bucketOwnerAccess == null ? Codegen.empty() : this.bucketOwnerAccess;
+    public Optional<Output<String>> bucketOwnerAccess() {
+        return Optional.ofNullable(this.bucketOwnerAccess);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProjectLogsConfigS3LogsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encryptionDisabled")
-      private final @Nullable Output<Boolean> encryptionDisabled;
+    private @Nullable Output<Boolean> encryptionDisabled;
 
-    public Output<Boolean> encryptionDisabled() {
-        return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
+    public Optional<Output<Boolean>> encryptionDisabled() {
+        return Optional.ofNullable(this.encryptionDisabled);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProjectLogsConfigS3LogsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class ProjectLogsConfigS3LogsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public ProjectLogsConfigS3LogsArgs(
-        @Nullable Output<String> bucketOwnerAccess,
-        @Nullable Output<Boolean> encryptionDisabled,
-        @Nullable Output<String> location,
-        @Nullable Output<String> status) {
-        this.bucketOwnerAccess = bucketOwnerAccess;
-        this.encryptionDisabled = encryptionDisabled;
-        this.location = location;
-        this.status = status;
-    }
+    private ProjectLogsConfigS3LogsArgs() {}
 
-    private ProjectLogsConfigS3LogsArgs() {
-        this.bucketOwnerAccess = Codegen.empty();
-        this.encryptionDisabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.status = Codegen.empty();
+    private ProjectLogsConfigS3LogsArgs(ProjectLogsConfigS3LogsArgs $) {
+        this.bucketOwnerAccess = $.bucketOwnerAccess;
+        this.encryptionDisabled = $.encryptionDisabled;
+        this.location = $.location;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectLogsConfigS3LogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketOwnerAccess;
-        private @Nullable Output<Boolean> encryptionDisabled;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> status;
+        private ProjectLogsConfigS3LogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectLogsConfigS3LogsArgs();
         }
 
         public Builder(ProjectLogsConfigS3LogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketOwnerAccess = defaults.bucketOwnerAccess;
-    	      this.encryptionDisabled = defaults.encryptionDisabled;
-    	      this.location = defaults.location;
-    	      this.status = defaults.status;
+            $ = new ProjectLogsConfigS3LogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketOwnerAccess(@Nullable Output<String> bucketOwnerAccess) {
-            this.bucketOwnerAccess = bucketOwnerAccess;
+            $.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
-        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
-            this.bucketOwnerAccess = Codegen.ofNullable(bucketOwnerAccess);
-            return this;
+
+        public Builder bucketOwnerAccess(String bucketOwnerAccess) {
+            return bucketOwnerAccess(Output.of(bucketOwnerAccess));
         }
+
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
-            this.encryptionDisabled = encryptionDisabled;
+            $.encryptionDisabled = encryptionDisabled;
             return this;
         }
-        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Codegen.ofNullable(encryptionDisabled);
-            return this;
+
+        public Builder encryptionDisabled(Boolean encryptionDisabled) {
+            return encryptionDisabled(Output.of(encryptionDisabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public ProjectLogsConfigS3LogsArgs build() {
-            return new ProjectLogsConfigS3LogsArgs(bucketOwnerAccess, encryptionDisabled, location, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public ProjectLogsConfigS3LogsArgs build() {
+            return $;
         }
     }
+
 }

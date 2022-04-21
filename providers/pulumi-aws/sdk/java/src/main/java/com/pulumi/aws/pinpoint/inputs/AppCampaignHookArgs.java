@@ -5,9 +5,9 @@ package com.pulumi.aws.pinpoint.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AppCampaignHookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="lambdaFunctionName")
-      private final @Nullable Output<String> lambdaFunctionName;
+    private @Nullable Output<String> lambdaFunctionName;
 
-    public Output<String> lambdaFunctionName() {
-        return this.lambdaFunctionName == null ? Codegen.empty() : this.lambdaFunctionName;
+    public Optional<Output<String>> lambdaFunctionName() {
+        return Optional.ofNullable(this.lambdaFunctionName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AppCampaignHookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class AppCampaignHookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="webUrl")
-      private final @Nullable Output<String> webUrl;
+    private @Nullable Output<String> webUrl;
 
-    public Output<String> webUrl() {
-        return this.webUrl == null ? Codegen.empty() : this.webUrl;
+    public Optional<Output<String>> webUrl() {
+        return Optional.ofNullable(this.webUrl);
     }
 
-    public AppCampaignHookArgs(
-        @Nullable Output<String> lambdaFunctionName,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> webUrl) {
-        this.lambdaFunctionName = lambdaFunctionName;
-        this.mode = mode;
-        this.webUrl = webUrl;
-    }
+    private AppCampaignHookArgs() {}
 
-    private AppCampaignHookArgs() {
-        this.lambdaFunctionName = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.webUrl = Codegen.empty();
+    private AppCampaignHookArgs(AppCampaignHookArgs $) {
+        this.lambdaFunctionName = $.lambdaFunctionName;
+        this.mode = $.mode;
+        this.webUrl = $.webUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppCampaignHookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lambdaFunctionName;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> webUrl;
+        private AppCampaignHookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppCampaignHookArgs();
         }
 
         public Builder(AppCampaignHookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lambdaFunctionName = defaults.lambdaFunctionName;
-    	      this.mode = defaults.mode;
-    	      this.webUrl = defaults.webUrl;
+            $ = new AppCampaignHookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lambdaFunctionName(@Nullable Output<String> lambdaFunctionName) {
-            this.lambdaFunctionName = lambdaFunctionName;
+            $.lambdaFunctionName = lambdaFunctionName;
             return this;
         }
-        public Builder lambdaFunctionName(@Nullable String lambdaFunctionName) {
-            this.lambdaFunctionName = Codegen.ofNullable(lambdaFunctionName);
-            return this;
+
+        public Builder lambdaFunctionName(String lambdaFunctionName) {
+            return lambdaFunctionName(Output.of(lambdaFunctionName));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder webUrl(@Nullable Output<String> webUrl) {
-            this.webUrl = webUrl;
+            $.webUrl = webUrl;
             return this;
         }
-        public Builder webUrl(@Nullable String webUrl) {
-            this.webUrl = Codegen.ofNullable(webUrl);
-            return this;
-        }        public AppCampaignHookArgs build() {
-            return new AppCampaignHookArgs(lambdaFunctionName, mode, webUrl);
+
+        public Builder webUrl(String webUrl) {
+            return webUrl(Output.of(webUrl));
+        }
+
+        public AppCampaignHookArgs build() {
+            return $;
         }
     }
+
 }

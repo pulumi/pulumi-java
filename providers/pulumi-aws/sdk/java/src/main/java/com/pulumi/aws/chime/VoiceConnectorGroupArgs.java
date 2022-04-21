@@ -6,10 +6,10 @@ package com.pulumi.aws.chime;
 import com.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VoiceConnectorGroupArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="connectors")
-      private final @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
+    private @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
 
-    public Output<List<VoiceConnectorGroupConnectorArgs>> connectors() {
-        return this.connectors == null ? Codegen.empty() : this.connectors;
+    public Optional<Output<List<VoiceConnectorGroupConnectorArgs>>> connectors() {
+        return Optional.ofNullable(this.connectors);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class VoiceConnectorGroupArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public VoiceConnectorGroupArgs(
-        @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors,
-        @Nullable Output<String> name) {
-        this.connectors = connectors;
-        this.name = name;
-    }
+    private VoiceConnectorGroupArgs() {}
 
-    private VoiceConnectorGroupArgs() {
-        this.connectors = Codegen.empty();
-        this.name = Codegen.empty();
+    private VoiceConnectorGroupArgs(VoiceConnectorGroupArgs $) {
+        this.connectors = $.connectors;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
-        private @Nullable Output<String> name;
+        private VoiceConnectorGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorGroupArgs();
         }
 
         public Builder(VoiceConnectorGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectors = defaults.connectors;
-    	      this.name = defaults.name;
+            $ = new VoiceConnectorGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectors(@Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors) {
-            this.connectors = connectors;
+            $.connectors = connectors;
             return this;
         }
-        public Builder connectors(@Nullable List<VoiceConnectorGroupConnectorArgs> connectors) {
-            this.connectors = Codegen.ofNullable(connectors);
-            return this;
+
+        public Builder connectors(List<VoiceConnectorGroupConnectorArgs> connectors) {
+            return connectors(Output.of(connectors));
         }
+
         public Builder connectors(VoiceConnectorGroupConnectorArgs... connectors) {
             return connectors(List.of(connectors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public VoiceConnectorGroupArgs build() {
-            return new VoiceConnectorGroupArgs(connectors, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public VoiceConnectorGroupArgs build() {
+            return $;
         }
     }
+
 }

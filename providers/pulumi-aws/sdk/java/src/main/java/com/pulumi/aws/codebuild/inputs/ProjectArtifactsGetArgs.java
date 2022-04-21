@@ -5,10 +5,10 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="artifactIdentifier")
-      private final @Nullable Output<String> artifactIdentifier;
+    private @Nullable Output<String> artifactIdentifier;
 
-    public Output<String> artifactIdentifier() {
-        return this.artifactIdentifier == null ? Codegen.empty() : this.artifactIdentifier;
+    public Optional<Output<String>> artifactIdentifier() {
+        return Optional.ofNullable(this.artifactIdentifier);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bucketOwnerAccess")
-      private final @Nullable Output<String> bucketOwnerAccess;
+    private @Nullable Output<String> bucketOwnerAccess;
 
-    public Output<String> bucketOwnerAccess() {
-        return this.bucketOwnerAccess == null ? Codegen.empty() : this.bucketOwnerAccess;
+    public Optional<Output<String>> bucketOwnerAccess() {
+        return Optional.ofNullable(this.bucketOwnerAccess);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="encryptionDisabled")
-      private final @Nullable Output<Boolean> encryptionDisabled;
+    private @Nullable Output<Boolean> encryptionDisabled;
 
-    public Output<Boolean> encryptionDisabled() {
-        return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
+    public Optional<Output<Boolean>> encryptionDisabled() {
+        return Optional.ofNullable(this.encryptionDisabled);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="namespaceType")
-      private final @Nullable Output<String> namespaceType;
+    private @Nullable Output<String> namespaceType;
 
-    public Output<String> namespaceType() {
-        return this.namespaceType == null ? Codegen.empty() : this.namespaceType;
+    public Optional<Output<String>> namespaceType() {
+        return Optional.ofNullable(this.namespaceType);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="overrideArtifactName")
-      private final @Nullable Output<Boolean> overrideArtifactName;
+    private @Nullable Output<Boolean> overrideArtifactName;
 
-    public Output<Boolean> overrideArtifactName() {
-        return this.overrideArtifactName == null ? Codegen.empty() : this.overrideArtifactName;
+    public Optional<Output<Boolean>> overrideArtifactName() {
+        return Optional.ofNullable(this.overrideArtifactName);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="packaging")
-      private final @Nullable Output<String> packaging;
+    private @Nullable Output<String> packaging;
 
-    public Output<String> packaging() {
-        return this.packaging == null ? Codegen.empty() : this.packaging;
+    public Optional<Output<String>> packaging() {
+        return Optional.ofNullable(this.packaging);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -120,167 +120,139 @@ public final class ProjectArtifactsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ProjectArtifactsGetArgs(
-        @Nullable Output<String> artifactIdentifier,
-        @Nullable Output<String> bucketOwnerAccess,
-        @Nullable Output<Boolean> encryptionDisabled,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespaceType,
-        @Nullable Output<Boolean> overrideArtifactName,
-        @Nullable Output<String> packaging,
-        @Nullable Output<String> path,
-        Output<String> type) {
-        this.artifactIdentifier = artifactIdentifier;
-        this.bucketOwnerAccess = bucketOwnerAccess;
-        this.encryptionDisabled = encryptionDisabled;
-        this.location = location;
-        this.name = name;
-        this.namespaceType = namespaceType;
-        this.overrideArtifactName = overrideArtifactName;
-        this.packaging = packaging;
-        this.path = path;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ProjectArtifactsGetArgs() {}
 
-    private ProjectArtifactsGetArgs() {
-        this.artifactIdentifier = Codegen.empty();
-        this.bucketOwnerAccess = Codegen.empty();
-        this.encryptionDisabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespaceType = Codegen.empty();
-        this.overrideArtifactName = Codegen.empty();
-        this.packaging = Codegen.empty();
-        this.path = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProjectArtifactsGetArgs(ProjectArtifactsGetArgs $) {
+        this.artifactIdentifier = $.artifactIdentifier;
+        this.bucketOwnerAccess = $.bucketOwnerAccess;
+        this.encryptionDisabled = $.encryptionDisabled;
+        this.location = $.location;
+        this.name = $.name;
+        this.namespaceType = $.namespaceType;
+        this.overrideArtifactName = $.overrideArtifactName;
+        this.packaging = $.packaging;
+        this.path = $.path;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArtifactsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactIdentifier;
-        private @Nullable Output<String> bucketOwnerAccess;
-        private @Nullable Output<Boolean> encryptionDisabled;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespaceType;
-        private @Nullable Output<Boolean> overrideArtifactName;
-        private @Nullable Output<String> packaging;
-        private @Nullable Output<String> path;
-        private Output<String> type;
+        private ProjectArtifactsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArtifactsGetArgs();
         }
 
         public Builder(ProjectArtifactsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactIdentifier = defaults.artifactIdentifier;
-    	      this.bucketOwnerAccess = defaults.bucketOwnerAccess;
-    	      this.encryptionDisabled = defaults.encryptionDisabled;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.namespaceType = defaults.namespaceType;
-    	      this.overrideArtifactName = defaults.overrideArtifactName;
-    	      this.packaging = defaults.packaging;
-    	      this.path = defaults.path;
-    	      this.type = defaults.type;
+            $ = new ProjectArtifactsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactIdentifier(@Nullable Output<String> artifactIdentifier) {
-            this.artifactIdentifier = artifactIdentifier;
+            $.artifactIdentifier = artifactIdentifier;
             return this;
         }
-        public Builder artifactIdentifier(@Nullable String artifactIdentifier) {
-            this.artifactIdentifier = Codegen.ofNullable(artifactIdentifier);
-            return this;
+
+        public Builder artifactIdentifier(String artifactIdentifier) {
+            return artifactIdentifier(Output.of(artifactIdentifier));
         }
+
         public Builder bucketOwnerAccess(@Nullable Output<String> bucketOwnerAccess) {
-            this.bucketOwnerAccess = bucketOwnerAccess;
+            $.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
-        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
-            this.bucketOwnerAccess = Codegen.ofNullable(bucketOwnerAccess);
-            return this;
+
+        public Builder bucketOwnerAccess(String bucketOwnerAccess) {
+            return bucketOwnerAccess(Output.of(bucketOwnerAccess));
         }
+
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
-            this.encryptionDisabled = encryptionDisabled;
+            $.encryptionDisabled = encryptionDisabled;
             return this;
         }
-        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Codegen.ofNullable(encryptionDisabled);
-            return this;
+
+        public Builder encryptionDisabled(Boolean encryptionDisabled) {
+            return encryptionDisabled(Output.of(encryptionDisabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespaceType(@Nullable Output<String> namespaceType) {
-            this.namespaceType = namespaceType;
+            $.namespaceType = namespaceType;
             return this;
         }
-        public Builder namespaceType(@Nullable String namespaceType) {
-            this.namespaceType = Codegen.ofNullable(namespaceType);
-            return this;
+
+        public Builder namespaceType(String namespaceType) {
+            return namespaceType(Output.of(namespaceType));
         }
+
         public Builder overrideArtifactName(@Nullable Output<Boolean> overrideArtifactName) {
-            this.overrideArtifactName = overrideArtifactName;
+            $.overrideArtifactName = overrideArtifactName;
             return this;
         }
-        public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
-            this.overrideArtifactName = Codegen.ofNullable(overrideArtifactName);
-            return this;
+
+        public Builder overrideArtifactName(Boolean overrideArtifactName) {
+            return overrideArtifactName(Output.of(overrideArtifactName));
         }
+
         public Builder packaging(@Nullable Output<String> packaging) {
-            this.packaging = packaging;
+            $.packaging = packaging;
             return this;
         }
-        public Builder packaging(@Nullable String packaging) {
-            this.packaging = Codegen.ofNullable(packaging);
-            return this;
+
+        public Builder packaging(String packaging) {
+            return packaging(Output.of(packaging));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ProjectArtifactsGetArgs build() {
-            return new ProjectArtifactsGetArgs(artifactIdentifier, bucketOwnerAccess, encryptionDisabled, location, name, namespaceType, overrideArtifactName, packaging, path, type);
+            return type(Output.of(type));
+        }
+
+        public ProjectArtifactsGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

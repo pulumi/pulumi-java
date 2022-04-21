@@ -9,11 +9,11 @@ import com.pulumi.aws.signer.inputs.SigningJobSignedObjectGetArgs;
 import com.pulumi.aws.signer.inputs.SigningJobSourceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completedAt")
-      private final @Nullable Output<String> completedAt;
+    private @Nullable Output<String> completedAt;
 
-    public Output<String> completedAt() {
-        return this.completedAt == null ? Codegen.empty() : this.completedAt;
+    public Optional<Output<String>> completedAt() {
+        return Optional.ofNullable(this.completedAt);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<SigningJobDestinationGetArgs> destination;
+    private @Nullable Output<SigningJobDestinationGetArgs> destination;
 
-    public Output<SigningJobDestinationGetArgs> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<SigningJobDestinationGetArgs>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoreSigningJobFailure")
-      private final @Nullable Output<Boolean> ignoreSigningJobFailure;
+    private @Nullable Output<Boolean> ignoreSigningJobFailure;
 
-    public Output<Boolean> ignoreSigningJobFailure() {
-        return this.ignoreSigningJobFailure == null ? Codegen.empty() : this.ignoreSigningJobFailure;
+    public Optional<Output<Boolean>> ignoreSigningJobFailure() {
+        return Optional.ofNullable(this.ignoreSigningJobFailure);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobId")
-      private final @Nullable Output<String> jobId;
+    private @Nullable Output<String> jobId;
 
-    public Output<String> jobId() {
-        return this.jobId == null ? Codegen.empty() : this.jobId;
+    public Optional<Output<String>> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobInvoker")
-      private final @Nullable Output<String> jobInvoker;
+    private @Nullable Output<String> jobInvoker;
 
-    public Output<String> jobInvoker() {
-        return this.jobInvoker == null ? Codegen.empty() : this.jobInvoker;
+    public Optional<Output<String>> jobInvoker() {
+        return Optional.ofNullable(this.jobInvoker);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobOwner")
-      private final @Nullable Output<String> jobOwner;
+    private @Nullable Output<String> jobOwner;
 
-    public Output<String> jobOwner() {
-        return this.jobOwner == null ? Codegen.empty() : this.jobOwner;
+    public Optional<Output<String>> jobOwner() {
+        return Optional.ofNullable(this.jobOwner);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformDisplayName")
-      private final @Nullable Output<String> platformDisplayName;
+    private @Nullable Output<String> platformDisplayName;
 
-    public Output<String> platformDisplayName() {
-        return this.platformDisplayName == null ? Codegen.empty() : this.platformDisplayName;
+    public Optional<Output<String>> platformDisplayName() {
+        return Optional.ofNullable(this.platformDisplayName);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformId")
-      private final @Nullable Output<String> platformId;
+    private @Nullable Output<String> platformId;
 
-    public Output<String> platformId() {
-        return this.platformId == null ? Codegen.empty() : this.platformId;
+    public Optional<Output<String>> platformId() {
+        return Optional.ofNullable(this.platformId);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName")
-      private final @Nullable Output<String> profileName;
+    private @Nullable Output<String> profileName;
 
-    public Output<String> profileName() {
-        return this.profileName == null ? Codegen.empty() : this.profileName;
+    public Optional<Output<String>> profileName() {
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileVersion")
-      private final @Nullable Output<String> profileVersion;
+    private @Nullable Output<String> profileVersion;
 
-    public Output<String> profileVersion() {
-        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
+    public Optional<Output<String>> profileVersion() {
+        return Optional.ofNullable(this.profileVersion);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestedBy")
-      private final @Nullable Output<String> requestedBy;
+    private @Nullable Output<String> requestedBy;
 
-    public Output<String> requestedBy() {
-        return this.requestedBy == null ? Codegen.empty() : this.requestedBy;
+    public Optional<Output<String>> requestedBy() {
+        return Optional.ofNullable(this.requestedBy);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revocationRecords")
-      private final @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
+    private @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
 
-    public Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords() {
-        return this.revocationRecords == null ? Codegen.empty() : this.revocationRecords;
+    public Optional<Output<List<SigningJobRevocationRecordGetArgs>>> revocationRecords() {
+        return Optional.ofNullable(this.revocationRecords);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signatureExpiresAt")
-      private final @Nullable Output<String> signatureExpiresAt;
+    private @Nullable Output<String> signatureExpiresAt;
 
-    public Output<String> signatureExpiresAt() {
-        return this.signatureExpiresAt == null ? Codegen.empty() : this.signatureExpiresAt;
+    public Optional<Output<String>> signatureExpiresAt() {
+        return Optional.ofNullable(this.signatureExpiresAt);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signedObjects")
-      private final @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects;
+    private @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects;
 
-    public Output<List<SigningJobSignedObjectGetArgs>> signedObjects() {
-        return this.signedObjects == null ? Codegen.empty() : this.signedObjects;
+    public Optional<Output<List<SigningJobSignedObjectGetArgs>>> signedObjects() {
+        return Optional.ofNullable(this.signedObjects);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<SigningJobSourceGetArgs> source;
+    private @Nullable Output<SigningJobSourceGetArgs> source;
 
-    public Output<SigningJobSourceGetArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<SigningJobSourceGetArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -213,277 +213,226 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statusReason")
-      private final @Nullable Output<String> statusReason;
+    private @Nullable Output<String> statusReason;
 
-    public Output<String> statusReason() {
-        return this.statusReason == null ? Codegen.empty() : this.statusReason;
+    public Optional<Output<String>> statusReason() {
+        return Optional.ofNullable(this.statusReason);
     }
 
-    public SigningJobState(
-        @Nullable Output<String> completedAt,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<SigningJobDestinationGetArgs> destination,
-        @Nullable Output<Boolean> ignoreSigningJobFailure,
-        @Nullable Output<String> jobId,
-        @Nullable Output<String> jobInvoker,
-        @Nullable Output<String> jobOwner,
-        @Nullable Output<String> platformDisplayName,
-        @Nullable Output<String> platformId,
-        @Nullable Output<String> profileName,
-        @Nullable Output<String> profileVersion,
-        @Nullable Output<String> requestedBy,
-        @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords,
-        @Nullable Output<String> signatureExpiresAt,
-        @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects,
-        @Nullable Output<SigningJobSourceGetArgs> source,
-        @Nullable Output<String> status,
-        @Nullable Output<String> statusReason) {
-        this.completedAt = completedAt;
-        this.createdAt = createdAt;
-        this.destination = destination;
-        this.ignoreSigningJobFailure = ignoreSigningJobFailure;
-        this.jobId = jobId;
-        this.jobInvoker = jobInvoker;
-        this.jobOwner = jobOwner;
-        this.platformDisplayName = platformDisplayName;
-        this.platformId = platformId;
-        this.profileName = profileName;
-        this.profileVersion = profileVersion;
-        this.requestedBy = requestedBy;
-        this.revocationRecords = revocationRecords;
-        this.signatureExpiresAt = signatureExpiresAt;
-        this.signedObjects = signedObjects;
-        this.source = source;
-        this.status = status;
-        this.statusReason = statusReason;
-    }
+    private SigningJobState() {}
 
-    private SigningJobState() {
-        this.completedAt = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.ignoreSigningJobFailure = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.jobInvoker = Codegen.empty();
-        this.jobOwner = Codegen.empty();
-        this.platformDisplayName = Codegen.empty();
-        this.platformId = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.profileVersion = Codegen.empty();
-        this.requestedBy = Codegen.empty();
-        this.revocationRecords = Codegen.empty();
-        this.signatureExpiresAt = Codegen.empty();
-        this.signedObjects = Codegen.empty();
-        this.source = Codegen.empty();
-        this.status = Codegen.empty();
-        this.statusReason = Codegen.empty();
+    private SigningJobState(SigningJobState $) {
+        this.completedAt = $.completedAt;
+        this.createdAt = $.createdAt;
+        this.destination = $.destination;
+        this.ignoreSigningJobFailure = $.ignoreSigningJobFailure;
+        this.jobId = $.jobId;
+        this.jobInvoker = $.jobInvoker;
+        this.jobOwner = $.jobOwner;
+        this.platformDisplayName = $.platformDisplayName;
+        this.platformId = $.platformId;
+        this.profileName = $.profileName;
+        this.profileVersion = $.profileVersion;
+        this.requestedBy = $.requestedBy;
+        this.revocationRecords = $.revocationRecords;
+        this.signatureExpiresAt = $.signatureExpiresAt;
+        this.signedObjects = $.signedObjects;
+        this.source = $.source;
+        this.status = $.status;
+        this.statusReason = $.statusReason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningJobState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> completedAt;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<SigningJobDestinationGetArgs> destination;
-        private @Nullable Output<Boolean> ignoreSigningJobFailure;
-        private @Nullable Output<String> jobId;
-        private @Nullable Output<String> jobInvoker;
-        private @Nullable Output<String> jobOwner;
-        private @Nullable Output<String> platformDisplayName;
-        private @Nullable Output<String> platformId;
-        private @Nullable Output<String> profileName;
-        private @Nullable Output<String> profileVersion;
-        private @Nullable Output<String> requestedBy;
-        private @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
-        private @Nullable Output<String> signatureExpiresAt;
-        private @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects;
-        private @Nullable Output<SigningJobSourceGetArgs> source;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> statusReason;
+        private SigningJobState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningJobState();
         }
 
         public Builder(SigningJobState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completedAt = defaults.completedAt;
-    	      this.createdAt = defaults.createdAt;
-    	      this.destination = defaults.destination;
-    	      this.ignoreSigningJobFailure = defaults.ignoreSigningJobFailure;
-    	      this.jobId = defaults.jobId;
-    	      this.jobInvoker = defaults.jobInvoker;
-    	      this.jobOwner = defaults.jobOwner;
-    	      this.platformDisplayName = defaults.platformDisplayName;
-    	      this.platformId = defaults.platformId;
-    	      this.profileName = defaults.profileName;
-    	      this.profileVersion = defaults.profileVersion;
-    	      this.requestedBy = defaults.requestedBy;
-    	      this.revocationRecords = defaults.revocationRecords;
-    	      this.signatureExpiresAt = defaults.signatureExpiresAt;
-    	      this.signedObjects = defaults.signedObjects;
-    	      this.source = defaults.source;
-    	      this.status = defaults.status;
-    	      this.statusReason = defaults.statusReason;
+            $ = new SigningJobState(Objects.requireNonNull(defaults));
         }
 
         public Builder completedAt(@Nullable Output<String> completedAt) {
-            this.completedAt = completedAt;
+            $.completedAt = completedAt;
             return this;
         }
-        public Builder completedAt(@Nullable String completedAt) {
-            this.completedAt = Codegen.ofNullable(completedAt);
-            return this;
+
+        public Builder completedAt(String completedAt) {
+            return completedAt(Output.of(completedAt));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder destination(@Nullable Output<SigningJobDestinationGetArgs> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable SigningJobDestinationGetArgs destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(SigningJobDestinationGetArgs destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder ignoreSigningJobFailure(@Nullable Output<Boolean> ignoreSigningJobFailure) {
-            this.ignoreSigningJobFailure = ignoreSigningJobFailure;
+            $.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
-        public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
-            this.ignoreSigningJobFailure = Codegen.ofNullable(ignoreSigningJobFailure);
-            return this;
+
+        public Builder ignoreSigningJobFailure(Boolean ignoreSigningJobFailure) {
+            return ignoreSigningJobFailure(Output.of(ignoreSigningJobFailure));
         }
+
         public Builder jobId(@Nullable Output<String> jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
-        public Builder jobId(@Nullable String jobId) {
-            this.jobId = Codegen.ofNullable(jobId);
-            return this;
+
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
         }
+
         public Builder jobInvoker(@Nullable Output<String> jobInvoker) {
-            this.jobInvoker = jobInvoker;
+            $.jobInvoker = jobInvoker;
             return this;
         }
-        public Builder jobInvoker(@Nullable String jobInvoker) {
-            this.jobInvoker = Codegen.ofNullable(jobInvoker);
-            return this;
+
+        public Builder jobInvoker(String jobInvoker) {
+            return jobInvoker(Output.of(jobInvoker));
         }
+
         public Builder jobOwner(@Nullable Output<String> jobOwner) {
-            this.jobOwner = jobOwner;
+            $.jobOwner = jobOwner;
             return this;
         }
-        public Builder jobOwner(@Nullable String jobOwner) {
-            this.jobOwner = Codegen.ofNullable(jobOwner);
-            return this;
+
+        public Builder jobOwner(String jobOwner) {
+            return jobOwner(Output.of(jobOwner));
         }
+
         public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
-            this.platformDisplayName = platformDisplayName;
+            $.platformDisplayName = platformDisplayName;
             return this;
         }
-        public Builder platformDisplayName(@Nullable String platformDisplayName) {
-            this.platformDisplayName = Codegen.ofNullable(platformDisplayName);
-            return this;
+
+        public Builder platformDisplayName(String platformDisplayName) {
+            return platformDisplayName(Output.of(platformDisplayName));
         }
+
         public Builder platformId(@Nullable Output<String> platformId) {
-            this.platformId = platformId;
+            $.platformId = platformId;
             return this;
         }
-        public Builder platformId(@Nullable String platformId) {
-            this.platformId = Codegen.ofNullable(platformId);
-            return this;
+
+        public Builder platformId(String platformId) {
+            return platformId(Output.of(platformId));
         }
+
         public Builder profileName(@Nullable Output<String> profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
-        public Builder profileName(@Nullable String profileName) {
-            this.profileName = Codegen.ofNullable(profileName);
-            return this;
+
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
         }
+
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
-            this.profileVersion = profileVersion;
+            $.profileVersion = profileVersion;
             return this;
         }
-        public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Codegen.ofNullable(profileVersion);
-            return this;
+
+        public Builder profileVersion(String profileVersion) {
+            return profileVersion(Output.of(profileVersion));
         }
+
         public Builder requestedBy(@Nullable Output<String> requestedBy) {
-            this.requestedBy = requestedBy;
+            $.requestedBy = requestedBy;
             return this;
         }
-        public Builder requestedBy(@Nullable String requestedBy) {
-            this.requestedBy = Codegen.ofNullable(requestedBy);
-            return this;
+
+        public Builder requestedBy(String requestedBy) {
+            return requestedBy(Output.of(requestedBy));
         }
+
         public Builder revocationRecords(@Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords) {
-            this.revocationRecords = revocationRecords;
+            $.revocationRecords = revocationRecords;
             return this;
         }
-        public Builder revocationRecords(@Nullable List<SigningJobRevocationRecordGetArgs> revocationRecords) {
-            this.revocationRecords = Codegen.ofNullable(revocationRecords);
-            return this;
+
+        public Builder revocationRecords(List<SigningJobRevocationRecordGetArgs> revocationRecords) {
+            return revocationRecords(Output.of(revocationRecords));
         }
+
         public Builder revocationRecords(SigningJobRevocationRecordGetArgs... revocationRecords) {
             return revocationRecords(List.of(revocationRecords));
         }
+
         public Builder signatureExpiresAt(@Nullable Output<String> signatureExpiresAt) {
-            this.signatureExpiresAt = signatureExpiresAt;
+            $.signatureExpiresAt = signatureExpiresAt;
             return this;
         }
-        public Builder signatureExpiresAt(@Nullable String signatureExpiresAt) {
-            this.signatureExpiresAt = Codegen.ofNullable(signatureExpiresAt);
-            return this;
+
+        public Builder signatureExpiresAt(String signatureExpiresAt) {
+            return signatureExpiresAt(Output.of(signatureExpiresAt));
         }
+
         public Builder signedObjects(@Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects) {
-            this.signedObjects = signedObjects;
+            $.signedObjects = signedObjects;
             return this;
         }
-        public Builder signedObjects(@Nullable List<SigningJobSignedObjectGetArgs> signedObjects) {
-            this.signedObjects = Codegen.ofNullable(signedObjects);
-            return this;
+
+        public Builder signedObjects(List<SigningJobSignedObjectGetArgs> signedObjects) {
+            return signedObjects(Output.of(signedObjects));
         }
+
         public Builder signedObjects(SigningJobSignedObjectGetArgs... signedObjects) {
             return signedObjects(List.of(signedObjects));
         }
+
         public Builder source(@Nullable Output<SigningJobSourceGetArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable SigningJobSourceGetArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(SigningJobSourceGetArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder statusReason(@Nullable Output<String> statusReason) {
-            this.statusReason = statusReason;
+            $.statusReason = statusReason;
             return this;
         }
-        public Builder statusReason(@Nullable String statusReason) {
-            this.statusReason = Codegen.ofNullable(statusReason);
-            return this;
-        }        public SigningJobState build() {
-            return new SigningJobState(completedAt, createdAt, destination, ignoreSigningJobFailure, jobId, jobInvoker, jobOwner, platformDisplayName, platformId, profileName, profileVersion, requestedBy, revocationRecords, signatureExpiresAt, signedObjects, source, status, statusReason);
+
+        public Builder statusReason(String statusReason) {
+            return statusReason(Output.of(statusReason));
+        }
+
+        public SigningJobState build() {
+            return $;
         }
     }
+
 }

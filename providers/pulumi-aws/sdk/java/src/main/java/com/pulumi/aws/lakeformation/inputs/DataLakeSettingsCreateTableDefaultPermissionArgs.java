@@ -5,10 +5,10 @@ package com.pulumi.aws.lakeformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends com.
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<String>> permissions;
+    private @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<String>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends com.
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
-    public DataLakeSettingsCreateTableDefaultPermissionArgs(
-        @Nullable Output<List<String>> permissions,
-        @Nullable Output<String> principal) {
-        this.permissions = permissions;
-        this.principal = principal;
-    }
+    private DataLakeSettingsCreateTableDefaultPermissionArgs() {}
 
-    private DataLakeSettingsCreateTableDefaultPermissionArgs() {
-        this.permissions = Codegen.empty();
-        this.principal = Codegen.empty();
+    private DataLakeSettingsCreateTableDefaultPermissionArgs(DataLakeSettingsCreateTableDefaultPermissionArgs $) {
+        this.permissions = $.permissions;
+        this.principal = $.principal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeSettingsCreateTableDefaultPermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> permissions;
-        private @Nullable Output<String> principal;
+        private DataLakeSettingsCreateTableDefaultPermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeSettingsCreateTableDefaultPermissionArgs();
         }
 
         public Builder(DataLakeSettingsCreateTableDefaultPermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissions = defaults.permissions;
-    	      this.principal = defaults.principal;
+            $ = new DataLakeSettingsCreateTableDefaultPermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder permissions(@Nullable Output<List<String>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<String> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
-        }        public DataLakeSettingsCreateTableDefaultPermissionArgs build() {
-            return new DataLakeSettingsCreateTableDefaultPermissionArgs(permissions, principal);
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
+        }
+
+        public DataLakeSettingsCreateTableDefaultPermissionArgs build() {
+            return $;
         }
     }
+
 }

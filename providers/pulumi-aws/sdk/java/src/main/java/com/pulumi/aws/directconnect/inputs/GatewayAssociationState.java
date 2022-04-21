@@ -5,10 +5,10 @@ package com.pulumi.aws.directconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allowedPrefixes")
-      private final @Nullable Output<List<String>> allowedPrefixes;
+    private @Nullable Output<List<String>> allowedPrefixes;
 
-    public Output<List<String>> allowedPrefixes() {
-        return this.allowedPrefixes == null ? Codegen.empty() : this.allowedPrefixes;
+    public Optional<Output<List<String>>> allowedPrefixes() {
+        return Optional.ofNullable(this.allowedPrefixes);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="associatedGatewayId")
-      private final @Nullable Output<String> associatedGatewayId;
+    private @Nullable Output<String> associatedGatewayId;
 
-    public Output<String> associatedGatewayId() {
-        return this.associatedGatewayId == null ? Codegen.empty() : this.associatedGatewayId;
+    public Optional<Output<String>> associatedGatewayId() {
+        return Optional.ofNullable(this.associatedGatewayId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="associatedGatewayOwnerAccountId")
-      private final @Nullable Output<String> associatedGatewayOwnerAccountId;
+    private @Nullable Output<String> associatedGatewayOwnerAccountId;
 
-    public Output<String> associatedGatewayOwnerAccountId() {
-        return this.associatedGatewayOwnerAccountId == null ? Codegen.empty() : this.associatedGatewayOwnerAccountId;
+    public Optional<Output<String>> associatedGatewayOwnerAccountId() {
+        return Optional.ofNullable(this.associatedGatewayOwnerAccountId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="associatedGatewayType")
-      private final @Nullable Output<String> associatedGatewayType;
+    private @Nullable Output<String> associatedGatewayType;
 
-    public Output<String> associatedGatewayType() {
-        return this.associatedGatewayType == null ? Codegen.empty() : this.associatedGatewayType;
+    public Optional<Output<String>> associatedGatewayType() {
+        return Optional.ofNullable(this.associatedGatewayType);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dxGatewayAssociationId")
-      private final @Nullable Output<String> dxGatewayAssociationId;
+    private @Nullable Output<String> dxGatewayAssociationId;
 
-    public Output<String> dxGatewayAssociationId() {
-        return this.dxGatewayAssociationId == null ? Codegen.empty() : this.dxGatewayAssociationId;
+    public Optional<Output<String>> dxGatewayAssociationId() {
+        return Optional.ofNullable(this.dxGatewayAssociationId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dxGatewayId")
-      private final @Nullable Output<String> dxGatewayId;
+    private @Nullable Output<String> dxGatewayId;
 
-    public Output<String> dxGatewayId() {
-        return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
+    public Optional<Output<String>> dxGatewayId() {
+        return Optional.ofNullable(this.dxGatewayId);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dxGatewayOwnerAccountId")
-      private final @Nullable Output<String> dxGatewayOwnerAccountId;
+    private @Nullable Output<String> dxGatewayOwnerAccountId;
 
-    public Output<String> dxGatewayOwnerAccountId() {
-        return this.dxGatewayOwnerAccountId == null ? Codegen.empty() : this.dxGatewayOwnerAccountId;
+    public Optional<Output<String>> dxGatewayOwnerAccountId() {
+        return Optional.ofNullable(this.dxGatewayOwnerAccountId);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="proposalId")
-      private final @Nullable Output<String> proposalId;
+    private @Nullable Output<String> proposalId;
 
-    public Output<String> proposalId() {
-        return this.proposalId == null ? Codegen.empty() : this.proposalId;
+    public Optional<Output<String>> proposalId() {
+        return Optional.ofNullable(this.proposalId);
     }
 
     /**
@@ -114,158 +114,133 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
      */
     @Deprecated /* use 'associated_gateway_id' argument instead */
     @Import(name="vpnGatewayId")
-      private final @Nullable Output<String> vpnGatewayId;
+    private @Nullable Output<String> vpnGatewayId;
 
     @Deprecated /* use 'associated_gateway_id' argument instead */
-    public Output<String> vpnGatewayId() {
-        return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
+    public Optional<Output<String>> vpnGatewayId() {
+        return Optional.ofNullable(this.vpnGatewayId);
     }
 
-    public GatewayAssociationState(
-        @Nullable Output<List<String>> allowedPrefixes,
-        @Nullable Output<String> associatedGatewayId,
-        @Nullable Output<String> associatedGatewayOwnerAccountId,
-        @Nullable Output<String> associatedGatewayType,
-        @Nullable Output<String> dxGatewayAssociationId,
-        @Nullable Output<String> dxGatewayId,
-        @Nullable Output<String> dxGatewayOwnerAccountId,
-        @Nullable Output<String> proposalId,
-        @Nullable Output<String> vpnGatewayId) {
-        this.allowedPrefixes = allowedPrefixes;
-        this.associatedGatewayId = associatedGatewayId;
-        this.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
-        this.associatedGatewayType = associatedGatewayType;
-        this.dxGatewayAssociationId = dxGatewayAssociationId;
-        this.dxGatewayId = dxGatewayId;
-        this.dxGatewayOwnerAccountId = dxGatewayOwnerAccountId;
-        this.proposalId = proposalId;
-        this.vpnGatewayId = vpnGatewayId;
-    }
+    private GatewayAssociationState() {}
 
-    private GatewayAssociationState() {
-        this.allowedPrefixes = Codegen.empty();
-        this.associatedGatewayId = Codegen.empty();
-        this.associatedGatewayOwnerAccountId = Codegen.empty();
-        this.associatedGatewayType = Codegen.empty();
-        this.dxGatewayAssociationId = Codegen.empty();
-        this.dxGatewayId = Codegen.empty();
-        this.dxGatewayOwnerAccountId = Codegen.empty();
-        this.proposalId = Codegen.empty();
-        this.vpnGatewayId = Codegen.empty();
+    private GatewayAssociationState(GatewayAssociationState $) {
+        this.allowedPrefixes = $.allowedPrefixes;
+        this.associatedGatewayId = $.associatedGatewayId;
+        this.associatedGatewayOwnerAccountId = $.associatedGatewayOwnerAccountId;
+        this.associatedGatewayType = $.associatedGatewayType;
+        this.dxGatewayAssociationId = $.dxGatewayAssociationId;
+        this.dxGatewayId = $.dxGatewayId;
+        this.dxGatewayOwnerAccountId = $.dxGatewayOwnerAccountId;
+        this.proposalId = $.proposalId;
+        this.vpnGatewayId = $.vpnGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedPrefixes;
-        private @Nullable Output<String> associatedGatewayId;
-        private @Nullable Output<String> associatedGatewayOwnerAccountId;
-        private @Nullable Output<String> associatedGatewayType;
-        private @Nullable Output<String> dxGatewayAssociationId;
-        private @Nullable Output<String> dxGatewayId;
-        private @Nullable Output<String> dxGatewayOwnerAccountId;
-        private @Nullable Output<String> proposalId;
-        private @Nullable Output<String> vpnGatewayId;
+        private GatewayAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayAssociationState();
         }
 
         public Builder(GatewayAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPrefixes = defaults.allowedPrefixes;
-    	      this.associatedGatewayId = defaults.associatedGatewayId;
-    	      this.associatedGatewayOwnerAccountId = defaults.associatedGatewayOwnerAccountId;
-    	      this.associatedGatewayType = defaults.associatedGatewayType;
-    	      this.dxGatewayAssociationId = defaults.dxGatewayAssociationId;
-    	      this.dxGatewayId = defaults.dxGatewayId;
-    	      this.dxGatewayOwnerAccountId = defaults.dxGatewayOwnerAccountId;
-    	      this.proposalId = defaults.proposalId;
-    	      this.vpnGatewayId = defaults.vpnGatewayId;
+            $ = new GatewayAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPrefixes(@Nullable Output<List<String>> allowedPrefixes) {
-            this.allowedPrefixes = allowedPrefixes;
+            $.allowedPrefixes = allowedPrefixes;
             return this;
         }
-        public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
-            this.allowedPrefixes = Codegen.ofNullable(allowedPrefixes);
-            return this;
+
+        public Builder allowedPrefixes(List<String> allowedPrefixes) {
+            return allowedPrefixes(Output.of(allowedPrefixes));
         }
+
         public Builder allowedPrefixes(String... allowedPrefixes) {
             return allowedPrefixes(List.of(allowedPrefixes));
         }
+
         public Builder associatedGatewayId(@Nullable Output<String> associatedGatewayId) {
-            this.associatedGatewayId = associatedGatewayId;
+            $.associatedGatewayId = associatedGatewayId;
             return this;
         }
-        public Builder associatedGatewayId(@Nullable String associatedGatewayId) {
-            this.associatedGatewayId = Codegen.ofNullable(associatedGatewayId);
-            return this;
+
+        public Builder associatedGatewayId(String associatedGatewayId) {
+            return associatedGatewayId(Output.of(associatedGatewayId));
         }
+
         public Builder associatedGatewayOwnerAccountId(@Nullable Output<String> associatedGatewayOwnerAccountId) {
-            this.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
+            $.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
             return this;
         }
-        public Builder associatedGatewayOwnerAccountId(@Nullable String associatedGatewayOwnerAccountId) {
-            this.associatedGatewayOwnerAccountId = Codegen.ofNullable(associatedGatewayOwnerAccountId);
-            return this;
+
+        public Builder associatedGatewayOwnerAccountId(String associatedGatewayOwnerAccountId) {
+            return associatedGatewayOwnerAccountId(Output.of(associatedGatewayOwnerAccountId));
         }
+
         public Builder associatedGatewayType(@Nullable Output<String> associatedGatewayType) {
-            this.associatedGatewayType = associatedGatewayType;
+            $.associatedGatewayType = associatedGatewayType;
             return this;
         }
-        public Builder associatedGatewayType(@Nullable String associatedGatewayType) {
-            this.associatedGatewayType = Codegen.ofNullable(associatedGatewayType);
-            return this;
+
+        public Builder associatedGatewayType(String associatedGatewayType) {
+            return associatedGatewayType(Output.of(associatedGatewayType));
         }
+
         public Builder dxGatewayAssociationId(@Nullable Output<String> dxGatewayAssociationId) {
-            this.dxGatewayAssociationId = dxGatewayAssociationId;
+            $.dxGatewayAssociationId = dxGatewayAssociationId;
             return this;
         }
-        public Builder dxGatewayAssociationId(@Nullable String dxGatewayAssociationId) {
-            this.dxGatewayAssociationId = Codegen.ofNullable(dxGatewayAssociationId);
-            return this;
+
+        public Builder dxGatewayAssociationId(String dxGatewayAssociationId) {
+            return dxGatewayAssociationId(Output.of(dxGatewayAssociationId));
         }
+
         public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
-            this.dxGatewayId = dxGatewayId;
+            $.dxGatewayId = dxGatewayId;
             return this;
         }
-        public Builder dxGatewayId(@Nullable String dxGatewayId) {
-            this.dxGatewayId = Codegen.ofNullable(dxGatewayId);
-            return this;
+
+        public Builder dxGatewayId(String dxGatewayId) {
+            return dxGatewayId(Output.of(dxGatewayId));
         }
+
         public Builder dxGatewayOwnerAccountId(@Nullable Output<String> dxGatewayOwnerAccountId) {
-            this.dxGatewayOwnerAccountId = dxGatewayOwnerAccountId;
+            $.dxGatewayOwnerAccountId = dxGatewayOwnerAccountId;
             return this;
         }
-        public Builder dxGatewayOwnerAccountId(@Nullable String dxGatewayOwnerAccountId) {
-            this.dxGatewayOwnerAccountId = Codegen.ofNullable(dxGatewayOwnerAccountId);
-            return this;
+
+        public Builder dxGatewayOwnerAccountId(String dxGatewayOwnerAccountId) {
+            return dxGatewayOwnerAccountId(Output.of(dxGatewayOwnerAccountId));
         }
+
         public Builder proposalId(@Nullable Output<String> proposalId) {
-            this.proposalId = proposalId;
+            $.proposalId = proposalId;
             return this;
         }
-        public Builder proposalId(@Nullable String proposalId) {
-            this.proposalId = Codegen.ofNullable(proposalId);
-            return this;
+
+        public Builder proposalId(String proposalId) {
+            return proposalId(Output.of(proposalId));
         }
+
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
-            this.vpnGatewayId = vpnGatewayId;
+            $.vpnGatewayId = vpnGatewayId;
             return this;
         }
-        public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
-            this.vpnGatewayId = Codegen.ofNullable(vpnGatewayId);
-            return this;
-        }        public GatewayAssociationState build() {
-            return new GatewayAssociationState(allowedPrefixes, associatedGatewayId, associatedGatewayOwnerAccountId, associatedGatewayType, dxGatewayAssociationId, dxGatewayId, dxGatewayOwnerAccountId, proposalId, vpnGatewayId);
+
+        public Builder vpnGatewayId(String vpnGatewayId) {
+            return vpnGatewayId(Output.of(vpnGatewayId));
+        }
+
+        public GatewayAssociationState build() {
+            return $;
         }
     }
+
 }

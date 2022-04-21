@@ -6,9 +6,9 @@ package com.pulumi.aws.apigateway.inputs;
 import com.pulumi.aws.apigateway.inputs.AccountThrottleSettingsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchRoleArn")
-      private final @Nullable Output<String> cloudwatchRoleArn;
+    private @Nullable Output<String> cloudwatchRoleArn;
 
-    public Output<String> cloudwatchRoleArn() {
-        return this.cloudwatchRoleArn == null ? Codegen.empty() : this.cloudwatchRoleArn;
+    public Optional<Output<String>> cloudwatchRoleArn() {
+        return Optional.ofNullable(this.cloudwatchRoleArn);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throttleSettings")
-      private final @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings;
+    private @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings;
 
-    public Output<AccountThrottleSettingsGetArgs> throttleSettings() {
-        return this.throttleSettings == null ? Codegen.empty() : this.throttleSettings;
+    public Optional<Output<AccountThrottleSettingsGetArgs>> throttleSettings() {
+        return Optional.ofNullable(this.throttleSettings);
     }
 
-    public AccountState(
-        @Nullable Output<String> cloudwatchRoleArn,
-        @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings) {
-        this.cloudwatchRoleArn = cloudwatchRoleArn;
-        this.throttleSettings = throttleSettings;
-    }
+    private AccountState() {}
 
-    private AccountState() {
-        this.cloudwatchRoleArn = Codegen.empty();
-        this.throttleSettings = Codegen.empty();
+    private AccountState(AccountState $) {
+        this.cloudwatchRoleArn = $.cloudwatchRoleArn;
+        this.throttleSettings = $.throttleSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudwatchRoleArn;
-        private @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings;
+        private AccountState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountState();
         }
 
         public Builder(AccountState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchRoleArn = defaults.cloudwatchRoleArn;
-    	      this.throttleSettings = defaults.throttleSettings;
+            $ = new AccountState(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchRoleArn(@Nullable Output<String> cloudwatchRoleArn) {
-            this.cloudwatchRoleArn = cloudwatchRoleArn;
+            $.cloudwatchRoleArn = cloudwatchRoleArn;
             return this;
         }
-        public Builder cloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
-            this.cloudwatchRoleArn = Codegen.ofNullable(cloudwatchRoleArn);
-            return this;
+
+        public Builder cloudwatchRoleArn(String cloudwatchRoleArn) {
+            return cloudwatchRoleArn(Output.of(cloudwatchRoleArn));
         }
+
         public Builder throttleSettings(@Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings) {
-            this.throttleSettings = throttleSettings;
+            $.throttleSettings = throttleSettings;
             return this;
         }
-        public Builder throttleSettings(@Nullable AccountThrottleSettingsGetArgs throttleSettings) {
-            this.throttleSettings = Codegen.ofNullable(throttleSettings);
-            return this;
-        }        public AccountState build() {
-            return new AccountState(cloudwatchRoleArn, throttleSettings);
+
+        public Builder throttleSettings(AccountThrottleSettingsGetArgs throttleSettings) {
+            return throttleSettings(Output.of(throttleSettings));
+        }
+
+        public AccountState build() {
+            return $;
         }
     }
+
 }

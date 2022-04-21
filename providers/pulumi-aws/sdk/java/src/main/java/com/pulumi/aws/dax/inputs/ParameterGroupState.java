@@ -6,10 +6,10 @@ package com.pulumi.aws.dax.inputs;
 import com.pulumi.aws.dax.inputs.ParameterGroupParameterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
+    private @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
 
-    public Output<List<ParameterGroupParameterGetArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ParameterGroupParameterGetArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public ParameterGroupState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters) {
-        this.description = description;
-        this.name = name;
-        this.parameters = parameters;
-    }
+    private ParameterGroupState() {}
 
-    private ParameterGroupState() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private ParameterGroupState(ParameterGroupState $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
+        private ParameterGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterGroupState();
         }
 
         public Builder(ParameterGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new ParameterGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<List<ParameterGroupParameterGetArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ParameterGroupParameterGetArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ParameterGroupParameterGetArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ParameterGroupParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public ParameterGroupState build() {
-            return new ParameterGroupState(description, name, parameters);
+        }
+
+        public ParameterGroupState build() {
+            return $;
         }
     }
+
 }

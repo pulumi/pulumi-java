@@ -19,10 +19,10 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="streamArn", required=true)
-      private final String streamArn;
+    private String streamArn;
 
     public String streamArn() {
         return this.streamArn;
     }
 
-    public GetStreamConsumerArgs(
-        @Nullable String arn,
-        @Nullable String name,
-        String streamArn) {
-        this.arn = arn;
-        this.name = name;
-        this.streamArn = Objects.requireNonNull(streamArn, "expected parameter 'streamArn' to be non-null");
-    }
+    private GetStreamConsumerArgs() {}
 
-    private GetStreamConsumerArgs() {
-        this.arn = null;
-        this.name = null;
-        this.streamArn = null;
+    private GetStreamConsumerArgs(GetStreamConsumerArgs $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.streamArn = $.streamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamConsumerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String name;
-        private String streamArn;
+        private GetStreamConsumerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamConsumerArgs();
         }
 
         public Builder(GetStreamConsumerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.streamArn = defaults.streamArn;
+            $ = new GetStreamConsumerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder streamArn(String streamArn) {
-            this.streamArn = Objects.requireNonNull(streamArn);
+            $.streamArn = streamArn;
             return this;
-        }        public GetStreamConsumerArgs build() {
-            return new GetStreamConsumerArgs(arn, name, streamArn);
+        }
+
+        public GetStreamConsumerArgs build() {
+            $.streamArn = Objects.requireNonNull($.streamArn, "expected parameter 'streamArn' to be non-null");
+            return $;
         }
     }
+
 }

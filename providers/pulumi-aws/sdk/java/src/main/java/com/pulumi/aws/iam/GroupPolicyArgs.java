@@ -5,9 +5,9 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class GroupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="group", required=true)
-      private final Output<String> group;
+    private Output<String> group;
 
     public Output<String> group() {
         return this.group;
@@ -32,10 +32,10 @@ public final class GroupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GroupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -55,85 +55,80 @@ public final class GroupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public GroupPolicyArgs(
-        Output<String> group,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        Output<String> policy) {
-        this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private GroupPolicyArgs() {}
 
-    private GroupPolicyArgs() {
-        this.group = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.policy = Codegen.empty();
+    private GroupPolicyArgs(GroupPolicyArgs $) {
+        this.group = $.group;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> group;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private Output<String> policy;
+        private GroupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupPolicyArgs();
         }
 
         public Builder(GroupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.policy = defaults.policy;
+            $ = new GroupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder group(Output<String> group) {
-            this.group = Objects.requireNonNull(group);
+            $.group = group;
             return this;
         }
+
         public Builder group(String group) {
-            this.group = Output.of(Objects.requireNonNull(group));
-            return this;
+            return group(Output.of(group));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
-        }        public GroupPolicyArgs build() {
-            return new GroupPolicyArgs(group, name, namePrefix, policy);
+        }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public GroupPolicyArgs build() {
+            $.group = Objects.requireNonNull($.group, "expected parameter 'group' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

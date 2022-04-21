@@ -7,10 +7,10 @@ import com.pulumi.aws.efs.inputs.AccessPointPosixUserGetArgs;
 import com.pulumi.aws.efs.inputs.AccessPointRootDirectoryGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemArn")
-      private final @Nullable Output<String> fileSystemArn;
+    private @Nullable Output<String> fileSystemArn;
 
-    public Output<String> fileSystemArn() {
-        return this.fileSystemArn == null ? Codegen.empty() : this.fileSystemArn;
+    public Optional<Output<String>> fileSystemArn() {
+        return Optional.ofNullable(this.fileSystemArn);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable Output<String> fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
-    public Output<String> fileSystemId() {
-        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
+    public Optional<Output<String>> fileSystemId() {
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixUser")
-      private final @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
+    private @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
 
-    public Output<AccessPointPosixUserGetArgs> posixUser() {
-        return this.posixUser == null ? Codegen.empty() : this.posixUser;
+    public Optional<Output<AccessPointPosixUserGetArgs>> posixUser() {
+        return Optional.ofNullable(this.posixUser);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootDirectory")
-      private final @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
+    private @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
 
-    public Output<AccessPointRootDirectoryGetArgs> rootDirectory() {
-        return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
+    public Optional<Output<AccessPointRootDirectoryGetArgs>> rootDirectory() {
+        return Optional.ofNullable(this.rootDirectory);
     }
 
     /**
@@ -85,148 +85,125 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public AccessPointState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> fileSystemArn,
-        @Nullable Output<String> fileSystemId,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<AccessPointPosixUserGetArgs> posixUser,
-        @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.fileSystemArn = fileSystemArn;
-        this.fileSystemId = fileSystemId;
-        this.ownerId = ownerId;
-        this.posixUser = posixUser;
-        this.rootDirectory = rootDirectory;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private AccessPointState() {}
 
-    private AccessPointState() {
-        this.arn = Codegen.empty();
-        this.fileSystemArn = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.posixUser = Codegen.empty();
-        this.rootDirectory = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private AccessPointState(AccessPointState $) {
+        this.arn = $.arn;
+        this.fileSystemArn = $.fileSystemArn;
+        this.fileSystemId = $.fileSystemId;
+        this.ownerId = $.ownerId;
+        this.posixUser = $.posixUser;
+        this.rootDirectory = $.rootDirectory;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> fileSystemArn;
-        private @Nullable Output<String> fileSystemId;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
-        private @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private AccessPointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointState();
         }
 
         public Builder(AccessPointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.fileSystemArn = defaults.fileSystemArn;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.ownerId = defaults.ownerId;
-    	      this.posixUser = defaults.posixUser;
-    	      this.rootDirectory = defaults.rootDirectory;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new AccessPointState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
-            this.fileSystemArn = fileSystemArn;
+            $.fileSystemArn = fileSystemArn;
             return this;
         }
-        public Builder fileSystemArn(@Nullable String fileSystemArn) {
-            this.fileSystemArn = Codegen.ofNullable(fileSystemArn);
-            return this;
+
+        public Builder fileSystemArn(String fileSystemArn) {
+            return fileSystemArn(Output.of(fileSystemArn));
         }
+
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
-        public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Codegen.ofNullable(fileSystemId);
-            return this;
+
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder posixUser(@Nullable Output<AccessPointPosixUserGetArgs> posixUser) {
-            this.posixUser = posixUser;
+            $.posixUser = posixUser;
             return this;
         }
-        public Builder posixUser(@Nullable AccessPointPosixUserGetArgs posixUser) {
-            this.posixUser = Codegen.ofNullable(posixUser);
-            return this;
+
+        public Builder posixUser(AccessPointPosixUserGetArgs posixUser) {
+            return posixUser(Output.of(posixUser));
         }
+
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory) {
-            this.rootDirectory = rootDirectory;
+            $.rootDirectory = rootDirectory;
             return this;
         }
-        public Builder rootDirectory(@Nullable AccessPointRootDirectoryGetArgs rootDirectory) {
-            this.rootDirectory = Codegen.ofNullable(rootDirectory);
-            return this;
+
+        public Builder rootDirectory(AccessPointRootDirectoryGetArgs rootDirectory) {
+            return rootDirectory(Output.of(rootDirectory));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public AccessPointState build() {
-            return new AccessPointState(arn, fileSystemArn, fileSystemId, ownerId, posixUser, rootDirectory, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public AccessPointState build() {
+            return $;
         }
     }
+
 }

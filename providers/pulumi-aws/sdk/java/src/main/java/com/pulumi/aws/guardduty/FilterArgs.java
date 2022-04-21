@@ -6,11 +6,11 @@ package com.pulumi.aws.guardduty;
 import com.pulumi.aws.guardduty.inputs.FilterFindingCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -34,10 +34,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detectorId", required=true)
-      private final Output<String> detectorId;
+    private Output<String> detectorId;
 
     public Output<String> detectorId() {
         return this.detectorId;
@@ -56,7 +56,7 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="findingCriteria", required=true)
-      private final Output<FilterFindingCriteriaArgs> findingCriteria;
+    private Output<FilterFindingCriteriaArgs> findingCriteria;
 
     public Output<FilterFindingCriteriaArgs> findingCriteria() {
         return this.findingCriteria;
@@ -67,10 +67,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rank", required=true)
-      private final Output<Integer> rank;
+    private Output<Integer> rank;
 
     public Output<Integer> rank() {
         return this.rank;
@@ -89,128 +89,112 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FilterArgs(
-        Output<String> action,
-        @Nullable Output<String> description,
-        Output<String> detectorId,
-        Output<FilterFindingCriteriaArgs> findingCriteria,
-        @Nullable Output<String> name,
-        Output<Integer> rank,
-        @Nullable Output<Map<String,String>> tags) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.description = description;
-        this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
-        this.findingCriteria = Objects.requireNonNull(findingCriteria, "expected parameter 'findingCriteria' to be non-null");
-        this.name = name;
-        this.rank = Objects.requireNonNull(rank, "expected parameter 'rank' to be non-null");
-        this.tags = tags;
-    }
+    private FilterArgs() {}
 
-    private FilterArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.detectorId = Codegen.empty();
-        this.findingCriteria = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rank = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FilterArgs(FilterArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.detectorId = $.detectorId;
+        this.findingCriteria = $.findingCriteria;
+        this.name = $.name;
+        this.rank = $.rank;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private @Nullable Output<String> description;
-        private Output<String> detectorId;
-        private Output<FilterFindingCriteriaArgs> findingCriteria;
-        private @Nullable Output<String> name;
-        private Output<Integer> rank;
-        private @Nullable Output<Map<String,String>> tags;
+        private FilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterArgs();
         }
 
         public Builder(FilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.detectorId = defaults.detectorId;
-    	      this.findingCriteria = defaults.findingCriteria;
-    	      this.name = defaults.name;
-    	      this.rank = defaults.rank;
-    	      this.tags = defaults.tags;
+            $ = new FilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder detectorId(Output<String> detectorId) {
-            this.detectorId = Objects.requireNonNull(detectorId);
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder detectorId(String detectorId) {
-            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
-            return this;
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder findingCriteria(Output<FilterFindingCriteriaArgs> findingCriteria) {
-            this.findingCriteria = Objects.requireNonNull(findingCriteria);
+            $.findingCriteria = findingCriteria;
             return this;
         }
+
         public Builder findingCriteria(FilterFindingCriteriaArgs findingCriteria) {
-            this.findingCriteria = Output.of(Objects.requireNonNull(findingCriteria));
-            return this;
+            return findingCriteria(Output.of(findingCriteria));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rank(Output<Integer> rank) {
-            this.rank = Objects.requireNonNull(rank);
+            $.rank = rank;
             return this;
         }
+
         public Builder rank(Integer rank) {
-            this.rank = Output.of(Objects.requireNonNull(rank));
-            return this;
+            return rank(Output.of(rank));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public FilterArgs build() {
-            return new FilterArgs(action, description, detectorId, findingCriteria, name, rank, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public FilterArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.detectorId = Objects.requireNonNull($.detectorId, "expected parameter 'detectorId' to be non-null");
+            $.findingCriteria = Objects.requireNonNull($.findingCriteria, "expected parameter 'findingCriteria' to be non-null");
+            $.rank = Objects.requireNonNull($.rank, "expected parameter 'rank' to be non-null");
+            return $;
         }
     }
+
 }

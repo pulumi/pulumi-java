@@ -6,8 +6,8 @@ package com.pulumi.aws.guardduty.inputs;
 import com.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesS3LogsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class OrganizationConfigurationDatasourcesGetArgs extends com.pulum
      * 
      */
     @Import(name="s3Logs")
-      private final @Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs;
+    private @Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs;
 
-    public Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs() {
-        return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
+    public Optional<Output<OrganizationConfigurationDatasourcesS3LogsGetArgs>> s3Logs() {
+        return Optional.ofNullable(this.s3Logs);
     }
 
-    public OrganizationConfigurationDatasourcesGetArgs(@Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
-        this.s3Logs = s3Logs;
-    }
+    private OrganizationConfigurationDatasourcesGetArgs() {}
 
-    private OrganizationConfigurationDatasourcesGetArgs() {
-        this.s3Logs = Codegen.empty();
+    private OrganizationConfigurationDatasourcesGetArgs(OrganizationConfigurationDatasourcesGetArgs $) {
+        this.s3Logs = $.s3Logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationConfigurationDatasourcesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs;
+        private OrganizationConfigurationDatasourcesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationConfigurationDatasourcesGetArgs();
         }
 
         public Builder(OrganizationConfigurationDatasourcesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Logs = defaults.s3Logs;
+            $ = new OrganizationConfigurationDatasourcesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Logs(@Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
-            this.s3Logs = s3Logs;
+            $.s3Logs = s3Logs;
             return this;
         }
-        public Builder s3Logs(@Nullable OrganizationConfigurationDatasourcesS3LogsGetArgs s3Logs) {
-            this.s3Logs = Codegen.ofNullable(s3Logs);
-            return this;
-        }        public OrganizationConfigurationDatasourcesGetArgs build() {
-            return new OrganizationConfigurationDatasourcesGetArgs(s3Logs);
+
+        public Builder s3Logs(OrganizationConfigurationDatasourcesS3LogsGetArgs s3Logs) {
+            return s3Logs(Output.of(s3Logs));
+        }
+
+        public OrganizationConfigurationDatasourcesGetArgs build() {
+            return $;
         }
     }
+
 }

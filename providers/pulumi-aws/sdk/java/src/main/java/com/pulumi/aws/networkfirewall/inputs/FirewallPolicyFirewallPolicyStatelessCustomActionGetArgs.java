@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs exte
      * 
      */
     @Import(name="actionDefinition", required=true)
-      private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition;
+    private Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition;
 
     public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition() {
         return this.actionDefinition;
@@ -31,63 +30,60 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs exte
      * 
      */
     @Import(name="actionName", required=true)
-      private final Output<String> actionName;
+    private Output<String> actionName;
 
     public Output<String> actionName() {
         return this.actionName;
     }
 
-    public FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs(
-        Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition,
-        Output<String> actionName) {
-        this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-    }
+    private FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs() {}
 
-    private FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs() {
-        this.actionDefinition = Codegen.empty();
-        this.actionName = Codegen.empty();
+    private FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs(FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs $) {
+        this.actionDefinition = $.actionDefinition;
+        this.actionName = $.actionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition;
-        private Output<String> actionName;
+        private FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs();
         }
 
         public Builder(FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionDefinition = defaults.actionDefinition;
-    	      this.actionName = defaults.actionName;
+            $ = new FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionDefinition(Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition) {
-            this.actionDefinition = Objects.requireNonNull(actionDefinition);
+            $.actionDefinition = actionDefinition;
             return this;
         }
+
         public Builder actionDefinition(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs actionDefinition) {
-            this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
-            return this;
+            return actionDefinition(Output.of(actionDefinition));
         }
+
         public Builder actionName(Output<String> actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder actionName(String actionName) {
-            this.actionName = Output.of(Objects.requireNonNull(actionName));
-            return this;
-        }        public FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs build() {
-            return new FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs(actionDefinition, actionName);
+            return actionName(Output.of(actionName));
+        }
+
+        public FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs build() {
+            $.actionDefinition = Objects.requireNonNull($.actionDefinition, "expected parameter 'actionDefinition' to be non-null");
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

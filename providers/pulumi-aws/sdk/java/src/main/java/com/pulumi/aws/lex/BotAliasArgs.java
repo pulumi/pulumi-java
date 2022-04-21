@@ -6,9 +6,9 @@ package com.pulumi.aws.lex;
 import com.pulumi.aws.lex.inputs.BotAliasConversationLogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="botName", required=true)
-      private final Output<String> botName;
+    private Output<String> botName;
 
     public Output<String> botName() {
         return this.botName;
@@ -32,7 +32,7 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="botVersion", required=true)
-      private final Output<String> botVersion;
+    private Output<String> botVersion;
 
     public Output<String> botVersion() {
         return this.botVersion;
@@ -43,10 +43,10 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conversationLogs")
-      private final @Nullable Output<BotAliasConversationLogsArgs> conversationLogs;
+    private @Nullable Output<BotAliasConversationLogsArgs> conversationLogs;
 
-    public Output<BotAliasConversationLogsArgs> conversationLogs() {
-        return this.conversationLogs == null ? Codegen.empty() : this.conversationLogs;
+    public Optional<Output<BotAliasConversationLogsArgs>> conversationLogs() {
+        return Optional.ofNullable(this.conversationLogs);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,102 +65,90 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public BotAliasArgs(
-        Output<String> botName,
-        Output<String> botVersion,
-        @Nullable Output<BotAliasConversationLogsArgs> conversationLogs,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name) {
-        this.botName = Objects.requireNonNull(botName, "expected parameter 'botName' to be non-null");
-        this.botVersion = Objects.requireNonNull(botVersion, "expected parameter 'botVersion' to be non-null");
-        this.conversationLogs = conversationLogs;
-        this.description = description;
-        this.name = name;
-    }
+    private BotAliasArgs() {}
 
-    private BotAliasArgs() {
-        this.botName = Codegen.empty();
-        this.botVersion = Codegen.empty();
-        this.conversationLogs = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
+    private BotAliasArgs(BotAliasArgs $) {
+        this.botName = $.botName;
+        this.botVersion = $.botVersion;
+        this.conversationLogs = $.conversationLogs;
+        this.description = $.description;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> botName;
-        private Output<String> botVersion;
-        private @Nullable Output<BotAliasConversationLogsArgs> conversationLogs;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
+        private BotAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasArgs();
         }
 
         public Builder(BotAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botName = defaults.botName;
-    	      this.botVersion = defaults.botVersion;
-    	      this.conversationLogs = defaults.conversationLogs;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
+            $ = new BotAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder botName(Output<String> botName) {
-            this.botName = Objects.requireNonNull(botName);
+            $.botName = botName;
             return this;
         }
+
         public Builder botName(String botName) {
-            this.botName = Output.of(Objects.requireNonNull(botName));
-            return this;
+            return botName(Output.of(botName));
         }
+
         public Builder botVersion(Output<String> botVersion) {
-            this.botVersion = Objects.requireNonNull(botVersion);
+            $.botVersion = botVersion;
             return this;
         }
+
         public Builder botVersion(String botVersion) {
-            this.botVersion = Output.of(Objects.requireNonNull(botVersion));
-            return this;
+            return botVersion(Output.of(botVersion));
         }
+
         public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsArgs> conversationLogs) {
-            this.conversationLogs = conversationLogs;
+            $.conversationLogs = conversationLogs;
             return this;
         }
-        public Builder conversationLogs(@Nullable BotAliasConversationLogsArgs conversationLogs) {
-            this.conversationLogs = Codegen.ofNullable(conversationLogs);
-            return this;
+
+        public Builder conversationLogs(BotAliasConversationLogsArgs conversationLogs) {
+            return conversationLogs(Output.of(conversationLogs));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public BotAliasArgs build() {
-            return new BotAliasArgs(botName, botVersion, conversationLogs, description, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public BotAliasArgs build() {
+            $.botName = Objects.requireNonNull($.botName, "expected parameter 'botName' to be non-null");
+            $.botVersion = Objects.requireNonNull($.botVersion, "expected parameter 'botVersion' to be non-null");
+            return $;
         }
     }
+
 }

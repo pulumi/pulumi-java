@@ -5,10 +5,10 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupNames")
-      private final @Nullable Output<List<String>> groupNames;
+    private @Nullable Output<List<String>> groupNames;
 
-    public Output<List<String>> groupNames() {
-        return this.groupNames == null ? Codegen.empty() : this.groupNames;
+    public Optional<Output<List<String>>> groupNames() {
+        return Optional.ofNullable(this.groupNames);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notifications")
-      private final @Nullable Output<List<String>> notifications;
+    private @Nullable Output<List<String>> notifications;
 
-    public Output<List<String>> notifications() {
-        return this.notifications == null ? Codegen.empty() : this.notifications;
+    public Optional<Output<List<String>>> notifications() {
+        return Optional.ofNullable(this.notifications);
     }
 
     /**
@@ -44,82 +44,76 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public NotificationState(
-        @Nullable Output<List<String>> groupNames,
-        @Nullable Output<List<String>> notifications,
-        @Nullable Output<String> topicArn) {
-        this.groupNames = groupNames;
-        this.notifications = notifications;
-        this.topicArn = topicArn;
-    }
+    private NotificationState() {}
 
-    private NotificationState() {
-        this.groupNames = Codegen.empty();
-        this.notifications = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private NotificationState(NotificationState $) {
+        this.groupNames = $.groupNames;
+        this.notifications = $.notifications;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> groupNames;
-        private @Nullable Output<List<String>> notifications;
-        private @Nullable Output<String> topicArn;
+        private NotificationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationState();
         }
 
         public Builder(NotificationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupNames = defaults.groupNames;
-    	      this.notifications = defaults.notifications;
-    	      this.topicArn = defaults.topicArn;
+            $ = new NotificationState(Objects.requireNonNull(defaults));
         }
 
         public Builder groupNames(@Nullable Output<List<String>> groupNames) {
-            this.groupNames = groupNames;
+            $.groupNames = groupNames;
             return this;
         }
-        public Builder groupNames(@Nullable List<String> groupNames) {
-            this.groupNames = Codegen.ofNullable(groupNames);
-            return this;
+
+        public Builder groupNames(List<String> groupNames) {
+            return groupNames(Output.of(groupNames));
         }
+
         public Builder groupNames(String... groupNames) {
             return groupNames(List.of(groupNames));
         }
+
         public Builder notifications(@Nullable Output<List<String>> notifications) {
-            this.notifications = notifications;
+            $.notifications = notifications;
             return this;
         }
-        public Builder notifications(@Nullable List<String> notifications) {
-            this.notifications = Codegen.ofNullable(notifications);
-            return this;
+
+        public Builder notifications(List<String> notifications) {
+            return notifications(Output.of(notifications));
         }
+
         public Builder notifications(String... notifications) {
             return notifications(List.of(notifications));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public NotificationState build() {
-            return new NotificationState(groupNames, notifications, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public NotificationState build() {
+            return $;
         }
     }
+
 }

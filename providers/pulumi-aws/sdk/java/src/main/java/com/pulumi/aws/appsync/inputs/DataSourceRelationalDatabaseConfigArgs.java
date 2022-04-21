@@ -6,9 +6,9 @@ package com.pulumi.aws.appsync.inputs;
 import com.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataSourceRelationalDatabaseConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="httpEndpointConfig")
-      private final @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig;
+    private @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig;
 
-    public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig() {
-        return this.httpEndpointConfig == null ? Codegen.empty() : this.httpEndpointConfig;
+    public Optional<Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs>> httpEndpointConfig() {
+        return Optional.ofNullable(this.httpEndpointConfig);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class DataSourceRelationalDatabaseConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="sourceType")
-      private final @Nullable Output<String> sourceType;
+    private @Nullable Output<String> sourceType;
 
-    public Output<String> sourceType() {
-        return this.sourceType == null ? Codegen.empty() : this.sourceType;
+    public Optional<Output<String>> sourceType() {
+        return Optional.ofNullable(this.sourceType);
     }
 
-    public DataSourceRelationalDatabaseConfigArgs(
-        @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig,
-        @Nullable Output<String> sourceType) {
-        this.httpEndpointConfig = httpEndpointConfig;
-        this.sourceType = sourceType;
-    }
+    private DataSourceRelationalDatabaseConfigArgs() {}
 
-    private DataSourceRelationalDatabaseConfigArgs() {
-        this.httpEndpointConfig = Codegen.empty();
-        this.sourceType = Codegen.empty();
+    private DataSourceRelationalDatabaseConfigArgs(DataSourceRelationalDatabaseConfigArgs $) {
+        this.httpEndpointConfig = $.httpEndpointConfig;
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRelationalDatabaseConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig;
-        private @Nullable Output<String> sourceType;
+        private DataSourceRelationalDatabaseConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRelationalDatabaseConfigArgs();
         }
 
         public Builder(DataSourceRelationalDatabaseConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEndpointConfig = defaults.httpEndpointConfig;
-    	      this.sourceType = defaults.sourceType;
+            $ = new DataSourceRelationalDatabaseConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEndpointConfig(@Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig) {
-            this.httpEndpointConfig = httpEndpointConfig;
+            $.httpEndpointConfig = httpEndpointConfig;
             return this;
         }
-        public Builder httpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs httpEndpointConfig) {
-            this.httpEndpointConfig = Codegen.ofNullable(httpEndpointConfig);
-            return this;
+
+        public Builder httpEndpointConfig(DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs httpEndpointConfig) {
+            return httpEndpointConfig(Output.of(httpEndpointConfig));
         }
+
         public Builder sourceType(@Nullable Output<String> sourceType) {
-            this.sourceType = sourceType;
+            $.sourceType = sourceType;
             return this;
         }
-        public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = Codegen.ofNullable(sourceType);
-            return this;
-        }        public DataSourceRelationalDatabaseConfigArgs build() {
-            return new DataSourceRelationalDatabaseConfigArgs(httpEndpointConfig, sourceType);
+
+        public Builder sourceType(String sourceType) {
+            return sourceType(Output.of(sourceType));
+        }
+
+        public DataSourceRelationalDatabaseConfigArgs build() {
+            return $;
         }
     }
+
 }

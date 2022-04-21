@@ -21,10 +21,10 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nameRegex", required=true)
-      private final String nameRegex;
+    private String nameRegex;
 
     public String nameRegex() {
         return this.nameRegex;
     }
 
-    public GetSolutionStackArgs(
-        @Nullable Boolean mostRecent,
-        String nameRegex) {
-        this.mostRecent = mostRecent;
-        this.nameRegex = Objects.requireNonNull(nameRegex, "expected parameter 'nameRegex' to be non-null");
-    }
+    private GetSolutionStackArgs() {}
 
-    private GetSolutionStackArgs() {
-        this.mostRecent = null;
-        this.nameRegex = null;
+    private GetSolutionStackArgs(GetSolutionStackArgs $) {
+        this.mostRecent = $.mostRecent;
+        this.nameRegex = $.nameRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSolutionStackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean mostRecent;
-        private String nameRegex;
+        private GetSolutionStackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSolutionStackArgs();
         }
 
         public Builder(GetSolutionStackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.nameRegex = defaults.nameRegex;
+            $ = new GetSolutionStackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder nameRegex(String nameRegex) {
-            this.nameRegex = Objects.requireNonNull(nameRegex);
+            $.nameRegex = nameRegex;
             return this;
-        }        public GetSolutionStackArgs build() {
-            return new GetSolutionStackArgs(mostRecent, nameRegex);
+        }
+
+        public GetSolutionStackArgs build() {
+            $.nameRegex = Objects.requireNonNull($.nameRegex, "expected parameter 'nameRegex' to be non-null");
+            return $;
         }
     }
+
 }

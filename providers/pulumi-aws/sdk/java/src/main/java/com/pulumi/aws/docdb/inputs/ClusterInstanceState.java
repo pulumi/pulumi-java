@@ -5,12 +5,12 @@ package com.pulumi.aws.docdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="applyImmediately")
-      private final @Nullable Output<Boolean> applyImmediately;
+    private @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> applyImmediately() {
-        return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
+    public Optional<Output<Boolean>> applyImmediately() {
+        return Optional.ofNullable(this.applyImmediately);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="autoMinorVersionUpgrade")
-      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
+    private @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
+    public Optional<Output<Boolean>> autoMinorVersionUpgrade() {
+        return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="caCertIdentifier")
-      private final @Nullable Output<String> caCertIdentifier;
+    private @Nullable Output<String> caCertIdentifier;
 
-    public Output<String> caCertIdentifier() {
-        return this.caCertIdentifier == null ? Codegen.empty() : this.caCertIdentifier;
+    public Optional<Output<String>> caCertIdentifier() {
+        return Optional.ofNullable(this.caCertIdentifier);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clusterIdentifier")
-      private final @Nullable Output<String> clusterIdentifier;
+    private @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> clusterIdentifier() {
-        return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
+    public Optional<Output<String>> clusterIdentifier() {
+        return Optional.ofNullable(this.clusterIdentifier);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dbSubnetGroupName")
-      private final @Nullable Output<String> dbSubnetGroupName;
+    private @Nullable Output<String> dbSubnetGroupName;
 
-    public Output<String> dbSubnetGroupName() {
-        return this.dbSubnetGroupName == null ? Codegen.empty() : this.dbSubnetGroupName;
+    public Optional<Output<String>> dbSubnetGroupName() {
+        return Optional.ofNullable(this.dbSubnetGroupName);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dbiResourceId")
-      private final @Nullable Output<String> dbiResourceId;
+    private @Nullable Output<String> dbiResourceId;
 
-    public Output<String> dbiResourceId() {
-        return this.dbiResourceId == null ? Codegen.empty() : this.dbiResourceId;
+    public Optional<Output<String>> dbiResourceId() {
+        return Optional.ofNullable(this.dbiResourceId);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="identifier")
-      private final @Nullable Output<String> identifier;
+    private @Nullable Output<String> identifier;
 
-    public Output<String> identifier() {
-        return this.identifier == null ? Codegen.empty() : this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="identifierPrefix")
-      private final @Nullable Output<String> identifierPrefix;
+    private @Nullable Output<String> identifierPrefix;
 
-    public Output<String> identifierPrefix() {
-        return this.identifierPrefix == null ? Codegen.empty() : this.identifierPrefix;
+    public Optional<Output<String>> identifierPrefix() {
+        return Optional.ofNullable(this.identifierPrefix);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instanceClass")
-      private final @Nullable Output<String> instanceClass;
+    private @Nullable Output<String> instanceClass;
 
-    public Output<String> instanceClass() {
-        return this.instanceClass == null ? Codegen.empty() : this.instanceClass;
+    public Optional<Output<String>> instanceClass() {
+        return Optional.ofNullable(this.instanceClass);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preferredBackupWindow")
-      private final @Nullable Output<String> preferredBackupWindow;
+    private @Nullable Output<String> preferredBackupWindow;
 
-    public Output<String> preferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Codegen.empty() : this.preferredBackupWindow;
+    public Optional<Output<String>> preferredBackupWindow() {
+        return Optional.ofNullable(this.preferredBackupWindow);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preferredMaintenanceWindow")
-      private final @Nullable Output<String> preferredMaintenanceWindow;
+    private @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> preferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
+    public Optional<Output<String>> preferredMaintenanceWindow() {
+        return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
 
     /**
@@ -237,17 +237,17 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="promotionTier")
-      private final @Nullable Output<Integer> promotionTier;
+    private @Nullable Output<Integer> promotionTier;
 
-    public Output<Integer> promotionTier() {
-        return this.promotionTier == null ? Codegen.empty() : this.promotionTier;
+    public Optional<Output<Integer>> promotionTier() {
+        return Optional.ofNullable(this.promotionTier);
     }
 
     @Import(name="publiclyAccessible")
-      private final @Nullable Output<Boolean> publiclyAccessible;
+    private @Nullable Output<Boolean> publiclyAccessible;
 
-    public Output<Boolean> publiclyAccessible() {
-        return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
+    public Optional<Output<Boolean>> publiclyAccessible() {
+        return Optional.ofNullable(this.publiclyAccessible);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="storageEncrypted")
-      private final @Nullable Output<Boolean> storageEncrypted;
+    private @Nullable Output<Boolean> storageEncrypted;
 
-    public Output<Boolean> storageEncrypted() {
-        return this.storageEncrypted == null ? Codegen.empty() : this.storageEncrypted;
+    public Optional<Output<Boolean>> storageEncrypted() {
+        return Optional.ofNullable(this.storageEncrypted);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -288,349 +288,278 @@ public final class ClusterInstanceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="writer")
-      private final @Nullable Output<Boolean> writer;
+    private @Nullable Output<Boolean> writer;
 
-    public Output<Boolean> writer() {
-        return this.writer == null ? Codegen.empty() : this.writer;
+    public Optional<Output<Boolean>> writer() {
+        return Optional.ofNullable(this.writer);
     }
 
-    public ClusterInstanceState(
-        @Nullable Output<Boolean> applyImmediately,
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> autoMinorVersionUpgrade,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> caCertIdentifier,
-        @Nullable Output<String> clusterIdentifier,
-        @Nullable Output<String> dbSubnetGroupName,
-        @Nullable Output<String> dbiResourceId,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> engine,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<String> identifier,
-        @Nullable Output<String> identifierPrefix,
-        @Nullable Output<String> instanceClass,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> preferredBackupWindow,
-        @Nullable Output<String> preferredMaintenanceWindow,
-        @Nullable Output<Integer> promotionTier,
-        @Nullable Output<Boolean> publiclyAccessible,
-        @Nullable Output<Boolean> storageEncrypted,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Boolean> writer) {
-        this.applyImmediately = applyImmediately;
-        this.arn = arn;
-        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
-        this.availabilityZone = availabilityZone;
-        this.caCertIdentifier = caCertIdentifier;
-        this.clusterIdentifier = clusterIdentifier;
-        this.dbSubnetGroupName = dbSubnetGroupName;
-        this.dbiResourceId = dbiResourceId;
-        this.endpoint = endpoint;
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.identifier = identifier;
-        this.identifierPrefix = identifierPrefix;
-        this.instanceClass = instanceClass;
-        this.kmsKeyId = kmsKeyId;
-        this.port = port;
-        this.preferredBackupWindow = preferredBackupWindow;
-        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
-        this.promotionTier = promotionTier;
-        this.publiclyAccessible = publiclyAccessible;
-        this.storageEncrypted = storageEncrypted;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.writer = writer;
-    }
+    private ClusterInstanceState() {}
 
-    private ClusterInstanceState() {
-        this.applyImmediately = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.autoMinorVersionUpgrade = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.caCertIdentifier = Codegen.empty();
-        this.clusterIdentifier = Codegen.empty();
-        this.dbSubnetGroupName = Codegen.empty();
-        this.dbiResourceId = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.identifierPrefix = Codegen.empty();
-        this.instanceClass = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.port = Codegen.empty();
-        this.preferredBackupWindow = Codegen.empty();
-        this.preferredMaintenanceWindow = Codegen.empty();
-        this.promotionTier = Codegen.empty();
-        this.publiclyAccessible = Codegen.empty();
-        this.storageEncrypted = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.writer = Codegen.empty();
+    private ClusterInstanceState(ClusterInstanceState $) {
+        this.applyImmediately = $.applyImmediately;
+        this.arn = $.arn;
+        this.autoMinorVersionUpgrade = $.autoMinorVersionUpgrade;
+        this.availabilityZone = $.availabilityZone;
+        this.caCertIdentifier = $.caCertIdentifier;
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.dbSubnetGroupName = $.dbSubnetGroupName;
+        this.dbiResourceId = $.dbiResourceId;
+        this.endpoint = $.endpoint;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.identifier = $.identifier;
+        this.identifierPrefix = $.identifierPrefix;
+        this.instanceClass = $.instanceClass;
+        this.kmsKeyId = $.kmsKeyId;
+        this.port = $.port;
+        this.preferredBackupWindow = $.preferredBackupWindow;
+        this.preferredMaintenanceWindow = $.preferredMaintenanceWindow;
+        this.promotionTier = $.promotionTier;
+        this.publiclyAccessible = $.publiclyAccessible;
+        this.storageEncrypted = $.storageEncrypted;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.writer = $.writer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterInstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> applyImmediately;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> caCertIdentifier;
-        private @Nullable Output<String> clusterIdentifier;
-        private @Nullable Output<String> dbSubnetGroupName;
-        private @Nullable Output<String> dbiResourceId;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<String> identifier;
-        private @Nullable Output<String> identifierPrefix;
-        private @Nullable Output<String> instanceClass;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> preferredBackupWindow;
-        private @Nullable Output<String> preferredMaintenanceWindow;
-        private @Nullable Output<Integer> promotionTier;
-        private @Nullable Output<Boolean> publiclyAccessible;
-        private @Nullable Output<Boolean> storageEncrypted;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Boolean> writer;
+        private ClusterInstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterInstanceState();
         }
 
         public Builder(ClusterInstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyImmediately = defaults.applyImmediately;
-    	      this.arn = defaults.arn;
-    	      this.autoMinorVersionUpgrade = defaults.autoMinorVersionUpgrade;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.caCertIdentifier = defaults.caCertIdentifier;
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.dbSubnetGroupName = defaults.dbSubnetGroupName;
-    	      this.dbiResourceId = defaults.dbiResourceId;
-    	      this.endpoint = defaults.endpoint;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.identifier = defaults.identifier;
-    	      this.identifierPrefix = defaults.identifierPrefix;
-    	      this.instanceClass = defaults.instanceClass;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.port = defaults.port;
-    	      this.preferredBackupWindow = defaults.preferredBackupWindow;
-    	      this.preferredMaintenanceWindow = defaults.preferredMaintenanceWindow;
-    	      this.promotionTier = defaults.promotionTier;
-    	      this.publiclyAccessible = defaults.publiclyAccessible;
-    	      this.storageEncrypted = defaults.storageEncrypted;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.writer = defaults.writer;
+            $ = new ClusterInstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
-            this.applyImmediately = applyImmediately;
+            $.applyImmediately = applyImmediately;
             return this;
         }
-        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Codegen.ofNullable(applyImmediately);
-            return this;
+
+        public Builder applyImmediately(Boolean applyImmediately) {
+            return applyImmediately(Output.of(applyImmediately));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+            $.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Codegen.ofNullable(autoMinorVersionUpgrade);
-            return this;
+
+        public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+            return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
-            this.caCertIdentifier = caCertIdentifier;
+            $.caCertIdentifier = caCertIdentifier;
             return this;
         }
-        public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
-            this.caCertIdentifier = Codegen.ofNullable(caCertIdentifier);
-            return this;
+
+        public Builder caCertIdentifier(String caCertIdentifier) {
+            return caCertIdentifier(Output.of(caCertIdentifier));
         }
+
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
-            this.clusterIdentifier = clusterIdentifier;
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
-        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Codegen.ofNullable(clusterIdentifier);
-            return this;
+
+        public Builder clusterIdentifier(String clusterIdentifier) {
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
-            this.dbSubnetGroupName = dbSubnetGroupName;
+            $.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
-        public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
-            this.dbSubnetGroupName = Codegen.ofNullable(dbSubnetGroupName);
-            return this;
+
+        public Builder dbSubnetGroupName(String dbSubnetGroupName) {
+            return dbSubnetGroupName(Output.of(dbSubnetGroupName));
         }
+
         public Builder dbiResourceId(@Nullable Output<String> dbiResourceId) {
-            this.dbiResourceId = dbiResourceId;
+            $.dbiResourceId = dbiResourceId;
             return this;
         }
-        public Builder dbiResourceId(@Nullable String dbiResourceId) {
-            this.dbiResourceId = Codegen.ofNullable(dbiResourceId);
-            return this;
+
+        public Builder dbiResourceId(String dbiResourceId) {
+            return dbiResourceId(Output.of(dbiResourceId));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder identifier(@Nullable Output<String> identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
-        public Builder identifier(@Nullable String identifier) {
-            this.identifier = Codegen.ofNullable(identifier);
-            return this;
+
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
         }
+
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
-            this.identifierPrefix = identifierPrefix;
+            $.identifierPrefix = identifierPrefix;
             return this;
         }
-        public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Codegen.ofNullable(identifierPrefix);
-            return this;
+
+        public Builder identifierPrefix(String identifierPrefix) {
+            return identifierPrefix(Output.of(identifierPrefix));
         }
+
         public Builder instanceClass(@Nullable Output<String> instanceClass) {
-            this.instanceClass = instanceClass;
+            $.instanceClass = instanceClass;
             return this;
         }
-        public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = Codegen.ofNullable(instanceClass);
-            return this;
+
+        public Builder instanceClass(String instanceClass) {
+            return instanceClass(Output.of(instanceClass));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
-            this.preferredBackupWindow = preferredBackupWindow;
+            $.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-        public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Codegen.ofNullable(preferredBackupWindow);
-            return this;
+
+        public Builder preferredBackupWindow(String preferredBackupWindow) {
+            return preferredBackupWindow(Output.of(preferredBackupWindow));
         }
+
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+            $.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
-            return this;
+
+        public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
+            return preferredMaintenanceWindow(Output.of(preferredMaintenanceWindow));
         }
+
         public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
-            this.promotionTier = promotionTier;
+            $.promotionTier = promotionTier;
             return this;
         }
-        public Builder promotionTier(@Nullable Integer promotionTier) {
-            this.promotionTier = Codegen.ofNullable(promotionTier);
-            return this;
+
+        public Builder promotionTier(Integer promotionTier) {
+            return promotionTier(Output.of(promotionTier));
         }
+
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
-            this.publiclyAccessible = publiclyAccessible;
+            $.publiclyAccessible = publiclyAccessible;
             return this;
         }
-        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Codegen.ofNullable(publiclyAccessible);
-            return this;
+
+        public Builder publiclyAccessible(Boolean publiclyAccessible) {
+            return publiclyAccessible(Output.of(publiclyAccessible));
         }
+
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
-            this.storageEncrypted = storageEncrypted;
+            $.storageEncrypted = storageEncrypted;
             return this;
         }
-        public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Codegen.ofNullable(storageEncrypted);
-            return this;
+
+        public Builder storageEncrypted(Boolean storageEncrypted) {
+            return storageEncrypted(Output.of(storageEncrypted));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder writer(@Nullable Output<Boolean> writer) {
-            this.writer = writer;
+            $.writer = writer;
             return this;
         }
-        public Builder writer(@Nullable Boolean writer) {
-            this.writer = Codegen.ofNullable(writer);
-            return this;
-        }        public ClusterInstanceState build() {
-            return new ClusterInstanceState(applyImmediately, arn, autoMinorVersionUpgrade, availabilityZone, caCertIdentifier, clusterIdentifier, dbSubnetGroupName, dbiResourceId, endpoint, engine, engineVersion, identifier, identifierPrefix, instanceClass, kmsKeyId, port, preferredBackupWindow, preferredMaintenanceWindow, promotionTier, publiclyAccessible, storageEncrypted, tags, tagsAll, writer);
+
+        public Builder writer(Boolean writer) {
+            return writer(Output.of(writer));
+        }
+
+        public ClusterInstanceState build() {
+            return $;
         }
     }
+
 }

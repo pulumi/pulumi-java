@@ -22,7 +22,7 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="args", required=true)
-      private final List<GetScriptDagNodeArg> args;
+    private List<GetScriptDagNodeArg> args;
 
     public List<GetScriptDagNodeArg> args() {
         return this.args;
@@ -33,7 +33,7 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -44,10 +44,10 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lineNumber")
-      private final @Nullable Integer lineNumber;
+    private @Nullable Integer lineNumber;
 
     public Optional<Integer> lineNumber() {
-        return this.lineNumber == null ? Optional.empty() : Optional.ofNullable(this.lineNumber);
+        return Optional.ofNullable(this.lineNumber);
     }
 
     /**
@@ -55,76 +55,69 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nodeType", required=true)
-      private final String nodeType;
+    private String nodeType;
 
     public String nodeType() {
         return this.nodeType;
     }
 
-    public GetScriptDagNode(
-        List<GetScriptDagNodeArg> args,
-        String id,
-        @Nullable Integer lineNumber,
-        String nodeType) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.lineNumber = lineNumber;
-        this.nodeType = Objects.requireNonNull(nodeType, "expected parameter 'nodeType' to be non-null");
-    }
+    private GetScriptDagNode() {}
 
-    private GetScriptDagNode() {
-        this.args = List.of();
-        this.id = null;
-        this.lineNumber = null;
-        this.nodeType = null;
+    private GetScriptDagNode(GetScriptDagNode $) {
+        this.args = $.args;
+        this.id = $.id;
+        this.lineNumber = $.lineNumber;
+        this.nodeType = $.nodeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScriptDagNode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetScriptDagNodeArg> args;
-        private String id;
-        private @Nullable Integer lineNumber;
-        private String nodeType;
+        private GetScriptDagNode $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScriptDagNode();
         }
 
         public Builder(GetScriptDagNode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.id = defaults.id;
-    	      this.lineNumber = defaults.lineNumber;
-    	      this.nodeType = defaults.nodeType;
+            $ = new GetScriptDagNode(Objects.requireNonNull(defaults));
         }
 
         public Builder args(List<GetScriptDagNodeArg> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(GetScriptDagNodeArg... args) {
             return args(List.of(args));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder lineNumber(@Nullable Integer lineNumber) {
-            this.lineNumber = lineNumber;
+            $.lineNumber = lineNumber;
             return this;
         }
+
         public Builder nodeType(String nodeType) {
-            this.nodeType = Objects.requireNonNull(nodeType);
+            $.nodeType = nodeType;
             return this;
-        }        public GetScriptDagNode build() {
-            return new GetScriptDagNode(args, id, lineNumber, nodeType);
+        }
+
+        public GetScriptDagNode build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.nodeType = Objects.requireNonNull($.nodeType, "expected parameter 'nodeType' to be non-null");
+            return $;
         }
     }
+
 }

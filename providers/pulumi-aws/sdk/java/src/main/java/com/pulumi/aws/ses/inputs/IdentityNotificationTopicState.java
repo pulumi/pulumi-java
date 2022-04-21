@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<String> identity;
+    private @Nullable Output<String> identity;
 
-    public Output<String> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<String>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
      * 
      */
     @Import(name="includeOriginalHeaders")
-      private final @Nullable Output<Boolean> includeOriginalHeaders;
+    private @Nullable Output<Boolean> includeOriginalHeaders;
 
-    public Output<Boolean> includeOriginalHeaders() {
-        return this.includeOriginalHeaders == null ? Codegen.empty() : this.includeOriginalHeaders;
+    public Optional<Output<Boolean>> includeOriginalHeaders() {
+        return Optional.ofNullable(this.includeOriginalHeaders);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
      * 
      */
     @Import(name="notificationType")
-      private final @Nullable Output<String> notificationType;
+    private @Nullable Output<String> notificationType;
 
-    public Output<String> notificationType() {
-        return this.notificationType == null ? Codegen.empty() : this.notificationType;
+    public Optional<Output<String>> notificationType() {
+        return Optional.ofNullable(this.notificationType);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class IdentityNotificationTopicState extends com.pulumi.resources.R
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public IdentityNotificationTopicState(
-        @Nullable Output<String> identity,
-        @Nullable Output<Boolean> includeOriginalHeaders,
-        @Nullable Output<String> notificationType,
-        @Nullable Output<String> topicArn) {
-        this.identity = identity;
-        this.includeOriginalHeaders = includeOriginalHeaders;
-        this.notificationType = notificationType;
-        this.topicArn = topicArn;
-    }
+    private IdentityNotificationTopicState() {}
 
-    private IdentityNotificationTopicState() {
-        this.identity = Codegen.empty();
-        this.includeOriginalHeaders = Codegen.empty();
-        this.notificationType = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private IdentityNotificationTopicState(IdentityNotificationTopicState $) {
+        this.identity = $.identity;
+        this.includeOriginalHeaders = $.includeOriginalHeaders;
+        this.notificationType = $.notificationType;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityNotificationTopicState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identity;
-        private @Nullable Output<Boolean> includeOriginalHeaders;
-        private @Nullable Output<String> notificationType;
-        private @Nullable Output<String> topicArn;
+        private IdentityNotificationTopicState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityNotificationTopicState();
         }
 
         public Builder(IdentityNotificationTopicState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.includeOriginalHeaders = defaults.includeOriginalHeaders;
-    	      this.notificationType = defaults.notificationType;
-    	      this.topicArn = defaults.topicArn;
+            $ = new IdentityNotificationTopicState(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<String> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable String identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(String identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder includeOriginalHeaders(@Nullable Output<Boolean> includeOriginalHeaders) {
-            this.includeOriginalHeaders = includeOriginalHeaders;
+            $.includeOriginalHeaders = includeOriginalHeaders;
             return this;
         }
-        public Builder includeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
-            this.includeOriginalHeaders = Codegen.ofNullable(includeOriginalHeaders);
-            return this;
+
+        public Builder includeOriginalHeaders(Boolean includeOriginalHeaders) {
+            return includeOriginalHeaders(Output.of(includeOriginalHeaders));
         }
+
         public Builder notificationType(@Nullable Output<String> notificationType) {
-            this.notificationType = notificationType;
+            $.notificationType = notificationType;
             return this;
         }
-        public Builder notificationType(@Nullable String notificationType) {
-            this.notificationType = Codegen.ofNullable(notificationType);
-            return this;
+
+        public Builder notificationType(String notificationType) {
+            return notificationType(Output.of(notificationType));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public IdentityNotificationTopicState build() {
-            return new IdentityNotificationTopicState(identity, includeOriginalHeaders, notificationType, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public IdentityNotificationTopicState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSd
      * 
      */
     @Import(name="secretName", required=true)
-      private final Output<String> secretName;
+    private Output<String> secretName;
 
     public Output<String> secretName() {
         return this.secretName;
     }
 
-    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs(Output<String> secretName) {
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-    }
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs() {}
 
-    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs() {
-        this.secretName = Codegen.empty();
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs(VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs $) {
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secretName;
+        private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs();
         }
 
         public Builder(VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretName = defaults.secretName;
+            $ = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretName(Output<String> secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Output.of(Objects.requireNonNull(secretName));
-            return this;
-        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs build() {
-            return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs(secretName);
+            return secretName(Output.of(secretName));
+        }
+
+        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs build() {
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            return $;
         }
     }
+
 }

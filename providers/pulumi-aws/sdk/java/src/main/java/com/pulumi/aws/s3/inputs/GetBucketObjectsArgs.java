@@ -21,7 +21,7 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -32,10 +32,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="delimiter")
-      private final @Nullable String delimiter;
+    private @Nullable String delimiter;
 
     public Optional<String> delimiter() {
-        return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
+        return Optional.ofNullable(this.delimiter);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="encodingType")
-      private final @Nullable String encodingType;
+    private @Nullable String encodingType;
 
     public Optional<String> encodingType() {
-        return this.encodingType == null ? Optional.empty() : Optional.ofNullable(this.encodingType);
+        return Optional.ofNullable(this.encodingType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fetchOwner")
-      private final @Nullable Boolean fetchOwner;
+    private @Nullable Boolean fetchOwner;
 
     public Optional<Boolean> fetchOwner() {
-        return this.fetchOwner == null ? Optional.empty() : Optional.ofNullable(this.fetchOwner);
+        return Optional.ofNullable(this.fetchOwner);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maxKeys")
-      private final @Nullable Integer maxKeys;
+    private @Nullable Integer maxKeys;
 
     public Optional<Integer> maxKeys() {
-        return this.maxKeys == null ? Optional.empty() : Optional.ofNullable(this.maxKeys);
+        return Optional.ofNullable(this.maxKeys);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -87,100 +87,81 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="startAfter")
-      private final @Nullable String startAfter;
+    private @Nullable String startAfter;
 
     public Optional<String> startAfter() {
-        return this.startAfter == null ? Optional.empty() : Optional.ofNullable(this.startAfter);
+        return Optional.ofNullable(this.startAfter);
     }
 
-    public GetBucketObjectsArgs(
-        String bucket,
-        @Nullable String delimiter,
-        @Nullable String encodingType,
-        @Nullable Boolean fetchOwner,
-        @Nullable Integer maxKeys,
-        @Nullable String prefix,
-        @Nullable String startAfter) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.delimiter = delimiter;
-        this.encodingType = encodingType;
-        this.fetchOwner = fetchOwner;
-        this.maxKeys = maxKeys;
-        this.prefix = prefix;
-        this.startAfter = startAfter;
-    }
+    private GetBucketObjectsArgs() {}
 
-    private GetBucketObjectsArgs() {
-        this.bucket = null;
-        this.delimiter = null;
-        this.encodingType = null;
-        this.fetchOwner = null;
-        this.maxKeys = null;
-        this.prefix = null;
-        this.startAfter = null;
+    private GetBucketObjectsArgs(GetBucketObjectsArgs $) {
+        this.bucket = $.bucket;
+        this.delimiter = $.delimiter;
+        this.encodingType = $.encodingType;
+        this.fetchOwner = $.fetchOwner;
+        this.maxKeys = $.maxKeys;
+        this.prefix = $.prefix;
+        this.startAfter = $.startAfter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketObjectsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String delimiter;
-        private @Nullable String encodingType;
-        private @Nullable Boolean fetchOwner;
-        private @Nullable Integer maxKeys;
-        private @Nullable String prefix;
-        private @Nullable String startAfter;
+        private GetBucketObjectsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketObjectsArgs();
         }
 
         public Builder(GetBucketObjectsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.delimiter = defaults.delimiter;
-    	      this.encodingType = defaults.encodingType;
-    	      this.fetchOwner = defaults.fetchOwner;
-    	      this.maxKeys = defaults.maxKeys;
-    	      this.prefix = defaults.prefix;
-    	      this.startAfter = defaults.startAfter;
+            $ = new GetBucketObjectsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
+
         public Builder encodingType(@Nullable String encodingType) {
-            this.encodingType = encodingType;
+            $.encodingType = encodingType;
             return this;
         }
+
         public Builder fetchOwner(@Nullable Boolean fetchOwner) {
-            this.fetchOwner = fetchOwner;
+            $.fetchOwner = fetchOwner;
             return this;
         }
+
         public Builder maxKeys(@Nullable Integer maxKeys) {
-            this.maxKeys = maxKeys;
+            $.maxKeys = maxKeys;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder startAfter(@Nullable String startAfter) {
-            this.startAfter = startAfter;
+            $.startAfter = startAfter;
             return this;
-        }        public GetBucketObjectsArgs build() {
-            return new GetBucketObjectsArgs(bucket, delimiter, encodingType, fetchOwner, maxKeys, prefix, startAfter);
+        }
+
+        public GetBucketObjectsArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

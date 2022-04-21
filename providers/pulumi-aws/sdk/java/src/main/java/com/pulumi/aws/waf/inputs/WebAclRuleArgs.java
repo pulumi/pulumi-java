@@ -7,10 +7,10 @@ import com.pulumi.aws.waf.inputs.WebAclRuleActionArgs;
 import com.pulumi.aws.waf.inputs.WebAclRuleOverrideActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<WebAclRuleActionArgs> action;
+    private @Nullable Output<WebAclRuleActionArgs> action;
 
-    public Output<WebAclRuleActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<WebAclRuleActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overrideAction")
-      private final @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
+    private @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
 
-    public Output<WebAclRuleOverrideActionArgs> overrideAction() {
-        return this.overrideAction == null ? Codegen.empty() : this.overrideAction;
+    public Optional<Output<WebAclRuleOverrideActionArgs>> overrideAction() {
+        return Optional.ofNullable(this.overrideAction);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -57,7 +57,7 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleId", required=true)
-      private final Output<String> ruleId;
+    private Output<String> ruleId;
 
     public Output<String> ruleId() {
         return this.ruleId;
@@ -68,102 +68,90 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public WebAclRuleArgs(
-        @Nullable Output<WebAclRuleActionArgs> action,
-        @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction,
-        Output<Integer> priority,
-        Output<String> ruleId,
-        @Nullable Output<String> type) {
-        this.action = action;
-        this.overrideAction = overrideAction;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-        this.type = type;
-    }
+    private WebAclRuleArgs() {}
 
-    private WebAclRuleArgs() {
-        this.action = Codegen.empty();
-        this.overrideAction = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.type = Codegen.empty();
+    private WebAclRuleArgs(WebAclRuleArgs $) {
+        this.action = $.action;
+        this.overrideAction = $.overrideAction;
+        this.priority = $.priority;
+        this.ruleId = $.ruleId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleActionArgs> action;
-        private @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
-        private Output<Integer> priority;
-        private Output<String> ruleId;
-        private @Nullable Output<String> type;
+        private WebAclRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleArgs();
         }
 
         public Builder(WebAclRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.overrideAction = defaults.overrideAction;
-    	      this.priority = defaults.priority;
-    	      this.ruleId = defaults.ruleId;
-    	      this.type = defaults.type;
+            $ = new WebAclRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<WebAclRuleActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable WebAclRuleActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(WebAclRuleActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder overrideAction(@Nullable Output<WebAclRuleOverrideActionArgs> overrideAction) {
-            this.overrideAction = overrideAction;
+            $.overrideAction = overrideAction;
             return this;
         }
-        public Builder overrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
-            this.overrideAction = Codegen.ofNullable(overrideAction);
-            return this;
+
+        public Builder overrideAction(WebAclRuleOverrideActionArgs overrideAction) {
+            return overrideAction(Output.of(overrideAction));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder ruleId(Output<String> ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
-            return this;
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public WebAclRuleArgs build() {
-            return new WebAclRuleArgs(action, overrideAction, priority, ruleId, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public WebAclRuleArgs build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            return $;
         }
     }
+
 }

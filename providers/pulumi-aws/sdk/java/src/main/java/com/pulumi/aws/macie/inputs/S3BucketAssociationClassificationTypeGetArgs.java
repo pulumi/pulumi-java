@@ -5,9 +5,9 @@ package com.pulumi.aws.macie.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends com.pulu
      * 
      */
     @Import(name="continuous")
-      private final @Nullable Output<String> continuous;
+    private @Nullable Output<String> continuous;
 
-    public Output<String> continuous() {
-        return this.continuous == null ? Codegen.empty() : this.continuous;
+    public Optional<Output<String>> continuous() {
+        return Optional.ofNullable(this.continuous);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends com.pulu
      * 
      */
     @Import(name="oneTime")
-      private final @Nullable Output<String> oneTime;
+    private @Nullable Output<String> oneTime;
 
-    public Output<String> oneTime() {
-        return this.oneTime == null ? Codegen.empty() : this.oneTime;
+    public Optional<Output<String>> oneTime() {
+        return Optional.ofNullable(this.oneTime);
     }
 
-    public S3BucketAssociationClassificationTypeGetArgs(
-        @Nullable Output<String> continuous,
-        @Nullable Output<String> oneTime) {
-        this.continuous = continuous;
-        this.oneTime = oneTime;
-    }
+    private S3BucketAssociationClassificationTypeGetArgs() {}
 
-    private S3BucketAssociationClassificationTypeGetArgs() {
-        this.continuous = Codegen.empty();
-        this.oneTime = Codegen.empty();
+    private S3BucketAssociationClassificationTypeGetArgs(S3BucketAssociationClassificationTypeGetArgs $) {
+        this.continuous = $.continuous;
+        this.oneTime = $.oneTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(S3BucketAssociationClassificationTypeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> continuous;
-        private @Nullable Output<String> oneTime;
+        private S3BucketAssociationClassificationTypeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new S3BucketAssociationClassificationTypeGetArgs();
         }
 
         public Builder(S3BucketAssociationClassificationTypeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.continuous = defaults.continuous;
-    	      this.oneTime = defaults.oneTime;
+            $ = new S3BucketAssociationClassificationTypeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder continuous(@Nullable Output<String> continuous) {
-            this.continuous = continuous;
+            $.continuous = continuous;
             return this;
         }
-        public Builder continuous(@Nullable String continuous) {
-            this.continuous = Codegen.ofNullable(continuous);
-            return this;
+
+        public Builder continuous(String continuous) {
+            return continuous(Output.of(continuous));
         }
+
         public Builder oneTime(@Nullable Output<String> oneTime) {
-            this.oneTime = oneTime;
+            $.oneTime = oneTime;
             return this;
         }
-        public Builder oneTime(@Nullable String oneTime) {
-            this.oneTime = Codegen.ofNullable(oneTime);
-            return this;
-        }        public S3BucketAssociationClassificationTypeGetArgs build() {
-            return new S3BucketAssociationClassificationTypeGetArgs(continuous, oneTime);
+
+        public Builder oneTime(String oneTime) {
+            return oneTime(Output.of(oneTime));
+        }
+
+        public S3BucketAssociationClassificationTypeGetArgs build() {
+            return $;
         }
     }
+
 }

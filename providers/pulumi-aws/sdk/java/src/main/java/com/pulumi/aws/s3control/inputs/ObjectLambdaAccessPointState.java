@@ -6,9 +6,9 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     public static final ObjectLambdaAccessPointState Empty = new ObjectLambdaAccessPointState();
 
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
+    private @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
 
-    public Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<ObjectLambdaAccessPointConfigurationGetArgs>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -50,89 +50,78 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ObjectLambdaAccessPointState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> arn,
-        @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration,
-        @Nullable Output<String> name) {
-        this.accountId = accountId;
-        this.arn = arn;
-        this.configuration = configuration;
-        this.name = name;
-    }
+    private ObjectLambdaAccessPointState() {}
 
-    private ObjectLambdaAccessPointState() {
-        this.accountId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.configuration = Codegen.empty();
-        this.name = Codegen.empty();
+    private ObjectLambdaAccessPointState(ObjectLambdaAccessPointState $) {
+        this.accountId = $.accountId;
+        this.arn = $.arn;
+        this.configuration = $.configuration;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectLambdaAccessPointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
-        private @Nullable Output<String> name;
+        private ObjectLambdaAccessPointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectLambdaAccessPointState();
         }
 
         public Builder(ObjectLambdaAccessPointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.arn = defaults.arn;
-    	      this.configuration = defaults.configuration;
-    	      this.name = defaults.name;
+            $ = new ObjectLambdaAccessPointState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder configuration(@Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable ObjectLambdaAccessPointConfigurationGetArgs configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(ObjectLambdaAccessPointConfigurationGetArgs configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ObjectLambdaAccessPointState build() {
-            return new ObjectLambdaAccessPointState(accountId, arn, configuration, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ObjectLambdaAccessPointState build() {
+            return $;
         }
     }
+
 }

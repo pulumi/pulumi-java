@@ -5,7 +5,6 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -30,7 +29,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<String> contentType;
+    private Output<String> contentType;
 
     public Output<String> contentType() {
         return this.contentType;
@@ -41,76 +40,71 @@ public final class RuleGroupCustomResponseBodyGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
-    public RuleGroupCustomResponseBodyGetArgs(
-        Output<String> content,
-        Output<String> contentType,
-        Output<String> key) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private RuleGroupCustomResponseBodyGetArgs() {}
 
-    private RuleGroupCustomResponseBodyGetArgs() {
-        this.content = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.key = Codegen.empty();
+    private RuleGroupCustomResponseBodyGetArgs(RuleGroupCustomResponseBodyGetArgs $) {
+        this.content = $.content;
+        this.contentType = $.contentType;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupCustomResponseBodyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> content;
-        private Output<String> contentType;
-        private Output<String> key;
+        private RuleGroupCustomResponseBodyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupCustomResponseBodyGetArgs();
         }
 
         public Builder(RuleGroupCustomResponseBodyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.contentType = defaults.contentType;
-    	      this.key = defaults.key;
+            $ = new RuleGroupCustomResponseBodyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder contentType(Output<String> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
-        }        public RuleGroupCustomResponseBodyGetArgs build() {
-            return new RuleGroupCustomResponseBodyGetArgs(content, contentType, key);
+            return key(Output.of(key));
+        }
+
+        public RuleGroupCustomResponseBodyGetArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

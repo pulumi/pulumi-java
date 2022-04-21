@@ -6,11 +6,11 @@ package com.pulumi.aws.route53recoveryreadiness;
 import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSetName", required=true)
-      private final Output<String> resourceSetName;
+    private Output<String> resourceSetName;
 
     public Output<String> resourceSetName() {
         return this.resourceSetName;
@@ -34,7 +34,7 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSetType", required=true)
-      private final Output<String> resourceSetType;
+    private Output<String> resourceSetType;
 
     public Output<String> resourceSetType() {
         return this.resourceSetType;
@@ -45,7 +45,7 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<List<ResourceSetResourceArgs>> resources;
+    private Output<List<ResourceSetResourceArgs>> resources;
 
     public Output<List<ResourceSetResourceArgs>> resources() {
         return this.resources;
@@ -56,92 +56,85 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ResourceSetArgs(
-        Output<String> resourceSetName,
-        Output<String> resourceSetType,
-        Output<List<ResourceSetResourceArgs>> resources,
-        @Nullable Output<Map<String,String>> tags) {
-        this.resourceSetName = Objects.requireNonNull(resourceSetName, "expected parameter 'resourceSetName' to be non-null");
-        this.resourceSetType = Objects.requireNonNull(resourceSetType, "expected parameter 'resourceSetType' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.tags = tags;
-    }
+    private ResourceSetArgs() {}
 
-    private ResourceSetArgs() {
-        this.resourceSetName = Codegen.empty();
-        this.resourceSetType = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ResourceSetArgs(ResourceSetArgs $) {
+        this.resourceSetName = $.resourceSetName;
+        this.resourceSetType = $.resourceSetType;
+        this.resources = $.resources;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceSetName;
-        private Output<String> resourceSetType;
-        private Output<List<ResourceSetResourceArgs>> resources;
-        private @Nullable Output<Map<String,String>> tags;
+        private ResourceSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetArgs();
         }
 
         public Builder(ResourceSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceSetName = defaults.resourceSetName;
-    	      this.resourceSetType = defaults.resourceSetType;
-    	      this.resources = defaults.resources;
-    	      this.tags = defaults.tags;
+            $ = new ResourceSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceSetName(Output<String> resourceSetName) {
-            this.resourceSetName = Objects.requireNonNull(resourceSetName);
+            $.resourceSetName = resourceSetName;
             return this;
         }
+
         public Builder resourceSetName(String resourceSetName) {
-            this.resourceSetName = Output.of(Objects.requireNonNull(resourceSetName));
-            return this;
+            return resourceSetName(Output.of(resourceSetName));
         }
+
         public Builder resourceSetType(Output<String> resourceSetType) {
-            this.resourceSetType = Objects.requireNonNull(resourceSetType);
+            $.resourceSetType = resourceSetType;
             return this;
         }
+
         public Builder resourceSetType(String resourceSetType) {
-            this.resourceSetType = Output.of(Objects.requireNonNull(resourceSetType));
-            return this;
+            return resourceSetType(Output.of(resourceSetType));
         }
+
         public Builder resources(Output<List<ResourceSetResourceArgs>> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(List<ResourceSetResourceArgs> resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder resources(ResourceSetResourceArgs... resources) {
             return resources(List.of(resources));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ResourceSetArgs build() {
-            return new ResourceSetArgs(resourceSetName, resourceSetType, resources, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ResourceSetArgs build() {
+            $.resourceSetName = Objects.requireNonNull($.resourceSetName, "expected parameter 'resourceSetName' to be non-null");
+            $.resourceSetType = Objects.requireNonNull($.resourceSetType, "expected parameter 'resourceSetType' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

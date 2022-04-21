@@ -17,45 +17,45 @@ public final class GetCodeSigningConfigPolicy extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="untrustedArtifactOnDeployment", required=true)
-      private final String untrustedArtifactOnDeployment;
+    private String untrustedArtifactOnDeployment;
 
     public String untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 
-    public GetCodeSigningConfigPolicy(String untrustedArtifactOnDeployment) {
-        this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment, "expected parameter 'untrustedArtifactOnDeployment' to be non-null");
-    }
+    private GetCodeSigningConfigPolicy() {}
 
-    private GetCodeSigningConfigPolicy() {
-        this.untrustedArtifactOnDeployment = null;
+    private GetCodeSigningConfigPolicy(GetCodeSigningConfigPolicy $) {
+        this.untrustedArtifactOnDeployment = $.untrustedArtifactOnDeployment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCodeSigningConfigPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String untrustedArtifactOnDeployment;
+        private GetCodeSigningConfigPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCodeSigningConfigPolicy();
         }
 
         public Builder(GetCodeSigningConfigPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.untrustedArtifactOnDeployment = defaults.untrustedArtifactOnDeployment;
+            $ = new GetCodeSigningConfigPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder untrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
-            this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
+            $.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
             return this;
-        }        public GetCodeSigningConfigPolicy build() {
-            return new GetCodeSigningConfigPolicy(untrustedArtifactOnDeployment);
+        }
+
+        public GetCodeSigningConfigPolicy build() {
+            $.untrustedArtifactOnDeployment = Objects.requireNonNull($.untrustedArtifactOnDeployment, "expected parameter 'untrustedArtifactOnDeployment' to be non-null");
+            return $;
         }
     }
+
 }

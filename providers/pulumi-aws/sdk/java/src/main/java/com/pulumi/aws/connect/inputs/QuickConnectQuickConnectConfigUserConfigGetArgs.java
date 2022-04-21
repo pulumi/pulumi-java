@@ -5,7 +5,6 @@ package com.pulumi.aws.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends com.p
      * 
      */
     @Import(name="contactFlowId", required=true)
-      private final Output<String> contactFlowId;
+    private Output<String> contactFlowId;
 
     public Output<String> contactFlowId() {
         return this.contactFlowId;
@@ -30,63 +29,60 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends com.p
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public QuickConnectQuickConnectConfigUserConfigGetArgs(
-        Output<String> contactFlowId,
-        Output<String> userId) {
-        this.contactFlowId = Objects.requireNonNull(contactFlowId, "expected parameter 'contactFlowId' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private QuickConnectQuickConnectConfigUserConfigGetArgs() {}
 
-    private QuickConnectQuickConnectConfigUserConfigGetArgs() {
-        this.contactFlowId = Codegen.empty();
-        this.userId = Codegen.empty();
+    private QuickConnectQuickConnectConfigUserConfigGetArgs(QuickConnectQuickConnectConfigUserConfigGetArgs $) {
+        this.contactFlowId = $.contactFlowId;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickConnectQuickConnectConfigUserConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contactFlowId;
-        private Output<String> userId;
+        private QuickConnectQuickConnectConfigUserConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickConnectQuickConnectConfigUserConfigGetArgs();
         }
 
         public Builder(QuickConnectQuickConnectConfigUserConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactFlowId = defaults.contactFlowId;
-    	      this.userId = defaults.userId;
+            $ = new QuickConnectQuickConnectConfigUserConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactFlowId(Output<String> contactFlowId) {
-            this.contactFlowId = Objects.requireNonNull(contactFlowId);
+            $.contactFlowId = contactFlowId;
             return this;
         }
+
         public Builder contactFlowId(String contactFlowId) {
-            this.contactFlowId = Output.of(Objects.requireNonNull(contactFlowId));
-            return this;
+            return contactFlowId(Output.of(contactFlowId));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public QuickConnectQuickConnectConfigUserConfigGetArgs build() {
-            return new QuickConnectQuickConnectConfigUserConfigGetArgs(contactFlowId, userId);
+            return userId(Output.of(userId));
+        }
+
+        public QuickConnectQuickConnectConfigUserConfigGetArgs build() {
+            $.contactFlowId = Objects.requireNonNull($.contactFlowId, "expected parameter 'contactFlowId' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

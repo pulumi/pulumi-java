@@ -21,10 +21,10 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable String availabilityZone;
+    private @Nullable String availabilityZone;
 
     public Optional<String> availabilityZone() {
-        return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSpotPriceFilter> filters;
+    private @Nullable List<GetSpotPriceFilter> filters;
 
-    public List<GetSpotPriceFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSpotPriceFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,67 +43,60 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable String instanceType;
+    private @Nullable String instanceType;
 
     public Optional<String> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
-    public GetSpotPriceArgs(
-        @Nullable String availabilityZone,
-        @Nullable List<GetSpotPriceFilter> filters,
-        @Nullable String instanceType) {
-        this.availabilityZone = availabilityZone;
-        this.filters = filters;
-        this.instanceType = instanceType;
-    }
+    private GetSpotPriceArgs() {}
 
-    private GetSpotPriceArgs() {
-        this.availabilityZone = null;
-        this.filters = List.of();
-        this.instanceType = null;
+    private GetSpotPriceArgs(GetSpotPriceArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.filters = $.filters;
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSpotPriceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String availabilityZone;
-        private @Nullable List<GetSpotPriceFilter> filters;
-        private @Nullable String instanceType;
+        private GetSpotPriceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSpotPriceArgs();
         }
 
         public Builder(GetSpotPriceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.filters = defaults.filters;
-    	      this.instanceType = defaults.instanceType;
+            $ = new GetSpotPriceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder filters(@Nullable List<GetSpotPriceFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSpotPriceFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
-        }        public GetSpotPriceArgs build() {
-            return new GetSpotPriceArgs(availabilityZone, filters, instanceType);
+        }
+
+        public GetSpotPriceArgs build() {
+            return $;
         }
     }
+
 }

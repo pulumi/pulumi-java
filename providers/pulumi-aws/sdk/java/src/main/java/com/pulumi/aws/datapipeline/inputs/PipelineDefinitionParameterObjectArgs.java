@@ -6,10 +6,10 @@ package com.pulumi.aws.datapipeline.inputs;
 import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class PipelineDefinitionParameterObjectArgs extends com.pulumi.reso
     public static final PipelineDefinitionParameterObjectArgs Empty = new PipelineDefinitionParameterObjectArgs();
 
     @Import(name="attributes")
-      private final @Nullable Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes;
+    private @Nullable Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes;
 
-    public Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<PipelineDefinitionParameterObjectAttributeArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -29,66 +29,63 @@ public final class PipelineDefinitionParameterObjectArgs extends com.pulumi.reso
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public PipelineDefinitionParameterObjectArgs(
-        @Nullable Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes,
-        Output<String> id) {
-        this.attributes = attributes;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private PipelineDefinitionParameterObjectArgs() {}
 
-    private PipelineDefinitionParameterObjectArgs() {
-        this.attributes = Codegen.empty();
-        this.id = Codegen.empty();
+    private PipelineDefinitionParameterObjectArgs(PipelineDefinitionParameterObjectArgs $) {
+        this.attributes = $.attributes;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDefinitionParameterObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes;
-        private Output<String> id;
+        private PipelineDefinitionParameterObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDefinitionParameterObjectArgs();
         }
 
         public Builder(PipelineDefinitionParameterObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.id = defaults.id;
+            $ = new PipelineDefinitionParameterObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<PipelineDefinitionParameterObjectAttributeArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<PipelineDefinitionParameterObjectAttributeArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(PipelineDefinitionParameterObjectAttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public PipelineDefinitionParameterObjectArgs build() {
-            return new PipelineDefinitionParameterObjectArgs(attributes, id);
+            return id(Output.of(id));
+        }
+
+        public PipelineDefinitionParameterObjectArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

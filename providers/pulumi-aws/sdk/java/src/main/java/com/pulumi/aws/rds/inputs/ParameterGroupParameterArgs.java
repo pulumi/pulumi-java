@@ -5,9 +5,9 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ParameterGroupParameterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="applyMethod")
-      private final @Nullable Output<String> applyMethod;
+    private @Nullable Output<String> applyMethod;
 
-    public Output<String> applyMethod() {
-        return this.applyMethod == null ? Codegen.empty() : this.applyMethod;
+    public Optional<Output<String>> applyMethod() {
+        return Optional.ofNullable(this.applyMethod);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ParameterGroupParameterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -44,76 +44,70 @@ public final class ParameterGroupParameterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ParameterGroupParameterArgs(
-        @Nullable Output<String> applyMethod,
-        Output<String> name,
-        Output<String> value) {
-        this.applyMethod = applyMethod;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ParameterGroupParameterArgs() {}
 
-    private ParameterGroupParameterArgs() {
-        this.applyMethod = Codegen.empty();
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private ParameterGroupParameterArgs(ParameterGroupParameterArgs $) {
+        this.applyMethod = $.applyMethod;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterGroupParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applyMethod;
-        private Output<String> name;
-        private Output<String> value;
+        private ParameterGroupParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterGroupParameterArgs();
         }
 
         public Builder(ParameterGroupParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyMethod = defaults.applyMethod;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new ParameterGroupParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applyMethod(@Nullable Output<String> applyMethod) {
-            this.applyMethod = applyMethod;
+            $.applyMethod = applyMethod;
             return this;
         }
-        public Builder applyMethod(@Nullable String applyMethod) {
-            this.applyMethod = Codegen.ofNullable(applyMethod);
-            return this;
+
+        public Builder applyMethod(String applyMethod) {
+            return applyMethod(Output.of(applyMethod));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ParameterGroupParameterArgs build() {
-            return new ParameterGroupParameterArgs(applyMethod, name, value);
+            return value(Output.of(value));
+        }
+
+        public ParameterGroupParameterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

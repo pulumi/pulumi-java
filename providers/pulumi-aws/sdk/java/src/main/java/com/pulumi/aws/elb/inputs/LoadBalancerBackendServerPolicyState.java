@@ -5,11 +5,11 @@ package com.pulumi.aws.elb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LoadBalancerBackendServerPolicyState extends com.pulumi.resou
      * 
      */
     @Import(name="instancePort")
-      private final @Nullable Output<Integer> instancePort;
+    private @Nullable Output<Integer> instancePort;
 
-    public Output<Integer> instancePort() {
-        return this.instancePort == null ? Codegen.empty() : this.instancePort;
+    public Optional<Output<Integer>> instancePort() {
+        return Optional.ofNullable(this.instancePort);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LoadBalancerBackendServerPolicyState extends com.pulumi.resou
      * 
      */
     @Import(name="loadBalancerName")
-      private final @Nullable Output<String> loadBalancerName;
+    private @Nullable Output<String> loadBalancerName;
 
-    public Output<String> loadBalancerName() {
-        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
+    public Optional<Output<String>> loadBalancerName() {
+        return Optional.ofNullable(this.loadBalancerName);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class LoadBalancerBackendServerPolicyState extends com.pulumi.resou
      * 
      */
     @Import(name="policyNames")
-      private final @Nullable Output<List<String>> policyNames;
+    private @Nullable Output<List<String>> policyNames;
 
-    public Output<List<String>> policyNames() {
-        return this.policyNames == null ? Codegen.empty() : this.policyNames;
+    public Optional<Output<List<String>>> policyNames() {
+        return Optional.ofNullable(this.policyNames);
     }
 
-    public LoadBalancerBackendServerPolicyState(
-        @Nullable Output<Integer> instancePort,
-        @Nullable Output<String> loadBalancerName,
-        @Nullable Output<List<String>> policyNames) {
-        this.instancePort = instancePort;
-        this.loadBalancerName = loadBalancerName;
-        this.policyNames = policyNames;
-    }
+    private LoadBalancerBackendServerPolicyState() {}
 
-    private LoadBalancerBackendServerPolicyState() {
-        this.instancePort = Codegen.empty();
-        this.loadBalancerName = Codegen.empty();
-        this.policyNames = Codegen.empty();
+    private LoadBalancerBackendServerPolicyState(LoadBalancerBackendServerPolicyState $) {
+        this.instancePort = $.instancePort;
+        this.loadBalancerName = $.loadBalancerName;
+        this.policyNames = $.policyNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerBackendServerPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> instancePort;
-        private @Nullable Output<String> loadBalancerName;
-        private @Nullable Output<List<String>> policyNames;
+        private LoadBalancerBackendServerPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerBackendServerPolicyState();
         }
 
         public Builder(LoadBalancerBackendServerPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instancePort = defaults.instancePort;
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.policyNames = defaults.policyNames;
+            $ = new LoadBalancerBackendServerPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder instancePort(@Nullable Output<Integer> instancePort) {
-            this.instancePort = instancePort;
+            $.instancePort = instancePort;
             return this;
         }
-        public Builder instancePort(@Nullable Integer instancePort) {
-            this.instancePort = Codegen.ofNullable(instancePort);
-            return this;
+
+        public Builder instancePort(Integer instancePort) {
+            return instancePort(Output.of(instancePort));
         }
+
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
-            this.loadBalancerName = loadBalancerName;
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
-        public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
-            return this;
+
+        public Builder loadBalancerName(String loadBalancerName) {
+            return loadBalancerName(Output.of(loadBalancerName));
         }
+
         public Builder policyNames(@Nullable Output<List<String>> policyNames) {
-            this.policyNames = policyNames;
+            $.policyNames = policyNames;
             return this;
         }
-        public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Codegen.ofNullable(policyNames);
-            return this;
+
+        public Builder policyNames(List<String> policyNames) {
+            return policyNames(Output.of(policyNames));
         }
+
         public Builder policyNames(String... policyNames) {
             return policyNames(List.of(policyNames));
-        }        public LoadBalancerBackendServerPolicyState build() {
-            return new LoadBalancerBackendServerPolicyState(instancePort, loadBalancerName, policyNames);
+        }
+
+        public LoadBalancerBackendServerPolicyState build() {
+            return $;
         }
     }
+
 }

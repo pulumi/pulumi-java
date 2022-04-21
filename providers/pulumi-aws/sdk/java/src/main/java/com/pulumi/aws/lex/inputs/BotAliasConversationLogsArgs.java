@@ -6,10 +6,10 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.BotAliasConversationLogsLogSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class BotAliasConversationLogsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="iamRoleArn", required=true)
-      private final Output<String> iamRoleArn;
+    private Output<String> iamRoleArn;
 
     public Output<String> iamRoleArn() {
         return this.iamRoleArn;
@@ -33,66 +33,63 @@ public final class BotAliasConversationLogsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="logSettings")
-      private final @Nullable Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings;
+    private @Nullable Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings;
 
-    public Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings() {
-        return this.logSettings == null ? Codegen.empty() : this.logSettings;
+    public Optional<Output<List<BotAliasConversationLogsLogSettingArgs>>> logSettings() {
+        return Optional.ofNullable(this.logSettings);
     }
 
-    public BotAliasConversationLogsArgs(
-        Output<String> iamRoleArn,
-        @Nullable Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings) {
-        this.iamRoleArn = Objects.requireNonNull(iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
-        this.logSettings = logSettings;
-    }
+    private BotAliasConversationLogsArgs() {}
 
-    private BotAliasConversationLogsArgs() {
-        this.iamRoleArn = Codegen.empty();
-        this.logSettings = Codegen.empty();
+    private BotAliasConversationLogsArgs(BotAliasConversationLogsArgs $) {
+        this.iamRoleArn = $.iamRoleArn;
+        this.logSettings = $.logSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasConversationLogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> iamRoleArn;
-        private @Nullable Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings;
+        private BotAliasConversationLogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasConversationLogsArgs();
         }
 
         public Builder(BotAliasConversationLogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.logSettings = defaults.logSettings;
+            $ = new BotAliasConversationLogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iamRoleArn(Output<String> iamRoleArn) {
-            this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
+
         public Builder iamRoleArn(String iamRoleArn) {
-            this.iamRoleArn = Output.of(Objects.requireNonNull(iamRoleArn));
-            return this;
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder logSettings(@Nullable Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings) {
-            this.logSettings = logSettings;
+            $.logSettings = logSettings;
             return this;
         }
-        public Builder logSettings(@Nullable List<BotAliasConversationLogsLogSettingArgs> logSettings) {
-            this.logSettings = Codegen.ofNullable(logSettings);
-            return this;
+
+        public Builder logSettings(List<BotAliasConversationLogsLogSettingArgs> logSettings) {
+            return logSettings(Output.of(logSettings));
         }
+
         public Builder logSettings(BotAliasConversationLogsLogSettingArgs... logSettings) {
             return logSettings(List.of(logSettings));
-        }        public BotAliasConversationLogsArgs build() {
-            return new BotAliasConversationLogsArgs(iamRoleArn, logSettings);
+        }
+
+        public BotAliasConversationLogsArgs build() {
+            $.iamRoleArn = Objects.requireNonNull($.iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

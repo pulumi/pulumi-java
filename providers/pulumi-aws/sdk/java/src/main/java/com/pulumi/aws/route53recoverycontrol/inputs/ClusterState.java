@@ -6,10 +6,10 @@ package com.pulumi.aws.route53recoverycontrol.inputs;
 import com.pulumi.aws.route53recoverycontrol.inputs.ClusterClusterEndpointGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterEndpoints")
-      private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
+    private @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
-    public Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints() {
-        return this.clusterEndpoints == null ? Codegen.empty() : this.clusterEndpoints;
+    public Optional<Output<List<ClusterClusterEndpointGetArgs>>> clusterEndpoints() {
+        return Optional.ofNullable(this.clusterEndpoints);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public ClusterState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints,
-        @Nullable Output<String> name,
-        @Nullable Output<String> status) {
-        this.arn = arn;
-        this.clusterEndpoints = clusterEndpoints;
-        this.name = name;
-        this.status = status;
-    }
+    private ClusterState() {}
 
-    private ClusterState() {
-        this.arn = Codegen.empty();
-        this.clusterEndpoints = Codegen.empty();
-        this.name = Codegen.empty();
-        this.status = Codegen.empty();
+    private ClusterState(ClusterState $) {
+        this.arn = $.arn;
+        this.clusterEndpoints = $.clusterEndpoints;
+        this.name = $.name;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> status;
+        private ClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterState();
         }
 
         public Builder(ClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.clusterEndpoints = defaults.clusterEndpoints;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
+            $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
-            this.clusterEndpoints = clusterEndpoints;
+            $.clusterEndpoints = clusterEndpoints;
             return this;
         }
-        public Builder clusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
-            this.clusterEndpoints = Codegen.ofNullable(clusterEndpoints);
-            return this;
+
+        public Builder clusterEndpoints(List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
+            return clusterEndpoints(Output.of(clusterEndpoints));
         }
+
         public Builder clusterEndpoints(ClusterClusterEndpointGetArgs... clusterEndpoints) {
             return clusterEndpoints(List.of(clusterEndpoints));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public ClusterState build() {
-            return new ClusterState(arn, clusterEndpoints, name, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public ClusterState build() {
+            return $;
         }
     }
+
 }

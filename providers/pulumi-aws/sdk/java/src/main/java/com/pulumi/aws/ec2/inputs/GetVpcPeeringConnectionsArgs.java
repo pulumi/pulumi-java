@@ -22,10 +22,10 @@ public final class GetVpcPeeringConnectionsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcPeeringConnectionsFilter> filters;
+    private @Nullable List<GetVpcPeeringConnectionsFilter> filters;
 
-    public List<GetVpcPeeringConnectionsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcPeeringConnectionsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetVpcPeeringConnectionsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpcPeeringConnectionsArgs(
-        @Nullable List<GetVpcPeeringConnectionsFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetVpcPeeringConnectionsArgs() {}
 
-    private GetVpcPeeringConnectionsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetVpcPeeringConnectionsArgs(GetVpcPeeringConnectionsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcPeeringConnectionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetVpcPeeringConnectionsFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetVpcPeeringConnectionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcPeeringConnectionsArgs();
         }
 
         public Builder(GetVpcPeeringConnectionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetVpcPeeringConnectionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetVpcPeeringConnectionsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcPeeringConnectionsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpcPeeringConnectionsArgs build() {
-            return new GetVpcPeeringConnectionsArgs(filters, tags);
+        }
+
+        public GetVpcPeeringConnectionsArgs build() {
+            return $;
         }
     }
+
 }

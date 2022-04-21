@@ -5,9 +5,9 @@ package com.pulumi.aws.workspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="changeComputeType")
-      private final @Nullable Output<Boolean> changeComputeType;
+    private @Nullable Output<Boolean> changeComputeType;
 
-    public Output<Boolean> changeComputeType() {
-        return this.changeComputeType == null ? Codegen.empty() : this.changeComputeType;
+    public Optional<Output<Boolean>> changeComputeType() {
+        return Optional.ofNullable(this.changeComputeType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="increaseVolumeSize")
-      private final @Nullable Output<Boolean> increaseVolumeSize;
+    private @Nullable Output<Boolean> increaseVolumeSize;
 
-    public Output<Boolean> increaseVolumeSize() {
-        return this.increaseVolumeSize == null ? Codegen.empty() : this.increaseVolumeSize;
+    public Optional<Output<Boolean>> increaseVolumeSize() {
+        return Optional.ofNullable(this.increaseVolumeSize);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="rebuildWorkspace")
-      private final @Nullable Output<Boolean> rebuildWorkspace;
+    private @Nullable Output<Boolean> rebuildWorkspace;
 
-    public Output<Boolean> rebuildWorkspace() {
-        return this.rebuildWorkspace == null ? Codegen.empty() : this.rebuildWorkspace;
+    public Optional<Output<Boolean>> rebuildWorkspace() {
+        return Optional.ofNullable(this.rebuildWorkspace);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DirectorySelfServicePermissionsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="restartWorkspace")
-      private final @Nullable Output<Boolean> restartWorkspace;
+    private @Nullable Output<Boolean> restartWorkspace;
 
-    public Output<Boolean> restartWorkspace() {
-        return this.restartWorkspace == null ? Codegen.empty() : this.restartWorkspace;
+    public Optional<Output<Boolean>> restartWorkspace() {
+        return Optional.ofNullable(this.restartWorkspace);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class DirectorySelfServicePermissionsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="switchRunningMode")
-      private final @Nullable Output<Boolean> switchRunningMode;
+    private @Nullable Output<Boolean> switchRunningMode;
 
-    public Output<Boolean> switchRunningMode() {
-        return this.switchRunningMode == null ? Codegen.empty() : this.switchRunningMode;
+    public Optional<Output<Boolean>> switchRunningMode() {
+        return Optional.ofNullable(this.switchRunningMode);
     }
 
-    public DirectorySelfServicePermissionsGetArgs(
-        @Nullable Output<Boolean> changeComputeType,
-        @Nullable Output<Boolean> increaseVolumeSize,
-        @Nullable Output<Boolean> rebuildWorkspace,
-        @Nullable Output<Boolean> restartWorkspace,
-        @Nullable Output<Boolean> switchRunningMode) {
-        this.changeComputeType = changeComputeType;
-        this.increaseVolumeSize = increaseVolumeSize;
-        this.rebuildWorkspace = rebuildWorkspace;
-        this.restartWorkspace = restartWorkspace;
-        this.switchRunningMode = switchRunningMode;
-    }
+    private DirectorySelfServicePermissionsGetArgs() {}
 
-    private DirectorySelfServicePermissionsGetArgs() {
-        this.changeComputeType = Codegen.empty();
-        this.increaseVolumeSize = Codegen.empty();
-        this.rebuildWorkspace = Codegen.empty();
-        this.restartWorkspace = Codegen.empty();
-        this.switchRunningMode = Codegen.empty();
+    private DirectorySelfServicePermissionsGetArgs(DirectorySelfServicePermissionsGetArgs $) {
+        this.changeComputeType = $.changeComputeType;
+        this.increaseVolumeSize = $.increaseVolumeSize;
+        this.rebuildWorkspace = $.rebuildWorkspace;
+        this.restartWorkspace = $.restartWorkspace;
+        this.switchRunningMode = $.switchRunningMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectorySelfServicePermissionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> changeComputeType;
-        private @Nullable Output<Boolean> increaseVolumeSize;
-        private @Nullable Output<Boolean> rebuildWorkspace;
-        private @Nullable Output<Boolean> restartWorkspace;
-        private @Nullable Output<Boolean> switchRunningMode;
+        private DirectorySelfServicePermissionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectorySelfServicePermissionsGetArgs();
         }
 
         public Builder(DirectorySelfServicePermissionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.changeComputeType = defaults.changeComputeType;
-    	      this.increaseVolumeSize = defaults.increaseVolumeSize;
-    	      this.rebuildWorkspace = defaults.rebuildWorkspace;
-    	      this.restartWorkspace = defaults.restartWorkspace;
-    	      this.switchRunningMode = defaults.switchRunningMode;
+            $ = new DirectorySelfServicePermissionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder changeComputeType(@Nullable Output<Boolean> changeComputeType) {
-            this.changeComputeType = changeComputeType;
+            $.changeComputeType = changeComputeType;
             return this;
         }
-        public Builder changeComputeType(@Nullable Boolean changeComputeType) {
-            this.changeComputeType = Codegen.ofNullable(changeComputeType);
-            return this;
+
+        public Builder changeComputeType(Boolean changeComputeType) {
+            return changeComputeType(Output.of(changeComputeType));
         }
+
         public Builder increaseVolumeSize(@Nullable Output<Boolean> increaseVolumeSize) {
-            this.increaseVolumeSize = increaseVolumeSize;
+            $.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
-        public Builder increaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
-            this.increaseVolumeSize = Codegen.ofNullable(increaseVolumeSize);
-            return this;
+
+        public Builder increaseVolumeSize(Boolean increaseVolumeSize) {
+            return increaseVolumeSize(Output.of(increaseVolumeSize));
         }
+
         public Builder rebuildWorkspace(@Nullable Output<Boolean> rebuildWorkspace) {
-            this.rebuildWorkspace = rebuildWorkspace;
+            $.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
-        public Builder rebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
-            this.rebuildWorkspace = Codegen.ofNullable(rebuildWorkspace);
-            return this;
+
+        public Builder rebuildWorkspace(Boolean rebuildWorkspace) {
+            return rebuildWorkspace(Output.of(rebuildWorkspace));
         }
+
         public Builder restartWorkspace(@Nullable Output<Boolean> restartWorkspace) {
-            this.restartWorkspace = restartWorkspace;
+            $.restartWorkspace = restartWorkspace;
             return this;
         }
-        public Builder restartWorkspace(@Nullable Boolean restartWorkspace) {
-            this.restartWorkspace = Codegen.ofNullable(restartWorkspace);
-            return this;
+
+        public Builder restartWorkspace(Boolean restartWorkspace) {
+            return restartWorkspace(Output.of(restartWorkspace));
         }
+
         public Builder switchRunningMode(@Nullable Output<Boolean> switchRunningMode) {
-            this.switchRunningMode = switchRunningMode;
+            $.switchRunningMode = switchRunningMode;
             return this;
         }
-        public Builder switchRunningMode(@Nullable Boolean switchRunningMode) {
-            this.switchRunningMode = Codegen.ofNullable(switchRunningMode);
-            return this;
-        }        public DirectorySelfServicePermissionsGetArgs build() {
-            return new DirectorySelfServicePermissionsGetArgs(changeComputeType, increaseVolumeSize, rebuildWorkspace, restartWorkspace, switchRunningMode);
+
+        public Builder switchRunningMode(Boolean switchRunningMode) {
+            return switchRunningMode(Output.of(switchRunningMode));
+        }
+
+        public DirectorySelfServicePermissionsGetArgs build() {
+            return $;
         }
     }
+
 }

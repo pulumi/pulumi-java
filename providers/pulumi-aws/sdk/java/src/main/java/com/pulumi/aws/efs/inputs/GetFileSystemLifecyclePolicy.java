@@ -13,62 +13,59 @@ public final class GetFileSystemLifecyclePolicy extends com.pulumi.resources.Inv
     public static final GetFileSystemLifecyclePolicy Empty = new GetFileSystemLifecyclePolicy();
 
     @Import(name="transitionToIa", required=true)
-      private final String transitionToIa;
+    private String transitionToIa;
 
     public String transitionToIa() {
         return this.transitionToIa;
     }
 
     @Import(name="transitionToPrimaryStorageClass", required=true)
-      private final String transitionToPrimaryStorageClass;
+    private String transitionToPrimaryStorageClass;
 
     public String transitionToPrimaryStorageClass() {
         return this.transitionToPrimaryStorageClass;
     }
 
-    public GetFileSystemLifecyclePolicy(
-        String transitionToIa,
-        String transitionToPrimaryStorageClass) {
-        this.transitionToIa = Objects.requireNonNull(transitionToIa, "expected parameter 'transitionToIa' to be non-null");
-        this.transitionToPrimaryStorageClass = Objects.requireNonNull(transitionToPrimaryStorageClass, "expected parameter 'transitionToPrimaryStorageClass' to be non-null");
-    }
+    private GetFileSystemLifecyclePolicy() {}
 
-    private GetFileSystemLifecyclePolicy() {
-        this.transitionToIa = null;
-        this.transitionToPrimaryStorageClass = null;
+    private GetFileSystemLifecyclePolicy(GetFileSystemLifecyclePolicy $) {
+        this.transitionToIa = $.transitionToIa;
+        this.transitionToPrimaryStorageClass = $.transitionToPrimaryStorageClass;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFileSystemLifecyclePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String transitionToIa;
-        private String transitionToPrimaryStorageClass;
+        private GetFileSystemLifecyclePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFileSystemLifecyclePolicy();
         }
 
         public Builder(GetFileSystemLifecyclePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transitionToIa = defaults.transitionToIa;
-    	      this.transitionToPrimaryStorageClass = defaults.transitionToPrimaryStorageClass;
+            $ = new GetFileSystemLifecyclePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder transitionToIa(String transitionToIa) {
-            this.transitionToIa = Objects.requireNonNull(transitionToIa);
+            $.transitionToIa = transitionToIa;
             return this;
         }
+
         public Builder transitionToPrimaryStorageClass(String transitionToPrimaryStorageClass) {
-            this.transitionToPrimaryStorageClass = Objects.requireNonNull(transitionToPrimaryStorageClass);
+            $.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
-        }        public GetFileSystemLifecyclePolicy build() {
-            return new GetFileSystemLifecyclePolicy(transitionToIa, transitionToPrimaryStorageClass);
+        }
+
+        public GetFileSystemLifecyclePolicy build() {
+            $.transitionToIa = Objects.requireNonNull($.transitionToIa, "expected parameter 'transitionToIa' to be non-null");
+            $.transitionToPrimaryStorageClass = Objects.requireNonNull($.transitionToPrimaryStorageClass, "expected parameter 'transitionToPrimaryStorageClass' to be non-null");
+            return $;
         }
     }
+
 }

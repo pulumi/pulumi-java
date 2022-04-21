@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EventTargetKinesisTargetGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="partitionKeyPath")
-      private final @Nullable Output<String> partitionKeyPath;
+    private @Nullable Output<String> partitionKeyPath;
 
-    public Output<String> partitionKeyPath() {
-        return this.partitionKeyPath == null ? Codegen.empty() : this.partitionKeyPath;
+    public Optional<Output<String>> partitionKeyPath() {
+        return Optional.ofNullable(this.partitionKeyPath);
     }
 
-    public EventTargetKinesisTargetGetArgs(@Nullable Output<String> partitionKeyPath) {
-        this.partitionKeyPath = partitionKeyPath;
-    }
+    private EventTargetKinesisTargetGetArgs() {}
 
-    private EventTargetKinesisTargetGetArgs() {
-        this.partitionKeyPath = Codegen.empty();
+    private EventTargetKinesisTargetGetArgs(EventTargetKinesisTargetGetArgs $) {
+        this.partitionKeyPath = $.partitionKeyPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetKinesisTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> partitionKeyPath;
+        private EventTargetKinesisTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetKinesisTargetGetArgs();
         }
 
         public Builder(EventTargetKinesisTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionKeyPath = defaults.partitionKeyPath;
+            $ = new EventTargetKinesisTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionKeyPath(@Nullable Output<String> partitionKeyPath) {
-            this.partitionKeyPath = partitionKeyPath;
+            $.partitionKeyPath = partitionKeyPath;
             return this;
         }
-        public Builder partitionKeyPath(@Nullable String partitionKeyPath) {
-            this.partitionKeyPath = Codegen.ofNullable(partitionKeyPath);
-            return this;
-        }        public EventTargetKinesisTargetGetArgs build() {
-            return new EventTargetKinesisTargetGetArgs(partitionKeyPath);
+
+        public Builder partitionKeyPath(String partitionKeyPath) {
+            return partitionKeyPath(Output.of(partitionKeyPath));
+        }
+
+        public EventTargetKinesisTargetGetArgs build() {
+            return $;
         }
     }
+
 }

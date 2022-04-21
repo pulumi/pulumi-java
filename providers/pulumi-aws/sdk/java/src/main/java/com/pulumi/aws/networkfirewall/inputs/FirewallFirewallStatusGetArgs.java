@@ -6,9 +6,9 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class FirewallFirewallStatusGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="syncStates")
-      private final @Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
+    private @Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
 
-    public Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates() {
-        return this.syncStates == null ? Codegen.empty() : this.syncStates;
+    public Optional<Output<List<FirewallFirewallStatusSyncStateGetArgs>>> syncStates() {
+        return Optional.ofNullable(this.syncStates);
     }
 
-    public FirewallFirewallStatusGetArgs(@Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
-        this.syncStates = syncStates;
-    }
+    private FirewallFirewallStatusGetArgs() {}
 
-    private FirewallFirewallStatusGetArgs() {
-        this.syncStates = Codegen.empty();
+    private FirewallFirewallStatusGetArgs(FirewallFirewallStatusGetArgs $) {
+        this.syncStates = $.syncStates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallFirewallStatusGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
+        private FirewallFirewallStatusGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallFirewallStatusGetArgs();
         }
 
         public Builder(FirewallFirewallStatusGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.syncStates = defaults.syncStates;
+            $ = new FirewallFirewallStatusGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder syncStates(@Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
-            this.syncStates = syncStates;
+            $.syncStates = syncStates;
             return this;
         }
-        public Builder syncStates(@Nullable List<FirewallFirewallStatusSyncStateGetArgs> syncStates) {
-            this.syncStates = Codegen.ofNullable(syncStates);
-            return this;
+
+        public Builder syncStates(List<FirewallFirewallStatusSyncStateGetArgs> syncStates) {
+            return syncStates(Output.of(syncStates));
         }
+
         public Builder syncStates(FirewallFirewallStatusSyncStateGetArgs... syncStates) {
             return syncStates(List.of(syncStates));
-        }        public FirewallFirewallStatusGetArgs build() {
-            return new FirewallFirewallStatusGetArgs(syncStates);
+        }
+
+        public FirewallFirewallStatusGetArgs build() {
+            return $;
         }
     }
+
 }

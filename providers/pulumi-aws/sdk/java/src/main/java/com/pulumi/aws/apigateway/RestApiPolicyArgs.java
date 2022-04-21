@@ -5,7 +5,6 @@ package com.pulumi.aws.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RestApiPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -30,63 +29,60 @@ public final class RestApiPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final Output<String> restApiId;
+    private Output<String> restApiId;
 
     public Output<String> restApiId() {
         return this.restApiId;
     }
 
-    public RestApiPolicyArgs(
-        Output<String> policy,
-        Output<String> restApiId) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private RestApiPolicyArgs() {}
 
-    private RestApiPolicyArgs() {
-        this.policy = Codegen.empty();
-        this.restApiId = Codegen.empty();
+    private RestApiPolicyArgs(RestApiPolicyArgs $) {
+        this.policy = $.policy;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestApiPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policy;
-        private Output<String> restApiId;
+        private RestApiPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestApiPolicyArgs();
         }
 
         public Builder(RestApiPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.restApiId = defaults.restApiId;
+            $ = new RestApiPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder restApiId(Output<String> restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
-            return this;
-        }        public RestApiPolicyArgs build() {
-            return new RestApiPolicyArgs(policy, restApiId);
+            return restApiId(Output.of(restApiId));
+        }
+
+        public RestApiPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends com.pulumi.
      * 
      */
     @Import(name="dxGatewayId", required=true)
-      private final Output<String> dxGatewayId;
+    private Output<String> dxGatewayId;
 
     public Output<String> dxGatewayId() {
         return this.dxGatewayId;
@@ -32,10 +32,10 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends com.pulumi.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends com.pulumi.
      * 
      */
     @Import(name="virtualInterfaceId", required=true)
-      private final Output<String> virtualInterfaceId;
+    private Output<String> virtualInterfaceId;
 
     public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 
-    public HostedTransitVirtualInterfaceAcceptorArgs(
-        Output<String> dxGatewayId,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> virtualInterfaceId) {
-        this.dxGatewayId = Objects.requireNonNull(dxGatewayId, "expected parameter 'dxGatewayId' to be non-null");
-        this.tags = tags;
-        this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId, "expected parameter 'virtualInterfaceId' to be non-null");
-    }
+    private HostedTransitVirtualInterfaceAcceptorArgs() {}
 
-    private HostedTransitVirtualInterfaceAcceptorArgs() {
-        this.dxGatewayId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualInterfaceId = Codegen.empty();
+    private HostedTransitVirtualInterfaceAcceptorArgs(HostedTransitVirtualInterfaceAcceptorArgs $) {
+        this.dxGatewayId = $.dxGatewayId;
+        this.tags = $.tags;
+        this.virtualInterfaceId = $.virtualInterfaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedTransitVirtualInterfaceAcceptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dxGatewayId;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> virtualInterfaceId;
+        private HostedTransitVirtualInterfaceAcceptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedTransitVirtualInterfaceAcceptorArgs();
         }
 
         public Builder(HostedTransitVirtualInterfaceAcceptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dxGatewayId = defaults.dxGatewayId;
-    	      this.tags = defaults.tags;
-    	      this.virtualInterfaceId = defaults.virtualInterfaceId;
+            $ = new HostedTransitVirtualInterfaceAcceptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dxGatewayId(Output<String> dxGatewayId) {
-            this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
+            $.dxGatewayId = dxGatewayId;
             return this;
         }
+
         public Builder dxGatewayId(String dxGatewayId) {
-            this.dxGatewayId = Output.of(Objects.requireNonNull(dxGatewayId));
-            return this;
+            return dxGatewayId(Output.of(dxGatewayId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {
-            this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId);
+            $.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
+
         public Builder virtualInterfaceId(String virtualInterfaceId) {
-            this.virtualInterfaceId = Output.of(Objects.requireNonNull(virtualInterfaceId));
-            return this;
-        }        public HostedTransitVirtualInterfaceAcceptorArgs build() {
-            return new HostedTransitVirtualInterfaceAcceptorArgs(dxGatewayId, tags, virtualInterfaceId);
+            return virtualInterfaceId(Output.of(virtualInterfaceId));
+        }
+
+        public HostedTransitVirtualInterfaceAcceptorArgs build() {
+            $.dxGatewayId = Objects.requireNonNull($.dxGatewayId, "expected parameter 'dxGatewayId' to be non-null");
+            $.virtualInterfaceId = Objects.requireNonNull($.virtualInterfaceId, "expected parameter 'virtualInterfaceId' to be non-null");
+            return $;
         }
     }
+
 }

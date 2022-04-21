@@ -5,9 +5,9 @@ package com.pulumi.aws.elasticache;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="globalReplicationGroupDescription")
-      private final @Nullable Output<String> globalReplicationGroupDescription;
+    private @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Output<String> globalReplicationGroupDescription() {
-        return this.globalReplicationGroupDescription == null ? Codegen.empty() : this.globalReplicationGroupDescription;
+    public Optional<Output<String>> globalReplicationGroupDescription() {
+        return Optional.ofNullable(this.globalReplicationGroupDescription);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="globalReplicationGroupIdSuffix", required=true)
-      private final Output<String> globalReplicationGroupIdSuffix;
+    private Output<String> globalReplicationGroupIdSuffix;
 
     public Output<String> globalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix;
@@ -42,76 +42,70 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="primaryReplicationGroupId", required=true)
-      private final Output<String> primaryReplicationGroupId;
+    private Output<String> primaryReplicationGroupId;
 
     public Output<String> primaryReplicationGroupId() {
         return this.primaryReplicationGroupId;
     }
 
-    public GlobalReplicationGroupArgs(
-        @Nullable Output<String> globalReplicationGroupDescription,
-        Output<String> globalReplicationGroupIdSuffix,
-        Output<String> primaryReplicationGroupId) {
-        this.globalReplicationGroupDescription = globalReplicationGroupDescription;
-        this.globalReplicationGroupIdSuffix = Objects.requireNonNull(globalReplicationGroupIdSuffix, "expected parameter 'globalReplicationGroupIdSuffix' to be non-null");
-        this.primaryReplicationGroupId = Objects.requireNonNull(primaryReplicationGroupId, "expected parameter 'primaryReplicationGroupId' to be non-null");
-    }
+    private GlobalReplicationGroupArgs() {}
 
-    private GlobalReplicationGroupArgs() {
-        this.globalReplicationGroupDescription = Codegen.empty();
-        this.globalReplicationGroupIdSuffix = Codegen.empty();
-        this.primaryReplicationGroupId = Codegen.empty();
+    private GlobalReplicationGroupArgs(GlobalReplicationGroupArgs $) {
+        this.globalReplicationGroupDescription = $.globalReplicationGroupDescription;
+        this.globalReplicationGroupIdSuffix = $.globalReplicationGroupIdSuffix;
+        this.primaryReplicationGroupId = $.primaryReplicationGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalReplicationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> globalReplicationGroupDescription;
-        private Output<String> globalReplicationGroupIdSuffix;
-        private Output<String> primaryReplicationGroupId;
+        private GlobalReplicationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalReplicationGroupArgs();
         }
 
         public Builder(GlobalReplicationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalReplicationGroupDescription = defaults.globalReplicationGroupDescription;
-    	      this.globalReplicationGroupIdSuffix = defaults.globalReplicationGroupIdSuffix;
-    	      this.primaryReplicationGroupId = defaults.primaryReplicationGroupId;
+            $ = new GlobalReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalReplicationGroupDescription(@Nullable Output<String> globalReplicationGroupDescription) {
-            this.globalReplicationGroupDescription = globalReplicationGroupDescription;
+            $.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
-        public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
-            this.globalReplicationGroupDescription = Codegen.ofNullable(globalReplicationGroupDescription);
-            return this;
+
+        public Builder globalReplicationGroupDescription(String globalReplicationGroupDescription) {
+            return globalReplicationGroupDescription(Output.of(globalReplicationGroupDescription));
         }
+
         public Builder globalReplicationGroupIdSuffix(Output<String> globalReplicationGroupIdSuffix) {
-            this.globalReplicationGroupIdSuffix = Objects.requireNonNull(globalReplicationGroupIdSuffix);
+            $.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
+
         public Builder globalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
-            this.globalReplicationGroupIdSuffix = Output.of(Objects.requireNonNull(globalReplicationGroupIdSuffix));
-            return this;
+            return globalReplicationGroupIdSuffix(Output.of(globalReplicationGroupIdSuffix));
         }
+
         public Builder primaryReplicationGroupId(Output<String> primaryReplicationGroupId) {
-            this.primaryReplicationGroupId = Objects.requireNonNull(primaryReplicationGroupId);
+            $.primaryReplicationGroupId = primaryReplicationGroupId;
             return this;
         }
+
         public Builder primaryReplicationGroupId(String primaryReplicationGroupId) {
-            this.primaryReplicationGroupId = Output.of(Objects.requireNonNull(primaryReplicationGroupId));
-            return this;
-        }        public GlobalReplicationGroupArgs build() {
-            return new GlobalReplicationGroupArgs(globalReplicationGroupDescription, globalReplicationGroupIdSuffix, primaryReplicationGroupId);
+            return primaryReplicationGroupId(Output.of(primaryReplicationGroupId));
+        }
+
+        public GlobalReplicationGroupArgs build() {
+            $.globalReplicationGroupIdSuffix = Objects.requireNonNull($.globalReplicationGroupIdSuffix, "expected parameter 'globalReplicationGroupIdSuffix' to be non-null");
+            $.primaryReplicationGroupId = Objects.requireNonNull($.primaryReplicationGroupId, "expected parameter 'primaryReplicationGroupId' to be non-null");
+            return $;
         }
     }
+
 }

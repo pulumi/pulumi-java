@@ -22,10 +22,10 @@ public final class GetRouteTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetRouteTablesFilter> filters;
+    private @Nullable List<GetRouteTablesFilter> filters;
 
-    public List<GetRouteTablesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetRouteTablesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GetRouteTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -45,67 +45,60 @@ public final class GetRouteTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public GetRouteTablesArgs(
-        @Nullable List<GetRouteTablesFilter> filters,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId) {
-        this.filters = filters;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private GetRouteTablesArgs() {}
 
-    private GetRouteTablesArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetRouteTablesArgs(GetRouteTablesArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteTablesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetRouteTablesFilter> filters;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
+        private GetRouteTablesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteTablesArgs();
         }
 
         public Builder(GetRouteTablesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetRouteTablesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetRouteTablesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetRouteTablesFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public GetRouteTablesArgs build() {
-            return new GetRouteTablesArgs(filters, tags, vpcId);
+        }
+
+        public GetRouteTablesArgs build() {
+            return $;
         }
     }
+
 }

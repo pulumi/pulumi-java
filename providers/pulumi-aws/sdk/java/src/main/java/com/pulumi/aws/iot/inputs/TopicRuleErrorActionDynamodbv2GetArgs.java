@@ -6,9 +6,9 @@ package com.pulumi.aws.iot.inputs;
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionDynamodbv2PutItemGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="putItem")
-      private final @Nullable Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem;
+    private @Nullable Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem;
 
-    public Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem() {
-        return this.putItem == null ? Codegen.empty() : this.putItem;
+    public Optional<Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs>> putItem() {
+        return Optional.ofNullable(this.putItem);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleErrorActionDynamodbv2GetArgs(
-        @Nullable Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem,
-        Output<String> roleArn) {
-        this.putItem = putItem;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleErrorActionDynamodbv2GetArgs() {}
 
-    private TopicRuleErrorActionDynamodbv2GetArgs() {
-        this.putItem = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private TopicRuleErrorActionDynamodbv2GetArgs(TopicRuleErrorActionDynamodbv2GetArgs $) {
+        this.putItem = $.putItem;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleErrorActionDynamodbv2GetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem;
-        private Output<String> roleArn;
+        private TopicRuleErrorActionDynamodbv2GetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleErrorActionDynamodbv2GetArgs();
         }
 
         public Builder(TopicRuleErrorActionDynamodbv2GetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.putItem = defaults.putItem;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleErrorActionDynamodbv2GetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder putItem(@Nullable Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem) {
-            this.putItem = putItem;
+            $.putItem = putItem;
             return this;
         }
-        public Builder putItem(@Nullable TopicRuleErrorActionDynamodbv2PutItemGetArgs putItem) {
-            this.putItem = Codegen.ofNullable(putItem);
-            return this;
+
+        public Builder putItem(TopicRuleErrorActionDynamodbv2PutItemGetArgs putItem) {
+            return putItem(Output.of(putItem));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public TopicRuleErrorActionDynamodbv2GetArgs build() {
-            return new TopicRuleErrorActionDynamodbv2GetArgs(putItem, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public TopicRuleErrorActionDynamodbv2GetArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsA
      * 
      */
     @Import(name="override", required=true)
-      private final Output<Boolean> override;
+    private Output<Boolean> override;
 
     public Output<Boolean> override() {
         return this.override;
     }
 
-    public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs(Output<Boolean> override) {
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs() {}
 
-    private ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs() {
-        this.override = Codegen.empty();
+    private ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs(ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs $) {
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> override;
+        private ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs();
         }
 
         public Builder(ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.override = defaults.override;
+            $ = new ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder override(Output<Boolean> override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Output.of(Objects.requireNonNull(override));
-            return this;
-        }        public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs build() {
-            return new ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs(override);
+            return override(Output.of(override));
+        }
+
+        public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs build() {
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

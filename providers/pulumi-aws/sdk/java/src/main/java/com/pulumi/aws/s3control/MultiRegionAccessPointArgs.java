@@ -6,9 +6,9 @@ package com.pulumi.aws.s3control;
 import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="details", required=true)
-      private final Output<MultiRegionAccessPointDetailsArgs> details;
+    private Output<MultiRegionAccessPointDetailsArgs> details;
 
     public Output<MultiRegionAccessPointDetailsArgs> details() {
         return this.details;
     }
 
-    public MultiRegionAccessPointArgs(
-        @Nullable Output<String> accountId,
-        Output<MultiRegionAccessPointDetailsArgs> details) {
-        this.accountId = accountId;
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-    }
+    private MultiRegionAccessPointArgs() {}
 
-    private MultiRegionAccessPointArgs() {
-        this.accountId = Codegen.empty();
-        this.details = Codegen.empty();
+    private MultiRegionAccessPointArgs(MultiRegionAccessPointArgs $) {
+        this.accountId = $.accountId;
+        this.details = $.details;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiRegionAccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private Output<MultiRegionAccessPointDetailsArgs> details;
+        private MultiRegionAccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiRegionAccessPointArgs();
         }
 
         public Builder(MultiRegionAccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.details = defaults.details;
+            $ = new MultiRegionAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder details(Output<MultiRegionAccessPointDetailsArgs> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(MultiRegionAccessPointDetailsArgs details) {
-            this.details = Output.of(Objects.requireNonNull(details));
-            return this;
-        }        public MultiRegionAccessPointArgs build() {
-            return new MultiRegionAccessPointArgs(accountId, details);
+            return details(Output.of(details));
+        }
+
+        public MultiRegionAccessPointArgs build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            return $;
         }
     }
+
 }

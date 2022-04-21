@@ -17,7 +17,7 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends com.pulumi
      * 
      */
     @Import(name="s3BucketName", required=true)
-      private final String s3BucketName;
+    private String s3BucketName;
 
     public String s3BucketName() {
         return this.s3BucketName;
@@ -28,55 +28,52 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends com.pulumi
      * 
      */
     @Import(name="s3KeyPrefix", required=true)
-      private final String s3KeyPrefix;
+    private String s3KeyPrefix;
 
     public String s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
 
-    public GetInfrastructureConfigurationLoggingS3Log(
-        String s3BucketName,
-        String s3KeyPrefix) {
-        this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
-        this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix, "expected parameter 's3KeyPrefix' to be non-null");
-    }
+    private GetInfrastructureConfigurationLoggingS3Log() {}
 
-    private GetInfrastructureConfigurationLoggingS3Log() {
-        this.s3BucketName = null;
-        this.s3KeyPrefix = null;
+    private GetInfrastructureConfigurationLoggingS3Log(GetInfrastructureConfigurationLoggingS3Log $) {
+        this.s3BucketName = $.s3BucketName;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInfrastructureConfigurationLoggingS3Log defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String s3BucketName;
-        private String s3KeyPrefix;
+        private GetInfrastructureConfigurationLoggingS3Log $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInfrastructureConfigurationLoggingS3Log();
         }
 
         public Builder(GetInfrastructureConfigurationLoggingS3Log defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new GetInfrastructureConfigurationLoggingS3Log(Objects.requireNonNull(defaults));
         }
 
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Objects.requireNonNull(s3BucketName);
+            $.s3BucketName = s3BucketName;
             return this;
         }
+
         public Builder s3KeyPrefix(String s3KeyPrefix) {
-            this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix);
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }        public GetInfrastructureConfigurationLoggingS3Log build() {
-            return new GetInfrastructureConfigurationLoggingS3Log(s3BucketName, s3KeyPrefix);
+        }
+
+        public GetInfrastructureConfigurationLoggingS3Log build() {
+            $.s3BucketName = Objects.requireNonNull($.s3BucketName, "expected parameter 's3BucketName' to be non-null");
+            $.s3KeyPrefix = Objects.requireNonNull($.s3KeyPrefix, "expected parameter 's3KeyPrefix' to be non-null");
+            return $;
         }
     }
+
 }

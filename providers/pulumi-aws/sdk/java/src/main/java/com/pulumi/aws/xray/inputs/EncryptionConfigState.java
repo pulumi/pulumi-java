@@ -5,9 +5,9 @@ package com.pulumi.aws.xray.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EncryptionConfigState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class EncryptionConfigState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public EncryptionConfigState(
-        @Nullable Output<String> keyId,
-        @Nullable Output<String> type) {
-        this.keyId = keyId;
-        this.type = type;
-    }
+    private EncryptionConfigState() {}
 
-    private EncryptionConfigState() {
-        this.keyId = Codegen.empty();
-        this.type = Codegen.empty();
+    private EncryptionConfigState(EncryptionConfigState $) {
+        this.keyId = $.keyId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<String> type;
+        private EncryptionConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigState();
         }
 
         public Builder(EncryptionConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.type = defaults.type;
+            $ = new EncryptionConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public EncryptionConfigState build() {
-            return new EncryptionConfigState(keyId, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public EncryptionConfigState build() {
+            return $;
         }
     }
+
 }

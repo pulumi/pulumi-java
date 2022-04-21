@@ -6,7 +6,6 @@ package com.pulumi.aws.ecr.inputs;
 import com.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleRepositoryFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class RegistryScanningConfigurationRuleArgs extends com.pulumi.reso
      * 
      */
     @Import(name="repositoryFilters", required=true)
-      private final Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
+    private Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
 
     public Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters() {
         return this.repositoryFilters;
@@ -32,66 +31,64 @@ public final class RegistryScanningConfigurationRuleArgs extends com.pulumi.reso
      * 
      */
     @Import(name="scanFrequency", required=true)
-      private final Output<String> scanFrequency;
+    private Output<String> scanFrequency;
 
     public Output<String> scanFrequency() {
         return this.scanFrequency;
     }
 
-    public RegistryScanningConfigurationRuleArgs(
-        Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters,
-        Output<String> scanFrequency) {
-        this.repositoryFilters = Objects.requireNonNull(repositoryFilters, "expected parameter 'repositoryFilters' to be non-null");
-        this.scanFrequency = Objects.requireNonNull(scanFrequency, "expected parameter 'scanFrequency' to be non-null");
-    }
+    private RegistryScanningConfigurationRuleArgs() {}
 
-    private RegistryScanningConfigurationRuleArgs() {
-        this.repositoryFilters = Codegen.empty();
-        this.scanFrequency = Codegen.empty();
+    private RegistryScanningConfigurationRuleArgs(RegistryScanningConfigurationRuleArgs $) {
+        this.repositoryFilters = $.repositoryFilters;
+        this.scanFrequency = $.scanFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryScanningConfigurationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
-        private Output<String> scanFrequency;
+        private RegistryScanningConfigurationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryScanningConfigurationRuleArgs();
         }
 
         public Builder(RegistryScanningConfigurationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryFilters = defaults.repositoryFilters;
-    	      this.scanFrequency = defaults.scanFrequency;
+            $ = new RegistryScanningConfigurationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryFilters(Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters) {
-            this.repositoryFilters = Objects.requireNonNull(repositoryFilters);
+            $.repositoryFilters = repositoryFilters;
             return this;
         }
+
         public Builder repositoryFilters(List<RegistryScanningConfigurationRuleRepositoryFilterArgs> repositoryFilters) {
-            this.repositoryFilters = Output.of(Objects.requireNonNull(repositoryFilters));
-            return this;
+            return repositoryFilters(Output.of(repositoryFilters));
         }
+
         public Builder repositoryFilters(RegistryScanningConfigurationRuleRepositoryFilterArgs... repositoryFilters) {
             return repositoryFilters(List.of(repositoryFilters));
         }
+
         public Builder scanFrequency(Output<String> scanFrequency) {
-            this.scanFrequency = Objects.requireNonNull(scanFrequency);
+            $.scanFrequency = scanFrequency;
             return this;
         }
+
         public Builder scanFrequency(String scanFrequency) {
-            this.scanFrequency = Output.of(Objects.requireNonNull(scanFrequency));
-            return this;
-        }        public RegistryScanningConfigurationRuleArgs build() {
-            return new RegistryScanningConfigurationRuleArgs(repositoryFilters, scanFrequency);
+            return scanFrequency(Output.of(scanFrequency));
+        }
+
+        public RegistryScanningConfigurationRuleArgs build() {
+            $.repositoryFilters = Objects.requireNonNull($.repositoryFilters, "expected parameter 'repositoryFilters' to be non-null");
+            $.scanFrequency = Objects.requireNonNull($.scanFrequency, "expected parameter 'scanFrequency' to be non-null");
+            return $;
         }
     }
+
 }

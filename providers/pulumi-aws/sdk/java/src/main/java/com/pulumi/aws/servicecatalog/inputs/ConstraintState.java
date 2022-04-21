@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConstraintState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConstraintState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ConstraintState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ConstraintState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<String> parameters;
+    private @Nullable Output<String> parameters;
 
-    public Output<String> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ConstraintState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portfolioId")
-      private final @Nullable Output<String> portfolioId;
+    private @Nullable Output<String> portfolioId;
 
-    public Output<String> portfolioId() {
-        return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
+    public Optional<Output<String>> portfolioId() {
+        return Optional.ofNullable(this.portfolioId);
     }
 
     /**
@@ -75,17 +75,17 @@ public final class ConstraintState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -93,141 +93,118 @@ public final class ConstraintState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ConstraintState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<String> description,
-        @Nullable Output<String> owner,
-        @Nullable Output<String> parameters,
-        @Nullable Output<String> portfolioId,
-        @Nullable Output<String> productId,
-        @Nullable Output<String> status,
-        @Nullable Output<String> type) {
-        this.acceptLanguage = acceptLanguage;
-        this.description = description;
-        this.owner = owner;
-        this.parameters = parameters;
-        this.portfolioId = portfolioId;
-        this.productId = productId;
-        this.status = status;
-        this.type = type;
-    }
+    private ConstraintState() {}
 
-    private ConstraintState() {
-        this.acceptLanguage = Codegen.empty();
-        this.description = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.portfolioId = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConstraintState(ConstraintState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.description = $.description;
+        this.owner = $.owner;
+        this.parameters = $.parameters;
+        this.portfolioId = $.portfolioId;
+        this.productId = $.productId;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConstraintState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<String> parameters;
-        private @Nullable Output<String> portfolioId;
-        private @Nullable Output<String> productId;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> type;
+        private ConstraintState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConstraintState();
         }
 
         public Builder(ConstraintState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.description = defaults.description;
-    	      this.owner = defaults.owner;
-    	      this.parameters = defaults.parameters;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.productId = defaults.productId;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new ConstraintState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder parameters(@Nullable Output<String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable String parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(String parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
-            this.portfolioId = portfolioId;
+            $.portfolioId = portfolioId;
             return this;
         }
-        public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Codegen.ofNullable(portfolioId);
-            return this;
+
+        public Builder portfolioId(String portfolioId) {
+            return portfolioId(Output.of(portfolioId));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ConstraintState build() {
-            return new ConstraintState(acceptLanguage, description, owner, parameters, portfolioId, productId, status, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ConstraintState build() {
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public GetRegionArgs(
-        @Nullable String endpoint,
-        @Nullable String name) {
-        this.endpoint = endpoint;
-        this.name = name;
-    }
+    private GetRegionArgs() {}
 
-    private GetRegionArgs() {
-        this.endpoint = null;
-        this.name = null;
+    private GetRegionArgs(GetRegionArgs $) {
+        this.endpoint = $.endpoint;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpoint;
-        private @Nullable String name;
+        private GetRegionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionArgs();
         }
 
         public Builder(GetRegionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.name = defaults.name;
+            $ = new GetRegionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public GetRegionArgs build() {
-            return new GetRegionArgs(endpoint, name);
+        }
+
+        public GetRegionArgs build() {
+            return $;
         }
     }
+
 }

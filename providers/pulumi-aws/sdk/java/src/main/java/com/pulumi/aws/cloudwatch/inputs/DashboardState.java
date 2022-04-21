@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardArn")
-      private final @Nullable Output<String> dashboardArn;
+    private @Nullable Output<String> dashboardArn;
 
-    public Output<String> dashboardArn() {
-        return this.dashboardArn == null ? Codegen.empty() : this.dashboardArn;
+    public Optional<Output<String>> dashboardArn() {
+        return Optional.ofNullable(this.dashboardArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardBody")
-      private final @Nullable Output<String> dashboardBody;
+    private @Nullable Output<String> dashboardBody;
 
-    public Output<String> dashboardBody() {
-        return this.dashboardBody == null ? Codegen.empty() : this.dashboardBody;
+    public Optional<Output<String>> dashboardBody() {
+        return Optional.ofNullable(this.dashboardBody);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardName")
-      private final @Nullable Output<String> dashboardName;
+    private @Nullable Output<String> dashboardName;
 
-    public Output<String> dashboardName() {
-        return this.dashboardName == null ? Codegen.empty() : this.dashboardName;
+    public Optional<Output<String>> dashboardName() {
+        return Optional.ofNullable(this.dashboardName);
     }
 
-    public DashboardState(
-        @Nullable Output<String> dashboardArn,
-        @Nullable Output<String> dashboardBody,
-        @Nullable Output<String> dashboardName) {
-        this.dashboardArn = dashboardArn;
-        this.dashboardBody = dashboardBody;
-        this.dashboardName = dashboardName;
-    }
+    private DashboardState() {}
 
-    private DashboardState() {
-        this.dashboardArn = Codegen.empty();
-        this.dashboardBody = Codegen.empty();
-        this.dashboardName = Codegen.empty();
+    private DashboardState(DashboardState $) {
+        this.dashboardArn = $.dashboardArn;
+        this.dashboardBody = $.dashboardBody;
+        this.dashboardName = $.dashboardName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dashboardArn;
-        private @Nullable Output<String> dashboardBody;
-        private @Nullable Output<String> dashboardName;
+        private DashboardState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardState();
         }
 
         public Builder(DashboardState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardArn = defaults.dashboardArn;
-    	      this.dashboardBody = defaults.dashboardBody;
-    	      this.dashboardName = defaults.dashboardName;
+            $ = new DashboardState(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardArn(@Nullable Output<String> dashboardArn) {
-            this.dashboardArn = dashboardArn;
+            $.dashboardArn = dashboardArn;
             return this;
         }
-        public Builder dashboardArn(@Nullable String dashboardArn) {
-            this.dashboardArn = Codegen.ofNullable(dashboardArn);
-            return this;
+
+        public Builder dashboardArn(String dashboardArn) {
+            return dashboardArn(Output.of(dashboardArn));
         }
+
         public Builder dashboardBody(@Nullable Output<String> dashboardBody) {
-            this.dashboardBody = dashboardBody;
+            $.dashboardBody = dashboardBody;
             return this;
         }
-        public Builder dashboardBody(@Nullable String dashboardBody) {
-            this.dashboardBody = Codegen.ofNullable(dashboardBody);
-            return this;
+
+        public Builder dashboardBody(String dashboardBody) {
+            return dashboardBody(Output.of(dashboardBody));
         }
+
         public Builder dashboardName(@Nullable Output<String> dashboardName) {
-            this.dashboardName = dashboardName;
+            $.dashboardName = dashboardName;
             return this;
         }
-        public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Codegen.ofNullable(dashboardName);
-            return this;
-        }        public DashboardState build() {
-            return new DashboardState(dashboardArn, dashboardBody, dashboardName);
+
+        public Builder dashboardName(String dashboardName) {
+            return dashboardName(Output.of(dashboardName));
+        }
+
+        public DashboardState build() {
+            return $;
         }
     }
+
 }

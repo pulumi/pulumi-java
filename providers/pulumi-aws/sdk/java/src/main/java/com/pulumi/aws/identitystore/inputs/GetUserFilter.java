@@ -17,7 +17,7 @@ public final class GetUserFilter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributePath", required=true)
-      private final String attributePath;
+    private String attributePath;
 
     public String attributePath() {
         return this.attributePath;
@@ -28,55 +28,52 @@ public final class GetUserFilter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributeValue", required=true)
-      private final String attributeValue;
+    private String attributeValue;
 
     public String attributeValue() {
         return this.attributeValue;
     }
 
-    public GetUserFilter(
-        String attributePath,
-        String attributeValue) {
-        this.attributePath = Objects.requireNonNull(attributePath, "expected parameter 'attributePath' to be non-null");
-        this.attributeValue = Objects.requireNonNull(attributeValue, "expected parameter 'attributeValue' to be non-null");
-    }
+    private GetUserFilter() {}
 
-    private GetUserFilter() {
-        this.attributePath = null;
-        this.attributeValue = null;
+    private GetUserFilter(GetUserFilter $) {
+        this.attributePath = $.attributePath;
+        this.attributeValue = $.attributeValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributePath;
-        private String attributeValue;
+        private GetUserFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserFilter();
         }
 
         public Builder(GetUserFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributePath = defaults.attributePath;
-    	      this.attributeValue = defaults.attributeValue;
+            $ = new GetUserFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder attributePath(String attributePath) {
-            this.attributePath = Objects.requireNonNull(attributePath);
+            $.attributePath = attributePath;
             return this;
         }
+
         public Builder attributeValue(String attributeValue) {
-            this.attributeValue = Objects.requireNonNull(attributeValue);
+            $.attributeValue = attributeValue;
             return this;
-        }        public GetUserFilter build() {
-            return new GetUserFilter(attributePath, attributeValue);
+        }
+
+        public GetUserFilter build() {
+            $.attributePath = Objects.requireNonNull($.attributePath, "expected parameter 'attributePath' to be non-null");
+            $.attributeValue = Objects.requireNonNull($.attributeValue, "expected parameter 'attributeValue' to be non-null");
+            return $;
         }
     }
+
 }

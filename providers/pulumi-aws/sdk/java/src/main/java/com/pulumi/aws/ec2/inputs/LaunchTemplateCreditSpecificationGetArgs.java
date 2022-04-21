@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class LaunchTemplateCreditSpecificationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="cpuCredits")
-      private final @Nullable Output<String> cpuCredits;
+    private @Nullable Output<String> cpuCredits;
 
-    public Output<String> cpuCredits() {
-        return this.cpuCredits == null ? Codegen.empty() : this.cpuCredits;
+    public Optional<Output<String>> cpuCredits() {
+        return Optional.ofNullable(this.cpuCredits);
     }
 
-    public LaunchTemplateCreditSpecificationGetArgs(@Nullable Output<String> cpuCredits) {
-        this.cpuCredits = cpuCredits;
-    }
+    private LaunchTemplateCreditSpecificationGetArgs() {}
 
-    private LaunchTemplateCreditSpecificationGetArgs() {
-        this.cpuCredits = Codegen.empty();
+    private LaunchTemplateCreditSpecificationGetArgs(LaunchTemplateCreditSpecificationGetArgs $) {
+        this.cpuCredits = $.cpuCredits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateCreditSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cpuCredits;
+        private LaunchTemplateCreditSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateCreditSpecificationGetArgs();
         }
 
         public Builder(LaunchTemplateCreditSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCredits = defaults.cpuCredits;
+            $ = new LaunchTemplateCreditSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCredits(@Nullable Output<String> cpuCredits) {
-            this.cpuCredits = cpuCredits;
+            $.cpuCredits = cpuCredits;
             return this;
         }
-        public Builder cpuCredits(@Nullable String cpuCredits) {
-            this.cpuCredits = Codegen.ofNullable(cpuCredits);
-            return this;
-        }        public LaunchTemplateCreditSpecificationGetArgs build() {
-            return new LaunchTemplateCreditSpecificationGetArgs(cpuCredits);
+
+        public Builder cpuCredits(String cpuCredits) {
+            return cpuCredits(Output.of(cpuCredits));
+        }
+
+        public LaunchTemplateCreditSpecificationGetArgs build() {
+            return $;
         }
     }
+
 }

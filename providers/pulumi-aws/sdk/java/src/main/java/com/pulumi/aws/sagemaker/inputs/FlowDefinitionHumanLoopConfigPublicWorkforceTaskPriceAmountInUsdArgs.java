@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @Import(name="cents")
-      private final @Nullable Output<Integer> cents;
+    private @Nullable Output<Integer> cents;
 
-    public Output<Integer> cents() {
-        return this.cents == null ? Codegen.empty() : this.cents;
+    public Optional<Output<Integer>> cents() {
+        return Optional.ofNullable(this.cents);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @Import(name="dollars")
-      private final @Nullable Output<Integer> dollars;
+    private @Nullable Output<Integer> dollars;
 
-    public Output<Integer> dollars() {
-        return this.dollars == null ? Codegen.empty() : this.dollars;
+    public Optional<Output<Integer>> dollars() {
+        return Optional.ofNullable(this.dollars);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @Import(name="tenthFractionsOfACent")
-      private final @Nullable Output<Integer> tenthFractionsOfACent;
+    private @Nullable Output<Integer> tenthFractionsOfACent;
 
-    public Output<Integer> tenthFractionsOfACent() {
-        return this.tenthFractionsOfACent == null ? Codegen.empty() : this.tenthFractionsOfACent;
+    public Optional<Output<Integer>> tenthFractionsOfACent() {
+        return Optional.ofNullable(this.tenthFractionsOfACent);
     }
 
-    public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs(
-        @Nullable Output<Integer> cents,
-        @Nullable Output<Integer> dollars,
-        @Nullable Output<Integer> tenthFractionsOfACent) {
-        this.cents = cents;
-        this.dollars = dollars;
-        this.tenthFractionsOfACent = tenthFractionsOfACent;
-    }
+    private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs() {}
 
-    private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs() {
-        this.cents = Codegen.empty();
-        this.dollars = Codegen.empty();
-        this.tenthFractionsOfACent = Codegen.empty();
+    private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs(FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs $) {
+        this.cents = $.cents;
+        this.dollars = $.dollars;
+        this.tenthFractionsOfACent = $.tenthFractionsOfACent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cents;
-        private @Nullable Output<Integer> dollars;
-        private @Nullable Output<Integer> tenthFractionsOfACent;
+        private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs();
         }
 
         public Builder(FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cents = defaults.cents;
-    	      this.dollars = defaults.dollars;
-    	      this.tenthFractionsOfACent = defaults.tenthFractionsOfACent;
+            $ = new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cents(@Nullable Output<Integer> cents) {
-            this.cents = cents;
+            $.cents = cents;
             return this;
         }
-        public Builder cents(@Nullable Integer cents) {
-            this.cents = Codegen.ofNullable(cents);
-            return this;
+
+        public Builder cents(Integer cents) {
+            return cents(Output.of(cents));
         }
+
         public Builder dollars(@Nullable Output<Integer> dollars) {
-            this.dollars = dollars;
+            $.dollars = dollars;
             return this;
         }
-        public Builder dollars(@Nullable Integer dollars) {
-            this.dollars = Codegen.ofNullable(dollars);
-            return this;
+
+        public Builder dollars(Integer dollars) {
+            return dollars(Output.of(dollars));
         }
+
         public Builder tenthFractionsOfACent(@Nullable Output<Integer> tenthFractionsOfACent) {
-            this.tenthFractionsOfACent = tenthFractionsOfACent;
+            $.tenthFractionsOfACent = tenthFractionsOfACent;
             return this;
         }
-        public Builder tenthFractionsOfACent(@Nullable Integer tenthFractionsOfACent) {
-            this.tenthFractionsOfACent = Codegen.ofNullable(tenthFractionsOfACent);
-            return this;
-        }        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs build() {
-            return new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs(cents, dollars, tenthFractionsOfACent);
+
+        public Builder tenthFractionsOfACent(Integer tenthFractionsOfACent) {
+            return tenthFractionsOfACent(Output.of(tenthFractionsOfACent));
+        }
+
+        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs build() {
+            return $;
         }
     }
+
 }

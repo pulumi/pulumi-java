@@ -7,11 +7,11 @@ import com.pulumi.aws.s3.inputs.AccessPointPublicAccessBlockConfigurationGetArgs
 import com.pulumi.aws.s3.inputs.AccessPointVpcConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<Map<String,String>> endpoints;
+    private @Nullable Output<Map<String,String>> endpoints;
 
-    public Output<Map<String,String>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<Map<String,String>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasPublicAccessPolicy")
-      private final @Nullable Output<Boolean> hasPublicAccessPolicy;
+    private @Nullable Output<Boolean> hasPublicAccessPolicy;
 
-    public Output<Boolean> hasPublicAccessPolicy() {
-        return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
+    public Optional<Output<Boolean>> hasPublicAccessPolicy() {
+        return Optional.ofNullable(this.hasPublicAccessPolicy);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkOrigin")
-      private final @Nullable Output<String> networkOrigin;
+    private @Nullable Output<String> networkOrigin;
 
-    public Output<String> networkOrigin() {
-        return this.networkOrigin == null ? Codegen.empty() : this.networkOrigin;
+    public Optional<Output<String>> networkOrigin() {
+        return Optional.ofNullable(this.networkOrigin);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicAccessBlockConfiguration")
-      private final @Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
+    private @Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
 
-    public Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
+    public Optional<Output<AccessPointPublicAccessBlockConfigurationGetArgs>> publicAccessBlockConfiguration() {
+        return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
 
     /**
@@ -146,193 +146,158 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfiguration")
-      private final @Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
+    private @Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
 
-    public Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
+    public Optional<Output<AccessPointVpcConfigurationGetArgs>> vpcConfiguration() {
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public AccessPointState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> alias,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> domainName,
-        @Nullable Output<Map<String,String>> endpoints,
-        @Nullable Output<Boolean> hasPublicAccessPolicy,
-        @Nullable Output<String> name,
-        @Nullable Output<String> networkOrigin,
-        @Nullable Output<String> policy,
-        @Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration,
-        @Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration) {
-        this.accountId = accountId;
-        this.alias = alias;
-        this.arn = arn;
-        this.bucket = bucket;
-        this.domainName = domainName;
-        this.endpoints = endpoints;
-        this.hasPublicAccessPolicy = hasPublicAccessPolicy;
-        this.name = name;
-        this.networkOrigin = networkOrigin;
-        this.policy = policy;
-        this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private AccessPointState() {}
 
-    private AccessPointState() {
-        this.accountId = Codegen.empty();
-        this.alias = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.bucket = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.hasPublicAccessPolicy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkOrigin = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.publicAccessBlockConfiguration = Codegen.empty();
-        this.vpcConfiguration = Codegen.empty();
+    private AccessPointState(AccessPointState $) {
+        this.accountId = $.accountId;
+        this.alias = $.alias;
+        this.arn = $.arn;
+        this.bucket = $.bucket;
+        this.domainName = $.domainName;
+        this.endpoints = $.endpoints;
+        this.hasPublicAccessPolicy = $.hasPublicAccessPolicy;
+        this.name = $.name;
+        this.networkOrigin = $.networkOrigin;
+        this.policy = $.policy;
+        this.publicAccessBlockConfiguration = $.publicAccessBlockConfiguration;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> alias;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<Map<String,String>> endpoints;
-        private @Nullable Output<Boolean> hasPublicAccessPolicy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> networkOrigin;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
-        private @Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
+        private AccessPointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointState();
         }
 
         public Builder(AccessPointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.alias = defaults.alias;
-    	      this.arn = defaults.arn;
-    	      this.bucket = defaults.bucket;
-    	      this.domainName = defaults.domainName;
-    	      this.endpoints = defaults.endpoints;
-    	      this.hasPublicAccessPolicy = defaults.hasPublicAccessPolicy;
-    	      this.name = defaults.name;
-    	      this.networkOrigin = defaults.networkOrigin;
-    	      this.policy = defaults.policy;
-    	      this.publicAccessBlockConfiguration = defaults.publicAccessBlockConfiguration;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new AccessPointState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder endpoints(@Nullable Output<Map<String,String>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable Map<String,String> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(Map<String,String> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = hasPublicAccessPolicy;
+            $.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
-        public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = Codegen.ofNullable(hasPublicAccessPolicy);
-            return this;
+
+        public Builder hasPublicAccessPolicy(Boolean hasPublicAccessPolicy) {
+            return hasPublicAccessPolicy(Output.of(hasPublicAccessPolicy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkOrigin(@Nullable Output<String> networkOrigin) {
-            this.networkOrigin = networkOrigin;
+            $.networkOrigin = networkOrigin;
             return this;
         }
-        public Builder networkOrigin(@Nullable String networkOrigin) {
-            this.networkOrigin = Codegen.ofNullable(networkOrigin);
-            return this;
+
+        public Builder networkOrigin(String networkOrigin) {
+            return networkOrigin(Output.of(networkOrigin));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder publicAccessBlockConfiguration(@Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
+            $.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
-        public Builder publicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfigurationGetArgs publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = Codegen.ofNullable(publicAccessBlockConfiguration);
-            return this;
+
+        public Builder publicAccessBlockConfiguration(AccessPointPublicAccessBlockConfigurationGetArgs publicAccessBlockConfiguration) {
+            return publicAccessBlockConfiguration(Output.of(publicAccessBlockConfiguration));
         }
+
         public Builder vpcConfiguration(@Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
         }
-        public Builder vpcConfiguration(@Nullable AccessPointVpcConfigurationGetArgs vpcConfiguration) {
-            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
-            return this;
-        }        public AccessPointState build() {
-            return new AccessPointState(accountId, alias, arn, bucket, domainName, endpoints, hasPublicAccessPolicy, name, networkOrigin, policy, publicAccessBlockConfiguration, vpcConfiguration);
+
+        public Builder vpcConfiguration(AccessPointVpcConfigurationGetArgs vpcConfiguration) {
+            return vpcConfiguration(Output.of(vpcConfiguration));
+        }
+
+        public AccessPointState build() {
+            return $;
         }
     }
+
 }

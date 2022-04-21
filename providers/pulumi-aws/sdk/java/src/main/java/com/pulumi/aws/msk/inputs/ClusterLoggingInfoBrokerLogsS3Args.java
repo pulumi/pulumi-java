@@ -5,10 +5,10 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterLoggingInfoBrokerLogsS3Args extends com.pulumi.resourc
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ClusterLoggingInfoBrokerLogsS3Args extends com.pulumi.resourc
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -43,76 +43,69 @@ public final class ClusterLoggingInfoBrokerLogsS3Args extends com.pulumi.resourc
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public ClusterLoggingInfoBrokerLogsS3Args(
-        @Nullable Output<String> bucket,
-        Output<Boolean> enabled,
-        @Nullable Output<String> prefix) {
-        this.bucket = bucket;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.prefix = prefix;
-    }
+    private ClusterLoggingInfoBrokerLogsS3Args() {}
 
-    private ClusterLoggingInfoBrokerLogsS3Args() {
-        this.bucket = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private ClusterLoggingInfoBrokerLogsS3Args(ClusterLoggingInfoBrokerLogsS3Args $) {
+        this.bucket = $.bucket;
+        this.enabled = $.enabled;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterLoggingInfoBrokerLogsS3Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> prefix;
+        private ClusterLoggingInfoBrokerLogsS3Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterLoggingInfoBrokerLogsS3Args();
         }
 
         public Builder(ClusterLoggingInfoBrokerLogsS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.enabled = defaults.enabled;
-    	      this.prefix = defaults.prefix;
+            $ = new ClusterLoggingInfoBrokerLogsS3Args(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public ClusterLoggingInfoBrokerLogsS3Args build() {
-            return new ClusterLoggingInfoBrokerLogsS3Args(bucket, enabled, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public ClusterLoggingInfoBrokerLogsS3Args build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

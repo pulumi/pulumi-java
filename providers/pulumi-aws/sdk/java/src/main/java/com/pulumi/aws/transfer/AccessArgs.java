@@ -7,10 +7,10 @@ import com.pulumi.aws.transfer.inputs.AccessHomeDirectoryMappingArgs;
 import com.pulumi.aws.transfer.inputs.AccessPosixProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalId", required=true)
-      private final Output<String> externalId;
+    private Output<String> externalId;
 
     public Output<String> externalId() {
         return this.externalId;
@@ -34,10 +34,10 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectory")
-      private final @Nullable Output<String> homeDirectory;
+    private @Nullable Output<String> homeDirectory;
 
-    public Output<String> homeDirectory() {
-        return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
+    public Optional<Output<String>> homeDirectory() {
+        return Optional.ofNullable(this.homeDirectory);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectoryMappings")
-      private final @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
+    private @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
-    public Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings() {
-        return this.homeDirectoryMappings == null ? Codegen.empty() : this.homeDirectoryMappings;
+    public Optional<Output<List<AccessHomeDirectoryMappingArgs>>> homeDirectoryMappings() {
+        return Optional.ofNullable(this.homeDirectoryMappings);
     }
 
     /**
@@ -56,17 +56,17 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectoryType")
-      private final @Nullable Output<String> homeDirectoryType;
+    private @Nullable Output<String> homeDirectoryType;
 
-    public Output<String> homeDirectoryType() {
-        return this.homeDirectoryType == null ? Codegen.empty() : this.homeDirectoryType;
+    public Optional<Output<String>> homeDirectoryType() {
+        return Optional.ofNullable(this.homeDirectoryType);
     }
 
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixProfile")
-      private final @Nullable Output<AccessPosixProfileArgs> posixProfile;
+    private @Nullable Output<AccessPosixProfileArgs> posixProfile;
 
-    public Output<AccessPosixProfileArgs> posixProfile() {
-        return this.posixProfile == null ? Codegen.empty() : this.posixProfile;
+    public Optional<Output<AccessPosixProfileArgs>> posixProfile() {
+        return Optional.ofNullable(this.posixProfile);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -96,144 +96,124 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverId", required=true)
-      private final Output<String> serverId;
+    private Output<String> serverId;
 
     public Output<String> serverId() {
         return this.serverId;
     }
 
-    public AccessArgs(
-        Output<String> externalId,
-        @Nullable Output<String> homeDirectory,
-        @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings,
-        @Nullable Output<String> homeDirectoryType,
-        @Nullable Output<String> policy,
-        @Nullable Output<AccessPosixProfileArgs> posixProfile,
-        @Nullable Output<String> role,
-        Output<String> serverId) {
-        this.externalId = Objects.requireNonNull(externalId, "expected parameter 'externalId' to be non-null");
-        this.homeDirectory = homeDirectory;
-        this.homeDirectoryMappings = homeDirectoryMappings;
-        this.homeDirectoryType = homeDirectoryType;
-        this.policy = policy;
-        this.posixProfile = posixProfile;
-        this.role = role;
-        this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
-    }
+    private AccessArgs() {}
 
-    private AccessArgs() {
-        this.externalId = Codegen.empty();
-        this.homeDirectory = Codegen.empty();
-        this.homeDirectoryMappings = Codegen.empty();
-        this.homeDirectoryType = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.posixProfile = Codegen.empty();
-        this.role = Codegen.empty();
-        this.serverId = Codegen.empty();
+    private AccessArgs(AccessArgs $) {
+        this.externalId = $.externalId;
+        this.homeDirectory = $.homeDirectory;
+        this.homeDirectoryMappings = $.homeDirectoryMappings;
+        this.homeDirectoryType = $.homeDirectoryType;
+        this.policy = $.policy;
+        this.posixProfile = $.posixProfile;
+        this.role = $.role;
+        this.serverId = $.serverId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> externalId;
-        private @Nullable Output<String> homeDirectory;
-        private @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
-        private @Nullable Output<String> homeDirectoryType;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<AccessPosixProfileArgs> posixProfile;
-        private @Nullable Output<String> role;
-        private Output<String> serverId;
+        private AccessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessArgs();
         }
 
         public Builder(AccessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalId = defaults.externalId;
-    	      this.homeDirectory = defaults.homeDirectory;
-    	      this.homeDirectoryMappings = defaults.homeDirectoryMappings;
-    	      this.homeDirectoryType = defaults.homeDirectoryType;
-    	      this.policy = defaults.policy;
-    	      this.posixProfile = defaults.posixProfile;
-    	      this.role = defaults.role;
-    	      this.serverId = defaults.serverId;
+            $ = new AccessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalId(Output<String> externalId) {
-            this.externalId = Objects.requireNonNull(externalId);
+            $.externalId = externalId;
             return this;
         }
+
         public Builder externalId(String externalId) {
-            this.externalId = Output.of(Objects.requireNonNull(externalId));
-            return this;
+            return externalId(Output.of(externalId));
         }
+
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
-            this.homeDirectory = homeDirectory;
+            $.homeDirectory = homeDirectory;
             return this;
         }
-        public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Codegen.ofNullable(homeDirectory);
-            return this;
+
+        public Builder homeDirectory(String homeDirectory) {
+            return homeDirectory(Output.of(homeDirectory));
         }
+
         public Builder homeDirectoryMappings(@Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings) {
-            this.homeDirectoryMappings = homeDirectoryMappings;
+            $.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
-        public Builder homeDirectoryMappings(@Nullable List<AccessHomeDirectoryMappingArgs> homeDirectoryMappings) {
-            this.homeDirectoryMappings = Codegen.ofNullable(homeDirectoryMappings);
-            return this;
+
+        public Builder homeDirectoryMappings(List<AccessHomeDirectoryMappingArgs> homeDirectoryMappings) {
+            return homeDirectoryMappings(Output.of(homeDirectoryMappings));
         }
+
         public Builder homeDirectoryMappings(AccessHomeDirectoryMappingArgs... homeDirectoryMappings) {
             return homeDirectoryMappings(List.of(homeDirectoryMappings));
         }
+
         public Builder homeDirectoryType(@Nullable Output<String> homeDirectoryType) {
-            this.homeDirectoryType = homeDirectoryType;
+            $.homeDirectoryType = homeDirectoryType;
             return this;
         }
-        public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
-            this.homeDirectoryType = Codegen.ofNullable(homeDirectoryType);
-            return this;
+
+        public Builder homeDirectoryType(String homeDirectoryType) {
+            return homeDirectoryType(Output.of(homeDirectoryType));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder posixProfile(@Nullable Output<AccessPosixProfileArgs> posixProfile) {
-            this.posixProfile = posixProfile;
+            $.posixProfile = posixProfile;
             return this;
         }
-        public Builder posixProfile(@Nullable AccessPosixProfileArgs posixProfile) {
-            this.posixProfile = Codegen.ofNullable(posixProfile);
-            return this;
+
+        public Builder posixProfile(AccessPosixProfileArgs posixProfile) {
+            return posixProfile(Output.of(posixProfile));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder serverId(Output<String> serverId) {
-            this.serverId = Objects.requireNonNull(serverId);
+            $.serverId = serverId;
             return this;
         }
+
         public Builder serverId(String serverId) {
-            this.serverId = Output.of(Objects.requireNonNull(serverId));
-            return this;
-        }        public AccessArgs build() {
-            return new AccessArgs(externalId, homeDirectory, homeDirectoryMappings, homeDirectoryType, policy, posixProfile, role, serverId);
+            return serverId(Output.of(serverId));
+        }
+
+        public AccessArgs build() {
+            $.externalId = Objects.requireNonNull($.externalId, "expected parameter 'externalId' to be non-null");
+            $.serverId = Objects.requireNonNull($.serverId, "expected parameter 'serverId' to be non-null");
+            return $;
         }
     }
+
 }

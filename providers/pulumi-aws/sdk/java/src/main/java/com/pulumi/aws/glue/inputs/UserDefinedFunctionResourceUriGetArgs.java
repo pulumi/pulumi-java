@@ -5,7 +5,6 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class UserDefinedFunctionResourceUriGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -30,63 +29,60 @@ public final class UserDefinedFunctionResourceUriGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public UserDefinedFunctionResourceUriGetArgs(
-        Output<String> resourceType,
-        Output<String> uri) {
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private UserDefinedFunctionResourceUriGetArgs() {}
 
-    private UserDefinedFunctionResourceUriGetArgs() {
-        this.resourceType = Codegen.empty();
-        this.uri = Codegen.empty();
+    private UserDefinedFunctionResourceUriGetArgs(UserDefinedFunctionResourceUriGetArgs $) {
+        this.resourceType = $.resourceType;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserDefinedFunctionResourceUriGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceType;
-        private Output<String> uri;
+        private UserDefinedFunctionResourceUriGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserDefinedFunctionResourceUriGetArgs();
         }
 
         public Builder(UserDefinedFunctionResourceUriGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.uri = defaults.uri;
+            $ = new UserDefinedFunctionResourceUriGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public UserDefinedFunctionResourceUriGetArgs build() {
-            return new UserDefinedFunctionResourceUriGetArgs(resourceType, uri);
+            return uri(Output.of(uri));
+        }
+
+        public UserDefinedFunctionResourceUriGetArgs build() {
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

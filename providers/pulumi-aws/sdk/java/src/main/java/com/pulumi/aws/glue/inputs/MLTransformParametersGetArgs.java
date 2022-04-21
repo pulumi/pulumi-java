@@ -6,7 +6,6 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.MLTransformParametersFindMatchesParametersGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class MLTransformParametersGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="findMatchesParameters", required=true)
-      private final Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
+    private Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
 
     public Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters() {
         return this.findMatchesParameters;
@@ -31,63 +30,60 @@ public final class MLTransformParametersGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="transformType", required=true)
-      private final Output<String> transformType;
+    private Output<String> transformType;
 
     public Output<String> transformType() {
         return this.transformType;
     }
 
-    public MLTransformParametersGetArgs(
-        Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters,
-        Output<String> transformType) {
-        this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters, "expected parameter 'findMatchesParameters' to be non-null");
-        this.transformType = Objects.requireNonNull(transformType, "expected parameter 'transformType' to be non-null");
-    }
+    private MLTransformParametersGetArgs() {}
 
-    private MLTransformParametersGetArgs() {
-        this.findMatchesParameters = Codegen.empty();
-        this.transformType = Codegen.empty();
+    private MLTransformParametersGetArgs(MLTransformParametersGetArgs $) {
+        this.findMatchesParameters = $.findMatchesParameters;
+        this.transformType = $.transformType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MLTransformParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
-        private Output<String> transformType;
+        private MLTransformParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MLTransformParametersGetArgs();
         }
 
         public Builder(MLTransformParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.findMatchesParameters = defaults.findMatchesParameters;
-    	      this.transformType = defaults.transformType;
+            $ = new MLTransformParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder findMatchesParameters(Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters) {
-            this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters);
+            $.findMatchesParameters = findMatchesParameters;
             return this;
         }
+
         public Builder findMatchesParameters(MLTransformParametersFindMatchesParametersGetArgs findMatchesParameters) {
-            this.findMatchesParameters = Output.of(Objects.requireNonNull(findMatchesParameters));
-            return this;
+            return findMatchesParameters(Output.of(findMatchesParameters));
         }
+
         public Builder transformType(Output<String> transformType) {
-            this.transformType = Objects.requireNonNull(transformType);
+            $.transformType = transformType;
             return this;
         }
+
         public Builder transformType(String transformType) {
-            this.transformType = Output.of(Objects.requireNonNull(transformType));
-            return this;
-        }        public MLTransformParametersGetArgs build() {
-            return new MLTransformParametersGetArgs(findMatchesParameters, transformType);
+            return transformType(Output.of(transformType));
+        }
+
+        public MLTransformParametersGetArgs build() {
+            $.findMatchesParameters = Objects.requireNonNull($.findMatchesParameters, "expected parameter 'findMatchesParameters' to be non-null");
+            $.transformType = Objects.requireNonNull($.transformType, "expected parameter 'transformType' to be non-null");
+            return $;
         }
     }
+
 }

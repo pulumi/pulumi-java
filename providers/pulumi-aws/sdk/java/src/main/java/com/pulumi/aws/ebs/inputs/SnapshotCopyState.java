@@ -5,12 +5,12 @@ package com.pulumi.aws.ebs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataEncryptionKeyId")
-      private final @Nullable Output<String> dataEncryptionKeyId;
+    private @Nullable Output<String> dataEncryptionKeyId;
 
-    public Output<String> dataEncryptionKeyId() {
-        return this.dataEncryptionKeyId == null ? Codegen.empty() : this.dataEncryptionKeyId;
+    public Optional<Output<String>> dataEncryptionKeyId() {
+        return Optional.ofNullable(this.dataEncryptionKeyId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -67,17 +67,17 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="outpostArn")
-      private final @Nullable Output<String> outpostArn;
+    private @Nullable Output<String> outpostArn;
 
-    public Output<String> outpostArn() {
-        return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
+    public Optional<Output<String>> outpostArn() {
+        return Optional.ofNullable(this.outpostArn);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerAlias")
-      private final @Nullable Output<String> ownerAlias;
+    private @Nullable Output<String> ownerAlias;
 
-    public Output<String> ownerAlias() {
-        return this.ownerAlias == null ? Codegen.empty() : this.ownerAlias;
+    public Optional<Output<String>> ownerAlias() {
+        return Optional.ofNullable(this.ownerAlias);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permanentRestore")
-      private final @Nullable Output<Boolean> permanentRestore;
+    private @Nullable Output<Boolean> permanentRestore;
 
-    public Output<Boolean> permanentRestore() {
-        return this.permanentRestore == null ? Codegen.empty() : this.permanentRestore;
+    public Optional<Output<Boolean>> permanentRestore() {
+        return Optional.ofNullable(this.permanentRestore);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRegion")
-      private final @Nullable Output<String> sourceRegion;
+    private @Nullable Output<String> sourceRegion;
 
-    public Output<String> sourceRegion() {
-        return this.sourceRegion == null ? Codegen.empty() : this.sourceRegion;
+    public Optional<Output<String>> sourceRegion() {
+        return Optional.ofNullable(this.sourceRegion);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshotId")
-      private final @Nullable Output<String> sourceSnapshotId;
+    private @Nullable Output<String> sourceSnapshotId;
 
-    public Output<String> sourceSnapshotId() {
-        return this.sourceSnapshotId == null ? Codegen.empty() : this.sourceSnapshotId;
+    public Optional<Output<String>> sourceSnapshotId() {
+        return Optional.ofNullable(this.sourceSnapshotId);
     }
 
     /**
@@ -140,17 +140,17 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageTier")
-      private final @Nullable Output<String> storageTier;
+    private @Nullable Output<String> storageTier;
 
-    public Output<String> storageTier() {
-        return this.storageTier == null ? Codegen.empty() : this.storageTier;
+    public Optional<Output<String>> storageTier() {
+        return Optional.ofNullable(this.storageTier);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -169,17 +169,17 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="temporaryRestoreDays")
-      private final @Nullable Output<Integer> temporaryRestoreDays;
+    private @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Output<Integer> temporaryRestoreDays() {
-        return this.temporaryRestoreDays == null ? Codegen.empty() : this.temporaryRestoreDays;
+    public Optional<Output<Integer>> temporaryRestoreDays() {
+        return Optional.ofNullable(this.temporaryRestoreDays);
     }
 
     @Import(name="volumeId")
-      private final @Nullable Output<String> volumeId;
+    private @Nullable Output<String> volumeId;
 
-    public Output<String> volumeId() {
-        return this.volumeId == null ? Codegen.empty() : this.volumeId;
+    public Optional<Output<String>> volumeId() {
+        return Optional.ofNullable(this.volumeId);
     }
 
     /**
@@ -187,258 +187,208 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeSize")
-      private final @Nullable Output<Integer> volumeSize;
+    private @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> volumeSize() {
-        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
+    public Optional<Output<Integer>> volumeSize() {
+        return Optional.ofNullable(this.volumeSize);
     }
 
-    public SnapshotCopyState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> dataEncryptionKeyId,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> outpostArn,
-        @Nullable Output<String> ownerAlias,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<Boolean> permanentRestore,
-        @Nullable Output<String> sourceRegion,
-        @Nullable Output<String> sourceSnapshotId,
-        @Nullable Output<String> storageTier,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Integer> temporaryRestoreDays,
-        @Nullable Output<String> volumeId,
-        @Nullable Output<Integer> volumeSize) {
-        this.arn = arn;
-        this.dataEncryptionKeyId = dataEncryptionKeyId;
-        this.description = description;
-        this.encrypted = encrypted;
-        this.kmsKeyId = kmsKeyId;
-        this.outpostArn = outpostArn;
-        this.ownerAlias = ownerAlias;
-        this.ownerId = ownerId;
-        this.permanentRestore = permanentRestore;
-        this.sourceRegion = sourceRegion;
-        this.sourceSnapshotId = sourceSnapshotId;
-        this.storageTier = storageTier;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.temporaryRestoreDays = temporaryRestoreDays;
-        this.volumeId = volumeId;
-        this.volumeSize = volumeSize;
-    }
+    private SnapshotCopyState() {}
 
-    private SnapshotCopyState() {
-        this.arn = Codegen.empty();
-        this.dataEncryptionKeyId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.outpostArn = Codegen.empty();
-        this.ownerAlias = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.permanentRestore = Codegen.empty();
-        this.sourceRegion = Codegen.empty();
-        this.sourceSnapshotId = Codegen.empty();
-        this.storageTier = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.temporaryRestoreDays = Codegen.empty();
-        this.volumeId = Codegen.empty();
-        this.volumeSize = Codegen.empty();
+    private SnapshotCopyState(SnapshotCopyState $) {
+        this.arn = $.arn;
+        this.dataEncryptionKeyId = $.dataEncryptionKeyId;
+        this.description = $.description;
+        this.encrypted = $.encrypted;
+        this.kmsKeyId = $.kmsKeyId;
+        this.outpostArn = $.outpostArn;
+        this.ownerAlias = $.ownerAlias;
+        this.ownerId = $.ownerId;
+        this.permanentRestore = $.permanentRestore;
+        this.sourceRegion = $.sourceRegion;
+        this.sourceSnapshotId = $.sourceSnapshotId;
+        this.storageTier = $.storageTier;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.temporaryRestoreDays = $.temporaryRestoreDays;
+        this.volumeId = $.volumeId;
+        this.volumeSize = $.volumeSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotCopyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> dataEncryptionKeyId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> outpostArn;
-        private @Nullable Output<String> ownerAlias;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<Boolean> permanentRestore;
-        private @Nullable Output<String> sourceRegion;
-        private @Nullable Output<String> sourceSnapshotId;
-        private @Nullable Output<String> storageTier;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Integer> temporaryRestoreDays;
-        private @Nullable Output<String> volumeId;
-        private @Nullable Output<Integer> volumeSize;
+        private SnapshotCopyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotCopyState();
         }
 
         public Builder(SnapshotCopyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.dataEncryptionKeyId = defaults.dataEncryptionKeyId;
-    	      this.description = defaults.description;
-    	      this.encrypted = defaults.encrypted;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.outpostArn = defaults.outpostArn;
-    	      this.ownerAlias = defaults.ownerAlias;
-    	      this.ownerId = defaults.ownerId;
-    	      this.permanentRestore = defaults.permanentRestore;
-    	      this.sourceRegion = defaults.sourceRegion;
-    	      this.sourceSnapshotId = defaults.sourceSnapshotId;
-    	      this.storageTier = defaults.storageTier;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.temporaryRestoreDays = defaults.temporaryRestoreDays;
-    	      this.volumeId = defaults.volumeId;
-    	      this.volumeSize = defaults.volumeSize;
+            $ = new SnapshotCopyState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder dataEncryptionKeyId(@Nullable Output<String> dataEncryptionKeyId) {
-            this.dataEncryptionKeyId = dataEncryptionKeyId;
+            $.dataEncryptionKeyId = dataEncryptionKeyId;
             return this;
         }
-        public Builder dataEncryptionKeyId(@Nullable String dataEncryptionKeyId) {
-            this.dataEncryptionKeyId = Codegen.ofNullable(dataEncryptionKeyId);
-            return this;
+
+        public Builder dataEncryptionKeyId(String dataEncryptionKeyId) {
+            return dataEncryptionKeyId(Output.of(dataEncryptionKeyId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
-            this.outpostArn = outpostArn;
+            $.outpostArn = outpostArn;
             return this;
         }
-        public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Codegen.ofNullable(outpostArn);
-            return this;
+
+        public Builder outpostArn(String outpostArn) {
+            return outpostArn(Output.of(outpostArn));
         }
+
         public Builder ownerAlias(@Nullable Output<String> ownerAlias) {
-            this.ownerAlias = ownerAlias;
+            $.ownerAlias = ownerAlias;
             return this;
         }
-        public Builder ownerAlias(@Nullable String ownerAlias) {
-            this.ownerAlias = Codegen.ofNullable(ownerAlias);
-            return this;
+
+        public Builder ownerAlias(String ownerAlias) {
+            return ownerAlias(Output.of(ownerAlias));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
-            this.permanentRestore = permanentRestore;
+            $.permanentRestore = permanentRestore;
             return this;
         }
-        public Builder permanentRestore(@Nullable Boolean permanentRestore) {
-            this.permanentRestore = Codegen.ofNullable(permanentRestore);
-            return this;
+
+        public Builder permanentRestore(Boolean permanentRestore) {
+            return permanentRestore(Output.of(permanentRestore));
         }
+
         public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
-            this.sourceRegion = sourceRegion;
+            $.sourceRegion = sourceRegion;
             return this;
         }
-        public Builder sourceRegion(@Nullable String sourceRegion) {
-            this.sourceRegion = Codegen.ofNullable(sourceRegion);
-            return this;
+
+        public Builder sourceRegion(String sourceRegion) {
+            return sourceRegion(Output.of(sourceRegion));
         }
+
         public Builder sourceSnapshotId(@Nullable Output<String> sourceSnapshotId) {
-            this.sourceSnapshotId = sourceSnapshotId;
+            $.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
-        public Builder sourceSnapshotId(@Nullable String sourceSnapshotId) {
-            this.sourceSnapshotId = Codegen.ofNullable(sourceSnapshotId);
-            return this;
+
+        public Builder sourceSnapshotId(String sourceSnapshotId) {
+            return sourceSnapshotId(Output.of(sourceSnapshotId));
         }
+
         public Builder storageTier(@Nullable Output<String> storageTier) {
-            this.storageTier = storageTier;
+            $.storageTier = storageTier;
             return this;
         }
-        public Builder storageTier(@Nullable String storageTier) {
-            this.storageTier = Codegen.ofNullable(storageTier);
-            return this;
+
+        public Builder storageTier(String storageTier) {
+            return storageTier(Output.of(storageTier));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
-            this.temporaryRestoreDays = temporaryRestoreDays;
+            $.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
-        public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
-            this.temporaryRestoreDays = Codegen.ofNullable(temporaryRestoreDays);
-            return this;
+
+        public Builder temporaryRestoreDays(Integer temporaryRestoreDays) {
+            return temporaryRestoreDays(Output.of(temporaryRestoreDays));
         }
+
         public Builder volumeId(@Nullable Output<String> volumeId) {
-            this.volumeId = volumeId;
+            $.volumeId = volumeId;
             return this;
         }
-        public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Codegen.ofNullable(volumeId);
-            return this;
+
+        public Builder volumeId(String volumeId) {
+            return volumeId(Output.of(volumeId));
         }
+
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
-        public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Codegen.ofNullable(volumeSize);
-            return this;
-        }        public SnapshotCopyState build() {
-            return new SnapshotCopyState(arn, dataEncryptionKeyId, description, encrypted, kmsKeyId, outpostArn, ownerAlias, ownerId, permanentRestore, sourceRegion, sourceSnapshotId, storageTier, tags, tagsAll, temporaryRestoreDays, volumeId, volumeSize);
+
+        public Builder volumeSize(Integer volumeSize) {
+            return volumeSize(Output.of(volumeSize));
+        }
+
+        public SnapshotCopyState build() {
+            return $;
         }
     }
+
 }

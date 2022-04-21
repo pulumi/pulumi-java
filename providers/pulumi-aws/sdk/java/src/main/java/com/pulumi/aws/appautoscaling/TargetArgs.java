@@ -5,10 +5,10 @@ package com.pulumi.aws.appautoscaling;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxCapacity", required=true)
-      private final Output<Integer> maxCapacity;
+    private Output<Integer> maxCapacity;
 
     public Output<Integer> maxCapacity() {
         return this.maxCapacity;
@@ -32,7 +32,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minCapacity", required=true)
-      private final Output<Integer> minCapacity;
+    private Output<Integer> minCapacity;
 
     public Output<Integer> minCapacity() {
         return this.minCapacity;
@@ -43,7 +43,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -54,10 +54,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalableDimension", required=true)
-      private final Output<String> scalableDimension;
+    private Output<String> scalableDimension;
 
     public Output<String> scalableDimension() {
         return this.scalableDimension;
@@ -76,115 +76,103 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceNamespace", required=true)
-      private final Output<String> serviceNamespace;
+    private Output<String> serviceNamespace;
 
     public Output<String> serviceNamespace() {
         return this.serviceNamespace;
     }
 
-    public TargetArgs(
-        Output<Integer> maxCapacity,
-        Output<Integer> minCapacity,
-        Output<String> resourceId,
-        @Nullable Output<String> roleArn,
-        Output<String> scalableDimension,
-        Output<String> serviceNamespace) {
-        this.maxCapacity = Objects.requireNonNull(maxCapacity, "expected parameter 'maxCapacity' to be non-null");
-        this.minCapacity = Objects.requireNonNull(minCapacity, "expected parameter 'minCapacity' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.roleArn = roleArn;
-        this.scalableDimension = Objects.requireNonNull(scalableDimension, "expected parameter 'scalableDimension' to be non-null");
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
-    }
+    private TargetArgs() {}
 
-    private TargetArgs() {
-        this.maxCapacity = Codegen.empty();
-        this.minCapacity = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.scalableDimension = Codegen.empty();
-        this.serviceNamespace = Codegen.empty();
+    private TargetArgs(TargetArgs $) {
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
+        this.resourceId = $.resourceId;
+        this.roleArn = $.roleArn;
+        this.scalableDimension = $.scalableDimension;
+        this.serviceNamespace = $.serviceNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxCapacity;
-        private Output<Integer> minCapacity;
-        private Output<String> resourceId;
-        private @Nullable Output<String> roleArn;
-        private Output<String> scalableDimension;
-        private Output<String> serviceNamespace;
+        private TargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetArgs();
         }
 
         public Builder(TargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
-    	      this.resourceId = defaults.resourceId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.scalableDimension = defaults.scalableDimension;
-    	      this.serviceNamespace = defaults.serviceNamespace;
+            $ = new TargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacity(Output<Integer> maxCapacity) {
-            this.maxCapacity = Objects.requireNonNull(maxCapacity);
+            $.maxCapacity = maxCapacity;
             return this;
         }
+
         public Builder maxCapacity(Integer maxCapacity) {
-            this.maxCapacity = Output.of(Objects.requireNonNull(maxCapacity));
-            return this;
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder minCapacity(Output<Integer> minCapacity) {
-            this.minCapacity = Objects.requireNonNull(minCapacity);
+            $.minCapacity = minCapacity;
             return this;
         }
+
         public Builder minCapacity(Integer minCapacity) {
-            this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
-            return this;
+            return minCapacity(Output.of(minCapacity));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder scalableDimension(Output<String> scalableDimension) {
-            this.scalableDimension = Objects.requireNonNull(scalableDimension);
+            $.scalableDimension = scalableDimension;
             return this;
         }
+
         public Builder scalableDimension(String scalableDimension) {
-            this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
-            return this;
+            return scalableDimension(Output.of(scalableDimension));
         }
+
         public Builder serviceNamespace(Output<String> serviceNamespace) {
-            this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
+            $.serviceNamespace = serviceNamespace;
             return this;
         }
+
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
-            return this;
-        }        public TargetArgs build() {
-            return new TargetArgs(maxCapacity, minCapacity, resourceId, roleArn, scalableDimension, serviceNamespace);
+            return serviceNamespace(Output.of(serviceNamespace));
+        }
+
+        public TargetArgs build() {
+            $.maxCapacity = Objects.requireNonNull($.maxCapacity, "expected parameter 'maxCapacity' to be non-null");
+            $.minCapacity = Objects.requireNonNull($.minCapacity, "expected parameter 'minCapacity' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.scalableDimension = Objects.requireNonNull($.scalableDimension, "expected parameter 'scalableDimension' to be non-null");
+            $.serviceNamespace = Objects.requireNonNull($.serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
+            return $;
         }
     }
+
 }

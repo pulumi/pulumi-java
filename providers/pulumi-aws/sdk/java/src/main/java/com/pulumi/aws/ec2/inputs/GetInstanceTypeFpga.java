@@ -14,14 +14,14 @@ public final class GetInstanceTypeFpga extends com.pulumi.resources.InvokeArgs {
     public static final GetInstanceTypeFpga Empty = new GetInstanceTypeFpga();
 
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
     }
 
     @Import(name="manufacturer", required=true)
-      private final String manufacturer;
+    private String manufacturer;
 
     public String manufacturer() {
         return this.manufacturer;
@@ -32,80 +32,73 @@ public final class GetInstanceTypeFpga extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="memorySize", required=true)
-      private final Integer memorySize;
+    private Integer memorySize;
 
     public Integer memorySize() {
         return this.memorySize;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetInstanceTypeFpga(
-        Integer count,
-        String manufacturer,
-        Integer memorySize,
-        String name) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.manufacturer = Objects.requireNonNull(manufacturer, "expected parameter 'manufacturer' to be non-null");
-        this.memorySize = Objects.requireNonNull(memorySize, "expected parameter 'memorySize' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetInstanceTypeFpga() {}
 
-    private GetInstanceTypeFpga() {
-        this.count = null;
-        this.manufacturer = null;
-        this.memorySize = null;
-        this.name = null;
+    private GetInstanceTypeFpga(GetInstanceTypeFpga $) {
+        this.count = $.count;
+        this.manufacturer = $.manufacturer;
+        this.memorySize = $.memorySize;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTypeFpga defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String manufacturer;
-        private Integer memorySize;
-        private String name;
+        private GetInstanceTypeFpga $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTypeFpga();
         }
 
         public Builder(GetInstanceTypeFpga defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.manufacturer = defaults.manufacturer;
-    	      this.memorySize = defaults.memorySize;
-    	      this.name = defaults.name;
+            $ = new GetInstanceTypeFpga(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder manufacturer(String manufacturer) {
-            this.manufacturer = Objects.requireNonNull(manufacturer);
+            $.manufacturer = manufacturer;
             return this;
         }
+
         public Builder memorySize(Integer memorySize) {
-            this.memorySize = Objects.requireNonNull(memorySize);
+            $.memorySize = memorySize;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetInstanceTypeFpga build() {
-            return new GetInstanceTypeFpga(count, manufacturer, memorySize, name);
+        }
+
+        public GetInstanceTypeFpga build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.manufacturer = Objects.requireNonNull($.manufacturer, "expected parameter 'manufacturer' to be non-null");
+            $.memorySize = Objects.requireNonNull($.memorySize, "expected parameter 'memorySize' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

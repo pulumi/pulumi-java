@@ -5,7 +5,6 @@ package com.pulumi.aws.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AccessHomeDirectoryMappingGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="entry", required=true)
-      private final Output<String> entry;
+    private Output<String> entry;
 
     public Output<String> entry() {
         return this.entry;
@@ -30,63 +29,60 @@ public final class AccessHomeDirectoryMappingGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="target", required=true)
-      private final Output<String> target;
+    private Output<String> target;
 
     public Output<String> target() {
         return this.target;
     }
 
-    public AccessHomeDirectoryMappingGetArgs(
-        Output<String> entry,
-        Output<String> target) {
-        this.entry = Objects.requireNonNull(entry, "expected parameter 'entry' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private AccessHomeDirectoryMappingGetArgs() {}
 
-    private AccessHomeDirectoryMappingGetArgs() {
-        this.entry = Codegen.empty();
-        this.target = Codegen.empty();
+    private AccessHomeDirectoryMappingGetArgs(AccessHomeDirectoryMappingGetArgs $) {
+        this.entry = $.entry;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessHomeDirectoryMappingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> entry;
-        private Output<String> target;
+        private AccessHomeDirectoryMappingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessHomeDirectoryMappingGetArgs();
         }
 
         public Builder(AccessHomeDirectoryMappingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entry = defaults.entry;
-    	      this.target = defaults.target;
+            $ = new AccessHomeDirectoryMappingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entry(Output<String> entry) {
-            this.entry = Objects.requireNonNull(entry);
+            $.entry = entry;
             return this;
         }
+
         public Builder entry(String entry) {
-            this.entry = Output.of(Objects.requireNonNull(entry));
-            return this;
+            return entry(Output.of(entry));
         }
+
         public Builder target(Output<String> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public AccessHomeDirectoryMappingGetArgs build() {
-            return new AccessHomeDirectoryMappingGetArgs(entry, target);
+            return target(Output.of(target));
+        }
+
+        public AccessHomeDirectoryMappingGetArgs build() {
+            $.entry = Objects.requireNonNull($.entry, "expected parameter 'entry' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

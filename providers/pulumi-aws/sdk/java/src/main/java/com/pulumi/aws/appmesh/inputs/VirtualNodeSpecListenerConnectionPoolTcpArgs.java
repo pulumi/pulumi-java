@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecListenerConnectionPoolTcpArgs extends com.pulu
      * 
      */
     @Import(name="maxConnections", required=true)
-      private final Output<Integer> maxConnections;
+    private Output<Integer> maxConnections;
 
     public Output<Integer> maxConnections() {
         return this.maxConnections;
     }
 
-    public VirtualNodeSpecListenerConnectionPoolTcpArgs(Output<Integer> maxConnections) {
-        this.maxConnections = Objects.requireNonNull(maxConnections, "expected parameter 'maxConnections' to be non-null");
-    }
+    private VirtualNodeSpecListenerConnectionPoolTcpArgs() {}
 
-    private VirtualNodeSpecListenerConnectionPoolTcpArgs() {
-        this.maxConnections = Codegen.empty();
+    private VirtualNodeSpecListenerConnectionPoolTcpArgs(VirtualNodeSpecListenerConnectionPoolTcpArgs $) {
+        this.maxConnections = $.maxConnections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerConnectionPoolTcpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxConnections;
+        private VirtualNodeSpecListenerConnectionPoolTcpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerConnectionPoolTcpArgs();
         }
 
         public Builder(VirtualNodeSpecListenerConnectionPoolTcpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConnections = defaults.maxConnections;
+            $ = new VirtualNodeSpecListenerConnectionPoolTcpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConnections(Output<Integer> maxConnections) {
-            this.maxConnections = Objects.requireNonNull(maxConnections);
+            $.maxConnections = maxConnections;
             return this;
         }
+
         public Builder maxConnections(Integer maxConnections) {
-            this.maxConnections = Output.of(Objects.requireNonNull(maxConnections));
-            return this;
-        }        public VirtualNodeSpecListenerConnectionPoolTcpArgs build() {
-            return new VirtualNodeSpecListenerConnectionPoolTcpArgs(maxConnections);
+            return maxConnections(Output.of(maxConnections));
+        }
+
+        public VirtualNodeSpecListenerConnectionPoolTcpArgs build() {
+            $.maxConnections = Objects.requireNonNull($.maxConnections, "expected parameter 'maxConnections' to be non-null");
+            return $;
         }
     }
+
 }

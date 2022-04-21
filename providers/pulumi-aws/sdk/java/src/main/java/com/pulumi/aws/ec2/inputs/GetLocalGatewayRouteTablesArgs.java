@@ -22,10 +22,10 @@ public final class GetLocalGatewayRouteTablesArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetLocalGatewayRouteTablesFilter> filters;
+    private @Nullable List<GetLocalGatewayRouteTablesFilter> filters;
 
-    public List<GetLocalGatewayRouteTablesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetLocalGatewayRouteTablesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetLocalGatewayRouteTablesArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetLocalGatewayRouteTablesArgs(
-        @Nullable List<GetLocalGatewayRouteTablesFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetLocalGatewayRouteTablesArgs() {}
 
-    private GetLocalGatewayRouteTablesArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetLocalGatewayRouteTablesArgs(GetLocalGatewayRouteTablesArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalGatewayRouteTablesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetLocalGatewayRouteTablesFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetLocalGatewayRouteTablesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalGatewayRouteTablesArgs();
         }
 
         public Builder(GetLocalGatewayRouteTablesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetLocalGatewayRouteTablesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetLocalGatewayRouteTablesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetLocalGatewayRouteTablesFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetLocalGatewayRouteTablesArgs build() {
-            return new GetLocalGatewayRouteTablesArgs(filters, tags);
+        }
+
+        public GetLocalGatewayRouteTablesArgs build() {
+            return $;
         }
     }
+
 }

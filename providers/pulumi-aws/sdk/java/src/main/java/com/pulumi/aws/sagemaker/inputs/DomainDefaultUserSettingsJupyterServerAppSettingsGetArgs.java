@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs exte
      * 
      */
     @Import(name="defaultResourceSpec")
-      private final @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+    private @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
+    public Optional<Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs>> defaultResourceSpec() {
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs exte
      * 
      */
     @Import(name="lifecycleConfigArns")
-      private final @Nullable Output<List<String>> lifecycleConfigArns;
+    private @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> lifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
+    public Optional<Output<List<String>>> lifecycleConfigArns() {
+        return Optional.ofNullable(this.lifecycleConfigArns);
     }
 
-    public DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs(
-        @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec,
-        @Nullable Output<List<String>> lifecycleConfigArns) {
-        this.defaultResourceSpec = defaultResourceSpec;
-        this.lifecycleConfigArns = lifecycleConfigArns;
-    }
+    private DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs() {}
 
-    private DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs() {
-        this.defaultResourceSpec = Codegen.empty();
-        this.lifecycleConfigArns = Codegen.empty();
+    private DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs(DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs $) {
+        this.defaultResourceSpec = $.defaultResourceSpec;
+        this.lifecycleConfigArns = $.lifecycleConfigArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
-        private @Nullable Output<List<String>> lifecycleConfigArns;
+        private DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs();
         }
 
         public Builder(DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
-    	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
+            $ = new DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceSpec(@Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-        public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
-            return this;
+
+        public Builder defaultResourceSpec(DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
+            return defaultResourceSpec(Output.of(defaultResourceSpec));
         }
+
         public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
-            this.lifecycleConfigArns = lifecycleConfigArns;
+            $.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-        public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Codegen.ofNullable(lifecycleConfigArns);
-            return this;
+
+        public Builder lifecycleConfigArns(List<String> lifecycleConfigArns) {
+            return lifecycleConfigArns(Output.of(lifecycleConfigArns));
         }
+
         public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
             return lifecycleConfigArns(List.of(lifecycleConfigArns));
-        }        public DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs build() {
-            return new DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs(defaultResourceSpec, lifecycleConfigArns);
+        }
+
+        public DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs build() {
+            return $;
         }
     }
+
 }

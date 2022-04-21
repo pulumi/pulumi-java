@@ -20,7 +20,7 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -31,55 +31,51 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetClusterArgs(
-        String clusterName,
-        @Nullable Map<String,String> tags) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.tags = tags;
-    }
+    private GetClusterArgs() {}
 
-    private GetClusterArgs() {
-        this.clusterName = null;
-        this.tags = Map.of();
+    private GetClusterArgs(GetClusterArgs $) {
+        this.clusterName = $.clusterName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private @Nullable Map<String,String> tags;
+        private GetClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterArgs();
         }
 
         public Builder(GetClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.tags = defaults.tags;
+            $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetClusterArgs build() {
-            return new GetClusterArgs(clusterName, tags);
+        }
+
+        public GetClusterArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            return $;
         }
     }
+
 }

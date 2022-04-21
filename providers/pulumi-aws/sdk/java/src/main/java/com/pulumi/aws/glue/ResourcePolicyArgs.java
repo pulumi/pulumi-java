@@ -5,9 +5,9 @@ package com.pulumi.aws.glue;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
     @Import(name="enableHybrid")
-      private final @Nullable Output<String> enableHybrid;
+    private @Nullable Output<String> enableHybrid;
 
-    public Output<String> enableHybrid() {
-        return this.enableHybrid == null ? Codegen.empty() : this.enableHybrid;
+    public Optional<Output<String>> enableHybrid() {
+        return Optional.ofNullable(this.enableHybrid);
     }
 
     /**
@@ -27,63 +27,59 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public ResourcePolicyArgs(
-        @Nullable Output<String> enableHybrid,
-        Output<String> policy) {
-        this.enableHybrid = enableHybrid;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private ResourcePolicyArgs() {}
 
-    private ResourcePolicyArgs() {
-        this.enableHybrid = Codegen.empty();
-        this.policy = Codegen.empty();
+    private ResourcePolicyArgs(ResourcePolicyArgs $) {
+        this.enableHybrid = $.enableHybrid;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> enableHybrid;
-        private Output<String> policy;
+        private ResourcePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyArgs();
         }
 
         public Builder(ResourcePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableHybrid = defaults.enableHybrid;
-    	      this.policy = defaults.policy;
+            $ = new ResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableHybrid(@Nullable Output<String> enableHybrid) {
-            this.enableHybrid = enableHybrid;
+            $.enableHybrid = enableHybrid;
             return this;
         }
-        public Builder enableHybrid(@Nullable String enableHybrid) {
-            this.enableHybrid = Codegen.ofNullable(enableHybrid);
-            return this;
+
+        public Builder enableHybrid(String enableHybrid) {
+            return enableHybrid(Output.of(enableHybrid));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public ResourcePolicyArgs build() {
-            return new ResourcePolicyArgs(enableHybrid, policy);
+            return policy(Output.of(policy));
+        }
+
+        public ResourcePolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

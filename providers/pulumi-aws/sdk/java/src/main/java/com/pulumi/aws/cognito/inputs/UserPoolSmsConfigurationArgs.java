@@ -5,7 +5,6 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class UserPoolSmsConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="externalId", required=true)
-      private final Output<String> externalId;
+    private Output<String> externalId;
 
     public Output<String> externalId() {
         return this.externalId;
@@ -30,63 +29,60 @@ public final class UserPoolSmsConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="snsCallerArn", required=true)
-      private final Output<String> snsCallerArn;
+    private Output<String> snsCallerArn;
 
     public Output<String> snsCallerArn() {
         return this.snsCallerArn;
     }
 
-    public UserPoolSmsConfigurationArgs(
-        Output<String> externalId,
-        Output<String> snsCallerArn) {
-        this.externalId = Objects.requireNonNull(externalId, "expected parameter 'externalId' to be non-null");
-        this.snsCallerArn = Objects.requireNonNull(snsCallerArn, "expected parameter 'snsCallerArn' to be non-null");
-    }
+    private UserPoolSmsConfigurationArgs() {}
 
-    private UserPoolSmsConfigurationArgs() {
-        this.externalId = Codegen.empty();
-        this.snsCallerArn = Codegen.empty();
+    private UserPoolSmsConfigurationArgs(UserPoolSmsConfigurationArgs $) {
+        this.externalId = $.externalId;
+        this.snsCallerArn = $.snsCallerArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolSmsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> externalId;
-        private Output<String> snsCallerArn;
+        private UserPoolSmsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolSmsConfigurationArgs();
         }
 
         public Builder(UserPoolSmsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalId = defaults.externalId;
-    	      this.snsCallerArn = defaults.snsCallerArn;
+            $ = new UserPoolSmsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalId(Output<String> externalId) {
-            this.externalId = Objects.requireNonNull(externalId);
+            $.externalId = externalId;
             return this;
         }
+
         public Builder externalId(String externalId) {
-            this.externalId = Output.of(Objects.requireNonNull(externalId));
-            return this;
+            return externalId(Output.of(externalId));
         }
+
         public Builder snsCallerArn(Output<String> snsCallerArn) {
-            this.snsCallerArn = Objects.requireNonNull(snsCallerArn);
+            $.snsCallerArn = snsCallerArn;
             return this;
         }
+
         public Builder snsCallerArn(String snsCallerArn) {
-            this.snsCallerArn = Output.of(Objects.requireNonNull(snsCallerArn));
-            return this;
-        }        public UserPoolSmsConfigurationArgs build() {
-            return new UserPoolSmsConfigurationArgs(externalId, snsCallerArn);
+            return snsCallerArn(Output.of(snsCallerArn));
+        }
+
+        public UserPoolSmsConfigurationArgs build() {
+            $.externalId = Objects.requireNonNull($.externalId, "expected parameter 'externalId' to be non-null");
+            $.snsCallerArn = Objects.requireNonNull($.snsCallerArn, "expected parameter 'snsCallerArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.aws.ebs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone", required=true)
-      private final Output<String> availabilityZone;
+    private Output<String> availabilityZone;
 
     public Output<String> availabilityZone() {
         return this.availabilityZone;
@@ -34,10 +34,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multiAttachEnabled")
-      private final @Nullable Output<Boolean> multiAttachEnabled;
+    private @Nullable Output<Boolean> multiAttachEnabled;
 
-    public Output<Boolean> multiAttachEnabled() {
-        return this.multiAttachEnabled == null ? Codegen.empty() : this.multiAttachEnabled;
+    public Optional<Output<Boolean>> multiAttachEnabled() {
+        return Optional.ofNullable(this.multiAttachEnabled);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outpostArn")
-      private final @Nullable Output<String> outpostArn;
+    private @Nullable Output<String> outpostArn;
 
-    public Output<String> outpostArn() {
-        return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
+    public Optional<Output<String>> outpostArn() {
+        return Optional.ofNullable(this.outpostArn);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<Integer> size;
+    private @Nullable Output<Integer> size;
 
-    public Output<Integer> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Integer>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throughput")
-      private final @Nullable Output<Integer> throughput;
+    private @Nullable Output<Integer> throughput;
 
-    public Output<Integer> throughput() {
-        return this.throughput == null ? Codegen.empty() : this.throughput;
+    public Optional<Output<Integer>> throughput() {
+        return Optional.ofNullable(this.throughput);
     }
 
     /**
@@ -129,180 +129,149 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public VolumeArgs(
-        Output<String> availabilityZone,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<Boolean> multiAttachEnabled,
-        @Nullable Output<String> outpostArn,
-        @Nullable Output<Integer> size,
-        @Nullable Output<String> snapshotId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> throughput,
-        @Nullable Output<String> type) {
-        this.availabilityZone = Objects.requireNonNull(availabilityZone, "expected parameter 'availabilityZone' to be non-null");
-        this.encrypted = encrypted;
-        this.iops = iops;
-        this.kmsKeyId = kmsKeyId;
-        this.multiAttachEnabled = multiAttachEnabled;
-        this.outpostArn = outpostArn;
-        this.size = size;
-        this.snapshotId = snapshotId;
-        this.tags = tags;
-        this.throughput = throughput;
-        this.type = type;
-    }
+    private VolumeArgs() {}
 
-    private VolumeArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.multiAttachEnabled = Codegen.empty();
-        this.outpostArn = Codegen.empty();
-        this.size = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.throughput = Codegen.empty();
-        this.type = Codegen.empty();
+    private VolumeArgs(VolumeArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.multiAttachEnabled = $.multiAttachEnabled;
+        this.outpostArn = $.outpostArn;
+        this.size = $.size;
+        this.snapshotId = $.snapshotId;
+        this.tags = $.tags;
+        this.throughput = $.throughput;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> availabilityZone;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<Boolean> multiAttachEnabled;
-        private @Nullable Output<String> outpostArn;
-        private @Nullable Output<Integer> size;
-        private @Nullable Output<String> snapshotId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> throughput;
-        private @Nullable Output<String> type;
+        private VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeArgs();
         }
 
         public Builder(VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.multiAttachEnabled = defaults.multiAttachEnabled;
-    	      this.outpostArn = defaults.outpostArn;
-    	      this.size = defaults.size;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.tags = defaults.tags;
-    	      this.throughput = defaults.throughput;
-    	      this.type = defaults.type;
+            $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(Output<String> availabilityZone) {
-            this.availabilityZone = Objects.requireNonNull(availabilityZone);
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder availabilityZone(String availabilityZone) {
-            this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
-            return this;
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder multiAttachEnabled(@Nullable Output<Boolean> multiAttachEnabled) {
-            this.multiAttachEnabled = multiAttachEnabled;
+            $.multiAttachEnabled = multiAttachEnabled;
             return this;
         }
-        public Builder multiAttachEnabled(@Nullable Boolean multiAttachEnabled) {
-            this.multiAttachEnabled = Codegen.ofNullable(multiAttachEnabled);
-            return this;
+
+        public Builder multiAttachEnabled(Boolean multiAttachEnabled) {
+            return multiAttachEnabled(Output.of(multiAttachEnabled));
         }
+
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
-            this.outpostArn = outpostArn;
+            $.outpostArn = outpostArn;
             return this;
         }
-        public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Codegen.ofNullable(outpostArn);
-            return this;
+
+        public Builder outpostArn(String outpostArn) {
+            return outpostArn(Output.of(outpostArn));
         }
+
         public Builder size(@Nullable Output<Integer> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Integer size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(Integer size) {
+            return size(Output.of(size));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder throughput(@Nullable Output<Integer> throughput) {
-            this.throughput = throughput;
+            $.throughput = throughput;
             return this;
         }
-        public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Codegen.ofNullable(throughput);
-            return this;
+
+        public Builder throughput(Integer throughput) {
+            return throughput(Output.of(throughput));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public VolumeArgs build() {
-            return new VolumeArgs(availabilityZone, encrypted, iops, kmsKeyId, multiAttachEnabled, outpostArn, size, snapshotId, tags, throughput, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public VolumeArgs build() {
+            $.availabilityZone = Objects.requireNonNull($.availabilityZone, "expected parameter 'availabilityZone' to be non-null");
+            return $;
         }
     }
+
 }

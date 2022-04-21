@@ -5,10 +5,10 @@ package com.pulumi.aws.appautoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
      * 
      */
     @Import(name="metricIntervalLowerBound")
-      private final @Nullable Output<String> metricIntervalLowerBound;
+    private @Nullable Output<String> metricIntervalLowerBound;
 
-    public Output<String> metricIntervalLowerBound() {
-        return this.metricIntervalLowerBound == null ? Codegen.empty() : this.metricIntervalLowerBound;
+    public Optional<Output<String>> metricIntervalLowerBound() {
+        return Optional.ofNullable(this.metricIntervalLowerBound);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
      * 
      */
     @Import(name="metricIntervalUpperBound")
-      private final @Nullable Output<String> metricIntervalUpperBound;
+    private @Nullable Output<String> metricIntervalUpperBound;
 
-    public Output<String> metricIntervalUpperBound() {
-        return this.metricIntervalUpperBound == null ? Codegen.empty() : this.metricIntervalUpperBound;
+    public Optional<Output<String>> metricIntervalUpperBound() {
+        return Optional.ofNullable(this.metricIntervalUpperBound);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
      * 
      */
     @Import(name="scalingAdjustment", required=true)
-      private final Output<Integer> scalingAdjustment;
+    private Output<Integer> scalingAdjustment;
 
     public Output<Integer> scalingAdjustment() {
         return this.scalingAdjustment;
     }
 
-    public PolicyStepScalingPolicyConfigurationStepAdjustmentArgs(
-        @Nullable Output<String> metricIntervalLowerBound,
-        @Nullable Output<String> metricIntervalUpperBound,
-        Output<Integer> scalingAdjustment) {
-        this.metricIntervalLowerBound = metricIntervalLowerBound;
-        this.metricIntervalUpperBound = metricIntervalUpperBound;
-        this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment, "expected parameter 'scalingAdjustment' to be non-null");
-    }
+    private PolicyStepScalingPolicyConfigurationStepAdjustmentArgs() {}
 
-    private PolicyStepScalingPolicyConfigurationStepAdjustmentArgs() {
-        this.metricIntervalLowerBound = Codegen.empty();
-        this.metricIntervalUpperBound = Codegen.empty();
-        this.scalingAdjustment = Codegen.empty();
+    private PolicyStepScalingPolicyConfigurationStepAdjustmentArgs(PolicyStepScalingPolicyConfigurationStepAdjustmentArgs $) {
+        this.metricIntervalLowerBound = $.metricIntervalLowerBound;
+        this.metricIntervalUpperBound = $.metricIntervalUpperBound;
+        this.scalingAdjustment = $.scalingAdjustment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyStepScalingPolicyConfigurationStepAdjustmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> metricIntervalLowerBound;
-        private @Nullable Output<String> metricIntervalUpperBound;
-        private Output<Integer> scalingAdjustment;
+        private PolicyStepScalingPolicyConfigurationStepAdjustmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyStepScalingPolicyConfigurationStepAdjustmentArgs();
         }
 
         public Builder(PolicyStepScalingPolicyConfigurationStepAdjustmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricIntervalLowerBound = defaults.metricIntervalLowerBound;
-    	      this.metricIntervalUpperBound = defaults.metricIntervalUpperBound;
-    	      this.scalingAdjustment = defaults.scalingAdjustment;
+            $ = new PolicyStepScalingPolicyConfigurationStepAdjustmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricIntervalLowerBound(@Nullable Output<String> metricIntervalLowerBound) {
-            this.metricIntervalLowerBound = metricIntervalLowerBound;
+            $.metricIntervalLowerBound = metricIntervalLowerBound;
             return this;
         }
-        public Builder metricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
-            this.metricIntervalLowerBound = Codegen.ofNullable(metricIntervalLowerBound);
-            return this;
+
+        public Builder metricIntervalLowerBound(String metricIntervalLowerBound) {
+            return metricIntervalLowerBound(Output.of(metricIntervalLowerBound));
         }
+
         public Builder metricIntervalUpperBound(@Nullable Output<String> metricIntervalUpperBound) {
-            this.metricIntervalUpperBound = metricIntervalUpperBound;
+            $.metricIntervalUpperBound = metricIntervalUpperBound;
             return this;
         }
-        public Builder metricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
-            this.metricIntervalUpperBound = Codegen.ofNullable(metricIntervalUpperBound);
-            return this;
+
+        public Builder metricIntervalUpperBound(String metricIntervalUpperBound) {
+            return metricIntervalUpperBound(Output.of(metricIntervalUpperBound));
         }
+
         public Builder scalingAdjustment(Output<Integer> scalingAdjustment) {
-            this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment);
+            $.scalingAdjustment = scalingAdjustment;
             return this;
         }
+
         public Builder scalingAdjustment(Integer scalingAdjustment) {
-            this.scalingAdjustment = Output.of(Objects.requireNonNull(scalingAdjustment));
-            return this;
-        }        public PolicyStepScalingPolicyConfigurationStepAdjustmentArgs build() {
-            return new PolicyStepScalingPolicyConfigurationStepAdjustmentArgs(metricIntervalLowerBound, metricIntervalUpperBound, scalingAdjustment);
+            return scalingAdjustment(Output.of(scalingAdjustment));
+        }
+
+        public PolicyStepScalingPolicyConfigurationStepAdjustmentArgs build() {
+            $.scalingAdjustment = Objects.requireNonNull($.scalingAdjustment, "expected parameter 'scalingAdjustment' to be non-null");
+            return $;
         }
     }
+
 }

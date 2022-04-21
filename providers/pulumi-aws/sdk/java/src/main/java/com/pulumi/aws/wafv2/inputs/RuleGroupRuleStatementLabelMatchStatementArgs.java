@@ -5,7 +5,6 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RuleGroupRuleStatementLabelMatchStatementArgs extends com.pul
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -30,63 +29,60 @@ public final class RuleGroupRuleStatementLabelMatchStatementArgs extends com.pul
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public RuleGroupRuleStatementLabelMatchStatementArgs(
-        Output<String> key,
-        Output<String> scope) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private RuleGroupRuleStatementLabelMatchStatementArgs() {}
 
-    private RuleGroupRuleStatementLabelMatchStatementArgs() {
-        this.key = Codegen.empty();
-        this.scope = Codegen.empty();
+    private RuleGroupRuleStatementLabelMatchStatementArgs(RuleGroupRuleStatementLabelMatchStatementArgs $) {
+        this.key = $.key;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleStatementLabelMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<String> scope;
+        private RuleGroupRuleStatementLabelMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleStatementLabelMatchStatementArgs();
         }
 
         public Builder(RuleGroupRuleStatementLabelMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.scope = defaults.scope;
+            $ = new RuleGroupRuleStatementLabelMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public RuleGroupRuleStatementLabelMatchStatementArgs build() {
-            return new RuleGroupRuleStatementLabelMatchStatementArgs(key, scope);
+            return scope(Output.of(scope));
+        }
+
+        public RuleGroupRuleStatementLabelMatchStatementArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowGetArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAclDefaultActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<WebAclDefaultActionAllowGetArgs> allow;
+    private @Nullable Output<WebAclDefaultActionAllowGetArgs> allow;
 
-    public Output<WebAclDefaultActionAllowGetArgs> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<WebAclDefaultActionAllowGetArgs>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class WebAclDefaultActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="block")
-      private final @Nullable Output<WebAclDefaultActionBlockGetArgs> block;
+    private @Nullable Output<WebAclDefaultActionBlockGetArgs> block;
 
-    public Output<WebAclDefaultActionBlockGetArgs> block() {
-        return this.block == null ? Codegen.empty() : this.block;
+    public Optional<Output<WebAclDefaultActionBlockGetArgs>> block() {
+        return Optional.ofNullable(this.block);
     }
 
-    public WebAclDefaultActionGetArgs(
-        @Nullable Output<WebAclDefaultActionAllowGetArgs> allow,
-        @Nullable Output<WebAclDefaultActionBlockGetArgs> block) {
-        this.allow = allow;
-        this.block = block;
-    }
+    private WebAclDefaultActionGetArgs() {}
 
-    private WebAclDefaultActionGetArgs() {
-        this.allow = Codegen.empty();
-        this.block = Codegen.empty();
+    private WebAclDefaultActionGetArgs(WebAclDefaultActionGetArgs $) {
+        this.allow = $.allow;
+        this.block = $.block;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclDefaultActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclDefaultActionAllowGetArgs> allow;
-        private @Nullable Output<WebAclDefaultActionBlockGetArgs> block;
+        private WebAclDefaultActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclDefaultActionGetArgs();
         }
 
         public Builder(WebAclDefaultActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
+            $ = new WebAclDefaultActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<WebAclDefaultActionAllowGetArgs> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable WebAclDefaultActionAllowGetArgs allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(WebAclDefaultActionAllowGetArgs allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder block(@Nullable Output<WebAclDefaultActionBlockGetArgs> block) {
-            this.block = block;
+            $.block = block;
             return this;
         }
-        public Builder block(@Nullable WebAclDefaultActionBlockGetArgs block) {
-            this.block = Codegen.ofNullable(block);
-            return this;
-        }        public WebAclDefaultActionGetArgs build() {
-            return new WebAclDefaultActionGetArgs(allow, block);
+
+        public Builder block(WebAclDefaultActionBlockGetArgs block) {
+            return block(Output.of(block));
+        }
+
+        public WebAclDefaultActionGetArgs build() {
+            return $;
         }
     }
+
 }

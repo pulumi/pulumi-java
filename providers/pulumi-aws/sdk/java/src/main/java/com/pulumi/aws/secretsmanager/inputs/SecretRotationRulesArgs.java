@@ -5,7 +5,6 @@ package com.pulumi.aws.secretsmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class SecretRotationRulesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="automaticallyAfterDays", required=true)
-      private final Output<Integer> automaticallyAfterDays;
+    private Output<Integer> automaticallyAfterDays;
 
     public Output<Integer> automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 
-    public SecretRotationRulesArgs(Output<Integer> automaticallyAfterDays) {
-        this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays, "expected parameter 'automaticallyAfterDays' to be non-null");
-    }
+    private SecretRotationRulesArgs() {}
 
-    private SecretRotationRulesArgs() {
-        this.automaticallyAfterDays = Codegen.empty();
+    private SecretRotationRulesArgs(SecretRotationRulesArgs $) {
+        this.automaticallyAfterDays = $.automaticallyAfterDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretRotationRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> automaticallyAfterDays;
+        private SecretRotationRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretRotationRulesArgs();
         }
 
         public Builder(SecretRotationRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticallyAfterDays = defaults.automaticallyAfterDays;
+            $ = new SecretRotationRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticallyAfterDays(Output<Integer> automaticallyAfterDays) {
-            this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
+            $.automaticallyAfterDays = automaticallyAfterDays;
             return this;
         }
+
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
-            this.automaticallyAfterDays = Output.of(Objects.requireNonNull(automaticallyAfterDays));
-            return this;
-        }        public SecretRotationRulesArgs build() {
-            return new SecretRotationRulesArgs(automaticallyAfterDays);
+            return automaticallyAfterDays(Output.of(automaticallyAfterDays));
+        }
+
+        public SecretRotationRulesArgs build() {
+            $.automaticallyAfterDays = Objects.requireNonNull($.automaticallyAfterDays, "expected parameter 'automaticallyAfterDays' to be non-null");
+            return $;
         }
     }
+
 }

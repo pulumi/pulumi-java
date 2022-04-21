@@ -5,7 +5,6 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TaskScheduleGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scheduleExpression", required=true)
-      private final Output<String> scheduleExpression;
+    private Output<String> scheduleExpression;
 
     public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public TaskScheduleGetArgs(Output<String> scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private TaskScheduleGetArgs() {}
 
-    private TaskScheduleGetArgs() {
-        this.scheduleExpression = Codegen.empty();
+    private TaskScheduleGetArgs(TaskScheduleGetArgs $) {
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> scheduleExpression;
+        private TaskScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskScheduleGetArgs();
         }
 
         public Builder(TaskScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new TaskScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleExpression(Output<String> scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
+
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
-            return this;
-        }        public TaskScheduleGetArgs build() {
-            return new TaskScheduleGetArgs(scheduleExpression);
+            return scheduleExpression(Output.of(scheduleExpression));
+        }
+
+        public TaskScheduleGetArgs build() {
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

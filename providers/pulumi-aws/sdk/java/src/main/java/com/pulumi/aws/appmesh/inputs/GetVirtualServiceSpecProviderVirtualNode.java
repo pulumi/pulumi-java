@@ -17,45 +17,45 @@ public final class GetVirtualServiceSpecProviderVirtualNode extends com.pulumi.r
      * 
      */
     @Import(name="virtualNodeName", required=true)
-      private final String virtualNodeName;
+    private String virtualNodeName;
 
     public String virtualNodeName() {
         return this.virtualNodeName;
     }
 
-    public GetVirtualServiceSpecProviderVirtualNode(String virtualNodeName) {
-        this.virtualNodeName = Objects.requireNonNull(virtualNodeName, "expected parameter 'virtualNodeName' to be non-null");
-    }
+    private GetVirtualServiceSpecProviderVirtualNode() {}
 
-    private GetVirtualServiceSpecProviderVirtualNode() {
-        this.virtualNodeName = null;
+    private GetVirtualServiceSpecProviderVirtualNode(GetVirtualServiceSpecProviderVirtualNode $) {
+        this.virtualNodeName = $.virtualNodeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualServiceSpecProviderVirtualNode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String virtualNodeName;
+        private GetVirtualServiceSpecProviderVirtualNode $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualServiceSpecProviderVirtualNode();
         }
 
         public Builder(GetVirtualServiceSpecProviderVirtualNode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNodeName = defaults.virtualNodeName;
+            $ = new GetVirtualServiceSpecProviderVirtualNode(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNodeName(String virtualNodeName) {
-            this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
+            $.virtualNodeName = virtualNodeName;
             return this;
-        }        public GetVirtualServiceSpecProviderVirtualNode build() {
-            return new GetVirtualServiceSpecProviderVirtualNode(virtualNodeName);
+        }
+
+        public GetVirtualServiceSpecProviderVirtualNode build() {
+            $.virtualNodeName = Objects.requireNonNull($.virtualNodeName, "expected parameter 'virtualNodeName' to be non-null");
+            return $;
         }
     }
+
 }

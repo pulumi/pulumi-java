@@ -5,10 +5,10 @@ package com.pulumi.aws.acm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CertificateValidationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class CertificateValidationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="validationRecordFqdns")
-      private final @Nullable Output<List<String>> validationRecordFqdns;
+    private @Nullable Output<List<String>> validationRecordFqdns;
 
-    public Output<List<String>> validationRecordFqdns() {
-        return this.validationRecordFqdns == null ? Codegen.empty() : this.validationRecordFqdns;
+    public Optional<Output<List<String>>> validationRecordFqdns() {
+        return Optional.ofNullable(this.validationRecordFqdns);
     }
 
-    public CertificateValidationState(
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<List<String>> validationRecordFqdns) {
-        this.certificateArn = certificateArn;
-        this.validationRecordFqdns = validationRecordFqdns;
-    }
+    private CertificateValidationState() {}
 
-    private CertificateValidationState() {
-        this.certificateArn = Codegen.empty();
-        this.validationRecordFqdns = Codegen.empty();
+    private CertificateValidationState(CertificateValidationState $) {
+        this.certificateArn = $.certificateArn;
+        this.validationRecordFqdns = $.validationRecordFqdns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateValidationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<List<String>> validationRecordFqdns;
+        private CertificateValidationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateValidationState();
         }
 
         public Builder(CertificateValidationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.validationRecordFqdns = defaults.validationRecordFqdns;
+            $ = new CertificateValidationState(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder validationRecordFqdns(@Nullable Output<List<String>> validationRecordFqdns) {
-            this.validationRecordFqdns = validationRecordFqdns;
+            $.validationRecordFqdns = validationRecordFqdns;
             return this;
         }
-        public Builder validationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
-            this.validationRecordFqdns = Codegen.ofNullable(validationRecordFqdns);
-            return this;
+
+        public Builder validationRecordFqdns(List<String> validationRecordFqdns) {
+            return validationRecordFqdns(Output.of(validationRecordFqdns));
         }
+
         public Builder validationRecordFqdns(String... validationRecordFqdns) {
             return validationRecordFqdns(List.of(validationRecordFqdns));
-        }        public CertificateValidationState build() {
-            return new CertificateValidationState(certificateArn, validationRecordFqdns);
+        }
+
+        public CertificateValidationState build() {
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutTcpIdleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualNodeSpecListenerTimeoutTcpArgs extends com.pulumi.reso
      * 
      */
     @Import(name="idle")
-      private final @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle;
+    private @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle;
 
-    public Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle() {
-        return this.idle == null ? Codegen.empty() : this.idle;
+    public Optional<Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs>> idle() {
+        return Optional.ofNullable(this.idle);
     }
 
-    public VirtualNodeSpecListenerTimeoutTcpArgs(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle) {
-        this.idle = idle;
-    }
+    private VirtualNodeSpecListenerTimeoutTcpArgs() {}
 
-    private VirtualNodeSpecListenerTimeoutTcpArgs() {
-        this.idle = Codegen.empty();
+    private VirtualNodeSpecListenerTimeoutTcpArgs(VirtualNodeSpecListenerTimeoutTcpArgs $) {
+        this.idle = $.idle;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerTimeoutTcpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle;
+        private VirtualNodeSpecListenerTimeoutTcpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerTimeoutTcpArgs();
         }
 
         public Builder(VirtualNodeSpecListenerTimeoutTcpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idle = defaults.idle;
+            $ = new VirtualNodeSpecListenerTimeoutTcpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idle(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle) {
-            this.idle = idle;
+            $.idle = idle;
             return this;
         }
-        public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutTcpIdleArgs idle) {
-            this.idle = Codegen.ofNullable(idle);
-            return this;
-        }        public VirtualNodeSpecListenerTimeoutTcpArgs build() {
-            return new VirtualNodeSpecListenerTimeoutTcpArgs(idle);
+
+        public Builder idle(VirtualNodeSpecListenerTimeoutTcpIdleArgs idle) {
+            return idle(Output.of(idle));
+        }
+
+        public VirtualNodeSpecListenerTimeoutTcpArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetInstanceFilter> filters;
+    private @Nullable List<GetInstanceFilter> filters;
 
-    public List<GetInstanceFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetInstanceFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="getPasswordData")
-      private final @Nullable Boolean getPasswordData;
+    private @Nullable Boolean getPasswordData;
 
     public Optional<Boolean> getPasswordData() {
-        return this.getPasswordData == null ? Optional.empty() : Optional.ofNullable(this.getPasswordData);
+        return Optional.ofNullable(this.getPasswordData);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="getUserData")
-      private final @Nullable Boolean getUserData;
+    private @Nullable Boolean getUserData;
 
     public Optional<Boolean> getUserData() {
-        return this.getUserData == null ? Optional.empty() : Optional.ofNullable(this.getUserData);
+        return Optional.ofNullable(this.getUserData);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable String instanceId;
+    private @Nullable String instanceId;
 
     public Optional<String> instanceId() {
-        return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceTags")
-      private final @Nullable Map<String,String> instanceTags;
+    private @Nullable Map<String,String> instanceTags;
 
-    public Map<String,String> instanceTags() {
-        return this.instanceTags == null ? Map.of() : this.instanceTags;
+    public Optional<Map<String,String>> instanceTags() {
+        return Optional.ofNullable(this.instanceTags);
     }
 
     /**
@@ -81,94 +81,78 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetInstanceArgs(
-        @Nullable List<GetInstanceFilter> filters,
-        @Nullable Boolean getPasswordData,
-        @Nullable Boolean getUserData,
-        @Nullable String instanceId,
-        @Nullable Map<String,String> instanceTags,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.getPasswordData = getPasswordData;
-        this.getUserData = getUserData;
-        this.instanceId = instanceId;
-        this.instanceTags = instanceTags;
-        this.tags = tags;
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.filters = List.of();
-        this.getPasswordData = null;
-        this.getUserData = null;
-        this.instanceId = null;
-        this.instanceTags = Map.of();
-        this.tags = Map.of();
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.filters = $.filters;
+        this.getPasswordData = $.getPasswordData;
+        this.getUserData = $.getUserData;
+        this.instanceId = $.instanceId;
+        this.instanceTags = $.instanceTags;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInstanceFilter> filters;
-        private @Nullable Boolean getPasswordData;
-        private @Nullable Boolean getUserData;
-        private @Nullable String instanceId;
-        private @Nullable Map<String,String> instanceTags;
-        private @Nullable Map<String,String> tags;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.getPasswordData = defaults.getPasswordData;
-    	      this.getUserData = defaults.getUserData;
-    	      this.instanceId = defaults.instanceId;
-    	      this.instanceTags = defaults.instanceTags;
-    	      this.tags = defaults.tags;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetInstanceFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetInstanceFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder getPasswordData(@Nullable Boolean getPasswordData) {
-            this.getPasswordData = getPasswordData;
+            $.getPasswordData = getPasswordData;
             return this;
         }
+
         public Builder getUserData(@Nullable Boolean getUserData) {
-            this.getUserData = getUserData;
+            $.getUserData = getUserData;
             return this;
         }
+
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
-            this.instanceTags = instanceTags;
+            $.instanceTags = instanceTags;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(filters, getPasswordData, getUserData, instanceId, instanceTags, tags);
+        }
+
+        public GetInstanceArgs build() {
+            return $;
         }
     }
+
 }

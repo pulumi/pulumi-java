@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncry
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
     }
 
-    public BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs(Output<String> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs() {}
 
-    private BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs() {
-        this.status = Codegen.empty();
+    private BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs(BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> status;
+        private BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs();
         }
 
         public Builder(BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs build() {
-            return new BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs(status);
+            return status(Output.of(status));
+        }
+
+        public BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

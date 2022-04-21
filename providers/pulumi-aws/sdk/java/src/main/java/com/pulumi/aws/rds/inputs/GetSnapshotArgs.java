@@ -20,10 +20,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier")
-      private final @Nullable String dbInstanceIdentifier;
+    private @Nullable String dbInstanceIdentifier;
 
     public Optional<String> dbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbInstanceIdentifier);
+        return Optional.ofNullable(this.dbInstanceIdentifier);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSnapshotIdentifier")
-      private final @Nullable String dbSnapshotIdentifier;
+    private @Nullable String dbSnapshotIdentifier;
 
     public Optional<String> dbSnapshotIdentifier() {
-        return this.dbSnapshotIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbSnapshotIdentifier);
+        return Optional.ofNullable(this.dbSnapshotIdentifier);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includePublic")
-      private final @Nullable Boolean includePublic;
+    private @Nullable Boolean includePublic;
 
     public Optional<Boolean> includePublic() {
-        return this.includePublic == null ? Optional.empty() : Optional.ofNullable(this.includePublic);
+        return Optional.ofNullable(this.includePublic);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeShared")
-      private final @Nullable Boolean includeShared;
+    private @Nullable Boolean includeShared;
 
     public Optional<Boolean> includeShared() {
-        return this.includeShared == null ? Optional.empty() : Optional.ofNullable(this.includeShared);
+        return Optional.ofNullable(this.includeShared);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -81,91 +81,74 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="snapshotType")
-      private final @Nullable String snapshotType;
+    private @Nullable String snapshotType;
 
     public Optional<String> snapshotType() {
-        return this.snapshotType == null ? Optional.empty() : Optional.ofNullable(this.snapshotType);
+        return Optional.ofNullable(this.snapshotType);
     }
 
-    public GetSnapshotArgs(
-        @Nullable String dbInstanceIdentifier,
-        @Nullable String dbSnapshotIdentifier,
-        @Nullable Boolean includePublic,
-        @Nullable Boolean includeShared,
-        @Nullable Boolean mostRecent,
-        @Nullable String snapshotType) {
-        this.dbInstanceIdentifier = dbInstanceIdentifier;
-        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
-        this.includePublic = includePublic;
-        this.includeShared = includeShared;
-        this.mostRecent = mostRecent;
-        this.snapshotType = snapshotType;
-    }
+    private GetSnapshotArgs() {}
 
-    private GetSnapshotArgs() {
-        this.dbInstanceIdentifier = null;
-        this.dbSnapshotIdentifier = null;
-        this.includePublic = null;
-        this.includeShared = null;
-        this.mostRecent = null;
-        this.snapshotType = null;
+    private GetSnapshotArgs(GetSnapshotArgs $) {
+        this.dbInstanceIdentifier = $.dbInstanceIdentifier;
+        this.dbSnapshotIdentifier = $.dbSnapshotIdentifier;
+        this.includePublic = $.includePublic;
+        this.includeShared = $.includeShared;
+        this.mostRecent = $.mostRecent;
+        this.snapshotType = $.snapshotType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dbInstanceIdentifier;
-        private @Nullable String dbSnapshotIdentifier;
-        private @Nullable Boolean includePublic;
-        private @Nullable Boolean includeShared;
-        private @Nullable Boolean mostRecent;
-        private @Nullable String snapshotType;
+        private GetSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSnapshotArgs();
         }
 
         public Builder(GetSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbInstanceIdentifier = defaults.dbInstanceIdentifier;
-    	      this.dbSnapshotIdentifier = defaults.dbSnapshotIdentifier;
-    	      this.includePublic = defaults.includePublic;
-    	      this.includeShared = defaults.includeShared;
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.snapshotType = defaults.snapshotType;
+            $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = dbInstanceIdentifier;
+            $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
+
         public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
-            this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+            $.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
+
         public Builder includePublic(@Nullable Boolean includePublic) {
-            this.includePublic = includePublic;
+            $.includePublic = includePublic;
             return this;
         }
+
         public Builder includeShared(@Nullable Boolean includeShared) {
-            this.includeShared = includeShared;
+            $.includeShared = includeShared;
             return this;
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder snapshotType(@Nullable String snapshotType) {
-            this.snapshotType = snapshotType;
+            $.snapshotType = snapshotType;
             return this;
-        }        public GetSnapshotArgs build() {
-            return new GetSnapshotArgs(dbInstanceIdentifier, dbSnapshotIdentifier, includePublic, includeShared, mostRecent, snapshotType);
+        }
+
+        public GetSnapshotArgs build() {
+            return $;
         }
     }
+
 }

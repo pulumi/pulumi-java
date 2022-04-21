@@ -5,7 +5,6 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * 
      */
     @Import(name="credentialsParameter", required=true)
-      private final Output<String> credentialsParameter;
+    private Output<String> credentialsParameter;
 
     public Output<String> credentialsParameter() {
         return this.credentialsParameter;
@@ -30,63 +29,60 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
     }
 
-    public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs(
-        Output<String> credentialsParameter,
-        Output<String> domain) {
-        this.credentialsParameter = Objects.requireNonNull(credentialsParameter, "expected parameter 'credentialsParameter' to be non-null");
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-    }
+    private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs() {}
 
-    private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs() {
-        this.credentialsParameter = Codegen.empty();
-        this.domain = Codegen.empty();
+    private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs $) {
+        this.credentialsParameter = $.credentialsParameter;
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> credentialsParameter;
-        private Output<String> domain;
+        private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs();
         }
 
         public Builder(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentialsParameter = defaults.credentialsParameter;
-    	      this.domain = defaults.domain;
+            $ = new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentialsParameter(Output<String> credentialsParameter) {
-            this.credentialsParameter = Objects.requireNonNull(credentialsParameter);
+            $.credentialsParameter = credentialsParameter;
             return this;
         }
+
         public Builder credentialsParameter(String credentialsParameter) {
-            this.credentialsParameter = Output.of(Objects.requireNonNull(credentialsParameter));
-            return this;
+            return credentialsParameter(Output.of(credentialsParameter));
         }
+
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
-        }        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs build() {
-            return new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs(credentialsParameter, domain);
+            return domain(Output.of(domain));
+        }
+
+        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs build() {
+            $.credentialsParameter = Objects.requireNonNull($.credentialsParameter, "expected parameter 'credentialsParameter' to be non-null");
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.storagegateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class WorkingStorageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="diskId", required=true)
-      private final Output<String> diskId;
+    private Output<String> diskId;
 
     public Output<String> diskId() {
         return this.diskId;
@@ -30,63 +29,60 @@ public final class WorkingStorageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="gatewayArn", required=true)
-      private final Output<String> gatewayArn;
+    private Output<String> gatewayArn;
 
     public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
-    public WorkingStorageArgs(
-        Output<String> diskId,
-        Output<String> gatewayArn) {
-        this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
-        this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
-    }
+    private WorkingStorageArgs() {}
 
-    private WorkingStorageArgs() {
-        this.diskId = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
+    private WorkingStorageArgs(WorkingStorageArgs $) {
+        this.diskId = $.diskId;
+        this.gatewayArn = $.gatewayArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkingStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> diskId;
-        private Output<String> gatewayArn;
+        private WorkingStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkingStorageArgs();
         }
 
         public Builder(WorkingStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskId = defaults.diskId;
-    	      this.gatewayArn = defaults.gatewayArn;
+            $ = new WorkingStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskId(Output<String> diskId) {
-            this.diskId = Objects.requireNonNull(diskId);
+            $.diskId = diskId;
             return this;
         }
+
         public Builder diskId(String diskId) {
-            this.diskId = Output.of(Objects.requireNonNull(diskId));
-            return this;
+            return diskId(Output.of(diskId));
         }
+
         public Builder gatewayArn(Output<String> gatewayArn) {
-            this.gatewayArn = Objects.requireNonNull(gatewayArn);
+            $.gatewayArn = gatewayArn;
             return this;
         }
+
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
-            return this;
-        }        public WorkingStorageArgs build() {
-            return new WorkingStorageArgs(diskId, gatewayArn);
+            return gatewayArn(Output.of(gatewayArn));
+        }
+
+        public WorkingStorageArgs build() {
+            $.diskId = Objects.requireNonNull($.diskId, "expected parameter 'diskId' to be non-null");
+            $.gatewayArn = Objects.requireNonNull($.gatewayArn, "expected parameter 'gatewayArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResolverQueryLogConfigAssociationState extends com.pulumi.res
      * 
      */
     @Import(name="resolverQueryLogConfigId")
-      private final @Nullable Output<String> resolverQueryLogConfigId;
+    private @Nullable Output<String> resolverQueryLogConfigId;
 
-    public Output<String> resolverQueryLogConfigId() {
-        return this.resolverQueryLogConfigId == null ? Codegen.empty() : this.resolverQueryLogConfigId;
+    public Optional<Output<String>> resolverQueryLogConfigId() {
+        return Optional.ofNullable(this.resolverQueryLogConfigId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ResolverQueryLogConfigAssociationState extends com.pulumi.res
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ResolverQueryLogConfigAssociationState(
-        @Nullable Output<String> resolverQueryLogConfigId,
-        @Nullable Output<String> resourceId) {
-        this.resolverQueryLogConfigId = resolverQueryLogConfigId;
-        this.resourceId = resourceId;
-    }
+    private ResolverQueryLogConfigAssociationState() {}
 
-    private ResolverQueryLogConfigAssociationState() {
-        this.resolverQueryLogConfigId = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ResolverQueryLogConfigAssociationState(ResolverQueryLogConfigAssociationState $) {
+        this.resolverQueryLogConfigId = $.resolverQueryLogConfigId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverQueryLogConfigAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resolverQueryLogConfigId;
-        private @Nullable Output<String> resourceId;
+        private ResolverQueryLogConfigAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverQueryLogConfigAssociationState();
         }
 
         public Builder(ResolverQueryLogConfigAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resolverQueryLogConfigId = defaults.resolverQueryLogConfigId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ResolverQueryLogConfigAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder resolverQueryLogConfigId(@Nullable Output<String> resolverQueryLogConfigId) {
-            this.resolverQueryLogConfigId = resolverQueryLogConfigId;
+            $.resolverQueryLogConfigId = resolverQueryLogConfigId;
             return this;
         }
-        public Builder resolverQueryLogConfigId(@Nullable String resolverQueryLogConfigId) {
-            this.resolverQueryLogConfigId = Codegen.ofNullable(resolverQueryLogConfigId);
-            return this;
+
+        public Builder resolverQueryLogConfigId(String resolverQueryLogConfigId) {
+            return resolverQueryLogConfigId(Output.of(resolverQueryLogConfigId));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public ResolverQueryLogConfigAssociationState build() {
-            return new ResolverQueryLogConfigAssociationState(resolverQueryLogConfigId, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ResolverQueryLogConfigAssociationState build() {
+            return $;
         }
     }
+
 }

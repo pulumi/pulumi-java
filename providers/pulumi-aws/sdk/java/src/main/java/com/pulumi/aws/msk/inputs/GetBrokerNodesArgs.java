@@ -17,45 +17,45 @@ public final class GetBrokerNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterArn", required=true)
-      private final String clusterArn;
+    private String clusterArn;
 
     public String clusterArn() {
         return this.clusterArn;
     }
 
-    public GetBrokerNodesArgs(String clusterArn) {
-        this.clusterArn = Objects.requireNonNull(clusterArn, "expected parameter 'clusterArn' to be non-null");
-    }
+    private GetBrokerNodesArgs() {}
 
-    private GetBrokerNodesArgs() {
-        this.clusterArn = null;
+    private GetBrokerNodesArgs(GetBrokerNodesArgs $) {
+        this.clusterArn = $.clusterArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerNodesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterArn;
+        private GetBrokerNodesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerNodesArgs();
         }
 
         public Builder(GetBrokerNodesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterArn = defaults.clusterArn;
+            $ = new GetBrokerNodesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterArn(String clusterArn) {
-            this.clusterArn = Objects.requireNonNull(clusterArn);
+            $.clusterArn = clusterArn;
             return this;
-        }        public GetBrokerNodesArgs build() {
-            return new GetBrokerNodesArgs(clusterArn);
+        }
+
+        public GetBrokerNodesArgs build() {
+            $.clusterArn = Objects.requireNonNull($.clusterArn, "expected parameter 'clusterArn' to be non-null");
+            return $;
         }
     }
+
 }

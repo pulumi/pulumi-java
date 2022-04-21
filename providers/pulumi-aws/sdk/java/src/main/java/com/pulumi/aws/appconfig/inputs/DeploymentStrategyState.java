@@ -5,12 +5,12 @@ package com.pulumi.aws.appconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deploymentDurationInMinutes")
-      private final @Nullable Output<Integer> deploymentDurationInMinutes;
+    private @Nullable Output<Integer> deploymentDurationInMinutes;
 
-    public Output<Integer> deploymentDurationInMinutes() {
-        return this.deploymentDurationInMinutes == null ? Codegen.empty() : this.deploymentDurationInMinutes;
+    public Optional<Output<Integer>> deploymentDurationInMinutes() {
+        return Optional.ofNullable(this.deploymentDurationInMinutes);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="finalBakeTimeInMinutes")
-      private final @Nullable Output<Integer> finalBakeTimeInMinutes;
+    private @Nullable Output<Integer> finalBakeTimeInMinutes;
 
-    public Output<Integer> finalBakeTimeInMinutes() {
-        return this.finalBakeTimeInMinutes == null ? Codegen.empty() : this.finalBakeTimeInMinutes;
+    public Optional<Output<Integer>> finalBakeTimeInMinutes() {
+        return Optional.ofNullable(this.finalBakeTimeInMinutes);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="growthFactor")
-      private final @Nullable Output<Double> growthFactor;
+    private @Nullable Output<Double> growthFactor;
 
-    public Output<Double> growthFactor() {
-        return this.growthFactor == null ? Codegen.empty() : this.growthFactor;
+    public Optional<Output<Double>> growthFactor() {
+        return Optional.ofNullable(this.growthFactor);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="growthType")
-      private final @Nullable Output<String> growthType;
+    private @Nullable Output<String> growthType;
 
-    public Output<String> growthType() {
-        return this.growthType == null ? Codegen.empty() : this.growthType;
+    public Optional<Output<String>> growthType() {
+        return Optional.ofNullable(this.growthType);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="replicateTo")
-      private final @Nullable Output<String> replicateTo;
+    private @Nullable Output<String> replicateTo;
 
-    public Output<String> replicateTo() {
-        return this.replicateTo == null ? Codegen.empty() : this.replicateTo;
+    public Optional<Output<String>> replicateTo() {
+        return Optional.ofNullable(this.replicateTo);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -122,167 +122,138 @@ public final class DeploymentStrategyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public DeploymentStrategyState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Integer> deploymentDurationInMinutes,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> finalBakeTimeInMinutes,
-        @Nullable Output<Double> growthFactor,
-        @Nullable Output<String> growthType,
-        @Nullable Output<String> name,
-        @Nullable Output<String> replicateTo,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.deploymentDurationInMinutes = deploymentDurationInMinutes;
-        this.description = description;
-        this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
-        this.growthFactor = growthFactor;
-        this.growthType = growthType;
-        this.name = name;
-        this.replicateTo = replicateTo;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private DeploymentStrategyState() {}
 
-    private DeploymentStrategyState() {
-        this.arn = Codegen.empty();
-        this.deploymentDurationInMinutes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.finalBakeTimeInMinutes = Codegen.empty();
-        this.growthFactor = Codegen.empty();
-        this.growthType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.replicateTo = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private DeploymentStrategyState(DeploymentStrategyState $) {
+        this.arn = $.arn;
+        this.deploymentDurationInMinutes = $.deploymentDurationInMinutes;
+        this.description = $.description;
+        this.finalBakeTimeInMinutes = $.finalBakeTimeInMinutes;
+        this.growthFactor = $.growthFactor;
+        this.growthType = $.growthType;
+        this.name = $.name;
+        this.replicateTo = $.replicateTo;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentStrategyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Integer> deploymentDurationInMinutes;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> finalBakeTimeInMinutes;
-        private @Nullable Output<Double> growthFactor;
-        private @Nullable Output<String> growthType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> replicateTo;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private DeploymentStrategyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentStrategyState();
         }
 
         public Builder(DeploymentStrategyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.deploymentDurationInMinutes = defaults.deploymentDurationInMinutes;
-    	      this.description = defaults.description;
-    	      this.finalBakeTimeInMinutes = defaults.finalBakeTimeInMinutes;
-    	      this.growthFactor = defaults.growthFactor;
-    	      this.growthType = defaults.growthType;
-    	      this.name = defaults.name;
-    	      this.replicateTo = defaults.replicateTo;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new DeploymentStrategyState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder deploymentDurationInMinutes(@Nullable Output<Integer> deploymentDurationInMinutes) {
-            this.deploymentDurationInMinutes = deploymentDurationInMinutes;
+            $.deploymentDurationInMinutes = deploymentDurationInMinutes;
             return this;
         }
-        public Builder deploymentDurationInMinutes(@Nullable Integer deploymentDurationInMinutes) {
-            this.deploymentDurationInMinutes = Codegen.ofNullable(deploymentDurationInMinutes);
-            return this;
+
+        public Builder deploymentDurationInMinutes(Integer deploymentDurationInMinutes) {
+            return deploymentDurationInMinutes(Output.of(deploymentDurationInMinutes));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder finalBakeTimeInMinutes(@Nullable Output<Integer> finalBakeTimeInMinutes) {
-            this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
+            $.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
             return this;
         }
-        public Builder finalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
-            this.finalBakeTimeInMinutes = Codegen.ofNullable(finalBakeTimeInMinutes);
-            return this;
+
+        public Builder finalBakeTimeInMinutes(Integer finalBakeTimeInMinutes) {
+            return finalBakeTimeInMinutes(Output.of(finalBakeTimeInMinutes));
         }
+
         public Builder growthFactor(@Nullable Output<Double> growthFactor) {
-            this.growthFactor = growthFactor;
+            $.growthFactor = growthFactor;
             return this;
         }
-        public Builder growthFactor(@Nullable Double growthFactor) {
-            this.growthFactor = Codegen.ofNullable(growthFactor);
-            return this;
+
+        public Builder growthFactor(Double growthFactor) {
+            return growthFactor(Output.of(growthFactor));
         }
+
         public Builder growthType(@Nullable Output<String> growthType) {
-            this.growthType = growthType;
+            $.growthType = growthType;
             return this;
         }
-        public Builder growthType(@Nullable String growthType) {
-            this.growthType = Codegen.ofNullable(growthType);
-            return this;
+
+        public Builder growthType(String growthType) {
+            return growthType(Output.of(growthType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder replicateTo(@Nullable Output<String> replicateTo) {
-            this.replicateTo = replicateTo;
+            $.replicateTo = replicateTo;
             return this;
         }
-        public Builder replicateTo(@Nullable String replicateTo) {
-            this.replicateTo = Codegen.ofNullable(replicateTo);
-            return this;
+
+        public Builder replicateTo(String replicateTo) {
+            return replicateTo(Output.of(replicateTo));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public DeploymentStrategyState build() {
-            return new DeploymentStrategyState(arn, deploymentDurationInMinutes, description, finalBakeTimeInMinutes, growthFactor, growthType, name, replicateTo, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public DeploymentStrategyState build() {
+            return $;
         }
     }
+
 }

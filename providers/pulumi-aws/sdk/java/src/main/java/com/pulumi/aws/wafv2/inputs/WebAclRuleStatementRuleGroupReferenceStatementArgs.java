@@ -6,10 +6,10 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends co
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
@@ -33,66 +33,63 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends co
      * 
      */
     @Import(name="excludedRules")
-      private final @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules;
+    private @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules;
 
-    public Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules() {
-        return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
+    public Optional<Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>>> excludedRules() {
+        return Optional.ofNullable(this.excludedRules);
     }
 
-    public WebAclRuleStatementRuleGroupReferenceStatementArgs(
-        Output<String> arn,
-        @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.excludedRules = excludedRules;
-    }
+    private WebAclRuleStatementRuleGroupReferenceStatementArgs() {}
 
-    private WebAclRuleStatementRuleGroupReferenceStatementArgs() {
-        this.arn = Codegen.empty();
-        this.excludedRules = Codegen.empty();
+    private WebAclRuleStatementRuleGroupReferenceStatementArgs(WebAclRuleStatementRuleGroupReferenceStatementArgs $) {
+        this.arn = $.arn;
+        this.excludedRules = $.excludedRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementRuleGroupReferenceStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules;
+        private WebAclRuleStatementRuleGroupReferenceStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementRuleGroupReferenceStatementArgs();
         }
 
         public Builder(WebAclRuleStatementRuleGroupReferenceStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.excludedRules = defaults.excludedRules;
+            $ = new WebAclRuleStatementRuleGroupReferenceStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder excludedRules(@Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules) {
-            this.excludedRules = excludedRules;
+            $.excludedRules = excludedRules;
             return this;
         }
-        public Builder excludedRules(@Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs> excludedRules) {
-            this.excludedRules = Codegen.ofNullable(excludedRules);
-            return this;
+
+        public Builder excludedRules(List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs> excludedRules) {
+            return excludedRules(Output.of(excludedRules));
         }
+
         public Builder excludedRules(WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs... excludedRules) {
             return excludedRules(List.of(excludedRules));
-        }        public WebAclRuleStatementRuleGroupReferenceStatementArgs build() {
-            return new WebAclRuleStatementRuleGroupReferenceStatementArgs(arn, excludedRules);
+        }
+
+        public WebAclRuleStatementRuleGroupReferenceStatementArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

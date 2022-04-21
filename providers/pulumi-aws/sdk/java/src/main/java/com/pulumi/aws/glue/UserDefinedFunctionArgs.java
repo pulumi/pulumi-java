@@ -6,10 +6,10 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class UserDefinedFunctionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class UserDefinedFunctionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="className", required=true)
-      private final Output<String> className;
+    private Output<String> className;
 
     public Output<String> className() {
         return this.className;
@@ -44,7 +44,7 @@ public final class UserDefinedFunctionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -55,10 +55,10 @@ public final class UserDefinedFunctionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class UserDefinedFunctionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ownerName", required=true)
-      private final Output<String> ownerName;
+    private Output<String> ownerName;
 
     public Output<String> ownerName() {
         return this.ownerName;
@@ -77,7 +77,7 @@ public final class UserDefinedFunctionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ownerType", required=true)
-      private final Output<String> ownerType;
+    private Output<String> ownerType;
 
     public Output<String> ownerType() {
         return this.ownerType;
@@ -88,131 +88,116 @@ public final class UserDefinedFunctionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceUris")
-      private final @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
+    private @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
 
-    public Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris() {
-        return this.resourceUris == null ? Codegen.empty() : this.resourceUris;
+    public Optional<Output<List<UserDefinedFunctionResourceUriArgs>>> resourceUris() {
+        return Optional.ofNullable(this.resourceUris);
     }
 
-    public UserDefinedFunctionArgs(
-        @Nullable Output<String> catalogId,
-        Output<String> className,
-        Output<String> databaseName,
-        @Nullable Output<String> name,
-        Output<String> ownerName,
-        Output<String> ownerType,
-        @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
-        this.catalogId = catalogId;
-        this.className = Objects.requireNonNull(className, "expected parameter 'className' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.name = name;
-        this.ownerName = Objects.requireNonNull(ownerName, "expected parameter 'ownerName' to be non-null");
-        this.ownerType = Objects.requireNonNull(ownerType, "expected parameter 'ownerType' to be non-null");
-        this.resourceUris = resourceUris;
-    }
+    private UserDefinedFunctionArgs() {}
 
-    private UserDefinedFunctionArgs() {
-        this.catalogId = Codegen.empty();
-        this.className = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerName = Codegen.empty();
-        this.ownerType = Codegen.empty();
-        this.resourceUris = Codegen.empty();
+    private UserDefinedFunctionArgs(UserDefinedFunctionArgs $) {
+        this.catalogId = $.catalogId;
+        this.className = $.className;
+        this.databaseName = $.databaseName;
+        this.name = $.name;
+        this.ownerName = $.ownerName;
+        this.ownerType = $.ownerType;
+        this.resourceUris = $.resourceUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserDefinedFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private Output<String> className;
-        private Output<String> databaseName;
-        private @Nullable Output<String> name;
-        private Output<String> ownerName;
-        private Output<String> ownerType;
-        private @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
+        private UserDefinedFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserDefinedFunctionArgs();
         }
 
         public Builder(UserDefinedFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.className = defaults.className;
-    	      this.databaseName = defaults.databaseName;
-    	      this.name = defaults.name;
-    	      this.ownerName = defaults.ownerName;
-    	      this.ownerType = defaults.ownerType;
-    	      this.resourceUris = defaults.resourceUris;
+            $ = new UserDefinedFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder className(Output<String> className) {
-            this.className = Objects.requireNonNull(className);
+            $.className = className;
             return this;
         }
+
         public Builder className(String className) {
-            this.className = Output.of(Objects.requireNonNull(className));
-            return this;
+            return className(Output.of(className));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerName(Output<String> ownerName) {
-            this.ownerName = Objects.requireNonNull(ownerName);
+            $.ownerName = ownerName;
             return this;
         }
+
         public Builder ownerName(String ownerName) {
-            this.ownerName = Output.of(Objects.requireNonNull(ownerName));
-            return this;
+            return ownerName(Output.of(ownerName));
         }
+
         public Builder ownerType(Output<String> ownerType) {
-            this.ownerType = Objects.requireNonNull(ownerType);
+            $.ownerType = ownerType;
             return this;
         }
+
         public Builder ownerType(String ownerType) {
-            this.ownerType = Output.of(Objects.requireNonNull(ownerType));
-            return this;
+            return ownerType(Output.of(ownerType));
         }
+
         public Builder resourceUris(@Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
-            this.resourceUris = resourceUris;
+            $.resourceUris = resourceUris;
             return this;
         }
-        public Builder resourceUris(@Nullable List<UserDefinedFunctionResourceUriArgs> resourceUris) {
-            this.resourceUris = Codegen.ofNullable(resourceUris);
-            return this;
+
+        public Builder resourceUris(List<UserDefinedFunctionResourceUriArgs> resourceUris) {
+            return resourceUris(Output.of(resourceUris));
         }
+
         public Builder resourceUris(UserDefinedFunctionResourceUriArgs... resourceUris) {
             return resourceUris(List.of(resourceUris));
-        }        public UserDefinedFunctionArgs build() {
-            return new UserDefinedFunctionArgs(catalogId, className, databaseName, name, ownerName, ownerType, resourceUris);
+        }
+
+        public UserDefinedFunctionArgs build() {
+            $.className = Objects.requireNonNull($.className, "expected parameter 'className' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.ownerName = Objects.requireNonNull($.ownerName, "expected parameter 'ownerName' to be non-null");
+            $.ownerType = Objects.requireNonNull($.ownerType, "expected parameter 'ownerType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.aws.datasync.inputs.TaskOptionsGetArgs;
 import com.pulumi.aws.datasync.inputs.TaskScheduleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchLogGroupArn")
-      private final @Nullable Output<String> cloudwatchLogGroupArn;
+    private @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> cloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
+    public Optional<Output<String>> cloudwatchLogGroupArn() {
+        return Optional.ofNullable(this.cloudwatchLogGroupArn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationLocationArn")
-      private final @Nullable Output<String> destinationLocationArn;
+    private @Nullable Output<String> destinationLocationArn;
 
-    public Output<String> destinationLocationArn() {
-        return this.destinationLocationArn == null ? Codegen.empty() : this.destinationLocationArn;
+    public Optional<Output<String>> destinationLocationArn() {
+        return Optional.ofNullable(this.destinationLocationArn);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludes")
-      private final @Nullable Output<TaskExcludesGetArgs> excludes;
+    private @Nullable Output<TaskExcludesGetArgs> excludes;
 
-    public Output<TaskExcludesGetArgs> excludes() {
-        return this.excludes == null ? Codegen.empty() : this.excludes;
+    public Optional<Output<TaskExcludesGetArgs>> excludes() {
+        return Optional.ofNullable(this.excludes);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<TaskOptionsGetArgs> options;
+    private @Nullable Output<TaskOptionsGetArgs> options;
 
-    public Output<TaskOptionsGetArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<TaskOptionsGetArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<TaskScheduleGetArgs> schedule;
+    private @Nullable Output<TaskScheduleGetArgs> schedule;
 
-    public Output<TaskScheduleGetArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<TaskScheduleGetArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceLocationArn")
-      private final @Nullable Output<String> sourceLocationArn;
+    private @Nullable Output<String> sourceLocationArn;
 
-    public Output<String> sourceLocationArn() {
-        return this.sourceLocationArn == null ? Codegen.empty() : this.sourceLocationArn;
+    public Optional<Output<String>> sourceLocationArn() {
+        return Optional.ofNullable(this.sourceLocationArn);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -123,167 +123,138 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public TaskState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> cloudwatchLogGroupArn,
-        @Nullable Output<String> destinationLocationArn,
-        @Nullable Output<TaskExcludesGetArgs> excludes,
-        @Nullable Output<String> name,
-        @Nullable Output<TaskOptionsGetArgs> options,
-        @Nullable Output<TaskScheduleGetArgs> schedule,
-        @Nullable Output<String> sourceLocationArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
-        this.destinationLocationArn = destinationLocationArn;
-        this.excludes = excludes;
-        this.name = name;
-        this.options = options;
-        this.schedule = schedule;
-        this.sourceLocationArn = sourceLocationArn;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private TaskState() {}
 
-    private TaskState() {
-        this.arn = Codegen.empty();
-        this.cloudwatchLogGroupArn = Codegen.empty();
-        this.destinationLocationArn = Codegen.empty();
-        this.excludes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.options = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.sourceLocationArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private TaskState(TaskState $) {
+        this.arn = $.arn;
+        this.cloudwatchLogGroupArn = $.cloudwatchLogGroupArn;
+        this.destinationLocationArn = $.destinationLocationArn;
+        this.excludes = $.excludes;
+        this.name = $.name;
+        this.options = $.options;
+        this.schedule = $.schedule;
+        this.sourceLocationArn = $.sourceLocationArn;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> cloudwatchLogGroupArn;
-        private @Nullable Output<String> destinationLocationArn;
-        private @Nullable Output<TaskExcludesGetArgs> excludes;
-        private @Nullable Output<String> name;
-        private @Nullable Output<TaskOptionsGetArgs> options;
-        private @Nullable Output<TaskScheduleGetArgs> schedule;
-        private @Nullable Output<String> sourceLocationArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private TaskState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskState();
         }
 
         public Builder(TaskState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.cloudwatchLogGroupArn = defaults.cloudwatchLogGroupArn;
-    	      this.destinationLocationArn = defaults.destinationLocationArn;
-    	      this.excludes = defaults.excludes;
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.schedule = defaults.schedule;
-    	      this.sourceLocationArn = defaults.sourceLocationArn;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new TaskState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
+            $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
-        public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Codegen.ofNullable(cloudwatchLogGroupArn);
-            return this;
+
+        public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
+            return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
+
         public Builder destinationLocationArn(@Nullable Output<String> destinationLocationArn) {
-            this.destinationLocationArn = destinationLocationArn;
+            $.destinationLocationArn = destinationLocationArn;
             return this;
         }
-        public Builder destinationLocationArn(@Nullable String destinationLocationArn) {
-            this.destinationLocationArn = Codegen.ofNullable(destinationLocationArn);
-            return this;
+
+        public Builder destinationLocationArn(String destinationLocationArn) {
+            return destinationLocationArn(Output.of(destinationLocationArn));
         }
+
         public Builder excludes(@Nullable Output<TaskExcludesGetArgs> excludes) {
-            this.excludes = excludes;
+            $.excludes = excludes;
             return this;
         }
-        public Builder excludes(@Nullable TaskExcludesGetArgs excludes) {
-            this.excludes = Codegen.ofNullable(excludes);
-            return this;
+
+        public Builder excludes(TaskExcludesGetArgs excludes) {
+            return excludes(Output.of(excludes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder options(@Nullable Output<TaskOptionsGetArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable TaskOptionsGetArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(TaskOptionsGetArgs options) {
+            return options(Output.of(options));
         }
+
         public Builder schedule(@Nullable Output<TaskScheduleGetArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable TaskScheduleGetArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(TaskScheduleGetArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder sourceLocationArn(@Nullable Output<String> sourceLocationArn) {
-            this.sourceLocationArn = sourceLocationArn;
+            $.sourceLocationArn = sourceLocationArn;
             return this;
         }
-        public Builder sourceLocationArn(@Nullable String sourceLocationArn) {
-            this.sourceLocationArn = Codegen.ofNullable(sourceLocationArn);
-            return this;
+
+        public Builder sourceLocationArn(String sourceLocationArn) {
+            return sourceLocationArn(Output.of(sourceLocationArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public TaskState build() {
-            return new TaskState(arn, cloudwatchLogGroupArn, destinationLocationArn, excludes, name, options, schedule, sourceLocationArn, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public TaskState build() {
+            return $;
         }
     }
+
 }

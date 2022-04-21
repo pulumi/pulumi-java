@@ -5,9 +5,9 @@ package com.pulumi.aws.appconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class EnvironmentMonitorGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="alarmArn", required=true)
-      private final Output<String> alarmArn;
+    private Output<String> alarmArn;
 
     public Output<String> alarmArn() {
         return this.alarmArn;
@@ -31,63 +31,59 @@ public final class EnvironmentMonitorGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="alarmRoleArn")
-      private final @Nullable Output<String> alarmRoleArn;
+    private @Nullable Output<String> alarmRoleArn;
 
-    public Output<String> alarmRoleArn() {
-        return this.alarmRoleArn == null ? Codegen.empty() : this.alarmRoleArn;
+    public Optional<Output<String>> alarmRoleArn() {
+        return Optional.ofNullable(this.alarmRoleArn);
     }
 
-    public EnvironmentMonitorGetArgs(
-        Output<String> alarmArn,
-        @Nullable Output<String> alarmRoleArn) {
-        this.alarmArn = Objects.requireNonNull(alarmArn, "expected parameter 'alarmArn' to be non-null");
-        this.alarmRoleArn = alarmRoleArn;
-    }
+    private EnvironmentMonitorGetArgs() {}
 
-    private EnvironmentMonitorGetArgs() {
-        this.alarmArn = Codegen.empty();
-        this.alarmRoleArn = Codegen.empty();
+    private EnvironmentMonitorGetArgs(EnvironmentMonitorGetArgs $) {
+        this.alarmArn = $.alarmArn;
+        this.alarmRoleArn = $.alarmRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentMonitorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alarmArn;
-        private @Nullable Output<String> alarmRoleArn;
+        private EnvironmentMonitorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentMonitorGetArgs();
         }
 
         public Builder(EnvironmentMonitorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmArn = defaults.alarmArn;
-    	      this.alarmRoleArn = defaults.alarmRoleArn;
+            $ = new EnvironmentMonitorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmArn(Output<String> alarmArn) {
-            this.alarmArn = Objects.requireNonNull(alarmArn);
+            $.alarmArn = alarmArn;
             return this;
         }
+
         public Builder alarmArn(String alarmArn) {
-            this.alarmArn = Output.of(Objects.requireNonNull(alarmArn));
-            return this;
+            return alarmArn(Output.of(alarmArn));
         }
+
         public Builder alarmRoleArn(@Nullable Output<String> alarmRoleArn) {
-            this.alarmRoleArn = alarmRoleArn;
+            $.alarmRoleArn = alarmRoleArn;
             return this;
         }
-        public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
-            this.alarmRoleArn = Codegen.ofNullable(alarmRoleArn);
-            return this;
-        }        public EnvironmentMonitorGetArgs build() {
-            return new EnvironmentMonitorGetArgs(alarmArn, alarmRoleArn);
+
+        public Builder alarmRoleArn(String alarmRoleArn) {
+            return alarmRoleArn(Output.of(alarmRoleArn));
+        }
+
+        public EnvironmentMonitorGetArgs build() {
+            $.alarmArn = Objects.requireNonNull($.alarmArn, "expected parameter 'alarmArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class OrganizationAdminAccountArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="adminAccountId", required=true)
-      private final Output<String> adminAccountId;
+    private Output<String> adminAccountId;
 
     public Output<String> adminAccountId() {
         return this.adminAccountId;
     }
 
-    public OrganizationAdminAccountArgs(Output<String> adminAccountId) {
-        this.adminAccountId = Objects.requireNonNull(adminAccountId, "expected parameter 'adminAccountId' to be non-null");
-    }
+    private OrganizationAdminAccountArgs() {}
 
-    private OrganizationAdminAccountArgs() {
-        this.adminAccountId = Codegen.empty();
+    private OrganizationAdminAccountArgs(OrganizationAdminAccountArgs $) {
+        this.adminAccountId = $.adminAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationAdminAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> adminAccountId;
+        private OrganizationAdminAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationAdminAccountArgs();
         }
 
         public Builder(OrganizationAdminAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminAccountId = defaults.adminAccountId;
+            $ = new OrganizationAdminAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminAccountId(Output<String> adminAccountId) {
-            this.adminAccountId = Objects.requireNonNull(adminAccountId);
+            $.adminAccountId = adminAccountId;
             return this;
         }
+
         public Builder adminAccountId(String adminAccountId) {
-            this.adminAccountId = Output.of(Objects.requireNonNull(adminAccountId));
-            return this;
-        }        public OrganizationAdminAccountArgs build() {
-            return new OrganizationAdminAccountArgs(adminAccountId);
+            return adminAccountId(Output.of(adminAccountId));
+        }
+
+        public OrganizationAdminAccountArgs build() {
+            $.adminAccountId = Objects.requireNonNull($.adminAccountId, "expected parameter 'adminAccountId' to be non-null");
+            return $;
         }
     }
+
 }

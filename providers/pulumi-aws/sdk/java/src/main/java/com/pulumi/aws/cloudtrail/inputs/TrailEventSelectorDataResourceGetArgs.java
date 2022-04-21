@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudtrail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class TrailEventSelectorDataResourceGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -31,66 +30,64 @@ public final class TrailEventSelectorDataResourceGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public TrailEventSelectorDataResourceGetArgs(
-        Output<String> type,
-        Output<List<String>> values) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private TrailEventSelectorDataResourceGetArgs() {}
 
-    private TrailEventSelectorDataResourceGetArgs() {
-        this.type = Codegen.empty();
-        this.values = Codegen.empty();
+    private TrailEventSelectorDataResourceGetArgs(TrailEventSelectorDataResourceGetArgs $) {
+        this.type = $.type;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailEventSelectorDataResourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<List<String>> values;
+        private TrailEventSelectorDataResourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailEventSelectorDataResourceGetArgs();
         }
 
         public Builder(TrailEventSelectorDataResourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
+            $ = new TrailEventSelectorDataResourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public TrailEventSelectorDataResourceGetArgs build() {
-            return new TrailEventSelectorDataResourceGetArgs(type, values);
+        }
+
+        public TrailEventSelectorDataResourceGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

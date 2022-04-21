@@ -5,10 +5,10 @@ package com.pulumi.aws.cognito;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="precedence")
-      private final @Nullable Output<Integer> precedence;
+    private @Nullable Output<Integer> precedence;
 
-    public Output<Integer> precedence() {
-        return this.precedence == null ? Codegen.empty() : this.precedence;
+    public Optional<Output<Integer>> precedence() {
+        return Optional.ofNullable(this.precedence);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -65,102 +65,89 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final Output<String> userPoolId;
+    private Output<String> userPoolId;
 
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
-    public UserGroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> precedence,
-        @Nullable Output<String> roleArn,
-        Output<String> userPoolId) {
-        this.description = description;
-        this.name = name;
-        this.precedence = precedence;
-        this.roleArn = roleArn;
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private UserGroupArgs() {}
 
-    private UserGroupArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.precedence = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private UserGroupArgs(UserGroupArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.precedence = $.precedence;
+        this.roleArn = $.roleArn;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> precedence;
-        private @Nullable Output<String> roleArn;
-        private Output<String> userPoolId;
+        private UserGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserGroupArgs();
         }
 
         public Builder(UserGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.precedence = defaults.precedence;
-    	      this.roleArn = defaults.roleArn;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new UserGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder precedence(@Nullable Output<Integer> precedence) {
-            this.precedence = precedence;
+            $.precedence = precedence;
             return this;
         }
-        public Builder precedence(@Nullable Integer precedence) {
-            this.precedence = Codegen.ofNullable(precedence);
-            return this;
+
+        public Builder precedence(Integer precedence) {
+            return precedence(Output.of(precedence));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder userPoolId(Output<String> userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
-            return this;
-        }        public UserGroupArgs build() {
-            return new UserGroupArgs(description, name, precedence, roleArn, userPoolId);
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public UserGroupArgs build() {
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

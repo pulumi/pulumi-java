@@ -6,10 +6,10 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.TriggerPredicateConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TriggerPredicateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<TriggerPredicateConditionArgs>> conditions;
+    private Output<List<TriggerPredicateConditionArgs>> conditions;
 
     public Output<List<TriggerPredicateConditionArgs>> conditions() {
         return this.conditions;
@@ -33,66 +33,63 @@ public final class TriggerPredicateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="logical")
-      private final @Nullable Output<String> logical;
+    private @Nullable Output<String> logical;
 
-    public Output<String> logical() {
-        return this.logical == null ? Codegen.empty() : this.logical;
+    public Optional<Output<String>> logical() {
+        return Optional.ofNullable(this.logical);
     }
 
-    public TriggerPredicateArgs(
-        Output<List<TriggerPredicateConditionArgs>> conditions,
-        @Nullable Output<String> logical) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.logical = logical;
-    }
+    private TriggerPredicateArgs() {}
 
-    private TriggerPredicateArgs() {
-        this.conditions = Codegen.empty();
-        this.logical = Codegen.empty();
+    private TriggerPredicateArgs(TriggerPredicateArgs $) {
+        this.conditions = $.conditions;
+        this.logical = $.logical;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPredicateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TriggerPredicateConditionArgs>> conditions;
-        private @Nullable Output<String> logical;
+        private TriggerPredicateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPredicateArgs();
         }
 
         public Builder(TriggerPredicateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.logical = defaults.logical;
+            $ = new TriggerPredicateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(Output<List<TriggerPredicateConditionArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<TriggerPredicateConditionArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(TriggerPredicateConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder logical(@Nullable Output<String> logical) {
-            this.logical = logical;
+            $.logical = logical;
             return this;
         }
-        public Builder logical(@Nullable String logical) {
-            this.logical = Codegen.ofNullable(logical);
-            return this;
-        }        public TriggerPredicateArgs build() {
-            return new TriggerPredicateArgs(conditions, logical);
+
+        public Builder logical(String logical) {
+            return logical(Output.of(logical));
+        }
+
+        public TriggerPredicateArgs build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

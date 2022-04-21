@@ -5,9 +5,9 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PresetAudioCodecOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bitDepth")
-      private final @Nullable Output<String> bitDepth;
+    private @Nullable Output<String> bitDepth;
 
-    public Output<String> bitDepth() {
-        return this.bitDepth == null ? Codegen.empty() : this.bitDepth;
+    public Optional<Output<String>> bitDepth() {
+        return Optional.ofNullable(this.bitDepth);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PresetAudioCodecOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bitOrder")
-      private final @Nullable Output<String> bitOrder;
+    private @Nullable Output<String> bitOrder;
 
-    public Output<String> bitOrder() {
-        return this.bitOrder == null ? Codegen.empty() : this.bitOrder;
+    public Optional<Output<String>> bitOrder() {
+        return Optional.ofNullable(this.bitOrder);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PresetAudioCodecOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<String> profile;
+    private @Nullable Output<String> profile;
 
-    public Output<String> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<String>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class PresetAudioCodecOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="signed")
-      private final @Nullable Output<String> signed;
+    private @Nullable Output<String> signed;
 
-    public Output<String> signed() {
-        return this.signed == null ? Codegen.empty() : this.signed;
+    public Optional<Output<String>> signed() {
+        return Optional.ofNullable(this.signed);
     }
 
-    public PresetAudioCodecOptionsArgs(
-        @Nullable Output<String> bitDepth,
-        @Nullable Output<String> bitOrder,
-        @Nullable Output<String> profile,
-        @Nullable Output<String> signed) {
-        this.bitDepth = bitDepth;
-        this.bitOrder = bitOrder;
-        this.profile = profile;
-        this.signed = signed;
-    }
+    private PresetAudioCodecOptionsArgs() {}
 
-    private PresetAudioCodecOptionsArgs() {
-        this.bitDepth = Codegen.empty();
-        this.bitOrder = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.signed = Codegen.empty();
+    private PresetAudioCodecOptionsArgs(PresetAudioCodecOptionsArgs $) {
+        this.bitDepth = $.bitDepth;
+        this.bitOrder = $.bitOrder;
+        this.profile = $.profile;
+        this.signed = $.signed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresetAudioCodecOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bitDepth;
-        private @Nullable Output<String> bitOrder;
-        private @Nullable Output<String> profile;
-        private @Nullable Output<String> signed;
+        private PresetAudioCodecOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresetAudioCodecOptionsArgs();
         }
 
         public Builder(PresetAudioCodecOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitDepth = defaults.bitDepth;
-    	      this.bitOrder = defaults.bitOrder;
-    	      this.profile = defaults.profile;
-    	      this.signed = defaults.signed;
+            $ = new PresetAudioCodecOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bitDepth(@Nullable Output<String> bitDepth) {
-            this.bitDepth = bitDepth;
+            $.bitDepth = bitDepth;
             return this;
         }
-        public Builder bitDepth(@Nullable String bitDepth) {
-            this.bitDepth = Codegen.ofNullable(bitDepth);
-            return this;
+
+        public Builder bitDepth(String bitDepth) {
+            return bitDepth(Output.of(bitDepth));
         }
+
         public Builder bitOrder(@Nullable Output<String> bitOrder) {
-            this.bitOrder = bitOrder;
+            $.bitOrder = bitOrder;
             return this;
         }
-        public Builder bitOrder(@Nullable String bitOrder) {
-            this.bitOrder = Codegen.ofNullable(bitOrder);
-            return this;
+
+        public Builder bitOrder(String bitOrder) {
+            return bitOrder(Output.of(bitOrder));
         }
+
         public Builder profile(@Nullable Output<String> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable String profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(String profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder signed(@Nullable Output<String> signed) {
-            this.signed = signed;
+            $.signed = signed;
             return this;
         }
-        public Builder signed(@Nullable String signed) {
-            this.signed = Codegen.ofNullable(signed);
-            return this;
-        }        public PresetAudioCodecOptionsArgs build() {
-            return new PresetAudioCodecOptionsArgs(bitDepth, bitOrder, profile, signed);
+
+        public Builder signed(String signed) {
+            return signed(Output.of(signed));
+        }
+
+        public PresetAudioCodecOptionsArgs build() {
+            return $;
         }
     }
+
 }

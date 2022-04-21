@@ -6,10 +6,10 @@ package com.pulumi.aws.storagegateway.inputs;
 import com.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="auditDestinationArn")
-      private final @Nullable Output<String> auditDestinationArn;
+    private @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> auditDestinationArn() {
-        return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
+    public Optional<Output<String>> auditDestinationArn() {
+        return Optional.ofNullable(this.auditDestinationArn);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cacheAttributes")
-      private final @Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
+    private @Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
 
-    public Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes() {
-        return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
+    public Optional<Output<FileSystemAssociationCacheAttributesGetArgs>> cacheAttributes() {
+        return Optional.ofNullable(this.cacheAttributes);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gatewayArn")
-      private final @Nullable Output<String> gatewayArn;
+    private @Nullable Output<String> gatewayArn;
 
-    public Output<String> gatewayArn() {
-        return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
+    public Optional<Output<String>> gatewayArn() {
+        return Optional.ofNullable(this.gatewayArn);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="locationArn")
-      private final @Nullable Output<String> locationArn;
+    private @Nullable Output<String> locationArn;
 
-    public Output<String> locationArn() {
-        return this.locationArn == null ? Codegen.empty() : this.locationArn;
+    public Optional<Output<String>> locationArn() {
+        return Optional.ofNullable(this.locationArn);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -110,154 +110,128 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public FileSystemAssociationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> auditDestinationArn,
-        @Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes,
-        @Nullable Output<String> gatewayArn,
-        @Nullable Output<String> locationArn,
-        @Nullable Output<String> password,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> username) {
-        this.arn = arn;
-        this.auditDestinationArn = auditDestinationArn;
-        this.cacheAttributes = cacheAttributes;
-        this.gatewayArn = gatewayArn;
-        this.locationArn = locationArn;
-        this.password = password;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.username = username;
-    }
+    private FileSystemAssociationState() {}
 
-    private FileSystemAssociationState() {
-        this.arn = Codegen.empty();
-        this.auditDestinationArn = Codegen.empty();
-        this.cacheAttributes = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
-        this.locationArn = Codegen.empty();
-        this.password = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.username = Codegen.empty();
+    private FileSystemAssociationState(FileSystemAssociationState $) {
+        this.arn = $.arn;
+        this.auditDestinationArn = $.auditDestinationArn;
+        this.cacheAttributes = $.cacheAttributes;
+        this.gatewayArn = $.gatewayArn;
+        this.locationArn = $.locationArn;
+        this.password = $.password;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> auditDestinationArn;
-        private @Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
-        private @Nullable Output<String> gatewayArn;
-        private @Nullable Output<String> locationArn;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> username;
+        private FileSystemAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemAssociationState();
         }
 
         public Builder(FileSystemAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.auditDestinationArn = defaults.auditDestinationArn;
-    	      this.cacheAttributes = defaults.cacheAttributes;
-    	      this.gatewayArn = defaults.gatewayArn;
-    	      this.locationArn = defaults.locationArn;
-    	      this.password = defaults.password;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.username = defaults.username;
+            $ = new FileSystemAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder auditDestinationArn(@Nullable Output<String> auditDestinationArn) {
-            this.auditDestinationArn = auditDestinationArn;
+            $.auditDestinationArn = auditDestinationArn;
             return this;
         }
-        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Codegen.ofNullable(auditDestinationArn);
-            return this;
+
+        public Builder auditDestinationArn(String auditDestinationArn) {
+            return auditDestinationArn(Output.of(auditDestinationArn));
         }
+
         public Builder cacheAttributes(@Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes) {
-            this.cacheAttributes = cacheAttributes;
+            $.cacheAttributes = cacheAttributes;
             return this;
         }
-        public Builder cacheAttributes(@Nullable FileSystemAssociationCacheAttributesGetArgs cacheAttributes) {
-            this.cacheAttributes = Codegen.ofNullable(cacheAttributes);
-            return this;
+
+        public Builder cacheAttributes(FileSystemAssociationCacheAttributesGetArgs cacheAttributes) {
+            return cacheAttributes(Output.of(cacheAttributes));
         }
+
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
-            this.gatewayArn = gatewayArn;
+            $.gatewayArn = gatewayArn;
             return this;
         }
-        public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Codegen.ofNullable(gatewayArn);
-            return this;
+
+        public Builder gatewayArn(String gatewayArn) {
+            return gatewayArn(Output.of(gatewayArn));
         }
+
         public Builder locationArn(@Nullable Output<String> locationArn) {
-            this.locationArn = locationArn;
+            $.locationArn = locationArn;
             return this;
         }
-        public Builder locationArn(@Nullable String locationArn) {
-            this.locationArn = Codegen.ofNullable(locationArn);
-            return this;
+
+        public Builder locationArn(String locationArn) {
+            return locationArn(Output.of(locationArn));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public FileSystemAssociationState build() {
-            return new FileSystemAssociationState(arn, auditDestinationArn, cacheAttributes, gatewayArn, locationArn, password, tags, tagsAll, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public FileSystemAssociationState build() {
+            return $;
         }
     }
+
 }

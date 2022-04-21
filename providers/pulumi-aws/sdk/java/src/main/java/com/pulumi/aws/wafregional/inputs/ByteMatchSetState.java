@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="byteMatchTuples")
-      private final @Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples;
+    private @Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples;
 
-    public Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples() {
-        return this.byteMatchTuples == null ? Codegen.empty() : this.byteMatchTuples;
+    public Optional<Output<List<ByteMatchSetByteMatchTupleGetArgs>>> byteMatchTuples() {
+        return Optional.ofNullable(this.byteMatchTuples);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ByteMatchSetState(
-        @Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples,
-        @Nullable Output<String> name) {
-        this.byteMatchTuples = byteMatchTuples;
-        this.name = name;
-    }
+    private ByteMatchSetState() {}
 
-    private ByteMatchSetState() {
-        this.byteMatchTuples = Codegen.empty();
-        this.name = Codegen.empty();
+    private ByteMatchSetState(ByteMatchSetState $) {
+        this.byteMatchTuples = $.byteMatchTuples;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ByteMatchSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples;
-        private @Nullable Output<String> name;
+        private ByteMatchSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ByteMatchSetState();
         }
 
         public Builder(ByteMatchSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.byteMatchTuples = defaults.byteMatchTuples;
-    	      this.name = defaults.name;
+            $ = new ByteMatchSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder byteMatchTuples(@Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples) {
-            this.byteMatchTuples = byteMatchTuples;
+            $.byteMatchTuples = byteMatchTuples;
             return this;
         }
-        public Builder byteMatchTuples(@Nullable List<ByteMatchSetByteMatchTupleGetArgs> byteMatchTuples) {
-            this.byteMatchTuples = Codegen.ofNullable(byteMatchTuples);
-            return this;
+
+        public Builder byteMatchTuples(List<ByteMatchSetByteMatchTupleGetArgs> byteMatchTuples) {
+            return byteMatchTuples(Output.of(byteMatchTuples));
         }
+
         public Builder byteMatchTuples(ByteMatchSetByteMatchTupleGetArgs... byteMatchTuples) {
             return byteMatchTuples(List.of(byteMatchTuples));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ByteMatchSetState build() {
-            return new ByteMatchSetState(byteMatchTuples, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ByteMatchSetState build() {
+            return $;
         }
     }
+
 }

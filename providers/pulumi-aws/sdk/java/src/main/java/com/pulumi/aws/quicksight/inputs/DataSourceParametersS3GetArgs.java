@@ -6,7 +6,6 @@ package com.pulumi.aws.quicksight.inputs;
 import com.pulumi.aws.quicksight.inputs.DataSourceParametersS3ManifestFileLocationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class DataSourceParametersS3GetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="manifestFileLocation", required=true)
-      private final Output<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation;
+    private Output<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation;
 
     public Output<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation() {
         return this.manifestFileLocation;
     }
 
-    public DataSourceParametersS3GetArgs(Output<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation) {
-        this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation, "expected parameter 'manifestFileLocation' to be non-null");
-    }
+    private DataSourceParametersS3GetArgs() {}
 
-    private DataSourceParametersS3GetArgs() {
-        this.manifestFileLocation = Codegen.empty();
+    private DataSourceParametersS3GetArgs(DataSourceParametersS3GetArgs $) {
+        this.manifestFileLocation = $.manifestFileLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersS3GetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation;
+        private DataSourceParametersS3GetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersS3GetArgs();
         }
 
         public Builder(DataSourceParametersS3GetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manifestFileLocation = defaults.manifestFileLocation;
+            $ = new DataSourceParametersS3GetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder manifestFileLocation(Output<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation) {
-            this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
+            $.manifestFileLocation = manifestFileLocation;
             return this;
         }
+
         public Builder manifestFileLocation(DataSourceParametersS3ManifestFileLocationGetArgs manifestFileLocation) {
-            this.manifestFileLocation = Output.of(Objects.requireNonNull(manifestFileLocation));
-            return this;
-        }        public DataSourceParametersS3GetArgs build() {
-            return new DataSourceParametersS3GetArgs(manifestFileLocation);
+            return manifestFileLocation(Output.of(manifestFileLocation));
+        }
+
+        public DataSourceParametersS3GetArgs build() {
+            $.manifestFileLocation = Objects.requireNonNull($.manifestFileLocation, "expected parameter 'manifestFileLocation' to be non-null");
+            return $;
         }
     }
+
 }

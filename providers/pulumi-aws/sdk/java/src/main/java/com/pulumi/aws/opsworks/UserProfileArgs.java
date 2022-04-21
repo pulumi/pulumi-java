@@ -5,10 +5,10 @@ package com.pulumi.aws.opsworks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowSelfManagement")
-      private final @Nullable Output<Boolean> allowSelfManagement;
+    private @Nullable Output<Boolean> allowSelfManagement;
 
-    public Output<Boolean> allowSelfManagement() {
-        return this.allowSelfManagement == null ? Codegen.empty() : this.allowSelfManagement;
+    public Optional<Output<Boolean>> allowSelfManagement() {
+        return Optional.ofNullable(this.allowSelfManagement);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshPublicKey")
-      private final @Nullable Output<String> sshPublicKey;
+    private @Nullable Output<String> sshPublicKey;
 
-    public Output<String> sshPublicKey() {
-        return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
+    public Optional<Output<String>> sshPublicKey() {
+        return Optional.ofNullable(this.sshPublicKey);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshUsername", required=true)
-      private final Output<String> sshUsername;
+    private Output<String> sshUsername;
 
     public Output<String> sshUsername() {
         return this.sshUsername;
@@ -54,89 +54,80 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userArn", required=true)
-      private final Output<String> userArn;
+    private Output<String> userArn;
 
     public Output<String> userArn() {
         return this.userArn;
     }
 
-    public UserProfileArgs(
-        @Nullable Output<Boolean> allowSelfManagement,
-        @Nullable Output<String> sshPublicKey,
-        Output<String> sshUsername,
-        Output<String> userArn) {
-        this.allowSelfManagement = allowSelfManagement;
-        this.sshPublicKey = sshPublicKey;
-        this.sshUsername = Objects.requireNonNull(sshUsername, "expected parameter 'sshUsername' to be non-null");
-        this.userArn = Objects.requireNonNull(userArn, "expected parameter 'userArn' to be non-null");
-    }
+    private UserProfileArgs() {}
 
-    private UserProfileArgs() {
-        this.allowSelfManagement = Codegen.empty();
-        this.sshPublicKey = Codegen.empty();
-        this.sshUsername = Codegen.empty();
-        this.userArn = Codegen.empty();
+    private UserProfileArgs(UserProfileArgs $) {
+        this.allowSelfManagement = $.allowSelfManagement;
+        this.sshPublicKey = $.sshPublicKey;
+        this.sshUsername = $.sshUsername;
+        this.userArn = $.userArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowSelfManagement;
-        private @Nullable Output<String> sshPublicKey;
-        private Output<String> sshUsername;
-        private Output<String> userArn;
+        private UserProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileArgs();
         }
 
         public Builder(UserProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSelfManagement = defaults.allowSelfManagement;
-    	      this.sshPublicKey = defaults.sshPublicKey;
-    	      this.sshUsername = defaults.sshUsername;
-    	      this.userArn = defaults.userArn;
+            $ = new UserProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSelfManagement(@Nullable Output<Boolean> allowSelfManagement) {
-            this.allowSelfManagement = allowSelfManagement;
+            $.allowSelfManagement = allowSelfManagement;
             return this;
         }
-        public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
-            this.allowSelfManagement = Codegen.ofNullable(allowSelfManagement);
-            return this;
+
+        public Builder allowSelfManagement(Boolean allowSelfManagement) {
+            return allowSelfManagement(Output.of(allowSelfManagement));
         }
+
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
-            this.sshPublicKey = sshPublicKey;
+            $.sshPublicKey = sshPublicKey;
             return this;
         }
-        public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Codegen.ofNullable(sshPublicKey);
-            return this;
+
+        public Builder sshPublicKey(String sshPublicKey) {
+            return sshPublicKey(Output.of(sshPublicKey));
         }
+
         public Builder sshUsername(Output<String> sshUsername) {
-            this.sshUsername = Objects.requireNonNull(sshUsername);
+            $.sshUsername = sshUsername;
             return this;
         }
+
         public Builder sshUsername(String sshUsername) {
-            this.sshUsername = Output.of(Objects.requireNonNull(sshUsername));
-            return this;
+            return sshUsername(Output.of(sshUsername));
         }
+
         public Builder userArn(Output<String> userArn) {
-            this.userArn = Objects.requireNonNull(userArn);
+            $.userArn = userArn;
             return this;
         }
+
         public Builder userArn(String userArn) {
-            this.userArn = Output.of(Objects.requireNonNull(userArn));
-            return this;
-        }        public UserProfileArgs build() {
-            return new UserProfileArgs(allowSelfManagement, sshPublicKey, sshUsername, userArn);
+            return userArn(Output.of(userArn));
+        }
+
+        public UserProfileArgs build() {
+            $.sshUsername = Objects.requireNonNull($.sshUsername, "expected parameter 'sshUsername' to be non-null");
+            $.userArn = Objects.requireNonNull($.userArn, "expected parameter 'userArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataSourceVpcConnectionPropertiesGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="vpcConnectionArn", required=true)
-      private final Output<String> vpcConnectionArn;
+    private Output<String> vpcConnectionArn;
 
     public Output<String> vpcConnectionArn() {
         return this.vpcConnectionArn;
     }
 
-    public DataSourceVpcConnectionPropertiesGetArgs(Output<String> vpcConnectionArn) {
-        this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn, "expected parameter 'vpcConnectionArn' to be non-null");
-    }
+    private DataSourceVpcConnectionPropertiesGetArgs() {}
 
-    private DataSourceVpcConnectionPropertiesGetArgs() {
-        this.vpcConnectionArn = Codegen.empty();
+    private DataSourceVpcConnectionPropertiesGetArgs(DataSourceVpcConnectionPropertiesGetArgs $) {
+        this.vpcConnectionArn = $.vpcConnectionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceVpcConnectionPropertiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> vpcConnectionArn;
+        private DataSourceVpcConnectionPropertiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceVpcConnectionPropertiesGetArgs();
         }
 
         public Builder(DataSourceVpcConnectionPropertiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcConnectionArn = defaults.vpcConnectionArn;
+            $ = new DataSourceVpcConnectionPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcConnectionArn(Output<String> vpcConnectionArn) {
-            this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
+            $.vpcConnectionArn = vpcConnectionArn;
             return this;
         }
+
         public Builder vpcConnectionArn(String vpcConnectionArn) {
-            this.vpcConnectionArn = Output.of(Objects.requireNonNull(vpcConnectionArn));
-            return this;
-        }        public DataSourceVpcConnectionPropertiesGetArgs build() {
-            return new DataSourceVpcConnectionPropertiesGetArgs(vpcConnectionArn);
+            return vpcConnectionArn(Output.of(vpcConnectionArn));
+        }
+
+        public DataSourceVpcConnectionPropertiesGetArgs build() {
+            $.vpcConnectionArn = Objects.requireNonNull($.vpcConnectionArn, "expected parameter 'vpcConnectionArn' to be non-null");
+            return $;
         }
     }
+
 }

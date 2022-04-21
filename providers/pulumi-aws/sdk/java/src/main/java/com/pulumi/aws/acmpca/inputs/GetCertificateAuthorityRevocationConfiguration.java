@@ -14,48 +14,49 @@ public final class GetCertificateAuthorityRevocationConfiguration extends com.pu
     public static final GetCertificateAuthorityRevocationConfiguration Empty = new GetCertificateAuthorityRevocationConfiguration();
 
     @Import(name="crlConfigurations", required=true)
-      private final List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations;
+    private List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations;
 
     public List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations() {
         return this.crlConfigurations;
     }
 
-    public GetCertificateAuthorityRevocationConfiguration(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
-        this.crlConfigurations = Objects.requireNonNull(crlConfigurations, "expected parameter 'crlConfigurations' to be non-null");
-    }
+    private GetCertificateAuthorityRevocationConfiguration() {}
 
-    private GetCertificateAuthorityRevocationConfiguration() {
-        this.crlConfigurations = List.of();
+    private GetCertificateAuthorityRevocationConfiguration(GetCertificateAuthorityRevocationConfiguration $) {
+        this.crlConfigurations = $.crlConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateAuthorityRevocationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations;
+        private GetCertificateAuthorityRevocationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateAuthorityRevocationConfiguration();
         }
 
         public Builder(GetCertificateAuthorityRevocationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crlConfigurations = defaults.crlConfigurations;
+            $ = new GetCertificateAuthorityRevocationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder crlConfigurations(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
-            this.crlConfigurations = Objects.requireNonNull(crlConfigurations);
+            $.crlConfigurations = crlConfigurations;
             return this;
         }
+
         public Builder crlConfigurations(GetCertificateAuthorityRevocationConfigurationCrlConfiguration... crlConfigurations) {
             return crlConfigurations(List.of(crlConfigurations));
-        }        public GetCertificateAuthorityRevocationConfiguration build() {
-            return new GetCertificateAuthorityRevocationConfiguration(crlConfigurations);
+        }
+
+        public GetCertificateAuthorityRevocationConfiguration build() {
+            $.crlConfigurations = Objects.requireNonNull($.crlConfigurations, "expected parameter 'crlConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

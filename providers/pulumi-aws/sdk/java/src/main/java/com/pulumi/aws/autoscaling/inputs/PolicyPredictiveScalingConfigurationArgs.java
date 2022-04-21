@@ -6,9 +6,9 @@ package com.pulumi.aws.autoscaling.inputs;
 import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="maxCapacityBreachBehavior")
-      private final @Nullable Output<String> maxCapacityBreachBehavior;
+    private @Nullable Output<String> maxCapacityBreachBehavior;
 
-    public Output<String> maxCapacityBreachBehavior() {
-        return this.maxCapacityBreachBehavior == null ? Codegen.empty() : this.maxCapacityBreachBehavior;
+    public Optional<Output<String>> maxCapacityBreachBehavior() {
+        return Optional.ofNullable(this.maxCapacityBreachBehavior);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="maxCapacityBuffer")
-      private final @Nullable Output<String> maxCapacityBuffer;
+    private @Nullable Output<String> maxCapacityBuffer;
 
-    public Output<String> maxCapacityBuffer() {
-        return this.maxCapacityBuffer == null ? Codegen.empty() : this.maxCapacityBuffer;
+    public Optional<Output<String>> maxCapacityBuffer() {
+        return Optional.ofNullable(this.maxCapacityBuffer);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="metricSpecification", required=true)
-      private final Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
+    private Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
 
     public Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification() {
         return this.metricSpecification;
@@ -54,10 +54,10 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -65,102 +65,89 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="schedulingBufferTime")
-      private final @Nullable Output<String> schedulingBufferTime;
+    private @Nullable Output<String> schedulingBufferTime;
 
-    public Output<String> schedulingBufferTime() {
-        return this.schedulingBufferTime == null ? Codegen.empty() : this.schedulingBufferTime;
+    public Optional<Output<String>> schedulingBufferTime() {
+        return Optional.ofNullable(this.schedulingBufferTime);
     }
 
-    public PolicyPredictiveScalingConfigurationArgs(
-        @Nullable Output<String> maxCapacityBreachBehavior,
-        @Nullable Output<String> maxCapacityBuffer,
-        Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> schedulingBufferTime) {
-        this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
-        this.maxCapacityBuffer = maxCapacityBuffer;
-        this.metricSpecification = Objects.requireNonNull(metricSpecification, "expected parameter 'metricSpecification' to be non-null");
-        this.mode = mode;
-        this.schedulingBufferTime = schedulingBufferTime;
-    }
+    private PolicyPredictiveScalingConfigurationArgs() {}
 
-    private PolicyPredictiveScalingConfigurationArgs() {
-        this.maxCapacityBreachBehavior = Codegen.empty();
-        this.maxCapacityBuffer = Codegen.empty();
-        this.metricSpecification = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.schedulingBufferTime = Codegen.empty();
+    private PolicyPredictiveScalingConfigurationArgs(PolicyPredictiveScalingConfigurationArgs $) {
+        this.maxCapacityBreachBehavior = $.maxCapacityBreachBehavior;
+        this.maxCapacityBuffer = $.maxCapacityBuffer;
+        this.metricSpecification = $.metricSpecification;
+        this.mode = $.mode;
+        this.schedulingBufferTime = $.schedulingBufferTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyPredictiveScalingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maxCapacityBreachBehavior;
-        private @Nullable Output<String> maxCapacityBuffer;
-        private Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> schedulingBufferTime;
+        private PolicyPredictiveScalingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyPredictiveScalingConfigurationArgs();
         }
 
         public Builder(PolicyPredictiveScalingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacityBreachBehavior = defaults.maxCapacityBreachBehavior;
-    	      this.maxCapacityBuffer = defaults.maxCapacityBuffer;
-    	      this.metricSpecification = defaults.metricSpecification;
-    	      this.mode = defaults.mode;
-    	      this.schedulingBufferTime = defaults.schedulingBufferTime;
+            $ = new PolicyPredictiveScalingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacityBreachBehavior(@Nullable Output<String> maxCapacityBreachBehavior) {
-            this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
+            $.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
             return this;
         }
-        public Builder maxCapacityBreachBehavior(@Nullable String maxCapacityBreachBehavior) {
-            this.maxCapacityBreachBehavior = Codegen.ofNullable(maxCapacityBreachBehavior);
-            return this;
+
+        public Builder maxCapacityBreachBehavior(String maxCapacityBreachBehavior) {
+            return maxCapacityBreachBehavior(Output.of(maxCapacityBreachBehavior));
         }
+
         public Builder maxCapacityBuffer(@Nullable Output<String> maxCapacityBuffer) {
-            this.maxCapacityBuffer = maxCapacityBuffer;
+            $.maxCapacityBuffer = maxCapacityBuffer;
             return this;
         }
-        public Builder maxCapacityBuffer(@Nullable String maxCapacityBuffer) {
-            this.maxCapacityBuffer = Codegen.ofNullable(maxCapacityBuffer);
-            return this;
+
+        public Builder maxCapacityBuffer(String maxCapacityBuffer) {
+            return maxCapacityBuffer(Output.of(maxCapacityBuffer));
         }
+
         public Builder metricSpecification(Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification) {
-            this.metricSpecification = Objects.requireNonNull(metricSpecification);
+            $.metricSpecification = metricSpecification;
             return this;
         }
+
         public Builder metricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationArgs metricSpecification) {
-            this.metricSpecification = Output.of(Objects.requireNonNull(metricSpecification));
-            return this;
+            return metricSpecification(Output.of(metricSpecification));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder schedulingBufferTime(@Nullable Output<String> schedulingBufferTime) {
-            this.schedulingBufferTime = schedulingBufferTime;
+            $.schedulingBufferTime = schedulingBufferTime;
             return this;
         }
-        public Builder schedulingBufferTime(@Nullable String schedulingBufferTime) {
-            this.schedulingBufferTime = Codegen.ofNullable(schedulingBufferTime);
-            return this;
-        }        public PolicyPredictiveScalingConfigurationArgs build() {
-            return new PolicyPredictiveScalingConfigurationArgs(maxCapacityBreachBehavior, maxCapacityBuffer, metricSpecification, mode, schedulingBufferTime);
+
+        public Builder schedulingBufferTime(String schedulingBufferTime) {
+            return schedulingBufferTime(Output.of(schedulingBufferTime));
+        }
+
+        public PolicyPredictiveScalingConfigurationArgs build() {
+            $.metricSpecification = Objects.requireNonNull($.metricSpecification, "expected parameter 'metricSpecification' to be non-null");
+            return $;
         }
     }
+
 }

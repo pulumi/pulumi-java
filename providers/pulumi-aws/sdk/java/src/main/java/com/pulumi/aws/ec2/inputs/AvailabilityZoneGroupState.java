@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AvailabilityZoneGroupState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class AvailabilityZoneGroupState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="optInStatus")
-      private final @Nullable Output<String> optInStatus;
+    private @Nullable Output<String> optInStatus;
 
-    public Output<String> optInStatus() {
-        return this.optInStatus == null ? Codegen.empty() : this.optInStatus;
+    public Optional<Output<String>> optInStatus() {
+        return Optional.ofNullable(this.optInStatus);
     }
 
-    public AvailabilityZoneGroupState(
-        @Nullable Output<String> groupName,
-        @Nullable Output<String> optInStatus) {
-        this.groupName = groupName;
-        this.optInStatus = optInStatus;
-    }
+    private AvailabilityZoneGroupState() {}
 
-    private AvailabilityZoneGroupState() {
-        this.groupName = Codegen.empty();
-        this.optInStatus = Codegen.empty();
+    private AvailabilityZoneGroupState(AvailabilityZoneGroupState $) {
+        this.groupName = $.groupName;
+        this.optInStatus = $.optInStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvailabilityZoneGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupName;
-        private @Nullable Output<String> optInStatus;
+        private AvailabilityZoneGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvailabilityZoneGroupState();
         }
 
         public Builder(AvailabilityZoneGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupName = defaults.groupName;
-    	      this.optInStatus = defaults.optInStatus;
+            $ = new AvailabilityZoneGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder optInStatus(@Nullable Output<String> optInStatus) {
-            this.optInStatus = optInStatus;
+            $.optInStatus = optInStatus;
             return this;
         }
-        public Builder optInStatus(@Nullable String optInStatus) {
-            this.optInStatus = Codegen.ofNullable(optInStatus);
-            return this;
-        }        public AvailabilityZoneGroupState build() {
-            return new AvailabilityZoneGroupState(groupName, optInStatus);
+
+        public Builder optInStatus(String optInStatus) {
+            return optInStatus(Output.of(optInStatus));
+        }
+
+        public AvailabilityZoneGroupState build() {
+            return $;
         }
     }
+
 }

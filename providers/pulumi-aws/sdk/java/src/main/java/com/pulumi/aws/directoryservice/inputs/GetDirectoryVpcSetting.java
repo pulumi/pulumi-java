@@ -14,7 +14,7 @@ public final class GetDirectoryVpcSetting extends com.pulumi.resources.InvokeArg
     public static final GetDirectoryVpcSetting Empty = new GetDirectoryVpcSetting();
 
     @Import(name="availabilityZones", required=true)
-      private final List<String> availabilityZones;
+    private List<String> availabilityZones;
 
     public List<String> availabilityZones() {
         return this.availabilityZones;
@@ -25,7 +25,7 @@ public final class GetDirectoryVpcSetting extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
@@ -36,70 +36,67 @@ public final class GetDirectoryVpcSetting extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetDirectoryVpcSetting(
-        List<String> availabilityZones,
-        List<String> subnetIds,
-        String vpcId) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones, "expected parameter 'availabilityZones' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetDirectoryVpcSetting() {}
 
-    private GetDirectoryVpcSetting() {
-        this.availabilityZones = List.of();
-        this.subnetIds = List.of();
-        this.vpcId = null;
+    private GetDirectoryVpcSetting(GetDirectoryVpcSetting $) {
+        this.availabilityZones = $.availabilityZones;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDirectoryVpcSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> availabilityZones;
-        private List<String> subnetIds;
-        private String vpcId;
+        private GetDirectoryVpcSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDirectoryVpcSetting();
         }
 
         public Builder(GetDirectoryVpcSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetDirectoryVpcSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZones(List<String> availabilityZones) {
-            this.availabilityZones = Objects.requireNonNull(availabilityZones);
+            $.availabilityZones = availabilityZones;
             return this;
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetDirectoryVpcSetting build() {
-            return new GetDirectoryVpcSetting(availabilityZones, subnetIds, vpcId);
+        }
+
+        public GetDirectoryVpcSetting build() {
+            $.availabilityZones = Objects.requireNonNull($.availabilityZones, "expected parameter 'availabilityZones' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

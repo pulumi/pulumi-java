@@ -5,9 +5,9 @@ package com.pulumi.aws.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LambdaFunctionAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="functionArn")
-      private final @Nullable Output<String> functionArn;
+    private @Nullable Output<String> functionArn;
 
-    public Output<String> functionArn() {
-        return this.functionArn == null ? Codegen.empty() : this.functionArn;
+    public Optional<Output<String>> functionArn() {
+        return Optional.ofNullable(this.functionArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class LambdaFunctionAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
-    public LambdaFunctionAssociationState(
-        @Nullable Output<String> functionArn,
-        @Nullable Output<String> instanceId) {
-        this.functionArn = functionArn;
-        this.instanceId = instanceId;
-    }
+    private LambdaFunctionAssociationState() {}
 
-    private LambdaFunctionAssociationState() {
-        this.functionArn = Codegen.empty();
-        this.instanceId = Codegen.empty();
+    private LambdaFunctionAssociationState(LambdaFunctionAssociationState $) {
+        this.functionArn = $.functionArn;
+        this.instanceId = $.instanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LambdaFunctionAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> functionArn;
-        private @Nullable Output<String> instanceId;
+        private LambdaFunctionAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LambdaFunctionAssociationState();
         }
 
         public Builder(LambdaFunctionAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
-    	      this.instanceId = defaults.instanceId;
+            $ = new LambdaFunctionAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(@Nullable Output<String> functionArn) {
-            this.functionArn = functionArn;
+            $.functionArn = functionArn;
             return this;
         }
-        public Builder functionArn(@Nullable String functionArn) {
-            this.functionArn = Codegen.ofNullable(functionArn);
-            return this;
+
+        public Builder functionArn(String functionArn) {
+            return functionArn(Output.of(functionArn));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
-        }        public LambdaFunctionAssociationState build() {
-            return new LambdaFunctionAssociationState(functionArn, instanceId);
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public LambdaFunctionAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigArg
 import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationProductionVariantArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EndpointConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="asyncInferenceConfig")
-      private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
+    private @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig() {
-        return this.asyncInferenceConfig == null ? Codegen.empty() : this.asyncInferenceConfig;
+    public Optional<Output<EndpointConfigurationAsyncInferenceConfigArgs>> asyncInferenceConfig() {
+        return Optional.ofNullable(this.asyncInferenceConfig);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EndpointConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dataCaptureConfig")
-      private final @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
+    private @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
 
-    public Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig() {
-        return this.dataCaptureConfig == null ? Codegen.empty() : this.dataCaptureConfig;
+    public Optional<Output<EndpointConfigurationDataCaptureConfigArgs>> dataCaptureConfig() {
+        return Optional.ofNullable(this.dataCaptureConfig);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EndpointConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EndpointConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class EndpointConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="productionVariants", required=true)
-      private final Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
+    private Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
 
     public Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants() {
         return this.productionVariants;
@@ -80,118 +80,103 @@ public final class EndpointConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EndpointConfigurationArgs(
-        @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig,
-        @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig,
-        @Nullable Output<String> kmsKeyArn,
-        @Nullable Output<String> name,
-        Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants,
-        @Nullable Output<Map<String,String>> tags) {
-        this.asyncInferenceConfig = asyncInferenceConfig;
-        this.dataCaptureConfig = dataCaptureConfig;
-        this.kmsKeyArn = kmsKeyArn;
-        this.name = name;
-        this.productionVariants = Objects.requireNonNull(productionVariants, "expected parameter 'productionVariants' to be non-null");
-        this.tags = tags;
-    }
+    private EndpointConfigurationArgs() {}
 
-    private EndpointConfigurationArgs() {
-        this.asyncInferenceConfig = Codegen.empty();
-        this.dataCaptureConfig = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.productionVariants = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EndpointConfigurationArgs(EndpointConfigurationArgs $) {
+        this.asyncInferenceConfig = $.asyncInferenceConfig;
+        this.dataCaptureConfig = $.dataCaptureConfig;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.name = $.name;
+        this.productionVariants = $.productionVariants;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
-        private @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
-        private @Nullable Output<String> kmsKeyArn;
-        private @Nullable Output<String> name;
-        private Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
-        private @Nullable Output<Map<String,String>> tags;
+        private EndpointConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigurationArgs();
         }
 
         public Builder(EndpointConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asyncInferenceConfig = defaults.asyncInferenceConfig;
-    	      this.dataCaptureConfig = defaults.dataCaptureConfig;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.name = defaults.name;
-    	      this.productionVariants = defaults.productionVariants;
-    	      this.tags = defaults.tags;
+            $ = new EndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder asyncInferenceConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig) {
-            this.asyncInferenceConfig = asyncInferenceConfig;
+            $.asyncInferenceConfig = asyncInferenceConfig;
             return this;
         }
-        public Builder asyncInferenceConfig(@Nullable EndpointConfigurationAsyncInferenceConfigArgs asyncInferenceConfig) {
-            this.asyncInferenceConfig = Codegen.ofNullable(asyncInferenceConfig);
-            return this;
+
+        public Builder asyncInferenceConfig(EndpointConfigurationAsyncInferenceConfigArgs asyncInferenceConfig) {
+            return asyncInferenceConfig(Output.of(asyncInferenceConfig));
         }
+
         public Builder dataCaptureConfig(@Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig) {
-            this.dataCaptureConfig = dataCaptureConfig;
+            $.dataCaptureConfig = dataCaptureConfig;
             return this;
         }
-        public Builder dataCaptureConfig(@Nullable EndpointConfigurationDataCaptureConfigArgs dataCaptureConfig) {
-            this.dataCaptureConfig = Codegen.ofNullable(dataCaptureConfig);
-            return this;
+
+        public Builder dataCaptureConfig(EndpointConfigurationDataCaptureConfigArgs dataCaptureConfig) {
+            return dataCaptureConfig(Output.of(dataCaptureConfig));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder productionVariants(Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants) {
-            this.productionVariants = Objects.requireNonNull(productionVariants);
+            $.productionVariants = productionVariants;
             return this;
         }
+
         public Builder productionVariants(List<EndpointConfigurationProductionVariantArgs> productionVariants) {
-            this.productionVariants = Output.of(Objects.requireNonNull(productionVariants));
-            return this;
+            return productionVariants(Output.of(productionVariants));
         }
+
         public Builder productionVariants(EndpointConfigurationProductionVariantArgs... productionVariants) {
             return productionVariants(List.of(productionVariants));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public EndpointConfigurationArgs build() {
-            return new EndpointConfigurationArgs(asyncInferenceConfig, dataCaptureConfig, kmsKeyArn, name, productionVariants, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public EndpointConfigurationArgs build() {
+            $.productionVariants = Objects.requireNonNull($.productionVariants, "expected parameter 'productionVariants' to be non-null");
+            return $;
         }
     }
+
 }

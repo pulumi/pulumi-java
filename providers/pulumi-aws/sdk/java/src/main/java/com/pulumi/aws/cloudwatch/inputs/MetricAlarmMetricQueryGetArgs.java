@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 import com.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryMetricGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="expression")
-      private final @Nullable Output<String> expression;
+    private @Nullable Output<String> expression;
 
-    public Output<String> expression() {
-        return this.expression == null ? Codegen.empty() : this.expression;
+    public Optional<Output<String>> expression() {
+        return Optional.ofNullable(this.expression);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -55,10 +55,10 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="metric")
-      private final @Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric;
+    private @Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric;
 
-    public Output<MetricAlarmMetricQueryMetricGetArgs> metric() {
-        return this.metric == null ? Codegen.empty() : this.metric;
+    public Optional<Output<MetricAlarmMetricQueryMetricGetArgs>> metric() {
+        return Optional.ofNullable(this.metric);
     }
 
     /**
@@ -77,115 +77,99 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="returnData")
-      private final @Nullable Output<Boolean> returnData;
+    private @Nullable Output<Boolean> returnData;
 
-    public Output<Boolean> returnData() {
-        return this.returnData == null ? Codegen.empty() : this.returnData;
+    public Optional<Output<Boolean>> returnData() {
+        return Optional.ofNullable(this.returnData);
     }
 
-    public MetricAlarmMetricQueryGetArgs(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> expression,
-        Output<String> id,
-        @Nullable Output<String> label,
-        @Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric,
-        @Nullable Output<Boolean> returnData) {
-        this.accountId = accountId;
-        this.expression = expression;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.label = label;
-        this.metric = metric;
-        this.returnData = returnData;
-    }
+    private MetricAlarmMetricQueryGetArgs() {}
 
-    private MetricAlarmMetricQueryGetArgs() {
-        this.accountId = Codegen.empty();
-        this.expression = Codegen.empty();
-        this.id = Codegen.empty();
-        this.label = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.returnData = Codegen.empty();
+    private MetricAlarmMetricQueryGetArgs(MetricAlarmMetricQueryGetArgs $) {
+        this.accountId = $.accountId;
+        this.expression = $.expression;
+        this.id = $.id;
+        this.label = $.label;
+        this.metric = $.metric;
+        this.returnData = $.returnData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlarmMetricQueryGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> expression;
-        private Output<String> id;
-        private @Nullable Output<String> label;
-        private @Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric;
-        private @Nullable Output<Boolean> returnData;
+        private MetricAlarmMetricQueryGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlarmMetricQueryGetArgs();
         }
 
         public Builder(MetricAlarmMetricQueryGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.expression = defaults.expression;
-    	      this.id = defaults.id;
-    	      this.label = defaults.label;
-    	      this.metric = defaults.metric;
-    	      this.returnData = defaults.returnData;
+            $ = new MetricAlarmMetricQueryGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder expression(@Nullable Output<String> expression) {
-            this.expression = expression;
+            $.expression = expression;
             return this;
         }
-        public Builder expression(@Nullable String expression) {
-            this.expression = Codegen.ofNullable(expression);
-            return this;
+
+        public Builder expression(String expression) {
+            return expression(Output.of(expression));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder metric(@Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric) {
-            this.metric = metric;
+            $.metric = metric;
             return this;
         }
-        public Builder metric(@Nullable MetricAlarmMetricQueryMetricGetArgs metric) {
-            this.metric = Codegen.ofNullable(metric);
-            return this;
+
+        public Builder metric(MetricAlarmMetricQueryMetricGetArgs metric) {
+            return metric(Output.of(metric));
         }
+
         public Builder returnData(@Nullable Output<Boolean> returnData) {
-            this.returnData = returnData;
+            $.returnData = returnData;
             return this;
         }
-        public Builder returnData(@Nullable Boolean returnData) {
-            this.returnData = Codegen.ofNullable(returnData);
-            return this;
-        }        public MetricAlarmMetricQueryGetArgs build() {
-            return new MetricAlarmMetricQueryGetArgs(accountId, expression, id, label, metric, returnData);
+
+        public Builder returnData(Boolean returnData) {
+            return returnData(Output.of(returnData));
+        }
+
+        public MetricAlarmMetricQueryGetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

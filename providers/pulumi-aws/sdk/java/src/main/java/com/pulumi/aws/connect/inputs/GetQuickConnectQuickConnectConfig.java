@@ -21,7 +21,7 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
      * 
      */
     @Import(name="phoneConfigs", required=true)
-      private final List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
+    private List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
 
     public List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs() {
         return this.phoneConfigs;
@@ -32,7 +32,7 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
      * 
      */
     @Import(name="queueConfigs", required=true)
-      private final List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
+    private List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
 
     public List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs() {
         return this.queueConfigs;
@@ -43,7 +43,7 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
      * 
      */
     @Import(name="quickConnectType", required=true)
-      private final String quickConnectType;
+    private String quickConnectType;
 
     public String quickConnectType() {
         return this.quickConnectType;
@@ -54,82 +54,78 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
      * 
      */
     @Import(name="userConfigs", required=true)
-      private final List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
+    private List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
 
     public List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs() {
         return this.userConfigs;
     }
 
-    public GetQuickConnectQuickConnectConfig(
-        List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
-        List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs,
-        String quickConnectType,
-        List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
-        this.phoneConfigs = Objects.requireNonNull(phoneConfigs, "expected parameter 'phoneConfigs' to be non-null");
-        this.queueConfigs = Objects.requireNonNull(queueConfigs, "expected parameter 'queueConfigs' to be non-null");
-        this.quickConnectType = Objects.requireNonNull(quickConnectType, "expected parameter 'quickConnectType' to be non-null");
-        this.userConfigs = Objects.requireNonNull(userConfigs, "expected parameter 'userConfigs' to be non-null");
-    }
+    private GetQuickConnectQuickConnectConfig() {}
 
-    private GetQuickConnectQuickConnectConfig() {
-        this.phoneConfigs = List.of();
-        this.queueConfigs = List.of();
-        this.quickConnectType = null;
-        this.userConfigs = List.of();
+    private GetQuickConnectQuickConnectConfig(GetQuickConnectQuickConnectConfig $) {
+        this.phoneConfigs = $.phoneConfigs;
+        this.queueConfigs = $.queueConfigs;
+        this.quickConnectType = $.quickConnectType;
+        this.userConfigs = $.userConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQuickConnectQuickConnectConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
-        private List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
-        private String quickConnectType;
-        private List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
+        private GetQuickConnectQuickConnectConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQuickConnectQuickConnectConfig();
         }
 
         public Builder(GetQuickConnectQuickConnectConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneConfigs = defaults.phoneConfigs;
-    	      this.queueConfigs = defaults.queueConfigs;
-    	      this.quickConnectType = defaults.quickConnectType;
-    	      this.userConfigs = defaults.userConfigs;
+            $ = new GetQuickConnectQuickConnectConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneConfigs(List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs) {
-            this.phoneConfigs = Objects.requireNonNull(phoneConfigs);
+            $.phoneConfigs = phoneConfigs;
             return this;
         }
+
         public Builder phoneConfigs(GetQuickConnectQuickConnectConfigPhoneConfig... phoneConfigs) {
             return phoneConfigs(List.of(phoneConfigs));
         }
+
         public Builder queueConfigs(List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs) {
-            this.queueConfigs = Objects.requireNonNull(queueConfigs);
+            $.queueConfigs = queueConfigs;
             return this;
         }
+
         public Builder queueConfigs(GetQuickConnectQuickConnectConfigQueueConfig... queueConfigs) {
             return queueConfigs(List.of(queueConfigs));
         }
+
         public Builder quickConnectType(String quickConnectType) {
-            this.quickConnectType = Objects.requireNonNull(quickConnectType);
+            $.quickConnectType = quickConnectType;
             return this;
         }
+
         public Builder userConfigs(List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
-            this.userConfigs = Objects.requireNonNull(userConfigs);
+            $.userConfigs = userConfigs;
             return this;
         }
+
         public Builder userConfigs(GetQuickConnectQuickConnectConfigUserConfig... userConfigs) {
             return userConfigs(List.of(userConfigs));
-        }        public GetQuickConnectQuickConnectConfig build() {
-            return new GetQuickConnectQuickConnectConfig(phoneConfigs, queueConfigs, quickConnectType, userConfigs);
+        }
+
+        public GetQuickConnectQuickConnectConfig build() {
+            $.phoneConfigs = Objects.requireNonNull($.phoneConfigs, "expected parameter 'phoneConfigs' to be non-null");
+            $.queueConfigs = Objects.requireNonNull($.queueConfigs, "expected parameter 'queueConfigs' to be non-null");
+            $.quickConnectType = Objects.requireNonNull($.quickConnectType, "expected parameter 'quickConnectType' to be non-null");
+            $.userConfigs = Objects.requireNonNull($.userConfigs, "expected parameter 'userConfigs' to be non-null");
+            return $;
         }
     }
+
 }

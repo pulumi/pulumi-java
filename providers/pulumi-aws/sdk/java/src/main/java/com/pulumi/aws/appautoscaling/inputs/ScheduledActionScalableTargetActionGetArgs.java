@@ -5,9 +5,9 @@ package com.pulumi.aws.appautoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ScheduledActionScalableTargetActionGetArgs extends com.pulumi
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Output<Integer> maxCapacity;
+    private @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> maxCapacity() {
-        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
+    public Optional<Output<Integer>> maxCapacity() {
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ScheduledActionScalableTargetActionGetArgs extends com.pulumi
      * 
      */
     @Import(name="minCapacity")
-      private final @Nullable Output<Integer> minCapacity;
+    private @Nullable Output<Integer> minCapacity;
 
-    public Output<Integer> minCapacity() {
-        return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
+    public Optional<Output<Integer>> minCapacity() {
+        return Optional.ofNullable(this.minCapacity);
     }
 
-    public ScheduledActionScalableTargetActionGetArgs(
-        @Nullable Output<Integer> maxCapacity,
-        @Nullable Output<Integer> minCapacity) {
-        this.maxCapacity = maxCapacity;
-        this.minCapacity = minCapacity;
-    }
+    private ScheduledActionScalableTargetActionGetArgs() {}
 
-    private ScheduledActionScalableTargetActionGetArgs() {
-        this.maxCapacity = Codegen.empty();
-        this.minCapacity = Codegen.empty();
+    private ScheduledActionScalableTargetActionGetArgs(ScheduledActionScalableTargetActionGetArgs $) {
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionScalableTargetActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxCapacity;
-        private @Nullable Output<Integer> minCapacity;
+        private ScheduledActionScalableTargetActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionScalableTargetActionGetArgs();
         }
 
         public Builder(ScheduledActionScalableTargetActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
+            $ = new ScheduledActionScalableTargetActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
-        public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Codegen.ofNullable(maxCapacity);
-            return this;
+
+        public Builder maxCapacity(Integer maxCapacity) {
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
-            this.minCapacity = minCapacity;
+            $.minCapacity = minCapacity;
             return this;
         }
-        public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Codegen.ofNullable(minCapacity);
-            return this;
-        }        public ScheduledActionScalableTargetActionGetArgs build() {
-            return new ScheduledActionScalableTargetActionGetArgs(maxCapacity, minCapacity);
+
+        public Builder minCapacity(Integer minCapacity) {
+            return minCapacity(Output.of(minCapacity));
+        }
+
+        public ScheduledActionScalableTargetActionGetArgs build() {
+            return $;
         }
     }
+
 }

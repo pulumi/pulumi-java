@@ -5,9 +5,9 @@ package com.pulumi.aws.quicksight;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsAccountId")
-      private final @Nullable Output<String> awsAccountId;
+    private @Nullable Output<String> awsAccountId;
 
-    public Output<String> awsAccountId() {
-        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
+    public Optional<Output<String>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -53,89 +53,79 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
-    public GroupArgs(
-        @Nullable Output<String> awsAccountId,
-        @Nullable Output<String> description,
-        Output<String> groupName,
-        @Nullable Output<String> namespace) {
-        this.awsAccountId = awsAccountId;
-        this.description = description;
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.namespace = namespace;
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.description = $.description;
+        this.groupName = $.groupName;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsAccountId;
-        private @Nullable Output<String> description;
-        private Output<String> groupName;
-        private @Nullable Output<String> namespace;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.description = defaults.description;
-    	      this.groupName = defaults.groupName;
-    	      this.namespace = defaults.namespace;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
-        public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Codegen.ofNullable(awsAccountId);
-            return this;
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
-        }        public GroupArgs build() {
-            return new GroupArgs(awsAccountId, description, groupName, namespace);
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        public GroupArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            return $;
         }
     }
+
 }

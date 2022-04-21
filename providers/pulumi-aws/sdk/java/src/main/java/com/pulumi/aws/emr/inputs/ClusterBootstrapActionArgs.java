@@ -5,10 +5,10 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterBootstrapActionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ClusterBootstrapActionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -43,79 +43,74 @@ public final class ClusterBootstrapActionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public ClusterBootstrapActionArgs(
-        @Nullable Output<List<String>> args,
-        Output<String> name,
-        Output<String> path) {
-        this.args = args;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private ClusterBootstrapActionArgs() {}
 
-    private ClusterBootstrapActionArgs() {
-        this.args = Codegen.empty();
-        this.name = Codegen.empty();
-        this.path = Codegen.empty();
+    private ClusterBootstrapActionArgs(ClusterBootstrapActionArgs $) {
+        this.args = $.args;
+        this.name = $.name;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterBootstrapActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private Output<String> name;
-        private Output<String> path;
+        private ClusterBootstrapActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterBootstrapActionArgs();
         }
 
         public Builder(ClusterBootstrapActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
+            $ = new ClusterBootstrapActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public ClusterBootstrapActionArgs build() {
-            return new ClusterBootstrapActionArgs(args, name, path);
+            return path(Output.of(path));
+        }
+
+        public ClusterBootstrapActionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

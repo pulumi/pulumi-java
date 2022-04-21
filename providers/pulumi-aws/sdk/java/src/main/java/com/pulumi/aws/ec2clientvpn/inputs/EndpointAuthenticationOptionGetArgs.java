@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2clientvpn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="activeDirectoryId")
-      private final @Nullable Output<String> activeDirectoryId;
+    private @Nullable Output<String> activeDirectoryId;
 
-    public Output<String> activeDirectoryId() {
-        return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
+    public Optional<Output<String>> activeDirectoryId() {
+        return Optional.ofNullable(this.activeDirectoryId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="rootCertificateChainArn")
-      private final @Nullable Output<String> rootCertificateChainArn;
+    private @Nullable Output<String> rootCertificateChainArn;
 
-    public Output<String> rootCertificateChainArn() {
-        return this.rootCertificateChainArn == null ? Codegen.empty() : this.rootCertificateChainArn;
+    public Optional<Output<String>> rootCertificateChainArn() {
+        return Optional.ofNullable(this.rootCertificateChainArn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="samlProviderArn")
-      private final @Nullable Output<String> samlProviderArn;
+    private @Nullable Output<String> samlProviderArn;
 
-    public Output<String> samlProviderArn() {
-        return this.samlProviderArn == null ? Codegen.empty() : this.samlProviderArn;
+    public Optional<Output<String>> samlProviderArn() {
+        return Optional.ofNullable(this.samlProviderArn);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="selfServiceSamlProviderArn")
-      private final @Nullable Output<String> selfServiceSamlProviderArn;
+    private @Nullable Output<String> selfServiceSamlProviderArn;
 
-    public Output<String> selfServiceSamlProviderArn() {
-        return this.selfServiceSamlProviderArn == null ? Codegen.empty() : this.selfServiceSamlProviderArn;
+    public Optional<Output<String>> selfServiceSamlProviderArn() {
+        return Optional.ofNullable(this.selfServiceSamlProviderArn);
     }
 
     /**
@@ -64,102 +64,89 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public EndpointAuthenticationOptionGetArgs(
-        @Nullable Output<String> activeDirectoryId,
-        @Nullable Output<String> rootCertificateChainArn,
-        @Nullable Output<String> samlProviderArn,
-        @Nullable Output<String> selfServiceSamlProviderArn,
-        Output<String> type) {
-        this.activeDirectoryId = activeDirectoryId;
-        this.rootCertificateChainArn = rootCertificateChainArn;
-        this.samlProviderArn = samlProviderArn;
-        this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EndpointAuthenticationOptionGetArgs() {}
 
-    private EndpointAuthenticationOptionGetArgs() {
-        this.activeDirectoryId = Codegen.empty();
-        this.rootCertificateChainArn = Codegen.empty();
-        this.samlProviderArn = Codegen.empty();
-        this.selfServiceSamlProviderArn = Codegen.empty();
-        this.type = Codegen.empty();
+    private EndpointAuthenticationOptionGetArgs(EndpointAuthenticationOptionGetArgs $) {
+        this.activeDirectoryId = $.activeDirectoryId;
+        this.rootCertificateChainArn = $.rootCertificateChainArn;
+        this.samlProviderArn = $.samlProviderArn;
+        this.selfServiceSamlProviderArn = $.selfServiceSamlProviderArn;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointAuthenticationOptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activeDirectoryId;
-        private @Nullable Output<String> rootCertificateChainArn;
-        private @Nullable Output<String> samlProviderArn;
-        private @Nullable Output<String> selfServiceSamlProviderArn;
-        private Output<String> type;
+        private EndpointAuthenticationOptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointAuthenticationOptionGetArgs();
         }
 
         public Builder(EndpointAuthenticationOptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryId = defaults.activeDirectoryId;
-    	      this.rootCertificateChainArn = defaults.rootCertificateChainArn;
-    	      this.samlProviderArn = defaults.samlProviderArn;
-    	      this.selfServiceSamlProviderArn = defaults.selfServiceSamlProviderArn;
-    	      this.type = defaults.type;
+            $ = new EndpointAuthenticationOptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryId(@Nullable Output<String> activeDirectoryId) {
-            this.activeDirectoryId = activeDirectoryId;
+            $.activeDirectoryId = activeDirectoryId;
             return this;
         }
-        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = Codegen.ofNullable(activeDirectoryId);
-            return this;
+
+        public Builder activeDirectoryId(String activeDirectoryId) {
+            return activeDirectoryId(Output.of(activeDirectoryId));
         }
+
         public Builder rootCertificateChainArn(@Nullable Output<String> rootCertificateChainArn) {
-            this.rootCertificateChainArn = rootCertificateChainArn;
+            $.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
-        public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
-            this.rootCertificateChainArn = Codegen.ofNullable(rootCertificateChainArn);
-            return this;
+
+        public Builder rootCertificateChainArn(String rootCertificateChainArn) {
+            return rootCertificateChainArn(Output.of(rootCertificateChainArn));
         }
+
         public Builder samlProviderArn(@Nullable Output<String> samlProviderArn) {
-            this.samlProviderArn = samlProviderArn;
+            $.samlProviderArn = samlProviderArn;
             return this;
         }
-        public Builder samlProviderArn(@Nullable String samlProviderArn) {
-            this.samlProviderArn = Codegen.ofNullable(samlProviderArn);
-            return this;
+
+        public Builder samlProviderArn(String samlProviderArn) {
+            return samlProviderArn(Output.of(samlProviderArn));
         }
+
         public Builder selfServiceSamlProviderArn(@Nullable Output<String> selfServiceSamlProviderArn) {
-            this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
+            $.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
-        public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
-            this.selfServiceSamlProviderArn = Codegen.ofNullable(selfServiceSamlProviderArn);
-            return this;
+
+        public Builder selfServiceSamlProviderArn(String selfServiceSamlProviderArn) {
+            return selfServiceSamlProviderArn(Output.of(selfServiceSamlProviderArn));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public EndpointAuthenticationOptionGetArgs build() {
-            return new EndpointAuthenticationOptionGetArgs(activeDirectoryId, rootCertificateChainArn, samlProviderArn, selfServiceSamlProviderArn, type);
+            return type(Output.of(type));
+        }
+
+        public EndpointAuthenticationOptionGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class GlobalSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="globalSettings")
-      private final @Nullable Output<Map<String,String>> globalSettings;
+    private @Nullable Output<Map<String,String>> globalSettings;
 
-    public Output<Map<String,String>> globalSettings() {
-        return this.globalSettings == null ? Codegen.empty() : this.globalSettings;
+    public Optional<Output<Map<String,String>>> globalSettings() {
+        return Optional.ofNullable(this.globalSettings);
     }
 
-    public GlobalSettingsState(@Nullable Output<Map<String,String>> globalSettings) {
-        this.globalSettings = globalSettings;
-    }
+    private GlobalSettingsState() {}
 
-    private GlobalSettingsState() {
-        this.globalSettings = Codegen.empty();
+    private GlobalSettingsState(GlobalSettingsState $) {
+        this.globalSettings = $.globalSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> globalSettings;
+        private GlobalSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalSettingsState();
         }
 
         public Builder(GlobalSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalSettings = defaults.globalSettings;
+            $ = new GlobalSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder globalSettings(@Nullable Output<Map<String,String>> globalSettings) {
-            this.globalSettings = globalSettings;
+            $.globalSettings = globalSettings;
             return this;
         }
-        public Builder globalSettings(@Nullable Map<String,String> globalSettings) {
-            this.globalSettings = Codegen.ofNullable(globalSettings);
-            return this;
-        }        public GlobalSettingsState build() {
-            return new GlobalSettingsState(globalSettings);
+
+        public Builder globalSettings(Map<String,String> globalSettings) {
+            return globalSettings(Output.of(globalSettings));
+        }
+
+        public GlobalSettingsState build() {
+            return $;
         }
     }
+
 }

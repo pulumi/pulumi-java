@@ -5,7 +5,6 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TaskDefinitionEphemeralStorageGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="sizeInGib", required=true)
-      private final Output<Integer> sizeInGib;
+    private Output<Integer> sizeInGib;
 
     public Output<Integer> sizeInGib() {
         return this.sizeInGib;
     }
 
-    public TaskDefinitionEphemeralStorageGetArgs(Output<Integer> sizeInGib) {
-        this.sizeInGib = Objects.requireNonNull(sizeInGib, "expected parameter 'sizeInGib' to be non-null");
-    }
+    private TaskDefinitionEphemeralStorageGetArgs() {}
 
-    private TaskDefinitionEphemeralStorageGetArgs() {
-        this.sizeInGib = Codegen.empty();
+    private TaskDefinitionEphemeralStorageGetArgs(TaskDefinitionEphemeralStorageGetArgs $) {
+        this.sizeInGib = $.sizeInGib;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionEphemeralStorageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> sizeInGib;
+        private TaskDefinitionEphemeralStorageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionEphemeralStorageGetArgs();
         }
 
         public Builder(TaskDefinitionEphemeralStorageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sizeInGib = defaults.sizeInGib;
+            $ = new TaskDefinitionEphemeralStorageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sizeInGib(Output<Integer> sizeInGib) {
-            this.sizeInGib = Objects.requireNonNull(sizeInGib);
+            $.sizeInGib = sizeInGib;
             return this;
         }
+
         public Builder sizeInGib(Integer sizeInGib) {
-            this.sizeInGib = Output.of(Objects.requireNonNull(sizeInGib));
-            return this;
-        }        public TaskDefinitionEphemeralStorageGetArgs build() {
-            return new TaskDefinitionEphemeralStorageGetArgs(sizeInGib);
+            return sizeInGib(Output.of(sizeInGib));
+        }
+
+        public TaskDefinitionEphemeralStorageGetArgs build() {
+            $.sizeInGib = Objects.requireNonNull($.sizeInGib, "expected parameter 'sizeInGib' to be non-null");
+            return $;
         }
     }
+
 }

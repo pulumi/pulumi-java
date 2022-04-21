@@ -8,9 +8,9 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="outputs")
-      private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
+    private @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
 
-    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs() {
-        return this.outputs == null ? Codegen.empty() : this.outputs;
+    public Optional<Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>>> outputs() {
+        return Optional.ofNullable(this.outputs);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="referenceDataSource")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource() {
-        return this.referenceDataSource == null ? Codegen.empty() : this.referenceDataSource;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs>> referenceDataSource() {
+        return Optional.ofNullable(this.referenceDataSource);
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs(
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input,
-        @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs,
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource) {
-        this.input = input;
-        this.outputs = outputs;
-        this.referenceDataSource = referenceDataSource;
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs() {
-        this.input = Codegen.empty();
-        this.outputs = Codegen.empty();
-        this.referenceDataSource = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs $) {
+        this.input = $.input;
+        this.outputs = $.outputs;
+        this.referenceDataSource = $.referenceDataSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
-        private @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.outputs = defaults.outputs;
-    	      this.referenceDataSource = defaults.referenceDataSource;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder outputs(@Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs) {
-            this.outputs = outputs;
+            $.outputs = outputs;
             return this;
         }
-        public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs> outputs) {
-            this.outputs = Codegen.ofNullable(outputs);
-            return this;
+
+        public Builder outputs(List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs> outputs) {
+            return outputs(Output.of(outputs));
         }
+
         public Builder outputs(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs... outputs) {
             return outputs(List.of(outputs));
         }
+
         public Builder referenceDataSource(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource) {
-            this.referenceDataSource = referenceDataSource;
+            $.referenceDataSource = referenceDataSource;
             return this;
         }
-        public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs referenceDataSource) {
-            this.referenceDataSource = Codegen.ofNullable(referenceDataSource);
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs(input, outputs, referenceDataSource);
+
+        public Builder referenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs referenceDataSource) {
+            return referenceDataSource(Output.of(referenceDataSource));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

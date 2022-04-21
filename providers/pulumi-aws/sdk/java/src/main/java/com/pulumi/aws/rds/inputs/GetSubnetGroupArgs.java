@@ -17,45 +17,45 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetSubnetGroupArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetSubnetGroupArgs() {}
 
-    private GetSubnetGroupArgs() {
-        this.name = null;
+    private GetSubnetGroupArgs(GetSubnetGroupArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetSubnetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetGroupArgs();
         }
 
         public Builder(GetSubnetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetSubnetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetSubnetGroupArgs build() {
-            return new GetSubnetGroupArgs(name);
+        }
+
+        public GetSubnetGroupArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

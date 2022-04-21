@@ -6,10 +6,10 @@ package com.pulumi.aws.cfg.inputs;
 import com.pulumi.aws.cfg.inputs.RuleSourceSourceDetailArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RuleSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner", required=true)
-      private final Output<String> owner;
+    private Output<String> owner;
 
     public Output<String> owner() {
         return this.owner;
@@ -33,10 +33,10 @@ public final class RuleSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDetails")
-      private final @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails;
+    private @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails;
 
-    public Output<List<RuleSourceSourceDetailArgs>> sourceDetails() {
-        return this.sourceDetails == null ? Codegen.empty() : this.sourceDetails;
+    public Optional<Output<List<RuleSourceSourceDetailArgs>>> sourceDetails() {
+        return Optional.ofNullable(this.sourceDetails);
     }
 
     /**
@@ -44,79 +44,74 @@ public final class RuleSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceIdentifier", required=true)
-      private final Output<String> sourceIdentifier;
+    private Output<String> sourceIdentifier;
 
     public Output<String> sourceIdentifier() {
         return this.sourceIdentifier;
     }
 
-    public RuleSourceArgs(
-        Output<String> owner,
-        @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails,
-        Output<String> sourceIdentifier) {
-        this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
-        this.sourceDetails = sourceDetails;
-        this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
-    }
+    private RuleSourceArgs() {}
 
-    private RuleSourceArgs() {
-        this.owner = Codegen.empty();
-        this.sourceDetails = Codegen.empty();
-        this.sourceIdentifier = Codegen.empty();
+    private RuleSourceArgs(RuleSourceArgs $) {
+        this.owner = $.owner;
+        this.sourceDetails = $.sourceDetails;
+        this.sourceIdentifier = $.sourceIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> owner;
-        private @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails;
-        private Output<String> sourceIdentifier;
+        private RuleSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleSourceArgs();
         }
 
         public Builder(RuleSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.owner = defaults.owner;
-    	      this.sourceDetails = defaults.sourceDetails;
-    	      this.sourceIdentifier = defaults.sourceIdentifier;
+            $ = new RuleSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder owner(Output<String> owner) {
-            this.owner = Objects.requireNonNull(owner);
+            $.owner = owner;
             return this;
         }
+
         public Builder owner(String owner) {
-            this.owner = Output.of(Objects.requireNonNull(owner));
-            return this;
+            return owner(Output.of(owner));
         }
+
         public Builder sourceDetails(@Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails) {
-            this.sourceDetails = sourceDetails;
+            $.sourceDetails = sourceDetails;
             return this;
         }
-        public Builder sourceDetails(@Nullable List<RuleSourceSourceDetailArgs> sourceDetails) {
-            this.sourceDetails = Codegen.ofNullable(sourceDetails);
-            return this;
+
+        public Builder sourceDetails(List<RuleSourceSourceDetailArgs> sourceDetails) {
+            return sourceDetails(Output.of(sourceDetails));
         }
+
         public Builder sourceDetails(RuleSourceSourceDetailArgs... sourceDetails) {
             return sourceDetails(List.of(sourceDetails));
         }
+
         public Builder sourceIdentifier(Output<String> sourceIdentifier) {
-            this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
+            $.sourceIdentifier = sourceIdentifier;
             return this;
         }
+
         public Builder sourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
-            return this;
-        }        public RuleSourceArgs build() {
-            return new RuleSourceArgs(owner, sourceDetails, sourceIdentifier);
+            return sourceIdentifier(Output.of(sourceIdentifier));
+        }
+
+        public RuleSourceArgs build() {
+            $.owner = Objects.requireNonNull($.owner, "expected parameter 'owner' to be non-null");
+            $.sourceIdentifier = Objects.requireNonNull($.sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

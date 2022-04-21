@@ -5,9 +5,9 @@ package com.pulumi.aws.ssoadmin.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ManagedPolicyAttachmentState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="instanceArn")
-      private final @Nullable Output<String> instanceArn;
+    private @Nullable Output<String> instanceArn;
 
-    public Output<String> instanceArn() {
-        return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
+    public Optional<Output<String>> instanceArn() {
+        return Optional.ofNullable(this.instanceArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ManagedPolicyAttachmentState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="managedPolicyArn")
-      private final @Nullable Output<String> managedPolicyArn;
+    private @Nullable Output<String> managedPolicyArn;
 
-    public Output<String> managedPolicyArn() {
-        return this.managedPolicyArn == null ? Codegen.empty() : this.managedPolicyArn;
+    public Optional<Output<String>> managedPolicyArn() {
+        return Optional.ofNullable(this.managedPolicyArn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManagedPolicyAttachmentState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="managedPolicyName")
-      private final @Nullable Output<String> managedPolicyName;
+    private @Nullable Output<String> managedPolicyName;
 
-    public Output<String> managedPolicyName() {
-        return this.managedPolicyName == null ? Codegen.empty() : this.managedPolicyName;
+    public Optional<Output<String>> managedPolicyName() {
+        return Optional.ofNullable(this.managedPolicyName);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class ManagedPolicyAttachmentState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="permissionSetArn")
-      private final @Nullable Output<String> permissionSetArn;
+    private @Nullable Output<String> permissionSetArn;
 
-    public Output<String> permissionSetArn() {
-        return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
+    public Optional<Output<String>> permissionSetArn() {
+        return Optional.ofNullable(this.permissionSetArn);
     }
 
-    public ManagedPolicyAttachmentState(
-        @Nullable Output<String> instanceArn,
-        @Nullable Output<String> managedPolicyArn,
-        @Nullable Output<String> managedPolicyName,
-        @Nullable Output<String> permissionSetArn) {
-        this.instanceArn = instanceArn;
-        this.managedPolicyArn = managedPolicyArn;
-        this.managedPolicyName = managedPolicyName;
-        this.permissionSetArn = permissionSetArn;
-    }
+    private ManagedPolicyAttachmentState() {}
 
-    private ManagedPolicyAttachmentState() {
-        this.instanceArn = Codegen.empty();
-        this.managedPolicyArn = Codegen.empty();
-        this.managedPolicyName = Codegen.empty();
-        this.permissionSetArn = Codegen.empty();
+    private ManagedPolicyAttachmentState(ManagedPolicyAttachmentState $) {
+        this.instanceArn = $.instanceArn;
+        this.managedPolicyArn = $.managedPolicyArn;
+        this.managedPolicyName = $.managedPolicyName;
+        this.permissionSetArn = $.permissionSetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPolicyAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceArn;
-        private @Nullable Output<String> managedPolicyArn;
-        private @Nullable Output<String> managedPolicyName;
-        private @Nullable Output<String> permissionSetArn;
+        private ManagedPolicyAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPolicyAttachmentState();
         }
 
         public Builder(ManagedPolicyAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.managedPolicyArn = defaults.managedPolicyArn;
-    	      this.managedPolicyName = defaults.managedPolicyName;
-    	      this.permissionSetArn = defaults.permissionSetArn;
+            $ = new ManagedPolicyAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceArn(@Nullable Output<String> instanceArn) {
-            this.instanceArn = instanceArn;
+            $.instanceArn = instanceArn;
             return this;
         }
-        public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Codegen.ofNullable(instanceArn);
-            return this;
+
+        public Builder instanceArn(String instanceArn) {
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder managedPolicyArn(@Nullable Output<String> managedPolicyArn) {
-            this.managedPolicyArn = managedPolicyArn;
+            $.managedPolicyArn = managedPolicyArn;
             return this;
         }
-        public Builder managedPolicyArn(@Nullable String managedPolicyArn) {
-            this.managedPolicyArn = Codegen.ofNullable(managedPolicyArn);
-            return this;
+
+        public Builder managedPolicyArn(String managedPolicyArn) {
+            return managedPolicyArn(Output.of(managedPolicyArn));
         }
+
         public Builder managedPolicyName(@Nullable Output<String> managedPolicyName) {
-            this.managedPolicyName = managedPolicyName;
+            $.managedPolicyName = managedPolicyName;
             return this;
         }
-        public Builder managedPolicyName(@Nullable String managedPolicyName) {
-            this.managedPolicyName = Codegen.ofNullable(managedPolicyName);
-            return this;
+
+        public Builder managedPolicyName(String managedPolicyName) {
+            return managedPolicyName(Output.of(managedPolicyName));
         }
+
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
-            this.permissionSetArn = permissionSetArn;
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
-        public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Codegen.ofNullable(permissionSetArn);
-            return this;
-        }        public ManagedPolicyAttachmentState build() {
-            return new ManagedPolicyAttachmentState(instanceArn, managedPolicyArn, managedPolicyName, permissionSetArn);
+
+        public Builder permissionSetArn(String permissionSetArn) {
+            return permissionSetArn(Output.of(permissionSetArn));
+        }
+
+        public ManagedPolicyAttachmentState build() {
+            return $;
         }
     }
+
 }

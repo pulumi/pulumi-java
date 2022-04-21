@@ -18,48 +18,49 @@ public final class GetCodeSigningConfigAllowedPublisher extends com.pulumi.resou
      * 
      */
     @Import(name="signingProfileVersionArns", required=true)
-      private final List<String> signingProfileVersionArns;
+    private List<String> signingProfileVersionArns;
 
     public List<String> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
 
-    public GetCodeSigningConfigAllowedPublisher(List<String> signingProfileVersionArns) {
-        this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns, "expected parameter 'signingProfileVersionArns' to be non-null");
-    }
+    private GetCodeSigningConfigAllowedPublisher() {}
 
-    private GetCodeSigningConfigAllowedPublisher() {
-        this.signingProfileVersionArns = List.of();
+    private GetCodeSigningConfigAllowedPublisher(GetCodeSigningConfigAllowedPublisher $) {
+        this.signingProfileVersionArns = $.signingProfileVersionArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCodeSigningConfigAllowedPublisher defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> signingProfileVersionArns;
+        private GetCodeSigningConfigAllowedPublisher $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCodeSigningConfigAllowedPublisher();
         }
 
         public Builder(GetCodeSigningConfigAllowedPublisher defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signingProfileVersionArns = defaults.signingProfileVersionArns;
+            $ = new GetCodeSigningConfigAllowedPublisher(Objects.requireNonNull(defaults));
         }
 
         public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
-            this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
+            $.signingProfileVersionArns = signingProfileVersionArns;
             return this;
         }
+
         public Builder signingProfileVersionArns(String... signingProfileVersionArns) {
             return signingProfileVersionArns(List.of(signingProfileVersionArns));
-        }        public GetCodeSigningConfigAllowedPublisher build() {
-            return new GetCodeSigningConfigAllowedPublisher(signingProfileVersionArns);
+        }
+
+        public GetCodeSigningConfigAllowedPublisher build() {
+            $.signingProfileVersionArns = Objects.requireNonNull($.signingProfileVersionArns, "expected parameter 'signingProfileVersionArns' to be non-null");
+            return $;
         }
     }
+
 }

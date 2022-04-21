@@ -5,9 +5,9 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="pipelineExecutionStartCondition")
-      private final @Nullable Output<String> pipelineExecutionStartCondition;
+    private @Nullable Output<String> pipelineExecutionStartCondition;
 
-    public Output<String> pipelineExecutionStartCondition() {
-        return this.pipelineExecutionStartCondition == null ? Codegen.empty() : this.pipelineExecutionStartCondition;
+    public Optional<Output<String>> pipelineExecutionStartCondition() {
+        return Optional.ofNullable(this.pipelineExecutionStartCondition);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scheduleExpression", required=true)
-      private final Output<String> scheduleExpression;
+    private Output<String> scheduleExpression;
 
     public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public ImagePipelineScheduleArgs(
-        @Nullable Output<String> pipelineExecutionStartCondition,
-        Output<String> scheduleExpression) {
-        this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private ImagePipelineScheduleArgs() {}
 
-    private ImagePipelineScheduleArgs() {
-        this.pipelineExecutionStartCondition = Codegen.empty();
-        this.scheduleExpression = Codegen.empty();
+    private ImagePipelineScheduleArgs(ImagePipelineScheduleArgs $) {
+        this.pipelineExecutionStartCondition = $.pipelineExecutionStartCondition;
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImagePipelineScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pipelineExecutionStartCondition;
-        private Output<String> scheduleExpression;
+        private ImagePipelineScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImagePipelineScheduleArgs();
         }
 
         public Builder(ImagePipelineScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineExecutionStartCondition = defaults.pipelineExecutionStartCondition;
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new ImagePipelineScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineExecutionStartCondition(@Nullable Output<String> pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
+            $.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
-        public Builder pipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = Codegen.ofNullable(pipelineExecutionStartCondition);
-            return this;
+
+        public Builder pipelineExecutionStartCondition(String pipelineExecutionStartCondition) {
+            return pipelineExecutionStartCondition(Output.of(pipelineExecutionStartCondition));
         }
+
         public Builder scheduleExpression(Output<String> scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
+
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
-            return this;
-        }        public ImagePipelineScheduleArgs build() {
-            return new ImagePipelineScheduleArgs(pipelineExecutionStartCondition, scheduleExpression);
+            return scheduleExpression(Output.of(scheduleExpression));
+        }
+
+        public ImagePipelineScheduleArgs build() {
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

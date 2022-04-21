@@ -6,11 +6,11 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.glue.inputs.PartitionStorageDescriptorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -45,10 +45,10 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionValues", required=true)
-      private final Output<List<String>> partitionValues;
+    private Output<List<String>> partitionValues;
 
     public Output<List<String>> partitionValues() {
         return this.partitionValues;
@@ -67,125 +67,112 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageDescriptor")
-      private final @Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor;
+    private @Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor;
 
-    public Output<PartitionStorageDescriptorArgs> storageDescriptor() {
-        return this.storageDescriptor == null ? Codegen.empty() : this.storageDescriptor;
+    public Optional<Output<PartitionStorageDescriptorArgs>> storageDescriptor() {
+        return Optional.ofNullable(this.storageDescriptor);
     }
 
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public PartitionArgs(
-        @Nullable Output<String> catalogId,
-        Output<String> databaseName,
-        @Nullable Output<Map<String,String>> parameters,
-        Output<List<String>> partitionValues,
-        @Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor,
-        Output<String> tableName) {
-        this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.parameters = parameters;
-        this.partitionValues = Objects.requireNonNull(partitionValues, "expected parameter 'partitionValues' to be non-null");
-        this.storageDescriptor = storageDescriptor;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private PartitionArgs() {}
 
-    private PartitionArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.partitionValues = Codegen.empty();
-        this.storageDescriptor = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private PartitionArgs(PartitionArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.parameters = $.parameters;
+        this.partitionValues = $.partitionValues;
+        this.storageDescriptor = $.storageDescriptor;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private Output<String> databaseName;
-        private @Nullable Output<Map<String,String>> parameters;
-        private Output<List<String>> partitionValues;
-        private @Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor;
-        private Output<String> tableName;
+        private PartitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionArgs();
         }
 
         public Builder(PartitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.parameters = defaults.parameters;
-    	      this.partitionValues = defaults.partitionValues;
-    	      this.storageDescriptor = defaults.storageDescriptor;
-    	      this.tableName = defaults.tableName;
+            $ = new PartitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder partitionValues(Output<List<String>> partitionValues) {
-            this.partitionValues = Objects.requireNonNull(partitionValues);
+            $.partitionValues = partitionValues;
             return this;
         }
+
         public Builder partitionValues(List<String> partitionValues) {
-            this.partitionValues = Output.of(Objects.requireNonNull(partitionValues));
-            return this;
+            return partitionValues(Output.of(partitionValues));
         }
+
         public Builder partitionValues(String... partitionValues) {
             return partitionValues(List.of(partitionValues));
         }
+
         public Builder storageDescriptor(@Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor) {
-            this.storageDescriptor = storageDescriptor;
+            $.storageDescriptor = storageDescriptor;
             return this;
         }
-        public Builder storageDescriptor(@Nullable PartitionStorageDescriptorArgs storageDescriptor) {
-            this.storageDescriptor = Codegen.ofNullable(storageDescriptor);
-            return this;
+
+        public Builder storageDescriptor(PartitionStorageDescriptorArgs storageDescriptor) {
+            return storageDescriptor(Output.of(storageDescriptor));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public PartitionArgs build() {
-            return new PartitionArgs(catalogId, databaseName, parameters, partitionValues, storageDescriptor, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public PartitionArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.partitionValues = Objects.requireNonNull($.partitionValues, "expected parameter 'partitionValues' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

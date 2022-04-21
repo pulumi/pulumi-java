@@ -5,11 +5,11 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClassifierCsvClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allowSingleColumn")
-      private final @Nullable Output<Boolean> allowSingleColumn;
+    private @Nullable Output<Boolean> allowSingleColumn;
 
-    public Output<Boolean> allowSingleColumn() {
-        return this.allowSingleColumn == null ? Codegen.empty() : this.allowSingleColumn;
+    public Optional<Output<Boolean>> allowSingleColumn() {
+        return Optional.ofNullable(this.allowSingleColumn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClassifierCsvClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="containsHeader")
-      private final @Nullable Output<String> containsHeader;
+    private @Nullable Output<String> containsHeader;
 
-    public Output<String> containsHeader() {
-        return this.containsHeader == null ? Codegen.empty() : this.containsHeader;
+    public Optional<Output<String>> containsHeader() {
+        return Optional.ofNullable(this.containsHeader);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClassifierCsvClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="delimiter")
-      private final @Nullable Output<String> delimiter;
+    private @Nullable Output<String> delimiter;
 
-    public Output<String> delimiter() {
-        return this.delimiter == null ? Codegen.empty() : this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClassifierCsvClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="disableValueTrimming")
-      private final @Nullable Output<Boolean> disableValueTrimming;
+    private @Nullable Output<Boolean> disableValueTrimming;
 
-    public Output<Boolean> disableValueTrimming() {
-        return this.disableValueTrimming == null ? Codegen.empty() : this.disableValueTrimming;
+    public Optional<Output<Boolean>> disableValueTrimming() {
+        return Optional.ofNullable(this.disableValueTrimming);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClassifierCsvClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<String>> headers;
+    private @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<String>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -77,118 +77,102 @@ public final class ClassifierCsvClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="quoteSymbol")
-      private final @Nullable Output<String> quoteSymbol;
+    private @Nullable Output<String> quoteSymbol;
 
-    public Output<String> quoteSymbol() {
-        return this.quoteSymbol == null ? Codegen.empty() : this.quoteSymbol;
+    public Optional<Output<String>> quoteSymbol() {
+        return Optional.ofNullable(this.quoteSymbol);
     }
 
-    public ClassifierCsvClassifierGetArgs(
-        @Nullable Output<Boolean> allowSingleColumn,
-        @Nullable Output<String> containsHeader,
-        @Nullable Output<String> delimiter,
-        @Nullable Output<Boolean> disableValueTrimming,
-        @Nullable Output<List<String>> headers,
-        @Nullable Output<String> quoteSymbol) {
-        this.allowSingleColumn = allowSingleColumn;
-        this.containsHeader = containsHeader;
-        this.delimiter = delimiter;
-        this.disableValueTrimming = disableValueTrimming;
-        this.headers = headers;
-        this.quoteSymbol = quoteSymbol;
-    }
+    private ClassifierCsvClassifierGetArgs() {}
 
-    private ClassifierCsvClassifierGetArgs() {
-        this.allowSingleColumn = Codegen.empty();
-        this.containsHeader = Codegen.empty();
-        this.delimiter = Codegen.empty();
-        this.disableValueTrimming = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.quoteSymbol = Codegen.empty();
+    private ClassifierCsvClassifierGetArgs(ClassifierCsvClassifierGetArgs $) {
+        this.allowSingleColumn = $.allowSingleColumn;
+        this.containsHeader = $.containsHeader;
+        this.delimiter = $.delimiter;
+        this.disableValueTrimming = $.disableValueTrimming;
+        this.headers = $.headers;
+        this.quoteSymbol = $.quoteSymbol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassifierCsvClassifierGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowSingleColumn;
-        private @Nullable Output<String> containsHeader;
-        private @Nullable Output<String> delimiter;
-        private @Nullable Output<Boolean> disableValueTrimming;
-        private @Nullable Output<List<String>> headers;
-        private @Nullable Output<String> quoteSymbol;
+        private ClassifierCsvClassifierGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassifierCsvClassifierGetArgs();
         }
 
         public Builder(ClassifierCsvClassifierGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSingleColumn = defaults.allowSingleColumn;
-    	      this.containsHeader = defaults.containsHeader;
-    	      this.delimiter = defaults.delimiter;
-    	      this.disableValueTrimming = defaults.disableValueTrimming;
-    	      this.headers = defaults.headers;
-    	      this.quoteSymbol = defaults.quoteSymbol;
+            $ = new ClassifierCsvClassifierGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSingleColumn(@Nullable Output<Boolean> allowSingleColumn) {
-            this.allowSingleColumn = allowSingleColumn;
+            $.allowSingleColumn = allowSingleColumn;
             return this;
         }
-        public Builder allowSingleColumn(@Nullable Boolean allowSingleColumn) {
-            this.allowSingleColumn = Codegen.ofNullable(allowSingleColumn);
-            return this;
+
+        public Builder allowSingleColumn(Boolean allowSingleColumn) {
+            return allowSingleColumn(Output.of(allowSingleColumn));
         }
+
         public Builder containsHeader(@Nullable Output<String> containsHeader) {
-            this.containsHeader = containsHeader;
+            $.containsHeader = containsHeader;
             return this;
         }
-        public Builder containsHeader(@Nullable String containsHeader) {
-            this.containsHeader = Codegen.ofNullable(containsHeader);
-            return this;
+
+        public Builder containsHeader(String containsHeader) {
+            return containsHeader(Output.of(containsHeader));
         }
+
         public Builder delimiter(@Nullable Output<String> delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
-        public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Codegen.ofNullable(delimiter);
-            return this;
+
+        public Builder delimiter(String delimiter) {
+            return delimiter(Output.of(delimiter));
         }
+
         public Builder disableValueTrimming(@Nullable Output<Boolean> disableValueTrimming) {
-            this.disableValueTrimming = disableValueTrimming;
+            $.disableValueTrimming = disableValueTrimming;
             return this;
         }
-        public Builder disableValueTrimming(@Nullable Boolean disableValueTrimming) {
-            this.disableValueTrimming = Codegen.ofNullable(disableValueTrimming);
-            return this;
+
+        public Builder disableValueTrimming(Boolean disableValueTrimming) {
+            return disableValueTrimming(Output.of(disableValueTrimming));
         }
+
         public Builder headers(@Nullable Output<List<String>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<String> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<String> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(String... headers) {
             return headers(List.of(headers));
         }
+
         public Builder quoteSymbol(@Nullable Output<String> quoteSymbol) {
-            this.quoteSymbol = quoteSymbol;
+            $.quoteSymbol = quoteSymbol;
             return this;
         }
-        public Builder quoteSymbol(@Nullable String quoteSymbol) {
-            this.quoteSymbol = Codegen.ofNullable(quoteSymbol);
-            return this;
-        }        public ClassifierCsvClassifierGetArgs build() {
-            return new ClassifierCsvClassifierGetArgs(allowSingleColumn, containsHeader, delimiter, disableValueTrimming, headers, quoteSymbol);
+
+        public Builder quoteSymbol(String quoteSymbol) {
+            return quoteSymbol(Output.of(quoteSymbol));
+        }
+
+        public ClassifierCsvClassifierGetArgs build() {
+            return $;
         }
     }
+
 }

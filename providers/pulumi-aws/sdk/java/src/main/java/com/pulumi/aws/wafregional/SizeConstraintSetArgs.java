@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional;
 import com.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SizeConstraintSetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class SizeConstraintSetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sizeConstraints")
-      private final @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
+    private @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
 
-    public Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints() {
-        return this.sizeConstraints == null ? Codegen.empty() : this.sizeConstraints;
+    public Optional<Output<List<SizeConstraintSetSizeConstraintArgs>>> sizeConstraints() {
+        return Optional.ofNullable(this.sizeConstraints);
     }
 
-    public SizeConstraintSetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
-        this.name = name;
-        this.sizeConstraints = sizeConstraints;
-    }
+    private SizeConstraintSetArgs() {}
 
-    private SizeConstraintSetArgs() {
-        this.name = Codegen.empty();
-        this.sizeConstraints = Codegen.empty();
+    private SizeConstraintSetArgs(SizeConstraintSetArgs $) {
+        this.name = $.name;
+        this.sizeConstraints = $.sizeConstraints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SizeConstraintSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
+        private SizeConstraintSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SizeConstraintSetArgs();
         }
 
         public Builder(SizeConstraintSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sizeConstraints = defaults.sizeConstraints;
+            $ = new SizeConstraintSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
-            this.sizeConstraints = sizeConstraints;
+            $.sizeConstraints = sizeConstraints;
             return this;
         }
-        public Builder sizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintArgs> sizeConstraints) {
-            this.sizeConstraints = Codegen.ofNullable(sizeConstraints);
-            return this;
+
+        public Builder sizeConstraints(List<SizeConstraintSetSizeConstraintArgs> sizeConstraints) {
+            return sizeConstraints(Output.of(sizeConstraints));
         }
+
         public Builder sizeConstraints(SizeConstraintSetSizeConstraintArgs... sizeConstraints) {
             return sizeConstraints(List.of(sizeConstraints));
-        }        public SizeConstraintSetArgs build() {
-            return new SizeConstraintSetArgs(name, sizeConstraints);
+        }
+
+        public SizeConstraintSetArgs build() {
+            return $;
         }
     }
+
 }

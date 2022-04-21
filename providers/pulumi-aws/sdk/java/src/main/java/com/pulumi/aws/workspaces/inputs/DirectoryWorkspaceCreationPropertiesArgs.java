@@ -5,10 +5,10 @@ package com.pulumi.aws.workspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="customSecurityGroupId")
-      private final @Nullable Output<String> customSecurityGroupId;
+    private @Nullable Output<String> customSecurityGroupId;
 
-    public Output<String> customSecurityGroupId() {
-        return this.customSecurityGroupId == null ? Codegen.empty() : this.customSecurityGroupId;
+    public Optional<Output<String>> customSecurityGroupId() {
+        return Optional.ofNullable(this.customSecurityGroupId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="defaultOu")
-      private final @Nullable Output<String> defaultOu;
+    private @Nullable Output<String> defaultOu;
 
-    public Output<String> defaultOu() {
-        return this.defaultOu == null ? Codegen.empty() : this.defaultOu;
+    public Optional<Output<String>> defaultOu() {
+        return Optional.ofNullable(this.defaultOu);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="enableInternetAccess")
-      private final @Nullable Output<Boolean> enableInternetAccess;
+    private @Nullable Output<Boolean> enableInternetAccess;
 
-    public Output<Boolean> enableInternetAccess() {
-        return this.enableInternetAccess == null ? Codegen.empty() : this.enableInternetAccess;
+    public Optional<Output<Boolean>> enableInternetAccess() {
+        return Optional.ofNullable(this.enableInternetAccess);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="enableMaintenanceMode")
-      private final @Nullable Output<Boolean> enableMaintenanceMode;
+    private @Nullable Output<Boolean> enableMaintenanceMode;
 
-    public Output<Boolean> enableMaintenanceMode() {
-        return this.enableMaintenanceMode == null ? Codegen.empty() : this.enableMaintenanceMode;
+    public Optional<Output<Boolean>> enableMaintenanceMode() {
+        return Optional.ofNullable(this.enableMaintenanceMode);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="userEnabledAsLocalAdministrator")
-      private final @Nullable Output<Boolean> userEnabledAsLocalAdministrator;
+    private @Nullable Output<Boolean> userEnabledAsLocalAdministrator;
 
-    public Output<Boolean> userEnabledAsLocalAdministrator() {
-        return this.userEnabledAsLocalAdministrator == null ? Codegen.empty() : this.userEnabledAsLocalAdministrator;
+    public Optional<Output<Boolean>> userEnabledAsLocalAdministrator() {
+        return Optional.ofNullable(this.userEnabledAsLocalAdministrator);
     }
 
-    public DirectoryWorkspaceCreationPropertiesArgs(
-        @Nullable Output<String> customSecurityGroupId,
-        @Nullable Output<String> defaultOu,
-        @Nullable Output<Boolean> enableInternetAccess,
-        @Nullable Output<Boolean> enableMaintenanceMode,
-        @Nullable Output<Boolean> userEnabledAsLocalAdministrator) {
-        this.customSecurityGroupId = customSecurityGroupId;
-        this.defaultOu = defaultOu;
-        this.enableInternetAccess = enableInternetAccess;
-        this.enableMaintenanceMode = enableMaintenanceMode;
-        this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
-    }
+    private DirectoryWorkspaceCreationPropertiesArgs() {}
 
-    private DirectoryWorkspaceCreationPropertiesArgs() {
-        this.customSecurityGroupId = Codegen.empty();
-        this.defaultOu = Codegen.empty();
-        this.enableInternetAccess = Codegen.empty();
-        this.enableMaintenanceMode = Codegen.empty();
-        this.userEnabledAsLocalAdministrator = Codegen.empty();
+    private DirectoryWorkspaceCreationPropertiesArgs(DirectoryWorkspaceCreationPropertiesArgs $) {
+        this.customSecurityGroupId = $.customSecurityGroupId;
+        this.defaultOu = $.defaultOu;
+        this.enableInternetAccess = $.enableInternetAccess;
+        this.enableMaintenanceMode = $.enableMaintenanceMode;
+        this.userEnabledAsLocalAdministrator = $.userEnabledAsLocalAdministrator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryWorkspaceCreationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customSecurityGroupId;
-        private @Nullable Output<String> defaultOu;
-        private @Nullable Output<Boolean> enableInternetAccess;
-        private @Nullable Output<Boolean> enableMaintenanceMode;
-        private @Nullable Output<Boolean> userEnabledAsLocalAdministrator;
+        private DirectoryWorkspaceCreationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryWorkspaceCreationPropertiesArgs();
         }
 
         public Builder(DirectoryWorkspaceCreationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customSecurityGroupId = defaults.customSecurityGroupId;
-    	      this.defaultOu = defaults.defaultOu;
-    	      this.enableInternetAccess = defaults.enableInternetAccess;
-    	      this.enableMaintenanceMode = defaults.enableMaintenanceMode;
-    	      this.userEnabledAsLocalAdministrator = defaults.userEnabledAsLocalAdministrator;
+            $ = new DirectoryWorkspaceCreationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customSecurityGroupId(@Nullable Output<String> customSecurityGroupId) {
-            this.customSecurityGroupId = customSecurityGroupId;
+            $.customSecurityGroupId = customSecurityGroupId;
             return this;
         }
-        public Builder customSecurityGroupId(@Nullable String customSecurityGroupId) {
-            this.customSecurityGroupId = Codegen.ofNullable(customSecurityGroupId);
-            return this;
+
+        public Builder customSecurityGroupId(String customSecurityGroupId) {
+            return customSecurityGroupId(Output.of(customSecurityGroupId));
         }
+
         public Builder defaultOu(@Nullable Output<String> defaultOu) {
-            this.defaultOu = defaultOu;
+            $.defaultOu = defaultOu;
             return this;
         }
-        public Builder defaultOu(@Nullable String defaultOu) {
-            this.defaultOu = Codegen.ofNullable(defaultOu);
-            return this;
+
+        public Builder defaultOu(String defaultOu) {
+            return defaultOu(Output.of(defaultOu));
         }
+
         public Builder enableInternetAccess(@Nullable Output<Boolean> enableInternetAccess) {
-            this.enableInternetAccess = enableInternetAccess;
+            $.enableInternetAccess = enableInternetAccess;
             return this;
         }
-        public Builder enableInternetAccess(@Nullable Boolean enableInternetAccess) {
-            this.enableInternetAccess = Codegen.ofNullable(enableInternetAccess);
-            return this;
+
+        public Builder enableInternetAccess(Boolean enableInternetAccess) {
+            return enableInternetAccess(Output.of(enableInternetAccess));
         }
+
         public Builder enableMaintenanceMode(@Nullable Output<Boolean> enableMaintenanceMode) {
-            this.enableMaintenanceMode = enableMaintenanceMode;
+            $.enableMaintenanceMode = enableMaintenanceMode;
             return this;
         }
-        public Builder enableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
-            this.enableMaintenanceMode = Codegen.ofNullable(enableMaintenanceMode);
-            return this;
+
+        public Builder enableMaintenanceMode(Boolean enableMaintenanceMode) {
+            return enableMaintenanceMode(Output.of(enableMaintenanceMode));
         }
+
         public Builder userEnabledAsLocalAdministrator(@Nullable Output<Boolean> userEnabledAsLocalAdministrator) {
-            this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
+            $.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
             return this;
         }
-        public Builder userEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
-            this.userEnabledAsLocalAdministrator = Codegen.ofNullable(userEnabledAsLocalAdministrator);
-            return this;
-        }        public DirectoryWorkspaceCreationPropertiesArgs build() {
-            return new DirectoryWorkspaceCreationPropertiesArgs(customSecurityGroupId, defaultOu, enableInternetAccess, enableMaintenanceMode, userEnabledAsLocalAdministrator);
+
+        public Builder userEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
+            return userEnabledAsLocalAdministrator(Output.of(userEnabledAsLocalAdministrator));
+        }
+
+        public DirectoryWorkspaceCreationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

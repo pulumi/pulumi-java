@@ -5,7 +5,6 @@ package com.pulumi.aws.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -30,63 +29,60 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      * 
      */
     @Import(name="filterType", required=true)
-      private final Output<String> filterType;
+    private Output<String> filterType;
 
     public Output<String> filterType() {
         return this.filterType;
     }
 
-    public ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs(
-        Output<String> filter,
-        Output<String> filterType) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.filterType = Objects.requireNonNull(filterType, "expected parameter 'filterType' to be non-null");
-    }
+    private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs() {}
 
-    private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs() {
-        this.filter = Codegen.empty();
-        this.filterType = Codegen.empty();
+    private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs $) {
+        this.filter = $.filter;
+        this.filterType = $.filterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filter;
-        private Output<String> filterType;
+        private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs();
         }
 
         public Builder(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.filterType = defaults.filterType;
+            $ = new ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder filterType(Output<String> filterType) {
-            this.filterType = Objects.requireNonNull(filterType);
+            $.filterType = filterType;
             return this;
         }
+
         public Builder filterType(String filterType) {
-            this.filterType = Output.of(Objects.requireNonNull(filterType));
-            return this;
-        }        public ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs build() {
-            return new ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs(filter, filterType);
+            return filterType(Output.of(filterType));
+        }
+
+        public ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.filterType = Objects.requireNonNull($.filterType, "expected parameter 'filterType' to be non-null");
+            return $;
         }
     }
+
 }

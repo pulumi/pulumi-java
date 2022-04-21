@@ -5,7 +5,6 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class GlobalTableReplicaArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="regionName", required=true)
-      private final Output<String> regionName;
+    private Output<String> regionName;
 
     public Output<String> regionName() {
         return this.regionName;
     }
 
-    public GlobalTableReplicaArgs(Output<String> regionName) {
-        this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
-    }
+    private GlobalTableReplicaArgs() {}
 
-    private GlobalTableReplicaArgs() {
-        this.regionName = Codegen.empty();
+    private GlobalTableReplicaArgs(GlobalTableReplicaArgs $) {
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableReplicaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> regionName;
+        private GlobalTableReplicaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableReplicaArgs();
         }
 
         public Builder(GlobalTableReplicaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regionName = defaults.regionName;
+            $ = new GlobalTableReplicaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regionName(Output<String> regionName) {
-            this.regionName = Objects.requireNonNull(regionName);
+            $.regionName = regionName;
             return this;
         }
+
         public Builder regionName(String regionName) {
-            this.regionName = Output.of(Objects.requireNonNull(regionName));
-            return this;
-        }        public GlobalTableReplicaArgs build() {
-            return new GlobalTableReplicaArgs(regionName);
+            return regionName(Output.of(regionName));
+        }
+
+        public GlobalTableReplicaArgs build() {
+            $.regionName = Objects.requireNonNull($.regionName, "expected parameter 'regionName' to be non-null");
+            return $;
         }
     }
+
 }

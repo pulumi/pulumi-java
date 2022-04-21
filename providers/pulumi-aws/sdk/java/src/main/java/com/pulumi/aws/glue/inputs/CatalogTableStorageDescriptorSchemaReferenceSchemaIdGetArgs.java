@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs e
      * 
      */
     @Import(name="registryName")
-      private final @Nullable Output<String> registryName;
+    private @Nullable Output<String> registryName;
 
-    public Output<String> registryName() {
-        return this.registryName == null ? Codegen.empty() : this.registryName;
+    public Optional<Output<String>> registryName() {
+        return Optional.ofNullable(this.registryName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs e
      * 
      */
     @Import(name="schemaArn")
-      private final @Nullable Output<String> schemaArn;
+    private @Nullable Output<String> schemaArn;
 
-    public Output<String> schemaArn() {
-        return this.schemaArn == null ? Codegen.empty() : this.schemaArn;
+    public Optional<Output<String>> schemaArn() {
+        return Optional.ofNullable(this.schemaArn);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs e
      * 
      */
     @Import(name="schemaName")
-      private final @Nullable Output<String> schemaName;
+    private @Nullable Output<String> schemaName;
 
-    public Output<String> schemaName() {
-        return this.schemaName == null ? Codegen.empty() : this.schemaName;
+    public Optional<Output<String>> schemaName() {
+        return Optional.ofNullable(this.schemaName);
     }
 
-    public CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs(
-        @Nullable Output<String> registryName,
-        @Nullable Output<String> schemaArn,
-        @Nullable Output<String> schemaName) {
-        this.registryName = registryName;
-        this.schemaArn = schemaArn;
-        this.schemaName = schemaName;
-    }
+    private CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs() {}
 
-    private CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs() {
-        this.registryName = Codegen.empty();
-        this.schemaArn = Codegen.empty();
-        this.schemaName = Codegen.empty();
+    private CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs(CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs $) {
+        this.registryName = $.registryName;
+        this.schemaArn = $.schemaArn;
+        this.schemaName = $.schemaName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> registryName;
-        private @Nullable Output<String> schemaArn;
-        private @Nullable Output<String> schemaName;
+        private CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs();
         }
 
         public Builder(CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.schemaArn = defaults.schemaArn;
-    	      this.schemaName = defaults.schemaName;
+            $ = new CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(@Nullable Output<String> registryName) {
-            this.registryName = registryName;
+            $.registryName = registryName;
             return this;
         }
-        public Builder registryName(@Nullable String registryName) {
-            this.registryName = Codegen.ofNullable(registryName);
-            return this;
+
+        public Builder registryName(String registryName) {
+            return registryName(Output.of(registryName));
         }
+
         public Builder schemaArn(@Nullable Output<String> schemaArn) {
-            this.schemaArn = schemaArn;
+            $.schemaArn = schemaArn;
             return this;
         }
-        public Builder schemaArn(@Nullable String schemaArn) {
-            this.schemaArn = Codegen.ofNullable(schemaArn);
-            return this;
+
+        public Builder schemaArn(String schemaArn) {
+            return schemaArn(Output.of(schemaArn));
         }
+
         public Builder schemaName(@Nullable Output<String> schemaName) {
-            this.schemaName = schemaName;
+            $.schemaName = schemaName;
             return this;
         }
-        public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Codegen.ofNullable(schemaName);
-            return this;
-        }        public CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs build() {
-            return new CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs(registryName, schemaArn, schemaName);
+
+        public Builder schemaName(String schemaName) {
+            return schemaName(Output.of(schemaName));
+        }
+
+        public CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs build() {
+            return $;
         }
     }
+
 }

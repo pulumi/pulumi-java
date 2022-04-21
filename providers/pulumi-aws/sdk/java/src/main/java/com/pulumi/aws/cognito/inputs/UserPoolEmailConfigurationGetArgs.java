@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="configurationSet")
-      private final @Nullable Output<String> configurationSet;
+    private @Nullable Output<String> configurationSet;
 
-    public Output<String> configurationSet() {
-        return this.configurationSet == null ? Codegen.empty() : this.configurationSet;
+    public Optional<Output<String>> configurationSet() {
+        return Optional.ofNullable(this.configurationSet);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="emailSendingAccount")
-      private final @Nullable Output<String> emailSendingAccount;
+    private @Nullable Output<String> emailSendingAccount;
 
-    public Output<String> emailSendingAccount() {
-        return this.emailSendingAccount == null ? Codegen.empty() : this.emailSendingAccount;
+    public Optional<Output<String>> emailSendingAccount() {
+        return Optional.ofNullable(this.emailSendingAccount);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="fromEmailAddress")
-      private final @Nullable Output<String> fromEmailAddress;
+    private @Nullable Output<String> fromEmailAddress;
 
-    public Output<String> fromEmailAddress() {
-        return this.fromEmailAddress == null ? Codegen.empty() : this.fromEmailAddress;
+    public Optional<Output<String>> fromEmailAddress() {
+        return Optional.ofNullable(this.fromEmailAddress);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="replyToEmailAddress")
-      private final @Nullable Output<String> replyToEmailAddress;
+    private @Nullable Output<String> replyToEmailAddress;
 
-    public Output<String> replyToEmailAddress() {
-        return this.replyToEmailAddress == null ? Codegen.empty() : this.replyToEmailAddress;
+    public Optional<Output<String>> replyToEmailAddress() {
+        return Optional.ofNullable(this.replyToEmailAddress);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sourceArn")
-      private final @Nullable Output<String> sourceArn;
+    private @Nullable Output<String> sourceArn;
 
-    public Output<String> sourceArn() {
-        return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
+    public Optional<Output<String>> sourceArn() {
+        return Optional.ofNullable(this.sourceArn);
     }
 
-    public UserPoolEmailConfigurationGetArgs(
-        @Nullable Output<String> configurationSet,
-        @Nullable Output<String> emailSendingAccount,
-        @Nullable Output<String> fromEmailAddress,
-        @Nullable Output<String> replyToEmailAddress,
-        @Nullable Output<String> sourceArn) {
-        this.configurationSet = configurationSet;
-        this.emailSendingAccount = emailSendingAccount;
-        this.fromEmailAddress = fromEmailAddress;
-        this.replyToEmailAddress = replyToEmailAddress;
-        this.sourceArn = sourceArn;
-    }
+    private UserPoolEmailConfigurationGetArgs() {}
 
-    private UserPoolEmailConfigurationGetArgs() {
-        this.configurationSet = Codegen.empty();
-        this.emailSendingAccount = Codegen.empty();
-        this.fromEmailAddress = Codegen.empty();
-        this.replyToEmailAddress = Codegen.empty();
-        this.sourceArn = Codegen.empty();
+    private UserPoolEmailConfigurationGetArgs(UserPoolEmailConfigurationGetArgs $) {
+        this.configurationSet = $.configurationSet;
+        this.emailSendingAccount = $.emailSendingAccount;
+        this.fromEmailAddress = $.fromEmailAddress;
+        this.replyToEmailAddress = $.replyToEmailAddress;
+        this.sourceArn = $.sourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolEmailConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationSet;
-        private @Nullable Output<String> emailSendingAccount;
-        private @Nullable Output<String> fromEmailAddress;
-        private @Nullable Output<String> replyToEmailAddress;
-        private @Nullable Output<String> sourceArn;
+        private UserPoolEmailConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolEmailConfigurationGetArgs();
         }
 
         public Builder(UserPoolEmailConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationSet = defaults.configurationSet;
-    	      this.emailSendingAccount = defaults.emailSendingAccount;
-    	      this.fromEmailAddress = defaults.fromEmailAddress;
-    	      this.replyToEmailAddress = defaults.replyToEmailAddress;
-    	      this.sourceArn = defaults.sourceArn;
+            $ = new UserPoolEmailConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationSet(@Nullable Output<String> configurationSet) {
-            this.configurationSet = configurationSet;
+            $.configurationSet = configurationSet;
             return this;
         }
-        public Builder configurationSet(@Nullable String configurationSet) {
-            this.configurationSet = Codegen.ofNullable(configurationSet);
-            return this;
+
+        public Builder configurationSet(String configurationSet) {
+            return configurationSet(Output.of(configurationSet));
         }
+
         public Builder emailSendingAccount(@Nullable Output<String> emailSendingAccount) {
-            this.emailSendingAccount = emailSendingAccount;
+            $.emailSendingAccount = emailSendingAccount;
             return this;
         }
-        public Builder emailSendingAccount(@Nullable String emailSendingAccount) {
-            this.emailSendingAccount = Codegen.ofNullable(emailSendingAccount);
-            return this;
+
+        public Builder emailSendingAccount(String emailSendingAccount) {
+            return emailSendingAccount(Output.of(emailSendingAccount));
         }
+
         public Builder fromEmailAddress(@Nullable Output<String> fromEmailAddress) {
-            this.fromEmailAddress = fromEmailAddress;
+            $.fromEmailAddress = fromEmailAddress;
             return this;
         }
-        public Builder fromEmailAddress(@Nullable String fromEmailAddress) {
-            this.fromEmailAddress = Codegen.ofNullable(fromEmailAddress);
-            return this;
+
+        public Builder fromEmailAddress(String fromEmailAddress) {
+            return fromEmailAddress(Output.of(fromEmailAddress));
         }
+
         public Builder replyToEmailAddress(@Nullable Output<String> replyToEmailAddress) {
-            this.replyToEmailAddress = replyToEmailAddress;
+            $.replyToEmailAddress = replyToEmailAddress;
             return this;
         }
-        public Builder replyToEmailAddress(@Nullable String replyToEmailAddress) {
-            this.replyToEmailAddress = Codegen.ofNullable(replyToEmailAddress);
-            return this;
+
+        public Builder replyToEmailAddress(String replyToEmailAddress) {
+            return replyToEmailAddress(Output.of(replyToEmailAddress));
         }
+
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
-            this.sourceArn = sourceArn;
+            $.sourceArn = sourceArn;
             return this;
         }
-        public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Codegen.ofNullable(sourceArn);
-            return this;
-        }        public UserPoolEmailConfigurationGetArgs build() {
-            return new UserPoolEmailConfigurationGetArgs(configurationSet, emailSendingAccount, fromEmailAddress, replyToEmailAddress, sourceArn);
+
+        public Builder sourceArn(String sourceArn) {
+            return sourceArn(Output.of(sourceArn));
+        }
+
+        public UserPoolEmailConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

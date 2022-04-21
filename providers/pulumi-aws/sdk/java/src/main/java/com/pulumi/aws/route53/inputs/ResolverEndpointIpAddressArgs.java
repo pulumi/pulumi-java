@@ -5,9 +5,9 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,17 +20,17 @@ public final class ResolverEndpointIpAddressArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     @Import(name="ipId")
-      private final @Nullable Output<String> ipId;
+    private @Nullable Output<String> ipId;
 
-    public Output<String> ipId() {
-        return this.ipId == null ? Codegen.empty() : this.ipId;
+    public Optional<Output<String>> ipId() {
+        return Optional.ofNullable(this.ipId);
     }
 
     /**
@@ -38,76 +38,69 @@ public final class ResolverEndpointIpAddressArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public ResolverEndpointIpAddressArgs(
-        @Nullable Output<String> ip,
-        @Nullable Output<String> ipId,
-        Output<String> subnetId) {
-        this.ip = ip;
-        this.ipId = ipId;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private ResolverEndpointIpAddressArgs() {}
 
-    private ResolverEndpointIpAddressArgs() {
-        this.ip = Codegen.empty();
-        this.ipId = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private ResolverEndpointIpAddressArgs(ResolverEndpointIpAddressArgs $) {
+        this.ip = $.ip;
+        this.ipId = $.ipId;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverEndpointIpAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ip;
-        private @Nullable Output<String> ipId;
-        private Output<String> subnetId;
+        private ResolverEndpointIpAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverEndpointIpAddressArgs();
         }
 
         public Builder(ResolverEndpointIpAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.ipId = defaults.ipId;
-    	      this.subnetId = defaults.subnetId;
+            $ = new ResolverEndpointIpAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
+
         public Builder ipId(@Nullable Output<String> ipId) {
-            this.ipId = ipId;
+            $.ipId = ipId;
             return this;
         }
-        public Builder ipId(@Nullable String ipId) {
-            this.ipId = Codegen.ofNullable(ipId);
-            return this;
+
+        public Builder ipId(String ipId) {
+            return ipId(Output.of(ipId));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public ResolverEndpointIpAddressArgs build() {
-            return new ResolverEndpointIpAddressArgs(ip, ipId, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public ResolverEndpointIpAddressArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

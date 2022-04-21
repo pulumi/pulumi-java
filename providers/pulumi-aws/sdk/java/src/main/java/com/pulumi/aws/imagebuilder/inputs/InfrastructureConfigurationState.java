@@ -6,12 +6,12 @@ package com.pulumi.aws.imagebuilder.inputs;
 import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="dateCreated")
-      private final @Nullable Output<String> dateCreated;
+    private @Nullable Output<String> dateCreated;
 
-    public Output<String> dateCreated() {
-        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
+    public Optional<Output<String>> dateCreated() {
+        return Optional.ofNullable(this.dateCreated);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="dateUpdated")
-      private final @Nullable Output<String> dateUpdated;
+    private @Nullable Output<String> dateUpdated;
 
-    public Output<String> dateUpdated() {
-        return this.dateUpdated == null ? Codegen.empty() : this.dateUpdated;
+    public Optional<Output<String>> dateUpdated() {
+        return Optional.ofNullable(this.dateUpdated);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="instanceProfileName")
-      private final @Nullable Output<String> instanceProfileName;
+    private @Nullable Output<String> instanceProfileName;
 
-    public Output<String> instanceProfileName() {
-        return this.instanceProfileName == null ? Codegen.empty() : this.instanceProfileName;
+    public Optional<Output<String>> instanceProfileName() {
+        return Optional.ofNullable(this.instanceProfileName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="instanceTypes")
-      private final @Nullable Output<List<String>> instanceTypes;
+    private @Nullable Output<List<String>> instanceTypes;
 
-    public Output<List<String>> instanceTypes() {
-        return this.instanceTypes == null ? Codegen.empty() : this.instanceTypes;
+    public Optional<Output<List<String>>> instanceTypes() {
+        return Optional.ofNullable(this.instanceTypes);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="keyPair")
-      private final @Nullable Output<String> keyPair;
+    private @Nullable Output<String> keyPair;
 
-    public Output<String> keyPair() {
-        return this.keyPair == null ? Codegen.empty() : this.keyPair;
+    public Optional<Output<String>> keyPair() {
+        return Optional.ofNullable(this.keyPair);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="logging")
-      private final @Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging;
+    private @Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging;
 
-    public Output<InfrastructureConfigurationLoggingGetArgs> logging() {
-        return this.logging == null ? Codegen.empty() : this.logging;
+    public Optional<Output<InfrastructureConfigurationLoggingGetArgs>> logging() {
+        return Optional.ofNullable(this.logging);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="resourceTags")
-      private final @Nullable Output<Map<String,String>> resourceTags;
+    private @Nullable Output<Map<String,String>> resourceTags;
 
-    public Output<Map<String,String>> resourceTags() {
-        return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
+    public Optional<Output<Map<String,String>>> resourceTags() {
+        return Optional.ofNullable(this.resourceTags);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="snsTopicArn")
-      private final @Nullable Output<String> snsTopicArn;
+    private @Nullable Output<String> snsTopicArn;
 
-    public Output<String> snsTopicArn() {
-        return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
+    public Optional<Output<String>> snsTopicArn() {
+        return Optional.ofNullable(this.snsTopicArn);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -189,251 +189,206 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      * 
      */
     @Import(name="terminateInstanceOnFailure")
-      private final @Nullable Output<Boolean> terminateInstanceOnFailure;
+    private @Nullable Output<Boolean> terminateInstanceOnFailure;
 
-    public Output<Boolean> terminateInstanceOnFailure() {
-        return this.terminateInstanceOnFailure == null ? Codegen.empty() : this.terminateInstanceOnFailure;
+    public Optional<Output<Boolean>> terminateInstanceOnFailure() {
+        return Optional.ofNullable(this.terminateInstanceOnFailure);
     }
 
-    public InfrastructureConfigurationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> dateCreated,
-        @Nullable Output<String> dateUpdated,
-        @Nullable Output<String> description,
-        @Nullable Output<String> instanceProfileName,
-        @Nullable Output<List<String>> instanceTypes,
-        @Nullable Output<String> keyPair,
-        @Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> resourceTags,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<String> snsTopicArn,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Boolean> terminateInstanceOnFailure) {
-        this.arn = arn;
-        this.dateCreated = dateCreated;
-        this.dateUpdated = dateUpdated;
-        this.description = description;
-        this.instanceProfileName = instanceProfileName;
-        this.instanceTypes = instanceTypes;
-        this.keyPair = keyPair;
-        this.logging = logging;
-        this.name = name;
-        this.resourceTags = resourceTags;
-        this.securityGroupIds = securityGroupIds;
-        this.snsTopicArn = snsTopicArn;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.terminateInstanceOnFailure = terminateInstanceOnFailure;
-    }
+    private InfrastructureConfigurationState() {}
 
-    private InfrastructureConfigurationState() {
-        this.arn = Codegen.empty();
-        this.dateCreated = Codegen.empty();
-        this.dateUpdated = Codegen.empty();
-        this.description = Codegen.empty();
-        this.instanceProfileName = Codegen.empty();
-        this.instanceTypes = Codegen.empty();
-        this.keyPair = Codegen.empty();
-        this.logging = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceTags = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.snsTopicArn = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.terminateInstanceOnFailure = Codegen.empty();
+    private InfrastructureConfigurationState(InfrastructureConfigurationState $) {
+        this.arn = $.arn;
+        this.dateCreated = $.dateCreated;
+        this.dateUpdated = $.dateUpdated;
+        this.description = $.description;
+        this.instanceProfileName = $.instanceProfileName;
+        this.instanceTypes = $.instanceTypes;
+        this.keyPair = $.keyPair;
+        this.logging = $.logging;
+        this.name = $.name;
+        this.resourceTags = $.resourceTags;
+        this.securityGroupIds = $.securityGroupIds;
+        this.snsTopicArn = $.snsTopicArn;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.terminateInstanceOnFailure = $.terminateInstanceOnFailure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> dateCreated;
-        private @Nullable Output<String> dateUpdated;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> instanceProfileName;
-        private @Nullable Output<List<String>> instanceTypes;
-        private @Nullable Output<String> keyPair;
-        private @Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> resourceTags;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<String> snsTopicArn;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Boolean> terminateInstanceOnFailure;
+        private InfrastructureConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationState();
         }
 
         public Builder(InfrastructureConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.dateCreated = defaults.dateCreated;
-    	      this.dateUpdated = defaults.dateUpdated;
-    	      this.description = defaults.description;
-    	      this.instanceProfileName = defaults.instanceProfileName;
-    	      this.instanceTypes = defaults.instanceTypes;
-    	      this.keyPair = defaults.keyPair;
-    	      this.logging = defaults.logging;
-    	      this.name = defaults.name;
-    	      this.resourceTags = defaults.resourceTags;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.snsTopicArn = defaults.snsTopicArn;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.terminateInstanceOnFailure = defaults.terminateInstanceOnFailure;
+            $ = new InfrastructureConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
-            this.dateCreated = dateCreated;
+            $.dateCreated = dateCreated;
             return this;
         }
-        public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Codegen.ofNullable(dateCreated);
-            return this;
+
+        public Builder dateCreated(String dateCreated) {
+            return dateCreated(Output.of(dateCreated));
         }
+
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
-            this.dateUpdated = dateUpdated;
+            $.dateUpdated = dateUpdated;
             return this;
         }
-        public Builder dateUpdated(@Nullable String dateUpdated) {
-            this.dateUpdated = Codegen.ofNullable(dateUpdated);
-            return this;
+
+        public Builder dateUpdated(String dateUpdated) {
+            return dateUpdated(Output.of(dateUpdated));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instanceProfileName(@Nullable Output<String> instanceProfileName) {
-            this.instanceProfileName = instanceProfileName;
+            $.instanceProfileName = instanceProfileName;
             return this;
         }
-        public Builder instanceProfileName(@Nullable String instanceProfileName) {
-            this.instanceProfileName = Codegen.ofNullable(instanceProfileName);
-            return this;
+
+        public Builder instanceProfileName(String instanceProfileName) {
+            return instanceProfileName(Output.of(instanceProfileName));
         }
+
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
-            this.instanceTypes = instanceTypes;
+            $.instanceTypes = instanceTypes;
             return this;
         }
-        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
-            this.instanceTypes = Codegen.ofNullable(instanceTypes);
-            return this;
+
+        public Builder instanceTypes(List<String> instanceTypes) {
+            return instanceTypes(Output.of(instanceTypes));
         }
+
         public Builder instanceTypes(String... instanceTypes) {
             return instanceTypes(List.of(instanceTypes));
         }
+
         public Builder keyPair(@Nullable Output<String> keyPair) {
-            this.keyPair = keyPair;
+            $.keyPair = keyPair;
             return this;
         }
-        public Builder keyPair(@Nullable String keyPair) {
-            this.keyPair = Codegen.ofNullable(keyPair);
-            return this;
+
+        public Builder keyPair(String keyPair) {
+            return keyPair(Output.of(keyPair));
         }
+
         public Builder logging(@Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging) {
-            this.logging = logging;
+            $.logging = logging;
             return this;
         }
-        public Builder logging(@Nullable InfrastructureConfigurationLoggingGetArgs logging) {
-            this.logging = Codegen.ofNullable(logging);
-            return this;
+
+        public Builder logging(InfrastructureConfigurationLoggingGetArgs logging) {
+            return logging(Output.of(logging));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceTags(@Nullable Output<Map<String,String>> resourceTags) {
-            this.resourceTags = resourceTags;
+            $.resourceTags = resourceTags;
             return this;
         }
-        public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
-            this.resourceTags = Codegen.ofNullable(resourceTags);
-            return this;
+
+        public Builder resourceTags(Map<String,String> resourceTags) {
+            return resourceTags(Output.of(resourceTags));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
-            this.snsTopicArn = snsTopicArn;
+            $.snsTopicArn = snsTopicArn;
             return this;
         }
-        public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Codegen.ofNullable(snsTopicArn);
-            return this;
+
+        public Builder snsTopicArn(String snsTopicArn) {
+            return snsTopicArn(Output.of(snsTopicArn));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder terminateInstanceOnFailure(@Nullable Output<Boolean> terminateInstanceOnFailure) {
-            this.terminateInstanceOnFailure = terminateInstanceOnFailure;
+            $.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
-        public Builder terminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
-            this.terminateInstanceOnFailure = Codegen.ofNullable(terminateInstanceOnFailure);
-            return this;
-        }        public InfrastructureConfigurationState build() {
-            return new InfrastructureConfigurationState(arn, dateCreated, dateUpdated, description, instanceProfileName, instanceTypes, keyPair, logging, name, resourceTags, securityGroupIds, snsTopicArn, subnetId, tags, tagsAll, terminateInstanceOnFailure);
+
+        public Builder terminateInstanceOnFailure(Boolean terminateInstanceOnFailure) {
+            return terminateInstanceOnFailure(Output.of(terminateInstanceOnFailure));
+        }
+
+        public InfrastructureConfigurationState build() {
+            return $;
         }
     }
+
 }

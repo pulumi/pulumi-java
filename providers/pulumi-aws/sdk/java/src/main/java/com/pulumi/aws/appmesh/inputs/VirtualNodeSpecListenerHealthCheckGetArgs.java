@@ -5,10 +5,10 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
      * 
      */
     @Import(name="healthyThreshold", required=true)
-      private final Output<Integer> healthyThreshold;
+    private Output<Integer> healthyThreshold;
 
     public Output<Integer> healthyThreshold() {
         return this.healthyThreshold;
@@ -32,7 +32,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
      * 
      */
     @Import(name="intervalMillis", required=true)
-      private final Output<Integer> intervalMillis;
+    private Output<Integer> intervalMillis;
 
     public Output<Integer> intervalMillis() {
         return this.intervalMillis;
@@ -43,10 +43,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
@@ -76,7 +76,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
      * 
      */
     @Import(name="timeoutMillis", required=true)
-      private final Output<Integer> timeoutMillis;
+    private Output<Integer> timeoutMillis;
 
     public Output<Integer> timeoutMillis() {
         return this.timeoutMillis;
@@ -87,128 +87,113 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
      * 
      */
     @Import(name="unhealthyThreshold", required=true)
-      private final Output<Integer> unhealthyThreshold;
+    private Output<Integer> unhealthyThreshold;
 
     public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
-    public VirtualNodeSpecListenerHealthCheckGetArgs(
-        Output<Integer> healthyThreshold,
-        Output<Integer> intervalMillis,
-        @Nullable Output<String> path,
-        @Nullable Output<Integer> port,
-        Output<String> protocol,
-        Output<Integer> timeoutMillis,
-        Output<Integer> unhealthyThreshold) {
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
-        this.intervalMillis = Objects.requireNonNull(intervalMillis, "expected parameter 'intervalMillis' to be non-null");
-        this.path = path;
-        this.port = port;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.timeoutMillis = Objects.requireNonNull(timeoutMillis, "expected parameter 'timeoutMillis' to be non-null");
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold, "expected parameter 'unhealthyThreshold' to be non-null");
-    }
+    private VirtualNodeSpecListenerHealthCheckGetArgs() {}
 
-    private VirtualNodeSpecListenerHealthCheckGetArgs() {
-        this.healthyThreshold = Codegen.empty();
-        this.intervalMillis = Codegen.empty();
-        this.path = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.timeoutMillis = Codegen.empty();
-        this.unhealthyThreshold = Codegen.empty();
+    private VirtualNodeSpecListenerHealthCheckGetArgs(VirtualNodeSpecListenerHealthCheckGetArgs $) {
+        this.healthyThreshold = $.healthyThreshold;
+        this.intervalMillis = $.intervalMillis;
+        this.path = $.path;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.timeoutMillis = $.timeoutMillis;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerHealthCheckGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> healthyThreshold;
-        private Output<Integer> intervalMillis;
-        private @Nullable Output<String> path;
-        private @Nullable Output<Integer> port;
-        private Output<String> protocol;
-        private Output<Integer> timeoutMillis;
-        private Output<Integer> unhealthyThreshold;
+        private VirtualNodeSpecListenerHealthCheckGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerHealthCheckGetArgs();
         }
 
         public Builder(VirtualNodeSpecListenerHealthCheckGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.intervalMillis = defaults.intervalMillis;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.timeoutMillis = defaults.timeoutMillis;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new VirtualNodeSpecListenerHealthCheckGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthyThreshold(Output<Integer> healthyThreshold) {
-            this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
+
         public Builder healthyThreshold(Integer healthyThreshold) {
-            this.healthyThreshold = Output.of(Objects.requireNonNull(healthyThreshold));
-            return this;
+            return healthyThreshold(Output.of(healthyThreshold));
         }
+
         public Builder intervalMillis(Output<Integer> intervalMillis) {
-            this.intervalMillis = Objects.requireNonNull(intervalMillis);
+            $.intervalMillis = intervalMillis;
             return this;
         }
+
         public Builder intervalMillis(Integer intervalMillis) {
-            this.intervalMillis = Output.of(Objects.requireNonNull(intervalMillis));
-            return this;
+            return intervalMillis(Output.of(intervalMillis));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder timeoutMillis(Output<Integer> timeoutMillis) {
-            this.timeoutMillis = Objects.requireNonNull(timeoutMillis);
+            $.timeoutMillis = timeoutMillis;
             return this;
         }
+
         public Builder timeoutMillis(Integer timeoutMillis) {
-            this.timeoutMillis = Output.of(Objects.requireNonNull(timeoutMillis));
-            return this;
+            return timeoutMillis(Output.of(timeoutMillis));
         }
+
         public Builder unhealthyThreshold(Output<Integer> unhealthyThreshold) {
-            this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
+
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.of(Objects.requireNonNull(unhealthyThreshold));
-            return this;
-        }        public VirtualNodeSpecListenerHealthCheckGetArgs build() {
-            return new VirtualNodeSpecListenerHealthCheckGetArgs(healthyThreshold, intervalMillis, path, port, protocol, timeoutMillis, unhealthyThreshold);
+            return unhealthyThreshold(Output.of(unhealthyThreshold));
+        }
+
+        public VirtualNodeSpecListenerHealthCheckGetArgs build() {
+            $.healthyThreshold = Objects.requireNonNull($.healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
+            $.intervalMillis = Objects.requireNonNull($.intervalMillis, "expected parameter 'intervalMillis' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.timeoutMillis = Objects.requireNonNull($.timeoutMillis, "expected parameter 'timeoutMillis' to be non-null");
+            $.unhealthyThreshold = Objects.requireNonNull($.unhealthyThreshold, "expected parameter 'unhealthyThreshold' to be non-null");
+            return $;
         }
     }
+
 }

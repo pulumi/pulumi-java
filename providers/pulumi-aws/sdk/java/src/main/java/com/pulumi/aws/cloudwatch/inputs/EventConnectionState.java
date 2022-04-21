@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 import com.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authParameters")
-      private final @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
+    private @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
 
-    public Output<EventConnectionAuthParametersGetArgs> authParameters() {
-        return this.authParameters == null ? Codegen.empty() : this.authParameters;
+    public Optional<Output<EventConnectionAuthParametersGetArgs>> authParameters() {
+        return Optional.ofNullable(this.authParameters);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authorizationType")
-      private final @Nullable Output<String> authorizationType;
+    private @Nullable Output<String> authorizationType;
 
-    public Output<String> authorizationType() {
-        return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
+    public Optional<Output<String>> authorizationType() {
+        return Optional.ofNullable(this.authorizationType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class EventConnectionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="secretArn")
-      private final @Nullable Output<String> secretArn;
+    private @Nullable Output<String> secretArn;
 
-    public Output<String> secretArn() {
-        return this.secretArn == null ? Codegen.empty() : this.secretArn;
+    public Optional<Output<String>> secretArn() {
+        return Optional.ofNullable(this.secretArn);
     }
 
-    public EventConnectionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters,
-        @Nullable Output<String> authorizationType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> secretArn) {
-        this.arn = arn;
-        this.authParameters = authParameters;
-        this.authorizationType = authorizationType;
-        this.description = description;
-        this.name = name;
-        this.secretArn = secretArn;
-    }
+    private EventConnectionState() {}
 
-    private EventConnectionState() {
-        this.arn = Codegen.empty();
-        this.authParameters = Codegen.empty();
-        this.authorizationType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.secretArn = Codegen.empty();
+    private EventConnectionState(EventConnectionState $) {
+        this.arn = $.arn;
+        this.authParameters = $.authParameters;
+        this.authorizationType = $.authorizationType;
+        this.description = $.description;
+        this.name = $.name;
+        this.secretArn = $.secretArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventConnectionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
-        private @Nullable Output<String> authorizationType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> secretArn;
+        private EventConnectionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventConnectionState();
         }
 
         public Builder(EventConnectionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.authParameters = defaults.authParameters;
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.secretArn = defaults.secretArn;
+            $ = new EventConnectionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder authParameters(@Nullable Output<EventConnectionAuthParametersGetArgs> authParameters) {
-            this.authParameters = authParameters;
+            $.authParameters = authParameters;
             return this;
         }
-        public Builder authParameters(@Nullable EventConnectionAuthParametersGetArgs authParameters) {
-            this.authParameters = Codegen.ofNullable(authParameters);
-            return this;
+
+        public Builder authParameters(EventConnectionAuthParametersGetArgs authParameters) {
+            return authParameters(Output.of(authParameters));
         }
+
         public Builder authorizationType(@Nullable Output<String> authorizationType) {
-            this.authorizationType = authorizationType;
+            $.authorizationType = authorizationType;
             return this;
         }
-        public Builder authorizationType(@Nullable String authorizationType) {
-            this.authorizationType = Codegen.ofNullable(authorizationType);
-            return this;
+
+        public Builder authorizationType(String authorizationType) {
+            return authorizationType(Output.of(authorizationType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder secretArn(@Nullable Output<String> secretArn) {
-            this.secretArn = secretArn;
+            $.secretArn = secretArn;
             return this;
         }
-        public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Codegen.ofNullable(secretArn);
-            return this;
-        }        public EventConnectionState build() {
-            return new EventConnectionState(arn, authParameters, authorizationType, description, name, secretArn);
+
+        public Builder secretArn(String secretArn) {
+            return secretArn(Output.of(secretArn));
+        }
+
+        public EventConnectionState build() {
+            return $;
         }
     }
+
 }

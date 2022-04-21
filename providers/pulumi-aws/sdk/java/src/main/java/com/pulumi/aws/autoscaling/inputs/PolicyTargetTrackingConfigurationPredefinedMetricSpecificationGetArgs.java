@@ -5,9 +5,9 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class PolicyTargetTrackingConfigurationPredefinedMetricSpecificatio
      * 
      */
     @Import(name="predefinedMetricType", required=true)
-      private final Output<String> predefinedMetricType;
+    private Output<String> predefinedMetricType;
 
     public Output<String> predefinedMetricType() {
         return this.predefinedMetricType;
@@ -31,63 +31,59 @@ public final class PolicyTargetTrackingConfigurationPredefinedMetricSpecificatio
      * 
      */
     @Import(name="resourceLabel")
-      private final @Nullable Output<String> resourceLabel;
+    private @Nullable Output<String> resourceLabel;
 
-    public Output<String> resourceLabel() {
-        return this.resourceLabel == null ? Codegen.empty() : this.resourceLabel;
+    public Optional<Output<String>> resourceLabel() {
+        return Optional.ofNullable(this.resourceLabel);
     }
 
-    public PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs(
-        Output<String> predefinedMetricType,
-        @Nullable Output<String> resourceLabel) {
-        this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType, "expected parameter 'predefinedMetricType' to be non-null");
-        this.resourceLabel = resourceLabel;
-    }
+    private PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs() {}
 
-    private PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs() {
-        this.predefinedMetricType = Codegen.empty();
-        this.resourceLabel = Codegen.empty();
+    private PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs(PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs $) {
+        this.predefinedMetricType = $.predefinedMetricType;
+        this.resourceLabel = $.resourceLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> predefinedMetricType;
-        private @Nullable Output<String> resourceLabel;
+        private PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs();
         }
 
         public Builder(PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predefinedMetricType = defaults.predefinedMetricType;
-    	      this.resourceLabel = defaults.resourceLabel;
+            $ = new PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder predefinedMetricType(Output<String> predefinedMetricType) {
-            this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
+            $.predefinedMetricType = predefinedMetricType;
             return this;
         }
+
         public Builder predefinedMetricType(String predefinedMetricType) {
-            this.predefinedMetricType = Output.of(Objects.requireNonNull(predefinedMetricType));
-            return this;
+            return predefinedMetricType(Output.of(predefinedMetricType));
         }
+
         public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
-            this.resourceLabel = resourceLabel;
+            $.resourceLabel = resourceLabel;
             return this;
         }
-        public Builder resourceLabel(@Nullable String resourceLabel) {
-            this.resourceLabel = Codegen.ofNullable(resourceLabel);
-            return this;
-        }        public PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs build() {
-            return new PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs(predefinedMetricType, resourceLabel);
+
+        public Builder resourceLabel(String resourceLabel) {
+            return resourceLabel(Output.of(resourceLabel));
+        }
+
+        public PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs build() {
+            $.predefinedMetricType = Objects.requireNonNull($.predefinedMetricType, "expected parameter 'predefinedMetricType' to be non-null");
+            return $;
         }
     }
+
 }

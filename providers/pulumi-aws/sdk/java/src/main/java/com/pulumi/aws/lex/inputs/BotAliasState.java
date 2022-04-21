@@ -6,9 +6,9 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.BotAliasConversationLogsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="botName")
-      private final @Nullable Output<String> botName;
+    private @Nullable Output<String> botName;
 
-    public Output<String> botName() {
-        return this.botName == null ? Codegen.empty() : this.botName;
+    public Optional<Output<String>> botName() {
+        return Optional.ofNullable(this.botName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="botVersion")
-      private final @Nullable Output<String> botVersion;
+    private @Nullable Output<String> botVersion;
 
-    public Output<String> botVersion() {
-        return this.botVersion == null ? Codegen.empty() : this.botVersion;
+    public Optional<Output<String>> botVersion() {
+        return Optional.ofNullable(this.botVersion);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="checksum")
-      private final @Nullable Output<String> checksum;
+    private @Nullable Output<String> checksum;
 
-    public Output<String> checksum() {
-        return this.checksum == null ? Codegen.empty() : this.checksum;
+    public Optional<Output<String>> checksum() {
+        return Optional.ofNullable(this.checksum);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conversationLogs")
-      private final @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
+    private @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
 
-    public Output<BotAliasConversationLogsGetArgs> conversationLogs() {
-        return this.conversationLogs == null ? Codegen.empty() : this.conversationLogs;
+    public Optional<Output<BotAliasConversationLogsGetArgs>> conversationLogs() {
+        return Optional.ofNullable(this.conversationLogs);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdatedDate")
-      private final @Nullable Output<String> lastUpdatedDate;
+    private @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> lastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
+    public Optional<Output<String>> lastUpdatedDate() {
+        return Optional.ofNullable(this.lastUpdatedDate);
     }
 
     /**
@@ -109,154 +109,128 @@ public final class BotAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public BotAliasState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> botName,
-        @Nullable Output<String> botVersion,
-        @Nullable Output<String> checksum,
-        @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> lastUpdatedDate,
-        @Nullable Output<String> name) {
-        this.arn = arn;
-        this.botName = botName;
-        this.botVersion = botVersion;
-        this.checksum = checksum;
-        this.conversationLogs = conversationLogs;
-        this.createdDate = createdDate;
-        this.description = description;
-        this.lastUpdatedDate = lastUpdatedDate;
-        this.name = name;
-    }
+    private BotAliasState() {}
 
-    private BotAliasState() {
-        this.arn = Codegen.empty();
-        this.botName = Codegen.empty();
-        this.botVersion = Codegen.empty();
-        this.checksum = Codegen.empty();
-        this.conversationLogs = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.lastUpdatedDate = Codegen.empty();
-        this.name = Codegen.empty();
+    private BotAliasState(BotAliasState $) {
+        this.arn = $.arn;
+        this.botName = $.botName;
+        this.botVersion = $.botVersion;
+        this.checksum = $.checksum;
+        this.conversationLogs = $.conversationLogs;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.lastUpdatedDate = $.lastUpdatedDate;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> botName;
-        private @Nullable Output<String> botVersion;
-        private @Nullable Output<String> checksum;
-        private @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> lastUpdatedDate;
-        private @Nullable Output<String> name;
+        private BotAliasState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasState();
         }
 
         public Builder(BotAliasState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.botName = defaults.botName;
-    	      this.botVersion = defaults.botVersion;
-    	      this.checksum = defaults.checksum;
-    	      this.conversationLogs = defaults.conversationLogs;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.lastUpdatedDate = defaults.lastUpdatedDate;
-    	      this.name = defaults.name;
+            $ = new BotAliasState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder botName(@Nullable Output<String> botName) {
-            this.botName = botName;
+            $.botName = botName;
             return this;
         }
-        public Builder botName(@Nullable String botName) {
-            this.botName = Codegen.ofNullable(botName);
-            return this;
+
+        public Builder botName(String botName) {
+            return botName(Output.of(botName));
         }
+
         public Builder botVersion(@Nullable Output<String> botVersion) {
-            this.botVersion = botVersion;
+            $.botVersion = botVersion;
             return this;
         }
-        public Builder botVersion(@Nullable String botVersion) {
-            this.botVersion = Codegen.ofNullable(botVersion);
-            return this;
+
+        public Builder botVersion(String botVersion) {
+            return botVersion(Output.of(botVersion));
         }
+
         public Builder checksum(@Nullable Output<String> checksum) {
-            this.checksum = checksum;
+            $.checksum = checksum;
             return this;
         }
-        public Builder checksum(@Nullable String checksum) {
-            this.checksum = Codegen.ofNullable(checksum);
-            return this;
+
+        public Builder checksum(String checksum) {
+            return checksum(Output.of(checksum));
         }
+
         public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs) {
-            this.conversationLogs = conversationLogs;
+            $.conversationLogs = conversationLogs;
             return this;
         }
-        public Builder conversationLogs(@Nullable BotAliasConversationLogsGetArgs conversationLogs) {
-            this.conversationLogs = Codegen.ofNullable(conversationLogs);
-            return this;
+
+        public Builder conversationLogs(BotAliasConversationLogsGetArgs conversationLogs) {
+            return conversationLogs(Output.of(conversationLogs));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
-            this.lastUpdatedDate = lastUpdatedDate;
+            $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Codegen.ofNullable(lastUpdatedDate);
-            return this;
+
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
+            return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public BotAliasState build() {
-            return new BotAliasState(arn, botName, botVersion, checksum, conversationLogs, createdDate, description, lastUpdatedDate, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public BotAliasState build() {
+            return $;
         }
     }
+
 }

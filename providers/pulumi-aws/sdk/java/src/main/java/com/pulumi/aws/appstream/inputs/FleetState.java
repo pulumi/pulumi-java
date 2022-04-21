@@ -8,12 +8,12 @@ import com.pulumi.aws.appstream.inputs.FleetDomainJoinInfoGetArgs;
 import com.pulumi.aws.appstream.inputs.FleetVpcConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computeCapacity")
-      private final @Nullable Output<FleetComputeCapacityGetArgs> computeCapacity;
+    private @Nullable Output<FleetComputeCapacityGetArgs> computeCapacity;
 
-    public Output<FleetComputeCapacityGetArgs> computeCapacity() {
-        return this.computeCapacity == null ? Codegen.empty() : this.computeCapacity;
+    public Optional<Output<FleetComputeCapacityGetArgs>> computeCapacity() {
+        return Optional.ofNullable(this.computeCapacity);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disconnectTimeoutInSeconds")
-      private final @Nullable Output<Integer> disconnectTimeoutInSeconds;
+    private @Nullable Output<Integer> disconnectTimeoutInSeconds;
 
-    public Output<Integer> disconnectTimeoutInSeconds() {
-        return this.disconnectTimeoutInSeconds == null ? Codegen.empty() : this.disconnectTimeoutInSeconds;
+    public Optional<Output<Integer>> disconnectTimeoutInSeconds() {
+        return Optional.ofNullable(this.disconnectTimeoutInSeconds);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainJoinInfo")
-      private final @Nullable Output<FleetDomainJoinInfoGetArgs> domainJoinInfo;
+    private @Nullable Output<FleetDomainJoinInfoGetArgs> domainJoinInfo;
 
-    public Output<FleetDomainJoinInfoGetArgs> domainJoinInfo() {
-        return this.domainJoinInfo == null ? Codegen.empty() : this.domainJoinInfo;
+    public Optional<Output<FleetDomainJoinInfoGetArgs>> domainJoinInfo() {
+        return Optional.ofNullable(this.domainJoinInfo);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDefaultInternetAccess")
-      private final @Nullable Output<Boolean> enableDefaultInternetAccess;
+    private @Nullable Output<Boolean> enableDefaultInternetAccess;
 
-    public Output<Boolean> enableDefaultInternetAccess() {
-        return this.enableDefaultInternetAccess == null ? Codegen.empty() : this.enableDefaultInternetAccess;
+    public Optional<Output<Boolean>> enableDefaultInternetAccess() {
+        return Optional.ofNullable(this.enableDefaultInternetAccess);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleetType")
-      private final @Nullable Output<String> fleetType;
+    private @Nullable Output<String> fleetType;
 
-    public Output<String> fleetType() {
-        return this.fleetType == null ? Codegen.empty() : this.fleetType;
+    public Optional<Output<String>> fleetType() {
+        return Optional.ofNullable(this.fleetType);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRoleArn")
-      private final @Nullable Output<String> iamRoleArn;
+    private @Nullable Output<String> iamRoleArn;
 
-    public Output<String> iamRoleArn() {
-        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
+    public Optional<Output<String>> iamRoleArn() {
+        return Optional.ofNullable(this.iamRoleArn);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idleDisconnectTimeoutInSeconds")
-      private final @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
+    private @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
 
-    public Output<Integer> idleDisconnectTimeoutInSeconds() {
-        return this.idleDisconnectTimeoutInSeconds == null ? Codegen.empty() : this.idleDisconnectTimeoutInSeconds;
+    public Optional<Output<Integer>> idleDisconnectTimeoutInSeconds() {
+        return Optional.ofNullable(this.idleDisconnectTimeoutInSeconds);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageArn")
-      private final @Nullable Output<String> imageArn;
+    private @Nullable Output<String> imageArn;
 
-    public Output<String> imageArn() {
-        return this.imageArn == null ? Codegen.empty() : this.imageArn;
+    public Optional<Output<String>> imageArn() {
+        return Optional.ofNullable(this.imageArn);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageName")
-      private final @Nullable Output<String> imageName;
+    private @Nullable Output<String> imageName;
 
-    public Output<String> imageName() {
-        return this.imageName == null ? Codegen.empty() : this.imageName;
+    public Optional<Output<String>> imageName() {
+        return Optional.ofNullable(this.imageName);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxUserDurationInSeconds")
-      private final @Nullable Output<Integer> maxUserDurationInSeconds;
+    private @Nullable Output<Integer> maxUserDurationInSeconds;
 
-    public Output<Integer> maxUserDurationInSeconds() {
-        return this.maxUserDurationInSeconds == null ? Codegen.empty() : this.maxUserDurationInSeconds;
+    public Optional<Output<Integer>> maxUserDurationInSeconds() {
+        return Optional.ofNullable(this.maxUserDurationInSeconds);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamView")
-      private final @Nullable Output<String> streamView;
+    private @Nullable Output<String> streamView;
 
-    public Output<String> streamView() {
-        return this.streamView == null ? Codegen.empty() : this.streamView;
+    public Optional<Output<String>> streamView() {
+        return Optional.ofNullable(this.streamView);
     }
 
     /**
@@ -224,17 +224,17 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -242,310 +242,248 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-      private final @Nullable Output<FleetVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<FleetVpcConfigGetArgs> vpcConfig;
 
-    public Output<FleetVpcConfigGetArgs> vpcConfig() {
-        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
+    public Optional<Output<FleetVpcConfigGetArgs>> vpcConfig() {
+        return Optional.ofNullable(this.vpcConfig);
     }
 
-    public FleetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<FleetComputeCapacityGetArgs> computeCapacity,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> disconnectTimeoutInSeconds,
-        @Nullable Output<String> displayName,
-        @Nullable Output<FleetDomainJoinInfoGetArgs> domainJoinInfo,
-        @Nullable Output<Boolean> enableDefaultInternetAccess,
-        @Nullable Output<String> fleetType,
-        @Nullable Output<String> iamRoleArn,
-        @Nullable Output<Integer> idleDisconnectTimeoutInSeconds,
-        @Nullable Output<String> imageArn,
-        @Nullable Output<String> imageName,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<Integer> maxUserDurationInSeconds,
-        @Nullable Output<String> name,
-        @Nullable Output<String> state,
-        @Nullable Output<String> streamView,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<FleetVpcConfigGetArgs> vpcConfig) {
-        this.arn = arn;
-        this.computeCapacity = computeCapacity;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
-        this.displayName = displayName;
-        this.domainJoinInfo = domainJoinInfo;
-        this.enableDefaultInternetAccess = enableDefaultInternetAccess;
-        this.fleetType = fleetType;
-        this.iamRoleArn = iamRoleArn;
-        this.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
-        this.imageArn = imageArn;
-        this.imageName = imageName;
-        this.instanceType = instanceType;
-        this.maxUserDurationInSeconds = maxUserDurationInSeconds;
-        this.name = name;
-        this.state = state;
-        this.streamView = streamView;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcConfig = vpcConfig;
-    }
+    private FleetState() {}
 
-    private FleetState() {
-        this.arn = Codegen.empty();
-        this.computeCapacity = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disconnectTimeoutInSeconds = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.domainJoinInfo = Codegen.empty();
-        this.enableDefaultInternetAccess = Codegen.empty();
-        this.fleetType = Codegen.empty();
-        this.iamRoleArn = Codegen.empty();
-        this.idleDisconnectTimeoutInSeconds = Codegen.empty();
-        this.imageArn = Codegen.empty();
-        this.imageName = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.maxUserDurationInSeconds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.state = Codegen.empty();
-        this.streamView = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcConfig = Codegen.empty();
+    private FleetState(FleetState $) {
+        this.arn = $.arn;
+        this.computeCapacity = $.computeCapacity;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.disconnectTimeoutInSeconds = $.disconnectTimeoutInSeconds;
+        this.displayName = $.displayName;
+        this.domainJoinInfo = $.domainJoinInfo;
+        this.enableDefaultInternetAccess = $.enableDefaultInternetAccess;
+        this.fleetType = $.fleetType;
+        this.iamRoleArn = $.iamRoleArn;
+        this.idleDisconnectTimeoutInSeconds = $.idleDisconnectTimeoutInSeconds;
+        this.imageArn = $.imageArn;
+        this.imageName = $.imageName;
+        this.instanceType = $.instanceType;
+        this.maxUserDurationInSeconds = $.maxUserDurationInSeconds;
+        this.name = $.name;
+        this.state = $.state;
+        this.streamView = $.streamView;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcConfig = $.vpcConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<FleetComputeCapacityGetArgs> computeCapacity;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> disconnectTimeoutInSeconds;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<FleetDomainJoinInfoGetArgs> domainJoinInfo;
-        private @Nullable Output<Boolean> enableDefaultInternetAccess;
-        private @Nullable Output<String> fleetType;
-        private @Nullable Output<String> iamRoleArn;
-        private @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
-        private @Nullable Output<String> imageArn;
-        private @Nullable Output<String> imageName;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<Integer> maxUserDurationInSeconds;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> streamView;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<FleetVpcConfigGetArgs> vpcConfig;
+        private FleetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetState();
         }
 
         public Builder(FleetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.computeCapacity = defaults.computeCapacity;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.disconnectTimeoutInSeconds = defaults.disconnectTimeoutInSeconds;
-    	      this.displayName = defaults.displayName;
-    	      this.domainJoinInfo = defaults.domainJoinInfo;
-    	      this.enableDefaultInternetAccess = defaults.enableDefaultInternetAccess;
-    	      this.fleetType = defaults.fleetType;
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.idleDisconnectTimeoutInSeconds = defaults.idleDisconnectTimeoutInSeconds;
-    	      this.imageArn = defaults.imageArn;
-    	      this.imageName = defaults.imageName;
-    	      this.instanceType = defaults.instanceType;
-    	      this.maxUserDurationInSeconds = defaults.maxUserDurationInSeconds;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
-    	      this.streamView = defaults.streamView;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcConfig = defaults.vpcConfig;
+            $ = new FleetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder computeCapacity(@Nullable Output<FleetComputeCapacityGetArgs> computeCapacity) {
-            this.computeCapacity = computeCapacity;
+            $.computeCapacity = computeCapacity;
             return this;
         }
-        public Builder computeCapacity(@Nullable FleetComputeCapacityGetArgs computeCapacity) {
-            this.computeCapacity = Codegen.ofNullable(computeCapacity);
-            return this;
+
+        public Builder computeCapacity(FleetComputeCapacityGetArgs computeCapacity) {
+            return computeCapacity(Output.of(computeCapacity));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disconnectTimeoutInSeconds(@Nullable Output<Integer> disconnectTimeoutInSeconds) {
-            this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
+            $.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
             return this;
         }
-        public Builder disconnectTimeoutInSeconds(@Nullable Integer disconnectTimeoutInSeconds) {
-            this.disconnectTimeoutInSeconds = Codegen.ofNullable(disconnectTimeoutInSeconds);
-            return this;
+
+        public Builder disconnectTimeoutInSeconds(Integer disconnectTimeoutInSeconds) {
+            return disconnectTimeoutInSeconds(Output.of(disconnectTimeoutInSeconds));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder domainJoinInfo(@Nullable Output<FleetDomainJoinInfoGetArgs> domainJoinInfo) {
-            this.domainJoinInfo = domainJoinInfo;
+            $.domainJoinInfo = domainJoinInfo;
             return this;
         }
-        public Builder domainJoinInfo(@Nullable FleetDomainJoinInfoGetArgs domainJoinInfo) {
-            this.domainJoinInfo = Codegen.ofNullable(domainJoinInfo);
-            return this;
+
+        public Builder domainJoinInfo(FleetDomainJoinInfoGetArgs domainJoinInfo) {
+            return domainJoinInfo(Output.of(domainJoinInfo));
         }
+
         public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = enableDefaultInternetAccess;
+            $.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
-        public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = Codegen.ofNullable(enableDefaultInternetAccess);
-            return this;
+
+        public Builder enableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
+            return enableDefaultInternetAccess(Output.of(enableDefaultInternetAccess));
         }
+
         public Builder fleetType(@Nullable Output<String> fleetType) {
-            this.fleetType = fleetType;
+            $.fleetType = fleetType;
             return this;
         }
-        public Builder fleetType(@Nullable String fleetType) {
-            this.fleetType = Codegen.ofNullable(fleetType);
-            return this;
+
+        public Builder fleetType(String fleetType) {
+            return fleetType(Output.of(fleetType));
         }
+
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
-            this.iamRoleArn = iamRoleArn;
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
-        public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
-            return this;
+
+        public Builder iamRoleArn(String iamRoleArn) {
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder idleDisconnectTimeoutInSeconds(@Nullable Output<Integer> idleDisconnectTimeoutInSeconds) {
-            this.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
+            $.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
             return this;
         }
-        public Builder idleDisconnectTimeoutInSeconds(@Nullable Integer idleDisconnectTimeoutInSeconds) {
-            this.idleDisconnectTimeoutInSeconds = Codegen.ofNullable(idleDisconnectTimeoutInSeconds);
-            return this;
+
+        public Builder idleDisconnectTimeoutInSeconds(Integer idleDisconnectTimeoutInSeconds) {
+            return idleDisconnectTimeoutInSeconds(Output.of(idleDisconnectTimeoutInSeconds));
         }
+
         public Builder imageArn(@Nullable Output<String> imageArn) {
-            this.imageArn = imageArn;
+            $.imageArn = imageArn;
             return this;
         }
-        public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Codegen.ofNullable(imageArn);
-            return this;
+
+        public Builder imageArn(String imageArn) {
+            return imageArn(Output.of(imageArn));
         }
+
         public Builder imageName(@Nullable Output<String> imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
-        public Builder imageName(@Nullable String imageName) {
-            this.imageName = Codegen.ofNullable(imageName);
-            return this;
+
+        public Builder imageName(String imageName) {
+            return imageName(Output.of(imageName));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder maxUserDurationInSeconds(@Nullable Output<Integer> maxUserDurationInSeconds) {
-            this.maxUserDurationInSeconds = maxUserDurationInSeconds;
+            $.maxUserDurationInSeconds = maxUserDurationInSeconds;
             return this;
         }
-        public Builder maxUserDurationInSeconds(@Nullable Integer maxUserDurationInSeconds) {
-            this.maxUserDurationInSeconds = Codegen.ofNullable(maxUserDurationInSeconds);
-            return this;
+
+        public Builder maxUserDurationInSeconds(Integer maxUserDurationInSeconds) {
+            return maxUserDurationInSeconds(Output.of(maxUserDurationInSeconds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder streamView(@Nullable Output<String> streamView) {
-            this.streamView = streamView;
+            $.streamView = streamView;
             return this;
         }
-        public Builder streamView(@Nullable String streamView) {
-            this.streamView = Codegen.ofNullable(streamView);
-            return this;
+
+        public Builder streamView(String streamView) {
+            return streamView(Output.of(streamView));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcConfig(@Nullable Output<FleetVpcConfigGetArgs> vpcConfig) {
-            this.vpcConfig = vpcConfig;
+            $.vpcConfig = vpcConfig;
             return this;
         }
-        public Builder vpcConfig(@Nullable FleetVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Codegen.ofNullable(vpcConfig);
-            return this;
-        }        public FleetState build() {
-            return new FleetState(arn, computeCapacity, createdTime, description, disconnectTimeoutInSeconds, displayName, domainJoinInfo, enableDefaultInternetAccess, fleetType, iamRoleArn, idleDisconnectTimeoutInSeconds, imageArn, imageName, instanceType, maxUserDurationInSeconds, name, state, streamView, tags, tagsAll, vpcConfig);
+
+        public Builder vpcConfig(FleetVpcConfigGetArgs vpcConfig) {
+            return vpcConfig(Output.of(vpcConfig));
+        }
+
+        public FleetState build() {
+            return $;
         }
     }
+
 }

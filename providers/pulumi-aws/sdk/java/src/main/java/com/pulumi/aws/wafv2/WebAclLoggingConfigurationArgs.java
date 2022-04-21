@@ -7,10 +7,10 @@ import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="logDestinationConfigs", required=true)
-      private final Output<List<String>> logDestinationConfigs;
+    private Output<List<String>> logDestinationConfigs;
 
     public Output<List<String>> logDestinationConfigs() {
         return this.logDestinationConfigs;
@@ -34,10 +34,10 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="loggingFilter")
-      private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
+    private @Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter() {
-        return this.loggingFilter == null ? Codegen.empty() : this.loggingFilter;
+    public Optional<Output<WebAclLoggingConfigurationLoggingFilterArgs>> loggingFilter() {
+        return Optional.ofNullable(this.loggingFilter);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="redactedFields")
-      private final @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
+    private @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
 
-    public Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields() {
-        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
+    public Optional<Output<List<WebAclLoggingConfigurationRedactedFieldArgs>>> redactedFields() {
+        return Optional.ofNullable(this.redactedFields);
     }
 
     /**
@@ -56,95 +56,88 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
-    public WebAclLoggingConfigurationArgs(
-        Output<List<String>> logDestinationConfigs,
-        @Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter,
-        @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields,
-        Output<String> resourceArn) {
-        this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
-        this.loggingFilter = loggingFilter;
-        this.redactedFields = redactedFields;
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-    }
+    private WebAclLoggingConfigurationArgs() {}
 
-    private WebAclLoggingConfigurationArgs() {
-        this.logDestinationConfigs = Codegen.empty();
-        this.loggingFilter = Codegen.empty();
-        this.redactedFields = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private WebAclLoggingConfigurationArgs(WebAclLoggingConfigurationArgs $) {
+        this.logDestinationConfigs = $.logDestinationConfigs;
+        this.loggingFilter = $.loggingFilter;
+        this.redactedFields = $.redactedFields;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> logDestinationConfigs;
-        private @Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
-        private @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
-        private Output<String> resourceArn;
+        private WebAclLoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationArgs();
         }
 
         public Builder(WebAclLoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logDestinationConfigs = defaults.logDestinationConfigs;
-    	      this.loggingFilter = defaults.loggingFilter;
-    	      this.redactedFields = defaults.redactedFields;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new WebAclLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logDestinationConfigs(Output<List<String>> logDestinationConfigs) {
-            this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
+            $.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
+
         public Builder logDestinationConfigs(List<String> logDestinationConfigs) {
-            this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
-            return this;
+            return logDestinationConfigs(Output.of(logDestinationConfigs));
         }
+
         public Builder logDestinationConfigs(String... logDestinationConfigs) {
             return logDestinationConfigs(List.of(logDestinationConfigs));
         }
+
         public Builder loggingFilter(@Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter) {
-            this.loggingFilter = loggingFilter;
+            $.loggingFilter = loggingFilter;
             return this;
         }
-        public Builder loggingFilter(@Nullable WebAclLoggingConfigurationLoggingFilterArgs loggingFilter) {
-            this.loggingFilter = Codegen.ofNullable(loggingFilter);
-            return this;
+
+        public Builder loggingFilter(WebAclLoggingConfigurationLoggingFilterArgs loggingFilter) {
+            return loggingFilter(Output.of(loggingFilter));
         }
+
         public Builder redactedFields(@Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields) {
-            this.redactedFields = redactedFields;
+            $.redactedFields = redactedFields;
             return this;
         }
-        public Builder redactedFields(@Nullable List<WebAclLoggingConfigurationRedactedFieldArgs> redactedFields) {
-            this.redactedFields = Codegen.ofNullable(redactedFields);
-            return this;
+
+        public Builder redactedFields(List<WebAclLoggingConfigurationRedactedFieldArgs> redactedFields) {
+            return redactedFields(Output.of(redactedFields));
         }
+
         public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldArgs... redactedFields) {
             return redactedFields(List.of(redactedFields));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
-        }        public WebAclLoggingConfigurationArgs build() {
-            return new WebAclLoggingConfigurationArgs(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public WebAclLoggingConfigurationArgs build() {
+            $.logDestinationConfigs = Objects.requireNonNull($.logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

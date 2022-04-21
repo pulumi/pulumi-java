@@ -5,7 +5,6 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ReceiptRuleAddHeaderActionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
@@ -31,7 +30,7 @@ public final class ReceiptRuleAddHeaderActionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="headerValue", required=true)
-      private final Output<String> headerValue;
+    private Output<String> headerValue;
 
     public Output<String> headerValue() {
         return this.headerValue;
@@ -42,76 +41,71 @@ public final class ReceiptRuleAddHeaderActionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="position", required=true)
-      private final Output<Integer> position;
+    private Output<Integer> position;
 
     public Output<Integer> position() {
         return this.position;
     }
 
-    public ReceiptRuleAddHeaderActionArgs(
-        Output<String> headerName,
-        Output<String> headerValue,
-        Output<Integer> position) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-    }
+    private ReceiptRuleAddHeaderActionArgs() {}
 
-    private ReceiptRuleAddHeaderActionArgs() {
-        this.headerName = Codegen.empty();
-        this.headerValue = Codegen.empty();
-        this.position = Codegen.empty();
+    private ReceiptRuleAddHeaderActionArgs(ReceiptRuleAddHeaderActionArgs $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
+        this.position = $.position;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleAddHeaderActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> headerName;
-        private Output<String> headerValue;
-        private Output<Integer> position;
+        private ReceiptRuleAddHeaderActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleAddHeaderActionArgs();
         }
 
         public Builder(ReceiptRuleAddHeaderActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
-    	      this.position = defaults.position;
+            $ = new ReceiptRuleAddHeaderActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
+            return headerName(Output.of(headerName));
         }
+
         public Builder headerValue(Output<String> headerValue) {
-            this.headerValue = Objects.requireNonNull(headerValue);
+            $.headerValue = headerValue;
             return this;
         }
+
         public Builder headerValue(String headerValue) {
-            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
-            return this;
+            return headerValue(Output.of(headerValue));
         }
+
         public Builder position(Output<Integer> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
-        }        public ReceiptRuleAddHeaderActionArgs build() {
-            return new ReceiptRuleAddHeaderActionArgs(headerName, headerValue, position);
+            return position(Output.of(position));
+        }
+
+        public ReceiptRuleAddHeaderActionArgs build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.headerValue = Objects.requireNonNull($.headerValue, "expected parameter 'headerValue' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

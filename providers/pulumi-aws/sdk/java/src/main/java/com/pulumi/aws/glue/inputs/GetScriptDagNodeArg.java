@@ -20,7 +20,7 @@ public final class GetScriptDagNodeArg extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -31,10 +31,10 @@ public final class GetScriptDagNodeArg extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="param")
-      private final @Nullable Boolean param;
+    private @Nullable Boolean param;
 
     public Optional<Boolean> param() {
-        return this.param == null ? Optional.empty() : Optional.ofNullable(this.param);
+        return Optional.ofNullable(this.param);
     }
 
     /**
@@ -42,64 +42,58 @@ public final class GetScriptDagNodeArg extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GetScriptDagNodeArg(
-        String name,
-        @Nullable Boolean param,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.param = param;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetScriptDagNodeArg() {}
 
-    private GetScriptDagNodeArg() {
-        this.name = null;
-        this.param = null;
-        this.value = null;
+    private GetScriptDagNodeArg(GetScriptDagNodeArg $) {
+        this.name = $.name;
+        this.param = $.param;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScriptDagNodeArg defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable Boolean param;
-        private String value;
+        private GetScriptDagNodeArg $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScriptDagNodeArg();
         }
 
         public Builder(GetScriptDagNodeArg defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.param = defaults.param;
-    	      this.value = defaults.value;
+            $ = new GetScriptDagNodeArg(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder param(@Nullable Boolean param) {
-            this.param = param;
+            $.param = param;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetScriptDagNodeArg build() {
-            return new GetScriptDagNodeArg(name, param, value);
+        }
+
+        public GetScriptDagNodeArg build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ThingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ThingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ThingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thingTypeName")
-      private final @Nullable Output<String> thingTypeName;
+    private @Nullable Output<String> thingTypeName;
 
-    public Output<String> thingTypeName() {
-        return this.thingTypeName == null ? Codegen.empty() : this.thingTypeName;
+    public Optional<Output<String>> thingTypeName() {
+        return Optional.ofNullable(this.thingTypeName);
     }
 
-    public ThingArgs(
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<String> name,
-        @Nullable Output<String> thingTypeName) {
-        this.attributes = attributes;
-        this.name = name;
-        this.thingTypeName = thingTypeName;
-    }
+    private ThingArgs() {}
 
-    private ThingArgs() {
-        this.attributes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.thingTypeName = Codegen.empty();
+    private ThingArgs(ThingArgs $) {
+        this.attributes = $.attributes;
+        this.name = $.name;
+        this.thingTypeName = $.thingTypeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> thingTypeName;
+        private ThingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingArgs();
         }
 
         public Builder(ThingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.name = defaults.name;
-    	      this.thingTypeName = defaults.thingTypeName;
+            $ = new ThingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
-            this.thingTypeName = thingTypeName;
+            $.thingTypeName = thingTypeName;
             return this;
         }
-        public Builder thingTypeName(@Nullable String thingTypeName) {
-            this.thingTypeName = Codegen.ofNullable(thingTypeName);
-            return this;
-        }        public ThingArgs build() {
-            return new ThingArgs(attributes, name, thingTypeName);
+
+        public Builder thingTypeName(String thingTypeName) {
+            return thingTypeName(Output.of(thingTypeName));
+        }
+
+        public ThingArgs build() {
+            return $;
         }
     }
+
 }

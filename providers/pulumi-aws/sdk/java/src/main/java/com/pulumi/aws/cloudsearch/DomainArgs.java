@@ -8,11 +8,11 @@ import com.pulumi.aws.cloudsearch.inputs.DomainIndexFieldArgs;
 import com.pulumi.aws.cloudsearch.inputs.DomainScalingParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointOptions")
-      private final @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
+    private @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
 
-    public Output<DomainEndpointOptionsArgs> endpointOptions() {
-        return this.endpointOptions == null ? Codegen.empty() : this.endpointOptions;
+    public Optional<Output<DomainEndpointOptionsArgs>> endpointOptions() {
+        return Optional.ofNullable(this.endpointOptions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="indexFields")
-      private final @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
+    private @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
 
-    public Output<List<DomainIndexFieldArgs>> indexFields() {
-        return this.indexFields == null ? Codegen.empty() : this.indexFields;
+    public Optional<Output<List<DomainIndexFieldArgs>>> indexFields() {
+        return Optional.ofNullable(this.indexFields);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multiAz")
-      private final @Nullable Output<Boolean> multiAz;
+    private @Nullable Output<Boolean> multiAz;
 
-    public Output<Boolean> multiAz() {
-        return this.multiAz == null ? Codegen.empty() : this.multiAz;
+    public Optional<Output<Boolean>> multiAz() {
+        return Optional.ofNullable(this.multiAz);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,105 +69,92 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingParameters")
-      private final @Nullable Output<DomainScalingParametersArgs> scalingParameters;
+    private @Nullable Output<DomainScalingParametersArgs> scalingParameters;
 
-    public Output<DomainScalingParametersArgs> scalingParameters() {
-        return this.scalingParameters == null ? Codegen.empty() : this.scalingParameters;
+    public Optional<Output<DomainScalingParametersArgs>> scalingParameters() {
+        return Optional.ofNullable(this.scalingParameters);
     }
 
-    public DomainArgs(
-        @Nullable Output<DomainEndpointOptionsArgs> endpointOptions,
-        @Nullable Output<List<DomainIndexFieldArgs>> indexFields,
-        @Nullable Output<Boolean> multiAz,
-        @Nullable Output<String> name,
-        @Nullable Output<DomainScalingParametersArgs> scalingParameters) {
-        this.endpointOptions = endpointOptions;
-        this.indexFields = indexFields;
-        this.multiAz = multiAz;
-        this.name = name;
-        this.scalingParameters = scalingParameters;
-    }
+    private DomainArgs() {}
 
-    private DomainArgs() {
-        this.endpointOptions = Codegen.empty();
-        this.indexFields = Codegen.empty();
-        this.multiAz = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scalingParameters = Codegen.empty();
+    private DomainArgs(DomainArgs $) {
+        this.endpointOptions = $.endpointOptions;
+        this.indexFields = $.indexFields;
+        this.multiAz = $.multiAz;
+        this.name = $.name;
+        this.scalingParameters = $.scalingParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
-        private @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
-        private @Nullable Output<Boolean> multiAz;
-        private @Nullable Output<String> name;
-        private @Nullable Output<DomainScalingParametersArgs> scalingParameters;
+        private DomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainArgs();
         }
 
         public Builder(DomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointOptions = defaults.endpointOptions;
-    	      this.indexFields = defaults.indexFields;
-    	      this.multiAz = defaults.multiAz;
-    	      this.name = defaults.name;
-    	      this.scalingParameters = defaults.scalingParameters;
+            $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointOptions(@Nullable Output<DomainEndpointOptionsArgs> endpointOptions) {
-            this.endpointOptions = endpointOptions;
+            $.endpointOptions = endpointOptions;
             return this;
         }
-        public Builder endpointOptions(@Nullable DomainEndpointOptionsArgs endpointOptions) {
-            this.endpointOptions = Codegen.ofNullable(endpointOptions);
-            return this;
+
+        public Builder endpointOptions(DomainEndpointOptionsArgs endpointOptions) {
+            return endpointOptions(Output.of(endpointOptions));
         }
+
         public Builder indexFields(@Nullable Output<List<DomainIndexFieldArgs>> indexFields) {
-            this.indexFields = indexFields;
+            $.indexFields = indexFields;
             return this;
         }
-        public Builder indexFields(@Nullable List<DomainIndexFieldArgs> indexFields) {
-            this.indexFields = Codegen.ofNullable(indexFields);
-            return this;
+
+        public Builder indexFields(List<DomainIndexFieldArgs> indexFields) {
+            return indexFields(Output.of(indexFields));
         }
+
         public Builder indexFields(DomainIndexFieldArgs... indexFields) {
             return indexFields(List.of(indexFields));
         }
+
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
-            this.multiAz = multiAz;
+            $.multiAz = multiAz;
             return this;
         }
-        public Builder multiAz(@Nullable Boolean multiAz) {
-            this.multiAz = Codegen.ofNullable(multiAz);
-            return this;
+
+        public Builder multiAz(Boolean multiAz) {
+            return multiAz(Output.of(multiAz));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scalingParameters(@Nullable Output<DomainScalingParametersArgs> scalingParameters) {
-            this.scalingParameters = scalingParameters;
+            $.scalingParameters = scalingParameters;
             return this;
         }
-        public Builder scalingParameters(@Nullable DomainScalingParametersArgs scalingParameters) {
-            this.scalingParameters = Codegen.ofNullable(scalingParameters);
-            return this;
-        }        public DomainArgs build() {
-            return new DomainArgs(endpointOptions, indexFields, multiAz, name, scalingParameters);
+
+        public Builder scalingParameters(DomainScalingParametersArgs scalingParameters) {
+            return scalingParameters(Output.of(scalingParameters));
+        }
+
+        public DomainArgs build() {
+            return $;
         }
     }
+
 }

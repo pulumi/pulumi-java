@@ -5,9 +5,9 @@ package com.pulumi.aws.s3control;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class ObjectLambdaAccessPointPolicyArgs extends com.pulumi.resource
     public static final ObjectLambdaAccessPointPolicyArgs Empty = new ObjectLambdaAccessPointPolicyArgs();
 
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -27,10 +27,10 @@ public final class ObjectLambdaAccessPointPolicyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,76 +38,69 @@ public final class ObjectLambdaAccessPointPolicyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public ObjectLambdaAccessPointPolicyArgs(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> name,
-        Output<String> policy) {
-        this.accountId = accountId;
-        this.name = name;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private ObjectLambdaAccessPointPolicyArgs() {}
 
-    private ObjectLambdaAccessPointPolicyArgs() {
-        this.accountId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
+    private ObjectLambdaAccessPointPolicyArgs(ObjectLambdaAccessPointPolicyArgs $) {
+        this.accountId = $.accountId;
+        this.name = $.name;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectLambdaAccessPointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> name;
-        private Output<String> policy;
+        private ObjectLambdaAccessPointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectLambdaAccessPointPolicyArgs();
         }
 
         public Builder(ObjectLambdaAccessPointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
+            $ = new ObjectLambdaAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public ObjectLambdaAccessPointPolicyArgs build() {
-            return new ObjectLambdaAccessPointPolicyArgs(accountId, name, policy);
+            return policy(Output.of(policy));
+        }
+
+        public ObjectLambdaAccessPointPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

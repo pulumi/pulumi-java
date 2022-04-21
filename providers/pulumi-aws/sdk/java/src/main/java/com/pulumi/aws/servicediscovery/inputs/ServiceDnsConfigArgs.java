@@ -6,10 +6,10 @@ package com.pulumi.aws.servicediscovery.inputs;
 import com.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigDnsRecordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ServiceDnsConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dnsRecords", required=true)
-      private final Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords;
+    private Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords;
 
     public Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords() {
         return this.dnsRecords;
@@ -33,7 +33,7 @@ public final class ServiceDnsConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="namespaceId", required=true)
-      private final Output<String> namespaceId;
+    private Output<String> namespaceId;
 
     public Output<String> namespaceId() {
         return this.namespaceId;
@@ -44,79 +44,74 @@ public final class ServiceDnsConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="routingPolicy")
-      private final @Nullable Output<String> routingPolicy;
+    private @Nullable Output<String> routingPolicy;
 
-    public Output<String> routingPolicy() {
-        return this.routingPolicy == null ? Codegen.empty() : this.routingPolicy;
+    public Optional<Output<String>> routingPolicy() {
+        return Optional.ofNullable(this.routingPolicy);
     }
 
-    public ServiceDnsConfigArgs(
-        Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords,
-        Output<String> namespaceId,
-        @Nullable Output<String> routingPolicy) {
-        this.dnsRecords = Objects.requireNonNull(dnsRecords, "expected parameter 'dnsRecords' to be non-null");
-        this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
-        this.routingPolicy = routingPolicy;
-    }
+    private ServiceDnsConfigArgs() {}
 
-    private ServiceDnsConfigArgs() {
-        this.dnsRecords = Codegen.empty();
-        this.namespaceId = Codegen.empty();
-        this.routingPolicy = Codegen.empty();
+    private ServiceDnsConfigArgs(ServiceDnsConfigArgs $) {
+        this.dnsRecords = $.dnsRecords;
+        this.namespaceId = $.namespaceId;
+        this.routingPolicy = $.routingPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceDnsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords;
-        private Output<String> namespaceId;
-        private @Nullable Output<String> routingPolicy;
+        private ServiceDnsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceDnsConfigArgs();
         }
 
         public Builder(ServiceDnsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsRecords = defaults.dnsRecords;
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.routingPolicy = defaults.routingPolicy;
+            $ = new ServiceDnsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsRecords(Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords) {
-            this.dnsRecords = Objects.requireNonNull(dnsRecords);
+            $.dnsRecords = dnsRecords;
             return this;
         }
+
         public Builder dnsRecords(List<ServiceDnsConfigDnsRecordArgs> dnsRecords) {
-            this.dnsRecords = Output.of(Objects.requireNonNull(dnsRecords));
-            return this;
+            return dnsRecords(Output.of(dnsRecords));
         }
+
         public Builder dnsRecords(ServiceDnsConfigDnsRecordArgs... dnsRecords) {
             return dnsRecords(List.of(dnsRecords));
         }
+
         public Builder namespaceId(Output<String> namespaceId) {
-            this.namespaceId = Objects.requireNonNull(namespaceId);
+            $.namespaceId = namespaceId;
             return this;
         }
+
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
-            return this;
+            return namespaceId(Output.of(namespaceId));
         }
+
         public Builder routingPolicy(@Nullable Output<String> routingPolicy) {
-            this.routingPolicy = routingPolicy;
+            $.routingPolicy = routingPolicy;
             return this;
         }
-        public Builder routingPolicy(@Nullable String routingPolicy) {
-            this.routingPolicy = Codegen.ofNullable(routingPolicy);
-            return this;
-        }        public ServiceDnsConfigArgs build() {
-            return new ServiceDnsConfigArgs(dnsRecords, namespaceId, routingPolicy);
+
+        public Builder routingPolicy(String routingPolicy) {
+            return routingPolicy(Output.of(routingPolicy));
+        }
+
+        public ServiceDnsConfigArgs build() {
+            $.dnsRecords = Objects.requireNonNull($.dnsRecords, "expected parameter 'dnsRecords' to be non-null");
+            $.namespaceId = Objects.requireNonNull($.namespaceId, "expected parameter 'namespaceId' to be non-null");
+            return $;
         }
     }
+
 }

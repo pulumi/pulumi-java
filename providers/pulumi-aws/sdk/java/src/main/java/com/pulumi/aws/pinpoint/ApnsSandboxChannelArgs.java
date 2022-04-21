@@ -5,10 +5,10 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -32,10 +32,10 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bundleId")
-      private final @Nullable Output<String> bundleId;
+    private @Nullable Output<String> bundleId;
 
-    public Output<String> bundleId() {
-        return this.bundleId == null ? Codegen.empty() : this.bundleId;
+    public Optional<Output<String>> bundleId() {
+        return Optional.ofNullable(this.bundleId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="defaultAuthenticationMethod")
-      private final @Nullable Output<String> defaultAuthenticationMethod;
+    private @Nullable Output<String> defaultAuthenticationMethod;
 
-    public Output<String> defaultAuthenticationMethod() {
-        return this.defaultAuthenticationMethod == null ? Codegen.empty() : this.defaultAuthenticationMethod;
+    public Optional<Output<String>> defaultAuthenticationMethod() {
+        return Optional.ofNullable(this.defaultAuthenticationMethod);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="teamId")
-      private final @Nullable Output<String> teamId;
+    private @Nullable Output<String> teamId;
 
-    public Output<String> teamId() {
-        return this.teamId == null ? Codegen.empty() : this.teamId;
+    public Optional<Output<String>> teamId() {
+        return Optional.ofNullable(this.teamId);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tokenKey")
-      private final @Nullable Output<String> tokenKey;
+    private @Nullable Output<String> tokenKey;
 
-    public Output<String> tokenKey() {
-        return this.tokenKey == null ? Codegen.empty() : this.tokenKey;
+    public Optional<Output<String>> tokenKey() {
+        return Optional.ofNullable(this.tokenKey);
     }
 
     /**
@@ -112,154 +112,129 @@ public final class ApnsSandboxChannelArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tokenKeyId")
-      private final @Nullable Output<String> tokenKeyId;
+    private @Nullable Output<String> tokenKeyId;
 
-    public Output<String> tokenKeyId() {
-        return this.tokenKeyId == null ? Codegen.empty() : this.tokenKeyId;
+    public Optional<Output<String>> tokenKeyId() {
+        return Optional.ofNullable(this.tokenKeyId);
     }
 
-    public ApnsSandboxChannelArgs(
-        Output<String> applicationId,
-        @Nullable Output<String> bundleId,
-        @Nullable Output<String> certificate,
-        @Nullable Output<String> defaultAuthenticationMethod,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> privateKey,
-        @Nullable Output<String> teamId,
-        @Nullable Output<String> tokenKey,
-        @Nullable Output<String> tokenKeyId) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.bundleId = bundleId;
-        this.certificate = certificate;
-        this.defaultAuthenticationMethod = defaultAuthenticationMethod;
-        this.enabled = enabled;
-        this.privateKey = privateKey;
-        this.teamId = teamId;
-        this.tokenKey = tokenKey;
-        this.tokenKeyId = tokenKeyId;
-    }
+    private ApnsSandboxChannelArgs() {}
 
-    private ApnsSandboxChannelArgs() {
-        this.applicationId = Codegen.empty();
-        this.bundleId = Codegen.empty();
-        this.certificate = Codegen.empty();
-        this.defaultAuthenticationMethod = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.teamId = Codegen.empty();
-        this.tokenKey = Codegen.empty();
-        this.tokenKeyId = Codegen.empty();
+    private ApnsSandboxChannelArgs(ApnsSandboxChannelArgs $) {
+        this.applicationId = $.applicationId;
+        this.bundleId = $.bundleId;
+        this.certificate = $.certificate;
+        this.defaultAuthenticationMethod = $.defaultAuthenticationMethod;
+        this.enabled = $.enabled;
+        this.privateKey = $.privateKey;
+        this.teamId = $.teamId;
+        this.tokenKey = $.tokenKey;
+        this.tokenKeyId = $.tokenKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApnsSandboxChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private @Nullable Output<String> bundleId;
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<String> defaultAuthenticationMethod;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<String> teamId;
-        private @Nullable Output<String> tokenKey;
-        private @Nullable Output<String> tokenKeyId;
+        private ApnsSandboxChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApnsSandboxChannelArgs();
         }
 
         public Builder(ApnsSandboxChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.bundleId = defaults.bundleId;
-    	      this.certificate = defaults.certificate;
-    	      this.defaultAuthenticationMethod = defaults.defaultAuthenticationMethod;
-    	      this.enabled = defaults.enabled;
-    	      this.privateKey = defaults.privateKey;
-    	      this.teamId = defaults.teamId;
-    	      this.tokenKey = defaults.tokenKey;
-    	      this.tokenKeyId = defaults.tokenKeyId;
+            $ = new ApnsSandboxChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder bundleId(@Nullable Output<String> bundleId) {
-            this.bundleId = bundleId;
+            $.bundleId = bundleId;
             return this;
         }
-        public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Codegen.ofNullable(bundleId);
-            return this;
+
+        public Builder bundleId(String bundleId) {
+            return bundleId(Output.of(bundleId));
         }
+
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder defaultAuthenticationMethod(@Nullable Output<String> defaultAuthenticationMethod) {
-            this.defaultAuthenticationMethod = defaultAuthenticationMethod;
+            $.defaultAuthenticationMethod = defaultAuthenticationMethod;
             return this;
         }
-        public Builder defaultAuthenticationMethod(@Nullable String defaultAuthenticationMethod) {
-            this.defaultAuthenticationMethod = Codegen.ofNullable(defaultAuthenticationMethod);
-            return this;
+
+        public Builder defaultAuthenticationMethod(String defaultAuthenticationMethod) {
+            return defaultAuthenticationMethod(Output.of(defaultAuthenticationMethod));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder teamId(@Nullable Output<String> teamId) {
-            this.teamId = teamId;
+            $.teamId = teamId;
             return this;
         }
-        public Builder teamId(@Nullable String teamId) {
-            this.teamId = Codegen.ofNullable(teamId);
-            return this;
+
+        public Builder teamId(String teamId) {
+            return teamId(Output.of(teamId));
         }
+
         public Builder tokenKey(@Nullable Output<String> tokenKey) {
-            this.tokenKey = tokenKey;
+            $.tokenKey = tokenKey;
             return this;
         }
-        public Builder tokenKey(@Nullable String tokenKey) {
-            this.tokenKey = Codegen.ofNullable(tokenKey);
-            return this;
+
+        public Builder tokenKey(String tokenKey) {
+            return tokenKey(Output.of(tokenKey));
         }
+
         public Builder tokenKeyId(@Nullable Output<String> tokenKeyId) {
-            this.tokenKeyId = tokenKeyId;
+            $.tokenKeyId = tokenKeyId;
             return this;
         }
-        public Builder tokenKeyId(@Nullable String tokenKeyId) {
-            this.tokenKeyId = Codegen.ofNullable(tokenKeyId);
-            return this;
-        }        public ApnsSandboxChannelArgs build() {
-            return new ApnsSandboxChannelArgs(applicationId, bundleId, certificate, defaultAuthenticationMethod, enabled, privateKey, teamId, tokenKey, tokenKeyId);
+
+        public Builder tokenKeyId(String tokenKeyId) {
+            return tokenKeyId(Output.of(tokenKeyId));
+        }
+
+        public ApnsSandboxChannelArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            return $;
         }
     }
+
 }

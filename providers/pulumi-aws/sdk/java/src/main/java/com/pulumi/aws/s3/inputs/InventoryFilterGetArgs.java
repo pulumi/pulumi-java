@@ -5,9 +5,9 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InventoryFilterGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public InventoryFilterGetArgs(@Nullable Output<String> prefix) {
-        this.prefix = prefix;
-    }
+    private InventoryFilterGetArgs() {}
 
-    private InventoryFilterGetArgs() {
-        this.prefix = Codegen.empty();
+    private InventoryFilterGetArgs(InventoryFilterGetArgs $) {
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InventoryFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> prefix;
+        private InventoryFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InventoryFilterGetArgs();
         }
 
         public Builder(InventoryFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prefix = defaults.prefix;
+            $ = new InventoryFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public InventoryFilterGetArgs build() {
-            return new InventoryFilterGetArgs(prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public InventoryFilterGetArgs build() {
+            return $;
         }
     }
+
 }

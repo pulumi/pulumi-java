@@ -5,9 +5,9 @@ package com.pulumi.aws.amp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AlertManagerDefinitionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="definition")
-      private final @Nullable Output<String> definition;
+    private @Nullable Output<String> definition;
 
-    public Output<String> definition() {
-        return this.definition == null ? Codegen.empty() : this.definition;
+    public Optional<Output<String>> definition() {
+        return Optional.ofNullable(this.definition);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class AlertManagerDefinitionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
-    public Output<String> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public AlertManagerDefinitionState(
-        @Nullable Output<String> definition,
-        @Nullable Output<String> workspaceId) {
-        this.definition = definition;
-        this.workspaceId = workspaceId;
-    }
+    private AlertManagerDefinitionState() {}
 
-    private AlertManagerDefinitionState() {
-        this.definition = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private AlertManagerDefinitionState(AlertManagerDefinitionState $) {
+        this.definition = $.definition;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertManagerDefinitionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> definition;
-        private @Nullable Output<String> workspaceId;
+        private AlertManagerDefinitionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertManagerDefinitionState();
         }
 
         public Builder(AlertManagerDefinitionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new AlertManagerDefinitionState(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(@Nullable Output<String> definition) {
-            this.definition = definition;
+            $.definition = definition;
             return this;
         }
-        public Builder definition(@Nullable String definition) {
-            this.definition = Codegen.ofNullable(definition);
-            return this;
+
+        public Builder definition(String definition) {
+            return definition(Output.of(definition));
         }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
-        }        public AlertManagerDefinitionState build() {
-            return new AlertManagerDefinitionState(definition, workspaceId);
+
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public AlertManagerDefinitionState build() {
+            return $;
         }
     }
+
 }

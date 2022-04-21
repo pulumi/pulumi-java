@@ -19,7 +19,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identifier", required=true)
-      private final String identifier;
+    private String identifier;
 
     public String identifier() {
         return this.identifier;
@@ -30,10 +30,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeName", required=true)
-      private final String typeName;
+    private String typeName;
 
     public String typeName() {
         return this.typeName;
@@ -52,73 +52,64 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeVersionId")
-      private final @Nullable String typeVersionId;
+    private @Nullable String typeVersionId;
 
     public Optional<String> typeVersionId() {
-        return this.typeVersionId == null ? Optional.empty() : Optional.ofNullable(this.typeVersionId);
+        return Optional.ofNullable(this.typeVersionId);
     }
 
-    public GetResourceArgs(
-        String identifier,
-        @Nullable String roleArn,
-        String typeName,
-        @Nullable String typeVersionId) {
-        this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
-        this.roleArn = roleArn;
-        this.typeName = Objects.requireNonNull(typeName, "expected parameter 'typeName' to be non-null");
-        this.typeVersionId = typeVersionId;
-    }
+    private GetResourceArgs() {}
 
-    private GetResourceArgs() {
-        this.identifier = null;
-        this.roleArn = null;
-        this.typeName = null;
-        this.typeVersionId = null;
+    private GetResourceArgs(GetResourceArgs $) {
+        this.identifier = $.identifier;
+        this.roleArn = $.roleArn;
+        this.typeName = $.typeName;
+        this.typeVersionId = $.typeVersionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String identifier;
-        private @Nullable String roleArn;
-        private String typeName;
-        private @Nullable String typeVersionId;
+        private GetResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceArgs();
         }
 
         public Builder(GetResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifier = defaults.identifier;
-    	      this.roleArn = defaults.roleArn;
-    	      this.typeName = defaults.typeName;
-    	      this.typeVersionId = defaults.typeVersionId;
+            $ = new GetResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identifier(String identifier) {
-            this.identifier = Objects.requireNonNull(identifier);
+            $.identifier = identifier;
             return this;
         }
+
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder typeName(String typeName) {
-            this.typeName = Objects.requireNonNull(typeName);
+            $.typeName = typeName;
             return this;
         }
+
         public Builder typeVersionId(@Nullable String typeVersionId) {
-            this.typeVersionId = typeVersionId;
+            $.typeVersionId = typeVersionId;
             return this;
-        }        public GetResourceArgs build() {
-            return new GetResourceArgs(identifier, roleArn, typeName, typeVersionId);
+        }
+
+        public GetResourceArgs build() {
+            $.identifier = Objects.requireNonNull($.identifier, "expected parameter 'identifier' to be non-null");
+            $.typeName = Objects.requireNonNull($.typeName, "expected parameter 'typeName' to be non-null");
+            return $;
         }
     }
+
 }

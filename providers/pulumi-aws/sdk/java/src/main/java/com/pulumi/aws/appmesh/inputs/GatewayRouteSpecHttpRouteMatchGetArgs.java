@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class GatewayRouteSpecHttpRouteMatchGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="prefix", required=true)
-      private final Output<String> prefix;
+    private Output<String> prefix;
 
     public Output<String> prefix() {
         return this.prefix;
     }
 
-    public GatewayRouteSpecHttpRouteMatchGetArgs(Output<String> prefix) {
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-    }
+    private GatewayRouteSpecHttpRouteMatchGetArgs() {}
 
-    private GatewayRouteSpecHttpRouteMatchGetArgs() {
-        this.prefix = Codegen.empty();
+    private GatewayRouteSpecHttpRouteMatchGetArgs(GatewayRouteSpecHttpRouteMatchGetArgs $) {
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecHttpRouteMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> prefix;
+        private GatewayRouteSpecHttpRouteMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecHttpRouteMatchGetArgs();
         }
 
         public Builder(GatewayRouteSpecHttpRouteMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prefix = defaults.prefix;
+            $ = new GatewayRouteSpecHttpRouteMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder prefix(Output<String> prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Output.of(Objects.requireNonNull(prefix));
-            return this;
-        }        public GatewayRouteSpecHttpRouteMatchGetArgs build() {
-            return new GatewayRouteSpecHttpRouteMatchGetArgs(prefix);
+            return prefix(Output.of(prefix));
+        }
+
+        public GatewayRouteSpecHttpRouteMatchGetArgs build() {
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            return $;
         }
     }
+
 }

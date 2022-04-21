@@ -5,7 +5,6 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ReceiptRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ruleSetName", required=true)
-      private final Output<String> ruleSetName;
+    private Output<String> ruleSetName;
 
     public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
-    public ReceiptRuleSetArgs(Output<String> ruleSetName) {
-        this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
-    }
+    private ReceiptRuleSetArgs() {}
 
-    private ReceiptRuleSetArgs() {
-        this.ruleSetName = Codegen.empty();
+    private ReceiptRuleSetArgs(ReceiptRuleSetArgs $) {
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ruleSetName;
+        private ReceiptRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleSetArgs();
         }
 
         public Builder(ReceiptRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new ReceiptRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleSetName(Output<String> ruleSetName) {
-            this.ruleSetName = Objects.requireNonNull(ruleSetName);
+            $.ruleSetName = ruleSetName;
             return this;
         }
+
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Output.of(Objects.requireNonNull(ruleSetName));
-            return this;
-        }        public ReceiptRuleSetArgs build() {
-            return new ReceiptRuleSetArgs(ruleSetName);
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        public ReceiptRuleSetArgs build() {
+            $.ruleSetName = Objects.requireNonNull($.ruleSetName, "expected parameter 'ruleSetName' to be non-null");
+            return $;
         }
     }
+
 }

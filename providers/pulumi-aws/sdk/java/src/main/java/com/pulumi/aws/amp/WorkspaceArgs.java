@@ -5,9 +5,9 @@ package com.pulumi.aws.amp;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
-    public WorkspaceArgs(@Nullable Output<String> alias) {
-        this.alias = alias;
-    }
+    private WorkspaceArgs() {}
 
-    private WorkspaceArgs() {
-        this.alias = Codegen.empty();
+    private WorkspaceArgs(WorkspaceArgs $) {
+        this.alias = $.alias;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alias;
+        private WorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceArgs();
         }
 
         public Builder(WorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
+            $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
-        }        public WorkspaceArgs build() {
-            return new WorkspaceArgs(alias);
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
+        }
+
+        public WorkspaceArgs build() {
+            return $;
         }
     }
+
 }

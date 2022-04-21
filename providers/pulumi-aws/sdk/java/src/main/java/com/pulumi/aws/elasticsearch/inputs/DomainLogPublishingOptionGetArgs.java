@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DomainLogPublishingOptionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cloudwatchLogGroupArn", required=true)
-      private final Output<String> cloudwatchLogGroupArn;
+    private Output<String> cloudwatchLogGroupArn;
 
     public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
@@ -32,10 +32,10 @@ public final class DomainLogPublishingOptionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class DomainLogPublishingOptionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="logType", required=true)
-      private final Output<String> logType;
+    private Output<String> logType;
 
     public Output<String> logType() {
         return this.logType;
     }
 
-    public DomainLogPublishingOptionGetArgs(
-        Output<String> cloudwatchLogGroupArn,
-        @Nullable Output<Boolean> enabled,
-        Output<String> logType) {
-        this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
-        this.enabled = enabled;
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private DomainLogPublishingOptionGetArgs() {}
 
-    private DomainLogPublishingOptionGetArgs() {
-        this.cloudwatchLogGroupArn = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.logType = Codegen.empty();
+    private DomainLogPublishingOptionGetArgs(DomainLogPublishingOptionGetArgs $) {
+        this.cloudwatchLogGroupArn = $.cloudwatchLogGroupArn;
+        this.enabled = $.enabled;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainLogPublishingOptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudwatchLogGroupArn;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> logType;
+        private DomainLogPublishingOptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainLogPublishingOptionGetArgs();
         }
 
         public Builder(DomainLogPublishingOptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLogGroupArn = defaults.cloudwatchLogGroupArn;
-    	      this.enabled = defaults.enabled;
-    	      this.logType = defaults.logType;
+            $ = new DomainLogPublishingOptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLogGroupArn(Output<String> cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
+            $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
+
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Output.of(Objects.requireNonNull(cloudwatchLogGroupArn));
-            return this;
+            return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder logType(Output<String> logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
         }
+
         public Builder logType(String logType) {
-            this.logType = Output.of(Objects.requireNonNull(logType));
-            return this;
-        }        public DomainLogPublishingOptionGetArgs build() {
-            return new DomainLogPublishingOptionGetArgs(cloudwatchLogGroupArn, enabled, logType);
+            return logType(Output.of(logType));
+        }
+
+        public DomainLogPublishingOptionGetArgs build() {
+            $.cloudwatchLogGroupArn = Objects.requireNonNull($.cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

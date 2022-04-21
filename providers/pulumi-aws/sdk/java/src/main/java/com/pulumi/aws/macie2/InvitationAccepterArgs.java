@@ -5,7 +5,6 @@ package com.pulumi.aws.macie2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InvitationAccepterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="administratorAccountId", required=true)
-      private final Output<String> administratorAccountId;
+    private Output<String> administratorAccountId;
 
     public Output<String> administratorAccountId() {
         return this.administratorAccountId;
     }
 
-    public InvitationAccepterArgs(Output<String> administratorAccountId) {
-        this.administratorAccountId = Objects.requireNonNull(administratorAccountId, "expected parameter 'administratorAccountId' to be non-null");
-    }
+    private InvitationAccepterArgs() {}
 
-    private InvitationAccepterArgs() {
-        this.administratorAccountId = Codegen.empty();
+    private InvitationAccepterArgs(InvitationAccepterArgs $) {
+        this.administratorAccountId = $.administratorAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvitationAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> administratorAccountId;
+        private InvitationAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvitationAccepterArgs();
         }
 
         public Builder(InvitationAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorAccountId = defaults.administratorAccountId;
+            $ = new InvitationAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorAccountId(Output<String> administratorAccountId) {
-            this.administratorAccountId = Objects.requireNonNull(administratorAccountId);
+            $.administratorAccountId = administratorAccountId;
             return this;
         }
+
         public Builder administratorAccountId(String administratorAccountId) {
-            this.administratorAccountId = Output.of(Objects.requireNonNull(administratorAccountId));
-            return this;
-        }        public InvitationAccepterArgs build() {
-            return new InvitationAccepterArgs(administratorAccountId);
+            return administratorAccountId(Output.of(administratorAccountId));
+        }
+
+        public InvitationAccepterArgs build() {
+            $.administratorAccountId = Objects.requireNonNull($.administratorAccountId, "expected parameter 'administratorAccountId' to be non-null");
+            return $;
         }
     }
+
 }

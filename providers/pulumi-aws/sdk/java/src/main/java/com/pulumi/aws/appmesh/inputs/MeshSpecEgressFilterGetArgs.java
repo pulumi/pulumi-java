@@ -5,9 +5,9 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class MeshSpecEgressFilterGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public MeshSpecEgressFilterGetArgs(@Nullable Output<String> type) {
-        this.type = type;
-    }
+    private MeshSpecEgressFilterGetArgs() {}
 
-    private MeshSpecEgressFilterGetArgs() {
-        this.type = Codegen.empty();
+    private MeshSpecEgressFilterGetArgs(MeshSpecEgressFilterGetArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MeshSpecEgressFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
+        private MeshSpecEgressFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MeshSpecEgressFilterGetArgs();
         }
 
         public Builder(MeshSpecEgressFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new MeshSpecEgressFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public MeshSpecEgressFilterGetArgs build() {
-            return new MeshSpecEgressFilterGetArgs(type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public MeshSpecEgressFilterGetArgs build() {
+            return $;
         }
     }
+
 }

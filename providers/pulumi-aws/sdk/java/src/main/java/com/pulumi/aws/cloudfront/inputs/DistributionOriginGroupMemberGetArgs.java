@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DistributionOriginGroupMemberGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="originId", required=true)
-      private final Output<String> originId;
+    private Output<String> originId;
 
     public Output<String> originId() {
         return this.originId;
     }
 
-    public DistributionOriginGroupMemberGetArgs(Output<String> originId) {
-        this.originId = Objects.requireNonNull(originId, "expected parameter 'originId' to be non-null");
-    }
+    private DistributionOriginGroupMemberGetArgs() {}
 
-    private DistributionOriginGroupMemberGetArgs() {
-        this.originId = Codegen.empty();
+    private DistributionOriginGroupMemberGetArgs(DistributionOriginGroupMemberGetArgs $) {
+        this.originId = $.originId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginGroupMemberGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> originId;
+        private DistributionOriginGroupMemberGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginGroupMemberGetArgs();
         }
 
         public Builder(DistributionOriginGroupMemberGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originId = defaults.originId;
+            $ = new DistributionOriginGroupMemberGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder originId(Output<String> originId) {
-            this.originId = Objects.requireNonNull(originId);
+            $.originId = originId;
             return this;
         }
+
         public Builder originId(String originId) {
-            this.originId = Output.of(Objects.requireNonNull(originId));
-            return this;
-        }        public DistributionOriginGroupMemberGetArgs build() {
-            return new DistributionOriginGroupMemberGetArgs(originId);
+            return originId(Output.of(originId));
+        }
+
+        public DistributionOriginGroupMemberGetArgs build() {
+            $.originId = Objects.requireNonNull($.originId, "expected parameter 'originId' to be non-null");
+            return $;
         }
     }
+
 }

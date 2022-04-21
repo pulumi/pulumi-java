@@ -5,9 +5,9 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DomainClusterConfigZoneAwarenessConfigGetArgs extends com.pul
      * 
      */
     @Import(name="availabilityZoneCount")
-      private final @Nullable Output<Integer> availabilityZoneCount;
+    private @Nullable Output<Integer> availabilityZoneCount;
 
-    public Output<Integer> availabilityZoneCount() {
-        return this.availabilityZoneCount == null ? Codegen.empty() : this.availabilityZoneCount;
+    public Optional<Output<Integer>> availabilityZoneCount() {
+        return Optional.ofNullable(this.availabilityZoneCount);
     }
 
-    public DomainClusterConfigZoneAwarenessConfigGetArgs(@Nullable Output<Integer> availabilityZoneCount) {
-        this.availabilityZoneCount = availabilityZoneCount;
-    }
+    private DomainClusterConfigZoneAwarenessConfigGetArgs() {}
 
-    private DomainClusterConfigZoneAwarenessConfigGetArgs() {
-        this.availabilityZoneCount = Codegen.empty();
+    private DomainClusterConfigZoneAwarenessConfigGetArgs(DomainClusterConfigZoneAwarenessConfigGetArgs $) {
+        this.availabilityZoneCount = $.availabilityZoneCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainClusterConfigZoneAwarenessConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> availabilityZoneCount;
+        private DomainClusterConfigZoneAwarenessConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainClusterConfigZoneAwarenessConfigGetArgs();
         }
 
         public Builder(DomainClusterConfigZoneAwarenessConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneCount = defaults.availabilityZoneCount;
+            $ = new DomainClusterConfigZoneAwarenessConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneCount(@Nullable Output<Integer> availabilityZoneCount) {
-            this.availabilityZoneCount = availabilityZoneCount;
+            $.availabilityZoneCount = availabilityZoneCount;
             return this;
         }
-        public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
-            this.availabilityZoneCount = Codegen.ofNullable(availabilityZoneCount);
-            return this;
-        }        public DomainClusterConfigZoneAwarenessConfigGetArgs build() {
-            return new DomainClusterConfigZoneAwarenessConfigGetArgs(availabilityZoneCount);
+
+        public Builder availabilityZoneCount(Integer availabilityZoneCount) {
+            return availabilityZoneCount(Output.of(availabilityZoneCount));
+        }
+
+        public DomainClusterConfigZoneAwarenessConfigGetArgs build() {
+            return $;
         }
     }
+
 }

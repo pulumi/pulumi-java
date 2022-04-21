@@ -5,7 +5,6 @@ package com.pulumi.aws.secretsmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class SecretRotationRotationRulesGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="automaticallyAfterDays", required=true)
-      private final Output<Integer> automaticallyAfterDays;
+    private Output<Integer> automaticallyAfterDays;
 
     public Output<Integer> automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 
-    public SecretRotationRotationRulesGetArgs(Output<Integer> automaticallyAfterDays) {
-        this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays, "expected parameter 'automaticallyAfterDays' to be non-null");
-    }
+    private SecretRotationRotationRulesGetArgs() {}
 
-    private SecretRotationRotationRulesGetArgs() {
-        this.automaticallyAfterDays = Codegen.empty();
+    private SecretRotationRotationRulesGetArgs(SecretRotationRotationRulesGetArgs $) {
+        this.automaticallyAfterDays = $.automaticallyAfterDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretRotationRotationRulesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> automaticallyAfterDays;
+        private SecretRotationRotationRulesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretRotationRotationRulesGetArgs();
         }
 
         public Builder(SecretRotationRotationRulesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticallyAfterDays = defaults.automaticallyAfterDays;
+            $ = new SecretRotationRotationRulesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticallyAfterDays(Output<Integer> automaticallyAfterDays) {
-            this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
+            $.automaticallyAfterDays = automaticallyAfterDays;
             return this;
         }
+
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
-            this.automaticallyAfterDays = Output.of(Objects.requireNonNull(automaticallyAfterDays));
-            return this;
-        }        public SecretRotationRotationRulesGetArgs build() {
-            return new SecretRotationRotationRulesGetArgs(automaticallyAfterDays);
+            return automaticallyAfterDays(Output.of(automaticallyAfterDays));
+        }
+
+        public SecretRotationRotationRulesGetArgs build() {
+            $.automaticallyAfterDays = Objects.requireNonNull($.automaticallyAfterDays, "expected parameter 'automaticallyAfterDays' to be non-null");
+            return $;
         }
     }
+
 }

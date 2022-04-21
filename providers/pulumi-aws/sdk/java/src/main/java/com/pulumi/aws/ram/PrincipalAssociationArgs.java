@@ -5,7 +5,6 @@ package com.pulumi.aws.ram;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PrincipalAssociationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
@@ -30,63 +29,60 @@ public final class PrincipalAssociationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceShareArn", required=true)
-      private final Output<String> resourceShareArn;
+    private Output<String> resourceShareArn;
 
     public Output<String> resourceShareArn() {
         return this.resourceShareArn;
     }
 
-    public PrincipalAssociationArgs(
-        Output<String> principal,
-        Output<String> resourceShareArn) {
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.resourceShareArn = Objects.requireNonNull(resourceShareArn, "expected parameter 'resourceShareArn' to be non-null");
-    }
+    private PrincipalAssociationArgs() {}
 
-    private PrincipalAssociationArgs() {
-        this.principal = Codegen.empty();
-        this.resourceShareArn = Codegen.empty();
+    private PrincipalAssociationArgs(PrincipalAssociationArgs $) {
+        this.principal = $.principal;
+        this.resourceShareArn = $.resourceShareArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrincipalAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> principal;
-        private Output<String> resourceShareArn;
+        private PrincipalAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrincipalAssociationArgs();
         }
 
         public Builder(PrincipalAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principal = defaults.principal;
-    	      this.resourceShareArn = defaults.resourceShareArn;
+            $ = new PrincipalAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder resourceShareArn(Output<String> resourceShareArn) {
-            this.resourceShareArn = Objects.requireNonNull(resourceShareArn);
+            $.resourceShareArn = resourceShareArn;
             return this;
         }
+
         public Builder resourceShareArn(String resourceShareArn) {
-            this.resourceShareArn = Output.of(Objects.requireNonNull(resourceShareArn));
-            return this;
-        }        public PrincipalAssociationArgs build() {
-            return new PrincipalAssociationArgs(principal, resourceShareArn);
+            return resourceShareArn(Output.of(resourceShareArn));
+        }
+
+        public PrincipalAssociationArgs build() {
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            $.resourceShareArn = Objects.requireNonNull($.resourceShareArn, "expected parameter 'resourceShareArn' to be non-null");
+            return $;
         }
     }
+
 }

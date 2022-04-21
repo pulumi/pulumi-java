@@ -7,9 +7,9 @@ import com.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetLaunchSpecificationsOnD
 import com.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsArgs extends com.
      * 
      */
     @Import(name="onDemandSpecifications")
-      private final @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
+    private @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
 
-    public Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications() {
-        return this.onDemandSpecifications == null ? Codegen.empty() : this.onDemandSpecifications;
+    public Optional<Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>>> onDemandSpecifications() {
+        return Optional.ofNullable(this.onDemandSpecifications);
     }
 
     /**
@@ -33,69 +33,66 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsArgs extends com.
      * 
      */
     @Import(name="spotSpecifications")
-      private final @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
+    private @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
 
-    public Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications() {
-        return this.spotSpecifications == null ? Codegen.empty() : this.spotSpecifications;
+    public Optional<Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>>> spotSpecifications() {
+        return Optional.ofNullable(this.spotSpecifications);
     }
 
-    public ClusterCoreInstanceFleetLaunchSpecificationsArgs(
-        @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications,
-        @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
-        this.onDemandSpecifications = onDemandSpecifications;
-        this.spotSpecifications = spotSpecifications;
-    }
+    private ClusterCoreInstanceFleetLaunchSpecificationsArgs() {}
 
-    private ClusterCoreInstanceFleetLaunchSpecificationsArgs() {
-        this.onDemandSpecifications = Codegen.empty();
-        this.spotSpecifications = Codegen.empty();
+    private ClusterCoreInstanceFleetLaunchSpecificationsArgs(ClusterCoreInstanceFleetLaunchSpecificationsArgs $) {
+        this.onDemandSpecifications = $.onDemandSpecifications;
+        this.spotSpecifications = $.spotSpecifications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCoreInstanceFleetLaunchSpecificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
-        private @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
+        private ClusterCoreInstanceFleetLaunchSpecificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCoreInstanceFleetLaunchSpecificationsArgs();
         }
 
         public Builder(ClusterCoreInstanceFleetLaunchSpecificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onDemandSpecifications = defaults.onDemandSpecifications;
-    	      this.spotSpecifications = defaults.spotSpecifications;
+            $ = new ClusterCoreInstanceFleetLaunchSpecificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onDemandSpecifications(@Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications) {
-            this.onDemandSpecifications = onDemandSpecifications;
+            $.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-        public Builder onDemandSpecifications(@Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
-            this.onDemandSpecifications = Codegen.ofNullable(onDemandSpecifications);
-            return this;
+
+        public Builder onDemandSpecifications(List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
+            return onDemandSpecifications(Output.of(onDemandSpecifications));
         }
+
         public Builder onDemandSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs... onDemandSpecifications) {
             return onDemandSpecifications(List.of(onDemandSpecifications));
         }
+
         public Builder spotSpecifications(@Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
-            this.spotSpecifications = spotSpecifications;
+            $.spotSpecifications = spotSpecifications;
             return this;
         }
-        public Builder spotSpecifications(@Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
-            this.spotSpecifications = Codegen.ofNullable(spotSpecifications);
-            return this;
+
+        public Builder spotSpecifications(List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
+            return spotSpecifications(Output.of(spotSpecifications));
         }
+
         public Builder spotSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs... spotSpecifications) {
             return spotSpecifications(List.of(spotSpecifications));
-        }        public ClusterCoreInstanceFleetLaunchSpecificationsArgs build() {
-            return new ClusterCoreInstanceFleetLaunchSpecificationsArgs(onDemandSpecifications, spotSpecifications);
+        }
+
+        public ClusterCoreInstanceFleetLaunchSpecificationsArgs build() {
+            return $;
         }
     }
+
 }

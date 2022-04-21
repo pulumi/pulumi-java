@@ -19,7 +19,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
      * 
      */
     @Import(name="deleteOnTermination", required=true)
-      private final Boolean deleteOnTermination;
+    private Boolean deleteOnTermination;
 
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
@@ -30,7 +30,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
      * 
      */
     @Import(name="encrypted", required=true)
-      private final Boolean encrypted;
+    private Boolean encrypted;
 
     public Boolean encrypted() {
         return this.encrypted;
@@ -41,7 +41,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
      * 
      */
     @Import(name="iops", required=true)
-      private final Integer iops;
+    private Integer iops;
 
     public Integer iops() {
         return this.iops;
@@ -52,7 +52,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
      * 
      */
     @Import(name="kmsKeyId", required=true)
-      private final String kmsKeyId;
+    private String kmsKeyId;
 
     public String kmsKeyId() {
         return this.kmsKeyId;
@@ -63,7 +63,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
      * 
      */
     @Import(name="snapshotId", required=true)
-      private final String snapshotId;
+    private String snapshotId;
 
     public String snapshotId() {
         return this.snapshotId;
@@ -74,7 +74,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
      * 
      */
     @Import(name="volumeSize", required=true)
-      private final Integer volumeSize;
+    private Integer volumeSize;
 
     public Integer volumeSize() {
         return this.volumeSize;
@@ -85,100 +85,87 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
      * 
      */
     @Import(name="volumeType", required=true)
-      private final String volumeType;
+    private String volumeType;
 
     public String volumeType() {
         return this.volumeType;
     }
 
-    public GetImageRecipeBlockDeviceMappingEb(
-        Boolean deleteOnTermination,
-        Boolean encrypted,
-        Integer iops,
-        String kmsKeyId,
-        String snapshotId,
-        Integer volumeSize,
-        String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
-        this.encrypted = Objects.requireNonNull(encrypted, "expected parameter 'encrypted' to be non-null");
-        this.iops = Objects.requireNonNull(iops, "expected parameter 'iops' to be non-null");
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
-        this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
-        this.volumeSize = Objects.requireNonNull(volumeSize, "expected parameter 'volumeSize' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private GetImageRecipeBlockDeviceMappingEb() {}
 
-    private GetImageRecipeBlockDeviceMappingEb() {
-        this.deleteOnTermination = null;
-        this.encrypted = null;
-        this.iops = null;
-        this.kmsKeyId = null;
-        this.snapshotId = null;
-        this.volumeSize = null;
-        this.volumeType = null;
+    private GetImageRecipeBlockDeviceMappingEb(GetImageRecipeBlockDeviceMappingEb $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.snapshotId = $.snapshotId;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageRecipeBlockDeviceMappingEb defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean deleteOnTermination;
-        private Boolean encrypted;
-        private Integer iops;
-        private String kmsKeyId;
-        private String snapshotId;
-        private Integer volumeSize;
-        private String volumeType;
+        private GetImageRecipeBlockDeviceMappingEb $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageRecipeBlockDeviceMappingEb();
         }
 
         public Builder(GetImageRecipeBlockDeviceMappingEb defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new GetImageRecipeBlockDeviceMappingEb(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
-            this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
+
         public Builder encrypted(Boolean encrypted) {
-            this.encrypted = Objects.requireNonNull(encrypted);
+            $.encrypted = encrypted;
             return this;
         }
+
         public Builder iops(Integer iops) {
-            this.iops = Objects.requireNonNull(iops);
+            $.iops = iops;
             return this;
         }
+
         public Builder kmsKeyId(String kmsKeyId) {
-            this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Objects.requireNonNull(snapshotId);
+            $.snapshotId = snapshotId;
             return this;
         }
+
         public Builder volumeSize(Integer volumeSize) {
-            this.volumeSize = Objects.requireNonNull(volumeSize);
+            $.volumeSize = volumeSize;
             return this;
         }
+
         public Builder volumeType(String volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
-        }        public GetImageRecipeBlockDeviceMappingEb build() {
-            return new GetImageRecipeBlockDeviceMappingEb(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, volumeSize, volumeType);
+        }
+
+        public GetImageRecipeBlockDeviceMappingEb build() {
+            $.deleteOnTermination = Objects.requireNonNull($.deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
+            $.encrypted = Objects.requireNonNull($.encrypted, "expected parameter 'encrypted' to be non-null");
+            $.iops = Objects.requireNonNull($.iops, "expected parameter 'iops' to be non-null");
+            $.kmsKeyId = Objects.requireNonNull($.kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
+            $.snapshotId = Objects.requireNonNull($.snapshotId, "expected parameter 'snapshotId' to be non-null");
+            $.volumeSize = Objects.requireNonNull($.volumeSize, "expected parameter 'volumeSize' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

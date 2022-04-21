@@ -20,7 +20,7 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -31,10 +31,10 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceTags")
-      private final @Nullable Map<String,String> resourceTags;
+    private @Nullable Map<String,String> resourceTags;
 
-    public Map<String,String> resourceTags() {
-        return this.resourceTags == null ? Map.of() : this.resourceTags;
+    public Optional<Map<String,String>> resourceTags() {
+        return Optional.ofNullable(this.resourceTags);
     }
 
     /**
@@ -42,64 +42,57 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetInfrastructureConfigurationArgs(
-        String arn,
-        @Nullable Map<String,String> resourceTags,
-        @Nullable Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.resourceTags = resourceTags;
-        this.tags = tags;
-    }
+    private GetInfrastructureConfigurationArgs() {}
 
-    private GetInfrastructureConfigurationArgs() {
-        this.arn = null;
-        this.resourceTags = Map.of();
-        this.tags = Map.of();
+    private GetInfrastructureConfigurationArgs(GetInfrastructureConfigurationArgs $) {
+        this.arn = $.arn;
+        this.resourceTags = $.resourceTags;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInfrastructureConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private @Nullable Map<String,String> resourceTags;
-        private @Nullable Map<String,String> tags;
+        private GetInfrastructureConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInfrastructureConfigurationArgs();
         }
 
         public Builder(GetInfrastructureConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.resourceTags = defaults.resourceTags;
-    	      this.tags = defaults.tags;
+            $ = new GetInfrastructureConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
-            this.resourceTags = resourceTags;
+            $.resourceTags = resourceTags;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetInfrastructureConfigurationArgs build() {
-            return new GetInfrastructureConfigurationArgs(arn, resourceTags, tags);
+        }
+
+        public GetInfrastructureConfigurationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

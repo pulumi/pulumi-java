@@ -6,9 +6,9 @@ package com.pulumi.aws.securityhub.inputs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InsightState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InsightState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<InsightFiltersGetArgs> filters;
+    private @Nullable Output<InsightFiltersGetArgs> filters;
 
-    public Output<InsightFiltersGetArgs> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<InsightFiltersGetArgs>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InsightState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupByAttribute")
-      private final @Nullable Output<String> groupByAttribute;
+    private @Nullable Output<String> groupByAttribute;
 
-    public Output<String> groupByAttribute() {
-        return this.groupByAttribute == null ? Codegen.empty() : this.groupByAttribute;
+    public Optional<Output<String>> groupByAttribute() {
+        return Optional.ofNullable(this.groupByAttribute);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class InsightState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public InsightState(
-        @Nullable Output<String> arn,
-        @Nullable Output<InsightFiltersGetArgs> filters,
-        @Nullable Output<String> groupByAttribute,
-        @Nullable Output<String> name) {
-        this.arn = arn;
-        this.filters = filters;
-        this.groupByAttribute = groupByAttribute;
-        this.name = name;
-    }
+    private InsightState() {}
 
-    private InsightState() {
-        this.arn = Codegen.empty();
-        this.filters = Codegen.empty();
-        this.groupByAttribute = Codegen.empty();
-        this.name = Codegen.empty();
+    private InsightState(InsightState $) {
+        this.arn = $.arn;
+        this.filters = $.filters;
+        this.groupByAttribute = $.groupByAttribute;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<InsightFiltersGetArgs> filters;
-        private @Nullable Output<String> groupByAttribute;
-        private @Nullable Output<String> name;
+        private InsightState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightState();
         }
 
         public Builder(InsightState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.filters = defaults.filters;
-    	      this.groupByAttribute = defaults.groupByAttribute;
-    	      this.name = defaults.name;
+            $ = new InsightState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder filters(@Nullable Output<InsightFiltersGetArgs> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable InsightFiltersGetArgs filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(InsightFiltersGetArgs filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder groupByAttribute(@Nullable Output<String> groupByAttribute) {
-            this.groupByAttribute = groupByAttribute;
+            $.groupByAttribute = groupByAttribute;
             return this;
         }
-        public Builder groupByAttribute(@Nullable String groupByAttribute) {
-            this.groupByAttribute = Codegen.ofNullable(groupByAttribute);
-            return this;
+
+        public Builder groupByAttribute(String groupByAttribute) {
+            return groupByAttribute(Output.of(groupByAttribute));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public InsightState build() {
-            return new InsightState(arn, filters, groupByAttribute, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public InsightState build() {
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResizeClusterAr
 import com.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResumeClusterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ScheduledActionTargetActionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="pauseCluster")
-      private final @Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster;
+    private @Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster;
 
-    public Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster() {
-        return this.pauseCluster == null ? Codegen.empty() : this.pauseCluster;
+    public Optional<Output<ScheduledActionTargetActionPauseClusterArgs>> pauseCluster() {
+        return Optional.ofNullable(this.pauseCluster);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ScheduledActionTargetActionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resizeCluster")
-      private final @Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster;
+    private @Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster;
 
-    public Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster() {
-        return this.resizeCluster == null ? Codegen.empty() : this.resizeCluster;
+    public Optional<Output<ScheduledActionTargetActionResizeClusterArgs>> resizeCluster() {
+        return Optional.ofNullable(this.resizeCluster);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class ScheduledActionTargetActionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resumeCluster")
-      private final @Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster;
+    private @Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster;
 
-    public Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster() {
-        return this.resumeCluster == null ? Codegen.empty() : this.resumeCluster;
+    public Optional<Output<ScheduledActionTargetActionResumeClusterArgs>> resumeCluster() {
+        return Optional.ofNullable(this.resumeCluster);
     }
 
-    public ScheduledActionTargetActionArgs(
-        @Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster,
-        @Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster,
-        @Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster) {
-        this.pauseCluster = pauseCluster;
-        this.resizeCluster = resizeCluster;
-        this.resumeCluster = resumeCluster;
-    }
+    private ScheduledActionTargetActionArgs() {}
 
-    private ScheduledActionTargetActionArgs() {
-        this.pauseCluster = Codegen.empty();
-        this.resizeCluster = Codegen.empty();
-        this.resumeCluster = Codegen.empty();
+    private ScheduledActionTargetActionArgs(ScheduledActionTargetActionArgs $) {
+        this.pauseCluster = $.pauseCluster;
+        this.resizeCluster = $.resizeCluster;
+        this.resumeCluster = $.resumeCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionTargetActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster;
-        private @Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster;
-        private @Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster;
+        private ScheduledActionTargetActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionTargetActionArgs();
         }
 
         public Builder(ScheduledActionTargetActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pauseCluster = defaults.pauseCluster;
-    	      this.resizeCluster = defaults.resizeCluster;
-    	      this.resumeCluster = defaults.resumeCluster;
+            $ = new ScheduledActionTargetActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pauseCluster(@Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster) {
-            this.pauseCluster = pauseCluster;
+            $.pauseCluster = pauseCluster;
             return this;
         }
-        public Builder pauseCluster(@Nullable ScheduledActionTargetActionPauseClusterArgs pauseCluster) {
-            this.pauseCluster = Codegen.ofNullable(pauseCluster);
-            return this;
+
+        public Builder pauseCluster(ScheduledActionTargetActionPauseClusterArgs pauseCluster) {
+            return pauseCluster(Output.of(pauseCluster));
         }
+
         public Builder resizeCluster(@Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster) {
-            this.resizeCluster = resizeCluster;
+            $.resizeCluster = resizeCluster;
             return this;
         }
-        public Builder resizeCluster(@Nullable ScheduledActionTargetActionResizeClusterArgs resizeCluster) {
-            this.resizeCluster = Codegen.ofNullable(resizeCluster);
-            return this;
+
+        public Builder resizeCluster(ScheduledActionTargetActionResizeClusterArgs resizeCluster) {
+            return resizeCluster(Output.of(resizeCluster));
         }
+
         public Builder resumeCluster(@Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster) {
-            this.resumeCluster = resumeCluster;
+            $.resumeCluster = resumeCluster;
             return this;
         }
-        public Builder resumeCluster(@Nullable ScheduledActionTargetActionResumeClusterArgs resumeCluster) {
-            this.resumeCluster = Codegen.ofNullable(resumeCluster);
-            return this;
-        }        public ScheduledActionTargetActionArgs build() {
-            return new ScheduledActionTargetActionArgs(pauseCluster, resizeCluster, resumeCluster);
+
+        public Builder resumeCluster(ScheduledActionTargetActionResumeClusterArgs resumeCluster) {
+            return resumeCluster(Output.of(resumeCluster));
+        }
+
+        public ScheduledActionTargetActionArgs build() {
+            return $;
         }
     }
+
 }

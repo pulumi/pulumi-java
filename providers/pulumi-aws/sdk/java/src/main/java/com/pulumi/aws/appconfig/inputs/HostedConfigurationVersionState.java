@@ -5,10 +5,10 @@ package com.pulumi.aws.appconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HostedConfigurationVersionState extends com.pulumi.resources.
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HostedConfigurationVersionState extends com.pulumi.resources.
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HostedConfigurationVersionState extends com.pulumi.resources.
      * 
      */
     @Import(name="configurationProfileId")
-      private final @Nullable Output<String> configurationProfileId;
+    private @Nullable Output<String> configurationProfileId;
 
-    public Output<String> configurationProfileId() {
-        return this.configurationProfileId == null ? Codegen.empty() : this.configurationProfileId;
+    public Optional<Output<String>> configurationProfileId() {
+        return Optional.ofNullable(this.configurationProfileId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HostedConfigurationVersionState extends com.pulumi.resources.
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class HostedConfigurationVersionState extends com.pulumi.resources.
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HostedConfigurationVersionState extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,128 +87,108 @@ public final class HostedConfigurationVersionState extends com.pulumi.resources.
      * 
      */
     @Import(name="versionNumber")
-      private final @Nullable Output<Integer> versionNumber;
+    private @Nullable Output<Integer> versionNumber;
 
-    public Output<Integer> versionNumber() {
-        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
+    public Optional<Output<Integer>> versionNumber() {
+        return Optional.ofNullable(this.versionNumber);
     }
 
-    public HostedConfigurationVersionState(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> configurationProfileId,
-        @Nullable Output<String> content,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> versionNumber) {
-        this.applicationId = applicationId;
-        this.arn = arn;
-        this.configurationProfileId = configurationProfileId;
-        this.content = content;
-        this.contentType = contentType;
-        this.description = description;
-        this.versionNumber = versionNumber;
-    }
+    private HostedConfigurationVersionState() {}
 
-    private HostedConfigurationVersionState() {
-        this.applicationId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.configurationProfileId = Codegen.empty();
-        this.content = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.versionNumber = Codegen.empty();
+    private HostedConfigurationVersionState(HostedConfigurationVersionState $) {
+        this.applicationId = $.applicationId;
+        this.arn = $.arn;
+        this.configurationProfileId = $.configurationProfileId;
+        this.content = $.content;
+        this.contentType = $.contentType;
+        this.description = $.description;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedConfigurationVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> configurationProfileId;
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> versionNumber;
+        private HostedConfigurationVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedConfigurationVersionState();
         }
 
         public Builder(HostedConfigurationVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.arn = defaults.arn;
-    	      this.configurationProfileId = defaults.configurationProfileId;
-    	      this.content = defaults.content;
-    	      this.contentType = defaults.contentType;
-    	      this.description = defaults.description;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new HostedConfigurationVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
-            this.configurationProfileId = configurationProfileId;
+            $.configurationProfileId = configurationProfileId;
             return this;
         }
-        public Builder configurationProfileId(@Nullable String configurationProfileId) {
-            this.configurationProfileId = Codegen.ofNullable(configurationProfileId);
-            return this;
+
+        public Builder configurationProfileId(String configurationProfileId) {
+            return configurationProfileId(Output.of(configurationProfileId));
         }
+
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
-            this.versionNumber = versionNumber;
+            $.versionNumber = versionNumber;
             return this;
         }
-        public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Codegen.ofNullable(versionNumber);
-            return this;
-        }        public HostedConfigurationVersionState build() {
-            return new HostedConfigurationVersionState(applicationId, arn, configurationProfileId, content, contentType, description, versionNumber);
+
+        public Builder versionNumber(Integer versionNumber) {
+            return versionNumber(Output.of(versionNumber));
+        }
+
+        public HostedConfigurationVersionState build() {
+            return $;
         }
     }
+
 }

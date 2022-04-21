@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class FunctionFileSystemConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
@@ -30,63 +29,60 @@ public final class FunctionFileSystemConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="localMountPath", required=true)
-      private final Output<String> localMountPath;
+    private Output<String> localMountPath;
 
     public Output<String> localMountPath() {
         return this.localMountPath;
     }
 
-    public FunctionFileSystemConfigGetArgs(
-        Output<String> arn,
-        Output<String> localMountPath) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.localMountPath = Objects.requireNonNull(localMountPath, "expected parameter 'localMountPath' to be non-null");
-    }
+    private FunctionFileSystemConfigGetArgs() {}
 
-    private FunctionFileSystemConfigGetArgs() {
-        this.arn = Codegen.empty();
-        this.localMountPath = Codegen.empty();
+    private FunctionFileSystemConfigGetArgs(FunctionFileSystemConfigGetArgs $) {
+        this.arn = $.arn;
+        this.localMountPath = $.localMountPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionFileSystemConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private Output<String> localMountPath;
+        private FunctionFileSystemConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionFileSystemConfigGetArgs();
         }
 
         public Builder(FunctionFileSystemConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.localMountPath = defaults.localMountPath;
+            $ = new FunctionFileSystemConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder localMountPath(Output<String> localMountPath) {
-            this.localMountPath = Objects.requireNonNull(localMountPath);
+            $.localMountPath = localMountPath;
             return this;
         }
+
         public Builder localMountPath(String localMountPath) {
-            this.localMountPath = Output.of(Objects.requireNonNull(localMountPath));
-            return this;
-        }        public FunctionFileSystemConfigGetArgs build() {
-            return new FunctionFileSystemConfigGetArgs(arn, localMountPath);
+            return localMountPath(Output.of(localMountPath));
+        }
+
+        public FunctionFileSystemConfigGetArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.localMountPath = Objects.requireNonNull($.localMountPath, "expected parameter 'localMountPath' to be non-null");
+            return $;
         }
     }
+
 }

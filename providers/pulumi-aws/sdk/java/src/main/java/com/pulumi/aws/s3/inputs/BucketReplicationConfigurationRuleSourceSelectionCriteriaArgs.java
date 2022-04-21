@@ -6,8 +6,8 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs
      * 
      */
     @Import(name="sseKmsEncryptedObjects")
-      private final @Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+    private @Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
-    public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
+    public Optional<Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs>> sseKmsEncryptedObjects() {
+        return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
 
-    public BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs(@Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
-        this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
-    }
+    private BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs() {}
 
-    private BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs() {
-        this.sseKmsEncryptedObjects = Codegen.empty();
+    private BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs(BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs $) {
+        this.sseKmsEncryptedObjects = $.sseKmsEncryptedObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+        private BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs();
         }
 
         public Builder(BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
+            $ = new BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sseKmsEncryptedObjects(@Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
+            $.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
-        public Builder sseKmsEncryptedObjects(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = Codegen.ofNullable(sseKmsEncryptedObjects);
-            return this;
-        }        public BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs build() {
-            return new BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs(sseKmsEncryptedObjects);
+
+        public Builder sseKmsEncryptedObjects(BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
+            return sseKmsEncryptedObjects(Output.of(sseKmsEncryptedObjects));
+        }
+
+        public BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs build() {
+            return $;
         }
     }
+
 }

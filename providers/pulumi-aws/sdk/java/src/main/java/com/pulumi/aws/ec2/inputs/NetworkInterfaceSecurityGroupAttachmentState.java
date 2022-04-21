@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends com.pulu
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends com.pulu
      * 
      */
     @Import(name="securityGroupId")
-      private final @Nullable Output<String> securityGroupId;
+    private @Nullable Output<String> securityGroupId;
 
-    public Output<String> securityGroupId() {
-        return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
+    public Optional<Output<String>> securityGroupId() {
+        return Optional.ofNullable(this.securityGroupId);
     }
 
-    public NetworkInterfaceSecurityGroupAttachmentState(
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<String> securityGroupId) {
-        this.networkInterfaceId = networkInterfaceId;
-        this.securityGroupId = securityGroupId;
-    }
+    private NetworkInterfaceSecurityGroupAttachmentState() {}
 
-    private NetworkInterfaceSecurityGroupAttachmentState() {
-        this.networkInterfaceId = Codegen.empty();
-        this.securityGroupId = Codegen.empty();
+    private NetworkInterfaceSecurityGroupAttachmentState(NetworkInterfaceSecurityGroupAttachmentState $) {
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.securityGroupId = $.securityGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceSecurityGroupAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<String> securityGroupId;
+        private NetworkInterfaceSecurityGroupAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceSecurityGroupAttachmentState();
         }
 
         public Builder(NetworkInterfaceSecurityGroupAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.securityGroupId = defaults.securityGroupId;
+            $ = new NetworkInterfaceSecurityGroupAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
-            this.securityGroupId = securityGroupId;
+            $.securityGroupId = securityGroupId;
             return this;
         }
-        public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Codegen.ofNullable(securityGroupId);
-            return this;
-        }        public NetworkInterfaceSecurityGroupAttachmentState build() {
-            return new NetworkInterfaceSecurityGroupAttachmentState(networkInterfaceId, securityGroupId);
+
+        public Builder securityGroupId(String securityGroupId) {
+            return securityGroupId(Output.of(securityGroupId));
+        }
+
+        public NetworkInterfaceSecurityGroupAttachmentState build() {
+            return $;
         }
     }
+
 }

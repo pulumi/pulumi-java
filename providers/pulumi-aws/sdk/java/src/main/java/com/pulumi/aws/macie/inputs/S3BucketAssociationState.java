@@ -6,9 +6,9 @@ package com.pulumi.aws.macie.inputs;
 import com.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="classificationType")
-      private final @Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType;
+    private @Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType;
 
-    public Output<S3BucketAssociationClassificationTypeGetArgs> classificationType() {
-        return this.classificationType == null ? Codegen.empty() : this.classificationType;
+    public Optional<Output<S3BucketAssociationClassificationTypeGetArgs>> classificationType() {
+        return Optional.ofNullable(this.classificationType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="memberAccountId")
-      private final @Nullable Output<String> memberAccountId;
+    private @Nullable Output<String> memberAccountId;
 
-    public Output<String> memberAccountId() {
-        return this.memberAccountId == null ? Codegen.empty() : this.memberAccountId;
+    public Optional<Output<String>> memberAccountId() {
+        return Optional.ofNullable(this.memberAccountId);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public S3BucketAssociationState(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType,
-        @Nullable Output<String> memberAccountId,
-        @Nullable Output<String> prefix) {
-        this.bucketName = bucketName;
-        this.classificationType = classificationType;
-        this.memberAccountId = memberAccountId;
-        this.prefix = prefix;
-    }
+    private S3BucketAssociationState() {}
 
-    private S3BucketAssociationState() {
-        this.bucketName = Codegen.empty();
-        this.classificationType = Codegen.empty();
-        this.memberAccountId = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private S3BucketAssociationState(S3BucketAssociationState $) {
+        this.bucketName = $.bucketName;
+        this.classificationType = $.classificationType;
+        this.memberAccountId = $.memberAccountId;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(S3BucketAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType;
-        private @Nullable Output<String> memberAccountId;
-        private @Nullable Output<String> prefix;
+        private S3BucketAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new S3BucketAssociationState();
         }
 
         public Builder(S3BucketAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.classificationType = defaults.classificationType;
-    	      this.memberAccountId = defaults.memberAccountId;
-    	      this.prefix = defaults.prefix;
+            $ = new S3BucketAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder classificationType(@Nullable Output<S3BucketAssociationClassificationTypeGetArgs> classificationType) {
-            this.classificationType = classificationType;
+            $.classificationType = classificationType;
             return this;
         }
-        public Builder classificationType(@Nullable S3BucketAssociationClassificationTypeGetArgs classificationType) {
-            this.classificationType = Codegen.ofNullable(classificationType);
-            return this;
+
+        public Builder classificationType(S3BucketAssociationClassificationTypeGetArgs classificationType) {
+            return classificationType(Output.of(classificationType));
         }
+
         public Builder memberAccountId(@Nullable Output<String> memberAccountId) {
-            this.memberAccountId = memberAccountId;
+            $.memberAccountId = memberAccountId;
             return this;
         }
-        public Builder memberAccountId(@Nullable String memberAccountId) {
-            this.memberAccountId = Codegen.ofNullable(memberAccountId);
-            return this;
+
+        public Builder memberAccountId(String memberAccountId) {
+            return memberAccountId(Output.of(memberAccountId));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public S3BucketAssociationState build() {
-            return new S3BucketAssociationState(bucketName, classificationType, memberAccountId, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public S3BucketAssociationState build() {
+            return $;
         }
     }
+
 }

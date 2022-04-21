@@ -8,9 +8,9 @@ import com.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderO
 import com.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<String> authenticationType;
+    private Output<String> authenticationType;
 
     public Output<String> authenticationType() {
         return this.authenticationType;
@@ -34,10 +34,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
      * 
      */
     @Import(name="lambdaAuthorizerConfig")
-      private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
+    private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
 
-    public Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig() {
-        return this.lambdaAuthorizerConfig == null ? Codegen.empty() : this.lambdaAuthorizerConfig;
+    public Optional<Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs>> lambdaAuthorizerConfig() {
+        return Optional.ofNullable(this.lambdaAuthorizerConfig);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
      * 
      */
     @Import(name="openidConnectConfig")
-      private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig;
+    private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig;
 
-    public Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig() {
-        return this.openidConnectConfig == null ? Codegen.empty() : this.openidConnectConfig;
+    public Optional<Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs>> openidConnectConfig() {
+        return Optional.ofNullable(this.openidConnectConfig);
     }
 
     /**
@@ -56,89 +56,79 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
      * 
      */
     @Import(name="userPoolConfig")
-      private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig;
+    private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig;
 
-    public Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig() {
-        return this.userPoolConfig == null ? Codegen.empty() : this.userPoolConfig;
+    public Optional<Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs>> userPoolConfig() {
+        return Optional.ofNullable(this.userPoolConfig);
     }
 
-    public GraphQLApiAdditionalAuthenticationProviderGetArgs(
-        Output<String> authenticationType,
-        @Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig,
-        @Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig,
-        @Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
-        this.openidConnectConfig = openidConnectConfig;
-        this.userPoolConfig = userPoolConfig;
-    }
+    private GraphQLApiAdditionalAuthenticationProviderGetArgs() {}
 
-    private GraphQLApiAdditionalAuthenticationProviderGetArgs() {
-        this.authenticationType = Codegen.empty();
-        this.lambdaAuthorizerConfig = Codegen.empty();
-        this.openidConnectConfig = Codegen.empty();
-        this.userPoolConfig = Codegen.empty();
+    private GraphQLApiAdditionalAuthenticationProviderGetArgs(GraphQLApiAdditionalAuthenticationProviderGetArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.lambdaAuthorizerConfig = $.lambdaAuthorizerConfig;
+        this.openidConnectConfig = $.openidConnectConfig;
+        this.userPoolConfig = $.userPoolConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphQLApiAdditionalAuthenticationProviderGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authenticationType;
-        private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
-        private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig;
-        private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig;
+        private GraphQLApiAdditionalAuthenticationProviderGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphQLApiAdditionalAuthenticationProviderGetArgs();
         }
 
         public Builder(GraphQLApiAdditionalAuthenticationProviderGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.lambdaAuthorizerConfig = defaults.lambdaAuthorizerConfig;
-    	      this.openidConnectConfig = defaults.openidConnectConfig;
-    	      this.userPoolConfig = defaults.userPoolConfig;
+            $ = new GraphQLApiAdditionalAuthenticationProviderGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<String> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder lambdaAuthorizerConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig) {
-            this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
+            $.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
-        public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
-            this.lambdaAuthorizerConfig = Codegen.ofNullable(lambdaAuthorizerConfig);
-            return this;
+
+        public Builder lambdaAuthorizerConfig(GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
+            return lambdaAuthorizerConfig(Output.of(lambdaAuthorizerConfig));
         }
+
         public Builder openidConnectConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig) {
-            this.openidConnectConfig = openidConnectConfig;
+            $.openidConnectConfig = openidConnectConfig;
             return this;
         }
-        public Builder openidConnectConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs openidConnectConfig) {
-            this.openidConnectConfig = Codegen.ofNullable(openidConnectConfig);
-            return this;
+
+        public Builder openidConnectConfig(GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs openidConnectConfig) {
+            return openidConnectConfig(Output.of(openidConnectConfig));
         }
+
         public Builder userPoolConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig) {
-            this.userPoolConfig = userPoolConfig;
+            $.userPoolConfig = userPoolConfig;
             return this;
         }
-        public Builder userPoolConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs userPoolConfig) {
-            this.userPoolConfig = Codegen.ofNullable(userPoolConfig);
-            return this;
-        }        public GraphQLApiAdditionalAuthenticationProviderGetArgs build() {
-            return new GraphQLApiAdditionalAuthenticationProviderGetArgs(authenticationType, lambdaAuthorizerConfig, openidConnectConfig, userPoolConfig);
+
+        public Builder userPoolConfig(GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs userPoolConfig) {
+            return userPoolConfig(Output.of(userPoolConfig));
+        }
+
+        public GraphQLApiAdditionalAuthenticationProviderGetArgs build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            return $;
         }
     }
+
 }

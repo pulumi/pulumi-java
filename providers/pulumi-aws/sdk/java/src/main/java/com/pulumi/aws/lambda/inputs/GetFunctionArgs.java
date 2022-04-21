@@ -20,7 +20,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-      private final String functionName;
+    private String functionName;
 
     public String functionName() {
         return this.functionName;
@@ -31,71 +31,64 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifier")
-      private final @Nullable String qualifier;
+    private @Nullable String qualifier;
 
     public Optional<String> qualifier() {
-        return this.qualifier == null ? Optional.empty() : Optional.ofNullable(this.qualifier);
+        return Optional.ofNullable(this.qualifier);
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetFunctionArgs(
-        String functionName,
-        @Nullable String qualifier,
-        @Nullable Map<String,String> tags) {
-        this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
-        this.qualifier = qualifier;
-        this.tags = tags;
-    }
+    private GetFunctionArgs() {}
 
-    private GetFunctionArgs() {
-        this.functionName = null;
-        this.qualifier = null;
-        this.tags = Map.of();
+    private GetFunctionArgs(GetFunctionArgs $) {
+        this.functionName = $.functionName;
+        this.qualifier = $.qualifier;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionName;
-        private @Nullable String qualifier;
-        private @Nullable Map<String,String> tags;
+        private GetFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionArgs();
         }
 
         public Builder(GetFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionName = defaults.functionName;
-    	      this.qualifier = defaults.qualifier;
-    	      this.tags = defaults.tags;
+            $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionName(String functionName) {
-            this.functionName = Objects.requireNonNull(functionName);
+            $.functionName = functionName;
             return this;
         }
+
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = qualifier;
+            $.qualifier = qualifier;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetFunctionArgs build() {
-            return new GetFunctionArgs(functionName, qualifier, tags);
+        }
+
+        public GetFunctionArgs build() {
+            $.functionName = Objects.requireNonNull($.functionName, "expected parameter 'functionName' to be non-null");
+            return $;
         }
     }
+
 }

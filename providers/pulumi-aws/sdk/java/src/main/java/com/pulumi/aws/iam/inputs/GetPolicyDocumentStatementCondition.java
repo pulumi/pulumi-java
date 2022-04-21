@@ -18,7 +18,7 @@ public final class GetPolicyDocumentStatementCondition extends com.pulumi.resour
      * 
      */
     @Import(name="test", required=true)
-      private final String test;
+    private String test;
 
     public String test() {
         return this.test;
@@ -29,7 +29,7 @@ public final class GetPolicyDocumentStatementCondition extends com.pulumi.resour
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
@@ -40,67 +40,63 @@ public final class GetPolicyDocumentStatementCondition extends com.pulumi.resour
      * 
      */
     @Import(name="variable", required=true)
-      private final String variable;
+    private String variable;
 
     public String variable() {
         return this.variable;
     }
 
-    public GetPolicyDocumentStatementCondition(
-        String test,
-        List<String> values,
-        String variable) {
-        this.test = Objects.requireNonNull(test, "expected parameter 'test' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-        this.variable = Objects.requireNonNull(variable, "expected parameter 'variable' to be non-null");
-    }
+    private GetPolicyDocumentStatementCondition() {}
 
-    private GetPolicyDocumentStatementCondition() {
-        this.test = null;
-        this.values = List.of();
-        this.variable = null;
+    private GetPolicyDocumentStatementCondition(GetPolicyDocumentStatementCondition $) {
+        this.test = $.test;
+        this.values = $.values;
+        this.variable = $.variable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyDocumentStatementCondition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String test;
-        private List<String> values;
-        private String variable;
+        private GetPolicyDocumentStatementCondition $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyDocumentStatementCondition();
         }
 
         public Builder(GetPolicyDocumentStatementCondition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.test = defaults.test;
-    	      this.values = defaults.values;
-    	      this.variable = defaults.variable;
+            $ = new GetPolicyDocumentStatementCondition(Objects.requireNonNull(defaults));
         }
 
         public Builder test(String test) {
-            this.test = Objects.requireNonNull(test);
+            $.test = test;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
         }
+
         public Builder variable(String variable) {
-            this.variable = Objects.requireNonNull(variable);
+            $.variable = variable;
             return this;
-        }        public GetPolicyDocumentStatementCondition build() {
-            return new GetPolicyDocumentStatementCondition(test, values, variable);
+        }
+
+        public GetPolicyDocumentStatementCondition build() {
+            $.test = Objects.requireNonNull($.test, "expected parameter 'test' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            $.variable = Objects.requireNonNull($.variable, "expected parameter 'variable' to be non-null");
+            return $;
         }
     }
+
 }

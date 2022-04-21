@@ -5,7 +5,6 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ConnectionAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectionId", required=true)
-      private final Output<String> connectionId;
+    private Output<String> connectionId;
 
     public Output<String> connectionId() {
         return this.connectionId;
@@ -30,63 +29,60 @@ public final class ConnectionAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lagId", required=true)
-      private final Output<String> lagId;
+    private Output<String> lagId;
 
     public Output<String> lagId() {
         return this.lagId;
     }
 
-    public ConnectionAssociationArgs(
-        Output<String> connectionId,
-        Output<String> lagId) {
-        this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
-        this.lagId = Objects.requireNonNull(lagId, "expected parameter 'lagId' to be non-null");
-    }
+    private ConnectionAssociationArgs() {}
 
-    private ConnectionAssociationArgs() {
-        this.connectionId = Codegen.empty();
-        this.lagId = Codegen.empty();
+    private ConnectionAssociationArgs(ConnectionAssociationArgs $) {
+        this.connectionId = $.connectionId;
+        this.lagId = $.lagId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionId;
-        private Output<String> lagId;
+        private ConnectionAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionAssociationArgs();
         }
 
         public Builder(ConnectionAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionId = defaults.connectionId;
-    	      this.lagId = defaults.lagId;
+            $ = new ConnectionAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionId(Output<String> connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId);
+            $.connectionId = connectionId;
             return this;
         }
+
         public Builder connectionId(String connectionId) {
-            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
-            return this;
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder lagId(Output<String> lagId) {
-            this.lagId = Objects.requireNonNull(lagId);
+            $.lagId = lagId;
             return this;
         }
+
         public Builder lagId(String lagId) {
-            this.lagId = Output.of(Objects.requireNonNull(lagId));
-            return this;
-        }        public ConnectionAssociationArgs build() {
-            return new ConnectionAssociationArgs(connectionId, lagId);
+            return lagId(Output.of(lagId));
+        }
+
+        public ConnectionAssociationArgs build() {
+            $.connectionId = Objects.requireNonNull($.connectionId, "expected parameter 'connectionId' to be non-null");
+            $.lagId = Objects.requireNonNull($.lagId, "expected parameter 'lagId' to be non-null");
+            return $;
         }
     }
+
 }

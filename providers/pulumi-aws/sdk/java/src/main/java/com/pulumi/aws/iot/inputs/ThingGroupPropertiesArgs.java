@@ -6,9 +6,9 @@ package com.pulumi.aws.iot.inputs;
 import com.pulumi.aws.iot.inputs.ThingGroupPropertiesAttributePayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ThingGroupPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="attributePayload")
-      private final @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
+    private @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
 
-    public Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload() {
-        return this.attributePayload == null ? Codegen.empty() : this.attributePayload;
+    public Optional<Output<ThingGroupPropertiesAttributePayloadArgs>> attributePayload() {
+        return Optional.ofNullable(this.attributePayload);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ThingGroupPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public ThingGroupPropertiesArgs(
-        @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload,
-        @Nullable Output<String> description) {
-        this.attributePayload = attributePayload;
-        this.description = description;
-    }
+    private ThingGroupPropertiesArgs() {}
 
-    private ThingGroupPropertiesArgs() {
-        this.attributePayload = Codegen.empty();
-        this.description = Codegen.empty();
+    private ThingGroupPropertiesArgs(ThingGroupPropertiesArgs $) {
+        this.attributePayload = $.attributePayload;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingGroupPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
-        private @Nullable Output<String> description;
+        private ThingGroupPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingGroupPropertiesArgs();
         }
 
         public Builder(ThingGroupPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributePayload = defaults.attributePayload;
-    	      this.description = defaults.description;
+            $ = new ThingGroupPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributePayload(@Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload) {
-            this.attributePayload = attributePayload;
+            $.attributePayload = attributePayload;
             return this;
         }
-        public Builder attributePayload(@Nullable ThingGroupPropertiesAttributePayloadArgs attributePayload) {
-            this.attributePayload = Codegen.ofNullable(attributePayload);
-            return this;
+
+        public Builder attributePayload(ThingGroupPropertiesAttributePayloadArgs attributePayload) {
+            return attributePayload(Output.of(attributePayload));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public ThingGroupPropertiesArgs build() {
-            return new ThingGroupPropertiesArgs(attributePayload, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public ThingGroupPropertiesArgs build() {
+            return $;
         }
     }
+
 }

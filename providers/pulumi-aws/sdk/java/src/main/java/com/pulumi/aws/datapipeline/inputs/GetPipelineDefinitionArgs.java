@@ -21,10 +21,10 @@ public final class GetPipelineDefinitionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameterValues")
-      private final @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
+    private @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
 
-    public List<GetPipelineDefinitionParameterValue> parameterValues() {
-        return this.parameterValues == null ? List.of() : this.parameterValues;
+    public Optional<List<GetPipelineDefinitionParameterValue>> parameterValues() {
+        return Optional.ofNullable(this.parameterValues);
     }
 
     /**
@@ -32,58 +32,55 @@ public final class GetPipelineDefinitionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pipelineId", required=true)
-      private final String pipelineId;
+    private String pipelineId;
 
     public String pipelineId() {
         return this.pipelineId;
     }
 
-    public GetPipelineDefinitionArgs(
-        @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
-        String pipelineId) {
-        this.parameterValues = parameterValues;
-        this.pipelineId = Objects.requireNonNull(pipelineId, "expected parameter 'pipelineId' to be non-null");
-    }
+    private GetPipelineDefinitionArgs() {}
 
-    private GetPipelineDefinitionArgs() {
-        this.parameterValues = List.of();
-        this.pipelineId = null;
+    private GetPipelineDefinitionArgs(GetPipelineDefinitionArgs $) {
+        this.parameterValues = $.parameterValues;
+        this.pipelineId = $.pipelineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
-        private String pipelineId;
+        private GetPipelineDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineDefinitionArgs();
         }
 
         public Builder(GetPipelineDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterValues = defaults.parameterValues;
-    	      this.pipelineId = defaults.pipelineId;
+            $ = new GetPipelineDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterValues(@Nullable List<GetPipelineDefinitionParameterValue> parameterValues) {
-            this.parameterValues = parameterValues;
+            $.parameterValues = parameterValues;
             return this;
         }
+
         public Builder parameterValues(GetPipelineDefinitionParameterValue... parameterValues) {
             return parameterValues(List.of(parameterValues));
         }
+
         public Builder pipelineId(String pipelineId) {
-            this.pipelineId = Objects.requireNonNull(pipelineId);
+            $.pipelineId = pipelineId;
             return this;
-        }        public GetPipelineDefinitionArgs build() {
-            return new GetPipelineDefinitionArgs(parameterValues, pipelineId);
+        }
+
+        public GetPipelineDefinitionArgs build() {
+            $.pipelineId = Objects.requireNonNull($.pipelineId, "expected parameter 'pipelineId' to be non-null");
+            return $;
         }
     }
+
 }

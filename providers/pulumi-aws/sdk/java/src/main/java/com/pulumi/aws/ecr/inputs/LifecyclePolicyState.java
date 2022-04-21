@@ -5,9 +5,9 @@ package com.pulumi.aws.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="registryId")
-      private final @Nullable Output<String> registryId;
+    private @Nullable Output<String> registryId;
 
-    public Output<String> registryId() {
-        return this.registryId == null ? Codegen.empty() : this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
     /**
@@ -42,72 +42,68 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="repository")
-      private final @Nullable Output<String> repository;
+    private @Nullable Output<String> repository;
 
-    public Output<String> repository() {
-        return this.repository == null ? Codegen.empty() : this.repository;
+    public Optional<Output<String>> repository() {
+        return Optional.ofNullable(this.repository);
     }
 
-    public LifecyclePolicyState(
-        @Nullable Output<String> policy,
-        @Nullable Output<String> registryId,
-        @Nullable Output<String> repository) {
-        this.policy = policy;
-        this.registryId = registryId;
-        this.repository = repository;
-    }
+    private LifecyclePolicyState() {}
 
-    private LifecyclePolicyState() {
-        this.policy = Codegen.empty();
-        this.registryId = Codegen.empty();
-        this.repository = Codegen.empty();
+    private LifecyclePolicyState(LifecyclePolicyState $) {
+        this.policy = $.policy;
+        this.registryId = $.registryId;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> registryId;
-        private @Nullable Output<String> repository;
+        private LifecyclePolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyState();
         }
 
         public Builder(LifecyclePolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.registryId = defaults.registryId;
-    	      this.repository = defaults.repository;
+            $ = new LifecyclePolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder registryId(@Nullable Output<String> registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
         }
-        public Builder registryId(@Nullable String registryId) {
-            this.registryId = Codegen.ofNullable(registryId);
-            return this;
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
+
         public Builder repository(@Nullable Output<String> repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
         }
-        public Builder repository(@Nullable String repository) {
-            this.repository = Codegen.ofNullable(repository);
-            return this;
-        }        public LifecyclePolicyState build() {
-            return new LifecyclePolicyState(policy, registryId, repository);
+
+        public Builder repository(String repository) {
+            return repository(Output.of(repository));
+        }
+
+        public LifecyclePolicyState build() {
+            return $;
         }
     }
+
 }

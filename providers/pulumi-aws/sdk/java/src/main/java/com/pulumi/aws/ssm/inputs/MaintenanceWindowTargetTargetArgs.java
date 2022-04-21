@@ -5,7 +5,6 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,73 +15,71 @@ public final class MaintenanceWindowTargetTargetArgs extends com.pulumi.resource
     public static final MaintenanceWindowTargetTargetArgs Empty = new MaintenanceWindowTargetTargetArgs();
 
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public MaintenanceWindowTargetTargetArgs(
-        Output<String> key,
-        Output<List<String>> values) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private MaintenanceWindowTargetTargetArgs() {}
 
-    private MaintenanceWindowTargetTargetArgs() {
-        this.key = Codegen.empty();
-        this.values = Codegen.empty();
+    private MaintenanceWindowTargetTargetArgs(MaintenanceWindowTargetTargetArgs $) {
+        this.key = $.key;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowTargetTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<List<String>> values;
+        private MaintenanceWindowTargetTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowTargetTargetArgs();
         }
 
         public Builder(MaintenanceWindowTargetTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.values = defaults.values;
+            $ = new MaintenanceWindowTargetTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public MaintenanceWindowTargetTargetArgs build() {
-            return new MaintenanceWindowTargetTargetArgs(key, values);
+        }
+
+        public MaintenanceWindowTargetTargetArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstancePublicPortsPortInfoGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="cidrs")
-      private final @Nullable Output<List<String>> cidrs;
+    private @Nullable Output<List<String>> cidrs;
 
-    public Output<List<String>> cidrs() {
-        return this.cidrs == null ? Codegen.empty() : this.cidrs;
+    public Optional<Output<List<String>>> cidrs() {
+        return Optional.ofNullable(this.cidrs);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class InstancePublicPortsPortInfoGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="fromPort", required=true)
-      private final Output<Integer> fromPort;
+    private Output<Integer> fromPort;
 
     public Output<Integer> fromPort() {
         return this.fromPort;
@@ -44,7 +44,7 @@ public final class InstancePublicPortsPortInfoGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
@@ -55,92 +55,85 @@ public final class InstancePublicPortsPortInfoGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="toPort", required=true)
-      private final Output<Integer> toPort;
+    private Output<Integer> toPort;
 
     public Output<Integer> toPort() {
         return this.toPort;
     }
 
-    public InstancePublicPortsPortInfoGetArgs(
-        @Nullable Output<List<String>> cidrs,
-        Output<Integer> fromPort,
-        Output<String> protocol,
-        Output<Integer> toPort) {
-        this.cidrs = cidrs;
-        this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.toPort = Objects.requireNonNull(toPort, "expected parameter 'toPort' to be non-null");
-    }
+    private InstancePublicPortsPortInfoGetArgs() {}
 
-    private InstancePublicPortsPortInfoGetArgs() {
-        this.cidrs = Codegen.empty();
-        this.fromPort = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.toPort = Codegen.empty();
+    private InstancePublicPortsPortInfoGetArgs(InstancePublicPortsPortInfoGetArgs $) {
+        this.cidrs = $.cidrs;
+        this.fromPort = $.fromPort;
+        this.protocol = $.protocol;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstancePublicPortsPortInfoGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cidrs;
-        private Output<Integer> fromPort;
-        private Output<String> protocol;
-        private Output<Integer> toPort;
+        private InstancePublicPortsPortInfoGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstancePublicPortsPortInfoGetArgs();
         }
 
         public Builder(InstancePublicPortsPortInfoGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrs = defaults.cidrs;
-    	      this.fromPort = defaults.fromPort;
-    	      this.protocol = defaults.protocol;
-    	      this.toPort = defaults.toPort;
+            $ = new InstancePublicPortsPortInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrs(@Nullable Output<List<String>> cidrs) {
-            this.cidrs = cidrs;
+            $.cidrs = cidrs;
             return this;
         }
-        public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Codegen.ofNullable(cidrs);
-            return this;
+
+        public Builder cidrs(List<String> cidrs) {
+            return cidrs(Output.of(cidrs));
         }
+
         public Builder cidrs(String... cidrs) {
             return cidrs(List.of(cidrs));
         }
+
         public Builder fromPort(Output<Integer> fromPort) {
-            this.fromPort = Objects.requireNonNull(fromPort);
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
-            return this;
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder toPort(Output<Integer> toPort) {
-            this.toPort = Objects.requireNonNull(toPort);
+            $.toPort = toPort;
             return this;
         }
+
         public Builder toPort(Integer toPort) {
-            this.toPort = Output.of(Objects.requireNonNull(toPort));
-            return this;
-        }        public InstancePublicPortsPortInfoGetArgs build() {
-            return new InstancePublicPortsPortInfoGetArgs(cidrs, fromPort, protocol, toPort);
+            return toPort(Output.of(toPort));
+        }
+
+        public InstancePublicPortsPortInfoGetArgs build() {
+            $.fromPort = Objects.requireNonNull($.fromPort, "expected parameter 'fromPort' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.toPort = Objects.requireNonNull($.toPort, "expected parameter 'toPort' to be non-null");
+            return $;
         }
     }
+
 }

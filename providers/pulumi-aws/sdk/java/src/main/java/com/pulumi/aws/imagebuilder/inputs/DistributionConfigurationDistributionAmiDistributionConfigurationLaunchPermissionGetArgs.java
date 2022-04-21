@@ -5,10 +5,10 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="userGroups")
-      private final @Nullable Output<List<String>> userGroups;
+    private @Nullable Output<List<String>> userGroups;
 
-    public Output<List<String>> userGroups() {
-        return this.userGroups == null ? Codegen.empty() : this.userGroups;
+    public Optional<Output<List<String>>> userGroups() {
+        return Optional.ofNullable(this.userGroups);
     }
 
     /**
@@ -32,69 +32,66 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="userIds")
-      private final @Nullable Output<List<String>> userIds;
+    private @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> userIds() {
-        return this.userIds == null ? Codegen.empty() : this.userIds;
+    public Optional<Output<List<String>>> userIds() {
+        return Optional.ofNullable(this.userIds);
     }
 
-    public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs(
-        @Nullable Output<List<String>> userGroups,
-        @Nullable Output<List<String>> userIds) {
-        this.userGroups = userGroups;
-        this.userIds = userIds;
-    }
+    private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs() {}
 
-    private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs() {
-        this.userGroups = Codegen.empty();
-        this.userIds = Codegen.empty();
+    private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs $) {
+        this.userGroups = $.userGroups;
+        this.userIds = $.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> userGroups;
-        private @Nullable Output<List<String>> userIds;
+        private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs();
         }
 
         public Builder(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userGroups = defaults.userGroups;
-    	      this.userIds = defaults.userIds;
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userGroups(@Nullable Output<List<String>> userGroups) {
-            this.userGroups = userGroups;
+            $.userGroups = userGroups;
             return this;
         }
-        public Builder userGroups(@Nullable List<String> userGroups) {
-            this.userGroups = Codegen.ofNullable(userGroups);
-            return this;
+
+        public Builder userGroups(List<String> userGroups) {
+            return userGroups(Output.of(userGroups));
         }
+
         public Builder userGroups(String... userGroups) {
             return userGroups(List.of(userGroups));
         }
+
         public Builder userIds(@Nullable Output<List<String>> userIds) {
-            this.userIds = userIds;
+            $.userIds = userIds;
             return this;
         }
-        public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Codegen.ofNullable(userIds);
-            return this;
+
+        public Builder userIds(List<String> userIds) {
+            return userIds(Output.of(userIds));
         }
+
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
-        }        public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs build() {
-            return new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs(userGroups, userIds);
+        }
+
+        public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteActionWeightedTargetGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,52 +20,53 @@ public final class RouteSpecGrpcRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="weightedTargets", required=true)
-      private final Output<List<RouteSpecGrpcRouteActionWeightedTargetGetArgs>> weightedTargets;
+    private Output<List<RouteSpecGrpcRouteActionWeightedTargetGetArgs>> weightedTargets;
 
     public Output<List<RouteSpecGrpcRouteActionWeightedTargetGetArgs>> weightedTargets() {
         return this.weightedTargets;
     }
 
-    public RouteSpecGrpcRouteActionGetArgs(Output<List<RouteSpecGrpcRouteActionWeightedTargetGetArgs>> weightedTargets) {
-        this.weightedTargets = Objects.requireNonNull(weightedTargets, "expected parameter 'weightedTargets' to be non-null");
-    }
+    private RouteSpecGrpcRouteActionGetArgs() {}
 
-    private RouteSpecGrpcRouteActionGetArgs() {
-        this.weightedTargets = Codegen.empty();
+    private RouteSpecGrpcRouteActionGetArgs(RouteSpecGrpcRouteActionGetArgs $) {
+        this.weightedTargets = $.weightedTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecGrpcRouteActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RouteSpecGrpcRouteActionWeightedTargetGetArgs>> weightedTargets;
+        private RouteSpecGrpcRouteActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecGrpcRouteActionGetArgs();
         }
 
         public Builder(RouteSpecGrpcRouteActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.weightedTargets = defaults.weightedTargets;
+            $ = new RouteSpecGrpcRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder weightedTargets(Output<List<RouteSpecGrpcRouteActionWeightedTargetGetArgs>> weightedTargets) {
-            this.weightedTargets = Objects.requireNonNull(weightedTargets);
+            $.weightedTargets = weightedTargets;
             return this;
         }
+
         public Builder weightedTargets(List<RouteSpecGrpcRouteActionWeightedTargetGetArgs> weightedTargets) {
-            this.weightedTargets = Output.of(Objects.requireNonNull(weightedTargets));
-            return this;
+            return weightedTargets(Output.of(weightedTargets));
         }
+
         public Builder weightedTargets(RouteSpecGrpcRouteActionWeightedTargetGetArgs... weightedTargets) {
             return weightedTargets(List.of(weightedTargets));
-        }        public RouteSpecGrpcRouteActionGetArgs build() {
-            return new RouteSpecGrpcRouteActionGetArgs(weightedTargets);
+        }
+
+        public RouteSpecGrpcRouteActionGetArgs build() {
+            $.weightedTargets = Objects.requireNonNull($.weightedTargets, "expected parameter 'weightedTargets' to be non-null");
+            return $;
         }
     }
+
 }

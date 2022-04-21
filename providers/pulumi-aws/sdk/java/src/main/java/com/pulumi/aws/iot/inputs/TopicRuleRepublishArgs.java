@@ -5,10 +5,10 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TopicRuleRepublishArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="qos")
-      private final @Nullable Output<Integer> qos;
+    private @Nullable Output<Integer> qos;
 
-    public Output<Integer> qos() {
-        return this.qos == null ? Codegen.empty() : this.qos;
+    public Optional<Output<Integer>> qos() {
+        return Optional.ofNullable(this.qos);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class TopicRuleRepublishArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -43,76 +43,70 @@ public final class TopicRuleRepublishArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public TopicRuleRepublishArgs(
-        @Nullable Output<Integer> qos,
-        Output<String> roleArn,
-        Output<String> topic) {
-        this.qos = qos;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private TopicRuleRepublishArgs() {}
 
-    private TopicRuleRepublishArgs() {
-        this.qos = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.topic = Codegen.empty();
+    private TopicRuleRepublishArgs(TopicRuleRepublishArgs $) {
+        this.qos = $.qos;
+        this.roleArn = $.roleArn;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleRepublishArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> qos;
-        private Output<String> roleArn;
-        private Output<String> topic;
+        private TopicRuleRepublishArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleRepublishArgs();
         }
 
         public Builder(TopicRuleRepublishArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.qos = defaults.qos;
-    	      this.roleArn = defaults.roleArn;
-    	      this.topic = defaults.topic;
+            $ = new TopicRuleRepublishArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder qos(@Nullable Output<Integer> qos) {
-            this.qos = qos;
+            $.qos = qos;
             return this;
         }
-        public Builder qos(@Nullable Integer qos) {
-            this.qos = Codegen.ofNullable(qos);
-            return this;
+
+        public Builder qos(Integer qos) {
+            return qos(Output.of(qos));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public TopicRuleRepublishArgs build() {
-            return new TopicRuleRepublishArgs(qos, roleArn, topic);
+            return topic(Output.of(topic));
+        }
+
+        public TopicRuleRepublishArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.autoscalingplans.inputs;
 import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceTagFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ScalingPlanApplicationSourceGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="cloudformationStackArn")
-      private final @Nullable Output<String> cloudformationStackArn;
+    private @Nullable Output<String> cloudformationStackArn;
 
-    public Output<String> cloudformationStackArn() {
-        return this.cloudformationStackArn == null ? Codegen.empty() : this.cloudformationStackArn;
+    public Optional<Output<String>> cloudformationStackArn() {
+        return Optional.ofNullable(this.cloudformationStackArn);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ScalingPlanApplicationSourceGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tagFilters")
-      private final @Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters;
+    private @Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters;
 
-    public Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters() {
-        return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
+    public Optional<Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
-    public ScalingPlanApplicationSourceGetArgs(
-        @Nullable Output<String> cloudformationStackArn,
-        @Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters) {
-        this.cloudformationStackArn = cloudformationStackArn;
-        this.tagFilters = tagFilters;
-    }
+    private ScalingPlanApplicationSourceGetArgs() {}
 
-    private ScalingPlanApplicationSourceGetArgs() {
-        this.cloudformationStackArn = Codegen.empty();
-        this.tagFilters = Codegen.empty();
+    private ScalingPlanApplicationSourceGetArgs(ScalingPlanApplicationSourceGetArgs $) {
+        this.cloudformationStackArn = $.cloudformationStackArn;
+        this.tagFilters = $.tagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingPlanApplicationSourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudformationStackArn;
-        private @Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters;
+        private ScalingPlanApplicationSourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingPlanApplicationSourceGetArgs();
         }
 
         public Builder(ScalingPlanApplicationSourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudformationStackArn = defaults.cloudformationStackArn;
-    	      this.tagFilters = defaults.tagFilters;
+            $ = new ScalingPlanApplicationSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudformationStackArn(@Nullable Output<String> cloudformationStackArn) {
-            this.cloudformationStackArn = cloudformationStackArn;
+            $.cloudformationStackArn = cloudformationStackArn;
             return this;
         }
-        public Builder cloudformationStackArn(@Nullable String cloudformationStackArn) {
-            this.cloudformationStackArn = Codegen.ofNullable(cloudformationStackArn);
-            return this;
+
+        public Builder cloudformationStackArn(String cloudformationStackArn) {
+            return cloudformationStackArn(Output.of(cloudformationStackArn));
         }
+
         public Builder tagFilters(@Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
-        public Builder tagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilterGetArgs> tagFilters) {
-            this.tagFilters = Codegen.ofNullable(tagFilters);
-            return this;
+
+        public Builder tagFilters(List<ScalingPlanApplicationSourceTagFilterGetArgs> tagFilters) {
+            return tagFilters(Output.of(tagFilters));
         }
+
         public Builder tagFilters(ScalingPlanApplicationSourceTagFilterGetArgs... tagFilters) {
             return tagFilters(List.of(tagFilters));
-        }        public ScalingPlanApplicationSourceGetArgs build() {
-            return new ScalingPlanApplicationSourceGetArgs(cloudformationStackArn, tagFilters);
+        }
+
+        public ScalingPlanApplicationSourceGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class NfsLocationMountOptionsGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public NfsLocationMountOptionsGetArgs(@Nullable Output<String> version) {
-        this.version = version;
-    }
+    private NfsLocationMountOptionsGetArgs() {}
 
-    private NfsLocationMountOptionsGetArgs() {
-        this.version = Codegen.empty();
+    private NfsLocationMountOptionsGetArgs(NfsLocationMountOptionsGetArgs $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NfsLocationMountOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> version;
+        private NfsLocationMountOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NfsLocationMountOptionsGetArgs();
         }
 
         public Builder(NfsLocationMountOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new NfsLocationMountOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public NfsLocationMountOptionsGetArgs build() {
-            return new NfsLocationMountOptionsGetArgs(version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public NfsLocationMountOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

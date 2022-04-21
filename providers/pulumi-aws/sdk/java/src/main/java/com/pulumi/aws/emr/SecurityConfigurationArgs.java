@@ -5,9 +5,9 @@ package com.pulumi.aws.emr;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="configuration", required=true)
-      private final Output<String> configuration;
+    private Output<String> configuration;
 
     public Output<String> configuration() {
         return this.configuration;
@@ -31,10 +31,10 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
-    public SecurityConfigurationArgs(
-        Output<String> configuration,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix) {
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.name = name;
-        this.namePrefix = namePrefix;
-    }
+    private SecurityConfigurationArgs() {}
 
-    private SecurityConfigurationArgs() {
-        this.configuration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
+    private SecurityConfigurationArgs(SecurityConfigurationArgs $) {
+        this.configuration = $.configuration;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configuration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
+        private SecurityConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConfigurationArgs();
         }
 
         public Builder(SecurityConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
+            $ = new SecurityConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(Output<String> configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder configuration(String configuration) {
-            this.configuration = Output.of(Objects.requireNonNull(configuration));
-            return this;
+            return configuration(Output.of(configuration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
-        }        public SecurityConfigurationArgs build() {
-            return new SecurityConfigurationArgs(configuration, name, namePrefix);
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        public SecurityConfigurationArgs build() {
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            return $;
         }
     }
+
 }

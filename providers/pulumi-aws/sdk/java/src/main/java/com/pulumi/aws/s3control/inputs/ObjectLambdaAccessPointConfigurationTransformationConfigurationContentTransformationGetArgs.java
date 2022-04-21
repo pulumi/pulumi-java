@@ -6,7 +6,6 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @Import(name="awsLambda", required=true)
-      private final Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda;
+    private Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda;
 
     public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda() {
         return this.awsLambda;
     }
 
-    public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs(Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda) {
-        this.awsLambda = Objects.requireNonNull(awsLambda, "expected parameter 'awsLambda' to be non-null");
-    }
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs() {}
 
-    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs() {
-        this.awsLambda = Codegen.empty();
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs $) {
+        this.awsLambda = $.awsLambda;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda;
+        private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs();
         }
 
         public Builder(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsLambda = defaults.awsLambda;
+            $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsLambda(Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda) {
-            this.awsLambda = Objects.requireNonNull(awsLambda);
+            $.awsLambda = awsLambda;
             return this;
         }
+
         public Builder awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs awsLambda) {
-            this.awsLambda = Output.of(Objects.requireNonNull(awsLambda));
-            return this;
-        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs build() {
-            return new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs(awsLambda);
+            return awsLambda(Output.of(awsLambda));
+        }
+
+        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs build() {
+            $.awsLambda = Objects.requireNonNull($.awsLambda, "expected parameter 'awsLambda' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class DomainVpcOptionsGetArgs extends com.pulumi.resources.Resource
     public static final DomainVpcOptionsGetArgs Empty = new DomainVpcOptionsGetArgs();
 
     @Import(name="availabilityZones")
-      private final @Nullable Output<List<String>> availabilityZones;
+    private @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> availabilityZones() {
-        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
+    public Optional<Output<List<String>>> availabilityZones() {
+        return Optional.ofNullable(this.availabilityZones);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class DomainVpcOptionsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -39,105 +39,97 @@ public final class DomainVpcOptionsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public DomainVpcOptionsGetArgs(
-        @Nullable Output<List<String>> availabilityZones,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<String> vpcId) {
-        this.availabilityZones = availabilityZones;
-        this.securityGroupIds = securityGroupIds;
-        this.subnetIds = subnetIds;
-        this.vpcId = vpcId;
-    }
+    private DomainVpcOptionsGetArgs() {}
 
-    private DomainVpcOptionsGetArgs() {
-        this.availabilityZones = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private DomainVpcOptionsGetArgs(DomainVpcOptionsGetArgs $) {
+        this.availabilityZones = $.availabilityZones;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainVpcOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> availabilityZones;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<String> vpcId;
+        private DomainVpcOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainVpcOptionsGetArgs();
         }
 
         public Builder(DomainVpcOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new DomainVpcOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
-            this.availabilityZones = availabilityZones;
+            $.availabilityZones = availabilityZones;
             return this;
         }
-        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Codegen.ofNullable(availabilityZones);
-            return this;
+
+        public Builder availabilityZones(List<String> availabilityZones) {
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public DomainVpcOptionsGetArgs build() {
-            return new DomainVpcOptionsGetArgs(availabilityZones, securityGroupIds, subnetIds, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public DomainVpcOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

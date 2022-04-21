@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2clientvpn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NetworkAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="associationId")
-      private final @Nullable Output<String> associationId;
+    private @Nullable Output<String> associationId;
 
-    public Output<String> associationId() {
-        return this.associationId == null ? Codegen.empty() : this.associationId;
+    public Optional<Output<String>> associationId() {
+        return Optional.ofNullable(this.associationId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NetworkAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientVpnEndpointId")
-      private final @Nullable Output<String> clientVpnEndpointId;
+    private @Nullable Output<String> clientVpnEndpointId;
 
-    public Output<String> clientVpnEndpointId() {
-        return this.clientVpnEndpointId == null ? Codegen.empty() : this.clientVpnEndpointId;
+    public Optional<Output<String>> clientVpnEndpointId() {
+        return Optional.ofNullable(this.clientVpnEndpointId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NetworkAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NetworkAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NetworkAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -76,118 +76,102 @@ public final class NetworkAssociationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public NetworkAssociationState(
-        @Nullable Output<String> associationId,
-        @Nullable Output<String> clientVpnEndpointId,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<String> status,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<String> vpcId) {
-        this.associationId = associationId;
-        this.clientVpnEndpointId = clientVpnEndpointId;
-        this.securityGroups = securityGroups;
-        this.status = status;
-        this.subnetId = subnetId;
-        this.vpcId = vpcId;
-    }
+    private NetworkAssociationState() {}
 
-    private NetworkAssociationState() {
-        this.associationId = Codegen.empty();
-        this.clientVpnEndpointId = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.status = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private NetworkAssociationState(NetworkAssociationState $) {
+        this.associationId = $.associationId;
+        this.clientVpnEndpointId = $.clientVpnEndpointId;
+        this.securityGroups = $.securityGroups;
+        this.status = $.status;
+        this.subnetId = $.subnetId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> associationId;
-        private @Nullable Output<String> clientVpnEndpointId;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<String> vpcId;
+        private NetworkAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkAssociationState();
         }
 
         public Builder(NetworkAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationId = defaults.associationId;
-    	      this.clientVpnEndpointId = defaults.clientVpnEndpointId;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.status = defaults.status;
-    	      this.subnetId = defaults.subnetId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new NetworkAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder associationId(@Nullable Output<String> associationId) {
-            this.associationId = associationId;
+            $.associationId = associationId;
             return this;
         }
-        public Builder associationId(@Nullable String associationId) {
-            this.associationId = Codegen.ofNullable(associationId);
-            return this;
+
+        public Builder associationId(String associationId) {
+            return associationId(Output.of(associationId));
         }
+
         public Builder clientVpnEndpointId(@Nullable Output<String> clientVpnEndpointId) {
-            this.clientVpnEndpointId = clientVpnEndpointId;
+            $.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
-        public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Codegen.ofNullable(clientVpnEndpointId);
-            return this;
+
+        public Builder clientVpnEndpointId(String clientVpnEndpointId) {
+            return clientVpnEndpointId(Output.of(clientVpnEndpointId));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public NetworkAssociationState build() {
-            return new NetworkAssociationState(associationId, clientVpnEndpointId, securityGroups, status, subnetId, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public NetworkAssociationState build() {
+            return $;
         }
     }
+
 }

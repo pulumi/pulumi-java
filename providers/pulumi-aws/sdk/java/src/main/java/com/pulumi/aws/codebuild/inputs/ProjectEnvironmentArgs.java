@@ -7,11 +7,11 @@ import com.pulumi.aws.codebuild.inputs.ProjectEnvironmentEnvironmentVariableArgs
 import com.pulumi.aws.codebuild.inputs.ProjectEnvironmentRegistryCredentialArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="computeType", required=true)
-      private final Output<String> computeType;
+    private Output<String> computeType;
 
     public Output<String> computeType() {
         return this.computeType;
@@ -46,10 +46,10 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables;
+    private @Nullable Output<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<List<ProjectEnvironmentEnvironmentVariableArgs>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -68,10 +68,10 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="imagePullCredentialsType")
-      private final @Nullable Output<String> imagePullCredentialsType;
+    private @Nullable Output<String> imagePullCredentialsType;
 
-    public Output<String> imagePullCredentialsType() {
-        return this.imagePullCredentialsType == null ? Codegen.empty() : this.imagePullCredentialsType;
+    public Optional<Output<String>> imagePullCredentialsType() {
+        return Optional.ofNullable(this.imagePullCredentialsType);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privilegedMode")
-      private final @Nullable Output<Boolean> privilegedMode;
+    private @Nullable Output<Boolean> privilegedMode;
 
-    public Output<Boolean> privilegedMode() {
-        return this.privilegedMode == null ? Codegen.empty() : this.privilegedMode;
+    public Optional<Output<Boolean>> privilegedMode() {
+        return Optional.ofNullable(this.privilegedMode);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="registryCredential")
-      private final @Nullable Output<ProjectEnvironmentRegistryCredentialArgs> registryCredential;
+    private @Nullable Output<ProjectEnvironmentRegistryCredentialArgs> registryCredential;
 
-    public Output<ProjectEnvironmentRegistryCredentialArgs> registryCredential() {
-        return this.registryCredential == null ? Codegen.empty() : this.registryCredential;
+    public Optional<Output<ProjectEnvironmentRegistryCredentialArgs>> registryCredential() {
+        return Optional.ofNullable(this.registryCredential);
     }
 
     /**
@@ -101,144 +101,125 @@ public final class ProjectEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ProjectEnvironmentArgs(
-        @Nullable Output<String> certificate,
-        Output<String> computeType,
-        @Nullable Output<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables,
-        Output<String> image,
-        @Nullable Output<String> imagePullCredentialsType,
-        @Nullable Output<Boolean> privilegedMode,
-        @Nullable Output<ProjectEnvironmentRegistryCredentialArgs> registryCredential,
-        Output<String> type) {
-        this.certificate = certificate;
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
-        this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.imagePullCredentialsType = imagePullCredentialsType;
-        this.privilegedMode = privilegedMode;
-        this.registryCredential = registryCredential;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ProjectEnvironmentArgs() {}
 
-    private ProjectEnvironmentArgs() {
-        this.certificate = Codegen.empty();
-        this.computeType = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.image = Codegen.empty();
-        this.imagePullCredentialsType = Codegen.empty();
-        this.privilegedMode = Codegen.empty();
-        this.registryCredential = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProjectEnvironmentArgs(ProjectEnvironmentArgs $) {
+        this.certificate = $.certificate;
+        this.computeType = $.computeType;
+        this.environmentVariables = $.environmentVariables;
+        this.image = $.image;
+        this.imagePullCredentialsType = $.imagePullCredentialsType;
+        this.privilegedMode = $.privilegedMode;
+        this.registryCredential = $.registryCredential;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificate;
-        private Output<String> computeType;
-        private @Nullable Output<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables;
-        private Output<String> image;
-        private @Nullable Output<String> imagePullCredentialsType;
-        private @Nullable Output<Boolean> privilegedMode;
-        private @Nullable Output<ProjectEnvironmentRegistryCredentialArgs> registryCredential;
-        private Output<String> type;
+        private ProjectEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectEnvironmentArgs();
         }
 
         public Builder(ProjectEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.computeType = defaults.computeType;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.image = defaults.image;
-    	      this.imagePullCredentialsType = defaults.imagePullCredentialsType;
-    	      this.privilegedMode = defaults.privilegedMode;
-    	      this.registryCredential = defaults.registryCredential;
-    	      this.type = defaults.type;
+            $ = new ProjectEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder computeType(Output<String> computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Output.of(Objects.requireNonNull(computeType));
-            return this;
+            return computeType(Output.of(computeType));
         }
+
         public Builder environmentVariables(@Nullable Output<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(List<ProjectEnvironmentEnvironmentVariableArgs> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder environmentVariables(ProjectEnvironmentEnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder imagePullCredentialsType(@Nullable Output<String> imagePullCredentialsType) {
-            this.imagePullCredentialsType = imagePullCredentialsType;
+            $.imagePullCredentialsType = imagePullCredentialsType;
             return this;
         }
-        public Builder imagePullCredentialsType(@Nullable String imagePullCredentialsType) {
-            this.imagePullCredentialsType = Codegen.ofNullable(imagePullCredentialsType);
-            return this;
+
+        public Builder imagePullCredentialsType(String imagePullCredentialsType) {
+            return imagePullCredentialsType(Output.of(imagePullCredentialsType));
         }
+
         public Builder privilegedMode(@Nullable Output<Boolean> privilegedMode) {
-            this.privilegedMode = privilegedMode;
+            $.privilegedMode = privilegedMode;
             return this;
         }
-        public Builder privilegedMode(@Nullable Boolean privilegedMode) {
-            this.privilegedMode = Codegen.ofNullable(privilegedMode);
-            return this;
+
+        public Builder privilegedMode(Boolean privilegedMode) {
+            return privilegedMode(Output.of(privilegedMode));
         }
+
         public Builder registryCredential(@Nullable Output<ProjectEnvironmentRegistryCredentialArgs> registryCredential) {
-            this.registryCredential = registryCredential;
+            $.registryCredential = registryCredential;
             return this;
         }
-        public Builder registryCredential(@Nullable ProjectEnvironmentRegistryCredentialArgs registryCredential) {
-            this.registryCredential = Codegen.ofNullable(registryCredential);
-            return this;
+
+        public Builder registryCredential(ProjectEnvironmentRegistryCredentialArgs registryCredential) {
+            return registryCredential(Output.of(registryCredential));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ProjectEnvironmentArgs build() {
-            return new ProjectEnvironmentArgs(certificate, computeType, environmentVariables, image, imagePullCredentialsType, privilegedMode, registryCredential, type);
+            return type(Output.of(type));
+        }
+
+        public ProjectEnvironmentArgs build() {
+            $.computeType = Objects.requireNonNull($.computeType, "expected parameter 'computeType' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

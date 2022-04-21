@@ -5,9 +5,9 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -31,10 +31,10 @@ public final class ResourceDataSyncS3DestinationGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResourceDataSyncS3DestinationGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -64,102 +64,90 @@ public final class ResourceDataSyncS3DestinationGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="syncFormat")
-      private final @Nullable Output<String> syncFormat;
+    private @Nullable Output<String> syncFormat;
 
-    public Output<String> syncFormat() {
-        return this.syncFormat == null ? Codegen.empty() : this.syncFormat;
+    public Optional<Output<String>> syncFormat() {
+        return Optional.ofNullable(this.syncFormat);
     }
 
-    public ResourceDataSyncS3DestinationGetArgs(
-        Output<String> bucketName,
-        @Nullable Output<String> kmsKeyArn,
-        @Nullable Output<String> prefix,
-        Output<String> region,
-        @Nullable Output<String> syncFormat) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.kmsKeyArn = kmsKeyArn;
-        this.prefix = prefix;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.syncFormat = syncFormat;
-    }
+    private ResourceDataSyncS3DestinationGetArgs() {}
 
-    private ResourceDataSyncS3DestinationGetArgs() {
-        this.bucketName = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.region = Codegen.empty();
-        this.syncFormat = Codegen.empty();
+    private ResourceDataSyncS3DestinationGetArgs(ResourceDataSyncS3DestinationGetArgs $) {
+        this.bucketName = $.bucketName;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.prefix = $.prefix;
+        this.region = $.region;
+        this.syncFormat = $.syncFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceDataSyncS3DestinationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<String> kmsKeyArn;
-        private @Nullable Output<String> prefix;
-        private Output<String> region;
-        private @Nullable Output<String> syncFormat;
+        private ResourceDataSyncS3DestinationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceDataSyncS3DestinationGetArgs();
         }
 
         public Builder(ResourceDataSyncS3DestinationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.prefix = defaults.prefix;
-    	      this.region = defaults.region;
-    	      this.syncFormat = defaults.syncFormat;
+            $ = new ResourceDataSyncS3DestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder syncFormat(@Nullable Output<String> syncFormat) {
-            this.syncFormat = syncFormat;
+            $.syncFormat = syncFormat;
             return this;
         }
-        public Builder syncFormat(@Nullable String syncFormat) {
-            this.syncFormat = Codegen.ofNullable(syncFormat);
-            return this;
-        }        public ResourceDataSyncS3DestinationGetArgs build() {
-            return new ResourceDataSyncS3DestinationGetArgs(bucketName, kmsKeyArn, prefix, region, syncFormat);
+
+        public Builder syncFormat(String syncFormat) {
+            return syncFormat(Output.of(syncFormat));
+        }
+
+        public ResourceDataSyncS3DestinationGetArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

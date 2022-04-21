@@ -5,10 +5,10 @@ package com.pulumi.aws.servicediscovery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceId")
-      private final @Nullable Output<String> serviceId;
+    private @Nullable Output<String> serviceId;
 
-    public Output<String> serviceId() {
-        return this.serviceId == null ? Codegen.empty() : this.serviceId;
+    public Optional<Output<String>> serviceId() {
+        return Optional.ofNullable(this.serviceId);
     }
 
-    public InstanceState(
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> serviceId) {
-        this.attributes = attributes;
-        this.instanceId = instanceId;
-        this.serviceId = serviceId;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.attributes = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.serviceId = Codegen.empty();
+    private InstanceState(InstanceState $) {
+        this.attributes = $.attributes;
+        this.instanceId = $.instanceId;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> serviceId;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.instanceId = defaults.instanceId;
-    	      this.serviceId = defaults.serviceId;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder serviceId(@Nullable Output<String> serviceId) {
-            this.serviceId = serviceId;
+            $.serviceId = serviceId;
             return this;
         }
-        public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Codegen.ofNullable(serviceId);
-            return this;
-        }        public InstanceState build() {
-            return new InstanceState(attributes, instanceId, serviceId);
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

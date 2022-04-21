@@ -6,9 +6,9 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends com.pulum
      * 
      */
     @Import(name="clientPolicy")
-      private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy;
+    private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy() {
-        return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
+    public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs>> clientPolicy() {
+        return Optional.ofNullable(this.clientPolicy);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends com.pulum
      * 
      */
     @Import(name="virtualServiceName", required=true)
-      private final Output<String> virtualServiceName;
+    private Output<String> virtualServiceName;
 
     public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
 
-    public VirtualNodeSpecBackendVirtualServiceGetArgs(
-        @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy,
-        Output<String> virtualServiceName) {
-        this.clientPolicy = clientPolicy;
-        this.virtualServiceName = Objects.requireNonNull(virtualServiceName, "expected parameter 'virtualServiceName' to be non-null");
-    }
+    private VirtualNodeSpecBackendVirtualServiceGetArgs() {}
 
-    private VirtualNodeSpecBackendVirtualServiceGetArgs() {
-        this.clientPolicy = Codegen.empty();
-        this.virtualServiceName = Codegen.empty();
+    private VirtualNodeSpecBackendVirtualServiceGetArgs(VirtualNodeSpecBackendVirtualServiceGetArgs $) {
+        this.clientPolicy = $.clientPolicy;
+        this.virtualServiceName = $.virtualServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendVirtualServiceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy;
-        private Output<String> virtualServiceName;
+        private VirtualNodeSpecBackendVirtualServiceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendVirtualServiceGetArgs();
         }
 
         public Builder(VirtualNodeSpecBackendVirtualServiceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientPolicy = defaults.clientPolicy;
-    	      this.virtualServiceName = defaults.virtualServiceName;
+            $ = new VirtualNodeSpecBackendVirtualServiceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientPolicy(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy) {
-            this.clientPolicy = clientPolicy;
+            $.clientPolicy = clientPolicy;
             return this;
         }
-        public Builder clientPolicy(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs clientPolicy) {
-            this.clientPolicy = Codegen.ofNullable(clientPolicy);
-            return this;
+
+        public Builder clientPolicy(VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs clientPolicy) {
+            return clientPolicy(Output.of(clientPolicy));
         }
+
         public Builder virtualServiceName(Output<String> virtualServiceName) {
-            this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
+            $.virtualServiceName = virtualServiceName;
             return this;
         }
+
         public Builder virtualServiceName(String virtualServiceName) {
-            this.virtualServiceName = Output.of(Objects.requireNonNull(virtualServiceName));
-            return this;
-        }        public VirtualNodeSpecBackendVirtualServiceGetArgs build() {
-            return new VirtualNodeSpecBackendVirtualServiceGetArgs(clientPolicy, virtualServiceName);
+            return virtualServiceName(Output.of(virtualServiceName));
+        }
+
+        public VirtualNodeSpecBackendVirtualServiceGetArgs build() {
+            $.virtualServiceName = Objects.requireNonNull($.virtualServiceName, "expected parameter 'virtualServiceName' to be non-null");
+            return $;
         }
     }
+
 }

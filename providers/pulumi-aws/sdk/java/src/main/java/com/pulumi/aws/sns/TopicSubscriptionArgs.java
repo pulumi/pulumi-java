@@ -5,11 +5,11 @@ package com.pulumi.aws.sns;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="confirmationTimeoutInMinutes")
-      private final @Nullable Output<Integer> confirmationTimeoutInMinutes;
+    private @Nullable Output<Integer> confirmationTimeoutInMinutes;
 
-    public Output<Integer> confirmationTimeoutInMinutes() {
-        return this.confirmationTimeoutInMinutes == null ? Codegen.empty() : this.confirmationTimeoutInMinutes;
+    public Optional<Output<Integer>> confirmationTimeoutInMinutes() {
+        return Optional.ofNullable(this.confirmationTimeoutInMinutes);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deliveryPolicy")
-      private final @Nullable Output<String> deliveryPolicy;
+    private @Nullable Output<String> deliveryPolicy;
 
-    public Output<String> deliveryPolicy() {
-        return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
+    public Optional<Output<String>> deliveryPolicy() {
+        return Optional.ofNullable(this.deliveryPolicy);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<String> endpoint;
+    private Output<String> endpoint;
 
     public Output<String> endpoint() {
         return this.endpoint;
@@ -55,10 +55,10 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endpointAutoConfirms")
-      private final @Nullable Output<Boolean> endpointAutoConfirms;
+    private @Nullable Output<Boolean> endpointAutoConfirms;
 
-    public Output<Boolean> endpointAutoConfirms() {
-        return this.endpointAutoConfirms == null ? Codegen.empty() : this.endpointAutoConfirms;
+    public Optional<Output<Boolean>> endpointAutoConfirms() {
+        return Optional.ofNullable(this.endpointAutoConfirms);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="filterPolicy")
-      private final @Nullable Output<String> filterPolicy;
+    private @Nullable Output<String> filterPolicy;
 
-    public Output<String> filterPolicy() {
-        return this.filterPolicy == null ? Codegen.empty() : this.filterPolicy;
+    public Optional<Output<String>> filterPolicy() {
+        return Optional.ofNullable(this.filterPolicy);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
@@ -88,10 +88,10 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="rawMessageDelivery")
-      private final @Nullable Output<Boolean> rawMessageDelivery;
+    private @Nullable Output<Boolean> rawMessageDelivery;
 
-    public Output<Boolean> rawMessageDelivery() {
-        return this.rawMessageDelivery == null ? Codegen.empty() : this.rawMessageDelivery;
+    public Optional<Output<Boolean>> rawMessageDelivery() {
+        return Optional.ofNullable(this.rawMessageDelivery);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="redrivePolicy")
-      private final @Nullable Output<String> redrivePolicy;
+    private @Nullable Output<String> redrivePolicy;
 
-    public Output<String> redrivePolicy() {
-        return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
+    public Optional<Output<String>> redrivePolicy() {
+        return Optional.ofNullable(this.redrivePolicy);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subscriptionRoleArn")
-      private final @Nullable Output<String> subscriptionRoleArn;
+    private @Nullable Output<String> subscriptionRoleArn;
 
-    public Output<String> subscriptionRoleArn() {
-        return this.subscriptionRoleArn == null ? Codegen.empty() : this.subscriptionRoleArn;
+    public Optional<Output<String>> subscriptionRoleArn() {
+        return Optional.ofNullable(this.subscriptionRoleArn);
     }
 
     /**
@@ -121,163 +121,141 @@ public final class TopicSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public TopicSubscriptionArgs(
-        @Nullable Output<Integer> confirmationTimeoutInMinutes,
-        @Nullable Output<String> deliveryPolicy,
-        Output<String> endpoint,
-        @Nullable Output<Boolean> endpointAutoConfirms,
-        @Nullable Output<String> filterPolicy,
-        Output<String> protocol,
-        @Nullable Output<Boolean> rawMessageDelivery,
-        @Nullable Output<String> redrivePolicy,
-        @Nullable Output<String> subscriptionRoleArn,
-        Output<String> topic) {
-        this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
-        this.deliveryPolicy = deliveryPolicy;
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.endpointAutoConfirms = endpointAutoConfirms;
-        this.filterPolicy = filterPolicy;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.rawMessageDelivery = rawMessageDelivery;
-        this.redrivePolicy = redrivePolicy;
-        this.subscriptionRoleArn = subscriptionRoleArn;
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private TopicSubscriptionArgs() {}
 
-    private TopicSubscriptionArgs() {
-        this.confirmationTimeoutInMinutes = Codegen.empty();
-        this.deliveryPolicy = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.endpointAutoConfirms = Codegen.empty();
-        this.filterPolicy = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.rawMessageDelivery = Codegen.empty();
-        this.redrivePolicy = Codegen.empty();
-        this.subscriptionRoleArn = Codegen.empty();
-        this.topic = Codegen.empty();
+    private TopicSubscriptionArgs(TopicSubscriptionArgs $) {
+        this.confirmationTimeoutInMinutes = $.confirmationTimeoutInMinutes;
+        this.deliveryPolicy = $.deliveryPolicy;
+        this.endpoint = $.endpoint;
+        this.endpointAutoConfirms = $.endpointAutoConfirms;
+        this.filterPolicy = $.filterPolicy;
+        this.protocol = $.protocol;
+        this.rawMessageDelivery = $.rawMessageDelivery;
+        this.redrivePolicy = $.redrivePolicy;
+        this.subscriptionRoleArn = $.subscriptionRoleArn;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> confirmationTimeoutInMinutes;
-        private @Nullable Output<String> deliveryPolicy;
-        private Output<String> endpoint;
-        private @Nullable Output<Boolean> endpointAutoConfirms;
-        private @Nullable Output<String> filterPolicy;
-        private Output<String> protocol;
-        private @Nullable Output<Boolean> rawMessageDelivery;
-        private @Nullable Output<String> redrivePolicy;
-        private @Nullable Output<String> subscriptionRoleArn;
-        private Output<String> topic;
+        private TopicSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicSubscriptionArgs();
         }
 
         public Builder(TopicSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confirmationTimeoutInMinutes = defaults.confirmationTimeoutInMinutes;
-    	      this.deliveryPolicy = defaults.deliveryPolicy;
-    	      this.endpoint = defaults.endpoint;
-    	      this.endpointAutoConfirms = defaults.endpointAutoConfirms;
-    	      this.filterPolicy = defaults.filterPolicy;
-    	      this.protocol = defaults.protocol;
-    	      this.rawMessageDelivery = defaults.rawMessageDelivery;
-    	      this.redrivePolicy = defaults.redrivePolicy;
-    	      this.subscriptionRoleArn = defaults.subscriptionRoleArn;
-    	      this.topic = defaults.topic;
+            $ = new TopicSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder confirmationTimeoutInMinutes(@Nullable Output<Integer> confirmationTimeoutInMinutes) {
-            this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
+            $.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
-        public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
-            this.confirmationTimeoutInMinutes = Codegen.ofNullable(confirmationTimeoutInMinutes);
-            return this;
+
+        public Builder confirmationTimeoutInMinutes(Integer confirmationTimeoutInMinutes) {
+            return confirmationTimeoutInMinutes(Output.of(confirmationTimeoutInMinutes));
         }
+
         public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
-            this.deliveryPolicy = deliveryPolicy;
+            $.deliveryPolicy = deliveryPolicy;
             return this;
         }
-        public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
-            this.deliveryPolicy = Codegen.ofNullable(deliveryPolicy);
-            return this;
+
+        public Builder deliveryPolicy(String deliveryPolicy) {
+            return deliveryPolicy(Output.of(deliveryPolicy));
         }
+
         public Builder endpoint(Output<String> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder endpointAutoConfirms(@Nullable Output<Boolean> endpointAutoConfirms) {
-            this.endpointAutoConfirms = endpointAutoConfirms;
+            $.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
-        public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
-            this.endpointAutoConfirms = Codegen.ofNullable(endpointAutoConfirms);
-            return this;
+
+        public Builder endpointAutoConfirms(Boolean endpointAutoConfirms) {
+            return endpointAutoConfirms(Output.of(endpointAutoConfirms));
         }
+
         public Builder filterPolicy(@Nullable Output<String> filterPolicy) {
-            this.filterPolicy = filterPolicy;
+            $.filterPolicy = filterPolicy;
             return this;
         }
-        public Builder filterPolicy(@Nullable String filterPolicy) {
-            this.filterPolicy = Codegen.ofNullable(filterPolicy);
-            return this;
+
+        public Builder filterPolicy(String filterPolicy) {
+            return filterPolicy(Output.of(filterPolicy));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder rawMessageDelivery(@Nullable Output<Boolean> rawMessageDelivery) {
-            this.rawMessageDelivery = rawMessageDelivery;
+            $.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
-        public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
-            this.rawMessageDelivery = Codegen.ofNullable(rawMessageDelivery);
-            return this;
+
+        public Builder rawMessageDelivery(Boolean rawMessageDelivery) {
+            return rawMessageDelivery(Output.of(rawMessageDelivery));
         }
+
         public Builder redrivePolicy(@Nullable Output<String> redrivePolicy) {
-            this.redrivePolicy = redrivePolicy;
+            $.redrivePolicy = redrivePolicy;
             return this;
         }
-        public Builder redrivePolicy(@Nullable String redrivePolicy) {
-            this.redrivePolicy = Codegen.ofNullable(redrivePolicy);
-            return this;
+
+        public Builder redrivePolicy(String redrivePolicy) {
+            return redrivePolicy(Output.of(redrivePolicy));
         }
+
         public Builder subscriptionRoleArn(@Nullable Output<String> subscriptionRoleArn) {
-            this.subscriptionRoleArn = subscriptionRoleArn;
+            $.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
-        public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
-            this.subscriptionRoleArn = Codegen.ofNullable(subscriptionRoleArn);
-            return this;
+
+        public Builder subscriptionRoleArn(String subscriptionRoleArn) {
+            return subscriptionRoleArn(Output.of(subscriptionRoleArn));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public TopicSubscriptionArgs build() {
-            return new TopicSubscriptionArgs(confirmationTimeoutInMinutes, deliveryPolicy, endpoint, endpointAutoConfirms, filterPolicy, protocol, rawMessageDelivery, redrivePolicy, subscriptionRoleArn, topic);
+        }
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public TopicSubscriptionArgs build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

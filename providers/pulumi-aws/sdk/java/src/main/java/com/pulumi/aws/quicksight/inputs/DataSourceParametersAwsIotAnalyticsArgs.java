@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataSourceParametersAwsIotAnalyticsArgs extends com.pulumi.re
      * 
      */
     @Import(name="dataSetName", required=true)
-      private final Output<String> dataSetName;
+    private Output<String> dataSetName;
 
     public Output<String> dataSetName() {
         return this.dataSetName;
     }
 
-    public DataSourceParametersAwsIotAnalyticsArgs(Output<String> dataSetName) {
-        this.dataSetName = Objects.requireNonNull(dataSetName, "expected parameter 'dataSetName' to be non-null");
-    }
+    private DataSourceParametersAwsIotAnalyticsArgs() {}
 
-    private DataSourceParametersAwsIotAnalyticsArgs() {
-        this.dataSetName = Codegen.empty();
+    private DataSourceParametersAwsIotAnalyticsArgs(DataSourceParametersAwsIotAnalyticsArgs $) {
+        this.dataSetName = $.dataSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersAwsIotAnalyticsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataSetName;
+        private DataSourceParametersAwsIotAnalyticsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersAwsIotAnalyticsArgs();
         }
 
         public Builder(DataSourceParametersAwsIotAnalyticsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSetName = defaults.dataSetName;
+            $ = new DataSourceParametersAwsIotAnalyticsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSetName(Output<String> dataSetName) {
-            this.dataSetName = Objects.requireNonNull(dataSetName);
+            $.dataSetName = dataSetName;
             return this;
         }
+
         public Builder dataSetName(String dataSetName) {
-            this.dataSetName = Output.of(Objects.requireNonNull(dataSetName));
-            return this;
-        }        public DataSourceParametersAwsIotAnalyticsArgs build() {
-            return new DataSourceParametersAwsIotAnalyticsArgs(dataSetName);
+            return dataSetName(Output.of(dataSetName));
+        }
+
+        public DataSourceParametersAwsIotAnalyticsArgs build() {
+            $.dataSetName = Objects.requireNonNull($.dataSetName, "expected parameter 'dataSetName' to be non-null");
+            return $;
         }
     }
+
 }

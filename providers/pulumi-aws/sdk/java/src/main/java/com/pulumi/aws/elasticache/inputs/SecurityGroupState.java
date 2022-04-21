@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +33,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,79 +45,73 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="securityGroupNames")
-      private final @Nullable Output<List<String>> securityGroupNames;
+    private @Nullable Output<List<String>> securityGroupNames;
 
-    public Output<List<String>> securityGroupNames() {
-        return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
+    public Optional<Output<List<String>>> securityGroupNames() {
+        return Optional.ofNullable(this.securityGroupNames);
     }
 
-    public SecurityGroupState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> securityGroupNames) {
-        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
-        this.name = name;
-        this.securityGroupNames = securityGroupNames;
-    }
+    private SecurityGroupState() {}
 
-    private SecurityGroupState() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.securityGroupNames = Codegen.empty();
+    private SecurityGroupState(SecurityGroupState $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.securityGroupNames = $.securityGroupNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> securityGroupNames;
+        private SecurityGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityGroupState();
         }
 
         public Builder(SecurityGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.securityGroupNames = defaults.securityGroupNames;
+            $ = new SecurityGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
-            this.securityGroupNames = securityGroupNames;
+            $.securityGroupNames = securityGroupNames;
             return this;
         }
-        public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Codegen.ofNullable(securityGroupNames);
-            return this;
+
+        public Builder securityGroupNames(List<String> securityGroupNames) {
+            return securityGroupNames(Output.of(securityGroupNames));
         }
+
         public Builder securityGroupNames(String... securityGroupNames) {
             return securityGroupNames(List.of(securityGroupNames));
-        }        public SecurityGroupState build() {
-            return new SecurityGroupState(description, name, securityGroupNames);
+        }
+
+        public SecurityGroupState build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("Managed by Pulumi").getNullable();
+            return $;
         }
     }
+
 }

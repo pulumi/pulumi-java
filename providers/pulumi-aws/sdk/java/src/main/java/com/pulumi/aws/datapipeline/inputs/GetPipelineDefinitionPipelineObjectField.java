@@ -17,7 +17,7 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -28,7 +28,7 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
      * 
      */
     @Import(name="refValue", required=true)
-      private final String refValue;
+    private String refValue;
 
     public String refValue() {
         return this.refValue;
@@ -39,64 +39,59 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
      * 
      */
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
     }
 
-    public GetPipelineDefinitionPipelineObjectField(
-        String key,
-        String refValue,
-        String stringValue) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.refValue = Objects.requireNonNull(refValue, "expected parameter 'refValue' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-    }
+    private GetPipelineDefinitionPipelineObjectField() {}
 
-    private GetPipelineDefinitionPipelineObjectField() {
-        this.key = null;
-        this.refValue = null;
-        this.stringValue = null;
+    private GetPipelineDefinitionPipelineObjectField(GetPipelineDefinitionPipelineObjectField $) {
+        this.key = $.key;
+        this.refValue = $.refValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineDefinitionPipelineObjectField defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String refValue;
-        private String stringValue;
+        private GetPipelineDefinitionPipelineObjectField $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineDefinitionPipelineObjectField();
         }
 
         public Builder(GetPipelineDefinitionPipelineObjectField defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.refValue = defaults.refValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new GetPipelineDefinitionPipelineObjectField(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder refValue(String refValue) {
-            this.refValue = Objects.requireNonNull(refValue);
+            $.refValue = refValue;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
-        }        public GetPipelineDefinitionPipelineObjectField build() {
-            return new GetPipelineDefinitionPipelineObjectField(key, refValue, stringValue);
+        }
+
+        public GetPipelineDefinitionPipelineObjectField build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.refValue = Objects.requireNonNull($.refValue, "expected parameter 'refValue' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            return $;
         }
     }
+
 }

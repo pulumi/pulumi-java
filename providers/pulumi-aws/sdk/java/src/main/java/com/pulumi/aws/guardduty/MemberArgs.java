@@ -5,10 +5,10 @@ package com.pulumi.aws.guardduty;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -32,7 +32,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detectorId", required=true)
-      private final Output<String> detectorId;
+    private Output<String> detectorId;
 
     public Output<String> detectorId() {
         return this.detectorId;
@@ -43,10 +43,10 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableEmailNotification")
-      private final @Nullable Output<Boolean> disableEmailNotification;
+    private @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> disableEmailNotification() {
-        return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
+    public Optional<Output<Boolean>> disableEmailNotification() {
+        return Optional.ofNullable(this.disableEmailNotification);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -65,10 +65,10 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitationMessage")
-      private final @Nullable Output<String> invitationMessage;
+    private @Nullable Output<String> invitationMessage;
 
-    public Output<String> invitationMessage() {
-        return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
+    public Optional<Output<String>> invitationMessage() {
+        return Optional.ofNullable(this.invitationMessage);
     }
 
     /**
@@ -76,115 +76,101 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invite")
-      private final @Nullable Output<Boolean> invite;
+    private @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> invite() {
-        return this.invite == null ? Codegen.empty() : this.invite;
+    public Optional<Output<Boolean>> invite() {
+        return Optional.ofNullable(this.invite);
     }
 
-    public MemberArgs(
-        Output<String> accountId,
-        Output<String> detectorId,
-        @Nullable Output<Boolean> disableEmailNotification,
-        Output<String> email,
-        @Nullable Output<String> invitationMessage,
-        @Nullable Output<Boolean> invite) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
-        this.disableEmailNotification = disableEmailNotification;
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.invitationMessage = invitationMessage;
-        this.invite = invite;
-    }
+    private MemberArgs() {}
 
-    private MemberArgs() {
-        this.accountId = Codegen.empty();
-        this.detectorId = Codegen.empty();
-        this.disableEmailNotification = Codegen.empty();
-        this.email = Codegen.empty();
-        this.invitationMessage = Codegen.empty();
-        this.invite = Codegen.empty();
+    private MemberArgs(MemberArgs $) {
+        this.accountId = $.accountId;
+        this.detectorId = $.detectorId;
+        this.disableEmailNotification = $.disableEmailNotification;
+        this.email = $.email;
+        this.invitationMessage = $.invitationMessage;
+        this.invite = $.invite;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<String> detectorId;
-        private @Nullable Output<Boolean> disableEmailNotification;
-        private Output<String> email;
-        private @Nullable Output<String> invitationMessage;
-        private @Nullable Output<Boolean> invite;
+        private MemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemberArgs();
         }
 
         public Builder(MemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.detectorId = defaults.detectorId;
-    	      this.disableEmailNotification = defaults.disableEmailNotification;
-    	      this.email = defaults.email;
-    	      this.invitationMessage = defaults.invitationMessage;
-    	      this.invite = defaults.invite;
+            $ = new MemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder detectorId(Output<String> detectorId) {
-            this.detectorId = Objects.requireNonNull(detectorId);
+            $.detectorId = detectorId;
             return this;
         }
+
         public Builder detectorId(String detectorId) {
-            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
-            return this;
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
-            this.disableEmailNotification = disableEmailNotification;
+            $.disableEmailNotification = disableEmailNotification;
             return this;
         }
-        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Codegen.ofNullable(disableEmailNotification);
-            return this;
+
+        public Builder disableEmailNotification(Boolean disableEmailNotification) {
+            return disableEmailNotification(Output.of(disableEmailNotification));
         }
+
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
-            this.invitationMessage = invitationMessage;
+            $.invitationMessage = invitationMessage;
             return this;
         }
-        public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Codegen.ofNullable(invitationMessage);
-            return this;
+
+        public Builder invitationMessage(String invitationMessage) {
+            return invitationMessage(Output.of(invitationMessage));
         }
+
         public Builder invite(@Nullable Output<Boolean> invite) {
-            this.invite = invite;
+            $.invite = invite;
             return this;
         }
-        public Builder invite(@Nullable Boolean invite) {
-            this.invite = Codegen.ofNullable(invite);
-            return this;
-        }        public MemberArgs build() {
-            return new MemberArgs(accountId, detectorId, disableEmailNotification, email, invitationMessage, invite);
+
+        public Builder invite(Boolean invite) {
+            return invite(Output.of(invite));
+        }
+
+        public MemberArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.detectorId = Objects.requireNonNull($.detectorId, "expected parameter 'detectorId' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

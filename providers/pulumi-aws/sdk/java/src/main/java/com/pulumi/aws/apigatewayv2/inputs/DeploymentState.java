@@ -5,11 +5,11 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoDeployed")
-      private final @Nullable Output<Boolean> autoDeployed;
+    private @Nullable Output<Boolean> autoDeployed;
 
-    public Output<Boolean> autoDeployed() {
-        return this.autoDeployed == null ? Codegen.empty() : this.autoDeployed;
+    public Optional<Output<Boolean>> autoDeployed() {
+        return Optional.ofNullable(this.autoDeployed);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggers")
-      private final @Nullable Output<Map<String,String>> triggers;
+    private @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> triggers() {
-        return this.triggers == null ? Codegen.empty() : this.triggers;
+    public Optional<Output<Map<String,String>>> triggers() {
+        return Optional.ofNullable(this.triggers);
     }
 
-    public DeploymentState(
-        @Nullable Output<String> apiId,
-        @Nullable Output<Boolean> autoDeployed,
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,String>> triggers) {
-        this.apiId = apiId;
-        this.autoDeployed = autoDeployed;
-        this.description = description;
-        this.triggers = triggers;
-    }
+    private DeploymentState() {}
 
-    private DeploymentState() {
-        this.apiId = Codegen.empty();
-        this.autoDeployed = Codegen.empty();
-        this.description = Codegen.empty();
-        this.triggers = Codegen.empty();
+    private DeploymentState(DeploymentState $) {
+        this.apiId = $.apiId;
+        this.autoDeployed = $.autoDeployed;
+        this.description = $.description;
+        this.triggers = $.triggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<Boolean> autoDeployed;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,String>> triggers;
+        private DeploymentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentState();
         }
 
         public Builder(DeploymentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.autoDeployed = defaults.autoDeployed;
-    	      this.description = defaults.description;
-    	      this.triggers = defaults.triggers;
+            $ = new DeploymentState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder autoDeployed(@Nullable Output<Boolean> autoDeployed) {
-            this.autoDeployed = autoDeployed;
+            $.autoDeployed = autoDeployed;
             return this;
         }
-        public Builder autoDeployed(@Nullable Boolean autoDeployed) {
-            this.autoDeployed = Codegen.ofNullable(autoDeployed);
-            return this;
+
+        public Builder autoDeployed(Boolean autoDeployed) {
+            return autoDeployed(Output.of(autoDeployed));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
-        public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Codegen.ofNullable(triggers);
-            return this;
-        }        public DeploymentState build() {
-            return new DeploymentState(apiId, autoDeployed, description, triggers);
+
+        public Builder triggers(Map<String,String> triggers) {
+            return triggers(Output.of(triggers));
+        }
+
+        public DeploymentState build() {
+            return $;
         }
     }
+
 }

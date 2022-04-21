@@ -20,10 +20,10 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable String acceptLanguage;
+    private @Nullable String acceptLanguage;
 
     public Optional<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -42,64 +42,57 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetProductArgs(
-        @Nullable String acceptLanguage,
-        String id,
-        @Nullable Map<String,String> tags) {
-        this.acceptLanguage = acceptLanguage;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.tags = tags;
-    }
+    private GetProductArgs() {}
 
-    private GetProductArgs() {
-        this.acceptLanguage = null;
-        this.id = null;
-        this.tags = Map.of();
+    private GetProductArgs(GetProductArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.id = $.id;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String acceptLanguage;
-        private String id;
-        private @Nullable Map<String,String> tags;
+        private GetProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProductArgs();
         }
 
         public Builder(GetProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.id = defaults.id;
-    	      this.tags = defaults.tags;
+            $ = new GetProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetProductArgs build() {
-            return new GetProductArgs(acceptLanguage, id, tags);
+        }
+
+        public GetProductArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

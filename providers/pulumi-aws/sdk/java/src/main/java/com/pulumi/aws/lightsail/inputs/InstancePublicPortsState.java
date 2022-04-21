@@ -6,10 +6,10 @@ package com.pulumi.aws.lightsail.inputs;
 import com.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="portInfos")
-      private final @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
+    private @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
 
-    public Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos() {
-        return this.portInfos == null ? Codegen.empty() : this.portInfos;
+    public Optional<Output<List<InstancePublicPortsPortInfoGetArgs>>> portInfos() {
+        return Optional.ofNullable(this.portInfos);
     }
 
-    public InstancePublicPortsState(
-        @Nullable Output<String> instanceName,
-        @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos) {
-        this.instanceName = instanceName;
-        this.portInfos = portInfos;
-    }
+    private InstancePublicPortsState() {}
 
-    private InstancePublicPortsState() {
-        this.instanceName = Codegen.empty();
-        this.portInfos = Codegen.empty();
+    private InstancePublicPortsState(InstancePublicPortsState $) {
+        this.instanceName = $.instanceName;
+        this.portInfos = $.portInfos;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstancePublicPortsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
+        private InstancePublicPortsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstancePublicPortsState();
         }
 
         public Builder(InstancePublicPortsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceName = defaults.instanceName;
-    	      this.portInfos = defaults.portInfos;
+            $ = new InstancePublicPortsState(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder portInfos(@Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos) {
-            this.portInfos = portInfos;
+            $.portInfos = portInfos;
             return this;
         }
-        public Builder portInfos(@Nullable List<InstancePublicPortsPortInfoGetArgs> portInfos) {
-            this.portInfos = Codegen.ofNullable(portInfos);
-            return this;
+
+        public Builder portInfos(List<InstancePublicPortsPortInfoGetArgs> portInfos) {
+            return portInfos(Output.of(portInfos));
         }
+
         public Builder portInfos(InstancePublicPortsPortInfoGetArgs... portInfos) {
             return portInfos(List.of(portInfos));
-        }        public InstancePublicPortsState build() {
-            return new InstancePublicPortsState(instanceName, portInfos);
+        }
+
+        public InstancePublicPortsState build() {
+            return $;
         }
     }
+
 }

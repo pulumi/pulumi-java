@@ -5,7 +5,6 @@ package com.pulumi.aws.worklink.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class FleetIdentityProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="samlMetadata", required=true)
-      private final Output<String> samlMetadata;
+    private Output<String> samlMetadata;
 
     public Output<String> samlMetadata() {
         return this.samlMetadata;
@@ -30,63 +29,60 @@ public final class FleetIdentityProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public FleetIdentityProviderArgs(
-        Output<String> samlMetadata,
-        Output<String> type) {
-        this.samlMetadata = Objects.requireNonNull(samlMetadata, "expected parameter 'samlMetadata' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FleetIdentityProviderArgs() {}
 
-    private FleetIdentityProviderArgs() {
-        this.samlMetadata = Codegen.empty();
-        this.type = Codegen.empty();
+    private FleetIdentityProviderArgs(FleetIdentityProviderArgs $) {
+        this.samlMetadata = $.samlMetadata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetIdentityProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> samlMetadata;
-        private Output<String> type;
+        private FleetIdentityProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetIdentityProviderArgs();
         }
 
         public Builder(FleetIdentityProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.samlMetadata = defaults.samlMetadata;
-    	      this.type = defaults.type;
+            $ = new FleetIdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder samlMetadata(Output<String> samlMetadata) {
-            this.samlMetadata = Objects.requireNonNull(samlMetadata);
+            $.samlMetadata = samlMetadata;
             return this;
         }
+
         public Builder samlMetadata(String samlMetadata) {
-            this.samlMetadata = Output.of(Objects.requireNonNull(samlMetadata));
-            return this;
+            return samlMetadata(Output.of(samlMetadata));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public FleetIdentityProviderArgs build() {
-            return new FleetIdentityProviderArgs(samlMetadata, type);
+            return type(Output.of(type));
+        }
+
+        public FleetIdentityProviderArgs build() {
+            $.samlMetadata = Objects.requireNonNull($.samlMetadata, "expected parameter 'samlMetadata' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.backup.inputs;
 import com.pulumi.aws.backup.inputs.PlanRuleCopyActionLifecycleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PlanRuleCopyActionGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="destinationVaultArn", required=true)
-      private final Output<String> destinationVaultArn;
+    private Output<String> destinationVaultArn;
 
     public Output<String> destinationVaultArn() {
         return this.destinationVaultArn;
@@ -32,63 +32,59 @@ public final class PlanRuleCopyActionGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lifecycle")
-      private final @Nullable Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle;
+    private @Nullable Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle;
 
-    public Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle() {
-        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
+    public Optional<Output<PlanRuleCopyActionLifecycleGetArgs>> lifecycle() {
+        return Optional.ofNullable(this.lifecycle);
     }
 
-    public PlanRuleCopyActionGetArgs(
-        Output<String> destinationVaultArn,
-        @Nullable Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle) {
-        this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn, "expected parameter 'destinationVaultArn' to be non-null");
-        this.lifecycle = lifecycle;
-    }
+    private PlanRuleCopyActionGetArgs() {}
 
-    private PlanRuleCopyActionGetArgs() {
-        this.destinationVaultArn = Codegen.empty();
-        this.lifecycle = Codegen.empty();
+    private PlanRuleCopyActionGetArgs(PlanRuleCopyActionGetArgs $) {
+        this.destinationVaultArn = $.destinationVaultArn;
+        this.lifecycle = $.lifecycle;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanRuleCopyActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationVaultArn;
-        private @Nullable Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle;
+        private PlanRuleCopyActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanRuleCopyActionGetArgs();
         }
 
         public Builder(PlanRuleCopyActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationVaultArn = defaults.destinationVaultArn;
-    	      this.lifecycle = defaults.lifecycle;
+            $ = new PlanRuleCopyActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationVaultArn(Output<String> destinationVaultArn) {
-            this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn);
+            $.destinationVaultArn = destinationVaultArn;
             return this;
         }
+
         public Builder destinationVaultArn(String destinationVaultArn) {
-            this.destinationVaultArn = Output.of(Objects.requireNonNull(destinationVaultArn));
-            return this;
+            return destinationVaultArn(Output.of(destinationVaultArn));
         }
+
         public Builder lifecycle(@Nullable Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle) {
-            this.lifecycle = lifecycle;
+            $.lifecycle = lifecycle;
             return this;
         }
-        public Builder lifecycle(@Nullable PlanRuleCopyActionLifecycleGetArgs lifecycle) {
-            this.lifecycle = Codegen.ofNullable(lifecycle);
-            return this;
-        }        public PlanRuleCopyActionGetArgs build() {
-            return new PlanRuleCopyActionGetArgs(destinationVaultArn, lifecycle);
+
+        public Builder lifecycle(PlanRuleCopyActionLifecycleGetArgs lifecycle) {
+            return lifecycle(Output.of(lifecycle));
+        }
+
+        public PlanRuleCopyActionGetArgs build() {
+            $.destinationVaultArn = Objects.requireNonNull($.destinationVaultArn, "expected parameter 'destinationVaultArn' to be non-null");
+            return $;
         }
     }
+
 }

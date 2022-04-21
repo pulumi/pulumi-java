@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CustomerGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bgpAsn", required=true)
-      private final Output<String> bgpAsn;
+    private Output<String> bgpAsn;
 
     public Output<String> bgpAsn() {
         return this.bgpAsn;
@@ -32,10 +32,10 @@ public final class CustomerGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CustomerGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class CustomerGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final Output<String> ipAddress;
+    private Output<String> ipAddress;
 
     public Output<String> ipAddress() {
         return this.ipAddress;
@@ -65,10 +65,10 @@ public final class CustomerGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -77,115 +77,101 @@ public final class CustomerGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public CustomerGatewayArgs(
-        Output<String> bgpAsn,
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<String> deviceName,
-        Output<String> ipAddress,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> type) {
-        this.bgpAsn = Objects.requireNonNull(bgpAsn, "expected parameter 'bgpAsn' to be non-null");
-        this.certificateArn = certificateArn;
-        this.deviceName = deviceName;
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private CustomerGatewayArgs() {}
 
-    private CustomerGatewayArgs() {
-        this.bgpAsn = Codegen.empty();
-        this.certificateArn = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private CustomerGatewayArgs(CustomerGatewayArgs $) {
+        this.bgpAsn = $.bgpAsn;
+        this.certificateArn = $.certificateArn;
+        this.deviceName = $.deviceName;
+        this.ipAddress = $.ipAddress;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bgpAsn;
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<String> deviceName;
-        private Output<String> ipAddress;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> type;
+        private CustomerGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerGatewayArgs();
         }
 
         public Builder(CustomerGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgpAsn = defaults.bgpAsn;
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.deviceName = defaults.deviceName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new CustomerGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bgpAsn(Output<String> bgpAsn) {
-            this.bgpAsn = Objects.requireNonNull(bgpAsn);
+            $.bgpAsn = bgpAsn;
             return this;
         }
+
         public Builder bgpAsn(String bgpAsn) {
-            this.bgpAsn = Output.of(Objects.requireNonNull(bgpAsn));
-            return this;
+            return bgpAsn(Output.of(bgpAsn));
         }
+
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder ipAddress(Output<String> ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Output.of(Objects.requireNonNull(ipAddress));
-            return this;
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public CustomerGatewayArgs build() {
-            return new CustomerGatewayArgs(bgpAsn, certificateArn, deviceName, ipAddress, tags, type);
+            return type(Output.of(type));
+        }
+
+        public CustomerGatewayArgs build() {
+            $.bgpAsn = Objects.requireNonNull($.bgpAsn, "expected parameter 'bgpAsn' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

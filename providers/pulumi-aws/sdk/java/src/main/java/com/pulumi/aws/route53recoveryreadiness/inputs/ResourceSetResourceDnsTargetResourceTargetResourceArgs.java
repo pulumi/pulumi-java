@@ -7,8 +7,8 @@ import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTarg
 import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
      * 
      */
     @Import(name="nlbResource")
-      private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource;
+    private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource() {
-        return this.nlbResource == null ? Codegen.empty() : this.nlbResource;
+    public Optional<Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs>> nlbResource() {
+        return Optional.ofNullable(this.nlbResource);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
      * 
      */
     @Import(name="r53Resource")
-      private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource;
+    private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource() {
-        return this.r53Resource == null ? Codegen.empty() : this.r53Resource;
+    public Optional<Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs>> r53Resource() {
+        return Optional.ofNullable(this.r53Resource);
     }
 
-    public ResourceSetResourceDnsTargetResourceTargetResourceArgs(
-        @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource,
-        @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource) {
-        this.nlbResource = nlbResource;
-        this.r53Resource = r53Resource;
-    }
+    private ResourceSetResourceDnsTargetResourceTargetResourceArgs() {}
 
-    private ResourceSetResourceDnsTargetResourceTargetResourceArgs() {
-        this.nlbResource = Codegen.empty();
-        this.r53Resource = Codegen.empty();
+    private ResourceSetResourceDnsTargetResourceTargetResourceArgs(ResourceSetResourceDnsTargetResourceTargetResourceArgs $) {
+        this.nlbResource = $.nlbResource;
+        this.r53Resource = $.r53Resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetResourceDnsTargetResourceTargetResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource;
-        private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource;
+        private ResourceSetResourceDnsTargetResourceTargetResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetResourceDnsTargetResourceTargetResourceArgs();
         }
 
         public Builder(ResourceSetResourceDnsTargetResourceTargetResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nlbResource = defaults.nlbResource;
-    	      this.r53Resource = defaults.r53Resource;
+            $ = new ResourceSetResourceDnsTargetResourceTargetResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nlbResource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource) {
-            this.nlbResource = nlbResource;
+            $.nlbResource = nlbResource;
             return this;
         }
-        public Builder nlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs nlbResource) {
-            this.nlbResource = Codegen.ofNullable(nlbResource);
-            return this;
+
+        public Builder nlbResource(ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs nlbResource) {
+            return nlbResource(Output.of(nlbResource));
         }
+
         public Builder r53Resource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource) {
-            this.r53Resource = r53Resource;
+            $.r53Resource = r53Resource;
             return this;
         }
-        public Builder r53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs r53Resource) {
-            this.r53Resource = Codegen.ofNullable(r53Resource);
-            return this;
-        }        public ResourceSetResourceDnsTargetResourceTargetResourceArgs build() {
-            return new ResourceSetResourceDnsTargetResourceTargetResourceArgs(nlbResource, r53Resource);
+
+        public Builder r53Resource(ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs r53Resource) {
+            return r53Resource(Output.of(r53Resource));
+        }
+
+        public ResourceSetResourceDnsTargetResourceTargetResourceArgs build() {
+            return $;
         }
     }
+
 }

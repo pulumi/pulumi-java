@@ -5,9 +5,9 @@ package com.pulumi.aws.worklink;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends com.pulumi
      * 
      */
     @Import(name="certificate", required=true)
-      private final Output<String> certificate;
+    private Output<String> certificate;
 
     public Output<String> certificate() {
         return this.certificate;
@@ -31,10 +31,10 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends com.pulumi
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends com.pulumi
      * 
      */
     @Import(name="fleetArn", required=true)
-      private final Output<String> fleetArn;
+    private Output<String> fleetArn;
 
     public Output<String> fleetArn() {
         return this.fleetArn;
     }
 
-    public WebsiteCertificateAuthorityAssociationArgs(
-        Output<String> certificate,
-        @Nullable Output<String> displayName,
-        Output<String> fleetArn) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.displayName = displayName;
-        this.fleetArn = Objects.requireNonNull(fleetArn, "expected parameter 'fleetArn' to be non-null");
-    }
+    private WebsiteCertificateAuthorityAssociationArgs() {}
 
-    private WebsiteCertificateAuthorityAssociationArgs() {
-        this.certificate = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.fleetArn = Codegen.empty();
+    private WebsiteCertificateAuthorityAssociationArgs(WebsiteCertificateAuthorityAssociationArgs $) {
+        this.certificate = $.certificate;
+        this.displayName = $.displayName;
+        this.fleetArn = $.fleetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebsiteCertificateAuthorityAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificate;
-        private @Nullable Output<String> displayName;
-        private Output<String> fleetArn;
+        private WebsiteCertificateAuthorityAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebsiteCertificateAuthorityAssociationArgs();
         }
 
         public Builder(WebsiteCertificateAuthorityAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.displayName = defaults.displayName;
-    	      this.fleetArn = defaults.fleetArn;
+            $ = new WebsiteCertificateAuthorityAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(Output<String> certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder certificate(String certificate) {
-            this.certificate = Output.of(Objects.requireNonNull(certificate));
-            return this;
+            return certificate(Output.of(certificate));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder fleetArn(Output<String> fleetArn) {
-            this.fleetArn = Objects.requireNonNull(fleetArn);
+            $.fleetArn = fleetArn;
             return this;
         }
+
         public Builder fleetArn(String fleetArn) {
-            this.fleetArn = Output.of(Objects.requireNonNull(fleetArn));
-            return this;
-        }        public WebsiteCertificateAuthorityAssociationArgs build() {
-            return new WebsiteCertificateAuthorityAssociationArgs(certificate, displayName, fleetArn);
+            return fleetArn(Output.of(fleetArn));
+        }
+
+        public WebsiteCertificateAuthorityAssociationArgs build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.fleetArn = Objects.requireNonNull($.fleetArn, "expected parameter 'fleetArn' to be non-null");
+            return $;
         }
     }
+
 }

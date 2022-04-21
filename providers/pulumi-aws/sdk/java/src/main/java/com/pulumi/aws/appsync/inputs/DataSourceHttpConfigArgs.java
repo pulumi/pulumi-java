@@ -6,9 +6,9 @@ package com.pulumi.aws.appsync.inputs;
 import com.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataSourceHttpConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="authorizationConfig")
-      private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig;
+    private @Nullable Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig;
 
-    public Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig() {
-        return this.authorizationConfig == null ? Codegen.empty() : this.authorizationConfig;
+    public Optional<Output<DataSourceHttpConfigAuthorizationConfigArgs>> authorizationConfig() {
+        return Optional.ofNullable(this.authorizationConfig);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class DataSourceHttpConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<String> endpoint;
+    private Output<String> endpoint;
 
     public Output<String> endpoint() {
         return this.endpoint;
     }
 
-    public DataSourceHttpConfigArgs(
-        @Nullable Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig,
-        Output<String> endpoint) {
-        this.authorizationConfig = authorizationConfig;
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-    }
+    private DataSourceHttpConfigArgs() {}
 
-    private DataSourceHttpConfigArgs() {
-        this.authorizationConfig = Codegen.empty();
-        this.endpoint = Codegen.empty();
+    private DataSourceHttpConfigArgs(DataSourceHttpConfigArgs $) {
+        this.authorizationConfig = $.authorizationConfig;
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceHttpConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig;
-        private Output<String> endpoint;
+        private DataSourceHttpConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceHttpConfigArgs();
         }
 
         public Builder(DataSourceHttpConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationConfig = defaults.authorizationConfig;
-    	      this.endpoint = defaults.endpoint;
+            $ = new DataSourceHttpConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationConfig(@Nullable Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig) {
-            this.authorizationConfig = authorizationConfig;
+            $.authorizationConfig = authorizationConfig;
             return this;
         }
-        public Builder authorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfigArgs authorizationConfig) {
-            this.authorizationConfig = Codegen.ofNullable(authorizationConfig);
-            return this;
+
+        public Builder authorizationConfig(DataSourceHttpConfigAuthorizationConfigArgs authorizationConfig) {
+            return authorizationConfig(Output.of(authorizationConfig));
         }
+
         public Builder endpoint(Output<String> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
-        }        public DataSourceHttpConfigArgs build() {
-            return new DataSourceHttpConfigArgs(authorizationConfig, endpoint);
+            return endpoint(Output.of(endpoint));
+        }
+
+        public DataSourceHttpConfigArgs build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            return $;
         }
     }
+
 }

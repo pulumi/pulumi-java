@@ -6,9 +6,9 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="encryptionConfiguration", required=true)
-      private final Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
+    private Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration;
@@ -32,63 +32,59 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SecurityConfigurationArgs(
-        Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Output<String> name) {
-        this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration, "expected parameter 'encryptionConfiguration' to be non-null");
-        this.name = name;
-    }
+    private SecurityConfigurationArgs() {}
 
-    private SecurityConfigurationArgs() {
-        this.encryptionConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
+    private SecurityConfigurationArgs(SecurityConfigurationArgs $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Output<String> name;
+        private SecurityConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConfigurationArgs();
         }
 
         public Builder(SecurityConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.name = defaults.name;
+            $ = new SecurityConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration);
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
+
         public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.of(Objects.requireNonNull(encryptionConfiguration));
-            return this;
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SecurityConfigurationArgs build() {
-            return new SecurityConfigurationArgs(encryptionConfiguration, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SecurityConfigurationArgs build() {
+            $.encryptionConfiguration = Objects.requireNonNull($.encryptionConfiguration, "expected parameter 'encryptionConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

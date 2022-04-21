@@ -5,9 +5,9 @@ package com.pulumi.aws.account.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AlternativeContactState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AlternativeContactState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="alternateContactType")
-      private final @Nullable Output<String> alternateContactType;
+    private @Nullable Output<String> alternateContactType;
 
-    public Output<String> alternateContactType() {
-        return this.alternateContactType == null ? Codegen.empty() : this.alternateContactType;
+    public Optional<Output<String>> alternateContactType() {
+        return Optional.ofNullable(this.alternateContactType);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AlternativeContactState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable Output<String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
-    public Output<String> emailAddress() {
-        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AlternativeContactState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AlternativeContactState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="phoneNumber")
-      private final @Nullable Output<String> phoneNumber;
+    private @Nullable Output<String> phoneNumber;
 
-    public Output<String> phoneNumber() {
-        return this.phoneNumber == null ? Codegen.empty() : this.phoneNumber;
+    public Optional<Output<String>> phoneNumber() {
+        return Optional.ofNullable(this.phoneNumber);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class AlternativeContactState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public AlternativeContactState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> alternateContactType,
-        @Nullable Output<String> emailAddress,
-        @Nullable Output<String> name,
-        @Nullable Output<String> phoneNumber,
-        @Nullable Output<String> title) {
-        this.accountId = accountId;
-        this.alternateContactType = alternateContactType;
-        this.emailAddress = emailAddress;
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.title = title;
-    }
+    private AlternativeContactState() {}
 
-    private AlternativeContactState() {
-        this.accountId = Codegen.empty();
-        this.alternateContactType = Codegen.empty();
-        this.emailAddress = Codegen.empty();
-        this.name = Codegen.empty();
-        this.phoneNumber = Codegen.empty();
-        this.title = Codegen.empty();
+    private AlternativeContactState(AlternativeContactState $) {
+        this.accountId = $.accountId;
+        this.alternateContactType = $.alternateContactType;
+        this.emailAddress = $.emailAddress;
+        this.name = $.name;
+        this.phoneNumber = $.phoneNumber;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlternativeContactState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> alternateContactType;
-        private @Nullable Output<String> emailAddress;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> phoneNumber;
-        private @Nullable Output<String> title;
+        private AlternativeContactState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlternativeContactState();
         }
 
         public Builder(AlternativeContactState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.alternateContactType = defaults.alternateContactType;
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.name = defaults.name;
-    	      this.phoneNumber = defaults.phoneNumber;
-    	      this.title = defaults.title;
+            $ = new AlternativeContactState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder alternateContactType(@Nullable Output<String> alternateContactType) {
-            this.alternateContactType = alternateContactType;
+            $.alternateContactType = alternateContactType;
             return this;
         }
-        public Builder alternateContactType(@Nullable String alternateContactType) {
-            this.alternateContactType = Codegen.ofNullable(alternateContactType);
-            return this;
+
+        public Builder alternateContactType(String alternateContactType) {
+            return alternateContactType(Output.of(alternateContactType));
         }
+
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
-        public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Codegen.ofNullable(emailAddress);
-            return this;
+
+        public Builder emailAddress(String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
+            $.phoneNumber = phoneNumber;
             return this;
         }
-        public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Codegen.ofNullable(phoneNumber);
-            return this;
+
+        public Builder phoneNumber(String phoneNumber) {
+            return phoneNumber(Output.of(phoneNumber));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public AlternativeContactState build() {
-            return new AlternativeContactState(accountId, alternateContactType, emailAddress, name, phoneNumber, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public AlternativeContactState build() {
+            return $;
         }
     }
+
 }

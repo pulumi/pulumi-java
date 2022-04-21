@@ -5,11 +5,11 @@ package com.pulumi.aws.elasticache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     public static final UserGroupState Empty = new UserGroupState();
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -29,24 +29,24 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userGroupId")
-      private final @Nullable Output<String> userGroupId;
+    private @Nullable Output<String> userGroupId;
 
-    public Output<String> userGroupId() {
-        return this.userGroupId == null ? Codegen.empty() : this.userGroupId;
+    public Optional<Output<String>> userGroupId() {
+        return Optional.ofNullable(this.userGroupId);
     }
 
     /**
@@ -65,118 +65,102 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userIds")
-      private final @Nullable Output<List<String>> userIds;
+    private @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> userIds() {
-        return this.userIds == null ? Codegen.empty() : this.userIds;
+    public Optional<Output<List<String>>> userIds() {
+        return Optional.ofNullable(this.userIds);
     }
 
-    public UserGroupState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> engine,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> userGroupId,
-        @Nullable Output<List<String>> userIds) {
-        this.arn = arn;
-        this.engine = engine;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userGroupId = userGroupId;
-        this.userIds = userIds;
-    }
+    private UserGroupState() {}
 
-    private UserGroupState() {
-        this.arn = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userGroupId = Codegen.empty();
-        this.userIds = Codegen.empty();
+    private UserGroupState(UserGroupState $) {
+        this.arn = $.arn;
+        this.engine = $.engine;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userGroupId = $.userGroupId;
+        this.userIds = $.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> userGroupId;
-        private @Nullable Output<List<String>> userIds;
+        private UserGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserGroupState();
         }
 
         public Builder(UserGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.engine = defaults.engine;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userGroupId = defaults.userGroupId;
-    	      this.userIds = defaults.userIds;
+            $ = new UserGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userGroupId(@Nullable Output<String> userGroupId) {
-            this.userGroupId = userGroupId;
+            $.userGroupId = userGroupId;
             return this;
         }
-        public Builder userGroupId(@Nullable String userGroupId) {
-            this.userGroupId = Codegen.ofNullable(userGroupId);
-            return this;
+
+        public Builder userGroupId(String userGroupId) {
+            return userGroupId(Output.of(userGroupId));
         }
+
         public Builder userIds(@Nullable Output<List<String>> userIds) {
-            this.userIds = userIds;
+            $.userIds = userIds;
             return this;
         }
-        public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Codegen.ofNullable(userIds);
-            return this;
+
+        public Builder userIds(List<String> userIds) {
+            return userIds(Output.of(userIds));
         }
+
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
-        }        public UserGroupState build() {
-            return new UserGroupState(arn, engine, tags, tagsAll, userGroupId, userIds);
+        }
+
+        public UserGroupState build() {
+            return $;
         }
     }
+
 }

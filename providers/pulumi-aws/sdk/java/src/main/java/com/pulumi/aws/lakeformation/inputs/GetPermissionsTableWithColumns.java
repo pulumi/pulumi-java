@@ -21,7 +21,7 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
      * 
      */
     @Import(name="catalogId", required=true)
-      private final String catalogId;
+    private String catalogId;
 
     public String catalogId() {
         return this.catalogId;
@@ -32,10 +32,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
      * 
      */
     @Import(name="columnNames")
-      private final @Nullable List<String> columnNames;
+    private @Nullable List<String> columnNames;
 
-    public List<String> columnNames() {
-        return this.columnNames == null ? List.of() : this.columnNames;
+    public Optional<List<String>> columnNames() {
+        return Optional.ofNullable(this.columnNames);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -54,10 +54,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
      * 
      */
     @Import(name="excludedColumnNames")
-      private final @Nullable List<String> excludedColumnNames;
+    private @Nullable List<String> excludedColumnNames;
 
-    public List<String> excludedColumnNames() {
-        return this.excludedColumnNames == null ? List.of() : this.excludedColumnNames;
+    public Optional<List<String>> excludedColumnNames() {
+        return Optional.ofNullable(this.excludedColumnNames);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -76,97 +76,85 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
      * 
      */
     @Import(name="wildcard")
-      private final @Nullable Boolean wildcard;
+    private @Nullable Boolean wildcard;
 
     public Optional<Boolean> wildcard() {
-        return this.wildcard == null ? Optional.empty() : Optional.ofNullable(this.wildcard);
+        return Optional.ofNullable(this.wildcard);
     }
 
-    public GetPermissionsTableWithColumns(
-        String catalogId,
-        @Nullable List<String> columnNames,
-        String databaseName,
-        @Nullable List<String> excludedColumnNames,
-        String name,
-        @Nullable Boolean wildcard) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.columnNames = columnNames;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.excludedColumnNames = excludedColumnNames;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.wildcard = wildcard;
-    }
+    private GetPermissionsTableWithColumns() {}
 
-    private GetPermissionsTableWithColumns() {
-        this.catalogId = null;
-        this.columnNames = List.of();
-        this.databaseName = null;
-        this.excludedColumnNames = List.of();
-        this.name = null;
-        this.wildcard = null;
+    private GetPermissionsTableWithColumns(GetPermissionsTableWithColumns $) {
+        this.catalogId = $.catalogId;
+        this.columnNames = $.columnNames;
+        this.databaseName = $.databaseName;
+        this.excludedColumnNames = $.excludedColumnNames;
+        this.name = $.name;
+        this.wildcard = $.wildcard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPermissionsTableWithColumns defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalogId;
-        private @Nullable List<String> columnNames;
-        private String databaseName;
-        private @Nullable List<String> excludedColumnNames;
-        private String name;
-        private @Nullable Boolean wildcard;
+        private GetPermissionsTableWithColumns $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPermissionsTableWithColumns();
         }
 
         public Builder(GetPermissionsTableWithColumns defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.columnNames = defaults.columnNames;
-    	      this.databaseName = defaults.databaseName;
-    	      this.excludedColumnNames = defaults.excludedColumnNames;
-    	      this.name = defaults.name;
-    	      this.wildcard = defaults.wildcard;
+            $ = new GetPermissionsTableWithColumns(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder columnNames(@Nullable List<String> columnNames) {
-            this.columnNames = columnNames;
+            $.columnNames = columnNames;
             return this;
         }
+
         public Builder columnNames(String... columnNames) {
             return columnNames(List.of(columnNames));
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder excludedColumnNames(@Nullable List<String> excludedColumnNames) {
-            this.excludedColumnNames = excludedColumnNames;
+            $.excludedColumnNames = excludedColumnNames;
             return this;
         }
+
         public Builder excludedColumnNames(String... excludedColumnNames) {
             return excludedColumnNames(List.of(excludedColumnNames));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder wildcard(@Nullable Boolean wildcard) {
-            this.wildcard = wildcard;
+            $.wildcard = wildcard;
             return this;
-        }        public GetPermissionsTableWithColumns build() {
-            return new GetPermissionsTableWithColumns(catalogId, columnNames, databaseName, excludedColumnNames, name, wildcard);
+        }
+
+        public GetPermissionsTableWithColumns build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

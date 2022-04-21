@@ -5,11 +5,11 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="hashKey", required=true)
-      private final Output<String> hashKey;
+    private Output<String> hashKey;
 
     public Output<String> hashKey() {
         return this.hashKey;
@@ -34,7 +34,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,10 +47,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="nonKeyAttributes")
-      private final @Nullable Output<List<String>> nonKeyAttributes;
+    private @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Output<List<String>> nonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
+    public Optional<Output<List<String>>> nonKeyAttributes() {
+        return Optional.ofNullable(this.nonKeyAttributes);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="projectionType", required=true)
-      private final Output<String> projectionType;
+    private Output<String> projectionType;
 
     public Output<String> projectionType() {
         return this.projectionType;
@@ -73,10 +73,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rangeKey")
-      private final @Nullable Output<String> rangeKey;
+    private @Nullable Output<String> rangeKey;
 
-    public Output<String> rangeKey() {
-        return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
+    public Optional<Output<String>> rangeKey() {
+        return Optional.ofNullable(this.rangeKey);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="readCapacity")
-      private final @Nullable Output<Integer> readCapacity;
+    private @Nullable Output<Integer> readCapacity;
 
-    public Output<Integer> readCapacity() {
-        return this.readCapacity == null ? Codegen.empty() : this.readCapacity;
+    public Optional<Output<Integer>> readCapacity() {
+        return Optional.ofNullable(this.readCapacity);
     }
 
     /**
@@ -95,131 +95,115 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="writeCapacity")
-      private final @Nullable Output<Integer> writeCapacity;
+    private @Nullable Output<Integer> writeCapacity;
 
-    public Output<Integer> writeCapacity() {
-        return this.writeCapacity == null ? Codegen.empty() : this.writeCapacity;
+    public Optional<Output<Integer>> writeCapacity() {
+        return Optional.ofNullable(this.writeCapacity);
     }
 
-    public TableGlobalSecondaryIndexGetArgs(
-        Output<String> hashKey,
-        Output<String> name,
-        @Nullable Output<List<String>> nonKeyAttributes,
-        Output<String> projectionType,
-        @Nullable Output<String> rangeKey,
-        @Nullable Output<Integer> readCapacity,
-        @Nullable Output<Integer> writeCapacity) {
-        this.hashKey = Objects.requireNonNull(hashKey, "expected parameter 'hashKey' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nonKeyAttributes = nonKeyAttributes;
-        this.projectionType = Objects.requireNonNull(projectionType, "expected parameter 'projectionType' to be non-null");
-        this.rangeKey = rangeKey;
-        this.readCapacity = readCapacity;
-        this.writeCapacity = writeCapacity;
-    }
+    private TableGlobalSecondaryIndexGetArgs() {}
 
-    private TableGlobalSecondaryIndexGetArgs() {
-        this.hashKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nonKeyAttributes = Codegen.empty();
-        this.projectionType = Codegen.empty();
-        this.rangeKey = Codegen.empty();
-        this.readCapacity = Codegen.empty();
-        this.writeCapacity = Codegen.empty();
+    private TableGlobalSecondaryIndexGetArgs(TableGlobalSecondaryIndexGetArgs $) {
+        this.hashKey = $.hashKey;
+        this.name = $.name;
+        this.nonKeyAttributes = $.nonKeyAttributes;
+        this.projectionType = $.projectionType;
+        this.rangeKey = $.rangeKey;
+        this.readCapacity = $.readCapacity;
+        this.writeCapacity = $.writeCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableGlobalSecondaryIndexGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hashKey;
-        private Output<String> name;
-        private @Nullable Output<List<String>> nonKeyAttributes;
-        private Output<String> projectionType;
-        private @Nullable Output<String> rangeKey;
-        private @Nullable Output<Integer> readCapacity;
-        private @Nullable Output<Integer> writeCapacity;
+        private TableGlobalSecondaryIndexGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableGlobalSecondaryIndexGetArgs();
         }
 
         public Builder(TableGlobalSecondaryIndexGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hashKey = defaults.hashKey;
-    	      this.name = defaults.name;
-    	      this.nonKeyAttributes = defaults.nonKeyAttributes;
-    	      this.projectionType = defaults.projectionType;
-    	      this.rangeKey = defaults.rangeKey;
-    	      this.readCapacity = defaults.readCapacity;
-    	      this.writeCapacity = defaults.writeCapacity;
+            $ = new TableGlobalSecondaryIndexGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hashKey(Output<String> hashKey) {
-            this.hashKey = Objects.requireNonNull(hashKey);
+            $.hashKey = hashKey;
             return this;
         }
+
         public Builder hashKey(String hashKey) {
-            this.hashKey = Output.of(Objects.requireNonNull(hashKey));
-            return this;
+            return hashKey(Output.of(hashKey));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
-            this.nonKeyAttributes = nonKeyAttributes;
+            $.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-        public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Codegen.ofNullable(nonKeyAttributes);
-            return this;
+
+        public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
+            return nonKeyAttributes(Output.of(nonKeyAttributes));
         }
+
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
             return nonKeyAttributes(List.of(nonKeyAttributes));
         }
+
         public Builder projectionType(Output<String> projectionType) {
-            this.projectionType = Objects.requireNonNull(projectionType);
+            $.projectionType = projectionType;
             return this;
         }
+
         public Builder projectionType(String projectionType) {
-            this.projectionType = Output.of(Objects.requireNonNull(projectionType));
-            return this;
+            return projectionType(Output.of(projectionType));
         }
+
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
-            this.rangeKey = rangeKey;
+            $.rangeKey = rangeKey;
             return this;
         }
-        public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Codegen.ofNullable(rangeKey);
-            return this;
+
+        public Builder rangeKey(String rangeKey) {
+            return rangeKey(Output.of(rangeKey));
         }
+
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
-            this.readCapacity = readCapacity;
+            $.readCapacity = readCapacity;
             return this;
         }
-        public Builder readCapacity(@Nullable Integer readCapacity) {
-            this.readCapacity = Codegen.ofNullable(readCapacity);
-            return this;
+
+        public Builder readCapacity(Integer readCapacity) {
+            return readCapacity(Output.of(readCapacity));
         }
+
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
-            this.writeCapacity = writeCapacity;
+            $.writeCapacity = writeCapacity;
             return this;
         }
-        public Builder writeCapacity(@Nullable Integer writeCapacity) {
-            this.writeCapacity = Codegen.ofNullable(writeCapacity);
-            return this;
-        }        public TableGlobalSecondaryIndexGetArgs build() {
-            return new TableGlobalSecondaryIndexGetArgs(hashKey, name, nonKeyAttributes, projectionType, rangeKey, readCapacity, writeCapacity);
+
+        public Builder writeCapacity(Integer writeCapacity) {
+            return writeCapacity(Output.of(writeCapacity));
+        }
+
+        public TableGlobalSecondaryIndexGetArgs build() {
+            $.hashKey = Objects.requireNonNull($.hashKey, "expected parameter 'hashKey' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.projectionType = Objects.requireNonNull($.projectionType, "expected parameter 'projectionType' to be non-null");
+            return $;
         }
     }
+
 }

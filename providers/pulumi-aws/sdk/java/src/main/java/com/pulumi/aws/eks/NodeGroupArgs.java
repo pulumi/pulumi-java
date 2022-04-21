@@ -10,13 +10,13 @@ import com.pulumi.aws.eks.inputs.NodeGroupTaintArgs;
 import com.pulumi.aws.eks.inputs.NodeGroupUpdateConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="amiType")
-      private final @Nullable Output<String> amiType;
+    private @Nullable Output<String> amiType;
 
-    public Output<String> amiType() {
-        return this.amiType == null ? Codegen.empty() : this.amiType;
+    public Optional<Output<String>> amiType() {
+        return Optional.ofNullable(this.amiType);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityType")
-      private final @Nullable Output<String> capacityType;
+    private @Nullable Output<String> capacityType;
 
-    public Output<String> capacityType() {
-        return this.capacityType == null ? Codegen.empty() : this.capacityType;
+    public Optional<Output<String>> capacityType() {
+        return Optional.ofNullable(this.capacityType);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -62,10 +62,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSize")
-      private final @Nullable Output<Integer> diskSize;
+    private @Nullable Output<Integer> diskSize;
 
-    public Output<Integer> diskSize() {
-        return this.diskSize == null ? Codegen.empty() : this.diskSize;
+    public Optional<Output<Integer>> diskSize() {
+        return Optional.ofNullable(this.diskSize);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceUpdateVersion")
-      private final @Nullable Output<Boolean> forceUpdateVersion;
+    private @Nullable Output<Boolean> forceUpdateVersion;
 
-    public Output<Boolean> forceUpdateVersion() {
-        return this.forceUpdateVersion == null ? Codegen.empty() : this.forceUpdateVersion;
+    public Optional<Output<Boolean>> forceUpdateVersion() {
+        return Optional.ofNullable(this.forceUpdateVersion);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceTypes")
-      private final @Nullable Output<List<String>> instanceTypes;
+    private @Nullable Output<List<String>> instanceTypes;
 
-    public Output<List<String>> instanceTypes() {
-        return this.instanceTypes == null ? Codegen.empty() : this.instanceTypes;
+    public Optional<Output<List<String>>> instanceTypes() {
+        return Optional.ofNullable(this.instanceTypes);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchTemplate")
-      private final @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
+    private @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
 
-    public Output<NodeGroupLaunchTemplateArgs> launchTemplate() {
-        return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
+    public Optional<Output<NodeGroupLaunchTemplateArgs>> launchTemplate() {
+        return Optional.ofNullable(this.launchTemplate);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeGroupName")
-      private final @Nullable Output<String> nodeGroupName;
+    private @Nullable Output<String> nodeGroupName;
 
-    public Output<String> nodeGroupName() {
-        return this.nodeGroupName == null ? Codegen.empty() : this.nodeGroupName;
+    public Optional<Output<String>> nodeGroupName() {
+        return Optional.ofNullable(this.nodeGroupName);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeGroupNamePrefix")
-      private final @Nullable Output<String> nodeGroupNamePrefix;
+    private @Nullable Output<String> nodeGroupNamePrefix;
 
-    public Output<String> nodeGroupNamePrefix() {
-        return this.nodeGroupNamePrefix == null ? Codegen.empty() : this.nodeGroupNamePrefix;
+    public Optional<Output<String>> nodeGroupNamePrefix() {
+        return Optional.ofNullable(this.nodeGroupNamePrefix);
     }
 
     /**
@@ -139,7 +139,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeRoleArn", required=true)
-      private final Output<String> nodeRoleArn;
+    private Output<String> nodeRoleArn;
 
     public Output<String> nodeRoleArn() {
         return this.nodeRoleArn;
@@ -150,10 +150,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseVersion")
-      private final @Nullable Output<String> releaseVersion;
+    private @Nullable Output<String> releaseVersion;
 
-    public Output<String> releaseVersion() {
-        return this.releaseVersion == null ? Codegen.empty() : this.releaseVersion;
+    public Optional<Output<String>> releaseVersion() {
+        return Optional.ofNullable(this.releaseVersion);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteAccess")
-      private final @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
+    private @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
 
-    public Output<NodeGroupRemoteAccessArgs> remoteAccess() {
-        return this.remoteAccess == null ? Codegen.empty() : this.remoteAccess;
+    public Optional<Output<NodeGroupRemoteAccessArgs>> remoteAccess() {
+        return Optional.ofNullable(this.remoteAccess);
     }
 
     /**
@@ -172,7 +172,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingConfig", required=true)
-      private final Output<NodeGroupScalingConfigArgs> scalingConfig;
+    private Output<NodeGroupScalingConfigArgs> scalingConfig;
 
     public Output<NodeGroupScalingConfigArgs> scalingConfig() {
         return this.scalingConfig;
@@ -183,7 +183,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -194,10 +194,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -205,17 +205,17 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taints")
-      private final @Nullable Output<List<NodeGroupTaintArgs>> taints;
+    private @Nullable Output<List<NodeGroupTaintArgs>> taints;
 
-    public Output<List<NodeGroupTaintArgs>> taints() {
-        return this.taints == null ? Codegen.empty() : this.taints;
+    public Optional<Output<List<NodeGroupTaintArgs>>> taints() {
+        return Optional.ofNullable(this.taints);
     }
 
     @Import(name="updateConfig")
-      private final @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig;
+    private @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig;
 
-    public Output<NodeGroupUpdateConfigArgs> updateConfig() {
-        return this.updateConfig == null ? Codegen.empty() : this.updateConfig;
+    public Optional<Output<NodeGroupUpdateConfigArgs>> updateConfig() {
+        return Optional.ofNullable(this.updateConfig);
     }
 
     /**
@@ -223,293 +223,244 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public NodeGroupArgs(
-        @Nullable Output<String> amiType,
-        @Nullable Output<String> capacityType,
-        Output<String> clusterName,
-        @Nullable Output<Integer> diskSize,
-        @Nullable Output<Boolean> forceUpdateVersion,
-        @Nullable Output<List<String>> instanceTypes,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate,
-        @Nullable Output<String> nodeGroupName,
-        @Nullable Output<String> nodeGroupNamePrefix,
-        Output<String> nodeRoleArn,
-        @Nullable Output<String> releaseVersion,
-        @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess,
-        Output<NodeGroupScalingConfigArgs> scalingConfig,
-        Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<NodeGroupTaintArgs>> taints,
-        @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig,
-        @Nullable Output<String> version) {
-        this.amiType = amiType;
-        this.capacityType = capacityType;
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.diskSize = diskSize;
-        this.forceUpdateVersion = forceUpdateVersion;
-        this.instanceTypes = instanceTypes;
-        this.labels = labels;
-        this.launchTemplate = launchTemplate;
-        this.nodeGroupName = nodeGroupName;
-        this.nodeGroupNamePrefix = nodeGroupNamePrefix;
-        this.nodeRoleArn = Objects.requireNonNull(nodeRoleArn, "expected parameter 'nodeRoleArn' to be non-null");
-        this.releaseVersion = releaseVersion;
-        this.remoteAccess = remoteAccess;
-        this.scalingConfig = Objects.requireNonNull(scalingConfig, "expected parameter 'scalingConfig' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.tags = tags;
-        this.taints = taints;
-        this.updateConfig = updateConfig;
-        this.version = version;
-    }
+    private NodeGroupArgs() {}
 
-    private NodeGroupArgs() {
-        this.amiType = Codegen.empty();
-        this.capacityType = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.diskSize = Codegen.empty();
-        this.forceUpdateVersion = Codegen.empty();
-        this.instanceTypes = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.launchTemplate = Codegen.empty();
-        this.nodeGroupName = Codegen.empty();
-        this.nodeGroupNamePrefix = Codegen.empty();
-        this.nodeRoleArn = Codegen.empty();
-        this.releaseVersion = Codegen.empty();
-        this.remoteAccess = Codegen.empty();
-        this.scalingConfig = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.taints = Codegen.empty();
-        this.updateConfig = Codegen.empty();
-        this.version = Codegen.empty();
+    private NodeGroupArgs(NodeGroupArgs $) {
+        this.amiType = $.amiType;
+        this.capacityType = $.capacityType;
+        this.clusterName = $.clusterName;
+        this.diskSize = $.diskSize;
+        this.forceUpdateVersion = $.forceUpdateVersion;
+        this.instanceTypes = $.instanceTypes;
+        this.labels = $.labels;
+        this.launchTemplate = $.launchTemplate;
+        this.nodeGroupName = $.nodeGroupName;
+        this.nodeGroupNamePrefix = $.nodeGroupNamePrefix;
+        this.nodeRoleArn = $.nodeRoleArn;
+        this.releaseVersion = $.releaseVersion;
+        this.remoteAccess = $.remoteAccess;
+        this.scalingConfig = $.scalingConfig;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.taints = $.taints;
+        this.updateConfig = $.updateConfig;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> amiType;
-        private @Nullable Output<String> capacityType;
-        private Output<String> clusterName;
-        private @Nullable Output<Integer> diskSize;
-        private @Nullable Output<Boolean> forceUpdateVersion;
-        private @Nullable Output<List<String>> instanceTypes;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
-        private @Nullable Output<String> nodeGroupName;
-        private @Nullable Output<String> nodeGroupNamePrefix;
-        private Output<String> nodeRoleArn;
-        private @Nullable Output<String> releaseVersion;
-        private @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
-        private Output<NodeGroupScalingConfigArgs> scalingConfig;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<NodeGroupTaintArgs>> taints;
-        private @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig;
-        private @Nullable Output<String> version;
+        private NodeGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupArgs();
         }
 
         public Builder(NodeGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amiType = defaults.amiType;
-    	      this.capacityType = defaults.capacityType;
-    	      this.clusterName = defaults.clusterName;
-    	      this.diskSize = defaults.diskSize;
-    	      this.forceUpdateVersion = defaults.forceUpdateVersion;
-    	      this.instanceTypes = defaults.instanceTypes;
-    	      this.labels = defaults.labels;
-    	      this.launchTemplate = defaults.launchTemplate;
-    	      this.nodeGroupName = defaults.nodeGroupName;
-    	      this.nodeGroupNamePrefix = defaults.nodeGroupNamePrefix;
-    	      this.nodeRoleArn = defaults.nodeRoleArn;
-    	      this.releaseVersion = defaults.releaseVersion;
-    	      this.remoteAccess = defaults.remoteAccess;
-    	      this.scalingConfig = defaults.scalingConfig;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.taints = defaults.taints;
-    	      this.updateConfig = defaults.updateConfig;
-    	      this.version = defaults.version;
+            $ = new NodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amiType(@Nullable Output<String> amiType) {
-            this.amiType = amiType;
+            $.amiType = amiType;
             return this;
         }
-        public Builder amiType(@Nullable String amiType) {
-            this.amiType = Codegen.ofNullable(amiType);
-            return this;
+
+        public Builder amiType(String amiType) {
+            return amiType(Output.of(amiType));
         }
+
         public Builder capacityType(@Nullable Output<String> capacityType) {
-            this.capacityType = capacityType;
+            $.capacityType = capacityType;
             return this;
         }
-        public Builder capacityType(@Nullable String capacityType) {
-            this.capacityType = Codegen.ofNullable(capacityType);
-            return this;
+
+        public Builder capacityType(String capacityType) {
+            return capacityType(Output.of(capacityType));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder diskSize(@Nullable Output<Integer> diskSize) {
-            this.diskSize = diskSize;
+            $.diskSize = diskSize;
             return this;
         }
-        public Builder diskSize(@Nullable Integer diskSize) {
-            this.diskSize = Codegen.ofNullable(diskSize);
-            return this;
+
+        public Builder diskSize(Integer diskSize) {
+            return diskSize(Output.of(diskSize));
         }
+
         public Builder forceUpdateVersion(@Nullable Output<Boolean> forceUpdateVersion) {
-            this.forceUpdateVersion = forceUpdateVersion;
+            $.forceUpdateVersion = forceUpdateVersion;
             return this;
         }
-        public Builder forceUpdateVersion(@Nullable Boolean forceUpdateVersion) {
-            this.forceUpdateVersion = Codegen.ofNullable(forceUpdateVersion);
-            return this;
+
+        public Builder forceUpdateVersion(Boolean forceUpdateVersion) {
+            return forceUpdateVersion(Output.of(forceUpdateVersion));
         }
+
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
-            this.instanceTypes = instanceTypes;
+            $.instanceTypes = instanceTypes;
             return this;
         }
-        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
-            this.instanceTypes = Codegen.ofNullable(instanceTypes);
-            return this;
+
+        public Builder instanceTypes(List<String> instanceTypes) {
+            return instanceTypes(Output.of(instanceTypes));
         }
+
         public Builder instanceTypes(String... instanceTypes) {
             return instanceTypes(List.of(instanceTypes));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder launchTemplate(@Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate) {
-            this.launchTemplate = launchTemplate;
+            $.launchTemplate = launchTemplate;
             return this;
         }
-        public Builder launchTemplate(@Nullable NodeGroupLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Codegen.ofNullable(launchTemplate);
-            return this;
+
+        public Builder launchTemplate(NodeGroupLaunchTemplateArgs launchTemplate) {
+            return launchTemplate(Output.of(launchTemplate));
         }
+
         public Builder nodeGroupName(@Nullable Output<String> nodeGroupName) {
-            this.nodeGroupName = nodeGroupName;
+            $.nodeGroupName = nodeGroupName;
             return this;
         }
-        public Builder nodeGroupName(@Nullable String nodeGroupName) {
-            this.nodeGroupName = Codegen.ofNullable(nodeGroupName);
-            return this;
+
+        public Builder nodeGroupName(String nodeGroupName) {
+            return nodeGroupName(Output.of(nodeGroupName));
         }
+
         public Builder nodeGroupNamePrefix(@Nullable Output<String> nodeGroupNamePrefix) {
-            this.nodeGroupNamePrefix = nodeGroupNamePrefix;
+            $.nodeGroupNamePrefix = nodeGroupNamePrefix;
             return this;
         }
-        public Builder nodeGroupNamePrefix(@Nullable String nodeGroupNamePrefix) {
-            this.nodeGroupNamePrefix = Codegen.ofNullable(nodeGroupNamePrefix);
-            return this;
+
+        public Builder nodeGroupNamePrefix(String nodeGroupNamePrefix) {
+            return nodeGroupNamePrefix(Output.of(nodeGroupNamePrefix));
         }
+
         public Builder nodeRoleArn(Output<String> nodeRoleArn) {
-            this.nodeRoleArn = Objects.requireNonNull(nodeRoleArn);
+            $.nodeRoleArn = nodeRoleArn;
             return this;
         }
+
         public Builder nodeRoleArn(String nodeRoleArn) {
-            this.nodeRoleArn = Output.of(Objects.requireNonNull(nodeRoleArn));
-            return this;
+            return nodeRoleArn(Output.of(nodeRoleArn));
         }
+
         public Builder releaseVersion(@Nullable Output<String> releaseVersion) {
-            this.releaseVersion = releaseVersion;
+            $.releaseVersion = releaseVersion;
             return this;
         }
-        public Builder releaseVersion(@Nullable String releaseVersion) {
-            this.releaseVersion = Codegen.ofNullable(releaseVersion);
-            return this;
+
+        public Builder releaseVersion(String releaseVersion) {
+            return releaseVersion(Output.of(releaseVersion));
         }
+
         public Builder remoteAccess(@Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess) {
-            this.remoteAccess = remoteAccess;
+            $.remoteAccess = remoteAccess;
             return this;
         }
-        public Builder remoteAccess(@Nullable NodeGroupRemoteAccessArgs remoteAccess) {
-            this.remoteAccess = Codegen.ofNullable(remoteAccess);
-            return this;
+
+        public Builder remoteAccess(NodeGroupRemoteAccessArgs remoteAccess) {
+            return remoteAccess(Output.of(remoteAccess));
         }
+
         public Builder scalingConfig(Output<NodeGroupScalingConfigArgs> scalingConfig) {
-            this.scalingConfig = Objects.requireNonNull(scalingConfig);
+            $.scalingConfig = scalingConfig;
             return this;
         }
+
         public Builder scalingConfig(NodeGroupScalingConfigArgs scalingConfig) {
-            this.scalingConfig = Output.of(Objects.requireNonNull(scalingConfig));
-            return this;
+            return scalingConfig(Output.of(scalingConfig));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder taints(@Nullable Output<List<NodeGroupTaintArgs>> taints) {
-            this.taints = taints;
+            $.taints = taints;
             return this;
         }
-        public Builder taints(@Nullable List<NodeGroupTaintArgs> taints) {
-            this.taints = Codegen.ofNullable(taints);
-            return this;
+
+        public Builder taints(List<NodeGroupTaintArgs> taints) {
+            return taints(Output.of(taints));
         }
+
         public Builder taints(NodeGroupTaintArgs... taints) {
             return taints(List.of(taints));
         }
+
         public Builder updateConfig(@Nullable Output<NodeGroupUpdateConfigArgs> updateConfig) {
-            this.updateConfig = updateConfig;
+            $.updateConfig = updateConfig;
             return this;
         }
-        public Builder updateConfig(@Nullable NodeGroupUpdateConfigArgs updateConfig) {
-            this.updateConfig = Codegen.ofNullable(updateConfig);
-            return this;
+
+        public Builder updateConfig(NodeGroupUpdateConfigArgs updateConfig) {
+            return updateConfig(Output.of(updateConfig));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public NodeGroupArgs build() {
-            return new NodeGroupArgs(amiType, capacityType, clusterName, diskSize, forceUpdateVersion, instanceTypes, labels, launchTemplate, nodeGroupName, nodeGroupNamePrefix, nodeRoleArn, releaseVersion, remoteAccess, scalingConfig, subnetIds, tags, taints, updateConfig, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public NodeGroupArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.nodeRoleArn = Objects.requireNonNull($.nodeRoleArn, "expected parameter 'nodeRoleArn' to be non-null");
+            $.scalingConfig = Objects.requireNonNull($.scalingConfig, "expected parameter 'scalingConfig' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

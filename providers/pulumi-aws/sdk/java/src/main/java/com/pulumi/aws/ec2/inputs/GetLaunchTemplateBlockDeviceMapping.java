@@ -15,97 +15,91 @@ public final class GetLaunchTemplateBlockDeviceMapping extends com.pulumi.resour
     public static final GetLaunchTemplateBlockDeviceMapping Empty = new GetLaunchTemplateBlockDeviceMapping();
 
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
     }
 
     @Import(name="ebs", required=true)
-      private final List<GetLaunchTemplateBlockDeviceMappingEb> ebs;
+    private List<GetLaunchTemplateBlockDeviceMappingEb> ebs;
 
     public List<GetLaunchTemplateBlockDeviceMappingEb> ebs() {
         return this.ebs;
     }
 
     @Import(name="noDevice", required=true)
-      private final String noDevice;
+    private String noDevice;
 
     public String noDevice() {
         return this.noDevice;
     }
 
     @Import(name="virtualName", required=true)
-      private final String virtualName;
+    private String virtualName;
 
     public String virtualName() {
         return this.virtualName;
     }
 
-    public GetLaunchTemplateBlockDeviceMapping(
-        String deviceName,
-        List<GetLaunchTemplateBlockDeviceMappingEb> ebs,
-        String noDevice,
-        String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.ebs = Objects.requireNonNull(ebs, "expected parameter 'ebs' to be non-null");
-        this.noDevice = Objects.requireNonNull(noDevice, "expected parameter 'noDevice' to be non-null");
-        this.virtualName = Objects.requireNonNull(virtualName, "expected parameter 'virtualName' to be non-null");
-    }
+    private GetLaunchTemplateBlockDeviceMapping() {}
 
-    private GetLaunchTemplateBlockDeviceMapping() {
-        this.deviceName = null;
-        this.ebs = List.of();
-        this.noDevice = null;
-        this.virtualName = null;
+    private GetLaunchTemplateBlockDeviceMapping(GetLaunchTemplateBlockDeviceMapping $) {
+        this.deviceName = $.deviceName;
+        this.ebs = $.ebs;
+        this.noDevice = $.noDevice;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateBlockDeviceMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private List<GetLaunchTemplateBlockDeviceMappingEb> ebs;
-        private String noDevice;
-        private String virtualName;
+        private GetLaunchTemplateBlockDeviceMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateBlockDeviceMapping();
         }
 
         public Builder(GetLaunchTemplateBlockDeviceMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.ebs = defaults.ebs;
-    	      this.noDevice = defaults.noDevice;
-    	      this.virtualName = defaults.virtualName;
+            $ = new GetLaunchTemplateBlockDeviceMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder ebs(List<GetLaunchTemplateBlockDeviceMappingEb> ebs) {
-            this.ebs = Objects.requireNonNull(ebs);
+            $.ebs = ebs;
             return this;
         }
+
         public Builder ebs(GetLaunchTemplateBlockDeviceMappingEb... ebs) {
             return ebs(List.of(ebs));
         }
+
         public Builder noDevice(String noDevice) {
-            this.noDevice = Objects.requireNonNull(noDevice);
+            $.noDevice = noDevice;
             return this;
         }
+
         public Builder virtualName(String virtualName) {
-            this.virtualName = Objects.requireNonNull(virtualName);
+            $.virtualName = virtualName;
             return this;
-        }        public GetLaunchTemplateBlockDeviceMapping build() {
-            return new GetLaunchTemplateBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
+        }
+
+        public GetLaunchTemplateBlockDeviceMapping build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.ebs = Objects.requireNonNull($.ebs, "expected parameter 'ebs' to be non-null");
+            $.noDevice = Objects.requireNonNull($.noDevice, "expected parameter 'noDevice' to be non-null");
+            $.virtualName = Objects.requireNonNull($.virtualName, "expected parameter 'virtualName' to be non-null");
+            return $;
         }
     }
+
 }

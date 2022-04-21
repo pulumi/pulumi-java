@@ -6,11 +6,11 @@ package com.pulumi.aws.servicecatalog.inputs;
 import com.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distributor")
-      private final @Nullable Output<String> distributor;
+    private @Nullable Output<String> distributor;
 
-    public Output<String> distributor() {
-        return this.distributor == null ? Codegen.empty() : this.distributor;
+    public Optional<Output<String>> distributor() {
+        return Optional.ofNullable(this.distributor);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasDefaultPath")
-      private final @Nullable Output<Boolean> hasDefaultPath;
+    private @Nullable Output<Boolean> hasDefaultPath;
 
-    public Output<Boolean> hasDefaultPath() {
-        return this.hasDefaultPath == null ? Codegen.empty() : this.hasDefaultPath;
+    public Optional<Output<Boolean>> hasDefaultPath() {
+        return Optional.ofNullable(this.hasDefaultPath);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningArtifactParameters")
-      private final @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
+    private @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
 
-    public Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters() {
-        return this.provisioningArtifactParameters == null ? Codegen.empty() : this.provisioningArtifactParameters;
+    public Optional<Output<ProductProvisioningArtifactParametersGetArgs>> provisioningArtifactParameters() {
+        return Optional.ofNullable(this.provisioningArtifactParameters);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportDescription")
-      private final @Nullable Output<String> supportDescription;
+    private @Nullable Output<String> supportDescription;
 
-    public Output<String> supportDescription() {
-        return this.supportDescription == null ? Codegen.empty() : this.supportDescription;
+    public Optional<Output<String>> supportDescription() {
+        return Optional.ofNullable(this.supportDescription);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportEmail")
-      private final @Nullable Output<String> supportEmail;
+    private @Nullable Output<String> supportEmail;
 
-    public Output<String> supportEmail() {
-        return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
+    public Optional<Output<String>> supportEmail() {
+        return Optional.ofNullable(this.supportEmail);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportUrl")
-      private final @Nullable Output<String> supportUrl;
+    private @Nullable Output<String> supportUrl;
 
-    public Output<String> supportUrl() {
-        return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
+    public Optional<Output<String>> supportUrl() {
+        return Optional.ofNullable(this.supportUrl);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -188,245 +188,198 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProductState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> distributor,
-        @Nullable Output<Boolean> hasDefaultPath,
-        @Nullable Output<String> name,
-        @Nullable Output<String> owner,
-        @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters,
-        @Nullable Output<String> status,
-        @Nullable Output<String> supportDescription,
-        @Nullable Output<String> supportEmail,
-        @Nullable Output<String> supportUrl,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> type) {
-        this.acceptLanguage = acceptLanguage;
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.distributor = distributor;
-        this.hasDefaultPath = hasDefaultPath;
-        this.name = name;
-        this.owner = owner;
-        this.provisioningArtifactParameters = provisioningArtifactParameters;
-        this.status = status;
-        this.supportDescription = supportDescription;
-        this.supportEmail = supportEmail;
-        this.supportUrl = supportUrl;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.type = type;
-    }
+    private ProductState() {}
 
-    private ProductState() {
-        this.acceptLanguage = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.distributor = Codegen.empty();
-        this.hasDefaultPath = Codegen.empty();
-        this.name = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.provisioningArtifactParameters = Codegen.empty();
-        this.status = Codegen.empty();
-        this.supportDescription = Codegen.empty();
-        this.supportEmail = Codegen.empty();
-        this.supportUrl = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProductState(ProductState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.distributor = $.distributor;
+        this.hasDefaultPath = $.hasDefaultPath;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.provisioningArtifactParameters = $.provisioningArtifactParameters;
+        this.status = $.status;
+        this.supportDescription = $.supportDescription;
+        this.supportEmail = $.supportEmail;
+        this.supportUrl = $.supportUrl;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> distributor;
-        private @Nullable Output<Boolean> hasDefaultPath;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> supportDescription;
-        private @Nullable Output<String> supportEmail;
-        private @Nullable Output<String> supportUrl;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> type;
+        private ProductState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductState();
         }
 
         public Builder(ProductState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.distributor = defaults.distributor;
-    	      this.hasDefaultPath = defaults.hasDefaultPath;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.provisioningArtifactParameters = defaults.provisioningArtifactParameters;
-    	      this.status = defaults.status;
-    	      this.supportDescription = defaults.supportDescription;
-    	      this.supportEmail = defaults.supportEmail;
-    	      this.supportUrl = defaults.supportUrl;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.type = defaults.type;
+            $ = new ProductState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder distributor(@Nullable Output<String> distributor) {
-            this.distributor = distributor;
+            $.distributor = distributor;
             return this;
         }
-        public Builder distributor(@Nullable String distributor) {
-            this.distributor = Codegen.ofNullable(distributor);
-            return this;
+
+        public Builder distributor(String distributor) {
+            return distributor(Output.of(distributor));
         }
+
         public Builder hasDefaultPath(@Nullable Output<Boolean> hasDefaultPath) {
-            this.hasDefaultPath = hasDefaultPath;
+            $.hasDefaultPath = hasDefaultPath;
             return this;
         }
-        public Builder hasDefaultPath(@Nullable Boolean hasDefaultPath) {
-            this.hasDefaultPath = Codegen.ofNullable(hasDefaultPath);
-            return this;
+
+        public Builder hasDefaultPath(Boolean hasDefaultPath) {
+            return hasDefaultPath(Output.of(hasDefaultPath));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder provisioningArtifactParameters(@Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters) {
-            this.provisioningArtifactParameters = provisioningArtifactParameters;
+            $.provisioningArtifactParameters = provisioningArtifactParameters;
             return this;
         }
-        public Builder provisioningArtifactParameters(@Nullable ProductProvisioningArtifactParametersGetArgs provisioningArtifactParameters) {
-            this.provisioningArtifactParameters = Codegen.ofNullable(provisioningArtifactParameters);
-            return this;
+
+        public Builder provisioningArtifactParameters(ProductProvisioningArtifactParametersGetArgs provisioningArtifactParameters) {
+            return provisioningArtifactParameters(Output.of(provisioningArtifactParameters));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder supportDescription(@Nullable Output<String> supportDescription) {
-            this.supportDescription = supportDescription;
+            $.supportDescription = supportDescription;
             return this;
         }
-        public Builder supportDescription(@Nullable String supportDescription) {
-            this.supportDescription = Codegen.ofNullable(supportDescription);
-            return this;
+
+        public Builder supportDescription(String supportDescription) {
+            return supportDescription(Output.of(supportDescription));
         }
+
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
-            this.supportEmail = supportEmail;
+            $.supportEmail = supportEmail;
             return this;
         }
-        public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Codegen.ofNullable(supportEmail);
-            return this;
+
+        public Builder supportEmail(String supportEmail) {
+            return supportEmail(Output.of(supportEmail));
         }
+
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
-            this.supportUrl = supportUrl;
+            $.supportUrl = supportUrl;
             return this;
         }
-        public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Codegen.ofNullable(supportUrl);
-            return this;
+
+        public Builder supportUrl(String supportUrl) {
+            return supportUrl(Output.of(supportUrl));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProductState build() {
-            return new ProductState(acceptLanguage, arn, createdTime, description, distributor, hasDefaultPath, name, owner, provisioningArtifactParameters, status, supportDescription, supportEmail, supportUrl, tags, tagsAll, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProductState build() {
+            return $;
         }
     }
+
 }

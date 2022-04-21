@@ -7,11 +7,11 @@ import com.pulumi.aws.transfer.inputs.UserHomeDirectoryMappingGetArgs;
 import com.pulumi.aws.transfer.inputs.UserPosixProfileGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectory")
-      private final @Nullable Output<String> homeDirectory;
+    private @Nullable Output<String> homeDirectory;
 
-    public Output<String> homeDirectory() {
-        return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
+    public Optional<Output<String>> homeDirectory() {
+        return Optional.ofNullable(this.homeDirectory);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectoryMappings")
-      private final @Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
+    private @Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
 
-    public Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings() {
-        return this.homeDirectoryMappings == null ? Codegen.empty() : this.homeDirectoryMappings;
+    public Optional<Output<List<UserHomeDirectoryMappingGetArgs>>> homeDirectoryMappings() {
+        return Optional.ofNullable(this.homeDirectoryMappings);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectoryType")
-      private final @Nullable Output<String> homeDirectoryType;
+    private @Nullable Output<String> homeDirectoryType;
 
-    public Output<String> homeDirectoryType() {
-        return this.homeDirectoryType == null ? Codegen.empty() : this.homeDirectoryType;
+    public Optional<Output<String>> homeDirectoryType() {
+        return Optional.ofNullable(this.homeDirectoryType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixProfile")
-      private final @Nullable Output<UserPosixProfileGetArgs> posixProfile;
+    private @Nullable Output<UserPosixProfileGetArgs> posixProfile;
 
-    public Output<UserPosixProfileGetArgs> posixProfile() {
-        return this.posixProfile == null ? Codegen.empty() : this.posixProfile;
+    public Optional<Output<UserPosixProfileGetArgs>> posixProfile() {
+        return Optional.ofNullable(this.posixProfile);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverId")
-      private final @Nullable Output<String> serverId;
+    private @Nullable Output<String> serverId;
 
-    public Output<String> serverId() {
-        return this.serverId == null ? Codegen.empty() : this.serverId;
+    public Optional<Output<String>> serverId() {
+        return Optional.ofNullable(this.serverId);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -134,183 +134,152 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> homeDirectory,
-        @Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings,
-        @Nullable Output<String> homeDirectoryType,
-        @Nullable Output<String> policy,
-        @Nullable Output<UserPosixProfileGetArgs> posixProfile,
-        @Nullable Output<String> role,
-        @Nullable Output<String> serverId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> userName) {
-        this.arn = arn;
-        this.homeDirectory = homeDirectory;
-        this.homeDirectoryMappings = homeDirectoryMappings;
-        this.homeDirectoryType = homeDirectoryType;
-        this.policy = policy;
-        this.posixProfile = posixProfile;
-        this.role = role;
-        this.serverId = serverId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userName = userName;
-    }
+    private UserState() {}
 
-    private UserState() {
-        this.arn = Codegen.empty();
-        this.homeDirectory = Codegen.empty();
-        this.homeDirectoryMappings = Codegen.empty();
-        this.homeDirectoryType = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.posixProfile = Codegen.empty();
-        this.role = Codegen.empty();
-        this.serverId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserState(UserState $) {
+        this.arn = $.arn;
+        this.homeDirectory = $.homeDirectory;
+        this.homeDirectoryMappings = $.homeDirectoryMappings;
+        this.homeDirectoryType = $.homeDirectoryType;
+        this.policy = $.policy;
+        this.posixProfile = $.posixProfile;
+        this.role = $.role;
+        this.serverId = $.serverId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> homeDirectory;
-        private @Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
-        private @Nullable Output<String> homeDirectoryType;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<UserPosixProfileGetArgs> posixProfile;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> serverId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> userName;
+        private UserState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserState();
         }
 
         public Builder(UserState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.homeDirectory = defaults.homeDirectory;
-    	      this.homeDirectoryMappings = defaults.homeDirectoryMappings;
-    	      this.homeDirectoryType = defaults.homeDirectoryType;
-    	      this.policy = defaults.policy;
-    	      this.posixProfile = defaults.posixProfile;
-    	      this.role = defaults.role;
-    	      this.serverId = defaults.serverId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userName = defaults.userName;
+            $ = new UserState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
-            this.homeDirectory = homeDirectory;
+            $.homeDirectory = homeDirectory;
             return this;
         }
-        public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Codegen.ofNullable(homeDirectory);
-            return this;
+
+        public Builder homeDirectory(String homeDirectory) {
+            return homeDirectory(Output.of(homeDirectory));
         }
+
         public Builder homeDirectoryMappings(@Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
-            this.homeDirectoryMappings = homeDirectoryMappings;
+            $.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
-        public Builder homeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
-            this.homeDirectoryMappings = Codegen.ofNullable(homeDirectoryMappings);
-            return this;
+
+        public Builder homeDirectoryMappings(List<UserHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
+            return homeDirectoryMappings(Output.of(homeDirectoryMappings));
         }
+
         public Builder homeDirectoryMappings(UserHomeDirectoryMappingGetArgs... homeDirectoryMappings) {
             return homeDirectoryMappings(List.of(homeDirectoryMappings));
         }
+
         public Builder homeDirectoryType(@Nullable Output<String> homeDirectoryType) {
-            this.homeDirectoryType = homeDirectoryType;
+            $.homeDirectoryType = homeDirectoryType;
             return this;
         }
-        public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
-            this.homeDirectoryType = Codegen.ofNullable(homeDirectoryType);
-            return this;
+
+        public Builder homeDirectoryType(String homeDirectoryType) {
+            return homeDirectoryType(Output.of(homeDirectoryType));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder posixProfile(@Nullable Output<UserPosixProfileGetArgs> posixProfile) {
-            this.posixProfile = posixProfile;
+            $.posixProfile = posixProfile;
             return this;
         }
-        public Builder posixProfile(@Nullable UserPosixProfileGetArgs posixProfile) {
-            this.posixProfile = Codegen.ofNullable(posixProfile);
-            return this;
+
+        public Builder posixProfile(UserPosixProfileGetArgs posixProfile) {
+            return posixProfile(Output.of(posixProfile));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder serverId(@Nullable Output<String> serverId) {
-            this.serverId = serverId;
+            $.serverId = serverId;
             return this;
         }
-        public Builder serverId(@Nullable String serverId) {
-            this.serverId = Codegen.ofNullable(serverId);
-            return this;
+
+        public Builder serverId(String serverId) {
+            return serverId(Output.of(serverId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public UserState build() {
-            return new UserState(arn, homeDirectory, homeDirectoryMappings, homeDirectoryType, policy, posixProfile, role, serverId, tags, tagsAll, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public UserState build() {
+            return $;
         }
     }
+
 }

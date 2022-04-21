@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +34,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdatedDate")
-      private final @Nullable Output<String> lastUpdatedDate;
+    private @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> lastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
+    public Optional<Output<String>> lastUpdatedDate() {
+        return Optional.ofNullable(this.lastUpdatedDate);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -110,154 +111,129 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ApiKeyState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> lastUpdatedDate,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> value) {
-        this.arn = arn;
-        this.createdDate = createdDate;
-        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
-        this.enabled = enabled;
-        this.lastUpdatedDate = lastUpdatedDate;
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.value = value;
-    }
+    private ApiKeyState() {}
 
-    private ApiKeyState() {
-        this.arn = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.lastUpdatedDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApiKeyState(ApiKeyState $) {
+        this.arn = $.arn;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.lastUpdatedDate = $.lastUpdatedDate;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> lastUpdatedDate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> value;
+        private ApiKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyState();
         }
 
         public Builder(ApiKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.lastUpdatedDate = defaults.lastUpdatedDate;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.value = defaults.value;
+            $ = new ApiKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
-            this.lastUpdatedDate = lastUpdatedDate;
+            $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Codegen.ofNullable(lastUpdatedDate);
-            return this;
+
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
+            return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ApiKeyState build() {
-            return new ApiKeyState(arn, createdDate, description, enabled, lastUpdatedDate, name, tags, tagsAll, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ApiKeyState build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("Managed by Pulumi").getNullable();
+            return $;
         }
     }
+
 }

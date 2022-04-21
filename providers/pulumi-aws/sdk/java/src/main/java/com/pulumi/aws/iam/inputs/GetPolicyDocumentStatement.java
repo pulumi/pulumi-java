@@ -23,10 +23,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="actions")
-      private final @Nullable List<String> actions;
+    private @Nullable List<String> actions;
 
-    public List<String> actions() {
-        return this.actions == null ? List.of() : this.actions;
+    public Optional<List<String>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="conditions")
-      private final @Nullable List<GetPolicyDocumentStatementCondition> conditions;
+    private @Nullable List<GetPolicyDocumentStatementCondition> conditions;
 
-    public List<GetPolicyDocumentStatementCondition> conditions() {
-        return this.conditions == null ? List.of() : this.conditions;
+    public Optional<List<GetPolicyDocumentStatementCondition>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="effect")
-      private final @Nullable String effect;
+    private @Nullable String effect;
 
     public Optional<String> effect() {
-        return this.effect == null ? Optional.empty() : Optional.ofNullable(this.effect);
+        return Optional.ofNullable(this.effect);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notActions")
-      private final @Nullable List<String> notActions;
+    private @Nullable List<String> notActions;
 
-    public List<String> notActions() {
-        return this.notActions == null ? List.of() : this.notActions;
+    public Optional<List<String>> notActions() {
+        return Optional.ofNullable(this.notActions);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notPrincipals")
-      private final @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals;
+    private @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals;
 
-    public List<GetPolicyDocumentStatementNotPrincipal> notPrincipals() {
-        return this.notPrincipals == null ? List.of() : this.notPrincipals;
+    public Optional<List<GetPolicyDocumentStatementNotPrincipal>> notPrincipals() {
+        return Optional.ofNullable(this.notPrincipals);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notResources")
-      private final @Nullable List<String> notResources;
+    private @Nullable List<String> notResources;
 
-    public List<String> notResources() {
-        return this.notResources == null ? List.of() : this.notResources;
+    public Optional<List<String>> notResources() {
+        return Optional.ofNullable(this.notResources);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="principals")
-      private final @Nullable List<GetPolicyDocumentStatementPrincipal> principals;
+    private @Nullable List<GetPolicyDocumentStatementPrincipal> principals;
 
-    public List<GetPolicyDocumentStatementPrincipal> principals() {
-        return this.principals == null ? List.of() : this.principals;
+    public Optional<List<GetPolicyDocumentStatementPrincipal>> principals() {
+        return Optional.ofNullable(this.principals);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resources")
-      private final @Nullable List<String> resources;
+    private @Nullable List<String> resources;
 
-    public List<String> resources() {
-        return this.resources == null ? List.of() : this.resources;
+    public Optional<List<String>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -111,139 +111,120 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sid")
-      private final @Nullable String sid;
+    private @Nullable String sid;
 
     public Optional<String> sid() {
-        return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
+        return Optional.ofNullable(this.sid);
     }
 
-    public GetPolicyDocumentStatement(
-        @Nullable List<String> actions,
-        @Nullable List<GetPolicyDocumentStatementCondition> conditions,
-        @Nullable String effect,
-        @Nullable List<String> notActions,
-        @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals,
-        @Nullable List<String> notResources,
-        @Nullable List<GetPolicyDocumentStatementPrincipal> principals,
-        @Nullable List<String> resources,
-        @Nullable String sid) {
-        this.actions = actions;
-        this.conditions = conditions;
-        this.effect = effect;
-        this.notActions = notActions;
-        this.notPrincipals = notPrincipals;
-        this.notResources = notResources;
-        this.principals = principals;
-        this.resources = resources;
-        this.sid = sid;
-    }
+    private GetPolicyDocumentStatement() {}
 
-    private GetPolicyDocumentStatement() {
-        this.actions = List.of();
-        this.conditions = List.of();
-        this.effect = null;
-        this.notActions = List.of();
-        this.notPrincipals = List.of();
-        this.notResources = List.of();
-        this.principals = List.of();
-        this.resources = List.of();
-        this.sid = null;
+    private GetPolicyDocumentStatement(GetPolicyDocumentStatement $) {
+        this.actions = $.actions;
+        this.conditions = $.conditions;
+        this.effect = $.effect;
+        this.notActions = $.notActions;
+        this.notPrincipals = $.notPrincipals;
+        this.notResources = $.notResources;
+        this.principals = $.principals;
+        this.resources = $.resources;
+        this.sid = $.sid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyDocumentStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> actions;
-        private @Nullable List<GetPolicyDocumentStatementCondition> conditions;
-        private @Nullable String effect;
-        private @Nullable List<String> notActions;
-        private @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals;
-        private @Nullable List<String> notResources;
-        private @Nullable List<GetPolicyDocumentStatementPrincipal> principals;
-        private @Nullable List<String> resources;
-        private @Nullable String sid;
+        private GetPolicyDocumentStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyDocumentStatement();
         }
 
         public Builder(GetPolicyDocumentStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.conditions = defaults.conditions;
-    	      this.effect = defaults.effect;
-    	      this.notActions = defaults.notActions;
-    	      this.notPrincipals = defaults.notPrincipals;
-    	      this.notResources = defaults.notResources;
-    	      this.principals = defaults.principals;
-    	      this.resources = defaults.resources;
-    	      this.sid = defaults.sid;
+            $ = new GetPolicyDocumentStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable List<String> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder conditions(@Nullable List<GetPolicyDocumentStatementCondition> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(GetPolicyDocumentStatementCondition... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder effect(@Nullable String effect) {
-            this.effect = effect;
+            $.effect = effect;
             return this;
         }
+
         public Builder notActions(@Nullable List<String> notActions) {
-            this.notActions = notActions;
+            $.notActions = notActions;
             return this;
         }
+
         public Builder notActions(String... notActions) {
             return notActions(List.of(notActions));
         }
+
         public Builder notPrincipals(@Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals) {
-            this.notPrincipals = notPrincipals;
+            $.notPrincipals = notPrincipals;
             return this;
         }
+
         public Builder notPrincipals(GetPolicyDocumentStatementNotPrincipal... notPrincipals) {
             return notPrincipals(List.of(notPrincipals));
         }
+
         public Builder notResources(@Nullable List<String> notResources) {
-            this.notResources = notResources;
+            $.notResources = notResources;
             return this;
         }
+
         public Builder notResources(String... notResources) {
             return notResources(List.of(notResources));
         }
+
         public Builder principals(@Nullable List<GetPolicyDocumentStatementPrincipal> principals) {
-            this.principals = principals;
+            $.principals = principals;
             return this;
         }
+
         public Builder principals(GetPolicyDocumentStatementPrincipal... principals) {
             return principals(List.of(principals));
         }
+
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder sid(@Nullable String sid) {
-            this.sid = sid;
+            $.sid = sid;
             return this;
-        }        public GetPolicyDocumentStatement build() {
-            return new GetPolicyDocumentStatement(actions, conditions, effect, notActions, notPrincipals, notResources, principals, resources, sid);
+        }
+
+        public GetPolicyDocumentStatement build() {
+            return $;
         }
     }
+
 }

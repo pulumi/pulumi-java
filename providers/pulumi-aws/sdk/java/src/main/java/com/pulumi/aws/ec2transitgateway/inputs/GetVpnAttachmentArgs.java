@@ -22,10 +22,10 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpnAttachmentFilter> filters;
+    private @Nullable List<GetVpnAttachmentFilter> filters;
 
-    public List<GetVpnAttachmentFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpnAttachmentFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="transitGatewayId")
-      private final @Nullable String transitGatewayId;
+    private @Nullable String transitGatewayId;
 
     public Optional<String> transitGatewayId() {
-        return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
     /**
@@ -55,76 +55,66 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vpnConnectionId")
-      private final @Nullable String vpnConnectionId;
+    private @Nullable String vpnConnectionId;
 
     public Optional<String> vpnConnectionId() {
-        return this.vpnConnectionId == null ? Optional.empty() : Optional.ofNullable(this.vpnConnectionId);
+        return Optional.ofNullable(this.vpnConnectionId);
     }
 
-    public GetVpnAttachmentArgs(
-        @Nullable List<GetVpnAttachmentFilter> filters,
-        @Nullable Map<String,String> tags,
-        @Nullable String transitGatewayId,
-        @Nullable String vpnConnectionId) {
-        this.filters = filters;
-        this.tags = tags;
-        this.transitGatewayId = transitGatewayId;
-        this.vpnConnectionId = vpnConnectionId;
-    }
+    private GetVpnAttachmentArgs() {}
 
-    private GetVpnAttachmentArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
-        this.transitGatewayId = null;
-        this.vpnConnectionId = null;
+    private GetVpnAttachmentArgs(GetVpnAttachmentArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
+        this.transitGatewayId = $.transitGatewayId;
+        this.vpnConnectionId = $.vpnConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpnAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetVpnAttachmentFilter> filters;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String transitGatewayId;
-        private @Nullable String vpnConnectionId;
+        private GetVpnAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpnAttachmentArgs();
         }
 
         public Builder(GetVpnAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
-    	      this.transitGatewayId = defaults.transitGatewayId;
-    	      this.vpnConnectionId = defaults.vpnConnectionId;
+            $ = new GetVpnAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetVpnAttachmentFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpnAttachmentFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = transitGatewayId;
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
+
         public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
-            this.vpnConnectionId = vpnConnectionId;
+            $.vpnConnectionId = vpnConnectionId;
             return this;
-        }        public GetVpnAttachmentArgs build() {
-            return new GetVpnAttachmentArgs(filters, tags, transitGatewayId, vpnConnectionId);
+        }
+
+        public GetVpnAttachmentArgs build() {
+            return $;
         }
     }
+
 }

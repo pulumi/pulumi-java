@@ -6,10 +6,10 @@ package com.pulumi.aws.datasync;
 import com.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2Config", required=true)
-      private final Output<EfsLocationEc2ConfigArgs> ec2Config;
+    private Output<EfsLocationEc2ConfigArgs> ec2Config;
 
     public Output<EfsLocationEc2ConfigArgs> ec2Config() {
         return this.ec2Config;
@@ -33,7 +33,7 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="efsFileSystemArn", required=true)
-      private final Output<String> efsFileSystemArn;
+    private Output<String> efsFileSystemArn;
 
     public Output<String> efsFileSystemArn() {
         return this.efsFileSystemArn;
@@ -44,10 +44,10 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -55,89 +55,80 @@ public final class EfsLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EfsLocationArgs(
-        Output<EfsLocationEc2ConfigArgs> ec2Config,
-        Output<String> efsFileSystemArn,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<Map<String,String>> tags) {
-        this.ec2Config = Objects.requireNonNull(ec2Config, "expected parameter 'ec2Config' to be non-null");
-        this.efsFileSystemArn = Objects.requireNonNull(efsFileSystemArn, "expected parameter 'efsFileSystemArn' to be non-null");
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-    }
+    private EfsLocationArgs() {}
 
-    private EfsLocationArgs() {
-        this.ec2Config = Codegen.empty();
-        this.efsFileSystemArn = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EfsLocationArgs(EfsLocationArgs $) {
+        this.ec2Config = $.ec2Config;
+        this.efsFileSystemArn = $.efsFileSystemArn;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EfsLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<EfsLocationEc2ConfigArgs> ec2Config;
-        private Output<String> efsFileSystemArn;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<Map<String,String>> tags;
+        private EfsLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EfsLocationArgs();
         }
 
         public Builder(EfsLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ec2Config = defaults.ec2Config;
-    	      this.efsFileSystemArn = defaults.efsFileSystemArn;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
+            $ = new EfsLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ec2Config(Output<EfsLocationEc2ConfigArgs> ec2Config) {
-            this.ec2Config = Objects.requireNonNull(ec2Config);
+            $.ec2Config = ec2Config;
             return this;
         }
+
         public Builder ec2Config(EfsLocationEc2ConfigArgs ec2Config) {
-            this.ec2Config = Output.of(Objects.requireNonNull(ec2Config));
-            return this;
+            return ec2Config(Output.of(ec2Config));
         }
+
         public Builder efsFileSystemArn(Output<String> efsFileSystemArn) {
-            this.efsFileSystemArn = Objects.requireNonNull(efsFileSystemArn);
+            $.efsFileSystemArn = efsFileSystemArn;
             return this;
         }
+
         public Builder efsFileSystemArn(String efsFileSystemArn) {
-            this.efsFileSystemArn = Output.of(Objects.requireNonNull(efsFileSystemArn));
-            return this;
+            return efsFileSystemArn(Output.of(efsFileSystemArn));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public EfsLocationArgs build() {
-            return new EfsLocationArgs(ec2Config, efsFileSystemArn, subdirectory, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public EfsLocationArgs build() {
+            $.ec2Config = Objects.requireNonNull($.ec2Config, "expected parameter 'ec2Config' to be non-null");
+            $.efsFileSystemArn = Objects.requireNonNull($.efsFileSystemArn, "expected parameter 'efsFileSystemArn' to be non-null");
+            return $;
         }
     }
+
 }

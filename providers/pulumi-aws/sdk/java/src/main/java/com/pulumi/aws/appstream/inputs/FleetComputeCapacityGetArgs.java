@@ -5,9 +5,9 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="available")
-      private final @Nullable Output<Integer> available;
+    private @Nullable Output<Integer> available;
 
-    public Output<Integer> available() {
-        return this.available == null ? Codegen.empty() : this.available;
+    public Optional<Output<Integer>> available() {
+        return Optional.ofNullable(this.available);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="desiredInstances", required=true)
-      private final Output<Integer> desiredInstances;
+    private Output<Integer> desiredInstances;
 
     public Output<Integer> desiredInstances() {
         return this.desiredInstances;
@@ -42,10 +42,10 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="inUse")
-      private final @Nullable Output<Integer> inUse;
+    private @Nullable Output<Integer> inUse;
 
-    public Output<Integer> inUse() {
-        return this.inUse == null ? Codegen.empty() : this.inUse;
+    public Optional<Output<Integer>> inUse() {
+        return Optional.ofNullable(this.inUse);
     }
 
     /**
@@ -53,89 +53,79 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="running")
-      private final @Nullable Output<Integer> running;
+    private @Nullable Output<Integer> running;
 
-    public Output<Integer> running() {
-        return this.running == null ? Codegen.empty() : this.running;
+    public Optional<Output<Integer>> running() {
+        return Optional.ofNullable(this.running);
     }
 
-    public FleetComputeCapacityGetArgs(
-        @Nullable Output<Integer> available,
-        Output<Integer> desiredInstances,
-        @Nullable Output<Integer> inUse,
-        @Nullable Output<Integer> running) {
-        this.available = available;
-        this.desiredInstances = Objects.requireNonNull(desiredInstances, "expected parameter 'desiredInstances' to be non-null");
-        this.inUse = inUse;
-        this.running = running;
-    }
+    private FleetComputeCapacityGetArgs() {}
 
-    private FleetComputeCapacityGetArgs() {
-        this.available = Codegen.empty();
-        this.desiredInstances = Codegen.empty();
-        this.inUse = Codegen.empty();
-        this.running = Codegen.empty();
+    private FleetComputeCapacityGetArgs(FleetComputeCapacityGetArgs $) {
+        this.available = $.available;
+        this.desiredInstances = $.desiredInstances;
+        this.inUse = $.inUse;
+        this.running = $.running;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetComputeCapacityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> available;
-        private Output<Integer> desiredInstances;
-        private @Nullable Output<Integer> inUse;
-        private @Nullable Output<Integer> running;
+        private FleetComputeCapacityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetComputeCapacityGetArgs();
         }
 
         public Builder(FleetComputeCapacityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.available = defaults.available;
-    	      this.desiredInstances = defaults.desiredInstances;
-    	      this.inUse = defaults.inUse;
-    	      this.running = defaults.running;
+            $ = new FleetComputeCapacityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder available(@Nullable Output<Integer> available) {
-            this.available = available;
+            $.available = available;
             return this;
         }
-        public Builder available(@Nullable Integer available) {
-            this.available = Codegen.ofNullable(available);
-            return this;
+
+        public Builder available(Integer available) {
+            return available(Output.of(available));
         }
+
         public Builder desiredInstances(Output<Integer> desiredInstances) {
-            this.desiredInstances = Objects.requireNonNull(desiredInstances);
+            $.desiredInstances = desiredInstances;
             return this;
         }
+
         public Builder desiredInstances(Integer desiredInstances) {
-            this.desiredInstances = Output.of(Objects.requireNonNull(desiredInstances));
-            return this;
+            return desiredInstances(Output.of(desiredInstances));
         }
+
         public Builder inUse(@Nullable Output<Integer> inUse) {
-            this.inUse = inUse;
+            $.inUse = inUse;
             return this;
         }
-        public Builder inUse(@Nullable Integer inUse) {
-            this.inUse = Codegen.ofNullable(inUse);
-            return this;
+
+        public Builder inUse(Integer inUse) {
+            return inUse(Output.of(inUse));
         }
+
         public Builder running(@Nullable Output<Integer> running) {
-            this.running = running;
+            $.running = running;
             return this;
         }
-        public Builder running(@Nullable Integer running) {
-            this.running = Codegen.ofNullable(running);
-            return this;
-        }        public FleetComputeCapacityGetArgs build() {
-            return new FleetComputeCapacityGetArgs(available, desiredInstances, inUse, running);
+
+        public Builder running(Integer running) {
+            return running(Output.of(running));
+        }
+
+        public FleetComputeCapacityGetArgs build() {
+            $.desiredInstances = Objects.requireNonNull($.desiredInstances, "expected parameter 'desiredInstances' to be non-null");
+            return $;
         }
     }
+
 }

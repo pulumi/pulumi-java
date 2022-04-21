@@ -19,7 +19,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      * 
      */
     @Import(name="headerBehavior", required=true)
-      private final String headerBehavior;
+    private String headerBehavior;
 
     public String headerBehavior() {
         return this.headerBehavior;
@@ -30,58 +30,56 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      * 
      */
     @Import(name="headers", required=true)
-      private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
+    private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
 
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers() {
         return this.headers;
     }
 
-    public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(
-        String headerBehavior,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
-        this.headerBehavior = Objects.requireNonNull(headerBehavior, "expected parameter 'headerBehavior' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-    }
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig() {}
 
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig() {
-        this.headerBehavior = null;
-        this.headers = List.of();
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig $) {
+        this.headerBehavior = $.headerBehavior;
+        this.headers = $.headers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerBehavior;
-        private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
+        private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig();
         }
 
         public Builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerBehavior = defaults.headerBehavior;
-    	      this.headers = defaults.headers;
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder headerBehavior(String headerBehavior) {
-            this.headerBehavior = Objects.requireNonNull(headerBehavior);
+            $.headerBehavior = headerBehavior;
             return this;
         }
+
         public Builder headers(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader... headers) {
             return headers(List.of(headers));
-        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig build() {
-            return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(headerBehavior, headers);
+        }
+
+        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig build() {
+            $.headerBehavior = Objects.requireNonNull($.headerBehavior, "expected parameter 'headerBehavior' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            return $;
         }
     }
+
 }

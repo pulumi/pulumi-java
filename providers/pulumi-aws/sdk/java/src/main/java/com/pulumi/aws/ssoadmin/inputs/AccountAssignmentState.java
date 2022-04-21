@@ -5,9 +5,9 @@ package com.pulumi.aws.ssoadmin.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AccountAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceArn")
-      private final @Nullable Output<String> instanceArn;
+    private @Nullable Output<String> instanceArn;
 
-    public Output<String> instanceArn() {
-        return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
+    public Optional<Output<String>> instanceArn() {
+        return Optional.ofNullable(this.instanceArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AccountAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="permissionSetArn")
-      private final @Nullable Output<String> permissionSetArn;
+    private @Nullable Output<String> permissionSetArn;
 
-    public Output<String> permissionSetArn() {
-        return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
+    public Optional<Output<String>> permissionSetArn() {
+        return Optional.ofNullable(this.permissionSetArn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AccountAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AccountAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="principalType")
-      private final @Nullable Output<String> principalType;
+    private @Nullable Output<String> principalType;
 
-    public Output<String> principalType() {
-        return this.principalType == null ? Codegen.empty() : this.principalType;
+    public Optional<Output<String>> principalType() {
+        return Optional.ofNullable(this.principalType);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AccountAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetId")
-      private final @Nullable Output<String> targetId;
+    private @Nullable Output<String> targetId;
 
-    public Output<String> targetId() {
-        return this.targetId == null ? Codegen.empty() : this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class AccountAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetType")
-      private final @Nullable Output<String> targetType;
+    private @Nullable Output<String> targetType;
 
-    public Output<String> targetType() {
-        return this.targetType == null ? Codegen.empty() : this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
-    public AccountAssignmentState(
-        @Nullable Output<String> instanceArn,
-        @Nullable Output<String> permissionSetArn,
-        @Nullable Output<String> principalId,
-        @Nullable Output<String> principalType,
-        @Nullable Output<String> targetId,
-        @Nullable Output<String> targetType) {
-        this.instanceArn = instanceArn;
-        this.permissionSetArn = permissionSetArn;
-        this.principalId = principalId;
-        this.principalType = principalType;
-        this.targetId = targetId;
-        this.targetType = targetType;
-    }
+    private AccountAssignmentState() {}
 
-    private AccountAssignmentState() {
-        this.instanceArn = Codegen.empty();
-        this.permissionSetArn = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalType = Codegen.empty();
-        this.targetId = Codegen.empty();
-        this.targetType = Codegen.empty();
+    private AccountAssignmentState(AccountAssignmentState $) {
+        this.instanceArn = $.instanceArn;
+        this.permissionSetArn = $.permissionSetArn;
+        this.principalId = $.principalId;
+        this.principalType = $.principalType;
+        this.targetId = $.targetId;
+        this.targetType = $.targetType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAssignmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceArn;
-        private @Nullable Output<String> permissionSetArn;
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<String> principalType;
-        private @Nullable Output<String> targetId;
-        private @Nullable Output<String> targetType;
+        private AccountAssignmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAssignmentState();
         }
 
         public Builder(AccountAssignmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.permissionSetArn = defaults.permissionSetArn;
-    	      this.principalId = defaults.principalId;
-    	      this.principalType = defaults.principalType;
-    	      this.targetId = defaults.targetId;
-    	      this.targetType = defaults.targetType;
+            $ = new AccountAssignmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceArn(@Nullable Output<String> instanceArn) {
-            this.instanceArn = instanceArn;
+            $.instanceArn = instanceArn;
             return this;
         }
-        public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Codegen.ofNullable(instanceArn);
-            return this;
+
+        public Builder instanceArn(String instanceArn) {
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
-            this.permissionSetArn = permissionSetArn;
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
-        public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Codegen.ofNullable(permissionSetArn);
-            return this;
+
+        public Builder permissionSetArn(String permissionSetArn) {
+            return permissionSetArn(Output.of(permissionSetArn));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalType(@Nullable Output<String> principalType) {
-            this.principalType = principalType;
+            $.principalType = principalType;
             return this;
         }
-        public Builder principalType(@Nullable String principalType) {
-            this.principalType = Codegen.ofNullable(principalType);
-            return this;
+
+        public Builder principalType(String principalType) {
+            return principalType(Output.of(principalType));
         }
+
         public Builder targetId(@Nullable Output<String> targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
         }
-        public Builder targetId(@Nullable String targetId) {
-            this.targetId = Codegen.ofNullable(targetId);
-            return this;
+
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
         }
+
         public Builder targetType(@Nullable Output<String> targetType) {
-            this.targetType = targetType;
+            $.targetType = targetType;
             return this;
         }
-        public Builder targetType(@Nullable String targetType) {
-            this.targetType = Codegen.ofNullable(targetType);
-            return this;
-        }        public AccountAssignmentState build() {
-            return new AccountAssignmentState(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
+
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
+        }
+
+        public AccountAssignmentState build() {
+            return $;
         }
     }
+
 }

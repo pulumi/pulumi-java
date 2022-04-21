@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.DistributionTrustedKeyGroupItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DistributionTrustedKeyGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class DistributionTrustedKeyGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<DistributionTrustedKeyGroupItemArgs>> items;
+    private @Nullable Output<List<DistributionTrustedKeyGroupItemArgs>> items;
 
-    public Output<List<DistributionTrustedKeyGroupItemArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<DistributionTrustedKeyGroupItemArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public DistributionTrustedKeyGroupArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<DistributionTrustedKeyGroupItemArgs>> items) {
-        this.enabled = enabled;
-        this.items = items;
-    }
+    private DistributionTrustedKeyGroupArgs() {}
 
-    private DistributionTrustedKeyGroupArgs() {
-        this.enabled = Codegen.empty();
-        this.items = Codegen.empty();
+    private DistributionTrustedKeyGroupArgs(DistributionTrustedKeyGroupArgs $) {
+        this.enabled = $.enabled;
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionTrustedKeyGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<DistributionTrustedKeyGroupItemArgs>> items;
+        private DistributionTrustedKeyGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionTrustedKeyGroupArgs();
         }
 
         public Builder(DistributionTrustedKeyGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.items = defaults.items;
+            $ = new DistributionTrustedKeyGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder items(@Nullable Output<List<DistributionTrustedKeyGroupItemArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<DistributionTrustedKeyGroupItemArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<DistributionTrustedKeyGroupItemArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(DistributionTrustedKeyGroupItemArgs... items) {
             return items(List.of(items));
-        }        public DistributionTrustedKeyGroupArgs build() {
-            return new DistributionTrustedKeyGroupArgs(enabled, items);
+        }
+
+        public DistributionTrustedKeyGroupArgs build() {
+            return $;
         }
     }
+
 }

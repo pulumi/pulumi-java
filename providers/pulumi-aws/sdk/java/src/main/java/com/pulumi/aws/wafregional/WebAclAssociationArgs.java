@@ -5,7 +5,6 @@ package com.pulumi.aws.wafregional;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class WebAclAssociationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
@@ -30,63 +29,60 @@ public final class WebAclAssociationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="webAclId", required=true)
-      private final Output<String> webAclId;
+    private Output<String> webAclId;
 
     public Output<String> webAclId() {
         return this.webAclId;
     }
 
-    public WebAclAssociationArgs(
-        Output<String> resourceArn,
-        Output<String> webAclId) {
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-        this.webAclId = Objects.requireNonNull(webAclId, "expected parameter 'webAclId' to be non-null");
-    }
+    private WebAclAssociationArgs() {}
 
-    private WebAclAssociationArgs() {
-        this.resourceArn = Codegen.empty();
-        this.webAclId = Codegen.empty();
+    private WebAclAssociationArgs(WebAclAssociationArgs $) {
+        this.resourceArn = $.resourceArn;
+        this.webAclId = $.webAclId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceArn;
-        private Output<String> webAclId;
+        private WebAclAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclAssociationArgs();
         }
 
         public Builder(WebAclAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.webAclId = defaults.webAclId;
+            $ = new WebAclAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder webAclId(Output<String> webAclId) {
-            this.webAclId = Objects.requireNonNull(webAclId);
+            $.webAclId = webAclId;
             return this;
         }
+
         public Builder webAclId(String webAclId) {
-            this.webAclId = Output.of(Objects.requireNonNull(webAclId));
-            return this;
-        }        public WebAclAssociationArgs build() {
-            return new WebAclAssociationArgs(resourceArn, webAclId);
+            return webAclId(Output.of(webAclId));
+        }
+
+        public WebAclAssociationArgs build() {
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            $.webAclId = Objects.requireNonNull($.webAclId, "expected parameter 'webAclId' to be non-null");
+            return $;
         }
     }
+
 }

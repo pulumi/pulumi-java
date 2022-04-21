@@ -6,9 +6,9 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatArgs extends com.
      * 
      */
     @Import(name="mappingParameters")
-      private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters;
+    private @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters() {
-        return this.mappingParameters == null ? Codegen.empty() : this.mappingParameters;
+    public Optional<Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs>> mappingParameters() {
+        return Optional.ofNullable(this.mappingParameters);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatArgs extends com.
      * 
      */
     @Import(name="recordFormatType")
-      private final @Nullable Output<String> recordFormatType;
+    private @Nullable Output<String> recordFormatType;
 
-    public Output<String> recordFormatType() {
-        return this.recordFormatType == null ? Codegen.empty() : this.recordFormatType;
+    public Optional<Output<String>> recordFormatType() {
+        return Optional.ofNullable(this.recordFormatType);
     }
 
-    public AnalyticsApplicationInputsSchemaRecordFormatArgs(
-        @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters,
-        @Nullable Output<String> recordFormatType) {
-        this.mappingParameters = mappingParameters;
-        this.recordFormatType = recordFormatType;
-    }
+    private AnalyticsApplicationInputsSchemaRecordFormatArgs() {}
 
-    private AnalyticsApplicationInputsSchemaRecordFormatArgs() {
-        this.mappingParameters = Codegen.empty();
-        this.recordFormatType = Codegen.empty();
+    private AnalyticsApplicationInputsSchemaRecordFormatArgs(AnalyticsApplicationInputsSchemaRecordFormatArgs $) {
+        this.mappingParameters = $.mappingParameters;
+        this.recordFormatType = $.recordFormatType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsSchemaRecordFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters;
-        private @Nullable Output<String> recordFormatType;
+        private AnalyticsApplicationInputsSchemaRecordFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsSchemaRecordFormatArgs();
         }
 
         public Builder(AnalyticsApplicationInputsSchemaRecordFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mappingParameters = defaults.mappingParameters;
-    	      this.recordFormatType = defaults.recordFormatType;
+            $ = new AnalyticsApplicationInputsSchemaRecordFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mappingParameters(@Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters) {
-            this.mappingParameters = mappingParameters;
+            $.mappingParameters = mappingParameters;
             return this;
         }
-        public Builder mappingParameters(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs mappingParameters) {
-            this.mappingParameters = Codegen.ofNullable(mappingParameters);
-            return this;
+
+        public Builder mappingParameters(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs mappingParameters) {
+            return mappingParameters(Output.of(mappingParameters));
         }
+
         public Builder recordFormatType(@Nullable Output<String> recordFormatType) {
-            this.recordFormatType = recordFormatType;
+            $.recordFormatType = recordFormatType;
             return this;
         }
-        public Builder recordFormatType(@Nullable String recordFormatType) {
-            this.recordFormatType = Codegen.ofNullable(recordFormatType);
-            return this;
-        }        public AnalyticsApplicationInputsSchemaRecordFormatArgs build() {
-            return new AnalyticsApplicationInputsSchemaRecordFormatArgs(mappingParameters, recordFormatType);
+
+        public Builder recordFormatType(String recordFormatType) {
+            return recordFormatType(Output.of(recordFormatType));
+        }
+
+        public AnalyticsApplicationInputsSchemaRecordFormatArgs build() {
+            return $;
         }
     }
+
 }

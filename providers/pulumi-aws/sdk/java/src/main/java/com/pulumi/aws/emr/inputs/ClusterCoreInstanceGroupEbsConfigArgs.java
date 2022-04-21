@@ -5,10 +5,10 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="size", required=true)
-      private final Output<Integer> size;
+    private Output<Integer> size;
 
     public Output<Integer> size() {
         return this.size;
@@ -43,7 +43,7 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -54,89 +54,80 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="volumesPerInstance")
-      private final @Nullable Output<Integer> volumesPerInstance;
+    private @Nullable Output<Integer> volumesPerInstance;
 
-    public Output<Integer> volumesPerInstance() {
-        return this.volumesPerInstance == null ? Codegen.empty() : this.volumesPerInstance;
+    public Optional<Output<Integer>> volumesPerInstance() {
+        return Optional.ofNullable(this.volumesPerInstance);
     }
 
-    public ClusterCoreInstanceGroupEbsConfigArgs(
-        @Nullable Output<Integer> iops,
-        Output<Integer> size,
-        Output<String> type,
-        @Nullable Output<Integer> volumesPerInstance) {
-        this.iops = iops;
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.volumesPerInstance = volumesPerInstance;
-    }
+    private ClusterCoreInstanceGroupEbsConfigArgs() {}
 
-    private ClusterCoreInstanceGroupEbsConfigArgs() {
-        this.iops = Codegen.empty();
-        this.size = Codegen.empty();
-        this.type = Codegen.empty();
-        this.volumesPerInstance = Codegen.empty();
+    private ClusterCoreInstanceGroupEbsConfigArgs(ClusterCoreInstanceGroupEbsConfigArgs $) {
+        this.iops = $.iops;
+        this.size = $.size;
+        this.type = $.type;
+        this.volumesPerInstance = $.volumesPerInstance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCoreInstanceGroupEbsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> iops;
-        private Output<Integer> size;
-        private Output<String> type;
-        private @Nullable Output<Integer> volumesPerInstance;
+        private ClusterCoreInstanceGroupEbsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCoreInstanceGroupEbsConfigArgs();
         }
 
         public Builder(ClusterCoreInstanceGroupEbsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iops = defaults.iops;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
-    	      this.volumesPerInstance = defaults.volumesPerInstance;
+            $ = new ClusterCoreInstanceGroupEbsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder size(Output<Integer> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(Integer size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
+            return size(Output.of(size));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder volumesPerInstance(@Nullable Output<Integer> volumesPerInstance) {
-            this.volumesPerInstance = volumesPerInstance;
+            $.volumesPerInstance = volumesPerInstance;
             return this;
         }
-        public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
-            this.volumesPerInstance = Codegen.ofNullable(volumesPerInstance);
-            return this;
-        }        public ClusterCoreInstanceGroupEbsConfigArgs build() {
-            return new ClusterCoreInstanceGroupEbsConfigArgs(iops, size, type, volumesPerInstance);
+
+        public Builder volumesPerInstance(Integer volumesPerInstance) {
+            return volumesPerInstance(Output.of(volumesPerInstance));
+        }
+
+        public ClusterCoreInstanceGroupEbsConfigArgs build() {
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

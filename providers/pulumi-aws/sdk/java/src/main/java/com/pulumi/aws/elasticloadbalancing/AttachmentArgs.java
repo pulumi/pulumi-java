@@ -5,7 +5,6 @@ package com.pulumi.aws.elasticloadbalancing;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elb", required=true)
-      private final Output<String> elb;
+    private Output<String> elb;
 
     public Output<String> elb() {
         return this.elb;
@@ -30,63 +29,60 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
     }
 
-    public AttachmentArgs(
-        Output<String> elb,
-        Output<String> instance) {
-        this.elb = Objects.requireNonNull(elb, "expected parameter 'elb' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-    }
+    private AttachmentArgs() {}
 
-    private AttachmentArgs() {
-        this.elb = Codegen.empty();
-        this.instance = Codegen.empty();
+    private AttachmentArgs(AttachmentArgs $) {
+        this.elb = $.elb;
+        this.instance = $.instance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> elb;
-        private Output<String> instance;
+        private AttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachmentArgs();
         }
 
         public Builder(AttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elb = defaults.elb;
-    	      this.instance = defaults.instance;
+            $ = new AttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elb(Output<String> elb) {
-            this.elb = Objects.requireNonNull(elb);
+            $.elb = elb;
             return this;
         }
+
         public Builder elb(String elb) {
-            this.elb = Output.of(Objects.requireNonNull(elb));
-            return this;
+            return elb(Output.of(elb));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
-        }        public AttachmentArgs build() {
-            return new AttachmentArgs(elb, instance);
+            return instance(Output.of(instance));
+        }
+
+        public AttachmentArgs build() {
+            $.elb = Objects.requireNonNull($.elb, "expected parameter 'elb' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

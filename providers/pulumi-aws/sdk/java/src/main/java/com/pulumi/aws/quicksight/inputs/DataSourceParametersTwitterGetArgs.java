@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class DataSourceParametersTwitterGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="maxRows", required=true)
-      private final Output<Integer> maxRows;
+    private Output<Integer> maxRows;
 
     public Output<Integer> maxRows() {
         return this.maxRows;
@@ -31,63 +30,60 @@ public final class DataSourceParametersTwitterGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
     }
 
-    public DataSourceParametersTwitterGetArgs(
-        Output<Integer> maxRows,
-        Output<String> query) {
-        this.maxRows = Objects.requireNonNull(maxRows, "expected parameter 'maxRows' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-    }
+    private DataSourceParametersTwitterGetArgs() {}
 
-    private DataSourceParametersTwitterGetArgs() {
-        this.maxRows = Codegen.empty();
-        this.query = Codegen.empty();
+    private DataSourceParametersTwitterGetArgs(DataSourceParametersTwitterGetArgs $) {
+        this.maxRows = $.maxRows;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersTwitterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxRows;
-        private Output<String> query;
+        private DataSourceParametersTwitterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersTwitterGetArgs();
         }
 
         public Builder(DataSourceParametersTwitterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRows = defaults.maxRows;
-    	      this.query = defaults.query;
+            $ = new DataSourceParametersTwitterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRows(Output<Integer> maxRows) {
-            this.maxRows = Objects.requireNonNull(maxRows);
+            $.maxRows = maxRows;
             return this;
         }
+
         public Builder maxRows(Integer maxRows) {
-            this.maxRows = Output.of(Objects.requireNonNull(maxRows));
-            return this;
+            return maxRows(Output.of(maxRows));
         }
+
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
-        }        public DataSourceParametersTwitterGetArgs build() {
-            return new DataSourceParametersTwitterGetArgs(maxRows, query);
+            return query(Output.of(query));
+        }
+
+        public DataSourceParametersTwitterGetArgs build() {
+            $.maxRows = Objects.requireNonNull($.maxRows, "expected parameter 'maxRows' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

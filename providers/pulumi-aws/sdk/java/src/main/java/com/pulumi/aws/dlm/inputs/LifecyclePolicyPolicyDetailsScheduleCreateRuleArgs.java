@@ -5,10 +5,10 @@ package com.pulumi.aws.dlm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
      * 
      */
     @Import(name="interval", required=true)
-      private final Output<Integer> interval;
+    private Output<Integer> interval;
 
     public Output<Integer> interval() {
         return this.interval;
@@ -32,10 +32,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
      * 
      */
     @Import(name="intervalUnit")
-      private final @Nullable Output<String> intervalUnit;
+    private @Nullable Output<String> intervalUnit;
 
-    public Output<String> intervalUnit() {
-        return this.intervalUnit == null ? Codegen.empty() : this.intervalUnit;
+    public Optional<Output<String>> intervalUnit() {
+        return Optional.ofNullable(this.intervalUnit);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
      * 
      */
     @Import(name="times")
-      private final @Nullable Output<String> times;
+    private @Nullable Output<String> times;
 
-    public Output<String> times() {
-        return this.times == null ? Codegen.empty() : this.times;
+    public Optional<Output<String>> times() {
+        return Optional.ofNullable(this.times);
     }
 
-    public LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(
-        Output<Integer> interval,
-        @Nullable Output<String> intervalUnit,
-        @Nullable Output<String> times) {
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.intervalUnit = intervalUnit;
-        this.times = times;
-    }
+    private LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs() {}
 
-    private LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs() {
-        this.interval = Codegen.empty();
-        this.intervalUnit = Codegen.empty();
-        this.times = Codegen.empty();
+    private LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs $) {
+        this.interval = $.interval;
+        this.intervalUnit = $.intervalUnit;
+        this.times = $.times;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> interval;
-        private @Nullable Output<String> intervalUnit;
-        private @Nullable Output<String> times;
+        private LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs();
         }
 
         public Builder(LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.intervalUnit = defaults.intervalUnit;
-    	      this.times = defaults.times;
+            $ = new LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(Output<Integer> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
+            return interval(Output.of(interval));
         }
+
         public Builder intervalUnit(@Nullable Output<String> intervalUnit) {
-            this.intervalUnit = intervalUnit;
+            $.intervalUnit = intervalUnit;
             return this;
         }
-        public Builder intervalUnit(@Nullable String intervalUnit) {
-            this.intervalUnit = Codegen.ofNullable(intervalUnit);
-            return this;
+
+        public Builder intervalUnit(String intervalUnit) {
+            return intervalUnit(Output.of(intervalUnit));
         }
+
         public Builder times(@Nullable Output<String> times) {
-            this.times = times;
+            $.times = times;
             return this;
         }
-        public Builder times(@Nullable String times) {
-            this.times = Codegen.ofNullable(times);
-            return this;
-        }        public LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs build() {
-            return new LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(interval, intervalUnit, times);
+
+        public Builder times(String times) {
+            return times(Output.of(times));
+        }
+
+        public LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            return $;
         }
     }
+
 }

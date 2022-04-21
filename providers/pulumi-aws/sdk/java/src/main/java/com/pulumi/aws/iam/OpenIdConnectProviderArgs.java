@@ -5,11 +5,11 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clientIdLists", required=true)
-      private final Output<List<String>> clientIdLists;
+    private Output<List<String>> clientIdLists;
 
     public Output<List<String>> clientIdLists() {
         return this.clientIdLists;
@@ -33,10 +33,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="thumbprintLists", required=true)
-      private final Output<List<String>> thumbprintLists;
+    private Output<List<String>> thumbprintLists;
 
     public Output<List<String>> thumbprintLists() {
         return this.thumbprintLists;
@@ -55,95 +55,89 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public OpenIdConnectProviderArgs(
-        Output<List<String>> clientIdLists,
-        @Nullable Output<Map<String,String>> tags,
-        Output<List<String>> thumbprintLists,
-        Output<String> url) {
-        this.clientIdLists = Objects.requireNonNull(clientIdLists, "expected parameter 'clientIdLists' to be non-null");
-        this.tags = tags;
-        this.thumbprintLists = Objects.requireNonNull(thumbprintLists, "expected parameter 'thumbprintLists' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private OpenIdConnectProviderArgs() {}
 
-    private OpenIdConnectProviderArgs() {
-        this.clientIdLists = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.thumbprintLists = Codegen.empty();
-        this.url = Codegen.empty();
+    private OpenIdConnectProviderArgs(OpenIdConnectProviderArgs $) {
+        this.clientIdLists = $.clientIdLists;
+        this.tags = $.tags;
+        this.thumbprintLists = $.thumbprintLists;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenIdConnectProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> clientIdLists;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<List<String>> thumbprintLists;
-        private Output<String> url;
+        private OpenIdConnectProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenIdConnectProviderArgs();
         }
 
         public Builder(OpenIdConnectProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientIdLists = defaults.clientIdLists;
-    	      this.tags = defaults.tags;
-    	      this.thumbprintLists = defaults.thumbprintLists;
-    	      this.url = defaults.url;
+            $ = new OpenIdConnectProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientIdLists(Output<List<String>> clientIdLists) {
-            this.clientIdLists = Objects.requireNonNull(clientIdLists);
+            $.clientIdLists = clientIdLists;
             return this;
         }
+
         public Builder clientIdLists(List<String> clientIdLists) {
-            this.clientIdLists = Output.of(Objects.requireNonNull(clientIdLists));
-            return this;
+            return clientIdLists(Output.of(clientIdLists));
         }
+
         public Builder clientIdLists(String... clientIdLists) {
             return clientIdLists(List.of(clientIdLists));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder thumbprintLists(Output<List<String>> thumbprintLists) {
-            this.thumbprintLists = Objects.requireNonNull(thumbprintLists);
+            $.thumbprintLists = thumbprintLists;
             return this;
         }
+
         public Builder thumbprintLists(List<String> thumbprintLists) {
-            this.thumbprintLists = Output.of(Objects.requireNonNull(thumbprintLists));
-            return this;
+            return thumbprintLists(Output.of(thumbprintLists));
         }
+
         public Builder thumbprintLists(String... thumbprintLists) {
             return thumbprintLists(List.of(thumbprintLists));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public OpenIdConnectProviderArgs build() {
-            return new OpenIdConnectProviderArgs(clientIdLists, tags, thumbprintLists, url);
+            return url(Output.of(url));
+        }
+
+        public OpenIdConnectProviderArgs build() {
+            $.clientIdLists = Objects.requireNonNull($.clientIdLists, "expected parameter 'clientIdLists' to be non-null");
+            $.thumbprintLists = Objects.requireNonNull($.thumbprintLists, "expected parameter 'thumbprintLists' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extend
      * 
      */
     @Import(name="contentTypeProfiles", required=true)
-      private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles;
+    private Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles;
 
     public Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles() {
         return this.contentTypeProfiles;
@@ -31,63 +30,60 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extend
      * 
      */
     @Import(name="forwardWhenContentTypeIsUnknown", required=true)
-      private final Output<Boolean> forwardWhenContentTypeIsUnknown;
+    private Output<Boolean> forwardWhenContentTypeIsUnknown;
 
     public Output<Boolean> forwardWhenContentTypeIsUnknown() {
         return this.forwardWhenContentTypeIsUnknown;
     }
 
-    public FieldLevelEncryptionConfigContentTypeProfileConfigArgs(
-        Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles,
-        Output<Boolean> forwardWhenContentTypeIsUnknown) {
-        this.contentTypeProfiles = Objects.requireNonNull(contentTypeProfiles, "expected parameter 'contentTypeProfiles' to be non-null");
-        this.forwardWhenContentTypeIsUnknown = Objects.requireNonNull(forwardWhenContentTypeIsUnknown, "expected parameter 'forwardWhenContentTypeIsUnknown' to be non-null");
-    }
+    private FieldLevelEncryptionConfigContentTypeProfileConfigArgs() {}
 
-    private FieldLevelEncryptionConfigContentTypeProfileConfigArgs() {
-        this.contentTypeProfiles = Codegen.empty();
-        this.forwardWhenContentTypeIsUnknown = Codegen.empty();
+    private FieldLevelEncryptionConfigContentTypeProfileConfigArgs(FieldLevelEncryptionConfigContentTypeProfileConfigArgs $) {
+        this.contentTypeProfiles = $.contentTypeProfiles;
+        this.forwardWhenContentTypeIsUnknown = $.forwardWhenContentTypeIsUnknown;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigContentTypeProfileConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles;
-        private Output<Boolean> forwardWhenContentTypeIsUnknown;
+        private FieldLevelEncryptionConfigContentTypeProfileConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigContentTypeProfileConfigArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigContentTypeProfileConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentTypeProfiles = defaults.contentTypeProfiles;
-    	      this.forwardWhenContentTypeIsUnknown = defaults.forwardWhenContentTypeIsUnknown;
+            $ = new FieldLevelEncryptionConfigContentTypeProfileConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentTypeProfiles(Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles) {
-            this.contentTypeProfiles = Objects.requireNonNull(contentTypeProfiles);
+            $.contentTypeProfiles = contentTypeProfiles;
             return this;
         }
+
         public Builder contentTypeProfiles(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs contentTypeProfiles) {
-            this.contentTypeProfiles = Output.of(Objects.requireNonNull(contentTypeProfiles));
-            return this;
+            return contentTypeProfiles(Output.of(contentTypeProfiles));
         }
+
         public Builder forwardWhenContentTypeIsUnknown(Output<Boolean> forwardWhenContentTypeIsUnknown) {
-            this.forwardWhenContentTypeIsUnknown = Objects.requireNonNull(forwardWhenContentTypeIsUnknown);
+            $.forwardWhenContentTypeIsUnknown = forwardWhenContentTypeIsUnknown;
             return this;
         }
+
         public Builder forwardWhenContentTypeIsUnknown(Boolean forwardWhenContentTypeIsUnknown) {
-            this.forwardWhenContentTypeIsUnknown = Output.of(Objects.requireNonNull(forwardWhenContentTypeIsUnknown));
-            return this;
-        }        public FieldLevelEncryptionConfigContentTypeProfileConfigArgs build() {
-            return new FieldLevelEncryptionConfigContentTypeProfileConfigArgs(contentTypeProfiles, forwardWhenContentTypeIsUnknown);
+            return forwardWhenContentTypeIsUnknown(Output.of(forwardWhenContentTypeIsUnknown));
+        }
+
+        public FieldLevelEncryptionConfigContentTypeProfileConfigArgs build() {
+            $.contentTypeProfiles = Objects.requireNonNull($.contentTypeProfiles, "expected parameter 'contentTypeProfiles' to be non-null");
+            $.forwardWhenContentTypeIsUnknown = Objects.requireNonNull($.forwardWhenContentTypeIsUnknown, "expected parameter 'forwardWhenContentTypeIsUnknown' to be non-null");
+            return $;
         }
     }
+
 }

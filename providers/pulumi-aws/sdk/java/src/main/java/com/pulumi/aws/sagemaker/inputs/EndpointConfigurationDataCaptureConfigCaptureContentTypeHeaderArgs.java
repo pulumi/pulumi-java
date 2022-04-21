@@ -5,10 +5,10 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * 
      */
     @Import(name="csvContentTypes")
-      private final @Nullable Output<List<String>> csvContentTypes;
+    private @Nullable Output<List<String>> csvContentTypes;
 
-    public Output<List<String>> csvContentTypes() {
-        return this.csvContentTypes == null ? Codegen.empty() : this.csvContentTypes;
+    public Optional<Output<List<String>>> csvContentTypes() {
+        return Optional.ofNullable(this.csvContentTypes);
     }
 
     /**
@@ -32,69 +32,66 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * 
      */
     @Import(name="jsonContentTypes")
-      private final @Nullable Output<List<String>> jsonContentTypes;
+    private @Nullable Output<List<String>> jsonContentTypes;
 
-    public Output<List<String>> jsonContentTypes() {
-        return this.jsonContentTypes == null ? Codegen.empty() : this.jsonContentTypes;
+    public Optional<Output<List<String>>> jsonContentTypes() {
+        return Optional.ofNullable(this.jsonContentTypes);
     }
 
-    public EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs(
-        @Nullable Output<List<String>> csvContentTypes,
-        @Nullable Output<List<String>> jsonContentTypes) {
-        this.csvContentTypes = csvContentTypes;
-        this.jsonContentTypes = jsonContentTypes;
-    }
+    private EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs() {}
 
-    private EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs() {
-        this.csvContentTypes = Codegen.empty();
-        this.jsonContentTypes = Codegen.empty();
+    private EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs(EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs $) {
+        this.csvContentTypes = $.csvContentTypes;
+        this.jsonContentTypes = $.jsonContentTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> csvContentTypes;
-        private @Nullable Output<List<String>> jsonContentTypes;
+        private EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs();
         }
 
         public Builder(EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csvContentTypes = defaults.csvContentTypes;
-    	      this.jsonContentTypes = defaults.jsonContentTypes;
+            $ = new EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csvContentTypes(@Nullable Output<List<String>> csvContentTypes) {
-            this.csvContentTypes = csvContentTypes;
+            $.csvContentTypes = csvContentTypes;
             return this;
         }
-        public Builder csvContentTypes(@Nullable List<String> csvContentTypes) {
-            this.csvContentTypes = Codegen.ofNullable(csvContentTypes);
-            return this;
+
+        public Builder csvContentTypes(List<String> csvContentTypes) {
+            return csvContentTypes(Output.of(csvContentTypes));
         }
+
         public Builder csvContentTypes(String... csvContentTypes) {
             return csvContentTypes(List.of(csvContentTypes));
         }
+
         public Builder jsonContentTypes(@Nullable Output<List<String>> jsonContentTypes) {
-            this.jsonContentTypes = jsonContentTypes;
+            $.jsonContentTypes = jsonContentTypes;
             return this;
         }
-        public Builder jsonContentTypes(@Nullable List<String> jsonContentTypes) {
-            this.jsonContentTypes = Codegen.ofNullable(jsonContentTypes);
-            return this;
+
+        public Builder jsonContentTypes(List<String> jsonContentTypes) {
+            return jsonContentTypes(Output.of(jsonContentTypes));
         }
+
         public Builder jsonContentTypes(String... jsonContentTypes) {
             return jsonContentTypes(List.of(jsonContentTypes));
-        }        public EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs build() {
-            return new EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs(csvContentTypes, jsonContentTypes);
+        }
+
+        public EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs build() {
+            return $;
         }
     }
+
 }

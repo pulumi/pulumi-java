@@ -7,12 +7,12 @@ import com.pulumi.aws.ssm.inputs.AssociationOutputLocationGetArgs;
 import com.pulumi.aws.ssm.inputs.AssociationTargetGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applyOnlyAtCronInterval")
-      private final @Nullable Output<Boolean> applyOnlyAtCronInterval;
+    private @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
-    public Output<Boolean> applyOnlyAtCronInterval() {
-        return this.applyOnlyAtCronInterval == null ? Codegen.empty() : this.applyOnlyAtCronInterval;
+    public Optional<Output<Boolean>> applyOnlyAtCronInterval() {
+        return Optional.ofNullable(this.applyOnlyAtCronInterval);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associationId")
-      private final @Nullable Output<String> associationId;
+    private @Nullable Output<String> associationId;
 
-    public Output<String> associationId() {
-        return this.associationId == null ? Codegen.empty() : this.associationId;
+    public Optional<Output<String>> associationId() {
+        return Optional.ofNullable(this.associationId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associationName")
-      private final @Nullable Output<String> associationName;
+    private @Nullable Output<String> associationName;
 
-    public Output<String> associationName() {
-        return this.associationName == null ? Codegen.empty() : this.associationName;
+    public Optional<Output<String>> associationName() {
+        return Optional.ofNullable(this.associationName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationTargetParameterName")
-      private final @Nullable Output<String> automationTargetParameterName;
+    private @Nullable Output<String> automationTargetParameterName;
 
-    public Output<String> automationTargetParameterName() {
-        return this.automationTargetParameterName == null ? Codegen.empty() : this.automationTargetParameterName;
+    public Optional<Output<String>> automationTargetParameterName() {
+        return Optional.ofNullable(this.automationTargetParameterName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="complianceSeverity")
-      private final @Nullable Output<String> complianceSeverity;
+    private @Nullable Output<String> complianceSeverity;
 
-    public Output<String> complianceSeverity() {
-        return this.complianceSeverity == null ? Codegen.empty() : this.complianceSeverity;
+    public Optional<Output<String>> complianceSeverity() {
+        return Optional.ofNullable(this.complianceSeverity);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentVersion")
-      private final @Nullable Output<String> documentVersion;
+    private @Nullable Output<String> documentVersion;
 
-    public Output<String> documentVersion() {
-        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
+    public Optional<Output<String>> documentVersion() {
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrency")
-      private final @Nullable Output<String> maxConcurrency;
+    private @Nullable Output<String> maxConcurrency;
 
-    public Output<String> maxConcurrency() {
-        return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
+    public Optional<Output<String>> maxConcurrency() {
+        return Optional.ofNullable(this.maxConcurrency);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxErrors")
-      private final @Nullable Output<String> maxErrors;
+    private @Nullable Output<String> maxErrors;
 
-    public Output<String> maxErrors() {
-        return this.maxErrors == null ? Codegen.empty() : this.maxErrors;
+    public Optional<Output<String>> maxErrors() {
+        return Optional.ofNullable(this.maxErrors);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputLocation")
-      private final @Nullable Output<AssociationOutputLocationGetArgs> outputLocation;
+    private @Nullable Output<AssociationOutputLocationGetArgs> outputLocation;
 
-    public Output<AssociationOutputLocationGetArgs> outputLocation() {
-        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
+    public Optional<Output<AssociationOutputLocationGetArgs>> outputLocation() {
+        return Optional.ofNullable(this.outputLocation);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleExpression")
-      private final @Nullable Output<String> scheduleExpression;
+    private @Nullable Output<String> scheduleExpression;
 
-    public Output<String> scheduleExpression() {
-        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
+    public Optional<Output<String>> scheduleExpression() {
+        return Optional.ofNullable(this.scheduleExpression);
     }
 
     /**
@@ -168,222 +168,182 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targets")
-      private final @Nullable Output<List<AssociationTargetGetArgs>> targets;
+    private @Nullable Output<List<AssociationTargetGetArgs>> targets;
 
-    public Output<List<AssociationTargetGetArgs>> targets() {
-        return this.targets == null ? Codegen.empty() : this.targets;
+    public Optional<Output<List<AssociationTargetGetArgs>>> targets() {
+        return Optional.ofNullable(this.targets);
     }
 
-    public AssociationState(
-        @Nullable Output<Boolean> applyOnlyAtCronInterval,
-        @Nullable Output<String> associationId,
-        @Nullable Output<String> associationName,
-        @Nullable Output<String> automationTargetParameterName,
-        @Nullable Output<String> complianceSeverity,
-        @Nullable Output<String> documentVersion,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> maxConcurrency,
-        @Nullable Output<String> maxErrors,
-        @Nullable Output<String> name,
-        @Nullable Output<AssociationOutputLocationGetArgs> outputLocation,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> scheduleExpression,
-        @Nullable Output<List<AssociationTargetGetArgs>> targets) {
-        this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
-        this.associationId = associationId;
-        this.associationName = associationName;
-        this.automationTargetParameterName = automationTargetParameterName;
-        this.complianceSeverity = complianceSeverity;
-        this.documentVersion = documentVersion;
-        this.instanceId = instanceId;
-        this.maxConcurrency = maxConcurrency;
-        this.maxErrors = maxErrors;
-        this.name = name;
-        this.outputLocation = outputLocation;
-        this.parameters = parameters;
-        this.scheduleExpression = scheduleExpression;
-        this.targets = targets;
-    }
+    private AssociationState() {}
 
-    private AssociationState() {
-        this.applyOnlyAtCronInterval = Codegen.empty();
-        this.associationId = Codegen.empty();
-        this.associationName = Codegen.empty();
-        this.automationTargetParameterName = Codegen.empty();
-        this.complianceSeverity = Codegen.empty();
-        this.documentVersion = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.maxConcurrency = Codegen.empty();
-        this.maxErrors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputLocation = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.scheduleExpression = Codegen.empty();
-        this.targets = Codegen.empty();
+    private AssociationState(AssociationState $) {
+        this.applyOnlyAtCronInterval = $.applyOnlyAtCronInterval;
+        this.associationId = $.associationId;
+        this.associationName = $.associationName;
+        this.automationTargetParameterName = $.automationTargetParameterName;
+        this.complianceSeverity = $.complianceSeverity;
+        this.documentVersion = $.documentVersion;
+        this.instanceId = $.instanceId;
+        this.maxConcurrency = $.maxConcurrency;
+        this.maxErrors = $.maxErrors;
+        this.name = $.name;
+        this.outputLocation = $.outputLocation;
+        this.parameters = $.parameters;
+        this.scheduleExpression = $.scheduleExpression;
+        this.targets = $.targets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> applyOnlyAtCronInterval;
-        private @Nullable Output<String> associationId;
-        private @Nullable Output<String> associationName;
-        private @Nullable Output<String> automationTargetParameterName;
-        private @Nullable Output<String> complianceSeverity;
-        private @Nullable Output<String> documentVersion;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> maxConcurrency;
-        private @Nullable Output<String> maxErrors;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AssociationOutputLocationGetArgs> outputLocation;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> scheduleExpression;
-        private @Nullable Output<List<AssociationTargetGetArgs>> targets;
+        private AssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociationState();
         }
 
         public Builder(AssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyOnlyAtCronInterval = defaults.applyOnlyAtCronInterval;
-    	      this.associationId = defaults.associationId;
-    	      this.associationName = defaults.associationName;
-    	      this.automationTargetParameterName = defaults.automationTargetParameterName;
-    	      this.complianceSeverity = defaults.complianceSeverity;
-    	      this.documentVersion = defaults.documentVersion;
-    	      this.instanceId = defaults.instanceId;
-    	      this.maxConcurrency = defaults.maxConcurrency;
-    	      this.maxErrors = defaults.maxErrors;
-    	      this.name = defaults.name;
-    	      this.outputLocation = defaults.outputLocation;
-    	      this.parameters = defaults.parameters;
-    	      this.scheduleExpression = defaults.scheduleExpression;
-    	      this.targets = defaults.targets;
+            $ = new AssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder applyOnlyAtCronInterval(@Nullable Output<Boolean> applyOnlyAtCronInterval) {
-            this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
+            $.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
-        public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
-            this.applyOnlyAtCronInterval = Codegen.ofNullable(applyOnlyAtCronInterval);
-            return this;
+
+        public Builder applyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
+            return applyOnlyAtCronInterval(Output.of(applyOnlyAtCronInterval));
         }
+
         public Builder associationId(@Nullable Output<String> associationId) {
-            this.associationId = associationId;
+            $.associationId = associationId;
             return this;
         }
-        public Builder associationId(@Nullable String associationId) {
-            this.associationId = Codegen.ofNullable(associationId);
-            return this;
+
+        public Builder associationId(String associationId) {
+            return associationId(Output.of(associationId));
         }
+
         public Builder associationName(@Nullable Output<String> associationName) {
-            this.associationName = associationName;
+            $.associationName = associationName;
             return this;
         }
-        public Builder associationName(@Nullable String associationName) {
-            this.associationName = Codegen.ofNullable(associationName);
-            return this;
+
+        public Builder associationName(String associationName) {
+            return associationName(Output.of(associationName));
         }
+
         public Builder automationTargetParameterName(@Nullable Output<String> automationTargetParameterName) {
-            this.automationTargetParameterName = automationTargetParameterName;
+            $.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
-        public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
-            this.automationTargetParameterName = Codegen.ofNullable(automationTargetParameterName);
-            return this;
+
+        public Builder automationTargetParameterName(String automationTargetParameterName) {
+            return automationTargetParameterName(Output.of(automationTargetParameterName));
         }
+
         public Builder complianceSeverity(@Nullable Output<String> complianceSeverity) {
-            this.complianceSeverity = complianceSeverity;
+            $.complianceSeverity = complianceSeverity;
             return this;
         }
-        public Builder complianceSeverity(@Nullable String complianceSeverity) {
-            this.complianceSeverity = Codegen.ofNullable(complianceSeverity);
-            return this;
+
+        public Builder complianceSeverity(String complianceSeverity) {
+            return complianceSeverity(Output.of(complianceSeverity));
         }
+
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
-            this.documentVersion = documentVersion;
+            $.documentVersion = documentVersion;
             return this;
         }
-        public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Codegen.ofNullable(documentVersion);
-            return this;
+
+        public Builder documentVersion(String documentVersion) {
+            return documentVersion(Output.of(documentVersion));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
-            this.maxConcurrency = maxConcurrency;
+            $.maxConcurrency = maxConcurrency;
             return this;
         }
-        public Builder maxConcurrency(@Nullable String maxConcurrency) {
-            this.maxConcurrency = Codegen.ofNullable(maxConcurrency);
-            return this;
+
+        public Builder maxConcurrency(String maxConcurrency) {
+            return maxConcurrency(Output.of(maxConcurrency));
         }
+
         public Builder maxErrors(@Nullable Output<String> maxErrors) {
-            this.maxErrors = maxErrors;
+            $.maxErrors = maxErrors;
             return this;
         }
-        public Builder maxErrors(@Nullable String maxErrors) {
-            this.maxErrors = Codegen.ofNullable(maxErrors);
-            return this;
+
+        public Builder maxErrors(String maxErrors) {
+            return maxErrors(Output.of(maxErrors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outputLocation(@Nullable Output<AssociationOutputLocationGetArgs> outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
         }
-        public Builder outputLocation(@Nullable AssociationOutputLocationGetArgs outputLocation) {
-            this.outputLocation = Codegen.ofNullable(outputLocation);
-            return this;
+
+        public Builder outputLocation(AssociationOutputLocationGetArgs outputLocation) {
+            return outputLocation(Output.of(outputLocation));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
-        public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
-            return this;
+
+        public Builder scheduleExpression(String scheduleExpression) {
+            return scheduleExpression(Output.of(scheduleExpression));
         }
+
         public Builder targets(@Nullable Output<List<AssociationTargetGetArgs>> targets) {
-            this.targets = targets;
+            $.targets = targets;
             return this;
         }
-        public Builder targets(@Nullable List<AssociationTargetGetArgs> targets) {
-            this.targets = Codegen.ofNullable(targets);
-            return this;
+
+        public Builder targets(List<AssociationTargetGetArgs> targets) {
+            return targets(Output.of(targets));
         }
+
         public Builder targets(AssociationTargetGetArgs... targets) {
             return targets(List.of(targets));
-        }        public AssociationState build() {
-            return new AssociationState(applyOnlyAtCronInterval, associationId, associationName, automationTargetParameterName, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, targets);
+        }
+
+        public AssociationState build() {
+            return $;
         }
     }
+
 }

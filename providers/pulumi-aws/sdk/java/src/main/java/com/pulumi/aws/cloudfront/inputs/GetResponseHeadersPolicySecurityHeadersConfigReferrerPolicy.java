@@ -18,7 +18,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy e
      * 
      */
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
@@ -29,55 +29,52 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy e
      * 
      */
     @Import(name="referrerPolicy", required=true)
-      private final String referrerPolicy;
+    private String referrerPolicy;
 
     public String referrerPolicy() {
         return this.referrerPolicy;
     }
 
-    public GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy(
-        Boolean override,
-        String referrerPolicy) {
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-        this.referrerPolicy = Objects.requireNonNull(referrerPolicy, "expected parameter 'referrerPolicy' to be non-null");
-    }
+    private GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy() {}
 
-    private GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy() {
-        this.override = null;
-        this.referrerPolicy = null;
+    private GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy(GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy $) {
+        this.override = $.override;
+        this.referrerPolicy = $.referrerPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean override;
-        private String referrerPolicy;
+        private GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy();
         }
 
         public Builder(GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.override = defaults.override;
-    	      this.referrerPolicy = defaults.referrerPolicy;
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder referrerPolicy(String referrerPolicy) {
-            this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
+            $.referrerPolicy = referrerPolicy;
             return this;
-        }        public GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy build() {
-            return new GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy(override, referrerPolicy);
+        }
+
+        public GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy build() {
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            $.referrerPolicy = Objects.requireNonNull($.referrerPolicy, "expected parameter 'referrerPolicy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="allowClassicLinkToRemoteVpc")
-      private final @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
+    private @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
 
-    public Output<Boolean> allowClassicLinkToRemoteVpc() {
-        return this.allowClassicLinkToRemoteVpc == null ? Codegen.empty() : this.allowClassicLinkToRemoteVpc;
+    public Optional<Output<Boolean>> allowClassicLinkToRemoteVpc() {
+        return Optional.ofNullable(this.allowClassicLinkToRemoteVpc);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="allowRemoteVpcDnsResolution")
-      private final @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
+    private @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
 
-    public Output<Boolean> allowRemoteVpcDnsResolution() {
-        return this.allowRemoteVpcDnsResolution == null ? Codegen.empty() : this.allowRemoteVpcDnsResolution;
+    public Optional<Output<Boolean>> allowRemoteVpcDnsResolution() {
+        return Optional.ofNullable(this.allowRemoteVpcDnsResolution);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="allowVpcToRemoteClassicLink")
-      private final @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
+    private @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
 
-    public Output<Boolean> allowVpcToRemoteClassicLink() {
-        return this.allowVpcToRemoteClassicLink == null ? Codegen.empty() : this.allowVpcToRemoteClassicLink;
+    public Optional<Output<Boolean>> allowVpcToRemoteClassicLink() {
+        return Optional.ofNullable(this.allowVpcToRemoteClassicLink);
     }
 
-    public VpcPeeringConnectionAccepterArgs(
-        @Nullable Output<Boolean> allowClassicLinkToRemoteVpc,
-        @Nullable Output<Boolean> allowRemoteVpcDnsResolution,
-        @Nullable Output<Boolean> allowVpcToRemoteClassicLink) {
-        this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
-        this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
-        this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
-    }
+    private VpcPeeringConnectionAccepterArgs() {}
 
-    private VpcPeeringConnectionAccepterArgs() {
-        this.allowClassicLinkToRemoteVpc = Codegen.empty();
-        this.allowRemoteVpcDnsResolution = Codegen.empty();
-        this.allowVpcToRemoteClassicLink = Codegen.empty();
+    private VpcPeeringConnectionAccepterArgs(VpcPeeringConnectionAccepterArgs $) {
+        this.allowClassicLinkToRemoteVpc = $.allowClassicLinkToRemoteVpc;
+        this.allowRemoteVpcDnsResolution = $.allowRemoteVpcDnsResolution;
+        this.allowVpcToRemoteClassicLink = $.allowVpcToRemoteClassicLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcPeeringConnectionAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
-        private @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
-        private @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
+        private VpcPeeringConnectionAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcPeeringConnectionAccepterArgs();
         }
 
         public Builder(VpcPeeringConnectionAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowClassicLinkToRemoteVpc = defaults.allowClassicLinkToRemoteVpc;
-    	      this.allowRemoteVpcDnsResolution = defaults.allowRemoteVpcDnsResolution;
-    	      this.allowVpcToRemoteClassicLink = defaults.allowVpcToRemoteClassicLink;
+            $ = new VpcPeeringConnectionAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowClassicLinkToRemoteVpc(@Nullable Output<Boolean> allowClassicLinkToRemoteVpc) {
-            this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
+            $.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
             return this;
         }
-        public Builder allowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
-            this.allowClassicLinkToRemoteVpc = Codegen.ofNullable(allowClassicLinkToRemoteVpc);
-            return this;
+
+        public Builder allowClassicLinkToRemoteVpc(Boolean allowClassicLinkToRemoteVpc) {
+            return allowClassicLinkToRemoteVpc(Output.of(allowClassicLinkToRemoteVpc));
         }
+
         public Builder allowRemoteVpcDnsResolution(@Nullable Output<Boolean> allowRemoteVpcDnsResolution) {
-            this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
+            $.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
             return this;
         }
-        public Builder allowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
-            this.allowRemoteVpcDnsResolution = Codegen.ofNullable(allowRemoteVpcDnsResolution);
-            return this;
+
+        public Builder allowRemoteVpcDnsResolution(Boolean allowRemoteVpcDnsResolution) {
+            return allowRemoteVpcDnsResolution(Output.of(allowRemoteVpcDnsResolution));
         }
+
         public Builder allowVpcToRemoteClassicLink(@Nullable Output<Boolean> allowVpcToRemoteClassicLink) {
-            this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
+            $.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
             return this;
         }
-        public Builder allowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
-            this.allowVpcToRemoteClassicLink = Codegen.ofNullable(allowVpcToRemoteClassicLink);
-            return this;
-        }        public VpcPeeringConnectionAccepterArgs build() {
-            return new VpcPeeringConnectionAccepterArgs(allowClassicLinkToRemoteVpc, allowRemoteVpcDnsResolution, allowVpcToRemoteClassicLink);
+
+        public Builder allowVpcToRemoteClassicLink(Boolean allowVpcToRemoteClassicLink) {
+            return allowVpcToRemoteClassicLink(Output.of(allowVpcToRemoteClassicLink));
+        }
+
+        public VpcPeeringConnectionAccepterArgs build() {
+            return $;
         }
     }
+
 }

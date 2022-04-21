@@ -6,10 +6,10 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
+    private @Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
-    public Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs(
-        @Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters,
-        Output<String> type) {
-        this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs() {}
 
-    private FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs() {
-        this.parameters = Codegen.empty();
-        this.type = Codegen.empty();
+    private FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs $) {
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
-        private Output<String> type;
+        private FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs();
         }
 
         public Builder(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs build() {
-            return new FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs(parameters, type);
+            return type(Output.of(type));
+        }
+
+        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

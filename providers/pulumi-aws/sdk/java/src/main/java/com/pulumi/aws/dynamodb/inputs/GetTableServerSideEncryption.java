@@ -14,62 +14,59 @@ public final class GetTableServerSideEncryption extends com.pulumi.resources.Inv
     public static final GetTableServerSideEncryption Empty = new GetTableServerSideEncryption();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="kmsKeyArn", required=true)
-      private final String kmsKeyArn;
+    private String kmsKeyArn;
 
     public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
 
-    public GetTableServerSideEncryption(
-        Boolean enabled,
-        String kmsKeyArn) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
-    }
+    private GetTableServerSideEncryption() {}
 
-    private GetTableServerSideEncryption() {
-        this.enabled = null;
-        this.kmsKeyArn = null;
+    private GetTableServerSideEncryption(GetTableServerSideEncryption $) {
+        this.enabled = $.enabled;
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableServerSideEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String kmsKeyArn;
+        private GetTableServerSideEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableServerSideEncryption();
         }
 
         public Builder(GetTableServerSideEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new GetTableServerSideEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder kmsKeyArn(String kmsKeyArn) {
-            this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
+            $.kmsKeyArn = kmsKeyArn;
             return this;
-        }        public GetTableServerSideEncryption build() {
-            return new GetTableServerSideEncryption(enabled, kmsKeyArn);
+        }
+
+        public GetTableServerSideEncryption build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.kmsKeyArn = Objects.requireNonNull($.kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
+            return $;
         }
     }
+
 }

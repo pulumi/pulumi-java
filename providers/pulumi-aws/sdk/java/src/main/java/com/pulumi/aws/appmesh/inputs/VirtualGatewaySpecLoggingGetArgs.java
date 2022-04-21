@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingAccessLogGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualGatewaySpecLoggingGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accessLog")
-      private final @Nullable Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog;
+    private @Nullable Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog;
 
-    public Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog() {
-        return this.accessLog == null ? Codegen.empty() : this.accessLog;
+    public Optional<Output<VirtualGatewaySpecLoggingAccessLogGetArgs>> accessLog() {
+        return Optional.ofNullable(this.accessLog);
     }
 
-    public VirtualGatewaySpecLoggingGetArgs(@Nullable Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog) {
-        this.accessLog = accessLog;
-    }
+    private VirtualGatewaySpecLoggingGetArgs() {}
 
-    private VirtualGatewaySpecLoggingGetArgs() {
-        this.accessLog = Codegen.empty();
+    private VirtualGatewaySpecLoggingGetArgs(VirtualGatewaySpecLoggingGetArgs $) {
+        this.accessLog = $.accessLog;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecLoggingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog;
+        private VirtualGatewaySpecLoggingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecLoggingGetArgs();
         }
 
         public Builder(VirtualGatewaySpecLoggingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLog = defaults.accessLog;
+            $ = new VirtualGatewaySpecLoggingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLog(@Nullable Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog) {
-            this.accessLog = accessLog;
+            $.accessLog = accessLog;
             return this;
         }
-        public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLogGetArgs accessLog) {
-            this.accessLog = Codegen.ofNullable(accessLog);
-            return this;
-        }        public VirtualGatewaySpecLoggingGetArgs build() {
-            return new VirtualGatewaySpecLoggingGetArgs(accessLog);
+
+        public Builder accessLog(VirtualGatewaySpecLoggingAccessLogGetArgs accessLog) {
+            return accessLog(Output.of(accessLog));
+        }
+
+        public VirtualGatewaySpecLoggingGetArgs build() {
+            return $;
         }
     }
+
 }

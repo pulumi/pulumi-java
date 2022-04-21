@@ -5,9 +5,9 @@ package com.pulumi.aws.elasticloadbalancing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class LoadBalancerPolicyPolicyAttributeArgs extends com.pulumi.reso
     public static final LoadBalancerPolicyPolicyAttributeArgs Empty = new LoadBalancerPolicyPolicyAttributeArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public LoadBalancerPolicyPolicyAttributeArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> value) {
-        this.name = name;
-        this.value = value;
-    }
+    private LoadBalancerPolicyPolicyAttributeArgs() {}
 
-    private LoadBalancerPolicyPolicyAttributeArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private LoadBalancerPolicyPolicyAttributeArgs(LoadBalancerPolicyPolicyAttributeArgs $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerPolicyPolicyAttributeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> value;
+        private LoadBalancerPolicyPolicyAttributeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerPolicyPolicyAttributeArgs();
         }
 
         public Builder(LoadBalancerPolicyPolicyAttributeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new LoadBalancerPolicyPolicyAttributeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public LoadBalancerPolicyPolicyAttributeArgs build() {
-            return new LoadBalancerPolicyPolicyAttributeArgs(name, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public LoadBalancerPolicyPolicyAttributeArgs build() {
+            return $;
         }
     }
+
 }

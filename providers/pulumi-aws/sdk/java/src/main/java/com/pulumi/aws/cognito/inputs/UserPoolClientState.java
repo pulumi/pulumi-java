@@ -7,12 +7,12 @@ import com.pulumi.aws.cognito.inputs.UserPoolClientAnalyticsConfigurationGetArgs
 import com.pulumi.aws.cognito.inputs.UserPoolClientTokenValidityUnitsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="accessTokenValidity")
-      private final @Nullable Output<Integer> accessTokenValidity;
+    private @Nullable Output<Integer> accessTokenValidity;
 
-    public Output<Integer> accessTokenValidity() {
-        return this.accessTokenValidity == null ? Codegen.empty() : this.accessTokenValidity;
+    public Optional<Output<Integer>> accessTokenValidity() {
+        return Optional.ofNullable(this.accessTokenValidity);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="allowedOauthFlows")
-      private final @Nullable Output<List<String>> allowedOauthFlows;
+    private @Nullable Output<List<String>> allowedOauthFlows;
 
-    public Output<List<String>> allowedOauthFlows() {
-        return this.allowedOauthFlows == null ? Codegen.empty() : this.allowedOauthFlows;
+    public Optional<Output<List<String>>> allowedOauthFlows() {
+        return Optional.ofNullable(this.allowedOauthFlows);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="allowedOauthFlowsUserPoolClient")
-      private final @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
+    private @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
 
-    public Output<Boolean> allowedOauthFlowsUserPoolClient() {
-        return this.allowedOauthFlowsUserPoolClient == null ? Codegen.empty() : this.allowedOauthFlowsUserPoolClient;
+    public Optional<Output<Boolean>> allowedOauthFlowsUserPoolClient() {
+        return Optional.ofNullable(this.allowedOauthFlowsUserPoolClient);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="allowedOauthScopes")
-      private final @Nullable Output<List<String>> allowedOauthScopes;
+    private @Nullable Output<List<String>> allowedOauthScopes;
 
-    public Output<List<String>> allowedOauthScopes() {
-        return this.allowedOauthScopes == null ? Codegen.empty() : this.allowedOauthScopes;
+    public Optional<Output<List<String>>> allowedOauthScopes() {
+        return Optional.ofNullable(this.allowedOauthScopes);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="analyticsConfiguration")
-      private final @Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration;
+    private @Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration;
 
-    public Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration() {
-        return this.analyticsConfiguration == null ? Codegen.empty() : this.analyticsConfiguration;
+    public Optional<Output<UserPoolClientAnalyticsConfigurationGetArgs>> analyticsConfiguration() {
+        return Optional.ofNullable(this.analyticsConfiguration);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="callbackUrls")
-      private final @Nullable Output<List<String>> callbackUrls;
+    private @Nullable Output<List<String>> callbackUrls;
 
-    public Output<List<String>> callbackUrls() {
-        return this.callbackUrls == null ? Codegen.empty() : this.callbackUrls;
+    public Optional<Output<List<String>>> callbackUrls() {
+        return Optional.ofNullable(this.callbackUrls);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="defaultRedirectUri")
-      private final @Nullable Output<String> defaultRedirectUri;
+    private @Nullable Output<String> defaultRedirectUri;
 
-    public Output<String> defaultRedirectUri() {
-        return this.defaultRedirectUri == null ? Codegen.empty() : this.defaultRedirectUri;
+    public Optional<Output<String>> defaultRedirectUri() {
+        return Optional.ofNullable(this.defaultRedirectUri);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enableTokenRevocation")
-      private final @Nullable Output<Boolean> enableTokenRevocation;
+    private @Nullable Output<Boolean> enableTokenRevocation;
 
-    public Output<Boolean> enableTokenRevocation() {
-        return this.enableTokenRevocation == null ? Codegen.empty() : this.enableTokenRevocation;
+    public Optional<Output<Boolean>> enableTokenRevocation() {
+        return Optional.ofNullable(this.enableTokenRevocation);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="explicitAuthFlows")
-      private final @Nullable Output<List<String>> explicitAuthFlows;
+    private @Nullable Output<List<String>> explicitAuthFlows;
 
-    public Output<List<String>> explicitAuthFlows() {
-        return this.explicitAuthFlows == null ? Codegen.empty() : this.explicitAuthFlows;
+    public Optional<Output<List<String>>> explicitAuthFlows() {
+        return Optional.ofNullable(this.explicitAuthFlows);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="generateSecret")
-      private final @Nullable Output<Boolean> generateSecret;
+    private @Nullable Output<Boolean> generateSecret;
 
-    public Output<Boolean> generateSecret() {
-        return this.generateSecret == null ? Codegen.empty() : this.generateSecret;
+    public Optional<Output<Boolean>> generateSecret() {
+        return Optional.ofNullable(this.generateSecret);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="idTokenValidity")
-      private final @Nullable Output<Integer> idTokenValidity;
+    private @Nullable Output<Integer> idTokenValidity;
 
-    public Output<Integer> idTokenValidity() {
-        return this.idTokenValidity == null ? Codegen.empty() : this.idTokenValidity;
+    public Optional<Output<Integer>> idTokenValidity() {
+        return Optional.ofNullable(this.idTokenValidity);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="logoutUrls")
-      private final @Nullable Output<List<String>> logoutUrls;
+    private @Nullable Output<List<String>> logoutUrls;
 
-    public Output<List<String>> logoutUrls() {
-        return this.logoutUrls == null ? Codegen.empty() : this.logoutUrls;
+    public Optional<Output<List<String>>> logoutUrls() {
+        return Optional.ofNullable(this.logoutUrls);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="preventUserExistenceErrors")
-      private final @Nullable Output<String> preventUserExistenceErrors;
+    private @Nullable Output<String> preventUserExistenceErrors;
 
-    public Output<String> preventUserExistenceErrors() {
-        return this.preventUserExistenceErrors == null ? Codegen.empty() : this.preventUserExistenceErrors;
+    public Optional<Output<String>> preventUserExistenceErrors() {
+        return Optional.ofNullable(this.preventUserExistenceErrors);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="readAttributes")
-      private final @Nullable Output<List<String>> readAttributes;
+    private @Nullable Output<List<String>> readAttributes;
 
-    public Output<List<String>> readAttributes() {
-        return this.readAttributes == null ? Codegen.empty() : this.readAttributes;
+    public Optional<Output<List<String>>> readAttributes() {
+        return Optional.ofNullable(this.readAttributes);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="refreshTokenValidity")
-      private final @Nullable Output<Integer> refreshTokenValidity;
+    private @Nullable Output<Integer> refreshTokenValidity;
 
-    public Output<Integer> refreshTokenValidity() {
-        return this.refreshTokenValidity == null ? Codegen.empty() : this.refreshTokenValidity;
+    public Optional<Output<Integer>> refreshTokenValidity() {
+        return Optional.ofNullable(this.refreshTokenValidity);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="supportedIdentityProviders")
-      private final @Nullable Output<List<String>> supportedIdentityProviders;
+    private @Nullable Output<List<String>> supportedIdentityProviders;
 
-    public Output<List<String>> supportedIdentityProviders() {
-        return this.supportedIdentityProviders == null ? Codegen.empty() : this.supportedIdentityProviders;
+    public Optional<Output<List<String>>> supportedIdentityProviders() {
+        return Optional.ofNullable(this.supportedIdentityProviders);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tokenValidityUnits")
-      private final @Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits;
+    private @Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits;
 
-    public Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits() {
-        return this.tokenValidityUnits == null ? Codegen.empty() : this.tokenValidityUnits;
+    public Optional<Output<UserPoolClientTokenValidityUnitsGetArgs>> tokenValidityUnits() {
+        return Optional.ofNullable(this.tokenValidityUnits);
     }
 
     /**
@@ -234,10 +234,10 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userPoolId")
-      private final @Nullable Output<String> userPoolId;
+    private @Nullable Output<String> userPoolId;
 
-    public Output<String> userPoolId() {
-        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
+    public Optional<Output<String>> userPoolId() {
+        return Optional.ofNullable(this.userPoolId);
     }
 
     /**
@@ -245,334 +245,280 @@ public final class UserPoolClientState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="writeAttributes")
-      private final @Nullable Output<List<String>> writeAttributes;
+    private @Nullable Output<List<String>> writeAttributes;
 
-    public Output<List<String>> writeAttributes() {
-        return this.writeAttributes == null ? Codegen.empty() : this.writeAttributes;
+    public Optional<Output<List<String>>> writeAttributes() {
+        return Optional.ofNullable(this.writeAttributes);
     }
 
-    public UserPoolClientState(
-        @Nullable Output<Integer> accessTokenValidity,
-        @Nullable Output<List<String>> allowedOauthFlows,
-        @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient,
-        @Nullable Output<List<String>> allowedOauthScopes,
-        @Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration,
-        @Nullable Output<List<String>> callbackUrls,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<String> defaultRedirectUri,
-        @Nullable Output<Boolean> enableTokenRevocation,
-        @Nullable Output<List<String>> explicitAuthFlows,
-        @Nullable Output<Boolean> generateSecret,
-        @Nullable Output<Integer> idTokenValidity,
-        @Nullable Output<List<String>> logoutUrls,
-        @Nullable Output<String> name,
-        @Nullable Output<String> preventUserExistenceErrors,
-        @Nullable Output<List<String>> readAttributes,
-        @Nullable Output<Integer> refreshTokenValidity,
-        @Nullable Output<List<String>> supportedIdentityProviders,
-        @Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits,
-        @Nullable Output<String> userPoolId,
-        @Nullable Output<List<String>> writeAttributes) {
-        this.accessTokenValidity = accessTokenValidity;
-        this.allowedOauthFlows = allowedOauthFlows;
-        this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
-        this.allowedOauthScopes = allowedOauthScopes;
-        this.analyticsConfiguration = analyticsConfiguration;
-        this.callbackUrls = callbackUrls;
-        this.clientSecret = clientSecret;
-        this.defaultRedirectUri = defaultRedirectUri;
-        this.enableTokenRevocation = enableTokenRevocation;
-        this.explicitAuthFlows = explicitAuthFlows;
-        this.generateSecret = generateSecret;
-        this.idTokenValidity = idTokenValidity;
-        this.logoutUrls = logoutUrls;
-        this.name = name;
-        this.preventUserExistenceErrors = preventUserExistenceErrors;
-        this.readAttributes = readAttributes;
-        this.refreshTokenValidity = refreshTokenValidity;
-        this.supportedIdentityProviders = supportedIdentityProviders;
-        this.tokenValidityUnits = tokenValidityUnits;
-        this.userPoolId = userPoolId;
-        this.writeAttributes = writeAttributes;
-    }
+    private UserPoolClientState() {}
 
-    private UserPoolClientState() {
-        this.accessTokenValidity = Codegen.empty();
-        this.allowedOauthFlows = Codegen.empty();
-        this.allowedOauthFlowsUserPoolClient = Codegen.empty();
-        this.allowedOauthScopes = Codegen.empty();
-        this.analyticsConfiguration = Codegen.empty();
-        this.callbackUrls = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.defaultRedirectUri = Codegen.empty();
-        this.enableTokenRevocation = Codegen.empty();
-        this.explicitAuthFlows = Codegen.empty();
-        this.generateSecret = Codegen.empty();
-        this.idTokenValidity = Codegen.empty();
-        this.logoutUrls = Codegen.empty();
-        this.name = Codegen.empty();
-        this.preventUserExistenceErrors = Codegen.empty();
-        this.readAttributes = Codegen.empty();
-        this.refreshTokenValidity = Codegen.empty();
-        this.supportedIdentityProviders = Codegen.empty();
-        this.tokenValidityUnits = Codegen.empty();
-        this.userPoolId = Codegen.empty();
-        this.writeAttributes = Codegen.empty();
+    private UserPoolClientState(UserPoolClientState $) {
+        this.accessTokenValidity = $.accessTokenValidity;
+        this.allowedOauthFlows = $.allowedOauthFlows;
+        this.allowedOauthFlowsUserPoolClient = $.allowedOauthFlowsUserPoolClient;
+        this.allowedOauthScopes = $.allowedOauthScopes;
+        this.analyticsConfiguration = $.analyticsConfiguration;
+        this.callbackUrls = $.callbackUrls;
+        this.clientSecret = $.clientSecret;
+        this.defaultRedirectUri = $.defaultRedirectUri;
+        this.enableTokenRevocation = $.enableTokenRevocation;
+        this.explicitAuthFlows = $.explicitAuthFlows;
+        this.generateSecret = $.generateSecret;
+        this.idTokenValidity = $.idTokenValidity;
+        this.logoutUrls = $.logoutUrls;
+        this.name = $.name;
+        this.preventUserExistenceErrors = $.preventUserExistenceErrors;
+        this.readAttributes = $.readAttributes;
+        this.refreshTokenValidity = $.refreshTokenValidity;
+        this.supportedIdentityProviders = $.supportedIdentityProviders;
+        this.tokenValidityUnits = $.tokenValidityUnits;
+        this.userPoolId = $.userPoolId;
+        this.writeAttributes = $.writeAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolClientState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> accessTokenValidity;
-        private @Nullable Output<List<String>> allowedOauthFlows;
-        private @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
-        private @Nullable Output<List<String>> allowedOauthScopes;
-        private @Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration;
-        private @Nullable Output<List<String>> callbackUrls;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<String> defaultRedirectUri;
-        private @Nullable Output<Boolean> enableTokenRevocation;
-        private @Nullable Output<List<String>> explicitAuthFlows;
-        private @Nullable Output<Boolean> generateSecret;
-        private @Nullable Output<Integer> idTokenValidity;
-        private @Nullable Output<List<String>> logoutUrls;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> preventUserExistenceErrors;
-        private @Nullable Output<List<String>> readAttributes;
-        private @Nullable Output<Integer> refreshTokenValidity;
-        private @Nullable Output<List<String>> supportedIdentityProviders;
-        private @Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits;
-        private @Nullable Output<String> userPoolId;
-        private @Nullable Output<List<String>> writeAttributes;
+        private UserPoolClientState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolClientState();
         }
 
         public Builder(UserPoolClientState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTokenValidity = defaults.accessTokenValidity;
-    	      this.allowedOauthFlows = defaults.allowedOauthFlows;
-    	      this.allowedOauthFlowsUserPoolClient = defaults.allowedOauthFlowsUserPoolClient;
-    	      this.allowedOauthScopes = defaults.allowedOauthScopes;
-    	      this.analyticsConfiguration = defaults.analyticsConfiguration;
-    	      this.callbackUrls = defaults.callbackUrls;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.defaultRedirectUri = defaults.defaultRedirectUri;
-    	      this.enableTokenRevocation = defaults.enableTokenRevocation;
-    	      this.explicitAuthFlows = defaults.explicitAuthFlows;
-    	      this.generateSecret = defaults.generateSecret;
-    	      this.idTokenValidity = defaults.idTokenValidity;
-    	      this.logoutUrls = defaults.logoutUrls;
-    	      this.name = defaults.name;
-    	      this.preventUserExistenceErrors = defaults.preventUserExistenceErrors;
-    	      this.readAttributes = defaults.readAttributes;
-    	      this.refreshTokenValidity = defaults.refreshTokenValidity;
-    	      this.supportedIdentityProviders = defaults.supportedIdentityProviders;
-    	      this.tokenValidityUnits = defaults.tokenValidityUnits;
-    	      this.userPoolId = defaults.userPoolId;
-    	      this.writeAttributes = defaults.writeAttributes;
+            $ = new UserPoolClientState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTokenValidity(@Nullable Output<Integer> accessTokenValidity) {
-            this.accessTokenValidity = accessTokenValidity;
+            $.accessTokenValidity = accessTokenValidity;
             return this;
         }
-        public Builder accessTokenValidity(@Nullable Integer accessTokenValidity) {
-            this.accessTokenValidity = Codegen.ofNullable(accessTokenValidity);
-            return this;
+
+        public Builder accessTokenValidity(Integer accessTokenValidity) {
+            return accessTokenValidity(Output.of(accessTokenValidity));
         }
+
         public Builder allowedOauthFlows(@Nullable Output<List<String>> allowedOauthFlows) {
-            this.allowedOauthFlows = allowedOauthFlows;
+            $.allowedOauthFlows = allowedOauthFlows;
             return this;
         }
-        public Builder allowedOauthFlows(@Nullable List<String> allowedOauthFlows) {
-            this.allowedOauthFlows = Codegen.ofNullable(allowedOauthFlows);
-            return this;
+
+        public Builder allowedOauthFlows(List<String> allowedOauthFlows) {
+            return allowedOauthFlows(Output.of(allowedOauthFlows));
         }
+
         public Builder allowedOauthFlows(String... allowedOauthFlows) {
             return allowedOauthFlows(List.of(allowedOauthFlows));
         }
+
         public Builder allowedOauthFlowsUserPoolClient(@Nullable Output<Boolean> allowedOauthFlowsUserPoolClient) {
-            this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
+            $.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
             return this;
         }
-        public Builder allowedOauthFlowsUserPoolClient(@Nullable Boolean allowedOauthFlowsUserPoolClient) {
-            this.allowedOauthFlowsUserPoolClient = Codegen.ofNullable(allowedOauthFlowsUserPoolClient);
-            return this;
+
+        public Builder allowedOauthFlowsUserPoolClient(Boolean allowedOauthFlowsUserPoolClient) {
+            return allowedOauthFlowsUserPoolClient(Output.of(allowedOauthFlowsUserPoolClient));
         }
+
         public Builder allowedOauthScopes(@Nullable Output<List<String>> allowedOauthScopes) {
-            this.allowedOauthScopes = allowedOauthScopes;
+            $.allowedOauthScopes = allowedOauthScopes;
             return this;
         }
-        public Builder allowedOauthScopes(@Nullable List<String> allowedOauthScopes) {
-            this.allowedOauthScopes = Codegen.ofNullable(allowedOauthScopes);
-            return this;
+
+        public Builder allowedOauthScopes(List<String> allowedOauthScopes) {
+            return allowedOauthScopes(Output.of(allowedOauthScopes));
         }
+
         public Builder allowedOauthScopes(String... allowedOauthScopes) {
             return allowedOauthScopes(List.of(allowedOauthScopes));
         }
+
         public Builder analyticsConfiguration(@Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration) {
-            this.analyticsConfiguration = analyticsConfiguration;
+            $.analyticsConfiguration = analyticsConfiguration;
             return this;
         }
-        public Builder analyticsConfiguration(@Nullable UserPoolClientAnalyticsConfigurationGetArgs analyticsConfiguration) {
-            this.analyticsConfiguration = Codegen.ofNullable(analyticsConfiguration);
-            return this;
+
+        public Builder analyticsConfiguration(UserPoolClientAnalyticsConfigurationGetArgs analyticsConfiguration) {
+            return analyticsConfiguration(Output.of(analyticsConfiguration));
         }
+
         public Builder callbackUrls(@Nullable Output<List<String>> callbackUrls) {
-            this.callbackUrls = callbackUrls;
+            $.callbackUrls = callbackUrls;
             return this;
         }
-        public Builder callbackUrls(@Nullable List<String> callbackUrls) {
-            this.callbackUrls = Codegen.ofNullable(callbackUrls);
-            return this;
+
+        public Builder callbackUrls(List<String> callbackUrls) {
+            return callbackUrls(Output.of(callbackUrls));
         }
+
         public Builder callbackUrls(String... callbackUrls) {
             return callbackUrls(List.of(callbackUrls));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder defaultRedirectUri(@Nullable Output<String> defaultRedirectUri) {
-            this.defaultRedirectUri = defaultRedirectUri;
+            $.defaultRedirectUri = defaultRedirectUri;
             return this;
         }
-        public Builder defaultRedirectUri(@Nullable String defaultRedirectUri) {
-            this.defaultRedirectUri = Codegen.ofNullable(defaultRedirectUri);
-            return this;
+
+        public Builder defaultRedirectUri(String defaultRedirectUri) {
+            return defaultRedirectUri(Output.of(defaultRedirectUri));
         }
+
         public Builder enableTokenRevocation(@Nullable Output<Boolean> enableTokenRevocation) {
-            this.enableTokenRevocation = enableTokenRevocation;
+            $.enableTokenRevocation = enableTokenRevocation;
             return this;
         }
-        public Builder enableTokenRevocation(@Nullable Boolean enableTokenRevocation) {
-            this.enableTokenRevocation = Codegen.ofNullable(enableTokenRevocation);
-            return this;
+
+        public Builder enableTokenRevocation(Boolean enableTokenRevocation) {
+            return enableTokenRevocation(Output.of(enableTokenRevocation));
         }
+
         public Builder explicitAuthFlows(@Nullable Output<List<String>> explicitAuthFlows) {
-            this.explicitAuthFlows = explicitAuthFlows;
+            $.explicitAuthFlows = explicitAuthFlows;
             return this;
         }
-        public Builder explicitAuthFlows(@Nullable List<String> explicitAuthFlows) {
-            this.explicitAuthFlows = Codegen.ofNullable(explicitAuthFlows);
-            return this;
+
+        public Builder explicitAuthFlows(List<String> explicitAuthFlows) {
+            return explicitAuthFlows(Output.of(explicitAuthFlows));
         }
+
         public Builder explicitAuthFlows(String... explicitAuthFlows) {
             return explicitAuthFlows(List.of(explicitAuthFlows));
         }
+
         public Builder generateSecret(@Nullable Output<Boolean> generateSecret) {
-            this.generateSecret = generateSecret;
+            $.generateSecret = generateSecret;
             return this;
         }
-        public Builder generateSecret(@Nullable Boolean generateSecret) {
-            this.generateSecret = Codegen.ofNullable(generateSecret);
-            return this;
+
+        public Builder generateSecret(Boolean generateSecret) {
+            return generateSecret(Output.of(generateSecret));
         }
+
         public Builder idTokenValidity(@Nullable Output<Integer> idTokenValidity) {
-            this.idTokenValidity = idTokenValidity;
+            $.idTokenValidity = idTokenValidity;
             return this;
         }
-        public Builder idTokenValidity(@Nullable Integer idTokenValidity) {
-            this.idTokenValidity = Codegen.ofNullable(idTokenValidity);
-            return this;
+
+        public Builder idTokenValidity(Integer idTokenValidity) {
+            return idTokenValidity(Output.of(idTokenValidity));
         }
+
         public Builder logoutUrls(@Nullable Output<List<String>> logoutUrls) {
-            this.logoutUrls = logoutUrls;
+            $.logoutUrls = logoutUrls;
             return this;
         }
-        public Builder logoutUrls(@Nullable List<String> logoutUrls) {
-            this.logoutUrls = Codegen.ofNullable(logoutUrls);
-            return this;
+
+        public Builder logoutUrls(List<String> logoutUrls) {
+            return logoutUrls(Output.of(logoutUrls));
         }
+
         public Builder logoutUrls(String... logoutUrls) {
             return logoutUrls(List.of(logoutUrls));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder preventUserExistenceErrors(@Nullable Output<String> preventUserExistenceErrors) {
-            this.preventUserExistenceErrors = preventUserExistenceErrors;
+            $.preventUserExistenceErrors = preventUserExistenceErrors;
             return this;
         }
-        public Builder preventUserExistenceErrors(@Nullable String preventUserExistenceErrors) {
-            this.preventUserExistenceErrors = Codegen.ofNullable(preventUserExistenceErrors);
-            return this;
+
+        public Builder preventUserExistenceErrors(String preventUserExistenceErrors) {
+            return preventUserExistenceErrors(Output.of(preventUserExistenceErrors));
         }
+
         public Builder readAttributes(@Nullable Output<List<String>> readAttributes) {
-            this.readAttributes = readAttributes;
+            $.readAttributes = readAttributes;
             return this;
         }
-        public Builder readAttributes(@Nullable List<String> readAttributes) {
-            this.readAttributes = Codegen.ofNullable(readAttributes);
-            return this;
+
+        public Builder readAttributes(List<String> readAttributes) {
+            return readAttributes(Output.of(readAttributes));
         }
+
         public Builder readAttributes(String... readAttributes) {
             return readAttributes(List.of(readAttributes));
         }
+
         public Builder refreshTokenValidity(@Nullable Output<Integer> refreshTokenValidity) {
-            this.refreshTokenValidity = refreshTokenValidity;
+            $.refreshTokenValidity = refreshTokenValidity;
             return this;
         }
-        public Builder refreshTokenValidity(@Nullable Integer refreshTokenValidity) {
-            this.refreshTokenValidity = Codegen.ofNullable(refreshTokenValidity);
-            return this;
+
+        public Builder refreshTokenValidity(Integer refreshTokenValidity) {
+            return refreshTokenValidity(Output.of(refreshTokenValidity));
         }
+
         public Builder supportedIdentityProviders(@Nullable Output<List<String>> supportedIdentityProviders) {
-            this.supportedIdentityProviders = supportedIdentityProviders;
+            $.supportedIdentityProviders = supportedIdentityProviders;
             return this;
         }
-        public Builder supportedIdentityProviders(@Nullable List<String> supportedIdentityProviders) {
-            this.supportedIdentityProviders = Codegen.ofNullable(supportedIdentityProviders);
-            return this;
+
+        public Builder supportedIdentityProviders(List<String> supportedIdentityProviders) {
+            return supportedIdentityProviders(Output.of(supportedIdentityProviders));
         }
+
         public Builder supportedIdentityProviders(String... supportedIdentityProviders) {
             return supportedIdentityProviders(List.of(supportedIdentityProviders));
         }
+
         public Builder tokenValidityUnits(@Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits) {
-            this.tokenValidityUnits = tokenValidityUnits;
+            $.tokenValidityUnits = tokenValidityUnits;
             return this;
         }
-        public Builder tokenValidityUnits(@Nullable UserPoolClientTokenValidityUnitsGetArgs tokenValidityUnits) {
-            this.tokenValidityUnits = Codegen.ofNullable(tokenValidityUnits);
-            return this;
+
+        public Builder tokenValidityUnits(UserPoolClientTokenValidityUnitsGetArgs tokenValidityUnits) {
+            return tokenValidityUnits(Output.of(tokenValidityUnits));
         }
+
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
-            this.userPoolId = userPoolId;
+            $.userPoolId = userPoolId;
             return this;
         }
-        public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Codegen.ofNullable(userPoolId);
-            return this;
+
+        public Builder userPoolId(String userPoolId) {
+            return userPoolId(Output.of(userPoolId));
         }
+
         public Builder writeAttributes(@Nullable Output<List<String>> writeAttributes) {
-            this.writeAttributes = writeAttributes;
+            $.writeAttributes = writeAttributes;
             return this;
         }
-        public Builder writeAttributes(@Nullable List<String> writeAttributes) {
-            this.writeAttributes = Codegen.ofNullable(writeAttributes);
-            return this;
+
+        public Builder writeAttributes(List<String> writeAttributes) {
+            return writeAttributes(Output.of(writeAttributes));
         }
+
         public Builder writeAttributes(String... writeAttributes) {
             return writeAttributes(List.of(writeAttributes));
-        }        public UserPoolClientState build() {
-            return new UserPoolClientState(accessTokenValidity, allowedOauthFlows, allowedOauthFlowsUserPoolClient, allowedOauthScopes, analyticsConfiguration, callbackUrls, clientSecret, defaultRedirectUri, enableTokenRevocation, explicitAuthFlows, generateSecret, idTokenValidity, logoutUrls, name, preventUserExistenceErrors, readAttributes, refreshTokenValidity, supportedIdentityProviders, tokenValidityUnits, userPoolId, writeAttributes);
+        }
+
+        public UserPoolClientState build() {
+            return $;
         }
     }
+
 }

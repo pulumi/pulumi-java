@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends c
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -30,7 +29,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends c
      * 
      */
     @Import(name="userGroup", required=true)
-      private final Output<String> userGroup;
+    private Output<String> userGroup;
 
     public Output<String> userGroup() {
         return this.userGroup;
@@ -41,76 +40,71 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends c
      * 
      */
     @Import(name="userPool", required=true)
-      private final Output<String> userPool;
+    private Output<String> userPool;
 
     public Output<String> userPool() {
         return this.userPool;
     }
 
-    public WorkteamMemberDefinitionCognitoMemberDefinitionArgs(
-        Output<String> clientId,
-        Output<String> userGroup,
-        Output<String> userPool) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.userGroup = Objects.requireNonNull(userGroup, "expected parameter 'userGroup' to be non-null");
-        this.userPool = Objects.requireNonNull(userPool, "expected parameter 'userPool' to be non-null");
-    }
+    private WorkteamMemberDefinitionCognitoMemberDefinitionArgs() {}
 
-    private WorkteamMemberDefinitionCognitoMemberDefinitionArgs() {
-        this.clientId = Codegen.empty();
-        this.userGroup = Codegen.empty();
-        this.userPool = Codegen.empty();
+    private WorkteamMemberDefinitionCognitoMemberDefinitionArgs(WorkteamMemberDefinitionCognitoMemberDefinitionArgs $) {
+        this.clientId = $.clientId;
+        this.userGroup = $.userGroup;
+        this.userPool = $.userPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkteamMemberDefinitionCognitoMemberDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private Output<String> userGroup;
-        private Output<String> userPool;
+        private WorkteamMemberDefinitionCognitoMemberDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkteamMemberDefinitionCognitoMemberDefinitionArgs();
         }
 
         public Builder(WorkteamMemberDefinitionCognitoMemberDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.userGroup = defaults.userGroup;
-    	      this.userPool = defaults.userPool;
+            $ = new WorkteamMemberDefinitionCognitoMemberDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder userGroup(Output<String> userGroup) {
-            this.userGroup = Objects.requireNonNull(userGroup);
+            $.userGroup = userGroup;
             return this;
         }
+
         public Builder userGroup(String userGroup) {
-            this.userGroup = Output.of(Objects.requireNonNull(userGroup));
-            return this;
+            return userGroup(Output.of(userGroup));
         }
+
         public Builder userPool(Output<String> userPool) {
-            this.userPool = Objects.requireNonNull(userPool);
+            $.userPool = userPool;
             return this;
         }
+
         public Builder userPool(String userPool) {
-            this.userPool = Output.of(Objects.requireNonNull(userPool));
-            return this;
-        }        public WorkteamMemberDefinitionCognitoMemberDefinitionArgs build() {
-            return new WorkteamMemberDefinitionCognitoMemberDefinitionArgs(clientId, userGroup, userPool);
+            return userPool(Output.of(userPool));
+        }
+
+        public WorkteamMemberDefinitionCognitoMemberDefinitionArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.userGroup = Objects.requireNonNull($.userGroup, "expected parameter 'userGroup' to be non-null");
+            $.userPool = Objects.requireNonNull($.userPool, "expected parameter 'userPool' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.batch.inputs;
 import com.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="computeEnvironmentName")
-      private final @Nullable Output<String> computeEnvironmentName;
+    private @Nullable Output<String> computeEnvironmentName;
 
-    public Output<String> computeEnvironmentName() {
-        return this.computeEnvironmentName == null ? Codegen.empty() : this.computeEnvironmentName;
+    public Optional<Output<String>> computeEnvironmentName() {
+        return Optional.ofNullable(this.computeEnvironmentName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="computeEnvironmentNamePrefix")
-      private final @Nullable Output<String> computeEnvironmentNamePrefix;
+    private @Nullable Output<String> computeEnvironmentNamePrefix;
 
-    public Output<String> computeEnvironmentNamePrefix() {
-        return this.computeEnvironmentNamePrefix == null ? Codegen.empty() : this.computeEnvironmentNamePrefix;
+    public Optional<Output<String>> computeEnvironmentNamePrefix() {
+        return Optional.ofNullable(this.computeEnvironmentNamePrefix);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="computeResources")
-      private final @Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
+    private @Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
 
-    public Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources() {
-        return this.computeResources == null ? Codegen.empty() : this.computeResources;
+    public Optional<Output<ComputeEnvironmentComputeResourcesGetArgs>> computeResources() {
+        return Optional.ofNullable(this.computeResources);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ecsClusterArn")
-      private final @Nullable Output<String> ecsClusterArn;
+    private @Nullable Output<String> ecsClusterArn;
 
-    public Output<String> ecsClusterArn() {
-        return this.ecsClusterArn == null ? Codegen.empty() : this.ecsClusterArn;
+    public Optional<Output<String>> ecsClusterArn() {
+        return Optional.ofNullable(this.ecsClusterArn);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceRole")
-      private final @Nullable Output<String> serviceRole;
+    private @Nullable Output<String> serviceRole;
 
-    public Output<String> serviceRole() {
-        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
+    public Optional<Output<String>> serviceRole() {
+        return Optional.ofNullable(this.serviceRole);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="statusReason")
-      private final @Nullable Output<String> statusReason;
+    private @Nullable Output<String> statusReason;
 
-    public Output<String> statusReason() {
-        return this.statusReason == null ? Codegen.empty() : this.statusReason;
+    public Optional<Output<String>> statusReason() {
+        return Optional.ofNullable(this.statusReason);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -143,193 +143,158 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ComputeEnvironmentState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> computeEnvironmentName,
-        @Nullable Output<String> computeEnvironmentNamePrefix,
-        @Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources,
-        @Nullable Output<String> ecsClusterArn,
-        @Nullable Output<String> serviceRole,
-        @Nullable Output<String> state,
-        @Nullable Output<String> status,
-        @Nullable Output<String> statusReason,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> type) {
-        this.arn = arn;
-        this.computeEnvironmentName = computeEnvironmentName;
-        this.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
-        this.computeResources = computeResources;
-        this.ecsClusterArn = ecsClusterArn;
-        this.serviceRole = serviceRole;
-        this.state = state;
-        this.status = status;
-        this.statusReason = statusReason;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.type = type;
-    }
+    private ComputeEnvironmentState() {}
 
-    private ComputeEnvironmentState() {
-        this.arn = Codegen.empty();
-        this.computeEnvironmentName = Codegen.empty();
-        this.computeEnvironmentNamePrefix = Codegen.empty();
-        this.computeResources = Codegen.empty();
-        this.ecsClusterArn = Codegen.empty();
-        this.serviceRole = Codegen.empty();
-        this.state = Codegen.empty();
-        this.status = Codegen.empty();
-        this.statusReason = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.type = Codegen.empty();
+    private ComputeEnvironmentState(ComputeEnvironmentState $) {
+        this.arn = $.arn;
+        this.computeEnvironmentName = $.computeEnvironmentName;
+        this.computeEnvironmentNamePrefix = $.computeEnvironmentNamePrefix;
+        this.computeResources = $.computeResources;
+        this.ecsClusterArn = $.ecsClusterArn;
+        this.serviceRole = $.serviceRole;
+        this.state = $.state;
+        this.status = $.status;
+        this.statusReason = $.statusReason;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeEnvironmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> computeEnvironmentName;
-        private @Nullable Output<String> computeEnvironmentNamePrefix;
-        private @Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
-        private @Nullable Output<String> ecsClusterArn;
-        private @Nullable Output<String> serviceRole;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> statusReason;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> type;
+        private ComputeEnvironmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeEnvironmentState();
         }
 
         public Builder(ComputeEnvironmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.computeEnvironmentName = defaults.computeEnvironmentName;
-    	      this.computeEnvironmentNamePrefix = defaults.computeEnvironmentNamePrefix;
-    	      this.computeResources = defaults.computeResources;
-    	      this.ecsClusterArn = defaults.ecsClusterArn;
-    	      this.serviceRole = defaults.serviceRole;
-    	      this.state = defaults.state;
-    	      this.status = defaults.status;
-    	      this.statusReason = defaults.statusReason;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.type = defaults.type;
+            $ = new ComputeEnvironmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder computeEnvironmentName(@Nullable Output<String> computeEnvironmentName) {
-            this.computeEnvironmentName = computeEnvironmentName;
+            $.computeEnvironmentName = computeEnvironmentName;
             return this;
         }
-        public Builder computeEnvironmentName(@Nullable String computeEnvironmentName) {
-            this.computeEnvironmentName = Codegen.ofNullable(computeEnvironmentName);
-            return this;
+
+        public Builder computeEnvironmentName(String computeEnvironmentName) {
+            return computeEnvironmentName(Output.of(computeEnvironmentName));
         }
+
         public Builder computeEnvironmentNamePrefix(@Nullable Output<String> computeEnvironmentNamePrefix) {
-            this.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
+            $.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
             return this;
         }
-        public Builder computeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
-            this.computeEnvironmentNamePrefix = Codegen.ofNullable(computeEnvironmentNamePrefix);
-            return this;
+
+        public Builder computeEnvironmentNamePrefix(String computeEnvironmentNamePrefix) {
+            return computeEnvironmentNamePrefix(Output.of(computeEnvironmentNamePrefix));
         }
+
         public Builder computeResources(@Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources) {
-            this.computeResources = computeResources;
+            $.computeResources = computeResources;
             return this;
         }
-        public Builder computeResources(@Nullable ComputeEnvironmentComputeResourcesGetArgs computeResources) {
-            this.computeResources = Codegen.ofNullable(computeResources);
-            return this;
+
+        public Builder computeResources(ComputeEnvironmentComputeResourcesGetArgs computeResources) {
+            return computeResources(Output.of(computeResources));
         }
+
         public Builder ecsClusterArn(@Nullable Output<String> ecsClusterArn) {
-            this.ecsClusterArn = ecsClusterArn;
+            $.ecsClusterArn = ecsClusterArn;
             return this;
         }
-        public Builder ecsClusterArn(@Nullable String ecsClusterArn) {
-            this.ecsClusterArn = Codegen.ofNullable(ecsClusterArn);
-            return this;
+
+        public Builder ecsClusterArn(String ecsClusterArn) {
+            return ecsClusterArn(Output.of(ecsClusterArn));
         }
+
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
-            this.serviceRole = serviceRole;
+            $.serviceRole = serviceRole;
             return this;
         }
-        public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Codegen.ofNullable(serviceRole);
-            return this;
+
+        public Builder serviceRole(String serviceRole) {
+            return serviceRole(Output.of(serviceRole));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder statusReason(@Nullable Output<String> statusReason) {
-            this.statusReason = statusReason;
+            $.statusReason = statusReason;
             return this;
         }
-        public Builder statusReason(@Nullable String statusReason) {
-            this.statusReason = Codegen.ofNullable(statusReason);
-            return this;
+
+        public Builder statusReason(String statusReason) {
+            return statusReason(Output.of(statusReason));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ComputeEnvironmentState build() {
-            return new ComputeEnvironmentState(arn, computeEnvironmentName, computeEnvironmentNamePrefix, computeResources, ecsClusterArn, serviceRole, state, status, statusReason, tags, tagsAll, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ComputeEnvironmentState build() {
+            return $;
         }
     }
+
 }

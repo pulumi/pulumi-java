@@ -7,8 +7,8 @@ import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriter
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
      * 
      */
     @Import(name="replicaModifications")
-      private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications;
+    private @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications;
 
-    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications() {
-        return this.replicaModifications == null ? Codegen.empty() : this.replicaModifications;
+    public Optional<Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs>> replicaModifications() {
+        return Optional.ofNullable(this.replicaModifications);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
      * 
      */
     @Import(name="sseKmsEncryptedObjects")
-      private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+    private @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
-    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
+    public Optional<Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs>> sseKmsEncryptedObjects() {
+        return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
 
-    public BucketReplicationConfigRuleSourceSelectionCriteriaArgs(
-        @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications,
-        @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
-        this.replicaModifications = replicaModifications;
-        this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
-    }
+    private BucketReplicationConfigRuleSourceSelectionCriteriaArgs() {}
 
-    private BucketReplicationConfigRuleSourceSelectionCriteriaArgs() {
-        this.replicaModifications = Codegen.empty();
-        this.sseKmsEncryptedObjects = Codegen.empty();
+    private BucketReplicationConfigRuleSourceSelectionCriteriaArgs(BucketReplicationConfigRuleSourceSelectionCriteriaArgs $) {
+        this.replicaModifications = $.replicaModifications;
+        this.sseKmsEncryptedObjects = $.sseKmsEncryptedObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleSourceSelectionCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications;
-        private @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+        private BucketReplicationConfigRuleSourceSelectionCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleSourceSelectionCriteriaArgs();
         }
 
         public Builder(BucketReplicationConfigRuleSourceSelectionCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicaModifications = defaults.replicaModifications;
-    	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
+            $ = new BucketReplicationConfigRuleSourceSelectionCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicaModifications(@Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications) {
-            this.replicaModifications = replicaModifications;
+            $.replicaModifications = replicaModifications;
             return this;
         }
-        public Builder replicaModifications(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs replicaModifications) {
-            this.replicaModifications = Codegen.ofNullable(replicaModifications);
-            return this;
+
+        public Builder replicaModifications(BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs replicaModifications) {
+            return replicaModifications(Output.of(replicaModifications));
         }
+
         public Builder sseKmsEncryptedObjects(@Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
+            $.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
-        public Builder sseKmsEncryptedObjects(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = Codegen.ofNullable(sseKmsEncryptedObjects);
-            return this;
-        }        public BucketReplicationConfigRuleSourceSelectionCriteriaArgs build() {
-            return new BucketReplicationConfigRuleSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);
+
+        public Builder sseKmsEncryptedObjects(BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
+            return sseKmsEncryptedObjects(Output.of(sseKmsEncryptedObjects));
+        }
+
+        public BucketReplicationConfigRuleSourceSelectionCriteriaArgs build() {
+            return $;
         }
     }
+
 }

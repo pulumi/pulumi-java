@@ -5,11 +5,11 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class CrawlerDynamodbTargetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -33,10 +33,10 @@ public final class CrawlerDynamodbTargetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scanAll")
-      private final @Nullable Output<Boolean> scanAll;
+    private @Nullable Output<Boolean> scanAll;
 
-    public Output<Boolean> scanAll() {
-        return this.scanAll == null ? Codegen.empty() : this.scanAll;
+    public Optional<Output<Boolean>> scanAll() {
+        return Optional.ofNullable(this.scanAll);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class CrawlerDynamodbTargetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scanRate")
-      private final @Nullable Output<Double> scanRate;
+    private @Nullable Output<Double> scanRate;
 
-    public Output<Double> scanRate() {
-        return this.scanRate == null ? Codegen.empty() : this.scanRate;
+    public Optional<Output<Double>> scanRate() {
+        return Optional.ofNullable(this.scanRate);
     }
 
-    public CrawlerDynamodbTargetArgs(
-        Output<String> path,
-        @Nullable Output<Boolean> scanAll,
-        @Nullable Output<Double> scanRate) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.scanAll = scanAll;
-        this.scanRate = scanRate;
-    }
+    private CrawlerDynamodbTargetArgs() {}
 
-    private CrawlerDynamodbTargetArgs() {
-        this.path = Codegen.empty();
-        this.scanAll = Codegen.empty();
-        this.scanRate = Codegen.empty();
+    private CrawlerDynamodbTargetArgs(CrawlerDynamodbTargetArgs $) {
+        this.path = $.path;
+        this.scanAll = $.scanAll;
+        this.scanRate = $.scanRate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerDynamodbTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> path;
-        private @Nullable Output<Boolean> scanAll;
-        private @Nullable Output<Double> scanRate;
+        private CrawlerDynamodbTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerDynamodbTargetArgs();
         }
 
         public Builder(CrawlerDynamodbTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.scanAll = defaults.scanAll;
-    	      this.scanRate = defaults.scanRate;
+            $ = new CrawlerDynamodbTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder scanAll(@Nullable Output<Boolean> scanAll) {
-            this.scanAll = scanAll;
+            $.scanAll = scanAll;
             return this;
         }
-        public Builder scanAll(@Nullable Boolean scanAll) {
-            this.scanAll = Codegen.ofNullable(scanAll);
-            return this;
+
+        public Builder scanAll(Boolean scanAll) {
+            return scanAll(Output.of(scanAll));
         }
+
         public Builder scanRate(@Nullable Output<Double> scanRate) {
-            this.scanRate = scanRate;
+            $.scanRate = scanRate;
             return this;
         }
-        public Builder scanRate(@Nullable Double scanRate) {
-            this.scanRate = Codegen.ofNullable(scanRate);
-            return this;
-        }        public CrawlerDynamodbTargetArgs build() {
-            return new CrawlerDynamodbTargetArgs(path, scanAll, scanRate);
+
+        public Builder scanRate(Double scanRate) {
+            return scanRate(Output.of(scanRate));
+        }
+
+        public CrawlerDynamodbTargetArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

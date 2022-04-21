@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="family", required=true)
-      private final Output<String> family;
+    private Output<String> family;
 
     public Output<String> family() {
         return this.family;
@@ -45,10 +46,10 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
+    private @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
 
-    public Output<List<ClusterParameterGroupParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ClusterParameterGroupParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -78,118 +79,104 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ClusterParameterGroupArgs(
-        @Nullable Output<String> description,
-        Output<String> family,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
-        this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.parameters = parameters;
-        this.tags = tags;
-    }
+    private ClusterParameterGroupArgs() {}
 
-    private ClusterParameterGroupArgs() {
-        this.description = Codegen.empty();
-        this.family = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ClusterParameterGroupArgs(ClusterParameterGroupArgs $) {
+        this.description = $.description;
+        this.family = $.family;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.parameters = $.parameters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterParameterGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> family;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
-        private @Nullable Output<Map<String,String>> tags;
+        private ClusterParameterGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterParameterGroupArgs();
         }
 
         public Builder(ClusterParameterGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.parameters = defaults.parameters;
-    	      this.tags = defaults.tags;
+            $ = new ClusterParameterGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder family(Output<String> family) {
-            this.family = Objects.requireNonNull(family);
+            $.family = family;
             return this;
         }
+
         public Builder family(String family) {
-            this.family = Output.of(Objects.requireNonNull(family));
-            return this;
+            return family(Output.of(family));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder parameters(@Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ClusterParameterGroupParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ClusterParameterGroupParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ClusterParameterGroupParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ClusterParameterGroupArgs build() {
-            return new ClusterParameterGroupArgs(description, family, name, namePrefix, parameters, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ClusterParameterGroupArgs build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("Managed by Pulumi").getNullable();
+            $.family = Objects.requireNonNull($.family, "expected parameter 'family' to be non-null");
+            return $;
         }
     }
+
 }

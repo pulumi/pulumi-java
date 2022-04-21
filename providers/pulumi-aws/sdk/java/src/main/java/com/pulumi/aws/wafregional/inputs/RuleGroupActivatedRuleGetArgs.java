@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.RuleGroupActivatedRuleActionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="action", required=true)
-      private final Output<RuleGroupActivatedRuleActionGetArgs> action;
+    private Output<RuleGroupActivatedRuleActionGetArgs> action;
 
     public Output<RuleGroupActivatedRuleActionGetArgs> action() {
         return this.action;
@@ -33,7 +33,7 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -44,7 +44,7 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ruleId", required=true)
-      private final Output<String> ruleId;
+    private Output<String> ruleId;
 
     public Output<String> ruleId() {
         return this.ruleId;
@@ -55,89 +55,81 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RuleGroupActivatedRuleGetArgs(
-        Output<RuleGroupActivatedRuleActionGetArgs> action,
-        Output<Integer> priority,
-        Output<String> ruleId,
-        @Nullable Output<String> type) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-        this.type = type;
-    }
+    private RuleGroupActivatedRuleGetArgs() {}
 
-    private RuleGroupActivatedRuleGetArgs() {
-        this.action = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.type = Codegen.empty();
+    private RuleGroupActivatedRuleGetArgs(RuleGroupActivatedRuleGetArgs $) {
+        this.action = $.action;
+        this.priority = $.priority;
+        this.ruleId = $.ruleId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupActivatedRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupActivatedRuleActionGetArgs> action;
-        private Output<Integer> priority;
-        private Output<String> ruleId;
-        private @Nullable Output<String> type;
+        private RuleGroupActivatedRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupActivatedRuleGetArgs();
         }
 
         public Builder(RuleGroupActivatedRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.priority = defaults.priority;
-    	      this.ruleId = defaults.ruleId;
-    	      this.type = defaults.type;
+            $ = new RuleGroupActivatedRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<RuleGroupActivatedRuleActionGetArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(RuleGroupActivatedRuleActionGetArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder ruleId(Output<String> ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
-            return this;
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RuleGroupActivatedRuleGetArgs build() {
-            return new RuleGroupActivatedRuleGetArgs(action, priority, ruleId, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public RuleGroupActivatedRuleGetArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            return $;
         }
     }
+
 }

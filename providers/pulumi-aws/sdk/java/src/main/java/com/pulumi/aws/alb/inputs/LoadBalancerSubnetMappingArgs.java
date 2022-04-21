@@ -5,9 +5,9 @@ package com.pulumi.aws.alb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LoadBalancerSubnetMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="allocationId")
-      private final @Nullable Output<String> allocationId;
+    private @Nullable Output<String> allocationId;
 
-    public Output<String> allocationId() {
-        return this.allocationId == null ? Codegen.empty() : this.allocationId;
+    public Optional<Output<String>> allocationId() {
+        return Optional.ofNullable(this.allocationId);
     }
 
     /**
@@ -31,17 +31,17 @@ public final class LoadBalancerSubnetMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ipv6Address")
-      private final @Nullable Output<String> ipv6Address;
+    private @Nullable Output<String> ipv6Address;
 
-    public Output<String> ipv6Address() {
-        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
+    public Optional<Output<String>> ipv6Address() {
+        return Optional.ofNullable(this.ipv6Address);
     }
 
     @Import(name="outpostId")
-      private final @Nullable Output<String> outpostId;
+    private @Nullable Output<String> outpostId;
 
-    public Output<String> outpostId() {
-        return this.outpostId == null ? Codegen.empty() : this.outpostId;
+    public Optional<Output<String>> outpostId() {
+        return Optional.ofNullable(this.outpostId);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LoadBalancerSubnetMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateIpv4Address")
-      private final @Nullable Output<String> privateIpv4Address;
+    private @Nullable Output<String> privateIpv4Address;
 
-    public Output<String> privateIpv4Address() {
-        return this.privateIpv4Address == null ? Codegen.empty() : this.privateIpv4Address;
+    public Optional<Output<String>> privateIpv4Address() {
+        return Optional.ofNullable(this.privateIpv4Address);
     }
 
     /**
@@ -60,102 +60,89 @@ public final class LoadBalancerSubnetMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public LoadBalancerSubnetMappingArgs(
-        @Nullable Output<String> allocationId,
-        @Nullable Output<String> ipv6Address,
-        @Nullable Output<String> outpostId,
-        @Nullable Output<String> privateIpv4Address,
-        Output<String> subnetId) {
-        this.allocationId = allocationId;
-        this.ipv6Address = ipv6Address;
-        this.outpostId = outpostId;
-        this.privateIpv4Address = privateIpv4Address;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private LoadBalancerSubnetMappingArgs() {}
 
-    private LoadBalancerSubnetMappingArgs() {
-        this.allocationId = Codegen.empty();
-        this.ipv6Address = Codegen.empty();
-        this.outpostId = Codegen.empty();
-        this.privateIpv4Address = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private LoadBalancerSubnetMappingArgs(LoadBalancerSubnetMappingArgs $) {
+        this.allocationId = $.allocationId;
+        this.ipv6Address = $.ipv6Address;
+        this.outpostId = $.outpostId;
+        this.privateIpv4Address = $.privateIpv4Address;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerSubnetMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocationId;
-        private @Nullable Output<String> ipv6Address;
-        private @Nullable Output<String> outpostId;
-        private @Nullable Output<String> privateIpv4Address;
-        private Output<String> subnetId;
+        private LoadBalancerSubnetMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerSubnetMappingArgs();
         }
 
         public Builder(LoadBalancerSubnetMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationId = defaults.allocationId;
-    	      this.ipv6Address = defaults.ipv6Address;
-    	      this.outpostId = defaults.outpostId;
-    	      this.privateIpv4Address = defaults.privateIpv4Address;
-    	      this.subnetId = defaults.subnetId;
+            $ = new LoadBalancerSubnetMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationId(@Nullable Output<String> allocationId) {
-            this.allocationId = allocationId;
+            $.allocationId = allocationId;
             return this;
         }
-        public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Codegen.ofNullable(allocationId);
-            return this;
+
+        public Builder allocationId(String allocationId) {
+            return allocationId(Output.of(allocationId));
         }
+
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
-            this.ipv6Address = ipv6Address;
+            $.ipv6Address = ipv6Address;
             return this;
         }
-        public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Codegen.ofNullable(ipv6Address);
-            return this;
+
+        public Builder ipv6Address(String ipv6Address) {
+            return ipv6Address(Output.of(ipv6Address));
         }
+
         public Builder outpostId(@Nullable Output<String> outpostId) {
-            this.outpostId = outpostId;
+            $.outpostId = outpostId;
             return this;
         }
-        public Builder outpostId(@Nullable String outpostId) {
-            this.outpostId = Codegen.ofNullable(outpostId);
-            return this;
+
+        public Builder outpostId(String outpostId) {
+            return outpostId(Output.of(outpostId));
         }
+
         public Builder privateIpv4Address(@Nullable Output<String> privateIpv4Address) {
-            this.privateIpv4Address = privateIpv4Address;
+            $.privateIpv4Address = privateIpv4Address;
             return this;
         }
-        public Builder privateIpv4Address(@Nullable String privateIpv4Address) {
-            this.privateIpv4Address = Codegen.ofNullable(privateIpv4Address);
-            return this;
+
+        public Builder privateIpv4Address(String privateIpv4Address) {
+            return privateIpv4Address(Output.of(privateIpv4Address));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public LoadBalancerSubnetMappingArgs build() {
-            return new LoadBalancerSubnetMappingArgs(allocationId, ipv6Address, outpostId, privateIpv4Address, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public LoadBalancerSubnetMappingArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

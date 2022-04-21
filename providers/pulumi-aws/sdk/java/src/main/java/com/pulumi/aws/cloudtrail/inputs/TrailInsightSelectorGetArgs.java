@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudtrail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TrailInsightSelectorGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="insightType", required=true)
-      private final Output<String> insightType;
+    private Output<String> insightType;
 
     public Output<String> insightType() {
         return this.insightType;
     }
 
-    public TrailInsightSelectorGetArgs(Output<String> insightType) {
-        this.insightType = Objects.requireNonNull(insightType, "expected parameter 'insightType' to be non-null");
-    }
+    private TrailInsightSelectorGetArgs() {}
 
-    private TrailInsightSelectorGetArgs() {
-        this.insightType = Codegen.empty();
+    private TrailInsightSelectorGetArgs(TrailInsightSelectorGetArgs $) {
+        this.insightType = $.insightType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailInsightSelectorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> insightType;
+        private TrailInsightSelectorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailInsightSelectorGetArgs();
         }
 
         public Builder(TrailInsightSelectorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insightType = defaults.insightType;
+            $ = new TrailInsightSelectorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder insightType(Output<String> insightType) {
-            this.insightType = Objects.requireNonNull(insightType);
+            $.insightType = insightType;
             return this;
         }
+
         public Builder insightType(String insightType) {
-            this.insightType = Output.of(Objects.requireNonNull(insightType));
-            return this;
-        }        public TrailInsightSelectorGetArgs build() {
-            return new TrailInsightSelectorGetArgs(insightType);
+            return insightType(Output.of(insightType));
+        }
+
+        public TrailInsightSelectorGetArgs build() {
+            $.insightType = Objects.requireNonNull($.insightType, "expected parameter 'insightType' to be non-null");
+            return $;
         }
     }
+
 }

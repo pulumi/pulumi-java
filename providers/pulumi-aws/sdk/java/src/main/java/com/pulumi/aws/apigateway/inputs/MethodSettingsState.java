@@ -6,9 +6,9 @@ package com.pulumi.aws.apigateway.inputs;
 import com.pulumi.aws.apigateway.inputs.MethodSettingsSettingsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="methodPath")
-      private final @Nullable Output<String> methodPath;
+    private @Nullable Output<String> methodPath;
 
-    public Output<String> methodPath() {
-        return this.methodPath == null ? Codegen.empty() : this.methodPath;
+    public Optional<Output<String>> methodPath() {
+        return Optional.ofNullable(this.methodPath);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<MethodSettingsSettingsGetArgs> settings;
+    private @Nullable Output<MethodSettingsSettingsGetArgs> settings;
 
-    public Output<MethodSettingsSettingsGetArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<MethodSettingsSettingsGetArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -54,85 +54,78 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="stageName")
-      private final @Nullable Output<String> stageName;
+    private @Nullable Output<String> stageName;
 
-    public Output<String> stageName() {
-        return this.stageName == null ? Codegen.empty() : this.stageName;
+    public Optional<Output<String>> stageName() {
+        return Optional.ofNullable(this.stageName);
     }
 
-    public MethodSettingsState(
-        @Nullable Output<String> methodPath,
-        @Nullable Output<String> restApi,
-        @Nullable Output<MethodSettingsSettingsGetArgs> settings,
-        @Nullable Output<String> stageName) {
-        this.methodPath = methodPath;
-        this.restApi = restApi;
-        this.settings = settings;
-        this.stageName = stageName;
-    }
+    private MethodSettingsState() {}
 
-    private MethodSettingsState() {
-        this.methodPath = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.stageName = Codegen.empty();
+    private MethodSettingsState(MethodSettingsState $) {
+        this.methodPath = $.methodPath;
+        this.restApi = $.restApi;
+        this.settings = $.settings;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> methodPath;
-        private @Nullable Output<String> restApi;
-        private @Nullable Output<MethodSettingsSettingsGetArgs> settings;
-        private @Nullable Output<String> stageName;
+        private MethodSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodSettingsState();
         }
 
         public Builder(MethodSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methodPath = defaults.methodPath;
-    	      this.restApi = defaults.restApi;
-    	      this.settings = defaults.settings;
-    	      this.stageName = defaults.stageName;
+            $ = new MethodSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder methodPath(@Nullable Output<String> methodPath) {
-            this.methodPath = methodPath;
+            $.methodPath = methodPath;
             return this;
         }
-        public Builder methodPath(@Nullable String methodPath) {
-            this.methodPath = Codegen.ofNullable(methodPath);
-            return this;
+
+        public Builder methodPath(String methodPath) {
+            return methodPath(Output.of(methodPath));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder settings(@Nullable Output<MethodSettingsSettingsGetArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable MethodSettingsSettingsGetArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(MethodSettingsSettingsGetArgs settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder stageName(@Nullable Output<String> stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
         }
-        public Builder stageName(@Nullable String stageName) {
-            this.stageName = Codegen.ofNullable(stageName);
-            return this;
-        }        public MethodSettingsState build() {
-            return new MethodSettingsState(methodPath, restApi, settings, stageName);
+
+        public Builder stageName(String stageName) {
+            return stageName(Output.of(stageName));
+        }
+
+        public MethodSettingsState build() {
+            return $;
         }
     }
+
 }

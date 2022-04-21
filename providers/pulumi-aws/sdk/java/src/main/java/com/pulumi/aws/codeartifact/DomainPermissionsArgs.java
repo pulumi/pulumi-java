@@ -5,9 +5,9 @@ package com.pulumi.aws.codeartifact;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DomainPermissionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
@@ -31,10 +31,10 @@ public final class DomainPermissionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="domainOwner")
-      private final @Nullable Output<String> domainOwner;
+    private @Nullable Output<String> domainOwner;
 
-    public Output<String> domainOwner() {
-        return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
+    public Optional<Output<String>> domainOwner() {
+        return Optional.ofNullable(this.domainOwner);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class DomainPermissionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyDocument", required=true)
-      private final Output<String> policyDocument;
+    private Output<String> policyDocument;
 
     public Output<String> policyDocument() {
         return this.policyDocument;
@@ -53,89 +53,80 @@ public final class DomainPermissionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyRevision")
-      private final @Nullable Output<String> policyRevision;
+    private @Nullable Output<String> policyRevision;
 
-    public Output<String> policyRevision() {
-        return this.policyRevision == null ? Codegen.empty() : this.policyRevision;
+    public Optional<Output<String>> policyRevision() {
+        return Optional.ofNullable(this.policyRevision);
     }
 
-    public DomainPermissionsArgs(
-        Output<String> domain,
-        @Nullable Output<String> domainOwner,
-        Output<String> policyDocument,
-        @Nullable Output<String> policyRevision) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.domainOwner = domainOwner;
-        this.policyDocument = Objects.requireNonNull(policyDocument, "expected parameter 'policyDocument' to be non-null");
-        this.policyRevision = policyRevision;
-    }
+    private DomainPermissionsArgs() {}
 
-    private DomainPermissionsArgs() {
-        this.domain = Codegen.empty();
-        this.domainOwner = Codegen.empty();
-        this.policyDocument = Codegen.empty();
-        this.policyRevision = Codegen.empty();
+    private DomainPermissionsArgs(DomainPermissionsArgs $) {
+        this.domain = $.domain;
+        this.domainOwner = $.domainOwner;
+        this.policyDocument = $.policyDocument;
+        this.policyRevision = $.policyRevision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainPermissionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domain;
-        private @Nullable Output<String> domainOwner;
-        private Output<String> policyDocument;
-        private @Nullable Output<String> policyRevision;
+        private DomainPermissionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainPermissionsArgs();
         }
 
         public Builder(DomainPermissionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.domainOwner = defaults.domainOwner;
-    	      this.policyDocument = defaults.policyDocument;
-    	      this.policyRevision = defaults.policyRevision;
+            $ = new DomainPermissionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
+            return domain(Output.of(domain));
         }
+
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
-            this.domainOwner = domainOwner;
+            $.domainOwner = domainOwner;
             return this;
         }
-        public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Codegen.ofNullable(domainOwner);
-            return this;
+
+        public Builder domainOwner(String domainOwner) {
+            return domainOwner(Output.of(domainOwner));
         }
+
         public Builder policyDocument(Output<String> policyDocument) {
-            this.policyDocument = Objects.requireNonNull(policyDocument);
+            $.policyDocument = policyDocument;
             return this;
         }
+
         public Builder policyDocument(String policyDocument) {
-            this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
-            return this;
+            return policyDocument(Output.of(policyDocument));
         }
+
         public Builder policyRevision(@Nullable Output<String> policyRevision) {
-            this.policyRevision = policyRevision;
+            $.policyRevision = policyRevision;
             return this;
         }
-        public Builder policyRevision(@Nullable String policyRevision) {
-            this.policyRevision = Codegen.ofNullable(policyRevision);
-            return this;
-        }        public DomainPermissionsArgs build() {
-            return new DomainPermissionsArgs(domain, domainOwner, policyDocument, policyRevision);
+
+        public Builder policyRevision(String policyRevision) {
+            return policyRevision(Output.of(policyRevision));
+        }
+
+        public DomainPermissionsArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.policyDocument = Objects.requireNonNull($.policyDocument, "expected parameter 'policyDocument' to be non-null");
+            return $;
         }
     }
+
 }

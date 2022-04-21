@@ -5,7 +5,6 @@ package com.pulumi.aws.ssoadmin;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PermissionSetInlinePolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="inlinePolicy", required=true)
-      private final Output<String> inlinePolicy;
+    private Output<String> inlinePolicy;
 
     public Output<String> inlinePolicy() {
         return this.inlinePolicy;
@@ -30,7 +29,7 @@ public final class PermissionSetInlinePolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final Output<String> instanceArn;
+    private Output<String> instanceArn;
 
     public Output<String> instanceArn() {
         return this.instanceArn;
@@ -41,76 +40,71 @@ public final class PermissionSetInlinePolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="permissionSetArn", required=true)
-      private final Output<String> permissionSetArn;
+    private Output<String> permissionSetArn;
 
     public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
-    public PermissionSetInlinePolicyArgs(
-        Output<String> inlinePolicy,
-        Output<String> instanceArn,
-        Output<String> permissionSetArn) {
-        this.inlinePolicy = Objects.requireNonNull(inlinePolicy, "expected parameter 'inlinePolicy' to be non-null");
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-        this.permissionSetArn = Objects.requireNonNull(permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
-    }
+    private PermissionSetInlinePolicyArgs() {}
 
-    private PermissionSetInlinePolicyArgs() {
-        this.inlinePolicy = Codegen.empty();
-        this.instanceArn = Codegen.empty();
-        this.permissionSetArn = Codegen.empty();
+    private PermissionSetInlinePolicyArgs(PermissionSetInlinePolicyArgs $) {
+        this.inlinePolicy = $.inlinePolicy;
+        this.instanceArn = $.instanceArn;
+        this.permissionSetArn = $.permissionSetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionSetInlinePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> inlinePolicy;
-        private Output<String> instanceArn;
-        private Output<String> permissionSetArn;
+        private PermissionSetInlinePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionSetInlinePolicyArgs();
         }
 
         public Builder(PermissionSetInlinePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inlinePolicy = defaults.inlinePolicy;
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.permissionSetArn = defaults.permissionSetArn;
+            $ = new PermissionSetInlinePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inlinePolicy(Output<String> inlinePolicy) {
-            this.inlinePolicy = Objects.requireNonNull(inlinePolicy);
+            $.inlinePolicy = inlinePolicy;
             return this;
         }
+
         public Builder inlinePolicy(String inlinePolicy) {
-            this.inlinePolicy = Output.of(Objects.requireNonNull(inlinePolicy));
-            return this;
+            return inlinePolicy(Output.of(inlinePolicy));
         }
+
         public Builder instanceArn(Output<String> instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
         }
+
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
-            return this;
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder permissionSetArn(Output<String> permissionSetArn) {
-            this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
+
         public Builder permissionSetArn(String permissionSetArn) {
-            this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
-            return this;
-        }        public PermissionSetInlinePolicyArgs build() {
-            return new PermissionSetInlinePolicyArgs(inlinePolicy, instanceArn, permissionSetArn);
+            return permissionSetArn(Output.of(permissionSetArn));
+        }
+
+        public PermissionSetInlinePolicyArgs build() {
+            $.inlinePolicy = Objects.requireNonNull($.inlinePolicy, "expected parameter 'inlinePolicy' to be non-null");
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            $.permissionSetArn = Objects.requireNonNull($.permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
+            return $;
         }
     }
+
 }

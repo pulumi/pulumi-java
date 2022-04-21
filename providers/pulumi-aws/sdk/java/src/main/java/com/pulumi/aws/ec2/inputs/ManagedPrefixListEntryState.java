@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ManagedPrefixListEntryState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cidr")
-      private final @Nullable Output<String> cidr;
+    private @Nullable Output<String> cidr;
 
-    public Output<String> cidr() {
-        return this.cidr == null ? Codegen.empty() : this.cidr;
+    public Optional<Output<String>> cidr() {
+        return Optional.ofNullable(this.cidr);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ManagedPrefixListEntryState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ManagedPrefixListEntryState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="prefixListId")
-      private final @Nullable Output<String> prefixListId;
+    private @Nullable Output<String> prefixListId;
 
-    public Output<String> prefixListId() {
-        return this.prefixListId == null ? Codegen.empty() : this.prefixListId;
+    public Optional<Output<String>> prefixListId() {
+        return Optional.ofNullable(this.prefixListId);
     }
 
-    public ManagedPrefixListEntryState(
-        @Nullable Output<String> cidr,
-        @Nullable Output<String> description,
-        @Nullable Output<String> prefixListId) {
-        this.cidr = cidr;
-        this.description = description;
-        this.prefixListId = prefixListId;
-    }
+    private ManagedPrefixListEntryState() {}
 
-    private ManagedPrefixListEntryState() {
-        this.cidr = Codegen.empty();
-        this.description = Codegen.empty();
-        this.prefixListId = Codegen.empty();
+    private ManagedPrefixListEntryState(ManagedPrefixListEntryState $) {
+        this.cidr = $.cidr;
+        this.description = $.description;
+        this.prefixListId = $.prefixListId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPrefixListEntryState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidr;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> prefixListId;
+        private ManagedPrefixListEntryState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPrefixListEntryState();
         }
 
         public Builder(ManagedPrefixListEntryState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.description = defaults.description;
-    	      this.prefixListId = defaults.prefixListId;
+            $ = new ManagedPrefixListEntryState(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(@Nullable Output<String> cidr) {
-            this.cidr = cidr;
+            $.cidr = cidr;
             return this;
         }
-        public Builder cidr(@Nullable String cidr) {
-            this.cidr = Codegen.ofNullable(cidr);
-            return this;
+
+        public Builder cidr(String cidr) {
+            return cidr(Output.of(cidr));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder prefixListId(@Nullable Output<String> prefixListId) {
-            this.prefixListId = prefixListId;
+            $.prefixListId = prefixListId;
             return this;
         }
-        public Builder prefixListId(@Nullable String prefixListId) {
-            this.prefixListId = Codegen.ofNullable(prefixListId);
-            return this;
-        }        public ManagedPrefixListEntryState build() {
-            return new ManagedPrefixListEntryState(cidr, description, prefixListId);
+
+        public Builder prefixListId(String prefixListId) {
+            return prefixListId(Output.of(prefixListId));
+        }
+
+        public ManagedPrefixListEntryState build() {
+            return $;
         }
     }
+
 }
