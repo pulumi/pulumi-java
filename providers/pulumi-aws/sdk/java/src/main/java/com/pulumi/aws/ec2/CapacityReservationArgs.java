@@ -261,6 +261,14 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
             return instancePlatform(Output.of(instancePlatform));
         }
 
+        public Builder instancePlatform(String instancePlatform) {
+            return instancePlatform(Either.ofLeft(instancePlatform));
+        }
+
+        public Builder instancePlatform(InstancePlatform instancePlatform) {
+            return instancePlatform(Either.ofRight(instancePlatform));
+        }
+
         public Builder instanceType(Output<Either<String,InstanceType>> instanceType) {
             $.instanceType = instanceType;
             return this;
@@ -268,6 +276,14 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
 
         public Builder instanceType(Either<String,InstanceType> instanceType) {
             return instanceType(Output.of(instanceType));
+        }
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Either.ofLeft(instanceType));
+        }
+
+        public Builder instanceType(InstanceType instanceType) {
+            return instanceType(Either.ofRight(instanceType));
         }
 
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
@@ -295,6 +311,14 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
 
         public Builder tenancy(Either<String,Tenancy> tenancy) {
             return tenancy(Output.of(tenancy));
+        }
+
+        public Builder tenancy(String tenancy) {
+            return tenancy(Either.ofLeft(tenancy));
+        }
+
+        public Builder tenancy(Tenancy tenancy) {
+            return tenancy(Either.ofRight(tenancy));
         }
 
         public CapacityReservationArgs build() {

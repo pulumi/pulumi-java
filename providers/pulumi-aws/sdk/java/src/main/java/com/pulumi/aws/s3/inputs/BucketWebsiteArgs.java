@@ -125,6 +125,14 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
             return routingRules(Output.of(routingRules));
         }
 
+        public Builder routingRules(String routingRules) {
+            return routingRules(Either.ofLeft(routingRules));
+        }
+
+        public Builder routingRules(List<String> routingRules) {
+            return routingRules(Either.ofRight(routingRules));
+        }
+
         public BucketWebsiteArgs build() {
             return $;
         }
