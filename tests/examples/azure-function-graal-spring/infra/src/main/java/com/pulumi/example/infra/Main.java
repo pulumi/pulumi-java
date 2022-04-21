@@ -29,7 +29,6 @@ import com.pulumi.azurenative.web.enums.SupportedTlsVersions;
 import com.pulumi.azurenative.web.inputs.NameValuePairArgs;
 import com.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import com.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
-import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 
 public class Main {
@@ -47,9 +46,9 @@ public class Main {
         // Also, we will upload the function code to the same storage account.
         var storageAccount = new StorageAccount("linux-fn-sa", StorageAccountArgs.builder()
                 .resourceGroupName(resourceGroup.name())
-                .kind(Either.ofRight(Kind.StorageV2))
+                .kind(Kind.StorageV2)
                 .sku(SkuArgs.builder()
-                        .name(Either.ofRight(SkuName.Standard_LRS))
+                        .name(SkuName.Standard_LRS)
                         .build())
                 .build());
 
@@ -94,8 +93,8 @@ public class Main {
                         .httpsOnly(true)
                         .siteConfig(SiteConfigArgs.builder()
                                 .numberOfWorkers(1)
-                                .minTlsVersion(Either.ofRight(SupportedTlsVersions.SupportedTlsVersions_1_2))
-                                .ftpsState(Either.ofRight(FtpsState.Disabled))
+                                .minTlsVersion(SupportedTlsVersions.SupportedTlsVersions_1_2)
+                                .ftpsState(FtpsState.Disabled)
                                 .appSettings(
                                         NameValuePairArgs.builder().name("AzureWebJobsStorage").value(conn).build(),
                                         NameValuePairArgs.builder().name("WEBSITE_RUN_FROM_PACKAGE").value(codeBlobUrl).build(),
@@ -143,8 +142,8 @@ public class Main {
                                         .protocols(HttpProtocol.Https)
                                         .sharedAccessExpiryTime("2030-01-01")
                                         .sharedAccessStartTime("2021-01-01")
-                                        .resource(Either.ofRight(SignedResource.C))
-                                        .permissions(Either.ofRight(Permissions.R))
+                                        .resource(SignedResource.C)
+                                        .permissions(Permissions.R)
                                         .canonicalizedResource(String.format("/blob/%s/%s", t.t2, t.t3))
                                         .contentType("application/json")
                                         .cacheControl("max-age=5")
