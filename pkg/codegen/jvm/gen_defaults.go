@@ -84,7 +84,7 @@ func (dg *defaultsGen) builderExpr(
 	var code string
 
 	// For Either<A,B> try to codegen A or B opportunistically.
-	if isEither, a, b := dg.unEitherTypeShape(t); isEither {
+	if isEither, a, b := t.UnEither(); isEither {
 		aV, err := dg.builderExprWithSimpleType(prop, a, config, arg,
 			fmt.Sprintf(".left(%s)%s",
 				b.ToCodeClassLiteral(dg.ctx.imports),
@@ -253,13 +253,6 @@ func (dg *defaultsGen) detectEnumTypes(prop *schema.Property) map[string]*schema
 		}
 	})
 	return enumTypes
-}
-
-func (dg *defaultsGen) unEitherTypeShape(typeShape TypeShape) (bool, TypeShape, TypeShape) {
-	if typeShape.Type.Equal(names.Either) {
-		return true, typeShape.Parameters[0], typeShape.Parameters[1]
-	}
-	return false, TypeShape{}, TypeShape{}
 }
 
 // In cases when the default value is a known enum reference, this
