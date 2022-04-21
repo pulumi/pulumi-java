@@ -108,6 +108,14 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
             return servicePort(Output.of(servicePort));
         }
 
+        public Builder servicePort(Integer servicePort) {
+            return servicePort(Either.ofLeft(servicePort));
+        }
+
+        public Builder servicePort(String servicePort) {
+            return servicePort(Either.ofRight(servicePort));
+        }
+
         public IngressBackendArgs build() {
             $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
             $.servicePort = Objects.requireNonNull($.servicePort, "expected parameter 'servicePort' to be non-null");

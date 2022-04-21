@@ -77,6 +77,14 @@ public final class NetworkPolicyPortArgs extends com.pulumi.resources.ResourceAr
             return port(Output.of(port));
         }
 
+        public Builder port(Integer port) {
+            return port(Either.ofLeft(port));
+        }
+
+        public Builder port(String port) {
+            return port(Either.ofRight(port));
+        }
+
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;

@@ -150,6 +150,14 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
             return port(Output.of(port));
         }
 
+        public Builder port(Integer port) {
+            return port(Either.ofLeft(port));
+        }
+
+        public Builder port(String port) {
+            return port(Either.ofRight(port));
+        }
+
         public Builder scheme(@Nullable Output<String> scheme) {
             $.scheme = scheme;
             return this;
