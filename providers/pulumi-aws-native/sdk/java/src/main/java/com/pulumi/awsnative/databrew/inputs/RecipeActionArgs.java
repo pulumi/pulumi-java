@@ -79,6 +79,14 @@ public final class RecipeActionArgs extends com.pulumi.resources.ResourceArgs {
             return parameters(Output.of(parameters));
         }
 
+        public Builder parameters(RecipeParametersArgs parameters) {
+            return parameters(Either.ofLeft(parameters));
+        }
+
+        public Builder parameters(RecipeParameterMapArgs parameters) {
+            return parameters(Either.ofRight(parameters));
+        }
+
         public RecipeActionArgs build() {
             $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
             return $;
