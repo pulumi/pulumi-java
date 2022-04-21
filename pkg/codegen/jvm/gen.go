@@ -1212,8 +1212,17 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		// Add getter
 		getterType := outputParameterType
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
-		fprintf(w, "    public %s<%s> %s() {\n", ctx.imports.Ref(names.Output), getterType, getterName)
-		fprintf(w, "        return this.%s;\n", propertyName)
+
+		// Prefer to surface non-required properties as `Output<Optional<T>>` rather than
+		// `Output</* Nullable */ T>` through the getter.
+		getterExpr := fmt.Sprintf("this.%s", propertyName)
+		if isNullable, t := propertyType.unNullable(); !isNullable {
+			getterType = t.optional().ToCode(ctx.imports)
+			getterExpr = fmt.Sprintf("%s.optional(this.%s)", ctx.ref(names.Codegen), propertyName)
+		}
+
+		fprintf(w, "    public %s<%s> %s() {\n", ctx.ref(names.Output), getterType, getterName)
+		fprintf(w, "        return %s;\n", getterExpr)
 		fprintf(w, "    }\n")
 	}
 
