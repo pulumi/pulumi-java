@@ -3,35 +3,26 @@
 
 package com.pulumi.example;
 
-import java.util.Objects;
+
 
 
 public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ResourceArgs Empty = new ResourceArgs();
 
-    public ResourceArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ResourceArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ResourceArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ResourceArgs();
         }
         public ResourceArgs build() {
-            return new ResourceArgs();
+            return $;
         }
     }
+
 }

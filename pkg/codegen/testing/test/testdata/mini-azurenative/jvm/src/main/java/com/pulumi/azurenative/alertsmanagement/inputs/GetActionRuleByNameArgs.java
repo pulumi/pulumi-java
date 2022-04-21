@@ -17,7 +17,7 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="actionRuleName", required=true)
-      private final String actionRuleName;
+    private String actionRuleName;
 
     public String actionRuleName() {
         return this.actionRuleName;
@@ -28,55 +28,52 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetActionRuleByNameArgs(
-        String actionRuleName,
-        String resourceGroupName) {
-        this.actionRuleName = Objects.requireNonNull(actionRuleName, "expected parameter 'actionRuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetActionRuleByNameArgs() {}
 
-    private GetActionRuleByNameArgs() {
-        this.actionRuleName = null;
-        this.resourceGroupName = null;
+    private GetActionRuleByNameArgs(GetActionRuleByNameArgs $) {
+        this.actionRuleName = $.actionRuleName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActionRuleByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionRuleName;
-        private String resourceGroupName;
+        private GetActionRuleByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActionRuleByNameArgs();
         }
 
         public Builder(GetActionRuleByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionRuleName = defaults.actionRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetActionRuleByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionRuleName(String actionRuleName) {
-            this.actionRuleName = Objects.requireNonNull(actionRuleName);
+            $.actionRuleName = actionRuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetActionRuleByNameArgs build() {
-            return new GetActionRuleByNameArgs(actionRuleName, resourceGroupName);
+        }
+
+        public GetActionRuleByNameArgs build() {
+            $.actionRuleName = Objects.requireNonNull($.actionRuleName, "expected parameter 'actionRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

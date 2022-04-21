@@ -24,10 +24,10 @@ public final class IgnoreTags extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyPrefixes")
-      private final @Nullable List<String> keyPrefixes;
+    private @Nullable List<String> keyPrefixes;
 
-    public List<String> keyPrefixes() {
-        return this.keyPrefixes == null ? List.of() : this.keyPrefixes;
+    public Optional<List<String>> keyPrefixes() {
+        return Optional.ofNullable(this.keyPrefixes);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class IgnoreTags extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keys")
-      private final @Nullable List<String> keys;
+    private @Nullable List<String> keys;
 
-    public List<String> keys() {
-        return this.keys == null ? List.of() : this.keys;
+    public Optional<List<String>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
-    public IgnoreTags(
-        @Nullable List<String> keyPrefixes,
-        @Nullable List<String> keys) {
-        this.keyPrefixes = keyPrefixes;
-        this.keys = keys;
-    }
+    private IgnoreTags() {}
 
-    private IgnoreTags() {
-        this.keyPrefixes = List.of();
-        this.keys = List.of();
+    private IgnoreTags(IgnoreTags $) {
+        this.keyPrefixes = $.keyPrefixes;
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IgnoreTags defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> keyPrefixes;
-        private @Nullable List<String> keys;
+        private IgnoreTags $;
 
         public Builder() {
-    	      // Empty
+            $ = new IgnoreTags();
         }
 
         public Builder(IgnoreTags defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyPrefixes = defaults.keyPrefixes;
-    	      this.keys = defaults.keys;
+            $ = new IgnoreTags(Objects.requireNonNull(defaults));
         }
 
         public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
-            this.keyPrefixes = keyPrefixes;
+            $.keyPrefixes = keyPrefixes;
             return this;
         }
+
         public Builder keyPrefixes(String... keyPrefixes) {
             return keyPrefixes(List.of(keyPrefixes));
         }
+
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
+
         public Builder keys(String... keys) {
             return keys(List.of(keys));
-        }        public IgnoreTags build() {
-            return new IgnoreTags(keyPrefixes, keys);
+        }
+
+        public IgnoreTags build() {
+            return $;
         }
     }
+
 }

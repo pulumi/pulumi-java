@@ -24,7 +24,7 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="frequency", required=true)
-      private final String frequency;
+    private String frequency;
 
     public String frequency() {
         return this.frequency;
@@ -35,7 +35,7 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="meterDetails", required=true)
-      private final Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
+    private Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
 
     public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails() {
         return this.meterDetails;
@@ -46,7 +46,7 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="meteringType", required=true)
-      private final String meteringType;
+    private String meteringType;
 
     public String meteringType() {
         return this.meteringType;
@@ -57,73 +57,66 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public BillingMeterDetailsResponse(
-        String frequency,
-        Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
-        String meteringType,
-        String name) {
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.meterDetails = Objects.requireNonNull(meterDetails, "expected parameter 'meterDetails' to be non-null");
-        this.meteringType = Objects.requireNonNull(meteringType, "expected parameter 'meteringType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private BillingMeterDetailsResponse() {}
 
-    private BillingMeterDetailsResponse() {
-        this.frequency = null;
-        this.meterDetails = null;
-        this.meteringType = null;
-        this.name = null;
+    private BillingMeterDetailsResponse(BillingMeterDetailsResponse $) {
+        this.frequency = $.frequency;
+        this.meterDetails = $.meterDetails;
+        this.meteringType = $.meteringType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingMeterDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String frequency;
-        private Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
-        private String meteringType;
-        private String name;
+        private BillingMeterDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingMeterDetailsResponse();
         }
 
         public Builder(BillingMeterDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequency = defaults.frequency;
-    	      this.meterDetails = defaults.meterDetails;
-    	      this.meteringType = defaults.meteringType;
-    	      this.name = defaults.name;
+            $ = new BillingMeterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder frequency(String frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder meterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
-            this.meterDetails = Objects.requireNonNull(meterDetails);
+            $.meterDetails = meterDetails;
             return this;
         }
+
         public Builder meteringType(String meteringType) {
-            this.meteringType = Objects.requireNonNull(meteringType);
+            $.meteringType = meteringType;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public BillingMeterDetailsResponse build() {
-            return new BillingMeterDetailsResponse(frequency, meterDetails, meteringType, name);
+        }
+
+        public BillingMeterDetailsResponse build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.meterDetails = Objects.requireNonNull($.meterDetails, "expected parameter 'meterDetails' to be non-null");
+            $.meteringType = Objects.requireNonNull($.meteringType, "expected parameter 'meteringType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

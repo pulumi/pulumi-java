@@ -5,9 +5,9 @@ package com.pulumi.example.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConfigMapArgs Empty = new ConfigMapArgs();
 
     @Import(name="config")
-      private final @Nullable Output<String> config;
+    private @Nullable Output<String> config;
 
-    public Output<String> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<String>> config() {
+        return Optional.ofNullable(this.config);
     }
 
-    public ConfigMapArgs(@Nullable Output<String> config) {
-        this.config = config;
-    }
+    private ConfigMapArgs() {}
 
-    private ConfigMapArgs() {
-        this.config = Codegen.empty();
+    private ConfigMapArgs(ConfigMapArgs $) {
+        this.config = $.config;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> config;
+        private ConfigMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigMapArgs();
         }
 
         public Builder(ConfigMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
+            $ = new ConfigMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Output<String> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable String config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
-        }        public ConfigMapArgs build() {
-            return new ConfigMapArgs(config);
+
+        public Builder config(String config) {
+            return config(Output.of(config));
+        }
+
+        public ConfigMapArgs build() {
+            return $;
         }
     }
+
 }

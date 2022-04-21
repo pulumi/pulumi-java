@@ -5,13 +5,13 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Map<String,String>> environmentVariables;
+    private @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="errorThreshold")
-      private final @Nullable Output<Integer> errorThreshold;
+    private @Nullable Output<Integer> errorThreshold;
 
-    public Output<Integer> errorThreshold() {
-        return this.errorThreshold == null ? Codegen.empty() : this.errorThreshold;
+    public Optional<Output<Integer>> errorThreshold() {
+        return Optional.ofNullable(this.errorThreshold);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="miniBatchSize")
-      private final @Nullable Output<Double> miniBatchSize;
+    private @Nullable Output<Double> miniBatchSize;
 
-    public Output<Double> miniBatchSize() {
-        return this.miniBatchSize == null ? Codegen.empty() : this.miniBatchSize;
+    public Optional<Output<Double>> miniBatchSize() {
+        return Optional.ofNullable(this.miniBatchSize);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="partitionKeys")
-      private final @Nullable Output<List<String>> partitionKeys;
+    private @Nullable Output<List<String>> partitionKeys;
 
-    public Output<List<String>> partitionKeys() {
-        return this.partitionKeys == null ? Codegen.empty() : this.partitionKeys;
+    public Optional<Output<List<String>>> partitionKeys() {
+        return Optional.ofNullable(this.partitionKeys);
     }
 
     /**
@@ -100,131 +100,112 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public BatchDeploymentArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> environmentId,
-        @Nullable Output<Map<String,String>> environmentVariables,
-        @Nullable Output<Integer> errorThreshold,
-        @Nullable Output<Double> miniBatchSize,
-        @Nullable Output<List<String>> partitionKeys,
-        @Nullable Output<Map<String,String>> properties) {
-        this.description = description;
-        this.environmentId = environmentId;
-        this.environmentVariables = environmentVariables;
-        this.errorThreshold = errorThreshold;
-        this.miniBatchSize = miniBatchSize;
-        this.partitionKeys = partitionKeys;
-        this.properties = properties;
-    }
+    private BatchDeploymentArgs() {}
 
-    private BatchDeploymentArgs() {
-        this.description = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.errorThreshold = Codegen.empty();
-        this.miniBatchSize = Codegen.empty();
-        this.partitionKeys = Codegen.empty();
-        this.properties = Codegen.empty();
+    private BatchDeploymentArgs(BatchDeploymentArgs $) {
+        this.description = $.description;
+        this.environmentId = $.environmentId;
+        this.environmentVariables = $.environmentVariables;
+        this.errorThreshold = $.errorThreshold;
+        this.miniBatchSize = $.miniBatchSize;
+        this.partitionKeys = $.partitionKeys;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<Map<String,String>> environmentVariables;
-        private @Nullable Output<Integer> errorThreshold;
-        private @Nullable Output<Double> miniBatchSize;
-        private @Nullable Output<List<String>> partitionKeys;
-        private @Nullable Output<Map<String,String>> properties;
+        private BatchDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchDeploymentArgs();
         }
 
         public Builder(BatchDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.environmentId = defaults.environmentId;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.errorThreshold = defaults.errorThreshold;
-    	      this.miniBatchSize = defaults.miniBatchSize;
-    	      this.partitionKeys = defaults.partitionKeys;
-    	      this.properties = defaults.properties;
+            $ = new BatchDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder errorThreshold(@Nullable Output<Integer> errorThreshold) {
-            this.errorThreshold = errorThreshold;
+            $.errorThreshold = errorThreshold;
             return this;
         }
-        public Builder errorThreshold(@Nullable Integer errorThreshold) {
-            this.errorThreshold = Codegen.ofNullable(errorThreshold);
-            return this;
+
+        public Builder errorThreshold(Integer errorThreshold) {
+            return errorThreshold(Output.of(errorThreshold));
         }
+
         public Builder miniBatchSize(@Nullable Output<Double> miniBatchSize) {
-            this.miniBatchSize = miniBatchSize;
+            $.miniBatchSize = miniBatchSize;
             return this;
         }
-        public Builder miniBatchSize(@Nullable Double miniBatchSize) {
-            this.miniBatchSize = Codegen.ofNullable(miniBatchSize);
-            return this;
+
+        public Builder miniBatchSize(Double miniBatchSize) {
+            return miniBatchSize(Output.of(miniBatchSize));
         }
+
         public Builder partitionKeys(@Nullable Output<List<String>> partitionKeys) {
-            this.partitionKeys = partitionKeys;
+            $.partitionKeys = partitionKeys;
             return this;
         }
-        public Builder partitionKeys(@Nullable List<String> partitionKeys) {
-            this.partitionKeys = Codegen.ofNullable(partitionKeys);
-            return this;
+
+        public Builder partitionKeys(List<String> partitionKeys) {
+            return partitionKeys(Output.of(partitionKeys));
         }
+
         public Builder partitionKeys(String... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public BatchDeploymentArgs build() {
-            return new BatchDeploymentArgs(description, environmentId, environmentVariables, errorThreshold, miniBatchSize, partitionKeys, properties);
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public BatchDeploymentArgs build() {
+            return $;
         }
     }
+
 }

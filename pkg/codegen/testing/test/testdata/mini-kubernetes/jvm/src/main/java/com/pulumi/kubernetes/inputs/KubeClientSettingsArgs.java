@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="burst")
-      private final @Nullable Output<Integer> burst;
+    private @Nullable Output<Integer> burst;
 
-    public Output<Integer> burst() {
-        return this.burst == null ? Codegen.empty() : this.burst;
+    public Optional<Output<Integer>> burst() {
+        return Optional.ofNullable(this.burst);
     }
 
     /**
@@ -36,63 +37,60 @@ public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="qps")
-      private final @Nullable Output<Double> qps;
+    private @Nullable Output<Double> qps;
 
-    public Output<Double> qps() {
-        return this.qps == null ? Codegen.empty() : this.qps;
+    public Optional<Output<Double>> qps() {
+        return Optional.ofNullable(this.qps);
     }
 
-    public KubeClientSettingsArgs(
-        @Nullable Output<Integer> burst,
-        @Nullable Output<Double> qps) {
-        this.burst = Codegen.integerProp("burst").output().arg(burst).env("PULUMI_K8S_CLIENT_BURST").getNullable();
-        this.qps = Codegen.doubleProp("qps").output().arg(qps).env("PULUMI_K8S_CLIENT_QPS").getNullable();
-    }
+    private KubeClientSettingsArgs() {}
 
-    private KubeClientSettingsArgs() {
-        this.burst = Codegen.empty();
-        this.qps = Codegen.empty();
+    private KubeClientSettingsArgs(KubeClientSettingsArgs $) {
+        this.burst = $.burst;
+        this.qps = $.qps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubeClientSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> burst;
-        private @Nullable Output<Double> qps;
+        private KubeClientSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubeClientSettingsArgs();
         }
 
         public Builder(KubeClientSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.burst = defaults.burst;
-    	      this.qps = defaults.qps;
+            $ = new KubeClientSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder burst(@Nullable Output<Integer> burst) {
-            this.burst = burst;
+            $.burst = burst;
             return this;
         }
-        public Builder burst(@Nullable Integer burst) {
-            this.burst = Codegen.ofNullable(burst);
-            return this;
+
+        public Builder burst(Integer burst) {
+            return burst(Output.of(burst));
         }
+
         public Builder qps(@Nullable Output<Double> qps) {
-            this.qps = qps;
+            $.qps = qps;
             return this;
         }
-        public Builder qps(@Nullable Double qps) {
-            this.qps = Codegen.ofNullable(qps);
-            return this;
-        }        public KubeClientSettingsArgs build() {
-            return new KubeClientSettingsArgs(burst, qps);
+
+        public Builder qps(Double qps) {
+            return qps(Output.of(qps));
+        }
+
+        public KubeClientSettingsArgs build() {
+            $.burst = Codegen.integerProp("burst").output().arg($.burst).env("PULUMI_K8S_CLIENT_BURST").getNullable();
+            $.qps = Codegen.doubleProp("qps").output().arg($.qps).env("PULUMI_K8S_CLIENT_QPS").getNullable();
+            return $;
         }
     }
+
 }

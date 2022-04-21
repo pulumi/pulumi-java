@@ -5,9 +5,9 @@ package com.pulumi.foobar.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class TopLevelArgs extends com.pulumi.resources.ResourceArgs {
     public static final TopLevelArgs Empty = new TopLevelArgs();
 
     @Import(name="buzz")
-      private final @Nullable Output<String> buzz;
+    private @Nullable Output<String> buzz;
 
-    public Output<String> buzz() {
-        return this.buzz == null ? Codegen.empty() : this.buzz;
+    public Optional<Output<String>> buzz() {
+        return Optional.ofNullable(this.buzz);
     }
 
-    public TopLevelArgs(@Nullable Output<String> buzz) {
-        this.buzz = buzz;
-    }
+    private TopLevelArgs() {}
 
-    private TopLevelArgs() {
-        this.buzz = Codegen.empty();
+    private TopLevelArgs(TopLevelArgs $) {
+        this.buzz = $.buzz;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> buzz;
+        private TopLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopLevelArgs();
         }
 
         public Builder(TopLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buzz = defaults.buzz;
+            $ = new TopLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buzz(@Nullable Output<String> buzz) {
-            this.buzz = buzz;
+            $.buzz = buzz;
             return this;
         }
-        public Builder buzz(@Nullable String buzz) {
-            this.buzz = Codegen.ofNullable(buzz);
-            return this;
-        }        public TopLevelArgs build() {
-            return new TopLevelArgs(buzz);
+
+        public Builder buzz(String buzz) {
+            return buzz(Output.of(buzz));
+        }
+
+        public TopLevelArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.foobar.submodule1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.foobar.inputs.TopLevelArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 
     @Import(name="thing")
-      private final @Nullable Output<TopLevelArgs> thing;
+    private @Nullable Output<TopLevelArgs> thing;
 
-    public Output<TopLevelArgs> thing() {
-        return this.thing == null ? Codegen.empty() : this.thing;
+    public Optional<Output<TopLevelArgs>> thing() {
+        return Optional.ofNullable(this.thing);
     }
 
-    public ModuleResourceArgs(@Nullable Output<TopLevelArgs> thing) {
-        this.thing = thing;
-    }
+    private ModuleResourceArgs() {}
 
-    private ModuleResourceArgs() {
-        this.thing = Codegen.empty();
+    private ModuleResourceArgs(ModuleResourceArgs $) {
+        this.thing = $.thing;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModuleResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TopLevelArgs> thing;
+        private ModuleResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModuleResourceArgs();
         }
 
         public Builder(ModuleResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.thing = defaults.thing;
+            $ = new ModuleResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder thing(@Nullable Output<TopLevelArgs> thing) {
-            this.thing = thing;
+            $.thing = thing;
             return this;
         }
-        public Builder thing(@Nullable TopLevelArgs thing) {
-            this.thing = Codegen.ofNullable(thing);
-            return this;
-        }        public ModuleResourceArgs build() {
-            return new ModuleResourceArgs(thing);
+
+        public Builder thing(TopLevelArgs thing) {
+            return thing(Output.of(thing));
+        }
+
+        public ModuleResourceArgs build() {
+            return $;
         }
     }
+
 }

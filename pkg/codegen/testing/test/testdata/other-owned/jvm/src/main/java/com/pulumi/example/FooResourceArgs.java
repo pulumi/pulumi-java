@@ -5,9 +5,9 @@ package com.pulumi.example;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.Resource;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FooResourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final FooResourceArgs Empty = new FooResourceArgs();
 
     @Import(name="foo")
-      private final @Nullable Output<Resource> foo;
+    private @Nullable Output<Resource> foo;
 
-    public Output<Resource> foo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+    public Optional<Output<Resource>> foo() {
+        return Optional.ofNullable(this.foo);
     }
 
-    public FooResourceArgs(@Nullable Output<Resource> foo) {
-        this.foo = foo;
-    }
+    private FooResourceArgs() {}
 
-    private FooResourceArgs() {
-        this.foo = Codegen.empty();
+    private FooResourceArgs(FooResourceArgs $) {
+        this.foo = $.foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FooResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Resource> foo;
+        private FooResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FooResourceArgs();
         }
 
         public Builder(FooResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.foo = defaults.foo;
+            $ = new FooResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder foo(@Nullable Output<Resource> foo) {
-            this.foo = foo;
+            $.foo = foo;
             return this;
         }
-        public Builder foo(@Nullable Resource foo) {
-            this.foo = Codegen.ofNullable(foo);
-            return this;
-        }        public FooResourceArgs build() {
-            return new FooResourceArgs(foo);
+
+        public Builder foo(Resource foo) {
+            return foo(Output.of(foo));
+        }
+
+        public FooResourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -3,35 +3,26 @@
 
 package com.pulumi.example;
 
-import java.util.Objects;
+
 
 
 public final class DogArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DogArgs Empty = new DogArgs();
 
-    public DogArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DogArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DogArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DogArgs();
         }
         public DogArgs build() {
-            return new DogArgs();
+            return $;
         }
     }
+
 }

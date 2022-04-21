@@ -24,45 +24,45 @@ public final class SiteConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="netFrameworkVersion")
-      private final @Nullable String netFrameworkVersion;
+    private @Nullable String netFrameworkVersion;
 
     public Optional<String> netFrameworkVersion() {
-        return this.netFrameworkVersion == null ? Optional.empty() : Optional.ofNullable(this.netFrameworkVersion);
+        return Optional.ofNullable(this.netFrameworkVersion);
     }
 
-    public SiteConfigResponse(@Nullable String netFrameworkVersion) {
-        this.netFrameworkVersion = Codegen.stringProp("netFrameworkVersion").arg(netFrameworkVersion).def("v4.6").getNullable();
-    }
+    private SiteConfigResponse() {}
 
-    private SiteConfigResponse() {
-        this.netFrameworkVersion = null;
+    private SiteConfigResponse(SiteConfigResponse $) {
+        this.netFrameworkVersion = $.netFrameworkVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String netFrameworkVersion;
+        private SiteConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteConfigResponse();
         }
 
         public Builder(SiteConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.netFrameworkVersion = defaults.netFrameworkVersion;
+            $ = new SiteConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
-            this.netFrameworkVersion = netFrameworkVersion;
+            $.netFrameworkVersion = netFrameworkVersion;
             return this;
-        }        public SiteConfigResponse build() {
-            return new SiteConfigResponse(netFrameworkVersion);
+        }
+
+        public SiteConfigResponse build() {
+            $.netFrameworkVersion = Codegen.stringProp("netFrameworkVersion").arg($.netFrameworkVersion).def("v4.6").getNullable();
+            return $;
         }
     }
+
 }

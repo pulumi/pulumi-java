@@ -3,35 +3,26 @@
 
 package com.pulumi.example;
 
-import java.util.Objects;
+
 
 
 public final class ToyStoreArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ToyStoreArgs Empty = new ToyStoreArgs();
 
-    public ToyStoreArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ToyStoreArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ToyStoreArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ToyStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ToyStoreArgs();
         }
         public ToyStoreArgs build() {
-            return new ToyStoreArgs();
+            return $;
         }
     }
+
 }

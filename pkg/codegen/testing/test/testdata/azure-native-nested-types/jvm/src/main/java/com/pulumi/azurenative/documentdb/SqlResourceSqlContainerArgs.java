@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.documentdb;
 
-import java.util.Objects;
+
 
 
 public final class SqlResourceSqlContainerArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final SqlResourceSqlContainerArgs Empty = new SqlResourceSqlContainerArgs();
 
-    public SqlResourceSqlContainerArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(SqlResourceSqlContainerArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private SqlResourceSqlContainerArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(SqlResourceSqlContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new SqlResourceSqlContainerArgs();
         }
         public SqlResourceSqlContainerArgs build() {
-            return new SqlResourceSqlContainerArgs();
+            return $;
         }
     }
+
 }

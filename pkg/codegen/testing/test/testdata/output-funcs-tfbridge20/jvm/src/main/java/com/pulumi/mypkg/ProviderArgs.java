@@ -3,35 +3,26 @@
 
 package com.pulumi.mypkg;
 
-import java.util.Objects;
+
 
 
 public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
-    public ProviderArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ProviderArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ProviderArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ProviderArgs();
         }
         public ProviderArgs build() {
-            return new ProviderArgs();
+            return $;
         }
     }
+
 }
