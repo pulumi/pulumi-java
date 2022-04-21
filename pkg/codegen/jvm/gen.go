@@ -440,8 +440,8 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	getterType, returnStatement := targetType, fmt.Sprintf("this.%s", propertyName)
 
 	// Wrap Nullable as optional when returning from the getter.
-	if isNullable, t := targetType.unNullable(); isNullable {
-		getterType = t.optional()
+	if isNullable, t := targetType.UnNullable(); isNullable {
+		getterType = t.Optional()
 		returnStatement = fmt.Sprintf("%s.ofNullable(%s)",
 			ctx.ref(names.Optional),
 			returnStatement)
@@ -593,7 +593,7 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldN
 	w := ctx.writer
 
 	// Helper for when Output<T> is needed but T is provided.
-	isOutput, t1 := t.unOutput()
+	isOutput, t1 := t.UnOutput()
 	if isOutput {
 		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
 			setterName, fieldName, t1.ToCode(ctx.imports))
@@ -603,7 +603,7 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldN
 	}
 
 	// Further helper for when List<T> is needed but varargs are provided.
-	if isList, t2 := t1.unList(); isList {
+	if isList, t2 := t1.UnList(); isList {
 		fprintf(w, "        public Builder %[1]s(%[3]s... %[2]s) {\n",
 			setterName, fieldName, t2.ToCode(ctx.imports))
 		fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",

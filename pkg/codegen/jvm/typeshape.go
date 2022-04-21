@@ -166,35 +166,35 @@ func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 	return shape
 }
 
-func (ts TypeShape) unOutput() (bool, TypeShape) {
+func (ts TypeShape) UnOutput() (bool, TypeShape) {
 	if ts.Type.Equal(names.Output) {
 		return true, ts.Parameters[0]
 	}
 	return false, ts
 }
 
-func (ts TypeShape) unList() (bool, TypeShape) {
+func (ts TypeShape) UnList() (bool, TypeShape) {
 	if ts.Type.Equal(names.List) {
 		return true, ts.Parameters[0]
 	}
 	return false, ts
 }
 
-func (ts TypeShape) optional() TypeShape {
+func (ts TypeShape) Optional() TypeShape {
 	return TypeShape{
 		Type:       names.Optional,
 		Parameters: []TypeShape{ts},
 	}
 }
 
-func (ts TypeShape) unOptional() (bool, TypeShape) {
+func (ts TypeShape) UnOptional() (bool, TypeShape) {
 	if ts.Type.Equal(names.Optional) {
 		return true, ts.Parameters[0]
 	}
 	return false, ts
 }
 
-func (ts TypeShape) unNullable() (bool, TypeShape) {
+func (ts TypeShape) UnNullable() (bool, TypeShape) {
 	annotations := []string{}
 	isNullable := false
 	for _, a := range ts.Annotations {
